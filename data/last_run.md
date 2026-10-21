@@ -1,80 +1,75 @@
-## Frontier Wire newsroom run — 2026-10-21T20:39:38+00:00
+## Frontier Wire newsroom run — 2026-10-21T20:44:10+00:00
 
-Fetched 2647 items · fresh 90 · judged 60 · kept 14 · **written 3**
-AI: 6 requests, 19,569 tokens this run · 16 requests today · providers: cerebras
+Fetched 2707 items · fresh 98 · judged 60 · kept 16 · **written 3**
+AI: 5 requests, 26,595 tokens this run · 21 requests today · providers: cerebras
 
 ### New stories
-- **research** — [Sage-A1.5 agentic model introduced for long-horizon execution and scientific discovery](https://arxiv.org/abs/2610.28578)  
-  Researchers released Sage-A1.5, a 35‑billion parameter Mixture‑of‑Experts agentic model. The model adds agentic orchestration, verification, and open scientific discovery to improve long‑horizon problem solving.  
+- **research** — [Large flow language model Lafa scaled to 8 B parameters with 2.5× faster inference](https://arxiv.org/abs/2610.28559)  
+  Researchers introduced Lafa, an 8‑billion‑parameter continuous flow language model trained on fewer than 30 billion tokens. The model matches or exceeds autoregressive quality while achieving 2.54× higher throughput via self‑speculative decoding.  
   _1 source(s), 0 verified quote(s)_
-- **industry** — [OpenAI acquires AI biotech startup Orchestra Bio](https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business)  
-  OpenAI announced it has acquired Orchestra Bio, a four‑year‑old AI biotech software startup. The terms were not disclosed; Orchestra had raised about $20 million and builds AI agents for drug‑discovery operations.  
-  _2 source(s), 0 verified quote(s)_
-- **policy** — [OpenAI releases blueprint to empower cyber defenders with frontier AI](https://openai.com/index/empowering-cyber-defenders)  
-  OpenAI published a plan detailing how frontier AI can be used to strengthen cyber defense, improve safeguards, modernize cybersecurity, and make public institutions more resilient.  
+- **industry** — [NVIDIA expands Confidential Computing with Confidential Bare Metal for model builders](https://blogs.nvidia.com/blog/confidential-computing-model-builders-infrastructure)  
+  NVIDIA announced Confidential Bare Metal, a new deployment option for its Confidential Computing platform that lets frontier model builders run sensitive workloads on dedicated third‑party bare‑metal infrastructure while retaining control of models and data. The expansion adds platform security controls, support across Grace Blackwell and Rubin systems, and integrations such as Cohere’s Model Vault and Google Cloud’s A4X Max instances.  
+  _1 source(s), 2 verified quote(s)_
+- **industry** — [Mistral and Mozilla launch AI‑powered Firefox Smart Window beta](https://mistral.ai/news/mistral-x-mozilla)  
+  Mistral announced a partnership with Mozilla to power the Firefox Smart Window beta browsing assistant with its models. The service will initially serve users in France and North America, with the United Kingdom and Germany expected to follow later this year.  
   _1 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- How AT&T is rethinking in-house legal work with OpenAI — score 5: AT&T legal workflow partnership with OpenAI is a corporate use case, not a frontier model or policy development.
-- NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required — score 5: Blog post touts Kumo relational performance; no new model or major advance, largely marketing of existing Kumo.
-- How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications — score 5: Technique to cut inference cost by specializing vocabularies; interesting but incremental.
-- NVIDIA Cloud Partners Scale Across Europe — Sovereign, Open and Built for Safe AI Agents — score 4: NVIDIA cloud partner announcement is a marketing piece without a new technical contribution.
-- NVIDIA Agent Toolkit Expands, Grounding Enterprise Agents in Company Data — score 5: Extension of NVIDIA Agent Toolkit is a product update, not a major frontier AI event.
-- Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust — score 4: Physicist joining Anthropic's trust is a personnel move, not a major AI development.
-- Company Mistral Advances AI for Engineering with NVIDIA Mistral is collaborating with NVIDIA to develop a new generation of AI-native engineering workflows powered by NVIDIA accelerated computing.… — score 5: Mistral‑NVIDIA engineering workflow collaboration is notable but not a major model release or policy shift.
-- Cache Engineering for Agents — score 5: Cache engineering for agents addresses scaling costs; incremental technical paper.
-- The Token-Energy Law of LLM Decode: Active Bytes and Realized Time Account for Joules per Token — score 5: Token‑Energy Law provides an energy model for LLM decoding; interesting but not a major breakthrough.
-- Evolving Semantic Indexes for Generative Retrieval — score 5: Evolving semantic indexes for generative retrieval is a technical contribution without immediate frontier impact.
-- Continual Concept Personalization in Diffusion Models via Residual-Space Adaptation — score 5: Continual concept personalization in diffusion models is an incremental method paper.
-- The Dynamics of Collapse and Recovery in Clustered Federated Learning — score 5: Study of clustered federated learning dynamics is a niche theoretical work.
-- Asymmetric Bidirectional Predictive Dynamics in Google Search and COVID-19 Time Series: A Multi-Horizon Forecast-Error Analysis — score 3: Analysis of Google Search and COVID‑19 trends is not central to AI frontier developments.
-- OptScientist: Automated Discovery of Optimization Laws — score 5: OptScientist framework for discovering optimization laws is a novel idea but not yet a major result.
-- Convergence of stochastic gradient descent for learning linear neural networks — score 4: Convergence analysis for SGD in linear networks is a theoretical study with limited immediate impact.
-- Agentic Ensemble with Vision-Language Models for Visual Anomaly Detection — score 5: Agentic ensemble for visual anomaly detection is a technical contribution, not a frontier breakthrough.
-- When Do LLMs Help with Feature Selection? A Systematic Empirical Study — score 5: Systematic study of LLMs for feature selection is useful but incremental.
-- Learning Computational Structure for Sample-Efficient Prediction — score 5: Learning computational structure for sample‑efficient prediction is a theoretical contribution.
-- Discount Yourself: Self-inclusive Freshness-weighted Gossip for Decentralised Learning under Client Outages — score 5: Self‑inclusive freshness‑weighted gossip for decentralized learning is a niche algorithmic paper.
-- Binary Discrete Diffusion: Candidate-Set Diffusion for Logic and Planning Tasks — score 5: Binary discrete diffusion for logic/planning is an interesting method but not a major advance.
-- Mistral Large 4 — duplicate of 820bd24a41c4
-- Steam Users Beg for "No AI" Filter as Vibecoders Flood Next Fest — score 3: User demand for AI‑free filters on Steam is a niche community issue.
-- Show HN: VoidAccess – open-source dark web OSINT, from query to a graph — score 3: Open‑source dark web OSINT tool not directly related to frontier AI.
-- Publish fake stats, get cited in LLMs — score 4: Fake‑stats publishing for LLM citation is a curiosity, not a major development.
-- Google Cloud outage affects almost all banking and other operations in Europe — score 3: Google Cloud outage is a service incident, not AI‑specific news.
-- Anthropic logged net loss of over $80B in first half of 2026 — score 4: Anthropic's financial loss is business news, not a frontier AI event.
-- NixOS is making me less afraid — score 2: Personal blog post about NixOS, unrelated to AI.
-- Claude Duet — score 5: Claude Duet appears to be a minor feature release, not a major model or policy.
-- PHP 8.2.35 — score 2: PHP version release unrelated to AI.
-- C# now beats Rust on WASM size — score 2: C# WASM size comparison not AI‑focused.
-- The Other Epidemic: Trying to get off benzodiazepines — score 2: Health article unrelated to AI.
-- How I got over 300 Tor exit nodes removed — score 2: Tor exit node removal is unrelated to AI frontier.
-- AI promises productivity, but for managers, it’s mostly a headache for now — score 5: Survey on AI productivity headaches is informative but not a major news event.
-- Hugging Face CEO warns that Netflix’s OpenAI hack documentary isn’t accurate — score 4: Hugging Face CEO's comment on Netflix documentary is a media critique, not frontier AI news.
-- Anthropic’s cloud partnerships are getting messy — score 5: Anthropic's cloud partnership challenges are industry‑focused but not a major breakthrough.
-- SpaceX’s AI business is beating expectations — score 4: SpaceX AI business profitability is corporate performance, not a frontier AI development.
-- ChatGPT now lets you lock your chats — score 5: ChatGPT chat‑locking feature is a product update, not a major frontier AI story.
-- Today's PHP Security Release, and How We're Strengthening PHP Security — score 2: PHP security release commentary unrelated to AI frontier.
-- Panache — RTS Belle Époque pour mobile — score 2: Game release commentary not relevant to AI frontier.
-- eMudhra Intermediate CA Compromise — score 2: CA compromise news unrelated to AI.
-- Battle Drones - a vibe coded RTS with audio-based multiplayer — score 2: Game development commentary not AI‑focused.
-- Simon Willison: It's been less than 24 hours and there's already a French fork of Battle Drones that reimagines it as Belle Époque steampunk!… — score 2: Social post about game fork, not AI news.
-- Simon Willison: I built a Command & Conquer style RTS called Battle Drones, mainly using Claude Opus 5.5, which runs in the browser and includes… — score 3: Mention of Claude Opus 5.5 in game building is peripheral to AI frontier.
-- Ethan Mollick: Companies I talk to are struggling with the rate of patches they need to do thanks to AI defenses finding issues before the coming wave of… — score 5: Commentary on AI‑driven patch rates is interesting but not a major policy development.
-- Ethan Mollick: I wrote about the exponential curve of the last 30 months of AI development: www.oneusefulthing.org/p/30-months-... And I asked Opus 5.5… — score 4: Personal commentary on AI development curve, not a newsworthy event.
-- Ethan Mollick: My new book, Co-Existence, is out today. It is a guide to how to live and work in a world where AI is sometimes, but not always, better… — score 3: Announcement of a book, not a frontier AI development.
-- Recursive launches Flint, a laptop coding model it says was largely built by AI — could not verify with enough independent sources
-- While Amazon blocks AI agents, Walmart rolls out the welcome mat — could not verify with enough independent sources
-- Anthropic pitches AI safety bill that may block a model if 50+ people could be killed — could not verify with enough independent sources
+- Research Introducing Timestral State-of-the-art probabilistic forecasts with just 209M parameters, outperforming larger models on CPU. October 15, 2026 By Mistral — score 5: Introduces a 209M-parameter model for probabilistic forecasts; modest improvement, not a frontier breakthrough.
+- Poll Shows Americans Wary Of AI Impact On Society — score 3: Poll on American attitudes toward AI; low news value for frontier AI audience.
+- Netflix Is Down 38 % Since Completing Its 10 - For - 1 Stock Split . Here Why the Sell - Off Is Worsening After Its Latest Earnings . — score 1: Netflix stock split news unrelated to AI.
+- Lithia : 3 Key Takeaways for Long - Term Investors — score 1: Lithia investment article not AI related.
+- Why Pegasystems Stock Dropped After Earnings — score 1: Pegasystems stock news unrelated to AI.
+- Colorado proposal would raise top income tax rate from about 4 . 4 % to 8 . 4 %, sparking debate — score 1: Colorado tax proposal, not AI.
+- Jio Platforms IPO Subscribed 3 . 2 Times on Day 1 ; ₹30 , 213 Crore Issue Fully Booked in 100 Minutes — score 1: Jio Platforms IPO, not AI.
+- NVIDIA wants AI agents on a leash with enhanced security measures — duplicate of 82603c5be230
+- Michael Peck , Author at Marine Corps Times — score 1: Author profile, no AI news.
+- Poll Shows Americans Wary Of AI Impact On Society | News Radio 1410 AM & 100 . 9 FM — duplicate of c3c47473c56f
+- 《 TAIPEI TIMES 》 Semiconductor industry electricity use hits record - 焦點 — score 1: Semiconductor electricity use record, not AI.
+- Government websites go dark after AI - discovers flaw — score 5: Report of government websites taken down after AI-discovered flaw; notable but limited impact.
+- China Focus : China - initiated Luban Workshops empower global youth with practical skills — score 1: China youth workshops, not AI.
+- AI could turn scientific papers into research assistants — score 4: General commentary on AI as research assistants, not breaking news.
+- Rogers , El - Sayed outline differing approaches to tariffs and AI during Detroit Economic Club forum — score 2: Discussion of tariffs and AI, low news value.
+- The AI Boom Just Sent a Warning Sign That Has Nothing to Do With Stock Prices — score 3: AI boom warning sign unrelated to stock prices, low relevance.
+- Highland Council goes offline in face of global cyber - security threat as worldwide governments including Finland , united states and Japan respond — score 1: Cyber‑security outage unrelated to AI.
+- Critical PHP flaws put millions of websites at risk as governments pull sites offline — score 1: PHP vulnerabilities, not AI.
+- Honolulu emergency managers want AI to help spot floods earlier — score 4: AI for flood spotting, modest local application.
+- Why Super Micro Computer Stock Popped Today — score 1: Super Micro stock news, not AI.
+- FIA opens Biggin Hill remote race - control center — score 1: FIA remote race control, not AI.
+- Is SpaceX a Buy After Its Monster Earnings Report ? — score 1: SpaceX stock analysis, not AI.
+- Some government websites taken down in response to security risk : AI minister — duplicate of 9a763fe9c4cb
+- Most Americans say AI is bad for society , oppose more data centers : ABC / Post / Ipsos poll — score 3: Poll showing AI perceived negatively; low news value.
+- Focus on artificial intelligence and growth at Singularity Summit — score 4: Singularity Summit focus on AI; event preview without concrete news.
+- SpaceX Offers Employees Extra Pay to Help Build Its Data Centers — score 1: SpaceX employee pay for data centers, not AI specific.
+- Overlooked industry could unlock billions for Australia — score 1: Australian industry article, not AI.
+- Two Customers Account for a Fifth of Anthropic Revenue , a Concentration Risk IPO Buyers Should Know — score 4: Anthropic revenue concentration risk; moderate relevance but not major news.
+- Group Chief Strategist at Union Bancaire Privée expects economic growth in EU to benefit Gibraltar — score 1: Bank strategist comments, not AI.
+- Poll Shows Americans Wary Of AI Impact On Society | Newstalk 1400 , 104 . 5 , and 105 . 9 WJMX — duplicate of c3c47473c56f
+- Traverse City company receives $170K for drone power line inspections — score 1: Drone power line inspection grant, not AI.
+- $4 , 000 in These 4 Non - Nvidia Chip Stocks Could Be Worth This Much by 2030 — score 1: Non‑Nvidia chip stock speculation, not AI.
+- Clayface Review : DC Villain With a Heart of Schmutz — score 1: Comic book review, not AI.
+- Meet the candidates for Michigan 2nd Congressional District – 9and10News . com — score 1: Political candidate list, not AI.
+- ASML Has Incredible News for Nvidia Stock and Micron Stock Investors — score 2: ASML news for Nvidia stock, peripheral to AI.
+- Federal privacy legislation in 2026 : The 49 bills reshaping US data privacy law — score 3: Federal privacy legislation overview, not AI‑specific.
+- IU students weigh in on first - time voting , key issues ahead of Election Day — score 1: Student voting article, not AI.
+- Here are the US metro home prices brokers need to watch — score 1: Home price article, not AI.
+- PHP code risk : Urgent security fix issued for code vital to estimated 70 % of all websites — score 1: PHP code risk article, not AI.
+- Eric Schmidt reportedly owns about half as much of Anthropic as CEO Dario Amodei — score 3: Ownership stake details of Anthropic; low relevance to frontier AI developments.
+- Meta’s Muse hits 10M US downloads in 40 days, a milestone reached by only 11 other apps — score 5: Meta’s Muse reaches 10M downloads; moderate user adoption but not a frontier breakthrough.
+- Ex-Nvidia-turned-VC Amulya Vishwanath: ‘Physical AI is in its LEGO era’ — score 5: Commentary on physical AI; interesting but not a major news item.
+- Plants can speak using electricity, so this startup built an AI model to decipher their language — score 5: AI model for plant electricity communication; novel but peripheral to core AI frontier.
+- Figma co-founder Dylan Field thinks MCP is not a perfect protocol — score 2: Figma co‑founder comments on protocol; not AI focused.
+- Google faces bipartisan Senate grilling over AI push in schools amid fears of harm to kids — could not verify with enough independent sources
+- Google open-sources TorchTPU, a native PyTorch back end for TPUs — could not verify with enough independent sources
+- US orders federal agencies to remove China’s DeepSeek AI from their systems — could not verify with enough independent sources
+- Simple tweak could cut AI chatbot reinforcement of false beliefs — could not verify with enough independent sources
+- Pentagon AI oversight office struggles to keep pace with department ambitions , GAO finds — could not verify with enough independent sources
 
 </details>
 
-### Sources with problems
-- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
-
 ### Notes
+- GDELT unavailable: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v
 - GDELT unavailable: GDELT paused for this run after repeated rate-limiting
-- stopped writing: every configured provider failed: cerebras/gpt-oss-120b: unusable answer; trying next model | cerebras/llama3.3-70b: model unavailable (404); trying next model | cerebras/qwen-3-235b-a22b-instruct-2507: model unavailable (404); trying next model
 - 8 kept item(s) carried over to the next run
-- cerebras/gpt-oss-120b: unusable answer; trying next model
-- cerebras/llama3.3-70b: model unavailable (404); trying next model
-- cerebras/qwen-3-235b-a22b-instruct-2507: model unavailable (404); trying next model
+- cerebras/gpt-oss-120b: unusable answer
