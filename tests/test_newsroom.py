@@ -285,3 +285,15 @@ def test_tracker_rebuilt_from_existing_stories(tmp_path):
     room2.run()
     labs = json.loads((tmp_path / "labs.json").read_text())
     assert labs["Example Lab"]["model"] == "Nova 2"
+
+
+@pytest.mark.parametrize("title,ok", [
+    ("US orders federal agencies to remove China's DeepSeek AI from their systems", True),
+    ("Google open-sources TorchTPU, a native PyTorch back end for TPUs", False),
+    ("Why Super Micro Computer Stock Popped Today", False),
+    ("Said the AIDS charity", False),
+    ("OpenAI acquires biotech startup", True),
+])
+def test_gdelt_headline_filter(title, ok):
+    from agent.sources import is_ai_headline
+    assert is_ai_headline(title) is ok

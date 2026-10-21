@@ -172,11 +172,21 @@ class Gdelt:
         return out
 
 
+AI_UPPER = re.compile(r"\b(AI|A\.I\.|LLMs?|GPT[-\w]*|AGI)\b")
+AI_WORDS = re.compile(r"artificial intelligence|machine learning|chatbot|neural|language model|openai|anthropic|claude|"
+                      r"gemini|deepmind|deepseek|mistral|llama|copilot|nvidia|hugging ?face|qwen|xai|grok|robotics?", re.I)
+
+
+def is_ai_headline(title: str) -> bool:
+    return bool(AI_UPPER.search(title) or AI_WORDS.search(title))
+
+
 def from_gdelt(src: dict[str, Any], gdelt: Gdelt, settings: dict[str, Any], lookback_hours: int) -> list[Item]:
     span = f"{max(1, min(lookback_hours, 72))}h"
     rows = gdelt.search(settings["query"], timespan=span, max_records=settings.get("max_records", 50))
+    # GDELT matches article text, so plenty of off-topic pieces slip in; keep headlines that are about AI.
     return [Item(url=r["url"], title=r["title"], source_id=src["id"], source_name=r["domain"] or "GDELT",
-                 role=src["role"], published=r["published"]) for r in rows]
+                 role=src["role"], published=r["published"]) for r in rows if is_ai_headline(r["title"])]
 
 
 # ------------------------------------------------------------------ Hacker News

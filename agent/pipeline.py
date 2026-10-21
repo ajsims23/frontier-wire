@@ -164,23 +164,28 @@ class Newsroom:
             if domain(it.url) in domains:
                 continue
             overlap = len(key & {w.lower() for w in keywords(it.title, 8)})
-            if overlap >= 3 or (overlap >= 2 and similar(it.title, members[0].title) >= 0.45):
+            if overlap >= 2:  # loose on purpose: the fact-checker model confirms the real matches
                 scored.append((overlap, it))
         scored.sort(key=lambda x: -x[0])
         results: list[dict[str, str]] = []
         seen_urls: set[str] = set()
-        for _, it in scored[:8]:
+        for _, it in scored[:10]:
             if it.url not in seen_urls:
                 results.append({"url": it.url, "title": it.title, "domain": it.source_name or domain(it.url)})
                 seen_urls.add(it.url)
 
         # 2) Then GDELT news search, if it's available this run.
         try:
-            for r in self.gdelt.search(" ".join(words) + " sourcelang:english", timespan="3d", max_records=20):
-                cu = canonical_url(r["url"])
-                if domain(cu) not in domains and cu not in seen_urls:
-                    results.append(r)
-                    seen_urls.add(cu)
+            # broad first (3 key terms), then broader (2) if that finds nothing new
+            for n in (3, 2):
+                before = len(results)
+                for r in self.gdelt.search(" ".join(words[:n]) + " sourcelang:english", timespan="3d", max_records=25):
+                    cu = canonical_url(r["url"])
+                    if domain(cu) not in domains and cu not in seen_urls:
+                        results.append(r)
+                        seen_urls.add(cu)
+                if len(results) > before or len(words) <= 2:
+                    break
         except Exception as e:  # noqa: BLE001
             note = f"GDELT unavailable: {str(e)[:80]}"
             if note not in self.report["notes"]:
