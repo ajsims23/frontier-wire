@@ -192,8 +192,9 @@ def write_briefing(room: Any, force: bool = False) -> None:
 REVIEW_SYSTEM = """You are reviewing how Frontier Wire's news-gathering agent performed over the last few days, using
 the statistics provided. Suggest at most 5 concrete improvements a human can approve, most useful first:
 fixing or removing a broken source, a lab or topic that is under-covered, a threshold that seems off.
-Be specific and brief. Do not invent web addresses; if you suggest a new source, set url to "" unless the
-statistics already contain its address."""
+Be specific and brief. Constraints: the site runs entirely on free services, so never suggest paid models
+or APIs. Read the current settings provided before suggesting a threshold change. Do not invent web addresses;
+if you suggest a new source, set url to "" unless the statistics already contain its address."""
 
 REVIEW_SCHEMA = {
     "type": "object",
@@ -244,6 +245,10 @@ def review_stats(room: Any, days: int = 3) -> dict[str, Any]:
         "drop_reasons": dict(sorted(reasons.items(), key=lambda kv: -kv[1])[:8]),
         "tracked_labs_without_stories_this_week": quiet_labs,
         "provider_notes": [n for r in runs for n in r.get("provider_log", [])][-8:],
+        "current_settings": {"min_score_to_publish_1_to_10": room.cfg.run["min_score"],
+                             "max_stories_per_run": room.cfg.run["max_stories_per_run"],
+                             "ai_providers_configured": room.llm.configured,
+                             "sources": [s["id"] for s in room.cfg.sources]},
     }
 
 
@@ -263,9 +268,10 @@ def self_review(room: Any) -> None:
         if not isinstance(s, dict) or not s.get("suggestion"):
             continue
         url = (s.get("url") or "").strip()
+        mentioned = re.findall(r"https?://[^\s)\]]+|\b[a-z0-9-]+\.(?:ai|com|io|org|net|dev)\b/?\S*", f"{url} {s['suggestion']}")
         note = ""
-        if url and url not in known_urls:
-            note = " _(address suggested by the agent; check it before adding)_"
+        if any(m not in known_urls for m in mentioned):
+            note = " _(contains an address suggested by the agent; check it before using)_"
         lines.append(f"- [ ] **{s.get('kind', 'tune').replace('_', ' ')}** · `{s.get('target', '')}`: {s['suggestion']}"
                      f"{(' ' + url) if url else ''}{note}  \n  _Why:_ {s.get('reason', '')}")
     lines += ["", "<details><summary>Statistics the agent reviewed</summary>", "", "```json",

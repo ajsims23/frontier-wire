@@ -280,6 +280,7 @@ def briefing(prompt: str) -> dict:
 def review(prompt: str) -> dict:
     return {"suggestions": [
         {"kind": "fix_source", "target": "broken", "suggestion": "Fix or remove the broken feed.", "reason": "fails every run", "url": ""},
+        {"kind": "add_source", "target": "Press", "suggestion": "Add a press feed such as https://made-up-press.ai/ for labs.", "reason": "gap", "url": ""},
         {"kind": "add_source", "target": "Some Lab", "suggestion": "Add their blog feed.", "reason": "under-covered",
          "url": "https://invented.example.com/feed.xml"},
     ]}

@@ -105,7 +105,7 @@ def test_full_run(tmp_path):
     assert "2 removed by checks" in report["briefing"]
     # self-review: written once a day, flags broken sources, marks agent-suggested addresses for checking
     review_md = (tmp_path / "self_review.md").read_text()
-    assert "`broken`" in review_md and "check it before adding" in review_md and "- [ ]" in review_md
+    assert "`broken`" in review_md and "check it before using" in review_md and "- [ ]" in review_md
     assert json.loads((tmp_path / "review_state.json").read_text())["last"] == NOW.date().isoformat()
 
     assert report["ai_requests_run"] == len(calls) <= 70
