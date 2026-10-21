@@ -187,3 +187,39 @@ def test_url_helpers():
     assert canonical_url("http://arxiv.org/abs/2610.00001v2") == canonical_url("https://arxiv.org/pdf/2610.00001.pdf")
     assert domain("https://news.bbc.co.uk/x") == "bbc.co.uk"
     assert keywords("City council approves AI rules for public buses")[:2] == ["City", "approves"] or "council" in keywords("City council approves AI rules for public buses")
+
+
+# ------------------------------------------------------------------ GDELT rate-limits + free corroboration
+class RateLimitedFetcher(FixtureFetcher):
+    """Every GDELT call is rate-limited (as on shared GitHub runners); a second outlet's feed exists."""
+    OTHER = """<?xml version="1.0"?><rss version="2.0"><channel><title>Other News</title>
+<item><title>Council approves new AI rules for city buses</title><link>https://othernews.example.org/council-bus-ai</link>
+<description>Vote passed.</description></item></channel></rss>"""
+
+    def get(self, url):
+        if url.startswith("https://api.gdeltproject.org"):
+            self.requests.append(url)
+            raise RuntimeError("Client error '429 Too Many Requests'")
+        if url == "https://othernews.example.org/feed":
+            return self.OTHER
+        return super().get(url)
+
+
+def test_gdelt_rate_limited_falls_back_to_fetched_items(tmp_path):
+    room, _ = make(tmp_path)
+    room.cfg.sources = SOURCES + [{"id": "othernews", "name": "Other News", "kind": "rss",
+                                   "url": "https://othernews.example.org/feed", "role": "news"}]
+    room.fetcher = RateLimitedFetcher()
+    room.gdelt = Gdelt(room.fetcher, sleep=lambda s: None)
+    report = room.run()
+    stories = {s["headline"]: s for s in json.loads((tmp_path / "stories.json").read_text())}
+
+    assert report["sources"]["gdelt"].startswith("failed")
+    # 3 tries, then GDELT is paused for the rest of the run (no more requests)
+    assert sum(u.startswith("https://api.gdeltproject.org") for u in room.fetcher.requests) == 3
+    assert any("GDELT unavailable" in n for n in report["notes"])
+    # council story confirmed by the other outlet already fetched this run
+    council = stories["City council approves AI rules for public buses"]
+    assert "https://othernews.example.org/council-bus-ai" in {s["url"] for s in council["sources"]}
+    # unconfirmable claim still blocked
+    assert not any("AGI" in h for h in stories)

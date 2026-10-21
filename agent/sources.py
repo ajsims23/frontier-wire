@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 
 from .text import canonical_url, extract_published, extract_text, stable_id
 
-USER_AGENT = "FrontierWireBot/0.2 (AI news aggregation; contact via GitHub repo)"
+USER_AGENT = "Mozilla/5.0 (compatible; FrontierWireBot/0.3; AI news aggregation)"
 QUANTISED = re.compile(r"gguf|awq|gptq|exl2|mlx|bnb|int4|int8|4bit|8bit|-fp8-dynamic", re.I)
 
 
@@ -131,15 +131,28 @@ class Gdelt:
     def __init__(self, fetcher: Fetcher, sleep: Callable[[float], None] = time.sleep, clock: Callable[[], float] = time.monotonic):
         self.fetcher, self.sleep, self.clock = fetcher, sleep, clock
         self._last = -1e9
+        self.disabled = False  # set after repeated rate-limiting, for the rest of the run
 
     def search(self, query: str, timespan: str = "1d", max_records: int = 50) -> list[dict[str, Any]]:
-        wait = 5.5 - (self.clock() - self._last)
-        if wait > 0:
-            self.sleep(wait)
-        self._last = self.clock()
+        if self.disabled:
+            raise RuntimeError("GDELT paused for this run after repeated rate-limiting")
         url = (f"{self.BASE}?query={quote(query)}&mode=artlist&format=json"
                f"&maxrecords={max_records}&timespan={timespan}&sort=datedesc")
-        raw = self.fetcher.get(url)
+        raw = None
+        for attempt in range(3):
+            wait = 6.0 - (self.clock() - self._last)
+            if wait > 0:
+                self.sleep(wait)
+            self._last = self.clock()
+            try:
+                raw = self.fetcher.get(url)
+                break
+            except Exception as exc:  # noqa: BLE001
+                if "429" not in str(exc) or attempt == 2:
+                    if "429" in str(exc):
+                        self.disabled = True
+                    raise
+                self.sleep(15 * (attempt + 1))  # shared servers get rate-limited; back off and retry
         try:
             data = json.loads(raw)
         except json.JSONDecodeError as exc:

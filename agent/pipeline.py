@@ -63,6 +63,9 @@ class Newsroom:
         items, status = gather(self.cfg.sources, self.fetcher, now=self.now, lookback_hours=lookback,
                                gdelt=self.gdelt, gdelt_settings=self.cfg.gdelt, lab_domains=self.cfg.lab_domains)
         self.report["sources"] = status
+        # Everything fetched in the last 3 days (seen or not) can corroborate a story.
+        pool_cutoff = self.now - timedelta(hours=72)
+        self._pool = [it for it in items if (_parse_time(it.published) or self.now) >= pool_cutoff]
         cutoff = self.now - timedelta(hours=lookback)
         fresh = []
         for it in items:
@@ -152,12 +155,36 @@ class Newsroom:
         words = keywords(members[0].title)
         if len(words) < 2:
             return None
+
+        # 1) Free check first: other outlets among everything fetched this run.
+        key = {w.lower() for w in keywords(members[0].title, 8)}
+        scored = []
+        for it in getattr(self, "_pool", []):
+            if domain(it.url) in domains:
+                continue
+            overlap = len(key & {w.lower() for w in keywords(it.title, 8)})
+            if overlap >= 3 or (overlap >= 2 and similar(it.title, members[0].title) >= 0.45):
+                scored.append((overlap, it))
+        scored.sort(key=lambda x: -x[0])
+        results: list[dict[str, str]] = []
+        seen_urls: set[str] = set()
+        for _, it in scored[:8]:
+            if it.url not in seen_urls:
+                results.append({"url": it.url, "title": it.title, "domain": it.source_name or domain(it.url)})
+                seen_urls.add(it.url)
+
+        # 2) Then GDELT news search, if it's available this run.
         try:
-            results = self.gdelt.search(" ".join(words) + " sourcelang:english", timespan="3d", max_records=20)
+            for r in self.gdelt.search(" ".join(words) + " sourcelang:english", timespan="3d", max_records=20):
+                cu = canonical_url(r["url"])
+                if domain(cu) not in domains and cu not in seen_urls:
+                    results.append(r)
+                    seen_urls.add(cu)
         except Exception as e:  # noqa: BLE001
-            self.report["notes"].append(f"GDELT check failed for '{members[0].title[:50]}': {e}")
-            return None
-        results = [r for r in results if domain(r["url"]) not in domains][:15]
+            note = f"GDELT unavailable: {str(e)[:80]}"
+            if note not in self.report["notes"]:
+                self.report["notes"].append(note)
+        results = results[:15]
         if not results:
             return None
         listing = "\n".join(f'<result n="{i}">{_esc(r["title"])} ({r["domain"]})</result>' for i, r in enumerate(results))
