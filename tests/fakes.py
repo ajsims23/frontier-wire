@@ -47,7 +47,7 @@ ARXIV_FEED = f"""<?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w
 LISTING = """<html><body><a href="/blog/atlas-update">Atlas robotics safety update</a>
 <a href="/blog/old-thing">An older announcement post</a><a href="/about">About</a></body></html>"""
 
-NOVA_ARTICLE = """<html><body><nav>menu</nav><article><h1>Introducing Nova 2</h1>
+NOVA_ARTICLE = """<html><head><meta property="og:image" content="/images/nova2-hero.jpg"></head><body><nav>menu</nav><article><h1>Introducing Nova 2</h1>
 <p>Today we release Nova 2. “We built Nova 2 to reason across text, images and audio,” said Ada Example, CEO of Example Lab.</p>
 </article></body></html>"""
 
@@ -88,7 +88,7 @@ PAGES = {
     "https://voiceblog.example.net/feed": VOICE_FEED,
     "https://pagelab.example.com/blog": LISTING,
     "https://pagelab.example.com/blog/atlas-update":
-        f'<html><head><meta property="article:published_time" content="{iso(3)}"></head><body><article>Atlas update text.</article></body></html>',
+        f'<html><head><meta property="article:published_time" content="{iso(3)}"><meta property="og:image" content="https://pagelab.example.com/static/site-logo.png"></head><body><article>Atlas update text.</article></body></html>',
     "https://pagelab.example.com/blog/old-thing":
         f'<html><head><meta property="article:published_time" content="{iso(480)}"></head><body>old</body></html>',
     "https://examplelab.ai/news/nova-2": NOVA_ARTICLE,

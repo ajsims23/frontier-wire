@@ -29,6 +29,46 @@
     return d < 7 ? `${d} day${d > 1 ? "s" : ""} ago` : new Date(iso).toLocaleDateString(undefined, { day: "numeric", month: "short" });
   }
   const clip = (t, n) => { t = String(t || ""); if (t.length <= n) return t; return t.slice(0, n).replace(/\s+\S*$/, "") + "…"; };
+
+  // ---------------------------------------------------------------- pictures
+  // Each story shows its source's preview image. Underneath sits generated "signal" art
+  // (unique per story, in its topic colour) that shows whenever there's no image or it fails to load.
+  const hash = (t) => { let h = 2166136261; for (const ch of String(t)) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
+  function rng(seed) { return () => { seed |= 0; seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+  function art(s) {
+    const r = rng(hash(s.id || s.url || s.headline));
+    const W = 400, H = 225, lines = 6 + Math.floor(r() * 4);
+    const cx = 80 + r() * 240, spread = 40 + r() * 70;
+    let paths = "", peak = null;
+    for (let i = 0; i < lines; i++) {
+      const y0 = 38 + (i * (H - 70)) / (lines - 1);
+      const amp = 8 + r() * (i === 2 ? 70 : 34), freq = 2 + r() * 5, phase = r() * 6.28;
+      let d = "";
+      for (let x = 0; x <= W; x += 8) {
+        const env = Math.exp(-(((x - cx) / spread) ** 2));
+        const y = y0 - amp * env * Math.abs(Math.sin((x / W) * 6.28 * freq + phase)) - 3 * Math.sin(x / 23 + i);
+        d += `${x ? "L" : "M"}${x} ${y.toFixed(1)}`;
+        if (i === 2 && (!peak || y < peak[1])) peak = [x, y];
+      }
+      const main = i === 2;
+      paths += `<path d="${d}" fill="none" stroke="${main ? "var(--c)" : "var(--soft)"}" stroke-width="${main ? 2.2 : 1}" stroke-opacity="${main ? 1 : (0.14 + r() * 0.22).toFixed(2)}"/>`;
+    }
+    return `<svg class="art" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect width="${W}" height="${H}" fill="var(--panel-2)"/>
+      <rect x="${(cx - spread).toFixed(0)}" width="${(spread * 2).toFixed(0)}" height="${H}" fill="var(--c)" opacity=".07"/>
+      ${paths}
+      <circle cx="${peak[0]}" cy="${peak[1].toFixed(1)}" r="5" fill="var(--c)"/><circle cx="${peak[0]}" cy="${peak[1].toFixed(1)}" r="12" fill="var(--c)" opacity=".18"/>
+    </svg>`;
+  }
+  const imgOk = (u) => /^https:\/\//i.test(u || "");
+  function media(s, cls) {
+    return `<div class="media ${cls}" style="--c:${color(s.category)}">${art(s)}${imgOk(s.image)
+      ? `<img src="${esc(s.image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}</div>`;
+  }
+  // a picture that fails to load is removed, revealing the generated art beneath it
+  document.addEventListener("error", (e) => { const t = e.target; if (t.tagName === "IMG" && t.parentElement && t.parentElement.classList.contains("media")) t.remove(); }, true);
+  document.addEventListener("load", (e) => { const t = e.target; if (t.tagName === "IMG" && t.naturalWidth > 0 && t.naturalWidth < 120) t.remove(); }, true);
+
   const who = (s) => s.lab || (s.sources && s.sources[0] && s.sources[0].publisher) || host(s.url);
 
   let data = { stories: [], labs: [], voices: [] };
@@ -132,6 +172,7 @@
       return;
     }
     $("lead").innerHTML = `
+      <a class="lead-media" href="${safeUrl(s.url)}" rel="noopener" tabindex="-1" aria-hidden="true">${media(s, "wide")}</a>
       <span class="tag" style="--c:${color(s.category)}">Top story, ${esc(CAT_NAME[s.category] || s.category)}</span>
       <h2 style="--c:${color(s.category)}"><a href="${safeUrl(s.url)}" rel="noopener">${esc(s.headline)}</a></h2>
       <p class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}</p>
@@ -151,6 +192,7 @@
       ? list.map((s) => `<li><a href="${safeUrl(s.url)}" rel="noopener" style="--c:${color(s.category)}">
           <span class="bar" aria-hidden="true"></span>
           <span class="h">${esc(s.headline)}</span>
+          ${media(s, "thumb")}
           <span class="meta">${esc(CAT_NAME[s.category] || s.category)}, ${esc(who(s))}, ${esc(ago(s.published_at))}</span></a></li>`).join("")
       : `<li class="empty">${filtering ? "No stories match yet. Try another topic or search." : "Stories appear here after each run."}</li>`;
   }
@@ -189,6 +231,7 @@
   function cards(el, list, empty) {
     el.innerHTML = list.length
       ? list.map((s) => `<a class="card" href="${safeUrl(s.url)}" rel="noopener" style="--c:${color(s.category)}">
+          ${media(s, "card-media")}
           <span class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}</span>
           <h3>${esc(s.headline)}</h3><p>${esc(s.why_it_matters || s.summary)}</p></a>`).join("")
       : `<p class="empty">${esc(empty)}</p>`;

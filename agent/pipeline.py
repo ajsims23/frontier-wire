@@ -10,7 +10,7 @@ from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
 from .sources import Fetcher, Gdelt, Item, gather
 from .store import Store
-from .text import canonical_url, domain, extract_text, quote_in_text, similar, stable_id
+from .text import canonical_url, domain, extract_image, extract_text, quote_in_text, similar, stable_id
 
 ROLE_RANK = {"lab": 0, "paper": 1, "voice": 2, "news": 3}
 STOP = set("""a an and are as at be by for from has have how in into is it its new of on or our that the their
@@ -55,6 +55,7 @@ class Newsroom:
             "providers": llm.configured, "sources": {}, "dropped": [], "written": [], "notes": [],
         }
         self._page_cache: dict[str, str] = {}
+        self._images: dict[str, str | None] = {}
         self._texts: dict[str, str] = {}
 
     # ------------------------------------------------------------ 1. gather
@@ -206,7 +207,9 @@ class Newsroom:
             return self._texts[url]
         if url not in self._page_cache:
             try:
-                self._page_cache[url] = extract_text(self.fetcher.get(url))
+                html = self.fetcher.get(url)
+                self._page_cache[url] = extract_text(html)
+                self._images[url] = extract_image(html, url)
             except Exception:  # noqa: BLE001
                 self._page_cache[url] = fallback
         return self._page_cache[url]
@@ -250,6 +253,7 @@ class Newsroom:
             "quotes": quotes,
             "score": score,
             "url": lead.url,
+            "image": next((self._images[s["url"]] for s in sources[:3] if self._images.get(s["url"])), None),
             "sources": sources,
             "published_at": min(pub, self.now).isoformat(),
             "created_at": self.now.isoformat(),
@@ -265,6 +269,23 @@ class Newsroom:
             return
         self.store.labs[story["lab"]] = {"model": model[:80], "type": story.get("model_type") or "Other",
                                          "date": story["published_at"], "story_id": story["id"], "url": story["url"]}
+
+    def add_missing_images(self, limit: int = 12) -> None:
+        """Look up preview images for recent stories that don't have one yet (no AI calls)."""
+        cutoff = (self.now - timedelta(days=self.cfg.run["front_page_days"])).isoformat()
+        todo = [s for s in self.store.stories if "image" not in s and s["published_at"] >= cutoff][:limit]
+        for story in todo:
+            image = None
+            for src in story.get("sources", [])[:2]:
+                if src["url"] not in self._images:
+                    try:
+                        self._images[src["url"]] = extract_image(self.fetcher.get(src["url"]), src["url"])
+                    except Exception:  # noqa: BLE001
+                        self._images[src["url"]] = None
+                image = self._images[src["url"]]
+                if image:
+                    break
+            story["image"] = image  # None means "looked, none found" so we don't retry every run
 
     def build_site(self) -> dict[str, Any]:
         cutoff = self.now - timedelta(days=self.cfg.run["front_page_days"])
@@ -336,6 +357,7 @@ class Newsroom:
         self.report["ai_requests_today"] = self.llm.limits.day["requests"]
         self.report["provider_log"] = self.llm.log[-20:]
         self.llm.limits.save()
+        self.add_missing_images()
         self.store.save(self.now, self.build_site(), self.report)
         return self.report
 
