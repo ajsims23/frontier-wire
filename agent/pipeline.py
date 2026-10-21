@@ -257,12 +257,13 @@ class Newsroom:
 
     # ------------------------------------------------------------ 6. curate
     def update_labs(self, story: dict[str, Any]) -> None:
-        if story["category"] != "models" or not story.get("lab") or not story.get("model_name"):
+        if story["category"] != "models" or not story.get("lab"):
             return
+        model = story.get("model_name") or story["headline"]  # fall back to the headline if the writer left it blank
         cur = self.store.labs.get(story["lab"])
         if cur and cur["date"] > story["published_at"]:
             return
-        self.store.labs[story["lab"]] = {"model": story["model_name"], "type": story.get("model_type") or "Other",
+        self.store.labs[story["lab"]] = {"model": model[:80], "type": story.get("model_type") or "Other",
                                          "date": story["published_at"], "story_id": story["id"], "url": story["url"]}
 
     def build_site(self) -> dict[str, Any]:

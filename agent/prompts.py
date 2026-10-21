@@ -75,7 +75,8 @@ Rules:
 - headline: plain and specific, max 90 characters, sentence case.
 - summary: at most two sentences: what happened, who, key number or detail.
 - why_it_matters: one sentence on the significance for people following AI.
-- quotes: up to two, only if a named person's words appear in a source. Copy the words EXACTLY as
+- quotes: up to two, each at most 40 words, only if a named person's words appear in a source.
+  Pick the most telling sentence rather than a whole paragraph. Copy the words EXACTLY as
   they appear in that source, character for character, and give that source's URL. For a person's
   own post, their words may be quoted with them as speaker. If nobody is quoted, return [].
   Never paraphrase inside a quote.

@@ -1,17 +1,18 @@
-// Frontier Wire front page: renders data/site.json (written by the newsroom agent).
+// Frontier Wire front page — renders data/site.json written by the newsroom agent.
 (function () {
   "use strict";
 
-  const CATS = [
-    { id: "all", label: "All" },
-    { id: "models", label: "Model releases" },
-    { id: "research", label: "Research" },
-    { id: "policy", label: "Policy & safety", match: ["policy", "safety"] },
-    { id: "industry", label: "Industry" },
-    { id: "voices", label: "Commentary" },
+  const LANES = [
+    { id: "models", label: "Models", cats: ["models"] },
+    { id: "research", label: "Research", cats: ["research"] },
+    { id: "policy", label: "Policy & safety", cats: ["policy", "safety"] },
+    { id: "industry", label: "Industry", cats: ["industry"] },
+    { id: "voices", label: "Voices", cats: ["voices"] },
   ];
-  const CAT_LABEL = { models: "Model release", research: "Research", policy: "Policy", safety: "Safety", industry: "Industry", voices: "Commentary" };
-  const WARM_TYPES = new Set(["Multimodal", "Vision-language", "Image", "Video"]);
+  const CAT_NAME = { models: "Model release", research: "Research", policy: "Policy", safety: "Safety", industry: "Industry", voices: "Commentary" };
+  const color = (cat) => `var(--${CAT_NAME[cat] ? cat : "models"})`;
+  const laneOf = (cat) => LANES.findIndex((l) => l.cats.includes(cat));
+  const DAY = 86400000;
 
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -19,116 +20,216 @@
   const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; } };
 
   function ago(iso) {
-    const d = new Date(iso);
-    const mins = Math.round((Date.now() - d.getTime()) / 60000);
-    if (isNaN(mins)) return "";
-    if (mins < 60) return `${Math.max(mins, 1)}m ago`;
-    if (mins < 60 * 24) return `${Math.round(mins / 60)}h ago`;
-    return d.toLocaleDateString(undefined, { day: "numeric", month: "short" });
+    const t = new Date(iso).getTime();
+    if (isNaN(t)) return "";
+    const m = Math.round((Date.now() - t) / 60000);
+    if (m < 60) return `${Math.max(m, 1)} min ago`;
+    if (m < 1440) return `${Math.round(m / 60)}h ago`;
+    const d = Math.round(m / 1440);
+    return d < 7 ? `${d} day${d > 1 ? "s" : ""} ago` : new Date(iso).toLocaleDateString(undefined, { day: "numeric", month: "short" });
   }
-  const shortDate = (iso) => (iso ? new Date(iso).toLocaleDateString(undefined, { day: "numeric", month: "short" }) : "—");
+  const clip = (t, n) => { t = String(t || ""); if (t.length <= n) return t; return t.slice(0, n).replace(/\s+\S*$/, "") + "…"; };
+  const who = (s) => s.lab || (s.sources && s.sources[0] && s.sources[0].publisher) || host(s.url);
 
-  function sourcesLine(s) {
-    const links = (s.sources || []).slice(0, 4).map((x) => `<a href="${safeUrl(x.url)}" rel="noopener">${esc(x.publisher || host(x.url))}</a>`);
-    return links.length ? `<p class="sources">Sources: ${links.join(" · ")}</p>` : "";
-  }
+  let data = { stories: [], labs: [], voices: [] };
+  let lane = null;
+  let query = "";
 
-  function renderLead(s) {
-    if (!s) {
-      $("lead").innerHTML = `<div class="lead-art">${art()}<span class="mono">FIRST RUN PENDING</span></div>
-        <h1>The newsroom is warming up</h1>
-        <p class="summary">Stories appear here after the agent's first run. It runs every three hours.</p>`;
-      return;
+  const matches = (s) => {
+    if (lane && !LANES.find((l) => l.id === lane).cats.includes(s.category)) return false;
+    if (!query) return true;
+    const hay = `${s.headline} ${s.summary} ${s.lab} ${s.model_name} ${(s.tags || []).join(" ")}`.toLowerCase();
+    return query.split(/\s+/).every((w) => hay.includes(w));
+  };
+
+  // ---------------------------------------------------------------- signal chart
+  function renderSignal() {
+    const stories = data.stories || [];
+    const now = Date.now();
+    // Window adapts to the data: at least 24 hours, at most 7 days.
+    const oldest = Math.min(now, ...stories.map((s) => new Date(s.published_at).getTime()).filter((t) => !isNaN(t) && t > now - 7 * DAY));
+    const span = Math.min(7 * DAY, Math.max(DAY, now - oldest));
+    const hours = span <= DAY ? 24 : span <= 2 * DAY ? 48 : span <= 3 * DAY ? 72 : 168;
+    const start = now - hours * 3600000;
+
+    $("lanes").innerHTML = LANES.map((l) => {
+      const n = stories.filter((s) => l.cats.includes(s.category) && new Date(s.published_at).getTime() >= start).length;
+      return `<button class="lane" type="button" data-lane="${l.id}" aria-pressed="false" style="--c: var(--${l.id})">
+        <span class="sw" aria-hidden="true"></span><span>${esc(l.label)}</span><span class="n" aria-label="${n} stories">${n}</span></button>`;
+    }).join("");
+
+    const ticks = [];
+    const n = hours === 168 ? 7 : 6;
+    for (let i = 0; i < n; i++) {
+      const d = new Date(start + (i * (now - start)) / n);
+      const label = hours === 168
+        ? d.toLocaleDateString(undefined, { weekday: "short", day: "numeric" })
+        : d.toLocaleString(undefined, { weekday: hours > 24 ? "short" : undefined, hour: "numeric" });
+      ticks.push(`<div><span>${esc(label)}</span></div>`);
     }
-    $("lead").innerHTML = `
-      <div class="lead-art">${art()}<span class="mono">TOP STORY</span></div>
-      <div class="meta"><span class="cat">${esc(CAT_LABEL[s.category] || s.category)}</span><span>${esc(s.lab || host(s.url))} · ${esc(ago(s.published_at))}</span></div>
-      <h1><a href="${safeUrl(s.url)}" rel="noopener">${esc(s.headline)}</a></h1>
-      <p class="summary">${esc(s.summary)}</p>
-      <p class="why"><b>Why it matters:</b> ${esc(s.why_it_matters)}</p>
-      ${sourcesLine(s)}`;
-  }
+    $("days").style.gridTemplateColumns = `repeat(${n}, 1fr)`;
+    $("days").innerHTML = ticks.join("");
+    $("window").textContent = hours === 168 ? "the past 7 days" : `the past ${hours} hours`;
 
-  function art() {
-    return `<svg aria-hidden="true" viewBox="0 0 800 350" preserveAspectRatio="xMidYMid slice" fill="none">
-      <path d="M0 70H800M0 140H800M0 210H800M0 280H800M160 0V350M320 0V350M480 0V350M640 0V350" stroke="#2a2f3a"/>
-      <path d="M40 300 L180 230 L300 255 L420 160 L540 185 L660 90 L760 60" stroke="#5b7bff" stroke-width="3"/></svg>`;
-  }
+    const placed = LANES.map(() => []);
 
-  function renderFeed(stories, cat, leadId) {
-    const def = CATS.find((c) => c.id === cat) || CATS[0];
-    const list = stories.filter((s) => s.id !== leadId && (cat === "all" || (def.match || [def.id]).includes(s.category))).slice(0, 10);
-    $("feed").innerHTML = list.length
-      ? list.map((s) => `<li><a href="${safeUrl(s.url)}" rel="noopener">
-          <span class="mono muted">${esc((CAT_LABEL[s.category] || s.category).toUpperCase())} · ${esc(ago(s.published_at))}</span>
-          <span class="h">${esc(s.headline)}</span>
-          <span class="pub">${esc(s.lab || (s.sources && s.sources[0] && s.sources[0].publisher) || host(s.url))}</span></a></li>`).join("")
-      : `<li class="empty">Nothing in this topic yet.</li>`;
-  }
+    $("dots").innerHTML = stories.map((s) => {
+      const t = new Date(s.published_at).getTime();
+      const li = laneOf(s.category);
+      if (isNaN(t) || t < start || li < 0) return "";
+      const x = Math.min(1, Math.max(0, (t - start) / (now - start))) * 100;
+      const size = 8 + Math.max(0, (s.score || 6) - 5) * 3;
+      // nudge points that would overlap within the lane
+      const base = li * 52 + 26;
+      let y = base;
+      for (const off of [0, -13, 13, -21, 21, -6, 6]) {
+        if (!placed[li].some((p) => Math.abs(p.x - x) < 2.2 && Math.abs(p.y - (base + off)) < 12)) { y = base + off; break; }
+      }
+      placed[li].push({ x, y });
+      return `<a class="dot" href="${safeUrl(s.url)}" rel="noopener" tabindex="-1" data-id="${esc(s.id)}"
+        style="left:${x.toFixed(2)}%;top:${y}px;--s:${size}px;--c:${color(s.category)};--d:${Math.round(x * 9)}ms"></a>`;
+    }).join("");
 
-  function renderLabs(labs) {
-    $("labs-body").innerHTML = (labs || []).map((l) => l.model
-      ? `<tr><td class="lab">${esc(l.lab)}</td><td>${l.url ? `<a href="${safeUrl(l.url)}" rel="noopener">${esc(l.model)}</a>` : esc(l.model)}</td>
-          <td><span class="pill${WARM_TYPES.has(l.type) ? " warm" : ""}">${esc(l.type || "Other")}</span></td><td class="date">${esc(shortDate(l.date))}</td></tr>`
-      : `<tr><td class="lab">${esc(l.lab)}</td><td class="none" colspan="3">No release tracked yet</td></tr>`).join("");
-  }
+    const tip = $("tip");
+    const plot = $("plot");
+    $("dots").addEventListener("mouseover", (e) => {
+      const dot = e.target.closest(".dot");
+      if (!dot) return;
+      const s = stories.find((x) => x.id === dot.dataset.id);
+      if (!s) return;
+      tip.innerHTML = `<b>${esc(s.headline)}</b><span>${esc(who(s))}, ${esc(ago(s.published_at))}</span>`;
+      tip.hidden = false;
+      const pr = plot.getBoundingClientRect();
+      const dr = dot.getBoundingClientRect();
+      const left = Math.min(Math.max(8, dr.left - pr.left - 40), pr.width - tip.offsetWidth - 8);
+      const below = dr.top - pr.top < pr.height / 2;
+      tip.style.left = `${left}px`;
+      tip.style.top = below ? `${dr.bottom - pr.top + 10}px` : `${dr.top - pr.top - tip.offsetHeight - 10}px`;
+    });
+    $("dots").addEventListener("mouseout", (e) => { if (e.target.closest(".dot")) tip.hidden = true; });
 
-  function renderCards(el, stories, emptyText) {
-    el.innerHTML = stories.length
-      ? stories.map((s) => `<a class="card" href="${safeUrl(s.url)}" rel="noopener">
-          <span class="mono muted">${esc(((s.lab || host(s.url)) + " · " + shortDate(s.published_at)).toUpperCase())}</span>
-          <h3>${esc(s.headline)}</h3><p>${esc(s.why_it_matters || s.summary)}</p></a>`).join("")
-      : `<p class="empty">${esc(emptyText)}</p>`;
-  }
-
-  function renderVoices(voices, stories) {
-    if (voices.length) {
-      $("voices-cards").innerHTML = voices.map((q) => `<figure class="quote">
-          <blockquote>“${esc(q.text)}”</blockquote>
-          <figcaption><b>${esc(q.speaker)}</b>${esc(q.speaker_role || "")}${q.speaker_role ? " · " : ""}<a href="${safeUrl(q.source_url)}" rel="noopener">source</a></figcaption>
-        </figure>`).join("");
-      return;
-    }
-    const commentary = stories.filter((s) => s.category === "voices").slice(0, 6);
-    renderCards($("voices-cards"), commentary, "Commentary from leading people will appear here.");
-  }
-
-  function renderPolicy(stories) {
-    const list = stories.filter((s) => s.category === "policy" || s.category === "safety").slice(0, 6);
-    $("policy-list").innerHTML = list.length
-      ? list.map((s) => `<a href="${safeUrl(s.url)}" rel="noopener">
-          <span class="mono muted">${esc((CAT_LABEL[s.category] + " · " + shortDate(s.published_at)).toUpperCase())}</span>
-          <span class="h">${esc(s.headline)}</span></a>`).join("")
-      : `<p class="empty">Policy and safety stories will appear here.</p>`;
-  }
-
-  function renderChips(onPick) {
-    $("chips").innerHTML = CATS.map((c, i) => `<button class="chip" type="button" data-cat="${c.id}" aria-pressed="${i === 0}">${esc(c.label)}</button>`).join("");
-    $("chips").addEventListener("click", (e) => {
-      const b = e.target.closest(".chip");
+    $("lanes").addEventListener("click", (e) => {
+      const b = e.target.closest(".lane");
       if (!b) return;
-      document.querySelectorAll(".chip").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
-      onPick(b.dataset.cat);
+      lane = lane === b.dataset.lane ? null : b.dataset.lane;
+      apply();
     });
   }
 
-  function render(data) {
-    const stories = data.stories || [];
-    const leadId = data.lead && data.lead.id;
-    const updated = data.updated_at ? new Date(data.updated_at) : null;
-    $("updated").textContent = updated
-      ? `LIVE · Updated ${ago(data.updated_at)} (${updated.toLocaleString(undefined, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })})`
-      : "LIVE";
-    const st = data.stats || {};
-    $("stats").textContent = `Tracking ${st.labs_tracked || 0} labs · ${st.model_releases_this_month || 0} model releases this month`;
-    renderLead(data.lead);
-    renderChips((cat) => renderFeed(stories, cat, leadId));
-    renderFeed(stories, "all", leadId);
-    renderLabs(data.labs);
-    renderCards($("research-cards"), stories.filter((s) => s.category === "research").slice(0, 6), "Research stories will appear here.");
-    renderVoices(data.voices || [], stories);
-    renderPolicy(stories);
+  // ---------------------------------------------------------------- stories
+  function srcChips(s) {
+    const items = (s.sources || []).slice(0, 5);
+    return items.length ? `<div class="srcs" aria-label="Sources">${items.map((x) =>
+      `<a href="${safeUrl(x.url)}" rel="noopener">${esc(x.publisher || host(x.url))}</a>`).join("")}</div>` : "";
   }
+
+  function renderLead() {
+    const s = data.lead;
+    if (!s) {
+      $("lead").innerHTML = `<span class="tag" style="--c: var(--research)">Warming up</span>
+        <h2>The first stories arrive after the newsroom's first run</h2>
+        <p class="sum">The agent runs every three hours. Check back shortly.</p>`;
+      return;
+    }
+    $("lead").innerHTML = `
+      <span class="tag" style="--c:${color(s.category)}">Top story, ${esc(CAT_NAME[s.category] || s.category)}</span>
+      <h2 style="--c:${color(s.category)}"><a href="${safeUrl(s.url)}" rel="noopener">${esc(s.headline)}</a></h2>
+      <p class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}</p>
+      <p class="sum">${esc(s.summary)}</p>
+      ${s.why_it_matters ? `<p class="why"><strong>Why it matters.</strong> ${esc(s.why_it_matters)}</p>` : ""}
+      ${srcChips(s)}`;
+  }
+
+  function renderFeed() {
+    const leadId = data.lead && data.lead.id;
+    const filtering = !!(lane || query);
+    const list = (data.stories || []).filter((s) => matches(s) && (filtering || s.id !== leadId)).slice(0, filtering ? 30 : 9);
+    const laneLabel = lane && LANES.find((l) => l.id === lane).label;
+    $("feed-title").textContent = query ? `Results for “${query}”${laneLabel ? ` in ${laneLabel}` : ""}` : laneLabel || "Latest";
+    $("clear").hidden = !filtering;
+    $("feed").innerHTML = list.length
+      ? list.map((s) => `<li><a href="${safeUrl(s.url)}" rel="noopener" style="--c:${color(s.category)}">
+          <span class="bar" aria-hidden="true"></span>
+          <span class="h">${esc(s.headline)}</span>
+          <span class="meta">${esc(CAT_NAME[s.category] || s.category)}, ${esc(who(s))}, ${esc(ago(s.published_at))}</span></a></li>`).join("")
+      : `<li class="empty">${filtering ? "No stories match yet. Try another topic or search." : "Stories appear here after each run."}</li>`;
+  }
+
+  function apply() {
+    document.querySelectorAll(".lane").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lane === lane)));
+    $("signal").classList.toggle("filtered", !!(lane || query));
+    const ids = new Set((data.stories || []).filter(matches).map((s) => s.id));
+    document.querySelectorAll(".dot").forEach((d) => d.classList.toggle("off", !ids.has(d.dataset.id)));
+    renderFeed();
+  }
+
+  // ---------------------------------------------------------------- labs
+  function renderBoard() {
+    const now = Date.now();
+    const tracked = (data.labs || []).filter((l) => l.model);
+    const waiting = (data.labs || []).filter((l) => !l.model).map((l) => l.lab);
+    const rows = tracked.map((l) => {
+      const days = Math.max(0, Math.floor((now - new Date(l.date).getTime()) / DAY));
+      const when = days === 0 ? "Today" : days === 1 ? "Yesterday" : `${days} days ago`;
+      const fill = Math.max(6, 100 - (days / 30) * 100);
+      return `<div class="row" role="row">
+        <span class="lab" role="cell">${esc(l.lab)}</span>
+        <span class="model" role="cell">${l.url ? `<a href="${safeUrl(l.url)}" rel="noopener">${esc(l.model)}</a>` : esc(l.model)}</span>
+        <span class="type" role="cell">${esc(l.type || "Model")}</span>
+        <span class="fresh" role="cell"><span class="track" aria-hidden="true"><span class="fill" style="width:${fill.toFixed(0)}%"></span></span><span>${esc(when)}</span></span>
+      </div>`;
+    });
+    $("board").innerHTML = `<div class="row headr" role="row"><span role="columnheader">Lab</span><span role="columnheader">Latest release</span>
+      <span role="columnheader">Type</span><span role="columnheader">Shipped</span></div>` + rows.join("")
+      + (rows.length ? "" : `<div class="row none" role="row"><span role="cell">The first releases appear here after the next runs.</span></div>`);
+    $("waiting").textContent = waiting.length ? `Watching for releases from ${waiting.join(", ")}.` : "";
+  }
+
+  // ---------------------------------------------------------------- sections
+  function cards(el, list, empty) {
+    el.innerHTML = list.length
+      ? list.map((s) => `<a class="card" href="${safeUrl(s.url)}" rel="noopener" style="--c:${color(s.category)}">
+          <span class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}</span>
+          <h3>${esc(s.headline)}</h3><p>${esc(s.why_it_matters || s.summary)}</p></a>`).join("")
+      : `<p class="empty">${esc(empty)}</p>`;
+  }
+
+  function renderVoices() {
+    const q = data.voices || [];
+    if (q.length) {
+      $("quotes").innerHTML = q.map((v) => `<figure class="quote">
+        <blockquote>“${esc(clip(v.text, 230))}”</blockquote>
+        <figcaption><strong>${esc(v.speaker)}</strong>${v.speaker_role ? `, ${esc(v.speaker_role)}` : ""}. <a href="${safeUrl(v.source_url)}" rel="noopener">Read the source</a></figcaption>
+      </figure>`).join("");
+    } else {
+      cards($("quotes"), (data.stories || []).filter((s) => s.category === "voices").slice(0, 4), "Commentary from leading people appears here.");
+    }
+  }
+
+  function render(d) {
+    data = d || data;
+    const st = data.stats || {};
+    $("updated").textContent = data.updated_at
+      ? `Updated ${ago(data.updated_at)}. ${st.stories_this_month || 0} stories and ${st.model_releases_this_month || 0} model releases this month.`
+      : "Waiting for the first run";
+    renderSignal();
+    renderLead();
+    renderFeed();
+    renderBoard();
+    const s = data.stories || [];
+    cards($("research-list"), s.filter((x) => x.category === "research").slice(0, 6), "Research stories appear here.");
+    cards($("policy-list"), s.filter((x) => x.category === "policy" || x.category === "safety").slice(0, 6), "Policy and safety stories appear here.");
+    renderVoices();
+  }
+
+  // search: type to filter; "/" focuses, Esc clears
+  const q = $("q");
+  q.addEventListener("input", () => { query = q.value.trim().toLowerCase(); apply(); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "/" && document.activeElement !== q && !/input|textarea/i.test(document.activeElement.tagName)) { e.preventDefault(); q.focus(); }
+    if (e.key === "Escape" && document.activeElement === q) { q.value = ""; query = ""; apply(); q.blur(); }
+  });
+  $("clear").addEventListener("click", () => { lane = null; query = ""; q.value = ""; apply(); });
 
   $("year").textContent = new Date().getFullYear();
   fetch("data/site.json", { cache: "no-store" })
