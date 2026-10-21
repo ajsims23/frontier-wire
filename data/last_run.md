@@ -1,63 +1,80 @@
-## Frontier Wire newsroom run — 2026-10-21T17:16:05+00:00
+## Frontier Wire newsroom run — 2026-10-21T20:39:38+00:00
 
-Fetched 2629 items · fresh 137 · judged 60 · kept 15 · **written 8**
-AI: 9 requests, 24,488 tokens this run · 9 requests today · providers: cerebras
+Fetched 2647 items · fresh 90 · judged 60 · kept 14 · **written 3**
+AI: 6 requests, 19,569 tokens this run · 16 requests today · providers: cerebras
 
 ### New stories
-- **industry** — [OpenAI models and Codex workflows added to Google Cloud Marketplace](https://openai.com/index/openai-models-google-cloud)  
-  OpenAI announced that its frontier models and Codex workflows will be available on Google Cloud’s Gemini Model Garden via the Cloud Marketplace. The integration lets users access these models through Google Cloud services.  
+- **research** — [Sage-A1.5 agentic model introduced for long-horizon execution and scientific discovery](https://arxiv.org/abs/2610.28578)  
+  Researchers released Sage-A1.5, a 35‑billion parameter Mixture‑of‑Experts agentic model. The model adds agentic orchestration, verification, and open scientific discovery to improve long‑horizon problem solving.  
   _1 source(s), 0 verified quote(s)_
-- **research** — [OpenAI, PerturbAI and Scripps use AI agents to find leads in brain cell data](https://openai.com/index/scaling-ai-research-for-complex-biological-data)  
-  OpenAI, PerturbAI and Scripps Research deployed thousands of distributed AI agents to analyze data from millions of brain cells. The agents identified promising research leads in the complex biological dataset.  
-  _1 source(s), 0 verified quote(s)_
-- **industry** — [Google Cloud and NVIDIA launch general availability of Vera Rubin A5X instances](https://blogs.nvidia.com/blog/google-cloud-vera-rubin-infrastructure)  
-  Google Cloud and NVIDIA announced the general availability of A5X instances built on NVIDIA Vera Rubin NVL72 GPUs, with plans to expand to Europe and scale up to 960,000 Rubin GPUs. Ineffable Intelligence, founded by AlphaGo creator David Silver, is the first customer using the platform for large‑scale reinforcement learning.  
-  _1 source(s), 1 verified quote(s)_
-- **models** — [NVIDIA launches open Nemotron 3.5 and Kumo models for European industries](https://blogs.nvidia.com/blog/open-models-europe-industry)  
-  NVIDIA announced new open-weight models—including Nemotron 3.5 Super VL, Nemotron 3.5 Bolt, Nemotron Retriever, Kumo Structured and Engine, Cosmos 3.5, Alpamayo 2 Edge, BioNeMo, and Ising—to let developers and enterprises in Europe customize AI with local data. Partners such as Black Forest Labs, H-Company and Mistral and customers like Dassault Systèmes, Salesforce and Accenture are already working with the models.  
-  _1 source(s), 0 verified quote(s)_
-- **models** — [Mistral AI opens preview of Mistral Large 4, a 1‑trillion‑parameter multimodal model](https://mistral.ai/news/mistral-large-4)  
-  Mistral AI released a public preview of Mistral Large 4, a 1‑trillion‑parameter multimodal model with 52 billion active parameters. The company plans to release the model weights by the end of October and is testing it with cybersecurity partners and state authorities.  
-  _1 source(s), 0 verified quote(s)_
-- **models** — [Mistral AI releases Voxtral 3 voice agent SDK with multilingual speech models](https://mistral.ai/news/voxtral-3)  
-  Mistral AI announced the Voxtral 3 family of speech-to-text and text-to-speech models along with a voice agent SDK for real‑time, multi‑step conversations in over 50 languages. The models and SDK are available through Mistral’s EU‑hosted API or for self‑deployment, offering data sovereignty and low‑latency interactions for contact‑center agents and virtual assistants.  
-  _1 source(s), 0 verified quote(s)_
-- **research** — [Anthropic’s Claude designs 17 protein binders against scorpion neurotoxins](https://anthropic.com/research/claude-scorpion-toxin-binder-design)  
-  Anthropic used its Claude model to generate 211 protein minibinder designs targeting four scorpion neurotoxins. Experimental testing by Adaptyv Bio and Twist Bioscience identified 17 binders that met the criteria.  
-  _1 source(s), 0 verified quote(s)_
-- **safety** — [OpenAI launches Patch the Planet to coordinate response to critical open‑source bugs](https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities)  
-  Patch the Planet links security researchers, maintainers and incident responders to address critical vulnerabilities in open‑source software.  
+- **industry** — [OpenAI acquires AI biotech startup Orchestra Bio](https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business)  
+  OpenAI announced it has acquired Orchestra Bio, a four‑year‑old AI biotech software startup. The terms were not disclosed; Orchestra had raised about $20 million and builds AI agents for drug‑discovery operations.  
+  _2 source(s), 0 verified quote(s)_
+- **policy** — [OpenAI releases blueprint to empower cyber defenders with frontier AI](https://openai.com/index/empowering-cyber-defenders)  
+  OpenAI published a plan detailing how frontier AI can be used to strengthen cyber defense, improve safeguards, modernize cybersecurity, and make public institutions more resilient.  
   _1 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- ChatGPT Ads expands to 26 new countries as over 100,000 advertisers have used the platform — score 3: Expansion of ChatGPT Ads to more countries is a marketing rollout, not frontier news.
-- How we built ChatGPT’s novel ad stack for user trust and relevance — score 4: Technical blog about ChatGPT ad stack; primarily internal engineering detail.
-- Franchisee reconciles cash in 94% less time with ChatGPT Work — score 3: Case study of a franchisee using ChatGPT Work; not broadly newsworthy.
-- Terminal X matches senior investor judgment 88.6% with GPT-6.1 — score 4: Marketing claim about GPT‑6.1 matching investor judgment; lacks independent significance.
-- Southeast Asia’s digital economy to hit $368 billion — score 2: Economic forecast report unrelated to AI frontier developments.
-- Profiling TorchNeuron (Part 1): System-level profiling on AWS Trainium. — score 4: Profiling TorchNeuron on AWS Trainium; technical profiling not a major advance.
-- Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster — score 5: Granite Speech 5.0 release is an incremental speech model improvement.
-- NVIDIA Kumo Forecast Combines Pretrained Time-Series Representations with Historical Pattern Retrieval and Interpretability — score 5: NVIDIA Kumo Forecast combines pretrained representations; incremental research.
-- FairStress: A deeper evaluation of fairness in LLM decision-making — score 5: FairStress benchmark evaluates fairness; useful but not frontier news.
-- ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model — score 5: ALTK‑Evolve benchmark result without a new frontier model.
-- Bringing the Spark to Europe: Local Intelligence Powers Next Wave of Agents — score 5: Showcase of local AI hardware; promotional content.
-- Europe’s Industrial Leaders Reinvent Engineering and Manufacturing With NVIDIA — score 4: Marketing of industrial leaders using NVIDIA tools; not a breakthrough.
-- NVIDIA cuDSS Now Generally Available to Accelerate Engineering and Scientific Simulations — score 5: General availability of cuDSS library; incremental tooling.
-- GTC Berlin 2026: Live Updates From NVIDIA CEO Jensen Huang’s Keynote — score 5: Live updates from GTC keynote without specific new announcements.
-- European Leaders Turn to NVIDIA Vera CPUs to Build Local Infrastructure — score 5: Report on European leaders adopting NVIDIA Vera CPUs; promotional.
-- Announcements — score 2: Empty Anthropic Announcements page; no substantive content.
-- Features — score 2: Empty Anthropic Features page; no substantive content.
-- Learn More — score 2: Empty Meta AI Learn More page; no news.
-- Company Hallo, Deutschland! Mistral Opens German Hub in Munich to Advance Industrial AI in Europe’s Largest Economy September 28, 2026 By Mistral — score 4: Opening of Mistral German hub is a regional business expansion.
-- Using Claude to reduce the attack surface of code — score 5: Blog post on using Claude to reduce code attack surface; interesting but not frontier news.
+- How AT&T is rethinking in-house legal work with OpenAI — score 5: AT&T legal workflow partnership with OpenAI is a corporate use case, not a frontier model or policy development.
+- NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required — score 5: Blog post touts Kumo relational performance; no new model or major advance, largely marketing of existing Kumo.
+- How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications — score 5: Technique to cut inference cost by specializing vocabularies; interesting but incremental.
+- NVIDIA Cloud Partners Scale Across Europe — Sovereign, Open and Built for Safe AI Agents — score 4: NVIDIA cloud partner announcement is a marketing piece without a new technical contribution.
+- NVIDIA Agent Toolkit Expands, Grounding Enterprise Agents in Company Data — score 5: Extension of NVIDIA Agent Toolkit is a product update, not a major frontier AI event.
+- Physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust — score 4: Physicist joining Anthropic's trust is a personnel move, not a major AI development.
+- Company Mistral Advances AI for Engineering with NVIDIA Mistral is collaborating with NVIDIA to develop a new generation of AI-native engineering workflows powered by NVIDIA accelerated computing.… — score 5: Mistral‑NVIDIA engineering workflow collaboration is notable but not a major model release or policy shift.
+- Cache Engineering for Agents — score 5: Cache engineering for agents addresses scaling costs; incremental technical paper.
+- The Token-Energy Law of LLM Decode: Active Bytes and Realized Time Account for Joules per Token — score 5: Token‑Energy Law provides an energy model for LLM decoding; interesting but not a major breakthrough.
+- Evolving Semantic Indexes for Generative Retrieval — score 5: Evolving semantic indexes for generative retrieval is a technical contribution without immediate frontier impact.
+- Continual Concept Personalization in Diffusion Models via Residual-Space Adaptation — score 5: Continual concept personalization in diffusion models is an incremental method paper.
+- The Dynamics of Collapse and Recovery in Clustered Federated Learning — score 5: Study of clustered federated learning dynamics is a niche theoretical work.
+- Asymmetric Bidirectional Predictive Dynamics in Google Search and COVID-19 Time Series: A Multi-Horizon Forecast-Error Analysis — score 3: Analysis of Google Search and COVID‑19 trends is not central to AI frontier developments.
+- OptScientist: Automated Discovery of Optimization Laws — score 5: OptScientist framework for discovering optimization laws is a novel idea but not yet a major result.
+- Convergence of stochastic gradient descent for learning linear neural networks — score 4: Convergence analysis for SGD in linear networks is a theoretical study with limited immediate impact.
+- Agentic Ensemble with Vision-Language Models for Visual Anomaly Detection — score 5: Agentic ensemble for visual anomaly detection is a technical contribution, not a frontier breakthrough.
+- When Do LLMs Help with Feature Selection? A Systematic Empirical Study — score 5: Systematic study of LLMs for feature selection is useful but incremental.
+- Learning Computational Structure for Sample-Efficient Prediction — score 5: Learning computational structure for sample‑efficient prediction is a theoretical contribution.
+- Discount Yourself: Self-inclusive Freshness-weighted Gossip for Decentralised Learning under Client Outages — score 5: Self‑inclusive freshness‑weighted gossip for decentralized learning is a niche algorithmic paper.
+- Binary Discrete Diffusion: Candidate-Set Diffusion for Logic and Planning Tasks — score 5: Binary discrete diffusion for logic/planning is an interesting method but not a major advance.
+- Mistral Large 4 — duplicate of 820bd24a41c4
+- Steam Users Beg for "No AI" Filter as Vibecoders Flood Next Fest — score 3: User demand for AI‑free filters on Steam is a niche community issue.
+- Show HN: VoidAccess – open-source dark web OSINT, from query to a graph — score 3: Open‑source dark web OSINT tool not directly related to frontier AI.
+- Publish fake stats, get cited in LLMs — score 4: Fake‑stats publishing for LLM citation is a curiosity, not a major development.
+- Google Cloud outage affects almost all banking and other operations in Europe — score 3: Google Cloud outage is a service incident, not AI‑specific news.
+- Anthropic logged net loss of over $80B in first half of 2026 — score 4: Anthropic's financial loss is business news, not a frontier AI event.
+- NixOS is making me less afraid — score 2: Personal blog post about NixOS, unrelated to AI.
+- Claude Duet — score 5: Claude Duet appears to be a minor feature release, not a major model or policy.
+- PHP 8.2.35 — score 2: PHP version release unrelated to AI.
+- C# now beats Rust on WASM size — score 2: C# WASM size comparison not AI‑focused.
+- The Other Epidemic: Trying to get off benzodiazepines — score 2: Health article unrelated to AI.
+- How I got over 300 Tor exit nodes removed — score 2: Tor exit node removal is unrelated to AI frontier.
+- AI promises productivity, but for managers, it’s mostly a headache for now — score 5: Survey on AI productivity headaches is informative but not a major news event.
+- Hugging Face CEO warns that Netflix’s OpenAI hack documentary isn’t accurate — score 4: Hugging Face CEO's comment on Netflix documentary is a media critique, not frontier AI news.
+- Anthropic’s cloud partnerships are getting messy — score 5: Anthropic's cloud partnership challenges are industry‑focused but not a major breakthrough.
+- SpaceX’s AI business is beating expectations — score 4: SpaceX AI business profitability is corporate performance, not a frontier AI development.
+- ChatGPT now lets you lock your chats — score 5: ChatGPT chat‑locking feature is a product update, not a major frontier AI story.
+- Today's PHP Security Release, and How We're Strengthening PHP Security — score 2: PHP security release commentary unrelated to AI frontier.
+- Panache — RTS Belle Époque pour mobile — score 2: Game release commentary not relevant to AI frontier.
+- eMudhra Intermediate CA Compromise — score 2: CA compromise news unrelated to AI.
+- Battle Drones - a vibe coded RTS with audio-based multiplayer — score 2: Game development commentary not AI‑focused.
+- Simon Willison: It's been less than 24 hours and there's already a French fork of Battle Drones that reimagines it as Belle Époque steampunk!… — score 2: Social post about game fork, not AI news.
+- Simon Willison: I built a Command & Conquer style RTS called Battle Drones, mainly using Claude Opus 5.5, which runs in the browser and includes… — score 3: Mention of Claude Opus 5.5 in game building is peripheral to AI frontier.
+- Ethan Mollick: Companies I talk to are struggling with the rate of patches they need to do thanks to AI defenses finding issues before the coming wave of… — score 5: Commentary on AI‑driven patch rates is interesting but not a major policy development.
+- Ethan Mollick: I wrote about the exponential curve of the last 30 months of AI development: www.oneusefulthing.org/p/30-months-... And I asked Opus 5.5… — score 4: Personal commentary on AI development curve, not a newsworthy event.
+- Ethan Mollick: My new book, Co-Existence, is out today. It is a guide to how to live and work in a world where AI is sometimes, but not always, better… — score 3: Announcement of a book, not a frontier AI development.
+- Recursive launches Flint, a laptop coding model it says was largely built by AI — could not verify with enough independent sources
+- While Amazon blocks AI agents, Walmart rolls out the welcome mat — could not verify with enough independent sources
+- Anthropic pitches AI safety bill that may block a model if 50+ people could be killed — could not verify with enough independent sources
 
 </details>
 
 ### Sources with problems
 - `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
-- `import-ai`: failed: HTTPStatusError: Client error '403 Forbidden' for url 'https://importai.substack.com/feed'
-For more information check: https://developer.
 
 ### Notes
-- 7 kept item(s) carried over to the next run
+- GDELT unavailable: GDELT paused for this run after repeated rate-limiting
+- stopped writing: every configured provider failed: cerebras/gpt-oss-120b: unusable answer; trying next model | cerebras/llama3.3-70b: model unavailable (404); trying next model | cerebras/qwen-3-235b-a22b-instruct-2507: model unavailable (404); trying next model
+- 8 kept item(s) carried over to the next run
+- cerebras/gpt-oss-120b: unusable answer; trying next model
+- cerebras/llama3.3-70b: model unavailable (404); trying next model
+- cerebras/qwen-3-235b-a22b-instruct-2507: model unavailable (404); trying next model
