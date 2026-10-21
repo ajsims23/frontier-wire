@@ -1,0 +1,45 @@
+name: Deploy website
+
+on:
+  push:
+    branches: [main]
+    paths: ["site/**", "data/site.json", "data/feed.xml"]
+  workflow_run:                 # after each newsroom run (auto mode publishes straight to main)
+    workflows: ["Newsroom agent"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site/data
+          cp -r site/* _site/
+          [ -f data/site.json ] && cp data/site.json _site/data/ || echo '{"stories":[],"labs":[],"stats":{}}' > _site/data/site.json
+          [ -f data/feed.xml ] && cp data/feed.xml _site/data/ || true
+          touch _site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

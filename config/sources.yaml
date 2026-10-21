@@ -1,0 +1,128 @@
+# Where the newsroom agent looks. All free; none of these need an API key. Edit freely.
+#
+# kind:
+#   rss        – an RSS/Atom feed
+#   arxiv      – arXiv API (papers)
+#   page       – a listing page with no feed; links matching `link_pattern` are articles
+#   gdelt      – GDELT global news search (query in settings.yaml)
+#   hn         – Hacker News stories above a points threshold
+#   hf_models  – new models published by labs on Hugging Face (feeds the lab tracker)
+#   hf_papers  – Hugging Face daily trending papers
+#   bluesky    – public posts from people's Bluesky accounts
+#
+# role:
+#   lab    – a lab's own channel (primary source for its own releases)
+#   paper  – research papers (primary source for the paper itself)
+#   news   – independent coverage (used to corroborate)
+#   voice  – a person's own words (primary source for their commentary)
+#
+# The run report lists any source that fails, so a wrong URL or handle is easy to spot.
+
+sources:
+  # ---- Frontier labs -------------------------------------------------------
+  - {id: openai, name: OpenAI, kind: rss, url: "https://openai.com/news/rss.xml", role: lab, lab: OpenAI}
+  - {id: deepmind, name: Google DeepMind, kind: rss, url: "https://deepmind.google/blog/rss.xml", role: lab, lab: Google DeepMind}
+  - {id: google-ai, name: Google AI blog, kind: rss, url: "https://blog.google/technology/ai/rss/", role: lab, lab: Google}
+  - {id: huggingface, name: Hugging Face blog, kind: rss, url: "https://huggingface.co/blog/feed.xml", role: lab, lab: Hugging Face}
+  - {id: nvidia, name: NVIDIA blog, kind: rss, url: "https://blogs.nvidia.com/feed/", role: lab, lab: NVIDIA}
+  - id: anthropic
+    name: Anthropic
+    kind: page
+    url: https://www.anthropic.com/news
+    link_pattern: "^https://www\\.anthropic\\.com/news/[a-z0-9-]+$"
+    role: lab
+    lab: Anthropic
+  - id: meta-ai
+    name: Meta AI
+    kind: page
+    url: https://ai.meta.com/blog/
+    link_pattern: "^https://ai\\.meta\\.com/blog/[a-z0-9-]+/?$"
+    role: lab
+    lab: Meta
+  - id: mistral
+    name: Mistral AI
+    kind: page
+    url: https://mistral.ai/news
+    link_pattern: "^https://mistral\\.ai/news/[a-z0-9-]+/?$"
+    role: lab
+    lab: Mistral AI
+
+  # New model uploads by lab (org on Hugging Face → lab name)
+  - id: hf-models
+    name: Hugging Face models
+    kind: hf_models
+    role: lab
+    per_org: 5
+    orgs:
+      meta-llama: Meta
+      mistralai: Mistral AI
+      deepseek-ai: DeepSeek
+      Qwen: Alibaba (Qwen)
+      google: Google DeepMind
+      microsoft: Microsoft
+      nvidia: NVIDIA
+      openai: OpenAI
+      xai-org: xAI
+      moonshotai: Moonshot AI
+      zai-org: Z.ai
+      allenai: Ai2
+
+  # ---- Research ------------------------------------------------------------
+  - {id: arxiv, name: "arXiv (cs.AI, cs.CL, cs.LG)", kind: arxiv, query: "cat:cs.AI OR cat:cs.CL OR cat:cs.LG", max_results: 40, role: paper}
+  - {id: hf-papers, name: Hugging Face daily papers, kind: hf_papers, min_upvotes: 15, role: paper}
+
+  # ---- News and what's trending -------------------------------------------
+  - {id: gdelt, name: GDELT news search, kind: gdelt, role: news}
+  - id: hn
+    name: Hacker News
+    kind: hn
+    role: news
+    min_points: 100
+    queries: [AI, LLM, OpenAI, Anthropic, DeepMind, Gemini, Claude, GPT, Llama, Mistral, DeepSeek]
+  - {id: techcrunch-ai, name: TechCrunch AI, kind: rss, url: "https://techcrunch.com/category/artificial-intelligence/feed/", role: news}
+  - {id: verge-ai, name: The Verge AI, kind: rss, url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", role: news}
+  - {id: mit-tr-ai, name: MIT Technology Review AI, kind: rss, url: "https://www.technologyreview.com/topic/artificial-intelligence/feed", role: news}
+  - {id: ars-ai, name: Ars Technica AI, kind: rss, url: "https://arstechnica.com/ai/feed/", role: news}
+
+  # ---- Voices --------------------------------------------------------------
+  - {id: import-ai, name: Import AI (Jack Clark), kind: rss, url: "https://importai.substack.com/feed", role: voice, person: Jack Clark}
+  - {id: simon-willison, name: Simon Willison, kind: rss, url: "https://simonwillison.net/atom/everything/", role: voice, person: Simon Willison}
+  - {id: sam-altman, name: Sam Altman's blog, kind: rss, url: "https://blog.samaltman.com/posts.atom", role: voice, person: Sam Altman}
+  - id: bluesky
+    name: Bluesky
+    kind: bluesky
+    role: voice
+    per_account: 10
+    accounts:          # handle: display name — add or remove people here
+      simonwillison.net: Simon Willison
+      emollick.bsky.social: Ethan Mollick
+      garymarcus.bsky.social: Gary Marcus
+      melaniemitchell.bsky.social: Melanie Mitchell
+
+# Links from these domains count as the lab's own (primary) source, wherever they're found
+# (e.g. a Hacker News or GDELT result pointing at a lab's blog).
+lab_domains:
+  openai.com: OpenAI
+  anthropic.com: Anthropic
+  deepmind.google: Google DeepMind
+  blog.google: Google
+  ai.meta.com: Meta
+  mistral.ai: Mistral AI
+  x.ai: xAI
+  deepseek.com: DeepSeek
+  qwenlm.github.io: Alibaba (Qwen)
+  blogs.nvidia.com: NVIDIA
+  microsoft.com: Microsoft
+
+# Labs the tracker always shows (others are added as releases are found).
+tracked_labs:
+  - OpenAI
+  - Anthropic
+  - Google DeepMind
+  - Meta
+  - xAI
+  - Mistral AI
+  - DeepSeek
+  - Alibaba (Qwen)
+  - NVIDIA
+  - Microsoft

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frontier Wire — AI news, labs, research and voices</title>
+<meta name="description" content="Live AI news: frontier model releases, research, policy and commentary from leading people. Every story links its sources.">
+<link rel="alternate" type="application/rss+xml" title="Frontier Wire" href="data/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Cpath d='M4 20 L10 8 L16 18 L20 11 L24 20' fill='none' stroke='%232448F5' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#latest">Skip to stories</a>
+
+<div class="topbar">
+  <div class="wrap topbar-row">
+    <div class="live"><span class="dot" aria-hidden="true"></span><span id="updated">Loading…</span></div>
+    <div id="stats" class="muted-on-dark"></div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="./">
+      <svg aria-hidden="true" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 20 L10 8 L16 18 L20 11 L24 20"/></svg>
+      <span>Frontier Wire</span>
+    </a>
+    <nav aria-label="Sections" class="nav">
+      <a href="#latest">Latest</a>
+      <a href="#labs">Frontier labs</a>
+      <a href="#research">Research</a>
+      <a href="#policy">Policy</a>
+      <a href="#voices">Voices</a>
+    </nav>
+    <a class="btn" href="data/feed.xml">
+      <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 4a15 15 0 0 1 15 15M5 11a8 8 0 0 1 8 8"/><circle cx="6" cy="18" r="1.6" fill="currentColor"/></svg>
+      RSS feed
+    </a>
+  </div>
+</header>
+
+<main id="app">
+  <div class="wrap chips" role="group" aria-label="Filter stories by topic" id="chips"></div>
+
+  <section class="wrap hero" id="latest">
+    <article class="lead" id="lead"></article>
+    <aside class="feed" aria-labelledby="latest-h">
+      <div class="feed-head"><h2 id="latest-h">Latest</h2><span class="mono muted">Updates every 3 hours</span></div>
+      <ol class="feed-list" id="feed"></ol>
+    </aside>
+  </section>
+
+  <section class="band" id="labs">
+    <div class="wrap stack">
+      <div class="section-head">
+        <div><p class="kicker">Frontier lab tracker</p><h2>Who shipped what</h2></div>
+      </div>
+      <div class="table-box"><table>
+        <thead><tr><th scope="col">Lab</th><th scope="col">Latest release</th><th scope="col">Type</th><th scope="col">Date</th></tr></thead>
+        <tbody id="labs-body"></tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <section class="wrap stack section" id="research">
+    <div class="section-head"><div><p class="kicker">Research &amp; breakthroughs</p><h2>Where the technology is moving</h2></div></div>
+    <div class="cards" id="research-cards"></div>
+  </section>
+
+  <section class="dark" id="voices">
+    <div class="wrap stack section">
+      <div class="section-head"><div><p class="kicker">Voices</p><h2>What the people building AI are saying</h2></div></div>
+      <div class="cards" id="voices-cards"></div>
+    </div>
+  </section>
+
+  <section class="wrap stack section" id="policy">
+    <div class="section-head"><div><p class="kicker">Policy &amp; safety</p><h2>The rules taking shape</h2></div></div>
+    <div class="rule-list" id="policy-list"></div>
+  </section>
+
+  <section class="wrap section-tight">
+    <div class="about">
+      <div>
+        <h2>How Frontier Wire works</h2>
+        <p>An AI newsroom agent reads lab announcements, papers, news outlets and posts from leading people every three hours. It keeps only what matters and publishes a story only when it has an official source or two independent outlets. Quotes appear only when they match the source word for word. Every story links its sources.</p>
+      </div>
+      <a class="btn" href="data/feed.xml">Follow via RSS</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span>© <span id="year"></span> Frontier Wire · Summaries are AI-written from the linked sources.</span>
+    <nav aria-label="Footer"><a href="data/feed.xml">RSS</a><a href="data/site.json">Data (JSON)</a></nav>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

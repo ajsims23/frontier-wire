@@ -1,0 +1,99 @@
+name: Newsroom agent
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"   # every 3 hours, at :17 past
+  workflow_dispatch:          # "Run workflow" button for a manual run
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: newsroom
+  cancel-in-progress: false
+
+env:
+  # Review mode (default): new stories arrive as a pull request; merge it to publish.
+  # Set the repository variable REVIEW_MODE to "false" to publish automatically.
+  REVIEW_MODE: ${{ vars.REVIEW_MODE || 'true' }}
+  REVIEW_BRANCH: newsroom/updates
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Tests
+        run: python -m pytest -q
+
+      - name: Continue the open review branch (review mode)
+        if: env.REVIEW_MODE == 'true'
+        run: |
+          git config user.name  "frontier-wire-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin "$REVIEW_BRANCH" >/dev/null; then
+            git checkout -B "$REVIEW_BRANCH" "origin/$REVIEW_BRANCH"
+            git merge --no-edit origin/${{ github.event.repository.default_branch }} || {
+              echo "Review branch conflicts with main; starting a fresh one."
+              git merge --abort
+              git checkout -B "$REVIEW_BRANCH" origin/${{ github.event.repository.default_branch }}
+            }
+          else
+            git checkout -B "$REVIEW_BRANCH"
+          fi
+
+      - name: Run the newsroom
+        id: newsroom
+        env:
+          # Add whichever free keys you have; the agent falls back through them in order.
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          MAX_REQUESTS_PER_DAY: ${{ vars.MAX_REQUESTS_PER_DAY }}
+        run: python -m agent run
+
+      - name: Commit
+        run: |
+          git config user.name  "frontier-wire-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git commit -m "Newsroom: ${{ steps.newsroom.outputs.stories_written || 0 }} new stories"
+          if [ "$REVIEW_MODE" = "true" ]; then
+            git push -f origin "$REVIEW_BRANCH"
+          else
+            git push origin HEAD:${{ github.event.repository.default_branch }}
+          fi
+
+      - name: Open review pull request (review mode)
+        if: env.REVIEW_MODE == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! git ls-remote --exit-code --heads origin "$REVIEW_BRANCH" >/dev/null; then exit 0; fi
+          open=$(gh pr list --head "$REVIEW_BRANCH" --state open --json number --jq 'length')
+          if [ "$open" = "0" ]; then
+            gh pr create --head "$REVIEW_BRANCH" \
+              --title "Newsroom: stories awaiting review" \
+              --body-file data/last_run.md || true
+          else
+            gh pr comment "$REVIEW_BRANCH" --body-file data/last_run.md || true
+          fi

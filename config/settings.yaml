@@ -1,0 +1,64 @@
+# Newsroom agent settings.
+
+# AI providers, tried in order. Every one uses the standard chat-completions API.
+# A provider is used only when its key is set (GitHub → Settings → Secrets → Actions).
+# If a provider is rate-limited or down, the agent moves to the next; if a model
+# name has been retired, it tries the next model in the list.
+# Free-tier limits change; run `python -m agent check-models` to see what works.
+providers:
+  - name: cerebras            # free: ~1M tokens/day, 30 requests/min
+    base_url: https://api.cerebras.ai/v1
+    key_env: CEREBRAS_API_KEY
+    models: [gpt-oss-120b, llama3.3-70b, qwen-3-235b-a22b-instruct-2507]
+
+  - name: groq                # free: ~1,000 requests/day on 70B models
+    base_url: https://api.groq.com/openai/v1
+    key_env: GROQ_API_KEY
+    models: [openai/gpt-oss-120b, llama-3.3-70b-versatile]
+
+  - name: openrouter          # free models: ~50 requests/day without credit
+    base_url: https://openrouter.ai/api/v1
+    key_env: OPENROUTER_API_KEY
+    models: ["meta-llama/llama-3.3-70b-instruct:free"]
+
+  - name: gemini              # free tier: low daily limits; Google may use prompts to improve its products
+    base_url: https://generativelanguage.googleapis.com/v1beta/openai
+    key_env: GEMINI_API_KEY
+    models: [gemini-flash-lite-latest, gemini-flash-latest]
+
+  # Optional paid fallback — uncomment to use Claude (needs ANTHROPIC_API_KEY).
+  # - name: anthropic
+  #   base_url: https://api.anthropic.com/v1
+  #   key_env: ANTHROPIC_API_KEY
+  #   models: [claude-sonnet-5-5]
+
+run:
+  lookback_hours: 36          # ignore items older than this
+  max_candidates_to_judge: 60 # items sent to the editor per run
+  min_score: 6                # 1–10; below this an item is dropped
+  max_stories_per_run: 8      # stories written per run
+  front_page_days: 14         # stories older than this leave the front page (kept in archive)
+  source_text_chars: 3000     # how much of each source page the writer reads
+
+guardrails:
+  # A story needs either an official primary source (the lab's own post / the paper /
+  # the person's own post) or this many independent domains confirming it.
+  min_independent_sources: 2
+  # Quotes are only published if found word-for-word in a fetched source.
+  require_verbatim_quotes: true
+
+# Review mode: in GitHub Actions, new stories arrive as a pull request you merge
+# to publish. Set to false (or the repository variable REVIEW_MODE=false) to publish automatically.
+review_mode: true
+
+limits:
+  # Keeps the agent well inside free tiers. A run stops calling AI once a cap is hit;
+  # anything not yet judged is picked up next run.
+  max_requests_per_run: 40
+  max_requests_per_day: 300
+  max_tokens_per_day: 700000
+
+# Free, no-key data APIs
+gdelt:
+  query: '("artificial intelligence" OR OpenAI OR Anthropic OR DeepMind OR "large language model" OR "AI model") sourcelang:english'
+  max_records: 60

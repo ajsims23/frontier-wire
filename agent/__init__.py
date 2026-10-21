@@ -1,0 +1,1 @@
+"""Frontier Wire newsroom agent."""
