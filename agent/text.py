@@ -5,7 +5,7 @@ import hashlib
 import re
 import unicodedata
 from difflib import SequenceMatcher
-from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
+from urllib.parse import parse_qsl, urlencode, urljoin, urlparse, urlunparse
 
 from bs4 import BeautifulSoup
 
@@ -85,3 +85,26 @@ def quote_in_text(quote: str, text: str) -> bool:
 
 def similar(a: str, b: str) -> float:
     return SequenceMatcher(None, _norm(a), _norm(b)).ratio()
+
+
+_GENERIC_IMG = re.compile(r"logo|favicon|icon|avatar|placeholder|default[-_]?(og|share|social)|sprite|blank", re.I)
+
+
+def extract_image(html: str, page_url: str) -> str | None:
+    """The page's own preview image (og:image / twitter:image), as an absolute https URL.
+
+    Generic site logos and icons are skipped so the site can fall back to generated art.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    for attrs in ({"property": "og:image"}, {"property": "og:image:url"}, {"name": "twitter:image"},
+                  {"name": "twitter:image:src"}, {"property": "twitter:image"}):
+        tag = soup.find("meta", attrs=attrs)
+        src = (tag.get("content") or "").strip() if tag else ""
+        if not src:
+            continue
+        url = urljoin(page_url, src)
+        if url.startswith("http://"):
+            url = "https://" + url[len("http://"):]
+        if url.startswith("https://") and not _GENERIC_IMG.search(urlparse(url).path) and len(url) < 600:
+            return url
+    return None

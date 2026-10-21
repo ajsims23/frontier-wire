@@ -85,6 +85,11 @@ def test_full_run(tmp_path):
     assert {q["speaker"] for q in site["voices"]} == {"Ada Example", "Jane Doe"}
     assert (tmp_path / "feed.xml").read_text().count("<item>") == len(stories)
 
+    # preview images: the page's own og:image (made absolute); generic logos are skipped
+    assert nova["image"] == "https://examplelab.ai/images/nova2-hero.jpg"
+    assert stories["Atlas robotics safety update"]["image"] is None
+    assert site["lead"]["image"] == "https://examplelab.ai/images/nova2-hero.jpg"
+
     assert report["ai_requests_run"] == len(calls) <= 40
     assert "New stories" in summary_markdown(report)
 
@@ -223,3 +228,18 @@ def test_gdelt_rate_limited_falls_back_to_fetched_items(tmp_path):
     assert "https://othernews.example.org/council-bus-ai" in {s["url"] for s in council["sources"]}
     # unconfirmable claim still blocked
     assert not any("AGI" in h for h in stories)
+
+
+def test_backfills_images_for_existing_stories(tmp_path):
+    room, _ = make(tmp_path)
+    room.run()
+    stories = json.loads((tmp_path / "stories.json").read_text())
+    for st in stories:
+        st.pop("image", None)  # stories written before images existed
+    (tmp_path / "stories.json").write_text(json.dumps(stories))
+    room2, calls2 = make(tmp_path, now=NOW + timedelta(hours=3))
+    room2.run()
+    after = {s["headline"]: s for s in json.loads((tmp_path / "stories.json").read_text())}
+    assert after["Introducing Nova 2, our new multimodal model"]["image"] == "https://examplelab.ai/images/nova2-hero.jpg"
+    assert all("image" in s for s in after.values())
+    assert calls2 == []  # no AI used for this
