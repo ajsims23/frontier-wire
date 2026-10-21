@@ -250,6 +250,51 @@
     }
   }
 
+  // ---------------------------------------------------------------- daily briefing
+  function renderBriefing(b) {
+    const sec = $("briefing");
+    if (!b || !b.themes || !b.themes.length) { sec.hidden = true; return; }
+    sec.hidden = false;
+    $("brief-line").textContent = b.one_line || "";
+    const when = b.written_at ? new Date(b.written_at).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }) : "";
+    $("brief-by").textContent = `Written by our newsroom agent${when ? ` at ${when}` : ""} from ${b.from_stories || "today's"} stories. Every line links to its sources.`;
+    $("themes").innerHTML = b.themes.map((t) => `<li class="theme">
+        <h3>${esc(t.title)}</h3>
+        <p>${esc(t.text)}</p>
+        <div class="refs">${(t.stories || []).slice(0, 4).map((s) => `<a href="${safeUrl(s.url)}" rel="noopener" title="${esc(s.headline)}">${esc(clip(s.headline, 42))}</a>`).join("")}</div>
+      </li>`).join("");
+  }
+
+  // ---------------------------------------------------------------- developing threads
+  function renderThreads(threads) {
+    const sec = $("developing");
+    if (!threads || !threads.length) { sec.hidden = true; return; }
+    sec.hidden = false;
+    $("threads").innerHTML = threads.map((t) => {
+      const c = color((t.stories[0] || {}).category);
+      return `<article class="thread" style="--c:${c}">
+        <div class="thread-head"><h3>${esc(t.title)}</h3><span>${t.stories.length} updates</span></div>
+        <ol class="tl">${t.stories.slice(0, 4).map((s, i) => `<li>
+          <span class="when">${i === 0 ? "Latest, " : ""}${esc(ago(s.published_at))}</span>
+          <a href="${safeUrl(s.url)}" rel="noopener">${esc(s.headline)}</a></li>`).join("")}</ol>
+      </article>`;
+    }).join("");
+  }
+
+  // ---------------------------------------------------------------- theme toggle
+  (function themeToggle() {
+    const root = document.documentElement;
+    const btn = $("theme-btn");
+    const sync = () => btn.setAttribute("aria-label", root.dataset.theme === "daylight" ? "Switch to dark mode" : "Switch to light mode");
+    sync();
+    btn.addEventListener("click", () => {
+      const next = root.dataset.theme === "daylight" ? (root.dataset.defaultDark || "midnight") : "daylight";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("fw-theme", next); } catch (e) {}
+      sync();
+    });
+  })();
+
   function render(d) {
     data = d || data;
     const st = data.stats || {};
@@ -264,6 +309,8 @@
     cards($("research-list"), s.filter((x) => x.category === "research").slice(0, 6), "Research stories appear here.");
     cards($("policy-list"), s.filter((x) => x.category === "policy" || x.category === "safety").slice(0, 6), "Policy and safety stories appear here.");
     renderVoices();
+    renderBriefing(data.briefing);
+    renderThreads(data.threads);
   }
 
   // search: type to filter; "/" focuses, Esc clears

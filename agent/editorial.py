@@ -119,7 +119,7 @@ def site_threads(room: Any) -> list[dict[str, Any]]:
 # ------------------------------------------------------------------ daily briefing
 BRIEF_SYSTEM = f"""You write the daily briefing for Frontier Wire, for people who follow AI closely.
 From the stories provided, pick the 2–4 most important themes of the day. Connect related stories into one
-theme where they belong together. For each theme: a plain title (max 6 words) and one or two sentences.
+theme where they belong together. For each theme: a plain title in sentence case (max 6 words, e.g. "Agents move into shopping") and one or two sentences.
 Also write one_line: the day in one sentence (max 18 words).
 Rules: use ONLY facts in the stories provided. No predictions, no opinions, no hype words. Every theme must
 list the ids of the stories it draws on. {UNTRUSTED}"""
