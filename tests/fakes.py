@@ -250,6 +250,36 @@ def newsroom_handler(calls: list[dict]):
             return httpx.Response(200, json=research_turn(body))
         name = body["tools"][0]["function"]["name"]
         prompt = body["messages"][1]["content"]
-        data = {"submit_decisions": judge, "submit_story": story, "submit_matches": verify}[name](prompt)
+        data = {"submit_decisions": judge, "submit_story": story, "submit_matches": verify,
+                "submit_links": links, "submit_briefing": briefing, "submit_review": review}[name](prompt)
         return httpx.Response(200, json=completion(name, data))
     return handler
+
+
+def links(prompt: str) -> dict:
+    import re
+    earlier = re.findall(r'<story id="([^"]+)" date="[^"]+">([^<]+)</story>', prompt)
+    new = re.findall(r'<story id="([^"]+)">([^<]+)</story>', prompt)
+    nova = next((i for i, h in earlier if h.startswith("Introducing Nova 2")), "")
+    out = [{"new_id": i, "follows": nova, "thread_title": "Example Lab's Nova 2 launch"} for i, t in new if "Nova" in t and nova]
+    out.append({"new_id": "made-up", "follows": "also-made-up", "thread_title": "x"})  # must be ignored
+    return {"links": out}
+
+
+def briefing(prompt: str) -> dict:
+    import re
+    rows = re.findall(r'<story id="([^"]+)"[^>]*>([^<]+)</story>', prompt)
+    ids = [i for i, _ in rows]
+    return {"one_line": "A busy day across labs and policy.", "themes": [
+        {"title": "Launch day", "text": "Example Lab shipped Nova 2.", "story_ids": ids[:2]},
+        {"title": "Usage jumps", "text": "Usage rose 99% overnight.", "story_ids": ids[:1]},          # invented number
+        {"title": "Ghost theme", "text": "Something happened.", "story_ids": ["not-a-real-id"]},      # no real story
+    ]}
+
+
+def review(prompt: str) -> dict:
+    return {"suggestions": [
+        {"kind": "fix_source", "target": "broken", "suggestion": "Fix or remove the broken feed.", "reason": "fails every run", "url": ""},
+        {"kind": "add_source", "target": "Some Lab", "suggestion": "Add their blog feed.", "reason": "under-covered",
+         "url": "https://invented.example.com/feed.xml"},
+    ]}

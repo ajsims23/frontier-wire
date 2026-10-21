@@ -71,6 +71,7 @@ def main(argv: list[str] | None = None) -> int:
     if os.environ.get("GITHUB_OUTPUT"):
         with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
             fh.write(f"stories_written={len(report['written'])}\n")
+            fh.write(f"self_review={'1' if report.get('self_review') else '0'}\n")
     return 0
 
 

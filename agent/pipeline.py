@@ -8,6 +8,7 @@ from typing import Any
 from . import prompts as P
 from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
+from . import editorial
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather
 from .store import Store
@@ -258,7 +259,8 @@ class Newsroom:
                 self._page_cache[url] = fallback
         return self._page_cache[url]
 
-    def write(self, score: int, category: str, members: list[Item], sources: list[dict[str, str]]) -> dict[str, Any]:
+    def write(self, score: int, category: str, members: list[Item], sources: list[dict[str, str]],
+              context: str = "") -> dict[str, Any]:
         lead = members[0]
         snippets = {m.url: m.snippet for m in members}
         limit = self.cfg.run.get("source_text_chars", 3000)
@@ -268,7 +270,7 @@ class Newsroom:
         blocks = "\n\n".join(f'<source url="{u}" publisher="{_esc(pubs[u])}">\n{_esc(t[:limit])}\n</source>' for u, t in texts.items())
         answer = self.llm.ask(
             system=P.WRITE_SYSTEM, schema_name="submit_story", schema=P.WRITE_SCHEMA, max_tokens=1500,
-            prompt=f"Suggested category: {category}\nItem: {lead.title}{who}\n\n{blocks}",
+            prompt=f"Suggested category: {category}\nItem: {lead.title}{who}{context}\n\n{blocks}",
         )
 
         quotes = []
@@ -297,6 +299,7 @@ class Newsroom:
             "quotes": quotes,
             "score": score,
             "url": lead.url,
+            "source_id": lead.source_id,
             "image": next((self._images[s["url"]] for s in sources[:4] if self._images.get(s["url"])), None),
             "sources": sources,
             "research": self._research_meta.get(lead.url),
@@ -351,6 +354,8 @@ class Newsroom:
             "lead": lead,
             "stories": live[:60],  # the site filters by category client-side
             "voices": voices[:6],
+            "briefing": self.store.briefing or None,
+            "threads": editorial.site_threads(self),
             "labs": labs,
             "stats": {
                 "stories_this_month": sum(1 for s in self.store.stories if s["published_at"].startswith(month)),
@@ -371,6 +376,12 @@ class Newsroom:
                 self.report["notes"].append(f"judging skipped: {e}")
                 clusters = {}  # nothing judged → nothing marked seen; retried next run
 
+        links: dict[str, dict[str, str]] = {}
+        try:
+            links = editorial.link_followups(self, kept[: self.cfg.run["max_stories_per_run"]])
+        except (LimitReached, AllProvidersFailed) as e:
+            self.report["notes"].append(f"follow-up linking skipped: {e}")
+
         # Kept stories not reached this run (per-run cap, limits) stay unseen so the next run picks them up.
         not_reached = {m.url for _, _, ms in kept for m in ms}
         for score, category, members in kept[: self.cfg.run["max_stories_per_run"]]:
@@ -387,7 +398,8 @@ class Newsroom:
                         reason = "could not verify yet after a second try; dropped"
                     self.report["dropped"].append({"title": members[0].title, "reason": reason})
                     continue
-                story = self.write(score, category, members, sources)
+                story = self.write(score, category, members, sources,
+                                   context=editorial.earlier_context(self, links.get(members[0].url)))
             except (LimitReached, AllProvidersFailed) as e:
                 self.report["notes"].append(f"stopped writing: {e}")
                 not_reached |= {m.url for m in members}
@@ -396,6 +408,7 @@ class Newsroom:
                 self.report["dropped"].append({"title": members[0].title, "reason": f"error: {type(e).__name__}: {e}"})
                 continue
             self.store.add_story(story)
+            editorial.attach_thread(self, story, links.get(members[0].url))
             self.update_labs(story)
             self.report["written"].append({"id": story["id"], "headline": story["headline"], "category": story["category"],
                                            "summary": story["summary"], "url": story["url"],
@@ -404,6 +417,13 @@ class Newsroom:
         if not_reached:
             self.report["notes"].append(f"{len(not_reached)} kept item(s) carried over to the next run")
         self.store.mark_seen([m.url for ms in clusters.values() for m in ms if m.url not in not_reached], self.now)
+        for step, fn in (("briefing", editorial.write_briefing), ("self-review", editorial.self_review)):
+            try:
+                fn(self)
+            except (LimitReached, AllProvidersFailed) as e:
+                self.report["notes"].append(f"{step} skipped: {e}")
+            except Exception as e:  # noqa: BLE001
+                self.report["notes"].append(f"{step} failed: {type(e).__name__}: {e}")
         self.report["ai_requests_run"] = self.llm.limits.run_requests
         self.report["ai_tokens_run"] = self.llm.limits.run_tokens
         self.report["ai_requests_today"] = self.llm.limits.day["requests"]
@@ -427,6 +447,12 @@ def summary_markdown(report: dict[str, Any]) -> str:
         r = report["research"]
         lines.append(f"Research agent: investigated {r['investigated']} stories with {r['tool_calls']} tool calls, "
                      f"confirmed {r['confirmed']}")
+    if report.get("briefing"):
+        lines.append(f"Daily briefing: {report['briefing']}")
+    if report.get("threads"):
+        lines.append("Threads updated: " + "; ".join(report["threads"]))
+    if report.get("self_review"):
+        lines.append("Self-review written (see the newsroom issue)")
     lines += ["", "### New stories"]
     lines += [f"- **{w['category']}** — [{w['headline']}]({w['url']})  \n  {w['summary']}  \n"
               f"  _{w['sources']} source(s), {w['quotes']} verified quote(s)_" for w in report["written"]] or ["- none"]

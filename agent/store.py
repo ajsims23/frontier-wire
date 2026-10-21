@@ -29,6 +29,9 @@ class Store:
         self.seen: dict[str, str] = _read(data_dir / "seen.json", {})
         self.labs: dict[str, dict[str, Any]] = _read(data_dir / "labs.json", {})
         self.retries: dict[str, int] = _read(data_dir / "retries.json", {})
+        self.threads: dict[str, dict[str, Any]] = _read(data_dir / "threads.json", {})
+        self.briefing: dict[str, Any] = _read(data_dir / "briefing.json", {})
+        self.review_state: dict[str, Any] = _read(data_dir / "review_state.json", {})
 
     def is_seen(self, url: str) -> bool:
         return url in self.seen
@@ -58,6 +61,9 @@ class Store:
         _write(self.dir / "labs.json", self.labs)
         self.retries = {u: n for u, n in self.retries.items() if u not in self.seen}
         _write(self.dir / "retries.json", self.retries)
+        _write(self.dir / "threads.json", self.threads)
+        _write(self.dir / "briefing.json", self.briefing)
+        _write(self.dir / "review_state.json", self.review_state)
         _write(self.dir / "site.json", site)
         (self.dir / "feed.xml").write_text(rss(self.stories[:30], now))
         _write(self.dir / "runs" / f"{now.strftime('%Y%m%dT%H%M%SZ')}.json", report)

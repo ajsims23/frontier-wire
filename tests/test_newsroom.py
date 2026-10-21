@@ -99,6 +99,15 @@ def test_full_run(tmp_path):
     assert any(m.get("role") == "tool" for c in tool_turns for m in c["messages"])  # real multi-turn tool use
     assert "Research agent" in summary_markdown(report)
 
+    # daily briefing: themes must cite real stories, and no number may appear that the stories don't contain
+    b = site["briefing"]
+    assert [t["title"] for t in b["themes"]] == ["Launch day"]
+    assert "2 removed by checks" in report["briefing"]
+    # self-review: written once a day, flags broken sources, marks agent-suggested addresses for checking
+    review_md = (tmp_path / "self_review.md").read_text()
+    assert "`broken`" in review_md and "check it before adding" in review_md and "- [ ]" in review_md
+    assert json.loads((tmp_path / "review_state.json").read_text())["last"] == NOW.date().isoformat()
+
     assert report["ai_requests_run"] == len(calls) <= 70
     assert "New stories" in summary_markdown(report)
 
@@ -107,9 +116,15 @@ def test_carry_over_then_nothing_new(tmp_path):
     room, _ = make(tmp_path, max_stories=8)
     first = room.run()
     assert len(first["written"]) == 7 and any("carried over" in n for n in first["notes"])
-    room2, _ = make(tmp_path, now=NOW + timedelta(hours=3), max_stories=8)
+    room2, calls2 = make(tmp_path, now=NOW + timedelta(hours=3), max_stories=8)
     second = room2.run()
     assert {w["category"] for w in second["written"]} == {"voices"}  # the two items the cap pushed out
+    # story memory: the Bluesky post about Nova 2 was linked into a thread with the original launch story
+    site = json.loads((tmp_path / "site.json").read_text())
+    assert site["threads"] and site["threads"][0]["title"] == "Example Lab's Nova 2 launch"
+    assert len(site["threads"][0]["stories"]) == 2
+    nova_thread_calls = [c for c in calls2 if c["tools"][0]["function"]["name"] == "submit_story" and "Earlier Frontier Wire coverage" in c["messages"][1]["content"]]
+    assert nova_thread_calls  # the writer got the earlier story as context
     # the unverifiable claim got exactly one retry in run 2, and is now dropped for good
     assert any("after a second try" in d["reason"] for d in second["dropped"])
     room3, calls3 = make(tmp_path, now=NOW + timedelta(hours=6), max_stories=8)
