@@ -243,3 +243,45 @@ def test_backfills_images_for_existing_stories(tmp_path):
     assert after["Introducing Nova 2, our new multimodal model"]["image"] == "https://examplelab.ai/images/nova2-hero.jpg"
     assert all("image" in s for s in after.values())
     assert calls2 == []  # no AI used for this
+
+
+def test_retry_unusable_then_discover_new_models(tmp_path):
+    seen = []
+    state = {"bad_once": True}
+
+    def handler(req):
+        if req.method == "GET" and req.url.path.endswith("/models"):
+            return httpx.Response(200, json={"data": [{"id": "whisper-large"}, {"id": "llama-9-70b-new"}, {"id": "gpt-oss-120b"}]})
+        body = json.loads(req.content)
+        seen.append(body["model"])
+        if body["model"] == "gpt-oss-120b" and state["bad_once"]:
+            state["bad_once"] = False
+            return httpx.Response(200, json={"choices": [{"message": {"content": "no json here"}}]})
+        if body["model"] in ("retired-a", "retired-b"):
+            return httpx.Response(404, json={"error": {"message": "Model not found"}})
+        return httpx.Response(200, json=completion("submit", {"ok": True}))
+
+    providers = [{"name": "c", "base_url": "https://c.example/v1", "key_env": "K", "models": ["gpt-oss-120b", "retired-a"]}]
+    lim = Limits({"max_requests_per_run": 20, "max_requests_per_day": 20, "max_tokens_per_day": 10**6}, tmp_path / "u.json")
+    llm = LLM(providers, lim, http=httpx.Client(transport=httpx.MockTransport(handler)), env={"K": "x"}, sleep=lambda s: None)
+    # bad answer is retried once on the same model, then succeeds
+    assert llm.ask(system="s", prompt="p", schema_name="submit", schema=SCHEMA) == {"ok": True}
+    assert seen == ["gpt-oss-120b", "gpt-oss-120b"]
+
+    # all listed models retired -> discover from /models (skipping non-chat models)
+    providers2 = [{"name": "c", "base_url": "https://c.example/v1", "key_env": "K", "models": ["retired-a", "retired-b"]}]
+    seen.clear()
+    llm2 = LLM(providers2, lim, http=httpx.Client(transport=httpx.MockTransport(handler)), env={"K": "x"}, sleep=lambda s: None)
+    assert llm2.ask(system="s", prompt="p", schema_name="submit", schema=SCHEMA) == {"ok": True}
+    assert seen == ["retired-a", "retired-b", "gpt-oss-120b"]
+    assert any("listed models retired" in l for l in llm2.log)
+
+
+def test_tracker_rebuilt_from_existing_stories(tmp_path):
+    room, _ = make(tmp_path)
+    room.run()
+    (tmp_path / "labs.json").write_text("{}")  # tracker lost / written before the fallback existed
+    room2, _ = make(tmp_path, now=NOW + timedelta(hours=3))
+    room2.run()
+    labs = json.loads((tmp_path / "labs.json").read_text())
+    assert labs["Example Lab"]["model"] == "Nova 2"

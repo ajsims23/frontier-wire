@@ -358,6 +358,9 @@ class Newsroom:
         self.report["provider_log"] = self.llm.log[-20:]
         self.llm.limits.save()
         self.add_missing_images()
+        # Rebuild the lab tracker from every model-release story (oldest first, so the newest wins).
+        for st in sorted(self.store.stories, key=lambda x: x["published_at"]):
+            self.update_labs(st)
         self.store.save(self.now, self.build_site(), self.report)
         return self.report
 

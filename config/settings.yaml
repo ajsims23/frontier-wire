@@ -9,7 +9,7 @@ providers:
   - name: cerebras            # free: ~1M tokens/day, 30 requests/min
     base_url: https://api.cerebras.ai/v1
     key_env: CEREBRAS_API_KEY
-    models: [gpt-oss-120b, llama3.3-70b, qwen-3-235b-a22b-instruct-2507]
+    models: [gpt-oss-120b]   # if this is retired, the agent asks Cerebras for its current models
 
   - name: groq                # free: ~1,000 requests/day on 70B models
     base_url: https://api.groq.com/openai/v1

@@ -120,6 +120,78 @@ class LLM:
             break
         return resp
 
+    _PREFERRED = [r"gpt-oss-120b", r"qwen.*(235b|480b|coder)", r"llama.*(3\.3|4).*(70b|maverick|scout)", r"glm", r"qwen", r"llama", r"gpt-oss"]
+    _NOT_CHAT = re.compile(r"embed|whisper|tts|guard|rerank|moderation|vision-preview|audio|image", re.I)
+
+    def _discover(self, p: dict[str, Any], tried: set[str]) -> list[str]:
+        """List the provider's current models and pick likely chat models we haven't tried."""
+        try:
+            resp = self.http.get(p["base_url"].rstrip("/") + "/models", headers={"Authorization": f"Bearer {p['key']}"})
+            ids = [m.get("id") for m in (resp.json().get("data") or []) if isinstance(m, dict)]
+        except Exception as exc:  # noqa: BLE001
+            self.log.append(f"{p['name']}: couldn't list models ({type(exc).__name__})")
+            return []
+        ids = [i for i in ids if i and i not in tried and not self._NOT_CHAT.search(i)
+               and (p["name"], i) not in self._dead_models]
+        ranked = sorted(ids, key=lambda i: next((n for n, pat in enumerate(self._PREFERRED) if re.search(pat, i, re.I)), 99))
+        picks = ranked[:3]
+        if picks:
+            self.log.append(f"{p['name']}: listed models retired; trying {', '.join(picks)} (update settings.yaml when convenient)")
+        return picks
+
+    def _attempt(self, p: dict[str, Any], model: str, system: str, prompt: str, tool: dict[str, Any],
+                 schema_name: str, required: list[str], max_tokens: int) -> tuple[str, dict[str, Any] | None]:
+        """One request. Returns ("ok", answer) | ("retry", None) | ("next", None) | ("dead", None)."""
+        self.limits.check()
+        body = {
+            "model": model,
+            "messages": [{"role": "system", "content": system}, {"role": "user", "content": prompt}],
+            "tools": [tool],
+            "tool_choice": {"type": "function", "function": {"name": schema_name}},
+            "max_tokens": max_tokens,
+            "temperature": 0.2,
+        }
+        try:
+            resp = self._post(p, body)
+        except httpx.HTTPError as exc:
+            self.log.append(f"{p['name']}: unreachable ({type(exc).__name__}); skipping provider")
+            self._dead_providers.add(p["name"])
+            return "dead", None
+        code = resp.status_code
+        if code in (401, 403):
+            self.log.append(f"{p['name']}: key rejected ({code}); skipping provider")
+            self._dead_providers.add(p["name"])
+            return "dead", None
+        if code in (400, 404) and re.search(r"model|decommission|not found|does not exist", resp.text, re.I):
+            self.log.append(f"{p['name']}/{model}: model unavailable ({code}); trying next model")
+            self._dead_models.add((p["name"], model))
+            return "next", None
+        if code == 429 or code >= 500:
+            self.log.append(f"{p['name']}: {code} after retry; moving to next provider for this run")
+            self._dead_providers.add(p["name"])
+            return "dead", None
+        if code != 200:
+            self.log.append(f"{p['name']}/{model}: HTTP {code}: {resp.text[:150]}")
+            return "next", None
+
+        data = resp.json()
+        usage = data.get("usage") or {}
+        self.limits.add(int(usage.get("total_tokens") or 0))
+        msg = (data.get("choices") or [{}])[0].get("message") or {}
+        answer = None
+        for call in msg.get("tool_calls") or []:
+            fn = call.get("function") or {}
+            if fn.get("name") == schema_name:
+                args = fn.get("arguments")
+                answer = args if isinstance(args, dict) else _extract_json(args or "")
+                break
+        if answer is None:
+            answer = _extract_json(msg.get("content") or "")
+        if answer is None or any(k not in answer for k in required):
+            self.log.append(f"{p['name']}/{model}: unusable answer")
+            return "retry", None
+        return "ok", answer
+
     def ask(self, *, system: str, prompt: str, schema_name: str, schema: dict[str, Any],
             max_tokens: int = 3000) -> dict[str, Any]:
         if not self.providers:
@@ -134,57 +206,30 @@ class LLM:
         for p in self.providers:
             if p["name"] in self._dead_providers:
                 continue
-            for model in p["models"]:
-                if (p["name"], model) in self._dead_models:
-                    continue
-                self.limits.check()
-                body = {
-                    "model": model,
-                    "messages": [{"role": "system", "content": system}, {"role": "user", "content": prompt}],
-                    "tools": [tool],
-                    "tool_choice": {"type": "function", "function": {"name": schema_name}},
-                    "max_tokens": max_tokens,
-                    "temperature": 0.2,
-                }
-                try:
-                    resp = self._post(p, body)
-                except httpx.HTTPError as exc:
-                    self.log.append(f"{p['name']}: unreachable ({type(exc).__name__}); skipping provider")
-                    self._dead_providers.add(p["name"])
-                    break
-                code = resp.status_code
-                if code in (401, 403):
-                    self.log.append(f"{p['name']}: key rejected ({code}); skipping provider")
-                    self._dead_providers.add(p["name"])
-                    break
-                if code in (400, 404) and re.search(r"model|decommission|not found|does not exist", resp.text, re.I):
-                    self.log.append(f"{p['name']}/{model}: model unavailable ({code}); trying next model")
-                    self._dead_models.add((p["name"], model))
-                    continue
-                if code == 429 or code >= 500:
-                    self.log.append(f"{p['name']}: {code} after retry; moving to next provider for this run")
-                    self._dead_providers.add(p["name"])
-                    break
-                if code != 200:
-                    self.log.append(f"{p['name']}/{model}: HTTP {code}: {resp.text[:150]}")
-                    continue
-
-                data = resp.json()
-                usage = data.get("usage") or {}
-                self.limits.add(int(usage.get("total_tokens") or 0))
-                msg = (data.get("choices") or [{}])[0].get("message") or {}
-                answer = None
-                for call in msg.get("tool_calls") or []:
-                    fn = call.get("function") or {}
-                    if fn.get("name") == schema_name:
-                        args = fn.get("arguments")
-                        answer = args if isinstance(args, dict) else _extract_json(args or "")
+            queue = list(p["models"])
+            tried: set[str] = set()
+            discovered = False
+            while True:
+                if not queue:
+                    # Every listed model is gone or failing: ask the provider what it offers now.
+                    if discovered or p["name"] in self._dead_providers:
                         break
-                if answer is None:
-                    answer = _extract_json(msg.get("content") or "")
-                if answer is None or any(k not in answer for k in required):
-                    self.log.append(f"{p['name']}/{model}: unusable answer; trying next model")
+                    discovered = True
+                    queue = self._discover(p, tried)
+                    if not queue:
+                        break
+                model = queue.pop(0)
+                if model in tried or (p["name"], model) in self._dead_models:
                     continue
-                return answer
+                tried.add(model)
+                outcome, answer = "retry", None
+                for attempt in range(2):  # one retry when the answer comes back unusable
+                    outcome, answer = self._attempt(p, model, system, prompt, tool, schema_name, required, max_tokens)
+                    if outcome != "retry":
+                        break
+                if outcome == "ok":
+                    return answer
+                if outcome == "dead":
+                    break
 
         raise AllProvidersFailed("every configured provider failed: " + " | ".join(self.log[-4:]))
