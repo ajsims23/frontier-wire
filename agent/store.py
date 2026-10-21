@@ -28,6 +28,7 @@ class Store:
         self.stories: list[dict[str, Any]] = _read(data_dir / "stories.json", [])
         self.seen: dict[str, str] = _read(data_dir / "seen.json", {})
         self.labs: dict[str, dict[str, Any]] = _read(data_dir / "labs.json", {})
+        self.retries: dict[str, int] = _read(data_dir / "retries.json", {})
 
     def is_seen(self, url: str) -> bool:
         return url in self.seen
@@ -55,6 +56,8 @@ class Store:
         _write(self.dir / "stories.json", self.stories)
         _write(self.dir / "seen.json", self.seen)
         _write(self.dir / "labs.json", self.labs)
+        self.retries = {u: n for u, n in self.retries.items() if u not in self.seen}
+        _write(self.dir / "retries.json", self.retries)
         _write(self.dir / "site.json", site)
         (self.dir / "feed.xml").write_text(rss(self.stories[:30], now))
         _write(self.dir / "runs" / f"{now.strftime('%Y%m%dT%H%M%SZ')}.json", report)

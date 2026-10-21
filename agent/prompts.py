@@ -28,6 +28,10 @@ same_event_as: another candidate's id if both cover the same event, else "".
 arXiv / daily papers: keep only the few that look like real advances — most should be dropped.
 Hugging Face model uploads: keep only genuinely new models from the lab (not quantised or minor variants).
 Social posts: keep only substantive commentary on AI developments by the named person.
+Bare titles: a lab's own page with just a product name (e.g. a new product, model or agent page) may be a
+new launch — judge it by what it names, not by how little text it has. A newly launched, named product,
+model or agent from a frontier lab (OpenAI, Anthropic, Google DeepMind, Meta, xAI, Mistral, DeepSeek...)
+scores at least 7.
 {UNTRUSTED_NOTE}"""
 
 JUDGE_SCHEMA = {

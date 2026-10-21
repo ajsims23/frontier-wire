@@ -374,7 +374,14 @@ class Newsroom:
             try:
                 sources = self.verify(members, score)
                 if sources is None:
-                    self.report["dropped"].append({"title": members[0].title, "reason": "could not verify with enough independent sources"})
+                    tries = self.store.retries.get(members[0].url, 0) + 1
+                    if tries < 2:  # coverage often appears later, so give it one more chance next run
+                        self.store.retries[members[0].url] = tries
+                        not_reached |= {m.url for m in members}
+                        reason = "could not verify yet; will retry next run"
+                    else:
+                        reason = "could not verify yet after a second try; dropped"
+                    self.report["dropped"].append({"title": members[0].title, "reason": reason})
                     continue
                 story = self.write(score, category, members, sources)
             except (LimitReached, AllProvidersFailed) as e:

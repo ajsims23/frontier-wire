@@ -58,7 +58,7 @@ def test_full_run(tmp_path):
     # news-only stories need a second outlet, found through GDELT
     council = stories["City council approves AI rules for public buses"]
     assert {domain(s["url"]) for s in council["sources"]} == {"example.com", "example.org"} or len(council["sources"]) == 2
-    assert "could not verify" in dropped["Startup claims AGI will arrive next week"]
+    assert "could not verify yet" in dropped["Startup claims AGI will arrive next week"]
     assert any("Regulator" in h for h in heads)  # GDELT-scouted story, confirmed
 
     # HN link to a lab's own site counts as a primary source
@@ -109,6 +109,8 @@ def test_carry_over_then_nothing_new(tmp_path):
     room2, _ = make(tmp_path, now=NOW + timedelta(hours=3), max_stories=8)
     second = room2.run()
     assert {w["category"] for w in second["written"]} == {"voices"}  # the two items the cap pushed out
+    # the unverifiable claim got exactly one retry in run 2, and is now dropped for good
+    assert any("after a second try" in d["reason"] for d in second["dropped"])
     room3, calls3 = make(tmp_path, now=NOW + timedelta(hours=6), max_stories=8)
     third = room3.run()
     assert third["written"] == [] and calls3 == []  # nothing new → no AI calls at all
@@ -249,7 +251,7 @@ def test_backfills_images_for_existing_stories(tmp_path):
     after = {s["headline"]: s for s in json.loads((tmp_path / "stories.json").read_text())}
     assert after["Introducing Nova 2, our new multimodal model"]["image"] == "https://examplelab.ai/images/nova2-hero.jpg"
     assert all("image" in s for s in after.values())
-    assert calls2 == []  # no AI used for this
+    assert not any(c["tools"][0]["function"]["name"] == "submit_story" for c in calls2)  # images need no AI
 
 
 def test_retry_unusable_then_discover_new_models(tmp_path):
