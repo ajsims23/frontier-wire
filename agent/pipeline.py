@@ -110,6 +110,7 @@ class Newsroom:
                 clusters.pop(cid)
 
         recent = self.store.recent_headlines(self.now)
+        recent_ids = {r["id"] for r in recent}
         prompt = ("Already published (for duplicate checks):\n"
                   + ("\n".join(f'- [{r["id"]}] {r["headline"]}' for r in recent) or "- none")
                   + "\n\nCandidates:\n" + "\n".join(_item_xml(m[0]) for _, m in ordered)
@@ -134,6 +135,9 @@ class Newsroom:
                 score = int(d.get("score", 0))
             except (TypeError, ValueError):
                 score = 0
+            if d.get("duplicate_of_story") and d["duplicate_of_story"] not in recent_ids:
+                self.report["notes"].append(f"ignored made-up duplicate id {d['duplicate_of_story']} for '{title[:50]}'")
+                d["duplicate_of_story"] = ""
             if d.get("duplicate_of_story"):
                 self.report["dropped"].append({"title": title, "reason": f"duplicate of {d['duplicate_of_story']}"})
             elif not d.get("keep") or score < self.cfg.run["min_score"]:

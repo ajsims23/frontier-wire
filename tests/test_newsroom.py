@@ -74,7 +74,8 @@ def test_full_run(tmp_path):
     # filtering
     assert "score 2" in dropped["10 prompts to boost your productivity"]
     assert not any("old" in h.lower() for h in heads)
-    assert any("Atlas" in h for h in heads)
+    assert any("Atlas" in h for h in heads)  # the editor's made-up duplicate id was ignored
+    assert any("made-up duplicate id deadbeef0000" in n for n in report["notes"])
 
     # tracker: newest release per lab
     labs = json.loads((tmp_path / "labs.json").read_text())

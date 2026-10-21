@@ -172,7 +172,7 @@ def judge(prompt: str) -> dict:
         ("Jane Doe:", dict(keep=True, score=6, category="voices")),
         ("Looped", dict(keep=True, score=7, category="research")),
         ("ablation", dict(keep=False, score=3, category="research")),
-        ("Atlas", dict(keep=True, score=6, category="safety")),
+        ("Atlas", dict(keep=True, score=6, category="safety", duplicate_of_story="deadbeef0000")),  # made-up id
         ("Regulator", dict(keep=True, score=7, category="policy")),
     ]
     out = []
