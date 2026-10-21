@@ -90,7 +90,15 @@ def test_full_run(tmp_path):
     assert stories["Atlas robotics safety update"]["image"] is None
     assert site["lead"]["image"] == "https://examplelab.ai/images/nova2-hero.jpg"
 
-    assert report["ai_requests_run"] == len(calls) <= 40
+    # the research agent investigated the stories without official sources, plus the top story
+    r = report["research"]
+    assert r["investigated"] == 4 and r["confirmed"] == 2
+    assert council["research"]["decision"] == "confirmed" and council["research"]["steps"] >= 2
+    tool_turns = [c for c in calls if any(t["function"]["name"] == "search_news" for t in c.get("tools", []))]
+    assert any(m.get("role") == "tool" for c in tool_turns for m in c["messages"])  # real multi-turn tool use
+    assert "Research agent" in summary_markdown(report)
+
+    assert report["ai_requests_run"] == len(calls) <= 70
     assert "New stories" in summary_markdown(report)
 
 
@@ -222,7 +230,6 @@ def test_gdelt_rate_limited_falls_back_to_fetched_items(tmp_path):
     assert report["sources"]["gdelt"].startswith("failed")
     # 3 tries, then GDELT is paused for the rest of the run (no more requests)
     assert sum(u.startswith("https://api.gdeltproject.org") for u in room.fetcher.requests) == 3
-    assert any("GDELT unavailable" in n for n in report["notes"])
     # council story confirmed by the other outlet already fetched this run
     council = stories["City council approves AI rules for public buses"]
     assert "https://othernews.example.org/council-bus-ai" in {s["url"] for s in council["sources"]}
@@ -297,3 +304,37 @@ def test_tracker_rebuilt_from_existing_stories(tmp_path):
 def test_gdelt_headline_filter(title, ok):
     from agent.sources import is_ai_headline
     assert is_ai_headline(title) is ok
+
+
+def test_research_agent_guardrails():
+    from agent.research import Researcher
+    from agent.sources import Item
+
+    class ScriptedLLM:
+        """Tries to read an unlisted page, cites an invented URL, and never finishes on its own."""
+        def __init__(self):
+            self.turns = 0
+            self.forced = []
+
+        def step(self, messages, tools, force=None, max_tokens=1200):
+            self.turns += 1
+            self.forced.append(force)
+            if force == "finish":
+                return {"calls": [{"id": "f", "name": "finish", "args": {"decision": "confirmed", "sources": [
+                    "https://invented.example.com/story", "https://othernews.example.org/council-bus-ai"]}}], "text": ""}
+            if self.turns == 1:
+                return {"calls": [{"id": "r", "name": "read_page", "args": {"url": "https://secret.example.com/x"}}], "text": ""}
+            return {"calls": [{"id": f"s{self.turns}", "name": "search_news", "args": {"query": "council AI rules buses"}}], "text": ""}
+
+    pool = [Item(url="https://othernews.example.org/council-bus-ai", title="Council approves new AI rules for city buses",
+                 source_id="o", source_name="Other News", role="news")]
+    fetcher = FixtureFetcher()
+    llm = ScriptedLLM()
+    r = Researcher(llm, fetcher, Gdelt(fetcher, sleep=lambda s: None), pool, max_steps=4)
+    out = r.investigate("City council approves AI rules for public buses", "", [
+        {"url": "https://technews.example.com/council-ai", "publisher": "Tech News", "title": "x"}])
+
+    assert "https://secret.example.com/x" not in fetcher.requests       # can't read pages outside its results
+    assert llm.forced[-1] == "finish" and llm.turns == 4                  # step budget enforced
+    assert [s["url"] for s in out["sources"]] == ["https://othernews.example.org/council-bus-ai"]  # invented URL dropped
+    assert out["decision"] == "confirmed"

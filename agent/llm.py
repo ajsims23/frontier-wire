@@ -139,18 +139,14 @@ class LLM:
             self.log.append(f"{p['name']}: listed models retired; trying {', '.join(picks)} (update settings.yaml when convenient)")
         return picks
 
-    def _attempt(self, p: dict[str, Any], model: str, system: str, prompt: str, tool: dict[str, Any],
-                 schema_name: str, required: list[str], max_tokens: int) -> tuple[str, dict[str, Any] | None]:
-        """One request. Returns ("ok", answer) | ("retry", None) | ("next", None) | ("dead", None)."""
+    def _attempt(self, p: dict[str, Any], model: str, messages: list[dict[str, Any]], tools: list[dict[str, Any]],
+                 tool_choice: Any, max_tokens: int, parse: Callable[[dict[str, Any]], Any]) -> tuple[str, Any]:
+        """One request. Returns ("ok", result) | ("retry", None) | ("next", None) | ("dead", None)."""
         self.limits.check()
-        body = {
-            "model": model,
-            "messages": [{"role": "system", "content": system}, {"role": "user", "content": prompt}],
-            "tools": [tool],
-            "tool_choice": {"type": "function", "function": {"name": schema_name}},
-            "max_tokens": max_tokens,
-            "temperature": 0.2,
-        }
+        body = {"model": model, "messages": messages, "max_tokens": max_tokens, "temperature": 0.2}
+        if tools:
+            body["tools"] = tools
+            body["tool_choice"] = tool_choice
         try:
             resp = self._post(p, body)
         except httpx.HTTPError as exc:
@@ -173,36 +169,21 @@ class LLM:
         if code != 200:
             self.log.append(f"{p['name']}/{model}: HTTP {code}: {resp.text[:150]}")
             return "next", None
-
         data = resp.json()
         usage = data.get("usage") or {}
         self.limits.add(int(usage.get("total_tokens") or 0))
         msg = (data.get("choices") or [{}])[0].get("message") or {}
-        answer = None
-        for call in msg.get("tool_calls") or []:
-            fn = call.get("function") or {}
-            if fn.get("name") == schema_name:
-                args = fn.get("arguments")
-                answer = args if isinstance(args, dict) else _extract_json(args or "")
-                break
-        if answer is None:
-            answer = _extract_json(msg.get("content") or "")
-        if answer is None or any(k not in answer for k in required):
+        result = parse(msg)
+        if result is None:
             self.log.append(f"{p['name']}/{model}: unusable answer")
             return "retry", None
-        return "ok", answer
+        return "ok", result
 
-    def ask(self, *, system: str, prompt: str, schema_name: str, schema: dict[str, Any],
-            max_tokens: int = 3000) -> dict[str, Any]:
+    def _call(self, messages: list[dict[str, Any]], tools: list[dict[str, Any]], tool_choice: Any,
+              max_tokens: int, parse: Callable[[dict[str, Any]], Any]) -> Any:
+        """Send one request with provider/model fallback, retrying an unusable answer once."""
         if not self.providers:
             raise AllProvidersFailed("no AI provider key is set (e.g. CEREBRAS_API_KEY or GROQ_API_KEY)")
-        tool = {"type": "function", "function": {
-            "name": schema_name,
-            "description": "Submit your final answer. Call this exactly once.",
-            "parameters": schema,
-        }}
-        required = schema.get("required", [])
-
         for p in self.providers:
             if p["name"] in self._dead_providers:
                 continue
@@ -222,14 +203,57 @@ class LLM:
                 if model in tried or (p["name"], model) in self._dead_models:
                     continue
                 tried.add(model)
-                outcome, answer = "retry", None
-                for attempt in range(2):  # one retry when the answer comes back unusable
-                    outcome, answer = self._attempt(p, model, system, prompt, tool, schema_name, required, max_tokens)
+                outcome, result = "retry", None
+                for _ in range(2):
+                    outcome, result = self._attempt(p, model, messages, tools, tool_choice, max_tokens, parse)
                     if outcome != "retry":
                         break
                 if outcome == "ok":
-                    return answer
+                    return result
                 if outcome == "dead":
                     break
-
         raise AllProvidersFailed("every configured provider failed: " + " | ".join(self.log[-4:]))
+
+    def ask(self, *, system: str, prompt: str, schema_name: str, schema: dict[str, Any],
+            max_tokens: int = 3000) -> dict[str, Any]:
+        """One structured answer: the model calls a single 'submit' tool whose arguments match the schema."""
+        tool = {"type": "function", "function": {
+            "name": schema_name, "description": "Submit your final answer. Call this exactly once.", "parameters": schema}}
+        required = schema.get("required", [])
+
+        def parse(msg: dict[str, Any]) -> dict[str, Any] | None:
+            answer = None
+            for call in msg.get("tool_calls") or []:
+                fn = call.get("function") or {}
+                if fn.get("name") == schema_name:
+                    args = fn.get("arguments")
+                    answer = args if isinstance(args, dict) else _extract_json(args or "")
+                    break
+            if answer is None:
+                answer = _extract_json(msg.get("content") or "")
+            if answer is None or any(k not in answer for k in required):
+                return None
+            return answer
+
+        messages = [{"role": "system", "content": system}, {"role": "user", "content": prompt}]
+        return self._call(messages, [tool], {"type": "function", "function": {"name": schema_name}}, max_tokens, parse)
+
+    def step(self, messages: list[dict[str, Any]], tools: list[dict[str, Any]], *, force: str | None = None,
+             max_tokens: int = 1200) -> dict[str, Any]:
+        """One turn of a multi-step tool conversation. Returns the assistant message (tool calls and/or text)."""
+        choice: Any = {"type": "function", "function": {"name": force}} if force else "auto"
+
+        def parse(msg: dict[str, Any]) -> dict[str, Any] | None:
+            calls = []
+            for c in msg.get("tool_calls") or []:
+                fn = c.get("function") or {}
+                args = fn.get("arguments")
+                parsed = args if isinstance(args, dict) else (_extract_json(args or "") if args else {})
+                if fn.get("name"):
+                    calls.append({"id": c.get("id") or f"call_{len(calls)}", "name": fn["name"], "args": parsed or {}})
+            text = msg.get("content") or ""
+            if not calls and not text.strip():
+                return None
+            return {"calls": calls, "text": text}
+
+        return self._call(messages, tools, choice, max_tokens, parse)

@@ -175,7 +175,8 @@
       <a class="lead-media" href="${safeUrl(s.url)}" rel="noopener" tabindex="-1" aria-hidden="true">${media(s, "wide")}</a>
       <span class="tag" style="--c:${color(s.category)}">Top story, ${esc(CAT_NAME[s.category] || s.category)}</span>
       <h2 style="--c:${color(s.category)}"><a href="${safeUrl(s.url)}" rel="noopener">${esc(s.headline)}</a></h2>
-      <p class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}</p>
+      <p class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}${s.research && s.research.decision === "confirmed"
+        ? `. Checked by our research agent against ${s.sources.length} sources` : ""}</p>
       <p class="sum">${esc(s.summary)}</p>
       ${s.why_it_matters ? `<p class="why"><strong>Why it matters.</strong> ${esc(s.why_it_matters)}</p>` : ""}
       ${srcChips(s)}`;

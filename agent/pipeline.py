@@ -8,6 +8,7 @@ from typing import Any
 from . import prompts as P
 from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
+from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather
 from .store import Store
 from .text import canonical_url, domain, extract_image, extract_text, quote_in_text, similar, stable_id
@@ -56,6 +57,8 @@ class Newsroom:
         }
         self._page_cache: dict[str, str] = {}
         self._images: dict[str, str | None] = {}
+        self._research_meta: dict[str, dict[str, Any]] = {}
+        self._enriched = 0
         self._texts: dict[str, str] = {}
 
     # ------------------------------------------------------------ 1. gather
@@ -144,13 +147,45 @@ class Newsroom:
         return kept
 
     # ------------------------------------------------------------ 4. verify
-    def verify(self, members: list[Item]) -> list[dict[str, str]] | None:
+    def research(self, members: list[Item], sources: list[dict[str, str]], domains: set[str]) -> dict[str, Any]:
+        """Let the research agent investigate; add the independent sources it confirmed."""
+        cfg = self.cfg.settings.get("research", {})
+        r = Researcher(self.llm, self.fetcher, self.gdelt, getattr(self, "_pool", []),
+                       max_steps=int(cfg.get("max_steps", 5)), page_chars=int(cfg.get("page_chars", 2500)))
+        result = r.investigate(members[0].title, members[0].snippet, sources)
+        for src in result["sources"]:
+            if domain(src["url"]) not in domains:
+                sources.append(src)
+                domains.add(domain(src["url"]))
+        self._texts.update(result["texts"])  # the writer gets the pages the agent read
+        self._images.update(result["images"])
+        stats = self.report.setdefault("research", {"investigated": 0, "confirmed": 0, "tool_calls": 0})
+        stats["investigated"] += 1
+        stats["tool_calls"] += result["steps"]
+        stats["confirmed"] += result["decision"] == "confirmed"
+        self.report.setdefault("research_log", []).append(
+            f"{members[0].title[:70]}: {result['decision']} ({'; '.join(result['trail']) or 'no tool use'})")
+        self._research_meta[members[0].url] = {"steps": result["steps"], "read": len(result["texts"]),
+                                               "decision": result["decision"]}
+        return result
+
+    def verify(self, members: list[Item], score: int = 0) -> list[dict[str, str]] | None:
         """Return the story's sources, or None if it can't be confirmed."""
         sources = [{"url": m.url, "publisher": m.source_name, "title": m.title} for m in members]
         official = any(m.role in ("lab", "paper", "voice") for m in members)
         domains = {domain(s["url"]) for s in sources}
         need = self.cfg.guardrails["min_independent_sources"]
-        if official or len(domains) >= need:
+        rcfg = self.cfg.settings.get("research", {})
+        confirmed_enough = official or len(domains) >= need
+        if rcfg.get("enabled", True):
+            enrich = (confirmed_enough and score >= int(rcfg.get("enrich_min_score", 8))
+                      and self._enriched < int(rcfg.get("enrich_top", 2)))
+            if not confirmed_enough or enrich:
+                if enrich:
+                    self._enriched += 1
+                self.research(members, sources, domains)
+                return sources if (confirmed_enough or len(domains) >= need) else None
+        if confirmed_enough:
             return sources
 
         words = keywords(members[0].title)
@@ -223,7 +258,7 @@ class Newsroom:
         lead = members[0]
         snippets = {m.url: m.snippet for m in members}
         limit = self.cfg.run.get("source_text_chars", 3000)
-        texts = {s["url"]: self._text(s["url"], snippets.get(s["url"]) or s.get("title", "")) for s in sources[:3]}
+        texts = {s["url"]: self._text(s["url"], snippets.get(s["url"]) or s.get("title", "")) for s in sources[:4]}
         pubs = {s["url"]: s["publisher"] for s in sources}
         who = f"\nPerson (author of the post): {lead.person}" if lead.person else ""
         blocks = "\n\n".join(f'<source url="{u}" publisher="{_esc(pubs[u])}">\n{_esc(t[:limit])}\n</source>' for u, t in texts.items())
@@ -258,8 +293,9 @@ class Newsroom:
             "quotes": quotes,
             "score": score,
             "url": lead.url,
-            "image": next((self._images[s["url"]] for s in sources[:3] if self._images.get(s["url"])), None),
+            "image": next((self._images[s["url"]] for s in sources[:4] if self._images.get(s["url"])), None),
             "sources": sources,
+            "research": self._research_meta.get(lead.url),
             "published_at": min(pub, self.now).isoformat(),
             "created_at": self.now.isoformat(),
         }
@@ -336,7 +372,7 @@ class Newsroom:
         for score, category, members in kept[: self.cfg.run["max_stories_per_run"]]:
             not_reached -= {m.url for m in members}
             try:
-                sources = self.verify(members)
+                sources = self.verify(members, score)
                 if sources is None:
                     self.report["dropped"].append({"title": members[0].title, "reason": "could not verify with enough independent sources"})
                     continue
@@ -376,6 +412,10 @@ def summary_markdown(report: dict[str, Any]) -> str:
                  f"kept {report.get('kept', 0)} · **written {len(report['written'])}**")
     lines.append(f"AI: {report.get('ai_requests_run', 0)} requests, {report.get('ai_tokens_run', 0):,} tokens this run · "
                  f"{report.get('ai_requests_today', 0)} requests today · providers: {', '.join(report['providers']) or 'none'}")
+    if report.get("research"):
+        r = report["research"]
+        lines.append(f"Research agent: investigated {r['investigated']} stories with {r['tool_calls']} tool calls, "
+                     f"confirmed {r['confirmed']}")
     lines += ["", "### New stories"]
     lines += [f"- **{w['category']}** — [{w['headline']}]({w['url']})  \n  {w['summary']}  \n"
               f"  _{w['sources']} source(s), {w['quotes']} verified quote(s)_" for w in report["written"]] or ["- none"]
@@ -385,6 +425,9 @@ def summary_markdown(report: dict[str, Any]) -> str:
     failed = {k: v for k, v in report["sources"].items() if not v.startswith("ok") or "failed" in v}
     if failed:
         lines += ["", "### Sources with problems"] + [f"- `{k}`: {v}" for k, v in failed.items()]
+    if report.get("research_log"):
+        lines += ["", "<details><summary>Research agent's work</summary>", ""]
+        lines += [f"- {l}" for l in report["research_log"]] + ["", "</details>"]
     if report["notes"] or report.get("provider_log"):
         lines += ["", "### Notes"] + [f"- {n}" for n in report["notes"] + report.get("provider_log", [])]
     return "\n".join(lines) + "\n"

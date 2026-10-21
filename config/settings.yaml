@@ -51,12 +51,20 @@ guardrails:
 # to publish. Set to false (or the repository variable REVIEW_MODE=false) to publish automatically.
 review_mode: true
 
+# Research agent: investigates stories with tools (search news, read pages) before they're written.
+research:
+  enabled: true
+  max_steps: 5            # tool steps per story
+  enrich_top: 2           # also dig into this many top stories per run that are already confirmed
+  enrich_min_score: 8
+  page_chars: 2500        # how much of each page the agent reads
+
 limits:
   # Keeps the agent well inside free tiers. A run stops calling AI once a cap is hit;
   # anything not yet judged is picked up next run.
-  max_requests_per_run: 40
-  max_requests_per_day: 300
-  max_tokens_per_day: 700000
+  max_requests_per_run: 70
+  max_requests_per_day: 450
+  max_tokens_per_day: 900000
 
 # Free, no-key data APIs
 gdelt:

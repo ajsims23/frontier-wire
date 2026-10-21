@@ -129,7 +129,7 @@ class FixtureFetcher:
                     {"url": "https://sports.example.org/match", "title": "Local team wins", "domain": "sports.example.org"}]})
             if "inquiry" in q.lower() or "regulator" in q.lower():
                 return json.dumps({"articles": [
-                    {"url": "https://othernews.example.org/hiring-inquiry", "title": "Watchdog probes AI hiring software", "domain": "othernews.example.org"}]})
+                    {"url": "https://othernews.example.org/hiring-inquiry", "title": "Watchdog opens inquiry into AI hiring software", "domain": "othernews.example.org"}]})
             if "agi" in q.lower():
                 return json.dumps({"articles": [
                     {"url": "https://unrelated.example.org/a", "title": "Weather update", "domain": "unrelated.example.org"}]})
@@ -211,10 +211,43 @@ def verify(prompt: str) -> dict:
     return {"matches": [99]}  # out of range — must be ignored
 
 
+def tool_call(name: str, args: dict, n: int) -> dict:
+    return {"choices": [{"message": {"role": "assistant", "content": None, "tool_calls": [
+        {"id": f"call_{n}", "type": "function", "function": {"name": name, "arguments": json.dumps(args)}}]}}],
+        "usage": {"total_tokens": 900}}
+
+
+def research_turn(body: dict) -> dict:
+    """A stand-in research agent: search with the claim's words, read the best match, then finish."""
+    import re
+    msgs = body["messages"]
+    claim = re.search(r"<item>(.+?)\n", msgs[1]["content"]).group(1)
+    words = {w for w in re.findall(r"[a-z]{4,}", claim.lower())}
+    n = len(msgs)
+    forced = isinstance(body.get("tool_choice"), dict)
+    last = msgs[-1]
+    if forced:
+        return tool_call("finish", {"decision": "unconfirmed", "sources": []}, n)
+    if last["role"] == "user":
+        return tool_call("search_news", {"query": claim}, n)
+    prev_call = msgs[-2]["tool_calls"][0]["function"]
+    if prev_call["name"] == "search_news":
+        for line in last["content"].splitlines():
+            if len(words & set(re.findall(r"[a-z]{4,}", line.lower()))) >= 2:
+                return tool_call("read_page", {"url": line.rsplit(" — ", 1)[-1]}, n)
+        return tool_call("finish", {"decision": "unconfirmed", "sources": [], "note": "nothing independent"}, n)
+    if prev_call["name"] == "read_page":
+        url = json.loads(prev_call["arguments"])["url"]
+        return tool_call("finish", {"decision": "confirmed", "sources": [url], "note": "same event"}, n)
+    return tool_call("finish", {"decision": "unconfirmed", "sources": []}, n)
+
+
 def newsroom_handler(calls: list[dict]):
     def handler(request: httpx.Request) -> httpx.Response:
         body = json.loads(request.content)
         calls.append(body)
+        if any(t["function"]["name"] == "search_news" for t in body.get("tools", [])):
+            return httpx.Response(200, json=research_turn(body))
         name = body["tools"][0]["function"]["name"]
         prompt = body["messages"][1]["content"]
         data = {"submit_decisions": judge, "submit_story": story, "submit_matches": verify}[name](prompt)
