@@ -376,6 +376,20 @@ class Newsroom:
                 self.report["notes"].append(f"judging skipped: {e}")
                 clusters = {}  # nothing judged → nothing marked seen; retried next run
 
+        # Variety: at most N stories per lab/publisher per run (keeps one company's blog from flooding the page).
+        cap = int(self.cfg.run.get("max_per_lab_per_run", 2))
+        per: dict[str, int] = {}
+        selected = []
+        for item in kept:
+            lead = item[2][0]
+            who = (lead.lab or domain(lead.url)).lower()
+            per[who] = per.get(who, 0) + 1
+            if per[who] > cap:
+                self.report["dropped"].append({"title": lead.title, "reason": f"variety: already {cap} stories from {lead.lab or domain(lead.url)} this run"})
+            else:
+                selected.append(item)
+        kept = selected
+
         links: dict[str, dict[str, str]] = {}
         try:
             links = editorial.link_followups(self, kept[: self.cfg.run["max_stories_per_run"]])

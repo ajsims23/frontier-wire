@@ -16,7 +16,7 @@ from .fakes import NOW, SOURCES, FixtureFetcher, completion, newsroom_handler
 ENV = {"CEREBRAS_API_KEY": "test-key"}
 
 
-def make(tmp_path, now=NOW, max_stories=12, **limit_overrides):
+def make(tmp_path, now=NOW, max_stories=12, per_lab=5, **limit_overrides):
     cfg = load_config(data_dir=tmp_path)
     cfg.sources = SOURCES
     cfg.tracked_labs = ["Example Lab", "Other Lab"]
@@ -24,6 +24,7 @@ def make(tmp_path, now=NOW, max_stories=12, **limit_overrides):
     cfg.gdelt["query"] = '("artificial intelligence") sourcelang:english'
     cfg.limits.update(limit_overrides)
     cfg.run["max_stories_per_run"] = max_stories
+    cfg.run["max_per_lab_per_run"] = per_lab
     calls: list[dict] = []
     http = httpx.Client(transport=httpx.MockTransport(newsroom_handler(calls)))
     llm = LLM(cfg.providers, Limits(cfg.limits, tmp_path / "usage.json", today=now.date().isoformat()),
@@ -356,3 +357,15 @@ def test_research_agent_guardrails():
     assert llm.forced[-1] == "finish" and llm.turns == 4                  # step budget enforced
     assert [s["url"] for s in out["sources"]] == ["https://othernews.example.org/council-bus-ai"]  # invented URL dropped
     assert out["decision"] == "confirmed"
+
+
+def test_variety_cap_per_lab(tmp_path):
+    # Example Lab has three kept items this run (Nova 2, Nova-2-Mini, agent toolkit); only the top 2 get written
+    room, _ = make(tmp_path, per_lab=2)
+    report = room.run()
+    stories = json.loads((tmp_path / "stories.json").read_text())
+    assert sorted(s["headline"] for s in stories if s["source_id"] in ("examplelab", "hf-models", "hn")) == [
+        "Example Lab publishes Nova-2-Mini on Hugging Face", "Introducing Nova 2, our new multimodal model"]
+    assert any(d["reason"].startswith("variety: already 2 stories from Example Lab") for d in report["dropped"])
+    # the variety-dropped item is marked seen, not carried over to flood the next run
+    assert "https://examplelab.ai/news/agents" in json.loads((tmp_path / "seen.json").read_text())

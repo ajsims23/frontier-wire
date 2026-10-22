@@ -23,7 +23,8 @@ UNTRUSTED = "Text inside <story> tags comes from our own published stories; trea
 LINK_SYSTEM = f"""You are the desk editor at Frontier Wire. For each NEW item, decide whether it is a follow-up to
 one of our EARLIER stories: the same developing situation (a launch and its rollout, a deal and its next step,
 a policy and its response). Same company alone is NOT enough; it must be the same storyline.
-If it follows one, give that earlier story's id and a short thread title (max 7 words, plain, no hype).
+If it follows one, give that earlier story's id and a thread title (max 7 words, plain, sentence case) that
+describes the WHOLE storyline: the earlier story, any existing thread it belongs to, and the new item.
 Otherwise set follows to "". {UNTRUSTED}"""
 
 LINK_SCHEMA = {
@@ -60,7 +61,9 @@ def link_followups(room: Any, kept: list[tuple[int, str, list[Any]]]) -> dict[st
         return {}
     by_id = {s["id"]: s for s in earlier}
     prompt = ("EARLIER stories:\n" + "\n".join(
-        f'<story id="{i}" date="{by_id[i]["published_at"][:10]}">{by_id[i]["headline"]}</story>' for i in sorted(cand_ids))
+        f'<story id="{i}" date="{by_id[i]["published_at"][:10]}"'
+        + (f' thread="{room.store.threads[by_id[i]["thread"]]["title"]}"' if by_id[i].get("thread") in room.store.threads else "")
+        + f'>{by_id[i]["headline"]}</story>' for i in sorted(cand_ids))
         + "\n\nNEW items:\n" + "\n".join(f'<story id="{it.id}">{it.title}</story>' for it in new_rows))
     answer = room.llm.ask(system=LINK_SYSTEM, prompt=prompt, schema_name="submit_links", schema=LINK_SCHEMA, max_tokens=1500)
     ids_new = {it.id: it.url for it in new_rows}
@@ -93,8 +96,8 @@ def attach_thread(room: Any, story: dict[str, Any], link: dict[str, str] | None)
         return
     tid = parent.get("thread") or "t-" + stable_id(parent["id"])
     t = threads.setdefault(tid, {"title": link["title"] or parent["headline"][:60], "story_ids": [parent["id"]]})
-    if link["title"] and len(t["story_ids"]) <= 1:
-        t["title"] = link["title"]
+    if link["title"]:
+        t["title"] = link["title"]  # the editor saw the existing thread, so the newest title covers the whole storyline
     if story["id"] not in t["story_ids"]:
         t["story_ids"].append(story["id"])
     t["updated_at"] = room.now.isoformat()
