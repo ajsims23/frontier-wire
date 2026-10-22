@@ -480,3 +480,14 @@ def test_desk_pages_build(tmp_path):
     desks = json.loads((out / "data" / "desks.json").read_text())
     assert desks["opportunities"]["roles"] == 4 and desks["opportunities"]["india"] == 1 and desks["india"]["count7"] >= 1
     assert "https://example.github.io" not in (out / "india" / "index.html").read_text() or True
+
+
+def test_desk_items_not_crowded_out(tmp_path):
+    room, calls = make(tmp_path)
+    room.cfg.run["max_candidates_to_judge"] = 6   # tiny editor budget
+    room.cfg.run["judge_batch"] = 4               # forces two editor requests
+    report = room.run()
+    judged_titles = " ".join(c["messages"][1]["content"] for c in calls if c["tools"][0]["function"]["name"] == "submit_decisions")
+    assert "IndicAI" in judged_titles                                   # India desk got its reserved slot
+    assert sum(1 for c in calls if c["tools"][0]["function"]["name"] == "submit_decisions") == 2
+    assert "gather" in report["timings"] and "judge" in report["timings"]

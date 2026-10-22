@@ -59,6 +59,9 @@ def update_jobs(room: Any, boards: list[dict[str, str]]) -> None:
             r["intern"] = bool(INTERN.search(r["title"]))
             r["india"] = bool(INDIA.search(r["location"]))
             r["remote"] = bool(REMOTE.search(r["location"]))
+        status[b["company"]] = f"ok ({len(rows)})"
+        if not rows:
+            continue  # a board with no listings is likely moved; don't show a misleading "0 open roles"
         rows.sort(key=lambda r: r["posted"], reverse=True)
         jobs[b["company"]] = {
             "total": len(rows),
@@ -68,7 +71,6 @@ def update_jobs(room: Any, boards: list[dict[str, str]]) -> None:
             "careers": b.get("careers", ""),
             "lab": b.get("lab", b["company"]),
         }
-        status[b["company"]] = f"ok ({len(rows)})"
     if jobs:  # keep the last good snapshot if every board failed this run
         room.store.opportunities["jobs"] = jobs
         room.store.opportunities["jobs_updated"] = room.now.isoformat()

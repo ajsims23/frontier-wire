@@ -153,7 +153,7 @@ class Gdelt:
                     if "429" in str(exc):
                         self.disabled = True
                     raise
-                self.sleep(15 * (attempt + 1))  # shared servers get rate-limited; back off and retry
+                self.sleep(8 * (attempt + 1))  # shared servers get rate-limited; back off and retry
         try:
             data = json.loads(raw)
         except json.JSONDecodeError as exc:

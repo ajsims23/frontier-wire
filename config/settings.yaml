@@ -34,7 +34,10 @@ providers:
 
 run:
   lookback_hours: 36          # ignore items older than this
-  max_candidates_to_judge: 60 # items sent to the editor per run
+  max_candidates_to_judge: 80 # items sent to the editor per run (in batches)
+  judge_batch: 45            # items per editor request
+  desk_judge_quota: 25       # editor slots reserved for desk sources (e.g. India)
+  desk_write_slots: 3        # writing slots reserved for desk stories
   min_score: 6                # 1–10; below this an item is dropped
   max_stories_per_run: 10     # stories written per run
   max_per_lab_per_run: 2      # variety: at most this many stories from one lab/publisher per run

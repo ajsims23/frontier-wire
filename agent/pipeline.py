@@ -103,8 +103,13 @@ class Newsroom:
 
     # ------------------------------------------------------------ 3. judge
     def judge(self, clusters: dict[str, list[Item]]) -> list[tuple[int, str, list[Item]]]:
-        ordered = sorted(clusters.items(), key=lambda kv: ROLE_RANK.get(kv[1][0].role, 9))
-        ordered = ordered[: self.cfg.run["max_candidates_to_judge"]]
+        cap = self.cfg.run["max_candidates_to_judge"]
+        quota = int(self.cfg.run.get("desk_judge_quota", 25))
+        newest = lambda kv: kv[1][0].published or ""  # noqa: E731
+        desk = sorted((kv for kv in clusters.items() if kv[1][0].desk), key=newest, reverse=True)[:quota]
+        desk_ids = {cid for cid, _ in desk}
+        rest = sorted((kv for kv in clusters.items() if kv[0] not in desk_ids), key=lambda kv: ROLE_RANK.get(kv[1][0].role, 9))
+        ordered = rest[: max(0, cap - len(desk))] + desk  # desks get their own slots, so they're never crowded out
         judged_ids = {cid for cid, _ in ordered}
         # Clusters beyond the cap are left unjudged (and unseen) for the next run.
         for cid in list(clusters):
@@ -113,13 +118,17 @@ class Newsroom:
 
         recent = self.store.recent_headlines(self.now)
         recent_ids = {r["id"] for r in recent}
-        prompt = ("Already published (for duplicate checks):\n"
-                  + ("\n".join(f'- [{r["id"]}] {r["headline"]}' for r in recent) or "- none")
-                  + "\n\nCandidates:\n" + "\n".join(_item_xml(m[0]) for _, m in ordered)
-                  + "\n\nReturn one decision per candidate id.")
-        answer = self.llm.ask(system=P.JUDGE_SYSTEM, prompt=prompt, schema_name="submit_decisions",
-                              schema=P.JUDGE_SCHEMA, max_tokens=6000)
-        decisions = {d["id"]: d for d in answer.get("decisions", []) if isinstance(d, dict) and "id" in d}
+        decisions: dict[str, dict] = {}
+        batch = int(self.cfg.run.get("judge_batch", 45))
+        for i in range(0, len(ordered), batch):
+            chunk = ordered[i:i + batch]
+            prompt = ("Already published (for duplicate checks):\n"
+                      + ("\n".join(f'- [{r["id"]}] {r["headline"]}' for r in recent) or "- none")
+                      + "\n\nCandidates:\n" + "\n".join(_item_xml(m[0]) for _, m in chunk)
+                      + "\n\nReturn one decision per candidate id.")
+            answer = self.llm.ask(system=P.JUDGE_SYSTEM, prompt=prompt, schema_name="submit_decisions",
+                                  schema=P.JUDGE_SCHEMA, max_tokens=6000)
+            decisions.update({d["id"]: d for d in answer.get("decisions", []) if isinstance(d, dict) and "id" in d})
 
         for cid, d in list(decisions.items()):
             other = d.get("same_event_as") or ""
@@ -369,10 +378,16 @@ class Newsroom:
 
     # ------------------------------------------------------------ run
     def run(self) -> dict[str, Any]:
+        import time as _time
+        t0 = _time.monotonic()
+        timings: dict[str, float] = {}
+        self.report["timings"] = timings
+        mark = lambda name: timings.__setitem__(name, round(_time.monotonic() - t0 - sum(timings.values()), 1))  # noqa: E731
         for st in self.store.stories:  # keep lab names consistent, including older stories
             st["lab"] = self.cfg.canon_lab(st.get("lab"))
         self.store.labs = {self.cfg.canon_lab(k): v for k, v in sorted(self.store.labs.items(), key=lambda kv: kv[1].get("date") or "")}
         clusters = self.group(self.collect())
+        mark("gather")
         kept: list[tuple[int, str, list[Item]]] = []
         if clusters:
             try:
@@ -393,8 +408,15 @@ class Newsroom:
                 self.report["dropped"].append({"title": lead.title, "reason": f"variety: already {cap} stories from {lead.lab or domain(lead.url)} this run"})
             else:
                 selected.append(item)
-        kept = selected
+        # Reserve a few writing slots for desk stories (e.g. India) so global news can't crowd them out.
+        reserve = int(self.cfg.run.get("desk_write_slots", 3))
+        n = self.cfg.run["max_stories_per_run"]
+        desk_kept = [k for k in selected if any(m.desk for m in k[2])][:reserve]
+        others = [k for k in selected if k not in desk_kept]
+        head = sorted(others[: max(0, n - len(desk_kept))] + desk_kept, key=lambda k: -k[0])
+        kept = head + [k for k in selected if k not in head]
 
+        mark("judge")
         links: dict[str, dict[str, str]] = {}
         try:
             links = editorial.link_followups(self, kept[: self.cfg.run["max_stories_per_run"]])
@@ -433,6 +455,7 @@ class Newsroom:
                                            "summary": story["summary"], "url": story["url"],
                                            "sources": len(story["sources"]), "quotes": len(story["quotes"])})
 
+        mark("verify and write")
         if not_reached:
             self.report["notes"].append(f"{len(not_reached)} kept item(s) carried over to the next run")
         self.store.mark_seen([m.url for ms in clusters.values() for m in ms if m.url not in not_reached], self.now)
@@ -447,6 +470,7 @@ class Newsroom:
         for step, fn in steps:
             try:
                 fn(self)
+                mark(step)
             except (LimitReached, AllProvidersFailed) as e:
                 self.report["notes"].append(f"{step} skipped: {e}")
             except Exception as e:  # noqa: BLE001
@@ -490,6 +514,8 @@ def summary_markdown(report: dict[str, Any]) -> str:
         lines.append(f"Daily email {report['newsletter']}")
     if report.get("self_review"):
         lines.append("Self-review written (see the newsroom issue)")
+    if report.get("timings"):
+        lines.append("Time: " + ", ".join(f"{k} {v:.0f}s" for k, v in report["timings"].items() if v >= 1))
     lines += ["", "### New stories"]
     lines += [f"- **{w['category']}** — [{w['headline']}]({w['url']})  \n  {w['summary']}  \n"
               f"  _{w['sources']} source(s), {w['quotes']} verified quote(s)_" for w in report["written"]] or ["- none"]
