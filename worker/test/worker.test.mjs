@@ -17,11 +17,12 @@ test("answers keep only real citations", async () => {
 });
 
 test("questions our archive doesn't cover get a labelled general answer", async () => {
-  const r = await answer({}, "quantum knitting", index, async (env, msgs) => (msgs[0].content.includes("general knowledge") ? "Background." : "x"));
+  const noWeb = async () => [];
+  const r = await answer({}, "quantum knitting", index, async (env, msgs) => (msgs[0].content.includes("general knowledge") ? "Background." : "x"), noWeb);
   assert.equal(r.general, true);
   assert.equal(r.answer, "Background.");
   assert.equal(r.sources.length, 0);
-  const r2 = await answer({}, "deepseek board members", index, async (env, msgs) => (msgs[0].content.includes("general knowledge") ? "General." : "NOT_COVERED"));
+  const r2 = await answer({}, "deepseek board members", index, async (env, msgs) => (msgs[0].content.includes("general knowledge") ? "General." : "NOT_COVERED"), noWeb);
   assert.equal(r2.general, true);
   assert.equal(r2.answer, "General.");
 });
@@ -44,4 +45,12 @@ test("news RSS parsing unwraps Bing links and cleans text", () => {
   const g = parseNewsRss('<item><title>Big launch - Reuters</title><link>https://news.google.com/rss/articles/abc</link><pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate><source url="https://reuters.com">Reuters</source></item>', "google");
   assert.equal(g[0].title, "Big launch");
   assert.equal(g[0].publisher, "Reuters");
+});
+
+test("uncovered questions use live news first, with real result citations", async () => {
+  const web = async () => [{ title: "Tesla does a big thing", url: "https://example.com/t", publisher: "Example", date: "2026-10-22", snippet: "Details." }];
+  const r = await answer({}, "tesla latest", index, async (env, msgs) => (msgs[0].content.includes("LIVE news") ? "Tesla did a big thing [1] and more [4]." : "NOT_COVERED"), web);
+  assert.equal(r.web, true);
+  assert.equal(r.answer, "Tesla did a big thing [1] and more .");
+  assert.equal(r.sources[0].url, "https://example.com/t");
 });
