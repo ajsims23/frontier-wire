@@ -94,6 +94,7 @@ export function parseNewsRss(xml, kind) {
   for (const m of String(xml).matchAll(/<item>([\s\S]*?)<\/item>/g)) {
     const it = m[1];
     let link = decode(tag(it, "link"));
+    if (kind === "web" && /\/(wiki|category|tag|topic)s?\//i.test(link)) continue;
     if (kind === "bing") { try { const u = new URL(link); if (u.hostname.endsWith("bing.com")) link = u.searchParams.get("url") || ""; } catch (e) { link = ""; } }
     let title = decode(tag(it, "title"));
     let publisher = decode(tag(it, "News:Source")) || decode(tag(it, "source"));
@@ -123,6 +124,7 @@ async function webNews(question) {
     ["bing", `https://www.bing.com/news/search?q=${enc}&format=rss&setlang=en-us&qft=sortbydate%3d%221%22`],
     ["google", `https://news.google.com/rss/search?q=${enc}%20when:30d&hl=en-US&gl=US&ceid=US:en`],
     ["bing", `https://www.bing.com/news/search?q=${enc}&format=rss&setlang=en-us&qft=interval%3d%229%22`],   // past month, by relevance
+    ["web", `https://www.bing.com/search?q=${enc}%20news&format=rss&setlang=en-us`],                        // web results catch big stories
   ];
   const results = await Promise.all(feeds.map(async ([kind, url]) => {
     try {

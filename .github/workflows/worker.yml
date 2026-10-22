@@ -95,7 +95,7 @@ jobs:
             -d '{"q":"What happened with DeepSeek this month?"}' "$url/api/ask" | head -c 1500 > worker/smoke.txt || true
           echo >> worker/smoke.txt
           curl -s -m 90 -X POST -H "Origin: https://ajsims23.github.io" -H "Content-Type: application/json" \
-            -d '{"q":"what is going on with tesla"}' "$url/api/ask" | head -c 6000 >> worker/smoke.txt || true
+            -d '{"q":"what is going on with tesla"}' "$url/api/ask" > worker/smoke-web.json || true
           cat worker/smoke.txt
       - name: Record the API address
         if: steps.setup.outputs.ready == 'true'
@@ -104,7 +104,7 @@ jobs:
           git config user.name "frontier-wire-bot"
           git config user.email "frontier-wire-bot@users.noreply.github.com"
           tail -n 25 worker/deploy.log | sed 's/[A-Za-z0-9_-]\{40,\}/[hidden]/g' > worker/last-deploy.txt   # for troubleshooting
-          git add worker/last-deploy.txt worker/smoke.txt 2>/dev/null || git add worker/last-deploy.txt
+          git add worker/last-deploy.txt worker/smoke.txt worker/smoke-web.json 2>/dev/null || git add worker/last-deploy.txt
           [ -f config/api_url.txt ] && git add config/api_url.txt
           if ! git diff --cached --quiet; then
             git commit -m "API address updated"
