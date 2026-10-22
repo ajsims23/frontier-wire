@@ -286,6 +286,7 @@
     renderNewsChart();
     renderBriefing(data.briefing);
     renderWatch();
+    if (window.FWPodcast) window.FWPodcast(data.podcasts);
     renderChips();
     renderFeed();
     renderThreads(data.threads);

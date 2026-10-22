@@ -510,3 +510,57 @@ table.deals .num, table.deals th.num { text-align: right; font-variant-numeric: 
 .weekly-link .wl-go { font-size: 14px; color: var(--brand); }
 .weekly-link:hover { border-color: var(--brand); }
 @media (max-width: 560px) { .shifts > li { grid-template-columns: 40px minmax(0, 1fr); gap: 12px; } .shift-n { font-size: 2rem; } .changes li { grid-template-columns: 56px 10px 1fr; } }
+
+/* ---------------------------------------------------------------- podcast pop-up and mini player */
+.pod { position: fixed; z-index: 60; background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: var(--r-lg);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .45), 0 0 0 1px rgba(255, 255, 255, .03); overflow: hidden; display: flex; flex-direction: column; }
+.pod[data-state="closed"] { display: none; }
+.pod[data-state="big"] { left: 50%; bottom: 24px; width: min(720px, calc(100vw - 32px)); margin-left: calc(min(720px, calc(100vw - 32px)) / -2); }
+.pod[data-state="mini"] { right: 20px; bottom: 20px; width: 340px; }
+.pod-frame { position: relative; aspect-ratio: 16 / 9; background: #000; }
+.pod-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.pod-body { display: flex; align-items: center; gap: 14px; padding: 14px 16px; }
+.pod-info { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.pod-kicker { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--brand); }
+.pod-live { width: 8px; height: 8px; border-radius: 50%; background: #ff5d5d; box-shadow: 0 0 0 0 rgba(255, 93, 93, .6); animation: live 1.8s infinite; flex: none; }
+@keyframes live { 0% { box-shadow: 0 0 0 0 rgba(255, 93, 93, .55); } 70% { box-shadow: 0 0 0 8px rgba(255, 93, 93, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 93, 93, 0); } }
+.pod-title { margin: 2px 0 0; font-weight: 700; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.pod[data-state="big"] .pod-title { font-size: 18px; font-stretch: 108%; }
+.pod-guest { margin: 0; font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pod-ctrl { display: flex; align-items: center; gap: 6px; flex: none; }
+.pod-btn { height: 38px; min-width: 38px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel-2); color: var(--text);
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 600 14px Archivo, sans-serif; cursor: pointer; }
+.pod-btn.icon { padding: 0; width: 38px; }
+.pod-btn:hover { border-color: var(--brand); }
+.pod-btn:focus-visible, .pod-launch:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.pod-sound[aria-pressed="false"] { background: var(--brand); color: #051416; border-color: var(--brand); }
+.pod-timer { position: absolute; left: 0; top: 0; z-index: 2; height: 3px; width: 0; background: var(--brand); }
+.pod[data-state="big"] .pod-timer { animation: pod-timer 9s linear forwards; }
+.pod[data-state="big"]:hover .pod-timer, .pod[data-state="big"]:focus-within .pod-timer { animation-play-state: paused; }
+@keyframes pod-timer { from { width: 0; } to { width: 100%; } }
+/* mini: compact text, sound button shows icon only */
+.pod[data-state="mini"] .pod-body { flex-direction: column; align-items: stretch; gap: 10px; padding: 12px; }
+.pod[data-state="mini"] .pod-kicker { font-size: 10px; }
+.pod[data-state="mini"] .pod-title { font-size: 14px; -webkit-line-clamp: 1; }
+.pod[data-state="mini"] .pod-ctrl { justify-content: space-between; }
+.pod[data-state="mini"] .pod-sound span { font-size: 13px; }
+.pod-launch { position: fixed; right: 20px; bottom: 20px; z-index: 59; display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 18px 0 16px;
+  border-radius: 999px; border: 1px solid var(--line); background: var(--panel); color: var(--text); font: 650 15px Archivo, sans-serif; cursor: pointer;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, .35); animation: vfade .4s ease both; }
+.pod-launch:hover { border-color: var(--brand); }
+.pod-launch[hidden] { display: none; }
+@media (max-width: 640px) {
+  .pod[data-state="big"] { left: 16px; right: 16px; width: auto; margin-left: 0; bottom: 16px; }
+  .pod[data-state="big"] .pod-body { flex-direction: column; align-items: stretch; }
+  .pod[data-state="mini"] { left: 16px; right: 16px; bottom: 16px; width: auto; flex-direction: row; align-items: center; }
+  .pod[data-state="mini"] .pod-frame { width: 132px; flex: none; }
+  .pod[data-state="mini"] .pod-body { flex-direction: row; align-items: center; padding: 8px 10px; gap: 8px; }
+  .pod[data-state="mini"] .pod-kicker, .pod[data-state="mini"] .pod-guest, .pod[data-state="mini"] .pod-sound span, .pod[data-state="mini"] .pod-next { display: none; }
+  .pod[data-state="mini"] .pod-title { -webkit-line-clamp: 2; font-size: 13px; }
+  .pod[data-state="mini"] .pod-ctrl { flex-direction: column; gap: 4px; }
+  .pod[data-state="mini"] .pod-btn { height: 30px; min-width: 30px; width: 30px; padding: 0; }
+  .pod-launch { right: 16px; bottom: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .pod-live, .pod-launch { animation: none; } .pod[data-state="big"] .pod-timer { animation: none; } }
+/* phones: the wrapped header is tall, so let it scroll away instead of covering a fifth of the screen */
+@media (max-width: 640px) { .top { position: static; } }
