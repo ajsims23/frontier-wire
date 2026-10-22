@@ -1,0 +1,123 @@
+{
+  "started_at": "2026-10-22T13:14:49+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1312)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (888)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (17)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (17)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (25)"
+  },
+  "dropped": [
+    {
+      "title": "Several Linux kernel vulnerabilities accidentally posted to public mailing list",
+      "reason": "score 2: Linux kernel vulnerability report unrelated to AI; off‑topic for Frontier Wire audience."
+    },
+    {
+      "title": "1Password lets AI agents use your passwords without seeing them",
+      "reason": "score 5: Product feature allowing AI agents to use passwords without seeing them; incremental and not a major AI development."
+    },
+    {
+      "title": "AI agents are ready to shop. Some retailers are wary.",
+      "reason": "score 5: General commentary on AI agents for shopping; not a notable release or policy change."
+    },
+    {
+      "title": "Einride expands Nvidia partnership to deploy AI reasoning model for self-driving trucks",
+      "reason": "score 5: Einride's expanded Nvidia partnership for self‑driving trucks is a modest update, not a major AI breakthrough for the Indian audience."
+    },
+    {
+      "title": "Exclusive: Slingshot Raises $27M In Seed Funding To Build An Insurer For Those Small Policies Sold At Checkout",
+      "reason": "score 5: Seed funding of $27 M for an embedded insurance startup is modest and routine."
+    },
+    {
+      "title": "The AI IPO Wave Is The Dot-Com Bubble’s Evil Twin. Anthropic’s Delay Just Proved It.",
+      "reason": "score 5: Opinion piece on AI IPO valuations; interesting commentary but not breaking news."
+    },
+    {
+      "title": "Binny Bansal-Backed ShopOS Launches AI Creative Platform Sloosh For Individuals",
+      "reason": "could not verify yet after a second try; dropped"
+    }
+  ],
+  "written": [
+    {
+      "id": "2bef5e155399",
+      "headline": "DeepSeek raises about $15 billion in funding round days after US restrictions",
+      "category": "industry",
+      "summary": "DeepSeek, a Chinese AI startup, secured roughly 100 billion yuan ($15 billion) from investors including CATL and Tencent, according to Bloomberg and other reports. The financing comes two days after the U.S. ordered federal agencies to remove DeepSeek’s technology from their systems.",
+      "url": "https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions",
+      "sources": 4,
+      "quotes": 0
+    }
+  ],
+  "notes": [],
+  "timings": {
+    "gather": 79.0,
+    "judge": 4.6,
+    "verify and write": 89.3,
+    "tagging": 20.4,
+    "briefing": 22.6,
+    "job boards": 1.8,
+    "courses": 0.0,
+    "self-review": 0.0,
+    "daily email": 0.0
+  },
+  "fetched": 2857,
+  "fresh": 8,
+  "judged": 8,
+  "kept": 2,
+  "research": {
+    "investigated": 2,
+    "confirmed": 1,
+    "tool_calls": 6
+  },
+  "research_log": [
+    "DeepSeek reportedly raises $15B days after US restrictions: confirmed (searched “DeepSeek raises $15 billion”; read msn.com; read indiatimes.com)",
+    "Binny Bansal-Backed ShopOS Launches AI Creative Platform Sloosh For In: unconfirmed (searched “ShopOS Sloosh launch”; searched “Sloosh AI platform ShopOS”; searched “Sloosh platform”)"
+  ],
+  "tagged": 1,
+  "briefing": "4 themes from 20 stories",
+  "job_boards": {
+    "Anthropic": "ok (678)",
+    "xAI": "ok (294)",
+    "OpenAI": "ok (813)",
+    "Cohere": "ok (113)",
+    "Perplexity": "ok (127)",
+    "ElevenLabs": "ok (158)",
+    "Mistral AI": "failed: HTTPStatusError: Server error '502 Bad Gateway' for url 'https://api.lever.co/v0/postings/mistral?mode=json'\nFor more",
+    "Scale AI": "ok (174)",
+    "Databricks": "ok (898)"
+  },
+  "ai_requests_run": 12,
+  "ai_tokens_run": 19561,
+  "ai_requests_today": 199,
+  "provider_log": []
+}
