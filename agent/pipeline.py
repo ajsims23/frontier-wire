@@ -402,7 +402,7 @@ class Newsroom:
             "videos": [{k: v.get(k) for k in ("id", "title", "channel", "lab", "published", "blurb", "story_id")}
                        for v in (self.store.videos.get("videos") or []) if v.get("kind") != "podcast"][:9],
             "podcasts": [{k: v.get(k) for k in ("id", "title", "channel", "published", "blurb", "guest")}
-                         for v in (self.store.videos.get("videos") or []) if v.get("kind") == "podcast"][:6],
+                         for v in videos.featured_podcasts(self.store.videos.get("videos") or [], self.now)],
             "briefing": self.store.briefing or None,
             "weekly": next(({"key": w["key"], "title": w["title"], "intro": w["intro"], "range": w["range"]}
                             for w in reversed(list((self.store.weekly.get("issues") or {}).values()))), None),
