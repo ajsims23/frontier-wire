@@ -106,7 +106,15 @@ export function parseNewsRss(xml, kind) {
   return out;
 }
 
-async function webNews(q) {
+// "what's going on with tesla?" -> "tesla": news search works best on the names, not the question words
+const FILLER = new Set("what whats what's is are was were going on happening happened latest news new update updates tell me about recent recently any there the a an with to of for in at this week month today currently current status give please know".split(" "));
+export function searchTerms(q) {
+  const words = String(q).toLowerCase().replace(/[?!.,]/g, " ").split(/\s+/).filter((w) => w && !FILLER.has(w.replace(/['’]s$/, "")) && !FILLER.has(w));
+  return words.join(" ").trim() || String(q);
+}
+
+async function webNews(question) {
+  const q = searchTerms(question);
   // the biggest stories (relevance), the newest ones, and Google News for breadth; a story found by
   // several feeds ranks higher, so a major event a week ago isn't crowded out by today's minor items
   const enc = encodeURIComponent(q);

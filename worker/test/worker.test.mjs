@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { buildIndex } from "../../site/search.js";
-import { answer, matchSubscriber, parseNewsRss } from "../src/index.js";
+import { answer, matchSubscriber, parseNewsRss, searchTerms } from "../src/index.js";
 
 const index = buildIndex([
   { id: "a", h: "DeepSeek raises $15 billion", s: "From CATL and Tencent.", d: "2026-10-22" },
@@ -53,4 +53,9 @@ test("uncovered questions use live news first, with real result citations", asyn
   assert.equal(r.web, true);
   assert.equal(r.answer, "Tesla did a big thing [1] and more .");
   assert.equal(r.sources[0].url, "https://example.com/t");
+});
+
+test("question words are dropped before searching the news", () => {
+  assert.equal(searchTerms("what's going on with tesla?"), "tesla");
+  assert.equal(searchTerms("Latest news about OpenAI GPT-7"), "openai gpt-7");
 });
