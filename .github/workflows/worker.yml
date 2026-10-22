@@ -50,6 +50,18 @@ jobs:
           fi
           sed -i "s/REPLACED_IN_CI/$id/" wrangler.toml
           wrangler d1 execute frontier-wire --remote --file schema.sql --yes
+      - name: workers.dev address
+        if: steps.setup.outputs.ready == 'true'
+        run: |
+          api="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/subdomain"
+          current=$(curl -s -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$api" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{process.stdout.write((JSON.parse(s).result||{}).subdomain||"")}catch(e){}})')
+          if [ -z "$current" ]; then
+            name="frontier-wire-${CLOUDFLARE_ACCOUNT_ID:0:6}"
+            echo "Registering workers.dev subdomain $name"
+            curl -s -X PUT -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Content-Type: application/json" -d "{\"subdomain\":\"$name\"}" "$api" | head -c 400; echo
+          else
+            echo "workers.dev subdomain: $current"
+          fi
       - name: Deploy
         if: steps.setup.outputs.ready == 'true'
         working-directory: worker
