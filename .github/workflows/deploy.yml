@@ -3,7 +3,7 @@ name: Deploy website
 on:
   push:
     branches: [main]
-    paths: ["site/**", "data/site.json", "data/feed.xml"]
+    paths: ["site/**", "data/**", "agent/build.py", "agent/cards.py", "config/settings.yaml"]
   workflow_run:                 # after each newsroom run (auto mode publishes straight to main)
     workflows: ["Newsroom agent"]
     types: [completed]
@@ -29,13 +29,19 @@ jobs:
         with:
           ref: main
 
-      - name: Assemble site
-        run: |
-          mkdir -p _site/data
-          cp -r site/* _site/
-          [ -f data/site.json ] && cp data/site.json _site/data/ || echo '{"stories":[],"labs":[],"stats":{}}' > _site/data/site.json
-          [ -f data/feed.xml ] && cp data/feed.xml _site/data/ || true
-          touch _site/.nojekyll
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Build site (home, story pages, lab pages, previews, sitemap)
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
+          NEWSLETTER_USERNAME: ${{ vars.NEWSLETTER_USERNAME }}
+        run: python -m agent.build --out _site
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

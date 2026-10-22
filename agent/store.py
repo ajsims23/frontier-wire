@@ -32,6 +32,7 @@ class Store:
         self.threads: dict[str, dict[str, Any]] = _read(data_dir / "threads.json", {})
         self.briefing: dict[str, Any] = _read(data_dir / "briefing.json", {})
         self.review_state: dict[str, Any] = _read(data_dir / "review_state.json", {})
+        self.newsletter_state: dict[str, Any] = _read(data_dir / "newsletter_state.json", {})
 
     def is_seen(self, url: str) -> bool:
         return url in self.seen
@@ -64,6 +65,7 @@ class Store:
         _write(self.dir / "threads.json", self.threads)
         _write(self.dir / "briefing.json", self.briefing)
         _write(self.dir / "review_state.json", self.review_state)
+        _write(self.dir / "newsletter_state.json", self.newsletter_state)
         _write(self.dir / "site.json", site)
         (self.dir / "feed.xml").write_text(rss(self.stories[:30], now))
         _write(self.dir / "runs" / f"{now.strftime('%Y%m%dT%H%M%SZ')}.json", report)

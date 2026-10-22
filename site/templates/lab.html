@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="shell lab-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><a href="{{ root }}#labs">Labs</a></nav>
+  <header class="lab-head">
+    <h1>{{ lab }}</h1>
+    <dl class="lab-stats">
+      <div><dt>Stories in the last 30 days</dt><dd>{{ count30 }}</dd></div>
+      <div><dt>Latest release</dt><dd>{% if release %}<a href="{{ release.href }}">{{ release.model }}</a>{% else %}None tracked yet{% endif %}</dd></div>
+      <div><dt>Last in the news</dt><dd>{{ last_seen or "Not yet" }}</dd></div>
+    </dl>
+  </header>
+
+  <figure class="activity" aria-labelledby="act-h">
+    <figcaption id="act-h">Stories per day, last 30 days</figcaption>
+    <svg viewBox="0 0 {{ chart.w }} {{ chart.h }}" preserveAspectRatio="none" role="img" aria-label="{{ count30 }} stories about {{ lab }} in the last 30 days, most on {{ chart.peak_label }}">
+      {% for b in chart.bars %}
+      <rect x="{{ b.x }}" y="{{ b.y }}" width="{{ b.w }}" height="{{ b.h }}" rx="2" fill="{{ 'var(--brand)' if b.n else 'var(--line-soft)' }}"><title>{{ b.label }}: {{ b.n }} stor{{ 'y' if b.n == 1 else 'ies' }}</title></rect>
+      {% endfor %}
+    </svg>
+    <div class="ticks" aria-hidden="true">{% for t in chart.ticks %}<span style="left: {{ t.pct }}%">{{ t.label }}</span>{% endfor %}</div>
+  </figure>
+
+  <section class="block" aria-labelledby="tl-h">
+    <div class="block-head"><h2 id="tl-h">Timeline</h2><p>Everything we've covered about {{ lab }}, newest first.</p></div>
+    {% if items %}
+    <ol class="lab-tl">
+      {% for it in items %}
+      <li style="--c: var(--{{ it.category }})">
+        <time datetime="{{ it.published_at }}">{{ it.date }}</time>
+        <div><span class="tag" style="--c: var(--{{ it.category }})">{{ it.cat_name }}</span>
+        <a href="{{ root }}story/{{ it.id }}/">{{ it.headline }}</a></div>
+      </li>
+      {% endfor %}
+    </ol>
+    {% else %}<p class="empty">No stories about {{ lab }} yet. The newsroom checks for news every three hours.</p>{% endif %}
+  </section>
+</section>
+{% endblock %}

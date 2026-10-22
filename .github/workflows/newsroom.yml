@@ -64,6 +64,7 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
           SITE_URL: ${{ vars.SITE_URL }}
           MAX_REQUESTS_PER_DAY: ${{ vars.MAX_REQUESTS_PER_DAY }}
         run: python -m agent run

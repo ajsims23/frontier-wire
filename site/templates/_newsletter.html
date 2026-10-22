@@ -1,0 +1,16 @@
+{% if newsletter %}
+<section class="shell news-signup" aria-labelledby="nl-h">
+  <div class="nl-card">
+    <div>
+      <h2 id="nl-h">Get Today in AI by email</h2>
+      <p>The daily briefing in your inbox each morning: the day's themes, with links to every source. Free, and you can unsubscribe anytime.</p>
+    </div>
+    <form class="nl-form" action="https://buttondown.com/api/emails/embed-subscribe/{{ newsletter }}" method="post" target="_blank" rel="noopener">
+      <label class="sr" for="nl-email">Email address</label>
+      <input id="nl-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+      <input type="hidden" name="embed" value="1">
+      <button class="btn" type="submit" data-goatcounter-click="newsletter-signup">Subscribe</button>
+    </form>
+  </div>
+</section>
+{% endif %}

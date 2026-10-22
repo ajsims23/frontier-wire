@@ -8,7 +8,7 @@ from typing import Any
 from . import prompts as P
 from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
-from . import editorial
+from . import editorial, newsletter
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather
 from .store import Store
@@ -292,7 +292,7 @@ class Newsroom:
             "summary": answer["summary"].strip(),
             "why_it_matters": answer["why_it_matters"].strip(),
             "category": cat,
-            "lab": answer.get("lab") or lead.lab or "",
+            "lab": self.cfg.canon_lab(answer.get("lab") or lead.lab or ""),
             "model_name": answer.get("model_name") or "",
             "model_type": answer.get("model_type") or "",
             "tags": [t for t in answer.get("tags") or [] if isinstance(t, str)][:5],
@@ -367,6 +367,9 @@ class Newsroom:
 
     # ------------------------------------------------------------ run
     def run(self) -> dict[str, Any]:
+        for st in self.store.stories:  # keep lab names consistent, including older stories
+            st["lab"] = self.cfg.canon_lab(st.get("lab"))
+        self.store.labs = {self.cfg.canon_lab(k): v for k, v in sorted(self.store.labs.items(), key=lambda kv: kv[1].get("date") or "")}
         clusters = self.group(self.collect())
         kept: list[tuple[int, str, list[Item]]] = []
         if clusters:
@@ -431,7 +434,8 @@ class Newsroom:
         if not_reached:
             self.report["notes"].append(f"{len(not_reached)} kept item(s) carried over to the next run")
         self.store.mark_seen([m.url for ms in clusters.values() for m in ms if m.url not in not_reached], self.now)
-        for step, fn in (("briefing", editorial.write_briefing), ("self-review", editorial.self_review)):
+        for step, fn in (("briefing", editorial.write_briefing), ("self-review", editorial.self_review),
+                         ("daily email", newsletter.maybe_send)):
             try:
                 fn(self)
             except (LimitReached, AllProvidersFailed) as e:
@@ -465,6 +469,8 @@ def summary_markdown(report: dict[str, Any]) -> str:
         lines.append(f"Daily briefing: {report['briefing']}")
     if report.get("threads"):
         lines.append("Threads updated: " + "; ".join(report["threads"]))
+    if report.get("newsletter"):
+        lines.append(f"Daily email {report['newsletter']}")
     if report.get("self_review"):
         lines.append("Self-review written (see the newsroom issue)")
     lines += ["", "### New stories"]

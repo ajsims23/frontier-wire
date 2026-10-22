@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block main %}
+<article class="shell story-page" style="--c: var(--{{ s.category }})">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><a href="{{ root }}?topic={{ topic }}#stories">{{ cat_name }}</a></nav>
+  <header class="story-head">
+    <span class="tag" style="--c: var(--{{ s.category }})">{{ cat_name }}{% if s.lab %}, <a href="{{ root }}lab/{{ lab_slug }}/">{{ s.lab }}</a>{% endif %}</span>
+    <h1>{{ s.headline }}</h1>
+    <p class="meta">
+      <time datetime="{{ s.published_at }}">{{ published_human }}</time>.
+      Checked against {{ s.sources|length }} source{{ '' if s.sources|length == 1 else 's' }}{% if s.research and s.research.decision == 'confirmed' %} by our research agent{% endif %}.
+    </p>
+  </header>
+
+  <figure class="story-figure">
+    <div class="media wide" style="--c: var(--{{ s.category }})">
+      <img src="{{ og_rel }}" alt="" width="1200" height="630">
+      {% if s.image %}<img class="photo" src="{{ s.image }}" alt="" loading="eager" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">{% endif %}
+    </div>
+    {% if s.image %}<figcaption>Image: {{ image_credit }}</figcaption>{% endif %}
+  </figure>
+
+  <div class="story-body">
+    <p class="lede">{{ s.summary }}</p>
+    {% if s.why_it_matters %}<p class="why"><strong>Why it matters.</strong> {{ s.why_it_matters }}</p>{% endif %}
+
+    {% for q in s.quotes %}
+    <figure class="pull">
+      <blockquote>“{{ q.text }}”</blockquote>
+      <figcaption><strong>{{ q.speaker }}</strong>{% if q.speaker_role %}, {{ q.speaker_role }}{% endif %}. <a href="{{ q.source_url }}" rel="noopener" data-goatcounter-click="out-quote">Source</a></figcaption>
+    </figure>
+    {% endfor %}
+
+    <section class="sources-list" aria-labelledby="src-h">
+      <h2 id="src-h">Sources</h2>
+      <ol>
+        {% for src in s.sources %}
+        <li><a href="{{ src.url }}" rel="noopener" data-goatcounter-click="out-source">{{ src.title or src.publisher }}</a><span>{{ src.publisher }}</span></li>
+        {% endfor %}
+      </ol>
+      <a class="btn" href="{{ s.url }}" rel="noopener" data-goatcounter-click="out-primary">Read the original</a>
+    </section>
+
+    <section class="share" aria-label="Share this story">
+      <span>Share</span>
+      <button type="button" class="chip" data-copy="{{ canonical }}">Copy link</button>
+      <a class="chip" href="https://wa.me/?text={{ (s.headline ~ ' ' ~ canonical)|urlencode }}" rel="noopener" target="_blank">WhatsApp</a>
+      <a class="chip" href="https://x.com/intent/post?text={{ s.headline|urlencode }}&url={{ canonical|urlencode }}" rel="noopener" target="_blank">X</a>
+      <a class="chip" href="https://www.linkedin.com/sharing/share-offsite/?url={{ canonical|urlencode }}" rel="noopener" target="_blank">LinkedIn</a>
+    </section>
+  </div>
+
+  {% if thread %}
+  <section class="block" aria-labelledby="thr-h">
+    <div class="block-head"><h2 id="thr-h">Developing: {{ thread.title }}</h2><p>How this story has unfolded.</p></div>
+    <ol class="tl story-tl">
+      {% for t in thread.stories %}
+      <li style="--c: var(--{{ t.category }})"{% if t.id == s.id %} aria-current="true"{% endif %}>
+        <span class="when">{{ t.when }}</span>
+        {% if t.id == s.id %}<span class="here">{{ t.headline }} (this story)</span>{% else %}<a href="{{ root }}story/{{ t.id }}/">{{ t.headline }}</a>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  {% if related %}
+  <section class="block" aria-labelledby="rel-h">
+    <div class="block-head"><h2 id="rel-h">{% if s.lab %}More from {{ s.lab }}{% else %}More {{ cat_name|lower }}{% endif %}</h2></div>
+    <div class="grid3">
+      {% for r in related %}
+      <a class="card" href="{{ root }}story/{{ r.id }}/" style="--c: var(--{{ r.category }})">
+        <span class="meta">{{ r.lab or r.cat_name }}, {{ r.when }}</span>
+        <h3>{{ r.headline }}</h3><p>{{ r.why_it_matters or r.summary }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</article>
+{% endblock %}

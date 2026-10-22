@@ -369,3 +369,64 @@ def test_variety_cap_per_lab(tmp_path):
     assert any(d["reason"].startswith("variety: already 2 stories from Example Lab") for d in report["dropped"])
     # the variety-dropped item is marked seen, not carried over to flood the next run
     assert "https://examplelab.ai/news/agents" in json.loads((tmp_path / "seen.json").read_text())
+
+
+def test_static_build(tmp_path):
+    from agent.build import build
+    room, _ = make(tmp_path / "data")
+    room.run()
+    stories = json.loads((tmp_path / "data" / "stories.json").read_text())
+    # a hostile headline from some web page must be escaped, never executed
+    stories[0]["headline"] = 'Evil <script>alert(1)</script> "quoted" headline'
+    (tmp_path / "data" / "stories.json").write_text(json.dumps(stories))
+    out = tmp_path / "site"
+    import os
+    os.environ["SITE_URL"] = "https://example.test/fw/"
+    os.environ["NEWSLETTER_USERNAME"] = "frontierwire"
+    os.environ["GOATCOUNTER_CODE"] = "frontierwire"
+    try:
+        stats = build(out, data_dir=tmp_path / "data", now=NOW + timedelta(hours=1))
+    finally:
+        for k in ("SITE_URL", "NEWSLETTER_USERNAME", "GOATCOUNTER_CODE"):
+            os.environ.pop(k, None)
+    assert stats["stories"] == len(stories)
+    for s in stories:
+        page = (out / "story" / s["id"] / "index.html").read_text()
+        assert (out / "og" / f"{s['id']}.png").stat().st_size > 5000       # preview card drawn
+        assert f'<meta property="og:image" content="https://example.test/fw/og/{s["id"]}.png">' in page
+        assert f'<link rel="canonical" href="https://example.test/fw/story/{s["id"]}/">' in page
+    evil = (out / "story" / stories[0]["id"] / "index.html").read_text()
+    assert "<script>alert(1)" not in evil and "&lt;script&gt;alert(1)" in evil
+    nova = next(s for s in stories if s.get("model_name") == "Nova 2")
+    lab_page = (out / "lab" / "example-lab" / "index.html").read_text()
+    assert "Nova 2" in lab_page and "Stories per day" in lab_page
+    home = (out / "index.html").read_text()
+    assert 'og:image" content="https://example.test/fw/og/home.png"' in home
+    assert "embed-subscribe/frontierwire" in home and "frontierwire.goatcounter.com/count" in home
+    assert "<!--META-->" not in home and "<!--NEWSLETTER-->" not in home
+    sitemap = (out / "sitemap.xml").read_text()
+    assert f"https://example.test/fw/story/{nova['id']}/" in sitemap and "https://example.test/fw/lab/example-lab/" in sitemap
+    assert (out / "robots.txt").read_text().endswith("Sitemap: https://example.test/fw/sitemap.xml\n")
+
+
+def test_daily_email_once_per_day(tmp_path, monkeypatch):
+    from agent import newsletter
+    sent = []
+    http = httpx.Client(transport=httpx.MockTransport(lambda r: (sent.append(json.loads(r.content)), httpx.Response(201, json={"id": "e1"}))[1]))
+    room, _ = make(tmp_path, now=NOW)  # NOW is 12:00 UTC, after the send hour
+    room.run()  # no key during the run, so the agent itself sends nothing here
+    monkeypatch.setenv("BUTTONDOWN_API_KEY", "test")
+    monkeypatch.setenv("SITE_URL", "https://example.test/fw/")
+    assert room.store.briefing["themes"]
+    newsletter.maybe_send(room, http=http)
+    newsletter.maybe_send(room, http=http)  # second call the same day does nothing
+    assert len(sent) == 1
+    assert sent[0]["subject"].startswith("Today in AI:") and sent[0]["status"] == "about_to_send"
+    assert "https://example.test/fw/story/" in sent[0]["body"]
+    # before the morning hour, nothing is sent
+    monkeypatch.delenv("BUTTONDOWN_API_KEY")
+    room2, _ = make(tmp_path / "early", now=NOW.replace(hour=1))
+    room2.run(); sent.clear()
+    monkeypatch.setenv("BUTTONDOWN_API_KEY", "test")
+    newsletter.maybe_send(room2, http=http)
+    assert sent == []

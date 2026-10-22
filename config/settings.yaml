@@ -71,3 +71,15 @@ limits:
 gdelt:
   query: '("artificial intelligence" OR OpenAI OR Anthropic OR DeepMind OR "large language model" OR "AI model") sourcelang:english'
   max_records: 60
+
+# Daily email of the briefing (needs the BUTTONDOWN_API_KEY secret).
+newsletter:
+  enabled: true
+  send_after_utc_hour: 2    # first run after 02:00 UTC (the ~8:45 am IST run) sends it, once a day
+
+# The website. Fill these in as you set things up; empty values are simply skipped.
+site:
+  base_url: https://ajsims23.github.io/frontier-wire/   # where the site lives (used in links and previews)
+  custom_domain: ""      # e.g. frontierwire.ai, once you own a domain
+  goatcounter: ""        # your GoatCounter code, e.g. frontierwire  -> visitor stats
+  newsletter: ""         # your Buttondown username                 -> daily email signup

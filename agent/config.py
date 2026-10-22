@@ -28,6 +28,16 @@ class Config:
     review_mode: bool
     extra: dict[str, Any] = field(default_factory=dict)
 
+    def canon_lab(self, name: str | None) -> str:
+        """One spelling per lab: apply aliases, and match tracked labs case-insensitively."""
+        n = (name or "").strip()
+        if not n:
+            return ""
+        aliases = {k.lower(): v for k, v in (self.extra.get("lab_aliases") or {}).items()}
+        if n.lower() in aliases:
+            return aliases[n.lower()]
+        return next((t for t in self.tracked_labs if t.lower() == n.lower()), n)
+
     @property
     def providers(self) -> list[dict[str, Any]]:
         return self.settings["providers"]
@@ -72,4 +82,5 @@ def load_config(config_dir: Path | None = None, data_dir: Path | None = None) ->
         lab_domains=src.get("lab_domains", {}),
         data_dir=Path(data_dir or os.environ.get("DATA_DIR") or ROOT / "data"),
         review_mode=_env_bool("REVIEW_MODE", settings.get("review_mode", True)),
+        extra={"lab_aliases": src.get("lab_aliases", {})},
     )
