@@ -94,7 +94,6 @@ export function parseNewsRss(xml, kind) {
   for (const m of String(xml).matchAll(/<item>([\s\S]*?)<\/item>/g)) {
     const it = m[1];
     let link = decode(tag(it, "link"));
-    if (kind === "web" && /\/(wiki|category|tag|topic)s?\//i.test(link)) continue;
     if (kind === "bing") { try { const u = new URL(link); if (u.hostname.endsWith("bing.com")) link = u.searchParams.get("url") || ""; } catch (e) { link = ""; } }
     let title = decode(tag(it, "title"));
     let publisher = decode(tag(it, "News:Source")) || decode(tag(it, "source"));
@@ -114,6 +113,16 @@ export function searchTerms(q) {
   return words.join(" ").trim() || String(q);
 }
 
+// GDELT: global news over the past month, ranked by relevance and recency (catches big stories from last week)
+export function parseGdelt(text) {
+  let data; try { data = JSON.parse(text); } catch (e) { return []; }
+  return (data.articles || []).map((a) => {
+    const d = String(a.seendate || "");
+    return { title: String(a.title || "").trim(), url: String(a.url || "").replace(/^http:/, "https:"), publisher: String(a.domain || ""),
+      date: d.length >= 8 ? `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}` : "", snippet: "" };
+  }).filter((a) => a.title && /^https:\/\//.test(a.url));
+}
+
 async function webNews(question) {
   const q = searchTerms(question);
   // the biggest stories (relevance), the newest ones, and Google News for breadth; a story found by
@@ -124,12 +133,13 @@ async function webNews(question) {
     ["bing", `https://www.bing.com/news/search?q=${enc}&format=rss&setlang=en-us&qft=sortbydate%3d%221%22`],
     ["google", `https://news.google.com/rss/search?q=${enc}%20when:30d&hl=en-US&gl=US&ceid=US:en`],
     ["bing", `https://www.bing.com/news/search?q=${enc}&format=rss&setlang=en-us&qft=interval%3d%229%22`],   // past month, by relevance
-    ["web", `https://www.bing.com/search?q=${enc}%20news&format=rss&setlang=en-us`],                        // web results catch big stories
+    ["gdelt", `https://api.gdeltproject.org/api/v2/doc/doc?query=${enc}%20sourcelang:english&mode=artlist&maxrecords=60&timespan=1month&sort=hybridrel&format=json`],
   ];
   const results = await Promise.all(feeds.map(async ([kind, url]) => {
     try {
       const r = await fetch(url, { headers: { "user-agent": "Mozilla/5.0 (compatible; FrontierWire/1.0)" }, cf: { cacheTtl: 900 } });
-      return r.ok ? parseNewsRss(await r.text(), kind) : [];
+      if (!r.ok) return [];
+      return kind === "gdelt" ? parseGdelt(await r.text()) : parseNewsRss(await r.text(), kind);
     } catch (e) { return []; }
   }));
   const byKey = new Map();
