@@ -634,3 +634,12 @@ def test_model_tracker_changes():
     pages["v"] = payload("0.000008")
     update_tracker(room)
     assert room.store.models["changes"][-1]["kind"] == "price_cut" and "$10 → $8" in room.store.models["changes"][-1]["text"]
+
+
+def test_audience_lines():
+    from agent.editorial import check_audiences
+    src = "The new API costs $2 per million tokens and is 40% faster."
+    got = check_audiences({"builders": "Cheaper API at $2 per million tokens.", "business": "Rivals may cut prices by 50%.",
+                           "investors": ""}, src)
+    assert got == {"builders": "Cheaper API at $2 per million tokens."}   # invented 50% dropped, empty skipped
+    assert check_audiences("nope", src) is None

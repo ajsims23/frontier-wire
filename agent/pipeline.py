@@ -310,7 +310,8 @@ class Newsroom:
                 benchmarks.append({k: str(b[k]).strip()[:60] for k in ("model", "benchmark", "score")})
             else:
                 self.report["notes"].append(f"dropped unverifiable benchmark: {b.get('model')} {b.get('benchmark')} {b.get('score')}")
-        extra = {k: v for k, v in (("explainer", explainer), ("benchmarks", benchmarks[:6])) if v}
+        audiences = editorial.check_audiences(answer.get("audiences"), all_text)
+        extra = {k: v for k, v in (("explainer", explainer), ("benchmarks", benchmarks[:6]), ("audiences", audiences)) if v}
         return {
             **extra,
             "id": stable_id(lead.url),

@@ -8,6 +8,9 @@ from __future__ import annotations
 import re
 from typing import Any
 
+from .editorial import check_audiences
+from .prompts import AUDIENCE_SCHEMA
+
 SECTORS = {
     "healthcare": "Healthcare", "finance": "Finance", "education": "Education", "manufacturing": "Manufacturing",
     "legal": "Legal", "agriculture": "Agriculture", "retail": "Retail and commerce", "media": "Media and entertainment",
@@ -30,6 +33,10 @@ SYSTEM = """You tag news stories for Frontier Wire's desks. For each story:
 - cover: the story's single most striking fact for a picture cover, max 16 characters, copied EXACTLY from the
   headline or summary: a figure ("$15 billion", "31-year", "70%"), a model or product name ("GPT-6.1", "Dark.ai")
   or a company name. Prefer a number when the story has a meaningful one. Never a generic word.
+- audiences: one plain sentence for each reader group on what this story means FOR THEM, or "" when it
+  genuinely doesn't matter to that group (don't force it). builders: developers and engineers (capabilities,
+  APIs, prices, tools they use). business: executives and strategy teams (competition, adoption, regulation,
+  their industry). investors: where money, valuations and market power are moving. Facts only from the story.
 Stories marked from="indian-outlet" were published by Indian news outlets, which often don't say "India":
 tag them "india" when the companies, people, government or market involved are Indian; global stories they
 merely reported (e.g. a US lab's announcement) are not India stories.
@@ -47,6 +54,7 @@ def _schema() -> dict[str, Any]:
             "company": {"type": "string"},
             "amount": {"type": "string"},
             "cover": {"type": "string"},
+            "audiences": AUDIENCE_SCHEMA,
         }, "required": ["id", "sectors", "regions", "deal_type", "cover"]}}},
         "required": ["tags"],
     }
@@ -70,16 +78,16 @@ def usd_value(amount: str) -> float | None:
         return None
 
 
-def tag_stories(room: Any, limit: int = 25) -> None:
-    todo = [s for s in room.store.stories if "sectors" not in s or "cover" not in s]
+def tag_stories(room: Any, limit: int = 20) -> None:
+    todo = [s for s in room.store.stories if "sectors" not in s or "cover" not in s or "audiences" not in s]
     todo = sorted(todo, key=lambda s: s["published_at"], reverse=True)[:limit]
     if not todo:
         return
     by_id = {s["id"]: s for s in todo}
     prompt = "Stories:\n" + "\n".join(
         f'<story id="{s["id"]}" lab="{s.get("lab", "")}"' + (' from="indian-outlet"' if s.get("desk") == "india" else "")
-        + f'>{s["headline"]}. {s["summary"]}</story>' for s in todo)
-    answer = room.llm.ask(system=SYSTEM, prompt=prompt, schema_name="submit_tags", schema=_schema(), max_tokens=3000)
+        + f'>{s["headline"]}. {s["summary"]} {s.get("why_it_matters", "")}</story>' for s in todo)
+    answer = room.llm.ask(system=SYSTEM, prompt=prompt, schema_name="submit_tags", schema=_schema(), max_tokens=6000)
     tagged = 0
     for t in answer.get("tags") or []:
         s = by_id.get(t.get("id") if isinstance(t, dict) else None)
@@ -95,6 +103,8 @@ def tag_stories(room: Any, limit: int = 25) -> None:
             "type": deal, "company": room.cfg.canon_lab((t.get("company") or "").strip()[:60]), "amount": amount, "usd": usd_value(amount)}
         cover = (t.get("cover") or "").strip()
         distinctive = bool(re.search(r"[\dA-Z$₹€£%]", cover))  # a figure or a name, not a generic word like "partnership"
+        if "audiences" not in s:
+            s["audiences"] = check_audiences(t.get("audiences"), f"{s['headline']} {s['summary']} {s.get('why_it_matters', '')}")
         s["cover"] = cover if 0 < len(cover) <= 18 and distinctive and _norm(cover) in _norm(f"{s['headline']} {s['summary']}") else ""
         tagged += 1
     room.report["tagged"] = tagged

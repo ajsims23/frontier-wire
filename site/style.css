@@ -564,3 +564,25 @@ table.deals .num, table.deals th.num { text-align: right; font-variant-numeric: 
 @media (prefers-reduced-motion: reduce) { .pod-live, .pod-launch { animation: none; } .pod[data-state="big"] .pod-timer { animation: none; } }
 /* phones: the wrapped header is tall, so let it scroll away instead of covering a fifth of the screen */
 @media (max-width: 640px) { .top { position: static; } }
+
+/* ---------------------------------------------------------------- reading as: builders / business / investors */
+.aud { display: inline-flex; align-items: center; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); flex-wrap: wrap; }
+.aud-label { font-size: 13px; color: var(--muted); padding: 0 8px 0 10px; }
+.aud button { min-height: 34px; padding: 0 14px; border: 0; border-radius: 999px; background: transparent; color: var(--soft); font: 600 14px Archivo, sans-serif; cursor: pointer; }
+.aud button:hover { color: var(--text); }
+.aud button[aria-pressed="true"] { background: var(--brand); color: #051416; }
+.aud button:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.front-head .aud { flex-basis: 100%; width: fit-content; margin-top: 4px; }
+.aud-line { display: block; font-size: 14px; line-height: 1.45; color: var(--soft); padding-left: 10px; border-left: 2px solid var(--brand); }
+.aud-line b { color: var(--brand); font-weight: 700; }
+.aud-line.big { font-size: 16px; max-width: 64ch; }
+.who { margin: 24px 0; max-width: 64ch; }
+.who h2 { font-size: 1.2rem; margin: 0 0 10px; }
+.who dl { margin: 0; display: grid; gap: 0; border: 1px solid var(--line-soft); border-radius: var(--r-md); overflow: hidden; }
+.who dl div { display: grid; grid-template-columns: 110px 1fr; gap: 14px; padding: 12px 16px; background: var(--panel); }
+.who dl div + div { border-top: 1px solid var(--line-soft); }
+.who dt { font-weight: 700; color: var(--brand); }
+.who dd { margin: 0; color: var(--soft); }
+.who .mine { background: color-mix(in srgb, var(--brand) 10%, var(--panel)); }
+.who .mine dd { color: var(--text); }
+@media (max-width: 560px) { .who dl div { grid-template-columns: 1fr; gap: 2px; } .aud-label { display: none; } }

@@ -52,6 +52,11 @@
 
   let data = { stories: [], labs: [], voices: [] };
   let topic = "all";
+  // "Reading as": builders, business or investors. Each story carries one line per group on what it means for them.
+  const AUD = { builders: "For builders", business: "For business", investors: "For investors" };
+  let aud = (() => { try { const v = localStorage.getItem("fw-aud"); return AUD[v] ? v : "all"; } catch (e) { return "all"; } })();
+  const audLine = (s) => (aud !== "all" && s.audiences && s.audiences[aud]) || "";
+  const audHtml = (s, cls) => { const l = audLine(s); return l ? `<span class="aud-line ${cls || ""}"><b>${AUD[aud]}:</b> ${esc(l)}</span>` : ""; };
   let query = "";
 
   const matches = (s) => {
@@ -96,6 +101,7 @@
           <span class="tag" style="--c:${color(s.category)}">${i ? "Top stories" : "Top story"}, ${esc(CAT_NAME[s.category] || s.category)}</span>
           <h2><a href="${storyHref(s)}" ${i ? 'tabindex="-1"' : ""}>${esc(s.headline)}</a></h2>
           <p class="sum">${esc(s.summary)}</p>
+          ${audHtml(s, "big")}
           <p class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}. Checked against ${(s.sources || []).length} source${(s.sources || []).length === 1 ? "" : "s"}.</p>
           ${s.video && /^[A-Za-z0-9_-]{11}$/.test(s.video.id) ? `<button class="btn play-btn" type="button" data-video="${esc(s.video.id)}" data-title="${esc(s.video.title)}" ${i ? 'tabindex="-1"' : ""}><svg width="14" height="14" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>Watch the video</button>` : ""}
         </div>`).join("")}</div>`;
@@ -166,15 +172,18 @@
   function renderFeed() {
     const filtering = topic !== "all" || !!query;
     const front = new Set([(data.lead || (data.stories || [])[0] || {}).id, ...topStories().more.map((s) => s.id)]);
-    const list = (data.stories || []).filter((s) => matches(s) && (filtering || !front.has(s.id))).slice(0, filtering ? 30 : 12);
+    let list = (data.stories || []).filter((s) => matches(s) && (filtering || !front.has(s.id)));
+    if (aud !== "all") list = list.filter((s) => audLine(s)).concat(list.filter((s) => !audLine(s)));  // what matters to you first
+    list = list.slice(0, filtering ? 30 : 12);
     const t = TOPICS.find((x) => x.id === topic);
-    $("feed-title").textContent = query ? `Results for “${query}”` : topic === "all" ? "Latest" : t.label;
+    $("feed-title").textContent = query ? `Results for “${query}”` : topic === "all" ? (aud === "all" ? "Latest" : `Latest ${AUD[aud].toLowerCase()}`) : t.label;
     $("clear").hidden = !filtering;
     $("feed").innerHTML = list.length
       ? list.map((s) => `<li><a class="story-card" href="${storyHref(s)}" style="--c:${color(s.category)}">
           ${media(s, "card-media")}
           <span class="sc-body"><span class="tag" style="--c:${color(s.category)}">${esc(CAT_NAME[s.category] || s.category)}</span>
           <span class="h">${esc(s.headline)}</span>
+          ${audHtml(s)}
           <span class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}</span></span></a></li>`).join("")
       : `<li class="empty">${filtering ? "No stories match yet. Try another topic or search." : "Stories appear here after each run."}</li>`;
     document.querySelectorAll(".chip[data-topic]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.topic === topic)));
@@ -276,12 +285,24 @@
     }).join("");
   }
 
+  function renderAud() {
+    document.querySelectorAll("#aud button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.aud === aud)));
+  }
+  $("aud").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-aud]");
+    if (!b) return;
+    aud = b.dataset.aud;
+    try { localStorage.setItem("fw-aud", aud); } catch (err) { /* private mode */ }
+    renderAud(); renderFront(); renderFeed();
+  });
+
   function render(d) {
     data = d || data;
     const st = data.stats || {};
     $("updated").textContent = data.updated_at
       ? `Updated ${ago(data.updated_at)}. ${st.stories_this_month || 0} stories this month, each checked against its sources.`
       : "Waiting for the first run";
+    renderAud();
     renderFront();
     renderNewsChart();
     renderBriefing(data.briefing);

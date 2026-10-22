@@ -171,6 +171,18 @@ def check_explainer(raw: Any, source: str) -> dict | None:
     return {"what_it_means": what[:600], "terms": terms, "watch_next": watch}
 
 
+def check_audiences(raw: Any, source: str) -> dict | None:
+    """One line per reader group; a line with a figure the sources don't contain is dropped."""
+    if not isinstance(raw, dict):
+        return None
+    out = {}
+    for a in ("builders", "business", "investors"):
+        line = str(raw.get(a) or "").strip()
+        if line and len(line) > 12 and _numbers_ok(line, source):
+            out[a] = line[:240]
+    return out or None
+
+
 def is_india(s: dict) -> bool:
     """About India (by the tagger's region), or from an Indian outlet and not tagged yet."""
     if "regions" in s:

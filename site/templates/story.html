@@ -28,6 +28,18 @@
     <p class="lede">{{ s.summary }}</p>
     {% if s.why_it_matters %}<p class="why"><strong>Why it matters.</strong> {{ s.why_it_matters }}</p>{% endif %}
 
+    {% if s.audiences %}
+    <section class="who" aria-labelledby="who-h">
+      <h2 id="who-h">Who should care</h2>
+      <dl>
+        {% for key, label in [("builders", "Builders"), ("business", "Business"), ("investors", "Investors")] %}{% if s.audiences[key] %}
+        <div data-aud="{{ key }}"><dt>{{ label }}</dt><dd>{{ s.audiences[key] }}</dd></div>
+        {% endif %}{% endfor %}
+      </dl>
+    </section>
+    <script>try{var a=localStorage.getItem("fw-aud");var r=a&&document.querySelector('.who [data-aud="'+a+'"]');if(r){r.classList.add("mine");r.parentNode.prepend(r);}}catch(e){}</script>
+    {% endif %}
+
     {% if s.explainer %}
     <section class="explainer" aria-labelledby="ex-h">
       <h2 id="ex-h"><span class="ex-kicker">Explainer</span>What it means</h2>

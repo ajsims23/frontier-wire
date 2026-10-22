@@ -80,6 +80,9 @@ VERIFY_SCHEMA = {
 }
 
 # ---------------------------------------------------------------- Write
+AUDIENCES = ("builders", "business", "investors")
+AUDIENCE_SCHEMA = {"type": "object", "properties": {a: {"type": "string"} for a in AUDIENCES}}
+
 WRITE_SYSTEM = f"""You write for Frontier Wire. Write one news item from the sources provided.
 
 Rules:
@@ -102,6 +105,10 @@ Rules:
   a court ruling). Never predict or guess; return [] if the sources don't say.
 - benchmarks: benchmark results stated in the sources (model, benchmark name, score copied exactly as written,
   e.g. "74.2%"). Return [] if none.
+- audiences: one plain sentence for each reader group on what this story means FOR THEM, or "" when it
+  genuinely doesn't matter to that group (don't force it). builders: developers and engineers (capabilities,
+  APIs, prices, tools they use). business: executives and strategy teams (competition, adoption, regulation,
+  their industry). investors: where money, valuations and market power are moving. Facts only from the story.
 {UNTRUSTED_NOTE}"""
 
 WRITE_SCHEMA = {
@@ -140,6 +147,7 @@ WRITE_SCHEMA = {
         "benchmarks": {"type": "array", "items": {"type": "object", "properties": {
             "model": {"type": "string"}, "benchmark": {"type": "string"}, "score": {"type": "string"}},
             "required": ["model", "benchmark", "score"]}},
+        "audiences": AUDIENCE_SCHEMA,
     },
     "required": ["headline", "summary", "why_it_matters", "category", "quotes"],
 }
