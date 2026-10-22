@@ -14,7 +14,8 @@ const ready = fetch(root + "data/search.json").then((r) => r.json()).then((docs)
 function storyList(items, title) {
   if (!items.length) return "";
   return `<section class="ask-src"><h2>${title}</h2><ol>${items.map((s) => `<li id="src-${s.n || ""}">${s.n ? `<span class="src-n">${s.n}</span>` : ""}
-    <a href="${root}story/${encodeURIComponent(s.id)}/">${esc(s.headline)}</a><span class="muted"> ${short(s.date)}</span></li>`).join("")}</ol></section>`;
+    ${s.url && /^https:\/\//.test(s.url) ? `<a href="${esc(s.url)}" rel="noopener" target="_blank">${esc(s.headline)}</a><span class="muted"> ${esc(s.publisher || "")}${s.date ? ", " + short(s.date) : ""}</span>`
+      : `<a href="${root}story/${encodeURIComponent(s.id)}/">${esc(s.headline)}</a><span class="muted"> ${s.date ? short(s.date) : ""}</span>`}</li>`).join("")}</ol></section>`;
 }
 
 function formatAnswer(text) {
@@ -46,6 +47,12 @@ async function ask(q) {
     const r = await fetch(`${api}/api/ask`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ q }) });
     const j = await r.json();
     if (!r.ok) throw new Error(j.error || "error");
+    if (j.answer && j.web) {
+      out.innerHTML = `<div class="ask-answer web"><span class="ask-kicker">Latest from the web</span>
+        <p class="gen-note">This isn't in our checked archive yet, so the answer comes from a live news search. Our agent hasn't verified it; open the sources to check.</p>
+        ${formatAnswer(j.answer)}</div>${storyList(j.sources, "Live news sources")}${storyList(j.related || [], "Related Frontier Wire stories")}`;
+      return;
+    }
     if (j.answer && j.general) {
       out.innerHTML = `<div class="ask-answer general"><span class="ask-kicker">General background</span>
         <p class="gen-note">This isn't in our news archive, so here's general background from AI. It isn't fact-checked by Frontier Wire and may be out of date.</p>

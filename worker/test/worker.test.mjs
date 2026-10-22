@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { buildIndex } from "../../site/search.js";
-import { answer, matchSubscriber } from "../src/index.js";
+import { answer, matchSubscriber, parseNewsRss } from "../src/index.js";
 
 const index = buildIndex([
   { id: "a", h: "DeepSeek raises $15 billion", s: "From CATL and Tencent.", d: "2026-10-22" },
@@ -36,4 +36,12 @@ test("full-width citations are normalised", async () => {
   const r = await answer({}, "deepseek", index, async () => "Raised $15 billion【1】 and more【1，2】.");
   assert.equal(r.answer, "Raised $15 billion[1] and more[1].");  // [2] wasn't among the stories it was given
   assert.equal(r.sources[0].cited, true);
+});
+
+test("news RSS parsing unwraps Bing links and cleans text", () => {
+  const bing = parseNewsRss('<item><title>Bing story</title><link>http://www.bing.com/news/apiclick.aspx?ref=FexRss&amp;url=https%3a%2f%2fexample.com%2fa&amp;c=1</link><description>Snip &lt;b&gt;x&lt;/b&gt; &amp; more</description><pubDate>Thu, 22 Oct 2026 10:00:00 GMT</pubDate><News:Source>Example</News:Source></item>', "bing");
+  assert.deepEqual(bing, [{ title: "Bing story", url: "https://example.com/a", publisher: "Example", date: "2026-10-22", snippet: "Snip x & more" }]);
+  const g = parseNewsRss('<item><title>Big launch - Reuters</title><link>https://news.google.com/rss/articles/abc</link><pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate><source url="https://reuters.com">Reuters</source></item>', "google");
+  assert.equal(g[0].title, "Big launch");
+  assert.equal(g[0].publisher, "Reuters");
 });
