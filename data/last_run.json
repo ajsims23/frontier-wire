@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-22T09:55:36+00:00",
+  "started_at": "2026-10-22T12:19:03+00:00",
   "review_mode": false,
   "providers": [
     "cerebras"
@@ -13,17 +13,25 @@
     "anthropic": "ok (6)",
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
-    "microsoft-ai": "failed: HTTPStatusError: Client error '410 Gone' for url 'https://blogs.microsoft.com/ai/feed/'\nFor more information check: https://developer.moz",
+    "microsoft-ai": "ok (10)",
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (14)",
-    "gdelt": "ok (12)",
+    "hf-papers": "ok (15)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
     "hn": "ok (16)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
     "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42-ai": "ok (0)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
     "sam-altman": "ok (30)",
@@ -31,102 +39,314 @@
   },
   "dropped": [
     {
-      "title": "Ensemble forecasting with IBM Granite time-series models",
-      "reason": "score 4: Hugging Face blog post about IBM Granite time‑series models is a minor model announcement from a non‑frontier lab; more marketing than news."
+      "title": "Celebrating the educators shaping the future of learning",
+      "reason": "score 2: Feature celebrating educators; not newsworthy for AI‑focused audience."
     },
     {
-      "title": "Circuits of LLM Classifiers",
-      "reason": "score 5: ArXiv paper on combining LLM classifier predictions is an incremental methodological contribution, not a major breakthrough."
+      "title": "New PowerToys utilities make everyday Windows tasks easier",
+      "reason": "score 2: Product‑feature announcement about PowerToys utilities – low relevance."
     },
     {
-      "title": "Lincoln Tech Extends Its LeadSquared Partnership into Applied AI for Enrollment - India Education | Latest Education News | Global Educational News",
-      "reason": "score 2: Local education partnership announcement is marketing‑focused and not of interest to frontier AI audience."
+      "title": "Before the ambulance arrives: How AI is helping the NHS rethink patient care",
+      "reason": "score 5: Case study of NHS using AI; interesting but not a major frontier development."
     },
     {
-      "title": "Shares in this data centre company are down 40 % as investors lose faith in the AI story",
-      "reason": "score 5: Article about a data‑centre company's stock decline reflects market sentiment but lacks direct AI technical relevance."
+      "title": "Today in the UK, I saw how the Yorkshire Ambulance Service NHS Trust is using Copilot to cut down on administrative work and make better use of its data, and ultimately provide a better experience…",
+      "reason": "score 4: Specific Copilot deployment at a UK ambulance service – limited broader impact."
     },
     {
-      "title": "Azerbaijan to use AI for public finance analytics , anomaly detection",
-      "reason": "score 3: Announcement of AI use for public finance in Azerbaijan is a small governmental initiative, not a major policy development."
+      "title": "Using LLM for confidence scoring is a bad idea",
+      "reason": "score 5: Opinion piece on confidence scoring with LLMs – useful commentary but not breaking news."
     },
     {
-      "title": "How is AI disrupting leadership roles ?",
-      "reason": "score 1: Generic discussion of AI disrupting leadership roles; no substantive new insight."
-    },
-    {
-      "title": "LISTEN : How to write AI prompts for the best responses",
-      "reason": "score 1: Tutorial‑style article on prompt writing; not news."
-    },
-    {
-      "title": "Polarise Launches Sovereign AI Cloud at NVIDIA GTC Berlin , Delivering Enterprise AI From Data Center to Application",
-      "reason": "score 5: Company launch of sovereign AI cloud at NVIDIA GTC is a marketing push; not a major industry shift."
-    },
-    {
-      "title": "AI Book - Writing Service Dictate Now Turns Author Hand - drawn Sketches into Professional Book Graphics",
-      "reason": "score 2: AI book‑writing service is a niche commercial offering, not frontier AI news."
-    },
-    {
-      "title": "AI takes centre stage at Orihuela City jobs and training fair",
-      "reason": "score 1: Local AI fair coverage; not relevant to frontier AI audience."
-    },
-    {
-      "title": "Firm behind planned Anthropic data centre in Nova Scotia denies owing fees to N . L .",
-      "reason": "score 5: Report on Anthropic data‑centre dispute is a minor corporate issue, not a major development."
-    },
-    {
-      "title": "Barclays to cut 5 , 000 jobs this year as AI makes work more efficient",
-      "reason": "score 5: Barclays job cuts due to AI efficiency are notable but not a frontier AI story."
-    },
-    {
-      "title": "Does Super Micro Big Quarter Make Nvidia Stock a Buy ?",
-      "reason": "score 3: Analysis of Nvidia stock performance is financial market commentary, not AI‑specific news."
-    },
-    {
-      "title": "OpenAI CLI",
-      "reason": "score 5: OpenAI CLI tool release is useful for developers but not a major frontier AI development."
-    },
-    {
-      "title": "Major new US regulation on AI unlikely despite rising political focus : UBS Report",
-      "reason": "could not verify yet; will retry next run"
+      "title": "Making the case for context-aware AI",
+      "reason": "score 4: General discussion of context‑aware AI; not a news event."
     },
     {
       "title": "AI’s hidden storage bill: What inference leaves behind",
+      "reason": "score 5: Analysis of storage costs for inference – interesting but not a headline story."
+    },
+    {
+      "title": "Unicorn India Ventures Launches US Operations To Back Indian Deep-Tech Startups",
+      "reason": "score 4: VC firm opening US office; not directly about AI technology."
+    },
+    {
+      "title": "Nutanix announces AI infrastructure tie-ups with NVIDIA, Supermicro and Netris",
+      "reason": "score 5: Nutanix tie‑ups with NVIDIA etc.; infrastructure news but not a major frontier development."
+    },
+    {
+      "title": "JanAI Partners With Four Universities To Expand AI Access In Rural India",
+      "reason": "score 4: University partnerships for rural AI education – valuable but low news value."
+    },
+    {
+      "title": "HCLTech Launches NVIDIA-Powered Validation Offering for Software-Defined Vehicles",
+      "reason": "score 5: HCLTech validation offering for software‑defined vehicles – niche industry use."
+    },
+    {
+      "title": "Cognizant to Acquire DyFlex Solutions to Expand SAP Capabilities",
+      "reason": "score 3: Cognizant acquisition of SAP services firm; not AI‑centric."
+    },
+    {
+      "title": "Karta AI Raises $3 Million in Seed Funding to Automate Complex Banking Calls",
+      "reason": "score 5: Seed funding for Karta AI; early‑stage startup, not a frontier model."
+    },
+    {
+      "title": "AI Agents are Making Human Customer Service a Specialist Job",
+      "reason": "score 4: Opinion on AI agents in customer service; not breaking news."
+    },
+    {
+      "title": "Anthropic Opens Claude Duet AI Agent Preview for US Pro and Max Subscribers",
+      "reason": "duplicate of 5dbb54a00540"
+    },
+    {
+      "title": "Premji Invest, Norwest and Lok Capital Plan Up to ₹1,000 Crore Investment in Vegafin: Report",
+      "reason": "score 5: Large investment in Vegafin; finance news but not a frontier AI event."
+    },
+    {
+      "title": "OpenAI Brings Its Models and Codex to Google Cloud",
+      "reason": "duplicate of 61f4d0141ff3"
+    },
+    {
+      "title": "Why Nandan Nilekani-Backed F2A Believes India's Investment Opportunity Lies in Edge AI",
+      "reason": "score 4: Investment thesis on edge AI; not a concrete AI development."
+    },
+    {
+      "title": "Deepinder Goyal Teases Dark.ai, a Privacy-Focused AI Platform",
+      "reason": "score 5: Teaser for Dark.ai privacy platform; early announcement without product launch."
+    },
+    {
+      "title": "From Humanoid Robots to Telecom Trials, 12 Major Announcements at NVIDIA GTC Berlin 2026",
+      "reason": "score 5: Summary of NVIDIA GTC Berlin announcements; many items, none individually breakthrough."
+    },
+    {
+      "title": "43% of Indian Enterprises Struggle to Control AI Costs: Splunk Report",
+      "reason": "score 4: Report on AI cost challenges in Indian enterprises – useful but not headline news."
+    },
+    {
+      "title": "OpenAI Acquires Pharma Co Orchestra Bio to Build AI Agents for Drug Development",
+      "reason": "duplicate of aeaa448f66c5"
+    },
+    {
+      "title": "India Needs to Build the AI 'Brain' for Robotics, Not Just Import Hardware",
+      "reason": "score 4: Opinion piece on building AI ‘brain’ for robotics; not a news event."
+    },
+    {
+      "title": "Chennai to Host One of the World’s Largest AMD GPU Clusters",
+      "reason": "score 5: Announcement of large AMD GPU cluster in Chennai – infrastructure news, modest impact."
+    },
+    {
+      "title": "Hugging Face CEO Criticises Netflix Documentary on OpenAI Agent Cyberattack",
+      "reason": "score 5: Hugging Face CEO criticism of Netflix documentary; commentary rather than new development."
+    },
+    {
+      "title": "Tesla and SpaceX Explore Merger as Elon Musk Backs Deal",
+      "reason": "score 2: Speculation about Tesla‑SpaceX merger; not AI‑focused."
+    },
+    {
+      "title": "The Hardest Part of Industrial AI Isn’t Adoption—It’s On-Site Deployment",
+      "reason": "score 4: Article on deployment challenges for industrial AI; not a breakthrough."
+    },
+    {
+      "title": "Meet the Winners of AIM Chess League 2026",
+      "reason": "score 2: Chess league coverage; unrelated to AI frontier."
+    },
+    {
+      "title": "OpenAI Seeks $30 Bn Funding at $1.4 Tn Valuation Ahead of Anthropic IPO: Report",
+      "reason": "score 5: OpenAI fundraising rumors; financial news but not a concrete AI development."
+    },
+    {
+      "title": "Salesforce to Acquire Braze for $5.66 Bn to Strengthen AI Customer Marketing",
+      "reason": "score 3: Salesforce acquisition of Braze; marketing tech, not core AI."
+    },
+    {
+      "title": "ElevenLabs Launches Real-Time Voice AI Models With Up to 98.8% Speech Reasoning Accuracy",
+      "reason": "score 5: ElevenLabs real‑time voice AI models – notable but not a frontier‑lab release."
+    },
+    {
+      "title": "Browsers Block eMudhra Certificates After Key Flaw",
+      "reason": "score 2: Certificate key flaw unrelated to AI."
+    },
+    {
+      "title": "Five strategic developments from Eternal’s Q2FY27 earnings call",
+      "reason": "score 3: Eternal earnings call highlights; not AI‑specific."
+    },
+    {
+      "title": "Report: Teen accounts with parental controls are still able to access nudify apps on Google, Apple play stores",
+      "reason": "score 2: Teen account access to nudify apps; not AI."
+    },
+    {
+      "title": "Cleartrip spent Rs 898 crore on discounts and cashbacks for Rs 198 crore net revenue in FY26",
+      "reason": "score 2: Cleartrip financials; unrelated to AI."
+    },
+    {
+      "title": "Meta pauses Muse AI chat sharing after researchers find over 6,800 discoverable links",
+      "reason": "duplicate of 4168438b63a2"
+    },
+    {
+      "title": "Meta Q3FY26 earnings call: From shopping to smart glasses, Meta expands its Muse AI push",
+      "reason": "score 4: Meta earnings call recap; not a distinct AI breakthrough."
+    },
+    {
+      "title": "Election Commission’s officers’ portal could hide voter-roll tools from West Bengal officials, audit finds",
+      "reason": "score 2: Election Commission portal code issue; not AI."
+    },
+    {
+      "title": "Explained: Why Meta faces a $25 billion penalty in a case linked to Cambridge Analytica",
+      "reason": "score 2: Meta $25 B penalty explanation; not AI‑focused."
+    },
+    {
+      "title": "WhatsApp, Telegram SIM binding rules from January 1, 2027: Who will be affected in India?",
+      "reason": "score 2: SIM‑binding rules for messaging apps; not AI."
+    },
+    {
+      "title": "Little-known eMudhra set the internet on red alert. What really happened?",
+      "reason": "score 2: eMudhra certificate issue; unrelated to AI."
+    },
+    {
+      "title": "Explained: What is PHP? Why govt websites went dark? International advisory issued as AI exposes serious cyber glitch",
+      "reason": "score 6: Duplicate of AI‑discovered PHP vulnerability story."
+    },
+    {
+      "title": "Redmi K100 launch date, camera and battery confirmed: What to expect from Xiaomi’s new smartphone",
+      "reason": "score 2: Smartphone launch; not AI."
+    },
+    {
+      "title": "Flexible grid connections can cut AI data centre power wait to 2-4 years from 5-10 years: BCG",
+      "reason": "score 5: Grid‑connection report for AI data centres – interesting but not headline news."
+    },
+    {
+      "title": "Indias AI financing demand to shift towards data centres, but GPU, regulatory risks persist: Report",
+      "reason": "score 5: Report on AI financing shift to data centres; useful context but not a breaking story."
+    },
+    {
+      "title": "Vivo X500 Ultra tipped to get a larger 200MP telephoto sensor than X300 Ultra",
+      "reason": "score 2: Phone hardware rumor; unrelated to AI."
+    },
+    {
+      "title": "In absence of sovereign buyers, Indian chip firms find clients in Japan, EU",
+      "reason": "score 3: Indian chip firms seeking overseas customers; not AI‑specific."
+    },
+    {
+      "title": "Telcos seek AI-led service quality monitoring, want rethink of traditional drive tests",
+      "reason": "score 5: Telcos exploring AI‑led service quality monitoring – moderate relevance."
+    },
+    {
+      "title": "Meta puts Muse agent at heart of AI strategy, plans new stock to power investments",
+      "reason": "duplicate of 4168438b63a2"
+    },
+    {
+      "title": "Nasdaq climbs over 1% as SpaceX, Super Micro boost AI sentiment",
+      "reason": "score 3: Market move commentary; not a direct AI development."
+    },
+    {
+      "title": "eMudhra security incident: MeitY orders probe, says impact on Indian websites and apps was limited; details here",
+      "reason": "score 2: eMudhra security incident; not AI."
+    },
+    {
+      "title": "US Orders DeepSeek Removal From Federal Civilian Systems Over National Security Concerns",
+      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
+    },
+    {
+      "title": "Government tells TV channels to limit AI to ‘assistive capacity’. Does that rule out AI anchors?",
+      "reason": "variety: already 2 stories from medianama.com this run"
+    },
+    {
+      "title": "Eiliko maker says it&#8217;s hiring an ‘independent security firm’ after Verge report on its insecure robots",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Microsoft Proposes Guardian Agents to Secure Enterprise AI",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Eternal to launch general-purpose AI assistant Dark.ai, pitching privacy over mainstream chatbots",
       "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "65a0534d66fe",
-      "headline": "Frontier AI models evaluated on LIBERO-10 robot tasks, GPT‑6 Astra tops at 44% success",
+      "id": "0397d30cafbc",
+      "headline": "Microsoft researchers prove 31-year-old KLS conjecture in high-dimensional geometry",
       "category": "research",
-      "summary": "Researchers benchmarked six frontier AI models on the LIBERO-10 robot manipulation suite, running 1,800 episodes across three reasoning effort levels. GPT‑6 Astra achieved the highest success rate of 44%, closely followed by Gemini‑4 Argon at 43%.",
-      "url": "https://arxiv.org/abs/2610.30051",
+      "summary": "Researchers at Microsoft Research have proved the Kannan‑Lovász‑Simonovits (KLS) conjecture, a problem first posed in 1995. The proof used a human‑directed AI process and has been independently verified and formally checked.",
+      "url": "https://microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture",
       "sources": 1,
       "quotes": 0
+    },
+    {
+      "id": "b67bba8524a9",
+      "headline": "Microsoft equips over 330,000 Volkswagen Group employees with Copilot",
+      "category": "industry",
+      "summary": "Microsoft announced that Volkswagen Group has rolled out Microsoft Copilot to more than 330,000 staff, aiming to boost productivity and decision‑making across the company. The deployment includes Copilot Chat, Work IQ and over 26,000 active agents.",
+      "url": "https://news.microsoft.com/source/2026/10/21/microsoft-empowers-more-than-330000-volkswagen-group-employees-with-copilot",
+      "sources": 1,
+      "quotes": 2
+    },
+    {
+      "id": "44544d37504b",
+      "headline": "AI tools uncover critical PHP vulnerabilities affecting up to 70% of websites",
+      "category": "safety",
+      "summary": "Two critical memory‑safety bugs (CVE‑2026‑109618 and CVE‑2026‑109619) were discovered in PHP, a language that powers roughly 70% of web sites. The flaws were identified using AI models from OpenAI and Google’s Wiz, and patches were released on October 21.",
+      "url": "https://analyticsindiamag.com/ai-trends/internet-on-alert-as-ai-uncovers-critical-flaws-in-php-used-by-70-of-websites",
+      "sources": 4,
+      "quotes": 1
+    },
+    {
+      "id": "af9699fd89cc",
+      "headline": "Anthropic argues fair use for song lyrics in Claude training as US judge hears case",
+      "category": "policy",
+      "summary": "Anthropic asked US District Judge Eumi Lee to deem its use of copyrighted song lyrics to train its Claude chatbot as fair use. Publishers UMG, Concord and ABKCO argue the training harms songwriters, citing nearly 120,000 requests for synthetic lyrics.",
+      "url": "https://medianama.com/2026/10/223-training-ai-song-us-court-india-licence-fee",
+      "sources": 2,
+      "quotes": 2
     }
   ],
   "notes": [
-    "2 kept item(s) carried over to the next run"
+    "ignored made-up duplicate id 44544d37504b for 'Explained: What is PHP? Why govt websites went dar'",
+    "dropped unverifiable quote (Matthew Prince): That jumped to tens of thousands in the 45 minutes post‑anno…",
+    "3 kept item(s) carried over to the next run",
+    "briefing skipped: every configured provider failed: cerebras/gpt-oss-120b: unusable answer | cerebras/gpt-oss-120b: unusable answer | cerebras: listed models retired; trying qwen-3.8-27b (update settings.yaml when convenient) | cerebras/qwen-3.8-27b: HTTP 400: {\"message\":\"Failed to generate tool_calls. Exception: Failed to generate tool call but tool_choice = 'required'.\",\"type\":\"generation_error\",\"param\":\"t"
   ],
-  "fetched": 2656,
-  "fresh": 17,
-  "judged": 17,
-  "kept": 3,
+  "fetched": 2830,
+  "fresh": 134,
+  "judged": 60,
+  "kept": 9,
   "research": {
-    "investigated": 2,
-    "confirmed": 0,
-    "tool_calls": 8
+    "investigated": 5,
+    "confirmed": 2,
+    "tool_calls": 20
   },
   "research_log": [
-    "Major new US regulation on AI unlikely despite rising political focus : unconfirmed (searched “UBS report major new US regulation on AI unlikely”; searched “UBS AI regulation report”; searched “\"UBS\" \"AI regulation\"”; searched “\"major new US regulation\" AI UBS”)",
-    "AI’s hidden storage bill: What inference leaves behind: unconfirmed (searched “AI hidden storage bill inference leaves behind”; searched “AI storage costs inference data after model responds”; searched “\"hidden storage\" AI inference”; searched “\"AI’s hidden storage bill\"”)"
+    "Eiliko maker says it&#8217;s hiring an ‘independent security firm’ aft: unconfirmed (searched “Eiliko hiring independent security firm”; searched “Eiliko security”; searched “Eiliko”; searched “Eiliko robot hack”)",
+    "Internet on Alert as AI Uncovers Critical Flaws in PHP Used by 70% of : confirmed (searched “Wiz AI uncovers critical flaws in PHP 5.4 vulnerabilities”; read techcrunch.com; read wiz.io; searched “AI uncovers PHP vulnerabilities 5.4 70% websites”)",
+    "Microsoft Proposes Guardian Agents to Secure Enterprise AI: unconfirmed (searched “Microsoft Guardian Agents secure enterprise AI”; read livemint.com; read livemint.com; searched “\"Guardian Agents\" Microsoft”)",
+    "Is training AI on song lyrics fair use? US court weighs question as In: confirmed (searched “Anthropic court fair use song lyrics training AI US court India mandatory licensing”; read indiatimes.com; searched “India mandatory licensing AI training song lyrics”; searched “India proposes mandatory licensing for AI training song lyrics”)",
+    "Eternal to launch general-purpose AI assistant Dark.ai, pitching priva: unconfirmed (searched “Eternal Dark.ai AI assistant”; searched “\"Dark.ai\" Eternal”; searched “\"Eternal\" \"Dark.ai\"”; searched “Eternal AI Dark AI assistant”)"
   ],
-  "briefing": "4 themes from 20 stories",
-  "ai_requests_run": 14,
-  "ai_tokens_run": 20573,
-  "ai_requests_today": 69,
+  "threads": [
+    "AI tools reveal PHP vulnerabilities: AI tools uncover critical PHP vulnerabilities affecting up t"
+  ],
+  "tagged": 25,
+  "job_boards": {
+    "Anthropic": "ok (677)",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://boards-api.greenhouse.io/v1/boards/deepmind/jobs'\nFor ",
+    "xAI": "ok (293)",
+    "OpenAI": "ok (813)",
+    "Cohere": "ok (113)",
+    "Perplexity": "ok (127)",
+    "ElevenLabs": "ok (158)",
+    "Mistral AI": "ok (0)",
+    "Scale AI": "ok (174)",
+    "Databricks": "ok (898)"
+  },
+  "courses": "0 new from 4 candidates",
+  "ai_requests_run": 35,
+  "ai_tokens_run": 65113,
+  "ai_requests_today": 104,
   "provider_log": [
-    "cerebras/gpt-oss-120b: unusable answer"
+    "cerebras/gpt-oss-120b: unusable answer",
+    "cerebras/gpt-oss-120b: unusable answer",
+    "cerebras: listed models retired; trying qwen-3.8-27b (update settings.yaml when convenient)",
+    "cerebras/qwen-3.8-27b: HTTP 400: {\"message\":\"Failed to generate tool_calls. Exception: Failed to generate tool call but tool_choice = 'required'.\",\"type\":\"generation_error\",\"param\":\"t"
   ]
 }
