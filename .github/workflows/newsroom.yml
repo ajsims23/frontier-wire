@@ -15,9 +15,9 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  # Review mode (default): new stories arrive as a pull request; merge it to publish.
-  # Set the repository variable REVIEW_MODE to "false" to publish automatically.
-  REVIEW_MODE: ${{ vars.REVIEW_MODE || 'true' }}
+  # Auto-publish (default): new stories go straight to the site.
+  # Set the repository variable REVIEW_MODE to "true" to get them as a pull request to merge instead.
+  REVIEW_MODE: ${{ vars.REVIEW_MODE || 'false' }}
   REVIEW_BRANCH: newsroom/updates
 
 jobs:

@@ -48,9 +48,9 @@ guardrails:
   # Quotes are only published if found word-for-word in a fetched source.
   require_verbatim_quotes: true
 
-# Review mode: in GitHub Actions, new stories arrive as a pull request you merge
-# to publish. Set to false (or the repository variable REVIEW_MODE=false) to publish automatically.
-review_mode: true
+# Review mode: when true, new stories arrive as a pull request you merge to publish.
+# Off by default: stories publish automatically (the repository variable REVIEW_MODE overrides this).
+review_mode: false
 
 # Research agent: investigates stories with tools (search news, read pages) before they're written.
 research:

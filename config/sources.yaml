@@ -39,6 +39,14 @@ sources:
     link_pattern: "^https://ai\\.meta\\.com/blog/[a-z0-9-]+/?$"
     role: lab
     lab: Meta
+  - id: xai
+    name: xAI
+    kind: page
+    url: https://x.ai/news
+    link_pattern: "^https://x\\.ai/news/[a-z0-9-]+/?$"
+    role: lab
+    lab: xAI
+  - {id: microsoft-ai, name: Microsoft AI blog, kind: rss, url: "https://blogs.microsoft.com/ai/feed/", role: lab, lab: Microsoft}
   - id: mistral
     name: Mistral AI
     kind: page
