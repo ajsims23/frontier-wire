@@ -23,13 +23,18 @@
     "tried_at": "2026-10-22T16:03:24+00:00"
   },
   "frontier-race": {
-    "status": "Frontier AI labs continue rolling out major models and integrations: OpenAI’s GPT‑6 series is now on Google Cloud, NVIDIA’s open‑weight Nemotron 3.5 family targets European enterprises, and Mistral’s Large 4 preview is underway. New research highlights faster flow‑based language models, large agentic MoE systems, AI‑designed therapeutic proteins, and planet‑scale satellite embeddings. Industry adoption expands across cloud marketplaces, automotive infotainment, and large corporate deployments like Volkswagen’s Copilot rollout.",
-    "changed": "The latest stories add a fast flow language model, a large agentic MoE model, AI‑generated protein binders, and a global satellite embedding model.",
+    "status": "Frontier AI labs have rolled out a wave of major models, including OpenAI’s GPT‑6 series on Google Cloud, NVIDIA’s open‑weight Nemotron 3.5 family for European enterprises, and Mistral’s 1‑trillion‑parameter Large 4 preview. Applications span enterprise AI copilots at Volkswagen, AI‑driven neuroscience discovery, and a medical diagnostic system that outperforms generalist doctors. New benchmark studies and satellite‑embedding models further expand frontier capabilities across robotics, biology, and geospatial analysis.",
+    "changed": "The newest stories add a high‑accuracy medical diagnostic AI, a global satellite‑embedding model, and several frontier model releases and integrations.",
     "timeline": [
       {
         "story_id": "eaa0ebff7daf",
         "date": "2026-10-22",
         "text": "AllenAI released OlmoEarth v1.3 satellite embedding model with global 128‑dim vectors."
+      },
+      {
+        "story_id": "a8f2132df5b8",
+        "date": "2026-10-22",
+        "text": "Microsoft AI diagnostic system hits 83% accuracy, surpassing doctors"
       },
       {
         "story_id": "1de8e62ff715",
@@ -139,17 +144,18 @@
       "b67bba8524a9",
       "3dba8c3e0d11",
       "65a0534d66fe",
-      "afe5d96a9d46",
       "820bd24a41c4",
+      "afe5d96a9d46",
       "af0f241f8166",
       "0397d30cafbc",
       "14f13252070a",
       "5dbb54a00540",
       "cbc158125a42",
-      "eaa0ebff7daf"
+      "eaa0ebff7daf",
+      "a8f2132df5b8"
     ],
-    "updated_at": "2026-10-22T16:15:28+00:00",
-    "tried_at": "2026-10-22T16:15:28+00:00",
+    "updated_at": "2026-10-22T21:46:58+00:00",
+    "tried_at": "2026-10-22T21:46:58+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
@@ -187,9 +193,14 @@
     "tried_at": "2026-10-22T16:03:24+00:00"
   },
   "agent-safety": {
-    "status": "Meta has temporarily disabled the Muse feature that let users share AI conversations via web links, after researchers found over 6,800 publicly accessible links exposing personal and business data.",
-    "changed": "Meta paused the Muse conversation‑sharing feature after a security firm uncovered thousands of publicly accessible links exposing data.",
+    "status": "Meta has disabled the Muse conversation‑sharing feature after a security firm uncovered thousands of publicly accessible links. Separately, Chinese‑aligned hackers leveraged AI agents and the ARTEX framework to breach ConnectWise, compromising credentials for roughly 2,250 Microsoft 365 tenants. Both incidents underscore emerging AI‑driven security risks.",
+    "changed": "Chinese hackers used AI agents to breach ConnectWise, exposing 2,250 Microsoft 365 tenants.",
     "timeline": [
+      {
+        "story_id": "d1b19037538a",
+        "date": "2026-10-22",
+        "text": "Chinese hackers used AI agents to breach ConnectWise, affecting 2,250 Microsoft 365 tenants"
+      },
       {
         "story_id": "4168438b63a2",
         "date": "2026-10-20",
@@ -197,12 +208,19 @@
       }
     ],
     "title": "AI agents and safety incidents",
-    "next": [],
-    "story_ids": [
-      "4168438b63a2"
+    "next": [
+      {
+        "text": "ConnectWise to restore its cloud backup service",
+        "when": "",
+        "story_id": "d1b19037538a"
+      }
     ],
-    "updated_at": "2026-10-22T16:15:28+00:00",
-    "tried_at": "2026-10-22T16:15:28+00:00"
+    "story_ids": [
+      "4168438b63a2",
+      "d1b19037538a"
+    ],
+    "updated_at": "2026-10-22T21:46:58+00:00",
+    "tried_at": "2026-10-22T21:46:58+00:00"
   },
   "ai-money": {
     "status": "OpenAI has acquired AI biotech startup Orchestra Bio and is moving to integrate its drug‑discovery agents into the Rosalind model and Workbench.",
@@ -251,5 +269,105 @@
     ],
     "updated_at": "2026-10-22T16:15:28+00:00",
     "tried_at": "2026-10-22T16:15:28+00:00"
+  },
+  "ai-infrastructure": {
+    "status": "NVIDIA is rapidly expanding its AI infrastructure offerings across Europe and beyond, adding new security options, open‑weight models, and integrated platforms for power, cloud, and edge workloads. European firms and governments are adopting these tools for finance, retail, weather forecasting, and industrial AI, while new super‑computing capacity is being deployed in India. The ecosystem now includes confidential bare‑metal services, the Vera Rubin A5X cloud instances, the DSX AI Factory for power integration, and the Polarise sovereign AI cloud.",
+    "changed": "The latest stories add multiple European adoptions, a new confidential bare‑metal option, GA of Vera Rubin A5X instances, and several platform extensions for power, data, and edge AI.",
+    "timeline": [
+      {
+        "story_id": "5346e68360b4",
+        "date": "2026-10-22",
+        "text": "NVIDIA open‑weight models integrated into EU public sector projects like AI@EC and Poland services."
+      },
+      {
+        "story_id": "67906ae6df39",
+        "date": "2026-10-22",
+        "text": "European firms adopt NVIDIA Earth‑2 models for advanced weather and climate forecasting."
+      },
+      {
+        "story_id": "8ed037559253",
+        "date": "2026-10-22",
+        "text": "Retailers cut inference costs up to 90% using NVIDIA Nemotron 3.5 Lightning."
+      },
+      {
+        "story_id": "f298fb1604b9",
+        "date": "2026-10-22",
+        "text": "NVIDIA DSX platform deployed to unify power grid and AI factory operations."
+      },
+      {
+        "story_id": "c3ecf70aef54",
+        "date": "2026-10-22",
+        "text": "Cosmos platform expanded with new training tools and data factory blueprints."
+      },
+      {
+        "story_id": "e12302cd4e2c",
+        "date": "2026-10-22",
+        "text": "European banks and fintechs adopt NVIDIA open‑weight models for in‑house AI."
+      },
+      {
+        "story_id": "cbf865176306",
+        "date": "2026-10-22",
+        "text": "Vultr launches 20 MW AI supercluster in Chennai with AMD Instinct MI355X GPUs."
+      },
+      {
+        "story_id": "3b124899189b",
+        "date": "2026-10-22",
+        "text": "Polarise unveils sovereign AI cloud in Europe, launching Rise chatbot and Drive API."
+      },
+      {
+        "story_id": "9aaacb38b57d",
+        "date": "2026-10-22",
+        "text": "Schneider Electric, NVIDIA, and HPE introduce Industrial AI Agents at the Edge."
+      },
+      {
+        "story_id": "99c8819be3a7",
+        "date": "2026-10-22",
+        "text": "NVIDIA releases Minerva AIOps platform for AI factory observability."
+      },
+      {
+        "story_id": "82603c5be230",
+        "date": "2026-10-21",
+        "text": "NVIDIA launches Confidential Bare Metal for secure third‑party AI workloads."
+      },
+      {
+        "story_id": "db73069fa994",
+        "date": "2026-10-21",
+        "text": "Google Cloud and NVIDIA announce GA of Vera Rubin A5X instances built on NVL72 GPUs."
+      }
+    ],
+    "title": "The AI infrastructure build-out",
+    "next": [
+      {
+        "text": "General availability of A5X instances scheduled for next month.",
+        "when": "next month",
+        "story_id": "db73069fa994"
+      },
+      {
+        "text": "Expansion of A5X instances to Europe.",
+        "when": "",
+        "story_id": "db73069fa994"
+      },
+      {
+        "text": "Scaling up to 960,000 Rubin GPUs.",
+        "when": "",
+        "story_id": "db73069fa994"
+      }
+    ],
+    "story_ids": [
+      "82603c5be230",
+      "db73069fa994",
+      "5346e68360b4",
+      "67906ae6df39",
+      "8ed037559253",
+      "f298fb1604b9",
+      "c3ecf70aef54",
+      "e12302cd4e2c",
+      "cbf865176306",
+      "3b124899189b",
+      "9aaacb38b57d",
+      "99c8819be3a7"
+    ],
+    "updated_at": "2026-10-22T21:46:58+00:00",
+    "tried_at": "2026-10-22T21:46:58+00:00"
   }
 }
