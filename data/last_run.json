@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-22T03:50:30+00:00",
+  "started_at": "2026-10-22T07:03:53+00:00",
   "review_mode": true,
   "providers": [
     "cerebras"
@@ -14,10 +14,10 @@
     "meta-ai": "ok (6)",
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
-    "arxiv": "failed: HTTPStatusError: Client error '429 Unknown Error' for url 'https://export.arxiv.org/api/query?search_query=cat%3Acs.AI+OR+cat%3Acs.CL+OR+",
-    "hf-papers": "ok (6)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (20)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (10)",
+    "gdelt": "ok (22)",
+    "hn": "ok (16)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -29,44 +29,112 @@
   },
   "dropped": [
     {
-      "title": "Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation",
-      "reason": "score 5: Incremental paper on autoregressive video diffusion; not a major breakthrough for frontier AI audience."
+      "title": "Some government websites taken down in response to security risk : AI minister",
+      "reason": "duplicate of 2b5b57e1b66c"
     },
     {
-      "title": "Airbnb bans making guests do dishes and take out the trash",
-      "reason": "score 2: Non‑AI related consumer policy story; off‑topic for Frontier Wire audience."
+      "title": "Websites around the world taken offline after AI finds critical security flaw",
+      "reason": "duplicate of 2b5b57e1b66c"
     },
     {
-      "title": "Google staff resign in backlash over its AI contracts with military",
-      "reason": "could not verify yet after a second try; dropped"
+      "title": "Nvidia wins Modal for new CPUs in push against Intel , AMD",
+      "reason": "score 6: Nvidia wins Modal for new CPUs, same event as previously published Nvidia gains ground story."
     },
     {
-      "title": "Blacksmith hits unicorn valuation after Sequoia leads Series C",
-      "reason": "could not verify yet after a second try; dropped"
-    },
-    {
-      "title": "Data centers could erase decades of air quality gains",
-      "reason": "could not verify yet after a second try; dropped"
+      "title": "NZ websites slow to patch against critical PHP vulnerability discovered by AI – consultant",
+      "reason": "duplicate of 2b5b57e1b66c"
     }
   ],
-  "written": [],
-  "notes": [],
-  "fetched": 2594,
-  "fresh": 5,
-  "judged": 5,
-  "kept": 3,
-  "research": {
-    "investigated": 3,
-    "confirmed": 0,
-    "tool_calls": 12
-  },
-  "research_log": [
-    "Google staff resign in backlash over its AI contracts with military: unconfirmed (searched “Google staff resign backlash AI contracts military resignation”; searched “\"Google\" staff resign AI military contract”; searched “Google employees resign over Pentagon AI contract”; searched “Google staff resign over AI military contract 2024”)",
-    "Blacksmith hits unicorn valuation after Sequoia leads Series C: unconfirmed (searched “Blacksmith Series C $66 million unicorn valuation Sequoia”; searched “Blacksmith AI Series C”; searched “Blacksmith AI unicorn valuation”; searched “Blacksmith AI startup Series C”)",
-    "Data centers could erase decades of air quality gains: unconfirmed (searched “Texas data centers air pollution decades of air quality gains report”; read arstechnica.com; searched “data center pollution Texas air quality gains report generative AI Texas data centers could erase decades of air quality gains”; searched “\"air quality gains\" Texas data centers”)"
+  "written": [
+    {
+      "id": "e12302cd4e2c",
+      "headline": "European banks and fintechs adopt NVIDIA open‑weight models for proprietary AI",
+      "category": "industry",
+      "summary": "At GTC Berlin, firms such as Revolut, Starling Bank, Lloyds, NatWest and Santander announced using NVIDIA open‑weight models and accelerated GPUs to build in‑house intelligence, with Revolut’s PRAGMA serving an initial 80 million customers and scaling three‑fold.",
+      "url": "https://blogs.nvidia.com/blog/european-financial-services-organizations-open-models-proprietary-intelligence",
+      "sources": 1,
+      "quotes": 1
+    },
+    {
+      "id": "c3ecf70aef54",
+      "headline": "NVIDIA expands Cosmos platform with new training tools and data factory blueprints",
+      "category": "industry",
+      "summary": "NVIDIA added training tools, simulation checkpoints and five cloud‑native data factory blueprints to its Cosmos platform, enabling developers to build multimodal world models. Porsche aims to cut repeat test drives by up to 90% and development time by up to 85% using the new blueprints.",
+      "url": "https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "f298fb1604b9",
+      "headline": "NVIDIA DSX platform used to address power bottleneck in AI infrastructure",
+      "category": "industry",
+      "summary": "Companies worldwide are adopting NVIDIA DSX AI Factory Platform to integrate grid, substation and AI factory operations as a single system. The move responds to power being the biggest bottleneck, with over $300 billion in equipment backlogged and more than 200 GW of projects in U.S. interconnection queues.",
+      "url": "https://blogs.nvidia.com/blog/dsx-power",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "8ed037559253",
+      "headline": "European retailers cut inference costs up to 90% using NVIDIA open models",
+      "category": "industry",
+      "summary": "Shopify post‑trained NVIDIA Nemotron 3.5 Lightning for its Sidekick assistant, achieving 90% lower serving cost and 7× faster responses. Other retailers such as Zooplus, Photoroom and L’Oréal reported accuracy gains and faster pipelines using NVIDIA’s open‑model tools.",
+      "url": "https://blogs.nvidia.com/blog/european-retail-open-models-robotics",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "67906ae6df39",
+      "headline": "European firms adopt NVIDIA Earth‑2 models for weather and climate forecasting",
+      "category": "industry",
+      "summary": "NVIDIA’s Earth‑2 open AI models are being used by organizations such as AXA, Vaisala Xweather and the University of Manchester to improve regional weather forecasts, cyclone risk analysis and air‑quality modeling across Europe. The StormScope EU model provides short‑term cloud predictions every 10 minutes using satellite data.",
+      "url": "https://blogs.nvidia.com/blog/europe-earth-2-open-models-weather-climate-prediction",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "5346e68360b4",
+      "headline": "NVIDIA open models adopted in European public sector projects",
+      "category": "industry",
+      "summary": "NVIDIA’s open‑weight AI models are being integrated into European government initiatives, including the European Commission’s AI@EC platform and Poland’s healthcare and employment services, using NVIDIA hardware and software such as DGX BasePOD and Triton Inference Server.",
+      "url": "https://blogs.nvidia.com/blog/european-public-sector-open-models",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "af0f241f8166",
+      "headline": "Environment Duels benchmark studies LLM co‑evolution through author‑solver interactions",
+      "category": "research",
+      "summary": "The paper introduces Environment Duels, a dynamic agentic benchmark where LLMs both create environments with hints and solve them, revealing distinct authoring and solving abilities across nine frontier models. Smaller models learn more from others and produce the hardest environments.",
+      "url": "https://arxiv.org/abs/2610.30116",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "eb525f486c18",
+      "headline": "Paper proposes PAPAV framework to unify multimodal agents and robots",
+      "category": "research",
+      "summary": "Researchers present a capability-centric framework, PAPAV, defining five functions for multimodal embodied agents that combine reasoning with physical action. Analysis of 64 benchmarks shows evaluation heavily emphasizes the Act function, with Anticipate and Verify rarely assessed.",
+      "url": "https://arxiv.org/abs/2610.30108",
+      "sources": 1,
+      "quotes": 0
+    }
   ],
-  "ai_requests_run": 16,
-  "ai_tokens_run": 14669,
-  "ai_requests_today": 44,
+  "notes": [
+    "ignored made-up duplicate id 56e43c251458 for 'Nvidia wins Modal for new CPUs in push against Int'",
+    "8 kept item(s) carried over to the next run"
+  ],
+  "fetched": 2656,
+  "fresh": 70,
+  "judged": 60,
+  "kept": 12,
+  "threads": [
+    "European finance adopts open models: European banks and fintechs adopt NVIDIA open‑weight models ",
+    "European finance adopts open models: European retailers cut inference costs up to 90% using NVIDI",
+    "European finance adopts open models: NVIDIA open models adopted in European public sector project"
+  ],
+  "briefing": "4 themes from 20 stories",
+  "ai_requests_run": 11,
+  "ai_tokens_run": 31056,
+  "ai_requests_today": 55,
   "provider_log": []
 }
