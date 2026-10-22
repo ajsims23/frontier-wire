@@ -28,3 +28,9 @@ test("subscribers only get events they follow", () => {
   const got = matchSubscriber(["deals"], events, { deals: "AI deals" });
   assert.deepEqual(got.map((e) => [e.key, e.because]), [["story:a", "AI deals"]]);
 });
+
+test("full-width citations are normalised", async () => {
+  const r = await answer({}, "deepseek", index, async () => "Raised $15 billion【1】 and more【1，2】.");
+  assert.equal(r.answer, "Raised $15 billion[1] and more[1].");  // [2] wasn't among the stories it was given
+  assert.equal(r.sources[0].cited, true);
+});

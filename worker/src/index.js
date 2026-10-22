@@ -80,6 +80,8 @@ export async function answer(env, q, index, ask = llm) {
   if (!hits.length) return { answer: "", sources, note: "No stories in our archive match that yet." };
   const ctx = hits.map((h, i) => `<story n="${i + 1}" date="${h.doc.d}">${h.doc.h}. ${h.doc.s} ${h.doc.w || ""}</story>`).join("\n");
   let text = await ask(env, [{ role: "system", content: ASK_SYSTEM }, { role: "user", content: `${ctx}\n\nQuestion: ${q}` }]);
+  // some models cite with 【1】 or (1): normalise to [1]
+  text = text.replace(/【\s*(\d+(?:\s*[,，]\s*\d+)*)\s*】/g, (m, n) => `[${n.replace(/，/g, ",")}]`);
   // keep only citations that point at a story we actually gave it
   text = text.replace(/\[(\d+(?:\s*,\s*\d+)*)\]/g, (m, nums) => {
     const ok = nums.split(",").map((n) => +n.trim()).filter((n) => n >= 1 && n <= sources.length);
