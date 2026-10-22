@@ -78,8 +78,9 @@ jobs:
         run: |
           git config user.name "frontier-wire-bot"
           git config user.email "frontier-wire-bot@users.noreply.github.com"
-          cat config/api_url.txt
-          git add config/api_url.txt
+          tail -n 25 worker/deploy.log | sed 's/[A-Za-z0-9_-]\{40,\}/[hidden]/g' > worker/last-deploy.txt   # for troubleshooting
+          git add worker/last-deploy.txt
+          [ -f config/api_url.txt ] && git add config/api_url.txt
           if ! git diff --cached --quiet; then
             git commit -m "API address updated"
             git pull --rebase origin main && git push
