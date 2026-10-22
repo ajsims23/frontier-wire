@@ -1,45 +1,47 @@
-## Frontier Wire newsroom run — 2026-10-22T07:03:53+00:00
+## Frontier Wire newsroom run — 2026-10-22T09:55:36+00:00
 
-Fetched 2656 items · fresh 70 · judged 60 · kept 12 · **written 8**
-AI: 11 requests, 31,056 tokens this run · 55 requests today · providers: cerebras
+Fetched 2656 items · fresh 17 · judged 17 · kept 3 · **written 1**
+AI: 14 requests, 20,573 tokens this run · 69 requests today · providers: cerebras
+Research agent: investigated 2 stories with 8 tool calls, confirmed 0
 Daily briefing: 4 themes from 20 stories
-Threads updated: European finance adopts open models: European banks and fintechs adopt NVIDIA open‑weight models ; European finance adopts open models: European retailers cut inference costs up to 90% using NVIDI; European finance adopts open models: NVIDIA open models adopted in European public sector project
 
 ### New stories
-- **industry** — [European banks and fintechs adopt NVIDIA open‑weight models for proprietary AI](https://blogs.nvidia.com/blog/european-financial-services-organizations-open-models-proprietary-intelligence)  
-  At GTC Berlin, firms such as Revolut, Starling Bank, Lloyds, NatWest and Santander announced using NVIDIA open‑weight models and accelerated GPUs to build in‑house intelligence, with Revolut’s PRAGMA serving an initial 80 million customers and scaling three‑fold.  
-  _1 source(s), 1 verified quote(s)_
-- **industry** — [NVIDIA expands Cosmos platform with new training tools and data factory blueprints](https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models)  
-  NVIDIA added training tools, simulation checkpoints and five cloud‑native data factory blueprints to its Cosmos platform, enabling developers to build multimodal world models. Porsche aims to cut repeat test drives by up to 90% and development time by up to 85% using the new blueprints.  
-  _1 source(s), 0 verified quote(s)_
-- **industry** — [NVIDIA DSX platform used to address power bottleneck in AI infrastructure](https://blogs.nvidia.com/blog/dsx-power)  
-  Companies worldwide are adopting NVIDIA DSX AI Factory Platform to integrate grid, substation and AI factory operations as a single system. The move responds to power being the biggest bottleneck, with over $300 billion in equipment backlogged and more than 200 GW of projects in U.S. interconnection queues.  
-  _1 source(s), 0 verified quote(s)_
-- **industry** — [European retailers cut inference costs up to 90% using NVIDIA open models](https://blogs.nvidia.com/blog/european-retail-open-models-robotics)  
-  Shopify post‑trained NVIDIA Nemotron 3.5 Lightning for its Sidekick assistant, achieving 90% lower serving cost and 7× faster responses. Other retailers such as Zooplus, Photoroom and L’Oréal reported accuracy gains and faster pipelines using NVIDIA’s open‑model tools.  
-  _1 source(s), 0 verified quote(s)_
-- **industry** — [European firms adopt NVIDIA Earth‑2 models for weather and climate forecasting](https://blogs.nvidia.com/blog/europe-earth-2-open-models-weather-climate-prediction)  
-  NVIDIA’s Earth‑2 open AI models are being used by organizations such as AXA, Vaisala Xweather and the University of Manchester to improve regional weather forecasts, cyclone risk analysis and air‑quality modeling across Europe. The StormScope EU model provides short‑term cloud predictions every 10 minutes using satellite data.  
-  _1 source(s), 0 verified quote(s)_
-- **industry** — [NVIDIA open models adopted in European public sector projects](https://blogs.nvidia.com/blog/european-public-sector-open-models)  
-  NVIDIA’s open‑weight AI models are being integrated into European government initiatives, including the European Commission’s AI@EC platform and Poland’s healthcare and employment services, using NVIDIA hardware and software such as DGX BasePOD and Triton Inference Server.  
-  _1 source(s), 0 verified quote(s)_
-- **research** — [Environment Duels benchmark studies LLM co‑evolution through author‑solver interactions](https://arxiv.org/abs/2610.30116)  
-  The paper introduces Environment Duels, a dynamic agentic benchmark where LLMs both create environments with hints and solve them, revealing distinct authoring and solving abilities across nine frontier models. Smaller models learn more from others and produce the hardest environments.  
-  _1 source(s), 0 verified quote(s)_
-- **research** — [Paper proposes PAPAV framework to unify multimodal agents and robots](https://arxiv.org/abs/2610.30108)  
-  Researchers present a capability-centric framework, PAPAV, defining five functions for multimodal embodied agents that combine reasoning with physical action. Analysis of 64 benchmarks shows evaluation heavily emphasizes the Act function, with Anticipate and Verify rarely assessed.  
+- **research** — [Frontier AI models evaluated on LIBERO-10 robot tasks, GPT‑6 Astra tops at 44% success](https://arxiv.org/abs/2610.30051)  
+  Researchers benchmarked six frontier AI models on the LIBERO-10 robot manipulation suite, running 1,800 episodes across three reasoning effort levels. GPT‑6 Astra achieved the highest success rate of 44%, closely followed by Gemini‑4 Argon at 43%.  
   _1 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Some government websites taken down in response to security risk : AI minister — duplicate of 2b5b57e1b66c
-- Websites around the world taken offline after AI finds critical security flaw — duplicate of 2b5b57e1b66c
-- Nvidia wins Modal for new CPUs in push against Intel , AMD — score 6: Nvidia wins Modal for new CPUs, same event as previously published Nvidia gains ground story.
-- NZ websites slow to patch against critical PHP vulnerability discovered by AI – consultant — duplicate of 2b5b57e1b66c
+- Ensemble forecasting with IBM Granite time-series models — score 4: Hugging Face blog post about IBM Granite time‑series models is a minor model announcement from a non‑frontier lab; more marketing than news.
+- Circuits of LLM Classifiers — score 5: ArXiv paper on combining LLM classifier predictions is an incremental methodological contribution, not a major breakthrough.
+- Lincoln Tech Extends Its LeadSquared Partnership into Applied AI for Enrollment - India Education | Latest Education News | Global Educational News — score 2: Local education partnership announcement is marketing‑focused and not of interest to frontier AI audience.
+- Shares in this data centre company are down 40 % as investors lose faith in the AI story — score 5: Article about a data‑centre company's stock decline reflects market sentiment but lacks direct AI technical relevance.
+- Azerbaijan to use AI for public finance analytics , anomaly detection — score 3: Announcement of AI use for public finance in Azerbaijan is a small governmental initiative, not a major policy development.
+- How is AI disrupting leadership roles ? — score 1: Generic discussion of AI disrupting leadership roles; no substantive new insight.
+- LISTEN : How to write AI prompts for the best responses — score 1: Tutorial‑style article on prompt writing; not news.
+- Polarise Launches Sovereign AI Cloud at NVIDIA GTC Berlin , Delivering Enterprise AI From Data Center to Application — score 5: Company launch of sovereign AI cloud at NVIDIA GTC is a marketing push; not a major industry shift.
+- AI Book - Writing Service Dictate Now Turns Author Hand - drawn Sketches into Professional Book Graphics — score 2: AI book‑writing service is a niche commercial offering, not frontier AI news.
+- AI takes centre stage at Orihuela City jobs and training fair — score 1: Local AI fair coverage; not relevant to frontier AI audience.
+- Firm behind planned Anthropic data centre in Nova Scotia denies owing fees to N . L . — score 5: Report on Anthropic data‑centre dispute is a minor corporate issue, not a major development.
+- Barclays to cut 5 , 000 jobs this year as AI makes work more efficient — score 5: Barclays job cuts due to AI efficiency are notable but not a frontier AI story.
+- Does Super Micro Big Quarter Make Nvidia Stock a Buy ? — score 3: Analysis of Nvidia stock performance is financial market commentary, not AI‑specific news.
+- OpenAI CLI — score 5: OpenAI CLI tool release is useful for developers but not a major frontier AI development.
+- Major new US regulation on AI unlikely despite rising political focus : UBS Report — could not verify yet; will retry next run
+- AI’s hidden storage bill: What inference leaves behind — could not verify yet; will retry next run
+
+</details>
+
+### Sources with problems
+- `microsoft-ai`: failed: HTTPStatusError: Client error '410 Gone' for url 'https://blogs.microsoft.com/ai/feed/'
+For more information check: https://developer.moz
+
+<details><summary>Research agent's work</summary>
+
+- Major new US regulation on AI unlikely despite rising political focus : unconfirmed (searched “UBS report major new US regulation on AI unlikely”; searched “UBS AI regulation report”; searched “"UBS" "AI regulation"”; searched “"major new US regulation" AI UBS”)
+- AI’s hidden storage bill: What inference leaves behind: unconfirmed (searched “AI hidden storage bill inference leaves behind”; searched “AI storage costs inference data after model responds”; searched “"hidden storage" AI inference”; searched “"AI’s hidden storage bill"”)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id 56e43c251458 for 'Nvidia wins Modal for new CPUs in push against Int'
-- 8 kept item(s) carried over to the next run
+- 2 kept item(s) carried over to the next run
+- cerebras/gpt-oss-120b: unusable answer
