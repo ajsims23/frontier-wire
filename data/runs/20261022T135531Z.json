@@ -1,0 +1,90 @@
+{
+  "started_at": "2026-10-22T13:55:31+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1313)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (888)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (15)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (17)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (25)"
+  },
+  "dropped": [
+    {
+      "title": "Claude Duet app is Anthropic’s bet on agents",
+      "reason": "score 5: The Claude Duet app rollout is an incremental product update (waitlist for Pro/Max users) following the earlier research preview launch already covered. It lacks a major new capability or frontier impact, so it scores 5 and is not kept as a separate story."
+    }
+  ],
+  "written": [],
+  "notes": [],
+  "timings": {
+    "gather": 76.3,
+    "judge": 0.4,
+    "verify and write": 0.0,
+    "videos": 3.8,
+    "tagging": -0.0,
+    "explainers": 22.6,
+    "model tracker": 0.1,
+    "weekly": 23.3,
+    "briefing": -0.0,
+    "self-review": -0.0,
+    "daily email": -0.0
+  },
+  "fetched": 2856,
+  "fresh": 1,
+  "judged": 1,
+  "kept": 0,
+  "videos": {
+    "OpenAI": "ok (12 in feed, 5 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 5 new)",
+    "Google for Developers": "ok (7 in feed, 6 new)",
+    "AI at Meta": "ok (4 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 1 new)",
+    "NVIDIA": "ok (12 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 7 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 4 new)",
+    "AI Explained": "ok (15 in feed, 2 new)"
+  },
+  "videos_kept": "13 kept from 20 new",
+  "explainers": "3 added to earlier stories",
+  "model_tracker": "82 models, 16 changes today",
+  "weekly": "wrote 2026-W43 with 5 shifts",
+  "ai_requests_run": 8,
+  "ai_tokens_run": 38308,
+  "ai_requests_today": 244,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
+}
