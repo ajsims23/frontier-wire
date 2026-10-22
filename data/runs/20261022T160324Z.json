@@ -1,0 +1,159 @@
+{
+  "started_at": "2026-10-22T16:03:24+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1313)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (888)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (18)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (16)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (25)"
+  },
+  "dropped": [
+    {
+      "title": "Company · Oct 22, 2026 Introducing the SpaceX Super Intelligence Partner Network",
+      "reason": "score 4: Announcement of the SpaceX Super Intelligence Partner Network is a marketing‑style partnership rollout without a new model or major AI capability."
+    },
+    {
+      "title": "What's Getting Pwned",
+      "reason": "score 3: The \"What's Getting Pwned\" piece is a generic security news item and not focused on AI frontier developments."
+    },
+    {
+      "title": "Spotify’s current AI bet is about being the music service that agents choose",
+      "reason": "score 5: Spotify’s discussion of its AI bet is an incremental business strategy piece, not a major model release or policy shift."
+    },
+    {
+      "title": "PHP: The three little letters wreaking havoc across the web",
+      "reason": "score 3: Article about PHP vulnerabilities is unrelated to AI frontier research or deployment."
+    },
+    {
+      "title": "Hackers got a four-day head start on epic PHP2Shell vulnerability",
+      "reason": "score 3: Focuses on a PHP security bug; not relevant to AI advancements."
+    },
+    {
+      "title": "What is the PHP security vulnerability: The AI-found bug that made governments take websites offline",
+      "reason": "score 4: While the bug was discovered using AI, the story is about PHP security, not a frontier AI development."
+    },
+    {
+      "title": "Quoting Armin Ronacher",
+      "reason": "score 4: Simon Willison’s post merely quotes a comment on software security; it does not provide substantive analysis of a specific AI development."
+    },
+    {
+      "title": "OpenAI, Anthropic, and Nvidia had record lobbying quarters",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Bridging the AI production gap: Over 100,000 Indian engineers trained to build with Gemini",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "99c8819be3a7",
+      "headline": "NVIDIA launches Minerva AIOps platform for AI factory observability",
+      "category": "industry",
+      "summary": "NVIDIA introduced Minerva, an AIOps platform that aggregates telemetry from GPUs, networking, storage and workloads to detect anomalies and suggest remediation. The system builds a dynamic knowledge graph to trace issues across large AI factories.",
+      "url": "https://blogs.nvidia.com/blog/minerva-platform-infrastructure",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "2 kept item(s) carried over to the next run"
+  ],
+  "timings": {
+    "gather": 89.9,
+    "judge": 1.2,
+    "verify and write": 109.0,
+    "videos": 24.3,
+    "tagging": 2.4,
+    "explainers": 41.9,
+    "trackers": 126.4,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "briefing": 21.1,
+    "self-review": -0.0,
+    "daily email": -0.0
+  },
+  "fetched": 2858,
+  "fresh": 10,
+  "judged": 10,
+  "kept": 3,
+  "threads": [
+    "NVIDIA expands AI factory tools with Minerva: NVIDIA launches Minerva AIOps platform for AI factory observ"
+  ],
+  "research": {
+    "investigated": 2,
+    "confirmed": 0,
+    "tool_calls": 6
+  },
+  "research_log": [
+    "OpenAI, Anthropic, and Nvidia had record lobbying quarters: unconfirmed (searched “OpenAI Anthropic Nvidia record lobbying quarter July September lobbying disclosures”; searched “lobbying disclosures OpenAI Anthropic Nvidia Q3 2023 lobbying spending”; read cryptobriefing.com)",
+    "Bridging the AI production gap: Over 100,000 Indian engineers trained : unconfirmed (searched “Build with Gemini 100,000 engineers”; read newsbytesapp.com; read msn.com)"
+  ],
+  "videos": {
+    "OpenAI": "ok (12 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (7 in feed, 0 new)",
+    "AI at Meta": "ok (4 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (12 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 1 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 14 new)",
+    "No Priors": "ok (3 in feed, 2 new)",
+    "Latent Space": "ok (13 in feed, 9 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 3 new)",
+    "a16z": "ok (15 in feed, 2 new)",
+    "Big Technology Podcast": "ok (11 in feed, 7 new)",
+    "Hard Fork": "ok (2 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 1 new)",
+    "20VC": "ok (3 in feed, 1 new)"
+  },
+  "videos_kept": "3 kept from 10 new",
+  "tagged": 20,
+  "explainers": "3 added to earlier stories",
+  "trackers": "filed 39 stories; updated us-china, frontier-race, ai-regulation, india-ai",
+  "model_tracker": "82 models, 2 changes today",
+  "briefing": "4 themes from 20 stories",
+  "ai_requests_run": 23,
+  "ai_tokens_run": 59623,
+  "ai_requests_today": 292,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
+}
