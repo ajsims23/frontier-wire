@@ -4,7 +4,7 @@
   --r-md: 14px;
 }
 /* ---------- palettes (data-theme on <html>) ---------- */
-:root, [data-theme="midnight"] {
+[data-theme="midnight"] {
   --ground: #0a0f1e; --panel: #10172c; --panel-2: #151e38; --line: #233056; --line-soft: #19223f;
   --text: #edf1fb; --soft: #b9c3dc; --muted: #8b97b6; --strong: #ffffff; --brand: #7aa2ff;
   --models: #7aa2ff; --research: #5eead4; --policy: #f7b955; --safety: #ff8f80; --industry: #c79bff; --voices: #f2ede3;
@@ -18,7 +18,7 @@
   --header: rgba(18, 17, 15, .86); --tip: #1d1b17; --grid: rgba(160, 149, 131, .14); --glow: .8;
   color-scheme: dark;
 }
-[data-theme="abyss"] {
+:root:not([data-theme]), [data-theme="abyss"] {
   --ground: #051416; --panel: #0a1f22; --panel-2: #0f292d; --line: #1d3d42; --line-soft: #143135;
   --text: #e9f5f3; --soft: #b3cfcb; --muted: #84a6a1; --strong: #ffffff; --brand: #5fe3cf;
   --models: #8aabff; --research: #5fe3cf; --policy: #ffc266; --safety: #ff8f80; --industry: #c9a4ff; --voices: #f1eee6;

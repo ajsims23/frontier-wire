@@ -288,7 +288,7 @@
     const sync = () => btn.setAttribute("aria-label", root.dataset.theme === "daylight" ? "Switch to dark mode" : "Switch to light mode");
     sync();
     btn.addEventListener("click", () => {
-      const next = root.dataset.theme === "daylight" ? (root.dataset.defaultDark || "midnight") : "daylight";
+      const next = root.dataset.theme === "daylight" ? (root.dataset.defaultDark || "abyss") : "daylight";
       root.setAttribute("data-theme", next);
       try { localStorage.setItem("fw-theme", next); } catch (e) {}
       sync();
