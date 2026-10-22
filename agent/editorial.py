@@ -148,23 +148,22 @@ def _numbers_ok(text: str, source: str) -> bool:
     return all(n.replace(",", "").rstrip(".") in src for n in _NUM.findall(text))
 
 
-def write_briefing(room: Any, force: bool = False) -> None:
-    store = room.store
-    last = store.briefing.get("written_at")
-    newest = max((s["created_at"] for s in store.stories), default="")
-    stale = not last or last < (room.now - timedelta(hours=12)).isoformat()
-    if not force and last and newest <= last and not stale:
-        return  # nothing new since the last briefing
-    window = [s for s in store.stories if s["published_at"] >= (room.now - timedelta(hours=24)).isoformat()]
+def is_india(s: dict) -> bool:
+    return s.get("desk") == "india" or "india" in (s.get("regions") or [])
+
+
+def _compose_briefing(room: Any, pool: list[dict], audience: str, min_stories: int = 2) -> tuple[dict | None, str]:
+    """Write a briefing from the given stories; returns (briefing, report line)."""
+    window = [s for s in pool if s["published_at"] >= (room.now - timedelta(hours=24)).isoformat()]
     if len(window) < 3:
-        window = [s for s in store.stories if s["published_at"] >= (room.now - timedelta(hours=48)).isoformat()]
-    if len(window) < 2:
-        return
+        window = [s for s in pool if s["published_at"] >= (room.now - timedelta(hours=48)).isoformat()]
+    if len(window) < min_stories:
+        return None, ""
     window = sorted(window, key=lambda s: (-s["score"], s["published_at"]))[:20]
     by_id = {s["id"]: s for s in window}
-    prompt = "Today's stories:\n" + "\n".join(
+    prompt = (f"Audience: {audience}\n\nToday's stories:\n" + "\n".join(
         f'<story id="{s["id"]}" category="{s["category"]}" lab="{s.get("lab", "")}">{s["headline"]}. {s["summary"]}</story>'
-        for s in window)
+        for s in window))
     answer = room.llm.ask(system=BRIEF_SYSTEM, prompt=prompt, schema_name="submit_briefing", schema=BRIEF_SCHEMA, max_tokens=1200)
 
     themes, dropped = [], 0
@@ -178,17 +177,39 @@ def write_briefing(room: Any, force: bool = False) -> None:
         themes.append({"title": (t.get("title") or "").strip()[:60], "text": text,
                        "stories": [{"id": i, "headline": by_id[i]["headline"], "url": by_id[i]["url"]} for i in ids]})
     if not themes:
-        room.report["notes"].append("briefing skipped: no theme passed the checks")
-        return
+        return None, "skipped: no theme passed the checks"
     all_cited = " ".join(f"{s['headline']} {s['summary']}" for s in window)
     one_line = (answer.get("one_line") or "").strip()
-    store.briefing = {
-        "written_at": room.now.isoformat(),
-        "one_line": one_line if _numbers_ok(one_line, all_cited) else themes[0]["title"],
-        "themes": themes[:4],
-        "from_stories": len(window),
-    }
-    room.report["briefing"] = f"{len(themes)} themes from {len(window)} stories" + (f" ({dropped} removed by checks)" if dropped else "")
+    brief = {"written_at": room.now.isoformat(),
+             "one_line": one_line if _numbers_ok(one_line, all_cited) else themes[0]["title"],
+             "themes": themes[:4], "from_stories": len(window)}
+    return brief, f"{len(themes)} themes from {len(window)} stories" + (f" ({dropped} removed by checks)" if dropped else "")
+
+
+def _due(room: Any, last: str | None, pool: list[dict]) -> bool:
+    newest = max((s["created_at"] for s in pool), default="")
+    stale = not last or last < (room.now - timedelta(hours=12)).isoformat()
+    return not last or newest > last or stale
+
+
+def write_briefing(room: Any, force: bool = False) -> None:
+    store = room.store
+    if force or _due(room, store.briefing.get("written_at"), store.stories):
+        brief, line = _compose_briefing(room, store.stories, "people who follow AI closely, worldwide")
+        if brief:
+            store.briefing = brief
+            room.report["briefing"] = line
+        elif line:
+            room.report["notes"].append(f"briefing {line}")
+    # Desk briefing: AI in India
+    india = [s for s in store.stories if is_india(s)]
+    last = (store.desk_briefings.get("india") or {}).get("written_at")
+    if india and _due(room, last, india):
+        brief, line = _compose_briefing(room, india, "readers in India following AI: Indian companies, startups, "
+                                                     "government policy and adoption", min_stories=2)
+        if brief:
+            store.desk_briefings["india"] = brief
+            room.report["india_briefing"] = line
 
 
 # ------------------------------------------------------------------ self-review

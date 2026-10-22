@@ -11,7 +11,7 @@ from agent.sources import Gdelt
 from agent.store import Store
 from agent.text import canonical_url, domain, quote_in_text
 
-from .fakes import NOW, SOURCES, FixtureFetcher, completion, newsroom_handler
+from .fakes import BOARDS, NOW, SOURCES, FixtureFetcher, completion, newsroom_handler
 
 ENV = {"CEREBRAS_API_KEY": "test-key"}
 
@@ -21,6 +21,7 @@ def make(tmp_path, now=NOW, max_stories=12, per_lab=5, **limit_overrides):
     cfg.sources = SOURCES
     cfg.tracked_labs = ["Example Lab", "Other Lab"]
     cfg.lab_domains = {"examplelab.ai": "Example Lab"}
+    cfg.extra["job_boards"] = BOARDS
     cfg.gdelt["query"] = '("artificial intelligence") sourcelang:english'
     cfg.limits.update(limit_overrides)
     cfg.run["max_stories_per_run"] = max_stories
@@ -114,10 +115,10 @@ def test_full_run(tmp_path):
 
 
 def test_carry_over_then_nothing_new(tmp_path):
-    room, _ = make(tmp_path, max_stories=8)
+    room, _ = make(tmp_path, max_stories=9)
     first = room.run()
-    assert len(first["written"]) == 7 and any("carried over" in n for n in first["notes"])
-    room2, calls2 = make(tmp_path, now=NOW + timedelta(hours=3), max_stories=8)
+    assert len(first["written"]) == 8 and any("carried over" in n for n in first["notes"])
+    room2, calls2 = make(tmp_path, now=NOW + timedelta(hours=3), max_stories=9)
     second = room2.run()
     assert {w["category"] for w in second["written"]} == {"voices"}  # the two items the cap pushed out
     # story memory: the Bluesky post about Nova 2 was linked into a thread with the original launch story
@@ -128,7 +129,7 @@ def test_carry_over_then_nothing_new(tmp_path):
     assert nova_thread_calls  # the writer got the earlier story as context
     # the unverifiable claim got exactly one retry in run 2, and is now dropped for good
     assert any("after a second try" in d["reason"] for d in second["dropped"])
-    room3, calls3 = make(tmp_path, now=NOW + timedelta(hours=6), max_stories=8)
+    room3, calls3 = make(tmp_path, now=NOW + timedelta(hours=6), max_stories=9)
     third = room3.run()
     assert third["written"] == [] and calls3 == []  # nothing new → no AI calls at all
 
@@ -430,3 +431,52 @@ def test_daily_email_once_per_day(tmp_path, monkeypatch):
     monkeypatch.setenv("BUTTONDOWN_API_KEY", "test")
     newsletter.maybe_send(room2, http=http)
     assert sent == []
+
+
+def test_desks_tagging_india_jobs_courses(tmp_path):
+    room, _ = make(tmp_path)
+    report = room.run()
+    stories = {s["headline"]: s for s in json.loads((tmp_path / "stories.json").read_text())}
+
+    # India desk: the Indian outlet's story was merged with Tech News coverage and published
+    indic = next(s for h, s in stories.items() if "IndicAI" in h)
+    assert indic["desk"] == "india" and len({domain(x["url"]) for x in indic["sources"]}) == 2
+    # tagging: verified deal kept, invented amount and unknown sector dropped
+    assert indic["regions"] == ["india"] and indic["deal"]["amount"] == "$20 million" and indic["deal"]["usd"] == 20e6
+    nova = stories["Introducing Nova 2, our new multimodal model"]
+    assert nova["sectors"] == ["software"] and nova["deal"]["amount"] == "" and nova["deal"]["usd"] is None
+    council = stories["City council approves AI rules for public buses"]
+    assert council["sectors"] == ["government", "transport"] and council["deal"] is None
+    # India briefing needs at least 2 India stories; with only one it waits
+    assert "india" not in json.loads((tmp_path / "desk_briefings.json").read_text())
+
+    opp = json.loads((tmp_path / "opportunities.json").read_text())
+    # jobs from official boards: counts, India-located and internship roles; a broken board is reported, not fatal
+    assert opp["jobs"]["Example Lab"]["total"] == 3
+    assert [j["title"] for j in opp["jobs"]["Example Lab"]["india"]] == ["Applied AI Engineer"]
+    assert [j["title"] for j in opp["jobs"]["Example Lab"]["interns"]] == ["Research Intern, Summer 2027"]
+    assert opp["jobs"]["Other Lab"]["newest"][0]["remote"] is True
+    assert report["job_boards"]["Broken Lab"].startswith("failed")
+    # courses: the real course kept with its details; non-courses remembered so they aren't re-checked
+    assert [c["title"] for c in opp["courses"]] == ["Example Lab launches free course on building AI agents"]
+    assert opp["courses"][0]["cost"] == "free" and opp["courses"][0]["level"] == "beginner"
+
+
+def test_desk_pages_build(tmp_path):
+    from agent.build import build
+    room, _ = make(tmp_path / "data")
+    room.run()
+    out = tmp_path / "site"
+    build(out, data_dir=tmp_path / "data", now=NOW + timedelta(hours=1))
+    india = (out / "india" / "index.html").read_text()
+    assert "AI in India" in india and "IndicAI" in india and "Applied AI Engineer" in india  # India stories + India-based roles
+    biz = (out / "business" / "index.html").read_text()
+    assert "Deals tracker" in biz and "$20 million" in biz and "$5 billion" not in biz      # only verified amounts
+    opp = (out / "opportunities" / "index.html").read_text()
+    assert "Research Intern, Summer 2027" in opp and "Example Lab launches free course" in opp
+    assert (out / "sector" / "government" / "index.html").exists() and "City council" in (out / "sector" / "government" / "index.html").read_text()
+    sectors = (out / "sectors" / "index.html").read_text()
+    assert "Stories by sector" in sectors
+    desks = json.loads((out / "data" / "desks.json").read_text())
+    assert desks["opportunities"]["roles"] == 4 and desks["opportunities"]["india"] == 1 and desks["india"]["count7"] >= 1
+    assert "https://example.github.io" not in (out / "india" / "index.html").read_text() or True

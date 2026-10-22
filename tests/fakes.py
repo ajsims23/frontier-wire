@@ -30,6 +30,8 @@ NEWS_FEED = f"""<?xml version="1.0"?><rss version="2.0"><channel><title>Tech New
 <item><title>Example Lab launches Nova 2 multimodal model</title><link>https://technews.example.com/nova-2-launch</link><pubDate>{H2}</pubDate><description>Coverage.</description></item>
 <item><title>City council approves AI rules for public buses</title><link>https://technews.example.com/council-ai</link><pubDate>{H5}</pubDate><description>The council voted 7-2.</description></item>
 <item><title>Startup claims AGI will arrive next week</title><link>https://technews.example.com/agi-claim</link><pubDate>{H5}</pubDate><description>Bold claim.</description></item>
+<item><title>Indic language model startup raises $20 million</title><link>https://technews.example.com/indic-llm-funding</link><pubDate>{H5}</pubDate><description>Bengaluru-based startup raised $20 million.</description></item>
+<item><title>Example Lab launches free course on building AI agents</title><link>https://technews.example.com/agents-course</link><pubDate>{H5}</pubDate><description>A free beginner course with a certificate.</description></item>
 <item><title>10 prompts to boost your productivity</title><link>https://technews.example.com/prompts</link><pubDate>{H5}</pubDate><description>Listicle.</description></item>
 </channel></rss>"""
 
@@ -57,6 +59,19 @@ GDELT_SCOUT = {"articles": [
     {"url": "https://regulator.example.gov/inquiry", "title": "Regulator opens inquiry into AI hiring tools", "domain": "regulator.example.gov", "seendate": NOW.strftime("%Y%m%dT%H%M%SZ")},
     {"url": "https://technews.example.com/nova-2-launch", "title": "Example Lab launches Nova 2 multimodal model", "domain": "technews.example.com", "seendate": NOW.strftime("%Y%m%dT%H%M%SZ")},
 ]}
+
+INDIA_FEED = f"""<?xml version="1.0"?><rss version="2.0"><channel><title>India AI News</title>
+<item><title>Bengaluru startup IndicAI raises $20 million to build Indic language models</title><link>https://indianews.example.in/indicai-20m</link><pubDate>{H5}</pubDate><description>IndicAI raised $20 million led by investors.</description></item>
+</channel></rss>"""
+
+JOB_BOARDS = {
+    "https://boards-api.greenhouse.io/v1/boards/examplelab/jobs": {"jobs": [
+        {"title": "Research Engineer, Agents", "absolute_url": "https://jobs.example.com/1", "location": {"name": "San Francisco"}, "updated_at": iso(5)},
+        {"title": "Applied AI Engineer", "absolute_url": "https://jobs.example.com/2", "location": {"name": "Bengaluru, India"}, "updated_at": iso(30)},
+        {"title": "Research Intern, Summer 2027", "absolute_url": "https://jobs.example.com/3", "location": {"name": "London"}, "updated_at": iso(50)}]},
+    "https://api.ashbyhq.com/posting-api/job-board/otherlab": {"jobs": [
+        {"title": "ML Engineer", "jobUrl": "https://jobs.example.org/a", "location": "Remote", "isRemote": True, "publishedAt": iso(8)}]},
+}
 
 JSON_PAGES = {
     "hn": {"hits": [
@@ -92,6 +107,7 @@ PAGES = {
     "https://pagelab.example.com/blog/old-thing":
         f'<html><head><meta property="article:published_time" content="{iso(480)}"></head><body>old</body></html>',
     "https://examplelab.ai/news/nova-2": NOVA_ARTICLE,
+    "https://india.example.in/feed": INDIA_FEED,
 }
 
 SOURCES = [
@@ -108,6 +124,13 @@ SOURCES = [
     {"id": "bluesky", "name": "Bluesky", "kind": "bluesky", "role": "voice",
      "accounts": {"jane.example.social": "Jane Doe", "missing.example.social": "Nobody"}},
     {"id": "broken", "name": "Broken feed", "kind": "rss", "url": "https://broken.example.com/feed", "role": "news"},
+    {"id": "indianews", "name": "India AI News", "kind": "rss", "url": "https://india.example.in/feed", "role": "news", "desk": "india"},
+]
+
+BOARDS = [
+    {"company": "Example Lab", "platform": "greenhouse", "token": "examplelab", "lab": "Example Lab"},
+    {"company": "Other Lab", "platform": "ashby", "token": "otherlab", "lab": "Other Lab"},
+    {"company": "Broken Lab", "platform": "lever", "token": "brokenlab", "lab": "Broken Lab"},
 ]
 
 
@@ -146,6 +169,8 @@ class FixtureFetcher:
             raise ConnectionError("400 profile not found")
         if url in PAGES:
             return PAGES[url]
+        if url in JOB_BOARDS:
+            return json.dumps(JOB_BOARDS[url])
         raise ConnectionError(f"no fixture for {url}")
 
 
@@ -160,6 +185,7 @@ def judge(prompt: str) -> dict:
     import re
     cands = re.findall(r'<item id="([^"]+)"[^>]*><title>([^<]+)</title>', prompt)
     nova_lab = next((i for i, t in cands if t.startswith("Introducing Nova 2")), "")
+    indic = next((i for i, t in cands if "IndicAI raises" in t), "")
     rules = [
         ("Introducing Nova 2", dict(keep=True, score=9, category="models")),
         ("launches Nova 2", dict(keep=True, score=8, category="models", same_event_as=nova_lab)),
@@ -173,6 +199,8 @@ def judge(prompt: str) -> dict:
         ("Looped", dict(keep=True, score=7, category="research")),
         ("ablation", dict(keep=False, score=3, category="research")),
         ("Atlas", dict(keep=True, score=6, category="safety", duplicate_of_story="deadbeef0000")),  # made-up id
+        ("IndicAI raises", dict(keep=True, score=7, category="industry")),
+        ("Indic language model startup", dict(keep=True, score=6, category="industry", same_event_as=indic)),
         ("Regulator", dict(keep=True, score=7, category="policy")),
     ]
     out = []
@@ -251,7 +279,8 @@ def newsroom_handler(calls: list[dict]):
         name = body["tools"][0]["function"]["name"]
         prompt = body["messages"][1]["content"]
         data = {"submit_decisions": judge, "submit_story": story, "submit_matches": verify,
-                "submit_links": links, "submit_briefing": briefing, "submit_review": review}[name](prompt)
+                "submit_links": links, "submit_briefing": briefing, "submit_review": review,
+                "submit_tags": tags, "submit_courses": courses}[name](prompt)
         return httpx.Response(200, json=completion(name, data))
     return handler
 
@@ -284,3 +313,29 @@ def review(prompt: str) -> dict:
         {"kind": "add_source", "target": "Some Lab", "suggestion": "Add their blog feed.", "reason": "under-covered",
          "url": "https://invented.example.com/feed.xml"},
     ]}
+
+
+def tags(prompt: str) -> dict:
+    import re
+    out = []
+    for i, text in re.findall(r'<story id="([^"]+)"[^>]*>([^<]+)</story>', prompt):
+        if "IndicAI" in text:
+            out.append({"id": i, "sectors": ["software"], "regions": ["india"], "deal_type": "funding", "company": "IndicAI", "amount": "$20 million"})
+        elif "Nova 2" in text:
+            # invented figure: not in the story, must be dropped
+            out.append({"id": i, "sectors": ["software", "not-a-sector"], "regions": ["global"], "deal_type": "funding", "company": "Example Lab", "amount": "$5 billion"})
+        elif "council" in text.lower():
+            out.append({"id": i, "sectors": ["government", "transport"], "regions": ["us"], "deal_type": "none"})
+        else:
+            out.append({"id": i, "sectors": [], "regions": ["global"], "deal_type": "none"})
+    return {"tags": out}
+
+
+def courses(prompt: str) -> dict:
+    import re
+    out = []
+    for i, text in re.findall(r'<item id="([^"]+)"[^>]*>([^<]+)</item>', prompt):
+        is_course = "free course" in text.lower()
+        out.append({"id": i, "is_course": is_course, "provider": "Example Lab", "cost": "free", "level": "beginner",
+                    "description": "A free beginner course on building AI agents, with a certificate."})
+    return {"items": out}

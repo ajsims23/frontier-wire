@@ -267,6 +267,30 @@
   $("clear").addEventListener("click", () => { topic = "all"; query = ""; q.value = ""; renderFeed(); });
   try { const t = new URLSearchParams(location.search).get("topic"); if (TOPICS.some((x) => x.id === t)) topic = t; } catch (e) {}
 
+  // ---------------------------------------------------------------- desks (summary built with the site)
+  function spark(values) {
+    const top = Math.max(1, ...values), w = 140, h = 36, bw = w / values.length;
+    return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">${values.map((v, i) =>
+      `<rect x="${(i * bw + 1).toFixed(1)}" y="${(h - Math.max(2, (v / top) * h)).toFixed(1)}" width="${(bw - 2).toFixed(1)}" height="${Math.max(2, (v / top) * h).toFixed(1)}" rx="1.5" fill="${v ? "var(--brand)" : "var(--line-soft)"}"/>`).join("")}</svg>`;
+  }
+  const big = (n, label) => `<span class="dc-num"><b>${esc(n)}</b> ${esc(label)}</span>`;
+  function renderDesks(d) {
+    const body = (id, html) => { const el = document.querySelector(`#${id} .dc-body`); if (el) el.innerHTML = html; };
+    const i = d.india || {};
+    body("desk-india", big(i.count7 || 0, "stories this week") + ((i.latest || []).length
+      ? `<ul>${i.latest.map((s) => `<li>${esc(clip(s.headline, 70))}</li>`).join("")}</ul>` : `<p class="muted">Indian AI news appears here.</p>`));
+    const b = d.business || {};
+    body("desk-business", big(b.deals7 || 0, "deals this week") + spark(b.days || []) +
+      (b.largest ? `<p class="muted">Largest disclosed: ${esc(b.largest.amount)}${b.largest.company ? `, ${esc(b.largest.company)}` : ""}</p>` : `<p class="muted">Deals and funding, tracked.</p>`));
+    const o = d.opportunities || {};
+    body("desk-opps", big((o.roles || 0).toLocaleString(), `open roles at ${o.labs || 0} labs`) +
+      `<ul class="dc-stats"><li><b>${o.interns || 0}</b> internships</li><li><b>${o.india || 0}</b> in India</li><li><b>${o.courses || 0}</b> courses</li></ul>`);
+    const sec = d.sectors || [], top = Math.max(1, ...sec.map((x) => x.count));
+    body("desk-sectors", sec.length ? `<ul class="dc-bars">${sec.map((x) => `<li><span>${esc(x.name)}</span><span class="nc-bar"><span style="width:${Math.max(6, x.count / top * 100).toFixed(0)}%"></span></span><b>${x.count}</b></li>`).join("")}</ul>`
+      : `<p class="muted">Healthcare, finance, education and more.</p>`);
+  }
+  fetch("data/desks.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).then((d) => d && renderDesks(d)).catch(() => {});
+
   $("year").textContent = new Date().getFullYear();
   fetch("data/site.json", { cache: "no-store" })
     .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))

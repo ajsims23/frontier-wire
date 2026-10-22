@@ -92,6 +92,23 @@ sources:
   - {id: mit-tr-ai, name: MIT Technology Review AI, kind: rss, url: "https://www.technologyreview.com/topic/artificial-intelligence/feed", role: news}
   - {id: ars-ai, name: Ars Technica AI, kind: rss, url: "https://arstechnica.com/ai/feed/", role: news}
 
+  # ---- AI in India (desk: india) -------------------------------------------
+  - {id: aim, name: Analytics India Magazine, kind: rss, url: "https://analyticsindiamag.com/feed/", role: news, desk: india}
+  - {id: inc42-ai, name: Inc42 AI, kind: rss, url: "https://inc42.com/tag/artificial-intelligence/feed/", role: news, desk: india}
+  - {id: medianama, name: MediaNama, kind: rss, url: "https://www.medianama.com/feed/", role: news, desk: india}
+  - {id: mint-tech, name: Mint Technology, kind: rss, url: "https://www.livemint.com/rss/technology", role: news, desk: india}
+  - {id: et-tech, name: ET Tech, kind: rss, url: "https://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms", role: news, desk: india}
+  - {id: yourstory, name: YourStory, kind: rss, url: "https://yourstory.com/feed", role: news, desk: india}
+  - id: gdelt-india
+    name: GDELT India
+    kind: gdelt
+    role: news
+    desk: india
+    query: '("artificial intelligence" OR "AI startup" OR IndiaAI OR "generative AI" OR "large language model") sourcecountry:india sourcelang:english'
+
+  # ---- AI business --------------------------------------------------------
+  - {id: crunchbase-news, name: Crunchbase News, kind: rss, url: "https://news.crunchbase.com/feed/", role: news}
+
   # ---- Voices --------------------------------------------------------------
   - {id: import-ai, name: Import AI (Jack Clark), kind: rss, url: "https://jack-clark.net/feed/", role: voice, person: Jack Clark}
   - {id: simon-willison, name: Simon Willison, kind: rss, url: "https://simonwillison.net/atom/everything/", role: voice, person: Simon Willison}
@@ -124,6 +141,19 @@ lab_domains:
   qwenlm.github.io: Alibaba (Qwen)
   blogs.nvidia.com: NVIDIA
   microsoft.com: Microsoft
+
+# Opportunities desk: official public job boards (free APIs, no keys). Wrong tokens show up in the run report.
+job_boards:
+  - {company: Anthropic, platform: greenhouse, token: anthropic, lab: Anthropic, careers: "https://www.anthropic.com/careers"}
+  - {company: Google DeepMind, platform: greenhouse, token: deepmind, lab: Google DeepMind, careers: "https://deepmind.google/about/careers/"}
+  - {company: xAI, platform: greenhouse, token: xai, lab: xAI, careers: "https://x.ai/careers"}
+  - {company: OpenAI, platform: ashby, token: openai, lab: OpenAI, careers: "https://openai.com/careers"}
+  - {company: Cohere, platform: ashby, token: cohere, lab: Cohere, careers: "https://cohere.com/careers"}
+  - {company: Perplexity, platform: ashby, token: perplexity, lab: Perplexity, careers: "https://www.perplexity.ai/hub/careers"}
+  - {company: ElevenLabs, platform: ashby, token: elevenlabs, lab: ElevenLabs, careers: "https://elevenlabs.io/careers"}
+  - {company: Mistral AI, platform: lever, token: mistral, lab: Mistral AI, careers: "https://mistral.ai/careers"}
+  - {company: Scale AI, platform: greenhouse, token: scaleai, lab: Scale AI, careers: "https://scale.com/careers"}
+  - {company: Databricks, platform: greenhouse, token: databricks, lab: Databricks, careers: "https://www.databricks.com/company/careers"}
 
 # Different names the writer may use for the same lab (keeps one page per lab).
 lab_aliases:

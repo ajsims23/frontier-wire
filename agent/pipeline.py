@@ -8,7 +8,7 @@ from typing import Any
 from . import prompts as P
 from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
-from . import editorial, newsletter
+from . import editorial, newsletter, opportunities, tagging
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather
 from .store import Store
@@ -35,6 +35,7 @@ def _esc(s: str) -> str:
 
 def _item_xml(it: Item) -> str:
     who = f' person="{_esc(it.person)}"' if it.person else ""
+    who += f' desk="{it.desk}"' if it.desk else ""
     return (f'<item id="{it.id}" source="{_esc(it.source_name)}" role="{it.role}"{who} '
             f'published="{it.published or "unknown"}"><title>{_esc(it.title)}</title>'
             f"<snippet>{_esc(it.snippet[:300])}</snippet></item>")
@@ -300,6 +301,7 @@ class Newsroom:
             "score": score,
             "url": lead.url,
             "source_id": lead.source_id,
+            "desk": next((m.desk for m in members if m.desk), ""),
             "image": next((self._images[s["url"]] for s in sources[:4] if self._images.get(s["url"])), None),
             "sources": sources,
             "research": self._research_meta.get(lead.url),
@@ -434,8 +436,15 @@ class Newsroom:
         if not_reached:
             self.report["notes"].append(f"{len(not_reached)} kept item(s) carried over to the next run")
         self.store.mark_seen([m.url for ms in clusters.values() for m in ms if m.url not in not_reached], self.now)
-        for step, fn in (("briefing", editorial.write_briefing), ("self-review", editorial.self_review),
-                         ("daily email", newsletter.maybe_send)):
+        steps = (
+            ("tagging", tagging.tag_stories),
+            ("briefing", editorial.write_briefing),
+            ("job boards", lambda r: opportunities.update_jobs(r, r.cfg.extra.get("job_boards", []))),
+            ("courses", lambda r: opportunities.update_courses(r, getattr(r, "_pool", []))),
+            ("self-review", editorial.self_review),
+            ("daily email", newsletter.maybe_send),
+        )
+        for step, fn in steps:
             try:
                 fn(self)
             except (LimitReached, AllProvidersFailed) as e:
@@ -469,6 +478,14 @@ def summary_markdown(report: dict[str, Any]) -> str:
         lines.append(f"Daily briefing: {report['briefing']}")
     if report.get("threads"):
         lines.append("Threads updated: " + "; ".join(report["threads"]))
+    if report.get("tagged"):
+        lines.append(f"Tagged {report['tagged']} stories by sector, region and deal")
+    if report.get("india_briefing"):
+        lines.append(f"India briefing: {report['india_briefing']}")
+    if report.get("courses"):
+        lines.append(f"Courses: {report['courses']}")
+    if report.get("job_boards"):
+        lines.append("Job boards: " + ", ".join(f"{k} {v}" for k, v in report["job_boards"].items()))
     if report.get("newsletter"):
         lines.append(f"Daily email {report['newsletter']}")
     if report.get("self_review"):

@@ -28,6 +28,10 @@ same_event_as: another candidate's id if both cover the same event, else "".
 arXiv / daily papers: keep only the few that look like real advances — most should be dropped.
 Hugging Face model uploads: keep only genuinely new models from the lab (not quantised or minor variants).
 Social posts: keep only substantive commentary on AI developments by the named person.
+India desk: items marked desk="india" come from Indian outlets. Judge them for readers following AI in India:
+Indian AI startups and funding, IndiaAI Mission and government policy, Indian companies adopting AI, Indian
+language models, data-centre and compute buildout in India. A notable Indian development scores at least 6 even
+if it would be minor globally. Drop general tech or business news that isn't about AI.
 Company blog bursts: when one company publishes several posts about the same event or campaign (a conference
 week, a regional roadshow, a string of customer or partner announcements), treat them as routine marketing:
 score them 5 or lower, except the single most significant one, which you judge on its merits.

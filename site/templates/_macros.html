@@ -1,0 +1,54 @@
+{% macro story_list(items, root) -%}
+<ol class="lab-tl">
+  {% for it in items %}
+  <li style="--c: var(--{{ it.category }})">
+    <time datetime="{{ it.published_at }}">{{ it.date }}</time>
+    <div><span class="tag" style="--c: var(--{{ it.category }})">{{ it.cat_name }}{% if it.lab %}, {{ it.lab }}{% endif %}</span>
+    <a href="{{ root }}story/{{ it.id }}/">{{ it.headline }}</a></div>
+  </li>
+  {% endfor %}
+</ol>
+{%- endmacro %}
+
+{% macro day_chart(chart, caption, label) -%}
+<figure class="activity">
+  <figcaption>{{ caption }}</figcaption>
+  <svg viewBox="0 0 {{ chart.w }} {{ chart.h }}" preserveAspectRatio="none" role="img" aria-label="{{ label }}">
+    {% for b in chart.bars %}<rect x="{{ b.x }}" y="{{ b.y }}" width="{{ b.w }}" height="{{ b.h }}" rx="2" fill="{{ 'var(--brand)' if b.n else 'var(--line-soft)' }}"><title>{{ b.label }}: {{ b.n }}</title></rect>{% endfor %}
+  </svg>
+  <div class="ticks" aria-hidden="true">{% for t in chart.ticks %}<span style="left: {{ t.pct }}%">{{ t.label }}</span>{% endfor %}</div>
+</figure>
+{%- endmacro %}
+
+{% macro hbars(rows, caption, sub="") -%}
+<figure class="news-chart hbars">
+  <figcaption><span class="nc-title">{{ caption }}</span>{% if sub %}<span class="muted">{{ sub }}</span>{% endif %}</figcaption>
+  <ol>
+    {% for r in rows %}
+    <li>{% if r.href %}<a href="{{ r.href }}">{% else %}<span class="hb-row">{% endif %}
+      <span class="nc-lab">{{ r.label }}</span>
+      <span class="nc-bar" aria-hidden="true"><span style="width: {{ r.pct }}%"></span></span>
+      <span class="nc-n">{{ r.n }}</span>
+    {% if r.href %}</a>{% else %}</span>{% endif %}</li>
+    {% endfor %}
+  </ol>
+</figure>
+{%- endmacro %}
+
+{% macro briefing(b, title, root) -%}
+{% if b and b.themes %}
+<div class="brief-card desk-brief">
+  <div class="brief-intro">
+    <h2>{{ title }}</h2>
+    <p class="brief-line">{{ b.one_line }}</p>
+    <p class="brief-by">Written by our newsroom agent from {{ b.from_stories }} stories. Every line links to its stories.</p>
+  </div>
+  <ul class="themes">
+    {% for t in b.themes %}
+    <li class="theme"><h3>{{ t.title }}</h3><p>{{ t.text }}</p>
+      <div class="refs">{% for s in t.stories[:4] %}<a href="{{ root }}story/{{ s.id }}/" title="{{ s.headline }}">{{ s.headline|truncate(44, True, '…') }}</a>{% endfor %}</div></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{%- endmacro %}

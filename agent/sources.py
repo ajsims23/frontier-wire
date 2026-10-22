@@ -30,6 +30,7 @@ class Item:
     lab: str | None = None
     person: str | None = None
     text: str = ""  # full text when the source gives it (posts), used instead of fetching the page
+    desk: str = ""  # specialist desk the source feeds (e.g. "india"), if any
     id: str = field(default="")
 
     def __post_init__(self) -> None:
@@ -183,7 +184,7 @@ def is_ai_headline(title: str) -> bool:
 
 def from_gdelt(src: dict[str, Any], gdelt: Gdelt, settings: dict[str, Any], lookback_hours: int) -> list[Item]:
     span = f"{max(1, min(lookback_hours, 72))}h"
-    rows = gdelt.search(settings["query"], timespan=span, max_records=settings.get("max_records", 50))
+    rows = gdelt.search(src.get("query") or settings["query"], timespan=span, max_records=settings.get("max_records", 50))
     # GDELT matches article text, so plenty of off-topic pieces slip in; keep headlines that are about AI.
     return [Item(url=r["url"], title=r["title"], source_id=src["id"], source_name=r["domain"] or "GDELT",
                  role=src["role"], published=r["published"]) for r in rows if is_ai_headline(r["title"])]
@@ -298,6 +299,8 @@ def gather(sources: list[dict[str, Any]], fetcher: Fetcher, *, now: datetime, lo
                 note = f"; failed accounts: {', '.join(failed)}" if failed else ""
             else:
                 raise ValueError(f"unknown kind {kind}")
+            for it in got:
+                it.desk = it.desk or src.get("desk", "")
             items.extend(got)
             status[src["id"]] = f"ok ({len(got)}){note}"
         except Exception as exc:  # noqa: BLE001

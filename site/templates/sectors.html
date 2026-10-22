@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block main %}
+<section class="shell lab-page desk-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>Sectors</span></nav>
+  <header class="lab-head">
+    <h1>AI by sector</h1>
+    <p class="desk-intro">How AI is changing each industry. Our agent tags every story with the sectors it affects.</p>
+  </header>
+  <div class="desk-charts single">{{ m.hbars(bars, "Stories by sector", "Last 30 days") }}</div>
+  <div class="grid3 sector-grid">
+    {% for s in sectors %}
+    <a class="card" href="{{ root }}sector/{{ s.slug }}/" style="--c: var(--brand)">
+      <span class="meta">{{ s.count }} stor{{ 'y' if s.count == 1 else 'ies' }} in 30 days</span>
+      <h3>{{ s.name }}</h3>
+      {% if s.latest %}<p>Latest: {{ s.latest }}</p>{% else %}<p>No stories yet.</p>{% endif %}
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
