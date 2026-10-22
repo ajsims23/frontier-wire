@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block main %}
+<article class="shell lab-page desk-page weekly">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><a href="{{ root }}weekly/">Weekly deep dive</a><span aria-hidden="true">/</span><span>{{ w.range }}</span></nav>
+  <header class="lab-head">
+    <p class="ex-kicker">Weekly deep dive, {{ w.range }}</p>
+    <h1>{{ w.title }}</h1>
+    {% if w.intro %}<p class="desk-intro">{{ w.intro }}</p>{% endif %}
+    <dl class="lab-stats">
+      <div><dt>Stories this week</dt><dd>{{ w.stats.stories }}{% if w.stats.stories_prev %}<span class="delta">{{ delta(w.stats.stories, w.stats.stories_prev) }} vs last week</span>{% endif %}</dd></div>
+      <div><dt>Model releases</dt><dd>{{ w.stats.models|length }}</dd></div>
+      <div><dt>Deals</dt><dd>{{ w.stats.deals }}</dd></div>
+      <div><dt>Biggest disclosed deal</dt><dd>{% if w.stats.biggest_deal %}<a href="{{ root }}story/{{ w.stats.biggest_deal.id }}/">{{ w.stats.biggest_deal.amount }}</a>{% else %}None{% endif %}</dd></div>
+    </dl>
+  </header>
+
+  <ol class="shifts">
+    {% for sh in w.shifts %}
+    <li>
+      <span class="shift-n" aria-hidden="true">{{ loop.index }}</span>
+      <div>
+        <h2>{{ sh.title }}</h2>
+        <p>{{ sh.text }}</p>
+        <ul class="shift-src">{% for st in sh.stories %}<li><a href="{{ root }}story/{{ st.id }}/" style="--c: var(--{{ st.category }})">{{ st.headline }}</a></li>{% endfor %}</ul>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+
+  <div class="desk-charts even">
+    {{ m.day_chart(day_chart, "Stories per day", w.stats.stories ~ " stories this week") }}
+    {% if lab_bars %}{{ m.hbars(lab_bars, "Most active labs", "Stories this week") }}{% endif %}
+  </div>
+  {% if cat_rows %}
+  <figure class="news-chart compare">
+    <figcaption><span class="nc-title">What the week was about</span><span class="muted">This week vs the week before</span></figcaption>
+    <ol>{% for c in cat_rows %}<li><span class="hb-row">
+      <span class="nc-lab">{{ c.label }}</span>
+      <span class="cmp-bars" aria-hidden="true"><span class="cmp-now" style="width: {{ c.pct }}%; --c: var(--{{ c.key }})"></span><span class="cmp-prev" style="width: {{ c.pct_prev }}%"></span></span>
+      <span class="nc-n">{{ c.n }}{% if delta(c.n, c.prev) %} <span class="muted">({{ delta(c.n, c.prev) }})</span>{% endif %}</span></span></li>{% endfor %}</ol>
+  </figure>
+  {% endif %}
+  <p class="ex-note">Written by our newsroom agent from this week's stories; every number comes from the stories it cites.</p>
+  {% if others %}
+  <section class="block" aria-labelledby="past-h"><div class="block-head"><h2 id="past-h">Earlier weeks</h2></div>
+    <ul class="job-list">{% for o in others %}<li><a href="{{ root }}weekly/{{ o.key }}/"><span class="strong">{{ o.title }}</span><span class="muted">{{ o.range }}</span></a></li>{% endfor %}</ul>
+  </section>
+  {% endif %}
+</article>
+{% endblock %}

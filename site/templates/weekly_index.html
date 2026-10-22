@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="shell lab-page desk-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>Weekly deep dive</span></nav>
+  <header class="lab-head">
+    <h1>Weekly deep dive</h1>
+    <p class="desk-intro">Every Sunday our newsroom agent writes up the five biggest shifts in AI that week, with charts. Every number comes from the stories it cites.</p>
+  </header>
+  {% if issues %}
+  <ul class="job-list weekly-list">{% for o in issues %}<li><a href="{{ root }}weekly/{{ o.key }}/"><span class="strong">{{ o.title }}</span><span class="muted">{{ o.range }}{% if o.intro %}. {{ o.intro }}{% endif %}</span></a></li>{% endfor %}</ul>
+  {% else %}<p class="empty">The first deep dive is written once there are enough stories.</p>{% endif %}
+</section>
+{% endblock %}

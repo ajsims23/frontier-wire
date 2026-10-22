@@ -573,3 +573,64 @@ def test_videos_pick_link_and_attach(tmp_path):
     # second run: nothing new, no AI call
     update_videos(room, [{"name": "Example Lab", "handle": "@examplelab"}])
     assert len(asked) == 1
+
+
+def test_explainer_guardrails():
+    from agent.editorial import check_explainer, figure_in
+    src = "The model scores 74.2% on SWE-bench. A wider rollout is planned for December. It costs $3 per million tokens."
+    ok = check_explainer({"what_it_means": "It's cheaper at $3 per million tokens.", "terms": [{"term": "Token", "meaning": "A piece of text."}],
+                          "watch_next": ["Wider rollout planned for December", "Price falls to $1 in 2027"]}, src)
+    assert ok["watch_next"] == ["Wider rollout planned for December"]          # invented figure dropped
+    assert check_explainer({"what_it_means": "It is 40% faster."}, src) is None  # invented number: no explainer
+    assert figure_in("74.2%", src) and not figure_in("75%", src)
+
+
+def test_weekly_guardrails_and_schedule():
+    from types import SimpleNamespace
+    from agent.weekly import maybe_write_weekly
+    stories = [{"id": f"s{i}", "headline": f"Lab {i} ships model {i}", "summary": f"It has {i}0 billion parameters.",
+                "why_it_matters": "", "category": "models", "lab": f"Lab {i}", "score": 7,
+                "published_at": (NOW - timedelta(hours=i * 5)).isoformat()} for i in range(1, 11)]
+
+    class L:
+        def ask(self, **kw):
+            return {"title": "Models everywhere", "intro": "Ten labs shipped.", "shifts": [
+                {"title": "Bigger models", "text": "Lab 1 shipped a 10 billion parameter model.", "story_ids": ["s1"]},
+                {"title": "Invented", "text": "Lab 2 shipped a 99 billion parameter model.", "story_ids": ["s2"]},   # number not in story
+                {"title": "Fake id", "text": "Something.", "story_ids": ["nope"]},
+                {"title": "Pair", "text": "Labs 3 and 4 both shipped.", "story_ids": ["s3", "s4"]},
+                {"title": "Five", "text": "Lab 5 shipped.", "story_ids": ["s5"]}]}
+
+    room = SimpleNamespace(store=SimpleNamespace(weekly={}, stories=stories), llm=L(), now=NOW, report={})
+    maybe_write_weekly(room)
+    issue = next(iter(room.store.weekly["issues"].values()))
+    assert [s["title"] for s in issue["shifts"]] == ["Bigger models", "Pair", "Five"]
+    assert issue["intro"] == "Ten labs shipped." and issue["stats"]["stories"] == 10
+    # not Sunday and an issue already exists: nothing new
+    room.now = NOW + timedelta(days=8 - NOW.isoweekday() % 7 if NOW.weekday() == 6 else 1)
+    if room.now.weekday() != 6:
+        maybe_write_weekly(room)
+        assert len(room.store.weekly["issues"]) == 1
+
+
+def test_model_tracker_changes():
+    from types import SimpleNamespace
+    from agent.models_tracker import update_tracker
+
+    def payload(price):
+        return json.dumps({"data": [
+            {"id": "openai/gpt-x", "name": "OpenAI: GPT-X", "created": 1760000000, "context_length": 400000,
+             "pricing": {"prompt": "0.00000125", "completion": price}, "architecture": {"input_modalities": ["text", "image"]}},
+            {"id": "openai/gpt-x:free", "name": "free variant", "created": 1760000000, "pricing": {"prompt": "0", "completion": "0"}},
+            {"id": "someco/unknown", "name": "x", "created": 1, "pricing": {"prompt": "0", "completion": "0"}},
+            {"id": "openrouter/auto", "name": "router", "pricing": {"prompt": "-1", "completion": "-1"}}]})
+
+    pages = {"v": payload("0.00001")}
+    room = SimpleNamespace(store=SimpleNamespace(models={}), fetcher=SimpleNamespace(get=lambda u: pages["v"]), now=NOW, report={})
+    update_tracker(room)
+    m = room.store.models["models"]
+    assert [x["name"] for x in m] == ["GPT-X"] and m[0]["price_out"] == 10.0 and m[0]["price_in"] == 1.25
+    assert room.store.models["changes"] == []          # first snapshot isn't news
+    pages["v"] = payload("0.000008")
+    update_tracker(room)
+    assert room.store.models["changes"][-1]["kind"] == "price_cut" and "$10 → $8" in room.store.models["changes"][-1]["text"]

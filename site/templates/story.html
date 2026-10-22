@@ -28,6 +28,32 @@
     <p class="lede">{{ s.summary }}</p>
     {% if s.why_it_matters %}<p class="why"><strong>Why it matters.</strong> {{ s.why_it_matters }}</p>{% endif %}
 
+    {% if s.explainer %}
+    <section class="explainer" aria-labelledby="ex-h">
+      <h2 id="ex-h"><span class="ex-kicker">Explainer</span>What it means</h2>
+      <p>{{ s.explainer.what_it_means }}</p>
+      {% if s.explainer.terms %}
+      <dl class="ex-terms">
+        {% for t in s.explainer.terms %}<div><dt>{{ t.term }}</dt><dd>{{ t.meaning }}</dd></div>{% endfor %}
+      </dl>
+      {% endif %}
+      {% if s.explainer.watch_next %}
+      <div class="ex-watch"><h3>What to watch next</h3>
+        <ul>{% for w in s.explainer.watch_next %}<li>{{ w }}</li>{% endfor %}</ul></div>
+      {% endif %}
+      <p class="ex-note">Written by our newsroom agent from the sources below.</p>
+    </section>
+    {% endif %}
+
+    {% if s.benchmarks %}
+    <section class="bench" aria-labelledby="bm-h">
+      <h2 id="bm-h">Reported results</h2>
+      <table class="bench-t"><thead><tr><th scope="col">Model</th><th scope="col">Benchmark</th><th scope="col">Score</th></tr></thead>
+      <tbody>{% for b in s.benchmarks %}<tr><td>{{ b.model }}</td><td>{{ b.benchmark }}</td><td class="num">{{ b.score }}</td></tr>{% endfor %}</tbody></table>
+      <p class="ex-note">As stated in the sources. See all results on the <a href="{{ root }}models/">model tracker</a>.</p>
+    </section>
+    {% endif %}
+
     {% for q in s.quotes %}
     <figure class="pull">
       <blockquote>“{{ q.text }}”</blockquote>

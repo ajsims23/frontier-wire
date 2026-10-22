@@ -101,6 +101,8 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     threads: dict = read("threads.json", {})
     labs_info: dict = read("labs.json", {})
     desk_briefs: dict = read("desk_briefings.json", {})
+    models_state: dict = read("models.json", {})
+    weekly_state: dict = read("weekly.json", {})
     by_id = {s["id"]: s for s in stories}
 
     if out.exists():
@@ -260,6 +262,55 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
          canonical=f"{base}sectors/", og_image=f"{base}og/home.png", sectors=sector_rows,
          bars=bars([(r["name"], r["count"], f"../sector/{r['slug']}/") for r in sector_rows if r["count"]][:10]))
 
+    # Model tracker
+    from .models_tracker import benchmark_rows
+    tracked = models_state.get("models") or []
+    lab_slugs = {l["lab"]: l["slug"] for l in lab_index}
+    def money(v: float) -> str:
+        return f"{v:,.2f}" if v < 100 else f"{v:,.0f}"
+    newest_per_lab: dict[str, dict] = {}
+    for x in tracked:
+        if x["lab"] not in newest_per_lab or x["released"] > newest_per_lab[x["lab"]]["released"]:
+            newest_per_lab[x["lab"]] = x
+    flag = sorted(newest_per_lab.values(), key=lambda x: x["price_out"])
+    top_out = max([x["price_out"] for x in flag] or [1]) or 1
+    price_bars = [{"label": f"{x['name']}", "n": f"${money(x['price_out'])}", "href": "", "pct": max(4, round(x["price_out"] / top_out * 100))} for x in flag[:10]]
+    ctx = sorted(newest_per_lab.values(), key=lambda x: -x["context"])
+    top_ctx = max([x["context"] for x in ctx] or [1]) or 1
+    ctx_bars = [{"label": x["name"], "n": f"{x['context'] // 1000:,}K", "href": "", "pct": max(4, round(x["context"] / top_ctx * 100))} for x in ctx[:10] if x["context"]]
+    recent_changes = [{**c, "when": short_date(c["date"] + "T00:00:00+00:00")}
+                      for c in sorted(models_state.get("changes") or [], key=lambda c: c["date"], reverse=True)
+                      if c["date"] >= (now - timedelta(days=30)).date().isoformat()]
+    page("models", "models.html", title="AI model tracker: prices, context windows, benchmarks | Frontier Wire",
+         description="Prices, context windows and release dates for frontier AI models, with every change logged and benchmark results from the news.",
+         canonical=f"{base}models/", og_image=f"{base}og/home.png",
+         models=[{**x, "lab_slug": lab_slugs.get(x["lab"], ""), "released_h": short_date(x["released"] + "T00:00:00+00:00") if x["released"] else "",
+                  "context_h": f"{x['context'] // 1000:,}K" if x["context"] else "", "price_in_h": money(x["price_in"]), "price_out_h": money(x["price_out"])}
+                 for x in tracked],
+         newest=tracked[0] if tracked else None, changes=recent_changes, price_bars=price_bars, ctx_bars=ctx_bars,
+         benchmarks=[{**b, "when": short_date(b["date"] + "T00:00:00+00:00")} for b in benchmark_rows(stories)],
+         updated=short_date(models_state["updated_at"]) if models_state.get("updated_at") else "not yet")
+
+    # Weekly deep dive
+    issues = sorted((weekly_state.get("issues") or {}).values(), key=lambda w: w["key"], reverse=True)
+    def delta(n: int, p: int) -> str:
+        if not p:
+            return "" if not n else "new"
+        return "same" if n == p else (f"+{n - p}" if n > p else f"{n - p}")
+    for i, w in enumerate(issues):
+        wnow = _dt(w["published_at"])
+        week_items = [s for s in stories if wnow - timedelta(days=7) <= _dt(s["published_at"]) <= wnow]
+        cats = w["stats"].get("categories") or []
+        top_c = max([max(c["n"], c["prev"]) for c in cats] or [1]) or 1
+        page(f"weekly/{w['key']}", "weekly.html", title=f"{w['title']} | Frontier Wire weekly", description=w.get("intro") or w["title"],
+             canonical=f"{base}weekly/{w['key']}/", og_image=f"{base}og/home.png", w=w, delta=delta,
+             day_chart=activity_chart(week_items, wnow, days=7),
+             lab_bars=bars([(r["label"], r["n"], f"../../lab/{lab_slugs[r['label']]}/" if r["label"] in lab_slugs else "") for r in w["stats"].get("labs", [])]),
+             cat_rows=[{**c, "pct": max(3, round(c["n"] / top_c * 100)) if c["n"] else 0, "pct_prev": max(3, round(c["prev"] / top_c * 100)) if c["prev"] else 0} for c in cats],
+             others=[{"key": o["key"], "title": o["title"], "range": o["range"]} for o in issues if o["key"] != w["key"]][:8])
+    page("weekly", "weekly_index.html", title="Weekly deep dive | Frontier Wire", description="The five biggest shifts in AI each week, with charts.",
+         canonical=f"{base}weekly/", og_image=f"{base}og/home.png", issues=issues)
+
     # small summary for the home page's Desks section
     week = now - timedelta(days=7)
     desks_summary = {
@@ -269,6 +320,8 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
                      "days": [b["n"] for b in activity_chart(deals, now, days=14)["bars"]],
                      "largest": ({"amount": disclosed[0]["deal"]["amount"], "company": disclosed[0]["deal"]["company"], "id": disclosed[0]["id"]} if disclosed else None)},
         "sectors": [{"slug": r["slug"], "name": r["name"], "count": r["count"]} for r in sector_rows if r["count"]][:5],
+        "models": {"count": len(tracked), "changes": [c["text"] for c in recent_changes[:2]],
+                   "cheapest": ({"name": flag[0]["name"], "price": money(flag[0]["price_out"])} if flag else None)},
     }
     (out / "data" / "desks.json").write_text(json.dumps(desks_summary, ensure_ascii=False))
 

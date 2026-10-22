@@ -232,6 +232,8 @@
     $("brief-line").textContent = b.one_line || "";
     const when = b.written_at ? new Date(b.written_at).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }) : "";
     $("brief-by").textContent = `Written by our newsroom agent${when ? ` at ${when}` : ""} from ${b.from_stories || "today's"} stories. Every line links to its stories.`;
+    const w = data.weekly;
+    $("brief-weekly").innerHTML = w && /^\d{4}-W\d{2}$/.test(w.key || "") ? `<a class="weekly-link" href="weekly/${w.key}/"><span class="ex-kicker">Weekly deep dive, ${esc(w.range)}</span><span class="strong">${esc(w.title)}</span><span class="wl-go">Read the week's five biggest shifts</span></a>` : "";
     $("themes").innerHTML = b.themes.map((t) => `<li class="theme">
         <h3>${esc(t.title)}</h3>
         <p>${esc(t.text)}</p>
@@ -328,6 +330,9 @@
     const b = d.business || {};
     body("desk-business", big(b.deals7 || 0, "deals this week") + spark(b.days || []) +
       (b.largest ? `<p class="muted">Largest disclosed: ${esc(b.largest.amount)}${b.largest.company ? `, ${esc(b.largest.company)}` : ""}</p>` : `<p class="muted">Deals and funding, tracked.</p>`));
+    const mo = d.models || {};
+    body("desk-models", big(mo.count || 0, "models tracked") + (mo.cheapest ? `<p class="muted">Cheapest newest model: ${esc(mo.cheapest.name)}, $${esc(mo.cheapest.price)} per 1M output tokens</p>` : "") +
+      ((mo.changes || []).length ? `<ul>${mo.changes.map((c) => `<li>${esc(clip(c, 80))}</li>`).join("")}</ul>` : `<p class="muted">New models and price changes, logged automatically.</p>`));
     const sec = d.sectors || [], top = Math.max(1, ...sec.map((x) => x.count));
     body("desk-sectors", sec.length ? `<ul class="dc-bars">${sec.map((x) => `<li><span>${esc(x.name)}</span><span class="nc-bar"><span style="width:${Math.max(6, x.count / top * 100).toFixed(0)}%"></span></span><b>${x.count}</b></li>`).join("")}</ul>`
       : `<p class="muted">Healthcare, finance, education and more.</p>`);

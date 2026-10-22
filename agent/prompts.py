@@ -95,6 +95,13 @@ Rules:
   Never paraphrase inside a quote.
 - lab: the organisation the story is mainly about, or "".
 - model_name / model_type: only for a model release; otherwise "".
+- explainer, for readers who are new to AI:
+  what_it_means: two or three plain sentences on what this means in practice, no jargon, facts only from the sources.
+  terms: up to three technical terms used in the story, each with a one-line plain definition.
+  watch_next: up to two things the SOURCES say are planned, expected or pending (a rollout, a date, a decision,
+  a court ruling). Never predict or guess; return [] if the sources don't say.
+- benchmarks: benchmark results stated in the sources (model, benchmark name, score copied exactly as written,
+  e.g. "74.2%"). Return [] if none.
 {UNTRUSTED_NOTE}"""
 
 WRITE_SCHEMA = {
@@ -121,6 +128,18 @@ WRITE_SCHEMA = {
                 "required": ["text", "speaker", "source_url"],
             },
         },
+        "explainer": {
+            "type": "object",
+            "properties": {
+                "what_it_means": {"type": "string"},
+                "terms": {"type": "array", "items": {"type": "object", "properties": {
+                    "term": {"type": "string"}, "meaning": {"type": "string"}}, "required": ["term", "meaning"]}},
+                "watch_next": {"type": "array", "items": {"type": "string"}},
+            },
+        },
+        "benchmarks": {"type": "array", "items": {"type": "object", "properties": {
+            "model": {"type": "string"}, "benchmark": {"type": "string"}, "score": {"type": "string"}},
+            "required": ["model", "benchmark", "score"]}},
     },
     "required": ["headline", "summary", "why_it_matters", "category", "quotes"],
 }

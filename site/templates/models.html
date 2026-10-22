@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block main %}
+<section class="shell lab-page desk-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>Model tracker</span></nav>
+  <header class="lab-head">
+    <h1>Model tracker</h1>
+    <p class="desk-intro">Prices, context windows and release dates for the frontier labs' models, checked every three hours. Our agent logs every new model and price change, and collects benchmark results reported in the news.</p>
+    <dl class="lab-stats">
+      <div><dt>Models tracked</dt><dd>{{ models|length }}</dd></div>
+      <div><dt>Newest</dt><dd>{% if newest %}{{ newest.name }}{% else %}None yet{% endif %}</dd></div>
+      <div><dt>Changes in 30 days</dt><dd>{{ changes|length }}</dd></div>
+    </dl>
+  </header>
+
+  {% if changes %}
+  <section class="block" aria-labelledby="chg-h">
+    <div class="block-head"><h2 id="chg-h">What changed</h2><p>Spotted by our agent by comparing each check with the last.</p></div>
+    <ol class="changes">
+      {% for c in changes[:12] %}<li class="chg-{{ c.kind }}"><time>{{ c.when }}</time><span class="chg-dot" aria-hidden="true"></span><span>{{ c.text }}</span></li>{% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  {% if price_bars or ctx_bars %}
+  <div class="desk-charts even">
+    {% if price_bars %}{{ m.hbars(price_bars, "Output price, newest model per lab", "US$ per 1M tokens, lower is cheaper") }}{% endif %}
+    {% if ctx_bars %}{{ m.hbars(ctx_bars, "Context window, newest model per lab", "Thousands of tokens") }}{% endif %}
+  </div>
+  {% endif %}
+
+  <section class="block" aria-labelledby="tbl-h">
+    <div class="block-head"><h2 id="tbl-h">All tracked models</h2><p>Click a column to sort. Prices in US$ per 1M tokens.</p></div>
+    {% if models %}
+    <div class="table-box"><table class="deals models-t" id="models-t">
+      <thead><tr>
+        <th scope="col"><button type="button" data-k="0">Model</button></th>
+        <th scope="col"><button type="button" data-k="1">Lab</button></th>
+        <th scope="col"><button type="button" data-k="2" data-num>Released</button></th>
+        <th scope="col" class="num"><button type="button" data-k="3" data-num>Context</button></th>
+        <th scope="col" class="num"><button type="button" data-k="4" data-num>Input</button></th>
+        <th scope="col" class="num"><button type="button" data-k="5" data-num>Output</button></th>
+        <th scope="col">Takes</th>
+      </tr></thead>
+      <tbody>
+        {% for x in models %}
+        <tr><td class="strong">{{ x.name }}</td><td>{% if x.lab_slug %}<a href="{{ root }}lab/{{ x.lab_slug }}/">{{ x.lab }}</a>{% else %}{{ x.lab }}{% endif %}</td>
+          <td data-v="{{ x.released }}">{{ x.released_h }}</td>
+          <td class="num" data-v="{{ x.context }}">{{ x.context_h }}</td>
+          <td class="num" data-v="{{ x.price_in }}">${{ x.price_in_h }}</td>
+          <td class="num" data-v="{{ x.price_out }}">${{ x.price_out_h }}</td>
+          <td class="muted">{{ x.inputs|join(", ") }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table></div>
+    {% else %}<p class="empty">The tracker fills in after the next newsroom run.</p>{% endif %}
+  </section>
+
+  <section class="block" aria-labelledby="bm-h">
+    <div class="block-head"><h2 id="bm-h">Benchmark results in the news</h2><p>Scores as stated in each story's sources. Labs' own numbers aren't independent tests.</p></div>
+    {% if benchmarks %}
+    <div class="table-box"><table class="deals">
+      <thead><tr><th scope="col">Date</th><th scope="col">Model</th><th scope="col">Benchmark</th><th scope="col" class="num">Score</th><th scope="col">Story</th></tr></thead>
+      <tbody>{% for b in benchmarks %}<tr><td>{{ b.when }}</td><td class="strong">{{ b.model }}</td><td>{{ b.benchmark }}</td><td class="num">{{ b.score }}</td><td><a href="{{ root }}story/{{ b.story_id }}/">{{ b.headline|truncate(60) }}</a></td></tr>{% endfor %}</tbody>
+    </table></div>
+    {% else %}<p class="empty">Results appear here as stories report them.</p>{% endif %}
+  </section>
+  <p class="ex-note">Prices and context windows: OpenRouter's public model list, which shows what each model is served at. Updated {{ updated }}.</p>
+</section>
+<script>
+(function () {
+  var t = document.getElementById("models-t"); if (!t) return;
+  var dir = {};
+  t.querySelectorAll("th button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var k = +b.dataset.k, num = b.hasAttribute("data-num"); dir[k] = !dir[k];
+      var rows = Array.prototype.slice.call(t.tBodies[0].rows);
+      rows.sort(function (a, c) {
+        var x = a.cells[k], y = c.cells[k];
+        var u = x.dataset.v || x.textContent, v = y.dataset.v || y.textContent;
+        var r = num && !isNaN(parseFloat(u)) ? parseFloat(u) - parseFloat(v) : String(u).localeCompare(String(v));
+        if (num && isNaN(parseFloat(u))) r = String(u).localeCompare(String(v));
+        return dir[k] ? r : -r;
+      });
+      rows.forEach(function (r) { t.tBodies[0].appendChild(r); });
+      t.querySelectorAll("th").forEach(function (th) { th.removeAttribute("aria-sort"); });
+      b.parentElement.setAttribute("aria-sort", dir[k] ? "ascending" : "descending");
+    });
+  });
+})();
+</script>
+{% endblock %}

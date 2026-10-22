@@ -8,7 +8,7 @@ from typing import Any
 from . import prompts as P
 from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
-from . import editorial, newsletter, tagging, videos
+from . import editorial, models_tracker, newsletter, tagging, videos, weekly
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather
 from .store import Store
@@ -284,7 +284,7 @@ class Newsroom:
         who = f"\nPerson (author of the post): {lead.person}" if lead.person else ""
         blocks = "\n\n".join(f'<source url="{u}" publisher="{_esc(pubs[u])}">\n{_esc(t[:limit])}\n</source>' for u, t in texts.items())
         answer = self.llm.ask(
-            system=P.WRITE_SYSTEM, schema_name="submit_story", schema=P.WRITE_SCHEMA, max_tokens=1500,
+            system=P.WRITE_SYSTEM, schema_name="submit_story", schema=P.WRITE_SCHEMA, max_tokens=2400,
             prompt=f"Suggested category: {category}\nItem: {lead.title}{who}{context}\n\n{blocks}",
         )
 
@@ -301,7 +301,18 @@ class Newsroom:
 
         pub = _parse_time(lead.published) or self.now
         cat = answer.get("category") if answer.get("category") in P.CATEGORIES else category
+        all_text = " ".join(texts.values())
+        explainer, benchmarks = editorial.check_explainer(answer.get("explainer"), all_text), []
+        for b in answer.get("benchmarks") or []:
+            if not isinstance(b, dict) or not (b.get("model") and b.get("benchmark") and b.get("score")):
+                continue
+            if editorial.figure_in(b["score"], all_text) and b["benchmark"].lower()[:6] in all_text.lower():
+                benchmarks.append({k: str(b[k]).strip()[:60] for k in ("model", "benchmark", "score")})
+            else:
+                self.report["notes"].append(f"dropped unverifiable benchmark: {b.get('model')} {b.get('benchmark')} {b.get('score')}")
+        extra = {k: v for k, v in (("explainer", explainer), ("benchmarks", benchmarks[:6])) if v}
         return {
+            **extra,
             "id": stable_id(lead.url),
             "headline": answer["headline"].strip()[:140],
             "summary": answer["summary"].strip(),
@@ -391,6 +402,8 @@ class Newsroom:
             "videos": [{k: v.get(k) for k in ("id", "title", "channel", "lab", "published", "blurb", "story_id")}
                        for v in (self.store.videos.get("videos") or [])[:9]],
             "briefing": self.store.briefing or None,
+            "weekly": next(({"key": w["key"], "title": w["title"], "intro": w["intro"], "range": w["range"]}
+                            for w in reversed(list((self.store.weekly.get("issues") or {}).values()))), None),
             "threads": editorial.site_threads(self),
             "labs": labs,
             "stats": {
@@ -498,6 +511,9 @@ class Newsroom:
         steps = (
             ("videos", lambda r: videos.update_videos(r, r.cfg.extra.get("video_channels", []))),
             ("tagging", tagging.tag_stories),
+            ("explainers", editorial.backfill_explainers),
+            ("model tracker", models_tracker.update_tracker),
+            ("weekly", weekly.maybe_write_weekly),
             ("briefing", editorial.write_briefing),
             ("self-review", editorial.self_review),
             ("daily email", newsletter.maybe_send),
@@ -539,6 +555,12 @@ def summary_markdown(report: dict[str, Any]) -> str:
         lines.append("Threads updated: " + "; ".join(report["threads"]))
     if report.get("videos"):
         lines.append("Videos: " + (report.get("videos_kept", "no new videos") + " · " + ", ".join(f"{k} {v}" for k, v in report["videos"].items())))
+    if report.get("weekly"):
+        lines.append(f"Weekly deep dive: {report['weekly']}")
+    if report.get("model_tracker"):
+        lines.append(f"Model tracker: {report['model_tracker']}")
+    if report.get("explainers"):
+        lines.append(f"Explainers: {report['explainers']}")
     if report.get("tagged"):
         lines.append(f"Tagged {report['tagged']} stories by sector, region and deal")
     if report.get("india_briefing"):

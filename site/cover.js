@@ -52,10 +52,10 @@
     return g;
   }
 
-  window.FWCover = function (s) {
+  window.FWCover = function (s, aspect) {
     const seed = hash(s.id || s.url || s.headline || "x"), r = rng(seed);
-    const W = 400, H = 225, kind = seed % 5, gid = `g${seed.toString(36)}`;
-    const text = keyText(s), size = Math.max(30, Math.min(84, 560 / Math.max(3, text.length)));
+    const W = 400, H = Math.round(W / Math.min(3, Math.max(1, aspect || 16 / 9))), kind = seed % 5, gid = `g${seed.toString(36)}`;
+    const text = keyText(s), size = Math.max(28, Math.min(84, H * 0.42, 560 / Math.max(3, text.length)));
     const label = (s.lab || CAT[s.category] || "").toUpperCase();
     const gx = (r() * 100).toFixed(0), gy = (r() * 100).toFixed(0);
     return `<svg class="art cover" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMinYMid slice" aria-hidden="true">
@@ -69,6 +69,6 @@
 
   // Story pages: fill any .media[data-cover] placeholder.
   document.querySelectorAll(".media[data-cover]").forEach((el) => {
-    try { el.insertAdjacentHTML("afterbegin", window.FWCover(JSON.parse(el.dataset.cover))); } catch (e) { /* keep the plain panel */ }
+    try { el.insertAdjacentHTML("afterbegin", window.FWCover(JSON.parse(el.dataset.cover), el.clientWidth / Math.max(1, el.clientHeight))); } catch (e) { /* keep the plain panel */ }
   });
 })();

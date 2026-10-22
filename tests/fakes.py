@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 from datetime import datetime, timedelta, timezone
 from urllib.parse import unquote
 
@@ -280,7 +281,12 @@ def newsroom_handler(calls: list[dict]):
         prompt = body["messages"][1]["content"]
         data = {"submit_decisions": judge, "submit_story": story, "submit_matches": verify,
                 "submit_links": links, "submit_briefing": briefing, "submit_review": review,
-                "submit_tags": tags, "submit_courses": courses}[name](prompt)
+                "submit_tags": tags, "submit_courses": courses,
+                "submit_weekly": lambda p: {"title": "A week of new models", "intro": "Labs shipped models.", "shifts": [
+                    {"title": f"Shift {i}", "text": "Labs shipped new models.", "story_ids": re.findall(r'<story id="([^"]+)"', p)[i:i + 1]}
+                    for i in range(4)]},
+                "submit_explainer": lambda p: {"explainer": {"what_it_means": "It means more capable assistants.", "terms": [], "watch_next": []},
+                                               "benchmarks": []}}[name](prompt)
         return httpx.Response(200, json=completion(name, data))
     return handler
 
