@@ -122,6 +122,7 @@ async function webNews(question) {
     ["bing", `https://www.bing.com/news/search?q=${enc}&format=rss&setlang=en-us`],
     ["bing", `https://www.bing.com/news/search?q=${enc}&format=rss&setlang=en-us&qft=sortbydate%3d%221%22`],
     ["google", `https://news.google.com/rss/search?q=${enc}%20when:30d&hl=en-US&gl=US&ceid=US:en`],
+    ["bing", `https://www.bing.com/news/search?q=${enc}&format=rss&setlang=en-us&qft=interval%3d%229%22`],   // past month, by relevance
   ];
   const results = await Promise.all(feeds.map(async ([kind, url]) => {
     try {
@@ -138,6 +139,7 @@ async function webNews(question) {
     else byKey.set(key, { ...it, score });
   }));
   const top = [...byKey.values()].sort((a, b) => b.score - a.score).slice(0, 20);
+  webNews.lastCounts = results.map((r) => r.length);
   return top.sort((a, b) => (b.date || "").localeCompare(a.date || "")).map(({ score, ...it }) => it);
 }
 
@@ -159,7 +161,7 @@ async function fromWeb(env, q, ask, archive, search = webNews) {
       const ok = nums.split(",").map((n) => +n.trim()).filter((n) => n >= 1 && n <= items.length);
       return ok.length ? `[${ok.join(", ")}]` : "";
     });
-  return { answer: text, web: true, sources: items.map((it, i) => ({ n: i + 1, headline: it.title, url: it.url, publisher: it.publisher, date: it.date })),
+  return { answer: text, web: true, feeds: webNews.lastCounts, sources: items.map((it, i) => ({ n: i + 1, headline: it.title, url: it.url, publisher: it.publisher, date: it.date })),
     related: archive.map((s) => ({ ...s, cited: false })) };
 }
 
