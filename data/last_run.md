@@ -1,45 +1,36 @@
-## Frontier Wire newsroom run — 2026-10-22T07:03:53+00:00
+## Frontier Wire newsroom run — 2026-10-22T09:52:08+00:00
 
-Fetched 2656 items · fresh 70 · judged 60 · kept 12 · **written 8**
-AI: 11 requests, 31,056 tokens this run · 55 requests today · providers: cerebras
-Daily briefing: 4 themes from 20 stories
-Threads updated: European finance adopts open models: European banks and fintechs adopt NVIDIA open‑weight models ; European finance adopts open models: European retailers cut inference costs up to 90% using NVIDI; European finance adopts open models: NVIDIA open models adopted in European public sector project
+Fetched 2638 items · fresh 5 · judged 5 · kept 2 · **written 1**
+AI: 9 requests, 14,940 tokens this run · 64 requests today · providers: cerebras
+Research agent: investigated 1 stories with 4 tool calls, confirmed 0
 
 ### New stories
-- **industry** — [European banks and fintechs adopt NVIDIA open‑weight models for proprietary AI](https://blogs.nvidia.com/blog/european-financial-services-organizations-open-models-proprietary-intelligence)  
-  At GTC Berlin, firms such as Revolut, Starling Bank, Lloyds, NatWest and Santander announced using NVIDIA open‑weight models and accelerated GPUs to build in‑house intelligence, with Revolut’s PRAGMA serving an initial 80 million customers and scaling three‑fold.  
-  _1 source(s), 1 verified quote(s)_
-- **industry** — [NVIDIA expands Cosmos platform with new training tools and data factory blueprints](https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models)  
-  NVIDIA added training tools, simulation checkpoints and five cloud‑native data factory blueprints to its Cosmos platform, enabling developers to build multimodal world models. Porsche aims to cut repeat test drives by up to 90% and development time by up to 85% using the new blueprints.  
-  _1 source(s), 0 verified quote(s)_
-- **industry** — [NVIDIA DSX platform used to address power bottleneck in AI infrastructure](https://blogs.nvidia.com/blog/dsx-power)  
-  Companies worldwide are adopting NVIDIA DSX AI Factory Platform to integrate grid, substation and AI factory operations as a single system. The move responds to power being the biggest bottleneck, with over $300 billion in equipment backlogged and more than 200 GW of projects in U.S. interconnection queues.  
-  _1 source(s), 0 verified quote(s)_
-- **industry** — [European retailers cut inference costs up to 90% using NVIDIA open models](https://blogs.nvidia.com/blog/european-retail-open-models-robotics)  
-  Shopify post‑trained NVIDIA Nemotron 3.5 Lightning for its Sidekick assistant, achieving 90% lower serving cost and 7× faster responses. Other retailers such as Zooplus, Photoroom and L’Oréal reported accuracy gains and faster pipelines using NVIDIA’s open‑model tools.  
-  _1 source(s), 0 verified quote(s)_
-- **industry** — [European firms adopt NVIDIA Earth‑2 models for weather and climate forecasting](https://blogs.nvidia.com/blog/europe-earth-2-open-models-weather-climate-prediction)  
-  NVIDIA’s Earth‑2 open AI models are being used by organizations such as AXA, Vaisala Xweather and the University of Manchester to improve regional weather forecasts, cyclone risk analysis and air‑quality modeling across Europe. The StormScope EU model provides short‑term cloud predictions every 10 minutes using satellite data.  
-  _1 source(s), 0 verified quote(s)_
-- **industry** — [NVIDIA open models adopted in European public sector projects](https://blogs.nvidia.com/blog/european-public-sector-open-models)  
-  NVIDIA’s open‑weight AI models are being integrated into European government initiatives, including the European Commission’s AI@EC platform and Poland’s healthcare and employment services, using NVIDIA hardware and software such as DGX BasePOD and Triton Inference Server.  
-  _1 source(s), 0 verified quote(s)_
-- **research** — [Environment Duels benchmark studies LLM co‑evolution through author‑solver interactions](https://arxiv.org/abs/2610.30116)  
-  The paper introduces Environment Duels, a dynamic agentic benchmark where LLMs both create environments with hints and solve them, revealing distinct authoring and solving abilities across nine frontier models. Smaller models learn more from others and produce the hardest environments.  
-  _1 source(s), 0 verified quote(s)_
-- **research** — [Paper proposes PAPAV framework to unify multimodal agents and robots](https://arxiv.org/abs/2610.30108)  
-  Researchers present a capability-centric framework, PAPAV, defining five functions for multimodal embodied agents that combine reasoning with physical action. Analysis of 64 benchmarks shows evaluation heavily emphasizes the Act function, with Anticipate and Verify rarely assessed.  
+- **research** — [Frontier AI models evaluated on LIBERO-10 robot tasks, GPT-6 Astra tops at 44% success](https://arxiv.org/abs/2610.30051)  
+  Researchers evaluated six frontier AI models on the LIBERO-10 robot manipulation benchmark using a closed-loop framework. GPT-6 Astra achieved the highest success rate of 44%, with Gemini-4 Argon close behind at 43%.  
   _1 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Some government websites taken down in response to security risk : AI minister — duplicate of 2b5b57e1b66c
-- Websites around the world taken offline after AI finds critical security flaw — duplicate of 2b5b57e1b66c
-- Nvidia wins Modal for new CPUs in push against Intel , AMD — score 6: Nvidia wins Modal for new CPUs, same event as previously published Nvidia gains ground story.
-- NZ websites slow to patch against critical PHP vulnerability discovered by AI – consultant — duplicate of 2b5b57e1b66c
+- Ensemble forecasting with IBM Granite time-series models — score 4: Hugging Face blog announcing IBM Granite time‑series models; IBM is not a frontier lab and the release is an incremental model rather than a major frontier model.
+- Circuits of LLM Classifiers — score 5: ArXiv paper on combining LLM classifiers; interesting but an incremental methodological contribution, not a landmark result.
+- OpenAI CLI — score 4: GitHub release of an OpenAI CLI tool; minor product feature with limited impact for frontier‑AI audience.
+- AI’s hidden storage bill: What inference leaves behind — could not verify yet; will retry next run
+
+</details>
+
+### Sources with problems
+- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+
+<details><summary>Research agent's work</summary>
+
+- AI’s hidden storage bill: What inference leaves behind: unconfirmed (searched “AI hidden storage bill inference leaves behind”; searched “"hidden storage" AI inference”; searched “AI hidden storage bill”; searched “AI storage costs inference data after model responds”)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id 56e43c251458 for 'Nvidia wins Modal for new CPUs in push against Int'
-- 8 kept item(s) carried over to the next run
+- 1 kept item(s) carried over to the next run
+- briefing skipped: every configured provider failed: cerebras/gpt-oss-120b: unusable answer | cerebras/gpt-oss-120b: unusable answer | cerebras: listed models retired; trying qwen-3.8-27b (update settings.yaml when convenient) | cerebras/qwen-3.8-27b: HTTP 400: {"message":"Failed to generate tool_calls. Exception: Failed to generate tool call but tool_choice = 'required'.","type":"generation_error","param":"t
+- cerebras/gpt-oss-120b: unusable answer
+- cerebras/gpt-oss-120b: unusable answer
+- cerebras: listed models retired; trying qwen-3.8-27b (update settings.yaml when convenient)
+- cerebras/qwen-3.8-27b: HTTP 400: {"message":"Failed to generate tool_calls. Exception: Failed to generate tool call but tool_choice = 'required'.","type":"generation_error","param":"t
