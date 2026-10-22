@@ -29,7 +29,7 @@ SYSTEM = """You tag news stories for Frontier Wire's desks. For each story:
 - amount: the deal amount copied EXACTLY as written in the story (e.g. "$1.2 billion", "₹500 crore"), else "".
 - cover: the story's single most striking fact for a picture cover, max 16 characters, copied EXACTLY from the
   headline or summary: a figure ("$15 billion", "31-year", "70%"), a model or product name ("GPT-6.1", "Dark.ai")
-  or a company name. Prefer a number when the story has a meaningful one.
+  or a company name. Prefer a number when the story has a meaningful one. Never a generic word.
 Stories marked from="indian-outlet" were published by Indian news outlets, which often don't say "India":
 tag them "india" when the companies, people, government or market involved are Indian; global stories they
 merely reported (e.g. a US lab's announcement) are not India stories.
@@ -94,6 +94,7 @@ def tag_stories(room: Any, limit: int = 25) -> None:
         s["deal"] = None if deal == "none" else {
             "type": deal, "company": room.cfg.canon_lab((t.get("company") or "").strip()[:60]), "amount": amount, "usd": usd_value(amount)}
         cover = (t.get("cover") or "").strip()
-        s["cover"] = cover if 0 < len(cover) <= 18 and _norm(cover) in _norm(f"{s['headline']} {s['summary']}") else ""
+        distinctive = bool(re.search(r"[\dA-Z$₹€£%]", cover))  # a figure or a name, not a generic word like "partnership"
+        s["cover"] = cover if 0 < len(cover) <= 18 and distinctive and _norm(cover) in _norm(f"{s['headline']} {s['summary']}") else ""
         tagged += 1
     room.report["tagged"] = tagged
