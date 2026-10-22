@@ -23,9 +23,14 @@
     "tried_at": "2026-10-22T16:03:24+00:00"
   },
   "frontier-race": {
-    "status": "Frontier AI labs have unveiled a wave of new large‑scale models and integrations across cloud platforms, enterprise tools, and robotics. OpenAI, NVIDIA, Google, Microsoft, and Mistral each announced major releases, including OpenAI’s GPT‑6 series, NVIDIA’s Nemotron 3.5 family, and Mistral’s 1‑trillion‑parameter Large 4. Adoption is expanding into neuroscience, automotive, productivity suites, and robot manipulation.",
-    "changed": "The newest stories added multiple flagship model releases (GPT‑6, Nemotron 3.5, Mistral Large 4) and several enterprise‑focused deployments across cloud, automotive, and industry.",
+    "status": "Frontier AI labs continue rolling out major models and integrations: OpenAI’s GPT‑6 series is now on Google Cloud, NVIDIA’s open‑weight Nemotron 3.5 family targets European enterprises, and Mistral’s Large 4 preview is underway. New research highlights faster flow‑based language models, large agentic MoE systems, AI‑designed therapeutic proteins, and planet‑scale satellite embeddings. Industry adoption expands across cloud marketplaces, automotive infotainment, and large corporate deployments like Volkswagen’s Copilot rollout.",
+    "changed": "The latest stories add a fast flow language model, a large agentic MoE model, AI‑generated protein binders, and a global satellite embedding model.",
     "timeline": [
+      {
+        "story_id": "eaa0ebff7daf",
+        "date": "2026-10-22",
+        "text": "AllenAI released OlmoEarth v1.3 satellite embedding model with global 128‑dim vectors."
+      },
       {
         "story_id": "1de8e62ff715",
         "date": "2026-10-21",
@@ -90,12 +95,27 @@
         "story_id": "cbc158125a42",
         "date": "2026-10-21",
         "text": "Mistral and Mozilla launch Firefox Smart Window beta browsing assistant in France and North America."
+      },
+      {
+        "story_id": "5b21354fdfc9",
+        "date": "2026-10-20",
+        "text": "Lafa flow language model released, 8 B parameters, 2.5× faster inference."
+      },
+      {
+        "story_id": "063c5fe37637",
+        "date": "2026-10-20",
+        "text": "Sage‑A1.5 35 B‑parameter MoE agentic model launched for long‑horizon tasks."
+      },
+      {
+        "story_id": "5b545cfdb425",
+        "date": "2026-10-20",
+        "text": "Claude generated 211 protein minibinder designs; 17 validated binders against scorpion neurotoxins."
       }
     ],
     "next": [
       {
         "text": "Mistral Large 4 model weights release",
-        "when": "by end of October 2026",
+        "when": "end of October 2026",
         "story_id": "820bd24a41c4"
       },
       {
@@ -104,28 +124,33 @@
         "story_id": "cbc158125a42"
       },
       {
-        "text": "OpenAI GPT‑6 private‑preview rollout on Google Cloud for select enterprises",
+        "text": "Global rollout of Gemini navigation on Apple CarPlay",
         "when": "",
-        "story_id": "14f13252070a"
+        "story_id": "3dba8c3e0d11"
       }
     ],
     "story_ids": [
+      "5b21354fdfc9",
+      "063c5fe37637",
+      "5b545cfdb425",
       "1de8e62ff715",
       "140f65345f1e",
       "61f4d0141ff3",
       "b67bba8524a9",
       "3dba8c3e0d11",
       "65a0534d66fe",
-      "820bd24a41c4",
       "afe5d96a9d46",
+      "820bd24a41c4",
       "af0f241f8166",
       "0397d30cafbc",
       "14f13252070a",
       "5dbb54a00540",
-      "cbc158125a42"
+      "cbc158125a42",
+      "eaa0ebff7daf"
     ],
-    "updated_at": "2026-10-22T16:03:24+00:00",
-    "tried_at": "2026-10-22T16:03:24+00:00"
+    "updated_at": "2026-10-22T16:15:28+00:00",
+    "tried_at": "2026-10-22T16:15:28+00:00",
+    "title": "The frontier model race"
   },
   "ai-regulation": {
     "status": "The United States is expected to maintain a light‑touch regulatory approach, with no major AI legislation forthcoming. The UBS report projects AI will boost growth and capex in 2026, allowing developers to operate under voluntary safety agreements. Other jurisdictions’ AI rules remain unchanged in this update.",
@@ -160,5 +185,71 @@
     ],
     "updated_at": "2026-10-22T16:03:24+00:00",
     "tried_at": "2026-10-22T16:03:24+00:00"
+  },
+  "agent-safety": {
+    "status": "Meta has temporarily disabled the Muse feature that let users share AI conversations via web links, after researchers found over 6,800 publicly accessible links exposing personal and business data.",
+    "changed": "Meta paused the Muse conversation‑sharing feature after a security firm uncovered thousands of publicly accessible links exposing data.",
+    "timeline": [
+      {
+        "story_id": "4168438b63a2",
+        "date": "2026-10-20",
+        "text": "Meta disables Muse conversation‑sharing after 6,800 exposed links found"
+      }
+    ],
+    "title": "AI agents and safety incidents",
+    "next": [],
+    "story_ids": [
+      "4168438b63a2"
+    ],
+    "updated_at": "2026-10-22T16:15:28+00:00",
+    "tried_at": "2026-10-22T16:15:28+00:00"
+  },
+  "ai-money": {
+    "status": "OpenAI has acquired AI biotech startup Orchestra Bio and is moving to integrate its drug‑discovery agents into the Rosalind model and Workbench.",
+    "changed": "The acquisition adds a life‑science AI toolset to OpenAI’s portfolio.",
+    "timeline": [
+      {
+        "story_id": "aeaa448f66c5",
+        "date": "2026-10-20",
+        "text": "OpenAI acquires AI biotech startup Orchestra Bio"
+      }
+    ],
+    "title": "AI funding and valuations",
+    "next": [
+      {
+        "text": "Integrate Orchestra Bio’s technology into the Rosalind model and Workbench",
+        "when": "",
+        "story_id": "aeaa448f66c5"
+      }
+    ],
+    "story_ids": [
+      "aeaa448f66c5"
+    ],
+    "updated_at": "2026-10-22T16:15:28+00:00",
+    "tried_at": "2026-10-22T16:15:28+00:00"
+  },
+  "copyright": {
+    "status": "AI training on copyrighted song lyrics is currently being litigated. Anthropic has presented a fair‑use defense for its Claude model, while major music publishers argue the practice harms songwriters. The upcoming court decision will set a precedent for future AI training practices.",
+    "changed": "Anthropic’s fair‑use argument for using song lyrics in Claude’s training was heard by a US judge.",
+    "timeline": [
+      {
+        "story_id": "af9699fd89cc",
+        "date": "2026-10-22",
+        "text": "US judge hears Anthropic’s fair‑use defense for song lyric training"
+      }
+    ],
+    "title": "AI and copyright",
+    "next": [
+      {
+        "text": "Judge’s fair‑use ruling on Anthropic’s training data",
+        "when": "",
+        "story_id": "af9699fd89cc"
+      }
+    ],
+    "story_ids": [
+      "af9699fd89cc"
+    ],
+    "updated_at": "2026-10-22T16:15:28+00:00",
+    "tried_at": "2026-10-22T16:15:28+00:00"
   }
 }

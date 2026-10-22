@@ -1,0 +1,146 @@
+{
+  "started_at": "2026-10-22T16:15:28+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1313)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (888)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (18)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (17)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (25)"
+  },
+  "dropped": [
+    {
+      "title": "Show HN: Omnara – Open-source alternative to Claude Managed Agents",
+      "reason": "score 5: Community‑driven open‑source alternative to Claude Managed Agents is a modest project without frontier‑lab backing; not significant enough for a story."
+    },
+    {
+      "title": "Meta wants to pay for its broad AI buildout with a newly created class of stock",
+      "reason": "score 5: Meta’s plan to issue a new class of stock to fund AI buildout is a corporate finance move rather than a direct AI breakthrough, so it falls below the news threshold."
+    },
+    {
+      "title": "Wildwood’s director says AI is ‘antithetical to everything that we are at this studio’",
+      "reason": "score 2: The studio’s artistic stance on AI is a niche cultural comment, not a frontier AI development."
+    },
+    {
+      "title": "Uber puts all 30,000 employees on ChatGPT Work",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "OpenAI, Anthropic, and Nvidia had record lobbying quarters",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Bridging the AI production gap: Over 100,000 Indian engineers trained to build with Gemini",
+      "reason": "could not verify yet after a second try; dropped"
+    }
+  ],
+  "written": [
+    {
+      "id": "eaa0ebff7daf",
+      "headline": "AllenAI releases OlmoEarth v1.3 satellite embedding model with global embeddings",
+      "category": "models",
+      "summary": "Allen Institute for AI released OlmoEarth v1.3, a satellite embedding model that generates 128‑dimensional vectors for every 10‑meter pixel on Earth. The team also provided precomputed annual embeddings for the entire planet and a browser tool for exploration.",
+      "url": "https://huggingface.co/blog/allenai/olmoearth-v1-3",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "dropped unverifiable benchmark: OlmoEarth v1.3 (64‑dim) 27 evaluations across six continents highest on 18 of 27 evals",
+    "1 kept item(s) carried over to the next run"
+  ],
+  "timings": {
+    "gather": 82.1,
+    "judge": 1.4,
+    "verify and write": 189.0,
+    "videos": 23.7,
+    "tagging": 22.8,
+    "explainers": -0.0,
+    "trackers": 104.4,
+    "claims": 0.0,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "briefing": 20.8,
+    "self-review": -0.0,
+    "daily email": -0.0,
+    "alerts": -0.0
+  },
+  "fetched": 2859,
+  "fresh": 7,
+  "judged": 7,
+  "kept": 4,
+  "research": {
+    "investigated": 3,
+    "confirmed": 0,
+    "tool_calls": 9
+  },
+  "research_log": [
+    "Uber puts all 30,000 employees on ChatGPT Work: unconfirmed (searched “Uber puts all 30,000 employees on ChatGPT Work”; read cryptobriefing.com; searched “Uber ChatGPT Work deployment 30,000 employees”)",
+    "OpenAI, Anthropic, and Nvidia had record lobbying quarters: unconfirmed (searched “OpenAI Anthropic Nvidia record lobbying quarter July September lobbying disclosures”; searched “\"record lobbying\" OpenAI Nvidia Anthropic quarter”; searched “OpenAI lobbying quarter July September 2024 lobbying disclosures”)",
+    "Bridging the AI production gap: Over 100,000 Indian engineers trained : unconfirmed (searched “\"Build with Gemini\" 100,000 engineers”; read newsbytesapp.com; read msn.com)"
+  ],
+  "videos": {
+    "OpenAI": "ok (12 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (7 in feed, 0 new)",
+    "AI at Meta": "ok (4 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (12 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 10 new)",
+    "No Priors": "ok (3 in feed, 1 new)",
+    "Latent Space": "ok (13 in feed, 6 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 3 new)",
+    "a16z": "ok (15 in feed, 2 new)",
+    "Big Technology Podcast": "ok (11 in feed, 7 new)",
+    "Hard Fork": "ok (2 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 1 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "4 kept from 10 new",
+  "tagged": 20,
+  "trackers": "filed 6 stories; updated frontier-race, agent-safety, ai-money, copyright",
+  "claims": "0 tracked, 0 open",
+  "model_tracker": "82 models, 2 changes today",
+  "briefing": "3 themes from 20 stories",
+  "ai_requests_run": 23,
+  "ai_tokens_run": 45039,
+  "ai_requests_today": 315,
+  "provider_log": []
+}
