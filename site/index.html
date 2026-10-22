@@ -38,6 +38,7 @@
       <a href="models/">Models</a>
       <a href="claims/">Claims</a>
       <a href="weekly/">Weekly</a>
+      <a class="nav-follow" href="following/">For you<span class="nf-n" hidden></span></a>
       <a class="rss" href="data/feed.xml">RSS</a>
       <button class="theme-btn" id="theme-btn" type="button" aria-label="Switch to light mode">
         <svg class="moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
@@ -70,6 +71,11 @@
         </figure>
       </div>
     </div>
+  </section>
+
+  <section class="shell block foryou" id="foryou" aria-labelledby="fy-h">
+    <div class="block-head"><h2 id="fy-h">For you</h2><p id="fy-sub"></p></div>
+    <div id="fy-body"></div>
   </section>
 
   <section class="shell brief" id="briefing" aria-labelledby="brief-h" hidden>
@@ -166,6 +172,7 @@
 
 <script src="theme.js"></script>
 <script src="cover.js"></script>
+<script src="follow.js"></script>
 <script src="player.js"></script>
 <script src="podcast.js"></script>
 <script src="app.js"></script>

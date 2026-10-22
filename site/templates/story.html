@@ -7,6 +7,7 @@
     <h1>{{ s.headline }}</h1>
     <p class="meta">
       <time datetime="{{ s.published_at }}">{{ published_human }}</time>.
+      {% if s.lab %}<button class="follow-mini" type="button" data-follow="lab:{{ s.lab }}" data-label="{{ s.lab }}" data-cta="Follow {{ s.lab }}" hidden>Follow {{ s.lab }}</button>{% endif %}
       Checked against {{ s.sources|length }} source{{ '' if s.sources|length == 1 else 's' }}{% if s.research and s.research.decision == 'confirmed' %} by our research agent{% endif %}.
     </p>
   </header>

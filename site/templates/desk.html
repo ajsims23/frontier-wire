@@ -6,6 +6,7 @@
   <header class="lab-head">
     <h1>{{ heading }}</h1>
     <p class="desk-intro">{{ intro }}</p>
+    {% if follow_key %}<button class="btn follow-btn" type="button" data-follow="{{ follow_key }}" data-label="{{ follow_label }}" data-cta="Follow {{ follow_label }}" hidden>Follow {{ follow_label }}</button>{% endif %}
     {% if stats %}
     <dl class="lab-stats">
       {% for st in stats %}<div><dt>{{ st.label }}</dt><dd>{% if st.href %}<a href="{{ st.href }}">{{ st.value }}</a>{% else %}{{ st.value }}{% endif %}</dd></div>{% endfor %}

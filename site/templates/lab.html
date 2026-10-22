@@ -4,6 +4,7 @@
   <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><a href="{{ root }}#labs">Labs</a></nav>
   <header class="lab-head">
     <h1>{{ lab }}</h1>
+    <button class="btn follow-btn" type="button" data-follow="lab:{{ lab }}" data-label="{{ lab }}" data-cta="Follow {{ lab }}" hidden>Follow {{ lab }}</button>
     <dl class="lab-stats">
       <div><dt>Stories in the last 30 days</dt><dd>{{ count30 }}</dd></div>
       <div><dt>Latest release</dt><dd>{% if release %}<a href="{{ release.href }}">{{ release.model }}</a>{% else %}None tracked yet{% endif %}</dd></div>

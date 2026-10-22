@@ -293,7 +293,7 @@
     if (!b) return;
     aud = b.dataset.aud;
     try { localStorage.setItem("fw-aud", aud); } catch (err) { /* private mode */ }
-    renderAud(); renderFront(); renderFeed();
+    renderAud(); renderFront(); renderFeed(); renderForYou();
   });
 
   function renderStand(list) {
@@ -305,6 +305,34 @@
   }
   fetch("data/trackers.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : [])).then(renderStand).catch(() => {});
 
+  // ---------------------------------------------------------------- for you: stories matching what the reader follows
+  const lastVisit = (() => { try { return localStorage.getItem("fw-last-visit") || ""; } catch (e) { return ""; } })();
+  setTimeout(() => { try { localStorage.setItem("fw-last-visit", new Date().toISOString()); } catch (e) { /* ignore */ } }, 5000);
+  function renderForYou() {
+    const F = window.FWFollow;
+    if (!F) return;
+    const mine = F.list(), keys = new Set(mine.map((f) => f.key));
+    const hits = (data.stories || []).filter((s) => F.keysFor(s).some((k) => keys.has(k)));
+    const fresh = hits.filter((s) => lastVisit && s.published_at > lastVisit);
+    const badge = document.querySelector(".nf-n");
+    if (badge) { badge.hidden = !fresh.length; badge.textContent = fresh.length; }
+    if (!mine.length) {
+      $("fy-sub").textContent = "Follow labs, storylines and industries to get your own feed and alerts.";
+      $("fy-body").innerHTML = `<div class="fy-start">${["tracker:frontier-race|The frontier model race", "tracker:ai-regulation|AI regulation", "lab:OpenAI|OpenAI", "lab:Anthropic|Anthropic",
+        "lab:Google DeepMind|Google DeepMind", "region:india|AI in India", "deals|AI deals", "models|Model price changes"].map((x) => { const [k, l] = x.split("|");
+        return `<button class="fchip" type="button" data-follow="${esc(k)}" data-label="${esc(l)}" data-cta="${esc(l)}">${esc(l)}</button>`; }).join("")}
+        <a class="text-link" href="following/">More to follow</a></div>`;
+      F.refresh();
+      return;
+    }
+    $("fy-sub").innerHTML = `${fresh.length ? `<b>${fresh.length} new</b> since your last visit · ` : ""}Following ${mine.length}. <a class="text-link" href="following/">Manage</a>`;
+    $("fy-body").innerHTML = hits.length ? `<ol class="fy-list">${hits.slice(0, 6).map((s) => `<li><a href="${storyHref(s)}" style="--c:${color(s.category)}">
+        ${media(s, "more-media")}<span class="more-text">${lastVisit && s.published_at > lastVisit ? '<span class="tc-new">New</span>' : `<span class="tag" style="--c:${color(s.category)}">${esc(CAT_NAME[s.category] || s.category)}</span>`}
+        <span class="h">${esc(s.headline)}</span>${audHtml(s)}<span class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}</span></span></a></li>`).join("")}</ol>`
+      : `<p class="muted">Nothing from what you follow in the last two weeks. New stories land here first.</p>`;
+  }
+  document.addEventListener("fw-follows", () => renderForYou());
+
   function render(d) {
     data = d || data;
     const st = data.stats || {};
@@ -313,6 +341,7 @@
       : "Waiting for the first run";
     renderAud();
     renderFront();
+    renderForYou();
     renderNewsChart();
     renderBriefing(data.briefing);
     renderWatch();

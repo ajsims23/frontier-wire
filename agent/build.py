@@ -49,8 +49,10 @@ def site_settings(cfg: Any) -> dict[str, str]:
     s = dict(cfg.settings.get("site") or {})
     base = os.environ.get("SITE_URL") or (f"https://{s['custom_domain']}/" if s.get("custom_domain") else s.get("base_url", ""))
     s["base_url"] = (base or "https://example.github.io/frontier-wire/").rstrip("/") + "/"
-    for key, env in (("goatcounter", "GOATCOUNTER_CODE"), ("newsletter", "NEWSLETTER_USERNAME")):
+    for key, env in (("goatcounter", "GOATCOUNTER_CODE"), ("newsletter", "NEWSLETTER_USERNAME"), ("alerts_api", "ALERTS_API")):
         s[key] = (os.environ.get(env) or s.get(key) or "").strip()
+    if not re.fullmatch(r"https://[A-Za-z0-9.-]+(/[A-Za-z0-9._/-]*)?", s["alerts_api"]):
+        s["alerts_api"] = ""  # only a plain https address is ever put into the page
     return s
 
 
@@ -223,7 +225,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
          chart=activity_chart(india, now), chart_caption="India stories per day, last 30 days",
          chart_label=f"{len(india)} India stories",
          bars=bars([(k, v, "") for k, v in sorted(india_cos.items(), key=lambda kv: -kv[1])[:7]]),
-         bars_caption="Companies in the news", bars_sub="India stories",
+         bars_caption="Companies in the news", bars_sub="India stories", follow_key="region:india", follow_label="AI in India",
          items=listing(india[:40]), list_title="India stories",
          empty_text="India stories appear here as the newsroom finds them.")
 
@@ -245,6 +247,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
                 {"label": "Largest disclosed", "value": (disclosed[0]["deal"]["amount"] + (f", {disclosed[0]['deal']['company']}" if disclosed[0]["deal"]["company"] else "")) if disclosed else "None yet"},
                 {"label": "Business stories in 30 days", "value": sum(1 for s in biz if _dt(s["published_at"]) >= month)}],
          chart=activity_chart(deals, now), chart_caption="Deals reported per day, last 30 days", chart_label=f"{len(deals)} deals",
+         follow_key="deals", follow_label="AI deals",
          bars=bars(sorted(((k, v, "") for k, v in by_type.items()), key=lambda r: -r[1])), bars_caption="Deals by type", bars_sub="Last 30 days",
          deals=[{"id": s["id"], "date": short_date(s["published_at"]), "company": s["deal"].get("company"), "type_name": deal_names[s["deal"]["type"]],
                  "amount": s["deal"].get("amount"), "headline": s["headline"]} for s in deals[:30]],
@@ -260,6 +263,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
              title=f"AI in {name.lower()} | Frontier Wire", description=f"How AI is changing {name.lower()}: news and developments, checked against sources.",
              canonical=f"{base}sector/{key}/", og_image=f"{base}og/home.png",
              intro=f"Every Frontier Wire story our agent tagged as affecting {name.lower()}, newest first.",
+             follow_key=f"sector:{key}", follow_label=f"AI in {name.lower()}",
              stats=[{"label": "Stories in 30 days", "value": n30}, {"label": "All-time", "value": len(items)}],
              chart=activity_chart(items, now), chart_caption="Stories per day, last 30 days", chart_label=f"{n30} stories in 30 days",
              items=listing(items[:60]), empty_text=f"No {name.lower()} stories yet. The newsroom checks every three hours.")
@@ -347,6 +351,42 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
              {"key": "open", "title": "Open, no deadline", "sub": "Newest first.",
               "rows": sorted((c for c in book if c["state"] == "open" and not c.get("due_date")), key=lambda c: c["made"], reverse=True)[:30]},
          ])
+
+    # Follows: options, one RSS feed per followable thing, and the "For you" page
+    from .store import rss as rss_feed
+    def follow_keys(s: dict) -> list[str]:
+        k = [f"lab:{s['lab']}"] if s.get("lab") else []
+        k += [f"tracker:{t}" for t in s.get("trackers") or []] + [f"sector:{t}" for t in s.get("sectors") or []]
+        k += [f"topic:{s['category']}"]
+        if is_india(s):
+            k.append("region:india")
+        if s.get("deal"):
+            k.append("deals")
+        return k
+    by_key: dict[str, list[dict]] = {}
+    for s in newest_first:
+        for k in follow_keys(s):
+            by_key.setdefault(k, []).append(s)
+    feeds = {}
+    (out / "data" / "feeds").mkdir(parents=True, exist_ok=True)
+    for k, items in by_key.items():
+        fname = re.sub(r"[^a-z0-9]+", "-", k.lower()).strip("-") + ".xml"
+        (out / "data" / "feeds" / fname).write_text(rss_feed(items[:30], now))
+        feeds[k] = f"data/feeds/{fname}"
+    topic_names = {"models": "Model releases", "research": "Research", "policy": "Policy", "safety": "Safety", "industry": "Industry", "voices": "Commentary"}
+    follow_options = [
+        {"title": "Storylines", "sub": "Living trackers our agent keeps current.", "rows": [{"key": f"tracker:{t['id']}", "label": t["title"]} for t in tracker_defs]},
+        {"title": "Labs and companies", "sub": "Everything about them, as it happens.",
+         "rows": [{"key": f"lab:{l['lab']}", "label": l["lab"]} for l in sorted(lab_index, key=lambda l: -len(by_key.get(f"lab:{l['lab']}", [])))[:24]]},
+        {"title": "Topics and desks", "sub": "Broad streams.",
+         "rows": [{"key": f"topic:{k}", "label": v} for k, v in topic_names.items()]
+                  + [{"key": "region:india", "label": "AI in India"}, {"key": "deals", "label": "AI deals"}, {"key": "models", "label": "Model launches and price changes"}]},
+        {"title": "Industries", "sub": "How AI is changing each sector.", "rows": [{"key": f"sector:{k}", "label": v} for k, v in SECTORS.items()]},
+    ]
+    page("following", "following.html", title="Your wire: follow labs, storylines and sectors | Frontier Wire",
+         description="Follow the AI labs, storylines and industries you care about and get alerts.",
+         canonical=f"{base}following/", og_image=f"{base}og/home.png", options=follow_options,
+         alerts_api=site.get("alerts_api", ""), feeds_json=json.dumps(feeds).replace("<", "\\u003c"))
 
     # Weekly deep dive
     issues = sorted((weekly_state.get("issues") or {}).values(), key=lambda w: w["key"], reverse=True)

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="shell lab-page desk-page following">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>For you</span></nav>
+  <header class="lab-head">
+    <h1>Your wire</h1>
+    <p class="desk-intro">Follow the labs, storylines and industries you care about. Your feed shows what's new since your last visit. Follows are saved in this browser, no account needed. Get alerts by RSS now{% if alerts_api %} or by email{% endif %}.</p>
+  </header>
+
+  <section class="block" aria-labelledby="mine-h">
+    <div class="block-head"><h2 id="mine-h">Following</h2><p id="mine-sub">Nothing yet. Pick a few below.</p></div>
+    <ul class="mine" id="mine"></ul>
+  </section>
+
+  <section class="block" aria-labelledby="new-h" id="new-sec" hidden>
+    <div class="block-head"><h2 id="new-h">New for you</h2><p id="new-sub"></p></div>
+    <ol class="lab-tl" id="new-list"></ol>
+  </section>
+
+  <section class="block alerts-box" aria-labelledby="al-h">
+    <div class="block-head"><h2 id="al-h">Alerts</h2><p>Get told when something you follow happens.</p></div>
+    {% if alerts_api %}
+    <form class="alert-form" id="alert-form" data-api="{{ alerts_api }}">
+      <label for="al-email">Email</label>
+      <div class="af-row"><input id="al-email" type="email" required autocomplete="email" placeholder="you@company.com">
+        <select id="al-freq" aria-label="How often"><option value="instant">As it happens</option><option value="daily">Daily digest</option></select>
+        <button class="btn" type="submit">Get email alerts</button></div>
+      <p class="ex-note" id="al-msg">We'll email a confirmation link first. Unsubscribe from any email in one click.</p>
+    </form>
+    {% else %}
+    <p class="muted">Email alerts are coming soon. Until then, every follow has its own RSS feed (the RSS link beside it), which any feed reader can notify you about.</p>
+    {% endif %}
+  </section>
+
+  {% for g in options %}
+  <section class="block" aria-labelledby="opt-{{ loop.index }}">
+    <div class="block-head"><h2 id="opt-{{ loop.index }}">{{ g.title }}</h2><p>{{ g.sub }}</p></div>
+    <div class="follow-chips">{% for o in g.rows %}<button class="fchip" type="button" data-follow="{{ o.key }}" data-label="{{ o.label }}" data-cta="{{ o.label }}">{{ o.label }}</button>{% endfor %}</div>
+  </section>
+  {% endfor %}
+</section>
+<script>window.FW_FEEDS = {{ feeds_json|safe }};</script>
+<script src="{{ root }}following.js"></script>
+{% endblock %}
