@@ -715,3 +715,26 @@ def test_claims_extract_and_resolve():
     room.llm = Bad()
     resolve(room, ["s2"])
     assert c["status"] == "open"                                               # no evidence, no change
+
+
+def test_alert_events_and_dispatch(tmp_path, monkeypatch):
+    from types import SimpleNamespace
+    from agent import alerts
+    stories = [{"id": "s1", "headline": "OpenAI ships GPT-7", "summary": "A new model.", "lab": "OpenAI", "category": "models",
+                "trackers": ["frontier-race"], "sectors": [], "regions": ["us"], "deal": None, "published_at": NOW.isoformat()}]
+    room = SimpleNamespace(now=NOW, report={"written": [{"id": "s1"}]}, cfg=SimpleNamespace(settings={"site": {"base_url": "https://x.example/fw/"}}),
+                           store=SimpleNamespace(stories=stories,
+                                                 trackers={"frontier-race": {"title": "Race", "status": "Busy.", "updated_at": NOW.isoformat()}},
+                                                 models={"changes": [{"date": NOW.date().isoformat(), "text": "GPT-7 price cut", "lab": "OpenAI"}]},
+                                                 claims={"claims": []}))
+    ev = alerts.build_events(room, "https://x.example/fw/")
+    assert ev[0]["follows"] == ["lab:OpenAI", "tracker:frontier-race", "topic:models"] and ev[0]["url"] == "https://x.example/fw/story/s1/"
+    assert {e["key"].split(":")[0] for e in ev} == {"story", "tracker", "model"}
+    sent = []
+    http = httpx.Client(transport=httpx.MockTransport(lambda r: (sent.append((r.headers["authorization"], json.loads(r.content))), httpx.Response(200, json={"sent": 1}))[1]))
+    alerts.dispatch(room, http)                       # not configured: does nothing
+    assert sent == []
+    monkeypatch.setenv("API_URL", "https://api.example")
+    monkeypatch.setenv("ALERTS_DISPATCH_SECRET", "s3cret")
+    alerts.dispatch(room, http)
+    assert sent[0][0] == "Bearer s3cret" and len(sent[0][1]["events"]) == 3

@@ -1,0 +1,17 @@
+# Frontier Wire API. Deployed by .github/workflows/worker.yml (the database id is filled in there).
+name = "frontier-wire-api"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+workers_dev = true
+
+[vars]
+SITE_URL = "https://ajsims23.github.io/frontier-wire/"
+SENDER_NAME = "Frontier Wire"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "frontier-wire"
+database_id = "REPLACED_IN_CI"
+
+[triggers]
+crons = ["20 3 * * *"]   # daily digests at 08:50 IST

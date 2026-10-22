@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="shell lab-page desk-page ask-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>Ask the Wire</span></nav>
+  <header class="lab-head">
+    <h1>Ask the Wire</h1>
+    <p class="desk-intro">Ask anything about recent AI news. Answers come only from our fact-checked archive of {{ count }} stories, with every claim linked to its story.{% if not api %} AI answers are coming soon; for now you get the most relevant stories.{% endif %}</p>
+  </header>
+  <form class="ask-form" id="ask-form" data-api="{{ api }}">
+    <label class="sr" for="ask-q">Your question</label>
+    <input id="ask-q" type="search" maxlength="300" autocomplete="off" placeholder="e.g. Where does AI regulation stand in the US?">
+    <button class="btn" type="submit">Ask</button>
+  </form>
+  <div class="ask-examples" id="ask-examples">
+    {% for q in examples %}<button type="button" class="fchip ex" data-q="{{ q }}">{{ q }}</button>{% endfor %}
+  </div>
+  <div id="ask-out" aria-live="polite"></div>
+</section>
+<script type="module" src="{{ root }}ask.js"></script>
+{% endblock %}

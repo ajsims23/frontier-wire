@@ -67,6 +67,8 @@ jobs:
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
           SITE_URL: ${{ vars.SITE_URL }}
           MAX_REQUESTS_PER_DAY: ${{ vars.MAX_REQUESTS_PER_DAY }}
+          API_URL: ${{ vars.API_URL }}
+          ALERTS_DISPATCH_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
         run: python -m agent run
 
       - name: Commit

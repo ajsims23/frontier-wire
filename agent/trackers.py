@@ -124,7 +124,7 @@ def update_tracker(room: Any, t: dict[str, str], state: dict[str, Any], new_ids:
     state.update({
         "status": status[:700], "changed": changed[:300] if _nums_ok(changed, src_all) else "",
         "timeline": sorted(timeline.values(), key=lambda e: e["date"], reverse=True)[:40],
-        "next": nxt[:3], "story_ids": filed[-200:], "updated_at": room.now.isoformat(), "tried_at": room.now.isoformat(),
+        "title": t["title"], "next": nxt[:3], "story_ids": filed[-200:], "updated_at": room.now.isoformat(), "tried_at": room.now.isoformat(),
     })
     return True
 

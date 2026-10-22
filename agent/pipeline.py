@@ -8,7 +8,7 @@ from typing import Any
 from . import prompts as P
 from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
-from . import claims, editorial, models_tracker, newsletter, tagging, trackers, videos, weekly
+from . import alerts, claims, editorial, models_tracker, newsletter, tagging, trackers, videos, weekly
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather
 from .store import Store
@@ -525,6 +525,7 @@ class Newsroom:
             ("briefing", editorial.write_briefing),
             ("self-review", editorial.self_review),
             ("daily email", newsletter.maybe_send),
+            ("alerts", alerts.dispatch),
         )
         for step, fn in steps:
             try:
@@ -563,6 +564,8 @@ def summary_markdown(report: dict[str, Any]) -> str:
         lines.append("Threads updated: " + "; ".join(report["threads"]))
     if report.get("videos"):
         lines.append("Videos: " + (report.get("videos_kept", "no new videos") + " · " + ", ".join(f"{k} {v}" for k, v in report["videos"].items())))
+    if report.get("alerts"):
+        lines.append(f"Alerts: {report['alerts']}")
     if report.get("claims"):
         lines.append(f"Claims: {report['claims']}")
     if report.get("trackers"):

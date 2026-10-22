@@ -41,6 +41,7 @@ jobs:
           SITE_URL: ${{ vars.SITE_URL }}
           GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
           NEWSLETTER_USERNAME: ${{ vars.NEWSLETTER_USERNAME }}
+          API_URL: ${{ vars.API_URL }}
         run: python -m agent.build --out _site
 
       - uses: actions/configure-pages@v5

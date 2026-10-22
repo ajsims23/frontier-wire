@@ -176,7 +176,7 @@
     if (aud !== "all") list = list.filter((s) => audLine(s)).concat(list.filter((s) => !audLine(s)));  // what matters to you first
     list = list.slice(0, filtering ? 30 : 12);
     const t = TOPICS.find((x) => x.id === topic);
-    $("feed-title").textContent = query ? `Results for “${query}”` : topic === "all" ? (aud === "all" ? "Latest" : `Latest ${AUD[aud].toLowerCase()}`) : t.label;
+    $("feed-title").innerHTML = query ? `Results for “${esc(query)}” <a class="ask-link" href="ask/?q=${encodeURIComponent(query)}">Ask the Wire instead</a>` : esc(topic === "all" ? (aud === "all" ? "Latest" : `Latest ${AUD[aud].toLowerCase()}`) : t.label);
     $("clear").hidden = !filtering;
     $("feed").innerHTML = list.length
       ? list.map((s) => `<li><a class="story-card" href="${storyHref(s)}" style="--c:${color(s.category)}">

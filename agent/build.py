@@ -49,10 +49,10 @@ def site_settings(cfg: Any) -> dict[str, str]:
     s = dict(cfg.settings.get("site") or {})
     base = os.environ.get("SITE_URL") or (f"https://{s['custom_domain']}/" if s.get("custom_domain") else s.get("base_url", ""))
     s["base_url"] = (base or "https://example.github.io/frontier-wire/").rstrip("/") + "/"
-    for key, env in (("goatcounter", "GOATCOUNTER_CODE"), ("newsletter", "NEWSLETTER_USERNAME"), ("alerts_api", "ALERTS_API")):
+    for key, env in (("goatcounter", "GOATCOUNTER_CODE"), ("newsletter", "NEWSLETTER_USERNAME"), ("api_url", "API_URL")):
         s[key] = (os.environ.get(env) or s.get(key) or "").strip()
-    if not re.fullmatch(r"https://[A-Za-z0-9.-]+(/[A-Za-z0-9._/-]*)?", s["alerts_api"]):
-        s["alerts_api"] = ""  # only a plain https address is ever put into the page
+    if not re.fullmatch(r"https://[A-Za-z0-9.-]+(/[A-Za-z0-9._/-]*)?", s["api_url"]):
+        s["api_url"] = ""  # only a plain https address is ever put into the page
     return s
 
 
@@ -354,15 +354,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
 
     # Follows: options, one RSS feed per followable thing, and the "For you" page
     from .store import rss as rss_feed
-    def follow_keys(s: dict) -> list[str]:
-        k = [f"lab:{s['lab']}"] if s.get("lab") else []
-        k += [f"tracker:{t}" for t in s.get("trackers") or []] + [f"sector:{t}" for t in s.get("sectors") or []]
-        k += [f"topic:{s['category']}"]
-        if is_india(s):
-            k.append("region:india")
-        if s.get("deal"):
-            k.append("deals")
-        return k
+    from .alerts import follow_keys
     by_key: dict[str, list[dict]] = {}
     for s in newest_first:
         for k in follow_keys(s):
@@ -386,7 +378,19 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     page("following", "following.html", title="Your wire: follow labs, storylines and sectors | Frontier Wire",
          description="Follow the AI labs, storylines and industries you care about and get alerts.",
          canonical=f"{base}following/", og_image=f"{base}og/home.png", options=follow_options,
-         alerts_api=site.get("alerts_api", ""), feeds_json=json.dumps(feeds).replace("<", "\\u003c"))
+         alerts_api=site.get("api_url", ""), feeds_json=json.dumps(feeds).replace("<", "\\u003c"))
+
+    # Ask the Wire: search index of every story, and the Ask page
+    search_docs = [{"id": s["id"], "h": s["headline"], "s": s["summary"], "w": s.get("why_it_matters", ""), "d": s["published_at"][:10],
+                    "l": s.get("lab", ""), "t": s.get("tags") or [], "a": " ".join((s.get("audiences") or {}).values()),
+                    "k": " ".join([tracker_titles.get(t, "") for t in s.get("trackers") or []] + [SECTORS.get(x, "") for x in s.get("sectors") or []])}
+                   for s in newest_first]
+    (out / "data" / "search.json").write_text(json.dumps(search_docs, ensure_ascii=False))
+    page("ask", "ask.html", title="Ask the Wire: AI news answers with sources | Frontier Wire",
+         description="Ask anything about recent AI news and get an answer from our fact-checked archive, with every claim linked.",
+         canonical=f"{base}ask/", og_image=f"{base}og/home.png", api=site.get("api_url", ""), count=len(stories),
+         examples=["What happened with DeepSeek this month?", "Where does AI regulation stand?", "Which labs launched new models this week?",
+                   "What's happening with AI in India?", "Which AI companies raised money recently?"])
 
     # Weekly deep dive
     issues = sorted((weekly_state.get("issues") or {}).values(), key=lambda w: w["key"], reverse=True)
