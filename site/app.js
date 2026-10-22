@@ -296,6 +296,15 @@
     renderAud(); renderFront(); renderFeed();
   });
 
+  function renderStand(list) {
+    const items = (list || []).slice(0, 4);
+    $("stand").hidden = !items.length;
+    $("stand-list").innerHTML = items.map((t) => `<a class="tracker-card" href="tracker/${encodeURIComponent(t.id)}/">
+        <span class="tc-top"><span class="tc-title">${esc(t.title)}</span>${t.fresh ? '<span class="tc-new">Updated</span>' : ""}</span>
+        <p>${esc(clip(t.status, 220))}</p><span class="meta">Updated ${esc(ago(t.updated_at))} · ${t.count} stor${t.count === 1 ? "y" : "ies"}</span></a>`).join("");
+  }
+  fetch("data/trackers.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : [])).then(renderStand).catch(() => {});
+
   function render(d) {
     data = d || data;
     const st = data.stats || {};

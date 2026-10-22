@@ -643,3 +643,40 @@ def test_audience_lines():
                            "investors": ""}, src)
     assert got == {"builders": "Cheaper API at $2 per million tokens."}   # invented 50% dropped, empty skipped
     assert check_audiences("nope", src) is None
+
+
+def test_trackers_file_and_update():
+    from types import SimpleNamespace
+    from agent.trackers import update_trackers
+    defs = [{"id": "copyright", "title": "AI and copyright", "scope": "lawsuits"}, {"id": "ai-money", "title": "Funding", "scope": "rounds"}]
+    stories = [
+        {"id": "a", "headline": "Judge hears lyrics case against Lab", "summary": "A hearing on fair use. A ruling is expected in December.",
+         "published_at": "2026-10-20T10:00:00+00:00"},
+        {"id": "b", "headline": "Startup raises $50 million", "summary": "A seed round.", "published_at": "2026-10-21T10:00:00+00:00"},
+        {"id": "c", "headline": "New phone launched", "summary": "Not AI.", "published_at": "2026-10-21T11:00:00+00:00"},
+    ]
+    calls = []
+
+    class L:
+        def ask(self, **kw):
+            calls.append(kw["schema_name"])
+            if kw["schema_name"] == "submit_filing":
+                return {"filed": [{"id": "a", "trackers": ["copyright", "made-up"]}, {"id": "b", "trackers": ["ai-money"]},
+                                  {"id": "c", "trackers": []}]}
+            if "copyright" in kw["prompt"].split("\n")[0].lower() or "AI and copyright" in kw["prompt"]:
+                return {"status": "A judge is weighing fair use; a ruling is expected in December.", "changed": "A hearing took place.",
+                        "timeline": [{"text": "Hearing on fair use", "story_id": "a"}, {"text": "Invented", "story_id": "zzz"}],
+                        "next": [{"text": "Ruling", "when": "December", "story_id": "a"}, {"text": "Appeal by 2028", "when": "", "story_id": "a"}]}
+            return {"status": "Funding hit $90 million this week.", "timeline": [], "next": []}   # number not in stories
+
+    room = SimpleNamespace(store=SimpleNamespace(trackers={}, stories=stories), llm=L(), now=NOW, report={"notes": []})
+    update_trackers(room, defs)
+    cp = room.store.trackers["copyright"]
+    assert stories[0]["trackers"] == ["copyright"] and stories[2]["trackers"] == []
+    assert [e["story_id"] for e in cp["timeline"]] == ["a"] and cp["timeline"][0]["date"] == "2026-10-20"
+    assert [n["text"] for n in cp["next"]] == ["Ruling"]                      # invented year dropped
+    assert room.store.trackers["ai-money"]["status"] == ""                     # invented figure: status not published
+    # nothing new next run: no AI calls at all
+    calls.clear()
+    update_trackers(room, defs)
+    assert calls == []

@@ -103,6 +103,10 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     desk_briefs: dict = read("desk_briefings.json", {})
     models_state: dict = read("models.json", {})
     weekly_state: dict = read("weekly.json", {})
+    trackers_state: dict = read("trackers.json", {})
+    from .trackers import load_trackers
+    tracker_defs = load_trackers()
+    tracker_titles = {t["id"]: t["title"] for t in tracker_defs}
     by_id = {s["id"]: s for s in stories}
 
     if out.exists():
@@ -152,6 +156,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
             cover_json=json.dumps({k: s.get(k) for k in ("id", "headline", "category", "lab", "model_name", "cover")}, ensure_ascii=False), jsonld=jsonld, cat_name=TAG.get(s["category"], s["category"]),
             topic=TOPIC_OF.get(s["category"], "all"), lab_slug=slug(s.get("lab", "")), published_human=human_date(s["published_at"]),
             image_credit=credit, thread=thread,
+            tracker_links=[{"id": t, "title": tracker_titles[t]} for t in (s.get("trackers") or []) if t in tracker_titles],
             related=[{**r, "when": short_date(r["published_at"]), "cat_name": TAG.get(r["category"], "")} for r in related],
         )
         page = out / "story" / s["id"] / "index.html"
@@ -290,6 +295,28 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
          newest=tracked[0] if tracked else None, changes=recent_changes, price_bars=price_bars, ctx_bars=ctx_bars,
          benchmarks=[{**b, "when": short_date(b["date"] + "T00:00:00+00:00")} for b in benchmark_rows(stories)],
          updated=short_date(models_state["updated_at"]) if models_state.get("updated_at") else "not yet")
+
+    # Living trackers
+    tracker_cards = []
+    for t in tracker_defs:
+        st = trackers_state.get(t["id"]) or {}
+        items = sorted((by_id[i] for i in st.get("story_ids", []) if i in by_id), key=lambda x: x["published_at"], reverse=True)
+        upd = _dt(st["updated_at"]) if st.get("updated_at") else None
+        page(f"tracker/{t['id']}", "tracker.html", title=f"{t['title']}: where things stand | Frontier Wire",
+             description=st.get("status") or t.get("scope", ""), canonical=f"{base}tracker/{t['id']}/", og_image=f"{base}og/home.png",
+             t=t, state=st, updated=short_date(st["updated_at"]) if upd else "",
+             timeline=[{**e, "when": short_date(e["date"] + "T00:00:00+00:00"), "headline": by_id[e["story_id"]]["headline"]}
+                       for e in st.get("timeline", []) if e["story_id"] in by_id],
+             stories=[{**x, "date": short_date(x["published_at"])} for x in items])
+        tracker_cards.append({"id": t["id"], "title": t["title"], "status": st.get("status", ""), "count": len(items),
+                              "updated": short_date(st["updated_at"]) if upd else "", "next_count": len(st.get("next", [])),
+                              "fresh": bool(upd and upd >= now - timedelta(hours=36)), "updated_at": st.get("updated_at", "")})
+    tracker_cards.sort(key=lambda c: (bool(c["status"]), c["updated_at"]), reverse=True)
+    page("trackers", "trackers.html", title="Where things stand: living trackers | Frontier Wire",
+         description="Living pages for the biggest storylines in AI, kept current by our newsroom agent.",
+         canonical=f"{base}trackers/", og_image=f"{base}og/home.png", trackers=tracker_cards)
+    (out / "data" / "trackers.json").write_text(json.dumps([{k: c[k] for k in ("id", "title", "status", "updated_at", "count", "fresh")}
+                                                            for c in tracker_cards if c["status"]], ensure_ascii=False))
 
     # Weekly deep dive
     issues = sorted((weekly_state.get("issues") or {}).values(), key=lambda w: w["key"], reverse=True)

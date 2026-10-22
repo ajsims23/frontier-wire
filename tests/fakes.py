@@ -286,6 +286,11 @@ def newsroom_handler(calls: list[dict]):
                     {"title": f"Shift {i}", "text": "Labs shipped new models.", "story_ids": re.findall(r'<story id="([^"]+)"', p)[i:i + 1]}
                     for i in range(4)]},
                 "submit_ratings": lambda p: {"ratings": []},
+                "submit_filing": lambda p: {"filed": [{"id": i, "trackers": ["frontier-race"] if "model" in t.lower() else []}
+                                                      for i, t in re.findall(r'<story id="([^"]+)">([^<]*)', p)]},
+                "submit_tracker": lambda p: {"status": "Labs keep shipping new models.", "changed": "",
+                                             "timeline": [{"text": "A new model shipped.", "story_id": i} for i in re.findall(r'<story id="([^"]+)"', p)],
+                                             "next": []},
                 "submit_explainer": lambda p: {"explainer": {"what_it_means": "It means more capable assistants.", "terms": [], "watch_next": []},
                                                "benchmarks": []}}[name](prompt)
         return httpx.Response(200, json=completion(name, data))

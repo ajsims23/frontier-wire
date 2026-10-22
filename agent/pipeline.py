@@ -8,7 +8,7 @@ from typing import Any
 from . import prompts as P
 from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
-from . import editorial, models_tracker, newsletter, tagging, videos, weekly
+from . import editorial, models_tracker, newsletter, tagging, trackers, videos, weekly
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather
 from .store import Store
@@ -515,6 +515,7 @@ class Newsroom:
             ("videos", lambda r: videos.update_videos(r, r.cfg.extra.get("video_channels", []))),
             ("tagging", tagging.tag_stories),
             ("explainers", editorial.backfill_explainers),
+            ("trackers", trackers.update_trackers),
             ("model tracker", models_tracker.update_tracker),
             ("weekly", weekly.maybe_write_weekly),
             ("briefing", editorial.write_briefing),
@@ -558,6 +559,8 @@ def summary_markdown(report: dict[str, Any]) -> str:
         lines.append("Threads updated: " + "; ".join(report["threads"]))
     if report.get("videos"):
         lines.append("Videos: " + (report.get("videos_kept", "no new videos") + " · " + ", ".join(f"{k} {v}" for k, v in report["videos"].items())))
+    if report.get("trackers"):
+        lines.append(f"Trackers: {report['trackers']}")
     if report.get("weekly"):
         lines.append(f"Weekly deep dive: {report['weekly']}")
     if report.get("model_tracker"):

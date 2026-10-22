@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block main %}
+<article class="shell lab-page desk-page tracker-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><a href="{{ root }}trackers/">Trackers</a><span aria-hidden="true">/</span><span>{{ t.title }}</span></nav>
+  <header class="lab-head">
+    <p class="ex-kicker">Living tracker</p>
+    <h1>{{ t.title }}</h1>
+    <p class="desk-intro">{{ t.scope }}</p>
+    <button class="btn follow-btn" type="button" data-follow="tracker:{{ t.id }}" data-label="{{ t.title }}" hidden>Follow this tracker</button>
+  </header>
+
+  <section class="stand" aria-labelledby="stand-h">
+    <h2 id="stand-h">Where it stands</h2>
+    {% if state.status %}<p class="stand-text">{{ state.status }}</p>{% else %}<p class="muted">Our agent writes the first status once stories arrive.</p>{% endif %}
+    {% if state.changed %}<p class="stand-changed"><b>Latest change:</b> {{ state.changed }}</p>{% endif %}
+    <p class="ex-note">{% if updated %}Updated {{ updated }} by our newsroom agent from {{ stories|length }} stories.{% endif %} Every line comes from the stories below.</p>
+  </section>
+
+  {% if state.next %}
+  <section class="block" aria-labelledby="next-h">
+    <div class="block-head"><h2 id="next-h">What's next</h2><p>Pending, as reported. We don't predict.</p></div>
+    <ul class="next-list">{% for n in state.next %}<li>{% if n.when %}<span class="when">{{ n.when }}</span>{% endif %}<span>{{ n.text }}</span> <a class="text-link" href="{{ root }}story/{{ n.story_id }}/">Source story</a></li>{% endfor %}</ul>
+  </section>
+  {% endif %}
+
+  {% if timeline %}
+  <section class="block" aria-labelledby="tl-h">
+    <div class="block-head"><h2 id="tl-h">Timeline</h2><p>Milestones, newest first.</p></div>
+    <ol class="timeline">{% for e in timeline %}<li><time datetime="{{ e.date }}">{{ e.when }}</time><div><p>{{ e.text }}</p><a href="{{ root }}story/{{ e.story_id }}/">{{ e.headline }}</a></div></li>{% endfor %}</ol>
+  </section>
+  {% endif %}
+
+  {% if stories %}
+  <section class="block" aria-labelledby="all-h">
+    <div class="block-head"><h2 id="all-h">All stories in this tracker</h2></div>
+    <ol class="lab-tl">{% for it in stories %}<li style="--c: var(--{{ it.category }})"><time datetime="{{ it.published_at }}">{{ it.date }}</time><div><a href="{{ root }}story/{{ it.id }}/">{{ it.headline }}</a></div></li>{% endfor %}</ol>
+  </section>
+  {% endif %}
+</article>
+{% endblock %}

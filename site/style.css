@@ -586,3 +586,30 @@ table.deals .num, table.deals th.num { text-align: right; font-variant-numeric: 
 .who .mine { background: color-mix(in srgb, var(--brand) 10%, var(--panel)); }
 .who .mine dd { color: var(--text); }
 @media (max-width: 560px) { .who dl div { grid-template-columns: 1fr; gap: 2px; } .aud-label { display: none; } }
+
+/* ---------------------------------------------------------------- living trackers */
+.tracker-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr)); gap: 18px; }
+.tracker-card { display: flex; flex-direction: column; gap: 10px; padding: 20px; border: 1px solid var(--line-soft); border-radius: var(--r-lg); background: var(--panel); border-top: 3px solid var(--brand); transition: border-color .2s, background .2s; }
+.tracker-card:hover { border-color: var(--line); background: var(--panel-2); }
+.tc-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.tc-title { font-weight: 750; font-size: 18px; font-stretch: 108%; letter-spacing: -.01em; }
+.tc-new { flex: none; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; background: color-mix(in srgb, var(--brand) 18%, transparent); color: var(--brand); }
+.tracker-card p { margin: 0; color: var(--soft); font-size: 15px; line-height: 1.5; }
+.tracker-card .meta { font-size: 13px; color: var(--muted); margin-top: auto; }
+.stand { margin: 28px 0 8px; padding: 26px 28px; max-width: 820px; border-radius: var(--r-lg); background: linear-gradient(135deg, color-mix(in srgb, var(--brand) 10%, var(--panel)), var(--panel) 65%); border: 1px solid var(--line-soft); border-left: 4px solid var(--brand); }
+.stand h2 { margin: 0 0 10px; font-size: 1.3rem; }
+.stand-text { font-size: 19px; line-height: 1.55; margin: 0; color: var(--text); }
+.stand-changed { margin: 14px 0 0; color: var(--soft); }
+.stand-changed b { color: var(--brand); }
+.next-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; max-width: 820px; }
+.next-list li { padding: 14px 16px; border: 1px solid var(--line-soft); border-radius: var(--r-md); background: var(--panel); display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: baseline; }
+.next-list .when { font-weight: 700; color: var(--policy); font-size: 14px; }
+.timeline { list-style: none; margin: 0; padding: 0 0 0 18px; border-left: 2px solid var(--line); max-width: 820px; }
+.timeline li { position: relative; display: grid; grid-template-columns: 72px 1fr; gap: 14px; padding: 0 0 22px 14px; }
+.timeline li::before { content: ""; position: absolute; left: -25px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--brand); box-shadow: 0 0 0 4px var(--ground); }
+.timeline time { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 2px; }
+.timeline p { margin: 0 0 4px; font-weight: 600; }
+.timeline a { font-size: 14px; color: var(--soft); border-bottom: 1px solid var(--line); }
+.part-of { font-size: 15px; color: var(--soft); margin: 0 0 18px; padding: 10px 14px; border-radius: var(--r-md); background: var(--panel); border: 1px dashed var(--line); max-width: 64ch; }
+.part-of a { color: var(--brand); font-weight: 650; }
+@media (max-width: 560px) { .timeline li { grid-template-columns: 1fr; gap: 2px; } .stand { padding: 20px; } .stand-text { font-size: 17px; } }

@@ -28,6 +28,10 @@
     <p class="lede">{{ s.summary }}</p>
     {% if s.why_it_matters %}<p class="why"><strong>Why it matters.</strong> {{ s.why_it_matters }}</p>{% endif %}
 
+    {% if tracker_links %}
+    <p class="part-of">Part of {% for t in tracker_links %}<a href="{{ root }}tracker/{{ t.id }}/">{{ t.title }}</a>{% if not loop.last %} and {% endif %}{% endfor %}. See where things stand.</p>
+    {% endif %}
+
     {% if s.audiences %}
     <section class="who" aria-labelledby="who-h">
       <h2 id="who-h">Who should care</h2>

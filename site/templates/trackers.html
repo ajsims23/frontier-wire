@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="shell lab-page desk-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>Trackers</span></nav>
+  <header class="lab-head">
+    <h1>Where things stand</h1>
+    <p class="desk-intro">Living pages for the biggest storylines in AI. Our newsroom agent files every new story under them and rewrites the status, timeline and what's next, so you can catch up in a minute.</p>
+  </header>
+  <div class="tracker-grid">
+    {% for t in trackers %}
+    <a class="tracker-card" href="{{ root }}tracker/{{ t.id }}/">
+      <span class="tc-top"><span class="tc-title">{{ t.title }}</span>{% if t.fresh %}<span class="tc-new">Updated</span>{% endif %}</span>
+      {% if t.status %}<p>{{ t.status }}</p>{% else %}<p class="muted">Waiting for the first developments.</p>{% endif %}
+      <span class="meta">{% if t.updated %}Updated {{ t.updated }} · {% endif %}{{ t.count }} stor{{ 'y' if t.count == 1 else 'ies' }}{% if t.next_count %} · {{ t.next_count }} coming up{% endif %}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
