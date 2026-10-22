@@ -23,7 +23,7 @@ written. Your job: find out whether independent, reputable outlets report the SA
 best sources (the organisation's own announcement counts as a primary source).
 
 Tools:
-- search_news(query): searches today's fetched news, Hacker News and global news. Use specific names
+- search_news(query): searches web news (Bing News), today's fetched news, Hacker News and global news. Use specific names
   (companies, products, people, numbers), not generic words. Try a different query if the first finds nothing.
 - read_page(url): reads an article so you can confirm what it actually says.
 - finish(decision, sources, note): submit your verdict. "confirmed" only if the sources report the same event.
@@ -52,12 +52,33 @@ def _words(text: str) -> set[str]:
     return {w for w in re.findall(r"[a-z0-9][a-z0-9.\-]+", text.lower()) if len(w) > 2 and w not in STOP}
 
 
+def bing_news(get: Callable[[str], str], query: str) -> list[dict[str, str]]:
+    """Search Bing News via its public RSS feed; unwraps Bing's click-tracking links to the publisher's URL."""
+    import feedparser
+    from urllib.parse import parse_qs, quote_plus, urlparse
+
+    feed = feedparser.parse(get(f"https://www.bing.com/news/search?q={quote_plus(query)}&format=rss&setlang=en-us"))
+    out = []
+    for e in feed.entries:
+        link = e.get("link", "")
+        u = urlparse(link)
+        if u.netloc.endswith("bing.com"):
+            link = (parse_qs(u.query).get("url") or [""])[0]
+        if not link.startswith("http") or not e.get("title"):
+            continue
+        link = "https://" + link.split("://", 1)[1]
+        out.append({"url": link, "title": e["title"], "publisher": e.get("news_source") or e.get("source", {}).get("title", "") or domain(link),
+                    "date": e.get("published", "")})
+    return out
+
+
 class Researcher:
     def __init__(self, llm: Any, fetcher: Fetcher, gdelt: Gdelt, pool: list[Item], *, max_steps: int = 5,
                  page_chars: int = 2500, hn_get: Callable[[str], str] | None = None):
         self.llm, self.fetcher, self.gdelt, self.pool = llm, fetcher, gdelt, pool
         self.max_steps, self.page_chars = max_steps, page_chars
         self.hn_get = hn_get or fetcher.get
+        self.web_off, self.web_fail, self.web_note = False, 0, ""
 
     # ------------------------------------------------------------------ tools
     def _search(self, query: str, exclude: set[str]) -> str:
@@ -78,7 +99,16 @@ class Researcher:
         for score, it in scored[:8]:
             if score >= need:
                 add(it.url, it.title, it.source_name, it.published)
-        # 2) Hacker News full-text search (free, no key)
+        # 2) web news search (Bing News RSS: free, no key, links straight to publishers)
+        if not self.web_off:
+            try:
+                for r in bing_news(self.fetcher.get, query)[:8]:
+                    add(r["url"], r["title"], r["publisher"], r["date"])
+            except Exception as exc:  # noqa: BLE001
+                self.web_fail += 1
+                self.web_off = self.web_fail >= 2  # blocked or rate-limited: stop trying this run
+                self.web_note = f"{type(exc).__name__}: {str(exc)[:80]}"
+        # 3) Hacker News full-text search (free, no key)
         try:
             from urllib.parse import quote_plus
             hits = json.loads(self.hn_get(f"https://hn.algolia.com/api/v1/search?tags=story&hitsPerPage=8&query={quote_plus(query)}")).get("hits", [])
@@ -87,7 +117,7 @@ class Researcher:
                     add(h["url"], h["title"], domain(h["url"]), h.get("created_at"))
         except Exception:  # noqa: BLE001
             pass
-        # 3) GDELT global news (often rate-limited on shared servers)
+        # 4) GDELT global news (often rate-limited on shared servers)
         if not self.gdelt.disabled:
             try:
                 for r in self.gdelt.search(query + " sourcelang:english", timespan="7d", max_records=10):

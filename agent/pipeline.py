@@ -167,7 +167,11 @@ class Newsroom:
         cfg = self.cfg.settings.get("research", {})
         r = Researcher(self.llm, self.fetcher, self.gdelt, getattr(self, "_pool", []),
                        max_steps=int(cfg.get("max_steps", 5)), page_chars=int(cfg.get("page_chars", 2500)))
+        r.web_off, r.web_fail = getattr(self, "_web_off", False), getattr(self, "_web_fail", 0)
         result = r.investigate(members[0].title, members[0].snippet, sources)
+        if r.web_off and not getattr(self, "_web_off", False):
+            self.report["notes"].append(f"web news search unavailable this run ({r.web_note})")
+        self._web_off, self._web_fail = r.web_off, r.web_fail
         for src in result["sources"]:
             if domain(src["url"]) not in domains:
                 sources.append(src)
@@ -433,6 +437,10 @@ class Newsroom:
                 self.report["notes"].append("time budget reached; remaining stories carried over")
                 break
             not_reached -= {m.url for m in members}
+            link = links.get(members[0].url) or {}
+            if link.get("repeat"):  # same news we already published, from another outlet
+                self.report["dropped"].append({"title": members[0].title, "reason": f"already covered (story {link['follows']})"})
+                continue
             try:
                 sources = self.verify(members, score)
                 if sources is None:

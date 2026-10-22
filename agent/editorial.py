@@ -25,12 +25,16 @@ one of our EARLIER stories: the same developing situation (a launch and its roll
 a policy and its response). Same company alone is NOT enough; it must be the same storyline.
 If it follows one, give that earlier story's id and a thread title (max 7 words, plain, sentence case) that
 describes the WHOLE storyline: the earlier story, any existing thread it belongs to, and the new item.
-Otherwise set follows to "". {UNTRUSTED}"""
+Otherwise set follows to "".
+Set repeat to true ONLY when the new item reports the very same announcement or event as the earlier story,
+just from another outlet or with a different headline, and adds no significant new development.
+A next step, a response, new numbers or a rollout is a follow-up, not a repeat. {UNTRUSTED}"""
 
 LINK_SCHEMA = {
     "type": "object",
     "properties": {"links": {"type": "array", "items": {"type": "object", "properties": {
-        "new_id": {"type": "string"}, "follows": {"type": "string"}, "thread_title": {"type": "string"}},
+        "new_id": {"type": "string"}, "follows": {"type": "string"}, "thread_title": {"type": "string"},
+        "repeat": {"type": "boolean"}},
         "required": ["new_id", "follows"]}}},
     "required": ["links"],
 }
@@ -73,7 +77,7 @@ def link_followups(room: Any, kept: list[tuple[int, str, list[Any]]]) -> dict[st
             continue
         f, n = l.get("follows") or "", l.get("new_id") or ""
         if n in ids_new and f in cand_ids:  # both ids must be real
-            out[ids_new[n]] = {"follows": f, "title": (l.get("thread_title") or "").strip()[:60]}
+            out[ids_new[n]] = {"follows": f, "title": (l.get("thread_title") or "").strip()[:60], "repeat": l.get("repeat") is True}
     return out
 
 

@@ -527,3 +527,16 @@ def test_unforced_retry_cutoff_and_no_false_retirement(tmp_path):
     except Exception as exc:  # noqa: BLE001
         assert "every configured provider failed" in str(exc)
     assert len(seen) == 2 and not any("retired" in l for l in llm.log)
+
+
+def test_bing_news_unwraps_links():
+    from agent.research import bing_news
+    rss = """<?xml version="1.0"?><rss version="2.0" xmlns:News="https://www.bing.com/news/search?q=x&amp;format=rss"><channel>
+    <item><title>DeepSeek raises funds</title>
+    <link>http://www.bing.com/news/apiclick.aspx?ref=FexRss&amp;aid=&amp;url=https%3a%2f%2fwww.reuters.com%2ftech%2fdeepseek-raise%2f&amp;c=1</link>
+    <pubDate>Thu, 22 Oct 2026 10:00:00 GMT</pubDate><News:Source>Reuters</News:Source></item>
+    <item><title>No link</title><link>http://www.bing.com/news/apiclick.aspx?ref=FexRss</link></item>
+    </channel></rss>"""
+    got = bing_news(lambda url: rss, "deepseek")
+    assert got == [{"url": "https://www.reuters.com/tech/deepseek-raise/", "title": "DeepSeek raises funds",
+                    "publisher": "Reuters", "date": "Thu, 22 Oct 2026 10:00:00 GMT"}]
