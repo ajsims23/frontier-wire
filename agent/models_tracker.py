@@ -35,7 +35,8 @@ def parse_models(raw: str) -> list[dict[str, Any]]:
     for m in json.loads(raw).get("data", []):
         mid = str(m.get("id") or "")
         prefix = mid.split("/", 1)[0]
-        if prefix not in LABS or SKIP.search(mid):
+        outputs = (m.get("architecture") or {}).get("output_modalities") or ["text"]
+        if prefix not in LABS or SKIP.search(mid) or "text" not in outputs or re.search(r"\((batch|flex|priority)\)", str(m.get("name") or ""), re.I):
             continue
         price = m.get("pricing") or {}
         p_in, p_out = _per_m(price.get("prompt")), _per_m(price.get("completion"))
