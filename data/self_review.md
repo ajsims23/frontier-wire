@@ -1,38 +1,38 @@
-## Newsroom self-review, 2026-10-21
+## Newsroom self-review, 2026-10-22
 
-Looked at 9 runs over the last 3 days (19 stories written).
+Looked at 11 runs over the last 3 days (22 stories written).
 Tick the suggestions you want applied; nothing changes until a person approves it.
 
-- [ ] **fix source** · `gdelt`: Implement exponential backoff and cache recent queries to stay under rate limits  
-  _Why:_ gdelt failed 5/9 runs with HTTP 429, causing loss of source data
-- [ ] **add source** · `AI Lab Press Releases`: Add a generic RSS/press‑release source (e.g., https://pressrelease.ai/) to capture announcements from DeepMind, xAI, DeepSeek, Alibaba Qwen, Microsoft  
-  _Why:_ Five tracked labs produced no stories this week, indicating a coverage gap
-- [ ] **coverage gap** · `Google DeepMind`: Prioritize DeepMind publications by querying arXiv and DeepMind blog daily  
-  _Why:_ DeepMind is a tracked lab with zero coverage
-- [ ] **tune** · `score_thresholds`: Raise the minimum acceptable relevance score from 1 to 2 and lower the maximum acceptable score from 5 to 4  
-  _Why:_ High drop counts at scores 1 and 5 suggest thresholds are too permissive or too strict
-- [ ] **remove source** · `cerebras/gpt-oss-120b`: Replace this model with a stable alternative (e.g., openai/gpt-4o) since it repeatedly returns unusable answers  
-  _Why:_ Provider notes show repeated unusable answers and 404 errors for cerebras models
+- [ ] **remove source** · `gdelt`: Remove GDELT as a source  
+  _Why:_ 6 of 11 runs hit HTTP 429 errors, causing frequent failures
+- [ ] **add source** · `deepmind-blog`: Add DeepMind blog as a source  
+  _Why:_ Google DeepMind lab has no stories this week
+- [ ] **add source** · `xai-blog`: Add xAI blog as a source  
+  _Why:_ xAI lab is unrepresented in recent stories
+- [ ] **add source** · `microsoft-research-ai`: Add Microsoft Research AI news source  
+  _Why:_ Microsoft lab lacks coverage
+- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower to 5  
+  _Why:_ 84 stories dropped at score 5; lowering will increase usable output without major quality loss
 
 <details><summary>Statistics the agent reviewed</summary>
 
 ```json
 {
- "runs": 9,
- "stories_written": 19,
+ "runs": 11,
+ "stories_written": 22,
  "source_failures": {
-  "gdelt": "5/9 runs; last error: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20"
+  "gdelt": "6/11 runs; last error: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20"
  },
  "sources_returning_nothing": {},
  "drop_reasons": {
-  "score 5": 43,
+  "score 5": 84,
+  "score 3": 27,
+  "score 4": 26,
+  "score 2": 25,
   "score 1": 25,
-  "score 4": 23,
-  "score 2": 23,
-  "score 3": 21,
   "could not verify with enough independent": 13,
-  "duplicate of c3c47473c56f": 2,
-  "duplicate of 820bd24a41c4": 1
+  "could not verify yet": 6,
+  "duplicate of c3c47473c56f": 2
  },
  "tracked_labs_without_stories_this_week": [
   "Google DeepMind",
@@ -45,11 +45,42 @@ Tick the suggestions you want applied; nothing changes until a person approves i
   "cerebras/gpt-oss-120b: unusable answer; trying next model",
   "cerebras/llama3.3-70b: model unavailable (404); trying next model",
   "cerebras/qwen-3-235b-a22b-instruct-2507: model unavailable (404); trying next model",
-  "cerebras/gpt-oss-120b: unusable answer; trying next model",
-  "cerebras/llama3.3-70b: model unavailable (404); trying next model",
-  "cerebras/qwen-3-235b-a22b-instruct-2507: model unavailable (404); trying next model",
-  "cerebras/gpt-oss-120b: unusable answer"
- ]
+  "cerebras/gpt-oss-120b: unusable answer",
+  "cerebras/gpt-oss-120b: unusable answer",
+  "cerebras/gpt-oss-120b: unusable answer",
+  "cerebras: listed models retired; trying qwen-3.8-27b (update settings.yaml when convenient)",
+  "cerebras/qwen-3.8-27b: HTTP 400: {\"message\":\"Failed to generate tool_calls. Exception: Failed to generate tool call but tool_choice = 'required'.\",\"type\":\"generation_error\",\"param\":\"t"
+ ],
+ "current_settings": {
+  "min_score_to_publish_1_to_10": 6,
+  "max_stories_per_run": 8,
+  "ai_providers_configured": [
+   "cerebras"
+  ],
+  "sources": [
+   "openai",
+   "deepmind",
+   "google-ai",
+   "huggingface",
+   "nvidia",
+   "anthropic",
+   "meta-ai",
+   "mistral",
+   "hf-models",
+   "arxiv",
+   "hf-papers",
+   "gdelt",
+   "hn",
+   "techcrunch-ai",
+   "verge-ai",
+   "mit-tr-ai",
+   "ars-ai",
+   "import-ai",
+   "simon-willison",
+   "sam-altman",
+   "bluesky"
+  ]
+ }
 }
 ```
 
