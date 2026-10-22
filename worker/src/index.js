@@ -61,17 +61,19 @@ async function llm(env, messages) {
     env.CEREBRAS_API_KEY && { url: "https://api.cerebras.ai/v1/chat/completions", key: env.CEREBRAS_API_KEY, model: env.CEREBRAS_MODEL || "gpt-oss-120b" },
     env.GROQ_API_KEY && { url: "https://api.groq.com/openai/v1/chat/completions", key: env.GROQ_API_KEY, model: env.GROQ_MODEL || "openai/gpt-oss-120b" },
   ].filter(Boolean);
+  llm.errors = [];
   for (const p of providers) {
     try {
       const r = await fetch(p.url, { method: "POST", headers: { authorization: `Bearer ${p.key}`, "content-type": "application/json" },
         // gpt-oss models think before answering: keep the thinking short and leave room for the answer
         body: JSON.stringify({ model: p.model, messages, max_tokens: 4000, temperature: 0.2,
           ...(/gpt-oss/.test(p.model) ? { reasoning_effort: "low" } : {}) }) });
-      if (!r.ok) continue;
+      if (!r.ok) { llm.errors.push(`${new URL(p.url).hostname.split(".")[1]} ${r.status}`); continue; }
       const data = await r.json();
       const text = (data.choices?.[0]?.message?.content || "").trim();
       if (text) return text;
-    } catch (e) { /* try the next provider */ }
+      llm.errors.push(`${new URL(p.url).hostname.split(".")[1]} empty (${data.choices?.[0]?.finish_reason || "?"})`);
+    } catch (e) { llm.errors.push("network"); }
   }
   return "";
 }
@@ -90,7 +92,9 @@ export async function answer(env, q, index, ask = llm) {
     return ok.length ? `[${ok.join(", ")}]` : "";
   });
   const cited = new Set([...text.matchAll(/\[(\d+(?:,\s*\d+)*)\]/g)].flatMap((m) => m[1].split(",").map((n) => +n.trim())));
-  return { answer: text, sources: sources.map((s) => ({ ...s, cited: cited.has(s.n) })) };
+  const out = { answer: text, sources: sources.map((s) => ({ ...s, cited: cited.has(s.n) })) };
+  if (!text && ask === llm) out.diag = (llm.errors || []).join(", ") || "no provider configured";  // status codes only, for troubleshooting
+  return out;
 }
 
 // ------------------------------------------------------------------ email
