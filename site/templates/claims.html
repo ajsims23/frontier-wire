@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="shell lab-page desk-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>Claims tracker</span></nav>
+  <header class="lab-head">
+    <h1>Claims tracker</h1>
+    <p class="desk-intro">Promises, targets and predictions from AI labs and leaders, in their own words, checked against what actually happens. Our agent marks a claim delivered or missed only when a story shows it. Past the deadline with no news, it's "overdue".</p>
+    <dl class="lab-stats">
+      <div><dt>Claims tracked</dt><dd>{{ counts.all }}</dd></div>
+      <div><dt>Delivered</dt><dd class="c-del">{{ counts.delivered }}</dd></div>
+      <div><dt>Missed</dt><dd class="c-mis">{{ counts.missed }}</dd></div>
+      <div><dt>Overdue</dt><dd class="c-due">{{ counts.overdue }}</dd></div>
+    </dl>
+  </header>
+
+  {% if scorecard %}
+  <section class="block" aria-labelledby="sc-h">
+    <div class="block-head"><h2 id="sc-h">Scorecard</h2><p>How often each organisation does what it says.</p></div>
+    <div class="table-box"><table class="deals">
+      <thead><tr><th scope="col">Who</th><th scope="col" class="num">Claims</th><th scope="col" class="num">Delivered</th><th scope="col" class="num">Missed</th><th scope="col" class="num">Overdue</th><th scope="col" class="num">Open</th></tr></thead>
+      <tbody>{% for r in scorecard %}<tr><td class="strong">{{ r.name }}</td><td class="num">{{ r.all }}</td><td class="num c-del">{{ r.delivered }}</td><td class="num c-mis">{{ r.missed }}</td><td class="num c-due">{{ r.overdue }}</td><td class="num">{{ r.open }}</td></tr>{% endfor %}</tbody>
+    </table></div>
+  </section>
+  {% endif %}
+
+  {% for group in groups %}{% if group.rows %}
+  <section class="block" aria-labelledby="g-{{ group.key }}">
+    <div class="block-head"><h2 id="g-{{ group.key }}">{{ group.title }}</h2><p>{{ group.sub }}</p></div>
+    <ol class="claims">
+      {% for c in group.rows %}
+      <li class="claim st-{{ c.state }}">
+        <div class="cl-top"><span class="cl-badge">{{ c.state_label }}</span><span class="cl-kind">{{ c.kind }}</span>{% if c.due %}<span class="cl-due">Due {{ c.due }}</span>{% endif %}</div>
+        <p class="cl-claim">{{ c.claim }}</p>
+        <blockquote>“{{ c.quote }}”</blockquote>
+        <p class="cl-meta"><b>{{ c.who }}</b>, {{ c.made_h }}. <a href="{{ root }}story/{{ c.story_id }}/">Story</a>{% if c.source_url %} · <a href="{{ c.source_url }}" rel="noopener">Source</a>{% endif %}</p>
+        {% if c.history %}<ul class="cl-hist">{% for h in c.history %}<li><span class="cl-v v-{{ h.verdict }}">{{ h.verdict }}</span> {{ h.note }} <a href="{{ root }}story/{{ h.story_id }}/">Evidence</a></li>{% endfor %}</ul>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}{% endfor %}
+  {% if not counts.all %}<p class="empty">Claims appear here as the agent finds them in new stories.</p>{% endif %}
+</section>
+{% endblock %}

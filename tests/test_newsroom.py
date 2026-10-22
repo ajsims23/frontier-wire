@@ -680,3 +680,38 @@ def test_trackers_file_and_update():
     calls.clear()
     update_trackers(room, defs)
     assert calls == []
+
+
+def test_claims_extract_and_resolve():
+    from types import SimpleNamespace
+    from agent.claims import add_claims, extract, resolve
+    texts = {"https://lab.example/post": "Our CEO said: “We will ship Nova 3 to everyone by March 2027.” Other text."}
+    story = {"id": "s1", "lab": "Example Lab", "published_at": "2026-10-20T10:00:00+00:00"}
+    got = extract([
+        {"who": "Jane Doe, Example Lab", "claim": "Nova 3 for everyone by March 2027", "quote": "We will ship Nova 3 to everyone by March 2027.",
+         "source_url": "https://lab.example/post", "kind": "promise", "due": "by March 2027", "due_date": "2027-03-31"},
+        {"who": "Jane Doe", "claim": "Invented", "quote": "We will cure all disease next year.", "kind": "prediction"},   # not in source
+    ], texts, story)
+    assert len(got) == 1 and got[0]["due_date"] == "2027-03-31" and got[0]["status"] == "open"
+    stories = [story | {"headline": "Example Lab plans Nova", "summary": "x"},
+               {"id": "s2", "headline": "Example Lab ships Nova 3 to everyone", "summary": "Nova 3 is now available.", "lab": "Example Lab",
+                "published_at": "2026-12-01T10:00:00+00:00"}]
+
+    class L:
+        def ask(self, **kw):
+            return {"verdicts": [{"claim_id": got[0]["id"], "verdict": "delivered", "story_id": "s2", "note": "Shipped."},
+                                 {"claim_id": "nope", "verdict": "missed", "story_id": "s2"}]}
+
+    room = SimpleNamespace(store=SimpleNamespace(claims={}, stories=stories), llm=L(), now=NOW, report={})
+    assert add_claims(room, got) == 1 and add_claims(room, got) == 0          # no duplicates
+    resolve(room, ["s2"])
+    c = room.store.claims["claims"][0]
+    assert c["status"] == "delivered" and c["history"][0]["story_id"] == "s2"
+
+    class Bad:
+        def ask(self, **kw):
+            return {"verdicts": [{"claim_id": got[0]["id"], "verdict": "missed", "story_id": "not-a-story"}]}
+    c["status"] = "open"
+    room.llm = Bad()
+    resolve(room, ["s2"])
+    assert c["status"] == "open"                                               # no evidence, no change

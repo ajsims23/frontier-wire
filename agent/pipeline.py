@@ -8,7 +8,7 @@ from typing import Any
 from . import prompts as P
 from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
-from . import editorial, models_tracker, newsletter, tagging, trackers, videos, weekly
+from . import claims, editorial, models_tracker, newsletter, tagging, trackers, videos, weekly
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather
 from .store import Store
@@ -59,6 +59,7 @@ class Newsroom:
         }
         self._page_cache: dict[str, str] = {}
         self._images: dict[str, str | None] = {}
+        self._new_claims: list[dict[str, Any]] = []
         self._research_meta: dict[str, dict[str, Any]] = {}
         self._enriched = 0
         self._texts: dict[str, str] = {}
@@ -312,7 +313,7 @@ class Newsroom:
                 self.report["notes"].append(f"dropped unverifiable benchmark: {b.get('model')} {b.get('benchmark')} {b.get('score')}")
         audiences = editorial.check_audiences(answer.get("audiences"), all_text)
         extra = {k: v for k, v in (("explainer", explainer), ("benchmarks", benchmarks[:6]), ("audiences", audiences)) if v}
-        return {
+        story = {
             **extra,
             "id": stable_id(lead.url),
             "headline": answer["headline"].strip()[:140],
@@ -334,6 +335,8 @@ class Newsroom:
             "published_at": min(pub, self.now).isoformat(),
             "created_at": self.now.isoformat(),
         }
+        self._new_claims.extend(claims.extract(answer.get("claims"), texts, story))
+        return story
 
     # ------------------------------------------------------------ 6. curate
     def update_labs(self, story: dict[str, Any]) -> None:
@@ -516,6 +519,7 @@ class Newsroom:
             ("tagging", tagging.tag_stories),
             ("explainers", editorial.backfill_explainers),
             ("trackers", trackers.update_trackers),
+            ("claims", lambda r: (claims.add_claims(r, r._new_claims), claims.resolve(r, [w["id"] for w in r.report["written"]]))),
             ("model tracker", models_tracker.update_tracker),
             ("weekly", weekly.maybe_write_weekly),
             ("briefing", editorial.write_briefing),
@@ -559,6 +563,8 @@ def summary_markdown(report: dict[str, Any]) -> str:
         lines.append("Threads updated: " + "; ".join(report["threads"]))
     if report.get("videos"):
         lines.append("Videos: " + (report.get("videos_kept", "no new videos") + " · " + ", ".join(f"{k} {v}" for k, v in report["videos"].items())))
+    if report.get("claims"):
+        lines.append(f"Claims: {report['claims']}")
     if report.get("trackers"):
         lines.append(f"Trackers: {report['trackers']}")
     if report.get("weekly"):

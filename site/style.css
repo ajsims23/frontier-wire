@@ -613,3 +613,23 @@ table.deals .num, table.deals th.num { text-align: right; font-variant-numeric: 
 .part-of { font-size: 15px; color: var(--soft); margin: 0 0 18px; padding: 10px 14px; border-radius: var(--r-md); background: var(--panel); border: 1px dashed var(--line); max-width: 64ch; }
 .part-of a { color: var(--brand); font-weight: 650; }
 @media (max-width: 560px) { .timeline li { grid-template-columns: 1fr; gap: 2px; } .stand { padding: 20px; } .stand-text { font-size: 17px; } }
+
+/* ---------------------------------------------------------------- claims tracker */
+.c-del { color: var(--research); } .c-mis { color: var(--safety); } .c-due { color: var(--policy); }
+.claims { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; max-width: 860px; }
+.claim { padding: 18px 20px; border: 1px solid var(--line-soft); border-left: 4px solid var(--line); border-radius: var(--r-md); background: var(--panel); }
+.claim.st-delivered { border-left-color: var(--research); } .claim.st-missed { border-left-color: var(--safety); } .claim.st-overdue { border-left-color: var(--policy); }
+.cl-top { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 12px; }
+.cl-badge { font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; background: var(--panel-2); color: var(--soft); }
+.st-delivered .cl-badge { background: color-mix(in srgb, var(--research) 18%, transparent); color: var(--research); }
+.st-missed .cl-badge { background: color-mix(in srgb, var(--safety) 18%, transparent); color: var(--safety); }
+.st-overdue .cl-badge { background: color-mix(in srgb, var(--policy) 18%, transparent); color: var(--policy); }
+.cl-kind { color: var(--muted); text-transform: capitalize; }
+.cl-due { color: var(--policy); font-weight: 650; }
+.cl-claim { font-size: 18px; font-weight: 700; margin: 10px 0 8px; line-height: 1.35; }
+.claim blockquote { margin: 0; padding-left: 12px; border-left: 2px solid var(--line); color: var(--soft); font-style: italic; }
+.cl-meta { margin: 10px 0 0; font-size: 14px; color: var(--muted); }
+.cl-meta a, .cl-hist a { color: var(--brand); }
+.cl-hist { list-style: none; margin: 12px 0 0; padding: 12px 0 0; border-top: 1px solid var(--line-soft); display: grid; gap: 6px; font-size: 14px; color: var(--soft); }
+.cl-v { font-weight: 700; text-transform: capitalize; }
+.v-delivered { color: var(--research); } .v-missed { color: var(--safety); } .v-update { color: var(--policy); }

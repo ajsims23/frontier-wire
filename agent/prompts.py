@@ -80,6 +80,8 @@ VERIFY_SCHEMA = {
 }
 
 # ---------------------------------------------------------------- Write
+from .claims import CLAIM_RULE, CLAIM_SCHEMA  # noqa: E402
+
 AUDIENCES = ("builders", "business", "investors")
 AUDIENCE_SCHEMA = {"type": "object", "properties": {a: {"type": "string"} for a in AUDIENCES}}
 
@@ -109,6 +111,7 @@ Rules:
   genuinely doesn't matter to that group (don't force it). builders: developers and engineers (capabilities,
   APIs, prices, tools they use). business: executives and strategy teams (competition, adoption, regulation,
   their industry). investors: where money, valuations and market power are moving. Facts only from the story.
+{CLAIM_RULE}
 {UNTRUSTED_NOTE}"""
 
 WRITE_SCHEMA = {
@@ -148,6 +151,7 @@ WRITE_SCHEMA = {
             "model": {"type": "string"}, "benchmark": {"type": "string"}, "score": {"type": "string"}},
             "required": ["model", "benchmark", "score"]}},
         "audiences": AUDIENCE_SCHEMA,
+        "claims": CLAIM_SCHEMA,
     },
     "required": ["headline", "summary", "why_it_matters", "category", "quotes"],
 }

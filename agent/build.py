@@ -104,6 +104,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     models_state: dict = read("models.json", {})
     weekly_state: dict = read("weekly.json", {})
     trackers_state: dict = read("trackers.json", {})
+    claims_state: dict = read("claims.json", {})
     from .trackers import load_trackers
     tracker_defs = load_trackers()
     tracker_titles = {t["id"]: t["title"] for t in tracker_defs}
@@ -317,6 +318,35 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
          canonical=f"{base}trackers/", og_image=f"{base}og/home.png", trackers=tracker_cards)
     (out / "data" / "trackers.json").write_text(json.dumps([{k: c[k] for k in ("id", "title", "status", "updated_at", "count", "fresh")}
                                                             for c in tracker_cards if c["status"]], ensure_ascii=False))
+
+    # Claims tracker
+    today = now.date().isoformat()
+    book = []
+    for c in claims_state.get("claims", []):
+        state = c["status"] if c["status"] != "open" else ("overdue" if c.get("due_date") and c["due_date"] < today else "open")
+        book.append({**c, "state": state, "state_label": {"open": "Open", "overdue": "Overdue", "delivered": "Delivered", "missed": "Missed"}[state],
+                     "made_h": short_date(c["made"] + "T00:00:00+00:00")})
+    counts = {k: sum(1 for c in book if c["state"] == k) for k in ("open", "overdue", "delivered", "missed")}
+    counts["all"] = len(book)
+    orgs: dict[str, dict] = {}
+    for c in book:
+        name = c.get("lab") or c["who"].split(",")[-1].strip()
+        r = orgs.setdefault(name, {"name": name, "all": 0, "open": 0, "overdue": 0, "delivered": 0, "missed": 0})
+        r["all"] += 1
+        r[c["state"]] += 1
+    soon = sorted((c for c in book if c["state"] == "open" and c.get("due_date")), key=lambda c: c["due_date"])
+    page("claims", "claims.html", title="Claims tracker: do AI labs keep their promises? | Frontier Wire",
+         description="Promises and predictions from AI labs and leaders, in their own words, checked against what happens.",
+         canonical=f"{base}claims/", og_image=f"{base}og/home.png", counts=counts,
+         scorecard=sorted(orgs.values(), key=lambda r: -r["all"])[:15],
+         groups=[
+             {"key": "res", "title": "Recently resolved", "sub": "Delivered or missed, with the story that shows it.",
+              "rows": sorted((c for c in book if c["state"] in ("delivered", "missed")), key=lambda c: c.get("resolved", ""), reverse=True)[:20]},
+             {"key": "due", "title": "Overdue", "sub": "Past the stated deadline with no news either way.", "rows": [c for c in book if c["state"] == "overdue"]},
+             {"key": "soon", "title": "Coming due", "sub": "Open claims with a deadline, soonest first.", "rows": soon[:30]},
+             {"key": "open", "title": "Open, no deadline", "sub": "Newest first.",
+              "rows": sorted((c for c in book if c["state"] == "open" and not c.get("due_date")), key=lambda c: c["made"], reverse=True)[:30]},
+         ])
 
     # Weekly deep dive
     issues = sorted((weekly_state.get("issues") or {}).values(), key=lambda w: w["key"], reverse=True)
