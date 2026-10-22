@@ -535,7 +535,7 @@ table.deals .num, table.deals th.num { text-align: right; font-variant-numeric: 
 .pod-btn:focus-visible, .pod-launch:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
 .pod-sound[aria-pressed="false"] { background: var(--brand); color: #051416; border-color: var(--brand); }
 .pod-timer { position: absolute; left: 0; top: 0; z-index: 2; height: 3px; width: 0; background: var(--brand); }
-.pod[data-state="big"] .pod-timer { animation: pod-timer 9s linear forwards; }
+.pod[data-state="big"] .pod-timer { animation: pod-timer 5s linear forwards; }
 .pod[data-state="big"]:hover .pod-timer, .pod[data-state="big"]:focus-within .pod-timer { animation-play-state: paused; }
 @keyframes pod-timer { from { width: 0; } to { width: 100%; } }
 /* mini: compact text, sound button shows icon only */
@@ -703,3 +703,7 @@ table.deals .num, table.deals th.num { text-align: right; font-variant-numeric: 
 .nav-drop a { padding: 9px 12px; border-radius: 8px; color: var(--text); }
 .nav-drop a:hover { background: var(--panel-2); }
 .follow-btn { align-self: flex-start; width: auto; }
+
+.ask-answer.general { border-left-color: var(--policy); }
+.ask-answer.general .ask-kicker { color: var(--policy); }
+.gen-note { font-size: 14px !important; color: var(--muted); padding: 8px 12px; border-radius: 8px; background: var(--panel-2); }

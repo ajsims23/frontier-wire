@@ -1,6 +1,7 @@
-// Frontier Wire podcast player: on a reader's first visit in a session, an AI podcast picked by the newsroom
-// agent pops up and plays silently, then shrinks into a mini player in the corner that stays while you read.
-// Later visits (or after closing it) show a small "AI podcast" button instead, so it never nags.
+// Frontier Wire podcast player: an AI podcast picked by the newsroom agent pops up and plays (silently, as
+// browsers require until the reader taps for sound), then after 5 seconds shrinks into a mini player in the
+// corner and keeps playing while you read. Moving to another page picks up where it left off, in the corner.
+// It only stops if the reader closes it; then a small "AI podcast" button brings it back.
 (function () {
   "use strict";
   const ID = /^[A-Za-z0-9_-]{11}$/;
@@ -10,7 +11,6 @@
     set(k, v, s) { try { (s ? sessionStorage : localStorage).setItem(k, v); } catch (e) { /* private mode */ } },
   };
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const today = new Date().toISOString().slice(0, 10);
   const ICON = {
     muted: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M23 9l-6 6M17 9l6 6"/></svg>',
     sound: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg>',
@@ -21,11 +21,24 @@
     play: '<svg width="14" height="14" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>',
   };
 
-  let list = [], idx = 0, el = null, launcher = null, muted = true, timer = null;
+  let list = [], idx = 0, el = null, launcher = null, muted = true, timer = null, pos = 0;
+  const SAVE = "fw-pod-state";
 
-  function src(id, withSound) {
-    return `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=${withSound ? 0 : 1}&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(location.origin)}`;
+  function src(id, withSound, start) {
+    return `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=${withSound ? 0 : 1}&rel=0&modestbranding=1&playsinline=1&enablejsapi=1${start ? `&start=${Math.floor(start)}` : ""}&origin=${encodeURIComponent(location.origin)}`;
   }
+  // remember which episode and where we are, so the next page continues it
+  function save(extra) {
+    if (!list[idx]) return;
+    store.set(SAVE, JSON.stringify({ id: list[idx].id, t: pos, muted, ...extra }), true);
+  }
+  window.addEventListener("message", (e) => {
+    if (!/youtube(-nocookie)?\.com$/.test(new URL(e.origin || "https://x.invalid").hostname)) return;
+    let d; try { d = typeof e.data === "string" ? JSON.parse(e.data) : e.data; } catch (err) { return; }
+    if (d && d.info && typeof d.info.currentTime === "number") pos = d.info.currentTime;
+  });
+  window.addEventListener("pagehide", () => { if (el && el.dataset.state !== "closed") save(); });
+  setInterval(() => { if (el && el.dataset.state !== "closed") save(); }, 5000);
   function command(func) {
     const f = el && el.querySelector("iframe");
     if (f && f.contentWindow) f.contentWindow.postMessage(JSON.stringify({ event: "command", func, args: [] }), "*");
@@ -39,10 +52,13 @@
     b.setAttribute("aria-label", m ? "Turn sound on" : "Mute");
   }
 
-  function load(i, withSound) {
+  function load(i, withSound, start) {
     idx = (i + list.length) % list.length;
     const p = list[idx];
-    el.querySelector(".pod-frame").innerHTML = `<iframe src="${src(p.id, withSound)}" title="${esc(p.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+    pos = start || 0;
+    el.querySelector(".pod-frame").innerHTML = `<iframe src="${src(p.id, withSound, start)}" title="${esc(p.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+    const f = el.querySelector("iframe");
+    f.addEventListener("load", () => f.contentWindow.postMessage(JSON.stringify({ event: "listening", id: "fw-pod", channel: "widget" }), "*"));
     el.querySelector(".pod-title").textContent = p.title;
     el.querySelector(".pod-guest").textContent = p.guest ? `${p.guest} · ${p.channel}` : p.channel;
     el.querySelector(".pod-next").hidden = list.length < 2;
@@ -98,19 +114,21 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  function open(withSound) {
+  function open(withSound, state, start) {
     if (!el) build();
     if (launcher) launcher.hidden = true;
+    store.set("fw-pod-closed", "", true);
     el.dataset.state = "closed";
-    load(idx, withSound);
-    setState("big");
+    load(idx, withSound, start);
+    setState(state || "big");
   }
 
   function close() {
     command("pauseVideo");
     el.querySelector(".pod-frame").innerHTML = "";
     el.dataset.state = "closed";
-    store.set("fw-pod-closed", today);
+    store.set("fw-pod-closed", "1", true);   // stays closed for the rest of this visit
+    store.set(SAVE, "", true);
     showLauncher();
   }
 
@@ -126,16 +144,27 @@
     launcher.hidden = false;
   }
 
-  window.FWPodcast = function (podcasts) {
+  function start(podcasts) {
     list = (podcasts || []).filter((p) => ID.test(p.id || ""));
-    if (!list.length || el) return;
-    const firstThisSession = !store.get("fw-pod-seen", true);
-    const closedToday = store.get("fw-pod-closed") === today;
-    store.set("fw-pod-seen", "1", true);
-    if (firstThisSession && !closedToday && !reduced) {
-      setTimeout(() => open(false), 1600);
-    } else {
+    if (!list.length || el || launcher) return;
+    if (store.get("fw-pod-closed", true) === "1") { showLauncher(); return; }
+    let saved = null;
+    try { saved = JSON.parse(store.get(SAVE, true) || "null"); } catch (e) { saved = null; }
+    const i = saved ? list.findIndex((p) => p.id === saved.id) : -1;
+    if (i >= 0) {
+      // continuing from another page: straight into the corner, at the same point
+      idx = i;
+      open(false, "mini", saved.t);
+    } else if (reduced) {
       showLauncher();
+    } else {
+      setTimeout(() => open(false, "big"), 1200);
     }
-  };
+  }
+  window.FWPodcast = start;
+  // pages other than the home page load the picks themselves
+  const me = document.currentScript;
+  if (me && me.dataset.root !== undefined) {
+    fetch(me.dataset.root + "data/site.json", { cache: "no-store" }).then((r) => r.json()).then((d) => start(d.podcasts)).catch(() => {});
+  }
 })();

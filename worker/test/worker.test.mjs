@@ -16,11 +16,14 @@ test("answers keep only real citations", async () => {
   assert.equal(r.sources[0].cited, true);
 });
 
-test("no matching stories means no AI call", async () => {
-  let called = false;
-  const r = await answer({}, "quantum knitting", index, async () => { called = true; return "x"; });
-  assert.equal(called, false);
+test("questions our archive doesn't cover get a labelled general answer", async () => {
+  const r = await answer({}, "quantum knitting", index, async (env, msgs) => (msgs[0].content.includes("general knowledge") ? "Background." : "x"));
+  assert.equal(r.general, true);
+  assert.equal(r.answer, "Background.");
   assert.equal(r.sources.length, 0);
+  const r2 = await answer({}, "deepseek board members", index, async (env, msgs) => (msgs[0].content.includes("general knowledge") ? "General." : "NOT_COVERED"));
+  assert.equal(r2.general, true);
+  assert.equal(r2.answer, "General.");
 });
 
 test("subscribers only get events they follow", () => {

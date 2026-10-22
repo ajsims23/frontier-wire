@@ -103,10 +103,16 @@ def rate_podcasts(room: Any, videos: list[dict[str, Any]]) -> None:
 
 
 def featured_podcasts(videos: list[dict[str, Any]], now: Any, days: int = 14, n: int = 6) -> list[dict[str, Any]]:
-    """Biggest names first among recent episodes; newer first on ties."""
+    """Big names first, but fresh: each day of age costs half a point, so a new episode beats an older one
+    with a slightly bigger guest."""
+    from datetime import datetime
     cutoff = (now - timedelta(days=days)).isoformat()
     pods = [v for v in videos if v.get("kind") == "podcast" and v["published"] >= cutoff]
-    pods.sort(key=lambda v: (v.get("prominence", 5), v["published"]), reverse=True)
+
+    def score(v: dict[str, Any]) -> float:
+        age = (now - datetime.fromisoformat(v["published"])).total_seconds() / 86400
+        return v.get("prominence", 5) - 0.5 * max(0.0, age)
+    pods.sort(key=score, reverse=True)
     return pods[:n]
 
 

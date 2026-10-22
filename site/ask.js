@@ -46,6 +46,12 @@ async function ask(q) {
     const r = await fetch(`${api}/api/ask`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ q }) });
     const j = await r.json();
     if (!r.ok) throw new Error(j.error || "error");
+    if (j.answer && j.general) {
+      out.innerHTML = `<div class="ask-answer general"><span class="ask-kicker">General background</span>
+        <p class="gen-note">This isn't in our news archive, so here's general background from AI. It isn't fact-checked by Frontier Wire and may be out of date.</p>
+        ${formatAnswer(j.answer)}</div>${storyList(j.sources.length ? j.sources : local, "Related stories")}`;
+      return;
+    }
     if (!j.answer) {
       out.innerHTML = `<div class="ask-answer"><p>${esc(j.note || "We couldn't write an answer this time. Here are the most relevant stories.")}</p></div>${storyList(j.sources.length ? j.sources : local, "Most relevant stories")}`;
       return;
