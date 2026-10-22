@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-22T14:19:30+00:00",
+  "started_at": "2026-10-22T14:38:54+00:00",
   "review_mode": false,
   "providers": [
     "cerebras"
@@ -18,7 +18,7 @@
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
     "hf-papers": "ok (15)",
-    "gdelt": "ok (18)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
     "hn": "ok (17)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
@@ -30,7 +30,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -39,112 +39,75 @@
   },
   "dropped": [
     {
-      "title": "Data and AI agents give a lift to TK Elevator service technicians",
-      "reason": "score 4: A case‑study about AI agents helping elevator technicians; interesting but an incremental industry application, not a frontier‑level development."
+      "title": "BlueStone Slips Into ₹4.4 Cr Loss In Q2, Revenue Jumps 45% YoY",
+      "reason": "score 2: The article concerns a jewellery retailer’s financial results and contains no AI‑related content, making it irrelevant for Frontier Wire."
     },
     {
-      "title": "Barclays To Cut 5K Jobs Because Of AI",
-      "reason": "score 5: Report of Barclays cutting 5,000 jobs due to AI; notable corporate impact but not a frontier AI breakthrough."
-    },
-    {
-      "title": "Cube Partners with Claude to Put Your Governed Financial Model One Question Away",
-      "reason": "score 4: Cube’s partnership with Anthropic’s Claude to offer governed financial modeling; a product integration rather than a major AI development."
-    },
-    {
-      "title": "Microsoft working to reduce AI costs , expand ecosystem as global adoption rises : Satya Nadella",
-      "reason": "score 5: Satya Nadella’s comments on reducing AI costs and expanding the ecosystem; useful insight but not a newsworthy breakthrough."
-    },
-    {
-      "title": "Republican Senate candidate Bert Mizusawa talks energy , immigration , AI , Trump at UVA Center for Politics",
-      "reason": "score 2: Political candidate discussing AI among other topics; not relevant as frontier AI news."
-    },
-    {
-      "title": "Bill Gates says to prepare for 20 years of ‘tumultuous’ AI disruption",
-      "reason": "score 5: Bill Gates’ commentary on a turbulent AI future; high‑profile but not a new development or policy."
-    },
-    {
-      "title": "Swiggy's net loss drops nearly 16% to Rs 922 Cr in Q2, revenue rises 36%",
-      "reason": "score 2: Swiggy financial results; unrelated to AI developments."
-    },
-    {
-      "title": "KSA Business : Humain , DataVolt join forces with Nebius to set up giga AI campus in NEOM",
-      "reason": "could not verify yet; will retry next run"
+      "title": "Anthropic unveils Claude Duet AI agent app",
+      "reason": "duplicate of 5dbb54a00540"
     }
   ],
   "written": [
     {
-      "id": "9aaacb38b57d",
-      "headline": "Schneider Electric, NVIDIA and HPE launch Industrial AI Agents at the Edge",
-      "category": "industry",
-      "summary": "Schneider Electric announced a strategic collaboration with NVIDIA and HPE to introduce Industrial AI Agents at the Edge, a suite of products that embed AI directly in industrial environments. The solution combines HPE Private Cloud AI with NVIDIA technology and Schneider’s operational expertise.",
-      "url": "https://globalcement.com/news/21395-schneider-electric-nvidia-and-hpe-to-work-together-on-applying-ai-to-the-real-world",
-      "sources": 3,
-      "quotes": 2
+      "id": "655df0fb22ac",
+      "headline": "DeepMind releases AlphaEarth Foundations to map global forest types in detail",
+      "category": "research",
+      "summary": "DeepMind’s AlphaEarth Foundations project provides a new dataset that classifies forest types worldwide, extending beyond simple tree‑cover maps. The effort aims to improve ecological monitoring and climate research.",
+      "url": "https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types",
+      "sources": 1,
+      "quotes": 0
     }
   ],
-  "notes": [
-    "1 kept item(s) carried over to the next run"
-  ],
+  "notes": [],
   "timings": {
-    "gather": 87.7,
-    "judge": 1.1,
-    "verify and write": 106.9,
-    "videos": 28.9,
-    "tagging": 20.4,
-    "explainers": 41.3,
+    "gather": 79.6,
+    "judge": 0.7,
+    "verify and write": 0.9,
+    "videos": 4.2,
+    "tagging": 0.4,
+    "explainers": 21.9,
     "model tracker": 0.1,
-    "weekly": 0.0,
-    "briefing": 21.1,
-    "self-review": -0.0,
-    "daily email": -0.0
+    "weekly": -0.0,
+    "briefing": 20.9,
+    "self-review": 0.0,
+    "daily email": 0.0
   },
-  "fetched": 2874,
-  "fresh": 10,
-  "judged": 10,
-  "kept": 2,
-  "research": {
-    "investigated": 2,
-    "confirmed": 1,
-    "tool_calls": 6
-  },
-  "research_log": [
-    "KSA Business : Humain , DataVolt join forces with Nebius to set up gig: unconfirmed (searched “Humain DataVolt Nebius giga AI campus NEOM”; read arabnews.com; read arabnews.com)",
-    "Schneider Electric , NVIDIA and HPE to work together on applying AI to: confirmed (searched “Schneider Electric NVIDIA HPE AI real world cement”; read businessinsider.com; read advancedmanufacturing.org)"
-  ],
+  "fetched": 2856,
+  "fresh": 3,
+  "judged": 3,
+  "kept": 1,
   "videos": {
-    "OpenAI": "ok (12 in feed, 2 new)",
+    "OpenAI": "ok (12 in feed, 1 new)",
     "Anthropic": "ok (12 in feed, 1 new)",
-    "Google DeepMind": "ok (12 in feed, 2 new)",
-    "Google for Developers": "ok (7 in feed, 2 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (7 in feed, 0 new)",
     "AI at Meta": "ok (4 in feed, 2 new)",
     "Microsoft Research": "ok (8 in feed, 1 new)",
     "NVIDIA": "ok (12 in feed, 0 new)",
-    "Hugging Face": "ok (12 in feed, 6 new)",
+    "Hugging Face": "ok (12 in feed, 4 new)",
     "Mistral AI": "ok (0 in feed, 0 new)",
     "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 4 new)",
-    "AI Explained": "ok (15 in feed, 3 new)",
+    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "AI Explained": "ok (15 in feed, 2 new)",
     "Lex Fridman": "ok (14 in feed, 1 new)",
     "Dwarkesh Patel": "ok (15 in feed, 15 new)",
-    "No Priors": "ok (3 in feed, 3 new)",
-    "Latent Space": "ok (14 in feed, 14 new)",
+    "No Priors": "ok (3 in feed, 2 new)",
+    "Latent Space": "ok (14 in feed, 10 new)",
     "Training Data (Sequoia)": "ok (6 in feed, 4 new)",
-    "a16z": "ok (15 in feed, 3 new)",
-    "Big Technology Podcast": "ok (11 in feed, 11 new)",
+    "a16z": "ok (15 in feed, 2 new)",
+    "Big Technology Podcast": "ok (11 in feed, 9 new)",
     "Hard Fork": "ok (2 in feed, 2 new)",
     "The Cognitive Revolution": "ok (9 in feed, 0 new)",
     "Lenny's Podcast": "ok (2 in feed, 2 new)",
     "20VC": "ok (3 in feed, 3 new)"
   },
-  "videos_kept": "18 kept from 30 new",
+  "videos_kept": "4 kept from 23 new",
   "tagged": 1,
   "explainers": "2 added to earlier stories",
-  "model_tracker": "82 models, 0 changes today",
-  "briefing": "3 themes from 20 stories",
-  "ai_requests_run": 17,
-  "ai_tokens_run": 41201,
-  "ai_requests_today": 261,
-  "provider_log": [
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
-  ]
+  "model_tracker": "82 models, 2 changes today",
+  "briefing": "4 themes from 20 stories",
+  "ai_requests_run": 8,
+  "ai_tokens_run": 19735,
+  "ai_requests_today": 269,
+  "provider_log": []
 }
