@@ -107,8 +107,11 @@ export function parseNewsRss(xml, kind) {
 }
 
 async function webNews(q) {
+  // the biggest stories (relevance), the newest ones, and Google News for breadth; a story found by
+  // several feeds ranks higher, so a major event a week ago isn't crowded out by today's minor items
   const enc = encodeURIComponent(q);
   const feeds = [
+    ["bing", `https://www.bing.com/news/search?q=${enc}&format=rss&setlang=en-us`],
     ["bing", `https://www.bing.com/news/search?q=${enc}&format=rss&setlang=en-us&qft=sortbydate%3d%221%22`],
     ["google", `https://news.google.com/rss/search?q=${enc}%20when:30d&hl=en-US&gl=US&ceid=US:en`],
   ];
@@ -118,14 +121,16 @@ async function webNews(q) {
       return r.ok ? parseNewsRss(await r.text(), kind) : [];
     } catch (e) { return []; }
   }));
-  const seen = new Set(), merged = [];
-  for (const it of results.flat()) {
-    const key = it.title.toLowerCase().replace(/[^a-z0-9]+/g, " ").slice(0, 60);
-    if (seen.has(key)) continue;
-    seen.add(key);
-    merged.push(it);
-  }
-  return merged.sort((a, b) => (b.date || "").localeCompare(a.date || "")).slice(0, 10);
+  const byKey = new Map();
+  results.forEach((list, f) => list.forEach((it, rankInFeed) => {
+    const key = it.title.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().slice(0, 60);
+    const score = (f === 1 ? 0.6 : 1) * (1 / (1 + rankInFeed * 0.15));
+    const cur = byKey.get(key);
+    if (cur) { cur.score += score; if (!cur.snippet && it.snippet) cur.snippet = it.snippet; }
+    else byKey.set(key, { ...it, score });
+  }));
+  const top = [...byKey.values()].sort((a, b) => b.score - a.score).slice(0, 14);
+  return top.sort((a, b) => (b.date || "").localeCompare(a.date || "")).map(({ score, ...it }) => it);
 }
 
 const WEB_SYSTEM = `You are Frontier Wire's research assistant. Our own fact-checked archive doesn't cover this question,
