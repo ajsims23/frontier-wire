@@ -88,6 +88,7 @@ jobs:
       - name: Record the API address
         if: steps.setup.outputs.ready == 'true'
         run: |
+          git checkout -- worker/wrangler.toml   # undo the database id filled in for this deploy
           git config user.name "frontier-wire-bot"
           git config user.email "frontier-wire-bot@users.noreply.github.com"
           tail -n 25 worker/deploy.log | sed 's/[A-Za-z0-9_-]\{40,\}/[hidden]/g' > worker/last-deploy.txt   # for troubleshooting
@@ -95,5 +96,5 @@ jobs:
           [ -f config/api_url.txt ] && git add config/api_url.txt
           if ! git diff --cached --quiet; then
             git commit -m "API address updated"
-            git pull --rebase --autostash origin main && git push
+            git pull --rebase origin main && git push
           fi
