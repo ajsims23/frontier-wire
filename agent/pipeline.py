@@ -8,7 +8,7 @@ from typing import Any
 from . import prompts as P
 from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
-from . import editorial, newsletter, opportunities, tagging
+from . import editorial, newsletter, tagging
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather
 from .store import Store
@@ -476,8 +476,6 @@ class Newsroom:
         steps = (
             ("tagging", tagging.tag_stories),
             ("briefing", editorial.write_briefing),
-            ("job boards", lambda r: opportunities.update_jobs(r, r.cfg.extra.get("job_boards", []))),
-            ("courses", lambda r: opportunities.update_courses(r, getattr(r, "_pool", []))),
             ("self-review", editorial.self_review),
             ("daily email", newsletter.maybe_send),
         )
@@ -520,10 +518,6 @@ def summary_markdown(report: dict[str, Any]) -> str:
         lines.append(f"Tagged {report['tagged']} stories by sector, region and deal")
     if report.get("india_briefing"):
         lines.append(f"India briefing: {report['india_briefing']}")
-    if report.get("courses"):
-        lines.append(f"Courses: {report['courses']}")
-    if report.get("job_boards"):
-        lines.append("Job boards: " + ", ".join(f"{k} {v}" for k, v in report["job_boards"].items()))
     if report.get("newsletter"):
         lines.append(f"Daily email {report['newsletter']}")
     if report.get("self_review"):

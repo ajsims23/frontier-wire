@@ -32,7 +32,6 @@ class Store:
         self.threads: dict[str, dict[str, Any]] = _read(data_dir / "threads.json", {})
         self.briefing: dict[str, Any] = _read(data_dir / "briefing.json", {})
         self.desk_briefings: dict[str, Any] = _read(data_dir / "desk_briefings.json", {})
-        self.opportunities: dict[str, Any] = _read(data_dir / "opportunities.json", {})
         self.review_state: dict[str, Any] = _read(data_dir / "review_state.json", {})
         self.newsletter_state: dict[str, Any] = _read(data_dir / "newsletter_state.json", {})
 
@@ -67,7 +66,6 @@ class Store:
         _write(self.dir / "threads.json", self.threads)
         _write(self.dir / "briefing.json", self.briefing)
         _write(self.dir / "desk_briefings.json", self.desk_briefings)
-        _write(self.dir / "opportunities.json", self.opportunities)
         _write(self.dir / "review_state.json", self.review_state)
         _write(self.dir / "newsletter_state.json", self.newsletter_state)
         _write(self.dir / "site.json", site)

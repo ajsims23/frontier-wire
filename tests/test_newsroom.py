@@ -433,7 +433,7 @@ def test_daily_email_once_per_day(tmp_path, monkeypatch):
     assert sent == []
 
 
-def test_desks_tagging_india_jobs_courses(tmp_path):
+def test_desks_tagging_india(tmp_path):
     room, _ = make(tmp_path)
     report = room.run()
     stories = {s["headline"]: s for s in json.loads((tmp_path / "stories.json").read_text())}
@@ -450,16 +450,6 @@ def test_desks_tagging_india_jobs_courses(tmp_path):
     # India briefing needs at least 2 India stories; with only one it waits
     assert "india" not in json.loads((tmp_path / "desk_briefings.json").read_text())
 
-    opp = json.loads((tmp_path / "opportunities.json").read_text())
-    # jobs from official boards: counts, India-located and internship roles; a broken board is reported, not fatal
-    assert opp["jobs"]["Example Lab"]["total"] == 3
-    assert [j["title"] for j in opp["jobs"]["Example Lab"]["india"]] == ["Applied AI Engineer"]
-    assert [j["title"] for j in opp["jobs"]["Example Lab"]["interns"]] == ["Research Intern, Summer 2027"]
-    assert opp["jobs"]["Other Lab"]["newest"][0]["remote"] is True
-    assert report["job_boards"]["Broken Lab"].startswith("failed")
-    # courses: the real course kept with its details; non-courses remembered so they aren't re-checked
-    assert [c["title"] for c in opp["courses"]] == ["Example Lab launches free course on building AI agents"]
-    assert opp["courses"][0]["cost"] == "free" and opp["courses"][0]["level"] == "beginner"
 
 
 def test_desk_pages_build(tmp_path):
@@ -469,16 +459,15 @@ def test_desk_pages_build(tmp_path):
     out = tmp_path / "site"
     build(out, data_dir=tmp_path / "data", now=NOW + timedelta(hours=1))
     india = (out / "india" / "index.html").read_text()
-    assert "AI in India" in india and "IndicAI" in india and "Applied AI Engineer" in india  # India stories + India-based roles
+    assert "AI in India" in india and "IndicAI" in india
     biz = (out / "business" / "index.html").read_text()
     assert "Deals tracker" in biz and "$20 million" in biz and "$5 billion" not in biz      # only verified amounts
-    opp = (out / "opportunities" / "index.html").read_text()
-    assert "Research Intern, Summer 2027" in opp and "Example Lab launches free course" in opp
+    assert not (out / "opportunities").exists()
     assert (out / "sector" / "government" / "index.html").exists() and "City council" in (out / "sector" / "government" / "index.html").read_text()
     sectors = (out / "sectors" / "index.html").read_text()
     assert "Stories by sector" in sectors
     desks = json.loads((out / "data" / "desks.json").read_text())
-    assert desks["opportunities"]["roles"] == 4 and desks["opportunities"]["india"] == 1 and desks["india"]["count7"] >= 1
+    assert "opportunities" not in desks and desks["india"]["count7"] >= 1
     assert "https://example.github.io" not in (out / "india" / "index.html").read_text() or True
 
 

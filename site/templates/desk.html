@@ -37,15 +37,6 @@
   </section>
   {% endif %}
 
-  {% if extra_jobs %}
-  <section class="block" aria-labelledby="ij-h">
-    <div class="block-head"><h2 id="ij-h">AI roles based in India</h2><p>Open now at AI labs, from their official job boards.</p></div>
-    <ul class="job-list">
-      {% for j in extra_jobs %}<li><a href="{{ j.url }}" rel="noopener" data-goatcounter-click="out-job"><span class="strong">{{ j.title }}</span><span class="muted">{{ j.company }}, {{ j.location }}</span></a></li>{% endfor %}
-    </ul>
-    <p><a class="text-link" href="{{ root }}opportunities/">All AI jobs and courses</a></p>
-  </section>
-  {% endif %}
 
   <section class="block" aria-labelledby="tl-h">
     <div class="block-head"><h2 id="tl-h">{{ list_title|default("Stories") }}</h2><p>{{ list_sub|default("Newest first.") }}</p></div>

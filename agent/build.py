@@ -100,7 +100,6 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     home: dict = read("site.json", {"stories": [], "labs": [], "stats": {}})
     threads: dict = read("threads.json", {})
     labs_info: dict = read("labs.json", {})
-    opp: dict = read("opportunities.json", {})
     desk_briefs: dict = read("desk_briefings.json", {})
     by_id = {s["id"]: s for s in stories}
 
@@ -181,7 +180,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
         lab_index.append({"lab": lab, "slug": slug(lab), "count7": sum(1 for s in items if _dt(s["published_at"]) >= now - timedelta(days=7))})
 
 
-    # ---------------------------------------------------------------- desks: India, Business, Opportunities, Sectors
+    # ---------------------------------------------------------------- desks: India, Business, Sectors
     def listing(items: list[dict]) -> list[dict]:
         return [{**it, "date": short_date(it["published_at"]), "cat_name": TAG.get(it["category"], "")} for it in items]
 
@@ -202,7 +201,6 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     # India
     from .editorial import is_india
     india = [s for s in newest_first if is_india(s)]
-    india_jobs = [{**j, "company": c} for c, v in (opp.get("jobs") or {}).items() for j in v.get("india", [])][:12]
     india_cos: dict[str, int] = {}
     for s in india:
         for name in filter(None, [(s.get("deal") or {}).get("company"), s.get("lab")]):
@@ -212,14 +210,13 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
          canonical=f"{base}india/", og_image=f"{base}og/home.png",
          intro="Indian AI startups and funding, government policy, and how Indian companies are adopting AI. From Indian outlets and global coverage, every story checked against its sources.",
          stats=[{"label": "India stories in 30 days", "value": sum(1 for s in india if _dt(s["published_at"]) >= month)},
-                {"label": "Funding and deals", "value": sum(1 for s in india if s.get("deal"))},
-                {"label": "AI lab roles in India", "value": len(india_jobs), "href": "../opportunities/#ind-h"}],
+                {"label": "Funding and deals", "value": sum(1 for s in india if s.get("deal"))}],
          desk_brief=desk_briefs.get("india"), brief_title="India today",
          chart=activity_chart(india, now), chart_caption="India stories per day, last 30 days",
          chart_label=f"{len(india)} India stories",
          bars=bars([(k, v, "") for k, v in sorted(india_cos.items(), key=lambda kv: -kv[1])[:7]]),
          bars_caption="Companies in the news", bars_sub="India stories",
-         extra_jobs=india_jobs[:8], items=listing(india[:40]), list_title="India stories",
+         items=listing(india[:40]), list_title="India stories",
          empty_text="India stories appear here as the newsroom finds them.")
 
     # Business
@@ -244,21 +241,6 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
          deals=[{"id": s["id"], "date": short_date(s["published_at"]), "company": s["deal"].get("company"), "type_name": deal_names[s["deal"]["type"]],
                  "amount": s["deal"].get("amount"), "headline": s["headline"]} for s in deals[:30]],
          items=listing(biz[:40]), list_title="Business stories", empty_text="Business stories appear here as the newsroom finds them.")
-
-    # Opportunities
-    jobs = opp.get("jobs") or {}
-    all_roles = [{**j, "company": c} for c, v in jobs.items() for j in v.get("newest", [])]
-    boards = {b["company"]: b for b in cfg.extra.get("job_boards", [])}
-    page("opportunities", "opportunities.html", title="AI jobs, internships and courses | Frontier Wire",
-         description="Open roles and internships at AI labs from their official job boards, plus new AI courses and certifications.",
-         canonical=f"{base}opportunities/", og_image=f"{base}og/home.png",
-         labs_count=len(jobs), total_roles=sum(v.get("total", 0) for v in jobs.values()),
-         role_bars=bars(sorted(((c, v.get("total", 0), v.get("careers", "")) for c, v in jobs.items()), key=lambda r: -r[1])),
-         newest=sorted(all_roles, key=lambda j: j.get("posted", ""), reverse=True)[:10],
-         interns=[{**j, "company": c} for c, v in jobs.items() for j in v.get("interns", [])][:40],
-         india=[{**j, "company": c} for c, v in jobs.items() for j in v.get("india", [])][:40],
-         courses=[{**c, "found": short_date(c["found_at"])} for c in opp.get("courses", [])],
-         labs=[{"company": c, "total": v.get("total", 0), "careers": v.get("careers", ""), "board": ""} for c, v in sorted(jobs.items())])
 
     # Sectors
     sector_rows = []
@@ -286,9 +268,6 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
         "business": {"deals7": sum(1 for s in deals if _dt(s["published_at"]) >= week),
                      "days": [b["n"] for b in activity_chart(deals, now, days=14)["bars"]],
                      "largest": ({"amount": disclosed[0]["deal"]["amount"], "company": disclosed[0]["deal"]["company"], "id": disclosed[0]["id"]} if disclosed else None)},
-        "opportunities": {"roles": sum(v.get("total", 0) for v in jobs.values()), "labs": len(jobs),
-                          "interns": sum(len(v.get("interns", [])) for v in jobs.values()),
-                          "india": sum(len(v.get("india", [])) for v in jobs.values()), "courses": len(opp.get("courses", []))},
         "sectors": [{"slug": r["slug"], "name": r["name"], "count": r["count"]} for r in sector_rows if r["count"]][:5],
     }
     (out / "data" / "desks.json").write_text(json.dumps(desks_summary, ensure_ascii=False))

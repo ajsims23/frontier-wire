@@ -82,5 +82,5 @@ def load_config(config_dir: Path | None = None, data_dir: Path | None = None) ->
         lab_domains=src.get("lab_domains", {}),
         data_dir=Path(data_dir or os.environ.get("DATA_DIR") or ROOT / "data"),
         review_mode=_env_bool("REVIEW_MODE", settings.get("review_mode", True)),
-        extra={"lab_aliases": src.get("lab_aliases", {}), "job_boards": src.get("job_boards", [])},
+        extra={"lab_aliases": src.get("lab_aliases", {})},
     )
