@@ -1,0 +1,1099 @@
+{
+  "models": [
+    {
+      "id": "deepseek/deepseek-v4.1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "lab": "DeepSeek",
+      "released": "2026-10-17",
+      "context": 1048576,
+      "price_in": 0.15,
+      "price_out": 0.6,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "nvidia/nemotron-3.5-super-vl",
+      "name": "Nemotron 3.5 Super VL",
+      "lab": "NVIDIA",
+      "released": "2026-10-15",
+      "context": 1048576,
+      "price_in": 0.15,
+      "price_out": 0.5,
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ]
+    },
+    {
+      "id": "google/gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "lab": "Google",
+      "released": "2026-10-13",
+      "context": 1048576,
+      "price_in": 2.0,
+      "price_out": 10.0,
+      "inputs": [
+        "audio",
+        "file",
+        "image",
+        "text",
+        "video"
+      ]
+    },
+    {
+      "id": "google/gemini-4-argon:batch",
+      "name": "Gemini 4 Argon (batch)",
+      "lab": "Google",
+      "released": "2026-10-13",
+      "context": 1048576,
+      "price_in": 1.0,
+      "price_out": 5.0,
+      "inputs": [
+        "audio",
+        "file",
+        "image",
+        "text",
+        "video"
+      ]
+    },
+    {
+      "id": "anthropic/claude-haiku-5.5",
+      "name": "Claude Haiku 5.5",
+      "lab": "Anthropic",
+      "released": "2026-10-07",
+      "context": 1000000,
+      "price_in": 0.1,
+      "price_out": 0.5,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "anthropic/claude-haiku-5.5:batch",
+      "name": "Claude Haiku 5.5 (batch)",
+      "lab": "Anthropic",
+      "released": "2026-10-07",
+      "context": 1000000,
+      "price_in": 0.05,
+      "price_out": 0.25,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "google/gemini-nano-banana-2.1",
+      "name": "Nano Banana 2.1",
+      "lab": "Google",
+      "released": "2026-10-06",
+      "context": 65536,
+      "price_in": 1.5,
+      "price_out": 7.5,
+      "inputs": [
+        "image",
+        "text"
+      ]
+    },
+    {
+      "id": "mistralai/mistral-large-4-0",
+      "name": "Mistral Large 4",
+      "lab": "Mistral AI",
+      "released": "2026-10-06",
+      "context": 1048576,
+      "price_in": 1.36,
+      "price_out": 4.18,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "openai/gpt-6.1-sol-pro",
+      "name": "GPT-6.1 Sol Pro",
+      "lab": "OpenAI",
+      "released": "2026-09-29",
+      "context": 1050000,
+      "price_in": 2.0,
+      "price_out": 10.0,
+      "inputs": [
+        "file",
+        "image",
+        "text"
+      ]
+    },
+    {
+      "id": "openai/gpt-6.1-sol-pro:batch",
+      "name": "GPT-6.1 Sol Pro (batch)",
+      "lab": "OpenAI",
+      "released": "2026-09-29",
+      "context": 1050000,
+      "price_in": 1.0,
+      "price_out": 5.0,
+      "inputs": [
+        "file",
+        "image",
+        "text"
+      ]
+    },
+    {
+      "id": "openai/gpt-6.1-sol",
+      "name": "GPT-6.1 Sol",
+      "lab": "OpenAI",
+      "released": "2026-09-29",
+      "context": 1050000,
+      "price_in": 2.0,
+      "price_out": 10.0,
+      "inputs": [
+        "file",
+        "image",
+        "text"
+      ]
+    },
+    {
+      "id": "openai/gpt-6.1-sol:batch",
+      "name": "GPT-6.1 Sol (batch)",
+      "lab": "OpenAI",
+      "released": "2026-09-29",
+      "context": 1050000,
+      "price_in": 1.0,
+      "price_out": 5.0,
+      "inputs": [
+        "file",
+        "image",
+        "text"
+      ]
+    },
+    {
+      "id": "anthropic/claude-sonnet-5.5",
+      "name": "Claude Sonnet 5.5",
+      "lab": "Anthropic",
+      "released": "2026-09-28",
+      "context": 1000000,
+      "price_in": 2.0,
+      "price_out": 10.0,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "anthropic/claude-sonnet-5.5:batch",
+      "name": "Claude Sonnet 5.5 (batch)",
+      "lab": "Anthropic",
+      "released": "2026-09-28",
+      "context": 1000000,
+      "price_in": 1.0,
+      "price_out": 5.0,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "qwen/qwen3.8-max-prime",
+      "name": "Qwen3.8 Max Prime",
+      "lab": "Alibaba (Qwen)",
+      "released": "2026-09-23",
+      "context": 1000000,
+      "price_in": 4.0,
+      "price_out": 12.0,
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ]
+    },
+    {
+      "id": "z-ai/glm-5.3-prime",
+      "name": "GLM 5.3 Prime",
+      "lab": "Zhipu AI",
+      "released": "2026-09-23",
+      "context": 1000000,
+      "price_in": 2.8,
+      "price_out": 8.8,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "anthropic/claude-opus-5.5",
+      "name": "Claude Opus 5.5",
+      "lab": "Anthropic",
+      "released": "2026-09-22",
+      "context": 1000000,
+      "price_in": 4.0,
+      "price_out": 20.0,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "anthropic/claude-opus-5.5:batch",
+      "name": "Claude Opus 5.5 (batch)",
+      "lab": "Anthropic",
+      "released": "2026-09-22",
+      "context": 1000000,
+      "price_in": 2.0,
+      "price_out": 10.0,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "cohere/command-a-plus",
+      "name": "Command A+",
+      "lab": "Cohere",
+      "released": "2026-09-22",
+      "context": 192000,
+      "price_in": 0.3,
+      "price_out": 1.5,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "openai/gpt-6-luna-pro",
+      "name": "GPT-6 Luna Pro",
+      "lab": "OpenAI",
+      "released": "2026-09-22",
+      "context": 1050000,
+      "price_in": 0.1,
+      "price_out": 0.5,
+      "inputs": [
+        "file",
+        "image",
+        "text"
+      ]
+    },
+    {
+      "id": "openai/gpt-6-luna-pro:batch",
+      "name": "GPT-6 Luna Pro (batch)",
+      "lab": "OpenAI",
+      "released": "2026-09-22",
+      "context": 1050000,
+      "price_in": 0.05,
+      "price_out": 0.25,
+      "inputs": [
+        "file",
+        "image",
+        "text"
+      ]
+    },
+    {
+      "id": "qwen/qwen3.8-omni-flash",
+      "name": "Qwen3.8 Omni Flash",
+      "lab": "Alibaba (Qwen)",
+      "released": "2026-09-21",
+      "context": 1000000,
+      "price_in": 0.15,
+      "price_out": 0.47,
+      "inputs": [
+        "text",
+        "image",
+        "audio",
+        "video"
+      ]
+    },
+    {
+      "id": "x-ai/grok-4.7",
+      "name": "Grok 4.7",
+      "lab": "xAI",
+      "released": "2026-09-21",
+      "context": 500000,
+      "price_in": 2.0,
+      "price_out": 6.0,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "z-ai/glm-5.3-flashx",
+      "name": "GLM 5.3 FlashX",
+      "lab": "Zhipu AI",
+      "released": "2026-09-18",
+      "context": 1048576,
+      "price_in": 0.37,
+      "price_out": 1.25,
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ]
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "lab": "DeepSeek",
+      "released": "2026-09-10",
+      "context": 1048576,
+      "price_in": 0.3,
+      "price_out": 1.2,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash:batch",
+      "name": "DeepSeek V4.1 Flash (batch)",
+      "lab": "DeepSeek",
+      "released": "2026-09-10",
+      "context": 1048576,
+      "price_in": 0.05,
+      "price_out": 0.15,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "qwen/qwen3.8-max-0902",
+      "name": "Qwen3.8 Max (0902)",
+      "lab": "Alibaba (Qwen)",
+      "released": "2026-09-03",
+      "context": 1000000,
+      "price_in": 2.0,
+      "price_out": 6.0,
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ]
+    },
+    {
+      "id": "google/gemini-3.8-flash",
+      "name": "Gemini 3.8 Flash",
+      "lab": "Google",
+      "released": "2026-09-02",
+      "context": 1048576,
+      "price_in": 0.825,
+      "price_out": 4.125,
+      "inputs": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "audio"
+      ]
+    },
+    {
+      "id": "google/gemini-3.8-flash:batch",
+      "name": "Gemini 3.8 Flash (batch)",
+      "lab": "Google",
+      "released": "2026-09-02",
+      "context": 1048576,
+      "price_in": 0.375,
+      "price_out": 1.875,
+      "inputs": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "audio"
+      ]
+    },
+    {
+      "id": "qwen/qwen3.8-flash",
+      "name": "Qwen3.8 Flash",
+      "lab": "Alibaba (Qwen)",
+      "released": "2026-08-26",
+      "context": 1000000,
+      "price_in": 0.15,
+      "price_out": 0.47,
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ]
+    },
+    {
+      "id": "z-ai/glm-5.3-flash",
+      "name": "GLM 5.3 Flash",
+      "lab": "Zhipu AI",
+      "released": "2026-08-26",
+      "context": 1048576,
+      "price_in": 0.0052,
+      "price_out": 0.1985,
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ]
+    },
+    {
+      "id": "z-ai/glm-5.3-flash:batch",
+      "name": "GLM 5.3 Flash (batch)",
+      "lab": "Zhipu AI",
+      "released": "2026-08-26",
+      "context": 1048576,
+      "price_in": 0.05,
+      "price_out": 0.18,
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ]
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-vision-exp",
+      "name": "DeepSeek V4 Flash Vision Exp",
+      "lab": "DeepSeek",
+      "released": "2026-08-21",
+      "context": 1048576,
+      "price_in": 0.2156,
+      "price_out": 0.6468,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "z-ai/glm-5.3",
+      "name": "GLM 5.3",
+      "lab": "Zhipu AI",
+      "released": "2026-08-18",
+      "context": 1048576,
+      "price_in": 0.079,
+      "price_out": 1.4,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "z-ai/glm-5.3:batch",
+      "name": "GLM 5.3 (batch)",
+      "lab": "Zhipu AI",
+      "released": "2026-08-18",
+      "context": 1048576,
+      "price_in": 0.45,
+      "price_out": 2.0,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "qwen/qwen3.8-27b",
+      "name": "Qwen3.8 27B",
+      "lab": "Alibaba (Qwen)",
+      "released": "2026-08-14",
+      "context": 1000000,
+      "price_in": 0.04,
+      "price_out": 1.35,
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ]
+    },
+    {
+      "id": "google/gemini-3.7-flash",
+      "name": "Gemini 3.7 Flash",
+      "lab": "Google",
+      "released": "2026-08-13",
+      "context": 1048576,
+      "price_in": 0.75,
+      "price_out": 3.75,
+      "inputs": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "audio"
+      ]
+    },
+    {
+      "id": "qwen/qwen3.8-2.4t-a95b",
+      "name": "Qwen3.8 2.4T A95B",
+      "lab": "Alibaba (Qwen)",
+      "released": "2026-08-12",
+      "context": 1048576,
+      "price_in": 2.0,
+      "price_out": 6.0,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro-0813",
+      "name": "DeepSeek V4 Pro 0813",
+      "lab": "DeepSeek",
+      "released": "2026-08-12",
+      "context": 1048576,
+      "price_in": 0.66,
+      "price_out": 1.98,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "x-ai/grok-4.6",
+      "name": "Grok 4.6",
+      "lab": "xAI",
+      "released": "2026-08-12",
+      "context": 500000,
+      "price_in": 2.0,
+      "price_out": 6.0,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning",
+      "name": "Nemotron 3.5 Lightning",
+      "lab": "NVIDIA",
+      "released": "2026-08-11",
+      "context": 262144,
+      "price_in": 0.07,
+      "price_out": 0.2,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "deepseek/deepseek-v4-flash-0731",
+      "name": "DeepSeek V4 Flash 0731",
+      "lab": "DeepSeek",
+      "released": "2026-07-31",
+      "context": 1048576,
+      "price_in": 0.0444,
+      "price_out": 0.1333,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "moonshotai/kimi-k3",
+      "name": "Kimi K3",
+      "lab": "Moonshot AI",
+      "released": "2026-07-16",
+      "context": 1048576,
+      "price_in": 0.239,
+      "price_out": 11.936,
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ]
+    },
+    {
+      "id": "moonshotai/kimi-k3:batch",
+      "name": "Kimi K3 (batch)",
+      "lab": "Moonshot AI",
+      "released": "2026-07-16",
+      "context": 1048576,
+      "price_in": 2.28,
+      "price_out": 11.4,
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ]
+    },
+    {
+      "id": "x-ai/grok-4.5",
+      "name": "Grok 4.5",
+      "lab": "xAI",
+      "released": "2026-07-08",
+      "context": 500000,
+      "price_in": 2.0,
+      "price_out": 6.0,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "moonshotai/kimi-k2.7-code",
+      "name": "Kimi K2.7 Code",
+      "lab": "Moonshot AI",
+      "released": "2026-06-12",
+      "context": 262144,
+      "price_in": 0.6712,
+      "price_out": 3.35,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "nvidia/nemotron-3.5-content-safety",
+      "name": "Nemotron 3.5 Content Safety",
+      "lab": "NVIDIA",
+      "released": "2026-06-04",
+      "context": 131072,
+      "price_in": 0.2,
+      "price_out": 0.2,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "name": "Nemotron 3 Ultra",
+      "lab": "NVIDIA",
+      "released": "2026-06-04",
+      "context": 262144,
+      "price_in": 0.6,
+      "price_out": 2.4,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "x-ai/grok-build-0.1",
+      "name": "Grok Build 0.1",
+      "lab": "xAI",
+      "released": "2026-05-20",
+      "context": 256000,
+      "price_in": 1.0,
+      "price_out": 2.0,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "mistralai/mistral-medium-3-5",
+      "name": "Mistral Medium 3.5",
+      "lab": "Mistral AI",
+      "released": "2026-04-30",
+      "context": 262144,
+      "price_in": 1.5,
+      "price_out": 7.5,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "mistralai/mistral-medium-3-5:batch",
+      "name": "Mistral Medium 3.5 (batch)",
+      "lab": "Mistral AI",
+      "released": "2026-04-30",
+      "context": 262144,
+      "price_in": 0.75,
+      "price_out": 3.75,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "x-ai/grok-4.3",
+      "name": "Grok 4.3",
+      "lab": "xAI",
+      "released": "2026-04-30",
+      "context": 1000000,
+      "price_in": 1.25,
+      "price_out": 2.5,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "x-ai/grok-4.3:batch",
+      "name": "Grok 4.3 (batch)",
+      "lab": "xAI",
+      "released": "2026-04-30",
+      "context": 1000000,
+      "price_in": 1.0,
+      "price_out": 2.0,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "moonshotai/kimi-k2.6",
+      "name": "Kimi K2.6",
+      "lab": "Moonshot AI",
+      "released": "2026-04-20",
+      "context": 262144,
+      "price_in": 0.65,
+      "price_out": 3.41,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "mistralai/mistral-small-2603",
+      "name": "Mistral Small 4",
+      "lab": "Mistral AI",
+      "released": "2026-03-16",
+      "context": 262144,
+      "price_in": 0.15,
+      "price_out": 0.6,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "mistralai/mistral-small-2603:batch",
+      "name": "Mistral Small 4 (batch)",
+      "lab": "Mistral AI",
+      "released": "2026-03-16",
+      "context": 262144,
+      "price_in": 0.075,
+      "price_out": 0.3,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "nvidia/nemotron-3-super-120b-a12b",
+      "name": "Nemotron 3 Super",
+      "lab": "NVIDIA",
+      "released": "2026-03-11",
+      "context": 262144,
+      "price_in": 0.3,
+      "price_out": 2.4,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "moonshotai/kimi-k2.5",
+      "name": "Kimi K2.5",
+      "lab": "Moonshot AI",
+      "released": "2026-01-27",
+      "context": 262144,
+      "price_in": 0.5,
+      "price_out": 2.5,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "nvidia/nemotron-3-nano-30b-a3b",
+      "name": "Nemotron 3 Nano 30B A3B",
+      "lab": "NVIDIA",
+      "released": "2025-12-14",
+      "context": 262144,
+      "price_in": 0.06,
+      "price_out": 0.24,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "mistralai/devstral-2512",
+      "name": "Devstral 2 2512",
+      "lab": "Mistral AI",
+      "released": "2025-12-09",
+      "context": 262144,
+      "price_in": 0.4,
+      "price_out": 2.0,
+      "inputs": [
+        "text",
+        "file"
+      ]
+    },
+    {
+      "id": "amazon/nova-2-lite-v1",
+      "name": "Nova 2 Lite",
+      "lab": "Amazon",
+      "released": "2025-12-02",
+      "context": 1000000,
+      "price_in": 0.3,
+      "price_out": 2.5,
+      "inputs": [
+        "text",
+        "image",
+        "video",
+        "file"
+      ]
+    },
+    {
+      "id": "moonshotai/kimi-k2-thinking",
+      "name": "Kimi K2 Thinking",
+      "lab": "Moonshot AI",
+      "released": "2025-11-06",
+      "context": 262144,
+      "price_in": 0.6,
+      "price_out": 2.5,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "amazon/nova-premier-v1",
+      "name": "Nova Premier 1.0",
+      "lab": "Amazon",
+      "released": "2025-10-31",
+      "context": 1000000,
+      "price_in": 2.5,
+      "price_out": 12.5,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "perplexity/sonar-pro-search",
+      "name": "Sonar Pro Search",
+      "lab": "Perplexity",
+      "released": "2025-10-30",
+      "context": 200000,
+      "price_in": 3.0,
+      "price_out": 15.0,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "meta-llama/llama-4-maverick",
+      "name": "Llama 4 Maverick",
+      "lab": "Meta",
+      "released": "2025-04-05",
+      "context": 524288,
+      "price_in": 0.1875,
+      "price_out": 0.6525,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "meta-llama/llama-4-scout",
+      "name": "Llama 4 Scout",
+      "lab": "Meta",
+      "released": "2025-04-05",
+      "context": 1310720,
+      "price_in": 0.1,
+      "price_out": 0.3,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "cohere/command-a",
+      "name": "Command A",
+      "lab": "Cohere",
+      "released": "2025-03-13",
+      "context": 256000,
+      "price_in": 2.5,
+      "price_out": 10.0,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "perplexity/sonar-reasoning-pro",
+      "name": "Sonar Reasoning Pro",
+      "lab": "Perplexity",
+      "released": "2025-03-07",
+      "context": 128000,
+      "price_in": 2.0,
+      "price_out": 8.0,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "perplexity/sonar-pro",
+      "name": "Sonar Pro",
+      "lab": "Perplexity",
+      "released": "2025-03-07",
+      "context": 200000,
+      "price_in": 3.0,
+      "price_out": 15.0,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "perplexity/sonar-deep-research",
+      "name": "Sonar Deep Research",
+      "lab": "Perplexity",
+      "released": "2025-03-07",
+      "context": 128000,
+      "price_in": 2.0,
+      "price_out": 8.0,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "perplexity/sonar",
+      "name": "Sonar",
+      "lab": "Perplexity",
+      "released": "2025-01-27",
+      "context": 127072,
+      "price_in": 1.0,
+      "price_out": 1.0,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "microsoft/phi-4",
+      "name": "Phi 4",
+      "lab": "Microsoft",
+      "released": "2025-01-10",
+      "context": 16384,
+      "price_in": 0.07,
+      "price_out": 0.14,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "cohere/command-r7b-12-2024",
+      "name": "Command R7B (12-2024)",
+      "lab": "Cohere",
+      "released": "2024-12-14",
+      "context": 128000,
+      "price_in": 0.0375,
+      "price_out": 0.15,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "meta-llama/llama-3.3-70b-instruct",
+      "name": "Llama 3.3 70B Instruct",
+      "lab": "Meta",
+      "released": "2024-12-06",
+      "context": 131072,
+      "price_in": 0.1,
+      "price_out": 0.32,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "amazon/nova-lite-v1",
+      "name": "Nova Lite 1.0",
+      "lab": "Amazon",
+      "released": "2024-12-05",
+      "context": 300000,
+      "price_in": 0.06,
+      "price_out": 0.24,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "amazon/nova-micro-v1",
+      "name": "Nova Micro 1.0",
+      "lab": "Amazon",
+      "released": "2024-12-05",
+      "context": 128000,
+      "price_in": 0.035,
+      "price_out": 0.14,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "amazon/nova-pro-v1",
+      "name": "Nova Pro 1.0",
+      "lab": "Amazon",
+      "released": "2024-12-05",
+      "context": 300000,
+      "price_in": 0.8,
+      "price_out": 3.2,
+      "inputs": [
+        "text",
+        "image"
+      ]
+    },
+    {
+      "id": "meta-llama/llama-3.2-1b-instruct",
+      "name": "Llama 3.2 1B Instruct",
+      "lab": "Meta",
+      "released": "2024-09-25",
+      "context": 60000,
+      "price_in": 0.027,
+      "price_out": 0.201,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "meta-llama/llama-3.2-3b-instruct",
+      "name": "Llama 3.2 3B Instruct",
+      "lab": "Meta",
+      "released": "2024-09-25",
+      "context": 131072,
+      "price_in": 0.0509,
+      "price_out": 0.335,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "cohere/command-r-08-2024",
+      "name": "Command R (08-2024)",
+      "lab": "Cohere",
+      "released": "2024-08-30",
+      "context": 128000,
+      "price_in": 0.15,
+      "price_out": 0.6,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "cohere/command-r-plus-08-2024",
+      "name": "Command R+ (08-2024)",
+      "lab": "Cohere",
+      "released": "2024-08-30",
+      "context": 128000,
+      "price_in": 2.5,
+      "price_out": 10.0,
+      "inputs": [
+        "text"
+      ]
+    },
+    {
+      "id": "meta-llama/llama-3.1-70b-instruct",
+      "name": "Llama 3.1 70B Instruct",
+      "lab": "Meta",
+      "released": "2024-07-23",
+      "context": 131072,
+      "price_in": 0.4,
+      "price_out": 0.4,
+      "inputs": [
+        "text"
+      ]
+    }
+  ],
+  "changes": [],
+  "updated_at": "2026-10-22T13:51:26+00:00"
+}
