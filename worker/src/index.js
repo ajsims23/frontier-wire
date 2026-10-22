@@ -64,7 +64,9 @@ async function llm(env, messages) {
   for (const p of providers) {
     try {
       const r = await fetch(p.url, { method: "POST", headers: { authorization: `Bearer ${p.key}`, "content-type": "application/json" },
-        body: JSON.stringify({ model: p.model, messages, max_tokens: 1800, temperature: 0.2 }) });
+        // gpt-oss models think before answering: keep the thinking short and leave room for the answer
+        body: JSON.stringify({ model: p.model, messages, max_tokens: 4000, temperature: 0.2,
+          ...(/gpt-oss/.test(p.model) ? { reasoning_effort: "low" } : {}) }) });
       if (!r.ok) continue;
       const data = await r.json();
       const text = (data.choices?.[0]?.message?.content || "").trim();
