@@ -49,7 +49,7 @@ class Fetcher(Protocol):
 class HttpFetcher:
     """Real HTTP fetcher (used in GitHub Actions)."""
 
-    def __init__(self, timeout: float = 20.0):
+    def __init__(self, timeout: float = 12.0):
         import httpx
 
         self._client = httpx.Client(timeout=timeout, follow_redirects=True, headers={"User-Agent": USER_AGENT})

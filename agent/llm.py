@@ -158,7 +158,7 @@ class LLM:
             self.log.append(f"{p['name']}: key rejected ({code}); skipping provider")
             self._dead_providers.add(p["name"])
             return "dead", None
-        if code in (400, 404) and re.search(r"model|decommission|not found|does not exist", resp.text, re.I):
+        if code in (400, 404) and re.search(r"model.{0,40}(not|unavailable|deprecat)|decommission|not found|does not exist", resp.text, re.I):
             self.log.append(f"{p['name']}/{model}: model unavailable ({code}); trying next model")
             self._dead_models.add((p["name"], model))
             return "next", None
@@ -166,15 +166,22 @@ class LLM:
             self.log.append(f"{p['name']}: {code} after retry; moving to next provider for this run")
             self._dead_providers.add(p["name"])
             return "dead", None
+        if code == 400 and tools and re.search(r"tool.?call|tool_choice", resp.text, re.I) and tool_choice != "auto":
+            self.log.append(f"{p['name']}/{model}: couldn't force a tool call; retrying without forcing")
+            return "unforced", None
         if code != 200:
             self.log.append(f"{p['name']}/{model}: HTTP {code}: {resp.text[:150]}")
             return "next", None
         data = resp.json()
         usage = data.get("usage") or {}
         self.limits.add(int(usage.get("total_tokens") or 0))
-        msg = (data.get("choices") or [{}])[0].get("message") or {}
+        choice = (data.get("choices") or [{}])[0]
+        msg = choice.get("message") or {}
         result = parse(msg)
         if result is None:
+            if choice.get("finish_reason") == "length":
+                self.log.append(f"{p['name']}/{model}: answer cut off; retrying with more room")
+                return "longer", None
             self.log.append(f"{p['name']}/{model}: unusable answer")
             return "retry", None
         return "ok", result
@@ -195,6 +202,8 @@ class LLM:
                     # Every listed model is gone or failing: ask the provider what it offers now.
                     if discovered or p["name"] in self._dead_providers:
                         break
+                    if not any((p["name"], m) in self._dead_models for m in tried):
+                        break  # models answered but badly: that's not retirement, so don't go model-hunting
                     discovered = True
                     queue = self._discover(p, tried)
                     if not queue:
@@ -204,10 +213,21 @@ class LLM:
                     continue
                 tried.add(model)
                 outcome, result = "retry", None
-                for _ in range(2):
-                    outcome, result = self._attempt(p, model, messages, tools, tool_choice, max_tokens, parse)
-                    if outcome != "retry":
-                        break
+                budget, choice, bad = max_tokens, tool_choice, 0
+                for _ in range(4):
+                    outcome, result = self._attempt(p, model, messages, tools, choice, budget, parse)
+                    if outcome == "longer" and budget < 12000:
+                        budget = min(budget * 2, 12000)
+                        continue
+                    if outcome == "unforced":
+                        choice = "auto"  # the parser also accepts JSON written in the reply text
+                        continue
+                    if outcome in ("retry", "longer"):
+                        bad += 1
+                        if bad < 2:
+                            continue
+                        outcome = "retry"
+                    break
                 if outcome == "ok":
                     return result
                 if outcome == "dead":
@@ -236,7 +256,8 @@ class LLM:
             return answer
 
         messages = [{"role": "system", "content": system}, {"role": "user", "content": prompt}]
-        return self._call(messages, [tool], {"type": "function", "function": {"name": schema_name}}, max_tokens, parse)
+        # reasoning models think before answering, so leave them room
+        return self._call(messages, [tool], {"type": "function", "function": {"name": schema_name}}, max(max_tokens, 2500), parse)
 
     def step(self, messages: list[dict[str, Any]], tools: list[dict[str, Any]], *, force: str | None = None,
              max_tokens: int = 1200) -> dict[str, Any]:

@@ -200,7 +200,8 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
         urls.append(f"{base}{path}/")
 
     # India
-    india = [s for s in newest_first if s.get("desk") == "india" or "india" in (s.get("regions") or [])]
+    from .editorial import is_india
+    india = [s for s in newest_first if is_india(s)]
     india_jobs = [{**j, "company": c} for c, v in (opp.get("jobs") or {}).items() for j in v.get("india", [])][:12]
     india_cos: dict[str, int] = {}
     for s in india:

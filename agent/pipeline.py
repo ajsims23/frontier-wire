@@ -192,7 +192,8 @@ class Newsroom:
         need = self.cfg.guardrails["min_independent_sources"]
         rcfg = self.cfg.settings.get("research", {})
         confirmed_enough = official or len(domains) >= need
-        if rcfg.get("enabled", True):
+        investigated = (self.report.get("research") or {}).get("investigated", 0)
+        if rcfg.get("enabled", True) and investigated < int(rcfg.get("max_stories", 5)):
             enrich = (confirmed_enough and score >= int(rcfg.get("enrich_min_score", 8))
                       and self._enriched < int(rcfg.get("enrich_top", 2)))
             if not confirmed_enough or enrich:
@@ -425,7 +426,12 @@ class Newsroom:
 
         # Kept stories not reached this run (per-run cap, limits) stay unseen so the next run picks them up.
         not_reached = {m.url for _, _, ms in kept for m in ms}
+        budget_s = float(self.cfg.run.get("write_time_budget_min", 14)) * 60
+        started_writing = _time.monotonic()
         for score, category, members in kept[: self.cfg.run["max_stories_per_run"]]:
+            if _time.monotonic() - started_writing > budget_s:
+                self.report["notes"].append("time budget reached; remaining stories carried over")
+                break
             not_reached -= {m.url for m in members}
             try:
                 sources = self.verify(members, score)

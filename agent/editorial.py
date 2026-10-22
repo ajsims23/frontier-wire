@@ -149,7 +149,10 @@ def _numbers_ok(text: str, source: str) -> bool:
 
 
 def is_india(s: dict) -> bool:
-    return s.get("desk") == "india" or "india" in (s.get("regions") or [])
+    """About India (by the tagger's region), or from an Indian outlet and not tagged yet."""
+    if "regions" in s:
+        return "india" in (s.get("regions") or [])
+    return s.get("desk") == "india"
 
 
 def _compose_briefing(room: Any, pool: list[dict], audience: str, min_stories: int = 2) -> tuple[dict | None, str]:

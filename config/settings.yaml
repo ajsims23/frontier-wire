@@ -38,6 +38,7 @@ run:
   judge_batch: 45            # items per editor request
   desk_judge_quota: 25       # editor slots reserved for desk sources (e.g. India)
   desk_write_slots: 3        # writing slots reserved for desk stories
+  write_time_budget_min: 14  # stop starting new stories after this; the rest carry over
   min_score: 6                # 1–10; below this an item is dropped
   max_stories_per_run: 10     # stories written per run
   max_per_lab_per_run: 2      # variety: at most this many stories from one lab/publisher per run
@@ -58,8 +59,9 @@ review_mode: false
 # Research agent: investigates stories with tools (search news, read pages) before they're written.
 research:
   enabled: true
-  max_steps: 5            # tool steps per story
-  enrich_top: 2           # also dig into this many top stories per run that are already confirmed
+  max_steps: 4            # tool steps per story
+  max_stories: 5          # stories investigated per run (keeps runs short)
+  enrich_top: 1           # also dig into this many top stories per run that are already confirmed
   enrich_min_score: 8
   page_chars: 2500        # how much of each page the agent reads
 

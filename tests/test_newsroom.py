@@ -491,3 +491,39 @@ def test_desk_items_not_crowded_out(tmp_path):
     assert "IndicAI" in judged_titles                                   # India desk got its reserved slot
     assert sum(1 for c in calls if c["tools"][0]["function"]["name"] == "submit_decisions") == 2
     assert "gather" in report["timings"] and "judge" in report["timings"]
+
+
+def test_unforced_retry_cutoff_and_no_false_retirement(tmp_path):
+    seen = []
+
+    def handler(req):
+        if req.method == "GET":
+            raise AssertionError("must not go model-hunting when the model merely answered badly")
+        body = json.loads(req.content)
+        seen.append((body["model"], body.get("tool_choice"), body["max_tokens"]))
+        if body["model"] == "picky":
+            if body.get("tool_choice") != "auto":
+                return httpx.Response(400, json={"error": {"message": "Failed to generate tool call but tool_choice = 'required'"}})
+            return httpx.Response(200, json={"choices": [{"message": {"content": '{"ok": true}'}}]})
+        if body["model"] == "thinker" and body["max_tokens"] < 6000:
+            return httpx.Response(200, json={"choices": [{"message": {"content": ""}, "finish_reason": "length"}]})
+        if body["model"] == "babbler":
+            return httpx.Response(200, json={"choices": [{"message": {"content": "no json"}}]})
+        return httpx.Response(200, json=completion("submit", {"ok": True}))
+
+    lim = Limits({"max_requests_per_run": 30, "max_requests_per_day": 30, "max_tokens_per_day": 10**6}, tmp_path / "u.json")
+    mk = lambda models: LLM([{"name": "c", "base_url": "https://c.example/v1", "key_env": "K", "models": models}], lim,
+                            http=httpx.Client(transport=httpx.MockTransport(handler)), env={"K": "x"}, sleep=lambda s: None)
+    assert mk(["picky"]).ask(system="s", prompt="p", schema_name="submit", schema=SCHEMA) == {"ok": True}
+    assert [c[1] for c in seen][-1] == "auto"
+    seen.clear()
+    assert mk(["thinker"]).ask(system="s", prompt="p", schema_name="submit", schema=SCHEMA) == {"ok": True}
+    assert [c[2] for c in seen] == [3000, 6000]
+    seen.clear()
+    llm = mk(["babbler"])
+    try:
+        llm.ask(system="s", prompt="p", schema_name="submit", schema=SCHEMA)
+        raise AssertionError("expected failure")
+    except Exception as exc:  # noqa: BLE001
+        assert "every configured provider failed" in str(exc)
+    assert len(seen) == 2 and not any("retired" in l for l in llm.log)

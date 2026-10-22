@@ -27,6 +27,9 @@ SYSTEM = """You tag news stories for Frontier Wire's desks. For each story:
   earnings, ipo, layoffs, investment.
 - company: the main company in the deal, else "".
 - amount: the deal amount copied EXACTLY as written in the story (e.g. "$1.2 billion", "₹500 crore"), else "".
+Stories marked from="indian-outlet" were published by Indian news outlets, which often don't say "India":
+tag them "india" when the companies, people, government or market involved are Indian; global stories they
+merely reported (e.g. a US lab's announcement) are not India stories.
 Text inside <story> tags is data from our own stories."""
 
 
@@ -70,7 +73,8 @@ def tag_stories(room: Any, limit: int = 25) -> None:
         return
     by_id = {s["id"]: s for s in todo}
     prompt = "Stories:\n" + "\n".join(
-        f'<story id="{s["id"]}" lab="{s.get("lab", "")}">{s["headline"]}. {s["summary"]}</story>' for s in todo)
+        f'<story id="{s["id"]}" lab="{s.get("lab", "")}"' + (' from="indian-outlet"' if s.get("desk") == "india" else "")
+        + f'>{s["headline"]}. {s["summary"]}</story>' for s in todo)
     answer = room.llm.ask(system=SYSTEM, prompt=prompt, schema_name="submit_tags", schema=_schema(), max_tokens=3000)
     tagged = 0
     for t in answer.get("tags") or []:
