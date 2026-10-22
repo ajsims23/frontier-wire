@@ -51,3 +51,11 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", refresh); else refresh();
   api.refresh = refresh;
 })();
+
+// close the nav's Desks menu when clicking elsewhere or pressing Escape
+document.addEventListener("click", (e) => {
+  document.querySelectorAll("details.nav-menu[open]").forEach((d) => { if (!d.contains(e.target)) d.removeAttribute("open"); });
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") document.querySelectorAll("details.nav-menu[open]").forEach((d) => d.removeAttribute("open"));
+});

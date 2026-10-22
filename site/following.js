@@ -1,5 +1,5 @@
 // "Your wire": manage follows, see what's new for you since your last visit, and sign up for alerts.
-(function () {
+document.addEventListener("DOMContentLoaded", function () {  // runs after follow.js, which loads at the end of the page
   "use strict";
   const F = window.FWFollow;
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -51,4 +51,4 @@
       }).catch(() => { msg.textContent = "That didn't work. Try again in a minute."; });
     });
   }
-})();
+});
