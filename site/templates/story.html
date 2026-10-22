@@ -12,14 +12,19 @@
   </header>
 
   <figure class="story-figure">
-    <div class="media wide" style="--c: var(--{{ s.category }})">
-      <img src="{{ og_rel }}" alt="" width="1200" height="630">
+    <div class="media wide{% if s.image_kind == 'figure' %} fig{% endif %}" style="--c: var(--{{ s.category }})" data-cover="{{ cover_json }}">
       {% if s.image %}<img class="photo" src="{{ s.image }}" alt="" loading="eager" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">{% endif %}
     </div>
-    {% if s.image %}<figcaption>Image: {{ image_credit }}</figcaption>{% endif %}
+    {% if s.image %}<figcaption>{% if s.image_kind == 'figure' %}Figure from the paper{% else %}Image{% endif %}: {{ image_credit }}</figcaption>{% endif %}
   </figure>
 
   <div class="story-body">
+    {% if s.video and s.video.id is match_video %}
+    <button class="vinline vcard" type="button" data-video="{{ s.video.id }}" data-title="{{ s.video.title }}">
+      <span class="vthumb"><img src="https://i.ytimg.com/vi/{{ s.video.id }}/hqdefault.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="vplay" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 10 10"><path d="M2.5 1.2l6 3.8-6 3.8z" fill="currentColor"/></svg></span></span>
+      <span class="vi-text"><span class="meta">Watch, {{ s.video.channel }}</span><span class="strong">{{ s.video.title }}</span></span>
+    </button>
+    {% endif %}
     <p class="lede">{{ s.summary }}</p>
     {% if s.why_it_matters %}<p class="why"><strong>Why it matters.</strong> {{ s.why_it_matters }}</p>{% endif %}
 

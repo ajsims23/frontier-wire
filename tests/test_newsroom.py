@@ -529,3 +529,47 @@ def test_bing_news_unwraps_links():
     got = bing_news(lambda url: rss, "deepseek")
     assert got == [{"url": "https://www.reuters.com/tech/deepseek-raise/", "title": "DeepSeek raises funds",
                     "publisher": "Reuters", "date": "Thu, 22 Oct 2026 10:00:00 GMT"}]
+
+
+def test_videos_pick_link_and_attach(tmp_path):
+    from types import SimpleNamespace
+    from agent.videos import update_videos
+    feed = """<?xml version="1.0"?><feed xmlns="http://www.w3.org/2005/Atom" xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/">
+    <entry><yt:videoId>AAAAAAAAAAA</yt:videoId><title>Introducing Nova 2</title><link rel="alternate" href="https://www.youtube.com/watch?v=AAAAAAAAAAA"/>
+      <published>2026-10-21T10:00:00+00:00</published><media:group><media:description>Demo of our new model.</media:description></media:group></entry>
+    <entry><yt:videoId>BBBBBBBBBBB</yt:videoId><title>Join us at our summit!</title><link rel="alternate" href="https://www.youtube.com/watch?v=BBBBBBBBBBB"/>
+      <published>2026-10-21T11:00:00+00:00</published></entry>
+    <entry><yt:videoId>CCCCCCCCCCC</yt:videoId><title>Quick clip</title><link rel="alternate" href="https://www.youtube.com/shorts/CCCCCCCCCCC"/>
+      <published>2026-10-21T12:00:00+00:00</published></entry>
+    </feed>"""
+    pages = {"https://www.youtube.com/@examplelab": '... "channelId":"UCabcdefghijklmnopqrstuv" ...',
+             "https://www.youtube.com/feeds/videos.xml?channel_id=UCabcdefghijklmnopqrstuv": feed}
+
+    class F:
+        def get(self, url):
+            if url not in pages:
+                raise RuntimeError("404")
+            return pages[url]
+
+    asked = []
+
+    class L:
+        def ask(self, **kw):
+            asked.append(kw["prompt"])
+            return {"videos": [{"id": "AAAAAAAAAAA", "keep": True, "blurb": "A demo of Nova 2.", "story_id": "s1"},
+                               {"id": "BBBBBBBBBBB", "keep": False},
+                               {"id": "ZZZZZZZZZZZ", "keep": True, "story_id": "s1"}]}  # invented id: ignored
+
+    stories = [{"id": "s1", "headline": "Example Lab launches Nova 2", "published_at": "2026-10-21T09:00:00+00:00"}]
+    room = SimpleNamespace(store=SimpleNamespace(videos={}, stories=stories), fetcher=F(), llm=L(), now=NOW, report={})
+    update_videos(room, [{"name": "Example Lab", "handle": "@examplelab"}, {"name": "Broken", "handle": "@nope"}])
+    vids = room.store.videos["videos"]
+    assert [v["id"] for v in vids] == ["AAAAAAAAAAA"] and vids[0]["story_id"] == "s1"
+    assert "CCCCCCCCCCC" not in asked[0]                       # Shorts skipped
+    assert room.store.videos["rejects"] == ["BBBBBBBBBBB"]
+    assert room.store.videos["channel_ids"] == {"examplelab": "UCabcdefghijklmnopqrstuv"}
+    assert stories[0]["video"]["id"] == "AAAAAAAAAAA"
+    assert room.report["videos"]["Broken"].startswith("failed")
+    # second run: nothing new, no AI call
+    update_videos(room, [{"name": "Example Lab", "handle": "@examplelab"}])
+    assert len(asked) == 1

@@ -59,6 +59,12 @@ class HttpFetcher:
         r.raise_for_status()
         return r.text
 
+    def fetch(self, url: str) -> tuple[str, str]:
+        """Page text and the final URL after redirects."""
+        r = self._client.get(url)
+        r.raise_for_status()
+        return r.text, str(r.url)
+
 
 def _iso_struct(struct: time.struct_time | None) -> str | None:
     if not struct:

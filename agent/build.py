@@ -16,7 +16,7 @@ from typing import Any
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from .cards import art_image, home_card, story_card
+from .cards import home_card, story_card
 from .config import ROOT, load_config
 from .tagging import SECTORS
 
@@ -114,6 +114,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     (out / "data" / "site.json").write_text(json.dumps(home, ensure_ascii=False))
 
     env = Environment(loader=FileSystemLoader(ROOT / "site" / "templates"), autoescape=select_autoescape(["html"]))
+    env.tests["match_video"] = lambda v: bool(re.fullmatch(r"[A-Za-z0-9_-]{11}", str(v or "")))
     theme_boot = (ROOT / "site" / "theme-boot.js").read_text()
     common = {"year": now.year, "theme_boot": theme_boot, "analytics": analytics_tag(site["goatcounter"]),
               "newsletter": site["newsletter"] if re.fullmatch(r"[A-Za-z0-9_-]{2,60}", site["newsletter"] or "") else ""}
@@ -123,7 +124,6 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     for s in stories:
         og_png = out / "og" / f"{s['id']}.png"
         story_card(s, og_png)
-        art_image(s, out / "art" / f"{s['id']}.png")
         tid = s.get("thread")
         thread = None
         if tid and tid in threads:
@@ -147,7 +147,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
         html = env.get_template("story.html").render(
             **common, s=s, root="../../", title=f"{s['headline']} | Frontier Wire", og_title=s["headline"],
             description=s["summary"][:300], canonical=canonical, og_type="article", og_image=f"{base}og/{s['id']}.png",
-            og_rel=f"../../art/{s['id']}.png", jsonld=jsonld, cat_name=TAG.get(s["category"], s["category"]),
+            cover_json=json.dumps({k: s.get(k) for k in ("id", "headline", "category", "lab", "model_name", "cover")}, ensure_ascii=False), jsonld=jsonld, cat_name=TAG.get(s["category"], s["category"]),
             topic=TOPIC_OF.get(s["category"], "all"), lab_slug=slug(s.get("lab", "")), published_human=human_date(s["published_at"]),
             image_credit=credit, thread=thread,
             related=[{**r, "when": short_date(r["published_at"]), "cat_name": TAG.get(r["category"], "")} for r in related],

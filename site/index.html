@@ -50,7 +50,7 @@
       <p class="status"><span class="pulse" aria-hidden="true"></span><span id="updated">Connecting to the wire</span></p>
     </div>
     <div class="front-grid">
-      <article class="front-lead" id="lead"></article>
+      <article class="front-lead hero" id="lead" aria-roledescription="carousel" aria-label="Top stories"></article>
       <div class="front-side">
         <ol class="front-more" id="more"></ol>
         <figure class="news-chart">
@@ -70,6 +70,11 @@
       </div>
       <ul class="themes" id="themes"></ul>
     </div>
+  </section>
+
+  <section class="shell block" id="watch" aria-labelledby="watch-h" hidden>
+    <div class="block-head"><h2 id="watch-h">Watch</h2><p>New videos from AI labs and explainers, picked by our agent. Hover to preview, click to play.</p></div>
+    <div class="watch-grid" id="watch-list"></div>
   </section>
 
   <section class="shell block" id="desks" aria-labelledby="desks-h">
@@ -142,6 +147,8 @@
 </footer>
 
 <script src="theme.js"></script>
+<script src="cover.js"></script>
+<script src="player.js"></script>
 <script src="app.js"></script>
 <!--ANALYTICS-->
 </body>

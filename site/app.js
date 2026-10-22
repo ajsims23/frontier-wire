@@ -34,39 +34,16 @@
   }
 
   // ---------------------------------------------------------------- pictures
-  // A story shows its source's preview image; generated "signal" art sits underneath and shows
-  // whenever there's no image or it fails to load.
+  // A story shows its source's preview image (or a figure from the paper); a generated cover
+  // (cover.js) sits underneath and shows whenever there's no image or it fails to load.
   const hash = (t) => { let h = 2166136261; for (const ch of String(t)) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
   function rng(seed) { return () => { seed |= 0; seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
-  function art(s) {
-    const r = rng(hash(s.id || s.url || s.headline));
-    const W = 400, H = 225, lines = 6 + Math.floor(r() * 4);
-    const cx = 80 + r() * 240, spread = 40 + r() * 70;
-    let paths = "", peak = null;
-    for (let i = 0; i < lines; i++) {
-      const y0 = 38 + (i * (H - 70)) / (lines - 1);
-      const amp = 8 + r() * (i === 2 ? 70 : 34), freq = 2 + r() * 5, phase = r() * 6.28;
-      let d = "";
-      for (let x = 0; x <= W; x += 8) {
-        const env = Math.exp(-(((x - cx) / spread) ** 2));
-        const y = y0 - amp * env * Math.abs(Math.sin((x / W) * 6.28 * freq + phase)) - 3 * Math.sin(x / 23 + i);
-        d += `${x ? "L" : "M"}${x} ${y.toFixed(1)}`;
-        if (i === 2 && (!peak || y < peak[1])) peak = [x, y];
-      }
-      const main = i === 2;
-      paths += `<path d="${d}" fill="none" stroke="${main ? "var(--c)" : "var(--soft)"}" stroke-width="${main ? 2.2 : 1}" stroke-opacity="${main ? 1 : (0.14 + r() * 0.22).toFixed(2)}"/>`;
-    }
-    return `<svg class="art" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <rect width="${W}" height="${H}" fill="var(--panel-2)"/>
-      <rect x="${(cx - spread).toFixed(0)}" width="${(spread * 2).toFixed(0)}" height="${H}" fill="var(--c)" opacity=".07"/>
-      ${paths}
-      <circle cx="${peak[0]}" cy="${peak[1].toFixed(1)}" r="5" fill="var(--c)"/><circle cx="${peak[0]}" cy="${peak[1].toFixed(1)}" r="12" fill="var(--c)" opacity=".18"/>
-    </svg>`;
-  }
   const imgOk = (u) => /^https:\/\//i.test(u || "");
   function media(s, cls) {
-    return `<div class="media ${cls}" style="--c:${color(s.category)}">${art(s)}${imgOk(s.image)
-      ? `<img src="${esc(s.image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}</div>`;
+    const fig = s.image_kind === "figure" ? " fig" : "";
+    const vid = s.video && /^[A-Za-z0-9_-]{11}$/.test(s.video.id) ? `<span class="vbadge"><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>Video</span>` : "";
+    return `<div class="media ${cls}${fig}" style="--c:${color(s.category)}">${window.FWCover ? window.FWCover(s) : ""}${imgOk(s.image)
+      ? `<img src="${esc(s.image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}${vid}</div>`;
   }
   document.addEventListener("error", (e) => { const t = e.target; if (t.tagName === "IMG" && t.parentElement && t.parentElement.classList.contains("media")) t.remove(); }, true);
   document.addEventListener("load", (e) => { const t = e.target; if (t.tagName === "IMG" && t.naturalWidth > 0 && t.naturalWidth < 120) t.remove(); }, true);
@@ -94,29 +71,74 @@
     const pool = recent.filter((s) => Date.now() - new Date(s.published_at).getTime() < 2 * DAY);
     const ranked = (pool.length >= 3 ? pool : recent).slice().sort((a, b) => (b.score - a.score) || ((b.image ? 1 : 0) - (a.image ? 1 : 0)));
     const more = [], labs = new Set(lead ? [lead.lab] : []);
-    for (const s of ranked) { if (more.length < 3 && !labs.has(s.lab || s.id)) { more.push(s); labs.add(s.lab || s.id); } }
-    for (const s of ranked) { if (more.length < 3 && !more.includes(s)) more.push(s); }
+    for (const s of ranked) { if (more.length < 4 && !labs.has(s.lab || s.id)) { more.push(s); labs.add(s.lab || s.id); } }
+    for (const s of ranked) { if (more.length < 4 && !more.includes(s)) more.push(s); }
     return { lead, more };
   }
 
+  // The top five stories take turns as the lead: slow zoom on the picture, progress bars like stories.
+  // A bar's fill animation drives the rotation, so hovering (which pauses it) also pauses the rotation.
   function renderFront() {
     const { lead, more } = topStories();
     if (!lead) {
-      $("lead").innerHTML = `<div class="front-media">${media({ id: "empty", category: "research" }, "wide")}</div>
+      $("lead").innerHTML = `<div class="front-media">${media({ id: "empty", category: "research", headline: "Frontier Wire" }, "wide")}</div>
         <h2>The first stories arrive after the newsroom's first run</h2>`;
       $("more").innerHTML = "";
       return;
     }
+    const slides = [lead, ...more].slice(0, 5);
     $("lead").innerHTML = `
-      <a class="front-media" href="${storyHref(lead)}" tabindex="-1" aria-hidden="true">${media(lead, "wide")}</a>
-      <span class="tag" style="--c:${color(lead.category)}">Top story, ${esc(CAT_NAME[lead.category] || lead.category)}</span>
-      <h2><a href="${storyHref(lead)}">${esc(lead.headline)}</a></h2>
-      <p class="sum">${esc(lead.summary)}</p>
-      <p class="meta">${esc(who(lead))}, ${esc(ago(lead.published_at))}. Checked against ${(lead.sources || []).length} sources.</p>`;
-    $("more").innerHTML = more.map((s) => `<li><a href="${storyHref(s)}" style="--c:${color(s.category)}">
+      <div class="hero-bars" role="tablist" aria-label="Top stories">${slides.map((s, i) =>
+        `<button class="hb${i ? "" : " on"}" type="button" role="tab" data-i="${i}" aria-selected="${!i}" aria-label="Top story ${i + 1}: ${esc(clip(s.headline, 60))}"><span></span></button>`).join("")}</div>
+      <div class="hero-stage">${slides.map((s, i) => `
+        <div class="hero-slide${i ? "" : " on"}" data-i="${i}" ${i ? 'aria-hidden="true"' : ""}>
+          <a class="front-media" href="${storyHref(s)}" tabindex="-1" aria-hidden="true">${media(s, `wide kb kb${i % 3}`)}</a>
+          <span class="tag" style="--c:${color(s.category)}">${i ? "Top stories" : "Top story"}, ${esc(CAT_NAME[s.category] || s.category)}</span>
+          <h2><a href="${storyHref(s)}" ${i ? 'tabindex="-1"' : ""}>${esc(s.headline)}</a></h2>
+          <p class="sum">${esc(s.summary)}</p>
+          <p class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}. Checked against ${(s.sources || []).length} source${(s.sources || []).length === 1 ? "" : "s"}.</p>
+          ${s.video && /^[A-Za-z0-9_-]{11}$/.test(s.video.id) ? `<button class="btn play-btn" type="button" data-video="${esc(s.video.id)}" data-title="${esc(s.video.title)}" ${i ? 'tabindex="-1"' : ""}><svg width="14" height="14" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>Watch the video</button>` : ""}
+        </div>`).join("")}</div>`;
+    $("more").innerHTML = slides.map((s, i) => `<li class="${i ? "" : "on"}" data-i="${i}"><a href="${storyHref(s)}" style="--c:${color(s.category)}">
         ${media(s, "more-media")}
         <span class="more-text"><span class="tag" style="--c:${color(s.category)}">${esc(CAT_NAME[s.category] || s.category)}</span>
         <span class="h">${esc(s.headline)}</span><span class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}</span></span></a></li>`).join("");
+    startHero(slides.length);
+  }
+
+  function startHero(n) {
+    const root = $("lead");
+    let cur = 0;
+    const show = (i) => {
+      cur = (i + n) % n;
+      root.querySelectorAll(".hb").forEach((b, j) => {
+        b.classList.toggle("on", j === cur); b.classList.toggle("done", j < cur); b.setAttribute("aria-selected", String(j === cur));
+        const bar = b.firstElementChild; bar.style.animation = "none"; void bar.offsetWidth; bar.style.animation = "";
+      });
+      root.querySelectorAll(".hero-slide").forEach((el, j) => {
+        const on = j === cur;
+        el.classList.toggle("on", on);
+        if (on) { el.removeAttribute("aria-hidden"); const m = el.querySelector(".media"); m.classList.remove("kb"); void m.offsetWidth; m.classList.add("kb"); }
+        else el.setAttribute("aria-hidden", "true");
+        el.querySelectorAll("h2 a, .play-btn").forEach((a) => (on ? a.removeAttribute("tabindex") : a.setAttribute("tabindex", "-1")));
+      });
+      document.querySelectorAll("#more li").forEach((li, j) => li.classList.toggle("on", j === cur));
+    };
+    root.querySelectorAll(".hb").forEach((b) => {
+      b.addEventListener("click", () => show(+b.dataset.i));
+      b.firstElementChild.addEventListener("animationend", () => { if (b.classList.contains("on")) show(cur + 1); });
+    });
+    document.querySelectorAll("#more li").forEach((li) => {
+      const pick = () => { if (+li.dataset.i !== cur) show(+li.dataset.i); };
+      li.addEventListener("mouseenter", pick); li.addEventListener("focusin", pick);
+    });
+    // pause while the reader hovers the lead or the list, or the tab is hidden
+    const pause = (on) => root.classList.toggle("paused", on);
+    [root, $("more")].forEach((el) => { el.addEventListener("mouseenter", () => pause(true)); el.addEventListener("mouseleave", () => pause(false)); });
+    document.addEventListener("visibilitychange", () => pause(document.hidden));
+    let x0 = null; // swipe on phones
+    root.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener("touchend", (e) => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1)); x0 = null; });
   }
 
   // "Who's making news": stories per lab over the last 7 days, as a bar chart linking to lab pages.
@@ -143,7 +165,7 @@
 
   function renderFeed() {
     const filtering = topic !== "all" || !!query;
-    const front = new Set([data.lead && data.lead.id, ...topStories().more.map((s) => s.id)]);
+    const front = new Set([(data.lead || (data.stories || [])[0] || {}).id, ...topStories().more.map((s) => s.id)]);
     const list = (data.stories || []).filter((s) => matches(s) && (filtering || !front.has(s.id))).slice(0, filtering ? 30 : 12);
     const t = TOPICS.find((x) => x.id === topic);
     $("feed-title").textContent = query ? `Results for “${query}”` : topic === "all" ? "Latest" : t.label;
@@ -229,6 +251,29 @@
       </article>`).join("");
   }
 
+  document.addEventListener("click", (e) => { if (e.target.closest(".vstory")) e.stopPropagation(); }, true);
+  // ---------------------------------------------------------------- watch: videos picked by the agent
+  const thumb = (id) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+  function renderWatch() {
+    const vids = (data.videos || []).filter((v) => /^[A-Za-z0-9_-]{11}$/.test(v.id || "")).slice(0, 5);
+    $("watch").hidden = !vids.length;
+    if (!vids.length) return;
+    const byId = Object.fromEntries((data.stories || []).map((s) => [s.id, s]));
+    $("watch-list").innerHTML = vids.map((v, i) => {
+      const st = v.story_id && byId[v.story_id];
+      return `<article class="vcard${i ? "" : " feat"}" data-video="${esc(v.id)}" data-title="${esc(v.title)}">
+        <button class="vthumb" type="button" aria-label="Play video: ${esc(v.title)}">
+          <img src="${thumb(v.id)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+          <span class="vplay" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 10 10"><path d="M2.5 1.2l6 3.8-6 3.8z" fill="currentColor"/></svg></span>
+        </button>
+        <div class="vtext"><p class="meta">${esc(v.channel)}, ${esc(ago(v.published))}</p>
+          <h3>${esc(v.title)}</h3>
+          ${i === 0 && v.blurb ? `<p class="vblurb">${esc(v.blurb)}</p>` : ""}
+          ${st ? `<a class="text-link vstory" href="${storyHref(st)}">Read our story</a>` : ""}</div>
+      </article>`;
+    }).join("");
+  }
+
   function render(d) {
     data = d || data;
     const st = data.stats || {};
@@ -238,6 +283,7 @@
     renderFront();
     renderNewsChart();
     renderBriefing(data.briefing);
+    renderWatch();
     renderChips();
     renderFeed();
     renderThreads(data.threads);

@@ -8,11 +8,11 @@ from typing import Any
 from . import prompts as P
 from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
-from . import editorial, newsletter, tagging
+from . import editorial, newsletter, tagging, videos
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather
 from .store import Store
-from .text import canonical_url, domain, extract_image, extract_text, quote_in_text, similar, stable_id
+from .text import arxiv_id, canonical_url, domain, extract_image, extract_text, paper_figure, quote_in_text, similar, stable_id
 
 ROLE_RANK = {"lab": 0, "paper": 1, "voice": 2, "news": 3}
 STOP = set("""a an and are as at be by for from has have how in into is it its new of on or our that the their
@@ -334,9 +334,27 @@ class Newsroom:
         self.store.labs[story["lab"]] = {"model": model[:80], "type": story.get("model_type") or "Other",
                                          "date": story["published_at"], "story_id": story["id"], "url": story["url"]}
 
+    def add_paper_figure(self, story: dict[str, Any]) -> None:
+        """Research papers rarely have a preview photo; use the paper's own first figure instead."""
+        if story.get("figure_checked") or (story.get("image") and story.get("image_kind") != "figure"):
+            return
+        pid = next((arxiv_id(u) for u in [story.get("url", "")] + [s["url"] for s in story.get("sources", [])] if arxiv_id(u)), None)
+        if not pid:
+            return
+        story["figure_checked"] = True
+        try:
+            fig = paper_figure(self.fetcher, pid)
+        except Exception:  # noqa: BLE001
+            fig = None
+        if fig:
+            story["image"], story["image_kind"] = fig, "figure"
+
     def add_missing_images(self, limit: int = 12) -> None:
         """Look up preview images for recent stories that don't have one yet (no AI calls)."""
         cutoff = (self.now - timedelta(days=self.cfg.run["front_page_days"])).isoformat()
+        for story in [s for s in self.store.stories if not s.get("figure_checked") and not s.get("image")
+                      and s["published_at"] >= cutoff][:limit]:
+            self.add_paper_figure(story)
         todo = [s for s in self.store.stories if "image" not in s and s["published_at"] >= cutoff][:limit]
         for story in todo:
             image = None
@@ -370,6 +388,8 @@ class Newsroom:
             "lead": lead,
             "stories": live[:60],  # the site filters by category client-side
             "voices": voices[:6],
+            "videos": [{k: v.get(k) for k in ("id", "title", "channel", "lab", "published", "blurb", "story_id")}
+                       for v in (self.store.videos.get("videos") or [])[:9]],
             "briefing": self.store.briefing or None,
             "threads": editorial.site_threads(self),
             "labs": labs,
@@ -462,6 +482,8 @@ class Newsroom:
             except Exception as e:  # noqa: BLE001
                 self.report["dropped"].append({"title": members[0].title, "reason": f"error: {type(e).__name__}: {e}"})
                 continue
+            if not story.get("image"):
+                self.add_paper_figure(story)
             self.store.add_story(story)
             editorial.attach_thread(self, story, links.get(members[0].url))
             self.update_labs(story)
@@ -474,6 +496,7 @@ class Newsroom:
             self.report["notes"].append(f"{len(not_reached)} kept item(s) carried over to the next run")
         self.store.mark_seen([m.url for ms in clusters.values() for m in ms if m.url not in not_reached], self.now)
         steps = (
+            ("videos", lambda r: videos.update_videos(r, r.cfg.extra.get("video_channels", []))),
             ("tagging", tagging.tag_stories),
             ("briefing", editorial.write_briefing),
             ("self-review", editorial.self_review),
@@ -514,6 +537,8 @@ def summary_markdown(report: dict[str, Any]) -> str:
         lines.append(f"Daily briefing: {report['briefing']}")
     if report.get("threads"):
         lines.append("Threads updated: " + "; ".join(report["threads"]))
+    if report.get("videos"):
+        lines.append("Videos: " + (report.get("videos_kept", "no new videos") + " · " + ", ".join(f"{k} {v}" for k, v in report["videos"].items())))
     if report.get("tagged"):
         lines.append(f"Tagged {report['tagged']} stories by sector, region and deal")
     if report.get("india_briefing"):

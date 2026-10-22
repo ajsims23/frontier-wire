@@ -108,3 +108,38 @@ def extract_image(html: str, page_url: str) -> str | None:
         if url.startswith("https://") and not _GENERIC_IMG.search(urlparse(url).path) and len(url) < 600:
             return url
     return None
+
+
+ARXIV_ID = re.compile(r"(?:arxiv\.org/(?:abs|pdf|html)/|huggingface\.co/papers/)(\d{4}\.\d{4,5})", re.I)
+
+
+def arxiv_id(url: str) -> str | None:
+    m = ARXIV_ID.search(url or "")
+    return m.group(1) if m else None
+
+
+def paper_figure(fetcher, paper_id: str) -> str | None:
+    """The first figure from the paper's arXiv HTML version (most recent papers have one), as an https URL."""
+    page = f"https://arxiv.org/html/{paper_id}"
+    fetch = getattr(fetcher, "fetch", None)
+    html, final = fetch(page) if fetch else (fetcher.get(page), page)
+    soup = BeautifulSoup(html, "html.parser")
+    for fig in soup.find_all("figure")[:6]:
+        img = fig.find("img")
+        src = (img.get("src") or "").strip() if img else ""
+        if not src or src.startswith("data:") or src.lower().endswith(".svg"):
+            continue
+        try:
+            if int(img.get("width") or 999) < 160:
+                continue  # icons and tiny inline images
+        except ValueError:
+            pass
+        if src.startswith("http"):
+            url = src
+        elif src.startswith(paper_id):
+            url = urljoin("https://arxiv.org/html/", src)
+        else:
+            url = urljoin(final.rstrip("/") + "/", src)
+        if url.startswith("https://arxiv.org/"):
+            return url
+    return None

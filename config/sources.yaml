@@ -126,6 +126,22 @@ sources:
 
 # Links from these domains count as the lab's own (primary) source, wherever they're found
 # (e.g. a Hacker News or GDELT result pointing at a lab's blog).
+# Videos: YouTube channels (public feeds, no key). Use a handle (@name) or a channel id (UC...).
+# The agent picks which uploads to show and links them to stories; failures show in the run report.
+video_channels:
+  - {name: OpenAI, handle: "@OpenAI", id: UCXZCJLdBC09xxGZ6gcdrc6A, lab: OpenAI}
+  - {name: Anthropic, handle: "@anthropic-ai", lab: Anthropic}
+  - {name: Google DeepMind, handle: "@googledeepmind", id: UCP7jMXSY2xbc3KCAE0MHQ-A, lab: Google DeepMind}
+  - {name: Google for Developers, handle: "@GoogleDevelopers", lab: Google}
+  - {name: AI at Meta, handle: "@AIatMeta", lab: Meta}
+  - {name: Microsoft Research, handle: "@MicrosoftResearch", lab: Microsoft}
+  - {name: NVIDIA, handle: "@NVIDIA", id: UCHuiy8bXnmK5nisYHUd1J5g, lab: NVIDIA}
+  - {name: Hugging Face, handle: "@HuggingFace", lab: Hugging Face}
+  - {name: Mistral AI, handle: "@MistralAI", lab: Mistral AI}
+  - {name: xAI, handle: "@xai", lab: xAI}
+  - {name: Two Minute Papers, handle: "@TwoMinutePapers", id: UCbfYPyITQ-7l4upoX8nvctg, kind: explainer}
+  - {name: AI Explained, handle: "@aiexplained-official", kind: explainer}
+
 lab_domains:
   openai.com: OpenAI
   chatgpt.com: OpenAI

@@ -27,6 +27,9 @@ SYSTEM = """You tag news stories for Frontier Wire's desks. For each story:
   earnings, ipo, layoffs, investment.
 - company: the main company in the deal, else "".
 - amount: the deal amount copied EXACTLY as written in the story (e.g. "$1.2 billion", "₹500 crore"), else "".
+- cover: the story's single most striking fact for a picture cover, max 16 characters, copied EXACTLY from the
+  headline or summary: a figure ("$15 billion", "31-year", "70%"), a model or product name ("GPT-6.1", "Dark.ai")
+  or a company name. Prefer a number when the story has a meaningful one.
 Stories marked from="indian-outlet" were published by Indian news outlets, which often don't say "India":
 tag them "india" when the companies, people, government or market involved are Indian; global stories they
 merely reported (e.g. a US lab's announcement) are not India stories.
@@ -43,7 +46,8 @@ def _schema() -> dict[str, Any]:
             "deal_type": {"type": "string", "enum": DEALS},
             "company": {"type": "string"},
             "amount": {"type": "string"},
-        }, "required": ["id", "sectors", "regions", "deal_type"]}}},
+            "cover": {"type": "string"},
+        }, "required": ["id", "sectors", "regions", "deal_type", "cover"]}}},
         "required": ["tags"],
     }
 
@@ -67,7 +71,7 @@ def usd_value(amount: str) -> float | None:
 
 
 def tag_stories(room: Any, limit: int = 25) -> None:
-    todo = [s for s in room.store.stories if "sectors" not in s]
+    todo = [s for s in room.store.stories if "sectors" not in s or "cover" not in s]
     todo = sorted(todo, key=lambda s: s["published_at"], reverse=True)[:limit]
     if not todo:
         return
@@ -89,5 +93,7 @@ def tag_stories(room: Any, limit: int = 25) -> None:
             amount = ""  # a figure the story doesn't contain is never shown
         s["deal"] = None if deal == "none" else {
             "type": deal, "company": room.cfg.canon_lab((t.get("company") or "").strip()[:60]), "amount": amount, "usd": usd_value(amount)}
+        cover = (t.get("cover") or "").strip()
+        s["cover"] = cover if 0 < len(cover) <= 18 and _norm(cover) in _norm(f"{s['headline']} {s['summary']}") else ""
         tagged += 1
     room.report["tagged"] = tagged
