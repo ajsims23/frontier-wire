@@ -1,0 +1,72 @@
+{
+  "started_at": "2026-10-22T03:50:30+00:00",
+  "review_mode": true,
+  "providers": [
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1312)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (888)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "failed: HTTPStatusError: Client error '429 Unknown Error' for url 'https://export.arxiv.org/api/query?search_query=cat%3Acs.AI+OR+cat%3Acs.CL+OR+",
+    "hf-papers": "ok (6)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (20)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (25)"
+  },
+  "dropped": [
+    {
+      "title": "Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation",
+      "reason": "score 5: Incremental paper on autoregressive video diffusion; not a major breakthrough for frontier AI audience."
+    },
+    {
+      "title": "Airbnb bans making guests do dishes and take out the trash",
+      "reason": "score 2: Non‑AI related consumer policy story; off‑topic for Frontier Wire audience."
+    },
+    {
+      "title": "Google staff resign in backlash over its AI contracts with military",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Blacksmith hits unicorn valuation after Sequoia leads Series C",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Data centers could erase decades of air quality gains",
+      "reason": "could not verify yet after a second try; dropped"
+    }
+  ],
+  "written": [],
+  "notes": [],
+  "fetched": 2594,
+  "fresh": 5,
+  "judged": 5,
+  "kept": 3,
+  "research": {
+    "investigated": 3,
+    "confirmed": 0,
+    "tool_calls": 12
+  },
+  "research_log": [
+    "Google staff resign in backlash over its AI contracts with military: unconfirmed (searched “Google staff resign backlash AI contracts military resignation”; searched “\"Google\" staff resign AI military contract”; searched “Google employees resign over Pentagon AI contract”; searched “Google staff resign over AI military contract 2024”)",
+    "Blacksmith hits unicorn valuation after Sequoia leads Series C: unconfirmed (searched “Blacksmith Series C $66 million unicorn valuation Sequoia”; searched “Blacksmith AI Series C”; searched “Blacksmith AI unicorn valuation”; searched “Blacksmith AI startup Series C”)",
+    "Data centers could erase decades of air quality gains: unconfirmed (searched “Texas data centers air pollution decades of air quality gains report”; read arstechnica.com; searched “data center pollution Texas air quality gains report generative AI Texas data centers could erase decades of air quality gains”; searched “\"air quality gains\" Texas data centers”)"
+  ],
+  "ai_requests_run": 16,
+  "ai_tokens_run": 14669,
+  "ai_requests_today": 44,
+  "provider_log": []
+}
