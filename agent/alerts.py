@@ -51,7 +51,10 @@ def build_events(room: Any, site: str) -> list[dict[str, Any]]:
 
 
 def dispatch(room: Any, http: Any = None) -> None:
-    api, secret = os.environ.get("API_URL", "").rstrip("/"), os.environ.get("ALERTS_DISPATCH_SECRET", "")
+    from pathlib import Path
+    recorded = Path(__file__).resolve().parent.parent / "config" / "api_url.txt"
+    api = (os.environ.get("API_URL") or (recorded.read_text().strip() if recorded.exists() else "")).rstrip("/")
+    secret = os.environ.get("ALERTS_DISPATCH_SECRET", "")
     if not api or not secret:
         return
     site = (os.environ.get("SITE_URL") or room.cfg.settings.get("site", {}).get("base_url", "")).rstrip("/") + "/"

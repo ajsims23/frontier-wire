@@ -51,6 +51,9 @@ def site_settings(cfg: Any) -> dict[str, str]:
     s["base_url"] = (base or "https://example.github.io/frontier-wire/").rstrip("/") + "/"
     for key, env in (("goatcounter", "GOATCOUNTER_CODE"), ("newsletter", "NEWSLETTER_USERNAME"), ("api_url", "API_URL")):
         s[key] = (os.environ.get(env) or s.get(key) or "").strip()
+    recorded = ROOT / "config" / "api_url.txt"  # written by the API deploy workflow
+    if not s["api_url"] and recorded.exists():
+        s["api_url"] = recorded.read_text().strip()
     if not re.fullmatch(r"https://[A-Za-z0-9.-]+(/[A-Za-z0-9._/-]*)?", s["api_url"]):
         s["api_url"] = ""  # only a plain https address is ever put into the page
     return s

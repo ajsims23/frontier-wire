@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write   # records the API address in config/api_url.txt so the site can use it
 
 concurrency:
   group: worker
@@ -57,7 +57,9 @@ jobs:
           SENDER_EMAIL: ${{ vars.SENDER_EMAIL }}
         run: |
           wrangler deploy --var "SENDER_EMAIL:${SENDER_EMAIL}" | tee deploy.log
-          echo "API address: $(grep -o 'https://[a-z0-9.-]*workers.dev' deploy.log | head -1)"
+          url=$(grep -o 'https://[a-z0-9.-]*workers.dev' deploy.log | head -1)
+          echo "API address: $url" | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "$url" > ../config/api_url.txt
       - name: Secrets
         if: steps.setup.outputs.ready == 'true'
         working-directory: worker
@@ -71,3 +73,13 @@ jobs:
             val="${!name}"
             if [ -n "$val" ]; then printf '%s' "$val" | wrangler secret put "$name" >/dev/null && echo "set $name"; fi
           done
+      - name: Record the API address
+        if: steps.setup.outputs.ready == 'true'
+        run: |
+          git config user.name "frontier-wire-bot"
+          git config user.email "frontier-wire-bot@users.noreply.github.com"
+          if ! git diff --quiet -- config/api_url.txt; then
+            git add config/api_url.txt
+            git commit -m "API address updated"
+            git pull --rebase origin main && git push
+          fi

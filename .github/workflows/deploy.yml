@@ -3,7 +3,7 @@ name: Deploy website
 on:
   push:
     branches: [main]
-    paths: ["site/**", "data/**", "agent/build.py", "agent/cards.py", "config/settings.yaml"]
+    paths: ["site/**", "data/**", "agent/**", "config/**"]
   workflow_run:                 # after each newsroom run (auto mode publishes straight to main)
     workflows: ["Newsroom agent"]
     types: [completed]
