@@ -123,6 +123,15 @@ export function parseGdelt(text) {
   }).filter((a) => a.title && /^https:\/\//.test(a.url));
 }
 
+export function parseHn(text) {
+  let data; try { data = JSON.parse(text); } catch (e) { return []; }
+  return (data.hits || []).filter((h) => h.url && h.title).sort((a, b) => (b.points || 0) - (a.points || 0)).map((h) => {
+    let host = ""; try { host = new URL(h.url).hostname.replace(/^www\./, ""); } catch (e) { /* skip */ }
+    return { title: h.title, url: h.url.replace(/^http:/, "https:"), publisher: host, date: String(h.created_at || "").slice(0, 10),
+      snippet: `${h.points} points and ${h.num_comments || 0} comments on Hacker News.` };
+  });
+}
+
 async function webNews(question) {
   const q = searchTerms(question);
   // the biggest stories (relevance), the newest ones, and Google News for breadth; a story found by
@@ -134,18 +143,22 @@ async function webNews(question) {
     ["google", `https://news.google.com/rss/search?q=${enc}%20when:30d&hl=en-US&gl=US&ceid=US:en`],
     ["bing", `https://www.bing.com/news/search?q=${enc}&format=rss&setlang=en-us&qft=interval%3d%229%22`],   // past month, by relevance
     ["gdelt", `https://api.gdeltproject.org/api/v2/doc/doc?query=${enc}%20sourcelang:english&mode=artlist&maxrecords=60&timespan=1month&sort=hybridrel&format=json`],
+    // Hacker News: the past month's most discussed stories, a strong signal of what was a big deal
+    ["hn", `https://hn.algolia.com/api/v1/search?query=${enc}&tags=story&hitsPerPage=20&numericFilters=created_at_i>${Math.floor(Date.now() / 1000) - 30 * 86400},points>40`],
   ];
   const results = await Promise.all(feeds.map(async ([kind, url]) => {
     try {
       const r = await fetch(url, { headers: { "user-agent": "Mozilla/5.0 (compatible; FrontierWire/1.0)" }, cf: { cacheTtl: 900 } });
       if (!r.ok) return [];
-      return kind === "gdelt" ? parseGdelt(await r.text()) : parseNewsRss(await r.text(), kind);
+      const body = await r.text();
+      return kind === "gdelt" ? parseGdelt(body) : kind === "hn" ? parseHn(body) : parseNewsRss(body, kind);
     } catch (e) { return []; }
   }));
   const byKey = new Map();
   results.forEach((list, f) => list.forEach((it, rankInFeed) => {
     const key = it.title.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().slice(0, 60);
-    const score = (f === 1 ? 0.6 : 1) * (1 / (1 + rankInFeed * 0.15));
+    const weight = feeds[f][0] === "hn" ? 1.6 : f === 1 ? 0.6 : 1;
+    const score = weight * (1 / (1 + rankInFeed * 0.15));
     const cur = byKey.get(key);
     if (cur) { cur.score += score; if (!cur.snippet && it.snippet) cur.snippet = it.snippet; }
     else byKey.set(key, { ...it, score });
@@ -168,7 +181,7 @@ async function fromWeb(env, q, ask, archive, search = webNews) {
   const ctx = items.map((it, i) => `<result n="${i + 1}" date="${it.date}" publisher="${it.publisher}">${it.title}. ${it.snippet}</result>`).join("\n");
   let text = (await ask(env, [{ role: "system", content: WEB_SYSTEM }, { role: "user", content: `${ctx}\n\nQuestion: ${q}` }])).trim();
   if (!text) return null;
-  text = text.replace(/【\s*(\d+(?:\s*[,，]\s*\d+)*)\s*】/g, (m, n) => `[${n.replace(/，/g, ",")}]`)
+  text = text.replace(/【\s*([\d\s,，†]+?)\s*】/g, (m, n) => `[${n.split(/[^\d]+/).filter(Boolean).join(", ")}]`)
     .replace(/\[(\d+(?:\s*,\s*\d+)*)\]/g, (m, nums) => {
       const ok = nums.split(",").map((n) => +n.trim()).filter((n) => n >= 1 && n <= items.length);
       return ok.length ? `[${ok.join(", ")}]` : "";
@@ -194,7 +207,7 @@ export async function answer(env, q, index, ask = llm, search = webNews) {
   let text = await ask(env, [{ role: "system", content: ASK_SYSTEM }, { role: "user", content: `${ctx}\n\nQuestion: ${q}` }]);
   if (/^\W*NOT_COVERED\W*$/.test(text.trim()) || text.trim().startsWith("NOT_COVERED")) return general(env, q, ask, sources, search);
   // some models cite with 【1】 or (1): normalise to [1]
-  text = text.replace(/【\s*(\d+(?:\s*[,，]\s*\d+)*)\s*】/g, (m, n) => `[${n.replace(/，/g, ",")}]`);
+  text = text.replace(/【\s*([\d\s,，†]+?)\s*】/g, (m, n) => `[${n.split(/[^\d]+/).filter(Boolean).join(", ")}]`);
   // keep only citations that point at a story we actually gave it
   text = text.replace(/\[(\d+(?:\s*,\s*\d+)*)\]/g, (m, nums) => {
     const ok = nums.split(",").map((n) => +n.trim()).filter((n) => n >= 1 && n <= sources.length);
