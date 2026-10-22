@@ -95,7 +95,7 @@ jobs:
             -d '{"q":"What happened with DeepSeek this month?"}' "$url/api/ask" | head -c 1500 > worker/smoke.txt || true
           echo >> worker/smoke.txt
           curl -s -m 90 -X POST -H "Origin: https://ajsims23.github.io" -H "Content-Type: application/json" \
-            -d '{"q":"what is going on with tesla"}' "$url/api/ask" | head -c 2500 >> worker/smoke.txt || true
+            -d '{"q":"what is going on with tesla"}' "$url/api/ask" | head -c 6000 >> worker/smoke.txt || true
           cat worker/smoke.txt
       - name: Record the API address
         if: steps.setup.outputs.ready == 'true'
