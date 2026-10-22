@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import json
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
 API = "https://openrouter.ai/api/v1/models"
@@ -36,7 +36,7 @@ def parse_models(raw: str) -> list[dict[str, Any]]:
         mid = str(m.get("id") or "")
         prefix = mid.split("/", 1)[0]
         outputs = (m.get("architecture") or {}).get("output_modalities") or ["text"]
-        if prefix not in LABS or SKIP.search(mid) or "text" not in outputs or re.search(r"\((batch|flex|priority)\)", str(m.get("name") or ""), re.I):
+        if prefix not in LABS or SKIP.search(mid) or "text" not in outputs or "image" in outputs or re.search(r"\((batch|flex|priority)\)", str(m.get("name") or ""), re.I):
             continue
         price = m.get("pricing") or {}
         p_in, p_out = _per_m(price.get("prompt")), _per_m(price.get("completion"))
@@ -74,6 +74,9 @@ def update_tracker(room: Any) -> None:
         for m in models:
             old = before.get(m["id"])
             if not old:
+                recent = m["released"] >= (room.now.date() - timedelta(days=14)).isoformat()
+                if not recent:
+                    continue  # an older model newly in view (e.g. a list reshuffle) isn't news
                 changes.append({"date": today, "model": m["name"], "lab": m["lab"], "kind": "new",
                                 "text": f"Now available: {m['name']} (${m['price_in']:g} in / ${m['price_out']:g} out per 1M tokens)"})
                 continue
