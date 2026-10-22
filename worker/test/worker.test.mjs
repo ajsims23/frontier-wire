@@ -49,9 +49,9 @@ test("news RSS parsing unwraps Bing links and cleans text", () => {
 
 test("uncovered questions use live news first, with real result citations", async () => {
   const web = async () => [{ title: "Tesla does a big thing", url: "https://example.com/t", publisher: "Example", date: "2026-10-22", snippet: "Details." }];
-  const r = await answer({}, "tesla latest", index, async (env, msgs) => (msgs[0].content.includes("LIVE news") ? "Tesla did a big thing [1] and more [4]." : "NOT_COVERED"), web);
+  const r = await answer({}, "tesla latest", index, async (env, msgs) => (msgs[0].content.includes("LIVE news") ? "Tesla did a big thing [1] and more [4]. Range [1‑1]." : "NOT_COVERED"), web);
   assert.equal(r.web, true);
-  assert.equal(r.answer, "Tesla did a big thing [1] and more .");
+  assert.equal(r.answer, "Tesla did a big thing [1] and more . Range [1].");
   assert.equal(r.sources[0].url, "https://example.com/t");
 });
 

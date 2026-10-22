@@ -182,6 +182,7 @@ async function fromWeb(env, q, ask, archive, search = webNews) {
   let text = (await ask(env, [{ role: "system", content: WEB_SYSTEM }, { role: "user", content: `${ctx}\n\nQuestion: ${q}` }])).trim();
   if (!text) return null;
   text = text.replace(/【\s*([\d\s,，†]+?)\s*】/g, (m, n) => `[${n.split(/[^\d]+/).filter(Boolean).join(", ")}]`)
+    .replace(/\[(\d+)\s*[-‑–]\s*(\d+)\]/g, (m, a, b) => (+b - +a >= 0 && +b - +a < 10 ? `[${Array.from({ length: +b - +a + 1 }, (_, i) => +a + i).join(", ")}]` : m))
     .replace(/\[(\d+(?:\s*,\s*\d+)*)\]/g, (m, nums) => {
       const ok = nums.split(",").map((n) => +n.trim()).filter((n) => n >= 1 && n <= items.length);
       return ok.length ? `[${ok.join(", ")}]` : "";
@@ -207,7 +208,8 @@ export async function answer(env, q, index, ask = llm, search = webNews) {
   let text = await ask(env, [{ role: "system", content: ASK_SYSTEM }, { role: "user", content: `${ctx}\n\nQuestion: ${q}` }]);
   if (/^\W*NOT_COVERED\W*$/.test(text.trim()) || text.trim().startsWith("NOT_COVERED")) return general(env, q, ask, sources, search);
   // some models cite with 【1】 or (1): normalise to [1]
-  text = text.replace(/【\s*([\d\s,，†]+?)\s*】/g, (m, n) => `[${n.split(/[^\d]+/).filter(Boolean).join(", ")}]`);
+  text = text.replace(/【\s*([\d\s,，†]+?)\s*】/g, (m, n) => `[${n.split(/[^\d]+/).filter(Boolean).join(", ")}]`)
+    .replace(/\[(\d+)\s*[-‑–]\s*(\d+)\]/g, (m, a, b) => (+b - +a >= 0 && +b - +a < 10 ? `[${Array.from({ length: +b - +a + 1 }, (_, i) => +a + i).join(", ")}]` : m));
   // keep only citations that point at a story we actually gave it
   text = text.replace(/\[(\d+(?:\s*,\s*\d+)*)\]/g, (m, nums) => {
     const ok = nums.split(",").map((n) => +n.trim()).filter((n) => n >= 1 && n <= sources.length);
