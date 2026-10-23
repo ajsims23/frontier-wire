@@ -23,8 +23,8 @@
     "tried_at": "2026-10-22T16:03:24+00:00"
   },
   "frontier-race": {
-    "status": "Frontier labs have rolled out several major models and applications: Mistral previewed its 1‑trillion‑parameter Large 4 multimodal model, OpenAI released a fast Decisions API with voice and visual capabilities, and Microsoft’s Diagnostic Orchestrator demonstrated 83% accuracy on complex medical simulations. Deployments continue across industry, from Volkswagen Copilot to Gemini navigation in cars, while benchmark studies show modest gains in robot manipulation and multimodal reasoning.",
-    "changed": "The newest stories announce Microsoft’s Diagnostic Orchestrator reaching 83% accuracy and OpenAI’s Decisions API with voice and visual inputs now generally available.",
+    "status": "Frontier labs have rolled out a wave of new models and applications, including Mistral’s 1‑trillion‑parameter Large 4 preview, OpenAI’s ultra‑fast Decisions API, and Moonshot’s Kimi K3.1 Pro nearing open‑weight release, while Microsoft’s Diagnostic Orchestrator demonstrated 83% accuracy in complex medical simulations. Open‑source and regional initiatives expanded, with NVIDIA’s Nemotron 3.5 suite for Europe, the Firefox Smart Window beta powered by Mistral, and Anthropic’s Claude Duet agent entering research preview.",
+    "changed": "The latest stories added Moonshot’s Kimi K3.1 Pro achieving a top AI‑index score and slated for weight release, and OpenAI’s shift to offline training of its frontier models.",
     "timeline": [
       {
         "story_id": "4b6100b4fb2f",
@@ -50,6 +50,21 @@
         "story_id": "7909cc8ce05e",
         "date": "2026-10-23",
         "text": "OpenAI launches Decisions API with voice, visual inputs, $0.10 per million tokens"
+      },
+      {
+        "story_id": "fe92d46aed82",
+        "date": "2026-10-23",
+        "text": "Kimi K3.1 Pro scores 55 on AI Index, ranking fourth among 709 models."
+      },
+      {
+        "story_id": "6c51129e93f6",
+        "date": "2026-10-23",
+        "text": "Moonshot launches Kimi K3.1 Pro API, announces open‑weight release scheduled for Nov 4 2026."
+      },
+      {
+        "story_id": "67972bfe4904",
+        "date": "2026-10-23",
+        "text": "OpenAI resumes training frontier AI models in an offline environment with added monitoring safeguards."
       },
       {
         "story_id": "eaa0ebff7daf",
@@ -154,14 +169,9 @@
         "story_id": "820bd24a41c4"
       },
       {
-        "text": "Firefox Smart Window expansion to UK and Germany",
-        "when": "later this year",
-        "story_id": "cbc158125a42"
-      },
-      {
-        "text": "Global rollout of Gemini navigation on Apple CarPlay",
-        "when": "",
-        "story_id": "3dba8c3e0d11"
+        "text": "Moonshot Kimi K3.1 Pro full model weights release",
+        "when": "Nov 4, 2026",
+        "story_id": "6c51129e93f6"
       }
     ],
     "story_ids": [
@@ -174,8 +184,8 @@
       "b67bba8524a9",
       "3dba8c3e0d11",
       "65a0534d66fe",
-      "afe5d96a9d46",
       "820bd24a41c4",
+      "afe5d96a9d46",
       "af0f241f8166",
       "0397d30cafbc",
       "14f13252070a",
@@ -188,10 +198,13 @@
       "4b6100b4fb2f",
       "4d4424ae2b1c",
       "fd2833dd343a",
-      "7909cc8ce05e"
+      "7909cc8ce05e",
+      "fe92d46aed82",
+      "6c51129e93f6",
+      "67972bfe4904"
     ],
-    "updated_at": "2026-10-23T15:52:43+00:00",
-    "tried_at": "2026-10-23T15:52:43+00:00",
+    "updated_at": "2026-10-23T21:46:49+00:00",
+    "tried_at": "2026-10-23T21:46:49+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
@@ -300,8 +313,8 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "Meta has paused the Muse conversation‑sharing feature after 6,800 public links exposed data. Chinese‑aligned hackers used AI agents and the ARTEX framework to breach ConnectWise, compromising credentials for about 2,250 Microsoft 365 tenants, and ConnectWise is working to restore its cloud backup service. Recent safety work includes mixed RLVR training results, the new EpiSEM‑Bench benchmark, OpenAI’s partnership with Poland’s NASK, US banks blocking third‑party AI agents, OpenAI’s added offline environments and high‑compute red‑team testing for frontier models, and Anthropic’s Claude generating formal security proofs for 123 open‑source libraries.",
-    "changed": "OpenAI announced new offline environments and high‑compute red‑team testing for frontier model training.",
+    "status": "Meta has paused the Muse conversation‑sharing feature after a security firm found thousands of publicly accessible links exposing data. Chinese‑aligned hackers used AI agents and the ARTEX framework to breach ConnectWise, compromising credentials for about 2,250 Microsoft 365 tenants, and ConnectWise is working to restore its cloud backup service. Recent safety work includes mixed RLVR results, the new EpiSEM‑Bench benchmark, OpenAI’s partnership with Poland’s NASK, US banks blocking third‑party AI agents, OpenAI’s added offline environments and high‑compute red‑team testing, Anthropic’s Claude generating formal security proofs, and OpenAI now training frontier models offline.",
+    "changed": "The newest story reports that OpenAI has resumed training its frontier models in an offline environment with added monitoring, keeping them offline until safeguards are improved.",
     "timeline": [
       {
         "story_id": "15c1f8ef7a58",
@@ -322,6 +335,11 @@
         "story_id": "48e2274fdf2b",
         "date": "2026-10-23",
         "text": "OpenAI adds offline environments and high‑compute red‑team testing to frontier model training"
+      },
+      {
+        "story_id": "67972bfe4904",
+        "date": "2026-10-23",
+        "text": "OpenAI resumes offline training of frontier models with monitoring checks"
       },
       {
         "story_id": "d1b19037538a",
@@ -352,9 +370,14 @@
         "story_id": "d1b19037538a"
       },
       {
-        "text": "Anthropic to publish subset of proofs and release trusted components on GitHub",
+        "text": "Anthropic to publish a subset of formal proofs and release trusted components on GitHub",
         "when": "",
         "story_id": "fd2833dd343a"
+      },
+      {
+        "text": "OpenAI will keep models offline until safeguards allow broader internet access",
+        "when": "",
+        "story_id": "67972bfe4904"
       }
     ],
     "story_ids": [
@@ -365,10 +388,11 @@
       "15c1f8ef7a58",
       "d6229369cc4d",
       "48e2274fdf2b",
-      "fd2833dd343a"
+      "fd2833dd343a",
+      "67972bfe4904"
     ],
-    "updated_at": "2026-10-23T19:58:15+00:00",
-    "tried_at": "2026-10-23T19:58:15+00:00"
+    "updated_at": "2026-10-23T21:46:49+00:00",
+    "tried_at": "2026-10-23T21:46:49+00:00"
   },
   "ai-money": {
     "status": "OpenAI has acquired Orchestra Bio and is working to embed its drug‑discovery AI agents into the Rosalind model and Workbench. The company is negotiating a private funding round of up to $30 billion at a $1.25 trillion valuation ahead of a planned IPO. Warp Sciences raised $215 million to build AI‑powered drug research labs, and Pathos AI announced a $237 million Series E round and a multi‑year partnership with Bristol Myers Squibb and Tempus AI on Alzheimer research.",
