@@ -110,7 +110,7 @@ function briefingBox(b, site) {
   </td></tr></table></td></tr>`;
 }
 
-export function renderEmail({ site, api, events, briefing, unsub, kind }) {
+export function renderEmail({ site, api, events, briefing, unsub, kind, intro }) {
   const list = tidy(events);
   const stories = list.filter((e) => storyId(e));
   const trackers = list.filter((e) => /^tracker:/.test(e.key || ""));
@@ -118,7 +118,11 @@ export function renderEmail({ site, api, events, briefing, unsub, kind }) {
   const claims = list.filter((e) => /^claim:/.test(e.key || ""));
   const date = new Date().toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", timeZone: "Asia/Kolkata" });
   const preheader = stories[0] ? stories[0].title : "What moved in AI for the things you follow";
+  const welcome = intro ? `<tr><td style="padding:0 0 22px">
+      <p style="margin:0 0 8px;${FONT};font-size:22px;line-height:1.3;font-weight:800;color:${INK}">${esc(intro.title)}</p>
+      <p style="margin:0;${FONT};font-size:15px;line-height:1.6;color:${SOFT}">${esc(intro.text)}</p></td></tr>` : "";
   const body = [
+    welcome,
     briefingBox(briefing, site),
     section(stories.length ? "From what you follow" : "", stories.map((e, i) => storyCard(e, site, i === 0)).join("")),
     section(trackers.length ? "Where things stand" : "", trackers.map((e) => compactRow(e, "Tracker update", "#b7791f")).join("")),
@@ -133,7 +137,7 @@ export function renderEmail({ site, api, events, briefing, unsub, kind }) {
   <tr><td style="background:${DARK};padding:22px 24px">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
       <td style="${FONT};font-size:20px;font-weight:800;color:#ffffff;letter-spacing:-.01em"><span style="color:#5fe3cf">▌</span> Frontier Wire</td>
-      <td align="right" style="${FONT};font-size:12px;color:#84a6a1">${esc(kind === "digest" ? "Your daily digest" : "Alert")}<br>${esc(date)}</td>
+      <td align="right" style="${FONT};font-size:12px;color:#84a6a1">${esc(kind === "digest" ? "Your daily digest" : kind === "welcome" ? "Welcome" : "Alert")}<br>${esc(date)}</td>
     </tr></table>
   </td></tr>
   <tr><td style="padding:24px 24px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${body}</table></td></tr>

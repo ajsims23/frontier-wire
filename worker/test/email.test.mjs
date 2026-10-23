@@ -37,3 +37,8 @@ test("covers are drawn in HTML from the story's key fact", () => {
   const html = renderEmail({ site, api: "x", events: [{ key: "story:a1", title: "Lab ships Nova 2", summary: "s", url: `${site}story/a1/`, lab: "Example Lab", category: "models" }], kind: "alert" });
   assert.ok(html.includes("EXAMPLE LAB") && html.includes(">Nova<") === false && !html.includes("<img"));
 });
+
+test("welcome emails open with an introduction", () => {
+  const html = renderEmail({ site, api: "x", events: events.slice(0, 1), kind: "welcome", intro: { title: "You're in.", text: "Following OpenAI." } });
+  assert.ok(html.includes("You&#39;re in.") && html.includes("Following OpenAI.") && html.includes(">Welcome<"));
+});

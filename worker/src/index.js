@@ -268,9 +268,31 @@ async function confirm(env, t) {
   const row = await env.DB.prepare("SELECT id, pending FROM subscribers WHERE ctoken = ?1").bind(t).first();
   if (!row || !row.pending) return false;
   const p = JSON.parse(row.pending);
+  const before = await env.DB.prepare("SELECT confirmed, email, utoken FROM subscribers WHERE id = ?1").bind(row.id).first();
   await env.DB.prepare("UPDATE subscribers SET follows = ?1, labels = ?2, frequency = ?3, confirmed = 1, pending = NULL, ctoken = NULL WHERE id = ?4")
     .bind(JSON.stringify(p.follows), JSON.stringify(p.labels || {}), p.freq, row.id).run();
+  if (before && !before.confirmed) {  // brand-new subscriber: send their first edition straight away
+    try { await sendWelcome(env, before.email, p, before.utoken); } catch (e) { /* the daily digest still follows */ }
+  }
   return true;
+}
+
+// The latest stories that match someone's follows (or the top stories if nothing matches yet).
+async function latestFor(env, follows, labels, n) {
+  const data = await (await fetch(new URL("data/site.json", env.SITE_URL))).json();
+  const all = (data.stories || []).map((s) => storyEvent(s, env.SITE_URL));
+  let events = matchSubscriber(follows, all, labels).slice(0, n);
+  if (!events.length) events = all.slice(0, n);
+  return { events, briefing: data.briefing };
+}
+
+async function sendWelcome(env, email, p, utoken) {
+  const { events, briefing } = await latestFor(env, p.follows, p.labels || {}, 5);
+  const names = p.follows.map((k) => (p.labels || {})[k] || k.replace(/^[a-z]+:/, "")).slice(0, 4).join(", ");
+  const when = p.freq === "daily" ? "every morning around 8:50 India time" : "as soon as something you follow happens";
+  const html = renderEmail({ site: env.SITE_URL, api: env.API_URL, events, briefing, unsub: utoken, kind: "welcome",
+    intro: { title: "You're in. Here's what's happening now.", text: `You're following ${names}${p.follows.length > 4 ? " and more" : ""}. Below are the latest stories on them, checked against their sources by our newsroom agent. From now on we'll email you ${when}.` } });
+  return sendEmail(env, email, `Welcome to Frontier Wire: ${digestSubject(events)}`, html);
 }
 
 export function matchSubscriber(follows, events, labels) {
@@ -342,15 +364,12 @@ export function storyEvent(s, site) {
     audience: line ? `Why it matters: ${line}` : "", photo: s.photo_local ? `${site}img/${s.id}.jpg` : "", cover: s.cover || s.model_name || "", lab: s.lab || "", category: s.category };
 }
 async function testDigest(env, to) {
-  const data = await (await fetch(new URL("data/site.json", env.SITE_URL))).json();
-  const all = (data.stories || []).map((s) => storyEvent(s, env.SITE_URL));
   const subs = to ? [{ email: to, follows: "[]", labels: "{}", utoken: "" }]   // a one-off preview to a given address
     : (await env.DB.prepare("SELECT email, follows, labels, utoken FROM subscribers WHERE confirmed = 1").all()).results || [];
   let sent = 0;
   for (const s of subs) {
-    let events = matchSubscriber(JSON.parse(s.follows), all, JSON.parse(s.labels || "{}")).slice(0, 5);
-    if (!events.length) events = all.slice(0, 4);
-    const html = renderEmail({ site: env.SITE_URL, api: env.API_URL, events, briefing: data.briefing, unsub: s.utoken, kind: "digest" });
+    const { events, briefing } = await latestFor(env, JSON.parse(s.follows), JSON.parse(s.labels || "{}"), 5);
+    const html = renderEmail({ site: env.SITE_URL, api: env.API_URL, events, briefing, unsub: s.utoken, kind: "digest" });
     if (await sendEmail(env, s.email, `[Test] Your AI digest: ${digestSubject(events)}`, html)) sent++;
   }
   return { subscribers: subs.length, sent };

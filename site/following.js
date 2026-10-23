@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {  // runs after follo
   document.addEventListener("fw-follows", render);
   fetch(root + "data/site.json", { cache: "no-store" }).then((r) => r.json()).then((d) => { stories = d.stories || []; render(); }).catch(render);
   render();
+  if (new URLSearchParams(location.search).get("alerts") === "on") document.getElementById("alerts-on").hidden = false;
   setTimeout(() => { try { localStorage.setItem("fw-last-visit-following", new Date().toISOString()); } catch (e) { /* ignore */ } }, 4000);
 
   // email alerts (only when the site has an alerts service configured)

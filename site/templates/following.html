@@ -7,6 +7,8 @@
     <p class="desk-intro">Follow the labs, storylines and industries you care about. Your feed shows what's new since your last visit. Follows are saved in this browser, no account needed. Get alerts by RSS now{% if alerts_api %} or by email{% endif %}.</p>
   </header>
 
+  <p class="alerts-on" id="alerts-on" hidden>You're in. Your first edition is on its way to your inbox now, and alerts will follow from here.</p>
+
   <section class="block" aria-labelledby="mine-h">
     <div class="block-head"><h2 id="mine-h">Following</h2><p id="mine-sub">Nothing yet. Pick a few below.</p></div>
     <ul class="mine" id="mine"></ul>
@@ -25,7 +27,7 @@
       <div class="af-row"><input id="al-email" type="email" required autocomplete="email" placeholder="you@company.com">
         <select id="al-freq" aria-label="How often"><option value="instant">As it happens</option><option value="daily">Daily digest</option></select>
         <button class="btn" type="submit">Get email alerts</button></div>
-      <p class="ex-note" id="al-msg">We'll email a confirmation link first. Unsubscribe from any email in one click.</p>
+      <p class="ex-note" id="al-msg">We'll email a confirmation link first. As soon as you confirm, your first edition arrives with the latest on what you follow. Unsubscribe from any email in one click.</p>
     </form>
     {% else %}
     <p class="muted">Email alerts are coming soon. Until then, every follow has its own RSS feed (the RSS link beside it), which any feed reader can notify you about.</p>
