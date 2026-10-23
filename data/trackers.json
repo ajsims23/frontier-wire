@@ -23,8 +23,8 @@
     "tried_at": "2026-10-22T16:03:24+00:00"
   },
   "frontier-race": {
-    "status": "Frontier labs have released a suite of new models—including Mistral Large 4, NVIDIA’s open‑weight Nemotron 3.5 series, and Anthropic’s Claude Duet agent—while OpenAI’s GPT‑6 and Google’s Gemini‑4 continue to lead robot‑task benchmarks. Deployments expand across industry and research, from Microsoft Copilot at Volkswagen to AI‑driven protein‑binder design and diagnostic systems surpassing doctors. Benchmark studies also reveal growing agentic reasoning and multimodal capabilities across the frontier models.",
-    "changed": "The latest story adds Chariot’s real‑time speech‑to‑text model supporting ten Indian languages.",
+    "status": "Frontier labs have rolled out a wave of new models and applications, with Mistral Large 4 preview, NVIDIA’s Nemotron 3.5 series, and OpenAI’s GPT‑6 now available on Google Cloud. Agentic capabilities are expanding, demonstrated by Sage‑A5.5, Claude Duet, and the new formal verification work using Claude on RISC‑V libraries. Deployments span industry—from Microsoft Copilot at Volkswagen to AI‑driven diagnostics and protein‑binder design—while benchmark studies show modest gains in robot manipulation and multimodal reasoning.",
+    "changed": "The latest story shows Claude being used to generate formal proofs for security properties across 123 open‑source libraries, dramatically speeding up verification.",
     "timeline": [
       {
         "story_id": "4b6100b4fb2f",
@@ -35,6 +35,11 @@
         "story_id": "4d4424ae2b1c",
         "date": "2026-10-23",
         "text": "Chariot‑1‑ASR Realtime launched, supporting 10 Indian languages with lower error rates."
+      },
+      {
+        "story_id": "fd2833dd343a",
+        "date": "2026-10-23",
+        "text": "Claude generates formal proofs for security properties in 123 open‑source libraries (RISC‑V level)."
       },
       {
         "story_id": "eaa0ebff7daf",
@@ -135,7 +140,7 @@
     "next": [
       {
         "text": "Mistral Large 4 model weights release",
-        "when": "by end of October 2026",
+        "when": "end of October 2026",
         "story_id": "820bd24a41c4"
       },
       {
@@ -170,26 +175,41 @@
       "a8f2132df5b8",
       "95eb6975ad24",
       "4b6100b4fb2f",
-      "4d4424ae2b1c"
+      "4d4424ae2b1c",
+      "fd2833dd343a"
     ],
-    "updated_at": "2026-10-23T12:38:38+00:00",
-    "tried_at": "2026-10-23T12:38:38+00:00",
+    "updated_at": "2026-10-23T12:55:35+00:00",
+    "tried_at": "2026-10-23T12:55:35+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
-    "status": "The United States is expected to maintain a light‑touch regulatory approach, with no major AI legislation forthcoming. The UBS report projects AI will boost growth and capex in 2026, allowing developers to operate under voluntary safety agreements. Other jurisdictions’ AI rules remain unchanged in this update.",
-    "changed": "US unlikely to adopt major AI regulations as UBS predicts light‑touch approach.",
-    "timeline": [],
-    "next": [],
-    "story_ids": [
-      "79131f1a3994"
+    "status": "The United States continues to pursue a light‑touch regulatory approach, with no major AI legislation expected despite political attention. UBS projects AI will add about 100 basis points to US growth in the first half of 2026 and drive capex near 2 % of GDP, relying on voluntary safety agreements. Meanwhile, the 12th BRICS Parliamentary Forum in New Delhi (Oct 26‑27) will focus on AI ethics and could influence future international policy frameworks.",
+    "changed": "The addition of the BRICS Parliamentary Forum highlights upcoming international discussions on AI ethics.",
+    "timeline": [
+      {
+        "story_id": "bfb51e2031c6",
+        "date": "2026-10-23",
+        "text": "BRICS Parliamentary Forum scheduled for Oct 26‑27 in New Delhi"
+      }
     ],
-    "updated_at": "2026-10-22T16:03:24+00:00",
-    "tried_at": "2026-10-22T16:03:24+00:00"
+    "next": [
+      {
+        "text": "US expected to maintain light‑touch approach with no major AI legislation forthcoming",
+        "when": "",
+        "story_id": "79131f1a3994"
+      }
+    ],
+    "story_ids": [
+      "79131f1a3994",
+      "bfb51e2031c6"
+    ],
+    "updated_at": "2026-10-23T12:55:35+00:00",
+    "tried_at": "2026-10-23T12:55:35+00:00",
+    "title": "AI regulation around the world"
   },
   "india-ai": {
     "status": "India has formalised a domestic framework to assess AI trustworthiness in defence, focusing on reliability, safety and transparency. Vultr has commissioned a 20 MW AI supercluster in Chennai using AMD Instinct MI355X GPUs, delivering substantial on‑premise compute for Indian AI labs and enterprises. Chariot introduced a real‑time speech‑to‑text model covering ten Indian languages, and LTM opened the BlueVerse Industrial AI Lab in Chennai for sandboxed industrial AI development.",
-    "changed": "The newest stories added Chariot’s multilingual real‑time speech model and LTM’s BlueVerse Industrial AI Lab in Chennai.",
+    "changed": "The latest story adds the upcoming BRICS Parliamentary Forum on AI ethics scheduled for Oct 26‑27 in New Delhi.",
     "timeline": [
       {
         "story_id": "4d4424ae2b1c",
@@ -214,18 +234,19 @@
     ],
     "next": [],
     "story_ids": [
-      "cbf865176306",
       "0ad057c8ff67",
+      "cbf865176306",
+      "bfb51e2031c6",
       "4d4424ae2b1c",
       "f58c8e600d56"
     ],
-    "updated_at": "2026-10-23T12:38:38+00:00",
-    "tried_at": "2026-10-23T12:38:38+00:00",
+    "updated_at": "2026-10-23T12:55:35+00:00",
+    "tried_at": "2026-10-23T12:55:35+00:00",
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "Meta has paused the Muse conversation‑sharing feature after researchers found thousands of publicly accessible links exposing data. Chinese‑aligned hackers used AI agents and the ARTEX framework to breach ConnectWise, compromising credentials for about 2,250 Microsoft 365 tenants, and the company is working to restore its cloud backup service. Recent safety research introduced new findings, benchmarks, a partnership with Poland’s NASK, and major US banks are blocking third‑party AI agents from customer accounts.",
-    "changed": "Recent studies reveal RLVR training may not reliably increase instrumental behavior and introduce the EpiSEM‑Bench safety benchmark; OpenAI announced a partnership with Poland’s NASK, and major US banks began blocking third‑party AI agents from customer accounts.",
+    "status": "Meta has paused the Muse conversation‑sharing feature after 6,800 public links exposed data. Chinese‑aligned hackers used AI agents and the ARTEX framework to breach ConnectWise, compromising credentials for about 2,250 Microsoft 365 tenants, and the company is working to restore its cloud backup service. Recent safety research includes mixed RLVR training results, the new EpiSEM‑Bench benchmark, OpenAI’s partnership with Poland’s NASK, US banks blocking third‑party AI agents, and Anthropic’s Claude generating formal security proofs for 123 open‑source libraries.",
+    "changed": "Anthropic demonstrated that Claude can automatically generate formal security proofs for 123 open‑source libraries.",
     "timeline": [
       {
         "story_id": "15c1f8ef7a58",
@@ -236,6 +257,11 @@
         "story_id": "d6229369cc4d",
         "date": "2026-10-23",
         "text": "Major US banks block third‑party AI agents from accessing customer accounts."
+      },
+      {
+        "story_id": "fd2833dd343a",
+        "date": "2026-10-23",
+        "text": "Claude generated formal proofs for security properties in 123 open‑source libraries"
       },
       {
         "story_id": "d1b19037538a",
@@ -264,6 +290,11 @@
         "text": "ConnectWise to restore its cloud backup service",
         "when": "",
         "story_id": "d1b19037538a"
+      },
+      {
+        "text": "Anthropic to publish subset of proofs and release trusted components on GitHub",
+        "when": "",
+        "story_id": "fd2833dd343a"
       }
     ],
     "story_ids": [
@@ -272,10 +303,11 @@
       "68259bbe1bea",
       "3fde963dbc89",
       "15c1f8ef7a58",
-      "d6229369cc4d"
+      "d6229369cc4d",
+      "fd2833dd343a"
     ],
-    "updated_at": "2026-10-23T07:01:39+00:00",
-    "tried_at": "2026-10-23T07:01:39+00:00"
+    "updated_at": "2026-10-23T12:55:35+00:00",
+    "tried_at": "2026-10-23T12:55:35+00:00"
   },
   "ai-money": {
     "status": "OpenAI has completed its acquisition of Orchestra Bio and is working to embed its drug‑discovery AI agents into the Rosalind model and Workbench. The company is negotiating a private funding round of up to $30 billion that would value it at $1.25 trillion ahead of a planned IPO. Meanwhile, Warp Sciences has raised $215 million to build AI‑powered drug research labs in the United States.",
