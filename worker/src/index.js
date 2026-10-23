@@ -341,10 +341,11 @@ export function storyEvent(s, site) {
     image: /^https:\/\//.test(s.image || "") ? s.image : `${site}og/${s.id}.png`, tag: TAGS[s.category] || "Story",
     audience: line ? `Why it matters: ${line}` : "", photo: /^https:\/\//.test(s.image || "") ? s.image : "", cover: s.cover || s.model_name || "", lab: s.lab || "", category: s.category };
 }
-async function testDigest(env) {
+async function testDigest(env, to) {
   const data = await (await fetch(new URL("data/site.json", env.SITE_URL))).json();
   const all = (data.stories || []).map((s) => storyEvent(s, env.SITE_URL));
-  const subs = (await env.DB.prepare("SELECT email, follows, labels, utoken FROM subscribers WHERE confirmed = 1").all()).results || [];
+  const subs = to ? [{ email: to, follows: "[]", labels: "{}", utoken: "" }]   // a one-off preview to a given address
+    : (await env.DB.prepare("SELECT email, follows, labels, utoken FROM subscribers WHERE confirmed = 1").all()).results || [];
   let sent = 0;
   for (const s of subs) {
     let events = matchSubscriber(JSON.parse(s.follows), all, JSON.parse(s.labels || "{}")).slice(0, 5);
@@ -407,7 +408,9 @@ export default {
       }
       if (url.pathname === "/api/test-digest" && req.method === "POST") {
         if (!env.DISPATCH_SECRET || req.headers.get("authorization") !== `Bearer ${env.DISPATCH_SECRET}`) return json({ error: "forbidden" }, 403);
-        return json(await testDigest(env));
+        let to = "";
+        try { to = String((await req.json()).to || "").trim().toLowerCase(); } catch (e) { /* no body */ }
+        return json(await testDigest(env, /^[^\s@<>"]{1,64}@[^\s@<>"]{1,190}\.[a-z]{2,}$/i.test(to) ? to : ""));
       }
       if (url.pathname === "/api/health") return json({ ok: true }, 200, cors);
       return json({ error: "not found" }, 404, cors);

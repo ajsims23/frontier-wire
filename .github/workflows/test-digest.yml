@@ -4,6 +4,11 @@ name: Send test digest
 
 on:
   workflow_dispatch:
+    inputs:
+      to:
+        description: "Send only to this email (leave empty to send to every confirmed subscriber)"
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -16,7 +21,9 @@ jobs:
       - name: Send
         env:
           SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
+          TO: ${{ inputs.to }}
         run: |
           url=$(cat config/api_url.txt)
-          curl -s -m 90 -X POST -H "Authorization: Bearer $SECRET" "$url/api/test-digest" | tee result.txt
+          body=$(node -e 'process.stdout.write(JSON.stringify({to: process.env.TO || ""}))')
+          curl -s -m 90 -X POST -H "Authorization: Bearer $SECRET" -H "Content-Type: application/json" -d "$body" "$url/api/test-digest" | tee result.txt
           grep -q '"sent":[1-9]' result.txt
