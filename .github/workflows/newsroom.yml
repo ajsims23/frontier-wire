@@ -84,7 +84,12 @@ jobs:
           if [ "$REVIEW_MODE" = "true" ]; then
             git push -f origin "$REVIEW_BRANCH"
           else
-            git push origin HEAD:${{ github.event.repository.default_branch }}
+            # main may have moved during the run (code changes, API address updates): rebase and retry
+            for i in 1 2 3; do
+              git push origin HEAD:${{ github.event.repository.default_branch }} && exit 0
+              git pull --rebase -X theirs origin ${{ github.event.repository.default_branch }} || { git rebase --abort; sleep 5; }
+            done
+            exit 1
           fi
 
       - name: Open review pull request (review mode)
