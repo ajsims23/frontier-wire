@@ -1,0 +1,150 @@
+{
+  "started_at": "2026-10-23T03:49:42+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1315)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (889)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "failed: ReadTimeout: The read operation timed out",
+    "hf-papers": "ok (13)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (18)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)"
+  },
+  "dropped": [
+    {
+      "title": "Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation",
+      "reason": "score 5: Paper on factor‑aware predictive learning for cinematic video generation is incremental multimodal work, not a breakthrough for frontier audience."
+    },
+    {
+      "title": "LLMs are making formal software verification feasible at a much larger scale",
+      "reason": "score 5: Anthropic blog post discusses LLMs for formal verification; interesting but not a new model or landmark result."
+    },
+    {
+      "title": "Left alone with nothing to do, AI agents started playing",
+      "reason": "score 5: Report on MIT‑marooned AI agents inventing games is a curiosity piece, not a major research advance."
+    },
+    {
+      "title": "SpaceX seeks access to 80,000 US cell sites for wireless network: report",
+      "reason": "score 2: Story about SpaceX seeking US cell sites is unrelated to AI and not India‑focused."
+    },
+    {
+      "title": "Microsoft develops AI tool that can diagnose 'sequentially' like a doctor",
+      "reason": "duplicate of a8f2132df5b8"
+    },
+    {
+      "title": "FinTech M&amp;A outlook improves, but investors remain selective on valuations: Report",
+      "reason": "score 2: FinTech M&A outlook report does not focus on AI."
+    },
+    {
+      "title": "iPhone Duo's entire first week stock pre-booked in India",
+      "reason": "score 1: iPhone pre‑booking story is unrelated to AI."
+    },
+    {
+      "title": "Rush is on to patch a software vulnerability that could impact 70% of websites worldwide",
+      "reason": "score 2: Software vulnerability patching is not AI‑specific."
+    },
+    {
+      "title": "Swiggy narrows loss in Q2; eMudhra cofounder on what went wrong",
+      "reason": "score 2: Swiggy financial update is not about AI."
+    },
+    {
+      "title": "Swiggy’s Q2: Net loss drops nearly 16%, revenue rises 36%; What sells? The celebrity or the product?",
+      "reason": "score 2: Swiggy earnings story lacks AI relevance."
+    }
+  ],
+  "written": [
+    {
+      "id": "822412740c4f",
+      "headline": "Kazakhstan expands AI compute with 45,000 Grace GPUs and new data centers",
+      "category": "industry",
+      "summary": "Firebird secured a U.S. export license for 45,000 NVIDIA Grace Blackwell GPUs and is building a first‑phase AI data center with Kazakhtelecom, aiming for commercial launch in Q3 2027. Kazakhtelecom has already deployed 880 GPUs and plans to add over 1,000 more next year, while a second phase could raise total AI capacity to about 500 MW.",
+      "url": "https://blogs.nvidia.com/blog/kazakhstan-ai-compute-ecosystem",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
+  "notes": [],
+  "timings": {
+    "gather": 91.5,
+    "judge": 1.1,
+    "verify and write": 1.5,
+    "videos": 2.1,
+    "tagging": 0.6,
+    "explainers": 0.0,
+    "trackers": 21.4,
+    "claims": 0.3,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "briefing": 41.8,
+    "self-review": -0.0,
+    "daily email": -0.0,
+    "alerts": 0.3
+  },
+  "fetched": 2820,
+  "fresh": 11,
+  "judged": 11,
+  "kept": 1,
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Microsoft Research": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/"
+  },
+  "tagged": 1,
+  "trackers": "filed 1 stories; updated ai-infrastructure",
+  "claims": "6 tracked, 6 open, 0 updated this run",
+  "model_tracker": "82 models, 14 changes today",
+  "briefing": "4 themes from 20 stories",
+  "india_briefing": "4 themes from 4 stories",
+  "alerts": "19 events sent: {\"subscribers\":1,\"sent\":0,\"queued\":0}",
+  "ai_requests_run": 9,
+  "ai_tokens_run": 22319,
+  "ai_requests_today": 42,
+  "provider_log": []
+}

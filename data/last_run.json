@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-23T01:03:55+00:00",
+  "started_at": "2026-10-23T03:49:42+00:00",
   "review_mode": false,
   "providers": [
     "cerebras"
@@ -17,9 +17,9 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "failed: ReadTimeout: The read operation timed out",
-    "hf-papers": "ok (21)",
-    "gdelt": "ok (12)",
-    "hn": "ok (21)",
+    "hf-papers": "ok (13)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (18)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -30,7 +30,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -39,178 +39,112 @@
   },
   "dropped": [
     {
-      "title": "Open call for guest investigators in the life sciences",
-      "reason": "score 4: Anthropic’s open call for guest investigators is a program announcement, not a major AI development."
+      "title": "Making MLLM Latents Matter: Factor-Aware Predictive Learning for Cinematic Video Generation",
+      "reason": "score 5: Paper on factor‑aware predictive learning for cinematic video generation is incremental multimodal work, not a breakthrough for frontier audience."
     },
     {
-      "title": "Dr Jitendra addresses Chennai Medical Convocation , illustrates AI guided , Gene driven Precision Medicine",
-      "reason": "score 3: Speech about AI‑guided precision medicine in India, but no concrete breakthrough or launch."
-    },
-    {
-      "title": "USF researchers use AI and satellite technology to target mosquito breeding grounds amid dengue outbreak",
-      "reason": "score 4: USF researchers applying AI and satellite data to mosquito control; interesting but incremental."
-    },
-    {
-      "title": "Interactive : AI may be shortchanging American women at the negotiating table",
-      "reason": "score 4: Opinion piece on AI bias in negotiations; lacks a newsworthy development."
-    },
-    {
-      "title": "Verra Mobility launches AI road safety cameras in Australia",
-      "reason": "score 5: Verra Mobility’s AI road‑safety cameras launch in Australia; modest industry rollout."
-    },
-    {
-      "title": "Epic Game Unreal Engine AI MegaJam contest will reward cash for AI vibe - coded slop games that no one asked for",
-      "reason": "score 3: Epic’s Unreal Engine AI MegaJam contest is a community event, not a frontier AI news item."
-    },
-    {
-      "title": "Nvidia CEO Does Not Expect Memory Supply to Outrun Demand by 2029 as Stocks Slide",
-      "reason": "score 3: Nvidia CEO’s comments on memory supply are market‑oriented, not a direct AI advancement."
-    },
-    {
-      "title": "U . S . stocks end mixed as AI spending jitters spark tech sell - off",
-      "reason": "score 3: General market report linking AI spending to stock movements; not a specific AI news."
-    },
-    {
-      "title": "If Economists Are Correct About the Future of AI , Here Are 2 Global ETFs to Buy -- and 2 to Avoid",
-      "reason": "score 2: ETF recommendation article, unrelated to AI breakthroughs."
-    },
-    {
-      "title": "Volkswagen expands with Microsoft Copilot as salary freeze for 660 , 000 workers reportedly looms",
-      "reason": "score 2: Volkswagen expansion with Microsoft Copilot is a corporate update, not AI‑focused news."
-    },
-    {
-      "title": "Hedra is a 3D open world game I wrote from scratch while in highschool",
-      "reason": "score 1: Personal game project announcement, not AI related."
-    },
-    {
-      "title": "AI and the Enclosure of the Scientific Commons",
-      "reason": "score 5: ArXiv paper discussing scientific commons; interesting but not a technical breakthrough."
-    },
-    {
-      "title": "Canva’s first AI image model plans designs before generating them",
-      "reason": "score 5: Canva’s new AI image model is a product launch from a non‑frontier lab, not high‑impact enough."
-    },
-    {
-      "title": "Melanie Mitchell: Incredible sky at dusk on my walk around our campus trails",
-      "reason": "score 1: Personal sky photo post, unrelated to AI developments."
-    },
-    {
-      "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
-      "reason": "variety: already 2 stories from techcrunch.com this run"
-    },
-    {
-      "title": "Hugging Face Announces AI Model to Chat With DNA",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Ron DeSantis Floats Criminal Liability for AI Executives",
-      "reason": "could not verify yet; will retry next run"
+      "title": "LLMs are making formal software verification feasible at a much larger scale",
+      "reason": "score 5: Anthropic blog post discusses LLMs for formal verification; interesting but not a new model or landmark result."
     },
     {
       "title": "Left alone with nothing to do, AI agents started playing",
-      "reason": "could not verify yet; will retry next run"
+      "reason": "score 5: Report on MIT‑marooned AI agents inventing games is a curiosity piece, not a major research advance."
+    },
+    {
+      "title": "SpaceX seeks access to 80,000 US cell sites for wireless network: report",
+      "reason": "score 2: Story about SpaceX seeking US cell sites is unrelated to AI and not India‑focused."
+    },
+    {
+      "title": "Microsoft develops AI tool that can diagnose 'sequentially' like a doctor",
+      "reason": "duplicate of a8f2132df5b8"
+    },
+    {
+      "title": "FinTech M&amp;A outlook improves, but investors remain selective on valuations: Report",
+      "reason": "score 2: FinTech M&A outlook report does not focus on AI."
+    },
+    {
+      "title": "iPhone Duo's entire first week stock pre-booked in India",
+      "reason": "score 1: iPhone pre‑booking story is unrelated to AI."
+    },
+    {
+      "title": "Rush is on to patch a software vulnerability that could impact 70% of websites worldwide",
+      "reason": "score 2: Software vulnerability patching is not AI‑specific."
+    },
+    {
+      "title": "Swiggy narrows loss in Q2; eMudhra cofounder on what went wrong",
+      "reason": "score 2: Swiggy financial update is not about AI."
+    },
+    {
+      "title": "Swiggy’s Q2: Net loss drops nearly 16%, revenue rises 36%; What sells? The celebrity or the product?",
+      "reason": "score 2: Swiggy earnings story lacks AI relevance."
     }
   ],
   "written": [
     {
-      "id": "6372ebaa66c8",
-      "headline": "OpenAI seeks up to $30 billion funding at $1.25 trillion valuation ahead of IPO",
+      "id": "822412740c4f",
+      "headline": "Kazakhstan expands AI compute with 45,000 Grace GPUs and new data centers",
       "category": "industry",
-      "summary": "OpenAI is negotiating a private funding round of up to $30 billion that would value the company at $1.25 trillion pre‑money, led by Coatue and investors from the United Arab Emirates. The raise follows a March round that valued the firm at $852 billion and could set a new record for private‑company valuation.",
-      "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo",
-      "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "95eb6975ad24",
-      "headline": "ThinkingBox training boosts Qwen3.8-27B agent success on database tasks",
-      "category": "research",
-      "summary": "Microsoft and Hugging Face released ThinkingBox-Training, fine‑tuning Qwen3.8-27B with 50 GRPO steps. The average pass@1 rose from 51.70% to 60.78% and pass@20 tasks solved increased from 38 to 107.",
-      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+      "summary": "Firebird secured a U.S. export license for 45,000 NVIDIA Grace Blackwell GPUs and is building a first‑phase AI data center with Kazakhtelecom, aiming for commercial launch in Q3 2027. Kazakhtelecom has already deployed 880 GPUs and plans to add over 1,000 more next year, while a second phase could raise total AI capacity to about 500 MW.",
+      "url": "https://blogs.nvidia.com/blog/kazakhstan-ai-compute-ecosystem",
       "sources": 1,
-      "quotes": 2
-    },
-    {
-      "id": "c744e4ea5afb",
-      "headline": "Meta’s new commercial terms could let it scrape news sites for AI training",
-      "category": "policy",
-      "summary": "Meta’s updated commercial terms, effective Oct. 30, 2026, allow business accounts to authorize the company to scrape content from associated websites, including news sites. Legal experts say the language still permits using that content to develop and train AI products.",
-      "url": "https://theverge.com/tech/1017082/meta-terms-update-ai-training-concerns",
-      "sources": 3,
-      "quotes": 2
+      "quotes": 0
     }
   ],
-  "notes": [
-    "dropped unverifiable benchmark: Qwen3.8-27B pass@1 51.70% → 60.78%",
-    "3 kept item(s) carried over to the next run"
-  ],
+  "notes": [],
   "timings": {
-    "gather": 127.1,
-    "judge": 1.5,
-    "verify and write": 376.8,
-    "videos": 23.0,
-    "tagging": 20.9,
-    "explainers": -0.0,
-    "trackers": 82.8,
-    "claims": 20.3,
+    "gather": 91.5,
+    "judge": 1.1,
+    "verify and write": 1.5,
+    "videos": 2.1,
+    "tagging": 0.6,
+    "explainers": 0.0,
+    "trackers": 21.4,
+    "claims": 0.3,
     "model tracker": 0.1,
-    "weekly": 0.0,
-    "briefing": 20.7,
-    "self-review": 20.7,
+    "weekly": -0.0,
+    "briefing": 41.8,
+    "self-review": -0.0,
     "daily email": -0.0,
-    "alerts": 0.5
+    "alerts": 0.3
   },
-  "fetched": 2843,
-  "fresh": 22,
-  "judged": 21,
-  "kept": 7,
-  "research": {
-    "investigated": 5,
-    "confirmed": 2,
-    "tool_calls": 15
-  },
-  "research_log": [
-    "OpenAI working on new $30B raise at $1.25T valuation ahead of IPO: confirmed (searched “OpenAI $30 billion raise $1.25 trillion valuation”; read cnbc.com; read analyticsindiamag.com)",
-    "Hugging Face Announces AI Model to Chat With DNA: unconfirmed (searched “Hugging Face AI model chat with DNA”; read businessinsider.com; read businessinsider.com)",
-    "Ron DeSantis Floats Criminal Liability for AI Executives: unconfirmed (searched “Ron DeSantis criminal liability AI executives”; read msn.com; searched “DeSantis AI executive liability bill”)",
-    "Left alone with nothing to do, AI agents started playing: unconfirmed (searched “MIT researchers marooned 13 AIs on a virtual island”; read fastcompany.com; read gizmodo.com)",
-    "Meta&#8217;s AI could still scrape news sites, legal experts say: confirmed (searched “Meta terms update AI training news sites legal experts”; read niemanlab.org; read arstechnica.com)"
-  ],
+  "fetched": 2820,
+  "fresh": 11,
+  "judged": 11,
+  "kept": 1,
   "videos": {
-    "OpenAI": "ok (12 in feed, 0 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
     "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Google for Developers": "ok (7 in feed, 0 new)",
-    "AI at Meta": "ok (3 in feed, 0 new)",
-    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "NVIDIA": "ok (12 in feed, 0 new)",
-    "Hugging Face": "ok (12 in feed, 0 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Microsoft Research": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
-    "No Priors": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Training Data (Sequoia)": "ok (6 in feed, 1 new)",
-    "a16z": "ok (15 in feed, 1 new)",
-    "Big Technology Podcast": "ok (11 in feed, 2 new)",
-    "Hard Fork": "ok (2 in feed, 1 new)",
-    "The Cognitive Revolution": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
-    "Lenny's Podcast": "ok (2 in feed, 0 new)",
-    "20VC": "ok (3 in feed, 0 new)"
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/"
   },
-  "videos_kept": "2 kept from 5 new",
-  "tagged": 3,
-  "trackers": "filed 3 stories; updated frontier-race, copyright, ai-money",
-  "claims": "4 tracked, 4 open, 0 updated this run",
-  "model_tracker": "82 models, 12 changes today",
+  "tagged": 1,
+  "trackers": "filed 1 stories; updated ai-infrastructure",
+  "claims": "6 tracked, 6 open, 0 updated this run",
+  "model_tracker": "82 models, 14 changes today",
   "briefing": "4 themes from 20 stories",
-  "self_review": "19 lines written to data/self_review.md",
-  "alerts": "18 events sent: {\"subscribers\":1,\"sent\":0,\"queued\":3}",
-  "ai_requests_run": 33,
-  "ai_tokens_run": 62714,
-  "ai_requests_today": 33,
+  "india_briefing": "4 themes from 4 stories",
+  "alerts": "19 events sent: {\"subscribers\":1,\"sent\":0,\"queued\":0}",
+  "ai_requests_run": 9,
+  "ai_tokens_run": 22319,
+  "ai_requests_today": 42,
   "provider_log": []
 }
