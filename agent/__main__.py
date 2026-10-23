@@ -69,7 +69,11 @@ def main(argv: list[str] | None = None) -> int:
         from .pipeline import breaking_sources
         items, _ = gather(breaking_sources(cfg.sources), fetcher, now=now, lookback_hours=12,
                           gdelt=Gdelt(fetcher), gdelt_settings=cfg.gdelt, lab_domains=cfg.lab_domains)
-        new = [it for it in items if not store.is_seen(it.url)]
+        from datetime import timedelta
+        from .pipeline import _parse_time
+        cutoff = now - timedelta(hours=12)
+        # same test the breaking run uses: not seen before, and published in the last 12 hours (or undated)
+        new = [it for it in items if not store.is_seen(it.url) and not ((_parse_time(it.published) or now) < cutoff)]
         if os.environ.get("GITHUB_OUTPUT"):
             with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
                 fh.write(f"new_items={len(new)}\n")
