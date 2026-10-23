@@ -42,7 +42,7 @@ function button(href, label) {
 function storyCard(e, site, big) {
   const img = imageFor(e, site);
   return `<tr><td style="padding:0 0 26px">
-    ${img ? `<a href="${esc(e.url)}"><img src="${esc(img)}" width="552" alt="" style="display:block;width:100%;max-width:552px;height:auto;border-radius:12px;border:0;background:#eef1f6"></a>` : ""}
+    ${img ? `<a href="${esc(e.url)}"><img src="${esc(img)}" width="552" alt="${esc(e.title)}" style="display:block;width:100%;max-width:552px;height:auto;border-radius:12px;border:0;background:#0f292d;color:#e9f5f3;${FONT};font-size:15px;font-weight:700;line-height:1.4"></a>` : ""}
     <p style="margin:${img ? "14px" : "0"} 0 6px;${FONT};font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:${TEAL}">${esc(e.tag || "Story")}${e.because ? ` · <span style="color:${MUTED};font-weight:600;letter-spacing:0;text-transform:none">You follow ${esc(e.because)}</span>` : ""}</p>
     <a href="${esc(e.url)}" style="${FONT};font-size:${big ? 22 : 18}px;line-height:1.3;font-weight:800;color:${INK};text-decoration:none">${esc(e.title)}</a>
     <p style="margin:8px 0 0;${FONT};font-size:15px;line-height:1.55;color:${SOFT}">${esc(e.summary || "")}</p>
