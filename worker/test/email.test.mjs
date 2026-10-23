@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { digestSubject, imageFor, renderEmail, tidy } from "../src/email.js";
+import { coverText, digestSubject, imageFor, renderEmail, tidy } from "../src/email.js";
 
 const site = "https://example.github.io/fw/";
 const events = [
@@ -28,4 +28,12 @@ test("subject leads with the top story; html is escaped and complete", () => {
   const html = renderEmail({ site, api: "https://api.example", events, briefing: { one_line: "Busy day.", themes: [] }, unsub: "tok", kind: "digest" });
   assert.ok(html.includes("Today in AI") && html.includes("Where things stand") && html.includes("api.example/api/unsubscribe?t=tok"));
   assert.ok(!html.includes("<script>") && html.includes("&lt;script&gt;"));
+});
+
+test("covers are drawn in HTML from the story's key fact", () => {
+  assert.equal(coverText({ cover: "$15 billion" }), "$15 billion");
+  assert.equal(coverText({ title: "DeepSeek raises $15 billion in funding" }), "$15B");
+  assert.equal(coverText({ title: "AI tools find bugs in 70% of websites" }), "70%");
+  const html = renderEmail({ site, api: "x", events: [{ key: "story:a1", title: "Lab ships Nova 2", summary: "s", url: `${site}story/a1/`, lab: "Example Lab", category: "models" }], kind: "alert" });
+  assert.ok(html.includes("EXAMPLE LAB") && html.includes(">Nova<") === false && !html.includes("<img"));
 });

@@ -39,11 +39,39 @@ function button(href, label) {
   return `<a href="${esc(href)}" style="display:inline-block;background:${DARK};color:#ffffff;${FONT};font-size:14px;font-weight:700;text-decoration:none;padding:10px 18px;border-radius:999px">${esc(label)}</a>`;
 }
 
+// The cover is drawn with HTML and CSS, not an image, so every email client shows it, including Outlook,
+// which blocks pictures from senders it doesn't know.
+const CAT_COLOR = { models: "#8aabff", research: "#5fe3cf", policy: "#ffc266", safety: "#ff8f80", industry: "#c9a4ff", voices: "#f1eee6" };
+export function coverText(e) {
+  const ok = (t) => t && String(t).length <= 18;
+  if (ok(e.cover)) return e.cover;
+  const h = String(e.title || "");
+  const money = h.match(/[$₹€£]\s?\d[\d.,]*\s?(?:billion|million|trillion|crore|bn|[BMK])?\b/i);
+  if (money) return money[0].replace(/\s?billion/i, "B").replace(/\s?million/i, "M").replace(/\s?trillion/i, "T");
+  const num = h.match(/\b\d[\d.,]*(?:%|x\b|\s?(?:years?|GW|MW|languages|countries|models|agents)\b)/i);
+  if (num) return num[0];
+  const SKIP = new Set(["AI", "US", "UK", "EU", "CEO", "API", "LLM", "AGI"]);
+  const name = (h.match(/\b(?:[A-Z][a-z]*[A-Z0-9][\w.-]*|[A-Z]{2,}[\w.-]*\d*)\b/g) || []).find((t) => !SKIP.has(t) && t.length <= 16);
+  return name || (ok(e.lab) ? e.lab : "");
+}
+
+function coverBlock(e, big) {
+  const text = coverText(e);
+  if (!text) return "";
+  const color = CAT_COLOR[e.category] || "#5fe3cf";
+  const size = Math.max(28, Math.min(big ? 56 : 40, Math.round((big ? 420 : 330) / Math.max(3, text.length))));
+  return `<a href="${esc(e.url)}" style="text-decoration:none"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#0f292d" style="background:#0f292d;border-radius:12px">
+    <tr><td style="padding:${big ? "22px 24px 24px" : "16px 20px 18px"};border-left:6px solid ${color};border-radius:12px">
+      <p style="margin:0 0 ${big ? 18 : 10}px;${FONT};font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:${color}">${esc((e.lab || e.tag || "Frontier Wire").toUpperCase())}</p>
+      <p style="margin:0;${FONT};font-size:${size}px;line-height:1.05;font-weight:800;letter-spacing:-.02em;color:#ffffff">${esc(text)}</p>
+    </td></tr></table></a>`;
+}
+
 function storyCard(e, site, big) {
-  const img = imageFor(e, site);
+  const cover = coverBlock(e, big);
   return `<tr><td style="padding:0 0 26px">
-    ${img ? `<a href="${esc(e.url)}"><img src="${esc(img)}" width="552" alt="${esc(e.title)}" style="display:block;width:100%;max-width:552px;height:auto;border-radius:12px;border:0;background:#0f292d;color:#e9f5f3;${FONT};font-size:15px;font-weight:700;line-height:1.4"></a>` : ""}
-    <p style="margin:${img ? "14px" : "0"} 0 6px;${FONT};font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:${TEAL}">${esc(e.tag || "Story")}${e.because ? ` · <span style="color:${MUTED};font-weight:600;letter-spacing:0;text-transform:none">You follow ${esc(e.because)}</span>` : ""}</p>
+    ${cover}
+    <p style="margin:${cover ? "14px" : "0"} 0 6px;${FONT};font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:${TEAL}">${esc(e.tag || "Story")}${e.because ? ` · <span style="color:${MUTED};font-weight:600;letter-spacing:0;text-transform:none">You follow ${esc(e.because)}</span>` : ""}</p>
     <a href="${esc(e.url)}" style="${FONT};font-size:${big ? 22 : 18}px;line-height:1.3;font-weight:800;color:${INK};text-decoration:none">${esc(e.title)}</a>
     <p style="margin:8px 0 0;${FONT};font-size:15px;line-height:1.55;color:${SOFT}">${esc(e.summary || "")}</p>
     ${e.audience ? `<p style="margin:10px 0 0;padding:8px 12px;border-left:3px solid ${TEAL};background:#f3faf9;${FONT};font-size:14px;line-height:1.5;color:${SOFT}">${esc(e.audience)}</p>` : ""}
