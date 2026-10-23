@@ -9,6 +9,7 @@
 // Secrets: CEREBRAS_API_KEY (and optional GROQ_API_KEY), BREVO_API_KEY, DISPATCH_SECRET.
 // Vars: SITE_URL, SENDER_EMAIL, SENDER_NAME. Binding: DB (D1).
 import { buildIndex, rank } from "../../site/search.js";
+import { digestSubject, renderEmail } from "./email.js";
 
 const ASK_PER_IP_PER_DAY = 25;
 const ASK_PER_DAY = 600;
@@ -231,20 +232,10 @@ async function sendEmail(env, to, subject, html) {
   return r.ok;
 }
 
-function shell(env, body, unsubToken) {
-  const site = env.SITE_URL;
-  const api = env.API_URL || "";
-  return `<div style="font-family:Arial,sans-serif;max-width:600px;margin:auto;color:#0d1222">
-    <p style="font-size:20px;font-weight:700;margin:0 0 16px">Frontier Wire</p>${body}
-    <p style="font-size:12px;color:#5a6380;margin-top:28px">You get this because you follow these on <a href="${site}following/">Frontier Wire</a>.
-    ${unsubToken ? `<a href="${api}/api/unsubscribe?t=${unsubToken}">Unsubscribe</a>.` : ""}</p></div>`;
-}
-
-function eventsHtml(env, events) {
-  return events.map((e) => `<div style="padding:12px 0;border-top:1px solid #e6e9f0">
-    <a href="${esc(e.url)}" style="font-size:16px;font-weight:700;color:#2f5bd8;text-decoration:none">${esc(e.title)}</a>
-    <p style="margin:6px 0 0;color:#3b4358">${esc(e.summary || "")}</p>
-    ${e.because ? `<p style="margin:4px 0 0;font-size:12px;color:#5a6380">Because you follow ${esc(e.because)}</p>` : ""}</div>`).join("");
+function shell(env, body) {
+  return `<div style="background:#eef1f5;padding:24px 12px"><div style="font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:560px;margin:auto;background:#fff;border-radius:16px;overflow:hidden;color:#0d1222">
+    <div style="background:#051416;padding:20px 24px;font-size:20px;font-weight:800;color:#fff"><span style="color:#5fe3cf">▌</span> Frontier Wire</div>
+    <div style="padding:22px 24px;font-size:15px;line-height:1.55">${body}</div></div></div>`;
 }
 
 async function subscribe(env, body) {
@@ -306,8 +297,8 @@ async function dispatch(env, events) {
       queued += fresh.length;
       continue;
     }
-    const subject = fresh.length === 1 ? fresh[0].title : `${fresh.length} updates on what you follow`;
-    if (await sendEmail(env, s.email, subject, shell(env, eventsHtml(env, fresh), s.utoken))) sent++;
+    const html = renderEmail({ site: env.SITE_URL, api: env.API_URL, events: fresh, unsub: s.utoken, kind: "alert" });
+    if (await sendEmail(env, s.email, digestSubject(fresh), html)) sent++;
     else for (const e of fresh) await env.DB.prepare("INSERT INTO queue (sub_id, event, created) VALUES (?1, ?2, ?3)").bind(s.id, JSON.stringify(e), new Date().toISOString()).run();
   }
   return { subscribers: subs.length, sent, queued };
@@ -321,9 +312,12 @@ async function digests(env) {
     const g = bySub.get(r.sub_id);
     g.ids.push(r.id); g.events.push(JSON.parse(r.event));
   }
+  let briefing = null;
+  try { briefing = (await (await fetch(new URL("data/site.json", env.SITE_URL))).json()).briefing; } catch (e) { /* digest without it */ }
   for (const [, g] of bySub) {
-    const ok = await sendEmail(env, g.email, `Your Frontier Wire digest: ${g.events.length} update${g.events.length === 1 ? "" : "s"}`,
-      shell(env, eventsHtml(env, g.events.slice(0, 30)), g.utoken));
+    const events = g.events.slice(0, 30);
+    const html = renderEmail({ site: env.SITE_URL, api: env.API_URL, events, briefing, unsub: g.utoken, kind: "digest" });
+    const ok = await sendEmail(env, g.email, `Your AI digest: ${digestSubject(events)}`, html);
     if (ok) await env.DB.prepare(`DELETE FROM queue WHERE id IN (${g.ids.map(() => "?").join(",")})`).bind(...g.ids).run();
   }
   await env.DB.prepare("DELETE FROM usage WHERE day < ?1").bind(new Date(Date.now() - 7 * 86400000).toISOString().slice(0, 10)).run();

@@ -13,6 +13,10 @@ from typing import Any
 from .editorial import is_india
 
 
+TAGS = {"models": "Model release", "research": "Research", "policy": "Policy", "safety": "Safety",
+        "industry": "Industry", "voices": "Commentary"}
+
+
 def follow_keys(s: dict[str, Any]) -> list[str]:
     keys = [f"lab:{s['lab']}"] if s.get("lab") else []
     keys += [f"tracker:{t}" for t in s.get("trackers") or []] + [f"sector:{t}" for t in s.get("sectors") or []]
@@ -31,8 +35,12 @@ def build_events(room: Any, site: str) -> list[dict[str, Any]]:
     for w in room.report.get("written", []):
         s = by_id.get(w["id"])
         if s:
+            image = s.get("image") if str(s.get("image") or "").startswith("https://") else f"{site}og/{s['id']}.png"
+            aud = s.get("audiences") or {}
+            line = aud.get("business") or aud.get("builders") or aud.get("investors") or s.get("why_it_matters", "")
             events.append({"key": f"story:{s['id']}", "title": s["headline"], "summary": s["summary"],
-                           "url": f"{site}story/{s['id']}/", "follows": follow_keys(s)})
+                           "url": f"{site}story/{s['id']}/", "follows": follow_keys(s), "image": image,
+                           "tag": TAGS.get(s.get("category", ""), "Story"), "audience": f"Why it matters: {line}" if line else ""})
     for tid, t in (room.store.trackers or {}).items():
         if (t.get("updated_at") or "")[:10] == today and t.get("status"):
             events.append({"key": f"tracker:{tid}:{t['updated_at']}", "title": f"Where things stand: {t.get('title') or tid}",
