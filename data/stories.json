@@ -1,6 +1,174 @@
 [
   {
     "explainer": {
+      "what_it_means": "ThinkingBox turns the final state of a database after an agent runs into a binary reward (1 for correct, 0 for incorrect). By using those rewards to fine‑tune the model, its ability to complete tasks that involve database updates improves.",
+      "terms": [
+        {
+          "term": "RL",
+          "meaning": "Reinforcement learning, where a model learns by receiving reward signals for its actions."
+        },
+        {
+          "term": "GRPO",
+          "meaning": "Gradient‑based policy optimization, a method used to adjust the model’s policy during training."
+        },
+        {
+          "term": "offline policy‑relative difficulty",
+          "meaning": "An estimate of how hard a task is for the current model, used to select tasks that can teach the model during fine‑tuning."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "Qwen3.8-27B",
+        "benchmark": "pass@20 tasks solved",
+        "score": "38 → 107"
+      }
+    ],
+    "audiences": {
+      "builders": "The approach shows a concrete way to improve agent training by using database state as a reward signal.",
+      "business": "Higher reliability reduces the risk of automated agents making incorrect updates in customer‑facing workflows.",
+      "investors": "Progress in agent reliability may increase the market value of AI agents and related services."
+    },
+    "id": "95eb6975ad24",
+    "headline": "ThinkingBox training boosts Qwen3.8-27B agent success on database tasks",
+    "summary": "Microsoft and Hugging Face released ThinkingBox-Training, fine‑tuning Qwen3.8-27B with 50 GRPO steps. The average pass@1 rose from 51.70% to 60.78% and pass@20 tasks solved increased from 38 to 107.",
+    "why_it_matters": "It shows that using executable database checks as reward signals can materially improve agent reliability.",
+    "category": "research",
+    "lab": "Microsoft",
+    "model_name": "Qwen3.8-27B",
+    "model_type": "Language",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "We built ThinkingBox to catch agents that say they are done when they are not.",
+        "speaker": "Tuhin Kundu",
+        "speaker_role": "",
+        "source_url": "https://huggingface.co/blog/microsoft/thinkingbox-training"
+      },
+      {
+        "text": "For most tasks, an executable check can return 1 or 0 directly from the final database state.",
+        "speaker": "Tuhin Kundu",
+        "speaker_role": "",
+        "source_url": "https://huggingface.co/blog/microsoft/thinkingbox-training"
+      }
+    ],
+    "score": 6,
+    "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+    "source_id": "huggingface",
+    "desk": "",
+    "image": "https://cdn-uploads.huggingface.co/production/uploads/64b8491203124195cd795cad/oS8I8qx7iBS8EcNIXR3q9.png",
+    "sources": [
+      {
+        "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+        "publisher": "Hugging Face blog",
+        "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-10-22T22:24:34+00:00",
+    "created_at": "2026-10-23T01:03:55+00:00",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "cover": "60.78%",
+    "trackers": [
+      "frontier-race"
+    ]
+  },
+  {
+    "explainer": {
+      "what_it_means": "OpenAI is trying to secure a massive cash injection that would make it the most valuable private company ever. The money will support its AI model development and computing infrastructure. A higher valuation also means a higher price when the company eventually goes public.",
+      "terms": [
+        {
+          "term": "valuation",
+          "meaning": "The monetary worth assigned to a company, often based on recent funding rounds."
+        },
+        {
+          "term": "pre‑money valuation",
+          "meaning": "The value of a company before new investment is added."
+        },
+        {
+          "term": "IPO",
+          "meaning": "Initial public offering, when a private company sells shares to the public for the first time."
+        }
+      ],
+      "watch_next": [
+        "OpenAI’s planned IPO, for which it filed confidential paperwork in June 2026",
+        "Anthropic’s expected IPO in mid‑November 2026"
+      ]
+    },
+    "audiences": {
+      "builders": "The fundraising underscores the scale of resources required to train large AI models, affecting compute and infrastructure planning.",
+      "business": "A higher valuation and potential IPO price could influence corporate AI adoption decisions and competitive positioning.",
+      "investors": "The round highlights the appetite for large‑scale AI investments and sets a benchmark for future valuations in the sector."
+    },
+    "id": "6372ebaa66c8",
+    "headline": "OpenAI seeks up to $30 billion funding at $1.25 trillion valuation ahead of IPO",
+    "summary": "OpenAI is negotiating a private funding round of up to $30 billion that would value the company at $1.25 trillion pre‑money, led by Coatue and investors from the United Arab Emirates. The raise follows a March round that valued the firm at $852 billion and could set a new record for private‑company valuation.",
+    "why_it_matters": "The size and valuation of the fundraise raise the bar for OpenAI’s upcoming public listing and signal the scale of capital needed for AI development.",
+    "category": "industry",
+    "lab": "OpenAI",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "fundraising",
+      "valuation",
+      "IPO"
+    ],
+    "quotes": [],
+    "score": 8,
+    "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo",
+    "source_id": "techcrunch-ai",
+    "desk": "",
+    "image": "https://techcrunch.com/wp-content/uploads/2023/11/Sam-Altman-OpenAI.jpg?resize=1200,680",
+    "sources": [
+      {
+        "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo",
+        "publisher": "TechCrunch AI",
+        "title": "OpenAI working on new $30B raise at $1.25T valuation ahead of IPO"
+      },
+      {
+        "url": "https://cnbc.com/video/2026/10/22/openai-nears-up-to-30-billion-funding-round-at-1point25-trillion-valuation.html",
+        "publisher": "CNBC",
+        "title": "OpenAI nears up to $30 billion funding round at $1.25 trillion valuation"
+      },
+      {
+        "url": "https://analyticsindiamag.com/ai-news/openai-seeks-30-bn-funding-at-14-tn-valuation-ahead-of-anthropic-ipo-report",
+        "publisher": "Analytics India Magazine",
+        "title": "OpenAI Seeks $30 Bn Funding at $1.4 Tn Valuation Ahead of Anthropic IPO: Report"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-22T22:08:24+00:00",
+    "created_at": "2026-10-23T01:03:55+00:00",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": {
+      "type": "funding",
+      "company": "OpenAI",
+      "amount": "$30 billion",
+      "usd": 30000000000.0
+    },
+    "cover": "$30 billion",
+    "trackers": [
+      "ai-money"
+    ]
+  },
+  {
+    "explainer": {
       "what_it_means": "The Diagnostic Orchestrator uses multiple AI agents that ask questions, order tests, and debate possible diagnoses, mimicking a panel of doctors. By coordinating these agents, the system can achieve higher diagnostic accuracy and lower cost than a single model. This demonstrates how AI orchestration can improve performance on complex medical tasks.",
       "terms": [
         {
@@ -91,6 +259,96 @@
     "cover": "83% accuracy",
     "trackers": [
       "frontier-race"
+    ]
+  },
+  {
+    "explainer": {
+      "what_it_means": "Meta’s terms give it permission to run automated tools that copy text from news websites linked to business accounts. That copied material can then be used to improve Meta’s AI systems without paying the publishers.",
+      "terms": [
+        {
+          "term": "robots.txt",
+          "meaning": "A file on a website that tells crawlers which pages they may or may not access."
+        },
+        {
+          "term": "web scraper",
+          "meaning": "Software that automatically visits web pages and extracts their content."
+        },
+        {
+          "term": "commercial terms",
+          "meaning": "The contract rules that businesses agree to when using Meta’s platforms, outlining what Meta can do with their data."
+        }
+      ],
+      "watch_next": [
+        "The updated commercial terms take effect on October 30, 2026."
+      ]
+    },
+    "audiences": {
+      "builders": "Developers should note that Meta may legally collect web content for AI training under the new terms, affecting data‑use policies.",
+      "business": "News publishers face the risk that their articles could be used to train Meta’s AI without compensation.",
+      "investors": "The policy could reduce Meta’s costs for AI training data, potentially impacting its competitive position and profitability."
+    },
+    "id": "c744e4ea5afb",
+    "headline": "Meta’s new commercial terms could let it scrape news sites for AI training",
+    "summary": "Meta’s updated commercial terms, effective Oct. 30, 2026, allow business accounts to authorize the company to scrape content from associated websites, including news sites. Legal experts say the language still permits using that content to develop and train AI products.",
+    "why_it_matters": "The change could give Meta access to news content without paying licensing fees, raising legal and competitive concerns for publishers.",
+    "category": "policy",
+    "lab": "Meta",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "This does nothing to restrict the ‘associated with your products or services’ [language] that would let Meta scrape entire sites,",
+        "speaker": "James Grimmelmann",
+        "speaker_role": "professor of digital and information law at Cornell Law School",
+        "source_url": "https://theverge.com/tech/1017082/meta-terms-update-ai-training-concerns"
+      },
+      {
+        "text": "The revised version of the new terms still allows Meta to use that scraped content to develop any ‘business product.’ That doesn’t seem to be a defined term, and presumably Meta is developing AI business products. I think ‘develop’ is broad enough to include ‘train,’",
+        "speaker": "Matt Topic",
+        "speaker_role": "media and intellectual property attorney at Loevy & Loevy",
+        "source_url": "https://theverge.com/tech/1017082/meta-terms-update-ai-training-concerns"
+      }
+    ],
+    "score": 6,
+    "url": "https://theverge.com/tech/1017082/meta-terms-update-ai-training-concerns",
+    "source_id": "verge-ai",
+    "desk": "",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK043_VRG_Illo_N_Barclay_1_Meta.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+    "sources": [
+      {
+        "url": "https://theverge.com/tech/1017082/meta-terms-update-ai-training-concerns",
+        "publisher": "The Verge AI",
+        "title": "Meta&#8217;s AI could still scrape news sites, legal experts say"
+      },
+      {
+        "url": "https://niemanlab.org/2026/10/metas-new-commercial-terms-will-allow-the-scraping-of-news-sites-legal-experts-say",
+        "publisher": "Nieman Journalism Lab",
+        "title": "Meta’s new commercial terms will allow the scraping of news sites, legal experts say"
+      },
+      {
+        "url": "https://arstechnica.com/tech-policy/2026/10/meta-may-use-sweeping-new-commercial-tos-to-avoid-millions-in-ai-licensing-fees",
+        "publisher": "Ars Technica",
+        "title": "Meta may use sweeping new commercial TOS to avoid millions in AI licensing fees"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-22T20:32:05+00:00",
+    "created_at": "2026-10-23T01:03:55+00:00",
+    "sectors": [
+      "media"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "cover": "",
+    "trackers": [
+      "copyright"
     ]
   },
   {

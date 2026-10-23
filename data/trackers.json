@@ -23,8 +23,8 @@
     "tried_at": "2026-10-22T16:03:24+00:00"
   },
   "frontier-race": {
-    "status": "Frontier AI labs have rolled out a wave of major models, including OpenAI’s GPT‑6 series on Google Cloud, NVIDIA’s open‑weight Nemotron 3.5 family for European enterprises, and Mistral’s 1‑trillion‑parameter Large 4 preview. Applications span enterprise AI copilots at Volkswagen, AI‑driven neuroscience discovery, and a medical diagnostic system that outperforms generalist doctors. New benchmark studies and satellite‑embedding models further expand frontier capabilities across robotics, biology, and geospatial analysis.",
-    "changed": "The newest stories add a high‑accuracy medical diagnostic AI, a global satellite‑embedding model, and several frontier model releases and integrations.",
+    "status": "Frontier AI labs have rolled out a wave of major models—including Lafa flow LM, Sage‑A1.5 agentic model, Mistral Large 4, Nemotron 3.5 series, and voice SDKs—while large‑scale deployments such as OpenAI on Google Cloud, Microsoft Copilot at Volkswagen, and Gemini navigation on Apple CarPlay expand enterprise and automotive use. Benchmark results show GPT‑6 Astra leading robot tasks and AI diagnostic systems surpassing doctors, and new research tools like Environment Duels and ThinkingBox training push capabilities further.",
+    "changed": "ThinkingBox training improves Qwen3.8‑27B agent performance on database tasks.",
     "timeline": [
       {
         "story_id": "eaa0ebff7daf",
@@ -35,6 +35,11 @@
         "story_id": "a8f2132df5b8",
         "date": "2026-10-22",
         "text": "Microsoft AI diagnostic system hits 83% accuracy, surpassing doctors"
+      },
+      {
+        "story_id": "95eb6975ad24",
+        "date": "2026-10-22",
+        "text": "ThinkingBox training boosts Qwen3.8‑27B agent pass@1 to 60.78% on database tasks."
       },
       {
         "story_id": "1de8e62ff715",
@@ -144,18 +149,19 @@
       "b67bba8524a9",
       "3dba8c3e0d11",
       "65a0534d66fe",
-      "820bd24a41c4",
       "afe5d96a9d46",
+      "820bd24a41c4",
       "af0f241f8166",
       "0397d30cafbc",
       "14f13252070a",
       "5dbb54a00540",
       "cbc158125a42",
       "eaa0ebff7daf",
-      "a8f2132df5b8"
+      "a8f2132df5b8",
+      "95eb6975ad24"
     ],
-    "updated_at": "2026-10-22T21:46:58+00:00",
-    "tried_at": "2026-10-22T21:46:58+00:00",
+    "updated_at": "2026-10-23T01:03:55+00:00",
+    "tried_at": "2026-10-23T01:03:55+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
@@ -223,9 +229,14 @@
     "tried_at": "2026-10-22T21:46:58+00:00"
   },
   "ai-money": {
-    "status": "OpenAI has acquired AI biotech startup Orchestra Bio and is moving to integrate its drug‑discovery agents into the Rosalind model and Workbench.",
-    "changed": "The acquisition adds a life‑science AI toolset to OpenAI’s portfolio.",
+    "status": "OpenAI has completed its acquisition of Orchestra Bio and is preparing to embed its drug‑discovery AI agents into the Rosalind model and Workbench. The company is now negotiating a massive private funding round of up to $30 billion that would value it at $1.25 trillion. An IPO is slated for the near future, with confidential paperwork already filed.",
+    "changed": "OpenAI is seeking up to $30 billion in funding at a $1.25 trillion valuation ahead of its IPO.",
     "timeline": [
+      {
+        "story_id": "6372ebaa66c8",
+        "date": "2026-10-22",
+        "text": "OpenAI seeks up to $30 billion funding at $1.25 trillion valuation ahead of IPO."
+      },
       {
         "story_id": "aeaa448f66c5",
         "date": "2026-10-20",
@@ -238,22 +249,38 @@
         "text": "Integrate Orchestra Bio’s technology into the Rosalind model and Workbench",
         "when": "",
         "story_id": "aeaa448f66c5"
+      },
+      {
+        "text": "OpenAI IPO (confidential filing completed)",
+        "when": "June 2026",
+        "story_id": "6372ebaa66c8"
+      },
+      {
+        "text": "Anthropic IPO expected",
+        "when": "mid‑November 2026",
+        "story_id": "6372ebaa66c8"
       }
     ],
     "story_ids": [
-      "aeaa448f66c5"
+      "aeaa448f66c5",
+      "6372ebaa66c8"
     ],
-    "updated_at": "2026-10-22T16:15:28+00:00",
-    "tried_at": "2026-10-22T16:15:28+00:00"
+    "updated_at": "2026-10-23T01:03:55+00:00",
+    "tried_at": "2026-10-23T01:03:55+00:00"
   },
   "copyright": {
-    "status": "AI training on copyrighted song lyrics is currently being litigated. Anthropic has presented a fair‑use defense for its Claude model, while major music publishers argue the practice harms songwriters. The upcoming court decision will set a precedent for future AI training practices.",
-    "changed": "Anthropic’s fair‑use argument for using song lyrics in Claude’s training was heard by a US judge.",
+    "status": "Litigation over AI training on copyrighted song lyrics continues, with a US judge hearing Anthropic’s fair‑use defense for its Claude model. Meanwhile, Meta has updated its commercial terms to allow business accounts to authorize scraping of news sites for AI training, effective Oct 30 2026.",
+    "changed": "Meta announced new commercial terms that permit scraping of news sites for AI training, effective Oct 30 2026.",
     "timeline": [
       {
         "story_id": "af9699fd89cc",
         "date": "2026-10-22",
         "text": "US judge hears Anthropic’s fair‑use defense for song lyric training"
+      },
+      {
+        "story_id": "c744e4ea5afb",
+        "date": "2026-10-22",
+        "text": "Meta updates terms to permit scraping news sites for AI training, effective Oct 30 2026."
       }
     ],
     "title": "AI and copyright",
@@ -262,13 +289,19 @@
         "text": "Judge’s fair‑use ruling on Anthropic’s training data",
         "when": "",
         "story_id": "af9699fd89cc"
+      },
+      {
+        "text": "Meta’s commercial terms become effective",
+        "when": "Oct 30 2026",
+        "story_id": "c744e4ea5afb"
       }
     ],
     "story_ids": [
-      "af9699fd89cc"
+      "af9699fd89cc",
+      "c744e4ea5afb"
     ],
-    "updated_at": "2026-10-22T16:15:28+00:00",
-    "tried_at": "2026-10-22T16:15:28+00:00"
+    "updated_at": "2026-10-23T01:03:55+00:00",
+    "tried_at": "2026-10-23T01:03:55+00:00"
   },
   "ai-infrastructure": {
     "status": "NVIDIA is rapidly expanding its AI infrastructure offerings across Europe and beyond, adding new security options, open‑weight models, and integrated platforms for power, cloud, and edge workloads. European firms and governments are adopting these tools for finance, retail, weather forecasting, and industrial AI, while new super‑computing capacity is being deployed in India. The ecosystem now includes confidential bare‑metal services, the Vera Rubin A5X cloud instances, the DSX AI Factory for power integration, and the Polarise sovereign AI cloud.",
