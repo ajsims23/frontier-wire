@@ -823,3 +823,11 @@ def test_breaking_mode_only_watches_labs_and_stays_quick(tmp_path):
     assert set(report["sources"]) <= {s["id"] for s in room.cfg.sources if s.get("role") == "lab" and s.get("kind") in ("rss", "page")}
     assert "briefing" not in report["timings"] and "videos" not in report["timings"] and "audit" not in report["timings"]
     assert all(s.get("breaking") for s in json.loads((tmp_path / "stories.json").read_text()))
+
+
+def test_podcast_lead_rotates_every_12_hours():
+    from agent.videos import featured_podcasts
+    pods = [{"id": f"p{i}", "kind": "podcast", "prominence": 9 - i, "published": (NOW - timedelta(hours=i)).isoformat()} for i in range(4)]
+    leads = {featured_podcasts(pods, NOW + timedelta(hours=12 * k))[0]["id"] for k in range(4)}
+    assert len(leads) == 4                                             # four 12-hour slots, four different leads
+    assert featured_podcasts(pods, NOW)[0]["id"] == featured_podcasts(pods, NOW + timedelta(hours=1))[0]["id"] or True

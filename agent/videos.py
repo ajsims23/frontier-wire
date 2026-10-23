@@ -113,7 +113,13 @@ def featured_podcasts(videos: list[dict[str, Any]], now: Any, days: int = 14, n:
         age = (now - datetime.fromisoformat(v["published"])).total_seconds() / 86400
         return v.get("prominence", 5) - 0.5 * max(0.0, age)
     pods.sort(key=score, reverse=True)
-    return pods[:n]
+    # a different lead podcast every 12 hours: rotate through the best few, so returning readers see something new
+    top = pods[:max(n, 8)]
+    if len(top) > 1:
+        slot = int(now.timestamp() // (12 * 3600))
+        k = slot % len(top)
+        top = top[k:] + top[:k]
+    return top[:n]
 
 
 def update_videos(room: Any, channels: list[dict[str, str]], keep_days: int = 30, max_new: int = 20) -> None:
