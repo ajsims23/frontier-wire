@@ -462,6 +462,9 @@ class Newsroom:
         selected = []
         for item in kept:
             lead = item[2][0]
+            if lead.source_id == "audit":  # catch-ups from the daily self-check aren't one outlet flooding the page
+                selected.append(item)
+                continue
             who = (lead.lab or domain(lead.url)).lower()
             per[who] = per.get(who, 0) + 1
             if per[who] > cap:
