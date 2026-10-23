@@ -1,0 +1,22 @@
+# Sends every confirmed subscriber a preview of the daily digest, built from the latest stories.
+# Run it from the Actions tab (Send test digest -> Run workflow). It doesn't change anyone's real digest.
+name: Send test digest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Send
+        env:
+          SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
+        run: |
+          url=$(cat config/api_url.txt)
+          curl -s -m 90 -X POST -H "Authorization: Bearer $SECRET" "$url/api/test-digest" | tee result.txt
+          grep -q '"sent":[1-9]' result.txt

@@ -323,6 +323,38 @@ async function digests(env) {
   await env.DB.prepare("DELETE FROM usage WHERE day < ?1").bind(new Date(Date.now() - 7 * 86400000).toISOString().slice(0, 10)).run();
 }
 
+// A preview digest built from the latest stories, sent to every confirmed subscriber (doesn't touch the queue).
+const TAGS = { models: "Model release", research: "Research", policy: "Policy", safety: "Safety", industry: "Industry", voices: "Commentary" };
+export function storyKeys(s) {
+  const k = s.lab ? [`lab:${s.lab}`] : [];
+  (s.trackers || []).forEach((t) => k.push(`tracker:${t}`));
+  (s.sectors || []).forEach((t) => k.push(`sector:${t}`));
+  k.push(`topic:${s.category}`);
+  if ((s.regions || []).includes("india") || (!s.regions && s.desk === "india")) k.push("region:india");
+  if (s.deal) k.push("deals");
+  return k;
+}
+export function storyEvent(s, site) {
+  const aud = s.audiences || {};
+  const line = aud.business || aud.builders || aud.investors || s.why_it_matters || "";
+  return { key: `story:${s.id}`, title: s.headline, summary: s.summary, url: `${site}story/${s.id}/`, follows: storyKeys(s),
+    image: /^https:\/\//.test(s.image || "") ? s.image : `${site}og/${s.id}.png`, tag: TAGS[s.category] || "Story",
+    audience: line ? `Why it matters: ${line}` : "" };
+}
+async function testDigest(env) {
+  const data = await (await fetch(new URL("data/site.json", env.SITE_URL))).json();
+  const all = (data.stories || []).map((s) => storyEvent(s, env.SITE_URL));
+  const subs = (await env.DB.prepare("SELECT email, follows, labels, utoken FROM subscribers WHERE confirmed = 1").all()).results || [];
+  let sent = 0;
+  for (const s of subs) {
+    let events = matchSubscriber(JSON.parse(s.follows), all, JSON.parse(s.labels || "{}")).slice(0, 5);
+    if (!events.length) events = all.slice(0, 4);
+    const html = renderEmail({ site: env.SITE_URL, api: env.API_URL, events, briefing: data.briefing, unsub: s.utoken, kind: "digest" });
+    if (await sendEmail(env, s.email, `[Test] Your AI digest: ${digestSubject(events)}`, html)) sent++;
+  }
+  return { subscribers: subs.length, sent };
+}
+
 function page(env, title, text) {
   return new Response(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title>
     <body style="font-family:Arial,sans-serif;background:#051416;color:#e9f5f3;display:grid;place-items:center;min-height:90vh;margin:0;padding:16px">
@@ -372,6 +404,10 @@ export default {
         if (!env.DISPATCH_SECRET || req.headers.get("authorization") !== `Bearer ${env.DISPATCH_SECRET}`) return json({ error: "forbidden" }, 403);
         const { events } = await req.json();
         return json(await dispatch(env, events));
+      }
+      if (url.pathname === "/api/test-digest" && req.method === "POST") {
+        if (!env.DISPATCH_SECRET || req.headers.get("authorization") !== `Bearer ${env.DISPATCH_SECRET}`) return json({ error: "forbidden" }, 403);
+        return json(await testDigest(env));
       }
       if (url.pathname === "/api/health") return json({ ok: true }, 200, cors);
       return json({ error: "not found" }, 404, cors);
