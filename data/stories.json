@@ -1,6 +1,73 @@
 [
   {
     "explainer": {
+      "what_it_means": "OpenAI upgraded its backend storage so that data can be retrieved much quicker, helping ChatGPT answer users faster. Multi‑tenancy lets many users share the same storage safely, while global caching stores frequently accessed data closer to users. Azure Cosmos DB provides a distributed database that can handle large volumes of reads.",
+      "terms": [
+        {
+          "term": "multi‑tenancy",
+          "meaning": "A design where a single system serves many users or tenants while keeping their data isolated."
+        },
+        {
+          "term": "global caching",
+          "meaning": "Storing copies of frequently accessed data in locations around the world to reduce retrieval time."
+        },
+        {
+          "term": "Azure Cosmos DB",
+          "meaning": "Microsoft’s globally distributed, multi‑model database service that scales to handle large read and write workloads."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "The storage improvements show how large‑scale AI services can be made more responsive using multi‑tenant architectures and cloud databases.",
+      "business": "Faster reads can translate into better user experience, supporting continued growth of ChatGPT.",
+      "investors": "The upgrade demonstrates OpenAI’s ability to handle scaling challenges, which may reassure investors about the platform’s sustainability."
+    },
+    "id": "298c8de07d18",
+    "headline": "OpenAI scales Habitat storage to deliver 12× faster reads for ChatGPT",
+    "summary": "OpenAI detailed how it upgraded its Habitat storage system to support more than one billion ChatGPT users. The redesign uses reliable multi‑tenancy, global caching and Azure Cosmos DB, delivering reads twelve times faster.",
+    "why_it_matters": "Faster storage reads improve ChatGPT response speed and reliability as usage scales.",
+    "category": "industry",
+    "lab": "OpenAI",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 6,
+    "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+    "source_id": "openai",
+    "desk": "",
+    "image": null,
+    "sources": [
+      {
+        "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+        "publisher": "OpenAI",
+        "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-10-23T16:32:39+00:00",
+    "created_at": "2026-10-23T16:32:39+00:00",
+    "breaking": true,
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "12× faster reads",
+    "trackers": [
+      "ai-infrastructure"
+    ]
+  },
+  {
+    "explainer": {
       "what_it_means": "Developers can send up to 400 structured questions per request and receive typed answers such as probabilities or scores, paying only for the input data they send. The low latency and lack of output charges make it economical for large‑scale classification, routing or micro‑decision workloads.",
       "terms": [
         {
