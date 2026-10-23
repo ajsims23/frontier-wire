@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T18:56:03+00:00",
+  "updated_at": "2026-10-23T19:58:15+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Developers can send up to 400 structured questions per request and receive typed answers such as probabilities or scores, paying only for the input data they send. The low latency and lack of output charges make it economical for large‑scale classification, routing or micro‑decision workloads.",
@@ -667,7 +667,8 @@
         "investors": 1
       },
       "cover": "",
-      "trackers": []
+      "trackers": [],
+      "thread": "t-08c3c7a6bdfe"
     },
     {
       "explainer": {
@@ -955,6 +956,70 @@
         "india-ai"
       ],
       "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "OpenAI is now training its most advanced models in isolated, offline settings that are not connected to the internet, and it is using intensive testing (red‑teaming) that simulates high‑power attacks. These steps are intended to keep the models secure while they are being built and evaluated.",
+        "terms": [
+          {
+            "term": "offline environments",
+            "meaning": "Training setups that are not connected to external networks, preventing data exfiltration."
+          },
+          {
+            "term": "red‑teaming",
+            "meaning": "A security practice where experts try to find vulnerabilities by attacking the system under controlled conditions."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers will need to adapt to stricter training infrastructure and may see new security tools.",
+        "business": "Companies can expect stronger assurances that frontier AI models are being developed with robust safety controls.",
+        "investors": "The measures signal risk management efforts that could protect the value of AI investments."
+      },
+      "id": "48e2274fdf2b",
+      "headline": "OpenAI details new containment measures for frontier model training",
+      "summary": "OpenAI announced that it has added offline environments and high‑compute red‑teaming to its training and evaluation process to improve security. The changes are aimed at strengthening containment of frontier AI models.",
+      "why_it_matters": "The tighter safeguards reduce the risk of accidental leaks or misuse of powerful AI systems.",
+      "category": "safety",
+      "lab": "OpenAI",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 6,
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+      "source_id": "openai",
+      "desk": "",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+          "publisher": "OpenAI",
+          "title": "Securing our frontier model training environment"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-10-23T10:00:00+00:00",
+      "created_at": "2026-10-23T19:58:15+00:00",
+      "breaking": true,
+      "thread": "t-08c3c7a6bdfe",
+      "sectors": [
+        "cybersecurity"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "",
+      "trackers": [
+        "agent-safety"
+      ]
     },
     {
       "explainer": {
@@ -4532,57 +4597,6 @@
         "business": 3,
         "investors": 2
       }
-    },
-    {
-      "id": "61f4d0141ff3",
-      "headline": "OpenAI models and Codex workflows added to Google Cloud Marketplace",
-      "summary": "OpenAI announced that its frontier models and Codex workflows will be available on Google Cloud’s Gemini Model Garden via the Cloud Marketplace. The integration lets users access these models through Google Cloud services.",
-      "why_it_matters": "The move broadens the reach of OpenAI’s advanced models to developers and enterprises using Google Cloud.",
-      "category": "industry",
-      "lab": "OpenAI",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://openai.com/index/openai-models-google-cloud",
-      "sources": [
-        {
-          "url": "https://openai.com/index/openai-models-google-cloud",
-          "publisher": "OpenAI",
-          "title": "OpenAI models are coming to Google Cloud"
-        }
-      ],
-      "published_at": "2026-10-21T12:00:00+00:00",
-      "created_at": "2026-10-21T17:16:05+00:00",
-      "image": null,
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": {
-        "type": "partnership",
-        "company": "OpenAI",
-        "amount": "",
-        "usd": null
-      },
-      "cover": "Codex",
-      "explainer": null,
-      "trackers": [
-        "frontier-race"
-      ],
-      "audiences": {
-        "builders": "OpenAI’s frontier models and Codex are now purchasable via Google Cloud Marketplace, simplifying access for developers.",
-        "business": "Enterprises can acquire AI models through familiar cloud procurement channels, accelerating adoption.",
-        "investors": "Extends OpenAI’s distribution, potentially increasing usage and revenue."
-      },
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 2
-      }
     }
   ],
   "voices": [
@@ -4858,6 +4872,27 @@
   },
   "threads": [
     {
+      "id": "t-08c3c7a6bdfe",
+      "title": "OpenAI safety breach prompts security measures",
+      "updated_at": "2026-10-23T12:55:35+00:00",
+      "stories": [
+        {
+          "id": "3f492a65e9c2",
+          "headline": "OpenAI fires three safety researchers over alleged leak of internal model designs",
+          "url": "https://techmeme.com/261022/p61",
+          "published_at": "2026-10-23T12:55:35+00:00",
+          "category": "safety"
+        },
+        {
+          "id": "48e2274fdf2b",
+          "headline": "OpenAI details new containment measures for frontier model training",
+          "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+          "published_at": "2026-10-23T10:00:00+00:00",
+          "category": "safety"
+        }
+      ]
+    },
+    {
       "id": "t-0cc3671858f5",
       "title": "Microsoft AI diagnostic system featured in study",
       "updated_at": "2026-10-23T00:36:00+00:00",
@@ -4917,27 +4952,6 @@
           "url": "https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models",
           "published_at": "2026-10-22T05:00:27+00:00",
           "category": "industry"
-        }
-      ]
-    },
-    {
-      "id": "t-d529487c9d1e",
-      "title": "AI tools reveal PHP vulnerabilities",
-      "updated_at": "2026-10-22T10:09:38+00:00",
-      "stories": [
-        {
-          "id": "44544d37504b",
-          "headline": "AI tools uncover critical PHP vulnerabilities affecting up to 70% of websites",
-          "url": "https://analyticsindiamag.com/ai-trends/internet-on-alert-as-ai-uncovers-critical-flaws-in-php-used-by-70-of-websites",
-          "published_at": "2026-10-22T10:09:38+00:00",
-          "category": "safety"
-        },
-        {
-          "id": "2b5b57e1b66c",
-          "headline": "AI tools uncover critical PHP vulnerabilities affecting up to 70% of websites",
-          "url": "https://fortune.com/2026/10/21/ai-tools-discovered-the-php-vulnerability-that-could-take-down-70-of-the-internet-now-the-race-is-on-to-patch-it-before-ai-powered-hackers-attack",
-          "published_at": "2026-10-21T21:15:00+00:00",
-          "category": "safety"
         }
       ]
     }
@@ -5027,7 +5041,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 74,
+    "stories_this_month": 75,
     "model_releases_this_month": 6,
     "labs_tracked": 12
   }
