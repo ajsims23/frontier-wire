@@ -107,7 +107,12 @@ def featured_podcasts(videos: list[dict[str, Any]], now: Any, days: int = 14, n:
     with a slightly bigger guest."""
     from datetime import datetime
     cutoff = (now - timedelta(days=days)).isoformat()
-    pods = [v for v in videos if v.get("kind") == "podcast" and v["published"] >= cutoff]
+    pods, seen = [], set()
+    for v in videos:  # one entry per episode (the same episode can appear twice, e.g. re-uploaded)
+        key = (v.get("title") or "").strip().lower()
+        if v.get("kind") == "podcast" and v["published"] >= cutoff and v["id"] not in seen and key not in seen:
+            pods.append(v)
+            seen |= {v["id"], key}
 
     def score(v: dict[str, Any]) -> float:
         age = (now - datetime.fromisoformat(v["published"])).total_seconds() / 86400
