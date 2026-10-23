@@ -1,6 +1,181 @@
 [
   {
     "explainer": {
+      "what_it_means": "Developers can send up to 400 structured questions per request and receive typed answers such as probabilities or scores, paying only for the input data they send. The low latency and lack of output charges make it economical for large‑scale classification, routing or micro‑decision workloads.",
+      "terms": [
+        {
+          "term": "latency",
+          "meaning": "The time between sending a request and receiving a response, measured in milliseconds."
+        },
+        {
+          "term": "token",
+          "meaning": "A unit of text processed by the model; pricing is based on the number of input tokens."
+        },
+        {
+          "term": "structured output",
+          "meaning": "Responses formatted as specific data types (e.g., choices, scores) rather than free‑form text."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "The API lets developers replace generic LLM calls with faster, cheaper decision calls and only pay for input tokens.",
+      "business": "Companies can cut response times and costs in decision‑heavy workflows, improving user experience and operational efficiency.",
+      "investors": "OpenAI’s entry into the decision‑model market expands its product portfolio and creates a new revenue stream competing with specialized rivals."
+    },
+    "id": "7909cc8ce05e",
+    "headline": "OpenAI launches Decisions API with voice, visual inputs at $0.10 per million tokens",
+    "summary": "OpenAI made its Decisions API generally available on Oct 22 2026, charging $0.10 per million input tokens and nothing for output. The API adds voice and visual modalities and delivers latency around 150 ms, up to ten‑times faster than standard GPT‑6 Luna calls.",
+    "why_it_matters": "It gives developers a cheap, ultra‑fast way to run high‑volume decision tasks, challenging competitors such as TypeSafe’s Jev model.",
+    "category": "industry",
+    "lab": "OpenAI",
+    "model_name": "GPT-6 Luna",
+    "model_type": "Language",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "The big unlock with Decisions API has been the speed, shrinking things from one to three seconds to 100, 120, 180 milliseconds.",
+        "speaker": "Nikunj Handa",
+        "speaker_role": "product lead for OpenAI’s APIs",
+        "source_url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up"
+      },
+      {
+        "text": "the Decisions API allowed the company to cut the time between actions from 1.4 seconds to .13 seconds.",
+        "speaker": "Andrew Hsu",
+        "speaker_role": "CTO at Speak",
+        "source_url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up"
+      }
+    ],
+    "score": 8,
+    "url": "https://techmeme.com/261023/p10",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/10/Screenshot-2026-10-22-at-12.17.11-PM-1.png?resize=1200,988",
+    "sources": [
+      {
+        "url": "https://techmeme.com/261023/p10",
+        "publisher": "techmeme.com",
+        "title": "OpenAI makes Decisions API, its Jev competitor, generally available with new voice and visual modalities, at $0.10/1M input tokens and no output-token charges (Tim Fernholz/TechCrunch)"
+      },
+      {
+        "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up",
+        "publisher": "TechCrunch AI",
+        "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up"
+      },
+      {
+        "url": "https://cryptobriefing.com/openai-decisions-api-generally-available",
+        "publisher": "Crypto Briefing",
+        "title": "OpenAI makes its Decisions API generally available at $0.10 per million input tokens"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-23T13:25:02+00:00",
+    "created_at": "2026-10-23T15:52:43+00:00",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 0
+    },
+    "cover": "$0.10 per mil",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Pathos will use its AI system, Pathos Foundry, to analyze a large, de‑identified patient dataset built by Tempus, generating hypotheses about disease biology and helping design more targeted, adaptive clinical trials. This could reduce the time and cost of developing new therapies for Alzheimer’s and related disorders.",
+      "terms": [
+        {
+          "term": "de‑identified dataset",
+          "meaning": "A collection of patient information that has had personal identifiers removed to protect privacy."
+        },
+        {
+          "term": "adaptive clinical trial",
+          "meaning": "A trial design that allows modifications to aspects like dosage or patient groups based on interim results."
+        },
+        {
+          "term": "agentic AI platform",
+          "meaning": "Software that can autonomously generate and test hypotheses from data without direct human instruction."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Pathos Foundry will be applied to large-scale, longitudinal data, offering a use case for AI tools that handle hypothesis generation and trial design.",
+      "business": "Pharma companies can leverage AI to make faster, higher‑confidence decisions in neuroscience drug programs.",
+      "investors": "The $237 million Series E and $3 billion valuation highlight strong investor interest in AI‑driven drug development."
+    },
+    "id": "99f7b33679f0",
+    "headline": "Pathos AI partners with Bristol Myers Squibb and Tempus AI on Alzheimer drug development",
+    "summary": "Pathos AI announced a multi‑year collaboration with Bristol Myers Squibb and Tempus AI, licensing a $55 million, five‑year dataset and applying its Pathos Foundry AI platform to accelerate Alzheimer’s and other neurological drug research. The deal coincides with a $237 million Series E round led by Bristol Myers, valuing Pathos at about $3 billion.",
+    "why_it_matters": "It shows AI platforms being integrated into pharma pipelines to speed discovery and trial design for complex diseases.",
+    "category": "industry",
+    "lab": "Pathos AI",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 6,
+    "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/pathos-ai-teams-up-with-bristol-myers-and-tempus-ai-to-advance-drug-development/articleshow/135147121.cms",
+    "source_id": "et-tech",
+    "desk": "india",
+    "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-9386563,resizemode-75,msid-135147121/tech/artificial-intelligence/pathos-ai-teams-up-with-bristol-myers-and-tempus-ai-to-advance-drug-development.jpg",
+    "sources": [
+      {
+        "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/pathos-ai-teams-up-with-bristol-myers-and-tempus-ai-to-advance-drug-development/articleshow/135147121.cms",
+        "publisher": "ET Tech",
+        "title": "Pathos AI teams up with Bristol Myers and Tempus AI to advance drug development"
+      },
+      {
+        "url": "https://finance.yahoo.com/healthcare/articles/pathos-ai-announces-strategic-collaborations-130000398.html",
+        "publisher": "Yahoo Finance",
+        "title": "Pathos AI Announces Strategic Collaborations with Bristol Myers Squibb and Tempus AI to Advance AI-Driven Drug Development Beginning with Alzheimer’s Disease and Other ..."
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-23T13:19:29+00:00",
+    "created_at": "2026-10-23T15:52:43+00:00",
+    "sectors": [
+      "healthcare"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": {
+      "type": "partnership",
+      "company": "Pathos AI",
+      "amount": "$55 million",
+      "usd": 55000000.0
+    },
+    "relevance": {
+      "builders": 1,
+      "business": 3,
+      "investors": 2
+    },
+    "cover": "$55 million",
+    "trackers": [
+      "ai-money"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Claude was used to turn existing fuzz tests into formal specifications and then automatically produce mathematical proofs that the code never crashes for inputs under 64 MB. The proofs run on the low‑level RISC‑V instructions that the processor actually executes, giving a stronger guarantee than testing alone. The results are shared publicly so others can inspect the proofs and the underlying models.",
       "terms": [
         {
@@ -1066,6 +1241,73 @@
   },
   {
     "explainer": {
+      "what_it_means": "The orchestrator uses AI to evaluate patient data and suggest diagnoses, achieving higher accuracy than doctors in tests. In practice it could help doctors make faster, more accurate decisions and reduce unnecessary tests.",
+      "terms": [
+        {
+          "term": "Diagnostic orchestrator",
+          "meaning": "An AI system that coordinates multiple diagnostic tools to suggest possible conditions."
+        },
+        {
+          "term": "Simulation",
+          "meaning": "A computer‑based test that mimics real‑world medical cases."
+        },
+        {
+          "term": "Accuracy",
+          "meaning": "The proportion of correct diagnoses out of total cases."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "The system demonstrates that AI can be integrated into diagnostic workflows, suggesting new API opportunities for developers.",
+      "business": "Executives see potential for AI to improve diagnostic efficiency and reduce testing costs.",
+      "investors": "Investors may view this as evidence of AI's commercial viability in healthcare."
+    },
+    "id": "97aa07987ebe",
+    "headline": "Microsoft diagnostic orchestrator reaches 83% accuracy in complex case simulation",
+    "summary": "Microsoft's Diagnostic Orchestrator (MAI‑DxO) correctly diagnosed complex medical cases 83% of the time in a simulation, compared with 36% for generalist physicians using reference materials. The system also achieved about 80% accuracy on emergency department cases versus roughly 47% for physicians.",
+    "why_it_matters": "The result shows AI can surpass doctors in diagnostic accuracy, indicating a shift toward AI‑assisted medical decision making.",
+    "category": "research",
+    "lab": "Microsoft",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 7,
+    "url": "https://linkedin.com/feed/update/urn:li:activity:7519138392542953472",
+    "source_id": "microsoft-ai",
+    "desk": "",
+    "image": null,
+    "sources": [
+      {
+        "url": "https://linkedin.com/feed/update/urn:li:activity:7519138392542953472",
+        "publisher": "Microsoft Source",
+        "title": "Important work from our team in Science Magazine today, showing how our diagnostic orchestrator can reason through complex medical cases, achieving greater diagnostic accuracy while reducing testing…"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-10-23T00:36:00+00:00",
+    "created_at": "2026-10-23T15:52:43+00:00",
+    "thread": "t-0cc3671858f5",
+    "sectors": [
+      "healthcare"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 2,
+      "business": 3,
+      "investors": 1
+    },
+    "cover": "83% accuracy",
+    "trackers": [
+      "frontier-race"
+    ]
+  },
+  {
+    "explainer": {
       "what_it_means": "The two organisations will jointly conduct research and develop tools to detect and mitigate AI risks. Their work will focus on protecting digital infrastructure and ensuring AI is used responsibly.",
       "terms": [
         {
@@ -1414,7 +1656,8 @@
       "builders": 2,
       "business": 3,
       "investors": 0
-    }
+    },
+    "thread": "t-0cc3671858f5"
   },
   {
     "explainer": {

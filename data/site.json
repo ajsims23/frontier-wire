@@ -1,89 +1,275 @@
 {
-  "updated_at": "2026-10-23T13:33:00+00:00",
+  "updated_at": "2026-10-23T15:52:43+00:00",
   "lead": {
     "explainer": {
-      "what_it_means": "The ban means that employees in Swedish government agencies cannot use public AI chat tools like ChatGPT or Claude on their work devices. They must instead use Microsoft Copilot, which has been cleared for official use. This is intended to protect information security and ensure compliance with government agreements.",
+      "what_it_means": "Developers can send up to 400 structured questions per request and receive typed answers such as probabilities or scores, paying only for the input data they send. The low latency and lack of output charges make it economical for large‑scale classification, routing or micro‑decision workloads.",
       "terms": [
         {
-          "term": "AI services",
-          "meaning": "Software that provides artificial intelligence capabilities such as language generation or analysis."
+          "term": "latency",
+          "meaning": "The time between sending a request and receiving a response, measured in milliseconds."
         },
         {
-          "term": "information security",
-          "meaning": "Measures taken to protect data from unauthorized access or disclosure."
+          "term": "token",
+          "meaning": "A unit of text processed by the model; pricing is based on the number of input tokens."
         },
         {
-          "term": "Microsoft Copilot",
-          "meaning": "An AI assistant integrated into Microsoft products that has been approved for official government use."
+          "term": "structured output",
+          "meaning": "Responses formatted as specific data types (e.g., choices, scores) rather than free‑form text."
         }
       ],
       "watch_next": []
     },
     "audiences": {
-      "builders": "Developers must ensure any AI tools they create for government use are compatible with the approved Microsoft Copilot platform.",
-      "business": "Government executives need to manage AI policy compliance and consider security implications of AI tool choices.",
-      "investors": "Investors may view the restriction as a signal of regulatory scrutiny on AI services in Europe."
+      "builders": "The API lets developers replace generic LLM calls with faster, cheaper decision calls and only pay for input tokens.",
+      "business": "Companies can cut response times and costs in decision‑heavy workflows, improving user experience and operational efficiency.",
+      "investors": "OpenAI’s entry into the decision‑model market expands its product portfolio and creates a new revenue stream competing with specialized rivals."
     },
-    "id": "9174a0a001c9",
-    "headline": "Swedish government offices ban ChatGPT and Claude, require Microsoft Copilot",
-    "summary": "Sweden's government ministries have prohibited staff from using ChatGPT and Claude on work computers. Employees must use Microsoft Copilot, the only AI tool approved for official use.",
-    "why_it_matters": "The ban highlights growing concerns about AI security and data protection in public sector IT.",
-    "category": "policy",
-    "lab": "Swedish government",
-    "model_name": "",
-    "model_type": "",
+    "id": "7909cc8ce05e",
+    "headline": "OpenAI launches Decisions API with voice, visual inputs at $0.10 per million tokens",
+    "summary": "OpenAI made its Decisions API generally available on Oct 22 2026, charging $0.10 per million input tokens and nothing for output. The API adds voice and visual modalities and delivers latency around 150 ms, up to ten‑times faster than standard GPT‑6 Luna calls.",
+    "why_it_matters": "It gives developers a cheap, ultra‑fast way to run high‑volume decision tasks, challenging competitors such as TypeSafe’s Jev model.",
+    "category": "industry",
+    "lab": "OpenAI",
+    "model_name": "GPT-6 Luna",
+    "model_type": "Language",
     "tags": [],
     "quotes": [
       {
-        "text": "consequences for our information security.",
-        "speaker": "Mikael Wettercrantz",
-        "speaker_role": "Digitalization Director",
-        "source_url": "https://azernews.az/region/266078.html"
+        "text": "The big unlock with Decisions API has been the speed, shrinking things from one to three seconds to 100, 120, 180 milliseconds.",
+        "speaker": "Nikunj Handa",
+        "speaker_role": "product lead for OpenAI’s APIs",
+        "source_url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up"
+      },
+      {
+        "text": "the Decisions API allowed the company to cut the time between actions from 1.4 seconds to .13 seconds.",
+        "speaker": "Andrew Hsu",
+        "speaker_role": "CTO at Speak",
+        "source_url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up"
       }
     ],
     "score": 8,
-    "url": "https://sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet",
-    "source_id": "hn",
+    "url": "https://techmeme.com/261023/p10",
+    "source_id": "auto-techmeme.com",
     "desk": "",
-    "image": "https://www.azernews.az/media/2026/09/04/ai_20suite_20lp_main_20header-1.png",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/10/Screenshot-2026-10-22-at-12.17.11-PM-1.png?resize=1200,988",
     "sources": [
       {
-        "url": "https://sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet",
-        "publisher": "sverigesradio.se",
-        "title": "Swedish government offices to ban ChatGPT and Claude"
+        "url": "https://techmeme.com/261023/p10",
+        "publisher": "techmeme.com",
+        "title": "OpenAI makes Decisions API, its Jev competitor, generally available with new voice and visual modalities, at $0.10/1M input tokens and no output-token charges (Tim Fernholz/TechCrunch)"
       },
       {
-        "url": "https://azernews.az/region/266078.html",
-        "publisher": "AzerNews",
-        "title": "Swedish government said to ban usage of ChatGPT, Claude"
+        "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up",
+        "publisher": "TechCrunch AI",
+        "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up"
+      },
+      {
+        "url": "https://cryptobriefing.com/openai-decisions-api-generally-available",
+        "publisher": "Crypto Briefing",
+        "title": "OpenAI makes its Decisions API generally available at $0.10 per million input tokens"
       }
     ],
     "research": {
       "steps": 3,
-      "read": 1,
+      "read": 2,
       "decision": "confirmed"
     },
-    "published_at": "2026-10-23T11:39:54+00:00",
-    "created_at": "2026-10-23T13:33:00+00:00",
+    "published_at": "2026-10-23T13:25:02+00:00",
+    "created_at": "2026-10-23T15:52:43+00:00",
     "sectors": [
-      "government"
+      "software"
     ],
     "regions": [
-      "europe"
+      "global"
     ],
     "deal": null,
     "relevance": {
-      "builders": 1,
+      "builders": 3,
       "business": 2,
-      "investors": 2
+      "investors": 0
     },
-    "cover": "",
+    "cover": "$0.10 per mil",
     "trackers": [
-      "ai-regulation"
+      "frontier-race"
     ],
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Developers can send up to 400 structured questions per request and receive typed answers such as probabilities or scores, paying only for the input data they send. The low latency and lack of output charges make it economical for large‑scale classification, routing or micro‑decision workloads.",
+        "terms": [
+          {
+            "term": "latency",
+            "meaning": "The time between sending a request and receiving a response, measured in milliseconds."
+          },
+          {
+            "term": "token",
+            "meaning": "A unit of text processed by the model; pricing is based on the number of input tokens."
+          },
+          {
+            "term": "structured output",
+            "meaning": "Responses formatted as specific data types (e.g., choices, scores) rather than free‑form text."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "The API lets developers replace generic LLM calls with faster, cheaper decision calls and only pay for input tokens.",
+        "business": "Companies can cut response times and costs in decision‑heavy workflows, improving user experience and operational efficiency.",
+        "investors": "OpenAI’s entry into the decision‑model market expands its product portfolio and creates a new revenue stream competing with specialized rivals."
+      },
+      "id": "7909cc8ce05e",
+      "headline": "OpenAI launches Decisions API with voice, visual inputs at $0.10 per million tokens",
+      "summary": "OpenAI made its Decisions API generally available on Oct 22 2026, charging $0.10 per million input tokens and nothing for output. The API adds voice and visual modalities and delivers latency around 150 ms, up to ten‑times faster than standard GPT‑6 Luna calls.",
+      "why_it_matters": "It gives developers a cheap, ultra‑fast way to run high‑volume decision tasks, challenging competitors such as TypeSafe’s Jev model.",
+      "category": "industry",
+      "lab": "OpenAI",
+      "model_name": "GPT-6 Luna",
+      "model_type": "Language",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "The big unlock with Decisions API has been the speed, shrinking things from one to three seconds to 100, 120, 180 milliseconds.",
+          "speaker": "Nikunj Handa",
+          "speaker_role": "product lead for OpenAI’s APIs",
+          "source_url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up"
+        },
+        {
+          "text": "the Decisions API allowed the company to cut the time between actions from 1.4 seconds to .13 seconds.",
+          "speaker": "Andrew Hsu",
+          "speaker_role": "CTO at Speak",
+          "source_url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up"
+        }
+      ],
+      "score": 8,
+      "url": "https://techmeme.com/261023/p10",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/10/Screenshot-2026-10-22-at-12.17.11-PM-1.png?resize=1200,988",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261023/p10",
+          "publisher": "techmeme.com",
+          "title": "OpenAI makes Decisions API, its Jev competitor, generally available with new voice and visual modalities, at $0.10/1M input tokens and no output-token charges (Tim Fernholz/TechCrunch)"
+        },
+        {
+          "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up",
+          "publisher": "TechCrunch AI",
+          "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up"
+        },
+        {
+          "url": "https://cryptobriefing.com/openai-decisions-api-generally-available",
+          "publisher": "Crypto Briefing",
+          "title": "OpenAI makes its Decisions API generally available at $0.10 per million input tokens"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-23T13:25:02+00:00",
+      "created_at": "2026-10-23T15:52:43+00:00",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 0
+      },
+      "cover": "$0.10 per mil",
+      "trackers": [
+        "frontier-race"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Pathos will use its AI system, Pathos Foundry, to analyze a large, de‑identified patient dataset built by Tempus, generating hypotheses about disease biology and helping design more targeted, adaptive clinical trials. This could reduce the time and cost of developing new therapies for Alzheimer’s and related disorders.",
+        "terms": [
+          {
+            "term": "de‑identified dataset",
+            "meaning": "A collection of patient information that has had personal identifiers removed to protect privacy."
+          },
+          {
+            "term": "adaptive clinical trial",
+            "meaning": "A trial design that allows modifications to aspects like dosage or patient groups based on interim results."
+          },
+          {
+            "term": "agentic AI platform",
+            "meaning": "Software that can autonomously generate and test hypotheses from data without direct human instruction."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Pathos Foundry will be applied to large-scale, longitudinal data, offering a use case for AI tools that handle hypothesis generation and trial design.",
+        "business": "Pharma companies can leverage AI to make faster, higher‑confidence decisions in neuroscience drug programs.",
+        "investors": "The $237 million Series E and $3 billion valuation highlight strong investor interest in AI‑driven drug development."
+      },
+      "id": "99f7b33679f0",
+      "headline": "Pathos AI partners with Bristol Myers Squibb and Tempus AI on Alzheimer drug development",
+      "summary": "Pathos AI announced a multi‑year collaboration with Bristol Myers Squibb and Tempus AI, licensing a $55 million, five‑year dataset and applying its Pathos Foundry AI platform to accelerate Alzheimer’s and other neurological drug research. The deal coincides with a $237 million Series E round led by Bristol Myers, valuing Pathos at about $3 billion.",
+      "why_it_matters": "It shows AI platforms being integrated into pharma pipelines to speed discovery and trial design for complex diseases.",
+      "category": "industry",
+      "lab": "Pathos AI",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 6,
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/pathos-ai-teams-up-with-bristol-myers-and-tempus-ai-to-advance-drug-development/articleshow/135147121.cms",
+      "source_id": "et-tech",
+      "desk": "india",
+      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-9386563,resizemode-75,msid-135147121/tech/artificial-intelligence/pathos-ai-teams-up-with-bristol-myers-and-tempus-ai-to-advance-drug-development.jpg",
+      "sources": [
+        {
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/pathos-ai-teams-up-with-bristol-myers-and-tempus-ai-to-advance-drug-development/articleshow/135147121.cms",
+          "publisher": "ET Tech",
+          "title": "Pathos AI teams up with Bristol Myers and Tempus AI to advance drug development"
+        },
+        {
+          "url": "https://finance.yahoo.com/healthcare/articles/pathos-ai-announces-strategic-collaborations-130000398.html",
+          "publisher": "Yahoo Finance",
+          "title": "Pathos AI Announces Strategic Collaborations with Bristol Myers Squibb and Tempus AI to Advance AI-Driven Drug Development Beginning with Alzheimer’s Disease and Other ..."
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-23T13:19:29+00:00",
+      "created_at": "2026-10-23T15:52:43+00:00",
+      "sectors": [
+        "healthcare"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": {
+        "type": "partnership",
+        "company": "Pathos AI",
+        "amount": "$55 million",
+        "usd": 55000000.0
+      },
+      "relevance": {
+        "builders": 1,
+        "business": 3,
+        "investors": 2
+      },
+      "cover": "$55 million",
+      "trackers": [
+        "ai-money"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "Claude was used to turn existing fuzz tests into formal specifications and then automatically produce mathematical proofs that the code never crashes for inputs under 64 MB. The proofs run on the low‑level RISC‑V instructions that the processor actually executes, giving a stronger guarantee than testing alone. The results are shared publicly so others can inspect the proofs and the underlying models.",
@@ -1151,6 +1337,73 @@
     },
     {
       "explainer": {
+        "what_it_means": "The orchestrator uses AI to evaluate patient data and suggest diagnoses, achieving higher accuracy than doctors in tests. In practice it could help doctors make faster, more accurate decisions and reduce unnecessary tests.",
+        "terms": [
+          {
+            "term": "Diagnostic orchestrator",
+            "meaning": "An AI system that coordinates multiple diagnostic tools to suggest possible conditions."
+          },
+          {
+            "term": "Simulation",
+            "meaning": "A computer‑based test that mimics real‑world medical cases."
+          },
+          {
+            "term": "Accuracy",
+            "meaning": "The proportion of correct diagnoses out of total cases."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "The system demonstrates that AI can be integrated into diagnostic workflows, suggesting new API opportunities for developers.",
+        "business": "Executives see potential for AI to improve diagnostic efficiency and reduce testing costs.",
+        "investors": "Investors may view this as evidence of AI's commercial viability in healthcare."
+      },
+      "id": "97aa07987ebe",
+      "headline": "Microsoft diagnostic orchestrator reaches 83% accuracy in complex case simulation",
+      "summary": "Microsoft's Diagnostic Orchestrator (MAI‑DxO) correctly diagnosed complex medical cases 83% of the time in a simulation, compared with 36% for generalist physicians using reference materials. The system also achieved about 80% accuracy on emergency department cases versus roughly 47% for physicians.",
+      "why_it_matters": "The result shows AI can surpass doctors in diagnostic accuracy, indicating a shift toward AI‑assisted medical decision making.",
+      "category": "research",
+      "lab": "Microsoft",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 7,
+      "url": "https://linkedin.com/feed/update/urn:li:activity:7519138392542953472",
+      "source_id": "microsoft-ai",
+      "desk": "",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://linkedin.com/feed/update/urn:li:activity:7519138392542953472",
+          "publisher": "Microsoft Source",
+          "title": "Important work from our team in Science Magazine today, showing how our diagnostic orchestrator can reason through complex medical cases, achieving greater diagnostic accuracy while reducing testing…"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-10-23T00:36:00+00:00",
+      "created_at": "2026-10-23T15:52:43+00:00",
+      "thread": "t-0cc3671858f5",
+      "sectors": [
+        "healthcare"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 3,
+        "investors": 1
+      },
+      "cover": "83% accuracy",
+      "trackers": [
+        "frontier-race"
+      ]
+    },
+    {
+      "explainer": {
         "what_it_means": "The two organisations will jointly conduct research and develop tools to detect and mitigate AI risks. Their work will focus on protecting digital infrastructure and ensuring AI is used responsibly.",
         "terms": [
           {
@@ -1499,7 +1752,8 @@
         "builders": 2,
         "business": 3,
         "investors": 0
-      }
+      },
+      "thread": "t-0cc3671858f5"
     },
     {
       "explainer": {
@@ -4320,172 +4574,27 @@
         "business": 2,
         "investors": 2
       }
-    },
-    {
-      "id": "140f65345f1e",
-      "headline": "NVIDIA launches open Nemotron 3.5 and Kumo models for European industries",
-      "summary": "NVIDIA announced new open-weight models—including Nemotron 3.5 Super VL, Nemotron 3.5 Bolt, Nemotron Retriever, Kumo Structured and Engine, Cosmos 3.5, Alpamayo 2 Edge, BioNeMo, and Ising—to let developers and enterprises in Europe customize AI with local data. Partners such as Black Forest Labs, H-Company and Mistral and customers like Dassault Systèmes, Salesforce and Accenture are already working with the models.",
-      "why_it_matters": "It gives European organizations control over AI foundations, enabling domain‑specific customization while keeping data on local infrastructure.",
-      "category": "models",
-      "lab": "NVIDIA",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://blogs.nvidia.com/blog/open-models-europe-industry",
-      "sources": [
-        {
-          "url": "https://blogs.nvidia.com/blog/open-models-europe-industry",
-          "publisher": "NVIDIA blog",
-          "title": "NVIDIA Open Models Advance Europe’s Sovereign Intelligence Across Industries"
-        }
-      ],
-      "published_at": "2026-10-21T10:00:07+00:00",
-      "created_at": "2026-10-21T17:16:05+00:00",
-      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/10/agentic-ai-key-visual-open-models-pr-gtc-berlin-2026-4k-scaled.png",
-      "thread": "t-5ae7f5cc4417",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "europe"
-      ],
-      "deal": null,
-      "cover": "Nemotron 3.5",
-      "explainer": {
-        "what_it_means": "NVIDIA has made a collection of AI models available for anyone in Europe to download and run on their own computers. Companies can teach these models with their own data so they work better for specific tasks like language understanding, forecasting or fraud detection. This lets businesses build custom AI tools while keeping control of their data and infrastructure.",
-        "terms": [
-          {
-            "term": "open-weight models",
-            "meaning": "AI models whose code and parameters are publicly shared so users can modify and run them themselves."
-          },
-          {
-            "term": "fine‑tune",
-            "meaning": "Adjusting a pre‑trained AI model with additional data so it performs better on a specific task."
-          },
-          {
-            "term": "structured business data",
-            "meaning": "Organized information such as tables or databases that companies use for things like sales, finance or operations."
-          }
-        ],
-        "watch_next": []
-      },
-      "trackers": [
-        "frontier-race"
-      ],
-      "audiences": {
-        "builders": "NVIDIA releases open‑weight Nemotron 3.5 and Kumo models for European developers to customize AI locally.",
-        "business": "European firms can train AI on‑premise, complying with data‑localization regulations.",
-        "investors": "Local AI model availability may drive regional AI market growth, attracting investors."
-      },
-      "video": {
-        "id": "v-NGxyPjcrE",
-        "title": "NVIDIA GTC Berlin 2026 Keynote With CEO Jensen Huang",
-        "channel": "NVIDIA"
-      },
-      "photo_local": true,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 2
-      }
-    },
-    {
-      "id": "d3f519557f32",
-      "headline": "OpenAI launches Patch the Planet to coordinate response to critical open‑source bugs",
-      "summary": "Patch the Planet links security researchers, maintainers and incident responders to address critical vulnerabilities in open‑source software.",
-      "why_it_matters": "Coordinated disclosure helps reduce the risk of exploitation of open‑source flaws that affect many AI systems.",
-      "category": "safety",
-      "lab": "OpenAI",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 6,
-      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
-      "sources": [
-        {
-          "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
-          "publisher": "OpenAI",
-          "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities"
-        }
-      ],
-      "published_at": "2026-10-21T07:00:00+00:00",
-      "created_at": "2026-10-21T17:16:05+00:00",
-      "image": null,
-      "thread": "t-5e3f50d9f67c",
-      "sectors": [
-        "cybersecurity"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "cover": "Patch the Planet",
-      "trackers": [
-        "agent-safety"
-      ],
-      "audiences": {
-        "builders": "OpenAI launches Patch the Planet to coordinate fixes for critical open‑source vulnerabilities.",
-        "business": "Organizations can rely on coordinated disclosures to reduce risk from open‑source bugs.",
-        "investors": "Improved security tooling may increase confidence in AI deployments, supporting market stability."
-      },
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 0
-      }
-    },
-    {
-      "id": "1de8e62ff715",
-      "headline": "OpenAI, PerturbAI and Scripps use AI agents to find leads in brain cell data",
-      "summary": "OpenAI, PerturbAI and Scripps Research deployed thousands of distributed AI agents to analyze data from millions of brain cells. The agents identified promising research leads in the complex biological dataset.",
-      "why_it_matters": "The approach shows how large‑scale AI can accelerate discovery in neuroscience by extracting insights from massive cellular data.",
-      "category": "research",
-      "lab": "OpenAI",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
-      "sources": [
-        {
-          "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
-          "publisher": "OpenAI",
-          "title": "Using thousands of AI agents to uncover new leads in biological data"
-        }
-      ],
-      "published_at": "2026-10-21T04:50:00+00:00",
-      "created_at": "2026-10-21T17:16:05+00:00",
-      "image": null,
-      "sectors": [
-        "science",
-        "healthcare"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "cover": "",
-      "explainer": null,
-      "trackers": [
-        "frontier-race"
-      ],
-      "audiences": {
-        "builders": "OpenAI and partners used AI agents to mine millions of brain cells, uncovering research leads.",
-        "business": "Biotech firms can accelerate discovery pipelines with large‑scale AI analysis.",
-        "investors": "Demonstrates AI’s potential in biotech, likely attracting capital to AI‑driven life‑science ventures."
-      },
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 0
-      }
     }
   ],
   "voices": [
+    {
+      "text": "The big unlock with Decisions API has been the speed, shrinking things from one to three seconds to 100, 120, 180 milliseconds.",
+      "speaker": "Nikunj Handa",
+      "speaker_role": "product lead for OpenAI’s APIs",
+      "source_url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up",
+      "story_id": "7909cc8ce05e",
+      "headline": "OpenAI launches Decisions API with voice, visual inputs at $0.10 per million tokens",
+      "published_at": "2026-10-23T13:25:02+00:00"
+    },
+    {
+      "text": "the Decisions API allowed the company to cut the time between actions from 1.4 seconds to .13 seconds.",
+      "speaker": "Andrew Hsu",
+      "speaker_role": "CTO at Speak",
+      "source_url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up",
+      "story_id": "7909cc8ce05e",
+      "headline": "OpenAI launches Decisions API with voice, visual inputs at $0.10 per million tokens",
+      "published_at": "2026-10-23T13:25:02+00:00"
+    },
     {
       "text": "I was told that there was a breach of trust because I interacted with a third party through unsanctioned channels,",
       "speaker": "Tomek Korbak",
@@ -4521,24 +4630,6 @@
       "story_id": "4d4424ae2b1c",
       "headline": "Chariot launches real‑time speech model for 10 Indian languages",
       "published_at": "2026-10-23T10:16:23+00:00"
-    },
-    {
-      "text": "We see an opportunity for partnerships in which Polish and Indian companies combine their research and development teams, technologies, and capital to jointly introduce new digital products to the market,",
-      "speaker": "Donald Tusk",
-      "speaker_role": "Polish Prime Minister",
-      "source_url": "https://livemint.com/technology/polish-pm-donald-tusk-seeks-deeper-technology-cooperation-with-india-across-ai-digital-and-space-sectors-11792741007680.html",
-      "story_id": "a67e741862c0",
-      "headline": "Polish prime minister calls for deeper AI, digital and space cooperation with India",
-      "published_at": "2026-10-23T09:30:00+00:00"
-    },
-    {
-      "text": "Polish space sector companies are already finding partners in India for joint technology development in the field of satellite components, earth observation, navigation, software, data analytics, space security, and dual use solutions.",
-      "speaker": "Donald Tusk",
-      "speaker_role": "Polish Prime Minister",
-      "source_url": "https://livemint.com/technology/polish-pm-donald-tusk-seeks-deeper-technology-cooperation-with-india-across-ai-digital-and-space-sectors-11792741007680.html",
-      "story_id": "a67e741862c0",
-      "headline": "Polish prime minister calls for deeper AI, digital and space cooperation with India",
-      "published_at": "2026-10-23T09:30:00+00:00"
     }
   ],
   "videos": [
@@ -4642,14 +4733,6 @@
       "guest": "Erik Bernhardsson, Modal CEO"
     },
     {
-      "id": "e-56iKSx1X4",
-      "title": "Why AI Compute Comes in Rectangles — Erik Bernhardsson, Modal",
-      "channel": "Latent Space",
-      "published": "2026-10-22T14:10:32+00:00",
-      "blurb": "Erik Bernhardsson discusses why AI compute is sold in rectangular units and how Modal pools compute.",
-      "guest": "Erik Bernhardsson, Modal CEO"
-    },
-    {
       "id": "DWHyPWnzGAI",
       "title": "The Recommendation Engine for Commodity Traders — Anekha Sokhal, Moshi",
       "channel": "Latent Space",
@@ -4666,6 +4749,14 @@
       "guest": "Adit Abraham, Reducto co‑founder and CEO"
     },
     {
+      "id": "L4SWQebqhek",
+      "title": "David Silver and Lasse Espeholt of Ineffable Intelligence: A Superlearner for the Age of Experience",
+      "channel": "Training Data (Sequoia)",
+      "published": "2026-10-13T12:00:32+00:00",
+      "blurb": "David Silver and Lasse Espeholt discuss their superlearner approach and its implications for AI.",
+      "guest": "David Silver, former DeepMind researcher (AlphaGo)"
+    },
+    {
       "id": "BbMxPZgCkVQ",
       "title": "Sundar Pichai on Frontier AI: “We Won’t Do It Any Other Way”",
       "channel": "Big Technology Podcast",
@@ -4675,8 +4766,8 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-10-23T13:33:00+00:00",
-    "one_line": "OpenAI seeks massive funding while AI policies tighten, safety concerns rise, and compute capacity expands globally.",
+    "written_at": "2026-10-23T15:52:43+00:00",
+    "one_line": "OpenAI raises funds, expands API, while safety and policy restrictions tighten worldwide.",
     "themes": [
       {
         "title": "OpenAI seeks $30 billion funding",
@@ -4690,29 +4781,19 @@
         ]
       },
       {
-        "title": "Governments and firms limit AI tools",
-        "text": "Swedish government ministries have prohibited staff from using ChatGPT and Claude on work computers, requiring Microsoft Copilot as the only approved AI tool. Meta’s updated commercial terms allow business accounts to authorize scraping of associated websites, including news sites, for AI training, and several major U.S. banks are restricting third‑party AI agents from accessing customer accounts after detecting unauthorized activity.",
+        "title": "OpenAI launches multimodal Decisions API",
+        "text": "OpenAI made its Decisions API generally available on Oct 22 2026, charging $0.10 per million input tokens, adding voice and visual modalities, and delivering latency around 150 ms, up to ten‑times faster than standard GPT‑6 Luna calls.",
         "stories": [
           {
-            "id": "9174a0a001c9",
-            "headline": "Swedish government offices ban ChatGPT and Claude, require Microsoft Copilot",
-            "url": "https://sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet"
-          },
-          {
-            "id": "c744e4ea5afb",
-            "headline": "Meta’s new commercial terms could let it scrape news sites for AI training",
-            "url": "https://theverge.com/tech/1017082/meta-terms-update-ai-training-concerns"
-          },
-          {
-            "id": "d6229369cc4d",
-            "headline": "Major US banks block third‑party AI agents from customer accounts",
-            "url": "https://timesofindia.indiatimes.com/world/us/why-us-banks-including-jpmorgan-and-morgan-stanley-are-blocking-ai-agents-from-customer-accounts/articleshow/135131817.cms"
+            "id": "7909cc8ce05e",
+            "headline": "OpenAI launches Decisions API with voice, visual inputs at $0.10 per million tokens",
+            "url": "https://techmeme.com/261023/p10"
           }
         ]
       },
       {
-        "title": "Safety incidents and research findings",
-        "text": "OpenAI terminated three safety researchers after an internal investigation said they leaked internal model designs, and Chinese‑aligned hackers used the open‑source AI framework ARTEX to breach ConnectWise and access about 2,250 Microsoft 365 tenants. Separate research reported that reinforcement learning from human feedback did not consistently improve instrumental behavior in OLMo‑3, that the EpiSEM‑Bench benchmark evaluates LLM agents on tasks with missing safety facts, and that Claude generated formal proofs for security properties across 123 open‑source libraries, producing roughly 180 million lines of Rocq proofs.",
+        "title": "AI safety concerns after firings, breaches",
+        "text": "OpenAI terminated three safety researchers after an internal investigation said they leaked internal model designs via disappearing Signal chats. Microsoft reported that China‑aligned hackers used the open‑source AI framework ARTEX to infiltrate about 2,250 organizations, gaining privileged cloud access in some cases within three hours.",
         "stories": [
           {
             "id": "3f492a65e9c2",
@@ -4723,47 +4804,27 @@
             "id": "d1b19037538a",
             "headline": "Chinese hackers used AI agents to breach ConnectWise and access 2,250 Microsoft 365 tenants",
             "url": "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise"
-          },
-          {
-            "id": "68259bbe1bea",
-            "headline": "Study finds RLVR training does not consistently increase instrumental behavior in OLMo-3",
-            "url": "https://arxiv.org/abs/2610.31624"
-          },
-          {
-            "id": "3fde963dbc89",
-            "headline": "EpiSEM-Bench evaluates safety of LLM agents when key facts are omitted",
-            "url": "https://arxiv.org/abs/2610.31650"
-          },
-          {
-            "id": "fd2833dd343a",
-            "headline": "Anthropic uses Claude to formally verify security properties in 123 open-source libraries",
-            "url": "https://techmeme.com/261023/p5"
           }
         ]
       },
       {
-        "title": "Global AI compute capacity expands",
-        "text": "NVIDIA unveiled the Minerva AIOps platform for AI factory observability, and Schneider Electric announced a collaboration with NVIDIA and HPE to deliver Industrial AI Agents at the Edge. SpaceX plans to manage at least 13 GW of AI compute power by the end of 2027, and Firebird obtained a U.S. export license for 45,000 NVIDIA Grace GPUs to build a Kazakh data center aiming for about 500 MW capacity.",
+        "title": "Governments and banks restrict AI tools",
+        "text": "Swedish government ministries have prohibited staff from using ChatGPT and Claude on work computers, requiring Microsoft Copilot as the only approved AI tool. Major U.S. banks including JPMorgan Chase, Morgan Stanley, Bank of America, Wells Fargo and Citi are restricting or blocking third‑party AI agents from accessing customer accounts after detecting unauthorized activity. Meta’s updated commercial terms, effective Oct. 30 2026, allow business accounts to authorize the company to scrape content from associated websites, including news sites, for AI training.",
         "stories": [
           {
-            "id": "99c8819be3a7",
-            "headline": "NVIDIA launches Minerva AIOps platform for AI factory observability",
-            "url": "https://blogs.nvidia.com/blog/minerva-platform-infrastructure"
+            "id": "9174a0a001c9",
+            "headline": "Swedish government offices ban ChatGPT and Claude, require Microsoft Copilot",
+            "url": "https://sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet"
           },
           {
-            "id": "9aaacb38b57d",
-            "headline": "Schneider Electric, NVIDIA and HPE launch Industrial AI Agents at the Edge",
-            "url": "https://globalcement.com/news/21395-schneider-electric-nvidia-and-hpe-to-work-together-on-applying-ai-to-the-real-world"
+            "id": "d6229369cc4d",
+            "headline": "Major US banks block third‑party AI agents from customer accounts",
+            "url": "https://timesofindia.indiatimes.com/world/us/why-us-banks-including-jpmorgan-and-morgan-stanley-are-blocking-ai-agents-from-customer-accounts/articleshow/135131817.cms"
           },
           {
-            "id": "e6b9c5ab474d",
-            "headline": "SpaceX aims for 13 GW AI compute capacity by end of 2027",
-            "url": "https://news.webindia123.com/news/Articles/Business/20261023/4514033.html"
-          },
-          {
-            "id": "822412740c4f",
-            "headline": "Kazakhstan expands AI compute with 45,000 Grace GPUs and new data centers",
-            "url": "https://blogs.nvidia.com/blog/kazakhstan-ai-compute-ecosystem"
+            "id": "c744e4ea5afb",
+            "headline": "Meta’s new commercial terms could let it scrape news sites for AI training",
+            "url": "https://theverge.com/tech/1017082/meta-terms-update-ai-training-concerns"
           }
         ]
       }
@@ -4777,6 +4838,27 @@
     "range": "15 Oct – 22 Oct 2026"
   },
   "threads": [
+    {
+      "id": "t-0cc3671858f5",
+      "title": "Microsoft AI diagnostic system featured in study",
+      "updated_at": "2026-10-23T00:36:00+00:00",
+      "stories": [
+        {
+          "id": "97aa07987ebe",
+          "headline": "Microsoft diagnostic orchestrator reaches 83% accuracy in complex case simulation",
+          "url": "https://linkedin.com/feed/update/urn:li:activity:7519138392542953472",
+          "published_at": "2026-10-23T00:36:00+00:00",
+          "category": "research"
+        },
+        {
+          "id": "a8f2132df5b8",
+          "headline": "Microsoft AI diagnostic system hits 83% accuracy, over twice doctors in complex cases",
+          "url": "https://gizmodo.com/microsoft-says-its-new-ai-is-more-than-twice-as-good-at-diagnosing-diseases-as-doctors-2000829562",
+          "published_at": "2026-10-22T21:00:00+00:00",
+          "category": "research"
+        }
+      ]
+    },
     {
       "id": "t-9b54cff2498d",
       "title": "OpenAI partnership approach expands with NASK",
@@ -4837,41 +4919,6 @@
           "url": "https://fortune.com/2026/10/21/ai-tools-discovered-the-php-vulnerability-that-could-take-down-70-of-the-internet-now-the-race-is-on-to-patch-it-before-ai-powered-hackers-attack",
           "published_at": "2026-10-21T21:15:00+00:00",
           "category": "safety"
-        }
-      ]
-    },
-    {
-      "id": "t-5ae7f5cc4417",
-      "title": "NVIDIA's open models in Europe",
-      "updated_at": "2026-10-22T05:00:56+00:00",
-      "stories": [
-        {
-          "id": "e12302cd4e2c",
-          "headline": "European banks and fintechs adopt NVIDIA open‑weight models for proprietary AI",
-          "url": "https://blogs.nvidia.com/blog/european-financial-services-organizations-open-models-proprietary-intelligence",
-          "published_at": "2026-10-22T05:00:56+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "8ed037559253",
-          "headline": "European retailers cut inference costs up to 90% using NVIDIA open models",
-          "url": "https://blogs.nvidia.com/blog/european-retail-open-models-robotics",
-          "published_at": "2026-10-22T05:00:23+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "5346e68360b4",
-          "headline": "NVIDIA open models adopted in European public sector projects",
-          "url": "https://blogs.nvidia.com/blog/european-public-sector-open-models",
-          "published_at": "2026-10-22T05:00:02+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "140f65345f1e",
-          "headline": "NVIDIA launches open Nemotron 3.5 and Kumo models for European industries",
-          "url": "https://blogs.nvidia.com/blog/open-models-europe-industry",
-          "published_at": "2026-10-21T10:00:07+00:00",
-          "category": "models"
         }
       ]
     }
@@ -4961,7 +5008,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 68,
+    "stories_this_month": 71,
     "model_releases_this_month": 6,
     "labs_tracked": 12
   }

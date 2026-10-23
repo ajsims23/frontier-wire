@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-23T13:33:00+00:00",
+  "started_at": "2026-10-23T15:52:43+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -18,9 +18,9 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (13)",
+    "hf-papers": "ok (16)",
     "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (12)",
+    "hn": "ok (15)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -41,112 +41,159 @@
   },
   "dropped": [
     {
-      "title": "Does Your Model Run on AWS Trainium? Look It Up",
-      "reason": "score 3: A brief Hugging Face blog post about checking model compatibility with AWS Trainium; minor product feature with limited impact for frontier AI audience."
+      "title": "Keeping over a million elevators and escalators running smoothly is no small task. Today in Cologne, I heard about how TK Elevator is using our tech to help provide its service technicians access to…",
+      "reason": "score 4: Describes a customer use‑case (TK Elevator) of Microsoft tech; minor deployment not newsworthy for Frontier Wire."
     },
     {
-      "title": "Tech Mahindra Partners With SpaceXSI to Bring AI Into Software Engineering",
-      "reason": "duplicate of 9e4a768261e4"
+      "title": "In my annual letter, I share how we’re building a frontier ecosystem to turn technological progress into real-world outcomes and economic opportunity for people, organizations, and communities…",
+      "reason": "score 3: Corporate annual letter about ecosystem building; largely marketing with no substantive AI breakthrough."
     },
     {
-      "title": "Lowdown: India’s new telecom sandbox rules are in force. How much of the trials will the public see?",
-      "reason": "score 4: India’s new telecom sandbox rules; while relevant to testing, the announcement is not directly about AI developments."
+      "title": "Show HN: OnKey – I'm a bad singer, so I built an app to show where I'm off-key",
+      "reason": "score 2: Hacker News post about a singing app; unrelated to frontier AI developments."
     },
     {
-      "title": "An interview with Intel's leadership, including CTO Pushkar Ranade, on AI chip demand, lessons from 10nm, whether Intel can catch up to TSMC, Terafab, and more (Dwarkesh Patel/Dwarkesh Podcast)",
-      "reason": "score 4: Podcast interview with Intel leadership on chip demand; primarily promotional and not a substantive AI development."
+      "title": "OpenSSL 4.1.0",
+      "reason": "score 1: OpenSSL 4.1.0 release; not AI‑related."
     },
     {
-      "title": "Sources: Anthropic and London-based PE firm Hg agree to launch a consultancy by the end of 2026 to embed AI consultants and engineers into European businesses (Financial Times)",
-      "reason": "score 5: Announcement of an Anthropic‑backed consultancy to embed AI engineers in European firms; routine business news without a major impact."
+      "title": "Remove pgrust: the entry is cheating",
+      "reason": "score 1: GitHub issue about pgrust; not AI news."
     },
     {
-      "title": "Greece's parliament passes a bill to ban social media platforms for children under 15 from January 1, 2027, and gives companies 2.5 months to verify users' ages (Angeliki Koutantou/Reuters)",
-      "reason": "score 3: Greek parliament bill banning social‑media for children; not directly related to AI technology or policy."
+      "title": "Meta delays new business terms after publisher pushback on AI scraping",
+      "reason": "duplicate of c744e4ea5afb"
     },
     {
-      "title": "SK Telecom unit SK Hyper is in talks with tech firms and investors to finance 15GW of data center capacity in South Korea by 2035; the first 5GW will cost $350B (Bloomberg)",
-      "reason": "score 3: SK Hyper’s plan to finance massive data‑center capacity; infrastructure news not specific to AI deployments."
+      "title": "Festive Sales See Shoppers Log In, But Hold Back On Big-Ticket Purchases",
+      "reason": "score 1: Festive sales trends; no AI relevance."
     },
     {
-      "title": "Oura sues Indian smart ring rival Ultrahuman again to block US sales of Ring Pro, months after a redesign helped Ultrahuman return following an import ban (Jagmeet Singh/TechCrunch)",
-      "reason": "score 2: Legal dispute between smart‑ring companies; unrelated to AI."
+      "title": "Unicommerce Q2: Profit Rises 11% YoY To ₹6.4 Cr, Revenue Up 15%",
+      "reason": "score 2: Unicommerce profit report; unrelated to AI."
     },
     {
-      "title": "SK Hynix says its SSD subsidiary Solidigm has halted a review of a potential US IPO to fund a new US chip fab, citing \"market conditions and share price trends\" (P.R. Venkat/Wall Street Journal)",
-      "reason": "score 2: SK Hynix subsidiary halts IPO review; not AI‑focused."
+      "title": "Zetwerk Makes Its Market Debut; Can Scale Alone Widen Its Thin Margins?",
+      "reason": "score 2: Zetwerk market debut; not AI."
     },
     {
-      "title": "Spotify confirms it is rolling out a new family plan verification method requiring members to scan QR codes on plan managers' phones within seven days of notice (Sarah Perez/TechCrunch)",
-      "reason": "score 2: Spotify family‑plan verification rollout; no AI relevance."
+      "title": "Netflix Credits Flipkart Bundle, Indian Shows For Record Q3 Subscriber Additions",
+      "reason": "score 2: Netflix‑Flipkart bundle subscriber growth; not AI."
     },
     {
-      "title": "An interview with Ondřej Surý, a volunteer who maintains and helps automate PHP patches, about his role in fixing two critical PHP security vulnerabilities (Charlie Warzel/The Atlantic)",
-      "reason": "score 2: Interview about PHP security patches; not AI‑related."
+      "title": "Vivo X500 series Europe launch on October 27: Expected camera specs, battery capacity and key features",
+      "reason": "score 2: Vivo X500 series launch in Europe; not an Indian AI story."
     },
     {
-      "title": "German energy company PreussenElektra says it is working with Nvidia to assess whether the country's idle nuclear plants could be turned into data centers (Eva Brendel/Bloomberg)",
-      "reason": "score 3: German energy firm exploring data‑center use of idle nuclear plants with Nvidia; peripheral to AI."
+      "title": "Explained: Why is Meta creating a new class of non-voting shares amid its AI growth?",
+      "reason": "score 4: Meta stock split announcement tied to AI growth; finance‑oriented, not core AI news."
     },
     {
-      "title": "Pathos AI, which uses AI to develop oncology drugs, raised a $237M Series E at a $3B post-money valuation, up from a $1.6B valuation in May 2025 (Katherine Davis/Axios)",
-      "reason": "variety: already 2 stories from techmeme.com this run"
+      "title": "SK Hynix drops US IPO plan for Solidigm: Report",
+      "reason": "score 2: SK Hynix IPO plan change; not AI."
     },
     {
-      "title": "The US Treasury proposes a rule to crack down on US high-tech investments in areas like AI and supercomputing in China, Russia, and other \"countries of concern\" (Associated Press)",
-      "reason": "could not verify yet after a second try; dropped"
+      "title": "AI-discovered bugs may soon trigger fresh disruptions, cyber experts say",
+      "reason": "score 5: Report on AI‑discovered bugs increasing digital flaw discovery; interesting but below news threshold."
     },
     {
-      "title": "OpenAI makes Decisions API, its Jev competitor, generally available with new voice and visual modalities, at $0.10/1M input tokens and no output-token charges (Tim Fernholz/TechCrunch)",
+      "title": "Apple bets iPhone Duo can remake foldable market as sales begin",
+      "reason": "score 2: Apple iPhone Duo foldable market story; not AI."
+    },
+    {
+      "title": "As chip prices surge, EV maker Ultraviolette is working on ways to absorb costs",
+      "reason": "score 2: Ultraviolette EV cost‑absorption story; not AI‑focused."
+    },
+    {
+      "title": "[Weekly funding roundup Oct 17-23] VC funding falls below $100M amid lack of big deals",
+      "reason": "score 2: VC funding roundup; not specific to AI."
+    },
+    {
+      "title": "Sources: Kalshi is targeting a December rollout for exchange-traded futures contracts tracking US inflation, rivaling exchanges like CME and ICE (Greg Ritchie/Bloomberg)",
+      "reason": "score 2: Kalshi futures contract rollout; not AI‑focused."
+    },
+    {
+      "title": "Source: Shein has agreed to pay $100M, equivalent to 44% of its Q2 profit, to settle a US FTC investigation over delivery delays and other customer complaints (Reuters)",
+      "reason": "score 1: Shein FTC settlement; unrelated to AI."
+    },
+    {
+      "title": "China's DeepSeek, MiniMax win approval for AI global use, state media-affiliated entity says",
       "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "9174a0a001c9",
-      "headline": "Swedish government offices ban ChatGPT and Claude, require Microsoft Copilot",
-      "category": "policy",
-      "summary": "Sweden's government ministries have prohibited staff from using ChatGPT and Claude on work computers. Employees must use Microsoft Copilot, the only AI tool approved for official use.",
-      "url": "https://sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet",
+      "id": "7909cc8ce05e",
+      "headline": "OpenAI launches Decisions API with voice, visual inputs at $0.10 per million tokens",
+      "category": "industry",
+      "summary": "OpenAI made its Decisions API generally available on Oct 22 2026, charging $0.10 per million input tokens and nothing for output. The API adds voice and visual modalities and delivers latency around 150 ms, up to ten‑times faster than standard GPT‑6 Luna calls.",
+      "url": "https://techmeme.com/261023/p10",
+      "sources": 3,
+      "quotes": 2
+    },
+    {
+      "id": "97aa07987ebe",
+      "headline": "Microsoft diagnostic orchestrator reaches 83% accuracy in complex case simulation",
+      "category": "research",
+      "summary": "Microsoft's Diagnostic Orchestrator (MAI‑DxO) correctly diagnosed complex medical cases 83% of the time in a simulation, compared with 36% for generalist physicians using reference materials. The system also achieved about 80% accuracy on emergency department cases versus roughly 47% for physicians.",
+      "url": "https://linkedin.com/feed/update/urn:li:activity:7519138392542953472",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "99f7b33679f0",
+      "headline": "Pathos AI partners with Bristol Myers Squibb and Tempus AI on Alzheimer drug development",
+      "category": "industry",
+      "summary": "Pathos AI announced a multi‑year collaboration with Bristol Myers Squibb and Tempus AI, licensing a $55 million, five‑year dataset and applying its Pathos Foundry AI platform to accelerate Alzheimer’s and other neurological drug research. The deal coincides with a $237 million Series E round led by Bristol Myers, valuing Pathos at about $3 billion.",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/pathos-ai-teams-up-with-bristol-myers-and-tempus-ai-to-advance-drug-development/articleshow/135147121.cms",
       "sources": 2,
-      "quotes": 1
+      "quotes": 0
     }
   ],
   "notes": [
+    "dropped unverifiable benchmark: OpenAI Decisions API (GPT-6 Luna) latency ≈150 ms",
+    "dropped unverifiable benchmark: OpenAI Decisions API (GPT-6 Luna) relative speed 10× faster than standard GPT‑6 Luna",
+    "dropped unverifiable benchmark: MAI‑DxO Complex case simulation accuracy 83%",
+    "dropped unverifiable benchmark: MAI‑DxO Emergency department case accuracy 80%",
+    "dropped unverifiable benchmark: Generalist physicians Complex case simulation accuracy 36%",
+    "dropped unverifiable benchmark: Physicians Emergency department case accuracy 47%",
     "1 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 80.8,
-    "audit": -0.0,
-    "judge": 1.6,
-    "verify and write": 191.7,
-    "videos": 2.0,
-    "tagging": 21.0,
-    "explainers": 0.0,
-    "trackers": 41.3,
-    "claims": 20.5,
+    "gather": 81.4,
+    "audit": 0.0,
+    "judge": 2.6,
+    "verify and write": 235.3,
+    "videos": 3.1,
+    "tagging": 21.1,
+    "explainers": -0.0,
+    "trackers": 63.5,
+    "claims": 21.1,
     "model tracker": 0.1,
     "weekly": 0.0,
-    "briefing": 43.4,
+    "briefing": 21.2,
     "self-review": -0.0,
-    "photos": 0.1,
-    "daily email": -0.0,
-    "alerts": 6.7
+    "photos": 0.5,
+    "daily email": 0.0,
+    "alerts": 8.0
   },
-  "fetched": 2871,
-  "fresh": 16,
-  "judged": 16,
+  "fetched": 2877,
+  "fresh": 23,
+  "judged": 23,
   "kept": 4,
   "research": {
     "investigated": 3,
-    "confirmed": 1,
+    "confirmed": 2,
     "tool_calls": 9
   },
   "research_log": [
-    "Swedish government offices to ban ChatGPT and Claude: confirmed (searched “Swedish government ban ChatGPT Claude government offices”; read azernews.az; searched “Sweden government offices ban ChatGPT Claude Microsoft Copilot”)",
-    "The US Treasury proposes a rule to crack down on US high-tech investme: unconfirmed (searched “US Treasury proposed rule high-tech investments China Russia AI supercomputing countries of concern”; searched “\"Treasury Department\" \"high-tech investments\" China Russia AI”; read msn.com)",
-    "OpenAI makes Decisions API, its Jev competitor, generally available wi: unconfirmed (searched “OpenAI Decisions API generally available voice visual modalities $0.10 per million input tokens”; read techcrunch.com; read gadgets360.com)"
+    "OpenAI makes Decisions API, its Jev competitor, generally available wi: confirmed (searched “OpenAI Decisions API generally available voice visual modalities $0.10 per million input tokens”; read techcrunch.com; read cryptobriefing.com)",
+    "China's DeepSeek, MiniMax win approval for AI global use, state media-: unconfirmed (searched “DeepSeek MiniMax approval for AI global use state media affiliated entity”; read msn.com; read msn.com)",
+    "Pathos AI teams up with Bristol Myers and Tempus AI to advance drug de: confirmed (searched “Pathos AI Bristol Myers Squibb Tempus AI collaboration Alzheimer's”; read msn.com; read yahoo.com)"
+  ],
+  "threads": [
+    "Microsoft AI diagnostic system featured in study: Microsoft diagnostic orchestrator reaches 83% accuracy in co"
   ],
   "videos": {
     "OpenAI": "ok (12 in feed, 0 new)",
@@ -173,16 +220,16 @@
     "Lenny's Podcast": "ok (2 in feed, 0 new)",
     "20VC": "ok (4 in feed, 0 new)"
   },
-  "tagged": 1,
-  "trackers": "filed 1 stories; updated ai-regulation",
-  "claims": "13 tracked, 13 open, 0 updated this run",
-  "model_tracker": "82 models, 26 changes today",
+  "tagged": 3,
+  "trackers": "filed 3 stories; updated frontier-race, ai-money",
+  "claims": "14 tracked, 14 open, 1 updated this run",
+  "model_tracker": "82 models, 32 changes today",
   "briefing": "4 themes from 20 stories",
-  "photos": "1 saved, 0 unavailable",
-  "alerts": "34 events sent: {\"subscribers\":4,\"sent\":1,\"queued\":8}",
-  "ai_requests_run": 21,
-  "ai_tokens_run": 36300,
-  "ai_requests_today": 183,
+  "photos": "2 saved, 0 unavailable",
+  "alerts": "42 events sent: {\"subscribers\":6,\"sent\":1,\"queued\":29}",
+  "ai_requests_run": 24,
+  "ai_tokens_run": 57574,
+  "ai_requests_today": 207,
   "provider_log": [
     "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
   ]
