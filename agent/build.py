@@ -119,6 +119,8 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
         shutil.rmtree(out)
     shutil.copytree(ROOT / "site", out, ignore=shutil.ignore_patterns("templates"))
     (out / "data").mkdir(exist_ok=True)
+    if (data / "img").exists():  # our own copies of story photos
+        shutil.copytree(data / "img", out / "img", dirs_exist_ok=True)
     if (data / "feed.xml").exists():
         shutil.copy(data / "feed.xml", out / "data" / "feed.xml")
     for st in home.get("stories", []) + ([home["lead"]] if home.get("lead") else []):

@@ -32,6 +32,7 @@ def make(tmp_path, now=NOW, max_stories=12, per_lab=5, **limit_overrides):
               http=http, env=ENV, sleep=lambda s: None)
     fetcher = FixtureFetcher()
     room = Newsroom(cfg, llm, fetcher, Store(tmp_path), now, gdelt=Gdelt(fetcher, sleep=lambda s: None))
+    room.photo_http = httpx.Client(transport=httpx.MockTransport(lambda r: httpx.Response(404)))  # no real downloads in tests
     return room, calls
 
 
@@ -738,3 +739,23 @@ def test_alert_events_and_dispatch(tmp_path, monkeypatch):
     monkeypatch.setenv("ALERTS_DISPATCH_SECRET", "s3cret")
     alerts.dispatch(room, http)
     assert sent[0][0] == "Bearer s3cret" and len(sent[0][1]["events"]) == 3
+
+
+def test_photos_saved_resized_and_pruned(tmp_path):
+    import io as _io
+    from types import SimpleNamespace
+    from PIL import Image
+    from agent.photos import update_photos
+    buf = _io.BytesIO(); Image.new("RGB", (2000, 1000), (20, 120, 110)).save(buf, "PNG")
+    tiny = _io.BytesIO(); Image.new("RGB", (64, 64)).save(tiny, "PNG")
+    http = httpx.Client(transport=httpx.MockTransport(lambda r: httpx.Response(200, content=(tiny if "icon" in str(r.url) else buf).getvalue())))
+    (tmp_path / "img").mkdir()
+    (tmp_path / "img" / "old.jpg").write_bytes(b"x")
+    stories = [{"id": "a1", "image": "https://pub.example/photo.png", "published_at": NOW.isoformat()},
+               {"id": "b2", "image": "https://pub.example/icon.png", "published_at": NOW.isoformat()}]
+    room = SimpleNamespace(store=SimpleNamespace(dir=tmp_path, stories=stories), cfg=SimpleNamespace(run={"front_page_days": 14}), now=NOW, report={})
+    update_photos(room, http)
+    saved = Image.open(tmp_path / "img" / "a1.jpg")
+    assert saved.width == 960 and stories[0]["photo_local"] is True
+    assert stories[1].get("photo_failed") and not (tmp_path / "img" / "b2.jpg").exists()   # icons aren't photos
+    assert not (tmp_path / "img" / "old.jpg").exists()                                      # stale copies removed

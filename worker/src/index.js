@@ -338,8 +338,8 @@ export function storyEvent(s, site) {
   const aud = s.audiences || {};
   const line = aud.business || aud.builders || aud.investors || s.why_it_matters || "";
   return { key: `story:${s.id}`, title: s.headline, summary: s.summary, url: `${site}story/${s.id}/`, follows: storyKeys(s),
-    image: /^https:\/\//.test(s.image || "") ? s.image : `${site}og/${s.id}.png`, tag: TAGS[s.category] || "Story",
-    audience: line ? `Why it matters: ${line}` : "", photo: /^https:\/\//.test(s.image || "") ? s.image : "", cover: s.cover || s.model_name || "", lab: s.lab || "", category: s.category };
+    image: s.photo_local ? `${site}img/${s.id}.jpg` : `${site}og/${s.id}.png`, tag: TAGS[s.category] || "Story",
+    audience: line ? `Why it matters: ${line}` : "", photo: s.photo_local ? `${site}img/${s.id}.jpg` : "", cover: s.cover || s.model_name || "", lab: s.lab || "", category: s.category };
 }
 async function testDigest(env, to) {
   const data = await (await fetch(new URL("data/site.json", env.SITE_URL))).json();

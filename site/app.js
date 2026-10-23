@@ -42,8 +42,9 @@
   function media(s, cls) {
     const fig = s.image_kind === "figure" ? " fig" : "";
     const vid = s.video && /^[A-Za-z0-9_-]{11}$/.test(s.video.id) ? `<span class="vbadge"><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>Video</span>` : "";
-    return `<div class="media ${cls}${fig}" style="--c:${color(s.category)}">${window.FWCover ? window.FWCover(s) : ""}${imgOk(s.image)
-      ? `<img src="${esc(s.image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}${vid}</div>`;
+    const src = s.photo_local ? `img/${encodeURIComponent(s.id)}.jpg` : (imgOk(s.image) ? s.image : "");
+    return `<div class="media ${cls}${fig}" style="--c:${color(s.category)}">${window.FWCover ? window.FWCover(s) : ""}${src
+      ? `<img src="${esc(src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}${vid}</div>`;
   }
   document.addEventListener("error", (e) => { const t = e.target; if (t.tagName === "IMG" && t.parentElement && t.parentElement.classList.contains("media")) t.remove(); }, true);
   document.addEventListener("load", (e) => { const t = e.target; if (t.tagName === "IMG" && t.naturalWidth > 0 && t.naturalWidth < 120) t.remove(); }, true);

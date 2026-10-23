@@ -35,13 +35,13 @@ def build_events(room: Any, site: str) -> list[dict[str, Any]]:
     for w in room.report.get("written", []):
         s = by_id.get(w["id"])
         if s:
-            image = s.get("image") if str(s.get("image") or "").startswith("https://") else f"{site}og/{s['id']}.png"
+            image = f"{site}img/{s['id']}.jpg" if s.get("photo_local") else f"{site}og/{s['id']}.png"
             aud = s.get("audiences") or {}
             line = aud.get("business") or aud.get("builders") or aud.get("investors") or s.get("why_it_matters", "")
             events.append({"key": f"story:{s['id']}", "title": s["headline"], "summary": s["summary"],
                            "url": f"{site}story/{s['id']}/", "follows": follow_keys(s), "image": image,
                            "tag": TAGS.get(s.get("category", ""), "Story"), "audience": f"Why it matters: {line}" if line else "",
-                           "photo": s["image"] if str(s.get("image") or "").startswith("https://") else "",
+                           "photo": f"{site}img/{s['id']}.jpg" if s.get("photo_local") else "",   # our own copy: shows in every inbox
                            "cover": s.get("cover") or s.get("model_name") or "", "lab": s.get("lab", ""), "category": s.get("category", "")})
     for tid, t in (room.store.trackers or {}).items():
         if (t.get("updated_at") or "")[:10] == today and t.get("status"):

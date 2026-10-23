@@ -14,7 +14,7 @@
 
   <figure class="story-figure">
     <div class="media wide{% if s.image_kind == 'figure' %} fig{% endif %}" style="--c: var(--{{ s.category }})" data-cover="{{ cover_json }}">
-      {% if s.image %}<img class="photo" src="{{ s.image }}" alt="" loading="eager" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">{% endif %}
+      {% if s.image %}<img class="photo" src="{% if s.photo_local %}{{ root }}img/{{ s.id }}.jpg{% else %}{{ s.image }}{% endif %}" alt="" loading="eager" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">{% endif %}
     </div>
     {% if s.image %}<figcaption>{% if s.image_kind == 'figure' %}Figure from the paper{% else %}Image{% endif %}: {{ image_credit }}</figcaption>{% endif %}
   </figure>
