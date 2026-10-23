@@ -49,6 +49,14 @@ def keywords(title: str, n: int = 5) -> list[str]:
     return picked[:n]
 
 
+def desk_fits(members: list[Item], decision: dict) -> bool:
+    """False when the editor says an India-desk item isn't about India (e.g. an Indian outlet reporting US news).
+    A missing answer keeps the desk, so older or partial replies behave as before."""
+    if not any(m.desk == "india" for m in members):
+        return True
+    return decision.get("about_india") is not False
+
+
 class Newsroom:
     def __init__(self, cfg: Config, llm: LLM, fetcher: Fetcher, store: Store, now: datetime, gdelt: Gdelt | None = None,
                  mode: str = "full"):
@@ -163,6 +171,10 @@ class Newsroom:
                 self.report["dropped"].append({"title": title, "reason": f"score {score}: {d.get('reason', '')}"})
             else:
                 members.sort(key=lambda m: ROLE_RANK.get(m.role, 9))
+                if not desk_fits(members, d):
+                    for m in members:
+                        m.desk = ""  # global news from an Indian outlet: no India slot, no India label
+                    self.report["notes"].append(f"not India desk: '{title[:50]}'")
                 category = d.get("category") if d.get("category") in P.CATEGORIES else "industry"
                 kept.append((score, category, members))
         kept.sort(key=lambda k: -k[0])

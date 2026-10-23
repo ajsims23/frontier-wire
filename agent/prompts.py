@@ -32,8 +32,11 @@ India desk: items marked desk="india" come from Indian outlets. Judge them for r
 Indian AI startups and funding, IndiaAI Mission and government policy, Indian companies adopting AI, Indian
 language models, data-centre and compute buildout in India. A notable Indian development scores at least 6 even
 if it would be minor globally. Drop general tech or business news that isn't about AI.
-This India lens applies ONLY to desk="india" items; judge every other item for Frontier Wire's global
-readers and never mention India or an Indian audience in its reason.
+For each desk="india" item also set about_india: true only when the companies, people, government or market
+involved are Indian. Indian outlets often report global news (a US lab's funding, a US bank's policy, a Chinese
+hack): set about_india=false for those and judge them on the global scale above, not the India lens.
+This India lens applies ONLY to desk="india" items with about_india=true; judge every other item for Frontier
+Wire's global readers and never mention India or an Indian audience in its reason.
 Company blog bursts: when one company publishes several posts about the same event or campaign (a conference
 week, a regional roadshow, a string of customer or partner announcements), treat them as routine marketing:
 score them 5 or lower, except the single most significant one, which you judge on its merits.
@@ -57,6 +60,7 @@ JUDGE_SCHEMA = {
                     "category": {"type": "string", "enum": CATEGORIES},
                     "duplicate_of_story": {"type": "string"},
                     "same_event_as": {"type": "string"},
+                    "about_india": {"type": "boolean"},
                     "reason": {"type": "string"},
                 },
                 "required": ["id", "keep", "score", "category", "reason"],

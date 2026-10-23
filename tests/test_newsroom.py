@@ -832,3 +832,14 @@ def test_podcast_lead_rotates_every_12_hours():
     assert len(leads) == 4                                             # four 12-hour slots, four different leads
     dup = pods + [{**pods[0], "id": "p0-again"}]                       # the same episode uploaded twice
     assert len([p for p in featured_podcasts([{**p, "title": f"t{p['id'][:2]}"} for p in dup], NOW)]) == 4
+
+
+def test_india_desk_only_for_india_stories():
+    from agent.pipeline import desk_fits
+    from agent.sources import Item
+    indian = Item(url="https://indianews.example.in/a", title="t", source_id="aim", source_name="AIM", role="news", desk="india")
+    plain = Item(url="https://technews.example.com/b", title="t", source_id="tc", source_name="TC", role="news")
+    assert desk_fits([indian], {"about_india": True})
+    assert not desk_fits([indian, plain], {"about_india": False})   # Indian outlet reporting US news
+    assert desk_fits([indian], {})                                   # no answer: keep the desk as before
+    assert desk_fits([plain], {"about_india": False})                # non-desk items are unaffected
