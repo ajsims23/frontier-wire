@@ -1,0 +1,36 @@
+# Checks that each AI provider key is present and accepted, without printing the keys.
+name: Check AI keys
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Groq key
+        env:
+          KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          [ -n "$KEY" ] || { echo "GROQ_API_KEY is not set"; exit 1; }
+          code=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $KEY" https://api.groq.com/openai/v1/models)
+          echo "Groq answered HTTP $code"; [ "$code" = "200" ]
+      - name: Groq answers a question
+        if: success()
+        env:
+          KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          code=$(curl -s -o out.json -w "%{http_code}" -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+            -d '{"model":"openai/gpt-oss-120b","messages":[{"role":"user","content":"Reply with the word ok."}],"max_tokens":200}' \
+            https://api.groq.com/openai/v1/chat/completions)
+          echo "Groq chat HTTP $code"; [ "$code" = "200" ]
+      - name: Cerebras key
+        if: always()
+        env:
+          KEY: ${{ secrets.CEREBRAS_API_KEY }}
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $KEY" https://api.cerebras.ai/v1/models)
+          echo "Cerebras answered HTTP $code"; [ "$code" = "200" ]
