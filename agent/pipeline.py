@@ -8,7 +8,7 @@ from typing import Any
 from . import prompts as P
 from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
-from . import alerts, claims, editorial, photos, models_tracker, newsletter, tagging, trackers, videos, weekly
+from . import alerts, audit, claims, editorial, photos, models_tracker, newsletter, tagging, trackers, videos, weekly
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather
 from .store import Store
@@ -50,12 +50,14 @@ def keywords(title: str, n: int = 5) -> list[str]:
 
 
 class Newsroom:
-    def __init__(self, cfg: Config, llm: LLM, fetcher: Fetcher, store: Store, now: datetime, gdelt: Gdelt | None = None):
+    def __init__(self, cfg: Config, llm: LLM, fetcher: Fetcher, store: Store, now: datetime, gdelt: Gdelt | None = None,
+                 mode: str = "full"):
         self.cfg, self.llm, self.fetcher, self.store, self.now = cfg, llm, fetcher, store, now
+        self.mode = mode  # "full" (every 3 hours) or "breaking" (labs' own announcements, checked every 15 minutes)
         self.gdelt = gdelt or Gdelt(fetcher)
         self.report: dict[str, Any] = {
             "started_at": now.isoformat(), "review_mode": cfg.review_mode,
-            "providers": llm.configured, "sources": {}, "dropped": [], "written": [], "notes": [],
+            "providers": llm.configured, "sources": {}, "dropped": [], "written": [], "notes": [], "mode": mode,
         }
         self._page_cache: dict[str, str] = {}
         self._images: dict[str, str | None] = {}
@@ -65,9 +67,14 @@ class Newsroom:
         self._texts: dict[str, str] = {}
 
     # ------------------------------------------------------------ 1. gather
+    def run_sources(self) -> list[dict[str, Any]]:
+        if self.mode == "breaking":
+            return breaking_sources(self.cfg.sources)
+        return self.cfg.sources + audit.auto_sources(self.store.audit)  # plus outlets the daily audit added
+
     def collect(self) -> list[Item]:
-        lookback = self.cfg.run["lookback_hours"]
-        items, status = gather(self.cfg.sources, self.fetcher, now=self.now, lookback_hours=lookback,
+        lookback = 12 if self.mode == "breaking" else self.cfg.run["lookback_hours"]
+        items, status = gather(self.run_sources(), self.fetcher, now=self.now, lookback_hours=lookback,
                                gdelt=self.gdelt, gdelt_settings=self.cfg.gdelt, lab_domains=self.cfg.lab_domains)
         self.report["sources"] = status
         # Everything fetched in the last 3 days (seen or not) can corroborate a story.
@@ -127,7 +134,7 @@ class Newsroom:
                       + ("\n".join(f'- [{r["id"]}] {r["headline"]}' for r in recent) or "- none")
                       + "\n\nCandidates:\n" + "\n".join(_item_xml(m[0]) for _, m in chunk)
                       + "\n\nReturn one decision per candidate id.")
-            answer = self.llm.ask(system=P.JUDGE_SYSTEM, prompt=prompt, schema_name="submit_decisions",
+            answer = self.llm.ask(system=P.JUDGE_SYSTEM + audit.lessons_text(self.store.audit), prompt=prompt, schema_name="submit_decisions",
                                   schema=P.JUDGE_SCHEMA, max_tokens=6000)
             decisions.update({d["id"]: d for d in answer.get("decisions", []) if isinstance(d, dict) and "id" in d})
 
@@ -430,8 +437,17 @@ class Newsroom:
         for st in self.store.stories:  # keep lab names consistent, including older stories
             st["lab"] = self.cfg.canon_lab(st.get("lab"))
         self.store.labs = {self.cfg.canon_lab(k): v for k, v in sorted(self.store.labs.items(), key=lambda kv: kv[1].get("date") or "")}
-        clusters = self.group(self.collect())
+        fresh = self.collect()
         mark("gather")
+        if self.mode == "full":
+            try:  # once a day: what did the wider press cover that we didn't? Missed stories join this run.
+                fresh += audit.run_audit(self, fresh)
+            except (LimitReached, AllProvidersFailed) as e:
+                self.report["notes"].append(f"audit skipped: {e}")
+            except Exception as e:  # noqa: BLE001
+                self.report["notes"].append(f"audit failed: {type(e).__name__}: {e}")
+            mark("audit")
+        clusters = self.group(fresh)
         kept: list[tuple[int, str, list[Item]]] = []
         if clusters:
             try:
@@ -503,6 +519,8 @@ class Newsroom:
                 continue
             if not story.get("image"):
                 self.add_paper_figure(story)
+            if self.mode == "breaking":
+                story["breaking"] = True
             self.store.add_story(story)
             editorial.attach_thread(self, story, links.get(members[0].url))
             self.update_labs(story)
@@ -528,6 +546,8 @@ class Newsroom:
             ("daily email", newsletter.maybe_send),
             ("alerts", alerts.dispatch),
         )
+        if self.mode == "breaking":  # keep breaking runs quick: only what readers need right away
+            steps = tuple(s for s in steps if s[0] in ("tagging", "trackers", "photos", "alerts"))
         for step, fn in steps:
             try:
                 fn(self)
@@ -549,8 +569,13 @@ class Newsroom:
         return self.report
 
 
+def breaking_sources(sources: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """The labs' own announcement channels: the fastest, primary signal for breaking news."""
+    return [s for s in sources if s.get("role") == "lab" and s.get("kind") in ("rss", "page")]
+
+
 def summary_markdown(report: dict[str, Any]) -> str:
-    lines = [f"## Frontier Wire newsroom run — {report['started_at']}", ""]
+    lines = [f"## Frontier Wire {'breaking-news check' if report.get('mode') == 'breaking' else 'newsroom run'} — {report['started_at']}", ""]
     lines.append(f"Fetched {report.get('fetched', 0)} items · fresh {report.get('fresh', 0)} · judged {report.get('judged', 0)} · "
                  f"kept {report.get('kept', 0)} · **written {len(report['written'])}**")
     lines.append(f"AI: {report.get('ai_requests_run', 0)} requests, {report.get('ai_tokens_run', 0):,} tokens this run · "
@@ -565,6 +590,8 @@ def summary_markdown(report: dict[str, Any]) -> str:
         lines.append("Threads updated: " + "; ".join(report["threads"]))
     if report.get("videos"):
         lines.append("Videos: " + (report.get("videos_kept", "no new videos") + " · " + ", ".join(f"{k} {v}" for k, v in report["videos"].items())))
+    if report.get("audit"):
+        lines.append(f"Daily self-check: {report['audit']}")
     if report.get("photos"):
         lines.append(f"Photos: {report['photos']}")
     if report.get("alerts"):

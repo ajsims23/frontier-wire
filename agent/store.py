@@ -39,6 +39,7 @@ class Store:
         self.weekly: dict[str, Any] = _read(data_dir / "weekly.json", {})
         self.trackers: dict[str, Any] = _read(data_dir / "trackers.json", {})
         self.claims: dict[str, Any] = _read(data_dir / "claims.json", {})
+        self.audit: dict[str, Any] = _read(data_dir / "audit.json", {})
 
     def is_seen(self, url: str) -> bool:
         return url in self.seen
@@ -78,6 +79,7 @@ class Store:
         _write(self.dir / "weekly.json", self.weekly)
         _write(self.dir / "trackers.json", self.trackers)
         _write(self.dir / "claims.json", self.claims)
+        _write(self.dir / "audit.json", self.audit)
         _write(self.dir / "site.json", site)
         (self.dir / "feed.xml").write_text(rss(self.stories[:30], now))
         _write(self.dir / "runs" / f"{now.strftime('%Y%m%dT%H%M%SZ')}.json", report)

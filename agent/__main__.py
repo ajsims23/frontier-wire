@@ -1,6 +1,7 @@
 """Command line.
 
   python -m agent run           full newsroom run (writes to data/)
+  python -m agent watch         quick check of the labs' own channels; runs a breaking-news edition if there's news
   python -m agent sources       fetch every source and report what came back (no AI calls)
   python -m agent check-models  send one tiny request to each configured provider/model
 """
@@ -21,6 +22,7 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="python -m agent", description="Frontier Wire newsroom agent")
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("run")
+    sub.add_parser("watch")
     sub.add_parser("sources")
     sub.add_parser("check-models")
     args = ap.parse_args(argv)
@@ -61,7 +63,22 @@ def main(argv: list[str] | None = None) -> int:
         print("No AI provider key is set. Add CEREBRAS_API_KEY or GROQ_API_KEY (see README).", file=sys.stderr)
         return 2
 
-    report = Newsroom(cfg, llm, fetcher, Store(cfg.data_dir), now).run()
+    store = Store(cfg.data_dir)
+    mode = "full"
+    if args.cmd == "watch":
+        from .pipeline import breaking_sources
+        items, _ = gather(breaking_sources(cfg.sources), fetcher, now=now, lookback_hours=12,
+                          gdelt=Gdelt(fetcher), gdelt_settings=cfg.gdelt, lab_domains=cfg.lab_domains)
+        new = [it for it in items if not store.is_seen(it.url)]
+        if os.environ.get("GITHUB_OUTPUT"):
+            with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+                fh.write(f"new_items={len(new)}\n")
+        if not new:
+            print("No new announcements from the labs.")
+            return 0
+        print(f"{len(new)} new item(s) from the labs: " + "; ".join(it.title[:60] for it in new[:5]))
+        mode = "breaking"
+    report = Newsroom(cfg, llm, fetcher, store, now, mode=mode).run()
     md = summary_markdown(report)
     print(md)
     (cfg.data_dir / "last_run.md").write_text(md)

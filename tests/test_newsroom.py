@@ -759,3 +759,67 @@ def test_photos_saved_resized_and_pruned(tmp_path):
     assert saved.width == 960 and stories[0]["photo_local"] is True
     assert stories[1].get("photo_failed") and not (tmp_path / "img" / "b2.jpg").exists()   # icons aren't photos
     assert not (tmp_path / "img" / "old.jpg").exists()                                      # stale copies removed
+
+
+def test_daily_audit_catches_up_and_learns(tmp_path):
+    from types import SimpleNamespace
+    from agent.audit import auto_sources, lessons_text, run_audit
+    from agent.pipeline import breaking_sources
+    t = NOW.strftime("%a, %d %b %Y %H:%M:%S +0000")
+    items = "".join(f"<item><title>{h}</title><link>{u}</link><pubDate>{t}</pubDate></item>" for h, u in [
+        ("BigLab releases GPT-9 AI model (Example Times)", "https://times.example/gpt9"),
+        ("AI startup raises $2 billion (Smallwire)", "https://smallwire.example/raise"),
+        ("New AI chip unveiled (Smallwire)", "https://smallwire.example/chip"),
+        ("AI rules passed in parliament (Policy Daily)", "https://policy.example/rules"),
+        ("Our covered AI story (Example Times)", "https://times.example/covered"),
+        ("Phone sales slow down", "https://phones.example/x")])
+    feed = f'<?xml version="1.0"?><rss version="2.0"><channel>{items}</channel></rss>'
+
+    class F:
+        def get(self, url):
+            if "techmeme" in url:
+                return feed
+            if url == "https://smallwire.example/":
+                return '<html><link rel="alternate" type="application/rss+xml" href="/feed.xml"></html>'
+            raise RuntimeError("blocked")
+
+    class L:
+        def ask(self, **kw):
+            if kw["schema_name"] == "submit_lessons":
+                return {"lessons": ["Funding rounds of $1B+ for AI startups are major news even from smaller companies."]}
+            refs = re.findall(r'<ref n="(\d+)"[^>]*>([^<]+)</ref>', kw["prompt"])
+            out = []
+            for n, title in refs:
+                out.append({"ref": int(n), "importance": 8, "covered_by": "s1" if "covered" in title else ""})
+            return {"items": out}
+
+    (tmp_path / "runs").mkdir()
+    (tmp_path / "runs" / f"{NOW.strftime('%Y%m%dT%H%M%SZ')}.json").write_text(json.dumps(
+        {"dropped": [{"title": "AI startup raises $2 billion", "reason": "score 4: routine funding"}]}))
+    state = {"history": [{"date": (NOW - timedelta(days=1)).date().isoformat(), "missed": [{"url": "https://smallwire.example/old", "why": "never saw"}]}]}
+    room = SimpleNamespace(store=SimpleNamespace(audit=state, dir=tmp_path, is_seen=lambda u: False,
+                                                 stories=[{"id": "s1", "headline": "Our covered AI story", "published_at": NOW.isoformat()}]),
+                           fetcher=F(), llm=L(), now=NOW, report={}, cfg=SimpleNamespace(sources=[{"url": "https://times.example/feed"}]),
+                           _pool=[SimpleNamespace(title="AI rules passed in parliament")])
+    import re
+    catch = run_audit(room, [])
+    h = state["history"][-1]
+    assert h["significant"] == 5 and h["coverage"] == 20
+    why = {m["title"]: m["why"] for m in h["missed"]}
+    assert why["AI startup raises $2 billion"] == "dropped" and why["AI rules passed in parliament"] == "not picked"
+    assert why["BigLab releases GPT-9 AI model"] == "never saw"
+    assert {c.url for c in catch} >= {"https://times.example/gpt9"} and all(c.source_id == "audit" for c in catch)
+    assert [a["domain"] for a in state["auto_sources"]] == ["smallwire.example"]           # 2nd miss in a week: feed added
+    assert auto_sources(state)[0]["url"] == "https://smallwire.example/feed.xml"
+    assert "Funding rounds of $1B+" in lessons_text(state)
+    assert run_audit(room, []) == []                                                        # once a day
+    assert all(s["role"] == "lab" for s in breaking_sources([{"role": "lab", "kind": "rss"}, {"role": "news", "kind": "rss"}]))
+
+
+def test_breaking_mode_only_watches_labs_and_stays_quick(tmp_path):
+    room, calls = make(tmp_path)
+    room.mode = "breaking"
+    report = room.run()
+    assert set(report["sources"]) <= {s["id"] for s in room.cfg.sources if s.get("role") == "lab" and s.get("kind") in ("rss", "page")}
+    assert "briefing" not in report["timings"] and "videos" not in report["timings"] and "audit" not in report["timings"]
+    assert all(s.get("breaking") for s in json.loads((tmp_path / "stories.json").read_text()))

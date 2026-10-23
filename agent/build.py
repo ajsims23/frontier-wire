@@ -110,6 +110,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     weekly_state: dict = read("weekly.json", {})
     trackers_state: dict = read("trackers.json", {})
     claims_state: dict = read("claims.json", {})
+    audit_state: dict = read("audit.json", {})
     from .trackers import load_trackers
     tracker_defs = load_trackers()
     tracker_titles = {t["id"]: t["title"] for t in tracker_defs}
@@ -396,6 +397,20 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
          canonical=f"{base}ask/", og_image=f"{base}og/home.png", api=site.get("api_url", ""), count=len(stories),
          examples=["What happened with DeepSeek this month?", "Where does AI regulation stand?", "Which labs launched new models this week?",
                    "What's happening with AI in India?", "Which AI companies raised money recently?"])
+
+    # Daily self-check ("How we're doing")
+    hist = audit_state.get("history", [])
+    dated = lambda d: short_date(d + "T00:00:00+00:00")  # noqa: E731
+    scored = [h for h in hist if h.get("coverage") is not None]
+    last7 = [h["coverage"] for h in scored[-7:]]
+    page("audit", "audit.html", title="How we're doing: our daily coverage check | Frontier Wire",
+         description="Every day our newsroom agent checks what it missed against the wider press, and fixes it.",
+         canonical=f"{base}audit/", og_image=f"{base}og/home.png",
+         latest={**hist[-1], "when": dated(hist[-1]["date"])} if hist else None,
+         avg7=round(sum(last7) / len(last7)) if last7 else None,
+         bars=[{"label": dated(h["date"]), "n": f"{h['coverage']}%", "href": "", "pct": max(3, h["coverage"])} for h in scored[-14:]][::-1],
+         lessons=[{**l, "when": dated(l["added"])} for l in reversed(audit_state.get("lessons", []))],
+         auto_sources=[{**a, "when": dated(a["added"])} for a in audit_state.get("auto_sources", [])])
 
     # Weekly deep dive
     issues = sorted((weekly_state.get("issues") or {}).values(), key=lambda w: w["key"], reverse=True)

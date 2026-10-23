@@ -49,6 +49,7 @@
   document.addEventListener("error", (e) => { const t = e.target; if (t.tagName === "IMG" && t.parentElement && t.parentElement.classList.contains("media")) t.remove(); }, true);
   document.addEventListener("load", (e) => { const t = e.target; if (t.tagName === "IMG" && t.naturalWidth > 0 && t.naturalWidth < 120) t.remove(); }, true);
 
+  const isBreaking = (s) => s.breaking && Date.now() - new Date(s.created_at || s.published_at).getTime() < 3 * 3600000;
   const who = (s) => s.lab || (s.sources && s.sources[0] && s.sources[0].publisher) || host(s.url);
 
   let data = { stories: [], labs: [], voices: [] };
@@ -120,7 +121,7 @@
       <div class="hero-stage">${slides.map((s, i) => `
         <div class="hero-slide${i ? "" : " on"}" data-i="${i}" ${i ? 'aria-hidden="true"' : ""}>
           <a class="front-media" href="${storyHref(s)}" tabindex="-1" aria-hidden="true">${media(s, `wide kb kb${i % 3}`)}</a>
-          <span class="tag" style="--c:${color(s.category)}">${i ? "Top stories" : "Top story"}, ${esc(CAT_NAME[s.category] || s.category)}</span>
+          <span class="tag" style="--c:${color(s.category)}">${isBreaking(s) ? '<b class="breaking">Breaking</b> ' : ""}${i ? "Top stories" : "Top story"}, ${esc(CAT_NAME[s.category] || s.category)}</span>
           <h2><a href="${storyHref(s)}" ${i ? 'tabindex="-1"' : ""}>${esc(s.headline)}</a></h2>
           <p class="sum">${esc(s.summary)}</p>
           ${audHtml(s, "big")}
@@ -203,7 +204,7 @@
     $("feed").innerHTML = list.length
       ? list.map((s) => `<li><a class="story-card" href="${storyHref(s)}" style="--c:${color(s.category)}">
           ${media(s, "card-media")}
-          <span class="sc-body"><span class="tag" style="--c:${color(s.category)}">${esc(CAT_NAME[s.category] || s.category)}</span>
+          <span class="sc-body"><span class="tag" style="--c:${color(s.category)}">${isBreaking(s) ? '<b class="breaking">Breaking</b> ' : ""}${esc(CAT_NAME[s.category] || s.category)}</span>
           <span class="h">${esc(s.headline)}</span>
           ${audHtml(s)}
           <span class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}</span></span></a></li>`).join("")

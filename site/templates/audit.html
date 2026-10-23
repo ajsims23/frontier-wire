@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block main %}
+<section class="shell lab-page desk-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>How we're doing</span></nav>
+  <header class="lab-head">
+    <h1>How we're doing</h1>
+    <p class="desk-intro">Every day our newsroom agent checks itself against the wider press: what significant AI news did other outlets cover that we didn't, and why? Then it fixes what it can: it writes up stories it missed, adds outlets it wasn't watching, and learns from stories it underrated. This page shows all of it.</p>
+    <dl class="lab-stats">
+      <div><dt>Coverage today</dt><dd>{% if latest and latest.coverage is not none %}{{ latest.coverage }}%{% else %}Not checked yet{% endif %}</dd></div>
+      <div><dt>Average, last 7 checks</dt><dd>{{ avg7 if avg7 is not none else "—" }}{% if avg7 is not none %}%{% endif %}</dd></div>
+      <div><dt>Outlets added by the agent</dt><dd>{{ auto_sources|length }}</dd></div>
+      <div><dt>Lessons for the editor</dt><dd>{{ lessons|length }}</dd></div>
+    </dl>
+  </header>
+
+  {% if bars %}
+  <div class="desk-charts single">{{ m.hbars(bars, "Coverage of significant AI stories", "Share of the day's significant stories we covered") }}</div>
+  {% endif %}
+
+  {% if latest %}
+  <section class="block" aria-labelledby="miss-h">
+    <div class="block-head"><h2 id="miss-h">Missed on {{ latest.when }}</h2><p>{{ latest.significant }} significant stories found across {{ latest.checked }} checked.</p></div>
+    {% if latest.missed %}
+    <ol class="claims">
+      {% for x in latest.missed %}
+      <li class="claim st-{{ 'delivered' if x.action != 'noted' else 'overdue' }}">
+        <div class="cl-top"><span class="cl-badge">{{ {'dropped': 'We dropped it', 'not picked': 'Seen, not picked', 'never saw': "Didn't see it"}[x.why] if x.why else 'Missed' }}</span><span class="cl-kind">Importance {{ x.importance }}/10</span></div>
+        <p class="cl-claim"><a href="{{ x.url }}" rel="noopener">{{ x.title }}</a></p>
+        <p class="cl-meta">{{ x.publisher }}. Why: {{ x.detail }}. What the agent did: <b>{{ x.action }}</b>.</p>
+      </li>
+      {% endfor %}
+    </ol>
+    {% else %}<p class="empty">Nothing significant missed. Every major AI story the wider press covered was on Frontier Wire.</p>{% endif %}
+  </section>
+  {% endif %}
+
+  <section class="block" aria-labelledby="les-h">
+    <div class="block-head"><h2 id="les-h">What the editor learned</h2><p>Written by the agent after it underrated important stories, and added to its own instructions.</p></div>
+    {% if lessons %}<ul class="next-list">{% for l in lessons %}<li><span class="when">{{ l.when }}</span><span>{{ l.text }}</span></li>{% endfor %}</ul>
+    {% else %}<p class="empty">No lessons yet.</p>{% endif %}
+  </section>
+
+  <section class="block" aria-labelledby="src-h">
+    <div class="block-head"><h2 id="src-h">Outlets the agent started watching</h2><p>Added automatically after we missed stories they broke.</p></div>
+    {% if auto_sources %}<ul class="job-list">{% for a in auto_sources %}<li><a href="https://{{ a.domain }}" rel="noopener"><span class="strong">{{ a.domain }}</span><span class="muted">added {{ a.when }}</span></a></li>{% endfor %}</ul>
+    {% else %}<p class="empty">None yet.</p>{% endif %}
+  </section>
+</section>
+{% endblock %}
