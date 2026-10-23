@@ -55,8 +55,22 @@
   let topic = "all";
   // "Reading as": builders, business or investors. Each story carries one line per group on what it means for them.
   const AUD = { builders: "For builders", business: "For business", investors: "For investors" };
-  let aud = (() => { try { const v = localStorage.getItem("fw-aud"); return AUD[v] ? v : "all"; } catch (e) { return "all"; } })();
+  let aud = (() => { const q = new URLSearchParams(location.search).get("as"); if (AUD[q]) return q; try { const v = localStorage.getItem("fw-aud"); return AUD[v] ? v : "all"; } catch (e) { return "all"; } })();
   const audLine = (s) => (aud !== "all" && s.audiences && s.audiences[aud]) || "";
+  // How much a story matters to each reader group, 0-3: the agent's rating, or a sensible guess until it has rated it.
+  const DEAL_INV = /funding|acquisition|ipo|investment|earnings/, MONEY = /\b(raises?|raised|valuation|valued|ipo|revenue|billion|funding|acquire[sd]?|stake)\b/i;
+  const DEV = /\b(api|sdk|open[- ]?source|open[- ]?weight|developer|coding|codex|agent|model|benchmark|inference|gpu|price)\b/i;
+  function relevance(s, who) {
+    const r = s.relevance && s.relevance[who];
+    if (typeof r === "number") return r;
+    const h = `${s.headline} ${s.summary}`, deal = s.deal && s.deal.type, sec = s.sectors || [];
+    if (who === "builders") return s.category === "models" ? 3 : s.category === "research" ? 2 : (sec.includes("software") || sec.includes("cybersecurity") || DEV.test(h)) ? 2 : 1;
+    if (who === "business") return s.category === "policy" ? 3 : (deal && /enterprise_deal|partnership|acquisition/.test(deal)) ? 3 : (s.category === "industry" || s.category === "safety" || sec.length) ? 2 : 1;
+    if (who === "investors") return (deal && DEAL_INV.test(deal)) ? 3 : (deal || MONEY.test(h)) ? 2 : s.category === "industry" ? 1 : 0;
+    return 1;
+  }
+  const relFor = (s) => (aud === "all" ? 1 : relevance(s, aud));
+  let desks = null, trackersList = [];
   const audHtml = (s, cls) => { const l = audLine(s); return l ? `<span class="aud-line ${cls || ""}"><b>${AUD[aud]}:</b> ${esc(l)}</span>` : ""; };
   let query = "";
 
@@ -71,6 +85,13 @@
   // ---------------------------------------------------------------- front page: picture-led top stories
   function topStories() {
     const stories = data.stories || [];
+    if (aud !== "all") {  // lead with what matters most to this reader: recent, relevant, important
+      const age = (s) => (Date.now() - new Date(s.published_at).getTime()) / DAY;
+      const pool = stories.filter((s) => age(s) < 4 && relevance(s, aud) >= 2);
+      const ranked = (pool.length >= 5 ? pool : stories.filter((s) => relevance(s, aud) >= 2)).slice()
+        .sort((a, b) => (relevance(b, aud) * 4 + b.score - age(b) * 0.6) - (relevance(a, aud) * 4 + a.score - age(a) * 0.6));
+      if (ranked.length) return { lead: ranked[0], more: ranked.slice(1, 5) };
+    }
     const lead = data.lead || stories[0];
     const recent = stories.filter((s) => !lead || s.id !== lead.id);
     // the next three: most important recent stories, preferring ones with photos and different labs
@@ -174,7 +195,7 @@
     const filtering = topic !== "all" || !!query;
     const front = new Set([(data.lead || (data.stories || [])[0] || {}).id, ...topStories().more.map((s) => s.id)]);
     let list = (data.stories || []).filter((s) => matches(s) && (filtering || !front.has(s.id)));
-    if (aud !== "all") list = list.filter((s) => audLine(s)).concat(list.filter((s) => !audLine(s)));  // what matters to you first
+    if (aud !== "all") list = list.filter((s) => relevance(s, aud) >= 2);  // only what matters to this reader
     list = list.slice(0, filtering ? 30 : 12);
     const t = TOPICS.find((x) => x.id === topic);
     $("feed-title").innerHTML = query ? `Results for “${esc(query)}” <a class="ask-link" href="ask/?q=${encodeURIComponent(query)}">Ask the Wire instead</a>` : esc(topic === "all" ? (aud === "all" ? "Latest" : `Latest ${AUD[aud].toLowerCase()}`) : t.label);
@@ -286,15 +307,49 @@
     }).join("");
   }
 
+  const ROLE = {
+    builders: { name: "builders", what: "model launches, API prices, open models and developer tools", ask: "Which new models and APIs launched this week, and what do they cost?" },
+    business: { name: "business leaders", what: "regulation, enterprise adoption, partnerships and how AI is changing industries", ask: "What should a business leader know about AI this week?" },
+    investors: { name: "investors", what: "funding rounds, valuations, deals and whether the big claims hold up", ask: "Which AI companies raised money this week and at what valuations?" },
+  };
+  function card(href, kicker, title, body) {
+    return `<a class="role-card" href="${href}"><span class="rc-k">${esc(kicker)}</span><span class="rc-t">${esc(title)}</span>${body ? `<span class="rc-b">${esc(body)}</span>` : ""}</a>`;
+  }
   function renderAud() {
     document.querySelectorAll("#aud button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.aud === aud)));
+    const panel = $("aud-panel");
+    if (aud === "all") { panel.hidden = true; panel.innerHTML = ""; return; }
+    const r = ROLE[aud], week = (data.stories || []).filter((s) => Date.now() - new Date(s.published_at).getTime() < 7 * DAY);
+    const n = week.filter((s) => relevance(s, aud) >= 2).length, must = week.filter((s) => relevance(s, aud) >= 3).length;
+    const tr = (id) => trackersList.find((t) => t.id === id);
+    const d = desks || {}, cards = [];
+    if (aud === "builders") {
+      const m = d.models || {};
+      cards.push(card("models/", "Model tracker", m.changes && m.changes[0] ? m.changes[0] : `${m.count || 0} models tracked`, m.cheapest ? `Cheapest new model: ${m.cheapest.name}, $${m.cheapest.price} per 1M output tokens` : "Prices and context windows, updated every run"));
+      const t = tr("frontier-race");
+      cards.push(card(t ? "tracker/frontier-race/" : "trackers/", "Where it stands", "The frontier model race", t ? clip(t.status, 120) : ""));
+    } else if (aud === "business") {
+      const t = tr("ai-regulation"), s2 = tr("agent-safety");
+      cards.push(card("tracker/ai-regulation/", "Where it stands", "AI regulation", t ? clip(t.status, 120) : "Rules, enforcement and what's pending"));
+      cards.push(card(s2 ? "tracker/agent-safety/" : "sectors/", s2 ? "Risk watch" : "Industries", s2 ? "AI agents and safety incidents" : "AI by sector", s2 ? clip(s2.status, 120) : ""));
+    } else {
+      const b = d.business || {}, t = tr("ai-money");
+      cards.push(card("business/", "Deals this week", `${b.deals7 || 0} deals`, b.largest ? `Largest disclosed: ${b.largest.amount}${b.largest.company ? `, ${b.largest.company}` : ""}` : "Funding, acquisitions and partnerships"));
+      cards.push(card(t ? "tracker/ai-money/" : "claims/", t ? "Where it stands" : "Claims check", t ? "AI funding and valuations" : "Do labs keep their promises?", t ? clip(t.status, 120) : ""));
+    }
+    cards.push(card(`ask/?q=${encodeURIComponent(r.ask)}`, "Ask the Wire", r.ask, "Answered from our checked stories, with sources"));
+    panel.innerHTML = `<p class="role-intro">Showing what matters to <b>${r.name}</b>: ${r.what}. <span class="muted">${n} stor${n === 1 ? "y" : "ies"} this week${must ? `, ${must} must-know` : ""}.</span></p><div class="role-cards">${cards.join("")}</div>`;
+    panel.hidden = false;
   }
   $("aud").addEventListener("click", (e) => {
     const b = e.target.closest("button[data-aud]");
     if (!b) return;
     aud = b.dataset.aud;
     try { localStorage.setItem("fw-aud", aud); } catch (err) { /* private mode */ }
+    history.replaceState(null, "", aud === "all" ? location.pathname : `?as=${aud}`);
+    document.body.classList.add("aud-switching");
     renderAud(); renderFront(); renderFeed(); renderForYou();
+    setTimeout(() => document.body.classList.remove("aud-switching"), 450);
   });
 
   function renderStand(list) {
@@ -304,7 +359,7 @@
         <span class="tc-top"><span class="tc-title">${esc(t.title)}</span>${t.fresh ? '<span class="tc-new">Updated</span>' : ""}</span>
         <p>${esc(clip(t.status, 220))}</p><span class="meta">Updated ${esc(ago(t.updated_at))} · ${t.count} stor${t.count === 1 ? "y" : "ies"}</span></a>`).join("");
   }
-  fetch("data/trackers.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : [])).then(renderStand).catch(() => {});
+  fetch("data/trackers.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : [])).then((l) => { trackersList = l || []; renderStand(l); renderAud(); }).catch(() => {});
 
   // ---------------------------------------------------------------- for you: stories matching what the reader follows
   const lastVisit = (() => { try { return localStorage.getItem("fw-last-visit") || ""; } catch (e) { return ""; } })();
@@ -398,7 +453,7 @@
     body("desk-sectors", sec.length ? `<ul class="dc-bars">${sec.map((x) => `<li><span>${esc(x.name)}</span><span class="nc-bar"><span style="width:${Math.max(6, x.count / top * 100).toFixed(0)}%"></span></span><b>${x.count}</b></li>`).join("")}</ul>`
       : `<p class="muted">Healthcare, finance, education and more.</p>`);
   }
-  fetch("data/desks.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).then((d) => d && renderDesks(d)).catch(() => {});
+  fetch("data/desks.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).then((d) => { if (d) { desks = d; renderDesks(d); renderAud(); } }).catch(() => {});
 
   $("year").textContent = new Date().getFullYear();
   fetch("data/site.json", { cache: "no-store" })

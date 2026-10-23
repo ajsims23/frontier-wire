@@ -37,6 +37,8 @@ SYSTEM = """You tag news stories for Frontier Wire's desks. For each story:
   genuinely doesn't matter to that group (don't force it). builders: developers and engineers (capabilities,
   APIs, prices, tools they use). business: executives and strategy teams (competition, adoption, regulation,
   their industry). investors: where money, valuations and market power are moving. Facts only from the story.
+- relevance: for each group (builders, business, investors), how much this story matters to them: 3 = must-know,
+  2 = useful, 1 = minor, 0 = not relevant. Be selective: most stories are a 3 for at most one group.
 Stories marked from="indian-outlet" were published by Indian news outlets, which often don't say "India":
 tag them "india" when the companies, people, government or market involved are Indian; global stories they
 merely reported (e.g. a US lab's announcement) are not India stories.
@@ -55,6 +57,7 @@ def _schema() -> dict[str, Any]:
             "amount": {"type": "string"},
             "cover": {"type": "string"},
             "audiences": AUDIENCE_SCHEMA,
+            "relevance": {"type": "object", "properties": {a: {"type": "integer"} for a in ("builders", "business", "investors")}},
         }, "required": ["id", "sectors", "regions", "deal_type", "cover"]}}},
         "required": ["tags"],
     }
@@ -78,8 +81,8 @@ def usd_value(amount: str) -> float | None:
         return None
 
 
-def tag_stories(room: Any, limit: int = 20) -> None:
-    todo = [s for s in room.store.stories if "sectors" not in s or "cover" not in s or "audiences" not in s]
+def tag_stories(room: Any, limit: int = 30) -> None:
+    todo = [s for s in room.store.stories if "sectors" not in s or "cover" not in s or "audiences" not in s or "relevance" not in s]
     todo = sorted(todo, key=lambda s: s["published_at"], reverse=True)[:limit]
     if not todo:
         return
@@ -103,6 +106,10 @@ def tag_stories(room: Any, limit: int = 20) -> None:
             "type": deal, "company": room.cfg.canon_lab((t.get("company") or "").strip()[:60]), "amount": amount, "usd": usd_value(amount)}
         cover = (t.get("cover") or "").strip()
         distinctive = bool(re.search(r"[\dA-Z$₹€£%]", cover))  # a figure or a name, not a generic word like "partnership"
+        rel = t.get("relevance") if isinstance(t.get("relevance"), dict) else {}
+        # an empty rating means "looked, no answer": the site falls back to its own guess, and we don't ask again
+        s["relevance"] = {a: max(0, min(3, int(rel[a]))) for a in ("builders", "business", "investors")
+                          if isinstance(rel.get(a), (int, float))}
         if "audiences" not in s:
             s["audiences"] = check_audiences(t.get("audiences"), f"{s['headline']} {s['summary']} {s.get('why_it_matters', '')}")
         s["cover"] = cover if 0 < len(cover) <= 18 and distinctive and _norm(cover) in _norm(f"{s['headline']} {s['summary']}") else ""
