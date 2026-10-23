@@ -1,15 +1,17 @@
-## Frontier Wire breaking-news check — 2026-10-23T19:58:15+00:00
+## Frontier Wire breaking-news check — 2026-10-23T20:31:39+00:00
 
-Fetched 2380 items · fresh 1 · judged 1 · kept 1 · **written 1**
-AI: 6 requests, 11,686 tokens this run · 251 requests today · providers: cerebras, groq
-Threads updated: OpenAI safety breach prompts security measures: OpenAI details new containment measures for frontier model t
+Fetched 2380 items · fresh 1 · judged 1 · kept 0 · **written 0**
+AI: 1 requests, 3,489 tokens this run · 252 requests today · providers: cerebras, groq
 Photos: 0 saved, 0 unavailable
-Alerts: 44 events sent: {"subscribers":7,"sent":1,"queued":7}
-Trackers: filed 1 stories; updated agent-safety
-Tagged 1 stories by sector, region and deal
-Time: gather 8s, verify and write 1s, trackers 21s, alerts 3s
+Alerts: 43 events sent: {"subscribers":7,"sent":0,"queued":0}
+Trackers: filed 0 stories; no tracker changed
+Time: gather 12s, alerts 3s
 
 ### New stories
-- **safety** — [OpenAI details new containment measures for frontier model training](https://openai.com/index/securing-our-frontier-model-training-environment)  
-  OpenAI announced that it has added offline environments and high‑compute red‑teaming to its training and evaluation process to improve security. The changes are aimed at strengthening containment of frontier AI models.  
-  _1 source(s), 0 verified quote(s)_
+- none
+
+<details><summary>Dropped</summary>
+
+- Super to see Volkswagen Group putting Copilot to work across the company! — duplicate of b67bba8524a9
+
+</details>
