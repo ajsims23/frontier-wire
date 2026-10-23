@@ -110,9 +110,9 @@ def featured_podcasts(videos: list[dict[str, Any]], now: Any, days: int = 14, n:
     pods, seen = [], set()
     for v in videos:  # one entry per episode (the same episode can appear twice, e.g. re-uploaded)
         key = (v.get("title") or "").strip().lower()
-        if v.get("kind") == "podcast" and v["published"] >= cutoff and v["id"] not in seen and key not in seen:
+        if v.get("kind") == "podcast" and v["published"] >= cutoff and v["id"] not in seen and not (key and key in seen):
             pods.append(v)
-            seen |= {v["id"], key}
+            seen |= {v["id"], key} if key else {v["id"]}
 
     def score(v: dict[str, Any]) -> float:
         age = (now - datetime.fromisoformat(v["published"])).total_seconds() / 86400

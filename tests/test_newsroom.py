@@ -830,4 +830,5 @@ def test_podcast_lead_rotates_every_12_hours():
     pods = [{"id": f"p{i}", "kind": "podcast", "prominence": 9 - i, "published": (NOW - timedelta(hours=i)).isoformat()} for i in range(4)]
     leads = {featured_podcasts(pods, NOW + timedelta(hours=12 * k))[0]["id"] for k in range(4)}
     assert len(leads) == 4                                             # four 12-hour slots, four different leads
-    assert featured_podcasts(pods, NOW)[0]["id"] == featured_podcasts(pods, NOW + timedelta(hours=1))[0]["id"] or True
+    dup = pods + [{**pods[0], "id": "p0-again"}]                       # the same episode uploaded twice
+    assert len([p for p in featured_podcasts([{**p, "title": f"t{p['id'][:2]}"} for p in dup], NOW)]) == 4
