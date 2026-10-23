@@ -67,8 +67,16 @@ function coverBlock(e, big) {
     </td></tr></table></a>`;
 }
 
+// A real photo from the story when it has one; otherwise the HTML cover. Photos load from the publisher, so
+// Outlook shows them once the reader allows pictures (or adds us to Safe Senders); the alt text keeps the
+// headline visible until then.
+function photoBlock(e) {
+  if (!safeUrl(e.photo)) return "";
+  return `<a href="${esc(e.url)}"><img src="${esc(e.photo)}" width="552" alt="${esc(e.title)}" style="display:block;width:100%;max-width:552px;height:auto;border-radius:12px;border:0;background:#0f292d;color:#e9f5f3;${FONT};font-size:15px;font-weight:700;line-height:1.4"></a>`;
+}
+
 function storyCard(e, site, big) {
-  const cover = coverBlock(e, big);
+  const cover = photoBlock(e) || coverBlock(e, big);
   return `<tr><td style="padding:0 0 26px">
     ${cover}
     <p style="margin:${cover ? "14px" : "0"} 0 6px;${FONT};font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:${TEAL}">${esc(e.tag || "Story")}${e.because ? ` · <span style="color:${MUTED};font-weight:600;letter-spacing:0;text-transform:none">You follow ${esc(e.because)}</span>` : ""}</p>

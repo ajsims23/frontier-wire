@@ -41,6 +41,7 @@ def build_events(room: Any, site: str) -> list[dict[str, Any]]:
             events.append({"key": f"story:{s['id']}", "title": s["headline"], "summary": s["summary"],
                            "url": f"{site}story/{s['id']}/", "follows": follow_keys(s), "image": image,
                            "tag": TAGS.get(s.get("category", ""), "Story"), "audience": f"Why it matters: {line}" if line else "",
+                           "photo": s["image"] if str(s.get("image") or "").startswith("https://") else "",
                            "cover": s.get("cover") or s.get("model_name") or "", "lab": s.get("lab", ""), "category": s.get("category", "")})
     for tid, t in (room.store.trackers or {}).items():
         if (t.get("updated_at") or "")[:10] == today and t.get("status"):
