@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-23T09:49:55+00:00",
+  "started_at": "2026-10-23T10:20:16+00:00",
   "review_mode": false,
   "providers": [
     "cerebras"
@@ -18,7 +18,7 @@
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
     "hf-papers": "ok (14)",
-    "gdelt": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
     "hn": "ok (13)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
@@ -30,7 +30,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -39,129 +39,65 @@
   },
   "dropped": [
     {
-      "title": "The same AI request emits 8.5 times more CO2 in Texas than in Sweden",
-      "reason": "score 5: Reports a comparison of AI request carbon emissions between Texas and Sweden; interesting but an incremental observation without broader impact."
-    },
-    {
-      "title": "AMD’s Server CPU Business Faces a New AI Boom",
-      "reason": "score 5: Discusses renewed interest in server CPUs due to AI boom; notable but largely a market trend without a specific breakthrough."
-    },
-    {
-      "title": "Cyient's Technology Order Intake Rises 39.7% as It Expands AI Capabilities",
-      "reason": "score 5: Cyient reports higher order intake and mentions expanding AI capabilities; incremental corporate growth rather than a frontier AI event."
-    },
-    {
-      "title": "How an Engineer Is Using AI to Bridge the Accessible Education Gap",
-      "reason": "score 5: Feature on AI tool for accessible education; interesting application but not a frontier breakthrough."
-    },
-    {
-      "title": "Ola Electric Slides Over 7% After Bearish Call From Goldman Sachs",
-      "reason": "score 2: Ola Electric stock movement; unrelated to AI."
-    },
-    {
-      "title": "CoinDCX Admits Losses From Old Wallet Deposits, Denies Breach Of Active Wallets",
-      "reason": "score 2: CoinDCX operational loss; not AI‑focused."
-    },
-    {
-      "title": "Jio Platforms IPO Booked 6.76X On Day 3 So Far, QIB Portion Subscribed 14.18X",
-      "reason": "score 2: Jio Platforms IPO subscription figures; not directly about AI developments."
-    },
-    {
-      "title": "What owning inventory has done for Blinkit as Swiggy’s Instamart follows suit",
-      "reason": "score 2: Focuses on inventory ownership at food delivery firms; not related to AI developments."
-    },
-    {
-      "title": "Swiggy narrows Q2 loss to Rs 922 crore, revenue zooms 36% YoY",
-      "reason": "score 2: Financial results of Swiggy; no AI relevance."
-    },
-    {
-      "title": "Apple has made the ‘necessary changes’ to implement SIM Binding on iOS: report",
-      "reason": "score 2: Apple SIM binding changes; no AI content."
-    },
-    {
-      "title": "CCPA fines Hogar Rs 1 lakh over walkie-talkie ads, rejects defence that website only generates leads",
-      "reason": "score 2: CCPA fine over advertising; not AI‑related."
-    },
-    {
-      "title": "Delhi High Court refuses to stay ‘Doosra’ film in Sourav Ganguly’s personality rights plea",
-      "reason": "score 1: Court decision on film release; no AI relevance."
-    },
-    {
-      "title": "Polymarket’s X account withheld in India, five months after website restrictions",
-      "reason": "score 1: Polymarket X account restriction; no AI content."
-    },
-    {
-      "title": "Oppo Find X10 and X10 Pro Max launched in India: Triple 200MP cameras, 8,000 mAh battery, check price",
-      "reason": "score 2: Oppo phone launch with AI‑powered camera tools; consumer product announcement, not a frontier AI development."
-    },
-    {
-      "title": "Polish PM Donald Tusk seeks deeper technology cooperation with India across AI, digital and space sectors",
-      "reason": "score 5: Polish PM seeks deeper AI cooperation with India; diplomatic initiative but limited immediate impact on AI frontier."
-    },
-    {
-      "title": "Autonomy and control are not opposites, they go together: EY GDS at DevSparks Chennai",
-      "reason": "score 5: Speech at DevSparks Chennai emphasizing engineering challenges of AI agents; substantive commentary but not a major news event."
-    },
-    {
-      "title": "Building a New Foundation for Education: Anshu Kumar’s Neev Ki Eent Foundation for Children of Bihar’s Brick Kiln Workers",
-      "reason": "score 1: Foundation for education of brick‑kiln children; unrelated to AI."
-    },
-    {
-      "title": "Sebi cautions investors against fraudulent stock-tip WhatsApp groups",
-      "reason": "score 1: Sebi warning about stock‑tip groups; unrelated to AI."
-    },
-    {
-      "title": "Tonbo Imaging shares make stellar market debut; jump 66%",
-      "reason": "score 1: Tonbo Imaging IPO; not AI‑centric."
-    },
-    {
       "title": "Meta Expects Up To $145 Billion In Capex As AI Investments Expand",
+      "reason": "score 5: Meta’s projected capex for AI investments is a financial outlook rather than a frontier AI development; falls below the keep threshold."
+    },
+    {
+      "title": "Vivo Y600 with Guinness record-holding 10,000mAh battery to launch next week: Check date, design and expected specs",
+      "reason": "score 1: Smartphone launch with a large battery; not AI‑related."
+    },
+    {
+      "title": "Startup news and updates: Daily roundup (October 23, 2026)",
+      "reason": "score 2: A generic daily roundup of startup news without substantive AI content; primarily a news digest."
+    },
+    {
+      "title": "Chariot Launches Speech Recognition Model for 10 Indian Languages",
       "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "d84313b37058",
-      "headline": "Warp Sciences raises $215 million to build AI‑powered drug research labs",
+      "id": "9e4a768261e4",
+      "headline": "Tech Mahindra partners with SpaceXSI to boost AI‑assisted software engineering",
       "category": "industry",
-      "summary": "Warp Sciences, a startup founded by former OpenAI, Meta and other AI leaders, raised $215 million to create U.S. chemistry contract research labs that combine AI, robotics and chemists. The company will focus on lead optimisation through analogue synthesis for biotech and pharma clients.",
-      "url": "https://analyticsindiamag.com/ai-news/former-openai-exec-raises-215-mn-to-build-ai-powered-drug-research-labs",
-      "sources": 4,
+      "summary": "Tech Mahindra announced a collaboration with AI coding platform SpaceXSI to help global enterprises modernise legacy applications, accelerate delivery and improve developer productivity. The joint offering combines Tech Mahindra’s engineering and AI consulting with SpaceXSI’s AI‑powered development platform.",
+      "url": "https://economictimes.indiatimes.com/tech/technology/tech-mahindra-spacexsi-partner-to-accelerate-ai-powered-software-engineering/articleshow/135136980.cms",
+      "sources": 2,
       "quotes": 2
     }
   ],
   "notes": [
-    "stopped writing: every configured provider failed: cerebras: 429 after retry; moving to next provider for this run",
-    "2 kept item(s) carried over to the next run",
-    "videos skipped: every configured provider failed: cerebras: 429 after retry; moving to next provider for this run",
-    "tagging skipped: every configured provider failed: cerebras: 429 after retry; moving to next provider for this run",
-    "trackers skipped: every configured provider failed: cerebras: 429 after retry; moving to next provider for this run",
-    "claims skipped: every configured provider failed: cerebras: 429 after retry; moving to next provider for this run",
-    "briefing skipped: every configured provider failed: cerebras: 429 after retry; moving to next provider for this run"
+    "1 kept item(s) carried over to the next run"
   ],
   "timings": {
-    "gather": 139.5,
-    "judge": 1.3,
-    "verify and write": 150.1,
-    "explainers": 1.9,
+    "gather": 82.9,
+    "judge": 0.8,
+    "verify and write": 89.6,
+    "videos": 25.9,
+    "tagging": 0.6,
+    "explainers": -0.0,
+    "trackers": 41.3,
+    "claims": 20.4,
     "model tracker": 0.1,
-    "weekly": -0.0,
-    "self-review": -0.0,
+    "weekly": 0.0,
+    "briefing": 41.8,
+    "self-review": 0.0,
+    "photos": 7.9,
     "daily email": -0.0,
-    "alerts": 0.2
+    "alerts": 0.4
   },
   "fetched": 2857,
-  "fresh": 22,
-  "judged": 22,
-  "kept": 3,
+  "fresh": 5,
+  "judged": 5,
+  "kept": 2,
   "research": {
     "investigated": 2,
     "confirmed": 1,
     "tool_calls": 6
   },
   "research_log": [
-    "Former OpenAI Exec Raises $215 Mn to Build AI-Powered Drug Research La: confirmed (searched “Warp Sciences former OpenAI exec raises $215 million AI drug research labs”; read msn.com; read yahoo.com)",
-    "Meta Expects Up To $145 Billion In Capex As AI Investments Expand: unconfirmed (searched “Meta expects $145 billion capex 2026 AI investments”; read msn.com; searched “\"Meta\" \"capex\" \"145\" \"AI\"”)"
+    "Chariot Launches Speech Recognition Model for 10 Indian Languages: unconfirmed (searched “Chariot speech recognition model 10 Indian languages”; read newsbytesapp.com; read cxotoday.com)",
+    "Tech Mahindra, SpaceXSI partner to accelerate AI-powered software engi: confirmed (searched “Tech Mahindra SpaceXSI partner AI-powered software engineering”; read rediff.com; read digitimes.com)"
   ],
   "videos": {
     "OpenAI": "ok (12 in feed, 0 new)",
@@ -178,7 +114,7 @@
     "AI Explained": "ok (15 in feed, 0 new)",
     "Lex Fridman": "ok (14 in feed, 0 new)",
     "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (3 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 1 new)",
     "Latent Space": "ok (14 in feed, 0 new)",
     "Training Data (Sequoia)": "ok (6 in feed, 0 new)",
     "a16z": "ok (15 in feed, 0 new)",
@@ -188,12 +124,17 @@
     "Lenny's Podcast": "ok (2 in feed, 0 new)",
     "20VC": "ok (3 in feed, 0 new)"
   },
-  "model_tracker": "82 models, 16 changes today",
-  "alerts": "22 events sent: {\"subscribers\":1,\"sent\":0,\"queued\":0}",
-  "ai_requests_run": 12,
-  "ai_tokens_run": 23695,
-  "ai_requests_today": 94,
-  "provider_log": [
-    "cerebras: 429 after retry; moving to next provider for this run"
-  ]
+  "videos_kept": "3 kept from 3 new",
+  "tagged": 2,
+  "trackers": "filed 1 stories; updated ai-money",
+  "claims": "10 tracked, 10 open, 0 updated this run",
+  "model_tracker": "82 models, 20 changes today",
+  "briefing": "4 themes from 20 stories",
+  "india_briefing": "4 themes from 4 stories",
+  "photos": "24 saved, 1 unavailable",
+  "alerts": "26 events sent: {\"subscribers\":1,\"sent\":0,\"queued\":0}",
+  "ai_requests_run": 17,
+  "ai_tokens_run": 30915,
+  "ai_requests_today": 111,
+  "provider_log": []
 }

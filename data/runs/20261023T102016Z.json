@@ -1,0 +1,140 @@
+{
+  "started_at": "2026-10-23T10:20:16+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1316)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (889)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (14)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (13)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)"
+  },
+  "dropped": [
+    {
+      "title": "Meta Expects Up To $145 Billion In Capex As AI Investments Expand",
+      "reason": "score 5: Meta’s projected capex for AI investments is a financial outlook rather than a frontier AI development; falls below the keep threshold."
+    },
+    {
+      "title": "Vivo Y600 with Guinness record-holding 10,000mAh battery to launch next week: Check date, design and expected specs",
+      "reason": "score 1: Smartphone launch with a large battery; not AI‑related."
+    },
+    {
+      "title": "Startup news and updates: Daily roundup (October 23, 2026)",
+      "reason": "score 2: A generic daily roundup of startup news without substantive AI content; primarily a news digest."
+    },
+    {
+      "title": "Chariot Launches Speech Recognition Model for 10 Indian Languages",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "9e4a768261e4",
+      "headline": "Tech Mahindra partners with SpaceXSI to boost AI‑assisted software engineering",
+      "category": "industry",
+      "summary": "Tech Mahindra announced a collaboration with AI coding platform SpaceXSI to help global enterprises modernise legacy applications, accelerate delivery and improve developer productivity. The joint offering combines Tech Mahindra’s engineering and AI consulting with SpaceXSI’s AI‑powered development platform.",
+      "url": "https://economictimes.indiatimes.com/tech/technology/tech-mahindra-spacexsi-partner-to-accelerate-ai-powered-software-engineering/articleshow/135136980.cms",
+      "sources": 2,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "1 kept item(s) carried over to the next run"
+  ],
+  "timings": {
+    "gather": 82.9,
+    "judge": 0.8,
+    "verify and write": 89.6,
+    "videos": 25.9,
+    "tagging": 0.6,
+    "explainers": -0.0,
+    "trackers": 41.3,
+    "claims": 20.4,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "briefing": 41.8,
+    "self-review": 0.0,
+    "photos": 7.9,
+    "daily email": -0.0,
+    "alerts": 0.4
+  },
+  "fetched": 2857,
+  "fresh": 5,
+  "judged": 5,
+  "kept": 2,
+  "research": {
+    "investigated": 2,
+    "confirmed": 1,
+    "tool_calls": 6
+  },
+  "research_log": [
+    "Chariot Launches Speech Recognition Model for 10 Indian Languages: unconfirmed (searched “Chariot speech recognition model 10 Indian languages”; read newsbytesapp.com; read cxotoday.com)",
+    "Tech Mahindra, SpaceXSI partner to accelerate AI-powered software engi: confirmed (searched “Tech Mahindra SpaceXSI partner AI-powered software engineering”; read rediff.com; read digitimes.com)"
+  ],
+  "videos": {
+    "OpenAI": "ok (12 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (7 in feed, 0 new)",
+    "AI at Meta": "ok (3 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (12 in feed, 1 new)",
+    "Hugging Face": "ok (12 in feed, 1 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 1 new)",
+    "Latent Space": "ok (14 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (2 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "3 kept from 3 new",
+  "tagged": 2,
+  "trackers": "filed 1 stories; updated ai-money",
+  "claims": "10 tracked, 10 open, 0 updated this run",
+  "model_tracker": "82 models, 20 changes today",
+  "briefing": "4 themes from 20 stories",
+  "india_briefing": "4 themes from 4 stories",
+  "photos": "24 saved, 1 unavailable",
+  "alerts": "26 events sent: {\"subscribers\":1,\"sent\":0,\"queued\":0}",
+  "ai_requests_run": 17,
+  "ai_tokens_run": 30915,
+  "ai_requests_today": 111,
+  "provider_log": []
+}
