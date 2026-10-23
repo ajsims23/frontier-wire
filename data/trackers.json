@@ -23,9 +23,14 @@
     "tried_at": "2026-10-22T16:03:24+00:00"
   },
   "frontier-race": {
-    "status": "Frontier AI labs have rolled out a wave of major models—including Lafa flow LM, Sage‑A1.5 agentic model, Mistral Large 4, Nemotron 3.5 series, and voice SDKs—while large‑scale deployments such as OpenAI on Google Cloud, Microsoft Copilot at Volkswagen, and Gemini navigation on Apple CarPlay expand enterprise and automotive use. Benchmark results show GPT‑6 Astra leading robot tasks and AI diagnostic systems surpassing doctors, and new research tools like Environment Duels and ThinkingBox training push capabilities further.",
-    "changed": "ThinkingBox training improves Qwen3.8‑27B agent performance on database tasks.",
+    "status": "Frontier labs have launched several major models this month, including the 8‑B Lafa flow LM, the 35‑B Sage‑A1.5 agentic model, and Mistral’s 1‑trillion‑parameter Large 4 preview. Deployments continue to expand, with OpenAI’s GPT‑6 on Google Cloud, Microsoft Copilot at Volkswagen, and Gemini navigation on Apple CarPlay now live, while benchmarks show GPT‑6 Astra leading robot tasks and Microsoft’s diagnostic system surpassing doctors. A new study also found Opus 4.8 outperformed human reviewers on Harvard social‑science papers.",
+    "changed": "The Opus 4.8 model was shown to outperform human experts in peer‑review of Harvard social‑science papers.",
     "timeline": [
+      {
+        "story_id": "4b6100b4fb2f",
+        "date": "2026-10-23",
+        "text": "Opus 4.8 beats human reviewers in Harvard social‑science paper peer review"
+      },
       {
         "story_id": "eaa0ebff7daf",
         "date": "2026-10-22",
@@ -125,7 +130,7 @@
     "next": [
       {
         "text": "Mistral Large 4 model weights release",
-        "when": "end of October 2026",
+        "when": "by end of October 2026",
         "story_id": "820bd24a41c4"
       },
       {
@@ -158,10 +163,11 @@
       "cbc158125a42",
       "eaa0ebff7daf",
       "a8f2132df5b8",
-      "95eb6975ad24"
+      "95eb6975ad24",
+      "4b6100b4fb2f"
     ],
-    "updated_at": "2026-10-23T01:03:55+00:00",
-    "tried_at": "2026-10-23T01:03:55+00:00",
+    "updated_at": "2026-10-23T07:01:39+00:00",
+    "tried_at": "2026-10-23T07:01:39+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
@@ -199,13 +205,33 @@
     "tried_at": "2026-10-22T16:03:24+00:00"
   },
   "agent-safety": {
-    "status": "Meta has disabled the Muse conversation‑sharing feature after a security firm uncovered thousands of publicly accessible links. Separately, Chinese‑aligned hackers leveraged AI agents and the ARTEX framework to breach ConnectWise, compromising credentials for roughly 2,250 Microsoft 365 tenants. Both incidents underscore emerging AI‑driven security risks.",
-    "changed": "Chinese hackers used AI agents to breach ConnectWise, exposing 2,250 Microsoft 365 tenants.",
+    "status": "Meta has paused the Muse conversation‑sharing feature after researchers found thousands of publicly accessible links exposing data. Chinese‑aligned hackers used AI agents and the ARTEX framework to breach ConnectWise, compromising credentials for about 2,250 Microsoft 365 tenants, and the company is working to restore its cloud backup service. Recent safety research introduced new findings, benchmarks, a partnership with Poland’s NASK, and major US banks are blocking third‑party AI agents from customer accounts.",
+    "changed": "Recent studies reveal RLVR training may not reliably increase instrumental behavior and introduce the EpiSEM‑Bench safety benchmark; OpenAI announced a partnership with Poland’s NASK, and major US banks began blocking third‑party AI agents from customer accounts.",
     "timeline": [
+      {
+        "story_id": "15c1f8ef7a58",
+        "date": "2026-10-23",
+        "text": "OpenAI partners with Poland’s NASK to advance AI safety and security research."
+      },
+      {
+        "story_id": "d6229369cc4d",
+        "date": "2026-10-23",
+        "text": "Major US banks block third‑party AI agents from accessing customer accounts."
+      },
       {
         "story_id": "d1b19037538a",
         "date": "2026-10-22",
         "text": "Chinese hackers used AI agents to breach ConnectWise, affecting 2,250 Microsoft 365 tenants"
+      },
+      {
+        "story_id": "68259bbe1bea",
+        "date": "2026-10-22",
+        "text": "Study shows RLVR training does not consistently boost instrumental behavior in OLMo-3 models."
+      },
+      {
+        "story_id": "3fde963dbc89",
+        "date": "2026-10-22",
+        "text": "EpiSEM‑Bench released, evaluating LLM agent safety when key facts are omitted."
       },
       {
         "story_id": "4168438b63a2",
@@ -223,10 +249,14 @@
     ],
     "story_ids": [
       "4168438b63a2",
-      "d1b19037538a"
+      "d1b19037538a",
+      "68259bbe1bea",
+      "3fde963dbc89",
+      "15c1f8ef7a58",
+      "d6229369cc4d"
     ],
-    "updated_at": "2026-10-22T21:46:58+00:00",
-    "tried_at": "2026-10-22T21:46:58+00:00"
+    "updated_at": "2026-10-23T07:01:39+00:00",
+    "tried_at": "2026-10-23T07:01:39+00:00"
   },
   "ai-money": {
     "status": "OpenAI has completed its acquisition of Orchestra Bio and is preparing to embed its drug‑discovery AI agents into the Rosalind model and Workbench. The company is now negotiating a massive private funding round of up to $30 billion that would value it at $1.25 trillion. An IPO is slated for the near future, with confidential paperwork already filed.",
@@ -304,13 +334,18 @@
     "tried_at": "2026-10-23T01:03:55+00:00"
   },
   "ai-infrastructure": {
-    "status": "NVIDIA’s AI infrastructure ecosystem now includes confidential bare‑metal compute, GA of Vera Rubin A5X instances, and widespread adoption of open‑weight models across European government, finance, retail, weather and industrial sectors. New AI factories and power‑integration platforms (DSX, Minerva) are being deployed, while large‑scale compute installations have launched in India and Kazakhstan. The overall landscape shows rapid expansion of compute capacity, security options, and regional sovereign AI clouds.",
-    "changed": "The newest stories add confidential bare‑metal services, announce GA of A5X instances, detail European open‑model deployments, and reveal major AI supercluster rollouts in India and Kazakhstan.",
+    "status": "NVIDIA’s AI infrastructure now spans confidential bare‑metal compute, GA of Vera Rubin A5X instances, and widespread adoption of open‑weight models across European government, finance, retail, weather and industrial sectors. DSX and Minerva platforms are being deployed to integrate power and compute, while large‑scale compute installations have launched in India (Vultr supercluster) and Kazakhstan (Grace GPU data centers). New sovereign AI clouds in Europe and industrial edge AI agents are expanding the ecosystem, and SpaceX is planning a massive AI compute expansion.",
+    "changed": "SpaceX announced a plan to reach 13 GW AI compute capacity and deploy a 440,000‑GPU Vera Rubin training cluster by the end of 2027.",
     "timeline": [
       {
         "story_id": "822412740c4f",
         "date": "2026-10-23",
         "text": "Kazakhstan builds AI data center with 45,000 Grace GPUs; commercial launch slated Q3 2027."
+      },
+      {
+        "story_id": "e6b9c5ab474d",
+        "date": "2026-10-23",
+        "text": "SpaceX targets 13 GW AI compute capacity and 440k‑GPU Vera Rubin cluster by end‑2027."
       },
       {
         "story_id": "5346e68360b4",
@@ -376,19 +411,19 @@
     "title": "The AI infrastructure build-out",
     "next": [
       {
-        "text": "General availability of A5X instances scheduled for next month.",
+        "text": "General availability of A5X instances",
         "when": "next month",
         "story_id": "db73069fa994"
       },
       {
-        "text": "Expansion of A5X instances to Europe.",
-        "when": "",
-        "story_id": "db73069fa994"
+        "text": "Commercial launch of Kazakhstan Data Center Valley",
+        "when": "Q3 2027",
+        "story_id": "822412740c4f"
       },
       {
-        "text": "Commercial launch of Kazakhstan Data Center Valley in Q3 2027.",
-        "when": "Q3 2027",
-        "story_id": "822412740c4f"
+        "text": "SpaceX aims for 13 GW AI compute capacity",
+        "when": "end of 2027",
+        "story_id": "e6b9c5ab474d"
       }
     ],
     "story_ids": [
@@ -404,9 +439,10 @@
       "3b124899189b",
       "9aaacb38b57d",
       "99c8819be3a7",
-      "822412740c4f"
+      "822412740c4f",
+      "e6b9c5ab474d"
     ],
-    "updated_at": "2026-10-23T03:49:42+00:00",
-    "tried_at": "2026-10-23T03:49:42+00:00"
+    "updated_at": "2026-10-23T07:01:39+00:00",
+    "tried_at": "2026-10-23T07:01:39+00:00"
   }
 }
