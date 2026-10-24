@@ -21,6 +21,7 @@ from urllib.parse import quote_plus
 
 import feedparser
 
+from .sources import bing_news
 from .text import canonical_url, domain, extract_text, stable_id
 
 SYSTEM = """You write Frontier Wire's Top Voices page: what AI's leading people are arguing about this week.
@@ -29,7 +30,9 @@ shared worry), not a list of unrelated posts. For each debate:
 - title: max 8 words, sentence case, names the question ("Is scaling hitting a wall?")
 - summary: two sentences on what the debate is and why it matters now
 - positions: 2 to 4 entries, each a person and their stance in one sentence, in your own words (never quote),
-  with the ids of the posts it comes from. Only attribute a stance to the person who actually wrote or said it;
+  with the ids of the posts it comes from. A stance is what that person argues, worries about or concludes. If
+  they only relay someone else's news, say so ("Flags that…", "Points to…"); never make it sound like they made
+  an announcement that came from someone else. Only attribute a stance to the person who actually wrote or said it;
   posts marked reported="true" are a news outlet's account of what someone said on X: use them only for the
   person they name.
 Also pick up to 3 standouts: single posts worth reading in full, with one line on why.
@@ -115,7 +118,17 @@ def from_x_coverage(room: Any, people: list[dict[str, str]], max_articles: int =
     """News articles that report what a named person posted on X. We keep the sentences that say so."""
     names = " OR ".join(_surname(p["name"]) for p in people[:18])
     query = f'("on X" OR "posted on X" OR "wrote on X" OR tweeted) ({names}) sourcelang:english'
-    rows = room.gdelt.search(query, timespan="72h", max_records=40)
+    engine = "gdelt"
+    try:
+        rows = room.gdelt.search(query, timespan="72h", max_records=40)
+    except Exception:  # noqa: BLE001  GDELT is often slow or rate-limited; Bing News is the fallback
+        rows, engine = [], "bing"
+        for i in range(0, min(len(people), 18), 6):
+            group = " OR ".join(f'"{p["name"]}"' for p in people[i:i + 6])
+            try:
+                rows += bing_news(room.fetcher, f'"on X" ({group})', max_records=15)
+            except Exception:  # noqa: BLE001
+                continue
     out = []
     for r in rows:
         if len(out) >= max_articles:
@@ -134,7 +147,7 @@ def from_x_coverage(room: Any, people: list[dict[str, str]], max_articles: int =
                 out.append(_post(r["url"], p["name"], " ".join(hits[:3]), r.get("published"), outlet, "reported",
                                  headline=r["title"]))
                 break
-    return out, f"ok ({len(out)} of {len(rows)} articles)"
+    return out, f"ok ({len(out)} of {len(rows)} articles, {engine})"
 
 
 def from_hn(fetcher: Any, people: list[dict[str, str]], now: datetime, n_people: int = 6, min_points: int = 80) -> list[dict[str, Any]]:

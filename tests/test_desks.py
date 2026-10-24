@@ -234,3 +234,17 @@ def test_builders_and_voices_pages_build(tmp_path):
     assert "Dario Amodei" in vp  # who we follow, from the sources file
     assert "javascript:" not in bp
     assert '../../builders/' in (out / "story" / room.report["written"][0]["id"] / "index.html").read_text()  # in the nav
+
+
+def test_news_search_falls_back_to_bing():
+    from agent.sources import news_search
+    rss = """<?xml version="1.0"?><rss version="2.0"><channel><title>Bing</title>
+<item><title>Altman says compute will double</title>
+<link>http://www.bing.com/news/apiclick.aspx?ref=FexRss&amp;url=https%3a%2f%2fnews.example.com%2faltman&amp;c=1</link></item>
+</channel></rss>"""
+
+    def gdelt_down(url):
+        raise ConnectionError("The handshake operation timed out")
+    f = Fetcher({"https://api.gdeltproject.org": gdelt_down, "https://www.bing.com/news/search": rss})
+    rows, engine = news_search(Gdelt(f, sleep=lambda s: None), f, "Altman compute")
+    assert engine == "bing" and rows[0]["url"] == "https://news.example.com/altman" and rows[0]["domain"] == "news.example.com"

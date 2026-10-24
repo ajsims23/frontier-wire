@@ -17,7 +17,7 @@ from __future__ import annotations
 from datetime import timedelta
 from typing import Any
 
-from .sources import Item, is_ai_headline
+from .sources import Item, is_ai_headline, news_search
 from .text import canonical_url
 
 AREAS = ["models", "research", "policy", "safety", "industry", "voices", "india", "business"]
@@ -158,7 +158,7 @@ def run_searches(room: Any, plan: dict[str, Any], known: set[str]) -> list[Item]
     found: list[Item] = []
     for s in plan.get("searches", []):
         try:
-            rows = room.gdelt.search(s["query"] + " sourcelang:english", timespan="48h", max_records=15)
+            rows, s["engine"] = news_search(room.gdelt, room.fetcher, s["query"], hours=48, max_records=15)
         except Exception as e:  # noqa: BLE001
             s["found"] = 0
             note = f"editor's searches stopped: {str(e)[:80]}"
