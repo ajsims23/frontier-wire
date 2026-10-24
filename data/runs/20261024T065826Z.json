@@ -1,0 +1,201 @@
+{
+  "started_at": "2026-10-24T06:58:26+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1318)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (890)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (20)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (11)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Air Purifiers as White Noise Machines",
+      "reason": "score 2: Blog post about air purifiers has no relevance to AI frontier developments."
+    },
+    {
+      "title": "Google Play System update latest Version download: How to check updates and fix the January 2027 date",
+      "reason": "score 2: Google Play System update issue is unrelated to AI."
+    },
+    {
+      "title": "Mark Cuban says AI hack agents are like cockroaches, but can be controlled",
+      "reason": "score 4: Mark Cuban's comment on AI hack agents is a peripheral quote without substantive new development."
+    },
+    {
+      "title": "Deepinder Goyal’s Temple opens waitlist; applicants see a price of Rs 85,000",
+      "reason": "score 2: Device waitlist pricing story is not about AI."
+    },
+    {
+      "title": "China's Moonshot AI launches Kimi K3.1 Pro; plans full model weights release by November",
+      "reason": "duplicate of 6c51129e93f6"
+    },
+    {
+      "title": "UK government sets out $800 million for AI security funding",
+      "reason": "duplicate of 5c759c4e62d1"
+    },
+    {
+      "title": "Instacart in talks for sale: The Information",
+      "reason": "score 2: Instacart sale talks are unrelated to AI."
+    },
+    {
+      "title": "What to know about the AI-detected security bug impacting wide swaths of the internet",
+      "reason": "score 5: Report on AI‑detected PHP bug is a minor security incident, not a major frontier AI development."
+    },
+    {
+      "title": "PHP Foundation 'under-funded' with one full-time staff member, director says",
+      "reason": "score 3: Under‑funded PHP Foundation article is not relevant to AI frontier news."
+    },
+    {
+      "title": "OpenAI resumes frontier AI training after security overhaul, discloses flaw in widely used software",
+      "reason": "duplicate of 48e2274fdf2b"
+    },
+    {
+      "title": "Why AI data centers are powering a boom in fuel-cell demand",
+      "reason": "score 5: Analysis of AI data‑center impact on fuel‑cell demand is a niche industry piece, not a major AI story."
+    },
+    {
+      "title": "How art festivals benefit when galleries across cities collaborate",
+      "reason": "score 1: Art festival collaboration piece is off‑topic for AI frontier coverage."
+    },
+    {
+      "title": "The PHP Foundation, which coordinated fixes for two critical PHP flaws, operates on a shoestring budget with one full-time staff member and 14 contractors (Toby Sterling/Reuters)",
+      "reason": "score 3: Article about the under‑funded PHP Foundation is unrelated to frontier AI developments."
+    },
+    {
+      "title": "Andy Jassy says AWS capacity for 2027 is \"largely sold out\" and a \"good chunk\" of 2028 capacity is also sold, though AWS reserves some capacity for on-demand (Catherine Perloff/The Information)",
+      "reason": "score 5: AWS capacity sold out is an incremental industry update, not a major frontier AI story."
+    },
+    {
+      "title": "Coforge Revenue Rises 54% as AI Engineering and Deal Bookings Gain Momentum",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "862f739b06c9",
+      "headline": "OpenAI’s Project Daybreak helps uncover critical PHP RCE bugs",
+      "category": "safety",
+      "summary": "OpenAI’s GPT‑5.6 Sol model, accessed through its Project Daybreak programme, was used by security firm Calif to discover two critical PHP remote‑code‑execution vulnerabilities (CVE‑2026‑109618 and CVE‑2026‑109619). Google’s Wiz team later found the same flaws using its own tools, and the bugs were patched in the latest PHP releases.",
+      "url": "https://techmeme.com/261024/p2",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "d254ac655271",
+      "headline": "Infosys AI revenue rises 29% QoQ as FY27 growth guidance cut to 1-2%",
+      "category": "industry",
+      "summary": "Infosys reported AI revenue grew 29% quarter‑on‑quarter, representing 10.5% of total revenue. The company lowered its FY27 constant‑currency revenue growth outlook to 1‑2% amid softer demand.",
+      "url": "https://yourstory.com/2026/10/infosys-ai-revenue-jumps-29-but-growth-outlook-dims",
+      "sources": 3,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "1 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 75.1,
+    "audit": 0.0,
+    "judge": 2.4,
+    "verify and write": 197.9,
+    "videos": 26.2,
+    "tagging": 0.6,
+    "explainers": 0.0,
+    "trackers": 66.3,
+    "claims": 0.5,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "briefing": 42.1,
+    "self-review": -0.0,
+    "photos": 0.4,
+    "daily email": -0.0,
+    "alerts": 4.5
+  },
+  "fetched": 2879,
+  "fresh": 19,
+  "judged": 19,
+  "kept": 3,
+  "research": {
+    "investigated": 3,
+    "confirmed": 2,
+    "tool_calls": 9
+  },
+  "research_log": [
+    "A look at OpenAI's Project Daybreak, which lets vetted partners use it: confirmed (searched “OpenAI Project Daybreak PHP2Shell RCE”; read thenextweb.com; read msn.com)",
+    "Coforge Revenue Rises 54% as AI Engineering and Deal Bookings Gain Mom: unconfirmed (searched “Coforge revenue 53.6% Q2 FY27 order intake $1.04 billion”; read fortuneindia.com; read financialcontent.com)",
+    "Infosys AI revenue jumps 29%; Apple’s foldable iPhone fully pre-booked: confirmed (searched “Infosys AI revenue jumps 29% Q2 FY27”; read analyticsindiamag.com; read indiatimes.com)"
+  ],
+  "threads": [
+    "Tools reveal PHP vulnerabilities with Project Daybreak: OpenAI’s Project Daybreak helps uncover critical PHP RCE bug"
+  ],
+  "videos": {
+    "OpenAI": "ok (9 in feed, 1 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (7 in feed, 0 new)",
+    "AI at Meta": "ok (5 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (13 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (2 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "1 kept from 1 new",
+  "tagged": 2,
+  "trackers": "filed 2 stories; updated frontier-race, india-ai",
+  "claims": "19 tracked, 19 open, 0 updated this run",
+  "model_tracker": "82 models, 8 changes today",
+  "briefing": "4 themes from 19 stories",
+  "india_briefing": "4 themes from 5 stories",
+  "photos": "2 saved, 0 unavailable",
+  "alerts": "14 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":18}",
+  "ai_requests_run": 24,
+  "ai_tokens_run": 57126,
+  "ai_requests_today": 58,
+  "provider_log": []
+}
