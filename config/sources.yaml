@@ -216,6 +216,8 @@ builders:
 # news articles that report what these people posted on X (we never read X itself). Hacker News: the week's
 # most-discussed threads about them. The digest is rewritten once a day from a rolling 7-day window.
 top_voices:
+  # Portraits: Bluesky avatar for anyone in the Bluesky list above (or with bsky: handle), else the Wikipedia
+  # article's photo for names below and feeds marked wiki: true. Everyone else gets their initials.
   people:              # used to find reported X posts and HN threads (most-discussed first)
     - {name: Sam Altman, role: OpenAI CEO}
     - {name: Elon Musk, role: xAI founder}
@@ -239,7 +241,7 @@ top_voices:
     - {id: tv-mollick, name: One Useful Thing, person: Ethan Mollick, url: "https://www.oneusefulthing.org/feed"}
     - {id: tv-lambert, name: Interconnects, person: Nathan Lambert, url: "https://www.interconnects.ai/feed"}
     - {id: tv-swyx, name: Latent Space, person: swyx, url: "https://www.latent.space/feed"}
-    - {id: tv-dwarkesh, name: Dwarkesh Podcast, person: Dwarkesh Patel, url: "https://www.dwarkesh.com/feed"}
+    - {id: tv-dwarkesh, name: Dwarkesh Podcast, person: Dwarkesh Patel, url: "https://www.dwarkesh.com/feed", wiki: true}
     - {id: tv-raschka, name: Ahead of AI, person: Sebastian Raschka, url: "https://magazine.sebastianraschka.com/feed"}
     - {id: tv-karpathy, name: Karpathy's blog, person: Andrej Karpathy, url: "https://karpathy.bearblog.dev/feed/"}
     - {id: tv-evans, name: Benedict Evans, person: Benedict Evans, url: "https://www.ben-evans.com/benedictevans?format=rss"}

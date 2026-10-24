@@ -441,7 +441,9 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     for day in [builders_state.get("picks") or []] + list(hist.values()):
         for p in day:
             p["url"], p["discussion"] = web(p.get("url")) or "#", web(p.get("discussion"))
-    for d in ((tv_digest := read("top_voices.json", {}).get("digest")) or {}).get("debates", []):
+    tv_all = read("top_voices.json", {})
+    tv_portraits = {n: c for n, c in (tv_all.get("portraits") or {}).items() if c.get("file") and (out / c["file"]).exists()}
+    for d in ((tv_digest := tv_all.get("digest")) or {}).get("debates", []):
         for pos in d.get("positions", []):
             pos["posts"] = [x for x in pos.get("posts", []) if web(x.get("url"))]
     page("builders", "builders.html", title="What people are building with AI | Frontier Wire",
@@ -459,8 +461,9 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
          description=(digest or {}).get("headline") or "The week's biggest debates among the people shaping AI, with links to what they said.",
          canonical=f"{base}voices/", og_image=f"{base}og/home.png", d=digest,
          written=human_date(digest["written_at"]) if digest else "",
-         people=(cfg.extra.get("top_voices") or {}).get("people", []) + [
-             {"name": f["person"], "role": f.get("name", "")} for f in (cfg.extra.get("top_voices") or {}).get("feeds", [])])
+         people=[{**p, "photo": (tv_portraits.get(p["name"]) or {}).get("file", "")} for p in
+                 (cfg.extra.get("top_voices") or {}).get("people", []) + [
+                     {"name": f["person"], "role": f.get("name", "")} for f in (cfg.extra.get("top_voices") or {}).get("feeds", [])]])
 
     # small summary for the home page's Desks section
     week = now - timedelta(days=7)

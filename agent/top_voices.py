@@ -21,6 +21,7 @@ from urllib.parse import quote_plus
 
 import feedparser
 
+from . import media
 from .sources import bing_news
 from .text import canonical_url, domain, extract_text, stable_id
 
@@ -253,7 +254,7 @@ def write_digest(room: Any, state: dict[str, Any], posts: dict[str, dict[str, An
                 continue
             stance = re.sub(r"^(Announces|Announced|Announcing)\b", "Flags", stance)  # they relay news, they don't make it
             positions.append({"person": person, "stance": stance[:260],
-                              "posts": [{"url": p["url"], "via": p["via"], "kind": p["kind"], "date": (p.get("published") or "")[:10]}
+                              "posts": [{"id": p["id"], "url": p["url"], "via": p["via"], "kind": p["kind"], "date": (p.get("published") or "")[:10]}
                                         for p in cited[:3]]})
         cited_text = " ".join(by_id[i]["text"] for pos in d.get("positions") or [] if isinstance(pos, dict)
                               for i in pos.get("post_ids") or [] if i in by_id)
@@ -267,7 +268,7 @@ def write_digest(room: Any, state: dict[str, Any], posts: dict[str, dict[str, An
         p = by_id.get(s.get("post_id")) if isinstance(s, dict) else None
         why = str((s or {}).get("why") or "").strip() if isinstance(s, dict) else ""
         if p and why and _nums_ok(why, p["text"]):
-            standouts.append({"person": p["person"], "why": why[:200], "url": p["url"], "via": p["via"], "kind": p["kind"],
+            standouts.append({"id": p["id"], "person": p["person"], "why": why[:200], "url": p["url"], "via": p["via"], "kind": p["kind"],
                               "title": _line(p.get("headline") or p["text"], 120)})
     if len(debates) < 2:
         room.report["top_voices"] = f"skipped: only {len(debates)} debates passed the checks"
@@ -282,14 +283,106 @@ def write_digest(room: Any, state: dict[str, Any], posts: dict[str, dict[str, An
         "debates": debates[:4], "standouts": standouts[:3], "people": people,
         "from_posts": len(shown), "reported": sum(1 for p in shown if p["kind"] == "reported"),
     }
+    try:
+        add_media(room, state)
+    except Exception as e:  # noqa: BLE001  pictures are a nice-to-have
+        room.report["notes"].append(f"top voices pictures failed: {type(e).__name__}: {e}")
+    d = state["digest"]
+    pics = sum(1 for x in d["debates"] if x.get("image")) + sum(1 for x in d["standouts"] if x.get("image"))
     room.report["top_voices"] = (f"{len(debates)} debates from {len(shown)} posts by {len({p['person'] for p in shown})} people"
-                                 + (f" ({dropped} removed by checks)" if dropped else ""))
+                                 + (f" ({dropped} removed by checks)" if dropped else "")
+                                 + f"; {len([a for a in d.get('portraits', {}).values() if a])} portraits, {pics} pictures")
+
+
+def _bsky_handles(room: Any) -> dict[str, str]:
+    out = {}
+    for src in getattr(room.cfg, "sources", None) or []:
+        if src.get("kind") == "bluesky":
+            out.update({person: handle for handle, person in (src.get("accounts") or {}).items()})
+    tv = room.cfg.extra.get("top_voices") or {}
+    for p in tv.get("people", []) + tv.get("feeds", []):
+        name = p.get("name") if "role" in p else p.get("person")
+        if name and p.get("bsky"):
+            out[name] = p["bsky"]
+    return out
+
+
+def _wiki_ok(room: Any) -> dict[str, str]:
+    """People we may look up on Wikipedia: the curated list, plus feeds marked wiki (avoids look-alike names)."""
+    tv = room.cfg.extra.get("top_voices") or {}
+    out = {p["name"]: p.get("wiki", p["name"]) for p in tv.get("people", [])}
+    for f in tv.get("feeds", []):
+        if f.get("wiki"):
+            out[f["person"]] = f["wiki"] if isinstance(f["wiki"], str) else f["person"]
+    return out
+
+
+def add_media(room: Any, state: dict[str, Any], refresh_days: int = 14) -> None:
+    """Portraits for everyone in the digest, and a picture or video for each debate and standout."""
+    d = state["digest"]
+    http = media.client(room)
+    img_dir = room.store.dir / "img"
+    # portraits, cached for two weeks (including "none found", so we don't ask every day)
+    cache: dict[str, dict[str, str]] = state.setdefault("portraits", {})
+    handles, wiki = _bsky_handles(room), _wiki_ok(room)
+    stale = (room.now - timedelta(days=refresh_days)).isoformat()
+    people = set(d["people"]) | {s["person"] for s in d["standouts"]}
+    for name in sorted(people):
+        c = cache.get(name)
+        if c and c.get("checked", "") >= stale and (not c.get("file") or (img_dir.parent / c["file"]).exists()):
+            continue
+        url, credit = media.portrait_url(room.fetcher, name, handles.get(name, ""), wiki.get(name, ""))
+        rel = f"img/people/{media.slug(name)}.jpg"
+        ok = bool(url) and media.save_image(http, url, img_dir / "people" / f"{media.slug(name)}.jpg", avatar=True)
+        cache[name] = {"file": rel if ok else "", "credit": credit if ok else "", "checked": room.now.isoformat()}
+    d["portraits"] = {n: cache[n]["file"] for n in people if cache.get(n, {}).get("file")}
+    d["portrait_credits"] = sorted({cache[n]["credit"] for n in people if cache.get(n, {}).get("credit")})
+
+    # a picture (and video, if the page embeds one) for each debate and standout, from the posts they cite
+    looked: dict[str, tuple[str, str]] = {}
+
+    def media_for(post: dict[str, Any]) -> tuple[str, str]:
+        if post["id"] in looked:
+            return looked[post["id"]]
+        img, vid = "", media.youtube_id(post["url"])
+        if "bsky.app" not in post["url"] and "news.ycombinator.com" not in post["url"]:
+            page_img, page_vid = media.page_media(room.fetcher, post["url"])
+            vid = vid or page_vid
+            if (page_img or vid) and media.save_image(http, page_img or f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg",
+                                                       img_dir / "voices" / f"{post['id']}.jpg"):
+                img = f"img/voices/{post['id']}.jpg"
+        looked[post["id"]] = (img, vid)
+        return img, vid
+
+    for x in d["debates"]:
+        for pos in x["positions"]:
+            for post in pos["posts"]:
+                img, vid = media_for(post)
+                if img and not x.get("image"):
+                    x["image"], x["image_credit"] = img, post["via"]
+                if vid and not x.get("video"):
+                    x["video"] = vid
+            if x.get("image") and x.get("video"):
+                break
+    for st in d["standouts"]:
+        img, vid = media_for(st)
+        if img:
+            st["image"] = img
+        if vid:
+            st["video"] = vid
+    keep = {f"{p['id']}.jpg" for x in d["debates"] for pos in x["positions"] for p in pos["posts"]} | {f"{s['id']}.jpg" for s in d["standouts"]}
+    if (img_dir / "voices").exists():
+        for f in (img_dir / "voices").glob("*.jpg"):
+            if f.name not in keep:
+                f.unlink()
 
 
 def site_top_voices(state: dict[str, Any]) -> dict[str, Any] | None:
     d = state.get("digest")
     if not d:
         return None
+    portraits = d.get("portraits") or {}
     return {"written_at": d["written_at"], "headline": d["headline"], "range": d["range"],
-            "debates": [{"title": x["title"], "summary": x["summary"],
-                         "people": [p["person"] for p in x["positions"]]} for x in d["debates"][:3]]}
+            "debates": [{"title": x["title"], "summary": x["summary"], "image": x.get("image", ""), "video": x.get("video", ""),
+                         "people": [{"name": p["person"], "photo": portraits.get(p["person"], "")} for p in x["positions"]]}
+                        for x in d["debates"][:3]]}

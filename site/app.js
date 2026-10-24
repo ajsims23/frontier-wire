@@ -321,23 +321,40 @@
     $("building").hidden = !picks.length;
     if (!picks.length) return;
     if (b.intro) $("build-sub").innerHTML = `${esc(b.intro)} <a class="text-link" href="builders/">All picks</a>`;
-    $("build-list").innerHTML = picks.slice(0, 6).map((p) => `<li class="build-card">
+    const pic = (img, vid) => (img && /^img\/[\w/.-]+$/.test(img) ? img : (/^[A-Za-z0-9_-]{11}$/.test(vid || "") ? `https://i.ytimg.com/vi/${vid}/hqdefault.jpg` : ""));
+    const play = `<span class="vplay" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 10 10"><path d="M2.5 1.2l6 3.8-6 3.8z" fill="currentColor"/></svg></span>`;
+    $("build-list").innerHTML = picks.slice(0, 6).map((p) => {
+      const src = pic(p.image, p.video), vid = /^[A-Za-z0-9_-]{11}$/.test(p.video || "") ? p.video : "";
+      const mediaHtml = !src ? "" : vid
+        ? `<div class="bc-media"><button class="bc-play" type="button" data-video="${vid}" data-title="${esc(p.name)}" aria-label="Play demo video: ${esc(p.name)}"><img src="${esc(src)}" alt="" loading="lazy" decoding="async">${play}</button></div>`
+        : `<div class="bc-media"><a href="${safeUrl(p.url)}" rel="noopener" tabindex="-1" aria-hidden="true"><img src="${esc(src)}" alt="" loading="lazy" decoding="async"></a></div>`;
+      return `<li class="build-card">${mediaHtml}
         <p class="bc-meta"><span class="pill">${esc(p.kind)}</span><span>${esc(p.source)}</span></p>
         <h3><a href="${safeUrl(p.url)}" rel="noopener">${esc(p.name)}</a></h3>
         <p class="bc-what">${esc(p.what)}</p>
         <p class="bc-why">${esc(p.why)}</p>
         <p class="bc-sig muted">${esc(p.signal)}</p>
-      </li>`).join("");
+      </li>`;
+    }).join("");
   }
+  const initials = (n) => String(n || "").split(/\s+/).map((w) => w[0] || "").join("").toUpperCase().slice(0, 2);
+  const face = (p) => (p.photo && /^img\/people\/[\w.-]+\.jpg$/.test(p.photo)
+    ? `<img class="face" src="${esc(p.photo)}" alt="" title="${esc(p.name)}" loading="lazy" decoding="async">`
+    : `<span class="face initials" title="${esc(p.name)}" aria-hidden="true">${esc(initials(p.name))}</span>`);
   function renderTopVoices() {
     const t = data.top_voices, ds = (t && t.debates) || [];
     $("topvoices").hidden = !ds.length;
     if (!ds.length) return;
     $("tv-sub").innerHTML = `${esc(t.headline)} <a class="text-link" href="voices/">Who said what</a>`;
-    $("tv-list").innerHTML = ds.slice(0, 3).map((d) => `<a class="tv-card" href="voices/">
+    $("tv-list").innerHTML = ds.slice(0, 3).map((d) => {
+      const img = d.image && /^img\/[\w/.-]+$/.test(d.image) ? d.image : (/^[A-Za-z0-9_-]{11}$/.test(d.video || "") ? `https://i.ytimg.com/vi/${d.video}/hqdefault.jpg` : "");
+      const people = (d.people || []).map((p) => (typeof p === "string" ? { name: p } : p));
+      return `<a class="tv-card" href="voices/">
+        ${img ? `<span class="tv-img"><img src="${esc(img)}" alt="" loading="lazy" decoding="async"></span>` : ""}
         <h3>${esc(d.title)}</h3><p>${esc(d.summary)}</p>
-        <p class="tv-people">${(d.people || []).map((n) => `<span class="pill">${esc(n)}</span>`).join("")}</p>
-      </a>`).join("");
+        <span class="tv-people">${people.map((p) => `<span class="tv-person">${face(p)}<span>${esc(p.name)}</span></span>`).join("")}</span>
+      </a>`;
+    }).join("");
   }
 
   const ROLE = {

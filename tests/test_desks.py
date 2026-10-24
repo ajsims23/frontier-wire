@@ -1,6 +1,9 @@
 """Builders desk and Top Voices: sources, guardrails and schedule (offline fixtures)."""
+import io
 import json
 from datetime import timedelta
+
+import httpx
 from types import SimpleNamespace
 from urllib.parse import unquote
 
@@ -64,6 +67,22 @@ def build_fetcher():
     })
 
 
+def png(w=800, h=420):
+    from PIL import Image
+    buf = io.BytesIO()
+    Image.new("RGB", (w, h), (30, 120, 110)).save(buf, "PNG")
+    return buf.getvalue()
+
+
+def image_http(seen):
+    def handler(req):
+        seen.append(str(req.url))
+        if "blocked" in str(req.url):
+            return httpx.Response(403)
+        return httpx.Response(200, content=png())
+    return httpx.Client(transport=httpx.MockTransport(handler))
+
+
 class LLM:
     def __init__(self, answer):
         self.answer, self.prompts = answer, []
@@ -77,7 +96,7 @@ def cid(url):
     return stable_id(canonical_url(url))
 
 
-def test_builders_desk_picks_checks_and_rotates():
+def test_builders_desk_picks_checks_and_rotates(tmp_path):
     pdf, bench, rag = cid("https://pdfchat.example.dev"), cid("https://news.ycombinator.com/item?id=102"), cid("https://github.com/ana/tinyrag")
     voice, meet = cid("https://huggingface.co/spaces/lab/voice-clone-demo"), cid("https://www.producthunt.com/products/meetnotes")
     llm = LLM({"intro": "Local tools and voice demos lead today.", "picks": [
@@ -89,8 +108,13 @@ def test_builders_desk_picks_checks_and_rotates():
         {"id": pdf, "name": "PDFChat again", "what": "dup", "why": "dup"},
         {"id": bench, "name": "AgentBench Lite", "what": "Compares agent frameworks on 12 tasks.", "why": "Handy before picking one.", "kind": "tool"},
     ]})
-    store = SimpleNamespace(builders={})
-    room = SimpleNamespace(store=store, llm=llm, now=NOW, report={}, fetcher=build_fetcher(),
+    store = SimpleNamespace(builders={}, dir=tmp_path)
+    fetcher = build_fetcher()
+    fetcher.pages["https://pdfchat.example.dev"] = ('<html><head><meta property="og:image" content="/shot.png"></head>'
+                                                    '<body><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe></body></html>')
+    fetcher.pages["https://www.producthunt.com/products/meetnotes"] = '<meta property="og:image" content="https://blocked.example/x.png">'
+    images: list[str] = []
+    room = SimpleNamespace(store=store, llm=llm, now=NOW, report={}, fetcher=fetcher, photo_http=image_http(images),
                            cfg=SimpleNamespace(extra={"builders": BUILD_SOURCES}))
     builders.update_builders(room)
 
@@ -106,6 +130,13 @@ def test_builders_desk_picks_checks_and_rotates():
     assert "3 removed by checks" in room.report["builders"]
     site = builders.site_builders(store.builders)
     assert len(site["picks"]) == 4 and site["intro"].startswith("Local tools")
+    # pictures: the page's preview image, GitHub's own social card; videos: a YouTube demo embedded on the page
+    by = {p["name"]: p for p in picks}
+    assert by["PDFChat"]["video"] == "dQw4w9WgXcQ" and by["PDFChat"]["image"] == f"img/builders/{pdf}.jpg"
+    assert "https://pdfchat.example.dev/shot.png" in images
+    assert any(u.startswith("https://opengraph.githubassets.com/1/ana/tinyrag") for u in images) and by["tinyrag"]["image"]
+    assert (tmp_path / "img" / "builders" / f"{pdf}.jpg").exists()
+    assert "with pictures" in room.report["builders"] and site["picks"][0]["video"] == "dQw4w9WgXcQ"
 
     # not due again the same day; the next day, already-featured builds aren't offered again
     room.now = NOW + timedelta(hours=5)
@@ -122,7 +153,7 @@ ARTICLE = """<html><body><article><h1>Altman weighs in on compute</h1>
 He did not give details. Other news followed.</p><p>Elsewhere, a robot learned to fold laundry.</p></article></body></html>"""
 
 
-def voices_room(answer):
+def voices_room(answer, tmp_path=None):
     pool = [
         Item(url="https://bsky.app/profile/jane.example.social/post/1", title="Jane Doe: scaling", source_id="bluesky",
              source_name="Jane Doe on Bluesky", role="voice", person="Jane Doe", published=iso(5),
@@ -140,6 +171,12 @@ def voices_room(answer):
         "https://ed.example.org/feed": feed,
         "https://api.gdeltproject.org": json.dumps(gdelt_rows),
         "https://outlet.example.com/altman-x": ARTICLE,
+        "https://ed.example.org/moat": '<meta property="og:image" content="https://ed.example.org/cover.png"><a href="https://youtu.be/abcdefghijk">talk</a>',
+        "https://en.wikipedia.org/api/rest_v1/page/summary/Sam_Altman": json.dumps(
+            {"type": "standard", "thumbnail": {"source": "https://upload.wikimedia.org/altman.jpg"}}),
+        "https://en.wikipedia.org/api/rest_v1/page/summary/Ed_Park": json.dumps(
+            {"type": "standard", "thumbnail": {"source": "https://upload.wikimedia.org/wrong-ed-park.jpg"}}),
+        "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile": json.dumps({"avatar": "https://cdn.bsky.app/jane.jpg"}),
         "https://hn.algolia.com": lambda u: json.dumps({"hits": [
             {"objectID": "9", "title": "Sam Altman: The road ahead", "url": "https://blog.example/road", "points": 400,
              "num_comments": 300, "created_at": iso(20)}]} if "Sam%20Altman" in u or "Sam+Altman" in u else {"hits": []}),
@@ -147,12 +184,14 @@ def voices_room(answer):
     cfg = {"people": [{"name": "Sam Altman", "role": "OpenAI CEO"}, {"name": "Elon Musk", "role": "xAI"}],
            "feeds": [{"id": "tv-ed", "name": "Ed's notes", "person": "Ed Park", "url": "https://ed.example.org/feed"},
                      {"id": "tv-broken", "name": "Broken", "person": "Nobody", "url": "https://broken.example/feed"}]}
-    return SimpleNamespace(store=SimpleNamespace(top_voices={}), llm=LLM(answer), now=NOW, report={"notes": []},
-                           fetcher=fetcher, gdelt=Gdelt(fetcher, sleep=lambda s: None), _pool=pool,
-                           cfg=SimpleNamespace(extra={"top_voices": cfg}))
+    images: list[str] = []
+    return SimpleNamespace(store=SimpleNamespace(top_voices={}, dir=tmp_path), llm=LLM(answer), now=NOW, report={"notes": []},
+                           fetcher=fetcher, gdelt=Gdelt(fetcher, sleep=lambda s: None), _pool=pool, photo_http=image_http(images),
+                           images=images, cfg=SimpleNamespace(extra={"top_voices": cfg}, sources=[
+                               {"kind": "bluesky", "accounts": {"jane.example.social": "Jane Doe"}}]))
 
 
-def test_top_voices_sources_attribution_and_checks():
+def test_top_voices_sources_attribution_and_checks(tmp_path):
     jane, kim = cid("https://bsky.app/profile/jane.example.social/post/1"), cid("https://kim.example.net/post")
     ed, altman_x = cid("https://ed.example.org/moat"), cid("https://outlet.example.com/altman-x")
     hn = cid("https://news.ycombinator.com/item?id=9")
@@ -170,7 +209,7 @@ def test_top_voices_sources_attribution_and_checks():
                 {"person": "Ed Park", "stance": "Spend more.", "post_ids": [ed]}]},
         ], "standouts": [{"post_id": hn, "why": "A long essay readers argued over."}, {"post_id": "nope", "why": "x"}]}
 
-    room = voices_room(answer)
+    room = voices_room(answer, tmp_path)
     top_voices.update_top_voices(room)
     st = room.report["top_voices_sources"]
     assert st["tv-ed"] == "ok (1)" and st["tv-broken"].startswith("failed") and st["x-coverage"].startswith("ok (1")
@@ -189,7 +228,15 @@ def test_top_voices_sources_attribution_and_checks():
     assert [s["url"] for s in d["standouts"]] == ["https://news.ycombinator.com/item?id=9"]
     assert "removed by checks" in room.report["top_voices"]
     site = top_voices.site_top_voices(room.store.top_voices)
-    assert site["debates"][1]["people"] == ["Ed Park", "Sam Altman"]
+    assert [p["name"] for p in site["debates"][1]["people"]] == ["Ed Park", "Sam Altman"]
+    # portraits: Bluesky avatar for people we follow there, Wikipedia only for the curated list (never a look-alike)
+    assert d["portraits"]["Jane Doe"] == "img/people/jane-doe.jpg" and "https://cdn.bsky.app/jane.jpg" in room.images
+    assert d["portraits"]["Sam Altman"] == "img/people/sam-altman.jpg"
+    assert "Ed Park" not in d["portraits"] and not any("wrong-ed-park" in u for u in room.images)
+    assert set(d["portrait_credits"]) == {"Bluesky", "Wikimedia Commons"}
+    # the compute debate gets the blog post's picture and its linked video
+    assert d["debates"][1]["image"] == f"img/voices/{ed}.jpg" and d["debates"][1]["video"] == "abcdefghijk"
+    assert site["debates"][1]["people"][1]["photo"] == "img/people/sam-altman.jpg"
 
     # same day: posts keep collecting from the newsroom, but no new digest or extra fetching
     n = len(room.fetcher.requests)
@@ -198,8 +245,8 @@ def test_top_voices_sources_attribution_and_checks():
     assert len(room.llm.prompts) == 1 and len(room.fetcher.requests) == n
 
 
-def test_top_voices_waits_for_enough_people():
-    room = voices_room({"headline": "", "debates": [], "standouts": []})
+def test_top_voices_waits_for_enough_people(tmp_path):
+    room = voices_room({"headline": "", "debates": [], "standouts": []}, tmp_path)
     room._pool = room._pool[:1]
     room.cfg.extra["top_voices"] = {}
     top_voices.update_top_voices(room)
@@ -230,6 +277,7 @@ def test_builders_and_voices_pages_build(tmp_path):
     assert "Today&#39;s picks" in bp or "Today's picks" in bp
     assert "<script>alert(1)" not in bp and "Older pick" in bp and "Show HN" in bp
     vp = (out / "voices" / "index.html").read_text()
+    assert 'class="face initials"' in vp and ">SA<" in vp  # no portrait saved: initials instead
     assert "Is compute the moat?" in vp and "Reported by outlet.example.com" in vp and "<script>alert(1)" not in vp
     assert "Dario Amodei" in vp  # who we follow, from the sources file
     assert "javascript:" not in bp
@@ -250,11 +298,11 @@ def test_news_search_falls_back_to_bing():
     assert engine == "bing" and rows[0]["url"] == "https://news.example.com/altman" and rows[0]["domain"] == "news.example.com"
 
 
-def test_x_coverage_bing_fallback_per_person():
+def test_x_coverage_bing_fallback_per_person(tmp_path):
     rss = f"""<?xml version="1.0"?><rss version="2.0"><channel><title>Bing</title>
 <item><title>Altman says compute will double</title><link>https://outlet.example.com/altman-x</link>
 <pubDate>{NOW.strftime('%a, %d %b %Y %H:%M:%S +0000')}</pubDate></item></channel></rss>"""
-    room = voices_room({})
+    room = voices_room({}, tmp_path)
     room.fetcher.pages["https://api.gdeltproject.org"] = lambda u: (_ for _ in ()).throw(ConnectionError("timed out"))
     room.fetcher.pages["https://www.bing.com/news/search"] = lambda u: rss if "Sam+Altman" in u else "<rss><channel></channel></rss>"
     out, status = top_voices.from_x_coverage(room, room.cfg.extra["top_voices"]["people"])

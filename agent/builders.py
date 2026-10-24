@@ -18,6 +18,7 @@ from urllib.parse import quote, quote_plus
 
 import feedparser
 
+from . import media
 from .sources import is_ai_headline
 from .text import canonical_url, extract_text, stable_id
 
@@ -91,9 +92,10 @@ def from_show_hn(fetcher: Any, src: dict[str, Any], now: datetime) -> list[dict[
                 continue
             discussion = f"https://news.ycombinator.com/item?id={h.get('objectID')}"
             text = extract_text(f"<body>{h.get('story_text') or ''}</body>", limit=500)
+            yt = media.youtube_id(h.get("story_text") or "") or media.youtube_id(h.get("url") or "")
             c = _cand(h.get("url") or discussion, title, "Show HN", text or title,
                       f"{h.get('points', 0)} points, {h.get('num_comments', 0)} comments on Hacker News",
-                      h.get("created_at"), discussion=discussion)
+                      h.get("created_at"), discussion=discussion, video=yt)
             out.setdefault(c["id"], c)
     return list(out.values())
 
@@ -168,7 +170,8 @@ def from_feed(fetcher: Any, src: dict[str, Any], now: datetime) -> list[dict[str
         if src.get("ai_only") and not is_ai_headline(f"{title} {text}"):
             continue
         out.append(_cand(link, title, src["name"], text or title, src.get("signal", f"posted on {src['name']}"),
-                         when.isoformat() if when else None, maker=(e.get("author") or "")[:60]))
+                         when.isoformat() if when else None, maker=(e.get("author") or "")[:60],
+                         video=media.youtube_id(body or "") or media.youtube_id(link)))
     return out
 
 
@@ -245,6 +248,7 @@ def update_builders(room: Any, sources: list[dict[str, Any]] | None = None, forc
     if len(picks) < 3:
         room.report["builders"] = f"skipped: only {len(picks)} picks passed the checks"
         return
+    add_media(room, picks, by_id)
     day = room.now.date().isoformat()
     history = state.get("history") or {}
     history[day] = picks
@@ -257,12 +261,42 @@ def update_builders(room: Any, sources: list[dict[str, Any]] | None = None, forc
         "picks": picks, "from_candidates": len(shown), "featured": featured,
         "history": dict(sorted(history.items())[-30:]),
     })
-    room.report["builders"] = f"picked {len(picks)} from {len(shown)} candidates" + (f" ({dropped} removed by checks)" if dropped else "")
+    prune_images(room, state)
+    room.report["builders"] = (f"picked {len(picks)} from {len(shown)} candidates" + (f" ({dropped} removed by checks)" if dropped else "")
+                               + f"; {sum(1 for p in picks if p.get('image'))} with pictures, {sum(1 for p in picks if p.get('video'))} with videos")
+
+
+def add_media(room: Any, picks: list[dict[str, Any]], by_id: dict[str, dict[str, Any]]) -> None:
+    """A picture for each pick (our own copy) and a YouTube demo when the post or page links one."""
+    http = media.client(room)
+    folder = room.store.dir / "img" / "builders"
+    for p in picks:
+        c = by_id.get(p["id"], {})
+        video = c.get("video", "")
+        image = media.github_card(p["url"])
+        if not image or not video:
+            page_img, page_vid = media.page_media(room.fetcher, p["url"])
+            image, video = image or page_img, video or page_vid
+        if not image and video:
+            image = f"https://i.ytimg.com/vi/{video}/hqdefault.jpg"
+        if video:
+            p["video"] = video
+        if image and media.save_image(http, image, folder / f"{p['id']}.jpg"):
+            p["image"] = f"img/builders/{p['id']}.jpg"
+
+
+def prune_images(room: Any, state: dict[str, Any]) -> None:
+    folder = room.store.dir / "img" / "builders"
+    keep = {p["id"] for day in (state.get("history") or {}).values() for p in day}
+    if folder.exists():
+        for f in folder.glob("*.jpg"):
+            if f.stem not in keep:
+                f.unlink()
 
 
 def site_builders(state: dict[str, Any]) -> dict[str, Any] | None:
     if not state.get("picks"):
         return None
     return {"written_at": state["written_at"], "intro": state.get("intro", ""),
-            "picks": [{k: p.get(k) for k in ("name", "what", "why", "kind", "for", "url", "discussion", "source", "signal")}
+            "picks": [{k: p.get(k) for k in ("name", "what", "why", "kind", "for", "url", "discussion", "source", "signal", "image", "video")}
                       for p in state["picks"][:6]]}

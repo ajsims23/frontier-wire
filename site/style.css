@@ -736,7 +736,15 @@ body.aud-switching .front-grid, body.aud-switching #feed, body.aud-switching .au
 
 /* ---------- builders desk ---------- */
 .build-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 16px; }
-.build-card { display: flex; flex-direction: column; gap: 8px; padding: 20px 22px; border-radius: var(--r-md); background: var(--panel); border: 1px solid var(--line-soft); border-top: 3px solid var(--brand); }
+.build-card { display: flex; flex-direction: column; gap: 8px; padding: 0 22px 20px; overflow: hidden; border-radius: var(--r-md); background: var(--panel); border: 1px solid var(--line-soft); border-top: 3px solid var(--brand); }
+.build-card > :first-child:not(.bc-media) { margin-top: 20px; }
+.bc-media { margin: 0 -22px 6px; aspect-ratio: 16 / 9; background: var(--panel-2); overflow: hidden; max-width: calc(100% + 44px); }
+.bc-media a, .bc-media .bc-play { display: block; width: 100%; height: 100%; }
+.bc-media img, .debate-media img, .tv-img img, .so-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bc-play { position: relative; padding: 0; border: 0; background: none; cursor: pointer; color: #fff; }
+.bc-play .vplay { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%); width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; background: rgba(0, 0, 0, .62); }
+.bc-play:hover .vplay, .bc-play:focus-visible .vplay { background: var(--brand); color: var(--ground); }
+.bc-watch { background: none; border: 0; padding: 0; font: inherit; cursor: pointer; color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
 .build-card h3 { font-size: 20px; font-weight: 800; font-stretch: 112.5%; letter-spacing: -0.01em; margin: 0; }
 .build-card h3 a:hover { color: var(--brand); }
 .bc-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0; color: var(--muted); font-size: 13px; }
@@ -748,24 +756,41 @@ body.aud-switching .front-grid, body.aud-switching #feed, body.aud-switching .au
 
 /* ---------- top voices ---------- */
 .tv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
-.tv-card { display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: var(--r-md); background: var(--panel); border: 1px solid var(--line-soft); border-left: 3px solid var(--industry); }
+.tv-card { display: flex; flex-direction: column; gap: 10px; padding: 0 22px 22px; overflow: hidden; border-radius: var(--r-md); background: var(--panel); border: 1px solid var(--line-soft); border-left: 3px solid var(--industry); }
 .tv-card:hover { border-color: var(--line); background: var(--panel-2); }
+.tv-card > h3:first-child { margin-top: 22px !important; }
+.tv-img { display: block; margin: 0 -22px 4px; aspect-ratio: 16 / 9; background: var(--panel-2); overflow: hidden; max-width: calc(100% + 44px); }
+.tv-person { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--soft); }
+.face { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; flex: none; background: var(--panel-2); border: 1px solid var(--line); }
+.face.big { width: 44px; height: 44px; }
+.face.initials { display: inline-grid; place-items: center; font-size: 11px; font-weight: 700; letter-spacing: .02em; color: var(--soft); }
+.debate-media { margin: 4px 0 14px; border-radius: var(--r-md); overflow: hidden; aspect-ratio: 16 / 9; max-width: 640px; background: var(--panel-2); position: relative; }
+.debate-media .bc-play { display: block; width: 100%; height: 100%; }
+.debate-media figcaption { position: absolute; right: 8px; bottom: 8px; font-size: 11px; padding: 2px 8px; border-radius: 999px; background: rgba(0, 0, 0, .6); color: #fff; }
+.standouts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 16px; }
+.standouts li { display: flex; flex-direction: column; gap: 8px; }
+.so-card { display: flex; flex-direction: column; gap: 8px; padding: 0 0 4px; }
+.so-img { aspect-ratio: 16 / 9; border-radius: var(--r-md); }
+.so-who { display: inline-flex; align-items: center; gap: 8px; }
+.so-title { font-weight: 600; color: var(--text); }
+.so-card:hover .so-title { color: var(--brand); }
 .tv-card h3 { font-size: 20px; font-weight: 800; font-stretch: 112.5%; letter-spacing: -0.01em; margin: 0; }
 .tv-card p { margin: 0; color: var(--soft); }
-.tv-people { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto !important; }
+.tv-people { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: auto; }
 .debates { list-style: none; margin: 32px 0; padding: 0; max-width: 900px; }
 .debate { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 20px; padding: 26px 0; border-top: 1px solid var(--line-soft); }
 .debate h2 { font-size: clamp(1.35rem, 2.4vw, 1.75rem); font-stretch: 112%; letter-spacing: -.02em; margin: 2px 0 10px; }
 .debate > div > p { color: var(--soft); font-size: 17px; margin: 0; max-width: 66ch; }
 .positions { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 10px; }
-.positions li { display: grid; grid-template-columns: minmax(120px, 170px) minmax(0, 1fr); gap: 4px 18px; padding: 12px 16px; border-radius: var(--r-md); background: var(--panel); border: 1px solid var(--line-soft); }
-.pos-who { font-weight: 700; color: var(--text); }
+.positions li { display: grid; grid-template-columns: minmax(150px, 210px) minmax(0, 1fr); gap: 4px 18px; padding: 12px 16px; border-radius: var(--r-md); background: var(--panel); border: 1px solid var(--line-soft); }
+.pos-who { font-weight: 700; color: var(--text); display: inline-flex; align-items: center; gap: 10px; }
 .pos-what { color: var(--soft); }
 .pos-src { grid-column: 2; display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13px; }
 .pos-src a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); }
 .pos-src a:hover { color: var(--text); }
 .follow-people { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 0 24px; }
-.follow-people li { display: flex; flex-direction: column; gap: 2px; padding: 10px 0; border-top: 1px solid var(--line-soft); }
+.follow-people li { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line-soft); }
+.follow-people li > span:last-child { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .follow-people .muted { font-size: 13px; }
 @media (max-width: 640px) {
   .debate { grid-template-columns: minmax(0, 1fr); gap: 6px; }
