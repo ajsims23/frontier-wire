@@ -7,7 +7,7 @@ on:
     branches: [feature/chief-builders-voices]
 
 permissions:
-  contents: read
+  contents: write   # only to push the preview output to the throwaway desk-preview branch
 
 concurrency:
   group: preview-desks
@@ -46,8 +46,11 @@ jobs:
           cp -r _site/index.html _site/builders _site/voices _site/*.js _site/*.css _site/favicon.svg preview/
           cp _site/data/site.json _site/data/desks.json preview/data/
           cp /tmp/preview-data/plan.json /tmp/preview-data/builders.json /tmp/preview-data/top_voices.json /tmp/preview-data/last_run.json preview/data/
-      - uses: actions/upload-artifact@v4
-        with:
-          name: desk-preview
-          path: preview/
-          retention-days: 3
+      - name: Push the preview to a throwaway branch (never main; the site doesn't deploy from it)
+        run: |
+          cd preview
+          git init -q -b desk-preview
+          git config user.name "frontier-wire-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A && git commit -qm "Desk preview from ${GITHUB_SHA::7}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" desk-preview
