@@ -1,59 +1,63 @@
-## Frontier Wire newsroom run — 2026-10-24T06:58:26+00:00
+## Frontier Wire newsroom run — 2026-10-24T09:46:50+00:00
 
-Fetched 2879 items · fresh 19 · judged 19 · kept 3 · **written 2**
-AI: 24 requests, 57,126 tokens this run · 58 requests today · providers: cerebras, groq
-Research agent: investigated 3 stories with 9 tool calls, confirmed 2
-Daily briefing: 4 themes from 19 stories
-Threads updated: Tools reveal PHP vulnerabilities with Project Daybreak: OpenAI’s Project Daybreak helps uncover critical PHP RCE bug
-Videos: 1 kept from 1 new · OpenAI ok (9 in feed, 1 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (7 in feed, 0 new), AI at Meta ok (5 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (13 in feed, 0 new), Hugging Face ok (12 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 0 new), Training Data (Sequoia) ok (6 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (4 in feed, 0 new)
-Photos: 2 saved, 0 unavailable
-Alerts: 14 events sent: {"subscribers":6,"sent":0,"queued":18}
-Claims: 19 tracked, 19 open, 0 updated this run
-Trackers: filed 2 stories; updated frontier-race, india-ai
-Model tracker: 82 models, 8 changes today
-Tagged 2 stories by sector, region and deal
-India briefing: 4 themes from 5 stories
-Time: gather 75s, judge 2s, verify and write 198s, videos 26s, trackers 66s, briefing 42s, alerts 4s
+Fetched 2912 items · fresh 37 · judged 26 · kept 2 · **written 1**
+AI: 19 requests, 52,405 tokens this run · 77 requests today · providers: cerebras, groq
+Research agent: investigated 2 stories with 6 tool calls, confirmed 1
+Daily briefing: 3 themes from 19 stories
+Threads updated: OpenAI safety breach prompts training resume: OpenAI resumes training of frontier AI models after security
+Videos: 0 kept from 1 new · OpenAI ok (9 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (7 in feed, 0 new), AI at Meta ok (5 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (13 in feed, 0 new), Hugging Face ok (12 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 0 new), Training Data (Sequoia) ok (6 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (4 in feed, 1 new)
+Photos: 1 saved, 0 unavailable
+Alerts: 17 events sent: {"subscribers":6,"sent":0,"queued":17}
+Claims: 19 tracked, 19 open, 1 updated this run
+Trackers: filed 2 stories; updated frontier-race, agent-safety
+Model tracker: 82 models, 10 changes today
+Tagged 1 stories by sector, region and deal
+Time: gather 100s, judge 2s, verify and write 131s, videos 22s, tagging 21s, trackers 85s, claims 20s, briefing 21s, alerts 3s
 
 ### New stories
-- **safety** — [OpenAI’s Project Daybreak helps uncover critical PHP RCE bugs](https://techmeme.com/261024/p2)  
-  OpenAI’s GPT‑5.6 Sol model, accessed through its Project Daybreak programme, was used by security firm Calif to discover two critical PHP remote‑code‑execution vulnerabilities (CVE‑2026‑109618 and CVE‑2026‑109619). Google’s Wiz team later found the same flaws using its own tools, and the bugs were patched in the latest PHP releases.  
-  _2 source(s), 2 verified quote(s)_
-- **industry** — [Infosys AI revenue rises 29% QoQ as FY27 growth guidance cut to 1-2%](https://yourstory.com/2026/10/infosys-ai-revenue-jumps-29-but-growth-outlook-dims)  
-  Infosys reported AI revenue grew 29% quarter‑on‑quarter, representing 10.5% of total revenue. The company lowered its FY27 constant‑currency revenue growth outlook to 1‑2% amid softer demand.  
-  _3 source(s), 2 verified quote(s)_
+- **industry** — [OpenAI resumes training of frontier AI models after security overhaul](https://thejakartapost.com/business/2026/10/24/openai-resumes-frontier-ai-training-after-security-overhaul)  
+  OpenAI paused training of its most capable models after a research model accessed the internet via a configuration error in September. After adding offline environments, high‑compute red‑teaming and fixing a flaw in the Brotli compression tool, training resumed on October 1.  
+  _3 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Air Purifiers as White Noise Machines — score 2: Blog post about air purifiers has no relevance to AI frontier developments.
-- Google Play System update latest Version download: How to check updates and fix the January 2027 date — score 2: Google Play System update issue is unrelated to AI.
-- Mark Cuban says AI hack agents are like cockroaches, but can be controlled — score 4: Mark Cuban's comment on AI hack agents is a peripheral quote without substantive new development.
-- Deepinder Goyal’s Temple opens waitlist; applicants see a price of Rs 85,000 — score 2: Device waitlist pricing story is not about AI.
-- China's Moonshot AI launches Kimi K3.1 Pro; plans full model weights release by November — duplicate of 6c51129e93f6
-- UK government sets out $800 million for AI security funding — duplicate of 5c759c4e62d1
-- Instacart in talks for sale: The Information — score 2: Instacart sale talks are unrelated to AI.
-- What to know about the AI-detected security bug impacting wide swaths of the internet — score 5: Report on AI‑detected PHP bug is a minor security incident, not a major frontier AI development.
-- PHP Foundation 'under-funded' with one full-time staff member, director says — score 3: Under‑funded PHP Foundation article is not relevant to AI frontier news.
-- OpenAI resumes frontier AI training after security overhaul, discloses flaw in widely used software — duplicate of 48e2274fdf2b
-- Why AI data centers are powering a boom in fuel-cell demand — score 5: Analysis of AI data‑center impact on fuel‑cell demand is a niche industry piece, not a major AI story.
-- How art festivals benefit when galleries across cities collaborate — score 1: Art festival collaboration piece is off‑topic for AI frontier coverage.
-- The PHP Foundation, which coordinated fixes for two critical PHP flaws, operates on a shoestring budget with one full-time staff member and 14 contractors (Toby Sterling/Reuters) — score 3: Article about the under‑funded PHP Foundation is unrelated to frontier AI developments.
-- Andy Jassy says AWS capacity for 2027 is "largely sold out" and a "good chunk" of 2028 capacity is also sold, though AWS reserves some capacity for on-demand (Catherine Perloff/The Information) — score 5: AWS capacity sold out is an incremental industry update, not a major frontier AI story.
-- Coforge Revenue Rises 54% as AI Engineering and Deal Bookings Gain Momentum — could not verify yet; will retry next run
+- Parliamentary Committee on Finance to examine 46 economic issues , including virtual digital assets , AI , in FY 27 — score 4: Parliamentary committee examining AI among many issues is a routine policy discussion, not a major regulation or frontier development.
+- Tech tycoons must not be allowed to let rip with AI , minister warns — score 3: Minister's warning to tech tycoons is a political comment without concrete policy impact.
+- Hong Kong Exchange Adds Separate AI and Semiconductor Benchmarks — score 5: Announcement of new AI and semiconductor benchmarks on Hong Kong Exchange is a market index update, not a frontier AI breakthrough.
+- Uzbekistan , EY explore AI , technology export cooperation opportunities — score 4: Uzbekistan and EY exploring AI export cooperation is a modest bilateral initiative, not a major AI development.
+- Meet Ellianna Gu , the Salt Lake City eighth - grader who tested ChatGPT , Claude and Gemini on 84 teen emotional scenarios and found their replies often lacked empathy — score 2: Human‑interest piece about a teenager testing chat models; not newsworthy for Frontier Wire.
+- MSI Malaysia unveils the Prestige N16 Flip AI+ , the world first Nvidia RTX Spark - powered 2 - in - 1 laptop — score 4: Launch of a new laptop featuring Nvidia RTX Spark; hardware product not a frontier AI model.
+- VistaShares Artificial Intelligence Supercycle ETF $AIS Shares Sold by Beaumont Financial Advisors LLC — score 3: ETF share sale is a financial transaction, not AI‑related news.
+- Cisco President let AI check his emails . It found Rs 8 . 5 lakh in yearly subscription bills : Are you sure ..? — score 3: Anecdotal claim about AI checking email bills; appears to be marketing fluff.
+- Thariq Shihipar announces departure from Anthropic after more than a year on Claude Code · Digg — score 4: Departure of a senior Anthropic employee is notable but not a major development in AI research or policy.
+- Scaling AI agents a bottleneck for Indian enterprises : Dynatrace Rafi Katanasho — score 5: Discussion of scaling bottlenecks for Indian enterprises is informative but not a breakthrough or major policy change.
+- Jack Dorsey Block launches Dessa ; AI voice model trained entirely on human conversation — score 5: Block’s launch of an AI voice model is a new product but not from a frontier lab and lacks broader impact.
+- Financing demand set to shift to emerging sectors like AI , semiconductors : Report — score 4: Report on shifting financing demand toward AI and semiconductors is a market outlook, not a specific AI event.
+- What Could Drive 1 , 000× More AI Demand in Four Years ? – NextBigFuture . com — score 3: Speculative article about potential AI demand growth; lacks concrete news.
+- OpenAI resumes frontier AI model training after 11 - day pause over security concerns — score 7: Story already published; duplicate of existing coverage on OpenAI’s training pause.
+- Hacker reverses Samsung TV, finds on-board AI listening OpenAI account suspended — score 2: Hacker anecdote about a Samsung TV listening; not a frontier AI security development.
+- OBS Studio 33 — score 1: OBS Studio 33 release is unrelated to AI frontier developments.
+- How close can pure functional programming get to C? — score 1: Article on functional programming has no relevance to AI news.
+- Show HN: Making a smart TV dumb and then smart — score 1: Show HN post about smart TV modifications; not AI‑focused.
+- Coforge Revenue Rises 54% as AI Engineering and Deal Bookings Gain Momentum — score 5: Coforge’s revenue rise attributed to AI engineering is notable for Indian IT, but not a frontier AI event.
+- FY26 Financial Tracker: Tracking The Financial Performance Of Indian Startups — score 3: Financial tracker of Indian startups; while India‑focused, it does not cover AI‑specific developments.
+- Ever heard of a touchscreen garment? World's 1st is here - washable, breathable; it responds to finger presses, wireless — score 2: Touchscreen garment prototype is a materials innovation, not AI.
+- The Tender247 Story: Turning tender intelligence into a competitive advantage with Anupam Kher — score 5: Tender247’s AI‑driven tender intelligence platform is a modest Indian startup story, not a major AI breakthrough.
+- OpenAI says AI agents can communicate even without internet connection , here is how — could not verify yet; will retry next run
 
 </details>
 
 ### Sources with problems
-- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
-- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
+- `gdelt-india`: failed: ReadTimeout: The read operation timed out
 
 <details><summary>Research agent's work</summary>
 
-- A look at OpenAI's Project Daybreak, which lets vetted partners use it: confirmed (searched “OpenAI Project Daybreak PHP2Shell RCE”; read thenextweb.com; read msn.com)
-- Coforge Revenue Rises 54% as AI Engineering and Deal Bookings Gain Mom: unconfirmed (searched “Coforge revenue 53.6% Q2 FY27 order intake $1.04 billion”; read fortuneindia.com; read financialcontent.com)
-- Infosys AI revenue jumps 29%; Apple’s foldable iPhone fully pre-booked: confirmed (searched “Infosys AI revenue jumps 29% Q2 FY27”; read analyticsindiamag.com; read indiatimes.com)
+- OpenAI resumes frontier AI training after security overhaul - Tech: confirmed (searched “OpenAI resumes frontier AI training after security overhaul”; read indiatimes.com; read msn.com)
+- OpenAI says AI agents can communicate even without internet connection: unconfirmed (searched “OpenAI AI agents communicate without internet connection”; read digitaltoday.co.kr; read officechai.com)
 
 </details>
 
 ### Notes
+- ignored made-up duplicate id 7bc2672307d3 for 'OpenAI resumes frontier AI model training after 11'
 - 1 kept item(s) carried over to the next run
+- cerebras/gpt-oss-120b: answer cut off; retrying with more room

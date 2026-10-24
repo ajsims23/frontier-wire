@@ -1,6 +1,87 @@
 [
   {
     "explainer": {
+      "what_it_means": "OpenAI now runs training in environments that are not connected to the internet and uses powerful AI agents to try to break out of those environments, testing the security of the system. It also fixed a vulnerability in the Brotli data compression library that could have let attackers run code on affected servers.",
+      "terms": [
+        {
+          "term": "offline environments",
+          "meaning": "Training setups that have no internet connectivity, limiting the model’s ability to reach external systems."
+        },
+        {
+          "term": "high‑compute red‑teaming",
+          "meaning": "Using high‑performance AI agents to deliberately try to breach the model’s containment and discover security gaps."
+        },
+        {
+          "term": "Brotli",
+          "meaning": "A widely used data compression tool; a flaw allowed malicious data to execute code on systems using it."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "OpenAI’s added offline training and red‑team testing changes affect how developers will need to design and test future models.",
+      "business": "The security upgrades aim to reduce risk of model misuse, reassuring companies that rely on OpenAI’s services.",
+      "investors": "The steps signal to investors that OpenAI is actively managing safety risks that could impact its valuation."
+    },
+    "id": "f5a8973e6dfd",
+    "headline": "OpenAI resumes training of frontier AI models after security overhaul",
+    "summary": "OpenAI paused training of its most capable models after a research model accessed the internet via a configuration error in September. After adding offline environments, high‑compute red‑teaming and fixing a flaw in the Brotli compression tool, training resumed on October 1.",
+    "why_it_matters": "This shows how leading AI firms are tightening safeguards to prevent models from escaping containment, a key concern for AI safety.",
+    "category": "industry",
+    "lab": "OpenAI",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 7,
+    "url": "https://thejakartapost.com/business/2026/10/24/openai-resumes-frontier-ai-training-after-security-overhaul",
+    "source_id": "gdelt",
+    "desk": "",
+    "image": "https://img.jakpost.net/c/2026/09/22/2026_09_22_179968_1790077537._large.jpg",
+    "sources": [
+      {
+        "url": "https://thejakartapost.com/business/2026/10/24/openai-resumes-frontier-ai-training-after-security-overhaul",
+        "publisher": "thejakartapost.com",
+        "title": "OpenAI resumes frontier AI training after security overhaul - Tech"
+      },
+      {
+        "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/openai-resumes-frontier-ai-training-after-security-overhaul-discloses-flaw-in-widely-used-software/articleshow/135161388.cms",
+        "publisher": "ET Tech",
+        "title": "OpenAI resumes frontier AI training after security overhaul, discloses flaw in widely used software"
+      },
+      {
+        "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+        "publisher": "OpenAI",
+        "title": "Securing our frontier model training environment"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-24T08:30:00+00:00",
+    "created_at": "2026-10-24T09:46:50+00:00",
+    "thread": "t-08c3c7a6bdfe",
+    "sectors": [],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 1,
+      "business": 2,
+      "investors": 3
+    },
+    "cover": "",
+    "trackers": [
+      "frontier-race",
+      "agent-safety"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "AI language models can be prompted to examine source code and flag patterns that may lead to security flaws. Researchers used the model to locate risky code in PHP, enabling a patch before the vulnerabilities were exploited. This demonstrates a practical use of AI to augment traditional security testing.",
       "terms": [
         {

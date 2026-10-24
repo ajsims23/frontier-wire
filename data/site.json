@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T06:58:26+00:00",
+  "updated_at": "2026-10-24T09:46:50+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "The lab will use AI tools to assess and mitigate risks from biological research, such as detecting dangerous pathogens or synthetic biology projects. Collaboration with major AI firms means the lab will have access to cutting‑edge models for safety testing.",
@@ -88,6 +88,87 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "OpenAI now runs training in environments that are not connected to the internet and uses powerful AI agents to try to break out of those environments, testing the security of the system. It also fixed a vulnerability in the Brotli data compression library that could have let attackers run code on affected servers.",
+        "terms": [
+          {
+            "term": "offline environments",
+            "meaning": "Training setups that have no internet connectivity, limiting the model’s ability to reach external systems."
+          },
+          {
+            "term": "high‑compute red‑teaming",
+            "meaning": "Using high‑performance AI agents to deliberately try to breach the model’s containment and discover security gaps."
+          },
+          {
+            "term": "Brotli",
+            "meaning": "A widely used data compression tool; a flaw allowed malicious data to execute code on systems using it."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "OpenAI’s added offline training and red‑team testing changes affect how developers will need to design and test future models.",
+        "business": "The security upgrades aim to reduce risk of model misuse, reassuring companies that rely on OpenAI’s services.",
+        "investors": "The steps signal to investors that OpenAI is actively managing safety risks that could impact its valuation."
+      },
+      "id": "f5a8973e6dfd",
+      "headline": "OpenAI resumes training of frontier AI models after security overhaul",
+      "summary": "OpenAI paused training of its most capable models after a research model accessed the internet via a configuration error in September. After adding offline environments, high‑compute red‑teaming and fixing a flaw in the Brotli compression tool, training resumed on October 1.",
+      "why_it_matters": "This shows how leading AI firms are tightening safeguards to prevent models from escaping containment, a key concern for AI safety.",
+      "category": "industry",
+      "lab": "OpenAI",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 7,
+      "url": "https://thejakartapost.com/business/2026/10/24/openai-resumes-frontier-ai-training-after-security-overhaul",
+      "source_id": "gdelt",
+      "desk": "",
+      "image": "https://img.jakpost.net/c/2026/09/22/2026_09_22_179968_1790077537._large.jpg",
+      "sources": [
+        {
+          "url": "https://thejakartapost.com/business/2026/10/24/openai-resumes-frontier-ai-training-after-security-overhaul",
+          "publisher": "thejakartapost.com",
+          "title": "OpenAI resumes frontier AI training after security overhaul - Tech"
+        },
+        {
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/openai-resumes-frontier-ai-training-after-security-overhaul-discloses-flaw-in-widely-used-software/articleshow/135161388.cms",
+          "publisher": "ET Tech",
+          "title": "OpenAI resumes frontier AI training after security overhaul, discloses flaw in widely used software"
+        },
+        {
+          "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+          "publisher": "OpenAI",
+          "title": "Securing our frontier model training environment"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-24T08:30:00+00:00",
+      "created_at": "2026-10-24T09:46:50+00:00",
+      "thread": "t-08c3c7a6bdfe",
+      "sectors": [],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 1,
+        "business": 2,
+        "investors": 3
+      },
+      "cover": "",
+      "trackers": [
+        "frontier-race",
+        "agent-safety"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "AI language models can be prompted to examine source code and flag patterns that may lead to security flaws. Researchers used the model to locate risky code in PHP, enabling a patch before the vulnerabilities were exploited. This demonstrates a practical use of AI to augment traditional security testing.",
@@ -4723,57 +4804,6 @@
         "business": 3,
         "investors": 2
       }
-    },
-    {
-      "id": "0397d30cafbc",
-      "headline": "Microsoft researchers prove 31-year-old KLS conjecture in high-dimensional geometry",
-      "summary": "Researchers at Microsoft Research have proved the Kannan‑Lovász‑Simonovits (KLS) conjecture, a problem first posed in 1995. The proof used a human‑directed AI process and has been independently verified and formally checked.",
-      "why_it_matters": "The result resolves a central open question in high‑dimensional geometry, influencing statistics, optimization, algorithms and theoretical computer science.",
-      "category": "research",
-      "lab": "Microsoft",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "KLS conjecture",
-        "high-dimensional geometry",
-        "AI-assisted mathematics"
-      ],
-      "quotes": [],
-      "score": 6,
-      "url": "https://microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture",
-      "source_id": "microsoft-ai",
-      "desk": "",
-      "image": "https://www.microsoft.com/en-us/research/wp-content/uploads/2026/10/KLS-TWLIFB-1200x627-1.jpg",
-      "sources": [
-        {
-          "url": "https://microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture",
-          "publisher": "Microsoft Source",
-          "title": "With new ideas and human-directed AI, researchers solve a 31-year-old math mystery"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-21T18:39:50+00:00",
-      "created_at": "2026-10-22T12:19:03+00:00",
-      "sectors": [
-        "science"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": null,
-      "cover": "31-year",
-      "trackers": [
-        "frontier-race"
-      ],
-      "audiences": {
-        "builders": "Microsoft researchers used AI‑assisted proof to resolve a 31‑year‑old conjecture in high‑dimensional geometry."
-      },
-      "photo_local": true,
-      "relevance": {
-        "builders": 0,
-        "business": 0,
-        "investors": 0
-      }
     }
   ],
   "voices": [
@@ -4966,12 +4996,12 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-10-24T06:58:26+00:00",
-    "one_line": "Governments act, OpenAI tightens safety, expands services, and Pathos AI secures biotech funding.",
+    "written_at": "2026-10-24T09:46:50+00:00",
+    "one_line": "Governments act, OpenAI tightens safety, and new AI models and services hit the market.",
     "themes": [
       {
-        "title": "Governments reshape AI regulations",
-        "text": "Swedish ministries banned ChatGPT and Claude, mandating Microsoft Copilot; the UK will spend £100 million on an AI Biosecurity Lab with OpenAI, Anthropic and DeepMind; India plans to publish an AI law consultation paper; and Poland’s prime minister urged deeper AI, digital and space cooperation with India.",
+        "title": "Governments shape AI policy",
+        "text": "Swedish ministries banned ChatGPT and Claude, requiring Microsoft Copilot for official use. The UK will invest £100 million in a national AI Biosecurity Lab with support from OpenAI, Anthropic and DeepMind. India will publish a consultation paper on AI legislation in the coming weeks.",
         "stories": [
           {
             "id": "9174a0a001c9",
@@ -4987,17 +5017,12 @@
             "id": "aab18b7646a4",
             "headline": "India to issue AI law consultation paper in coming weeks, says minister",
             "url": "https://economictimes.indiatimes.com/tech/technology/govt-to-issue-consultation-paper-on-ai-law-in-coming-weeks-vaishnaw/articleshow/135152578.cms"
-          },
-          {
-            "id": "a67e741862c0",
-            "headline": "Polish prime minister calls for deeper AI, digital and space cooperation with India",
-            "url": "https://calcuttanews.net/news/279394078/polish-pm-donald-tusk-seeks-deeper-technology-cooperation-with-india-across-ai-digital-and-space-sectors"
           }
         ]
       },
       {
-        "title": "OpenAI tightens safety protocols",
-        "text": "OpenAI resumed offline training of its most advanced models after hacking incidents, added offline environments and high‑compute red‑team checks for containment, used its Project Daybreak programme to uncover critical PHP remote‑code‑execution bugs, and terminated three safety researchers over alleged internal model design leaks.",
+        "title": "OpenAI adds safety safeguards",
+        "text": "OpenAI resumed training of its most advanced models in offline environments, adding high‑compute red‑team testing and new containment measures. Through its Project Daybreak program the company helped discover critical PHP remote‑code‑execution bugs, and terminated three safety researchers over alleged leaks of internal model designs.",
         "stories": [
           {
             "id": "67972bfe4904",
@@ -5022,8 +5047,8 @@
         ]
       },
       {
-        "title": "OpenAI rolls out new services",
-        "text": "OpenAI made its Decisions API generally available, adding voice and visual inputs at $0.10 per million input tokens, and upgraded its Habitat storage system to deliver twelve‑times faster reads for ChatGPT users.",
+        "title": "New AI models and services launch",
+        "text": "OpenAI made its Decisions API generally available, adding voice and visual inputs at $0.10 per million tokens. The company also upgraded its Habitat storage system to deliver twelve‑times faster reads for ChatGPT. Chariot released a real‑time speech‑to‑text model supporting ten Indian languages. Moonshot introduced Kimi K3.1 Pro, an open‑weight model scoring 55 on the AI Index.",
         "stories": [
           {
             "id": "7909cc8ce05e",
@@ -5034,22 +5059,16 @@
             "id": "298c8de07d18",
             "headline": "OpenAI scales Habitat storage to deliver 12× faster reads for ChatGPT",
             "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two"
-          }
-        ]
-      },
-      {
-        "title": "Pathos AI fuels biotech AI",
-        "text": "Pathos AI raised $237 million in a Series E round led by Bristol Myers Squibb and announced a multi‑year collaboration with Bristol Myers Squibb and Tempus AI to accelerate Alzheimer and other neurological drug research using its Foundry AI platform.",
-        "stories": [
-          {
-            "id": "41931bd070ce",
-            "headline": "Pathos AI raises $237 million Series E led by Bristol Myers Squibb",
-            "url": "https://siliconangle.com/2026/10/23/ai-drug-development-startup-pathos-ai-closes-237m-investment"
           },
           {
-            "id": "99f7b33679f0",
-            "headline": "Pathos AI partners with Bristol Myers Squibb and Tempus AI on Alzheimer drug development",
-            "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/pathos-ai-teams-up-with-bristol-myers-and-tempus-ai-to-advance-drug-development/articleshow/135147121.cms"
+            "id": "4d4424ae2b1c",
+            "headline": "Chariot launches real‑time speech model for 10 Indian languages",
+            "url": "https://analyticsindiamag.com/ai-news/chariot-launches-speech-recognition-model-for-10-indian-languages"
+          },
+          {
+            "id": "6c51129e93f6",
+            "headline": "Moonshot launches Kimi K3.1 Pro with open‑weight promise and competitive pricing",
+            "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro"
           }
         ]
       }
@@ -5063,6 +5082,41 @@
     "range": "15 Oct – 22 Oct 2026"
   },
   "threads": [
+    {
+      "id": "t-08c3c7a6bdfe",
+      "title": "OpenAI safety breach prompts training resume",
+      "updated_at": "2026-10-24T08:30:00+00:00",
+      "stories": [
+        {
+          "id": "f5a8973e6dfd",
+          "headline": "OpenAI resumes training of frontier AI models after security overhaul",
+          "url": "https://thejakartapost.com/business/2026/10/24/openai-resumes-frontier-ai-training-after-security-overhaul",
+          "published_at": "2026-10-24T08:30:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "67972bfe4904",
+          "headline": "OpenAI trains frontier AI models without internet access",
+          "url": "https://theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet",
+          "published_at": "2026-10-23T21:11:07+00:00",
+          "category": "safety"
+        },
+        {
+          "id": "3f492a65e9c2",
+          "headline": "OpenAI fires three safety researchers over alleged leak of internal model designs",
+          "url": "https://techmeme.com/261022/p61",
+          "published_at": "2026-10-23T12:55:35+00:00",
+          "category": "safety"
+        },
+        {
+          "id": "48e2274fdf2b",
+          "headline": "OpenAI details new containment measures for frontier model training",
+          "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+          "published_at": "2026-10-23T10:00:00+00:00",
+          "category": "safety"
+        }
+      ]
+    },
     {
       "id": "t-d529487c9d1e",
       "title": "Tools reveal PHP vulnerabilities with Project Daybreak",
@@ -5087,34 +5141,6 @@
           "headline": "AI tools uncover critical PHP vulnerabilities affecting up to 70% of websites",
           "url": "https://fortune.com/2026/10/21/ai-tools-discovered-the-php-vulnerability-that-could-take-down-70-of-the-internet-now-the-race-is-on-to-patch-it-before-ai-powered-hackers-attack",
           "published_at": "2026-10-21T21:15:00+00:00",
-          "category": "safety"
-        }
-      ]
-    },
-    {
-      "id": "t-08c3c7a6bdfe",
-      "title": "OpenAI safety breach prompts security measures",
-      "updated_at": "2026-10-23T21:11:07+00:00",
-      "stories": [
-        {
-          "id": "67972bfe4904",
-          "headline": "OpenAI trains frontier AI models without internet access",
-          "url": "https://theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet",
-          "published_at": "2026-10-23T21:11:07+00:00",
-          "category": "safety"
-        },
-        {
-          "id": "3f492a65e9c2",
-          "headline": "OpenAI fires three safety researchers over alleged leak of internal model designs",
-          "url": "https://techmeme.com/261022/p61",
-          "published_at": "2026-10-23T12:55:35+00:00",
-          "category": "safety"
-        },
-        {
-          "id": "48e2274fdf2b",
-          "headline": "OpenAI details new containment measures for frontier model training",
-          "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
-          "published_at": "2026-10-23T10:00:00+00:00",
           "category": "safety"
         }
       ]
@@ -5255,7 +5281,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 82,
+    "stories_this_month": 83,
     "model_releases_this_month": 7,
     "labs_tracked": 13
   }
