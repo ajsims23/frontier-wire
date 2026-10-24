@@ -1,41 +1,51 @@
-## Frontier Wire newsroom run — 2026-10-24T01:05:42+00:00
+## Frontier Wire newsroom run — 2026-10-24T03:48:56+00:00
 
-Fetched 2882 items · fresh 6 · judged 7 · kept 1 · **written 1**
-AI: 14 requests, 29,091 tokens this run · 14 requests today · providers: cerebras, groq
-Research agent: investigated 1 stories with 3 tool calls, confirmed 1
+Fetched 2785 items · fresh 9 · judged 9 · kept 4 · **written 1**
+AI: 20 requests, 36,986 tokens this run · 34 requests today · providers: cerebras, groq
+Research agent: investigated 3 stories with 9 tool calls, confirmed 1
 Daily briefing: 4 themes from 20 stories
-Videos: no new videos · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
-Daily self-check: coverage 44% of 9 significant stories; 5 missed, 1 added to this run
+Videos: no new videos · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
 Photos: 1 saved, 0 unavailable
-Alerts: 6 events sent: {"subscribers":6,"sent":0,"queued":10}
+Alerts: 9 events sent: {"subscribers":6,"sent":0,"queued":7}
 Claims: 19 tracked, 19 open, 0 updated this run
-Trackers: filed 1 stories; updated ai-money
-Model tracker: 82 models, 4 changes today
+Trackers: filed 1 stories; updated ai-infrastructure
+Model tracker: 82 models, 6 changes today
 Tagged 1 stories by sector, region and deal
-Self-review written (see the newsroom issue)
-Time: gather 96s, audit 3s, verify and write 63s, videos 1s, tagging 21s, trackers 41s, claims 20s, briefing 21s, self-review 21s, alerts 1s
+Time: gather 102s, judge 1s, verify and write 207s, videos 2s, tagging 21s, trackers 41s, claims 20s, briefing 21s
 
 ### New stories
-- **industry** — [Pathos AI raises $237 million Series E led by Bristol Myers Squibb](https://siliconangle.com/2026/10/23/ai-drug-development-startup-pathos-ai-closes-237m-investment)  
-  Pathos AI announced a $237 million Series E funding round at a $3 billion valuation, led by Bristol Myers Squibb and joined by AstraZeneca, NEA and General Atlantic. The capital will fund its Foundry AI platform and drug programs including the JSKN016 antibody‑drug conjugate and a collaboration with AstraZeneca on an ER PROTAC.  
-  _2 source(s), 2 verified quote(s)_
+- **policy** — [UK to invest £100 million in AI Biosecurity Lab](https://techmeme.com/261023/p26)  
+  The UK government will spend £100 million to establish a national AI Biosecurity Lab, with support from OpenAI, Anthropic and Google DeepMind, to strengthen defenses against emerging biological threats.  
+  _3 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- OpenAI says it will no longer train its AI models on the live internet, citing “significant risks” — duplicate of 67972bfe4904
-- Hottest toy for Christmas? Nvidia CEO plays with adorable Microduck robots, 20,000 sell — score 2: A marketing piece about Nvidia CEO playing with toy robots; not relevant to frontier AI developments.
-- Quick Study — score 3: A tutorial‑style post about a Quick Study tool using Claude Opus 5.5; minor product feature, not newsworthy for Frontier Wire.
-- Utopai, an AI film studio that says it has more than 20 projects in the works, raised $60M at a $1B valuation (Rocket Drew/The Information) — score 5: Funding round for an AI film studio; notable but below the threshold for Frontier Wire’s focus on frontier models and major AI industry moves.
-- Memo: Helen Chiang, Xbox's first COO, is leaving Microsoft on October 23, just months after the role was created; she spent 21 years at the company (Tom Warren/The Verge) — score 1: Executive departure at Microsoft Xbox; not an AI‑specific development.
+- Evolving Threat: http2shell is an RCE in Node, Python, and more — score 2: A generic security vulnerability (http2shell RCE) not specific to AI systems; low relevance for Frontier Wire audience.
+- From Even Health To The Pant Project— Indian Startups Raised Over $184 Mn This Week — score 4: Funding roundup of Indian startups is a routine financing update; while Indian, it lacks a specific AI focus and scores below the news threshold.
+- iPhone Duo at ₹2.99 lakh sells out on Blinkit in 5 minutes; Is Apple's monthly lease worth it? — score 2: Apple's foldable iPhone sell‑out is a consumer hardware story, not AI‑related, and the company is not Indian.
+- Rs 10,000 Cr into restaurants. But why do 80% fail? Here's the Hotshare F&B investment playbook — score 2: Restaurant investment podcast is unrelated to AI and therefore not newsworthy for the audience.
+- Why India’s flying taxi revolution begins with electric air ambulances — score 3: Discussion of electric air ambulances as a precursor to flying taxis is interesting but not directly about AI developments.
+- Google updates its privacy policy to clarify it could use data shared via Personal Intelligence from connected apps, including Gmail and Photos, to target ads (Shimul Sood/Android Authority) — variety: already 2 stories from techmeme.com this run
+- Andy Jassy says AWS capacity for 2027 is "largely sold out" and a "good chunk" of 2028 capacity is also sold, though AWS reserves some capacity for on-demand (Catherine Perloff/The Information) — could not verify yet; will retry next run
+- Infosys AI revenue jumps 29%; Apple’s foldable iPhone fully pre-booked in week 1 — could not verify yet; will retry next run
 
 </details>
 
 ### Sources with problems
-- `gdelt`: failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out
-- `gdelt-india`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+- `mistral`: failed: ReadTimeout: The read operation timed out
+- `arxiv`: failed: ReadTimeout: The read operation timed out
+- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+- `aim`: failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://analyticsindiamag.com/feed'
+For more information check: https:
+- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
 
 <details><summary>Research agent's work</summary>
 
-- AI drug development startup Pathos AI closes $237M investment: confirmed (searched “Pathos AI $237M investment”; read fiercebiotech.com; read tipranks.com)
+- The UK plans to invest £100M to create the AI Biosecurity Lab to boost: confirmed (searched “UK AI Biosecurity Lab £100M OpenAI Anthropic DeepMind”; read msn.com; searched “Reuters UK AI Biosecurity Lab £100m”)
+- Andy Jassy says AWS capacity for 2027 is "largely sold out" and a "goo: unconfirmed (searched “Andy Jassy AWS capacity 2027 largely sold out”; read msn.com; searched “Reuters Amazon cloud capacity sold out through 2027 Jassy”)
+- Infosys AI revenue jumps 29%; Apple’s foldable iPhone fully pre-booked: unconfirmed (searched “Infosys AI revenue jumps 29% Q2 FY27”; read financialexpress.com; read indiatimes.com)
 
 </details>
+
+### Notes
+- 2 kept item(s) carried over to the next run
