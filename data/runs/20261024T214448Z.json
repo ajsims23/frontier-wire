@@ -1,0 +1,154 @@
+{
+  "started_at": "2026-10-24T21:44:48+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1318)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (890)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (22)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "hn": "ok (18)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "No Signs of AI Payoff Outside the Tech Sector",
+      "reason": "score 5: A commentary on AI financial payoff outside tech; interesting but not a major news item for Frontier Wire."
+    },
+    {
+      "title": "Dream-1",
+      "reason": "score 5: Announcement of a new model from a lesser‑known lab; not a frontier‑scale release."
+    },
+    {
+      "title": "Why is AI generated language so hard to understand?",
+      "reason": "score 5: ArXiv paper analyzing why AI‑generated language is hard to understand; incremental research, not a breakthrough."
+    },
+    {
+      "title": "The Goose Programming Language",
+      "reason": "score 2: Announcement of a new programming language; unrelated to AI frontier developments."
+    },
+    {
+      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+      "reason": "score 3: Listicle of failed AI projects; not new news."
+    },
+    {
+      "title": "Blue Planet III is keeping the rough edges in the age of AI",
+      "reason": "score 2: Feature about a documentary series; not AI‑focused news."
+    },
+    {
+      "title": "New-Age Tech Stocks Tumble This Week, Swiggy Leads Sell-Off With 24.5% Fall",
+      "reason": "score 2: Stock market report on tech stocks; not about AI developments."
+    },
+    {
+      "title": "Outside of tech there has been no financial payoff to US companies for using AI, now viewed as a margin-hurting cost center, as VC-backed firms burn more tokens (Torsten Slok/Apollo Global Management)",
+      "reason": "score 5: Opinion piece on AI payoff outside tech; lacks sufficient news value."
+    },
+    {
+      "title": "Pennsylvania will require labels on AI-generated ads",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Source: Replit recently moved most AI spend from Anthropic to OpenAI, which gave 30%+ off in a deal worth $100M+/year, after Anthropic discontinued its discount (The Information)",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [],
+  "notes": [
+    "1 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 67.6,
+    "audit": -0.0,
+    "judge": 1.0,
+    "verify and write": 77.2,
+    "videos": 4.6,
+    "tagging": 0.0,
+    "explainers": 0.0,
+    "trackers": 0.0,
+    "claims": 0.0,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "briefing": 0.0,
+    "self-review": 0.0,
+    "photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 3.9
+  },
+  "fetched": 2888,
+  "fresh": 10,
+  "judged": 10,
+  "kept": 2,
+  "research": {
+    "investigated": 2,
+    "confirmed": 0,
+    "tool_calls": 6
+  },
+  "research_log": [
+    "Pennsylvania will require labels on AI-generated ads: unconfirmed (searched “Pennsylvania Artificial Intelligence Deceptive Advertising Act signed”; read msn.com; searched “WPXI Pennsylvania AI deceptive advertising act”)",
+    "Source: Replit recently moved most AI spend from Anthropic to OpenAI, : unconfirmed (searched “Replit moved AI spend from Anthropic to OpenAI 30% discount $100 million deal”; searched “\"Replit\" \"Anthropic\" \"OpenAI\" \"The Information\"”; read theinformation.com)"
+  ],
+  "videos": {
+    "OpenAI": "ok (9 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (7 in feed, 0 new)",
+    "AI at Meta": "ok (5 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (13 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (2 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "trackers": "filed 0 stories; no tracker changed",
+  "claims": "21 tracked, 20 open",
+  "model_tracker": "82 models, 20 changes today",
+  "photos": "0 saved, 0 unavailable",
+  "alerts": "28 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":2}",
+  "ai_requests_run": 10,
+  "ai_tokens_run": 13603,
+  "ai_requests_today": 152,
+  "provider_log": []
+}
