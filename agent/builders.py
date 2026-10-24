@@ -281,7 +281,12 @@ def add_media(room: Any, picks: list[dict[str, Any]], by_id: dict[str, dict[str,
             image = f"https://i.ytimg.com/vi/{video}/hqdefault.jpg"
         if video:
             p["video"] = video
-        if image and media.save_image(http, image, folder / f"{p['id']}.jpg"):
+        out = folder / f"{p['id']}.jpg"
+        ok = bool(image) and media.save_image(http, image, out)
+        if not ok:  # blocked, missing or too small: ask for the page's image or a screenshot instead
+            shot = media.screenshot_url(room.fetcher, p["url"])
+            ok = bool(shot) and media.save_image(http, shot, out)
+        if ok:
             p["image"] = f"img/builders/{p['id']}.jpg"
 
 

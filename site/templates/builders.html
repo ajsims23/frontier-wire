@@ -25,6 +25,8 @@
             <span class="vplay" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 10 10"><path d="M2.5 1.2l6 3.8-6 3.8z" fill="currentColor"/></svg></span></button>
           {% else %}<a href="{{ p.url }}" rel="noopener" tabindex="-1" aria-hidden="true"><img src="{{ root }}{{ p.image }}" alt="" loading="lazy" decoding="async"></a>{% endif %}
         </div>
+        {% else %}
+        <div class="bc-media bc-tile" aria-hidden="true"><span class="bc-tile-n">{{ p.name[:1]|upper }}</span><span class="bc-tile-k">{{ p.kind }} · {{ p.source }}</span></div>
         {% endif %}
         <p class="bc-meta"><span class="pill">{{ p.kind }}</span><span>{{ p.source }}</span>{% if p.maker %}<span>by {{ p.maker }}</span>{% endif %}</p>
         <h3><a href="{{ p.url }}" rel="noopener">{{ p.name }}</a></h3>

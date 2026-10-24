@@ -113,6 +113,7 @@ def test_builders_desk_picks_checks_and_rotates(tmp_path):
     fetcher.pages["https://pdfchat.example.dev"] = ('<html><head><meta property="og:image" content="/shot.png"></head>'
                                                     '<body><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe></body></html>')
     fetcher.pages["https://www.producthunt.com/products/meetnotes"] = '<meta property="og:image" content="https://blocked.example/x.png">'
+    fetcher.pages["https://api.microlink.io"] = json.dumps({"data": {"screenshot": {"url": "https://shots.example/page.png"}}})
     images: list[str] = []
     room = SimpleNamespace(store=store, llm=llm, now=NOW, report={}, fetcher=fetcher, photo_http=image_http(images),
                            cfg=SimpleNamespace(extra={"builders": BUILD_SOURCES}))
@@ -137,6 +138,10 @@ def test_builders_desk_picks_checks_and_rotates(tmp_path):
     assert any(u.startswith("https://opengraph.githubassets.com/1/ana/tinyrag") for u in images) and by["tinyrag"]["image"]
     assert (tmp_path / "img" / "builders" / f"{pdf}.jpg").exists()
     assert "with pictures" in room.report["builders"] and site["picks"][0]["video"] == "dQw4w9WgXcQ"
+    # no preview image on the page: a screenshot instead; never a screenshot of a Hacker News thread
+    assert by["Voice Clone Demo"]["image"] and "https://shots.example/page.png" in images
+    assert not by["AgentBench Lite"].get("image")
+    assert not any("microlink" in u and "ycombinator" in unquote(u) for u in room.fetcher.requests)
 
     # not due again the same day; the next day, already-featured builds aren't offered again
     room.now = NOW + timedelta(hours=5)

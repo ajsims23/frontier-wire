@@ -325,7 +325,7 @@
     const play = `<span class="vplay" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 10 10"><path d="M2.5 1.2l6 3.8-6 3.8z" fill="currentColor"/></svg></span>`;
     $("build-list").innerHTML = picks.slice(0, 6).map((p) => {
       const src = pic(p.image, p.video), vid = /^[A-Za-z0-9_-]{11}$/.test(p.video || "") ? p.video : "";
-      const mediaHtml = !src ? "" : vid
+      const mediaHtml = !src ? `<div class="bc-media bc-tile" aria-hidden="true"><span class="bc-tile-n">${esc(String(p.name || "?").slice(0, 1).toUpperCase())}</span><span class="bc-tile-k">${esc(p.kind)} · ${esc(p.source)}</span></div>` : vid
         ? `<div class="bc-media"><button class="bc-play" type="button" data-video="${vid}" data-title="${esc(p.name)}" aria-label="Play demo video: ${esc(p.name)}"><img src="${esc(src)}" alt="" loading="lazy" decoding="async">${play}</button></div>`
         : `<div class="bc-media"><a href="${safeUrl(p.url)}" rel="noopener" tabindex="-1" aria-hidden="true"><img src="${esc(src)}" alt="" loading="lazy" decoding="async"></a></div>`;
       return `<li class="build-card">${mediaHtml}

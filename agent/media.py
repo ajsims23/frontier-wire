@@ -48,6 +48,22 @@ def page_media(fetcher: Any, url: str) -> tuple[str, str]:
     return extract_image(html, url) or "", youtube_id(html)
 
 
+def screenshot_url(fetcher: Any, url: str) -> str:
+    """Last resort for sites that block us or build their page in JavaScript: Microlink's free API (about 50
+    requests a day, no key) returns the page's preview image, or a screenshot of the page."""
+    if "news.ycombinator.com" in url:
+        return ""
+    try:
+        data = json.loads(fetcher.get(f"https://api.microlink.io/?url={quote(url, safe='')}&screenshot=true")).get("data") or {}
+    except Exception:  # noqa: BLE001
+        return ""
+    for key in ("image", "screenshot"):
+        u = (data.get(key) or {}).get("url") or ""
+        if u.startswith("https://"):
+            return u
+    return ""
+
+
 def github_card(url: str) -> str:
     m = re.match(r"https://github\.com/([^/\s]+)/([^/\s#?]+)", url or "")
     return f"https://opengraph.githubassets.com/1/{m.group(1)}/{m.group(2)}" if m else ""
