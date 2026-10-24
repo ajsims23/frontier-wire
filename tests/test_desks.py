@@ -248,3 +248,14 @@ def test_news_search_falls_back_to_bing():
     f = Fetcher({"https://api.gdeltproject.org": gdelt_down, "https://www.bing.com/news/search": rss})
     rows, engine = news_search(Gdelt(f, sleep=lambda s: None), f, "Altman compute")
     assert engine == "bing" and rows[0]["url"] == "https://news.example.com/altman" and rows[0]["domain"] == "news.example.com"
+
+
+def test_x_coverage_bing_fallback_per_person():
+    rss = f"""<?xml version="1.0"?><rss version="2.0"><channel><title>Bing</title>
+<item><title>Altman says compute will double</title><link>https://outlet.example.com/altman-x</link>
+<pubDate>{NOW.strftime('%a, %d %b %Y %H:%M:%S +0000')}</pubDate></item></channel></rss>"""
+    room = voices_room({})
+    room.fetcher.pages["https://api.gdeltproject.org"] = lambda u: (_ for _ in ()).throw(ConnectionError("timed out"))
+    room.fetcher.pages["https://www.bing.com/news/search"] = lambda u: rss if "Sam+Altman" in u else "<rss><channel></channel></rss>"
+    out, status = top_voices.from_x_coverage(room, room.cfg.extra["top_voices"]["people"])
+    assert status.endswith("bing)") and [p["person"] for p in out] == ["Sam Altman"] and out[0]["kind"] == "reported"

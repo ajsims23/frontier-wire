@@ -121,12 +121,14 @@ def from_x_coverage(room: Any, people: list[dict[str, str]], max_articles: int =
     engine = "gdelt"
     try:
         rows = room.gdelt.search(query, timespan="72h", max_records=40)
-    except Exception:  # noqa: BLE001  GDELT is often slow or rate-limited; Bing News is the fallback
-        rows, engine = [], "bing"
-        for i in range(0, min(len(people), 18), 6):
-            group = " OR ".join(f'"{p["name"]}"' for p in people[i:i + 6])
+    except Exception:  # noqa: BLE001  GDELT is often slow or rate-limited
+        rows = []
+    if not rows:  # Bing News, one search per person (it doesn't handle long OR queries)
+        engine, cutoff = "bing", (room.now - timedelta(days=4)).isoformat()
+        for p in people[:10]:
             try:
-                rows += bing_news(room.fetcher, f'"on X" ({group})', max_records=15)
+                rows += [r for r in bing_news(room.fetcher, f'"{p["name"]}" posted on X', max_records=5)
+                         if (r.get("published") or room.now.isoformat()) >= cutoff]
             except Exception:  # noqa: BLE001
                 continue
     out = []
@@ -247,6 +249,9 @@ def write_digest(room: Any, state: dict[str, Any], posts: dict[str, dict[str, An
             if not cited or not stance or not _nums_ok(stance, " ".join(p["text"] for p in cited)):
                 dropped += 1
                 continue
+            if any(x["person"] == person for x in positions):  # one position per person per debate
+                continue
+            stance = re.sub(r"^(Announces|Announced|Announcing)\b", "Flags", stance)  # they relay news, they don't make it
             positions.append({"person": person, "stance": stance[:260],
                               "posts": [{"url": p["url"], "via": p["via"], "kind": p["kind"], "date": (p.get("published") or "")[:10]}
                                         for p in cited[:3]]})
