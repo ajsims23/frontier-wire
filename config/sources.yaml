@@ -196,3 +196,52 @@ tracked_labs:
   - Alibaba (Qwen)
   - NVIDIA
   - Microsoft
+
+# ---- Builders desk: what people are making with AI (all free, no keys) ----------------------------
+# Checked once a day; the agent picks the 5–8 most interesting builds. Failures show in the run report.
+#   show_hn   – Show HN posts matching the queries, above a points threshold
+#   github    – new repositories on these topics, by stars (uses the workflow's built-in token)
+#   hf_spaces – trending Hugging Face Spaces (demos and apps)
+#   feed      – any RSS/Atom feed of launches; ai_only keeps only AI-related entries
+builders:
+  - {id: show-hn, kind: show_hn, queries: ["AI", "LLM", "agent", "Claude", "GPT", "MCP"], min_points: 15, hours: 48}
+  - {id: github-new, kind: github, topics: [llm, ai-agents, mcp, generative-ai, rag], min_stars: 50, days: 10}
+  - {id: hf-spaces, kind: hf_spaces, limit: 25, details: 10}
+  - {id: product-hunt, kind: feed, name: Product Hunt, url: "https://www.producthunt.com/feed?category=artificial-intelligence", signal: "launched on Product Hunt", hours: 48}
+  - {id: r-localllama, kind: feed, name: "r/LocalLLaMA", url: "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day", signal: "top post today on r/LocalLLaMA", hours: 48}
+  - {id: r-sideproject, kind: feed, name: "r/SideProject", url: "https://www.reddit.com/r/SideProject/top/.rss?t=day", signal: "top post today on r/SideProject", hours: 48, ai_only: true}
+
+# ---- Top Voices: what AI's leading people are arguing about -----------------------------------------
+# Free only. First-hand: the Bluesky accounts and voice blogs above, plus these feeds. Second-hand X coverage:
+# news articles that report what these people posted on X (we never read X itself). Hacker News: the week's
+# most-discussed threads about them. The digest is rewritten once a day from a rolling 7-day window.
+top_voices:
+  people:              # used to find reported X posts and HN threads (most-discussed first)
+    - {name: Sam Altman, role: OpenAI CEO}
+    - {name: Elon Musk, role: xAI founder}
+    - {name: Dario Amodei, role: Anthropic CEO}
+    - {name: Andrej Karpathy, role: AI researcher}
+    - {name: Yann LeCun, role: AI researcher}
+    - {name: Demis Hassabis, role: Google DeepMind CEO}
+    - {name: Jensen Huang, role: NVIDIA CEO}
+    - {name: Satya Nadella, role: Microsoft CEO}
+    - {name: Mark Zuckerberg, role: Meta CEO}
+    - {name: Sundar Pichai, role: Google CEO}
+    - {name: Mustafa Suleyman, role: Microsoft AI CEO}
+    - {name: Ilya Sutskever, role: SSI co-founder}
+    - {name: Geoffrey Hinton, role: AI researcher}
+    - {name: Marc Andreessen, role: investor}
+    - {name: Aravind Srinivas, role: Perplexity CEO}
+    - {name: Arthur Mensch, role: Mistral AI CEO}
+    - {name: Andrew Ng, role: AI educator}
+    - {name: Fei-Fei Li, role: AI researcher}
+  feeds:               # people's own blogs and newsletters
+    - {id: tv-mollick, name: One Useful Thing, person: Ethan Mollick, url: "https://www.oneusefulthing.org/feed"}
+    - {id: tv-marcus, name: Marcus on AI, person: Gary Marcus, url: "https://garymarcus.substack.com/feed"}
+    - {id: tv-zvi, name: Don't Worry About the Vase, person: Zvi Mowshowitz, url: "https://thezvi.substack.com/feed"}
+    - {id: tv-lambert, name: Interconnects, person: Nathan Lambert, url: "https://www.interconnects.ai/feed"}
+    - {id: tv-swyx, name: Latent Space, person: swyx, url: "https://www.latent.space/feed"}
+    - {id: tv-dwarkesh, name: Dwarkesh Podcast, person: Dwarkesh Patel, url: "https://www.dwarkesh.com/feed"}
+    - {id: tv-raschka, name: Ahead of AI, person: Sebastian Raschka, url: "https://magazine.sebastianraschka.com/feed"}
+    - {id: tv-karpathy, name: Karpathy's blog, person: Andrej Karpathy, url: "https://karpathy.bearblog.dev/feed/"}
+    - {id: tv-evans, name: Benedict Evans, person: Benedict Evans, url: "https://www.ben-evans.com/benedictevans?format=rss"}

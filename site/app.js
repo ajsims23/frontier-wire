@@ -264,6 +264,13 @@
     $("brief-line").textContent = b.one_line || "";
     const when = b.written_at ? new Date(b.written_at).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }) : "";
     $("brief-by").textContent = `Written by our newsroom agent${when ? ` at ${when}` : ""} from ${b.from_stories || "today's"} stories. Every line links to its stories.`;
+    const pl = data.plan, plEl = $("brief-plan");
+    plEl.hidden = !(pl && pl.focus);
+    if (pl && pl.focus) {
+      const when = pl.updated_at ? ` (${ago(pl.updated_at)})` : "";
+      const extra = (pl.searches || []).length ? ` Chasing: ${pl.searches.map(esc).join(", ")}.` : "";
+      plEl.innerHTML = `<span class="ex-kicker">Editor-in-chief${esc(when)}</span> ${esc(pl.focus)}${extra}`;
+    }
     const w = data.weekly;
     $("brief-weekly").innerHTML = w && /^\d{4}-W\d{2}$/.test(w.key || "") ? `<a class="weekly-link" href="weekly/${w.key}/"><span class="ex-kicker">Weekly deep dive, ${esc(w.range)}</span><span class="strong">${esc(w.title)}</span><span class="wl-go">Read the week's five biggest shifts</span></a>` : "";
     $("themes").innerHTML = b.themes.map((t) => `<li class="theme">
@@ -306,6 +313,31 @@
           ${st ? `<a class="text-link vstory" href="${storyHref(st)}">Read our story</a>` : ""}</div>
       </article>`;
     }).join("");
+  }
+
+  // ---------------------------------------------------------------- builders desk and top voices
+  function renderBuilding() {
+    const b = data.builders, picks = (b && b.picks) || [];
+    $("building").hidden = !picks.length;
+    if (!picks.length) return;
+    if (b.intro) $("build-sub").innerHTML = `${esc(b.intro)} <a class="text-link" href="builders/">All picks</a>`;
+    $("build-list").innerHTML = picks.slice(0, 6).map((p) => `<li class="build-card">
+        <p class="bc-meta"><span class="pill">${esc(p.kind)}</span><span>${esc(p.source)}</span></p>
+        <h3><a href="${safeUrl(p.url)}" rel="noopener">${esc(p.name)}</a></h3>
+        <p class="bc-what">${esc(p.what)}</p>
+        <p class="bc-why">${esc(p.why)}</p>
+        <p class="bc-sig muted">${esc(p.signal)}</p>
+      </li>`).join("");
+  }
+  function renderTopVoices() {
+    const t = data.top_voices, ds = (t && t.debates) || [];
+    $("topvoices").hidden = !ds.length;
+    if (!ds.length) return;
+    $("tv-sub").innerHTML = `${esc(t.headline)} <a class="text-link" href="voices/">Who said what</a>`;
+    $("tv-list").innerHTML = ds.slice(0, 3).map((d) => `<a class="tv-card" href="voices/">
+        <h3>${esc(d.title)}</h3><p>${esc(d.summary)}</p>
+        <p class="tv-people">${(d.people || []).map((n) => `<span class="pill">${esc(n)}</span>`).join("")}</p>
+      </a>`).join("");
   }
 
   const ROLE = {
@@ -402,6 +434,8 @@
     renderNewsChart();
     renderBriefing(data.briefing);
     renderWatch();
+    renderBuilding();
+    renderTopVoices();
     if (window.FWPodcast) window.FWPodcast(data.podcasts);
     renderChips();
     renderFeed();

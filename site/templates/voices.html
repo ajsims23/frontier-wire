@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="shell lab-page desk-page voices-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>Top voices</span></nav>
+  <header class="lab-head">
+    {% if d %}<p class="ex-kicker">Top voices, {{ d.range }}</p>{% endif %}
+    <h1>{{ d.headline if d else "What AI's top voices are arguing about" }}</h1>
+    <p class="desk-intro">The week's biggest debates among the people shaping AI: who's on which side, with links to what they actually said. From their own posts and blogs, news reports of what they posted on X, and the week's most-discussed Hacker News threads.</p>
+    {% if d %}
+    <dl class="lab-stats">
+      <div><dt>Debates</dt><dd>{{ d.debates|length }}</dd></div>
+      <div><dt>Posts read</dt><dd>{{ d.from_posts }}</dd></div>
+      <div><dt>People quoted</dt><dd>{{ d.people|length }}</dd></div>
+    </dl>
+    {% endif %}
+  </header>
+
+  {% if d %}
+  <ol class="debates">
+    {% for x in d.debates %}
+    <li class="debate">
+      <span class="shift-n" aria-hidden="true">{{ loop.index }}</span>
+      <div>
+        <h2>{{ x.title }}</h2>
+        <p>{{ x.summary }}</p>
+        <ul class="positions">
+          {% for pos in x.positions %}
+          <li>
+            <span class="pos-who">{{ pos.person }}</span>
+            <span class="pos-what">{{ pos.stance }}</span>
+            <span class="pos-src">{% for s in pos.posts %}<a href="{{ s.url }}" rel="noopener">{% if s.kind == "reported" %}Reported by {{ s.via }}{% elif s.kind == "discussion" %}Hacker News thread{% else %}{{ s.via }}{% endif %}{% if s.date %}, {{ s.date }}{% endif %}</a>{% endfor %}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+
+  {% if d.standouts %}
+  <section class="block" aria-labelledby="st-h">
+    <div class="block-head"><h2 id="st-h">Worth reading in full</h2></div>
+    <ul class="job-list">{% for s in d.standouts %}<li><a href="{{ s.url }}" rel="noopener"><span class="strong">{{ s.person }}: {{ s.title }}</span><span class="muted">{{ s.why }} ({% if s.kind == "reported" %}reported by {{ s.via }}{% else %}{{ s.via }}{% endif %})</span></a></li>{% endfor %}</ul>
+  </section>
+  {% endif %}
+  <p class="ex-note">Written by our agent on {{ written }}, in its own words: stances are summaries, not quotes. Posts on X appear only as a named outlet reported them; follow the link to check what was said.</p>
+  {% else %}
+  <p class="empty">The first digest appears once the agent has read enough posts this week.</p>
+  {% endif %}
+
+  <section class="block" aria-labelledby="who-h">
+    <div class="block-head"><h2 id="who-h">Who we follow</h2><p>Add or remove people in the site's sources file.</p></div>
+    <ul class="follow-people">{% for p in people %}<li><span class="strong">{{ p.name }}</span>{% if p.role %}<span class="muted">{{ p.role }}</span>{% endif %}</li>{% endfor %}</ul>
+  </section>
+</section>
+{% endblock %}

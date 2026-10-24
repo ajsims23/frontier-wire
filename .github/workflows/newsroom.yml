@@ -69,6 +69,7 @@ jobs:
           MAX_REQUESTS_PER_DAY: ${{ vars.MAX_REQUESTS_PER_DAY }}
           API_URL: ${{ vars.API_URL }}
           ALERTS_DISPATCH_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
+          GITHUB_TOKEN: ${{ github.token }}   # read-only search for the Builders desk (new AI repos)
         run: python -m agent run
 
       - name: Commit

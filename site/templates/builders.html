@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="shell lab-page desk-page builders-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>What people are building</span></nav>
+  <header class="lab-head">
+    <h1>What people are building</h1>
+    <p class="desk-intro">New tools, open-source projects, demos and launches built with AI. Once a day our agent reads Show HN, new GitHub repositories, trending Hugging Face Spaces, Product Hunt and Reddit's builder communities, and picks the most interesting ones.</p>
+    <dl class="lab-stats">
+      <div><dt>Picked today</dt><dd>{{ picks|length }}</dd></div>
+      <div><dt>From candidates</dt><dd>{{ from_candidates or "—" }}</dd></div>
+      <div><dt>Featured in 30 days</dt><dd>{{ featured30 }}</dd></div>
+    </dl>
+  </header>
+
+  {% if picks %}
+  <section class="block" aria-labelledby="today-h">
+    <div class="block-head"><h2 id="today-h">Today's picks</h2><p>{% if intro %}{{ intro }} {% endif %}Picked {{ written }}.</p></div>
+    <ol class="build-grid">
+      {% for p in picks %}
+      <li class="build-card">
+        <p class="bc-meta"><span class="pill">{{ p.kind }}</span><span>{{ p.source }}</span>{% if p.maker %}<span>by {{ p.maker }}</span>{% endif %}</p>
+        <h3><a href="{{ p.url }}" rel="noopener">{{ p.name }}</a></h3>
+        <p class="bc-what">{{ p.what }}</p>
+        <p class="bc-why"><span class="bc-for">For {{ p.for }}.</span> {{ p.why }}</p>
+        <p class="bc-sig muted">{{ p.signal }}{% if p.discussion %} · <a class="text-link" href="{{ p.discussion }}" rel="noopener">Discussion</a>{% endif %}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% else %}
+  <p class="empty">The first picks appear after the next daily run.</p>
+  {% endif %}
+
+  {% if past %}
+  <section class="block" aria-labelledby="past-h">
+    <div class="block-head"><h2 id="past-h">Earlier picks</h2><p>The last two weeks.</p></div>
+    {% for day in past %}
+    <h3 class="build-day">{{ day.when }}</h3>
+    <ul class="job-list">{% for p in day.picks %}<li><a href="{{ p.url }}" rel="noopener"><span class="strong">{{ p.name }}</span><span class="muted">{{ p.what }}</span></a></li>{% endfor %}</ul>
+    {% endfor %}
+  </section>
+  {% endif %}
+  <p class="ex-note">Write-ups are by our agent and use only what each project's own listing says. A pick is not an endorsement; check a project before you install or pay for it.</p>
+</section>
+{% endblock %}

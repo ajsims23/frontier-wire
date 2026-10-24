@@ -22,6 +22,7 @@ def make(tmp_path, now=NOW, max_stories=12, per_lab=5, **limit_overrides):
     cfg.tracked_labs = ["Example Lab", "Other Lab"]
     cfg.lab_domains = {"examplelab.ai": "Example Lab"}
     cfg.extra["job_boards"] = BOARDS
+    cfg.extra["builders"], cfg.extra["top_voices"] = [], {}  # the desks have their own tests and fixtures
     cfg.gdelt["query"] = '("artificial intelligence") sourcelang:english'
     cfg.limits.update(limit_overrides)
     cfg.run["max_stories_per_run"] = max_stories
@@ -843,3 +844,64 @@ def test_india_desk_only_for_india_stories():
     assert not desk_fits([indian, plain], {"about_india": False})   # Indian outlet reporting US news
     assert desk_fits([indian], {})                                   # no answer: keep the desk as before
     assert desk_fits([plain], {"about_india": False})                # non-desk items are unaffected
+
+
+def test_editor_in_chief_plans_the_run(tmp_path):
+    from agent.text import stable_id
+    from . import fakes
+    council = stable_id(canonical_url("https://technews.example.com/council-ai"))
+    toolkit = stable_id(canonical_url("https://examplelab.ai/news/agents"))
+    fakes.PLAN["answer"] = {
+        "focus": "Chase the bus rules and fill a thin policy desk.",
+        "priorities": [{"id": council, "why": "local policy readers care"}, {"id": "made-up", "why": "x"}],
+        "thin_areas": ["policy", "not-an-area"],
+        "searches": [{"query": "regulator inquiry AI hiring", "purpose": "policy gap", "thread_id": "no-such-thread"},
+                     {"query": "AI"}],  # one word: too vague, ignored
+        "dig_deeper": [toolkit, "made-up"],
+    }
+    try:
+        room, calls = make(tmp_path)
+        report = room.run()
+    finally:
+        fakes.PLAN.clear()
+    plan = room.plan
+    # only real ids, real areas and usable queries survive
+    assert [p["id"] for p in plan["priorities"]] == [council]
+    assert plan["thin_areas"] == ["policy"]
+    assert [s["query"] for s in plan["searches"]] == ["regulator inquiry AI hiring"] and plan["searches"][0]["thread_id"] == ""
+    assert plan["dig_deeper"] == [toolkit]
+    # the search ran on GDELT and its results joined the run
+    assert any("regulator inquiry AI hiring" in u for u in map(__import__("urllib.parse").parse.unquote, room.fetcher.requests))
+    assert report["plan"]["searches"][0].startswith("regulator inquiry AI hiring:")
+    # priority kept by the judge gets +1; the research agent dug into the already-confirmed toolkit story
+    stories = {s["headline"]: s for s in json.loads((tmp_path / "stories.json").read_text())}
+    assert stories["City council approves AI rules for public buses"]["score"] == 8
+    assert stories["Example Lab ships an agent toolkit"].get("research")
+    # the plan is shown on the homepage, kept across runs, and in the run summary
+    site = json.loads((tmp_path / "site.json").read_text())
+    assert site["plan"]["focus"].startswith("Chase the bus rules") and site["plan"]["thin_areas"] == ["policy"]
+    assert json.loads((tmp_path / "plan.json").read_text())["written_at"] == NOW.isoformat()
+    assert "Editor-in-chief: Chase the bus rules" in summary_markdown(report)
+
+
+def test_editor_in_chief_failure_does_not_stop_the_run(tmp_path):
+    from . import fakes
+    fakes.PLAN["answer"] = {"focus": "x"}  # missing required fields: the model's answer is unusable
+    try:
+        room, _ = make(tmp_path)
+        report = room.run()
+    finally:
+        fakes.PLAN.clear()
+    assert report["written"] and not room.plan.get("priorities")
+
+
+def test_thin_area_holds_a_writing_slot():
+    from agent.chief import apply_thin_areas
+    from agent.sources import Item
+
+    def k(score, cat, url, desk=""):
+        return (score, cat, [Item(url=url, title=url, source_id="s", source_name="s", role="news", desk=desk)])
+    a, b, c = k(9, "models", "https://a.example/1"), k(8, "models", "https://a.example/2"), k(6, "policy", "https://p.example/1")
+    head = apply_thin_areas([a, b, c], [a, b], ["policy"], protected={"https://a.example/1"})
+    assert [h[1] for h in head] == ["models", "policy"]  # the lowest unprotected story made room
+    assert apply_thin_areas([a, b, c], [a, b], ["safety"], set()) == [a, b]  # nothing to fill it with: unchanged

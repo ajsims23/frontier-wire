@@ -432,6 +432,36 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     page("weekly", "weekly_index.html", title="Weekly deep dive | Frontier Wire", description="The five biggest shifts in AI each week, with charts.",
          canonical=f"{base}weekly/", og_image=f"{base}og/home.png", issues=issues)
 
+    # Builders desk
+    builders_state: dict = read("builders.json", {})
+    hist = builders_state.get("history") or {}
+    today_key = (builders_state.get("written_at") or "")[:10]
+    past = [{"when": short_date(k + "T00:00:00+00:00"), "picks": v} for k, v in sorted(hist.items(), reverse=True) if k != today_key][:14]
+    web = lambda u: u if re.match(r"https?://", u or "") else ""  # noqa: E731  (never render javascript: links)
+    for day in [builders_state.get("picks") or []] + list(hist.values()):
+        for p in day:
+            p["url"], p["discussion"] = web(p.get("url")) or "#", web(p.get("discussion"))
+    for d in ((tv_digest := read("top_voices.json", {}).get("digest")) or {}).get("debates", []):
+        for pos in d.get("positions", []):
+            pos["posts"] = [x for x in pos.get("posts", []) if web(x.get("url"))]
+    page("builders", "builders.html", title="What people are building with AI | Frontier Wire",
+         description="New AI tools, open-source projects, demos and launches, picked daily from Show HN, GitHub, Hugging Face, Product Hunt and Reddit.",
+         canonical=f"{base}builders/", og_image=f"{base}og/home.png", picks=builders_state.get("picks") or [],
+         intro=builders_state.get("intro", ""), from_candidates=builders_state.get("from_candidates"),
+         written=human_date(builders_state["written_at"]) if builders_state.get("written_at") else "",
+         featured30=len(builders_state.get("featured") or {}), past=past)
+
+    # Top voices
+    digest = tv_digest
+    if digest:
+        digest["standouts"] = [x for x in digest.get("standouts", []) if web(x.get("url"))]
+    page("voices", "voices.html", title="What AI's top voices are arguing about | Frontier Wire",
+         description=(digest or {}).get("headline") or "The week's biggest debates among the people shaping AI, with links to what they said.",
+         canonical=f"{base}voices/", og_image=f"{base}og/home.png", d=digest,
+         written=human_date(digest["written_at"]) if digest else "",
+         people=(cfg.extra.get("top_voices") or {}).get("people", []) + [
+             {"name": f["person"], "role": f.get("name", "")} for f in (cfg.extra.get("top_voices") or {}).get("feeds", [])])
+
     # small summary for the home page's Desks section
     week = now - timedelta(days=7)
     desks_summary = {
