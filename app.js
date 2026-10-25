@@ -1,0 +1,515 @@
+// Frontier Wire home page — renders data/site.json written by the newsroom agent.
+// Every story links to its own page on this site (story/<id>/); sources are linked from there.
+(function () {
+  "use strict";
+
+  const TOPICS = [
+    { id: "all", label: "All", cats: null },
+    { id: "models", label: "Models", cats: ["models"] },
+    { id: "research", label: "Research", cats: ["research"] },
+    { id: "policy", label: "Policy & safety", cats: ["policy", "safety"] },
+    { id: "industry", label: "Industry", cats: ["industry"] },
+    { id: "voices", label: "Voices", cats: ["voices"] },
+  ];
+  const CAT_NAME = { models: "Model release", research: "Research", policy: "Policy", safety: "Safety", industry: "Industry", voices: "Commentary" };
+  const color = (cat) => `var(--${CAT_NAME[cat] ? cat : "models"})`;
+  const DAY = 86400000;
+
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const safeUrl = (u) => (/^https?:\/\//i.test(u || "") ? esc(u) : "#");
+  const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; } };
+  const slug = (t) => String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "lab";
+  const storyHref = (s) => `story/${encodeURIComponent(s.id)}/`;
+  const clip = (t, n) => { t = String(t || ""); if (t.length <= n) return t; return t.slice(0, n).replace(/\s+\S*$/, "") + "…"; };
+
+  function ago(iso) {
+    const t = new Date(iso).getTime();
+    if (isNaN(t)) return "";
+    const m = Math.round((Date.now() - t) / 60000);
+    if (m < 60) return `${Math.max(m, 1)} min ago`;
+    if (m < 1440) return `${Math.round(m / 60)}h ago`;
+    const d = Math.round(m / 1440);
+    return d < 7 ? `${d} day${d > 1 ? "s" : ""} ago` : new Date(iso).toLocaleDateString(undefined, { day: "numeric", month: "short" });
+  }
+
+  // ---------------------------------------------------------------- pictures
+  // A story shows its source's preview image (or a figure from the paper); a generated cover
+  // (cover.js) sits underneath and shows whenever there's no image or it fails to load.
+  const hash = (t) => { let h = 2166136261; for (const ch of String(t)) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
+  function rng(seed) { return () => { seed |= 0; seed = (seed + 0x6d2b79f5) | 0; let t = Math.imul(seed ^ (seed >>> 15), 1 | seed); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+  const imgOk = (u) => /^https:\/\//i.test(u || "");
+  function media(s, cls) {
+    const fig = s.image_kind === "figure" ? " fig" : "";
+    const vid = s.video && /^[A-Za-z0-9_-]{11}$/.test(s.video.id) ? `<span class="vbadge"><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>Video</span>` : "";
+    const src = s.photo_local ? `img/${encodeURIComponent(s.id)}.jpg` : (imgOk(s.image) ? s.image : "");
+    return `<div class="media ${cls}${fig}" style="--c:${color(s.category)}">${window.FWCover ? window.FWCover(s) : ""}${src
+      ? `<img src="${esc(src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ""}${vid}</div>`;
+  }
+  document.addEventListener("error", (e) => { const t = e.target; if (t.tagName === "IMG" && t.parentElement && t.parentElement.classList.contains("media")) t.remove(); }, true);
+  document.addEventListener("load", (e) => { const t = e.target; if (t.tagName === "IMG" && t.naturalWidth > 0 && t.naturalWidth < 120) t.remove(); }, true);
+
+  const isBreaking = (s) => s.breaking && Date.now() - new Date(s.created_at || s.published_at).getTime() < 3 * 3600000;
+  const who = (s) => s.lab || (s.sources && s.sources[0] && s.sources[0].publisher) || host(s.url);
+
+  let data = { stories: [], labs: [], voices: [] };
+  let topic = "all";
+  // "Reading as": builders, business or investors. Each story carries one line per group on what it means for them.
+  const AUD = { builders: "For builders", business: "For business", investors: "For investors" };
+  let aud = (() => { const q = new URLSearchParams(location.search).get("as"); if (AUD[q]) return q; try { const v = localStorage.getItem("fw-aud"); return AUD[v] ? v : "all"; } catch (e) { return "all"; } })();
+  const audLine = (s) => (aud !== "all" && s.audiences && s.audiences[aud]) || "";
+  // How much a story matters to each reader group, 0-3: the agent's rating, or a sensible guess until it has rated it.
+  const DEAL_INV = /funding|acquisition|ipo|investment|earnings/, MONEY = /\b(raises?|raised|valuation|valued|ipo|revenue|billion|funding|acquire[sd]?|stake)\b/i;
+  const DEV = /\b(api|sdk|open[- ]?source|open[- ]?weight|developer|coding|codex|agent|model|benchmark|inference|gpu|price)\b/i;
+  function relevance(s, who) {
+    const r = s.relevance && s.relevance[who];
+    if (typeof r === "number") return r;
+    const h = `${s.headline} ${s.summary}`, deal = s.deal && s.deal.type, sec = s.sectors || [];
+    if (who === "builders") return s.category === "models" ? 3 : s.category === "research" ? 2 : (sec.includes("software") || sec.includes("cybersecurity") || DEV.test(h)) ? 2 : 1;
+    if (who === "business") return s.category === "policy" ? 3 : (deal && /enterprise_deal|partnership|acquisition/.test(deal)) ? 3 : (s.category === "industry" || s.category === "safety" || sec.length) ? 2 : 1;
+    if (who === "investors") return (deal && DEAL_INV.test(deal)) ? 3 : (deal || MONEY.test(h)) ? 2 : s.category === "industry" ? 1 : 0;
+    return 1;
+  }
+  const relFor = (s) => (aud === "all" ? 1 : relevance(s, aud));
+  let desks = null, trackersList = [];
+  const audHtml = (s, cls) => { const l = audLine(s); return l ? `<span class="aud-line ${cls || ""}"><b>${AUD[aud]}:</b> ${esc(l)}</span>` : ""; };
+  let query = "";
+
+  const matches = (s) => {
+    const t = TOPICS.find((x) => x.id === topic);
+    if (t && t.cats && !t.cats.includes(s.category)) return false;
+    if (!query) return true;
+    const hay = `${s.headline} ${s.summary} ${s.lab} ${s.model_name} ${(s.tags || []).join(" ")}`.toLowerCase();
+    return query.split(/\s+/).every((w) => hay.includes(w));
+  };
+
+  // ---------------------------------------------------------------- front page: picture-led top stories
+  function topStories() {
+    const stories = data.stories || [];
+    if (aud !== "all") {  // lead with what matters most to this reader: recent, relevant, important
+      const age = (s) => (Date.now() - new Date(s.published_at).getTime()) / DAY;
+      const pool = stories.filter((s) => age(s) < 4 && relevance(s, aud) >= 2);
+      const ranked = (pool.length >= 5 ? pool : stories.filter((s) => relevance(s, aud) >= 2)).slice()
+        .sort((a, b) => (relevance(b, aud) * 4 + b.score - age(b) * 0.6) - (relevance(a, aud) * 4 + a.score - age(a) * 0.6));
+      if (ranked.length) return { lead: ranked[0], more: ranked.slice(1, 5) };
+    }
+    const lead = data.lead || stories[0];
+    const recent = stories.filter((s) => !lead || s.id !== lead.id);
+    // the next three: most important recent stories, preferring ones with photos and different labs
+    const pool = recent.filter((s) => Date.now() - new Date(s.published_at).getTime() < 2 * DAY);
+    const ranked = (pool.length >= 3 ? pool : recent).slice().sort((a, b) => (b.score - a.score) || ((b.image ? 1 : 0) - (a.image ? 1 : 0)));
+    const more = [], labs = new Set(lead ? [lead.lab] : []);
+    for (const s of ranked) { if (more.length < 4 && !labs.has(s.lab || s.id)) { more.push(s); labs.add(s.lab || s.id); } }
+    for (const s of ranked) { if (more.length < 4 && !more.includes(s)) more.push(s); }
+    return { lead, more };
+  }
+
+  // The top five stories take turns as the lead: slow zoom on the picture, progress bars like stories.
+  // A bar's fill animation drives the rotation, so hovering (which pauses it) also pauses the rotation.
+  function renderFront() {
+    const { lead, more } = topStories();
+    if (!lead) {
+      $("lead").innerHTML = `<div class="front-media">${media({ id: "empty", category: "research", headline: "Frontier Wire" }, "wide")}</div>
+        <h2>The first stories arrive after the newsroom's first run</h2>`;
+      $("more").innerHTML = "";
+      return;
+    }
+    const slides = [lead, ...more].slice(0, 5);
+    $("lead").innerHTML = `
+      <div class="hero-bars" role="tablist" aria-label="Top stories">${slides.map((s, i) =>
+        `<button class="hb${i ? "" : " on"}" type="button" role="tab" data-i="${i}" aria-selected="${!i}" aria-label="Top story ${i + 1}: ${esc(clip(s.headline, 60))}"><span></span></button>`).join("")}</div>
+      <div class="hero-stage">${slides.map((s, i) => `
+        <div class="hero-slide${i ? "" : " on"}" data-i="${i}" ${i ? 'aria-hidden="true"' : ""}>
+          <a class="front-media" href="${storyHref(s)}" tabindex="-1" aria-hidden="true">${media(s, `wide kb kb${i % 3}`)}</a>
+          <span class="tag" style="--c:${color(s.category)}">${isBreaking(s) ? '<b class="breaking">Breaking</b> ' : ""}${i ? "Top stories" : "Top story"}, ${esc(CAT_NAME[s.category] || s.category)}</span>
+          <h2><a href="${storyHref(s)}" ${i ? 'tabindex="-1"' : ""}>${esc(s.headline)}</a></h2>
+          <p class="sum">${esc(s.summary)}</p>
+          ${audHtml(s, "big")}
+          <p class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}. Checked against ${(s.sources || []).length} source${(s.sources || []).length === 1 ? "" : "s"}.</p>
+          ${s.video && /^[A-Za-z0-9_-]{11}$/.test(s.video.id) ? `<button class="btn play-btn" type="button" data-video="${esc(s.video.id)}" data-title="${esc(s.video.title)}" ${i ? 'tabindex="-1"' : ""}><svg width="14" height="14" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>Watch the video</button>` : ""}
+        </div>`).join("")}</div>`;
+    $("more").innerHTML = slides.map((s, i) => `<li class="${i ? "" : "on"}" data-i="${i}"><a href="${storyHref(s)}" style="--c:${color(s.category)}">
+        ${media(s, "more-media")}
+        <span class="more-text"><span class="tag" style="--c:${color(s.category)}">${esc(CAT_NAME[s.category] || s.category)}</span>
+        <span class="h">${esc(s.headline)}</span><span class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}</span></span></a></li>`).join("");
+    startHero(slides.length);
+  }
+
+  function startHero(n) {
+    const root = $("lead");
+    let cur = 0;
+    const show = (i) => {
+      cur = (i + n) % n;
+      root.querySelectorAll(".hb").forEach((b, j) => {
+        b.classList.toggle("on", j === cur); b.classList.toggle("done", j < cur); b.setAttribute("aria-selected", String(j === cur));
+        const bar = b.firstElementChild; bar.style.animation = "none"; void bar.offsetWidth; bar.style.animation = "";
+      });
+      root.querySelectorAll(".hero-slide").forEach((el, j) => {
+        const on = j === cur;
+        el.classList.toggle("on", on);
+        if (on) { el.removeAttribute("aria-hidden"); const m = el.querySelector(".media"); m.classList.remove("kb"); void m.offsetWidth; m.classList.add("kb"); }
+        else el.setAttribute("aria-hidden", "true");
+        el.querySelectorAll("h2 a, .play-btn").forEach((a) => (on ? a.removeAttribute("tabindex") : a.setAttribute("tabindex", "-1")));
+      });
+      document.querySelectorAll("#more li").forEach((li, j) => li.classList.toggle("on", j === cur));
+    };
+    root.querySelectorAll(".hb").forEach((b) => {
+      b.addEventListener("click", () => show(+b.dataset.i));
+      b.firstElementChild.addEventListener("animationend", () => { if (b.classList.contains("on")) show(cur + 1); });
+    });
+    document.querySelectorAll("#more li").forEach((li) => {
+      const pick = () => { if (+li.dataset.i !== cur) show(+li.dataset.i); };
+      li.addEventListener("mouseenter", pick); li.addEventListener("focusin", pick);
+    });
+    // pause while the reader hovers the lead or the list, or the tab is hidden
+    const pause = (on) => root.classList.toggle("paused", on);
+    [root, $("more")].forEach((el) => { el.addEventListener("mouseenter", () => pause(true)); el.addEventListener("mouseleave", () => pause(false)); });
+    document.addEventListener("visibilitychange", () => pause(document.hidden));
+    let x0 = null; // swipe on phones
+    root.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener("touchend", (e) => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1)); x0 = null; });
+  }
+
+  // "Who's making news": stories per lab over the last 7 days, as a bar chart linking to lab pages.
+  function renderNewsChart() {
+    const counts = {};
+    const since = Date.now() - 7 * DAY;
+    for (const s of data.stories || []) {
+      if (s.lab && new Date(s.published_at).getTime() >= since) counts[s.lab] = (counts[s.lab] || 0) + 1;
+    }
+    const rows = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 7);
+    const top = rows.length ? rows[0][1] : 1;
+    $("news-chart").innerHTML = rows.length ? rows.map(([lab, n]) => `<li><a href="lab/${slug(lab)}/">
+        <span class="nc-lab">${esc(lab)}</span>
+        <span class="nc-bar" aria-hidden="true"><span style="width:${Math.max(6, (n / top) * 100).toFixed(0)}%"></span></span>
+        <span class="nc-n">${n}<span class="sr"> stor${n === 1 ? "y" : "ies"}</span></span></a></li>`).join("")
+      : `<li class="empty">Lab activity appears after a few runs.</li>`;
+  }
+
+  // ---------------------------------------------------------------- latest stories
+  function renderChips() {
+    const counts = Object.fromEntries(TOPICS.map((t) => [t.id, (data.stories || []).filter((s) => !t.cats || t.cats.includes(s.category)).length]));
+    $("chips").innerHTML = TOPICS.filter((t) => t.id === "all" || counts[t.id] > 0).map((t) => `<button class="chip" type="button" data-topic="${t.id}" aria-pressed="${t.id === topic}">${esc(t.label)} <span class="n">${counts[t.id]}</span></button>`).join("");
+  }
+
+  function renderFeed() {
+    const filtering = topic !== "all" || !!query;
+    const front = new Set([(data.lead || (data.stories || [])[0] || {}).id, ...topStories().more.map((s) => s.id)]);
+    let list = (data.stories || []).filter((s) => matches(s) && (filtering || !front.has(s.id)));
+    if (aud !== "all") list = list.filter((s) => relevance(s, aud) >= 2);  // only what matters to this reader
+    list = list.slice(0, filtering ? 30 : 12);
+    const t = TOPICS.find((x) => x.id === topic);
+    $("feed-title").innerHTML = query ? `Results for “${esc(query)}” <a class="ask-link" href="ask/?q=${encodeURIComponent(query)}">Ask the Wire instead</a>` : esc(topic === "all" ? (aud === "all" ? "Latest" : `Latest ${AUD[aud].toLowerCase()}`) : t.label);
+    $("clear").hidden = !filtering;
+    $("feed").innerHTML = list.length
+      ? list.map((s) => `<li><a class="story-card" href="${storyHref(s)}" style="--c:${color(s.category)}">
+          ${media(s, "card-media")}
+          <span class="sc-body"><span class="tag" style="--c:${color(s.category)}">${isBreaking(s) ? '<b class="breaking">Breaking</b> ' : ""}${esc(CAT_NAME[s.category] || s.category)}</span>
+          <span class="h">${esc(s.headline)}</span>
+          ${audHtml(s)}
+          <span class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}</span></span></a></li>`).join("")
+      : `<li class="empty">${filtering ? "No stories match yet. Try another topic or search." : "Stories appear here after each run."}</li>`;
+    document.querySelectorAll(".chip[data-topic]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.topic === topic)));
+  }
+
+  // ---------------------------------------------------------------- labs
+  function renderBoard() {
+    const now = Date.now();
+    const tracked = (data.labs || []).filter((l) => l.model);
+    const waiting = (data.labs || []).filter((l) => !l.model);
+    const rows = tracked.map((l) => {
+      const days = Math.max(0, Math.floor((now - new Date(l.date).getTime()) / DAY));
+      const when = days === 0 ? "Today" : days === 1 ? "Yesterday" : `${days} days ago`;
+      const fill = Math.max(6, 100 - (days / 30) * 100);
+      const rel = l.story_id ? `story/${encodeURIComponent(l.story_id)}/` : null;
+      return `<div class="row" role="row">
+        <span class="lab" role="cell"><a href="lab/${slug(l.lab)}/">${esc(l.lab)}</a></span>
+        <span class="model" role="cell">${rel ? `<a href="${rel}">${esc(clip(l.model, 60))}</a>` : esc(l.model)}</span>
+        <span class="type" role="cell">${esc(l.type || "Model")}</span>
+        <span class="fresh" role="cell"><span class="track" aria-hidden="true"><span class="fill" style="width:${fill.toFixed(0)}%"></span></span><span>${esc(when)}</span></span>
+      </div>`;
+    });
+    $("board").innerHTML = `<div class="row headr" role="row"><span role="columnheader">Lab</span><span role="columnheader">Latest release</span>
+      <span role="columnheader">Type</span><span role="columnheader">Shipped</span></div>` + rows.join("")
+      + (rows.length ? "" : `<div class="row none" role="row"><span role="cell">The first releases appear here after the next runs.</span></div>`);
+    $("waiting").innerHTML = waiting.length ? `Watching for releases from ${waiting.map((l) => `<a href="lab/${slug(l.lab)}/">${esc(l.lab)}</a>`).join(", ")}.` : "";
+  }
+
+  // ---------------------------------------------------------------- sections
+  function cards(el, list, empty) {
+    el.innerHTML = list.length
+      ? list.map((s) => `<a class="card" href="${storyHref(s)}" style="--c:${color(s.category)}">
+          ${media(s, "card-media")}
+          <span class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}</span>
+          <h3>${esc(s.headline)}</h3><p>${esc(s.why_it_matters || s.summary)}</p></a>`).join("")
+      : `<p class="empty">${esc(empty)}</p>`;
+  }
+
+  function renderVoices() {
+    const q = data.voices || [];
+    if (q.length) {
+      $("quotes").innerHTML = q.map((v) => `<figure class="quote">
+        <blockquote>“${esc(clip(v.text, 230))}”</blockquote>
+        <figcaption><strong>${esc(v.speaker)}</strong>${v.speaker_role ? `, ${esc(v.speaker_role)}` : ""}. <a href="story/${encodeURIComponent(v.story_id)}/">Read the story</a></figcaption>
+      </figure>`).join("");
+    } else {
+      cards($("quotes"), (data.stories || []).filter((s) => s.category === "voices").slice(0, 4), "Commentary from leading people appears here.");
+    }
+  }
+
+  function renderBriefing(b) {
+    const sec = $("briefing");
+    if (!b || !b.themes || !b.themes.length) { sec.hidden = true; return; }
+    sec.hidden = false;
+    $("brief-line").textContent = b.one_line || "";
+    const when = b.written_at ? new Date(b.written_at).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }) : "";
+    $("brief-by").textContent = `Written by our newsroom agent${when ? ` at ${when}` : ""} from ${b.from_stories || "today's"} stories. Every line links to its stories.`;
+    const pl = data.plan, plEl = $("brief-plan");
+    plEl.hidden = !(pl && pl.focus);
+    if (pl && pl.focus) {
+      const when = pl.updated_at ? ` (${ago(pl.updated_at)})` : "";
+      const extra = (pl.searches || []).length ? ` Chasing: ${pl.searches.map(esc).join(", ")}.` : "";
+      plEl.innerHTML = `<span class="ex-kicker">Editor-in-chief${esc(when)}</span> ${esc(pl.focus)}${extra}`;
+    }
+    const w = data.weekly;
+    $("brief-weekly").innerHTML = w && /^\d{4}-W\d{2}$/.test(w.key || "") ? `<a class="weekly-link" href="weekly/${w.key}/"><span class="ex-kicker">Weekly deep dive, ${esc(w.range)}</span><span class="strong">${esc(w.title)}</span><span class="wl-go">Read the week's five biggest shifts</span></a>` : "";
+    $("themes").innerHTML = b.themes.map((t) => `<li class="theme">
+        <h3>${esc(t.title)}</h3>
+        <p>${esc(t.text)}</p>
+        <div class="refs">${(t.stories || []).slice(0, 4).map((s) => `<a href="${storyHref(s)}" title="${esc(s.headline)}">${esc(clip(s.headline, 42))}</a>`).join("")}</div>
+      </li>`).join("");
+  }
+
+  function renderThreads(threads) {
+    const sec = $("developing");
+    if (!threads || !threads.length) { sec.hidden = true; return; }
+    sec.hidden = false;
+    $("threads").innerHTML = threads.map((t) => `<article class="thread" style="--c:${color((t.stories[0] || {}).category)}">
+        <div class="thread-head"><h3>${esc(t.title)}</h3><span>${t.stories.length} updates</span></div>
+        <ol class="tl">${t.stories.slice(0, 4).map((s, i) => `<li>
+          <span class="when">${i === 0 ? "Latest, " : ""}${esc(ago(s.published_at))}</span>
+          <a href="${storyHref(s)}">${esc(s.headline)}</a></li>`).join("")}</ol>
+      </article>`).join("");
+  }
+
+  document.addEventListener("click", (e) => { if (e.target.closest(".vstory")) e.stopPropagation(); }, true);
+  // ---------------------------------------------------------------- watch: videos picked by the agent
+  const thumb = (id) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+  function renderWatch() {
+    const vids = (data.videos || []).filter((v) => /^[A-Za-z0-9_-]{11}$/.test(v.id || "")).slice(0, 5);
+    $("watch").hidden = !vids.length;
+    if (!vids.length) return;
+    const byId = Object.fromEntries((data.stories || []).map((s) => [s.id, s]));
+    $("watch-list").innerHTML = vids.map((v, i) => {
+      const st = v.story_id && byId[v.story_id];
+      return `<article class="vcard${i ? "" : " feat"}" data-video="${esc(v.id)}" data-title="${esc(v.title)}">
+        <button class="vthumb" type="button" aria-label="Play video: ${esc(v.title)}">
+          <img src="${thumb(v.id)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+          <span class="vplay" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 10 10"><path d="M2.5 1.2l6 3.8-6 3.8z" fill="currentColor"/></svg></span>
+        </button>
+        <div class="vtext"><p class="meta">${esc(v.channel)}, ${esc(ago(v.published))}</p>
+          <h3>${esc(v.title)}</h3>
+          ${i === 0 && v.blurb ? `<p class="vblurb">${esc(v.blurb)}</p>` : ""}
+          ${st ? `<a class="text-link vstory" href="${storyHref(st)}">Read our story</a>` : ""}</div>
+      </article>`;
+    }).join("");
+  }
+
+  // ---------------------------------------------------------------- builders desk and top voices
+  function renderBuilding() {
+    const b = data.builders, picks = (b && b.picks) || [];
+    $("building").hidden = !picks.length;
+    if (!picks.length) return;
+    if (b.intro) $("build-sub").innerHTML = `${esc(b.intro)} <a class="text-link" href="builders/">All picks</a>`;
+    const pic = (img, vid) => (img && /^img\/[\w/.-]+$/.test(img) ? img : (/^[A-Za-z0-9_-]{11}$/.test(vid || "") ? `https://i.ytimg.com/vi/${vid}/hqdefault.jpg` : ""));
+    const play = `<span class="vplay" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 10 10"><path d="M2.5 1.2l6 3.8-6 3.8z" fill="currentColor"/></svg></span>`;
+    $("build-list").innerHTML = picks.slice(0, 6).map((p) => {
+      const src = pic(p.image, p.video), vid = /^[A-Za-z0-9_-]{11}$/.test(p.video || "") ? p.video : "";
+      const mediaHtml = !src ? `<div class="bc-media bc-tile" aria-hidden="true"><span class="bc-tile-n">${esc(host(p.url) || p.name)}</span><span class="bc-tile-k">${esc(String(p.kind || "").replace(/^./, (c) => c.toUpperCase()))} on ${esc(p.source)}</span></div>` : vid
+        ? `<div class="bc-media"><button class="bc-play" type="button" data-video="${vid}" data-title="${esc(p.name)}" aria-label="Play demo video: ${esc(p.name)}"><img src="${esc(src)}" alt="" loading="lazy" decoding="async">${play}</button></div>`
+        : `<div class="bc-media"><a href="${safeUrl(p.url)}" rel="noopener" tabindex="-1" aria-hidden="true"><img src="${esc(src)}" alt="" loading="lazy" decoding="async"></a></div>`;
+      return `<li class="build-card">${mediaHtml}
+        <p class="bc-meta"><span class="pill">${esc(p.kind)}</span><span>${esc(p.source)}</span></p>
+        <h3><a href="${safeUrl(p.url)}" rel="noopener">${esc(p.name)}</a></h3>
+        <p class="bc-what">${esc(p.what)}</p>
+        <p class="bc-why">${esc(p.why)}</p>
+        <p class="bc-sig muted">${esc(p.signal)}</p>
+      </li>`;
+    }).join("");
+  }
+  const initials = (n) => String(n || "").split(/\s+/).map((w) => w[0] || "").join("").toUpperCase().slice(0, 2);
+  const face = (p) => (p.photo && /^img\/people\/[\w.-]+\.jpg$/.test(p.photo)
+    ? `<img class="face" src="${esc(p.photo)}" alt="" title="${esc(p.name)}" loading="lazy" decoding="async">`
+    : `<span class="face initials" title="${esc(p.name)}" aria-hidden="true">${esc(initials(p.name))}</span>`);
+  function renderTopVoices() {
+    const t = data.top_voices, ds = (t && t.debates) || [];
+    $("topvoices").hidden = !ds.length;
+    if (!ds.length) return;
+    $("tv-sub").innerHTML = `${esc(t.headline)} <a class="text-link" href="voices/">Who said what</a>`;
+    const names = (list) => (list.length < 2 ? list.join("") : `${list.slice(0, -1).join(", ")} and ${list[list.length - 1]}`);
+    $("tv-list").innerHTML = ds.slice(0, 3).map((d, i) => {
+      const people = (d.people || []).map((p) => (typeof p === "string" ? { name: p } : p));
+      return `<a class="tv-card" href="voices/">
+        <span class="tv-head"><span class="tv-stack">${people.slice(0, 4).map(face).join("")}</span><span class="tv-n">Debate ${i + 1}</span></span>
+        <h3>${esc(d.title)}</h3><p>${esc(d.summary)}</p>
+        <span class="tv-names">${esc(names(people.map((p) => p.name)))}</span>
+      </a>`;
+    }).join("");
+  }
+
+  const ROLE = {
+    builders: { name: "builders", what: "model launches, API prices, open models and developer tools", ask: "Which new models and APIs launched this week, and what do they cost?" },
+    business: { name: "business leaders", what: "regulation, enterprise adoption, partnerships and how AI is changing industries", ask: "What should a business leader know about AI this week?" },
+    investors: { name: "investors", what: "funding rounds, valuations, deals and whether the big claims hold up", ask: "Which AI companies raised money this week and at what valuations?" },
+  };
+  function card(href, kicker, title, body) {
+    return `<a class="role-card" href="${href}"><span class="rc-k">${esc(kicker)}</span><span class="rc-t">${esc(title)}</span>${body ? `<span class="rc-b">${esc(body)}</span>` : ""}</a>`;
+  }
+  function renderAud() {
+    document.querySelectorAll("#aud button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.aud === aud)));
+    const panel = $("aud-panel");
+    if (aud === "all") { panel.hidden = true; panel.innerHTML = ""; return; }
+    const r = ROLE[aud], week = (data.stories || []).filter((s) => Date.now() - new Date(s.published_at).getTime() < 7 * DAY);
+    const n = week.filter((s) => relevance(s, aud) >= 2).length, must = week.filter((s) => relevance(s, aud) >= 3).length;
+    const tr = (id) => trackersList.find((t) => t.id === id);
+    const d = desks || {}, cards = [];
+    if (aud === "builders") {
+      const m = d.models || {};
+      cards.push(card("models/", "Model tracker", m.changes && m.changes[0] ? m.changes[0] : `${m.count || 0} models tracked`, m.cheapest ? `Cheapest new model: ${m.cheapest.name}, $${m.cheapest.price} per 1M output tokens` : "Prices and context windows, updated every run"));
+      const t = tr("frontier-race");
+      cards.push(card(t ? "tracker/frontier-race/" : "trackers/", "Where it stands", "The frontier model race", t ? clip(t.status, 120) : ""));
+    } else if (aud === "business") {
+      const t = tr("ai-regulation"), s2 = tr("agent-safety");
+      cards.push(card("tracker/ai-regulation/", "Where it stands", "AI regulation", t ? clip(t.status, 120) : "Rules, enforcement and what's pending"));
+      cards.push(card(s2 ? "tracker/agent-safety/" : "sectors/", s2 ? "Risk watch" : "Industries", s2 ? "AI agents and safety incidents" : "AI by sector", s2 ? clip(s2.status, 120) : ""));
+    } else {
+      const b = d.business || {}, t = tr("ai-money");
+      cards.push(card("business/", "Deals this week", `${b.deals7 || 0} deals`, b.largest ? `Largest disclosed: ${b.largest.amount}${b.largest.company ? `, ${b.largest.company}` : ""}` : "Funding, acquisitions and partnerships"));
+      cards.push(card(t ? "tracker/ai-money/" : "claims/", t ? "Where it stands" : "Claims check", t ? "AI funding and valuations" : "Do labs keep their promises?", t ? clip(t.status, 120) : ""));
+    }
+    cards.push(card(`ask/?q=${encodeURIComponent(r.ask)}`, "Ask the Wire", r.ask, "Answered from our checked stories, with sources"));
+    panel.innerHTML = `<p class="role-intro">Showing what matters to <b>${r.name}</b>: ${r.what}. <span class="muted">${n} stor${n === 1 ? "y" : "ies"} this week${must ? `, ${must} must-know` : ""}.</span></p><div class="role-cards">${cards.join("")}</div>`;
+    panel.hidden = false;
+  }
+  $("aud").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-aud]");
+    if (!b) return;
+    aud = b.dataset.aud;
+    try { localStorage.setItem("fw-aud", aud); } catch (err) { /* private mode */ }
+    history.replaceState(null, "", aud === "all" ? location.pathname : `?as=${aud}`);
+    document.body.classList.add("aud-switching");
+    renderAud(); renderFront(); renderFeed(); renderForYou();
+    setTimeout(() => document.body.classList.remove("aud-switching"), 450);
+  });
+
+  function renderStand(list) {
+    const items = (list || []).slice(0, 4);
+    $("stand").hidden = !items.length;
+    $("stand-list").innerHTML = items.map((t) => `<a class="tracker-card" href="tracker/${encodeURIComponent(t.id)}/">
+        <span class="tc-top"><span class="tc-title">${esc(t.title)}</span>${t.fresh ? '<span class="tc-new">Updated</span>' : ""}</span>
+        <p>${esc(clip(t.status, 220))}</p><span class="meta">Updated ${esc(ago(t.updated_at))} · ${t.count} stor${t.count === 1 ? "y" : "ies"}</span></a>`).join("");
+  }
+  fetch("data/trackers.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : [])).then((l) => { trackersList = l || []; renderStand(l); renderAud(); }).catch(() => {});
+
+  // ---------------------------------------------------------------- for you: stories matching what the reader follows
+  const lastVisit = (() => { try { return localStorage.getItem("fw-last-visit") || ""; } catch (e) { return ""; } })();
+  setTimeout(() => { try { localStorage.setItem("fw-last-visit", new Date().toISOString()); } catch (e) { /* ignore */ } }, 5000);
+  function renderForYou() {
+    const F = window.FWFollow;
+    if (!F) return;
+    const mine = F.list(), keys = new Set(mine.map((f) => f.key));
+    const hits = (data.stories || []).filter((s) => F.keysFor(s).some((k) => keys.has(k)));
+    const fresh = hits.filter((s) => lastVisit && s.published_at > lastVisit);
+    const badge = document.querySelector(".nf-n");
+    if (badge) { badge.hidden = !fresh.length; badge.textContent = fresh.length; }
+    if (!mine.length) {
+      $("fy-sub").textContent = "Follow labs, storylines and industries to get your own feed and alerts.";
+      $("fy-body").innerHTML = `<div class="fy-start">${["tracker:frontier-race|The frontier model race", "tracker:ai-regulation|AI regulation", "lab:OpenAI|OpenAI", "lab:Anthropic|Anthropic",
+        "lab:Google DeepMind|Google DeepMind", "region:india|AI in India", "deals|AI deals", "models|Model price changes"].map((x) => { const [k, l] = x.split("|");
+        return `<button class="fchip" type="button" data-follow="${esc(k)}" data-label="${esc(l)}" data-cta="${esc(l)}">${esc(l)}</button>`; }).join("")}
+        <a class="text-link" href="following/">More to follow</a></div>`;
+      F.refresh();
+      return;
+    }
+    $("fy-sub").innerHTML = `${fresh.length ? `<b>${fresh.length} new</b> since your last visit · ` : ""}Following ${mine.length}. <a class="text-link" href="following/">Manage</a>`;
+    $("fy-body").innerHTML = hits.length ? `<ol class="fy-list">${hits.slice(0, 6).map((s) => `<li><a href="${storyHref(s)}" style="--c:${color(s.category)}">
+        ${media(s, "more-media")}<span class="more-text">${lastVisit && s.published_at > lastVisit ? '<span class="tc-new">New</span>' : `<span class="tag" style="--c:${color(s.category)}">${esc(CAT_NAME[s.category] || s.category)}</span>`}
+        <span class="h">${esc(s.headline)}</span>${audHtml(s)}<span class="meta">${esc(who(s))}, ${esc(ago(s.published_at))}</span></span></a></li>`).join("")}</ol>`
+      : `<p class="muted">Nothing from what you follow in the last two weeks. New stories land here first.</p>`;
+  }
+  document.addEventListener("fw-follows", () => renderForYou());
+
+  function render(d) {
+    data = d || data;
+    const st = data.stats || {};
+    $("updated").textContent = data.updated_at
+      ? `Updated ${ago(data.updated_at)}. ${st.stories_this_month || 0} stories this month, each checked against its sources.`
+      : "Waiting for the first run";
+    renderAud();
+    renderFront();
+    renderForYou();
+    renderNewsChart();
+    renderBriefing(data.briefing);
+    renderWatch();
+    renderBuilding();
+    renderTopVoices();
+    if (window.FWPodcast) window.FWPodcast(data.podcasts);
+    renderChips();
+    renderFeed();
+    renderThreads(data.threads);
+    renderBoard();
+    cards($("research-list"), (data.stories || []).filter((x) => x.category === "research").slice(0, 6), "Research stories appear here.");
+    renderVoices();
+    if (window.goatcounter && window.goatcounter.bind_events) window.goatcounter.bind_events();
+  }
+
+  // topic chips, search ("/" focuses, Esc clears), and ?topic= links from story pages
+  $("chips").addEventListener("click", (e) => {
+    const b = e.target.closest(".chip[data-topic]");
+    if (!b) return;
+    topic = b.dataset.topic;
+    renderFeed();
+  });
+  const q = $("q");
+  q.addEventListener("input", () => {
+    query = q.value.trim().toLowerCase();
+    renderFeed();
+    if (query) $("stories").scrollIntoView({ block: "start" });
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "/" && document.activeElement !== q && !/input|textarea/i.test(document.activeElement.tagName)) { e.preventDefault(); q.focus(); }
+    if (e.key === "Escape" && document.activeElement === q) { q.value = ""; query = ""; renderFeed(); q.blur(); }
+  });
+  $("clear").addEventListener("click", () => { topic = "all"; query = ""; q.value = ""; renderFeed(); });
+  try { const t = new URLSearchParams(location.search).get("topic"); if (TOPICS.some((x) => x.id === t)) topic = t; } catch (e) {}
+
+  // ---------------------------------------------------------------- desks (summary built with the site)
+  function spark(values) {
+    const top = Math.max(1, ...values), w = 140, h = 36, bw = w / values.length;
+    return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">${values.map((v, i) =>
+      `<rect x="${(i * bw + 1).toFixed(1)}" y="${(h - Math.max(2, (v / top) * h)).toFixed(1)}" width="${(bw - 2).toFixed(1)}" height="${Math.max(2, (v / top) * h).toFixed(1)}" rx="1.5" fill="${v ? "var(--brand)" : "var(--line-soft)"}"/>`).join("")}</svg>`;
+  }
+  const big = (n, label) => `<span class="dc-num"><b>${esc(n)}</b> ${esc(label)}</span>`;
+  function renderDesks(d) {
+    const body = (id, html) => { const el = document.querySelector(`#${id} .dc-body`); if (el) el.innerHTML = html; };
+    const i = d.india || {};
+    body("desk-india", big(i.count7 || 0, "stories this week") + ((i.latest || []).length
+      ? `<ul>${i.latest.map((s) => `<li>${esc(clip(s.headline, 70))}</li>`).join("")}</ul>` : `<p class="muted">Indian AI news appears here.</p>`));
+    const b = d.business || {};
+    body("desk-business", big(b.deals7 || 0, "deals this week") + spark(b.days || []) +
+      (b.largest ? `<p class="muted">Largest disclosed: ${esc(b.largest.amount)}${b.largest.company ? `, ${esc(b.largest.company)}` : ""}</p>` : `<p class="muted">Deals and funding, tracked.</p>`));
+    const mo = d.models || {};
+    body("desk-models", big(mo.count || 0, "models tracked") + (mo.cheapest ? `<p class="muted">Cheapest newest model: ${esc(mo.cheapest.name)}, $${esc(mo.cheapest.price)} per 1M output tokens</p>` : "") +
+      ((mo.changes || []).length ? `<ul>${mo.changes.map((c) => `<li>${esc(clip(c, 80))}</li>`).join("")}</ul>` : `<p class="muted">New models and price changes, logged automatically.</p>`));
+    const sec = d.sectors || [], top = Math.max(1, ...sec.map((x) => x.count));
+    body("desk-sectors", sec.length ? `<ul class="dc-bars">${sec.map((x) => `<li><span>${esc(x.name)}</span><span class="nc-bar"><span style="width:${Math.max(6, x.count / top * 100).toFixed(0)}%"></span></span><b>${x.count}</b></li>`).join("")}</ul>`
+      : `<p class="muted">Healthcare, finance, education and more.</p>`);
+  }
+  fetch("data/desks.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).then((d) => { if (d) { desks = d; renderDesks(d); renderAud(); } }).catch(() => {});
+
+  $("year").textContent = new Date().getFullYear();
+  fetch("data/site.json", { cache: "no-store" })
+    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then(render)
+    .catch(() => render({ stories: [], labs: [], stats: {} }));
+})();
