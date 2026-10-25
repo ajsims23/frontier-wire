@@ -5835,6 +5835,98 @@
     }
   },
   {
+    "explainer": {
+      "what_it_means": "The two vulnerabilities let an attacker send a request that runs arbitrary code on a server before any application code runs. Updating PHP to the newly released versions blocks this attack vector. Organizations using PHP should apply the patches immediately.",
+      "terms": [
+        {
+          "term": "Remote code execution",
+          "meaning": "Ability for an attacker to run arbitrary code on a target system without permission."
+        },
+        {
+          "term": "CVSS v4.0",
+          "meaning": "A standardized score that rates the severity of security vulnerabilities, with 9.2 indicating a critical level."
+        },
+        {
+          "term": "Out-of-memory corruption",
+          "meaning": "A memory‑safety error that occurs when a program runs out of memory and mishandles data structures, leading to potential exploits."
+        }
+      ],
+      "watch_next": [
+        "Daybreak usage credits rollout",
+        "Increase in vulnerability discoveries over the coming months"
+      ]
+    },
+    "audiences": {
+      "builders": "Developers must update PHP versions to avoid remote code execution risks.",
+      "business": "Companies running PHP‑based web services need to patch quickly to protect their sites and data.",
+      "investors": "The incident highlights the market need for AI‑driven security tools, underscoring investments like OpenAI’s $1 billion Daybreak initiative."
+    },
+    "id": "4319883cba60",
+    "headline": "PHP releases patches for two critical remote code execution flaws found by frontier AI",
+    "summary": "The PHP project released security updates fixing CVE-2026-109618 and CVE-2026-109619, two critical remote code execution vulnerabilities discovered with frontier AI models. The patches affect all PHP installations serving web requests, and updating is the only safe mitigation.",
+    "why_it_matters": "The flaws could allow unauthenticated attackers to run code on servers hosting up to 70% of websites, making the patches essential for internet security.",
+    "category": "safety",
+    "lab": "PHP project",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 6,
+    "url": "https://unite.ai/php-patches-two-critical-rce-flaws-found-with-frontier-ai-models",
+    "source_id": "chief",
+    "desk": "",
+    "image": "https://www.unite.ai/wp-content/uploads/2026/10/php-patches-two-critical-rce-flaws-found-with-frontier-ai-models.jpg",
+    "sources": [
+      {
+        "url": "https://unite.ai/php-patches-two-critical-rce-flaws-found-with-frontier-ai-models",
+        "publisher": "Unite.AI",
+        "title": "PHP Patches Two Critical RCE Flaws Found with Frontier AI Models"
+      },
+      {
+        "url": "https://kucoin.com/news/flash/openai-discovers-two-critical-php-vulnerabilities-allocates-10-billion-for-daybreak-initiative",
+        "publisher": "kucoin",
+        "title": "OpenAI discovers two critical PHP vulnerabilities, allocates $10 billion for Daybreak Initiative"
+      },
+      {
+        "url": "https://forbes.com/sites/thomasbrewster/2026/10/23/inside-openais-plan-to-protect-the-internet-before-hackers-break-it",
+        "publisher": "Forbes",
+        "title": "Inside OpenAI's Plan To Protect The Internet Before Hackers Break It"
+      },
+      {
+        "url": "https://msn.com/en-us/news/technology/openai-unveils-daybreak-an-ai-tool-for-vulnerability-detection-and-patching/ar-AA230J27",
+        "publisher": "MSN",
+        "title": "OpenAI unveils Daybreak, an AI tool for vulnerability detection and patching"
+      },
+      {
+        "url": "https://techbooky.com/openai-says-gpt-5-6-sol-helped-find-php-flaw-warns-more-are-coming",
+        "publisher": "TechBooky",
+        "title": "OpenAI Says GPT-5.6 Sol Helped Find PHP Flaw, Warns More Are Coming"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-10-21T12:13:00+00:00",
+    "created_at": "2026-10-25T18:50:37+00:00",
+    "thread": "t-d529487c9d1e",
+    "sectors": [
+      "software",
+      "cybersecurity"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_failed": true
+  },
+  {
     "id": "b67bba8524a9",
     "headline": "Microsoft equips over 330,000 Volkswagen Group employees with Copilot",
     "summary": "Microsoft announced that Volkswagen Group has rolled out Microsoft Copilot to more than 330,000 staff, aiming to boost productivity and decision‑making across the company. The deployment includes Copilot Chat, Work IQ and over 26,000 active agents.",
@@ -6243,8 +6335,8 @@
       "investors": "Local AI model availability may drive regional AI market growth, attracting investors."
     },
     "video": {
-      "id": "v-NGxyPjcrE",
-      "title": "NVIDIA GTC Berlin 2026 Keynote With CEO Jensen Huang",
+      "id": "rF1EsryCAwc",
+      "title": "Jensen Huang’s Keynote Highlights at NVIDIA GTC Berlin 2026",
       "channel": "NVIDIA"
     },
     "photo_local": true,
