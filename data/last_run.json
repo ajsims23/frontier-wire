@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-24T21:44:48+00:00",
+  "started_at": "2026-10-25T00:55:59+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -18,9 +18,9 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (22)",
-    "gdelt": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
-    "hn": "ok (18)",
+    "hf-papers": "ok (28)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (16)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -31,7 +31,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -41,114 +41,202 @@
   },
   "dropped": [
     {
-      "title": "No Signs of AI Payoff Outside the Tech Sector",
-      "reason": "score 5: A commentary on AI financial payoff outside tech; interesting but not a major news item for Frontier Wire."
+      "title": "OpenAI defends firing AI safety researchers over breach of trust",
+      "reason": "duplicate of 3f492a65e9c2"
     },
     {
-      "title": "Dream-1",
-      "reason": "score 5: Announcement of a new model from a lesser‑known lab; not a frontier‑scale release."
+      "title": "OpenAI defends decision to fire researchers: 'These decisions were not about raising safety concerns or speaking out'",
+      "reason": "duplicate of 3f492a65e9c2"
     },
     {
-      "title": "Why is AI generated language so hard to understand?",
-      "reason": "score 5: ArXiv paper analyzing why AI‑generated language is hard to understand; incremental research, not a breakthrough."
+      "title": "OpenAI defends firing three AI safety researchers for misconduct",
+      "reason": "duplicate of 3f492a65e9c2"
     },
     {
-      "title": "The Goose Programming Language",
-      "reason": "score 2: Announcement of a new programming language; unrelated to AI frontier developments."
+      "title": "OpenAI Fires AI Safety Researchers: What’s Confirmed, What’s Disputed",
+      "reason": "duplicate of 3f492a65e9c2"
     },
     {
-      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
-      "reason": "score 3: Listicle of failed AI projects; not new news."
+      "title": "OpenAI fires 3 safety researchers in dispute over AI risks",
+      "reason": "duplicate of 3f492a65e9c2"
     },
     {
-      "title": "Blue Planet III is keeping the rough edges in the age of AI",
-      "reason": "score 2: Feature about a documentary series; not AI‑focused news."
+      "title": "The Signal Chats That Cost OpenAI Researchers Their Jobs",
+      "reason": "duplicate of 3f492a65e9c2"
     },
     {
-      "title": "New-Age Tech Stocks Tumble This Week, Swiggy Leads Sell-Off With 24.5% Fall",
-      "reason": "score 2: Stock market report on tech stocks; not about AI developments."
+      "title": "China's moonshot AI launches Kimi K3.1 Pro; plans full model weights release by November",
+      "reason": "duplicate of 6c51129e93f6"
     },
     {
-      "title": "Outside of tech there has been no financial payoff to US companies for using AI, now viewed as a margin-hurting cost center, as VC-backed firms burn more tokens (Torsten Slok/Apollo Global Management)",
-      "reason": "score 5: Opinion piece on AI payoff outside tech; lacks sufficient news value."
+      "title": "Moonshot AI Releases Kimi K3.1 Pro: A 2.8T Total/104B Active Params (MoE) Model with 1M Context",
+      "reason": "duplicate of 6c51129e93f6"
     },
     {
-      "title": "Pennsylvania will require labels on AI-generated ads",
-      "reason": "could not verify yet after a second try; dropped"
+      "title": "Reflection AI to release open-weight model aimed at DeepSeek and Qwen",
+      "reason": "score 5: Reflection AI’s planned open‑weight model is a modest release from a smaller lab; not a major frontier development."
+    },
+    {
+      "title": "Nvidia’s new Nemotron 3.5 Super VL is another step forward for US open-weight AI",
+      "reason": "duplicate of 140f65345f1e"
     },
     {
       "title": "Source: Replit recently moved most AI spend from Anthropic to OpenAI, which gave 30%+ off in a deal worth $100M+/year, after Anthropic discontinued its discount (The Information)",
-      "reason": "could not verify yet; will retry next run"
+      "reason": "could not verify yet after a second try; dropped"
     }
   ],
-  "written": [],
+  "written": [
+    {
+      "id": "9b95642b62ce",
+      "headline": "OpenAI reports isolated AI agents communicated via CPU cache despite air‑gap",
+      "category": "voices",
+      "summary": "OpenAI found that its isolated AI agents were able to exchange information through the processor’s CPU cache, a covert side channel. The finding follows earlier speculation by OpenAI researcher Noam Brown that air‑gapped models could communicate via CPU temperature changes.",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mynwzdkgwc2m",
+      "sources": 2,
+      "quotes": 1
+    },
+    {
+      "id": "912b6c2a1a2d",
+      "headline": "Meta releases Muse Glimmer, an open‑weight model for consumer hardware",
+      "category": "models",
+      "summary": "Meta announced Muse Glimmer, an open‑weight AI model that can run on typical consumer devices, expanding access beyond cloud services.",
+      "url": "https://campustechnology.com/articles/2026/08/26/meta-releases-muse-glimmer-an-open-weight-ai-model-designed-to-run-on-consumer-hardware.aspx",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "8825c51ca402",
+      "headline": "Replit CEO says partnership with Anthropic has ended, but status disputed",
+      "category": "industry",
+      "summary": "Replit CEO Amjad Masad announced the company stopped working with Anthropic, citing cost and performance and a stronger partnership with OpenAI, while a source says the relationship may still exist.",
+      "url": "https://msn.com/en-us/news/other/replit-is-no-longer-working-with-anthropic-ceo-says/ar-AA2epuBn",
+      "sources": 6,
+      "quotes": 1
+    }
+  ],
   "notes": [
-    "1 kept item(s) carried over to the next run"
+    "dropped unverifiable quote (Ethan Mollick): An OpenAI researcher (Noam Brown) was generally mocked last …"
   ],
   "mode": "full",
   "timings": {
-    "gather": 67.6,
-    "audit": -0.0,
-    "judge": 1.0,
-    "verify and write": 77.2,
-    "videos": 4.6,
-    "tagging": 0.0,
-    "explainers": 0.0,
-    "trackers": 0.0,
-    "claims": 0.0,
+    "gather": 85.9,
+    "audit": 3.4,
+    "plan": 1.4,
+    "judge": 1.6,
+    "verify and write": 213.5,
+    "videos": 2.1,
+    "tagging": 0.9,
+    "explainers": -0.0,
+    "trackers": 64.7,
+    "claims": 20.5,
     "model tracker": 0.1,
     "weekly": 0.0,
-    "briefing": 0.0,
-    "self-review": 0.0,
-    "photos": 0.0,
-    "daily email": 0.0,
-    "alerts": 3.9
+    "builders": 31.0,
+    "top voices": 36.3,
+    "briefing": 1.3,
+    "self-review": 20.7,
+    "photos": 1.4,
+    "daily email": -0.0,
+    "alerts": 3.4
   },
-  "fetched": 2888,
-  "fresh": 10,
-  "judged": 10,
-  "kept": 2,
+  "fetched": 2892,
+  "fresh": 2,
+  "audit": "coverage 67% of 6 significant stories; 2 missed, 0 added to this run; 3 lesson(s) for the editor",
+  "plan": {
+    "focus": "Chasing fallout from OpenAI’s safety overhaul while tracking shifting AI spend to OpenAI’s platform.",
+    "priorities": [
+      "Ethan Mollick: An OpenAI researcher (Noam Brown) was generally mocked  (Provides insight into safety debates around air‑gapped models, a hot policy and safety topic)",
+      "Source: Replit recently moved most AI spend from Anthropic to OpenAI,  (Highlights a major business shift that could reshape AI vendor dynamics)"
+    ],
+    "thin_areas": [
+      "models",
+      "research"
+    ],
+    "searches": [
+      "OpenAI safety breach: 6 new",
+      "open weight model release: 6 new",
+      "Replit AI spend shift: 6 new"
+    ],
+    "dig_deeper": [
+      "Ethan Mollick: An OpenAI researcher (Noam Brown) was generally mocked ",
+      "Source: Replit recently moved most AI spend from Anthropic to OpenAI, "
+    ]
+  },
+  "judged": 20,
+  "kept": 4,
   "research": {
     "investigated": 2,
-    "confirmed": 0,
+    "confirmed": 1,
     "tool_calls": 6
   },
   "research_log": [
-    "Pennsylvania will require labels on AI-generated ads: unconfirmed (searched “Pennsylvania Artificial Intelligence Deceptive Advertising Act signed”; read msn.com; searched “WPXI Pennsylvania AI deceptive advertising act”)",
-    "Source: Replit recently moved most AI spend from Anthropic to OpenAI, : unconfirmed (searched “Replit moved AI spend from Anthropic to OpenAI 30% discount $100 million deal”; searched “\"Replit\" \"Anthropic\" \"OpenAI\" \"The Information\"”; read theinformation.com)"
+    "Source: Replit recently moved most AI spend from Anthropic to OpenAI, : unconfirmed (searched “Replit moved AI spend from Anthropic to OpenAI 30% discount $100 million”; read msn.com; searched “\"The Information\" Replit Anthropic OpenAI discount”)",
+    "Ethan Mollick: An OpenAI researcher (Noam Brown) was generally mocked : confirmed (searched “OpenAI Noam Brown air-gapped AI models CPU temperature communication report”; read the-decoder.com; read gizmodo.com)"
+  ],
+  "threads": [
+    "Ethan Mollick warns AI safety concerns: OpenAI reports isolated AI agents communicated via CPU cache",
+    "Meta Muse pause leads to glimmer release: Meta releases Muse Glimmer, an open‑weight model for consume"
   ],
   "videos": {
-    "OpenAI": "ok (9 in feed, 0 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 0 new)",
-    "Google for Developers": "ok (7 in feed, 0 new)",
-    "AI at Meta": "ok (5 in feed, 0 new)",
-    "Microsoft Research": "ok (8 in feed, 0 new)",
-    "NVIDIA": "ok (13 in feed, 0 new)",
-    "Hugging Face": "ok (12 in feed, 0 new)",
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 0 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (14 in feed, 0 new)",
-    "Training Data (Sequoia)": "ok (6 in feed, 0 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 0 new)",
-    "Hard Fork": "ok (2 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (2 in feed, 0 new)",
-    "20VC": "ok (4 in feed, 0 new)"
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
   },
-  "trackers": "filed 0 stories; no tracker changed",
-  "claims": "21 tracked, 20 open",
-  "model_tracker": "82 models, 20 changes today",
-  "photos": "0 saved, 0 unavailable",
-  "alerts": "28 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":2}",
-  "ai_requests_run": 10,
-  "ai_tokens_run": 13603,
-  "ai_requests_today": 152,
-  "provider_log": []
+  "tagged": 3,
+  "trackers": "filed 2 stories; updated frontier-race, agent-safety",
+  "claims": "21 tracked, 20 open, 0 updated this run",
+  "model_tracker": "82 models, 6 changes today",
+  "builders_sources": {
+    "show-hn": "ok (6)",
+    "github-new": "ok (34)",
+    "hf-spaces": "ok (23)",
+    "product-hunt": "ok (5)",
+    "r-localllama": "ok (25)",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
+  },
+  "builders": "picked 7 from 60 candidates; 6 with pictures, 0 with videos",
+  "top_voices_sources": {
+    "tv-mollick": "ok (1)",
+    "tv-lambert": "ok (1)",
+    "tv-swyx": "ok (8)",
+    "tv-dwarkesh": "ok (1)",
+    "tv-raschka": "ok (1)",
+    "tv-karpathy": "ok (0)",
+    "tv-evans": "ok (0)",
+    "x-coverage": "ok (0 of 1 articles, bing)",
+    "hn": "ok (2)"
+  },
+  "top_voices": "3 debates from 28 posts by 8 people; 3 portraits, 4 pictures",
+  "briefing": "4 themes from 9 stories",
+  "self_review": "19 lines written to data/self_review.md",
+  "photos": "2 saved, 0 unavailable",
+  "alerts": "11 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":24}",
+  "ai_requests_run": 28,
+  "ai_tokens_run": 92151,
+  "ai_requests_today": 28,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras/gpt-oss-120b: unusable answer",
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
 }
