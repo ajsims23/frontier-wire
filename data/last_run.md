@@ -1,74 +1,90 @@
-## Frontier Wire newsroom run — 2026-10-25T12:55:11+00:00
+## Frontier Wire newsroom run — 2026-10-25T15:46:08+00:00
 
-Fetched 2890 items · fresh 5 · judged 23 · kept 8 · **written 3**
-AI: 36 requests, 76,208 tokens this run · 169 requests today · providers: cerebras, groq
-Editor-in-chief: Tracking AI firms' political pushback while covering major model releases and policy shifts affecting investors.
-  Priorities: Google’s AI search changes upended online publishing (Google AI search changes reshape online publishing, a key concern for builders and investors.); Lawmakers and Hill staffers in both parties say AI leaders are becomin (Highlights growing political liability for AI leaders, directly impacting policy and regulatory risk.); Cerebras Deploys Trillion-Parameter AI Models (Cerebras' trillion‑parameter models represent a significant advance in model capabilities.); Gen Z is shaping India’s beauty market: prevention first,and going bey (Shows how Gen Z is reshaping India's fast‑growing beauty market, relevant for business strategy.); Deepinder Goyal’s Temple brain wearable: ₹85,000 price, pre-order date (New high‑price brain wearable signals emerging Indian consumer tech trends.)
-  Thin areas: models, research
-  Searches: AI political liability: 6 new; trillion parameter model benchmarks: 6 new; AI research funding trends 2026: 6 new
-  Dig deeper: Google’s AI search changes upended online publishing; Lawmakers and Hill staffers in both parties say AI leaders are becomin
+Fetched 2910 items · fresh 26 · judged 37 · kept 8 · **written 3**
+AI: 40 requests, 91,462 tokens this run · 209 requests today · providers: cerebras, groq
+Editor-in-chief: Tracking policy fallout and AI compute expansion while covering emerging business impacts and safety concerns.
+  Priorities: PM inaugurates RBI's Rs 169-cr data centre, Cybersecurity Training Ins (India's new RBI data centre signals compute buildout crucial for AI strategy and investment.); The great compute buildout : Can data centres power India AI leap ? (Analyzes India's compute infrastructure push, key for builders and investors.); As vote nears , Trump AI gamble fuels economic uncertainty (Bill Gates' AI economic warnings affect market outlook for investors.); Google DeepMind Exec Shares Skills That Can Make Graduates Stand Out (Google DeepMind exec shares skill advice, valuable for talent strategy.); r/opensource just banned AI, non-English speakers, and more (r/opensource ban reflects governance trends impacting AI community policy.)
+  Thin areas: business, models
+  Searches: OpenAI safety breach: 6 new; NVIDIA open weight models Europe: 6 new; AI compute data centres India: 6 new
+  Dig deeper: PM inaugurates RBI's Rs 169-cr data centre, Cybersecurity Training Ins; As vote nears , Trump AI gamble fuels economic uncertainty
 Research agent: investigated 5 stories with 15 tool calls, confirmed 2
-Daily briefing: 4 themes from 5 stories
-Videos: 0 kept from 1 new · OpenAI ok (9 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (7 in feed, 0 new), AI at Meta ok (5 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (13 in feed, 0 new), Hugging Face ok (12 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 0 new), Training Data (Sequoia) ok (6 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (3 in feed, 1 new), 20VC ok (5 in feed, 0 new)
-Photos: 1 saved, 0 unavailable
-Alerts: 17 events sent: {"subscribers":6,"sent":0,"queued":27}
+Daily briefing: 4 themes from 6 stories
+Videos: no new videos · OpenAI ok (9 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (7 in feed, 0 new), AI at Meta ok (5 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (13 in feed, 0 new), Hugging Face ok (12 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 0 new), Training Data (Sequoia) ok (6 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (3 in feed, 0 new), 20VC ok (4 in feed, 0 new)
+Photos: 2 saved, 0 unavailable
+Alerts: 18 events sent: {"subscribers":6,"sent":0,"queued":25}
 Claims: 27 tracked, 26 open, 0 updated this run
-Trackers: filed 3 stories; updated frontier-race, copyright, ai-money
+Trackers: filed 4 stories; updated frontier-race, india-ai, ai-infrastructure, ai-money
 Model tracker: 82 models, 8 changes today
 Tagged 3 stories by sector, region and deal
-Time: gather 78s, plan 2s, judge 1s, verify and write 444s, videos 23s, tagging 21s, trackers 105s, claims 20s, briefing 21s, alerts 4s
+India briefing: 3 themes from 4 stories
+Time: gather 118s, plan 3s, judge 2s, verify and write 496s, videos 2s, tagging 21s, trackers 126s, claims 21s, briefing 42s, alerts 2s
 
 ### New stories
-- **industry** — [Mistral raises €3 billion in record EU Series D, valuation exceeds €21 billion](https://pymnts.com/news/artificial-intelligence/2026/mistral-raises-3-billion-dollars-ai-research-record-european-union-funding-round)  
-  French AI startup Mistral secured €3 billion ($3.5 billion) in a Series D round led by Samsung, valuing the company at over €21 billion. The capital will fund expanded research, compute capacity and global growth.  
-  _3 source(s), 2 verified quote(s)_
-- **models** — [Alibaba releases 2.4 trillion‑parameter Qwen3.8‑Max with 1 million‑token context](https://eweek.com/news/alibaba-qwen3-8-max-ai-model)  
-  Alibaba’s Qwen team launched Qwen3.8‑Max, a 2.4 trillion‑parameter model with about 95 billion active parameters and a 1 million‑token context window, available via API and QwenCloud.  
-  _2 source(s), 0 verified quote(s)_
-- **industry** — [Google’s AI search overhaul reduces traffic and pays tiny fees to publishers](https://theverge.com/column/1017983/google-ai-search-online-publishing)  
-  Google’s AI Overviews and AI Mode have shifted search results to AI‑generated summaries, cutting traffic to news sites. In a pilot, Google pays about 100 publishers for content that appears in AI answers, but payments are often under $1,000 or a fraction of ad revenue.  
+- **industry** — [Nvidia to acquire Hugging Face for $12.93 billion](https://finance.yahoo.com/markets/article/nvidia-confirms-13-billion-acquisition-of-open-weight-ai-platform-hugging-face-141058641.html)  
+  Nvidia confirmed a deal to buy open‑weight AI platform Hugging Face for about $12.93 billion. The acquisition, expected to close in the first half of 2027, will keep the platform open for all developers.  
+  _2 source(s), 2 verified quote(s)_
+- **models** — [Nvidia releases open‑weight Nemotron 3.5 models for enterprise agents and PCs](https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs)  
+  Nvidia announced three new open‑weight Nemotron 3.5 models—a 120‑billion‑parameter Super VL for data‑center agents and two smaller Bolt variants for local PCs. The models can be post‑trained on a company’s own data and run on Nvidia’s RTX Spark‑based AI PCs and DGX Spark workstations.  
+  _2 source(s), 1 verified quote(s)_
+- **industry** — [India's AI sector looks to debt financing for data centres amid GPU and regulatory risks](https://msn.com/en-in/money/general/india-s-ai-sector-eyes-debt-financing-for-data-centres-amid-gpu-and-regulatory-challenges-report/ar-AA2g0l75)  
+  A Union Bank of India report says India's AI sector will increasingly seek debt financing to build data centres and computing infrastructure over the next three to five years. The report cites rapid GPU obsolescence, limited domestic hardware manufacturing and evolving AI regulations as key risks.  
   _2 source(s), 1 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Deepinder Goyal’s Temple brain wearable: ₹85,000 price, pre-order date and features — score 2: Brain‑wearable product report does not involve AI frontier developments.
-- Gen Z is shaping India’s beauty market: prevention first,and going beyond the metros — score 1: Beauty market piece unrelated to AI.
-- Lawmakers and Hill staffers in both parties say AI leaders are becoming a political liability as they swing between claims of prosperity and existential dangers (Maria Curi/Axios) — score 4: Political commentary about AI leaders being a liability is interesting but not a major development for a frontier‑model audience.
-- Washington's message to AI execs: please shut up — score 3: A short editorial urging AI executives to stay quiet lacks substantive news value for the audience.
-- Opinion: Want AI agents to stop going rogue? Make executives personally liable. — score 3: Opinion piece on executive liability is a peripheral political angle, not a frontier AI development.
-- Trump’s AI liability push leaves a big question: who pays when AI breaks things — score 3: Discussion of Trump’s AI liability push is political rather than a technical or frontier AI breakthrough.
-- ‘Clearly not working’: Sam Altman hits AI industry over political spending — score 4: Sam Altman’s criticism of political spending is noteworthy but does not rise to a news threshold for Frontier Wire.
-- Strict liability is gaining traction as a solution to force AI companies to institute better safety controls but it has some big downsides too — score 5: Article on strict liability trends is relevant to AI regulation but remains a background analysis, not a headline‑level event.
-- Why Silicon Valley’s AI super PACs aren’t talking about AI — score 4: Coverage of AI super PAC silence is political commentary without a concrete policy or technical development.
-- [AI Daily Intelligence Briefing] Summary of Key Trends for 2026-10-19 — score 2: Generic AI daily briefing lacks a distinct news hook for the Frontier Wire audience.
-- Disparities in the Benefits of AI Investment, AI Moves into Foreign and Security Policy—Global Trends on October 13, 2026 — score 2: Broad analysis of AI investment disparities is background material, not a breaking story.
-- Global Telehealth Market Size, Share, Growth, Trends, and Forecast 2026-2035 | AI and Cloud-Based Care Drive 23% CAGR Toward USD 1.20 Trillion by 2035 — score 2: Telehealth market forecast is not directly about frontier AI developments.
-- From AI Use to Funding Cuts: How Provosts Are Navigating 2026 — score 3: Higher‑ed funding cuts story is peripheral to AI frontier news.
-- Scopus bibliometric review maps 2015–2025 growth in AI research for sustainable water management — score 2: Bibliometric review of AI for water management is a niche academic trend, not frontier‑model news.
-- Cerebras Deploys Trillion-Parameter AI Models — could not verify yet after a second try; dropped
-- Moonshot AI's 2.8 Trillion Parameter Model Just Became the First From China to Top a Major Coding Benchmark — could not verify yet; will retry next run
-- Nvidia is building a trillion-parameter open model, and it would still be smaller than China’s — could not verify yet; will retry next run
-- TikTok Owner ByteDance Is Going Much Bigger in the AI Race — could not verify yet; will retry next run
-- Trillion Parameters, No Human Labels: Ant Group Documents Five Emergent AI Behaviors — could not verify yet; will retry next run
+- To make AI morally good , tech companies are turning to religion . But some say it isnt that simple — score 3: Opinion piece linking religion and AI ethics, not a news event.
+- AI Has Ushered In the Era of Personalized Software , and Honestly ? Im Excited — score 2: General enthusiasm article, no substantive AI development.
+- As vote nears , Trump AI gamble fuels economic uncertainty — score 2: Political commentary about AI's role in elections, not a frontier AI development or policy.
+- Google DeepMind Exec Shares Skills That Can Make Graduates Stand Out — score 2: Career advice from a DeepMind exec, not newsworthy for AI frontier audience.
+- Euro sinks on French debt worries ; yen gains for week on AI rout — score 4: Financial market movement attributed to an AI rout; not a core AI development.
+- China stocks enter bear market as AI enthusiasm fades , growth concerns mount — score 4: China stock market reaction to AI enthusiasm fading; not a frontier AI story.
+- Bill Gates warns how AI could reshape power and the future of work on The Verge Decoder podcast — score 3: Podcast promotion of Bill Gates interview, not a new AI development.
+- NCERT develops AI module for Classes 9 - 12 : Data privacy , ethical use and critical thinking in focus — score 5: NCERT AI curriculum rollout in Indian schools – important for education but not a frontier AI breakthrough.
+- Bill Gates warns AI could disrupt jobs for 20 years before creating abundance as robots threaten human employment — score 3: Bill Gates warning about AI job disruption – repeat of other coverage, no new information.
+- Bill Gates Sees 20 Years of Turmoil Before AI Creates True Abundance — score 3: Same Bill Gates commentary as other items, low news value.
+- Nicolas Cage Refuses To Work With Amazon Prime Over AI Dispute — score 2: Entertainment story about Nicolas Cage, unrelated to AI frontier.
+- The Importance of Limitations for Creativity and Learning (2023) — score 1: Blog post about creativity limits, not news.
+- fheroes2: A recreation of Heroes of Might and Magic II game engine — score 1: GitHub project recreation of a game engine, not AI.
+- The hottest AI wearables and gadgets you should know about — score 3: Listicle of AI wearables – marketing content, low relevance.
+- r/opensource just banned AI, non-English speakers, and more — score 3: Reddit moderation policy change, not directly about AI technology or frontier developments.
+- Will take action if Kannadigas sidelined in jobs in Karnataka: CM Shivakumar — score 2: Political statement about regional employment; unrelated to AI developments.
+- Sources: Apple tweaked macOS for its OLED touch MacBook Pro, due Wednesday, with a dynamic interface that adapts to whether touch or the trackpad was last used (Mark Gurman/Bloomberg) — score 2: Apple macOS tweak rumor, not AI related.
+- OpenAI defends firing AI safety researchers over breach of trust — duplicate of 3f492a65e9c2
+- OpenAI defends decision to fire researchers: 'These decisions were not about raising safety concerns or speaking out' — duplicate of 3f492a65e9c2
+- OpenAI checked fired researchers’ phones for Signal chats, WSJ reports — duplicate of 3f492a65e9c2
+- OpenAI defends firing three AI safety researchers for misconduct — duplicate of 3f492a65e9c2
+- OpenAI Cites Policy Breaches in Dismissal of Three Safety Researchers — duplicate of 3f492a65e9c2
+- OpenAI fires three safety researchers over alleged breach of trust — duplicate of 3f492a65e9c2
+- Nvidia’s new Nemotron 3.5 Super VL is another step forward for US open-weight AI — duplicate of 140f65345f1e
+- Why Big Tech is giving away open-weight AI models, and what it wants in return | Explained — score 5: Analytical piece on why big tech releases open‑weight models; interesting but not breaking news.
+- Nvidia debuts three new open AI models — duplicate of 140f65345f1e
+- India’s AI race is becoming an infrastructure race — score 5: General commentary on India's AI becoming an infrastructure race; lacks a specific news hook.
+- India's AI Financing Demand To Shift Towards Data Centres, But GPU Infrastructure And Regulatory Risks Persist: UBI Report — score 5: Report on financing shift toward data centres; informative but not a distinct news event.
+- India’s AI Push Faces Key Test: Can It Keep Data, Technology Under Its Control? — score 2: Older 2023 article on AI policy; not current news.
+- NVIDIA to Invest an Additional $20 Billion in Europe to Accelerate AI Development — could not verify yet after a second try; dropped
+- PM inaugurates RBI's Rs 169-cr data centre, Cybersecurity Training Institute in Odisha — could not verify yet; will retry next run
+- The great compute buildout : Can data centres power India AI leap ? — could not verify yet; will retry next run
+- India's AI race enters a new phase: Why data centres, chips and compute power matter more than ever — could not verify yet; will retry next run
+- Centre fortifies India’s AI mission with Sovereign Compute Pool amid rising GPU costs — could not verify yet; will retry next run
 
 </details>
 
 ### Sources with problems
-- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
-- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
+- `gdelt-india`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
 
 <details><summary>Research agent's work</summary>
 
-- Cerebras Deploys Trillion-Parameter AI Models: unconfirmed (searched “Cerebras trillion-parameter model deployment news”; searched “Cerebras trillion parameter model deployment announced”; searched “"Cerebras" "trillion-parameter"”)
-- Mistral Raises $3.5 Billion for AI Research in Record EU Funding Round: confirmed (searched “Mistral raises $3.5 billion AI research EU funding round”; read businesstimes.com.sg; read france24.com)
-- Alibaba Launches 2.4 Trillion-Parameter Qwen3.8-Max for Autonomous AI : unconfirmed (searched “Alibaba Qwen3.8-Max 2.4 trillion parameter model launch”; read theinformation.com; read msn.com)
-- Google’s AI search changes upended online publishing: confirmed (searched “Google AI search changes online publishing impact”; read techrepublic.com; searched “Google AI search publisher payments online publishing”)
-- Moonshot AI's 2.8 Trillion Parameter Model Just Became the First From : unconfirmed (searched “Moonshot AI 2.8 trillion parameter model coding benchmark”; read crowdfundinsider.com; read officechai.com)
+- Nvidia confirms $13 billion acquisition of open-weight AI platform Hug: confirmed (searched “Nvidia confirms $13 billion acquisition of Hugging Face”; read msn.com; read techcrunch.com)
+- NVIDIA to Invest an Additional $20 Billion in Europe to Accelerate AI : unconfirmed (searched “NVIDIA invest additional $20 billion Europe AI development”; searched “NVIDIA 20 billion Europe AI”; read forbes.com)
+- PM inaugurates RBI's Rs 169-cr data centre, Cybersecurity Training Ins: unconfirmed (searched “PM inaugurates RBI Rs 169 crore data centre Odisha”; read business-standard.com; read business-standard.com)
+- The great compute buildout : Can data centres power India AI leap ?: unconfirmed (searched “India AI data centre boom compute buildout report”; read msn.com; searched “"great compute buildout" India AI”)
+- Nvidia launches new open models to run agents in the enterprise and on: confirmed (searched “Nvidia launches new open models to run agents in the enterprise and on PCs”; read aol.com; read windowsreport.com)
 
 </details>
 
 ### Notes
-- dropped unverifiable benchmark: Qwen3.8-Max AIME24 math benchmark improved performance by 2.7 percentage points
+- dropped unverifiable quote (Kari Briski): Unlike closed frontier models, organizations can post‑train …
 - GDELT unavailable: GDELT paused for this run after repeated rate-limiting
 - 4 kept item(s) carried over to the next run
+- cerebras/gpt-oss-120b: unusable answer
 - cerebras/gpt-oss-120b: answer cut off; retrying with more room
