@@ -34,6 +34,7 @@ providers:
 
 run:
   lookback_hours: 36          # ignore items older than this
+  max_story_age_hours: 72     # never write up an article older than this, whatever path it came in by
   max_candidates_to_judge: 80 # items sent to the editor per run (in batches)
   judge_batch: 45            # items per editor request
   desk_judge_quota: 25       # editor slots reserved for desk sources (e.g. India)

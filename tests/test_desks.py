@@ -292,15 +292,41 @@ def test_builders_and_voices_pages_build(tmp_path):
 def test_news_search_falls_back_to_bing():
     from agent.sources import news_search
     rss = """<?xml version="1.0"?><rss version="2.0"><channel><title>Bing</title>
-<item><title>Altman says compute will double</title>
+<item><title>Altman says compute will double</title><pubDate>Wed, 21 Oct 2026 08:00:00 GMT</pubDate>
 <link>http://www.bing.com/news/apiclick.aspx?ref=FexRss&amp;url=https%3a%2f%2fnews.example.com%2faltman&amp;c=1</link></item>
+<item><title>Altman compute plan, from last month</title><pubDate>Fri, 18 Sep 2026 08:00:00 GMT</pubDate>
+<link>http://www.bing.com/news/apiclick.aspx?ref=FexRss&amp;url=https%3a%2f%2fnews.example.com%2fold&amp;c=1</link></item>
+<item><title>Altman compute, no date</title>
+<link>http://www.bing.com/news/apiclick.aspx?ref=FexRss&amp;url=https%3a%2f%2fnews.example.com%2fundated&amp;c=1</link></item>
 </channel></rss>"""
 
     def gdelt_down(url):
         raise ConnectionError("The handshake operation timed out")
     f = Fetcher({"https://api.gdeltproject.org": gdelt_down, "https://www.bing.com/news/search": rss})
-    rows, engine = news_search(Gdelt(f, sleep=lambda s: None), f, "Altman compute")
+    rows, engine = news_search(Gdelt(f, sleep=lambda s: None), f, "Altman compute", now=NOW)
     assert engine == "bing" and rows[0]["url"] == "https://news.example.com/altman" and rows[0]["domain"] == "news.example.com"
+    assert [r["url"] for r in rows] == ["https://news.example.com/altman"]  # Bing's old and undated results are cut
+
+
+def test_editor_searches_skip_old_articles():
+    """Bing ignores time windows; the editor-in-chief's searches must not bring months-old news into a run."""
+    from types import SimpleNamespace
+    from agent.chief import run_searches
+    rows = [{"url": "https://news.example.com/today", "title": "AI lab raises $1B", "domain": "news.example.com",
+             "published": (NOW - timedelta(hours=5)).isoformat()},
+            {"url": "https://news.example.com/march", "title": "AI lab launches agent tool", "domain": "news.example.com",
+             "published": "2026-03-09T17:00:00+00:00"},
+            {"url": "https://news.example.com/nodate", "title": "AI lab update", "domain": "news.example.com", "published": None}]
+
+    class G:
+        def search(self, *a, **k):
+            return rows
+    room = SimpleNamespace(gdelt=G(), fetcher=None, now=NOW, report={"notes": []},
+                           cfg=SimpleNamespace(run={"lookback_hours": 36}),
+                           store=SimpleNamespace(is_seen=lambda u: False))
+    plan = {"searches": [{"query": "AI lab funding"}]}
+    found = run_searches(room, plan, set())
+    assert [it.url for it in found] == ["https://news.example.com/today"] and plan["searches"][0]["found"] == 1
 
 
 def test_x_coverage_bing_fallback_per_person(tmp_path):

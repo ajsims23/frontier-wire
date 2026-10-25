@@ -549,12 +549,17 @@ class Newsroom:
         # Kept stories not reached this run (per-run cap, limits) stay unseen so the next run picks them up.
         not_reached = {m.url for _, _, ms in kept for m in ms}
         budget_s = float(self.cfg.run.get("write_time_budget_min", 14)) * 60
+        max_age = int(self.cfg.run.get("max_story_age_hours", 72))
         started_writing = _time.monotonic()
         for score, category, members in kept[: self.cfg.run["max_stories_per_run"]]:
             if _time.monotonic() - started_writing > budget_s:
                 self.report["notes"].append("time budget reached; remaining stories carried over")
                 break
             not_reached -= {m.url for m in members}
+            pub = _parse_time(members[0].published)
+            if pub and pub < self.now - timedelta(hours=max_age):  # last line of defence against old news
+                self.report["dropped"].append({"title": members[0].title, "reason": f"stale: published {pub:%d %b %Y}"})
+                continue
             link = links.get(members[0].url) or {}
             if link.get("repeat"):  # same news we already published, from another outlet
                 self.report["dropped"].append({"title": members[0].title, "reason": f"already covered (story {link['follows']})"})

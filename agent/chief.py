@@ -14,7 +14,7 @@ checks as everything else. If planning fails, the run continues exactly as it wo
 """
 from __future__ import annotations
 
-from datetime import timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
 from .sources import Item, is_ai_headline, news_search
@@ -155,11 +155,14 @@ def plan_run(room: Any, fresh: list[Item], max_items: int = 70) -> dict[str, Any
 
 
 def run_searches(room: Any, plan: dict[str, Any], known: set[str]) -> list[Item]:
-    """Run the editor's searches on GDELT. New, AI-related, unseen results join this run."""
+    """Run the editor's searches (GDELT, Bing fallback). New, AI-related, unseen, recent results join this run.
+    Search results skip the gather step's freshness filter, so the same lookback window is enforced here."""
     found: list[Item] = []
+    hours = int(room.cfg.run.get("lookback_hours", 36))
+    cutoff = room.now - timedelta(hours=hours)
     for s in plan.get("searches", []):
         try:
-            rows, s["engine"] = news_search(room.gdelt, room.fetcher, s["query"], hours=48, max_records=15)
+            rows, s["engine"] = news_search(room.gdelt, room.fetcher, s["query"], hours=hours, max_records=15, now=room.now)
         except Exception as e:  # noqa: BLE001
             s["found"] = 0
             note = f"editor's searches stopped: {str(e)[:80]}"
@@ -171,6 +174,9 @@ def run_searches(room: Any, plan: dict[str, Any], known: set[str]) -> list[Item]
             url = canonical_url(r["url"])
             if url in known or room.store.is_seen(url) or not is_ai_headline(r["title"]):
                 continue
+            pub = _when(r.get("published"))
+            if pub is None or pub < cutoff:  # undated or older than this run's window: not news any more
+                continue
             known.add(url)
             found.append(Item(url=url, title=r["title"], source_id="chief", source_name=r.get("domain") or "news search",
                               role="news", published=r.get("published"), snippet=f"Found by the editor's search: {s['query']}"))
@@ -179,6 +185,16 @@ def run_searches(room: Any, plan: dict[str, Any], known: set[str]) -> list[Item]
                 break
         s["found"] = n
     return found
+
+
+def _when(s: str | None) -> datetime | None:
+    if not s:
+        return None
+    try:
+        dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
 
 
 def apply_thin_areas(selected: list[tuple[int, str, list[Item]]], head: list[tuple[int, str, list[Item]]],
