@@ -6641,6 +6641,97 @@
   },
   {
     "explainer": {
+      "what_it_means": "Open-weight AI models are released with their trained parameters, allowing anyone to download, modify, and run them. Because the provider’s safety controls may be removed or altered, enterprises need to verify the model’s origin and test its behavior before deployment. Using cryptographic signatures helps confirm the model file matches the original publisher’s version.",
+      "terms": [
+        {
+          "term": "Open-weight AI",
+          "meaning": "AI models whose trained weights are publicly released for anyone to download, inspect, modify, and run."
+        },
+        {
+          "term": "Provenance",
+          "meaning": "Verification of a model’s origin and integrity, often using cryptographic signatures to ensure it has not been altered."
+        },
+        {
+          "term": "Cryptographic signature",
+          "meaning": "A digital code attached to a file that proves it was created by a trusted source and has not been changed."
+        }
+      ],
+      "watch_next": [
+        "The next papers in the planned series on managing risks across open-weight AI deployments."
+      ]
+    },
+    "audiences": {
+      "builders": "Enterprises must implement provenance verification and separate safety testing for each model configuration they deploy.",
+      "business": "Companies need to assess the five risk categories and maintain controls when using open-weight AI, as provider‑side guardrails are absent."
+    },
+    "id": "ca76cdd83e01",
+    "headline": "Microsoft and Nvidia issue guidelines for assessing open-weight AI model risks",
+    "summary": "Microsoft and Nvidia released a joint paper urging enterprises to verify provenance and test configurations of open-weight AI models, noting that changes to model weights can weaken safety safeguards while preserving task performance. The guidance outlines 30 risk types across five categories and recommends cryptographic signatures and ongoing risk reassessment.",
+    "why_it_matters": "Enterprises must manage security and safety themselves when using open-weight models, unlike closed-weight services that provide built‑in guardrails.",
+    "category": "safety",
+    "lab": "Microsoft",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "Weight openness alone does not determine an AI system’s risk.",
+        "speaker": "Michael Scovetta",
+        "speaker_role": "Partner Security Assurance Manager at Microsoft",
+        "source_url": "https://helpnetsecurity.com/2026/10/19/open-weight-ai-model-risks-microsoft-nvidia"
+      },
+      {
+        "text": "Open- and closed-weight models can share many of the same underlying risks, but how those risks materialize depends on the deployment.",
+        "speaker": "Michael Scovetta",
+        "speaker_role": "Partner Security Assurance Manager at Microsoft",
+        "source_url": "https://helpnetsecurity.com/2026/10/19/open-weight-ai-model-risks-microsoft-nvidia"
+      }
+    ],
+    "score": 6,
+    "url": "https://csoonline.com/article/4237095/microsoft-nvidia-push-provenance-checks-as-open-weight-ai-adoption-accelerates.html",
+    "source_id": "chief",
+    "desk": "",
+    "image": "https://www.csoonline.com/wp-content/uploads/2026/10/4237095-0-58592900-1792413276-shutterstock_2319793905.jpg?quality=50&strip=all&w=1024",
+    "sources": [
+      {
+        "url": "https://csoonline.com/article/4237095/microsoft-nvidia-push-provenance-checks-as-open-weight-ai-adoption-accelerates.html",
+        "publisher": "CSO Online",
+        "title": "Microsoft, Nvidia push provenance checks as open-weight AI adoption accelerates"
+      },
+      {
+        "url": "https://helpnetsecurity.com/2026/10/19/open-weight-ai-model-risks-microsoft-nvidia",
+        "publisher": "Help Net Security",
+        "title": "With open-weight AI, more of the security burden falls on enterprises"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-18T23:37:00+00:00",
+    "created_at": "2026-10-25T03:49:28+00:00",
+    "sectors": [
+      "software",
+      "cybersecurity"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 2,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "30 risk types",
+    "trackers": [
+      "agent-safety"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "The removal means that future weapons using AI could make targeting and firing decisions without a human operator present. This increases the risk of unintended engagements and makes it harder to attribute responsibility for mistakes. The change also signals a shift away from earlier efforts to limit fully autonomous weapons.",
       "terms": [
         {

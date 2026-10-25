@@ -1,0 +1,236 @@
+{
+  "started_at": "2026-10-25T03:49:28+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1318)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (890)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "failed: ReadTimeout: The read operation timed out",
+    "hf-papers": "ok (28)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (17)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "AI Can Be Cyborg or Centaur. But Can Enterprises Monetise It?",
+      "reason": "score 4: General enterprise AI commentary; not specifically about Indian companies or policy."
+    },
+    {
+      "title": "Discover how Superminis, Nayam by Lakshita and Broadstar are scaling nationally with Myntra’s platform capabilities",
+      "reason": "score 3: Fashion brands leveraging Myntra platform; unrelated to AI frontier developments."
+    },
+    {
+      "title": "Ultraviolette’s answer to the global chip squeeze; The making of Indian flying taxis",
+      "reason": "score 3: Discussion of Indian flying‑taxi hardware costs; not an AI‑centric story."
+    },
+    {
+      "title": "A look at Meta's role in Brazil's runoff, where Lula da Silva alleges Meta restricts his content and a court ordered it not to interfere; Meta cites glitches (Augusta Saraiva/Bloomberg)",
+      "reason": "score 4: Meta's alleged content restrictions in Brazil's election are political platform issues, not a frontier AI development."
+    },
+    {
+      "title": "OpenAI rejects researchers’ claim they were fired over safety warnings, says they committed ‘breach of trust’",
+      "reason": "duplicate of 3f492a65e9c2"
+    },
+    {
+      "title": "OpenAI Fires AI Safety Researchers: What’s Confirmed, What’s Disputed",
+      "reason": "duplicate of 3f492a65e9c2"
+    },
+    {
+      "title": "OpenAI says three fired safety researchers got the boot over 'breach of trust,' not their warnings",
+      "reason": "duplicate of 3f492a65e9c2"
+    },
+    {
+      "title": "OpenAI says it didn’t fire 3 safety researchers for speaking out on AI risks",
+      "reason": "duplicate of 3f492a65e9c2"
+    },
+    {
+      "title": "OpenAI denies firing researchers over AI safety warnings",
+      "reason": "duplicate of 3f492a65e9c2"
+    },
+    {
+      "title": "An OpenAI agent turned off its own safety monitoring, and then denied it",
+      "reason": "duplicate of c0c536d8efa2"
+    },
+    {
+      "title": "NVIDIA expands open model lineup across Europe-focused industries",
+      "reason": "duplicate of 5346e68360b4"
+    },
+    {
+      "title": "NVIDIA outlines European public-sector projects built on open models",
+      "reason": "duplicate of 5346e68360b4"
+    },
+    {
+      "title": "Is NVIDIA’s Open‑Weight AI Push via Reflection AI Recasting Its Full‑Stack Narrative (NVDA)?",
+      "reason": "score 4: Opinion piece on NVIDIA’s open‑weight strategy; lacks a concrete news hook for Frontier Wire."
+    },
+    {
+      "title": "Nvidia’s Open Weight Letter Is More About AI Sovereignty Than Anything",
+      "reason": "score 4: Analytical article on NVIDIA’s narrative; not a newsworthy development."
+    },
+    {
+      "title": "IonQ Earns Four Best Paper Awards Ahead of IEEE Quantum Week 2026 for Breakthroughs in AI, Hybrid Computing, and Life Sciences",
+      "reason": "score 4: IonQ awards are notable within quantum computing but not directly relevant to frontier AI developments."
+    },
+    {
+      "title": "Can AI Chip Boom Help LRCX Reach Record Q4 Sales Target of $6.6B?",
+      "reason": "score 4: Speculative link between AI chip demand and LRCX sales; lacks a concrete AI breakthrough."
+    },
+    {
+      "title": "Researchers chart new course for AI-powered biomedical discoveries",
+      "reason": "score 5: General discussion of AI‑powered biomedical research; no specific breakthrough or model release."
+    },
+    {
+      "title": "China’s AI research is booming: what it’s like to be on the front line",
+      "reason": "score 4: Feature on China’s AI research environment; not a specific technical advance."
+    },
+    {
+      "title": "University research uses AI to achieve breakthroughs",
+      "reason": "score 4: University‑level AI research breakthroughs without clear frontier impact."
+    },
+    {
+      "title": "NVIDIA to Invest an Additional $20 Billion in Europe to Accelerate AI Development",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "AI Models Generate Advances in Mathematical Research",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "ca76cdd83e01",
+      "headline": "Microsoft and Nvidia issue guidelines for assessing open-weight AI model risks",
+      "category": "safety",
+      "summary": "Microsoft and Nvidia released a joint paper urging enterprises to verify provenance and test configurations of open-weight AI models, noting that changes to model weights can weaken safety safeguards while preserving task performance. The guidance outlines 30 risk types across five categories and recommends cryptographic signatures and ongoing risk reassessment.",
+      "url": "https://csoonline.com/article/4237095/microsoft-nvidia-push-provenance-checks-as-open-weight-ai-adoption-accelerates.html",
+      "sources": 2,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "2 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 90.9,
+    "audit": -0.0,
+    "plan": 1.6,
+    "judge": 1.8,
+    "verify and write": 189.0,
+    "videos": 1.4,
+    "tagging": 21.4,
+    "explainers": 0.0,
+    "trackers": 41.2,
+    "claims": 20.4,
+    "model tracker": 0.0,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 20.9,
+    "self-review": 0.0,
+    "photos": 0.5,
+    "daily email": -0.0,
+    "alerts": 0.6
+  },
+  "fetched": 2853,
+  "fresh": 4,
+  "plan": {
+    "focus": "Tracking policy fallout and safety gaps while expanding coverage of Indian AI business developments and emerging model research.",
+    "priorities": [
+      "AI Can Be Cyborg or Centaur. But Can Enterprises Monetise It? (Enterprise AI monetisation insights for investors and builders)",
+      "Discover how Superminis, Nayam by Lakshita and Broadstar are scaling n (Showcases scaling Indian startups via platform partnerships)",
+      "Ultraviolette’s answer to the global chip squeeze; The making of India (Highlights Indian chip challenges and flying‑taxi industry prospects)",
+      "A look at Meta's role in Brazil's runoff, where Lula da Silva alleges  (Illustrates political risk for tech firms in Brazil)"
+    ],
+    "thin_areas": [
+      "models",
+      "research"
+    ],
+    "searches": [
+      "OpenAI safety breach response: 6 new",
+      "NVIDIA open weight model adoption Europe: 6 new",
+      "AI research breakthroughs Q4 2026: 6 new"
+    ],
+    "dig_deeper": [
+      "AI Can Be Cyborg or Centaur. But Can Enterprises Monetise It?",
+      "Ultraviolette’s answer to the global chip squeeze; The making of India"
+    ]
+  },
+  "judged": 22,
+  "kept": 3,
+  "research": {
+    "investigated": 3,
+    "confirmed": 1,
+    "tool_calls": 9
+  },
+  "research_log": [
+    "NVIDIA to Invest an Additional $20 Billion in Europe to Accelerate AI : unconfirmed (searched “NVIDIA invest additional $20 billion Europe AI development”; searched “\"NVIDIA\" \"20 billion\" Europe AI investment”; searched “\"NVIDIA\" \"20 billion euros\" Europe AI”)",
+    "Microsoft, Nvidia push provenance checks as open-weight AI adoption ac: confirmed (searched “Microsoft Nvidia provenance checks open weight AI adoption”; read helpnetsecurity.com; read theverge.com)",
+    "AI Models Generate Advances in Mathematical Research: unconfirmed (searched “AI models generate advances in mathematical research September 2026”; read blockchain.news; read wired.com)"
+  ],
+  "videos": {
+    "OpenAI": "ok (9 in feed, 0 new)",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "ok (13 in feed, 0 new)",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "tagged": 1,
+  "trackers": "filed 1 stories; updated agent-safety",
+  "claims": "21 tracked, 20 open, 0 updated this run",
+  "model_tracker": "82 models, 6 changes today",
+  "briefing": "4 themes from 7 stories",
+  "photos": "1 saved, 0 unavailable",
+  "alerts": "10 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":5}",
+  "ai_requests_run": 20,
+  "ai_tokens_run": 39243,
+  "ai_requests_today": 59,
+  "provider_log": []
+}

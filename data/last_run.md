@@ -1,92 +1,66 @@
-## Frontier Wire newsroom run — 2026-10-25T01:04:29+00:00
+## Frontier Wire newsroom run — 2026-10-25T03:49:28+00:00
 
-Fetched 2915 items · fresh 17 · judged 35 · kept 8 · **written 3**
-AI: 39 requests, 81,486 tokens this run · 39 requests today · providers: cerebras, groq
-Editor-in-chief: Tracking policy and safety fallout from OpenAI’s Recorder case while noting shifting AI spend and emerging governance challenges.
-  Priorities: FBI Weighs Additional Economic Espionage Charge in OpenAI Recorder Cas (FBI espionage charge in OpenAI Recorder case raises major policy and safety concerns for investors.); Google DeepMind Resignations Put Pentagon AI Oversight Under Scrutiny (DeepMind resignations could affect Pentagon AI oversight, impacting defense‑related AI strategy.); Source: Replit recently moved most AI spend from Anthropic to OpenAI,  (Replit’s large spend shift to OpenAI signals market dynamics and pricing pressures.); Paxton Sues OpenAI And Sam Altman Over Suicide Claims , Seeks ChatGPT  (Paxton lawsuit over ChatGPT and youth suicide highlights regulatory risk for consumer AI products.); AI robot for dementia care : Can a home robot help older adults with d (AI robot for dementia care shows emerging healthcare AI opportunities for investors.)
-  Thin areas: research, models
-  Searches: OpenAI Recorder case details: 6 new; DeepMind resignations Pentagon AI oversight: 6 new; AI weaponry regulation India: 6 new
-  Dig deeper: FBI Weighs Additional Economic Espionage Charge in OpenAI Recorder Cas; Google DeepMind Resignations Put Pentagon AI Oversight Under Scrutiny
-Research agent: investigated 5 stories with 15 tool calls, confirmed 0
-Daily briefing: 4 themes from 10 stories
-Threads updated: Ethan Mollick warns AI labs, researcher mocked: OpenAI researcher mocked for claim air‑gapped AIs could comm
-Videos: no new videos · OpenAI ok (9 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (7 in feed, 0 new), AI at Meta ok (5 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (13 in feed, 0 new), Hugging Face ok (12 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors ok (4 in feed, 0 new), Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) ok (6 in feed, 0 new), a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (4 in feed, 0 new)
-Builders desk: picked 7 from 60 candidates; 5 with pictures, 0 with videos
-Top Voices: 3 debates from 28 posts by 8 people; 3 portraits, 1 pictures
-Daily self-check: coverage 57% of 7 significant stories; 3 missed, 0 added to this run; 3 lesson(s) for the editor
+Fetched 2853 items · fresh 4 · judged 22 · kept 3 · **written 1**
+AI: 20 requests, 39,243 tokens this run · 59 requests today · providers: cerebras, groq
+Editor-in-chief: Tracking policy fallout and safety gaps while expanding coverage of Indian AI business developments and emerging model research.
+  Priorities: AI Can Be Cyborg or Centaur. But Can Enterprises Monetise It? (Enterprise AI monetisation insights for investors and builders); Discover how Superminis, Nayam by Lakshita and Broadstar are scaling n (Showcases scaling Indian startups via platform partnerships); Ultraviolette’s answer to the global chip squeeze; The making of India (Highlights Indian chip challenges and flying‑taxi industry prospects); A look at Meta's role in Brazil's runoff, where Lula da Silva alleges  (Illustrates political risk for tech firms in Brazil)
+  Thin areas: models, research
+  Searches: OpenAI safety breach response: 6 new; NVIDIA open weight model adoption Europe: 6 new; AI research breakthroughs Q4 2026: 6 new
+  Dig deeper: AI Can Be Cyborg or Centaur. But Can Enterprises Monetise It?; Ultraviolette’s answer to the global chip squeeze; The making of India
+Research agent: investigated 3 stories with 9 tool calls, confirmed 1
+Daily briefing: 4 themes from 7 stories
+Videos: no new videos · OpenAI ok (9 in feed, 0 new), Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA ok (13 in feed, 0 new), Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
 Photos: 1 saved, 0 unavailable
-Alerts: 11 events sent: {"subscribers":6,"sent":0,"queued":16}
+Alerts: 10 events sent: {"subscribers":6,"sent":0,"queued":5}
 Claims: 21 tracked, 20 open, 0 updated this run
-Trackers: filed 3 stories; updated ai-regulation, agent-safety
+Trackers: filed 1 stories; updated agent-safety
 Model tracker: 82 models, 6 changes today
-Tagged 3 stories by sector, region and deal
-Self-review written (see the newsroom issue)
-Time: gather 151s, audit 3s, plan 2s, judge 3s, verify and write 496s, videos 2s, tagging 21s, trackers 63s, claims 20s, builders 29s, top voices 12s, self-review 21s, alerts 2s
+Tagged 1 stories by sector, region and deal
+Time: gather 91s, plan 2s, judge 2s, verify and write 189s, videos 1s, tagging 21s, trackers 41s, claims 20s, briefing 21s
 
 ### New stories
-- **policy** — [Two Google DeepMind researchers resign over Pentagon AI contract, oversight concerns](https://econotimes.com/Google-DeepMind-Resignations-Put-Pentagon-AI-Oversight-Under-Scrutiny-1762681)  
-  Google DeepMind research engineer Sofia Liguori left on Oct. 20 and AI researcher Andreas Kirsch resigned earlier in October, citing concerns that the company’s governance and oversight of its Pentagon AI contract are insufficient. The resignations follow a May 1 Department of War announcement naming Google among eight firms allowed to use AI on classified networks for lawful operations.  
-  _7 source(s), 0 verified quote(s)_
-- **voices** — [OpenAI researcher mocked for claim air‑gapped AIs could communicate via CPU temperature](https://bsky.app/profile/emollick.bsky.social/post/3mynwzdkgwc2m)  
-  Ethan Mollick reported that OpenAI researcher Noam Brown was mocked after suggesting that even air‑gapped AI models on separate computers could exchange information through CPU temperature changes. Mollick said a recent OpenAI report makes the idea seem plausible.  
-  _1 source(s), 1 verified quote(s)_
-- **policy** — [U.S. and Russia remove human‑oversight requirement from UN AI weapons pact](https://detroitnews.com/story/news/world/2026/09/26/u-s-russia-stripped-human-oversight-from-ai-weapons-pact/91955507007)  
-  The United States and Russia voted to strip the human‑oversight clause from a global artificial‑intelligence weapons agreement being negotiated at the United Nations. The change weakens the pact’s safeguards against fully autonomous weapon systems.  
-  _2 source(s), 0 verified quote(s)_
+- **safety** — [Microsoft and Nvidia issue guidelines for assessing open-weight AI model risks](https://csoonline.com/article/4237095/microsoft-nvidia-push-provenance-checks-as-open-weight-ai-adoption-accelerates.html)  
+  Microsoft and Nvidia released a joint paper urging enterprises to verify provenance and test configurations of open-weight AI models, noting that changes to model weights can weaken safety safeguards while preserving task performance. The guidance outlines 30 risk types across five categories and recommends cryptographic signatures and ongoing risk reassessment.  
+  _2 source(s), 2 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Use of AI in weaponry , weapon systems , and platforms is growing rapidly , says Former Army Chief Naravane , launches Forever Young KSLF — score 4: General statement on AI weaponry by a former Indian army chief lacks concrete news value.
-- S & P 500 ( SPY ) And Dow Jones Industrial Average ( DJIA ) Slide As Oil Prices Surge And AI Profitability Fears Persist — score 4: Market commentary linking oil prices and AI profitability fears is peripheral to frontier AI developments.
-- How Israeli Researchers Are Using AI To Transform Cancer Treatment and Diagnoses — score 5: Highlighting Israeli AI research in cancer care is noteworthy but not a frontier model breakthrough.
-- AI robot for dementia care : Can a home robot help older adults with dementia ? Hello Robot gets nearly $3 million to find out — score 4: Funding for a dementia‑care robot is modest and not a frontier AI model or major industry shift.
-- A timeline of developments in AI safety since the attack on Hugging Face — score 5: A timeline of AI safety events is informative but not a new development.
-- FBI Weighs Additional Economic Espionage Charge in OpenAI Recorder Case — score 5: The FBI consideration is part of the already‑covered OpenAI Recorder case; no new information.
-- China to showcase AI - powered tourism innovations at World Travel Market London 2026 — score 4: Showcasing AI tourism innovations at a trade fair is a minor commercial showcase.
-- Will AI expose the rickety infrastructure of the internet ? — score 5: Opinion piece on internet infrastructure lacks a concrete news hook.
-- Anthropic employees and Wall Street reportedly differ on Nobel Prize - level AI breakthroughs by 2030 · Digg — score 5: Speculative claim about Anthropic and Nobel‑level breakthroughs is not yet substantiated.
-- Grindr Uses Your Profile to Train AI Unless You Opt Out — score 5: Privacy concerns about Grindr training AI are notable but not a frontier AI story.
-- Jack Dorsey new voice AI is impressing users and alarming fraud watchers — score 5: Jack Dorsey’s voice AI is a product update without broader AI impact.
-- America Has Lost 200k of Jobs in Media, Film and the Arts. How Much Is AI? — score 4: Broad employment impact analysis is more economic commentary than AI news.
-- OpenAI bugging case raises questions about AI lab security — score 5: Duplicate coverage of the OpenAI bugging case.
-- Judge Rejects Bail for Former OpenAI Employee Accused of Installing Listening Device — score 5: Duplicate coverage of the OpenAI bugging case.
-- Saudi OpenAI engineer charged in boardroom recorder case — score 5: Duplicate coverage of the OpenAI bugging case.
-- OpenAI employee arrested for installing hidden recorder in executive meeting room — score 6: Already published story about OpenAI employee arrest.
-- Apple gets access to OpenAI interview records in alleged trade secrets theft case — score 5: Duplicate coverage of the OpenAI Recorder case.
-- OpenAI Engineer Arrested for Bugging Office, Company Says AI Caught Him — score 5: Duplicate coverage of the OpenAI Recorder case.
-- India's AI Safety: Own Framework, Not US Copy, Say Experts — score 5: Discussion of an Indian AI safety framework is informative but not a major breakthrough.
-- India needs its own AI safety framework, not a copy of US pact: Industry experts — score 5: Similar commentary on India’s AI safety framework without new policy action.
-- When AI takes control of weapons systems — score 4: General discussion of AI‑controlled weapons lacks specific news.
-- Source: Replit recently moved most AI spend from Anthropic to OpenAI, which gave 30%+ off in a deal worth $100M+/year, after Anthropic discontinued its discount (The Information) — could not verify yet after a second try; dropped
-- Paxton Sues OpenAI And Sam Altman Over Suicide Claims , Seeks ChatGPT Ban For Texas Kids — could not verify yet; will retry next run
-- Israel heads to polls in world first AI election – Channel 4 News — could not verify yet; will retry next run
-- Death by a thousand paper cuts: How US, Russia gutted AI weapons rules at UN — could not verify yet; will retry next run
-- India Demands Binding AI Rules as White House Self-Policing Accord Draws Scrutiny — could not verify yet; will retry next run
+- AI Can Be Cyborg or Centaur. But Can Enterprises Monetise It? — score 4: General enterprise AI commentary; not specifically about Indian companies or policy.
+- Discover how Superminis, Nayam by Lakshita and Broadstar are scaling nationally with Myntra’s platform capabilities — score 3: Fashion brands leveraging Myntra platform; unrelated to AI frontier developments.
+- Ultraviolette’s answer to the global chip squeeze; The making of Indian flying taxis — score 3: Discussion of Indian flying‑taxi hardware costs; not an AI‑centric story.
+- A look at Meta's role in Brazil's runoff, where Lula da Silva alleges Meta restricts his content and a court ordered it not to interfere; Meta cites glitches (Augusta Saraiva/Bloomberg) — score 4: Meta's alleged content restrictions in Brazil's election are political platform issues, not a frontier AI development.
+- OpenAI rejects researchers’ claim they were fired over safety warnings, says they committed ‘breach of trust’ — duplicate of 3f492a65e9c2
+- OpenAI Fires AI Safety Researchers: What’s Confirmed, What’s Disputed — duplicate of 3f492a65e9c2
+- OpenAI says three fired safety researchers got the boot over 'breach of trust,' not their warnings — duplicate of 3f492a65e9c2
+- OpenAI says it didn’t fire 3 safety researchers for speaking out on AI risks — duplicate of 3f492a65e9c2
+- OpenAI denies firing researchers over AI safety warnings — duplicate of 3f492a65e9c2
+- An OpenAI agent turned off its own safety monitoring, and then denied it — duplicate of c0c536d8efa2
+- NVIDIA expands open model lineup across Europe-focused industries — duplicate of 5346e68360b4
+- NVIDIA outlines European public-sector projects built on open models — duplicate of 5346e68360b4
+- Is NVIDIA’s Open‑Weight AI Push via Reflection AI Recasting Its Full‑Stack Narrative (NVDA)? — score 4: Opinion piece on NVIDIA’s open‑weight strategy; lacks a concrete news hook for Frontier Wire.
+- Nvidia’s Open Weight Letter Is More About AI Sovereignty Than Anything — score 4: Analytical article on NVIDIA’s narrative; not a newsworthy development.
+- IonQ Earns Four Best Paper Awards Ahead of IEEE Quantum Week 2026 for Breakthroughs in AI, Hybrid Computing, and Life Sciences — score 4: IonQ awards are notable within quantum computing but not directly relevant to frontier AI developments.
+- Can AI Chip Boom Help LRCX Reach Record Q4 Sales Target of $6.6B? — score 4: Speculative link between AI chip demand and LRCX sales; lacks a concrete AI breakthrough.
+- Researchers chart new course for AI-powered biomedical discoveries — score 5: General discussion of AI‑powered biomedical research; no specific breakthrough or model release.
+- China’s AI research is booming: what it’s like to be on the front line — score 4: Feature on China’s AI research environment; not a specific technical advance.
+- University research uses AI to achieve breakthroughs — score 4: University‑level AI research breakthroughs without clear frontier impact.
+- NVIDIA to Invest an Additional $20 Billion in Europe to Accelerate AI Development — could not verify yet; will retry next run
+- AI Models Generate Advances in Mathematical Research — could not verify yet; will retry next run
 
 </details>
 
 ### Sources with problems
-- `gdelt-india`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
-- `r-sideproject`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'
-F
+- `arxiv`: failed: ReadTimeout: The read operation timed out
+- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
 
 <details><summary>Research agent's work</summary>
 
-- Source: Replit recently moved most AI spend from Anthropic to OpenAI, : unconfirmed (searched “Replit moved AI spend from Anthropic to OpenAI 30% discount $100 million deal”; searched “"Replit" "Anthropic" "The Information"”; searched “"Replit" "OpenAI" "deal" "100 million"”)
-- Google DeepMind Resignations Put Pentagon AI Oversight Under Scrutiny: unconfirmed (searched “Google DeepMind resignations Pentagon AI oversight”; searched “DeepMind resignations Pentagon AI contract”; read msn.com)
-- Paxton Sues OpenAI And Sam Altman Over Suicide Claims , Seeks ChatGPT : unconfirmed (searched “Paxton sues OpenAI Sam Altman suicide claims ChatGPT ban Texas kids”; read msn.com; read msn.com)
-- Israel heads to polls in world first AI election – Channel 4 News: unconfirmed (searched “Israel heads to polls in world first AI election”; read msn.com; searched “world's first AI election Israel”)
-- Death by a thousand paper cuts: How US, Russia gutted AI weapons rules: unconfirmed (searched “US Russia gutted AI weapons rules at UN "Death by a thousand paper cuts"”; read detroitnews.com; searched “"Death by a thousand paper cuts" AI weapons UN”)
+- NVIDIA to Invest an Additional $20 Billion in Europe to Accelerate AI : unconfirmed (searched “NVIDIA invest additional $20 billion Europe AI development”; searched “"NVIDIA" "20 billion" Europe AI investment”; searched “"NVIDIA" "20 billion euros" Europe AI”)
+- Microsoft, Nvidia push provenance checks as open-weight AI adoption ac: confirmed (searched “Microsoft Nvidia provenance checks open weight AI adoption”; read helpnetsecurity.com; read theverge.com)
+- AI Models Generate Advances in Mathematical Research: unconfirmed (searched “AI models generate advances in mathematical research September 2026”; read blockchain.news; read wired.com)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id 4ee4ae7ed12d for 'FBI Weighs Additional Economic Espionage Charge in'
-- ignored made-up duplicate id 4ee4ae7ed12d for 'OpenAI bugging case raises questions about AI lab '
-- ignored made-up duplicate id 4ee4ae7ed12d for 'Judge Rejects Bail for Former OpenAI Employee Accu'
-- ignored made-up duplicate id 4ee4ae7ed12d for 'Saudi OpenAI engineer charged in boardroom recorde'
-- ignored made-up duplicate id 4ee4ae7ed12d for 'OpenAI employee arrested for installing hidden rec'
-- ignored made-up duplicate id 4ee4ae7ed12d for 'Apple gets access to OpenAI interview records in a'
-- ignored made-up duplicate id 4ee4ae7ed12d for 'OpenAI Engineer Arrested for Bugging Office, Compa'
-- GDELT unavailable: GDELT paused for this run after repeated rate-limiting
-- 4 kept item(s) carried over to the next run
+- 2 kept item(s) carried over to the next run
