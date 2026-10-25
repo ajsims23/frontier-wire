@@ -4,8 +4,8 @@
   python -m agent watch         quick check of the labs' own channels; runs a breaking-news edition if there's news
   python -m agent sources       fetch every source and report what came back (no AI calls)
   python -m agent check-models  send one tiny request to each configured provider/model
-  python -m agent preview-desks plan a run and write the Builders and Top Voices desks now (for previews; set DATA_DIR
-                                to a copy of data/, since nothing is judged or published)
+  python -m agent preview-desks plan a run and write the Builders and Top Voices desks now (set DATA_DIR to a copy of
+                                data/ to try changes without touching the live site)
 """
 from __future__ import annotations
 
