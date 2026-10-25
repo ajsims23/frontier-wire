@@ -354,19 +354,24 @@ def add_media(room: Any, state: dict[str, Any], refresh_days: int = 14) -> None:
         looked[post["id"]] = (img, vid)
         return img, vid
 
+    used_vid: set[str] = set()
+    used_via: set[str] = set()  # one picture per publication, so the page doesn't repeat the same masthead
     for x in d["debates"]:
         for pos in x["positions"]:
             for post in pos["posts"]:
                 img, vid = media_for(post)
-                if img and not x.get("image"):
+                if img and not x.get("image") and post["via"] not in used_via:
                     x["image"], x["image_credit"] = img, post["via"]
-                if vid and not x.get("video"):
+                    used_via.add(post["via"])
+                if vid and not x.get("video") and vid not in used_vid:
                     x["video"] = vid
+                    used_vid.add(vid)
             if x.get("image") and x.get("video"):
                 break
+    shown_imgs = {x.get("image") for x in d["debates"]}
     for st in d["standouts"]:
         img, vid = media_for(st)
-        if img:
+        if img and img not in shown_imgs:
             st["image"] = img
         if vid:
             st["video"] = vid

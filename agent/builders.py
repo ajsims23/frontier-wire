@@ -100,6 +100,13 @@ def from_show_hn(fetcher: Any, src: dict[str, Any], now: datetime) -> list[dict[
     return list(out.values())
 
 
+def _day(iso: str | None) -> str:
+    try:
+        return datetime.fromisoformat(str(iso).replace("Z", "+00:00")).strftime("%-d %b")
+    except ValueError:
+        return "launch"
+
+
 def _github_json(fetcher: Any, url: str) -> Any:
     token = os.environ.get("GITHUB_TOKEN")
     client = getattr(fetcher, "_client", None)
@@ -122,7 +129,7 @@ def from_github(fetcher: Any, src: dict[str, Any], now: datetime) -> list[dict[s
             desc = r.get("description") or ""
             topics = ", ".join((r.get("topics") or [])[:6])
             c = _cand(r["html_url"], r.get("name") or r["full_name"], "GitHub", f"{desc} Topics: {topics}." if topics else desc,
-                      f"{r.get('stargazers_count', 0):,} stars since {r.get('created_at', '')[:10]}"
+                      f"{r.get('stargazers_count', 0):,} stars since {_day(r.get('created_at'))}"
                       + (f", written in {r['language']}" if r.get("language") else ""),
                       r.get("created_at"), maker=(r.get("owner") or {}).get("login", ""))
             out.setdefault(c["id"], c)

@@ -136,7 +136,8 @@ def plan_run(room: Any, fresh: list[Item], max_items: int = 70) -> dict[str, Any
     answer = room.llm.ask(system=SYSTEM, prompt=prompt, schema_name="submit_plan", schema=SCHEMA, max_tokens=1500)
     ids = {it.id for it in shown}
     thread_ids = {t["id"] for t in threads}
-    plan: dict[str, Any] = {"focus": str(answer.get("focus") or "").strip()[:200]}
+    focus = str(answer.get("focus") or "").strip()[:200]
+    plan: dict[str, Any] = {"focus": focus + ("." if focus and focus[-1] not in ".!?" else "")}
     plan["priorities"] = [{"id": p["id"], "why": str(p.get("why") or "")[:140]}
                           for p in (answer.get("priorities") or []) if isinstance(p, dict) and p.get("id") in ids][:5]
     plan["thin_areas"] = [a for a in dict.fromkeys(answer.get("thin_areas") or []) if a in AREAS][:2]

@@ -738,20 +738,21 @@ body.aud-switching .front-grid, body.aud-switching #feed, body.aud-switching .au
 .build-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 16px; }
 .build-card { display: flex; flex-direction: column; gap: 8px; padding: 0 22px 20px; overflow: hidden; border-radius: var(--r-md); background: var(--panel); border: 1px solid var(--line-soft); border-top: 3px solid var(--brand); }
 .build-card > :first-child:not(.bc-media) { margin-top: 20px; }
-.bc-media { margin: 0 -22px 6px; aspect-ratio: 16 / 9; background: var(--panel-2); overflow: hidden; max-width: calc(100% + 44px); }
+.bc-media { margin: 0 -22px 6px; aspect-ratio: 2 / 1; background: var(--panel-2); overflow: hidden; max-width: calc(100% + 44px); }
 .bc-media a, .bc-media .bc-play { display: block; width: 100%; height: 100%; }
-.bc-media img, .debate-media img, .tv-img img, .so-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.bc-tile { display: flex; flex-direction: column; justify-content: space-between; padding: 16px 22px; background:
-  radial-gradient(120% 90% at 100% 0%, color-mix(in srgb, var(--brand) 38%, transparent), transparent 60%),
-  linear-gradient(135deg, var(--panel-2), color-mix(in srgb, var(--industry) 22%, var(--panel-2))); }
-.bc-tile-n { font-size: 64px; line-height: 1; font-weight: 900; font-stretch: 125%; color: var(--strong); opacity: .85; }
-.bc-tile-k { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--soft); }
+.bc-media img, .debate-media img, .so-img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+.bc-tile { display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; padding: 18px 22px; border-bottom: 1px solid var(--line-soft);
+  background: radial-gradient(90% 120% at 100% 0%, color-mix(in srgb, var(--brand) 16%, transparent), transparent 70%), var(--panel-2); }
+.bc-tile-n { font-size: clamp(22px, 2.6vw, 30px); line-height: 1.05; font-weight: 800; font-stretch: 125%; letter-spacing: -.02em; color: var(--strong);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.bc-tile-k { font-size: 12px; font-weight: 600; letter-spacing: .06em; color: var(--muted); }
 .bc-play { position: relative; padding: 0; border: 0; background: none; cursor: pointer; color: #fff; }
 .bc-play .vplay { position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%); width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; background: rgba(0, 0, 0, .62); }
 .bc-play:hover .vplay, .bc-play:focus-visible .vplay { background: var(--brand); color: var(--ground); }
 .bc-watch { background: none; border: 0; padding: 0; font: inherit; cursor: pointer; color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
 .build-card h3 { font-size: 20px; font-weight: 800; font-stretch: 112.5%; letter-spacing: -0.01em; margin: 0; }
 .build-card h3 a:hover { color: var(--brand); }
+.bc-meta .pill { text-transform: capitalize; }
 .bc-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0; color: var(--muted); font-size: 13px; }
 .bc-what { margin: 0; color: var(--text); }
 .bc-why { margin: 0; color: var(--soft); font-size: 15px; }
@@ -761,21 +762,25 @@ body.aud-switching .front-grid, body.aud-switching #feed, body.aud-switching .au
 
 /* ---------- top voices ---------- */
 .tv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
-.tv-card { display: flex; flex-direction: column; gap: 10px; padding: 0 22px 22px; overflow: hidden; border-radius: var(--r-md); background: var(--panel); border: 1px solid var(--line-soft); border-left: 3px solid var(--industry); }
+.tv-card { display: flex; flex-direction: column; gap: 10px; padding: 22px; overflow: hidden; border-radius: var(--r-md); background: var(--panel); border: 1px solid var(--line-soft); border-left: 3px solid var(--industry); }
 .tv-card:hover { border-color: var(--line); background: var(--panel-2); }
-.tv-card > h3:first-child { margin-top: 22px !important; }
-.tv-img { display: block; margin: 0 -22px 4px; aspect-ratio: 16 / 9; background: var(--panel-2); overflow: hidden; max-width: calc(100% + 44px); }
+.tv-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
+.tv-stack { display: flex; }
+.tv-stack .face { width: 44px; height: 44px; font-size: 13px; border: 2px solid var(--panel); }
+.tv-stack .face + .face { margin-left: -10px; }
+.tv-n { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.tv-names { margin-top: auto; font-size: 13px; color: var(--muted); }
 .tv-person { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--soft); }
 .face { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; flex: none; background: var(--panel-2); border: 1px solid var(--line); }
 .face.big { width: 44px; height: 44px; }
 .face.initials { display: inline-grid; place-items: center; font-size: 11px; font-weight: 700; letter-spacing: .02em; color: var(--soft); }
-.debate-media { margin: 4px 0 14px; border-radius: var(--r-md); overflow: hidden; aspect-ratio: 16 / 9; max-width: 640px; background: var(--panel-2); position: relative; }
+.debate-media { margin: 4px 0 14px; border-radius: var(--r-md); overflow: hidden; aspect-ratio: 2 / 1; max-width: 560px; background: var(--panel-2); position: relative; }
 .debate-media .bc-play { display: block; width: 100%; height: 100%; }
 .debate-media figcaption { position: absolute; right: 8px; bottom: 8px; font-size: 11px; padding: 2px 8px; border-radius: 999px; background: rgba(0, 0, 0, .6); color: #fff; }
 .standouts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 16px; }
 .standouts li { display: flex; flex-direction: column; gap: 8px; }
 .so-card { display: flex; flex-direction: column; gap: 8px; padding: 0 0 4px; }
-.so-img { aspect-ratio: 16 / 9; border-radius: var(--r-md); }
+.so-img { aspect-ratio: 2 / 1; border-radius: var(--r-md); }
 .so-who { display: inline-flex; align-items: center; gap: 8px; }
 .so-title { font-weight: 600; color: var(--text); }
 .so-card:hover .so-title { color: var(--brand); }

@@ -325,7 +325,7 @@
     const play = `<span class="vplay" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 10 10"><path d="M2.5 1.2l6 3.8-6 3.8z" fill="currentColor"/></svg></span>`;
     $("build-list").innerHTML = picks.slice(0, 6).map((p) => {
       const src = pic(p.image, p.video), vid = /^[A-Za-z0-9_-]{11}$/.test(p.video || "") ? p.video : "";
-      const mediaHtml = !src ? `<div class="bc-media bc-tile" aria-hidden="true"><span class="bc-tile-n">${esc(String(p.name || "?").slice(0, 1).toUpperCase())}</span><span class="bc-tile-k">${esc(p.kind)} · ${esc(p.source)}</span></div>` : vid
+      const mediaHtml = !src ? `<div class="bc-media bc-tile" aria-hidden="true"><span class="bc-tile-n">${esc(host(p.url) || p.name)}</span><span class="bc-tile-k">${esc(String(p.kind || "").replace(/^./, (c) => c.toUpperCase()))} on ${esc(p.source)}</span></div>` : vid
         ? `<div class="bc-media"><button class="bc-play" type="button" data-video="${vid}" data-title="${esc(p.name)}" aria-label="Play demo video: ${esc(p.name)}"><img src="${esc(src)}" alt="" loading="lazy" decoding="async">${play}</button></div>`
         : `<div class="bc-media"><a href="${safeUrl(p.url)}" rel="noopener" tabindex="-1" aria-hidden="true"><img src="${esc(src)}" alt="" loading="lazy" decoding="async"></a></div>`;
       return `<li class="build-card">${mediaHtml}
@@ -346,13 +346,13 @@
     $("topvoices").hidden = !ds.length;
     if (!ds.length) return;
     $("tv-sub").innerHTML = `${esc(t.headline)} <a class="text-link" href="voices/">Who said what</a>`;
-    $("tv-list").innerHTML = ds.slice(0, 3).map((d) => {
-      const img = d.image && /^img\/[\w/.-]+$/.test(d.image) ? d.image : (/^[A-Za-z0-9_-]{11}$/.test(d.video || "") ? `https://i.ytimg.com/vi/${d.video}/hqdefault.jpg` : "");
+    const names = (list) => (list.length < 2 ? list.join("") : `${list.slice(0, -1).join(", ")} and ${list[list.length - 1]}`);
+    $("tv-list").innerHTML = ds.slice(0, 3).map((d, i) => {
       const people = (d.people || []).map((p) => (typeof p === "string" ? { name: p } : p));
       return `<a class="tv-card" href="voices/">
-        ${img ? `<span class="tv-img"><img src="${esc(img)}" alt="" loading="lazy" decoding="async"></span>` : ""}
+        <span class="tv-head"><span class="tv-stack">${people.slice(0, 4).map(face).join("")}</span><span class="tv-n">Debate ${i + 1}</span></span>
         <h3>${esc(d.title)}</h3><p>${esc(d.summary)}</p>
-        <span class="tv-people">${people.map((p) => `<span class="tv-person">${face(p)}<span>${esc(p.name)}</span></span>`).join("")}</span>
+        <span class="tv-names">${esc(names(people.map((p) => p.name)))}</span>
       </a>`;
     }).join("");
   }

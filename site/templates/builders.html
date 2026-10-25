@@ -26,7 +26,7 @@
           {% else %}<a href="{{ p.url }}" rel="noopener" tabindex="-1" aria-hidden="true"><img src="{{ root }}{{ p.image }}" alt="" loading="lazy" decoding="async"></a>{% endif %}
         </div>
         {% else %}
-        <div class="bc-media bc-tile" aria-hidden="true"><span class="bc-tile-n">{{ p.name[:1]|upper }}</span><span class="bc-tile-k">{{ p.kind }} · {{ p.source }}</span></div>
+        <div class="bc-media bc-tile" aria-hidden="true"><span class="bc-tile-n">{{ p.url.split('/')[2]|replace('www.', '') if '://' in p.url else p.name }}</span><span class="bc-tile-k">{{ p.kind|capitalize }} on {{ p.source }}</span></div>
         {% endif %}
         <p class="bc-meta"><span class="pill">{{ p.kind }}</span><span>{{ p.source }}</span>{% if p.maker %}<span>by {{ p.maker }}</span>{% endif %}</p>
         <h3><a href="{{ p.url }}" rel="noopener">{{ p.name }}</a></h3>
