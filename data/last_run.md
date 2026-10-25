@@ -1,53 +1,55 @@
-## Frontier Wire newsroom run — 2026-10-25T09:46:53+00:00
+## Frontier Wire newsroom run — 2026-10-25T12:55:11+00:00
 
-Fetched 2891 items · fresh 6 · judged 24 · kept 7 · **written 2**
-AI: 36 requests, 83,057 tokens this run · 133 requests today · providers: cerebras, groq
-Editor-in-chief: Tracking the fallout from OpenAI’s safety breach while filling gaps in model and research coverage.
-  Priorities: Cerebras Deploys Trillion-Parameter AI Models (Shows a major new trillion‑parameter model, bolstering our under‑covered model reporting.); How a Blackstone-led $2.3B private credit loan to CoreWeave in 2023 be (Provides a detailed look at AI‑focused financing, key for business and industry readers.); Tech Layoffs 2026: Job cuts near 2 lakh globally as big tech like Micr (Highlights massive AI‑related layoffs, impacting talent and market dynamics in India.); Five IPOs to open next week; companies eye close to Rs 2,600 Cr (Previews upcoming Indian AI IPOs, valuable for investors and strategy readers.); Drizz's AI App Testing Ambition Meets Reality (Offers insight into AI testing platforms, filling a research‑oriented gap.)
-  Thin areas: research, models
-  Searches: OpenAI safety breach response: 6 new; trillion parameter model release: 6 new; AI research funding 2026: 6 new
-  Dig deeper: Cerebras Deploys Trillion-Parameter AI Models; How a Blackstone-led $2.3B private credit loan to CoreWeave in 2023 be
-Research agent: investigated 5 stories with 15 tool calls, confirmed 1
+Fetched 2890 items · fresh 5 · judged 23 · kept 8 · **written 3**
+AI: 36 requests, 76,208 tokens this run · 169 requests today · providers: cerebras, groq
+Editor-in-chief: Tracking AI firms' political pushback while covering major model releases and policy shifts affecting investors.
+  Priorities: Google’s AI search changes upended online publishing (Google AI search changes reshape online publishing, a key concern for builders and investors.); Lawmakers and Hill staffers in both parties say AI leaders are becomin (Highlights growing political liability for AI leaders, directly impacting policy and regulatory risk.); Cerebras Deploys Trillion-Parameter AI Models (Cerebras' trillion‑parameter models represent a significant advance in model capabilities.); Gen Z is shaping India’s beauty market: prevention first,and going bey (Shows how Gen Z is reshaping India's fast‑growing beauty market, relevant for business strategy.); Deepinder Goyal’s Temple brain wearable: ₹85,000 price, pre-order date (New high‑price brain wearable signals emerging Indian consumer tech trends.)
+  Thin areas: models, research
+  Searches: AI political liability: 6 new; trillion parameter model benchmarks: 6 new; AI research funding trends 2026: 6 new
+  Dig deeper: Google’s AI search changes upended online publishing; Lawmakers and Hill staffers in both parties say AI leaders are becomin
+Research agent: investigated 5 stories with 15 tool calls, confirmed 2
 Daily briefing: 4 themes from 5 stories
-Videos: 0 kept from 1 new · OpenAI ok (9 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (7 in feed, 0 new), AI at Meta ok (5 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (13 in feed, 0 new), Hugging Face ok (12 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 0 new), Training Data (Sequoia) ok (6 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (5 in feed, 1 new)
-Photos: 2 saved, 0 unavailable
-Alerts: 13 events sent: {"subscribers":6,"sent":0,"queued":15}
-Claims: 24 tracked, 23 open, 0 updated this run
-Trackers: filed 2 stories; updated frontier-race, ai-regulation
-Model tracker: 82 models, 6 changes today
-Tagged 2 stories by sector, region and deal
-Time: gather 80s, plan 3s, judge 2s, verify and write 435s, videos 22s, trackers 106s, claims 20s, briefing 21s, alerts 2s
+Videos: 0 kept from 1 new · OpenAI ok (9 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (7 in feed, 0 new), AI at Meta ok (5 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (13 in feed, 0 new), Hugging Face ok (12 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 0 new), Training Data (Sequoia) ok (6 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (3 in feed, 1 new), 20VC ok (5 in feed, 0 new)
+Photos: 1 saved, 0 unavailable
+Alerts: 17 events sent: {"subscribers":6,"sent":0,"queued":27}
+Claims: 27 tracked, 26 open, 0 updated this run
+Trackers: filed 3 stories; updated frontier-race, copyright, ai-money
+Model tracker: 82 models, 8 changes today
+Tagged 3 stories by sector, region and deal
+Time: gather 78s, plan 2s, judge 1s, verify and write 444s, videos 23s, tagging 21s, trackers 105s, claims 20s, briefing 21s, alerts 4s
 
 ### New stories
-- **models** — [Microsoft completes pre‑training of 2.8 trillion‑parameter MAI‑Base‑2 model](https://note.com/daigo_miyoshi/n/n90c41c10a07d?hl=en)  
-  Microsoft announced that its MAI‑Base‑2 model, with 2.8 trillion total parameters and 80 billion active parameters, finished pre‑training after 38 days on 16,000 GB200 GPUs. The model uses a mixture‑of‑experts architecture and is claimed to be up to 12 times more compute‑efficient than leading rivals.  
-  _3 source(s), 0 verified quote(s)_
-- **policy** — [UK government announces over £600 million AI security funding package](https://msn.com/en-gb/news/other/uk-government-sets-out-800-million-of-ai-security-funding/ar-AA2fWze8)  
-  The UK government unveiled a policy package of more than £600 million to fund AI safety, cyber defence and biosecurity initiatives. The plan includes £165 million for a new AI Biosecurity Lab and up to £200 million in AI model usage credits from OpenAI and Anthropic.  
+- **industry** — [Mistral raises €3 billion in record EU Series D, valuation exceeds €21 billion](https://pymnts.com/news/artificial-intelligence/2026/mistral-raises-3-billion-dollars-ai-research-record-european-union-funding-round)  
+  French AI startup Mistral secured €3 billion ($3.5 billion) in a Series D round led by Samsung, valuing the company at over €21 billion. The capital will fund expanded research, compute capacity and global growth.  
+  _3 source(s), 2 verified quote(s)_
+- **models** — [Alibaba releases 2.4 trillion‑parameter Qwen3.8‑Max with 1 million‑token context](https://eweek.com/news/alibaba-qwen3-8-max-ai-model)  
+  Alibaba’s Qwen team launched Qwen3.8‑Max, a 2.4 trillion‑parameter model with about 95 billion active parameters and a 1 million‑token context window, available via API and QwenCloud.  
   _2 source(s), 0 verified quote(s)_
+- **industry** — [Google’s AI search overhaul reduces traffic and pays tiny fees to publishers](https://theverge.com/column/1017983/google-ai-search-online-publishing)  
+  Google’s AI Overviews and AI Mode have shifted search results to AI‑generated summaries, cutting traffic to news sites. In a pilot, Google pays about 100 publishers for content that appears in AI answers, but payments are often under $1,000 or a fraction of ad revenue.  
+  _2 source(s), 1 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Drizz's AI App Testing Ambition Meets Reality — score 5: Indian startup Drizz’s AI app‑testing platform is interesting but an incremental product launch, scoring below the news threshold.
-- Tech Layoffs 2026: Job cuts near 2 lakh globally as big tech like Microsoft, Google, Oracle, Meta &amp; more pivot to AI — score 4: Global tech layoffs story; not India‑specific and below news threshold.
-- Less than 20 folds, one cracked screen: iPhone Duo buyers raise durability concerns — score 1: Consumer hardware durability issue; not AI‑related.
-- Five IPOs to open next week; companies eye close to Rs 2,600 Cr — score 2: General IPO roundup; unrelated to AI.
-- OpenAI Resumes Training AI, But Without Internet Access — duplicate of 67972bfe4904
-- OpenAI apologises for Medicare breach, shelves next gen ChatGPT — score 5: OpenAI apology for Medicare breach is a repeat of the same incident covered elsewhere and scores below the news threshold.
-- Cyber-attack similar to OpenAI Medicare breach seems likely in UK, says minister — score 4: Speculative warning about a possible similar breach in the UK; not a concrete development.
-- Moonshot AI unveils Kimi K3.1 Pro 3-trillion-parameter AI model — duplicate of 6c51129e93f6
-- The 1 Trillion Parameter Shock! New Mistral Model Released & Claude Support Expanded | Today's AI x Stocks [10/7] — duplicate of 820bd24a41c4
-- Alibaba plans AI model with 5T to 10T parameters — score 5: Alibaba’s plan for a 5‑10 trillion‑parameter model is speculative and does not yet constitute a concrete release.
-- Business News | Mistral Launches 1-trillion-parameter Large 4 Model, Plans Open-weight Release by Month-end — duplicate of 820bd24a41c4
-- 7 AI News Highlights of the Day | October 24, 2026 | — score 2: List‑style roundup; low news value.
-- We Need Research on AI in Schools. The Feds Should Fund It, Report Says — score 3: Opinion piece on school AI research; not frontier‑model news.
-- AI Revenue Statistics 2026: How Much Money Are OpenAI, Anthropic and Google Making? — score 4: Revenue statistics article; modest interest but below threshold.
-- AI is already in Latino classrooms, the federal research system built to vet it has been dismantled — score 3: Commentary on AI in Latino classrooms; not a frontier development.
-- Cerebras Deploys Trillion-Parameter AI Models — could not verify yet; will retry next run
-- How a Blackstone-led $2.3B private credit loan to CoreWeave in 2023 became a blueprint for chip-backed debt, which is on track to become a $1T market (Bloomberg) — could not verify yet after a second try; dropped
-- OpenAI Says AGI Is Coming By Year-End. It Also Just Had The Worst Safety Crisis In Its History. — could not verify yet; will retry next run
-- Alibaba Launches 2.4 Trillion-Parameter Qwen3.8-Max for Autonomous AI Tasks — could not verify yet; will retry next run
-- AI safety group sues OpenAI over Hugging Face hack — could not verify yet; will retry next run
+- Deepinder Goyal’s Temple brain wearable: ₹85,000 price, pre-order date and features — score 2: Brain‑wearable product report does not involve AI frontier developments.
+- Gen Z is shaping India’s beauty market: prevention first,and going beyond the metros — score 1: Beauty market piece unrelated to AI.
+- Lawmakers and Hill staffers in both parties say AI leaders are becoming a political liability as they swing between claims of prosperity and existential dangers (Maria Curi/Axios) — score 4: Political commentary about AI leaders being a liability is interesting but not a major development for a frontier‑model audience.
+- Washington's message to AI execs: please shut up — score 3: A short editorial urging AI executives to stay quiet lacks substantive news value for the audience.
+- Opinion: Want AI agents to stop going rogue? Make executives personally liable. — score 3: Opinion piece on executive liability is a peripheral political angle, not a frontier AI development.
+- Trump’s AI liability push leaves a big question: who pays when AI breaks things — score 3: Discussion of Trump’s AI liability push is political rather than a technical or frontier AI breakthrough.
+- ‘Clearly not working’: Sam Altman hits AI industry over political spending — score 4: Sam Altman’s criticism of political spending is noteworthy but does not rise to a news threshold for Frontier Wire.
+- Strict liability is gaining traction as a solution to force AI companies to institute better safety controls but it has some big downsides too — score 5: Article on strict liability trends is relevant to AI regulation but remains a background analysis, not a headline‑level event.
+- Why Silicon Valley’s AI super PACs aren’t talking about AI — score 4: Coverage of AI super PAC silence is political commentary without a concrete policy or technical development.
+- [AI Daily Intelligence Briefing] Summary of Key Trends for 2026-10-19 — score 2: Generic AI daily briefing lacks a distinct news hook for the Frontier Wire audience.
+- Disparities in the Benefits of AI Investment, AI Moves into Foreign and Security Policy—Global Trends on October 13, 2026 — score 2: Broad analysis of AI investment disparities is background material, not a breaking story.
+- Global Telehealth Market Size, Share, Growth, Trends, and Forecast 2026-2035 | AI and Cloud-Based Care Drive 23% CAGR Toward USD 1.20 Trillion by 2035 — score 2: Telehealth market forecast is not directly about frontier AI developments.
+- From AI Use to Funding Cuts: How Provosts Are Navigating 2026 — score 3: Higher‑ed funding cuts story is peripheral to AI frontier news.
+- Scopus bibliometric review maps 2015–2025 growth in AI research for sustainable water management — score 2: Bibliometric review of AI for water management is a niche academic trend, not frontier‑model news.
+- Cerebras Deploys Trillion-Parameter AI Models — could not verify yet after a second try; dropped
+- Moonshot AI's 2.8 Trillion Parameter Model Just Became the First From China to Top a Major Coding Benchmark — could not verify yet; will retry next run
+- Nvidia is building a trillion-parameter open model, and it would still be smaller than China’s — could not verify yet; will retry next run
+- TikTok Owner ByteDance Is Going Much Bigger in the AI Race — could not verify yet; will retry next run
+- Trillion Parameters, No Human Labels: Ant Group Documents Five Emergent AI Behaviors — could not verify yet; will retry next run
 
 </details>
 
@@ -57,20 +59,16 @@ Time: gather 80s, plan 3s, judge 2s, verify and write 435s, videos 22s, trackers
 
 <details><summary>Research agent's work</summary>
 
-- Cerebras Deploys Trillion-Parameter AI Models: unconfirmed (searched “Cerebras trillion-parameter model deployment news”; searched “Cerebras trillion-parameter model”; read msn.com)
-- How a Blackstone-led $2.3B private credit loan to CoreWeave in 2023 be: unconfirmed (searched “Blackstone $2.3 billion private credit loan CoreWeave 2023 chip-backed debt”; read yahoo.com; read reuters.com)
-- OpenAI Says AGI Is Coming By Year-End. It Also Just Had The Worst Safe: unconfirmed (searched “OpenAI AGI coming by year end safety crisis worst safety breach 2026”; read msn.com; searched “"OpenAI" "AGI" "year end"”)
-- Alibaba Launches 2.4 Trillion-Parameter Qwen3.8-Max for Autonomous AI : unconfirmed (searched “Alibaba Qwen3.8-Max 2.4 trillion parameter model launch”; searched “"Qwen3.8-Max"”; read reuters.com)
-- Microsoft Completes Pre-training of 2.8 Trillion Parameter Model MAI-B: confirmed (searched “Microsoft MAI-Base-2 2.8 trillion parameter model”; read yahoo.com; read msn.com)
+- Cerebras Deploys Trillion-Parameter AI Models: unconfirmed (searched “Cerebras trillion-parameter model deployment news”; searched “Cerebras trillion parameter model deployment announced”; searched “"Cerebras" "trillion-parameter"”)
+- Mistral Raises $3.5 Billion for AI Research in Record EU Funding Round: confirmed (searched “Mistral raises $3.5 billion AI research EU funding round”; read businesstimes.com.sg; read france24.com)
+- Alibaba Launches 2.4 Trillion-Parameter Qwen3.8-Max for Autonomous AI : unconfirmed (searched “Alibaba Qwen3.8-Max 2.4 trillion parameter model launch”; read theinformation.com; read msn.com)
+- Google’s AI search changes upended online publishing: confirmed (searched “Google AI search changes online publishing impact”; read techrepublic.com; searched “Google AI search publisher payments online publishing”)
+- Moonshot AI's 2.8 Trillion Parameter Model Just Became the First From : unconfirmed (searched “Moonshot AI 2.8 trillion parameter model coding benchmark”; read crowdfundinsider.com; read officechai.com)
 
 </details>
 
 ### Notes
-- dropped unverifiable benchmark: MAI-Base-2 compute efficiency vs DeepSeek-V4-Pro-Base 4.2 to 12.3×
-- dropped unverifiable benchmark: MAI-Base-2 compute efficiency vs MAI-Base-1 6.3 to 12.7×
-- dropped unverifiable benchmark: MAI-Base-2 compute efficiency vs leading rival up to 12× less computing power
+- dropped unverifiable benchmark: Qwen3.8-Max AIME24 math benchmark improved performance by 2.7 percentage points
 - GDELT unavailable: GDELT paused for this run after repeated rate-limiting
 - 4 kept item(s) carried over to the next run
-- cerebras/gpt-oss-120b: unusable answer
-- cerebras/gpt-oss-120b: answer cut off; retrying with more room
 - cerebras/gpt-oss-120b: answer cut off; retrying with more room
