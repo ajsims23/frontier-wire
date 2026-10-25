@@ -271,6 +271,9 @@ def research_turn(body: dict) -> dict:
     return tool_call("finish", {"decision": "unconfirmed", "sources": []}, n)
 
 
+PLAN: dict = {}  # tests can set PLAN["answer"] to script the editor-in-chief
+
+
 def newsroom_handler(calls: list[dict]):
     def handler(request: httpx.Request) -> httpx.Response:
         body = json.loads(request.content)
@@ -286,6 +289,8 @@ def newsroom_handler(calls: list[dict]):
                     {"title": f"Shift {i}", "text": "Labs shipped new models.", "story_ids": re.findall(r'<story id="([^"]+)"', p)[i:i + 1]}
                     for i in range(4)]},
                 "submit_ratings": lambda p: {"ratings": []},
+                "submit_plan": lambda p: PLAN.get("answer") or {"focus": "Covering the Nova 2 launch.", "priorities": [],
+                                                                 "thin_areas": [], "searches": [], "dig_deeper": []},
                 "submit_filing": lambda p: {"filed": [{"id": i, "trackers": ["frontier-race"] if "model" in t.lower() else []}
                                                       for i, t in re.findall(r'<story id="([^"]+)">([^<]*)', p)]},
                 "submit_tracker": lambda p: {"status": "Labs keep shipping new models.", "changed": "",

@@ -37,6 +37,8 @@
           <a href="india/">AI in India</a>
           <a href="business/">Business and deals</a>
           <a href="sectors/">AI by sector</a>
+          <a href="builders/">What people are building</a>
+          <a href="voices/">Top voices</a>
           <a href="weekly/">Weekly deep dive</a>
           <a href="audit/">How we're doing</a>
           <a href="data/feed.xml">RSS feed</a>
@@ -92,6 +94,7 @@
         <h2 id="brief-h">Today in AI</h2>
         <p class="brief-line" id="brief-line"></p>
         <p class="brief-by" id="brief-by"></p>
+        <p class="brief-plan" id="brief-plan" hidden></p>
         <div id="brief-weekly"></div>
       </div>
       <ul class="themes" id="themes"></ul>
@@ -106,6 +109,16 @@
   <section class="shell block" id="watch" aria-labelledby="watch-h" hidden>
     <div class="block-head"><h2 id="watch-h">Watch</h2><p>New videos from AI labs and explainers, picked by our agent. Hover to preview, click to play.</p></div>
     <div class="watch-grid" id="watch-list"></div>
+  </section>
+
+  <section class="shell block" id="building" aria-labelledby="build-h" hidden>
+    <div class="block-head"><h2 id="build-h">What people are building</h2><p id="build-sub">New tools, projects and demos made with AI, picked daily by our agent. <a class="text-link" href="builders/">All picks</a></p></div>
+    <ol class="build-grid" id="build-list"></ol>
+  </section>
+
+  <section class="shell block" id="topvoices" aria-labelledby="tv-h" hidden>
+    <div class="block-head"><h2 id="tv-h">Top voices</h2><p id="tv-sub"></p></div>
+    <div class="tv-grid" id="tv-list"></div>
   </section>
 
   <section class="shell block" id="desks" aria-labelledby="desks-h">

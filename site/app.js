@@ -264,6 +264,13 @@
     $("brief-line").textContent = b.one_line || "";
     const when = b.written_at ? new Date(b.written_at).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }) : "";
     $("brief-by").textContent = `Written by our newsroom agent${when ? ` at ${when}` : ""} from ${b.from_stories || "today's"} stories. Every line links to its stories.`;
+    const pl = data.plan, plEl = $("brief-plan");
+    plEl.hidden = !(pl && pl.focus);
+    if (pl && pl.focus) {
+      const when = pl.updated_at ? ` (${ago(pl.updated_at)})` : "";
+      const extra = (pl.searches || []).length ? ` Chasing: ${pl.searches.map(esc).join(", ")}.` : "";
+      plEl.innerHTML = `<span class="ex-kicker">Editor-in-chief${esc(when)}</span> ${esc(pl.focus)}${extra}`;
+    }
     const w = data.weekly;
     $("brief-weekly").innerHTML = w && /^\d{4}-W\d{2}$/.test(w.key || "") ? `<a class="weekly-link" href="weekly/${w.key}/"><span class="ex-kicker">Weekly deep dive, ${esc(w.range)}</span><span class="strong">${esc(w.title)}</span><span class="wl-go">Read the week's five biggest shifts</span></a>` : "";
     $("themes").innerHTML = b.themes.map((t) => `<li class="theme">
@@ -305,6 +312,48 @@
           ${i === 0 && v.blurb ? `<p class="vblurb">${esc(v.blurb)}</p>` : ""}
           ${st ? `<a class="text-link vstory" href="${storyHref(st)}">Read our story</a>` : ""}</div>
       </article>`;
+    }).join("");
+  }
+
+  // ---------------------------------------------------------------- builders desk and top voices
+  function renderBuilding() {
+    const b = data.builders, picks = (b && b.picks) || [];
+    $("building").hidden = !picks.length;
+    if (!picks.length) return;
+    if (b.intro) $("build-sub").innerHTML = `${esc(b.intro)} <a class="text-link" href="builders/">All picks</a>`;
+    const pic = (img, vid) => (img && /^img\/[\w/.-]+$/.test(img) ? img : (/^[A-Za-z0-9_-]{11}$/.test(vid || "") ? `https://i.ytimg.com/vi/${vid}/hqdefault.jpg` : ""));
+    const play = `<span class="vplay" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 10 10"><path d="M2.5 1.2l6 3.8-6 3.8z" fill="currentColor"/></svg></span>`;
+    $("build-list").innerHTML = picks.slice(0, 6).map((p) => {
+      const src = pic(p.image, p.video), vid = /^[A-Za-z0-9_-]{11}$/.test(p.video || "") ? p.video : "";
+      const mediaHtml = !src ? `<div class="bc-media bc-tile" aria-hidden="true"><span class="bc-tile-n">${esc(host(p.url) || p.name)}</span><span class="bc-tile-k">${esc(String(p.kind || "").replace(/^./, (c) => c.toUpperCase()))} on ${esc(p.source)}</span></div>` : vid
+        ? `<div class="bc-media"><button class="bc-play" type="button" data-video="${vid}" data-title="${esc(p.name)}" aria-label="Play demo video: ${esc(p.name)}"><img src="${esc(src)}" alt="" loading="lazy" decoding="async">${play}</button></div>`
+        : `<div class="bc-media"><a href="${safeUrl(p.url)}" rel="noopener" tabindex="-1" aria-hidden="true"><img src="${esc(src)}" alt="" loading="lazy" decoding="async"></a></div>`;
+      return `<li class="build-card">${mediaHtml}
+        <p class="bc-meta"><span class="pill">${esc(p.kind)}</span><span>${esc(p.source)}</span></p>
+        <h3><a href="${safeUrl(p.url)}" rel="noopener">${esc(p.name)}</a></h3>
+        <p class="bc-what">${esc(p.what)}</p>
+        <p class="bc-why">${esc(p.why)}</p>
+        <p class="bc-sig muted">${esc(p.signal)}</p>
+      </li>`;
+    }).join("");
+  }
+  const initials = (n) => String(n || "").split(/\s+/).map((w) => w[0] || "").join("").toUpperCase().slice(0, 2);
+  const face = (p) => (p.photo && /^img\/people\/[\w.-]+\.jpg$/.test(p.photo)
+    ? `<img class="face" src="${esc(p.photo)}" alt="" title="${esc(p.name)}" loading="lazy" decoding="async">`
+    : `<span class="face initials" title="${esc(p.name)}" aria-hidden="true">${esc(initials(p.name))}</span>`);
+  function renderTopVoices() {
+    const t = data.top_voices, ds = (t && t.debates) || [];
+    $("topvoices").hidden = !ds.length;
+    if (!ds.length) return;
+    $("tv-sub").innerHTML = `${esc(t.headline)} <a class="text-link" href="voices/">Who said what</a>`;
+    const names = (list) => (list.length < 2 ? list.join("") : `${list.slice(0, -1).join(", ")} and ${list[list.length - 1]}`);
+    $("tv-list").innerHTML = ds.slice(0, 3).map((d, i) => {
+      const people = (d.people || []).map((p) => (typeof p === "string" ? { name: p } : p));
+      return `<a class="tv-card" href="voices/">
+        <span class="tv-head"><span class="tv-stack">${people.slice(0, 4).map(face).join("")}</span><span class="tv-n">Debate ${i + 1}</span></span>
+        <h3>${esc(d.title)}</h3><p>${esc(d.summary)}</p>
+        <span class="tv-names">${esc(names(people.map((p) => p.name)))}</span>
+      </a>`;
     }).join("");
   }
 
@@ -402,6 +451,8 @@
     renderNewsChart();
     renderBriefing(data.briefing);
     renderWatch();
+    renderBuilding();
+    renderTopVoices();
     if (window.FWPodcast) window.FWPodcast(data.podcasts);
     renderChips();
     renderFeed();

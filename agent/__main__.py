@@ -4,6 +4,8 @@
   python -m agent watch         quick check of the labs' own channels; runs a breaking-news edition if there's news
   python -m agent sources       fetch every source and report what came back (no AI calls)
   python -m agent check-models  send one tiny request to each configured provider/model
+  python -m agent preview-desks plan a run and write the Builders and Top Voices desks now (set DATA_DIR to a copy of
+                                data/ to try changes without touching the live site)
 """
 from __future__ import annotations
 
@@ -25,6 +27,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("watch")
     sub.add_parser("sources")
     sub.add_parser("check-models")
+    sub.add_parser("preview-desks")
     args = ap.parse_args(argv)
 
     cfg = load_config()
@@ -64,6 +67,23 @@ def main(argv: list[str] | None = None) -> int:
         return 2
 
     store = Store(cfg.data_dir)
+    if args.cmd == "preview-desks":
+        import json as _json
+        from . import builders, top_voices
+        room = Newsroom(cfg, llm, fetcher, store, now)
+        fresh = room.collect()
+        extra = room.make_plan(fresh)
+        builders.update_builders(room, force=True)
+        top_voices.update_top_voices(room, force=True)
+        store.save(now, room.build_site(), room.report)
+        lines = ["## Desk preview", "", f"Fresh items: {len(fresh)} · editor's searches found {len(extra)}",
+                 "", "```json", _json.dumps({k: room.report.get(k) for k in (
+                     "plan", "builders", "builders_sources", "top_voices", "top_voices_sources", "notes")}, indent=2), "```"]
+        print("\n".join(lines))
+        if os.environ.get("GITHUB_STEP_SUMMARY"):
+            with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as fh:
+                fh.write("\n".join(lines) + "\n")
+        return 0
     mode = "full"
     if args.cmd == "watch":
         from .pipeline import breaking_sources

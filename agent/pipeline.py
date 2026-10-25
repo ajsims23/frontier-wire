@@ -8,7 +8,7 @@ from typing import Any
 from . import prompts as P
 from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
-from . import alerts, audit, claims, editorial, photos, models_tracker, newsletter, tagging, trackers, videos, weekly
+from . import alerts, audit, builders, chief, claims, top_voices, editorial, photos, models_tracker, newsletter, tagging, trackers, videos, weekly
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather
 from .store import Store
@@ -73,6 +73,9 @@ class Newsroom:
         self._research_meta: dict[str, dict[str, Any]] = {}
         self._enriched = 0
         self._texts: dict[str, str] = {}
+        self.plan: dict[str, Any] = {}  # the editor-in-chief's plan for this run (empty = run as usual)
+        self._priority: set[str] = set()
+        self._dig: set[str] = set()
 
     # ------------------------------------------------------------ 1. gather
     def run_sources(self) -> list[dict[str, Any]]:
@@ -124,7 +127,9 @@ class Newsroom:
         newest = lambda kv: kv[1][0].published or ""  # noqa: E731
         desk = sorted((kv for kv in clusters.items() if kv[1][0].desk), key=newest, reverse=True)[:quota]
         desk_ids = {cid for cid, _ in desk}
-        rest = sorted((kv for kv in clusters.items() if kv[0] not in desk_ids), key=lambda kv: ROLE_RANK.get(kv[1][0].role, 9))
+        pri = self._priority_clusters(clusters)
+        rest = sorted((kv for kv in clusters.items() if kv[0] not in desk_ids),
+                      key=lambda kv: (kv[0] not in pri, ROLE_RANK.get(kv[1][0].role, 9)))  # editor's priorities first
         ordered = rest[: max(0, cap - len(desk))] + desk  # desks get their own slots, so they're never crowded out
         judged_ids = {cid for cid, _ in ordered}
         # Clusters beyond the cap are left unjudged (and unseen) for the next run.
@@ -176,10 +181,43 @@ class Newsroom:
                         m.desk = ""  # global news from an Indian outlet: no India slot, no India label
                     self.report["notes"].append(f"not India desk: '{title[:50]}'")
                 category = d.get("category") if d.get("category") in P.CATEGORIES else "industry"
+                if cid in pri:  # the editor-in-chief flagged it and the judge agreed it's worth a story
+                    score = min(10, score + 1)
                 kept.append((score, category, members))
         kept.sort(key=lambda k: -k[0])
         self.report["judged"], self.report["kept"] = len(ordered), len(kept)
         return kept
+
+    def _priority_clusters(self, clusters: dict[str, list[Item]]) -> set[str]:
+        return {cid for cid, ms in clusters.items() if any(m.id in self._priority for m in ms)}
+
+    def make_plan(self, fresh: list[Item]) -> list[Item]:
+        """Ask the editor-in-chief for this run's plan, run its searches, and return the extra items found."""
+        try:
+            self.plan = chief.plan_run(self, fresh)
+        except (LimitReached, AllProvidersFailed) as e:
+            self.report["notes"].append(f"editor-in-chief skipped: {e}")
+            return []
+        except Exception as e:  # noqa: BLE001
+            self.report["notes"].append(f"editor-in-chief failed: {type(e).__name__}: {e}")
+            return []
+        if not self.plan:
+            return []
+        self._priority = {p["id"] for p in self.plan.get("priorities", [])}
+        self._dig = set(self.plan.get("dig_deeper", []))
+        extra = chief.run_searches(self, self.plan, {it.url for it in fresh})
+        self._pool = getattr(self, "_pool", []) + extra  # can corroborate other stories too
+        titles = {it.id: it.title for it in fresh}
+        self.report["plan"] = {
+            "focus": self.plan.get("focus", ""),
+            "priorities": [f'{titles.get(p["id"], p["id"])[:70]} ({p["why"]})' if p.get("why") else titles.get(p["id"], p["id"])[:70]
+                           for p in self.plan.get("priorities", [])],
+            "thin_areas": self.plan.get("thin_areas", []),
+            "searches": [f'{s["query"]}: {s.get("found", 0)} new' for s in self.plan.get("searches", [])],
+            "dig_deeper": [titles.get(i, i)[:70] for i in self.plan.get("dig_deeper", [])],
+        }
+        self.store.plan = {**self.plan, "written_at": self.now.isoformat()}
+        return extra
 
     # ------------------------------------------------------------ 4. verify
     def research(self, members: list[Item], sources: list[dict[str, str]], domains: set[str]) -> dict[str, Any]:
@@ -218,10 +256,11 @@ class Newsroom:
         confirmed_enough = official or len(domains) >= need
         investigated = (self.report.get("research") or {}).get("investigated", 0)
         if rcfg.get("enabled", True) and investigated < int(rcfg.get("max_stories", 5)):
-            enrich = (confirmed_enough and score >= int(rcfg.get("enrich_min_score", 8))
-                      and self._enriched < int(rcfg.get("enrich_top", 2)))
+            dig = any(m.id in self._dig for m in members)  # the editor-in-chief asked for more reporting
+            enrich = confirmed_enough and (dig or (score >= int(rcfg.get("enrich_min_score", 8))
+                                                   and self._enriched < int(rcfg.get("enrich_top", 2))))
             if not confirmed_enough or enrich:
-                if enrich:
+                if enrich and not dig:
                     self._enriched += 1
                 self.research(members, sources, domains)
                 return sources if (confirmed_enough or len(domains) >= need) else None
@@ -427,6 +466,9 @@ class Newsroom:
             "podcasts": [{k: v.get(k) for k in ("id", "title", "channel", "published", "blurb", "guest")}
                          for v in videos.featured_podcasts(self.store.videos.get("videos") or [], self.now)],
             "briefing": self.store.briefing or None,
+            "plan": chief.site_plan(self.store.plan, self.store.plan.get("written_at", "")),
+            "builders": builders.site_builders(self.store.builders),
+            "top_voices": top_voices.site_top_voices(self.store.top_voices),
             "weekly": next(({"key": w["key"], "title": w["title"], "intro": w["intro"], "range": w["range"]}
                             for w in reversed(list((self.store.weekly.get("issues") or {}).values()))), None),
             "threads": editorial.site_threads(self),
@@ -459,6 +501,8 @@ class Newsroom:
             except Exception as e:  # noqa: BLE001
                 self.report["notes"].append(f"audit failed: {type(e).__name__}: {e}")
             mark("audit")
+            fresh += self.make_plan(fresh)
+            mark("plan")
         clusters = self.group(fresh)
         kept: list[tuple[int, str, list[Item]]] = []
         if clusters:
@@ -489,6 +533,10 @@ class Newsroom:
         desk_kept = [k for k in selected if any(m.desk for m in k[2])][:reserve]
         others = [k for k in selected if k not in desk_kept]
         head = sorted(others[: max(0, n - len(desk_kept))] + desk_kept, key=lambda k: -k[0])
+        if self.plan.get("thin_areas"):  # hold a slot for each area the editor-in-chief says we've under-covered
+            protected = {ms[0].url for _, _, ms in selected if any(m.id in self._priority for m in ms)}
+            protected |= {ms[0].url for _, _, ms in desk_kept}
+            head = chief.apply_thin_areas(selected, head, self.plan["thin_areas"], protected)
         kept = head + [k for k in selected if k not in head]
 
         mark("judge")
@@ -555,6 +603,8 @@ class Newsroom:
             ("claims", lambda r: (claims.add_claims(r, r._new_claims), claims.resolve(r, [w["id"] for w in r.report["written"]]))),
             ("model tracker", models_tracker.update_tracker),
             ("weekly", weekly.maybe_write_weekly),
+            ("builders", builders.update_builders),
+            ("top voices", top_voices.update_top_voices),
             ("briefing", editorial.write_briefing),
             ("self-review", editorial.self_review),
             ("photos", photos.update_photos),
@@ -595,6 +645,17 @@ def summary_markdown(report: dict[str, Any]) -> str:
                  f"kept {report.get('kept', 0)} · **written {len(report['written'])}**")
     lines.append(f"AI: {report.get('ai_requests_run', 0)} requests, {report.get('ai_tokens_run', 0):,} tokens this run · "
                  f"{report.get('ai_requests_today', 0)} requests today · providers: {', '.join(report['providers']) or 'none'}")
+    if report.get("plan"):
+        p = report["plan"]
+        lines.append(f"Editor-in-chief: {p['focus']}")
+        if p.get("priorities"):
+            lines.append("  Priorities: " + "; ".join(p["priorities"]))
+        if p.get("thin_areas"):
+            lines.append("  Thin areas: " + ", ".join(p["thin_areas"]))
+        if p.get("searches"):
+            lines.append("  Searches: " + "; ".join(p["searches"]))
+        if p.get("dig_deeper"):
+            lines.append("  Dig deeper: " + "; ".join(p["dig_deeper"]))
     if report.get("research"):
         r = report["research"]
         lines.append(f"Research agent: investigated {r['investigated']} stories with {r['tool_calls']} tool calls, "
@@ -605,6 +666,10 @@ def summary_markdown(report: dict[str, Any]) -> str:
         lines.append("Threads updated: " + "; ".join(report["threads"]))
     if report.get("videos"):
         lines.append("Videos: " + (report.get("videos_kept", "no new videos") + " · " + ", ".join(f"{k} {v}" for k, v in report["videos"].items())))
+    if report.get("builders"):
+        lines.append(f"Builders desk: {report['builders']}")
+    if report.get("top_voices"):
+        lines.append(f"Top Voices: {report['top_voices']}")
     if report.get("audit"):
         lines.append(f"Daily self-check: {report['audit']}")
     if report.get("photos"):
@@ -638,6 +703,8 @@ def summary_markdown(report: dict[str, Any]) -> str:
         lines += ["", "<details><summary>Dropped</summary>", ""]
         lines += [f"- {d['title']} — {d['reason']}" for d in report["dropped"][:60]] + ["", "</details>"]
     failed = {k: v for k, v in report["sources"].items() if not v.startswith("ok") or "failed" in v}
+    for extra in ("builders_sources", "top_voices_sources"):  # the desks' own sources, checked once a day
+        failed.update({k: v for k, v in (report.get(extra) or {}).items() if not v.startswith("ok")})
     if failed:
         lines += ["", "### Sources with problems"] + [f"- `{k}`: {v}" for k, v in failed.items()]
     if report.get("research_log"):

@@ -179,6 +179,35 @@ class Gdelt:
         return out
 
 
+def bing_news(fetcher: Fetcher, query: str, max_records: int = 25) -> list[dict[str, Any]]:
+    """Bing News search (public RSS, no key): the fallback when GDELT is slow or rate-limited.
+    Returns rows shaped like Gdelt.search's."""
+    from urllib.parse import parse_qs
+    feed = feedparser.parse(fetcher.get(f"https://www.bing.com/news/search?q={quote_plus(query)}&format=rss&setlang=en-us"))
+    out = []
+    for e in feed.entries[:max_records]:
+        link = e.get("link", "")
+        u = urlparse(link)
+        if u.netloc.endswith("bing.com"):  # Bing wraps the article link in a redirect
+            link = (parse_qs(u.query).get("url") or [""])[0]
+        if not link.startswith("http") or not e.get("title"):
+            continue
+        out.append({"url": link, "title": _one_line(e["title"]), "domain": e.get("news_source") or urlparse(link).netloc.removeprefix("www."),
+                    "published": _iso_struct(e.get("published_parsed"))})
+    return out
+
+
+def news_search(gdelt: Gdelt, fetcher: Fetcher, query: str, hours: int = 48, max_records: int = 15) -> tuple[list[dict[str, Any]], str]:
+    """GDELT first, Bing News if GDELT fails or finds nothing. Returns (rows, which engine answered)."""
+    try:
+        rows = gdelt.search(query + " sourcelang:english", timespan=f"{hours}h", max_records=max_records)
+        if rows:
+            return rows, "gdelt"
+    except Exception:  # noqa: BLE001
+        pass
+    return bing_news(fetcher, query, max_records), "bing"
+
+
 AI_UPPER = re.compile(r"\b(AI|A\.I\.|LLMs?|GPT[-\w]*|AGI)\b")
 AI_WORDS = re.compile(r"artificial intelligence|machine learning|chatbot|neural|language model|openai|anthropic|claude|"
                       r"gemini|deepmind|deepseek|mistral|llama|copilot|nvidia|hugging ?face|qwen|xai|grok|robotics?", re.I)
