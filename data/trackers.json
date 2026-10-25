@@ -410,8 +410,8 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "Meta has paused its Muse conversation‑sharing feature after a security firm exposed thousands of public links, and Chinese‑aligned hackers used AI agents to breach ConnectWise, compromising credentials for roughly 2,250 Microsoft 365 tenants. OpenAI resumed frontier model training in offline environments with new containment measures, while Microsoft and Nvidia issued joint guidelines for assessing risks of open‑weight AI models. Anthropic demonstrated large‑scale formal verification of open‑source libraries, and major US banks are blocking third‑party AI agents from customer accounts.",
-    "changed": "The latest stories show OpenAI restarting offline training with added containment safeguards and Anthropic releasing extensive formal verification of security properties in open‑source code.",
+    "status": "Meta has paused its Muse conversation‑sharing feature after a security breach, while Chinese‑aligned hackers used AI agents to compromise ConnectWise and access 2,250 Microsoft 365 tenants. OpenAI resumed frontier model training in offline, highly‑contained environments, and Microsoft/Nvidia issued joint guidelines for assessing open‑weight AI risks; Anthropic showcased large‑scale formal verification of open‑source libraries, and major US banks now block third‑party AI agents from customer accounts. JetBrains introduced Air Governance to centrally manage AI agents for developers, and a recent mock‑up claim about CPU‑temperature covert channels has sparked debate over AI isolation security.",
+    "changed": "The latest story mocked a claim that air‑gapped AI models could communicate via CPU temperature, highlighting concerns about covert channels in isolated AI systems.",
     "timeline": [
       {
         "story_id": "9b95642b62ce",
@@ -472,27 +472,33 @@
         "story_id": "ca76cdd83e01",
         "date": "2026-10-18",
         "text": "Microsoft and Nvidia release joint guidelines for assessing open‑weight AI model risks"
+      },
+      {
+        "story_id": "6432c0daeb84",
+        "date": "2026-03-09",
+        "text": "JetBrains launches Air Governance to centrally manage AI agents for developers, supporting multiple models and cost controls."
       }
     ],
     "title": "AI agents and safety incidents",
     "next": [
       {
-        "text": "Next papers in the planned series on managing open‑weight AI deployment risks",
+        "text": "Next papers in the planned series on managing open‑weight AI deployment risks (Microsoft/Nvidia).",
         "when": "",
         "story_id": "ca76cdd83e01"
       },
       {
-        "text": "ConnectWise to restore its cloud backup service after the breach",
+        "text": "ConnectWise to restore its cloud backup service after the breach.",
         "when": "",
         "story_id": "d1b19037538a"
       },
       {
-        "text": "Anthropic to publish a subset of formal proofs and trusted components on GitHub",
+        "text": "Anthropic to publish a subset of formal proofs and trusted components on GitHub.",
         "when": "",
         "story_id": "fd2833dd343a"
       }
     ],
     "story_ids": [
+      "6432c0daeb84",
       "ca76cdd83e01",
       "4168438b63a2",
       "d1b19037538a",
@@ -506,8 +512,8 @@
       "f5a8973e6dfd",
       "9b95642b62ce"
     ],
-    "updated_at": "2026-10-25T03:49:28+00:00",
-    "tried_at": "2026-10-25T03:49:28+00:00"
+    "updated_at": "2026-10-25T21:45:05+00:00",
+    "tried_at": "2026-10-25T21:45:05+00:00"
   },
   "ai-money": {
     "status": "AI funding remains massive: OpenAI is courting a $30 billion round at a $1.25 trillion valuation, while European AI leader Mistral secured €3 billion and Broadcom is financing Anthropic’s chip purchases. Nvidia is expanding into AI platforms by buying Hugging Face, and several AI‑driven drug‑discovery firms have raised hundreds of millions, underscoring continued capital flow into both compute and biotech AI.",

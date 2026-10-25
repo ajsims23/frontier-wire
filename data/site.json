@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T18:50:37+00:00",
+  "updated_at": "2026-10-25T21:45:05+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Google has a contract with the U.S. Department of Defense that permits its AI systems to be used on classified networks for lawful government purposes. The resignations show that some researchers believe the company's oversight of such work is inadequate. Employees can raise concerns through internal channels, but the departures suggest internal disagreement.",
@@ -5128,23 +5128,12 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-10-25T18:50:37+00:00",
-    "one_line": "Resignations over Pentagon AI contract, Google AI search changes, India seeks debt for data centres, OpenAI claim mocked",
+    "written_at": "2026-10-25T21:45:05+00:00",
+    "one_line": "Google’s AI search overhaul cuts traffic, India plans debt‑financed data centres, and air‑gapped AI claim draws mockery.",
     "themes": [
       {
-        "title": "DeepMind researchers resign over Pentagon contract",
-        "text": "Two DeepMind researchers left Google citing insufficient oversight of the Pentagon AI contract.",
-        "stories": [
-          {
-            "id": "65924f8d80ba",
-            "headline": "Two Google DeepMind researchers resign over Pentagon AI contract, oversight concerns",
-            "url": "https://econotimes.com/Google-DeepMind-Resignations-Put-Pentagon-AI-Oversight-Under-Scrutiny-1762681"
-          }
-        ]
-      },
-      {
-        "title": "Google AI search cuts publisher traffic",
-        "text": "Google’s AI Overviews shift search to AI summaries, reducing traffic to news sites and paying minimal fees to publishers.",
+        "title": "Google shifts search to AI summaries",
+        "text": "Google’s AI Overviews and AI Mode now show AI‑generated summaries instead of traditional links, reducing traffic to news sites. In a pilot the company pays about 100 publishers small fees, often under $1,000, for content that appears in AI answers.",
         "stories": [
           {
             "id": "6f9ed043fa8a",
@@ -5154,8 +5143,8 @@
         ]
       },
       {
-        "title": "India AI sector looks to debt financing",
-        "text": "India’s AI industry plans to use debt to build data centres amid GPU obsolescence and regulatory risks.",
+        "title": "India seeks debt for AI data centres",
+        "text": "A Union Bank of India report says India’s AI sector will increasingly use debt financing to build data centres and computing infrastructure over the next three to five years, citing rapid GPU obsolescence, limited domestic hardware manufacturing and evolving AI regulations as key risks.",
         "stories": [
           {
             "id": "3eeb5d7fd94f",
@@ -5165,8 +5154,8 @@
         ]
       },
       {
-        "title": "OpenAI researcher mocked over air‑gapped claim",
-        "text": "An OpenAI researcher was mocked after suggesting air‑gapped AIs could communicate via CPU temperature changes.",
+        "title": "Air‑gapped AI communication claim mocked",
+        "text": "OpenAI researcher Noam Brown suggested that separate, air‑gapped AI models could exchange information via CPU temperature changes; the idea was mocked after being highlighted in a recent OpenAI report, according to Ethan Mollick.",
         "stories": [
           {
             "id": "9b95642b62ce",
@@ -5176,45 +5165,58 @@
         ]
       }
     ],
-    "from_stories": 4
+    "from_stories": 3
   },
   "plan": {
-    "focus": "Evaluating AI's tangible returns and risks while we catch up on under‑reported model performance and safety vulnerabilities.",
-    "updated_at": "2026-10-25T18:50:37+00:00",
+    "focus": "Chasing the fallout from AI data‑center financing crunch while covering fresh model releases and tooling.",
+    "updated_at": "2026-10-25T21:45:05+00:00",
     "thin_areas": [
       "model releases",
-      "safety"
+      "deals and business"
     ],
     "searches": [
-      "Project Daybreak PHP vulnerabilities",
-      "Ethan Mollick AI management expansion",
-      "latest medical AI model benchmarks"
+      "AI data center debt",
+      "Grok Odyssey release",
+      "JetBrains Thinkrail AI"
     ]
   },
   "builders": {
-    "written_at": "2026-10-25T01:04:29+00:00",
-    "intro": "Today’s picks showcase AI gateways, agent tooling, data pipelines, and eye‑catching generative demos.",
+    "written_at": "2026-10-25T21:45:05+00:00",
+    "intro": "Today’s AI builds showcase new security agents, voice models, collaborative tools, and visual demos for developers and businesses.",
     "picks": [
       {
-        "name": "antirion",
-        "what": "One‑binary Rust AI gateway with console to route, secure, budget, and observe every LLM call across OpenAI, Anthropic, Gemini, Bedrock and more.",
-        "why": "Provides builders a fast, unified way to manage LLM usage and guardrails without stitching together multiple services.",
-        "kind": "tool",
-        "for": "builders",
-        "url": "https://github.com/eliasbiondo/antirion",
-        "discussion": "",
-        "source": "GitHub",
-        "signal": "234 stars since 17 Oct, written in Rust",
-        "image": "img/builders/fd6181e478c1.jpg",
-        "video": null
-      },
-      {
-        "name": "Basedash Scheduled CSV Exports",
-        "what": "Ask once and receive a fresh CSV in Slack or email on a weekly schedule.",
-        "why": "Lets businesses automate recurring data delivery without writing custom scripts or cron jobs.",
-        "kind": "app",
+        "name": "Open-Source Cybersecurity Platform",
+        "what": "An open-source cybersecurity platform that uses AI agents to protect businesses.",
+        "why": "Shows how AI agents can be applied to security, useful for teams building protective tech.",
+        "kind": "open-source",
         "for": "business",
-        "url": "https://producthunt.com/products/basedash",
+        "url": "https://medium.com/@thomasunise/this-open-source-cybersecurity-platform-uses-ai-agents-to-detect-threats-and-protect-businesses-762e65392b42",
+        "discussion": "https://news.ycombinator.com/item?id=50231486",
+        "source": "Show HN",
+        "signal": "15 points, 4 comments on Hacker News",
+        "image": "img/builders/90a01e32e7c1.jpg",
+        "video": null
+      },
+      {
+        "name": "Hurston-1",
+        "what": "A narrowband TTS model that excels at Southern American and African English accents, released under Apache-2.0.",
+        "why": "Provides high-quality regional speech synthesis, valuable for developers targeting diverse user voices.",
+        "kind": "model",
+        "for": "builders",
+        "url": "https://huggingface.co/destined/hurston-1",
+        "discussion": "https://news.ycombinator.com/item?id=50227330",
+        "source": "Show HN",
+        "signal": "25 points, 10 comments on Hacker News",
+        "image": "img/builders/a9e08b18c9f8.jpg",
+        "video": null
+      },
+      {
+        "name": "Yourcast 2.0",
+        "what": "AI-generated summaries with tap-to-jump timestamps delivered directly in Telegram.",
+        "why": "Enables quick content digestion inside a popular messenger, appealing for product teams and creators.",
+        "kind": "app",
+        "for": "everyone",
+        "url": "https://producthunt.com/products/yourcast",
         "discussion": "",
         "source": "Product Hunt",
         "signal": "launched on Product Hunt",
@@ -5222,102 +5224,101 @@
         "video": null
       },
       {
-        "name": "Lampline",
-        "what": "Build AI phone agents locally and test changes with an AI caller, importing Dialogflow CX, with optional API‑key usage.",
-        "why": "Enables developers to prototype and iterate on voice agents without incurring cloud costs.",
+        "name": "AgentGrid.io",
+        "what": "A shared workspace that lets humans and AI agents collaborate on tasks.",
+        "why": "Facilitates coordinated human‑agent workflows, interesting for teams building agent‑centric products.",
+        "kind": "app",
+        "for": "builders",
+        "url": "https://producthunt.com/products/agentgrid-io",
+        "discussion": "",
+        "source": "Product Hunt",
+        "signal": "launched on Product Hunt",
+        "image": null,
+        "video": null
+      },
+      {
+        "name": "Llama Windows",
+        "what": "Runs a local AI server that integrates with any Windows application.",
+        "why": "Provides a simple way to add local LLM capabilities to Windows software, useful for developers.",
         "kind": "tool",
         "for": "builders",
-        "url": "https://github.com/C4rohan/Lampline",
+        "url": "https://producthunt.com/products/llama-windows",
+        "discussion": "",
+        "source": "Product Hunt",
+        "signal": "launched on Product Hunt",
+        "image": null,
+        "video": null
+      },
+      {
+        "name": "whatsmyagentdoing",
+        "what": "Visual dashboard showing live activity of Claude Code and Codex agents on your machine.",
+        "why": "Helps developers monitor and debug AI coding assistants, improving productivity.",
+        "kind": "demo",
+        "for": "builders",
+        "url": "https://github.com/Charonyuu/whatsmyagentdoing",
         "discussion": "",
         "source": "GitHub",
-        "signal": "171 stars since 19 Oct, written in Python",
-        "image": "img/builders/e8fa649bf341.jpg",
-        "video": null
-      },
-      {
-        "name": "Wan2.2 14B Preview",
-        "what": "Generate a video from an image using a text prompt.",
-        "why": "Shows a compelling new multimodal capability that creators can experiment with directly in the browser.",
-        "kind": "demo",
-        "for": "everyone",
-        "url": "https://huggingface.co/spaces/kulkas2pintu/wan777",
-        "discussion": "",
-        "source": "Hugging Face Spaces",
-        "signal": "trending on Hugging Face, 919 likes",
-        "image": "img/builders/2e085f45112b.jpg",
-        "video": null
-      },
-      {
-        "name": "Corgi",
-        "what": "A terminal multiplexer that displays multiple AI agents’ activity, feeds, and lets you jump to the next unread agent.",
-        "why": "Improves ergonomics for power users juggling several agents in a single console.",
-        "kind": "tool",
-        "for": "builders",
-        "url": "https://corgi.computer/",
-        "discussion": "https://news.ycombinator.com/item?id=50214373",
-        "source": "Show HN",
-        "signal": "125 points, 42 comments on Hacker News",
-        "image": "img/builders/c94050b89bca.jpg",
-        "video": null
-      },
-      {
-        "name": "Agent Hunt",
-        "what": "Live rankings of the tools AI agents use most.",
-        "why": "Provides investors a quick pulse on which agent frameworks are gaining traction.",
-        "kind": "app",
-        "for": "investors",
-        "url": "https://producthunt.com/products/monid",
-        "discussion": "",
-        "source": "Product Hunt",
-        "signal": "launched on Product Hunt",
-        "image": null,
+        "signal": "226 stars since 23 Oct, written in JavaScript",
+        "image": "img/builders/6f61e7d05116.jpg",
         "video": null
       }
     ]
   },
   "top_voices": {
-    "written_at": "2026-10-25T01:04:29+00:00",
-    "headline": "Open models challenge closed giants, AI math breakthroughs spark caution, and reviewers face AI competition",
+    "written_at": "2026-10-25T21:45:05+00:00",
+    "headline": "AI’s open‑weight surge sparks security worries, regulatory battles, and corporate power shifts",
     "range": "18 Oct – 25 Oct 2026",
     "debates": [
       {
-        "title": "Open‑weight models rival closed‑source giants",
-        "summary": "Open‑weight Kimi 3.1 Pro matches performance of leading closed models, prompting discussion about pricing, speed, and regulatory implications. The debate centers on whether open models can now compete on parity with proprietary systems.",
-        "image": "img/voices/c1ad71a16e1f.jpg",
-        "video": "35ZWesLrv5A",
+        "title": "Open‑weight models challenge closed AI dominance",
+        "summary": "Open‑weight releases like Kimi 3.1 Pro are narrowing the performance gap with closed‑source leaders, but their mixed reception raises adoption and security questions. The debate centers on whether open models will reshape the frontier AI landscape or introduce new risks.",
+        "image": "img/voices/36a01b353c30.jpg",
+        "video": "0xiq7RHVGRE",
         "people": [
+          {
+            "name": "Nathan Lambert",
+            "photo": ""
+          },
+          {
+            "name": "swyx",
+            "photo": "img/people/swyx.jpg"
+          },
           {
             "name": "Simon Willison",
             "photo": "img/people/simon-willison.jpg"
-          },
-          {
-            "name": "swyx",
-            "photo": "img/people/swyx.jpg"
           }
         ]
       },
       {
-        "title": "AI’s sudden mastery of advanced mathematics",
-        "summary": "OpenAI internal models have produced counterexamples and proofs for long‑standing conjectures, raising questions about predictability and impact. The conversation explores how to anticipate which problems become tractable for AI.",
-        "image": "",
-        "video": "JNyuX1zoOgU",
+        "title": "AI models raise new cybersecurity and covert channel fears",
+        "summary": "Recent findings suggest AI can exploit hardware side‑channels and discover software vulnerabilities, prompting alarm over covert communication and cyber‑risk amplification. Experts debate how realistic these threats are and what safeguards are needed.",
+        "image": "img/voices/dc028fea27bb.jpg",
+        "video": "35ZWesLrv5A",
         "people": [
-          {
-            "name": "swyx",
-            "photo": "img/people/swyx.jpg"
-          },
           {
             "name": "Ethan Mollick",
             "photo": "img/people/ethan-mollick.jpg"
+          },
+          {
+            "name": "swyx",
+            "photo": "img/people/swyx.jpg"
+          },
+          {
+            "name": "Simon Willison",
+            "photo": "img/people/simon-willison.jpg"
           }
         ]
       },
       {
-        "title": "AI outperforms humans in peer review",
-        "summary": "A study shows Claude Opus 4.8 surpasses expert reviewers across diverse social‑science papers, sparking urgency for academia to adapt evaluation processes. The debate weighs the benefits of AI assistance against the risk of over‑reliance.",
+        "title": "Governments grapple with regulation of frontier AI models",
+        "summary": "Both the United States and China are moving toward pre‑approval regimes for frontier AI models, intensifying geopolitical competition and raising questions about export controls. The discussion also touches on how labs might leverage internal‑model advantages in regulated sectors.",
         "image": "",
         "video": "",
         "people": [
+          {
+            "name": "Nathan Lambert",
+            "photo": ""
+          },
           {
             "name": "Ethan Mollick",
             "photo": "img/people/ethan-mollick.jpg"
