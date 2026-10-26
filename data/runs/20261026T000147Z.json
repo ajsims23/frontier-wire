@@ -1,0 +1,151 @@
+{
+  "started_at": "2026-10-26T00:01:47+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1318)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (890)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (32)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "hn": "ok (15)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "JetBrains Thinkrail",
+      "reason": "score 5: JetBrains Thinkrail is a new AI‑assisted coding tool, but it is an incremental product launch rather than a frontier model or major infrastructure move."
+    },
+    {
+      "title": "Ethan Mollick: My general advice for using AI for any purpose is to ask yourself: \"how do I make what I am doing even more ambitious?\" You do this over…",
+      "reason": "score 3: General advice from Ethan Mollick without reference to a specific AI development or policy; more of a personal commentary than newsworthy content."
+    },
+    {
+      "title": "Moderators of r/opensource ban submissions of projects using, made by, or intended for AI, exclude non-English speakers over AI translation concerns, and more (Terrence O'Brien/The Verge)",
+      "reason": "score 3: Subreddit moderation rule change impacts community discussion but does not represent a significant AI policy or regulatory development."
+    },
+    {
+      "title": "r/opensource implements new restrictions on AI and non-English participants",
+      "reason": "score 2: Duplicate coverage of the r/opensource AI restrictions; the content adds no new information."
+    },
+    {
+      "title": "llm-d 1.0 Advances Open-Source AI Inference for Production Scale",
+      "reason": "score 5: Announcement of llm-d 1.0 for open‑source inference is an incremental technical update; without evidence of major impact it falls below the news threshold."
+    }
+  ],
+  "written": [],
+  "notes": [
+    "ignored made-up duplicate id 387de776c869 for 'r/opensource implements new restrictions on AI and'"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 65.0,
+    "audit": 3.9,
+    "plan": 41.7,
+    "judge": 0.8,
+    "verify and write": -0.0,
+    "videos": 3.8,
+    "tagging": 0.0,
+    "explainers": 0.0,
+    "trackers": 0.0,
+    "claims": 0.0,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 0.0,
+    "self-review": 0.6,
+    "photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 0.9
+  },
+  "fetched": 2895,
+  "fresh": 3,
+  "audit": "coverage 0% of 4 significant stories; 4 missed, 0 added to this run; 3 lesson(s) for the editor",
+  "plan": {
+    "focus": "Cover the open‑source community pushback on AI tools while tracking policy moves and safety updates.",
+    "priorities": [
+      "Moderators of r/opensource ban submissions of projects using, made by, (Open‑source moderation ban impacts developers and signals broader platform restrictions on AI projects.)",
+      "JetBrains Thinkrail (JetBrains Thinkrail is a new AI‑assisted coding tool relevant to builders and enterprise developers.)",
+      "Ethan Mollick: My general advice for using AI for any purpose is to as (Ethan Mollick’s advice ties into ongoing debate over AI research claims and community reactions.)"
+    ],
+    "thin_areas": [
+      "research",
+      "models"
+    ],
+    "searches": [
+      "AI research funding: 0 new",
+      "open source AI tools ban: 1 new",
+      "new open-source models: 1 new"
+    ],
+    "dig_deeper": [
+      "Moderators of r/opensource ban submissions of projects using, made by,",
+      "JetBrains Thinkrail"
+    ]
+  },
+  "judged": 5,
+  "kept": 0,
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "trackers": "filed 0 stories; no tracker changed",
+  "claims": "23 tracked, 22 open",
+  "model_tracker": "82 models, 4 changes today",
+  "self_review": "19 lines written to data/self_review.md",
+  "photos": "0 saved, 0 unavailable",
+  "alerts": "4 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":2}",
+  "ai_requests_run": 5,
+  "ai_tokens_run": 13300,
+  "ai_requests_today": 5,
+  "provider_log": []
+}

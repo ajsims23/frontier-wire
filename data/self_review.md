@@ -1,40 +1,40 @@
-## Newsroom self-review, 2026-10-25
+## Newsroom self-review, 2026-10-26
 
-Looked at 40 runs over the last 3 days (69 stories written).
+Looked at 34 runs over the last 3 days (58 stories written).
 Tick the suggestions you want applied; nothing changes until a person approves it.
 
-- [ ] **fix source** · `arxiv`: Add a retry with increased read timeout (e.g., 30 s) and back‑off for arxiv queries  
-  _Why:_ Arxiv fails 4/40 runs due to read timeout, causing missed stories
-- [ ] **remove source** · `gdelt`: Temporarily disable the gdelt source  
-  _Why:_ gdelt fails 22/40 runs with connect timeouts, heavily reducing reliability
-- [ ] **remove source** · `gdelt-india`: Temporarily disable the gdelt‑india source  
-  _Why:_ gdelt‑india fails 28/40 runs with HTTP 429, indicating rate‑limit issues
-- [ ] **add source** · `Alibaba (Qwen)`: Add a free news source covering Alibaba’s Qwen lab (e.g., monitor Alibaba press releases or relevant RSS feeds)  
-  _Why:_ Lab xAI and Alibaba (Qwen) have no stories this week, indicating coverage gap
-- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower the minimum score from 6 to 5  
-  _Why:_ Most drops are due to low scores (score 5‑1); lowering the threshold will increase usable story count without sacrificing quality
+- [ ] **remove source** · `gdelt`: Remove gdelt due to frequent ConnectTimeout errors (22/34 runs)  
+  _Why:_ High failure rate prevents timely news gathering
+- [ ] **remove source** · `gdelt-india`: Remove gdelt-india because it fails in most runs (26/34)  
+  _Why:_ Consistently timing out, wasting resources
+- [ ] **add source** · `xAI lab updates`: Add a source tracking xAI research announcements  
+  _Why:_ xAI is a tracked lab with no stories this week
+- [ ] **add source** · `Alibaba Qwen lab updates`: Add a source for Alibaba (Qwen) research releases  
+  _Why:_ Alibaba (Qwen) is a tracked lab lacking coverage
+- [ ] **tune** · `max_stories_per_run`: Reduce max_stories_per_run from 10 to 5  
+  _Why:_ Fewer stories per run can improve overall quality and reduce overload
 
 <details><summary>Statistics the agent reviewed</summary>
 
 ```json
 {
- "runs": 40,
- "stories_written": 69,
+ "runs": 34,
+ "stories_written": 58,
  "source_failures": {
-  "arxiv": "4/40 runs; last error: failed: ReadTimeout: The read operation timed out",
-  "gdelt": "22/40 runs; last error: failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
-  "gdelt-india": "28/40 runs; last error: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20"
+  "arxiv": "4/34 runs; last error: failed: ReadTimeout: The read operation timed out",
+  "gdelt-india": "26/34 runs; last error: failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+  "gdelt": "22/34 runs; last error: failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out"
  },
  "sources_returning_nothing": {},
  "drop_reasons": {
-  "score 5": 167,
-  "score 2": 164,
-  "score 4": 108,
-  "score 3": 70,
-  "could not verify yet": 62,
-  "score 1": 35,
-  "could not verify yet after a second try": 18,
-  "variety": 18
+  "score 5": 130,
+  "score 2": 113,
+  "score 4": 111,
+  "score 3": 69,
+  "could not verify yet": 58,
+  "score 1": 26,
+  "duplicate of 3f492a65e9c2": 17,
+  "variety": 12
  },
  "tracked_labs_without_stories_this_week": [
   "xAI",
@@ -42,9 +42,9 @@ Tick the suggestions you want applied; nothing changes until a person approves i
  ],
  "provider_notes": [
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
-  "cerebras: 429 after retry; moving to next provider for this run",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+  "cerebras/gpt-oss-120b: unusable answer",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
