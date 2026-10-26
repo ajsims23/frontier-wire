@@ -43,12 +43,12 @@
     <p class="brief-line">{{ b.one_line }}</p>
     <p class="brief-by">Written by our newsroom agent from {{ b.from_stories }} stories. Every line links to its stories.</p>
   </div>
-  <ul class="themes">
+  <ol class="themes">
     {% for t in b.themes %}
-    <li class="theme"><h3>{{ t.title }}</h3><p>{{ t.text }}</p>
-      <div class="refs">{% for s in t.stories[:4] %}<a href="{{ root }}story/{{ s.id }}/" title="{{ s.headline }}">{{ s.headline|truncate(44, True, '…') }}</a>{% endfor %}</div></li>
+    <li class="theme"><div class="theme-text"><h3>{{ t.title }}</h3><p>{{ t.text }}</p>
+      <div class="refs">{% for s in t.stories[:3] %}<a href="{{ root }}story/{{ s.id }}/" title="{{ s.headline }}">{{ s.headline|truncate(46, True, '…') }}</a>{% endfor %}</div></div></li>
     {% endfor %}
-  </ul>
+  </ol>
 </div>
 {% endif %}
 {%- endmacro %}

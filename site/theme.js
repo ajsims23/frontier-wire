@@ -20,3 +20,22 @@
     if (navigator.clipboard) navigator.clipboard.writeText(b.dataset.copy).then(done, () => {});
   });
 })();
+
+// Header: today's date, and which section the reader is in.
+(function () {
+  "use strict";
+  const d = document.getElementById("u-date");
+  if (d) d.textContent = new Date().toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+  const here = location.pathname.replace(/index\.html$/, "");
+  const links = Array.from(document.querySelectorAll(".secnav a"));
+  let best = null, len = 0;
+  for (const a of links) {
+    const u = new URL(a.getAttribute("href"), location.href);
+    if (u.search || u.hash) continue;   // topic filters on the home page
+    const p = u.pathname.replace(/index\.html$/, "");
+    if ((a.dataset.nav === "home" ? here === p : here.startsWith(p)) && p.length > len) { best = a; len = p.length; }
+  }
+  if (best) best.setAttribute("aria-current", "page");
+  const cur = links.find((a) => a.getAttribute("aria-current"));
+  if (cur && cur.scrollIntoView && cur.offsetLeft > window.innerWidth * 0.6) cur.parentElement.scrollLeft = cur.offsetLeft - 16;
+})();

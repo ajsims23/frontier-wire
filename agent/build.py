@@ -166,7 +166,9 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
             topic=TOPIC_OF.get(s["category"], "all"), lab_slug=slug(s.get("lab", "")), published_human=human_date(s["published_at"]),
             image_credit=credit, thread=thread,
             tracker_links=[{"id": t, "title": tracker_titles[t]} for t in (s.get("trackers") or []) if t in tracker_titles],
-            related=[{**r, "when": short_date(r["published_at"]), "cat_name": TAG.get(r["category"], "")} for r in related],
+            related=[{**r, "when": short_date(r["published_at"]), "cat_name": TAG.get(r["category"], ""),
+                      "cover_json": json.dumps({k: r.get(k) for k in ("id", "headline", "category", "lab", "model_name", "cover")}, ensure_ascii=False)}
+                     for r in related],
         )
         page = out / "story" / s["id"] / "index.html"
         page.parent.mkdir(parents=True, exist_ok=True)
@@ -494,6 +496,8 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     index = (out / "index.html").read_text()
     index = index.replace("<!--META-->", meta)
     index = index.replace("<!--NEWSLETTER-->", env.get_template("_newsletter.html").render(**common))
+    index = index.replace("<!--HEADER-->", env.get_template("_header.html").render(**common, root=""))
+    index = index.replace("<!--FOOTER-->", env.get_template("_footer.html").render(**common, root=""))
     index = index.replace("<!--ANALYTICS-->", common["analytics"])
     (out / "index.html").write_text(index)
     (out / "data" / "labs-index.json").write_text(json.dumps(lab_index, indent=1))

@@ -1,0 +1,47 @@
+<footer class="foot">
+  <div class="shell foot-grid">
+    <div class="foot-brand">
+      <a class="mark" href="{{ root }}" aria-label="Frontier Wire home">
+        <svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26"><rect x="2" y="10" width="3.4" height="13" rx="1.7" fill="var(--models)"/><rect x="8.2" y="3" width="3.4" height="20" rx="1.7" fill="var(--research)"/><rect x="14.4" y="13" width="3.4" height="10" rx="1.7" fill="var(--policy)"/><rect x="20.6" y="7" width="3.4" height="16" rx="1.7" fill="var(--industry)"/></svg>
+        <span class="mark-name">Frontier Wire</span>
+      </a>
+      <p>An AI newsroom agent reads lab announcements, papers, news outlets and posts from leading people every three hours. A story is published only with an official source or two independent outlets, and quotes appear only when they match the source word for word.</p>
+      <a class="btn btn-ghost" href="{{ root }}data/feed.xml">Follow with RSS</a>
+    </div>
+    <nav class="foot-col" aria-label="News">
+      <h2>News</h2>
+      <a href="{{ root }}">Top stories</a>
+      <a href="{{ root }}#stories">Latest</a>
+      <a href="{{ root }}?topic=models#stories">Models</a>
+      <a href="{{ root }}?topic=research#stories">Research</a>
+      <a href="{{ root }}?topic=policy#stories">Policy &amp; safety</a>
+      <a href="{{ root }}weekly/">Weekly deep dive</a>
+    </nav>
+    <nav class="foot-col" aria-label="Desks">
+      <h2>Desks</h2>
+      <a href="{{ root }}business/">Business and deals</a>
+      <a href="{{ root }}india/">AI in India</a>
+      <a href="{{ root }}sectors/">AI by sector</a>
+      <a href="{{ root }}builders/">What people are building</a>
+      <a href="{{ root }}voices/">Top voices</a>
+    </nav>
+    <nav class="foot-col" aria-label="Tools">
+      <h2>Tools</h2>
+      <a href="{{ root }}models/">Model tracker</a>
+      <a href="{{ root }}trackers/">Where things stand</a>
+      <a href="{{ root }}claims/">Claims check</a>
+      <a href="{{ root }}ask/">Ask the Wire</a>
+      <a href="{{ root }}following/">For you</a>
+    </nav>
+    <nav class="foot-col" aria-label="About">
+      <h2>About</h2>
+      <a href="{{ root }}audit/">How we're doing</a>
+      <a href="{{ root }}data/site.json">Open data</a>
+      <a href="{{ root }}data/feed.xml">RSS feed</a>
+    </nav>
+  </div>
+  <div class="shell foot-base">
+    <span>© <span class="yr">{{ year }}</span> Frontier Wire. Created by <span class="maker">Ajay Manuel</span>.</span>
+    <span>Summaries are written by AI from the linked sources. Stock photos are credited on each story.</span>
+  </div>
+</footer>

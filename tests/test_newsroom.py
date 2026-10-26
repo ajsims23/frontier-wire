@@ -943,3 +943,41 @@ def test_audit_lessons_only_widen_the_editors_bar():
     text = lessons_text({"lessons": [{"text": "AI chip export rules are major policy news for every reader."},
                                      {"text": "Financing tweets are background and should be scored low."}]})
     assert "export rules" in text and "Financing tweets" not in text
+
+
+def test_stock_photos_fill_gaps_with_credited_unique_photos(tmp_path):
+    import io as _io
+    from types import SimpleNamespace
+    from PIL import Image
+    from agent.stock import add_stock_photos, query_for
+    assert query_for({"headline": "SpaceX secures $40 billion GPU debt financing", "category": "industry"}) == "computer chip semiconductor"
+    assert query_for({"headline": "NCERT releases AI module for classes 9-12", "category": "industry"}) == "students classroom computers"
+    assert query_for({"headline": "Researcher shares thoughts", "category": "voices"}) == "conference speaker"
+    photo = _io.BytesIO(); Image.new("RGB", (1600, 900), (40, 90, 160)).save(photo, "JPEG")
+    seen = []
+
+    def handler(r):
+        seen.append(str(r.url))
+        if "api.openverse.org" in str(r.url):
+            res = [{"id": "logo1", "url": "https://img.example/logo.jpg", "title": "Company logo", "width": 1600, "height": 900, "license": "by"},
+                   {"id": "nc1", "url": "https://img.example/nc.jpg", "title": "Chip", "width": 1600, "height": 900, "license": "by-nc"},
+                   {"id": "p1", "url": "https://img.example/p1.jpg", "title": "Wafer", "width": 1600, "height": 900, "license": "by",
+                    "license_version": "2.0", "creator": "Ana", "foreign_landing_url": "https://flickr.example/p1", "source": "flickr"},
+                   {"id": "p2", "url": "https://img.example/p2.jpg", "title": "Chip close-up", "width": 1600, "height": 900, "license": "cc0",
+                    "creator": "Ben", "foreign_landing_url": "https://flickr.example/p2", "source": "flickr"}]
+            return httpx.Response(200, json={"results": res})
+        return httpx.Response(200, content=photo.getvalue())
+    http = httpx.Client(transport=httpx.MockTransport(handler))
+    stories = [{"id": "a1", "headline": "Nvidia unveils new GPU", "category": "models", "published_at": NOW.isoformat()},
+               {"id": "b2", "headline": "TSMC chip output rises", "category": "industry", "published_at": NOW.isoformat()},
+               {"id": "c3", "headline": "Paper figure", "category": "research", "image_kind": "figure", "image": "https://x/f.png", "published_at": NOW.isoformat()},
+               {"id": "d4", "headline": "Has its own photo", "category": "industry", "photo_local": True, "published_at": NOW.isoformat()}]
+    room = SimpleNamespace(store=SimpleNamespace(dir=tmp_path, stories=stories), cfg=SimpleNamespace(run={"front_page_days": 14}), now=NOW, report={})
+    add_stock_photos(room, http)
+    a, b = stories[0], stories[1]
+    assert a["photo_local"] and b["photo_local"] and (tmp_path / "img" / "a1.jpg").exists()
+    assert a["photo_credit"]["by"] == "Ana" and a["photo_credit"]["license"] == "CC BY 2.0" and a["image_kind"] == "stock"
+    assert b["photo_credit"]["key"] != a["photo_credit"]["key"] and b["photo_credit"]["license"] == "CC0"   # no repeats
+    assert not any("logo.jpg" in u or "nc.jpg" in u for u in seen)                                            # logos and NC licences skipped
+    assert sum("api.openverse.org" in u for u in seen) == 1                                                   # one search per topic
+    assert "photo_credit" not in stories[2] and "stock_tried" not in stories[3]

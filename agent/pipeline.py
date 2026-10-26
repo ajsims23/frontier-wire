@@ -8,7 +8,7 @@ from typing import Any
 from . import prompts as P
 from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
-from . import alerts, audit, builders, chief, claims, top_voices, editorial, photos, models_tracker, newsletter, tagging, trackers, videos, weekly
+from . import alerts, audit, builders, chief, claims, top_voices, editorial, photos, models_tracker, newsletter, stock, tagging, trackers, videos, weekly
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather
 from .store import Store
@@ -633,11 +633,12 @@ class Newsroom:
             ("briefing", editorial.write_briefing),
             ("self-review", editorial.self_review),
             ("photos", photos.update_photos),
+            ("stock photos", stock.add_stock_photos),
             ("daily email", newsletter.maybe_send),
             ("alerts", alerts.dispatch),
         )
         if self.mode == "breaking":  # keep breaking runs quick: only what readers need right away
-            steps = tuple(s for s in steps if s[0] in ("tagging", "trackers", "photos", "alerts"))
+            steps = tuple(s for s in steps if s[0] in ("tagging", "trackers", "photos", "stock photos", "alerts"))
         for step, fn in steps:
             try:
                 fn(self)

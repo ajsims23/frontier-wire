@@ -1,6 +1,6 @@
-// Frontier Wire podcast player: an AI podcast picked by the newsroom agent pops up and plays (silently, as
-// browsers require until the reader taps for sound), then after 5 seconds shrinks into a mini player in the
-// corner and keeps playing while you read. Moving to another page picks up where it left off, in the corner.
+// Frontier Wire podcast player: an AI podcast picked by the newsroom agent plays silently (as browsers require
+// until the reader taps for sound) in a mini player in the corner, and keeps playing while you read. On phones it
+// waits behind a small "AI podcast" button. The reader can expand it to the big player. Moving to another page picks up where it left off, in the corner.
 // It only stops if the reader closes it; then a small "AI podcast" button brings it back.
 (function () {
   "use strict";
@@ -157,8 +157,10 @@
       open(false, "mini", saved.t);
     } else if (reduced) {
       showLauncher();
+    } else if (window.matchMedia("(max-width: 760px)").matches) {
+      showLauncher();   // phones: a small button, so the player never covers the story being read
     } else {
-      setTimeout(() => open(false, "big"), 1200);
+      setTimeout(() => open(false, "mini"), 1500);   // desktop: plays quietly in the corner, never over the front page
     }
   }
   window.FWPodcast = start;

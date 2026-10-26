@@ -14,9 +14,10 @@
 
   <figure class="story-figure">
     <div class="media wide{% if s.image_kind == 'figure' %} fig{% endif %}" style="--c: var(--{{ s.category }})" data-cover="{{ cover_json }}">
-      {% if s.image %}<img class="photo" src="{% if s.photo_local %}{{ root }}img/{{ s.id }}.jpg{% else %}{{ s.image }}{% endif %}" alt="" loading="eager" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">{% endif %}
+      {% if s.image or s.photo_local %}<img class="photo" src="{% if s.photo_local %}{{ root }}img/{{ s.id }}.jpg{% else %}{{ s.image }}{% endif %}" alt="" loading="eager" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">{% endif %}
     </div>
-    {% if s.image %}<figcaption>{% if s.image_kind == 'figure' %}Figure from the paper{% else %}Image{% endif %}: {{ image_credit }}</figcaption>{% endif %}
+    {% if s.photo_local and s.photo_credit %}<figcaption>Illustrative photo{% if s.photo_credit.by %}: {{ s.photo_credit.by }}{% endif %}, {% if s.photo_credit.page and s.photo_credit.page.startswith('https://') %}<a href="{{ s.photo_credit.page }}" rel="noopener license">{{ s.photo_credit.license }}</a>{% else %}{{ s.photo_credit.license }}{% endif %}, via {{ s.photo_credit.via }}</figcaption>
+    {% elif s.image %}<figcaption>{% if s.image_kind == 'figure' %}Figure from the paper{% else %}Image{% endif %}: {{ image_credit }}</figcaption>{% endif %}
   </figure>
 
   <div class="story-body">
@@ -117,6 +118,7 @@
     <div class="grid3">
       {% for r in related %}
       <a class="card" href="{{ root }}story/{{ r.id }}/" style="--c: var(--{{ r.category }})">
+        <span class="media card-media" style="--c: var(--{{ r.category }})" data-cover="{{ r.cover_json }}">{% if r.photo_local %}<img src="{{ root }}img/{{ r.id }}.jpg" alt="" loading="lazy" decoding="async">{% endif %}</span>
         <span class="meta">{{ r.lab or r.cat_name }}, {{ r.when }}</span>
         <h3>{{ r.headline }}</h3><p>{{ r.why_it_matters or r.summary }}</p>
       </a>
