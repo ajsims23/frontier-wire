@@ -33,12 +33,26 @@ def _esc(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
 
-def _item_xml(it: Item) -> str:
+def _item_xml(it: Item, why: str | None = None) -> str:
     who = f' person="{_esc(it.person)}"' if it.person else ""
     who += f' desk="{it.desk}"' if it.desk else ""
+    who += f' priority="editor" why="{_esc(why[:160])}"' if why is not None else ""
     return (f'<item id="{it.id}" source="{_esc(it.source_name)}" role="{it.role}"{who} '
             f'published="{it.published or "unknown"}"><title>{_esc(it.title)}</title>'
             f"<snippet>{_esc(it.snippet[:300])}</snippet></item>")
+
+
+def variety_key(lead: Item, aggregators: set[str]) -> str:
+    """Who a story counts against for the per-run variety cap. Aggregators like Techmeme carry many outlets'
+    stories, so they count against the outlet named in the headline ("… (Author/The Information)"), not the
+    aggregator; with no outlet named, each one stands alone."""
+    d = domain(lead.url).lower()
+    if lead.lab or d not in aggregators:
+        return (lead.lab or d).lower()
+    m = re.search(r"\(([^()]*)\)\s*$", lead.title)
+    if m:
+        return m.group(1).split("/")[-1].strip().lower() or f"{d}:{lead.id}"
+    return f"{d}:{lead.id}"
 
 
 def keywords(title: str, n: int = 5) -> list[str]:
@@ -145,7 +159,7 @@ class Newsroom:
             chunk = ordered[i:i + batch]
             prompt = ("Already published (for duplicate checks):\n"
                       + ("\n".join(f'- [{r["id"]}] {r["headline"]}' for r in recent) or "- none")
-                      + "\n\nCandidates:\n" + "\n".join(_item_xml(m[0]) for _, m in chunk)
+                      + "\n\nCandidates:\n" + "\n".join(_item_xml(m[0], self._why(m) if cid in pri else None) for cid, m in chunk)
                       + "\n\nReturn one decision per candidate id.")
             answer = self.llm.ask(system=P.JUDGE_SYSTEM + audit.lessons_text(self.store.audit), prompt=prompt, schema_name="submit_decisions",
                                   schema=P.JUDGE_SCHEMA, max_tokens=6000)
@@ -187,6 +201,11 @@ class Newsroom:
         kept.sort(key=lambda k: -k[0])
         self.report["judged"], self.report["kept"] = len(ordered), len(kept)
         return kept
+
+    def _why(self, members: list[Item]) -> str:
+        """The editor-in-chief's reason for flagging this cluster, for the judge."""
+        reasons = {p["id"]: p.get("why", "") for p in self.plan.get("priorities", [])}
+        return next((reasons[m.id] for m in members if m.id in reasons), "")
 
     def _priority_clusters(self, clusters: dict[str, list[Item]]) -> set[str]:
         return {cid for cid, ms in clusters.items() if any(m.id in self._priority for m in ms)}
@@ -514,6 +533,7 @@ class Newsroom:
 
         # Variety: at most N stories per lab/publisher per run (keeps one company's blog from flooding the page).
         cap = int(self.cfg.run.get("max_per_lab_per_run", 2))
+        aggregators = set(self.cfg.run.get("aggregator_domains", []))
         per: dict[str, int] = {}
         selected = []
         for item in kept:
@@ -521,10 +541,10 @@ class Newsroom:
             if lead.source_id == "audit":  # catch-ups from the daily self-check aren't one outlet flooding the page
                 selected.append(item)
                 continue
-            who = (lead.lab or domain(lead.url)).lower()
+            who = variety_key(lead, aggregators)
             per[who] = per.get(who, 0) + 1
             if per[who] > cap:
-                self.report["dropped"].append({"title": lead.title, "reason": f"variety: already {cap} stories from {lead.lab or domain(lead.url)} this run"})
+                self.report["dropped"].append({"title": lead.title, "reason": f"variety: already {cap} stories from {lead.lab or who} this run"})
             else:
                 selected.append(item)
         # Reserve a few writing slots for desk stories (e.g. India) so global news can't crowd them out.

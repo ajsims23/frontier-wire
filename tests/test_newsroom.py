@@ -905,3 +905,26 @@ def test_thin_area_holds_a_writing_slot():
     head = apply_thin_areas([a, b, c], [a, b], ["policy"], protected={"https://a.example/1"})
     assert [h[1] for h in head] == ["models", "policy"]  # the lowest unprotected story made room
     assert apply_thin_areas([a, b, c], [a, b], ["safety"], set()) == [a, b]  # nothing to fill it with: unchanged
+
+
+def test_variety_cap_counts_aggregator_stories_by_outlet():
+    from agent.pipeline import variety_key
+    from agent.sources import Item
+    tm = lambda t, u="https://www.techmeme.com/261025/p1": Item(url=u, title=t, source_id="techmeme", source_name="Techmeme", role="news")  # noqa: E731
+    agg = {"techmeme.com"}
+    assert variety_key(tm("Tenants demand $5M+ a day in late fees (Ann Davis Vaughan/The Information)"), agg) == "the information"
+    assert variety_key(tm("SpaceX closed $40B in GPU debt (Elon Musk/@elonmusk)", "https://www.techmeme.com/261025/p2"), agg) == "@elonmusk"
+    bare = tm("No outlet named", "https://www.techmeme.com/261025/p3")
+    assert variety_key(bare, agg) == f"techmeme.com:{bare.id}"                 # stands alone, never capped with others
+    plain = Item(url="https://techcrunch.com/a", title="x (TechCrunch)", source_id="tc", source_name="TC", role="news")
+    assert variety_key(plain, agg) == "techcrunch.com"                          # ordinary outlets: capped by domain as before
+
+
+def test_judge_sees_editor_priorities():
+    from agent.pipeline import _item_xml
+    from agent.sources import Item
+    it = Item(url="https://news.example.com/gpu-debt", title="AI data-centre credit dries up", source_id="x", source_name="X", role="news")
+    assert 'priority="editor" why="Shows financing strain"' in _item_xml(it, "Shows financing strain")
+    assert "priority=" not in _item_xml(it)
+    from agent import prompts as P
+    assert "AI infrastructure and money" in P.JUDGE_SYSTEM and "investors" in P.JUDGE_SYSTEM
