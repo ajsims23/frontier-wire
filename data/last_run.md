@@ -1,18 +1,18 @@
-## Frontier Wire breaking-news check — 2026-10-26T18:07:42+00:00
+## Frontier Wire breaking-news check — 2026-10-26T19:02:29+00:00
 
 Fetched 2382 items · fresh 2 · judged 2 · kept 0 · **written 0**
-AI: 1 requests, 4,442 tokens this run · 246 requests today · providers: cerebras, groq
+AI: 1 requests, 4,441 tokens this run · 247 requests today · providers: cerebras, groq
 Photos: 0 saved, 0 unavailable
 Alerts: 46 events sent: {"subscribers":7,"sent":0,"queued":0}
 Trackers: filed 0 stories; no tracker changed
-Time: gather 8s, alerts 7s
+Time: gather 15s, alerts 6s
 
 ### New stories
 - none
 
 <details><summary>Dropped</summary>
 
-- ChatGPT’s expanding world of work — score 5: A usage‑statistics blog from OpenAI showing how people employ ChatGPT at work; interesting but an incremental product insight rather than a major model release or policy change.
-- How AI could help scientists track a pest threatening citrus trees — score 4: A niche application story about AI tracking a citrus pest; useful but not a frontier‑scale development for our audience.
+- When AI rewrites millions of lines of code, verification becomes essential — score 4: The piece is a general commentary on verification of AI‑generated code, without a new model release, research result, policy change or major industry development. It falls into routine commentary and scores below the threshold for publication.
+- From classrooms to careers: The future of education in an AI-driven world — score 3: This is a broad, forward‑looking discussion of AI in education, lacking a concrete news hook such as a new product, research breakthrough, or policy move. It is therefore routine commentary and does not meet the significance threshold.
 
 </details>
