@@ -1,12 +1,12 @@
 {
-  "started_at": "2026-10-26T16:13:59+00:00",
+  "started_at": "2026-10-26T18:07:42+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
     "groq"
   ],
   "sources": {
-    "openai": "ok (1319)",
+    "openai": "ok (1320)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
     "huggingface": "ok (890)",
@@ -15,182 +15,40 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)",
-    "hf-models": "ok (57)",
-    "arxiv": "ok (40)",
-    "hf-papers": "ok (12)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (12)",
-    "techcrunch-ai": "ok (20)",
-    "verge-ai": "ok (10)",
-    "mit-tr-ai": "ok (10)",
-    "ars-ai": "ok (20)",
-    "aim": "ok (50)",
-    "inc42": "ok (24)",
-    "medianama": "ok (10)",
-    "mint-tech": "ok (35)",
-    "et-tech": "ok (50)",
-    "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
-    "crunchbase-news": "ok (10)",
-    "import-ai": "ok (10)",
-    "simon-willison": "ok (30)",
-    "sam-altman": "ok (30)",
-    "bluesky": "ok (27)",
-    "auto-techmeme.com": "ok (15)"
+    "mistral": "ok (6)"
   },
   "dropped": [
     {
-      "title": "Our newest AI Quest: Mapping the human brain",
-      "reason": "score 5: A brief Google AI blog post announcing an “AI Quest” without concrete details or a new model/research result is only a routine communication."
+      "title": "ChatGPT’s expanding world of work",
+      "reason": "score 5: A usage‑statistics blog from OpenAI showing how people employ ChatGPT at work; interesting but an incremental product insight rather than a major model release or policy change."
     },
     {
-      "title": "Fixing Tool-Call Accuracy in vLLM",
-      "reason": "score 4: Technical fix for vLLM tool‑call accuracy is a minor engineering update, not a news‑worthy breakthrough."
-    },
-    {
-      "title": "Paytm Q2 Profit Skyrockets Over 10X YoY To ₹225 Cr, Revenue Up 28%",
-      "reason": "score 1: Paytm’s profit surge is a fintech earnings story, not an AI‑focused development."
-    },
-    {
-      "title": "Tata Communications To Pour Up To $450 Mn In Build AI Connectivity Infrastructure",
-      "reason": "duplicate of b0150cace2ad"
-    },
-    {
-      "title": "Anthropic is said to plan public filing for Mega-IPO Monday",
-      "reason": "duplicate of 8a77e646571b"
-    },
-    {
-      "title": "Anthropic files for IPO even as losses surge to $80B",
-      "reason": "duplicate of 8a77e646571b"
-    },
-    {
-      "title": "Instagram is testing Features, a new long-form horizontal video format of up to 90 minutes aimed at podcasters, comedians, and other creators, in the US (Caitlin Huston/The Hollywood Reporter)",
-      "reason": "score 2: Instagram testing a long‑form video format is unrelated to AI frontier developments."
-    },
-    {
-      "title": "Bedrock Robotics, which makes driverless excavators and other autonomous construction machines, raised a $600M Series C at a $4.1B valuation (Edward Ludlow/Bloomberg)",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "OpenAI Severs Frontier AI From Live Internet After 700-Agent Hugging Face Breach",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Nevis, which uses AI to automate paperwork for financial advisors, raised a $70M Series B led by EQT Ventures, a source says at a $500M valuation (Camila Grigera Naón/Fortune)",
-      "reason": "could not verify yet; will retry next run"
+      "title": "How AI could help scientists track a pest threatening citrus trees",
+      "reason": "score 4: A niche application story about AI tracking a citrus pest; useful but not a frontier‑scale development for our audience."
     }
   ],
-  "written": [
-    {
-      "id": "31748bfffea3",
-      "headline": "Microsoft offers buyouts to about 60,000 employees at VP level and below",
-      "category": "industry",
-      "summary": "Microsoft will offer voluntary exit buyouts to roughly 60,000 employees at the vice‑president level and below across the United States, Canada, India and the United Kingdom. The move is part of a cost‑cutting effort to retool the workforce for the artificial‑intelligence era, and eligible staff will receive severance‑like benefits.",
-      "url": "https://techmeme.com/261026/p32",
-      "sources": 3,
-      "quotes": 2
-    }
-  ],
-  "notes": [
-    "3 kept item(s) carried over to the next run"
-  ],
-  "mode": "full",
+  "written": [],
+  "notes": [],
+  "mode": "breaking",
   "timings": {
-    "gather": 78.0,
-    "audit": 0.0,
-    "plan": 2.6,
-    "judge": 1.5,
-    "verify and write": 296.5,
-    "videos": 23.4,
-    "tagging": 0.7,
-    "explainers": 0.0,
-    "trackers": 21.1,
-    "claims": 20.6,
-    "model tracker": 0.1,
-    "weekly": 0.0,
-    "builders": 0.0,
-    "top voices": 0.0,
-    "briefing": 21.0,
-    "self-review": -0.0,
-    "photos": 0.1,
-    "stock photos": 0.0,
-    "daily email": 0.0,
-    "alerts": 5.0
+    "gather": 8.4,
+    "judge": 0.8,
+    "verify and write": -0.0,
+    "tagging": -0.0,
+    "trackers": -0.0,
+    "photos": -0.0,
+    "stock photos": -0.0,
+    "alerts": 7.1
   },
-  "fetched": 2873,
-  "fresh": 10,
-  "plan": {
-    "focus": "Tracking the fallout from Anthropic’s IPO filing while bolstering our thin model and research coverage.",
-    "priorities": [
-      "Anthropic files for IPO even as losses surge to $80B (Anthropic’s mega‑IPO signals market dynamics and loss scale, crucial for investors and policy watchers)",
-      "Bedrock Robotics, which makes driverless excavators and other autonomo (Bedrock Robotics $600M raise highlights AI‑driven construction automation, a fast‑growing industry segment)",
-      "Microsoft offers buyouts to ~60K workers at VP level and below across  (Microsoft’s large‑scale layoffs affect AI talent pool and corporate strategy, relevant to business readers)",
-      "Nevis, which uses AI to automate paperwork for financial advisors, rai (Nevis AI automates financial‑advisor paperwork, illustrating AI’s expansion into wealth‑management services)",
-      "Tata Communications To Pour Up To $450 Mn In Build AI Connectivity Inf (Tata Communications’ AI‑ready fibre rollout deepens India’s infrastructure story, tying into our India coverage)"
-    ],
-    "thin_areas": [
-      "models",
-      "research"
-    ],
-    "searches": [
-      "vLLM tool-call accuracy updates: 0 new",
-      "AI brain mapping research progress: 0 new",
-      "OpenAI safety breach investigation: 1 new"
-    ],
-    "dig_deeper": [
-      "Anthropic files for IPO even as losses surge to $80B",
-      "Microsoft offers buyouts to ~60K workers at VP level and below across "
-    ]
-  },
-  "judged": 11,
-  "kept": 4,
-  "research": {
-    "investigated": 4,
-    "confirmed": 1,
-    "tool_calls": 12
-  },
-  "research_log": [
-    "Bedrock Robotics, which makes driverless excavators and other autonomo: unconfirmed (searched “Bedrock Robotics $600 million Series C $4.1 billion valuation”; read businessinsider.com; searched “Bedrock Robotics Series C $600 million valuation”)",
-    "Microsoft offers buyouts to ~60K workers at VP level and below across : confirmed (searched “Microsoft offers buyouts to about 60,000 workers”; read techcrunch.com; searched “Microsoft buyouts 60,000 Business Insider”)",
-    "OpenAI Severs Frontier AI From Live Internet After 700-Agent Hugging F: unconfirmed (searched “OpenAI severs Frontier AI from live internet after 700-agent Hugging Face breach”; read techcrunch.com; read yahoo.com)",
-    "Nevis, which uses AI to automate paperwork for financial advisors, rai: unconfirmed (searched “Nevers AI paperwork financial advisors $70 million Series B EQT Ventures”; read yahoo.com; read yahoo.com)"
-  ],
-  "videos": {
-    "OpenAI": "ok (9 in feed, 0 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 0 new)",
-    "Google for Developers": "ok (7 in feed, 0 new)",
-    "AI at Meta": "ok (5 in feed, 0 new)",
-    "Microsoft Research": "ok (7 in feed, 0 new)",
-    "NVIDIA": "ok (10 in feed, 0 new)",
-    "Hugging Face": "ok (13 in feed, 0 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 0 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (14 in feed, 1 new)",
-    "Training Data (Sequoia)": "ok (6 in feed, 0 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 0 new)",
-    "Hard Fork": "ok (1 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (3 in feed, 0 new)",
-    "20VC": "ok (4 in feed, 0 new)"
-  },
-  "videos_kept": "0 kept from 1 new",
-  "tagged": 1,
+  "fetched": 2382,
+  "fresh": 2,
+  "judged": 2,
+  "kept": 0,
   "trackers": "filed 0 stories; no tracker changed",
-  "claims": "32 tracked, 31 open, 0 updated this run",
-  "model_tracker": "82 models, 39 changes today",
-  "briefing": "4 themes from 13 stories",
-  "photos": "1 saved, 0 unavailable",
-  "alerts": "47 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":7}",
-  "ai_requests_run": 25,
-  "ai_tokens_run": 45350,
-  "ai_requests_today": 245,
+  "photos": "0 saved, 0 unavailable",
+  "alerts": "46 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":0}",
+  "ai_requests_run": 1,
+  "ai_tokens_run": 4442,
+  "ai_requests_today": 246,
   "provider_log": []
 }
