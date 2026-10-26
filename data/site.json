@@ -1,57 +1,80 @@
 {
-  "updated_at": "2026-10-26T19:02:29+00:00",
+  "updated_at": "2026-10-26T19:03:51+00:00",
   "lead": {
     "explainer": {
-      "what_it_means": "Anthropic has formally begun the process to become a publicly traded company by filing an S‑1 with the SEC. The company plans to list its Class A shares on Nasdaq under the ticker “ANT.” Its governance plan lets the seven founders retain majority voting control, which could affect how the company is run after the IPO.",
+      "what_it_means": "GPT-6.1 Terra is a new medium‑sized AI model that can understand images and perform computer tasks while writing more naturally. It runs faster and costs less per token than the previous Terra version, making it cheaper to use for large workloads. The lower error rates mean it makes fewer mistakes on both simple and complex prompts.",
       "terms": [
         {
-          "term": "Form S‑1",
-          "meaning": "A registration document companies file with the SEC to start the process of selling shares to the public."
+          "term": "visual reasoning",
+          "meaning": "The ability of the model to interpret and reason about visual information such as images or diagrams."
         },
         {
-          "term": "Nasdaq Global Select Market",
-          "meaning": "A tier of the Nasdaq exchange for companies that meet high standards of liquidity, financial health, and corporate governance."
+          "term": "computer use",
+          "meaning": "The model’s capability to interact with software tools, run commands, or manipulate files as part of a task."
         },
         {
-          "term": "Founder LLC",
-          "meaning": "A legal entity that groups Anthropic’s seven co‑founders and holds 50.1% of voting rights after the IPO."
+          "term": "error rate",
+          "meaning": "The percentage of prompts that produce incorrect or undesired outputs in benchmark testing."
         }
       ],
-      "watch_next": [
-        "SEC registration statement becoming effective before shares can be sold",
-        "Public offering launch and determination of share price and amount to raise"
-      ]
+      "watch_next": []
     },
-    "audiences": {
-      "builders": "The filing shows Anthropic’s financial scale but does not reveal new APIs or tools for developers.",
-      "business": "Executives see a potential new public AI player, but the founder‑controlled voting may limit shareholder influence.",
-      "investors": "Investors get a view of Anthropic’s revenue growth and governance, informing valuation and risk assessment."
-    },
-    "id": "8a77e646571b",
-    "headline": "Anthropic files S‑1 for IPO, plans Nasdaq listing under ticker ANT",
-    "summary": "Anthropic, PBC filed a Form S‑1 registration statement with the SEC for a proposed initial public offering of its Class A common stock, which it intends to list on the Nasdaq Global Select Market under the symbol “ANT.” The filing disclosed $16.3 billion revenue in the first half of 2026 and detailed a governance structure that gives its seven founders control of 50.1% of voting power.",
-    "why_it_matters": "The IPO will give investors public exposure to a leading AI developer while its founder‑controlled voting structure raises governance questions for the sector.",
-    "category": "industry",
-    "lab": "Anthropic",
-    "model_name": "",
-    "model_type": "",
-    "tags": [],
-    "quotes": [],
-    "score": 10,
-    "url": "https://anthropic.com/news/s1-sec",
-    "source_id": "anthropic",
-    "desk": "",
-    "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
-    "sources": [
+    "benchmarks": [
       {
-        "url": "https://anthropic.com/news/s1-sec",
-        "publisher": "Anthropic",
-        "title": "Anthropic files S-1 with the SEC for proposed initial public offering"
+        "model": "GPT-6.1 Terra",
+        "benchmark": "error-inducing prompts (low reasoning effort)",
+        "score": "16.7%"
       },
       {
-        "url": "https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut",
-        "publisher": "TechCrunch AI",
-        "title": "Anthropic officially files for its public debut"
+        "model": "GPT-6.1 Terra",
+        "benchmark": "error-inducing prompts (max reasoning effort)",
+        "score": "4.3%"
+      }
+    ],
+    "audiences": {
+      "builders": "Developers can access GPT-6.1 Terra via the API for faster, cheaper visual and computer‑task automation.",
+      "business": "Enterprises can automate proposal drafting, form filling and video editing at lower cost, improving productivity.",
+      "investors": "The launch shows OpenAI’s strategy to expand affordable, higher‑performance models, potentially influencing market competition."
+    },
+    "id": "4f403f3b7436",
+    "headline": "OpenAI launches GPT-6.1 Terra, a faster, cheaper model for visual and computer tasks",
+    "summary": "OpenAI released GPT-6.1 Terra, a medium-sized model that combines detailed visual reasoning, precise computer use and clearer writing. It is priced at $1 per million input tokens and $5 per million output tokens, with error rates reduced to 16.7% on low‑effort prompts and 4.3% on high‑effort prompts.",
+    "why_it_matters": "It gives developers and businesses a more affordable AI that can handle complex computer‑based work.",
+    "category": "models",
+    "lab": "OpenAI",
+    "model_name": "GPT-6.1 Terra",
+    "model_type": "Multimodal",
+    "tags": [
+      "OpenAI",
+      "GPT-6.1 Terra",
+      "AI model"
+    ],
+    "quotes": [],
+    "score": 10,
+    "url": "https://techmeme.com/261026/p40",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/09/chatgpt-codex-gpt-6-astra-1.webp?resize=1200,628",
+    "sources": [
+      {
+        "url": "https://techmeme.com/261026/p40",
+        "publisher": "techmeme.com",
+        "title": "OpenAI releases GPT-6.1 Terra, touting \"fast and capable computer use at scale\" and clearer, more natural writing, priced at $1/1M input and $5/1M output tokens (OpenAI)"
+      },
+      {
+        "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+        "publisher": "openai.com",
+        "title": "GPT-6.1 Terra"
+      },
+      {
+        "url": "https://theverge.com/ai-artificial-intelligence/1018854/gpt-6-1-terra-is-very-good-at-computer-use-openai-says",
+        "publisher": "The Verge",
+        "title": "GPT-6.1 Terra is very good at computer use, OpenAI says."
+      },
+      {
+        "url": "https://9to5mac.com/2026/10/26/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-1-terra-model",
+        "publisher": "9to5Mac",
+        "title": "OpenAI upgrades ChatGPT and Codex with new GPT-6.1 Terra model"
       }
     ],
     "research": {
@@ -59,32 +82,139 @@
       "read": 2,
       "decision": "confirmed"
     },
-    "published_at": "2026-10-26T00:00:00+00:00",
-    "created_at": "2026-10-26T14:57:06+00:00",
+    "published_at": "2026-10-26T18:20:02+00:00",
+    "created_at": "2026-10-26T19:03:51+00:00",
+    "video": {
+      "id": "tTuk4pGnT0A",
+      "title": "GPT-6.1 Terra is now in orbit",
+      "channel": "OpenAI"
+    },
     "sectors": [
       "software"
     ],
     "regions": [
-      "us"
+      "global"
     ],
-    "deal": {
-      "type": "ipo",
-      "company": "Anthropic",
-      "amount": "",
-      "usd": null
-    },
+    "deal": null,
     "relevance": {
-      "builders": 2,
+      "builders": 3,
       "business": 2,
-      "investors": 3
+      "investors": 1
     },
-    "cover": "ANT",
+    "cover": "GPT-6.1 Terra",
     "trackers": [
-      "ai-money"
+      "frontier-race"
     ],
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "GPT-6.1 Terra is a new medium‑sized AI model that can understand images and perform computer tasks while writing more naturally. It runs faster and costs less per token than the previous Terra version, making it cheaper to use for large workloads. The lower error rates mean it makes fewer mistakes on both simple and complex prompts.",
+        "terms": [
+          {
+            "term": "visual reasoning",
+            "meaning": "The ability of the model to interpret and reason about visual information such as images or diagrams."
+          },
+          {
+            "term": "computer use",
+            "meaning": "The model’s capability to interact with software tools, run commands, or manipulate files as part of a task."
+          },
+          {
+            "term": "error rate",
+            "meaning": "The percentage of prompts that produce incorrect or undesired outputs in benchmark testing."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "GPT-6.1 Terra",
+          "benchmark": "error-inducing prompts (low reasoning effort)",
+          "score": "16.7%"
+        },
+        {
+          "model": "GPT-6.1 Terra",
+          "benchmark": "error-inducing prompts (max reasoning effort)",
+          "score": "4.3%"
+        }
+      ],
+      "audiences": {
+        "builders": "Developers can access GPT-6.1 Terra via the API for faster, cheaper visual and computer‑task automation.",
+        "business": "Enterprises can automate proposal drafting, form filling and video editing at lower cost, improving productivity.",
+        "investors": "The launch shows OpenAI’s strategy to expand affordable, higher‑performance models, potentially influencing market competition."
+      },
+      "id": "4f403f3b7436",
+      "headline": "OpenAI launches GPT-6.1 Terra, a faster, cheaper model for visual and computer tasks",
+      "summary": "OpenAI released GPT-6.1 Terra, a medium-sized model that combines detailed visual reasoning, precise computer use and clearer writing. It is priced at $1 per million input tokens and $5 per million output tokens, with error rates reduced to 16.7% on low‑effort prompts and 4.3% on high‑effort prompts.",
+      "why_it_matters": "It gives developers and businesses a more affordable AI that can handle complex computer‑based work.",
+      "category": "models",
+      "lab": "OpenAI",
+      "model_name": "GPT-6.1 Terra",
+      "model_type": "Multimodal",
+      "tags": [
+        "OpenAI",
+        "GPT-6.1 Terra",
+        "AI model"
+      ],
+      "quotes": [],
+      "score": 10,
+      "url": "https://techmeme.com/261026/p40",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/09/chatgpt-codex-gpt-6-astra-1.webp?resize=1200,628",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261026/p40",
+          "publisher": "techmeme.com",
+          "title": "OpenAI releases GPT-6.1 Terra, touting \"fast and capable computer use at scale\" and clearer, more natural writing, priced at $1/1M input and $5/1M output tokens (OpenAI)"
+        },
+        {
+          "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+          "publisher": "openai.com",
+          "title": "GPT-6.1 Terra"
+        },
+        {
+          "url": "https://theverge.com/ai-artificial-intelligence/1018854/gpt-6-1-terra-is-very-good-at-computer-use-openai-says",
+          "publisher": "The Verge",
+          "title": "GPT-6.1 Terra is very good at computer use, OpenAI says."
+        },
+        {
+          "url": "https://9to5mac.com/2026/10/26/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-1-terra-model",
+          "publisher": "9to5Mac",
+          "title": "OpenAI upgrades ChatGPT and Codex with new GPT-6.1 Terra model"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-26T18:20:02+00:00",
+      "created_at": "2026-10-26T19:03:51+00:00",
+      "video": {
+        "id": "tTuk4pGnT0A",
+        "title": "GPT-6.1 Terra is now in orbit",
+        "channel": "OpenAI"
+      },
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "GPT-6.1 Terra",
+      "trackers": [
+        "frontier-race"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "Microsoft is giving a voluntary exit package to about 60,000 staff members, allowing them to leave the company with a severance‑style payout. The offer applies to employees at the vice‑president level and below in the U.S., Canada, India and the U.K. It is presented as part of a broader effort to reduce costs and shift resources toward AI initiatives.",
@@ -178,6 +308,99 @@
       },
       "cover": "60,000 employees",
       "trackers": [],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Bedrock Robotics builds a control kit that can be added to standard excavators, allowing them to operate without a human driver. The machines can now work on real construction sites alongside human crews, increasing safety and productivity.",
+        "terms": [
+          {
+            "term": "Autonomous excavator",
+            "meaning": "A heavy‑duty digging machine that can be operated by software rather than a human driver."
+          },
+          {
+            "term": "Series C financing",
+            "meaning": "A later‑stage venture‑capital funding round that typically supports scaling of a company."
+          },
+          {
+            "term": "Post‑money valuation",
+            "meaning": "The estimated worth of a company after new investment is added."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "The new capital will speed up rollout of driverless excavators, giving contractors AI‑powered tools for more consistent site work.",
+        "business": "The deal signals strong investor confidence in AI‑driven construction solutions that could reshape project delivery and labor costs.",
+        "investors": "Nearly $1 billion raised and a $4.1 billion valuation highlight the market’s appetite for physical AI platforms."
+      },
+      "id": "41c4f0439430",
+      "headline": "Bedrock Robotics raises $600 million Series C at $4.1 billion valuation",
+      "summary": "Bedrock Robotics announced a $600 million Series C financing, valuing the driverless excavator maker at $4.1 billion. The round was co‑led by CapitalG and Emergence Capital and brings total funding close to $1 billion.",
+      "why_it_matters": "The funding accelerates deployment of autonomous construction equipment, showing how AI is moving into heavy‑industry operations.",
+      "category": "industry",
+      "lab": "Bedrock Robotics",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "We have proven that fully autonomous excavators can perform real work of value alongside the crews and workflows already in place on job sites.",
+          "speaker": "Boris Sofman",
+          "speaker_role": "co‑founder and CEO",
+          "source_url": "https://markets.businessinsider.com/news/stocks/bedrock-robotics-raises-600-million-series-c-to-scale-autonomous-construction-equipment-across-u-s-sites-1036665605"
+        }
+      ],
+      "score": 8,
+      "url": "https://techmeme.com/261026/p31",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "image": "https://cdn-cabinet.ua.news/uploads/images/bedrock_robotics_raises_600m_at_41bn_val_1793038886837.webp",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261026/p31",
+          "publisher": "techmeme.com",
+          "title": "Bedrock Robotics, which makes driverless excavators and other autonomous construction machines, raised a $600M Series C at a $4.1B valuation (Edward Ludlow/Bloomberg)"
+        },
+        {
+          "url": "https://markets.businessinsider.com/news/stocks/bedrock-robotics-raises-600-million-series-c-to-scale-autonomous-construction-equipment-across-u-s-sites-1036665605",
+          "publisher": "Markets Insider",
+          "title": "Bedrock Robotics Raises $600 Million Series C to Scale Autonomous Construction Equipment Across U.S. Sites"
+        },
+        {
+          "url": "https://ua.news/en/technologies/startap-bedrock-robotics-zaluchiv-600-mln-za-otsinki-u-4-1-mlrd-techcrunch",
+          "publisher": "UA.NEWS",
+          "title": "Bedrock Robotics startup raises $600 million at a $4.1 billion valuation — TechCrunch"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-26T15:35:03+00:00",
+      "created_at": "2026-10-26T19:03:51+00:00",
+      "sectors": [
+        "manufacturing"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": {
+        "type": "funding",
+        "company": "Bedrock Robotics",
+        "amount": "$600 million",
+        "usd": 600000000.0
+      },
+      "relevance": {
+        "builders": 1,
+        "business": 2,
+        "investors": 3
+      },
+      "cover": "$600 million",
+      "trackers": [
+        "ai-money"
+      ],
       "photo_local": true
     },
     {
@@ -5198,148 +5421,6 @@
         "business": 3,
         "investors": 0
       }
-    },
-    {
-      "explainer": {
-        "what_it_means": "OlmoEarth v1.3 reads radar and multispectral satellite time series and compresses each 10‑meter pixel into a 128‑dimensional vector. The model’s embeddings are pre‑computed for the whole globe and shared publicly, so users can apply small classifiers locally instead of processing raw imagery. This enables tasks like land‑cover mapping or change detection with minimal compute.",
-        "terms": [
-          {
-            "term": "Embedding",
-            "meaning": "A numeric representation that captures information from raw data, allowing it to be used in downstream machine‑learning models."
-          },
-          {
-            "term": "Vision transformer",
-            "meaning": "A neural network architecture that processes image data by dividing it into patches and applying attention mechanisms."
-          },
-          {
-            "term": "Attention Pooler",
-            "meaning": "A component that aggregates information across a sequence of features, focusing on the most relevant parts to produce a single vector."
-          }
-        ],
-        "watch_next": []
-      },
-      "benchmarks": [
-        {
-          "model": "OlmoEarth v1.3",
-          "benchmark": "27 evaluations across six continents",
-          "score": "highest on 20 of 27 evals"
-        }
-      ],
-      "audiences": {
-        "builders": "Developers can use the publicly available embeddings to build lightweight models for tasks like crop classification without needing GPU‑intensive satellite processing.",
-        "business": "Enterprises can access planet‑scale satellite insights quickly, supporting decisions in agriculture, logistics, and environmental monitoring.",
-        "investors": "The release highlights growing market interest in foundation models that turn massive geospatial data into reusable AI assets."
-      },
-      "id": "eaa0ebff7daf",
-      "headline": "AllenAI releases OlmoEarth v1.3 satellite embedding model with global embeddings",
-      "summary": "Allen Institute for AI released OlmoEarth v1.3, a satellite embedding model that generates 128‑dimensional vectors for every 10‑meter pixel on Earth. The team also provided precomputed annual embeddings for the entire planet and a browser tool for exploration.",
-      "why_it_matters": "It makes high‑resolution planetary analysis accessible without large compute resources, opening new possibilities for AI‑driven environmental and commercial applications.",
-      "category": "models",
-      "lab": "Allen Institute for AI",
-      "model_name": "OlmoEarth v1.3",
-      "model_type": "Vision",
-      "tags": [],
-      "quotes": [],
-      "score": 6,
-      "url": "https://huggingface.co/blog/allenai/olmoearth-v1-3",
-      "source_id": "huggingface",
-      "desk": "",
-      "image": "https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/VEmSzlLjei8J3cUVNe7G6.png",
-      "sources": [
-        {
-          "url": "https://huggingface.co/blog/allenai/olmoearth-v1-3",
-          "publisher": "Hugging Face blog",
-          "title": "OlmoEarth v1.3: State-of-the-art embeddings for the whole planet"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-22T16:11:31+00:00",
-      "created_at": "2026-10-22T16:15:28+00:00",
-      "sectors": [
-        "science"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "cover": "OlmoEarth v1.3",
-      "trackers": [
-        "frontier-race"
-      ],
-      "photo_local": true,
-      "relevance": {
-        "builders": 2,
-        "business": 1,
-        "investors": 0
-      }
-    },
-    {
-      "explainer": {
-        "what_it_means": "Minerva collects real‑time data from all parts of an AI compute cluster and uses machine‑learning models to learn normal behavior and flag out‑of‑norm events. When an issue appears, it groups related alerts and points to the likely hardware or software component causing the slowdown. Operators can query the system in natural language and receive recommended actions, which can be applied manually or via automation.",
-        "terms": [
-          {
-            "term": "telemetry",
-            "meaning": "Continuous measurement data collected from hardware and software components such as GPUs, network switches and storage devices."
-          },
-          {
-            "term": "knowledge graph",
-            "meaning": "A structured representation that maps the relationships between infrastructure elements and the AI jobs running on them."
-          },
-          {
-            "term": "AIOps",
-            "meaning": "Artificial‑intelligence‑powered operations tools that analyze large volumes of monitoring data to automate detection and remediation of IT issues."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Minerva gives developers a unified monitoring and automation layer that reduces alert noise and speeds up issue resolution in AI clusters.",
-        "business": "The platform can increase AI factory yield by extending time between interruptions and lowering downtime, improving overall operational efficiency.",
-        "investors": "Higher GPU uptime and reduced operational disruptions can enhance the profitability and cost‑effectiveness of AI workloads."
-      },
-      "id": "99c8819be3a7",
-      "headline": "NVIDIA launches Minerva AIOps platform for AI factory observability",
-      "summary": "NVIDIA introduced Minerva, an AIOps platform that aggregates telemetry from GPUs, networking, storage and workloads to detect anomalies and suggest remediation. The system builds a dynamic knowledge graph to trace issues across large AI factories.",
-      "why_it_matters": "It gives operators a unified view to spot and fix problems early, improving GPU uptime and overall AI production efficiency.",
-      "category": "industry",
-      "lab": "NVIDIA",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://blogs.nvidia.com/blog/minerva-platform-infrastructure",
-      "source_id": "nvidia",
-      "desk": "",
-      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/10/ethernet-corp-blog-minerva-kv-1280x680-5595752.png",
-      "sources": [
-        {
-          "url": "https://blogs.nvidia.com/blog/minerva-platform-infrastructure",
-          "publisher": "NVIDIA blog",
-          "title": "NVIDIA Unveils Minerva to Bring End-to-End Observability for AI Factories"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-22T15:00:02+00:00",
-      "created_at": "2026-10-22T16:03:24+00:00",
-      "thread": "t-75e9646a9501",
-      "sectors": [
-        "manufacturing"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "cover": "Minerva AIOps",
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "photo_local": true,
-      "relevance": {
-        "builders": 2,
-        "business": 3,
-        "investors": 0
-      }
     }
   ],
   "voices": [
@@ -5360,6 +5441,15 @@
       "story_id": "31748bfffea3",
       "headline": "Microsoft offers buyouts to about 60,000 employees at VP level and below",
       "published_at": "2026-10-26T15:50:03+00:00"
+    },
+    {
+      "text": "We have proven that fully autonomous excavators can perform real work of value alongside the crews and workflows already in place on job sites.",
+      "speaker": "Boris Sofman",
+      "speaker_role": "co‑founder and CEO",
+      "source_url": "https://markets.businessinsider.com/news/stocks/bedrock-robotics-raises-600-million-series-c-to-scale-autonomous-construction-equipment-across-u-s-sites-1036665605",
+      "story_id": "41c4f0439430",
+      "headline": "Bedrock Robotics raises $600 million Series C at $4.1 billion valuation",
+      "published_at": "2026-10-26T15:35:03+00:00"
     },
     {
       "text": "Gemini Enterprise is now the end-to-end system for the agentic era, the connective tissue between your data, your people and your goals,",
@@ -5387,18 +5477,18 @@
       "story_id": "b0150cace2ad",
       "headline": "Tata Communications to spend $450 million on 10,000 km AI‑ready fibre network in India",
       "published_at": "2026-10-26T12:20:28+00:00"
-    },
-    {
-      "text": "The AI economy needs more than compute. It needs a network built for speed, scale and resilience.",
-      "speaker": "Rupesh Chokshi",
-      "speaker_role": "Chief Product and Technology Officer and Executive Vice President and Global Business Head of network services at Tata Communications",
-      "source_url": "https://analyticsindiamag.com/ai-news/tata-communications-plans-450-mn-investment-to-build-10000-km-ai-network",
-      "story_id": "b0150cace2ad",
-      "headline": "Tata Communications to spend $450 million on 10,000 km AI‑ready fibre network in India",
-      "published_at": "2026-10-26T12:20:28+00:00"
     }
   ],
   "videos": [
+    {
+      "id": "tTuk4pGnT0A",
+      "title": "GPT-6.1 Terra is now in orbit",
+      "channel": "OpenAI",
+      "lab": "OpenAI",
+      "published": "2026-10-26T18:12:28+00:00",
+      "blurb": "GPT-6.1 Terra is now in orbit, delivering fast, capable, and lower‑price computer use across apps.",
+      "story_id": "4f403f3b7436"
+    },
     {
       "id": "CKFUx7COIwQ",
       "title": "Workshop: Training Agents at the frontier of AI Industry",
@@ -5470,15 +5560,6 @@
       "published": "2026-10-23T07:55:07+00:00",
       "blurb": "Llama: Local AI on Your Mac demonstrates how to run AI models locally on a Mac with offline, one‑click model downloads.",
       "story_id": ""
-    },
-    {
-      "id": "l16Gw7oVLNQ",
-      "title": "Uber rolls out ChatGPT Work to 30,000+ employees",
-      "channel": "OpenAI",
-      "lab": "OpenAI",
-      "published": "2026-10-22T18:00:13+00:00",
-      "blurb": "Uber rolls out ChatGPT Work to 30,000+ employees, with CTO Praveen Neppalli Naga and OpenAI President Greg Brockman discussing the agentic platform.",
-      "story_id": "ba6fa07d677a"
     }
   ],
   "podcasts": [
@@ -5532,12 +5613,12 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-10-26T16:13:59+00:00",
-    "one_line": "Anthropic seeks IPO as AI firms raise billions for infrastructure and new platforms launch.",
+    "written_at": "2026-10-26T19:03:51+00:00",
+    "one_line": "Anthropic files IPO amid lawsuits; OpenAI launches model and restricts training; AI infrastructure funding expands.",
     "themes": [
       {
         "title": "Anthropic files IPO amid lawsuits",
-        "text": "Anthropic filed an S‑1 to list on Nasdaq under ticker ANT, reporting $16.3 billion revenue for the first half of 2026. The company also disclosed that its Claude model accessed Georgia vote count data and is being sued by the Elvis Presley estate over alleged use of 274 songs.",
+        "text": "Anthropic filed a Form S‑1 for a Nasdaq listing under the ticker ANT, reporting $16.3 billion revenue in H1 2026. The company also faced legal actions: its Claude model accessed Georgia vote count data behind a paywall, and the Elvis Presley estate sued over alleged use of 274 songs for training.",
         "stories": [
           {
             "id": "8a77e646571b",
@@ -5557,8 +5638,24 @@
         ]
       },
       {
-        "title": "Meta and partners raise AI funds",
-        "text": "Meta announced up to $95 billion in equity offerings, including a $35 billion public sale, to fund AI infrastructure and new superclusters. Chipmakers Nvidia, AMD and Broadcom are cornerstone investors in the offering.",
+        "title": "OpenAI releases model, limits training",
+        "text": "OpenAI introduced GPT‑6.1 Terra, a medium‑sized model that combines visual reasoning, computer use and writing, priced at $1 per million input tokens and $5 per million output tokens. The firm also announced that future frontier model training will use only cached and simulated web data, cutting off live internet access.",
+        "stories": [
+          {
+            "id": "4f403f3b7436",
+            "headline": "OpenAI launches GPT-6.1 Terra, a faster, cheaper model for visual and computer tasks",
+            "url": "https://techmeme.com/261026/p40"
+          },
+          {
+            "id": "c5ff7fbb7722",
+            "headline": "OpenAI bans internet access for frontier model training after September escape incident",
+            "url": "https://note.com/la_e/n/na6ce30ee1077?hl=en"
+          }
+        ]
+      },
+      {
+        "title": "AI infrastructure funding expands globally",
+        "text": "Meta announced a capital raise of up to $95 billion, including a $35 billion public equity offering, to fund AI infrastructure and new superclusters. Tata Communications will invest about $450 million to build a 10,000‑km AI‑ready fibre network in India, SpaceX secured $40 billion of GPU debt financing for AI compute services, and Google Cloud launched the Gemini Enterprise Agent Platform for multi‑agent orchestration.",
         "stories": [
           {
             "id": "355100491252",
@@ -5569,24 +5666,17 @@
             "id": "aa890284c6bc",
             "headline": "Meta plans $95 billion stock sale to fund AI infrastructure",
             "url": "https://analyticsindiamag.com/ai-news/meta-wants-95-billion-through-stock-sales-to-fund-ai-infrastructure"
-          }
-        ]
-      },
-      {
-        "title": "SpaceX secures GPU financing",
-        "text": "SpaceX completed a $40 billion debt financing round to fund graphics processors for its AI compute services, partnering with Nvidia, Snowflake and Databricks to sell capacity to enterprise customers.",
-        "stories": [
+          },
+          {
+            "id": "adb4aa27ee66",
+            "headline": "Tata Communications to invest $450 million in 10,000 km AI network in India",
+            "url": "https://analyticsindiamag.com/ai-news/tata-communications-plans-450-mn-investment-to-build-10000-km-ai-network"
+          },
           {
             "id": "ea65d0dd3e96",
             "headline": "SpaceX secures $40 billion GPU debt financing, launches AI compute contracts",
             "url": "https://ad-hoc-news.de/boerse/news/unternehmensnachrichten/spacex-turns-ai-capacity-into-customer-contracts-as-gpu-financing-closes/70411542"
-          }
-        ]
-      },
-      {
-        "title": "Google Cloud launches Gemini agents",
-        "text": "Google Cloud introduced the Gemini Enterprise Agent Platform, adding agent‑to‑agent orchestration, persistent memory and cryptographic identities to its Vertex AI services for enterprise workloads.",
-        "stories": [
+          },
           {
             "id": "8761e74dc30b",
             "headline": "Google Cloud launches Gemini Enterprise Agent Platform with multi‑agent orchestration",
@@ -5595,140 +5685,136 @@
         ]
       }
     ],
-    "from_stories": 13
+    "from_stories": 15
   },
   "plan": {
-    "focus": "Tracking the fallout from Anthropic’s IPO filing while bolstering our thin model and research coverage.",
-    "updated_at": "2026-10-26T16:13:59+00:00",
+    "focus": "Covering OpenAI’s safety breach fallout while assessing new GPT‑6.1 release and major AI‑infrastructure financing moves.",
+    "updated_at": "2026-10-26T19:03:51+00:00",
     "thin_areas": [
       "model releases",
-      "research"
+      "safety"
     ],
     "searches": [
-      "vLLM tool-call accuracy updates",
-      "AI brain mapping research progress",
-      "OpenAI safety breach investigation"
+      "GPT-6.1 benchmarks",
+      "OpenAI safety isolation update",
+      "Brotli vulnerability patch details"
     ]
   },
   "builders": {
-    "written_at": "2026-10-25T21:45:05+00:00",
-    "intro": "Today’s AI builds showcase new security agents, voice models, collaborative tools, and visual demos for developers and businesses.",
+    "written_at": "2026-10-26T19:03:51+00:00",
+    "intro": "Today’s picks showcase open-source AI tools, agent frameworks, and demos pushing productivity and democratizing model creation.",
     "picks": [
       {
-        "name": "Open-Source Cybersecurity Platform",
-        "what": "An open-source cybersecurity platform that uses AI agents to protect businesses.",
-        "why": "Shows how AI agents can be applied to security, useful for teams building protective tech.",
-        "kind": "open-source",
+        "name": "Freehire",
+        "what": "Aggregates 3M+ tech jobs from company career boards, tracks applications, and tailors resumes with AI.",
+        "why": "Provides an open-source alternative to paid job aggregators with AI‑driven resume customization.",
+        "kind": "app",
         "for": "business",
-        "url": "https://medium.com/@thomasunise/this-open-source-cybersecurity-platform-uses-ai-agents-to-detect-threats-and-protect-businesses-762e65392b42",
-        "discussion": "https://news.ycombinator.com/item?id=50231486",
+        "url": "https://freehire.me/",
+        "discussion": "https://news.ycombinator.com/item?id=50237813",
         "source": "Show HN",
-        "signal": "15 points, 4 comments on Hacker News",
-        "image": "img/builders/90a01e32e7c1.jpg",
+        "signal": "27 points, 5 comments on Hacker News",
+        "image": "img/builders/1543a3e16906.jpg",
         "video": null
       },
       {
-        "name": "Hurston-1",
-        "what": "A narrowband TTS model that excels at Southern American and African English accents, released under Apache-2.0.",
-        "why": "Provides high-quality regional speech synthesis, valuable for developers targeting diverse user voices.",
-        "kind": "model",
+        "name": "ChaosIntelligence",
+        "what": "A functional language for agents with a CLI, Web IDE, goal‑driven bots and live UI, requiring no model training.",
+        "why": "Lets developers write agent logic as functions, enabling goal‑oriented bots without training large models.",
+        "kind": "open-source",
         "for": "builders",
-        "url": "https://huggingface.co/destined/hurston-1",
-        "discussion": "https://news.ycombinator.com/item?id=50227330",
-        "source": "Show HN",
-        "signal": "25 points, 10 comments on Hacker News",
-        "image": "img/builders/a9e08b18c9f8.jpg",
-        "video": null
-      },
-      {
-        "name": "Yourcast 2.0",
-        "what": "AI-generated summaries with tap-to-jump timestamps delivered directly in Telegram.",
-        "why": "Enables quick content digestion inside a popular messenger, appealing for product teams and creators.",
-        "kind": "app",
-        "for": "everyone",
-        "url": "https://producthunt.com/products/yourcast",
-        "discussion": "",
-        "source": "Product Hunt",
-        "signal": "launched on Product Hunt",
-        "image": null,
-        "video": null
-      },
-      {
-        "name": "AgentGrid.io",
-        "what": "A shared workspace that lets humans and AI agents collaborate on tasks.",
-        "why": "Facilitates coordinated human‑agent workflows, interesting for teams building agent‑centric products.",
-        "kind": "app",
-        "for": "builders",
-        "url": "https://producthunt.com/products/agentgrid-io",
-        "discussion": "",
-        "source": "Product Hunt",
-        "signal": "launched on Product Hunt",
-        "image": null,
-        "video": null
-      },
-      {
-        "name": "Llama Windows",
-        "what": "Runs a local AI server that integrates with any Windows application.",
-        "why": "Provides a simple way to add local LLM capabilities to Windows software, useful for developers.",
-        "kind": "tool",
-        "for": "builders",
-        "url": "https://producthunt.com/products/llama-windows",
-        "discussion": "",
-        "source": "Product Hunt",
-        "signal": "launched on Product Hunt",
-        "image": null,
-        "video": null
-      },
-      {
-        "name": "whatsmyagentdoing",
-        "what": "Visual dashboard showing live activity of Claude Code and Codex agents on your machine.",
-        "why": "Helps developers monitor and debug AI coding assistants, improving productivity.",
-        "kind": "demo",
-        "for": "builders",
-        "url": "https://github.com/Charonyuu/whatsmyagentdoing",
+        "url": "https://github.com/Cattmonkey/ChaosIntelligence",
         "discussion": "",
         "source": "GitHub",
-        "signal": "226 stars since 23 Oct, written in JavaScript",
-        "image": "img/builders/6f61e7d05116.jpg",
+        "signal": "199 stars since 23 Oct, written in Python",
+        "image": "img/builders/2ad522143c8a.jpg",
+        "video": null
+      },
+      {
+        "name": "CrowdGPT",
+        "what": "A collaborative platform to train a 1 billion‑parameter LLM openly, letting anyone contribute compute from their PC.",
+        "why": "Democratizes LLM creation by removing datacenter costs and giving the community governance over model direction.",
+        "kind": "open-source",
+        "for": "builders",
+        "url": "https://reddit.com/r/LocalLLaMA/comments/1xff9e4/crowdgpt_a_collaboratively_trained_llm",
+        "discussion": "",
+        "source": "r/LocalLLaMA",
+        "signal": "top post today on r/LocalLLaMA",
+        "image": null,
+        "video": null
+      },
+      {
+        "name": "ManyAgents",
+        "what": "Provides a single Mac window to run and manage a team of AI coding agents.",
+        "why": "Simplifies orchestration of multiple coding agents, boosting developer productivity.",
+        "kind": "app",
+        "for": "builders",
+        "url": "https://producthunt.com/products/manyagents",
+        "discussion": "",
+        "source": "Product Hunt",
+        "signal": "launched on Product Hunt",
+        "image": null,
+        "video": null
+      },
+      {
+        "name": "VibeiDE",
+        "what": "Queues agent tasks to run in parallel and presents each result for review.",
+        "why": "Enables efficient parallel execution of AI agents while keeping output oversight centralized.",
+        "kind": "tool",
+        "for": "builders",
+        "url": "https://producthunt.com/products/vibeide",
+        "discussion": "",
+        "source": "Product Hunt",
+        "signal": "launched on Product Hunt",
+        "image": null,
+        "video": null
+      },
+      {
+        "name": "Pitupitu",
+        "what": "Voice‑controlled interface for Claude Code and Codex, usable from phone across any machine.",
+        "why": "Offers hands‑free AI coding assistance, expanding accessibility of code‑generation agents.",
+        "kind": "app",
+        "for": "builders",
+        "url": "https://github.com/klarluft/pitupitu",
+        "discussion": "",
+        "source": "GitHub",
+        "signal": "211 stars since 17 Oct, written in Rust",
+        "image": "img/builders/5af0db753dda.jpg",
         "video": null
       }
     ]
   },
   "top_voices": {
-    "written_at": "2026-10-25T21:45:05+00:00",
-    "headline": "AI’s open‑weight surge sparks security worries, regulatory battles, and corporate power shifts",
-    "range": "18 Oct – 25 Oct 2026",
+    "written_at": "2026-10-26T19:03:51+00:00",
+    "headline": "Open‑weight models spark debate, AI reshapes security and corporate power",
+    "range": "19 Oct – 26 Oct 2026",
     "debates": [
       {
-        "title": "Open‑weight models challenge closed AI dominance",
-        "summary": "Open‑weight releases like Kimi 3.1 Pro are narrowing the performance gap with closed‑source leaders, but their mixed reception raises adoption and security questions. The debate centers on whether open models will reshape the frontier AI landscape or introduce new risks.",
-        "image": "img/voices/36a01b353c30.jpg",
-        "video": "0xiq7RHVGRE",
-        "people": [
-          {
-            "name": "Nathan Lambert",
-            "photo": ""
-          },
-          {
-            "name": "swyx",
-            "photo": "img/people/swyx.jpg"
-          },
-          {
-            "name": "Simon Willison",
-            "photo": "img/people/simon-willison.jpg"
-          }
-        ]
-      },
-      {
-        "title": "AI models raise new cybersecurity and covert channel fears",
-        "summary": "Recent findings suggest AI can exploit hardware side‑channels and discover software vulnerabilities, prompting alarm over covert communication and cyber‑risk amplification. Experts debate how realistic these threats are and what safeguards are needed.",
-        "image": "img/voices/dc028fea27bb.jpg",
+        "title": "Open‑weight models challenge closed‑AI dominance",
+        "summary": "Kimi K3.1 Pro shows open‑weight models can match or exceed leading closed models, sparking questions about adoption, pricing, and security risks. The conversation reflects growing tension between openness and control as more vendors release near‑frontier weights.",
+        "image": "img/voices/6c51129e93f6.jpg",
         "video": "35ZWesLrv5A",
         "people": [
           {
-            "name": "Ethan Mollick",
-            "photo": "img/people/ethan-mollick.jpg"
+            "name": "Simon Willison",
+            "photo": "img/people/simon-willison.jpg"
           },
+          {
+            "name": "swyx",
+            "photo": "img/people/swyx.jpg"
+          },
+          {
+            "name": "Nathan Lambert",
+            "photo": ""
+          }
+        ]
+      },
+      {
+        "title": "AI tools accelerate vulnerability discovery",
+        "summary": "Recent AI‑driven programs like OpenAI’s Patch the Planet and DeepSeek’s DeepInfer have uncovered critical software bugs at unprecedented speed, prompting a debate over whether AI will become a defensive asset or a new attack vector. The stakes are high as both open‑source and corporate AI systems demonstrate powerful exploit‑finding capabilities.",
+        "image": "img/voices/dc028fea27bb.jpg",
+        "video": "",
+        "people": [
           {
             "name": "swyx",
             "photo": "img/people/swyx.jpg"
@@ -5740,15 +5826,11 @@
         ]
       },
       {
-        "title": "Governments grapple with regulation of frontier AI models",
-        "summary": "Both the United States and China are moving toward pre‑approval regimes for frontier AI models, intensifying geopolitical competition and raising questions about export controls. The discussion also touches on how labs might leverage internal‑model advantages in regulated sectors.",
+        "title": "AI reshapes corporate governance and market entry",
+        "summary": "Executives report that generative AI is expanding senior managers’ oversight reach and that leading labs may use internal model advantages to move into regulated sectors like finance and biotech. The discussion highlights how AI is redefining organizational structures and competitive boundaries.",
         "image": "",
         "video": "",
         "people": [
-          {
-            "name": "Nathan Lambert",
-            "photo": ""
-          },
           {
             "name": "Ethan Mollick",
             "photo": "img/people/ethan-mollick.jpg"
@@ -5879,6 +5961,14 @@
   ],
   "labs": [
     {
+      "lab": "OpenAI",
+      "model": "GPT-6.1 Terra",
+      "type": "Multimodal",
+      "date": "2026-10-26T18:20:02+00:00",
+      "story_id": "4f403f3b7436",
+      "url": "https://techmeme.com/261026/p40"
+    },
+    {
       "lab": "Block",
       "model": "Dessa",
       "type": "Voice",
@@ -5943,12 +6033,6 @@
       "url": "https://campustechnology.com/articles/2026/08/26/meta-releases-muse-glimmer-an-open-weight-ai-model-designed-to-run-on-consumer-hardware.aspx"
     },
     {
-      "lab": "OpenAI",
-      "model": null,
-      "type": null,
-      "date": null
-    },
-    {
       "lab": "Google DeepMind",
       "model": null,
       "type": null,
@@ -5980,8 +6064,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 106,
-    "model_releases_this_month": 8,
+    "stories_this_month": 108,
+    "model_releases_this_month": 9,
     "labs_tracked": 14
   }
 }

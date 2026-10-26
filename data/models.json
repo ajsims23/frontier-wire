@@ -1,6 +1,20 @@
 {
   "models": [
     {
+      "id": "openai/gpt-6.1-terra",
+      "name": "GPT-6.1 Terra",
+      "lab": "OpenAI",
+      "released": "2026-10-26",
+      "context": 1050000,
+      "price_in": 1.0,
+      "price_out": 5.0,
+      "inputs": [
+        "file",
+        "image",
+        "text"
+      ]
+    },
+    {
       "id": "moonshotai/kimi-k3.1-pro",
       "name": "Kimi K3.1 Pro",
       "lab": "Moonshot AI",
@@ -222,20 +236,6 @@
       ]
     },
     {
-      "id": "openai/gpt-6-sol",
-      "name": "GPT-6 Sol",
-      "lab": "OpenAI",
-      "released": "2026-09-22",
-      "context": 1050000,
-      "price_in": 2.0,
-      "price_out": 10.0,
-      "inputs": [
-        "file",
-        "image",
-        "text"
-      ]
-    },
-    {
       "id": "qwen/qwen3.8-omni-flash",
       "name": "Qwen3.8 Omni Flash",
       "lab": "Alibaba (Qwen)",
@@ -284,8 +284,8 @@
       "lab": "DeepSeek",
       "released": "2026-09-10",
       "context": 1048576,
-      "price_in": 0.02,
-      "price_out": 1.0,
+      "price_in": 0.0477,
+      "price_out": 0.1908,
       "inputs": [
         "text",
         "image"
@@ -532,7 +532,7 @@
       "lab": "Moonshot AI",
       "released": "2026-07-16",
       "context": 1048576,
-      "price_in": 0.179,
+      "price_in": 0.15,
       "price_out": 20.0,
       "inputs": [
         "text",
@@ -682,8 +682,8 @@
       "lab": "DeepSeek",
       "released": "2026-04-24",
       "context": 1048576,
-      "price_in": 0.7656,
-      "price_out": 1.5312,
+      "price_in": 0.7402,
+      "price_out": 1.4804,
       "inputs": [
         "text"
       ]
@@ -1099,48 +1099,6 @@
       "model": "DeepSeek V4 Pro 0423",
       "lab": "DeepSeek",
       "kind": "price_cut",
-      "text": "DeepSeek V4 Pro 0423 output price cut: $1.2027 → $0.9594 per 1M tokens"
-    },
-    {
-      "date": "2026-10-24",
-      "model": "DeepSeek V4 Pro 0423",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4 Pro 0423 input price cut: $0.4797 → $0.3783 per 1M tokens"
-    },
-    {
-      "date": "2026-10-24",
-      "model": "DeepSeek V4 Pro 0423",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4 Pro 0423 output price cut: $0.9594 → $0.7566 per 1M tokens"
-    },
-    {
-      "date": "2026-10-24",
-      "model": "DeepSeek V4 Pro 0423",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4 Pro 0423 input price cut: $0.3783 → $0.2566 per 1M tokens"
-    },
-    {
-      "date": "2026-10-24",
-      "model": "DeepSeek V4 Pro 0423",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4 Pro 0423 output price cut: $0.7566 → $0.5133 per 1M tokens"
-    },
-    {
-      "date": "2026-10-24",
-      "model": "DeepSeek V4 Pro 0423",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4 Pro 0423 input price cut: $0.2566 → $0.2088 per 1M tokens"
-    },
-    {
-      "date": "2026-10-24",
-      "model": "DeepSeek V4 Pro 0423",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
       "text": "DeepSeek V4 Pro 0423 output price cut: $0.5133 → $0.4176 per 1M tokens"
     },
     {
@@ -1513,7 +1471,49 @@
       "lab": "DeepSeek",
       "kind": "price_cut",
       "text": "DeepSeek V4 Pro 0423 output price cut: $1.5615 → $1.5312 per 1M tokens"
+    },
+    {
+      "date": "2026-10-26",
+      "model": "GPT-6.1 Terra",
+      "lab": "OpenAI",
+      "kind": "new",
+      "text": "Now available: GPT-6.1 Terra ($1 in / $5 out per 1M tokens)"
+    },
+    {
+      "date": "2026-10-26",
+      "model": "DeepSeek V4.1 Flash",
+      "lab": "DeepSeek",
+      "kind": "price_rise",
+      "text": "DeepSeek V4.1 Flash input price raised: $0.02 → $0.0477 per 1M tokens"
+    },
+    {
+      "date": "2026-10-26",
+      "model": "DeepSeek V4.1 Flash",
+      "lab": "DeepSeek",
+      "kind": "price_cut",
+      "text": "DeepSeek V4.1 Flash output price cut: $1 → $0.1908 per 1M tokens"
+    },
+    {
+      "date": "2026-10-26",
+      "model": "Kimi K3",
+      "lab": "Moonshot AI",
+      "kind": "price_cut",
+      "text": "Kimi K3 input price cut: $0.179 → $0.15 per 1M tokens"
+    },
+    {
+      "date": "2026-10-26",
+      "model": "DeepSeek V4 Pro 0423",
+      "lab": "DeepSeek",
+      "kind": "price_cut",
+      "text": "DeepSeek V4 Pro 0423 input price cut: $0.7656 → $0.7402 per 1M tokens"
+    },
+    {
+      "date": "2026-10-26",
+      "model": "DeepSeek V4 Pro 0423",
+      "lab": "DeepSeek",
+      "kind": "price_cut",
+      "text": "DeepSeek V4 Pro 0423 output price cut: $1.5312 → $1.4804 per 1M tokens"
     }
   ],
-  "updated_at": "2026-10-26T16:13:59+00:00"
+  "updated_at": "2026-10-26T19:03:51+00:00"
 }
