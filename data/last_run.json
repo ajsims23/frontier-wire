@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-26T07:07:46+00:00",
+  "started_at": "2026-10-26T09:36:11+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -18,9 +18,9 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (24)",
-    "gdelt": "ok (20)",
-    "hn": "ok (12)",
+    "hf-papers": "ok (15)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (14)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -31,7 +31,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -41,189 +41,202 @@
   },
   "dropped": [
     {
-      "title": "As the US and China form AI blocs , countries are increasingly torn between them",
-      "reason": "duplicate of 0dc406750f53"
+      "title": "PaperPilot – Zero-Cloud, Pure-Rust PDF Engine with WASM and MCP",
+      "reason": "score 1: Zero‑cloud PDF engine is unrelated to frontier AI developments."
     },
     {
-      "title": "Global Market : South Korean shares fall over 1 % as AI trade concerns weigh ; won strengthens",
-      "reason": "score 4: General market move about South Korean shares; AI relevance minimal."
+      "title": "Steal My Bitcoin CTF PoC",
+      "reason": "score 1: Security CTF proof‑of‑concept, not AI‑relevant."
     },
     {
-      "title": "OpenAI resumes frontier AI training after security overhaul , discloses flaw in widely used software",
-      "reason": "duplicate of f5a8973e6dfd"
+      "title": "Show HN: A Truly Modular Keyboard",
+      "reason": "score 1: Modular keyboard hardware, not AI."
     },
     {
-      "title": "Visa sharpens its identity for the AI shopping era",
-      "reason": "score 2: Marketing‑focused piece on Visa branding; not substantive AI news."
+      "title": "Hexaware Certified as Best Firm for Forward-Deployed Engineers by AIM",
+      "reason": "score 2: Certification award for Hexaware does not pertain to AI advancements."
     },
     {
-      "title": "To make AI morally good , tech companies are turning to religion , in spite of doubts",
-      "reason": "score 3: Opinion piece on religion and AI ethics; lacks concrete AI developments."
+      "title": "Jev Isn’t An Overnight Fix For Your Lack of AI Fundamentals",
+      "reason": "score 5: Valuation of TypeSafe is notable but the company is not Indian; the story is more a startup finance note."
     },
     {
-      "title": "No sweat , just use AI to create ...",
-      "reason": "score 2: Promotional content about AI‑generated creations; not newsworthy."
+      "title": "[Update] IRDAI Extends Feedback Deadline For Insurance Distribution Reforms To Oct 31",
+      "reason": "score 1: Regulatory deadline extension for insurance, not AI."
     },
     {
-      "title": "Removing Next.js Got My Blog to 100 on Every Lighthouse Category",
-      "reason": "score 1: Technical blog about Next.js performance; unrelated to AI."
+      "title": "Amagi Media Labs faces extortion attempt, operational data stolen",
+      "reason": "score 2: Extortion attempt on a media company, not AI‑focused."
     },
     {
-      "title": "Musk Says SpaceX Closed $40 Bn GPU Debt Deal, Warns Most Neoclouds Won’t Survive",
-      "reason": "duplicate of ea65d0dd3e96"
+      "title": "‘Legal requirements’, no authority named: What Instagram told a comedian about her blocked reel",
+      "reason": "score 1: Instagram legal notice story, not AI‑related."
     },
     {
-      "title": "Pune Police write to Google, Apple to take down Rapido app amid bike taxi licence dispute",
-      "reason": "score 2: Local regulatory dispute over a bike‑taxi app; not AI‑related."
+      "title": "Google can now use your Gmail, Drive and Photos data to personalise ads, but there’s a catch",
+      "reason": "score 2: Google ad personalization policy, peripheral to AI news."
     },
     {
-      "title": "Grand Theft Auto VI launch: How is the highly anticipated game moving calendars as fever grips workforce",
-      "reason": "score 1: Gaming release survey; not AI‑related."
+      "title": "Same AI, different outcomes: what 25 lean AI startups got right",
+      "reason": "score 5: Report on lean AI startups provides some insight but lacks a single newsworthy development."
     },
     {
-      "title": "From Carnegie to Claude: AI wealth could reshape philanthropy",
-      "reason": "score 3: Opinion on AI‑generated wealth and philanthropy; lacks concrete AI news."
+      "title": "Soulflower's Natasha Tuli on why brands must earn customer trust",
+      "reason": "score 1: Brand‑trust commentary unrelated to AI developments."
     },
     {
-      "title": "Japanese companies compensate users as cyberattacks buffet economy",
-      "reason": "score 2: Cyber‑attack compensation news; not AI‑centric."
+      "title": "Collective Artists Network’s Vijay Subramaniam on AI and the changing media landscape",
+      "reason": "score 2: Discussion of AI’s impact on media landscape is a commentary without a concrete news hook."
     },
     {
-      "title": "Elon Musk says SpaceX raised $40 billion in debt for GPUs",
-      "reason": "duplicate of ea65d0dd3e96"
+      "title": "Told to give up science in school, Mallikarjuna Iytha now backs 2,000 entrepreneurs with disabilities",
+      "reason": "score 1: Human‑interest story about disability entrepreneurship, not AI‑related."
     },
     {
-      "title": "Rapido rides ahead with Razorpay’s real‑time payments",
-      "reason": "score 2: Ride‑hailing payment integration; not AI‑focused."
+      "title": "How Attero is using AI to solve recycling’s pricing and compliance challenges",
+      "reason": "score 5: Attero’s AI solution for e‑waste pricing is a niche application, not a major AI market development."
     },
     {
-      "title": "Life After 55: Cradle Of Life is reimagining senior living lifestyle for retired Indians",
-      "reason": "score 1: Senior‑living lifestyle piece; unrelated to AI."
-    },
-    {
-      "title": "Who will shape India’s next 500 million digital users?",
-      "reason": "score 3: Broad discussion of India’s digital user base; no specific AI development."
-    },
-    {
-      "title": "Startup funding falls below $100M; Deeptech startups look to go global",
-      "reason": "score 4: General funding slowdown for deep‑tech startups; below $100 M threshold and not AI‑specific."
-    },
-    {
-      "title": "QpiAI founder Nagendra Nagaraja makes the case for intelligence modelling",
-      "reason": "score 4: Speculative talk on quantum intelligence modelling; lacks concrete AI advancement."
-    },
-    {
-      "title": "Seam Cutter",
-      "reason": "score 2: Tool announcement unrelated to frontier AI developments; low relevance for audience."
-    },
-    {
-      "title": "Amazon Bee Frontier review: a simple $75 AI wearable that excels at always-on listening, summarizing conversations, and suggesting follow-up actions (M.G. Siegler/Spyglass)",
-      "reason": "score 4: Product review of an AI wearable; modest relevance but not a major frontier development."
-    },
-    {
-      "title": "Report: SK Hynix gained ~$15B from selling down its Kioxia stake earlier this year, and plans to return ~$12B to shareholders via a special dividend (Bloomberg)",
-      "reason": "score 4: Financial news about SK Hynix dividend; not directly tied to AI developments."
-    },
-    {
-      "title": "High-frequency trading firms such as Jane Street are investing in AI and chip startups and neoclouds, and building data centers to gain an edge in the AI era (Bloomberg)",
-      "reason": "could not verify yet after a second try; dropped"
-    },
-    {
-      "title": "Talent, compute and R&amp;D key to India's AI ambitions: Report",
-      "reason": "could not verify yet after a second try; dropped"
-    },
-    {
-      "title": "India's chip design startups near production with government support, but low volumes, high fab costs, and supply chain bottlenecks hinder commercialization (Ananta Agarwal/Nikkei Asia)",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "A look at Toyota's robotics expansion, including its Walden spinoff and a $6.4B annual plan to deploy 400K factory robots, as it competes with Tesla and China (Financial Times)",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "External Researchers Audit OpenAI's AI Monitoring: The Pitfalls of 'We're Watching, So It's Safe'",
-      "reason": "could not verify yet; will retry next run"
+      "title": "Startup news and updates: daily roundup (October 26, 2026)",
+      "reason": "score 1: General daily roundup, no specific AI news."
     },
     {
       "title": "India's voice AI challenges could shape global technology, says Murf AI co-founder",
+      "reason": "score 5: Murf AI co‑founder’s commentary on voice AI challenges offers perspective but lacks a distinct news event."
+    },
+    {
+      "title": "Alphabet, Amazon, and Microsoft are expected to report double-digit gains in revenue this week, as investors grow impatient with AI capex and seek returns (Bloomberg)",
+      "reason": "score 5: Earnings preview for Alphabet, Amazon and Microsoft is routine financial reporting, not a major AI development."
+    },
+    {
+      "title": "Inside Slack's Salesforce culture clash: Benioff had ~1 hour with CEO Butterfield pre-deal and didn't use Slack; Butterfield quit after a Davos celebrity panel (Johnny Rodgers/Building Slack)",
+      "reason": "score 1: Internal Slack/Salesforce culture story, not AI‑focused."
+    },
+    {
+      "title": "A profile of former Google VP and Yahoo CEO Marissa Mayer, whose startup Dazzle is building an AI assistant to help non-tech enthusiasts with mundane tasks (Alexandra Alter/New York Times)",
+      "reason": "score 5: Profile of Marissa Mayer’s startup is a human‑interest piece with limited AI news value."
+    },
+    {
+      "title": "Anthropic sued for allegedly training Claude on Elvis Presley's music",
+      "reason": "score 0: Duplicate coverage of the Anthropic lawsuit."
+    },
+    {
+      "title": "Anthropic sued for using 274 Elvis Presley songs to train AI models",
+      "reason": "score 0: Duplicate coverage of the Anthropic lawsuit."
+    },
+    {
+      "title": "Elvis Presley’s rights holders sue Anthropic saying it trained AI on his music",
+      "reason": "score 0: Duplicate coverage of the Anthropic lawsuit."
+    },
+    {
+      "title": "Owners of Elvis Presley’s Music Sue Anthropic for Copyright Infringement",
+      "reason": "score 0: Duplicate coverage of the Anthropic lawsuit."
+    },
+    {
+      "title": "Elvis Presley catalog owners sue Anthropic alleging copyright infringement",
+      "reason": "score 0: Duplicate coverage of the Anthropic lawsuit."
+    },
+    {
+      "title": "Anthropic Sued for Training Claude on Elvis Presley Songs",
+      "reason": "score 0: Duplicate coverage of the Anthropic lawsuit."
+    },
+    {
+      "title": "India’s draft AI regulations could be out in November, says IT Minister Ashwini Vaishnaw",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "India's chip design startups near production with government support, but low volumes, high fab costs, and supply chain bottlenecks hinder commercialization (Ananta Agarwal/Nikkei Asia)",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "A look at Toyota's robotics expansion, including its Walden spinoff and a $6.4B annual plan to deploy 400K factory robots, as it competes with Tesla and China (Financial Times)",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Telangana Unveils AI-Powered Digital Twin of IT Minister at DevFest 2026",
       "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "17944c853d9a",
-      "headline": "Unacademy founders launch ₹700 cr AI and deeptech fund Longshot Capital",
-      "category": "industry",
-      "summary": "Unacademy co‑founders Gaurav Munjal and Roman Saini are raising a ₹700 crore venture fund, Longshot Capital, to back AI and deep‑tech startups. The fund aims to invest in 25‑28 seed and pre‑Series A companies with cheques of $500,000‑$1.5 million, targeting its first close in January 2027.",
-      "url": "https://inc42.com/buzz/unacademy-cofounders-plan-%e2%82%b9700-cr-ai-deeptech-fund-longshot-capital",
+      "id": "c07fce9420b1",
+      "headline": "Elvis Presley estate sues Anthropic over 274 songs, seeks $41 million",
+      "category": "policy",
+      "summary": "The owners of Elvis Presley’s music have filed a copyright infringement lawsuit against Anthropic, alleging the company used 274 of the singer’s songs to train its AI models without permission. Anthropic says it disagrees with the claims and will defend itself in court.",
+      "url": "https://techmeme.com/261026/p7",
       "sources": 2,
       "quotes": 0
     }
   ],
   "notes": [
-    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "4 kept item(s) carried over to the next run"
+    "ignored made-up duplicate id c07fce9420b1 for 'Anthropic sued for allegedly training Claude on El'",
+    "ignored made-up duplicate id c07fce9420b1 for 'Anthropic sued for using 274 Elvis Presley songs t'",
+    "ignored made-up duplicate id c07fce9420b1 for 'Elvis Presley’s rights holders sue Anthropic sayin'",
+    "ignored made-up duplicate id c07fce9420b1 for 'Owners of Elvis Presley’s Music Sue Anthropic for '",
+    "ignored made-up duplicate id c07fce9420b1 for 'Elvis Presley catalog owners sue Anthropic allegin'",
+    "ignored made-up duplicate id c07fce9420b1 for 'Anthropic Sued for Training Claude on Elvis Presle'",
+    "2 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 104.4,
-    "audit": -0.0,
-    "plan": 1.7,
-    "judge": 2.0,
-    "verify and write": 417.9,
-    "videos": 2.4,
-    "tagging": 20.7,
-    "explainers": -0.0,
-    "trackers": 62.5,
-    "claims": 20.7,
-    "model tracker": 0.2,
-    "weekly": 0.0,
-    "builders": 0.0,
-    "top voices": 0.0,
-    "briefing": 41.0,
+    "gather": 77.5,
+    "audit": 0.0,
+    "plan": 1.5,
+    "judge": 2.1,
+    "verify and write": 373.7,
+    "videos": 1.6,
+    "tagging": 20.6,
+    "explainers": 0.0,
+    "trackers": 41.4,
+    "claims": 20.4,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 20.9,
     "self-review": 0.0,
-    "photos": 0.1,
+    "photos": 0.0,
+    "stock photos": 51.8,
     "daily email": 0.0,
-    "alerts": 2.3
+    "alerts": 4.4
   },
-  "fetched": 2904,
-  "fresh": 27,
+  "fetched": 2877,
+  "fresh": 24,
   "plan": {
-    "focus": "Tracking AI financing deals and safety setbacks while probing policy splits and India's emerging AI market.",
+    "focus": "Chasing policy fallout from US-China AI curbs while filling a thin models desk with Anthropic lawsuit and India regulation news.",
     "priorities": [
-      "OpenAI resumes frontier AI training after security overhaul , disclose (OpenAI resumes frontier AI training after a security overhaul, key safety and industry implications for builders and investors.)",
-      "As the US and China form AI blocs , countries are increasingly torn be (Analysis of US‑China AI bloc formation, highlighting geopolitical policy pressures affecting global AI strategy.)",
-      "Musk Says SpaceX Closed $40 Bn GPU Debt Deal, Warns Most Neoclouds Won (Musk confirms SpaceX $40 bn GPU debt deal, signaling massive financing trends for AI compute infrastructure.)",
-      "Talent, compute and R&amp;D key to India's AI ambitions: Report (Report on talent, compute, and R&D needs underscores India's AI ambitions, relevant for market entrants.)",
-      "High-frequency trading firms such as Jane Street are investing in AI a (Bloomberg piece on high‑frequency trading firms investing in AI and chip startups offers insight for investors.)"
+      "Elvis Presley's rightsholders sue Anthropic over 274 songs allegedly u (High‑profile Anthropic lawsuit raises legal and policy questions for AI training data.)",
+      "India’s draft AI regulations could be out in November, says IT Ministe (India’s draft AI regulations could reshape the market and affect investors.)",
+      "Alphabet, Amazon, and Microsoft are expected to report double-digit ga (Revenue growth signals investor sentiment on AI capex across top tech firms.)",
+      "India's chip design startups near production with government support,  (Chip design startup surge highlights India’s industrial AI push and supply chain challenges.)",
+      "A look at Toyota's robotics expansion, including its Walden spinoff an (Toyota’s robot expansion shows competitive pressure in AI‑driven manufacturing.)"
     ],
     "thin_areas": [
-      "research",
-      "safety"
+      "models"
     ],
     "searches": [
-      "OpenAI safety audit results: 1 new",
-      "AI policy bloc reactions: 0 new",
-      "India AI model releases: 0 new"
+      "Anthropic lawsuit updates: 6 new",
+      "SpaceX AI compute contracts 2026: 0 new",
+      "OpenAI safety breach training resume: 0 new"
     ],
     "dig_deeper": [
-      "OpenAI resumes frontier AI training after security overhaul , disclose",
-      "As the US and China form AI blocs , countries are increasingly torn be"
+      "Elvis Presley's rightsholders sue Anthropic over 274 songs allegedly u",
+      "India’s draft AI regulations could be out in November, says IT Ministe"
     ]
   },
-  "judged": 28,
-  "kept": 7,
+  "judged": 30,
+  "kept": 5,
   "research": {
     "investigated": 5,
-    "confirmed": 0,
+    "confirmed": 1,
     "tool_calls": 15
   },
   "research_log": [
-    "High-frequency trading firms such as Jane Street are investing in AI a: unconfirmed (searched “Bloomberg high-frequency trading firms investing in AI chip startups building data centers Jane Street”; searched “\"Jane Street\" AI data center Bloomberg”; read yahoo.com)",
-    "Talent, compute and R&amp;D key to India's AI ambitions: Report: unconfirmed (searched “KPMG report talent compute R&D key to India's AI ambitions”; read msn.com; searched “\"Talent, compute and R&D\" India AI report”)",
-    "India's chip design startups near production with government support, : unconfirmed (searched “India chip design startups near production government support low volumes high fab costs supply chain bottlenecks”; read msn.com; searched “\"India's chip design startups\"”)",
-    "A look at Toyota's robotics expansion, including its Walden spinoff an: unconfirmed (searched “Toyota robotics expansion Walden spinoff $6.4 billion plan 400,000 factory robots”; read techrepublic.com; read msn.com)",
-    "External Researchers Audit OpenAI's AI Monitoring: The Pitfalls of 'We: unconfirmed (searched “external researchers audit OpenAI AI monitoring \"we're watching, so it's safe\"”; searched “OpenAI AI monitoring audit external researchers”; read msn.com)"
+    "India’s draft AI regulations could be out in November, says IT Ministe: unconfirmed (searched “India draft AI regulations November Ashwini Vaishnaw IT Minister”; read india.com; read india.com)",
+    "Elvis Presley's rightsholders sue Anthropic over 274 songs allegedly u: confirmed (searched “Elvis Presley rightsholders sue Anthropic 274 songs lawsuit”; read msn.com; read msn.com)",
+    "India's chip design startups near production with government support, : unconfirmed (searched “India chip design startups near production government support Nikkei Asia”; read msn.com; searched “India chip design startups near production low volumes high fab costs supply chain bottlenecks”)",
+    "A look at Toyota's robotics expansion, including its Walden spinoff an: unconfirmed (searched “Toyota robotics expansion 400,000 factory robots $6.4 billion plan Walden spinoff”; read cnbc.com; read techrepublic.com)",
+    "Telangana Unveils AI-Powered Digital Twin of IT Minister at DevFest 20: unconfirmed (searched “Telangana AI-powered digital twin IT Minister DevFest 2026”; read msn.com; read msn.com)"
   ],
   "videos": {
     "OpenAI": "ok (9 in feed, 0 new)",
@@ -251,15 +264,15 @@
     "20VC": "ok (4 in feed, 0 new)"
   },
   "tagged": 1,
-  "trackers": "filed 2 stories; updated india-ai, ai-money",
-  "claims": "25 tracked, 24 open, 0 updated this run",
-  "model_tracker": "82 models, 16 changes today",
-  "briefing": "4 themes from 5 stories",
-  "india_briefing": "3 themes from 4 stories",
-  "photos": "1 saved, 0 unavailable",
-  "alerts": "21 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":11}",
-  "ai_requests_run": 33,
-  "ai_tokens_run": 53674,
-  "ai_requests_today": 97,
+  "trackers": "filed 1 stories; updated copyright",
+  "claims": "26 tracked, 25 open, 0 updated this run",
+  "model_tracker": "82 models, 17 changes today",
+  "briefing": "3 themes from 6 stories",
+  "photos": "0 saved, 0 unavailable",
+  "stock photos": "8 added",
+  "alerts": "23 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":11}",
+  "ai_requests_run": 29,
+  "ai_tokens_run": 46874,
+  "ai_requests_today": 126,
   "provider_log": []
 }
