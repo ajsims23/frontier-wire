@@ -1193,3 +1193,17 @@ body { font-family: var(--sans); }
 .lab-stats div { border: 0; border-top: 2px solid var(--text); border-radius: 0; background: none; padding: 10px 0 0; }
 .lab-stats dd { font-family: var(--serif); font-stretch: normal; font-size: 28px; }
 .activity, .table-box { border-radius: var(--r-md); background: var(--ground); }
+/* weekly deep dive: issue list */
+.issues { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; }
+.issue { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 20px 32px; padding: 28px 0; border-top: 2px solid var(--text); }
+.issue + .issue { border-top-width: 1px; border-top-color: var(--line); }
+.issue-media { display: block; aspect-ratio: 16 / 10; }
+.issue-text { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.issue h2 { font-family: var(--serif); font-size: clamp(1.5rem, 2.6vw, 2.2rem); font-weight: 700; line-height: 1.12; letter-spacing: -.015em; }
+.issue:not(.latest) h2 { font-size: clamp(1.3rem, 2vw, 1.7rem); }
+.issue h2 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.issue-intro { color: var(--soft); font-size: 16.5px; line-height: 1.55; max-width: 62ch; }
+.issue-shifts { margin: 4px 0 0; padding-left: 22px; display: grid; gap: 6px; font-family: var(--serif); font-size: 17px; font-weight: 600; }
+.issue-shifts li::marker { color: var(--brand); font-family: var(--sans); font-weight: 800; font-size: 14px; }
+.issue .see-all { margin-left: 0; margin-top: 4px; }
+@media (max-width: 760px) { .issue { grid-template-columns: minmax(0, 1fr); } }

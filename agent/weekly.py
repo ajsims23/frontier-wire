@@ -2,7 +2,7 @@
 
 The write-up only uses the week's published stories. Each shift must cite real story ids, and any number in it
 must appear in the stories it cites; shifts that fail are dropped. The first issue is written as soon as there
-are enough stories, so the page isn't empty while waiting for Sunday.
+are enough stories, so the page isn't empty while waiting for Sunday. A missed Sunday is caught up on the next run.
 """
 from __future__ import annotations
 
@@ -71,15 +71,36 @@ def week_stats(stories: list[dict[str, Any]], now: datetime) -> dict[str, Any]:
     }
 
 
+def last_sunday(now: datetime) -> datetime:
+    """The end of the week an issue covers: today if it's Sunday, else the end of the most recent Sunday."""
+    if now.weekday() == 6:
+        return now
+    sunday = now - timedelta(days=now.weekday() + 1)
+    return sunday.replace(hour=23, minute=59, second=59, microsecond=0)
+
+
 def maybe_write_weekly(room: Any, min_stories: int = 8) -> None:
+    """One issue per week, for the week ending on Sunday. If Sunday's runs missed it (or failed), the next run
+    catches up with the same Sunday-ending week. The very first issue is written straight away, for the last
+    seven days, and filed under the previous week so it never takes the slot of the coming Sunday's issue."""
     state = room.store.weekly
     issues: dict[str, Any] = state.setdefault("issues", {})
-    key = week_key(room.now)
     first = not issues
-    if key in issues or (not first and room.now.weekday() != 6):  # Sundays, plus the very first issue
+    end = room.now if first else last_sunday(room.now)
+    key = week_key(end - timedelta(days=7)) if first else week_key(end)
+    old = issues.get(key)
+    if old and not first:
+        published = datetime.fromisoformat(old["published_at"])
+        early = old.get("first") or ("week_end" not in old and published.weekday() != 6 and published < end)
+        prev = week_key(published - timedelta(days=7))
+        if early and prev not in issues:  # an early first issue sitting in this week's slot: file it under the week before
+            issues[prev] = {**old, "key": prev, "first": True}
+            del issues[key]
+            state["issues"] = issues = dict(sorted(issues.items()))
+    if key in issues:
         return
-    start = room.now - timedelta(days=7)
-    week = sorted((s for s in room.store.stories if s["published_at"] >= start.isoformat()),
+    start = end - timedelta(days=7)
+    week = sorted((s for s in room.store.stories if start.isoformat() <= s["published_at"] <= end.isoformat()),
                   key=lambda s: (-s.get("score", 0), s["published_at"]))[:45]
     if len(week) < min_stories:
         room.report["weekly"] = f"waiting: {len(week)} stories this week"
@@ -107,12 +128,12 @@ def maybe_write_weekly(room: Any, min_stories: int = 8) -> None:
         room.report["weekly"] = f"skipped: only {len(shifts)} shifts passed the checks"
         return
     issues[key] = {
-        "key": key, "published_at": room.now.isoformat(),
-        "range": f"{start.strftime('%-d %b')} – {room.now.strftime('%-d %b %Y')}",
+        "key": key, "published_at": room.now.isoformat(), "week_end": end.isoformat(), **({"first": True} if first else {}),
+        "range": f"{start.strftime('%-d %b')} – {end.strftime('%-d %b %Y')}",
         "title": str(answer.get("title") or "The week in AI").strip()[:90],
         "intro": intro if _nums_ok(intro, all_src) else "",
         "shifts": shifts,
-        "stats": week_stats(room.store.stories, room.now),
+        "stats": week_stats([x for x in room.store.stories if x["published_at"] <= end.isoformat()], end),
     }
     state["issues"] = dict(sorted(issues.items())[-52:])
     room.report["weekly"] = f"wrote {key} with {len(shifts)} shifts"

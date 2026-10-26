@@ -1,5 +1,5 @@
 import json
-from datetime import timedelta
+from datetime import datetime, timedelta, timezone
 
 import httpx
 import pytest
@@ -608,11 +608,38 @@ def test_weekly_guardrails_and_schedule():
     issue = next(iter(room.store.weekly["issues"].values()))
     assert [s["title"] for s in issue["shifts"]] == ["Bigger models", "Pair", "Five"]
     assert issue["intro"] == "Ten labs shipped." and issue["stats"]["stories"] == 10
-    # not Sunday and an issue already exists: nothing new
-    room.now = NOW + timedelta(days=8 - NOW.isoweekday() % 7 if NOW.weekday() == 6 else 1)
-    if room.now.weekday() != 6:
-        maybe_write_weekly(room)
-        assert len(room.store.weekly["issues"]) == 1
+    assert issue.get("first") and issue["key"] != "2026-W43"           # the early first issue doesn't take this week's slot
+    # later the same week, not Sunday: nothing new
+    room.now = NOW + timedelta(days=1)
+    maybe_write_weekly(room)
+    assert len(room.store.weekly["issues"]) == 1
+    # Sunday's runs were missed; Monday catches up with the week ending Sunday
+    for st in stories:
+        st["published_at"] = (datetime.fromisoformat(st["published_at"]) + timedelta(days=4)).isoformat()
+    room.now = datetime(2026, 10, 26, 6, 0, tzinfo=timezone.utc)
+    maybe_write_weekly(room)
+    issues = room.store.weekly["issues"]
+    assert list(issues) == [issue["key"], "2026-W43"] and issues["2026-W43"]["range"] == "18 Oct – 25 Oct 2026"
+    maybe_write_weekly(room)
+    assert len(issues) == 2                                                 # once per week
+
+
+def test_weekly_moves_an_early_issue_out_of_sundays_slot():
+    from types import SimpleNamespace
+    from agent.weekly import maybe_write_weekly
+    stories = [{"id": f"s{i}", "headline": f"Lab {i} ships", "summary": "A model.", "category": "models", "score": 7,
+                "published_at": datetime(2026, 10, 24, i, tzinfo=timezone.utc).isoformat()} for i in range(10)]
+
+    class L:
+        def ask(self, **kw):
+            return {"title": "Week", "intro": "", "shifts": [{"title": t, "text": "Labs shipped.", "story_ids": [f"s{i}"]}
+                                                             for i, t in enumerate("abc")]}
+    early = {"key": "2026-W43", "published_at": "2026-10-22T09:00:00+00:00", "title": "Early", "shifts": []}
+    room = SimpleNamespace(store=SimpleNamespace(weekly={"issues": {"2026-W43": early}}, stories=stories), llm=L(),
+                           now=datetime(2026, 10, 26, 6, tzinfo=timezone.utc), report={})
+    maybe_write_weekly(room)
+    issues = room.store.weekly["issues"]
+    assert issues["2026-W42"]["title"] == "Early" and issues["2026-W43"]["title"] == "Week"
 
 
 def test_model_tracker_changes():

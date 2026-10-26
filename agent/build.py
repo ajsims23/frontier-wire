@@ -421,7 +421,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
             return "" if not n else "new"
         return "same" if n == p else (f"+{n - p}" if n > p else f"{n - p}")
     for i, w in enumerate(issues):
-        wnow = _dt(w["published_at"])
+        wnow = _dt(w.get("week_end") or w["published_at"])
         week_items = [s for s in stories if wnow - timedelta(days=7) <= _dt(s["published_at"]) <= wnow]
         cats = w["stats"].get("categories") or []
         top_c = max([max(c["n"], c["prev"]) for c in cats] or [1]) or 1
@@ -431,6 +431,9 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
              lab_bars=bars([(r["label"], r["n"], f"../../lab/{lab_slugs[r['label']]}/" if r["label"] in lab_slugs else "") for r in w["stats"].get("labs", [])]),
              cat_rows=[{**c, "pct": max(3, round(c["n"] / top_c * 100)) if c["n"] else 0, "pct_prev": max(3, round(c["prev"] / top_c * 100)) if c["prev"] else 0} for c in cats],
              others=[{"key": o["key"], "title": o["title"], "range": o["range"]} for o in issues if o["key"] != w["key"]][:8])
+    for w in issues:  # a picture for each issue: the first photo among the stories its shifts cite
+        ids = [st["id"] for sh in w.get("shifts", []) for st in sh.get("stories", [])]
+        w["pic"] = next((i for i in ids if by_id.get(i, {}).get("photo_local") and (data / "img" / f"{i}.jpg").exists()), "")
     page("weekly", "weekly_index.html", title="Weekly deep dive | Frontier Wire", description="The five biggest shifts in AI each week, with charts.",
          canonical=f"{base}weekly/", og_image=f"{base}og/home.png", issues=issues)
 

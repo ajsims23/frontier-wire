@@ -7,7 +7,24 @@
     <p class="desk-intro">Every Sunday our newsroom agent writes up the five biggest shifts in AI that week, with charts. Every number comes from the stories it cites.</p>
   </header>
   {% if issues %}
-  <ul class="job-list weekly-list">{% for o in issues %}<li><a href="{{ root }}weekly/{{ o.key }}/"><span class="strong">{{ o.title }}</span><span class="muted">{{ o.range }}{% if o.intro %}. {{ o.intro }}{% endif %}</span></a></li>{% endfor %}</ul>
+  <ol class="issues">
+    {% for o in issues %}
+    <li class="issue{% if loop.first %} latest{% endif %}">
+      <a class="issue-pic" href="{{ root }}weekly/{{ o.key }}/" tabindex="-1" aria-hidden="true">
+        <span class="media issue-media" style="--c: var(--brand)">{% if o.pic %}<img src="{{ root }}img/{{ o.pic }}.jpg" alt="" loading="lazy" decoding="async">{% endif %}</span>
+      </a>
+      <div class="issue-text">
+        <span class="tag" style="--c: var(--brand)">{% if loop.first %}Latest issue · {% endif %}Week of {{ o.range }}</span>
+        <h2><a href="{{ root }}weekly/{{ o.key }}/">{{ o.title }}</a></h2>
+        {% if o.intro %}<p class="issue-intro">{{ o.intro }}</p>{% endif %}
+        {% if o.shifts %}
+        <ol class="issue-shifts">{% for sh in o.shifts %}<li>{{ sh.title }}</li>{% endfor %}</ol>
+        {% endif %}
+        <a class="see-all" href="{{ root }}weekly/{{ o.key }}/">Read the issue</a>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
   {% else %}<p class="empty">The first deep dive is written once there are enough stories.</p>{% endif %}
 </section>
 {% endblock %}
