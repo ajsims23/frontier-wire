@@ -928,3 +928,18 @@ def test_judge_sees_editor_priorities():
     assert "priority=" not in _item_xml(it)
     from agent import prompts as P
     assert "AI infrastructure and money" in P.JUDGE_SYSTEM and "investors" in P.JUDGE_SYSTEM
+
+
+def test_audit_lessons_only_widen_the_editors_bar():
+    """The coach turns missed stories into lessons; a lesson that tightens the bar would cause more misses."""
+    from agent.audit import lessons_text, widening
+    assert widening("Funding rounds of $1B+ for AI labs are major news even when the company is not a frontier lab.")
+    assert widening("Large debt raises for AI data centres are core AI news for investors.")
+    for bad in ["Financing details (e.g., debt) are background info; only multi-billion rounds count as major news.",
+                "If a story lacks clear AI impact, e.g. a financing tweet, it should be scored low.",
+                "For non-model AI firms, require multi-hundred-million funding to meet the threshold.",
+                "Political commentary is newsworthy only when it signals concrete legislation."]:
+        assert not widening(bad), bad
+    text = lessons_text({"lessons": [{"text": "AI chip export rules are major policy news for every reader."},
+                                     {"text": "Financing tweets are background and should be scored low."}]})
+    assert "export rules" in text and "Financing tweets" not in text
