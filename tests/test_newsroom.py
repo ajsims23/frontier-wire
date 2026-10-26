@@ -953,7 +953,15 @@ def test_stock_photos_fill_gaps_with_credited_unique_photos(tmp_path):
     assert query_for({"headline": "SpaceX secures $40 billion GPU debt financing", "category": "industry"}) == "computer chip semiconductor"
     assert query_for({"headline": "NCERT releases AI module for classes 9-12", "category": "industry"}) == "students classroom computers"
     assert query_for({"headline": "Researcher shares thoughts", "category": "voices"}) == "conference speaker"
-    photo = _io.BytesIO(); Image.new("RGB", (1600, 900), (40, 90, 160)).save(photo, "JPEG")
+    import random as _r
+    _r.seed(1)
+    img = Image.new("RGB", (32, 18))
+    img.putdata([(_r.randrange(0, 200), _r.randrange(0, 200), _r.randrange(0, 200)) for _ in range(32 * 18)])
+    img = img.resize((1600, 900), Image.NEAREST)   # a busy, colourful picture, like a photo
+    photo = _io.BytesIO(); img.save(photo, "JPEG")
+    from agent.stock import looks_like_photo
+    page = _io.BytesIO(); Image.new("RGB", (1600, 900), (255, 255, 255)).save(page, "JPEG")
+    assert looks_like_photo(photo.getvalue()) and not looks_like_photo(page.getvalue())   # scanned pages aren't photos
     seen = []
 
     def handler(r):

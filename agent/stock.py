@@ -29,7 +29,7 @@ TOPICS: list[tuple[str, str]] = [
     (r"\b(school|students?|curriculum|ncert|classroom|universit\w+|education|teachers?)\b", "students classroom computers"),
     (r"\b(hospital|doctors?|medical|diagnos\w+|health\w*|patients?|clinical|drug|biotech|pharma\w*)\b", "doctor hospital technology"),
     (r"\b(sebi|broker\w*|stock exchange|trading|bank\w*|fintech|bonds?|insurance)\b", "stock exchange trading"),
-    (r"\b(cyber\w*|vulnerab\w+|hack\w*|exploit\w*|malware|breach|phishing)\b", "cybersecurity computer code"),
+    (r"\b(cyber\w*|vulnerab\w+|hack\w*|exploit\w*|malware|breach|phishing)\b", "computer security hacker"),
     (r"\b(voice|speech|audio|podcast|music|text-to-speech|tts)\b", "studio microphone"),
     (r"\b(coding|developers?|programm\w+|software engineer\w*|github|open[- ]source)\b", "programmer laptop code"),
     (r"\b(china|chinese|beijing)\b", "shanghai skyline"),
@@ -42,9 +42,10 @@ TOPICS: list[tuple[str, str]] = [
     (r"\b(glasses|headset|wearable|vr|ar)\b", "virtual reality headset"),
 ]
 BY_CATEGORY = {"models": "artificial intelligence computer", "research": "science laboratory research",
-               "policy": "government building", "safety": "cybersecurity computer code", "industry": "technology office",
+               "policy": "government building", "safety": "computer security hacker", "industry": "technology office",
                "voices": "conference speaker"}
-AVOID = re.compile(r"\b(logo|icon|diagram|chart|map|screenshot|poster|flyer|meme|clipart|drawing|cartoon|text|sign|graph)\b", re.I)
+AVOID = re.compile(r"\b(logo|icon|diagram|chart|map|screenshot|poster|flyer|meme|clipart|drawing|cartoon|text|sign|graph|figure|table|"
+                   r"report|document|page|slide|infographic|brochure|assessment|framework|agency|seal|emblem|cover|scan)\b|\.(pdf|png|svg|tiff?|djvu|gif)\b", re.I)
 
 
 def query_for(story: dict[str, Any]) -> str:
@@ -77,7 +78,7 @@ def openverse(http: Any, q: str) -> list[dict[str, Any]]:
 
 def commons(http: Any, q: str) -> list[dict[str, Any]]:
     params = {"action": "query", "format": "json", "generator": "search", "gsrsearch": f"filetype:bitmap {q}",
-              "gsrnamespace": 6, "gsrlimit": 20, "prop": "imageinfo", "iiprop": "url|size|extmetadata", "iiurlwidth": 1280}
+              "gsrnamespace": 6, "gsrlimit": 20, "prop": "imageinfo", "iiprop": "url|size|mime|extmetadata", "iiurlwidth": 1280}
     r = http.get(f"https://commons.wikimedia.org/w/api.php?{urlencode(params)}", headers=UA)
     if r.status_code != 200:
         return []
@@ -87,12 +88,28 @@ def commons(http: Any, q: str) -> list[dict[str, Any]]:
         meta = ii.get("extmetadata") or {}
         val = lambda k: re.sub(r"<[^>]+>", "", str((meta.get(k) or {}).get("value") or "")).strip()  # noqa: E731
         lic = val("LicenseShortName")
-        if not lic or re.search(r"\b(nc|nd|fair use|non-free)\b", lic, re.I):
+        if not lic or re.search(r"\b(nc|nd|fair use|non-free)\b", lic, re.I) or ii.get("mime") != "image/jpeg":
             continue
         out.append({"key": f"wc:{p.get('pageid')}", "url": ii.get("thumburl") or ii.get("url") or "", "title": p.get("title") or "",
                     "w": ii.get("width") or 0, "h": ii.get("height") or 0, "by": val("Artist")[:80], "license": lic,
                     "page": ii.get("descriptionurl") or "", "via": "Wikimedia Commons"})
     return out
+
+
+def looks_like_photo(content: bytes) -> bool:
+    """Scanned pages, slides and diagrams are mostly flat white or one flat colour; photos aren't."""
+    import io
+    from PIL import Image, ImageStat
+    try:
+        im = Image.open(io.BytesIO(content)).convert("RGB")
+    except Exception:  # noqa: BLE001
+        return False
+    im.thumbnail((160, 160))
+    px = list(im.getdata())
+    white = sum(1 for r, g, b in px if r > 232 and g > 232 and b > 232) / max(1, len(px))
+    spread = sum(ImageStat.Stat(im.convert("L")).stddev)
+    colours = len(set((r >> 4, g >> 4, b >> 4) for r, g, b in px))
+    return white < 0.3 and spread > 25 and colours > 60
 
 
 def usable(c: dict[str, Any]) -> bool:
@@ -136,7 +153,8 @@ def add_stock_photos(room: Any, http: Any = None, limit: int = 8) -> None:
             used.add(c["key"])  # tried once, whatever happens: don't hand a broken photo to the next story
             try:
                 r = http.get(c["url"], headers={**UA, "Accept": "image/avif,image/webp,image/*,*/*"})
-                ok = r.status_code == 200 and len(r.content) < MAX_BYTES and save_photo(r.content, folder / f"{s['id']}.jpg")
+                ok = (r.status_code == 200 and len(r.content) < MAX_BYTES and looks_like_photo(r.content)
+                      and save_photo(r.content, folder / f"{s['id']}.jpg"))
             except Exception:  # noqa: BLE001
                 ok = False
             if ok:
