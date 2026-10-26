@@ -1,64 +1,74 @@
-## Frontier Wire newsroom run — 2026-10-26T03:52:29+00:00
+## Frontier Wire newsroom run — 2026-10-26T07:07:46+00:00
 
-Fetched 2931 items · fresh 18 · judged 21 · kept 9 · **written 1**
-AI: 31 requests, 49,795 tokens this run · 64 requests today · providers: cerebras, groq
-Editor-in-chief: Chasing AI pricing cuts and debt‑financing moves while bolstering our thin business coverage.
-  Priorities: OpenAI and Anthropic cut their LLM prices by up to 80% within a few mo (LLM price cuts reshape enterprise AI economics and could trigger policy responses.); High-frequency trading firms such as Jane Street are investing in AI a (Shows how finance firms are driving AI infrastructure investment, relevant for industry readers.); Report: SK Hynix gained ~$15B from selling down its Kioxia stake earli (Highlights major hardware shareholder moves and dividend returns affecting AI supply chain.); Elon Musk says SpaceX raised $40 billion in debt for GPUs (Musk’s claim of $40B GPU debt financing signals massive capital shifts for AI compute.); Talent, compute and R&amp;D key to India's AI ambitions: Report (Provides insight into India’s AI talent and compute strategy, a growing market.)
-  Thin areas: business
-  Searches: US Treasury AI investment curbs China: 1 new; OpenAI Anthropic pricing cuts impact: 0 new; AI debt financing trends 2026: 2 new
-  Dig deeper: OpenAI and Anthropic cut their LLM prices by up to 80% within a few mo; High-frequency trading firms such as Jane Street are investing in AI a
+Fetched 2904 items · fresh 27 · judged 28 · kept 7 · **written 1**
+AI: 33 requests, 53,674 tokens this run · 97 requests today · providers: cerebras, groq
+Editor-in-chief: Tracking AI financing deals and safety setbacks while probing policy splits and India's emerging AI market.
+  Priorities: OpenAI resumes frontier AI training after security overhaul , disclose (OpenAI resumes frontier AI training after a security overhaul, key safety and industry implications for builders and investors.); As the US and China form AI blocs , countries are increasingly torn be (Analysis of US‑China AI bloc formation, highlighting geopolitical policy pressures affecting global AI strategy.); Musk Says SpaceX Closed $40 Bn GPU Debt Deal, Warns Most Neoclouds Won (Musk confirms SpaceX $40 bn GPU debt deal, signaling massive financing trends for AI compute infrastructure.); Talent, compute and R&amp;D key to India's AI ambitions: Report (Report on talent, compute, and R&D needs underscores India's AI ambitions, relevant for market entrants.); High-frequency trading firms such as Jane Street are investing in AI a (Bloomberg piece on high‑frequency trading firms investing in AI and chip startups offers insight for investors.)
+  Thin areas: research, safety
+  Searches: OpenAI safety audit results: 1 new; AI policy bloc reactions: 0 new; India AI model releases: 0 new
+  Dig deeper: OpenAI resumes frontier AI training after security overhaul , disclose; As the US and China form AI blocs , countries are increasingly torn be
 Research agent: investigated 5 stories with 15 tool calls, confirmed 0
-Daily briefing: 4 themes from 4 stories
-Threads updated: SpaceX AI compute capacity contracts: SpaceX secures $40 billion GPU debt financing, launches AI c
-Videos: no new videos · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
+Daily briefing: 4 themes from 5 stories
+Videos: no new videos · OpenAI ok (9 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (7 in feed, 0 new), AI at Meta ok (5 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (11 in feed, 0 new), Hugging Face ok (12 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 0 new), Training Data (Sequoia) ok (6 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (1 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (3 in feed, 0 new), 20VC ok (4 in feed, 0 new)
 Photos: 1 saved, 0 unavailable
-Alerts: 20 events sent: {"subscribers":6,"sent":0,"queued":11}
-Claims: 24 tracked, 23 open, 1 updated this run
-Trackers: filed 2 stories; updated ai-infrastructure, ai-money
-Model tracker: 82 models, 15 changes today
+Alerts: 21 events sent: {"subscribers":6,"sent":0,"queued":11}
+Claims: 25 tracked, 24 open, 0 updated this run
+Trackers: filed 2 stories; updated india-ai, ai-money
+Model tracker: 82 models, 16 changes today
 Tagged 1 stories by sector, region and deal
-Time: gather 69s, plan 61s, judge 2s, verify and write 374s, videos 1s, tagging 20s, trackers 62s, claims 20s, briefing 21s, photos 1s, alerts 1s
+India briefing: 3 themes from 4 stories
+Time: gather 104s, plan 2s, judge 2s, verify and write 418s, videos 2s, tagging 21s, trackers 62s, claims 21s, briefing 41s, alerts 2s
 
 ### New stories
-- **industry** — [SpaceX secures $40 billion GPU debt financing, launches AI compute contracts](https://ad-hoc-news.de/boerse/news/unternehmensnachrichten/spacex-turns-ai-capacity-into-customer-contracts-as-gpu-financing-closes/70411542)  
-  SpaceX completed a $40 billion debt financing round to fund graphics processors for its AI compute services. The company is pairing with partners such as Nvidia, Snowflake and Databricks to sell the capacity to enterprise customers.  
-  _2 source(s), 1 verified quote(s)_
+- **industry** — [Unacademy founders launch ₹700 cr AI and deeptech fund Longshot Capital](https://inc42.com/buzz/unacademy-cofounders-plan-%e2%82%b9700-cr-ai-deeptech-fund-longshot-capital)  
+  Unacademy co‑founders Gaurav Munjal and Roman Saini are raising a ₹700 crore venture fund, Longshot Capital, to back AI and deep‑tech startups. The fund aims to invest in 25‑28 seed and pre‑Series A companies with cheques of $500,000‑$1.5 million, targeting its first close in January 2027.  
+  _2 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- MODA working on better social media AI disclosure — score 4: MODA’s work on social‑media AI disclosure is a modest policy initiative without immediate industry impact.
-- Pro Medicus CEO Sam Hupert says US contract wins show it has survived the SaaSpocalypse and is future - fit for AI era — score 3: Pro Medicus CEO’s comments on US contracts are a routine corporate PR piece rather than a news‑worthy development.
-- Big Tech is cashing in on AI while the rest of corporate America sees no financial returns report outlines how rising token costs threaten to squeeze corporate profit margins — score 5: Analysis of token‑cost pressure on corporate margins is interesting but does not constitute a breaking news item.
-- To make AI morally good , tech companies are turning to religion . But some say it isnt that simple — score 2: Speculative commentary linking AI ethics to religion lacks concrete news value.
-- Elvis Presley IP owners sue Anthropic for training AI with his work — score 5: The lawsuit over training data is a legal development but not yet a landmark case for the AI sector.
-- Trending stocks this week as markets navigate AI concerns , geopolitical tensions — score 3: Stock‑trend roundup is a routine market commentary piece.
-- New poll shows 74 per cent of Australians support creator copyright rights over AI tech companies — score 4: Public opinion poll on copyright is a regional sentiment piece, not a major AI development.
-- How AI helped expose critical flaws in the code powering most websites — score 5: Article on AI‑driven code‑flaw discovery is informative but not a distinct news event.
-- AI will keep uncovering critical software flaws for years , says Cloudflare CEO — score 4: CEO quote about ongoing AI bug discovery is a standard interview rather than breaking news.
-- Anthropic's Claude accessed Georgia state vote count information behind paywall — score 4: Anthropic’s Claude accessing Georgia vote data is a narrow privacy incident without broader policy implications.
-- Sources detail how Ramp investors Joe Lonsdale and Keith Rabois pushed US lawmakers to probe rival Airwallex's China ties after Airwallex scrapped a Ramp deal (Michael Roddan/The Information) — score 5: Report on Ramp investors influencing US lawmakers is a niche political‑finance story with limited broader impact.
-- US Treasury moves to curb AI, chip and biotech deals in China and Russia — duplicate of 4974921f6a1a
-- Unacademy founders plan AI fund; Flipkart’s premium push — variety: already 2 stories from indiatimes.com this run
-- Report: SK Hynix gained ~$15B from selling down its Kioxia stake earlier this year, and plans to return ~$12B to shareholders via a special dividend (Bloomberg) — could not verify yet; will retry next run
-- Talent, compute and R&amp;D key to India's AI ambitions: Report — could not verify yet; will retry next run
-- Elon Musk says SpaceX raised $40 billion in debt for GPUs — could not verify yet; will retry next run
-- OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why? — could not verify yet after a second try; dropped
-- High-frequency trading firms such as Jane Street are investing in AI and chip startups and neoclouds, and building data centers to gain an edge in the AI era (Bloomberg) — could not verify yet; will retry next run
-- CoreWeave financial struggles raise doubts about AI sector funding viability — could not verify yet; will retry next run
-- Startup funding falls below $100M; Deeptech startups look to go global — could not verify yet; will retry next run
+- As the US and China form AI blocs , countries are increasingly torn between them — duplicate of 0dc406750f53
+- Global Market : South Korean shares fall over 1 % as AI trade concerns weigh ; won strengthens — score 4: General market move about South Korean shares; AI relevance minimal.
+- OpenAI resumes frontier AI training after security overhaul , discloses flaw in widely used software — duplicate of f5a8973e6dfd
+- Visa sharpens its identity for the AI shopping era — score 2: Marketing‑focused piece on Visa branding; not substantive AI news.
+- To make AI morally good , tech companies are turning to religion , in spite of doubts — score 3: Opinion piece on religion and AI ethics; lacks concrete AI developments.
+- No sweat , just use AI to create ... — score 2: Promotional content about AI‑generated creations; not newsworthy.
+- Removing Next.js Got My Blog to 100 on Every Lighthouse Category — score 1: Technical blog about Next.js performance; unrelated to AI.
+- Musk Says SpaceX Closed $40 Bn GPU Debt Deal, Warns Most Neoclouds Won’t Survive — duplicate of ea65d0dd3e96
+- Pune Police write to Google, Apple to take down Rapido app amid bike taxi licence dispute — score 2: Local regulatory dispute over a bike‑taxi app; not AI‑related.
+- Grand Theft Auto VI launch: How is the highly anticipated game moving calendars as fever grips workforce — score 1: Gaming release survey; not AI‑related.
+- From Carnegie to Claude: AI wealth could reshape philanthropy — score 3: Opinion on AI‑generated wealth and philanthropy; lacks concrete AI news.
+- Japanese companies compensate users as cyberattacks buffet economy — score 2: Cyber‑attack compensation news; not AI‑centric.
+- Elon Musk says SpaceX raised $40 billion in debt for GPUs — duplicate of ea65d0dd3e96
+- Rapido rides ahead with Razorpay’s real‑time payments — score 2: Ride‑hailing payment integration; not AI‑focused.
+- Life After 55: Cradle Of Life is reimagining senior living lifestyle for retired Indians — score 1: Senior‑living lifestyle piece; unrelated to AI.
+- Who will shape India’s next 500 million digital users? — score 3: Broad discussion of India’s digital user base; no specific AI development.
+- Startup funding falls below $100M; Deeptech startups look to go global — score 4: General funding slowdown for deep‑tech startups; below $100 M threshold and not AI‑specific.
+- QpiAI founder Nagendra Nagaraja makes the case for intelligence modelling — score 4: Speculative talk on quantum intelligence modelling; lacks concrete AI advancement.
+- Seam Cutter — score 2: Tool announcement unrelated to frontier AI developments; low relevance for audience.
+- Amazon Bee Frontier review: a simple $75 AI wearable that excels at always-on listening, summarizing conversations, and suggesting follow-up actions (M.G. Siegler/Spyglass) — score 4: Product review of an AI wearable; modest relevance but not a major frontier development.
+- Report: SK Hynix gained ~$15B from selling down its Kioxia stake earlier this year, and plans to return ~$12B to shareholders via a special dividend (Bloomberg) — score 4: Financial news about SK Hynix dividend; not directly tied to AI developments.
+- High-frequency trading firms such as Jane Street are investing in AI and chip startups and neoclouds, and building data centers to gain an edge in the AI era (Bloomberg) — could not verify yet after a second try; dropped
+- Talent, compute and R&amp;D key to India's AI ambitions: Report — could not verify yet after a second try; dropped
+- India's chip design startups near production with government support, but low volumes, high fab costs, and supply chain bottlenecks hinder commercialization (Ananta Agarwal/Nikkei Asia) — could not verify yet; will retry next run
+- A look at Toyota's robotics expansion, including its Walden spinoff and a $6.4B annual plan to deploy 400K factory robots, as it competes with Tesla and China (Financial Times) — could not verify yet; will retry next run
+- External Researchers Audit OpenAI's AI Monitoring: The Pitfalls of 'We're Watching, So It's Safe' — could not verify yet; will retry next run
+- India's voice AI challenges could shape global technology, says Murf AI co-founder — could not verify yet; will retry next run
 
 </details>
 
+### Sources with problems
+- `gdelt-india`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+
 <details><summary>Research agent's work</summary>
 
-- Report: SK Hynix gained ~$15B from selling down its Kioxia stake earli: unconfirmed (searched “SK Hynix $15B Kioxia stake sale special dividend $12B”; searched “SK Hynix special dividend $12 billion”; read seekingalpha.com)
+- High-frequency trading firms such as Jane Street are investing in AI a: unconfirmed (searched “Bloomberg high-frequency trading firms investing in AI chip startups building data centers Jane Street”; searched “"Jane Street" AI data center Bloomberg”; read yahoo.com)
 - Talent, compute and R&amp;D key to India's AI ambitions: Report: unconfirmed (searched “KPMG report talent compute R&D key to India's AI ambitions”; read msn.com; searched “"Talent, compute and R&D" India AI report”)
-- Elon Musk says SpaceX raised $40 billion in debt for GPUs: unconfirmed (searched “Elon Musk says SpaceX raised $40 billion in debt for GPUs”; read bloomberg.com; read marketwatch.com)
-- OpenAI and Anthropic cut their LLM prices by up to 80% within a few mo: unconfirmed (searched “OpenAI price cut LLM 80% October 2026”; read reuters.com; searched “Anthropic cuts price LLM 80% 2026”)
-- High-frequency trading firms such as Jane Street are investing in AI a: unconfirmed (searched “Jane Street investing in AI chip startups data centers Bloomberg”; read techtimes.com; searched “high-frequency trading firms building data centers AI era Bloomberg Jane Street”)
+- India's chip design startups near production with government support, : unconfirmed (searched “India chip design startups near production government support low volumes high fab costs supply chain bottlenecks”; read msn.com; searched “"India's chip design startups"”)
+- A look at Toyota's robotics expansion, including its Walden spinoff an: unconfirmed (searched “Toyota robotics expansion Walden spinoff $6.4 billion plan 400,000 factory robots”; read techrepublic.com; read msn.com)
+- External Researchers Audit OpenAI's AI Monitoring: The Pitfalls of 'We: unconfirmed (searched “external researchers audit OpenAI AI monitoring "we're watching, so it's safe"”; searched “OpenAI AI monitoring audit external researchers”; read msn.com)
 
 </details>
 
 ### Notes
 - GDELT unavailable: GDELT paused for this run after repeated rate-limiting
-- 6 kept item(s) carried over to the next run
+- 4 kept item(s) carried over to the next run
