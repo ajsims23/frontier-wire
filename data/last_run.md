@@ -1,17 +1,23 @@
-## Frontier Wire breaking-news check — 2026-10-26T22:30:26+00:00
+## Frontier Wire breaking-news check — 2026-10-26T23:13:04+00:00
 
-Fetched 2386 items · fresh 1 · judged 1 · kept 0 · **written 0**
-AI: 1 requests, 4,384 tokens this run · 307 requests today · providers: cerebras, groq
+Fetched 2387 items · fresh 2 · judged 2 · kept 1 · **written 1**
+AI: 7 requests, 19,378 tokens this run · 314 requests today · providers: cerebras, groq
 Photos: 0 saved, 0 unavailable
-Alerts: 55 events sent: {"subscribers":7,"sent":0,"queued":0}
-Trackers: filed 0 stories; no tracker changed
-Time: gather 14s, alerts 5s
+Alerts: 56 events sent: {"subscribers":7,"sent":0,"queued":10}
+Trackers: filed 1 stories; updated frontier-race
+Tagged 1 stories by sector, region and deal
+Time: gather 14s, verify and write 2s, trackers 41s, stock photos 12s, alerts 4s
 
 ### New stories
-- none
+- **research** — [OpenAI shares on Kakeya conjecture, Exponential Time Hypothesis, quantum chromodynamics](https://openai.com/index/building-scientific-understanding-with-academic-communities)  
+  OpenAI made its model results for the Kakeya conjecture, the Exponential Time Hypothesis, and quantum chromodynamics publicly available, inviting researchers to verify and extend the findings.  
+  _1 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases — score 5: The item describes a specific customer use‑case of the already‑released GPT‑6.1 Sol model. It is an incremental product feature rather than a major model launch or policy change, so it scores below the threshold for publication.
+- Greptile takes bug detection beyond code review with GPT-6 Astra — score 5: Greptile's use of GPT‑6 Astra for bug detection is a specific company case study and marketing‑type application, offering only an incremental update for Frontier Wire readers.
 
 </details>
+
+### Notes
+- cerebras/gpt-oss-120b: answer cut off; retrying with more room
