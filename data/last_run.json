@@ -1,12 +1,12 @@
 {
-  "started_at": "2026-10-27T21:50:06+00:00",
+  "started_at": "2026-10-27T22:49:28+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
     "groq"
   ],
   "sources": {
-    "openai": "ok (1328)",
+    "openai": "ok (1331)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
     "huggingface": "ok (891)",
@@ -15,283 +15,50 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)",
-    "hf-models": "ok (57)",
-    "arxiv": "ok (40)",
-    "hf-papers": "ok (12)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (24)",
-    "techcrunch-ai": "ok (20)",
-    "verge-ai": "ok (10)",
-    "mit-tr-ai": "ok (10)",
-    "ars-ai": "ok (20)",
-    "aim": "ok (50)",
-    "inc42": "ok (24)",
-    "medianama": "ok (10)",
-    "mint-tech": "ok (35)",
-    "et-tech": "ok (50)",
-    "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
-    "crunchbase-news": "ok (10)",
-    "import-ai": "ok (10)",
-    "simon-willison": "ok (30)",
-    "sam-altman": "ok (30)",
-    "bluesky": "ok (28)",
-    "auto-techmeme.com": "ok (15)"
+    "mistral": "ok (6)"
   },
   "dropped": [
     {
-      "title": "How Check Point accelerates vulnerability research with Daybreak",
-      "reason": "score 5: Lab‑hosted page describing a Daybreak‑enabled vulnerability‑research workflow; not a new model or major release."
-    },
-    {
-      "title": "Classification of Finite Simple Groups Formalized in Lean",
-      "reason": "not AI: Formalization of a mathematical theorem; no AI component."
-    },
-    {
-      "title": "Bank of America kindly asks that you don’t share your banking password with your AI assistant",
-      "reason": "score 5: Bank of America reminder about not sharing passwords with AI assistants; useful but not a major development."
-    },
-    {
-      "title": "Disruptive raises $10B fund to make big bets on at least 10 companies",
-      "reason": "duplicate of 8f543dd50781"
-    },
-    {
-      "title": "Researchers are getting tired of OpenAI gatekeeping its breakthroughs",
-      "reason": "score 5: Reflects researcher fatigue with OpenAI's gatekeeping but offers no new substantive development."
-    },
-    {
-      "title": "Game Boy Color on My Conference Badge",
-      "reason": "not AI: Personal conference badge anecdote unrelated to AI developments."
-    },
-    {
-      "title": "Robinhood reports Q3 revenue up 12% YoY to $1.42B, in line with est., crypto revenue down 55% to $120M, and profit down 14% to $476M; HOOD drops 5%+ after hours (Reuters)",
-      "reason": "not AI: Robinhood earnings report; no AI relevance."
-    },
-    {
-      "title": "Memo: Amazon says measuring AI adoption solely by token usage or code generation is \"deeply flawed,\" as it discourages staff from tokenmaxxing (Annie Palmer/CNBC)",
-      "reason": "score 5: Amazon internal memo on AI token‑maxxing; interesting but not a high‑impact development."
-    },
-    {
-      "title": "Anthropic eyes $1.5T IPO as FTX’s sold stake looks like a historic miss",
-      "reason": "score 7: Duplicate coverage of Anthropic IPO valuation."
-    },
-    {
-      "title": "How to invest in Anthropic AI’s IPO – and whether you should",
-      "reason": "score 7: Duplicate coverage of Anthropic IPO valuation."
-    },
-    {
-      "title": "Anthropic's IPO could be 'speculative fiction' or a 'generational moment' — investors are split",
-      "reason": "score 7: Duplicate coverage of Anthropic IPO valuation."
-    },
-    {
-      "title": "Nvidia (NASDAQ:NVDA) to Invest $3 Billion in Meta (NASDAQ:META) Share Offering as AI Partnership Expands",
-      "reason": "score 7: Duplicate of Nvidia‑Meta Muse investment story."
-    },
-    {
-      "title": "Nvidia invests $3 billion in Meta to supercharge Muse AI agents",
-      "reason": "score 7: Duplicate coverage of Nvidia‑Meta Muse investment."
-    },
-    {
-      "title": "Nvidia to Invest $3B in Meta’s Equity Offering, Expands Muse AI Partnership",
-      "reason": "score 7: Duplicate coverage of Nvidia‑Meta Muse investment."
-    },
-    {
-      "title": "Meta's Muse AI Partnership With Nvidia To Expand Alongside $3 Billion Investment",
-      "reason": "score 7: Duplicate coverage of Nvidia‑Meta Muse investment."
-    },
-    {
-      "title": "Amazon's anti-tokenmaxxing memo says engineers should be pickier about using AI",
-      "reason": "score 5: Duplicate of Amazon token‑maxxing memo."
-    },
-    {
-      "title": "Amazon tells software engineers what really matters as AI ushers in the era of the 'Renaissance Developer'",
-      "reason": "score 5: Duplicate of Amazon token‑maxxing memo."
-    },
-    {
-      "title": "AI success depends on business outcomes, not usage vanity metrics",
-      "reason": "score 5: Duplicate of Amazon token‑maxxing memo."
-    },
-    {
-      "title": "Amazon cautions software engineers against AI ‘token maxxing’ in internal memo",
-      "reason": "score 5: Duplicate of Amazon token‑maxxing memo."
-    },
-    {
-      "title": "72% token usage generates only 27% revenue, highlighting disparity in the AI market",
-      "reason": "not AI: Token‑usage revenue statistics; not AI‑focused news."
-    },
-    {
-      "title": "Globant Expands Glob.AI with the Launch of an Enterprise AI Operating System",
-      "reason": "not AI: Globant AI platform launch; not a major development."
-    },
-    {
-      "title": "Frontier AI labs say their models refuted the Exponential Time Hypothesis. What does that mean?",
-      "reason": "could not verify yet after a second try; dropped"
-    },
-    {
-      "title": "Sources: AI robotics startup Physical Intelligence is in talks to raise $1B+ led by Avenir and Lux Capital at a ~$20B valuation, up from $11.5B earlier in 2026 (Bloomberg)",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Amazon Is Gutting Its AI Division After Sustained Failure",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
-      "reason": "could not verify yet after a second try; dropped"
-    },
-    {
-      "title": "Anthropic details early drug development work with six partners and says it has acquired Mithril, a one-person company working on muscular dystrophy (Anthropic)",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Sources: Meta's $25B share sale was oversubscribed 5x as it seeks $98B for AI spending; the 15 largest investors in the sale accounted for ~70% of shares (Anthony Hughes/Bloomberg)",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Nvidia just announced plans to pour billions into Meta's Muse",
-      "reason": "already covered (story bdec57e767d5)"
-    },
-    {
-      "title": "Police are using AI to pull over drivers for 'suspicious' behavior",
-      "reason": "could not verify yet after a second try; dropped"
-    },
-    {
-      "title": "Vibe genes? Natural(ish) language comes to protein, genome design software",
-      "reason": "could not verify yet after a second try; dropped"
+      "title": "Partnerships",
+      "reason": "not AI: The item only contains a generic title \"Partnerships\" with no accompanying details, providing no substantive AI news."
     }
   ],
   "written": [
     {
-      "id": "09134649a0da",
-      "headline": "Anthropic files S‑1 showing $16.3 billion H1 revenue and $131.7 billion cash",
+      "id": "d42fb1eb3362",
+      "headline": "Retell uses OpenAI models to power 100 M monthly calls",
       "category": "industry",
-      "summary": "Anthropic filed a Form S‑1 for a Nasdaq IPO, reporting $16.3 billion revenue in the first half of 2026 and $131.7 billion in cash or cash equivalents. The filing suggests a potential valuation of up to $2 trillion and an offering that could raise as much as $100 billion.",
-      "url": "https://msn.com/en-us/news/other/the-anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/ar-AA2g76lV",
-      "sources": 5,
-      "quotes": 1
+      "summary": "Retell is using OpenAI’s GPT‑6 Astra and Codex models to handle about 100 million calls each month. The combination helped the company achieve a $1.6 million annual revenue run rate per employee.",
+      "url": "https://openai.com/index/retell-ai",
+      "sources": 1,
+      "quotes": 0
     }
   ],
-  "notes": [
-    "ignored made-up duplicate id 09134649a0da for 'Anthropic eyes $1.5T IPO as FTX’s sold stake looks'",
-    "ignored made-up duplicate id 09134649a0da for 'How to invest in Anthropic AI’s IPO – and whether '",
-    "ignored made-up duplicate id 09134649a0da for 'Anthropic's IPO could be 'speculative fiction' or '",
-    "ignored made-up duplicate id 4f808a64e5e1 for 'Nvidia (NASDAQ:NVDA) to Invest $3 Billion in Meta '",
-    "ignored made-up duplicate id 4f808a64e5e1 for 'Nvidia invests $3 billion in Meta to supercharge M'",
-    "ignored made-up duplicate id 4f808a64e5e1 for 'Nvidia to Invest $3B in Meta’s Equity Offering, Ex'",
-    "ignored made-up duplicate id 4f808a64e5e1 for 'Meta's Muse AI Partnership With Nvidia To Expand A'",
-    "ignored made-up duplicate id fdb8bfbfb7aa for 'Amazon's anti-tokenmaxxing memo says engineers sho'",
-    "ignored made-up duplicate id fdb8bfbfb7aa for 'Amazon tells software engineers what really matter'",
-    "ignored made-up duplicate id fdb8bfbfb7aa for 'AI success depends on business outcomes, not usage'",
-    "ignored made-up duplicate id fdb8bfbfb7aa for 'Amazon cautions software engineers against AI ‘tok'",
-    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "4 kept item(s) carried over to the next run"
-  ],
-  "mode": "full",
+  "notes": [],
+  "mode": "breaking",
   "timings": {
-    "gather": 80.0,
-    "audit": 0.0,
-    "plan": 2.2,
-    "judge": 26.6,
-    "verify and write": 406.8,
-    "videos": 24.3,
-    "tagging": 1.2,
-    "explainers": 21.1,
-    "trackers": 41.9,
-    "claims": 20.7,
-    "model tracker": 0.1,
-    "weekly": 0.0,
-    "builders": 0.0,
-    "top voices": 0.0,
-    "briefing": 21.5,
-    "self-review": 0.0,
-    "photos": 0.2,
-    "stock photos": -0.0,
-    "daily email": -0.0,
-    "alerts": 30.1
+    "gather": 12.6,
+    "judge": 0.8,
+    "verify and write": 1.0,
+    "tagging": 0.7,
+    "trackers": 43.1,
+    "photos": 0.0,
+    "stock photos": 17.4,
+    "alerts": 9.0
   },
-  "fetched": 2896,
-  "fresh": 18,
-  "plan": {
-    "focus": "Tracking Anthropic's IPO fallout while assessing new AI safety warnings and industry funding trends.",
-    "priorities": [
-      "Who’s really in charge at Anthropic after the IPO? (Bank of America warning highlights consumer‑AI safety and policy concerns for a broad audience)",
-      "Anthropic details early drug development work with six partners and sa (Anthropic's drug‑development partnership shows AI's expanding role in biotech and business)",
-      "Anthropic IPO warns its AI could blackmail people, become sentient, en (IPO warning ties into Anthropic valuation story and raises safety/ethics questions)",
-      "Researchers are getting tired of OpenAI gatekeeping its breakthroughs (OpenAI gatekeeping fatigue reflects researcher sentiment and impacts future research collaborations)",
-      "Sources: AI robotics startup Physical Intelligence is in talks to rais (Physical Intelligence $1B+ raise signals major AI‑robotics industry investment)"
-    ],
-    "thin_areas": [
-      "models",
-      "voices"
-    ],
-    "searches": [
-      "Anthropic IPO valuation: 4 new",
-      "Muse AI agents deployment: 6 new",
-      "AI adoption token usage metrics: 6 new"
-    ],
-    "dig_deeper": [
-      "Anthropic IPO warns its AI could blackmail people, become sentient, en",
-      "Frontier AI labs say their models refuted the Exponential Time Hypothe"
-    ]
-  },
-  "judged": 33,
-  "kept": 10,
-  "research": {
-    "investigated": 5,
-    "confirmed": 1,
-    "tool_calls": 15
-  },
-  "research_log": [
-    "Frontier AI labs say their models refuted the Exponential Time Hypothe: unconfirmed (searched “Frontier AI labs models refuted the Exponential Time Hypothesis”; read thenextweb.com; read yahoo.com)",
-    "Sources: AI robotics startup Physical Intelligence is in talks to rais: unconfirmed (searched “Physical Intelligence $1B raise Avenir Lux Capital valuation $20B”; read yahoo.com; searched “\"Physical Intelligence\" \"valuation\" \"20 billion\"”)",
-    "The Anthropic IPO by the numbers, from a possible valuation in the tri: confirmed (searched “Anthropic IPO by the numbers valuation”; read indiatimes.com; read cnbc.com)",
-    "Amazon Is Gutting Its AI Division After Sustained Failure: unconfirmed (searched “Amazon gutting AI division after sustained failure”; searched “Amazon AI division shutdown”; read analyticsinsight.net)",
-    "Anthropic trained Claude on illegally obtained Stanford professors' bo: unconfirmed (searched “Anthropic Claude Stanford professors books illegally obtained”; searched “Stanford professors books pirated to train Claude Anthropic”; read mynorthwest.com)"
-  ],
-  "threads": [
-    "Anthropic IPO progress, numbers overview: Anthropic files S‑1 showing $16.3 billion H1 revenue and $13"
-  ],
-  "videos": {
-    "OpenAI": "ok (8 in feed, 0 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 1 new)",
-    "Google for Developers": "ok (8 in feed, 0 new)",
-    "AI at Meta": "ok (7 in feed, 0 new)",
-    "Microsoft Research": "ok (8 in feed, 1 new)",
-    "NVIDIA": "ok (9 in feed, 0 new)",
-    "Hugging Face": "ok (13 in feed, 0 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 0 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (14 in feed, 0 new)",
-    "Training Data (Sequoia)": "ok (6 in feed, 0 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 0 new)",
-    "Hard Fork": "ok (1 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (2 in feed, 0 new)",
-    "20VC": "ok (5 in feed, 0 new)"
-  },
-  "videos_kept": "1 kept from 2 new",
+  "fetched": 2394,
+  "fresh": 2,
+  "judged": 2,
+  "kept": 1,
   "tagged": 1,
-  "explainers": "0 added to earlier stories",
-  "trackers": "filed 1 stories; updated ai-money",
-  "claims": "37 tracked, 36 open, 0 updated this run",
-  "model_tracker": "82 models, 55 changes today",
-  "briefing": "4 themes from 15 stories",
-  "photos": "1 saved, 0 unavailable",
-  "alerts": "dispatch failed: ReadTimeout",
-  "ai_requests_run": 34,
-  "ai_tokens_run": 93901,
-  "ai_requests_today": 293,
+  "trackers": "filed 1 stories; updated frontier-race",
+  "photos": "0 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "62 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":11}",
+  "ai_requests_run": 7,
+  "ai_tokens_run": 24308,
+  "ai_requests_today": 300,
   "provider_log": [
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
     "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
   ]
 }
