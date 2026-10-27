@@ -1,0 +1,279 @@
+{
+  "started_at": "2026-10-27T09:54:52+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1325)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (890)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (16)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (16)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "The Mythical Man-Month in the Age of AI",
+      "reason": "not AI: Opinion piece on AI era, not a news event."
+    },
+    {
+      "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model (155 responses)",
+      "reason": "score 5: Security vulnerability in GLM‑5.3 Workers model; notable but not a broader safety incident."
+    },
+    {
+      "title": "Luxury Watch Brand Rotoris Raises $8.5 Mn To Grow Retail Footprint",
+      "reason": "not AI: Luxury watch brand funding, no AI angle."
+    },
+    {
+      "title": "Baillie Gifford Funds Slash Value Of Holdings In Dailyhunt Parent VerSe By Up To 80%",
+      "reason": "not AI: Fund holdings cut, no AI angle."
+    },
+    {
+      "title": "‘What is the point if the press has to ask for consent?’: News publishers tell SC that DPDP Act could create a pre-censorship regime",
+      "reason": "not AI: Legal challenge about press consent, not AI related."
+    },
+    {
+      "title": "Bihar gives Ola, Uber, Rapido until Oct 30 to be more transparent or lose licences",
+      "reason": "not AI: Cab transparency regulation, not AI."
+    },
+    {
+      "title": "AI cybersecurity doomsday, or a case of FUD",
+      "reason": "score 5: Debunks AI cybersecurity hype; mainly about human error."
+    },
+    {
+      "title": "Agentic AI could strengthen financial-crime prevention, but governance, cost hurdles limit adoption: McKinsey",
+      "reason": "score 5: McKinsey report on agentic AI for financial crime; interesting but not a core AI breakthrough."
+    },
+    {
+      "title": "In China, the AI bubble has already burst",
+      "reason": "score 5: Commentary on Chinese AI bubble, peripheral to core AI news."
+    },
+    {
+      "title": "Paytm has proven the resilience of its merchant-led model: JP Morgan",
+      "reason": "not AI: Paytm financial performance report, no AI focus."
+    },
+    {
+      "title": "Tata Motors, Amazon partner to deploy 3,000 electric trucks for ecommerce logistics",
+      "reason": "not AI: Electric truck deployment, not AI related."
+    },
+    {
+      "title": "ByteDance founder Zhang Yiming reclaims top spot in China's rich list, thanks to his firm's AI push",
+      "reason": "score 3: ByteDance founder's AI push, not directly relevant to Frontier Wire audience."
+    },
+    {
+      "title": "Risks spelled out for Anthropic investors include possible harms from runaway AI",
+      "reason": "score 5: Anthropic risk factors already covered in other IPO stories."
+    },
+    {
+      "title": "Startup news and updates: daily roundup (October 27, 2026)",
+      "reason": "not AI: Generic startup roundup, no AI focus."
+    },
+    {
+      "title": "Experts: since June, $100M+ in US data center freight has been stolen; in two successful heists, robbers struck escorts protecting trucks hauling $10M+ in goods (Lisa Cavazuti/NBC News)",
+      "reason": "not AI: Data‑center freight theft unrelated to AI."
+    },
+    {
+      "title": "China's Star 50 index of AI and chip leaders is down by 40% in under four months, losing ~$480B in market value; chipmaker CXMT is down ~25% in the past month (Reuters)",
+      "reason": "score 5: Reports Chinese AI chip index decline; market‑level impact but not core AI development."
+    },
+    {
+      "title": "9 juicy numbers that define Anthropic’s mega-IPO",
+      "reason": "score 5: Summary of Anthropic IPO numbers; largely duplicate of existing IPO coverage."
+    },
+    {
+      "title": "Anthropic Files for IPO With Up to $2 Trillion Valuation in Sight: Where to Trade Pre-IPO Exposure",
+      "reason": "score 5: Similar IPO coverage without new angle."
+    },
+    {
+      "title": "Anthropic Just Filed Its IPO Prospectus. Here's What Investors Learned",
+      "reason": "score 5: Redundant report of Anthropic filing its IPO prospectus."
+    },
+    {
+      "title": "Anthropic’s IPO had over 90 pages of risk factors. Should you worry?",
+      "reason": "score 5: Focus on IPO risk factors, already covered elsewhere."
+    },
+    {
+      "title": "Anthropic files for potentially the biggest IPO ever as CEO warns of risk to humanity from AI",
+      "reason": "score 5: CEO warning about AI risk; overlaps existing IPO risk reporting."
+    },
+    {
+      "title": "Claude's Company Goes Public! The Day AI 'Pricing' Started to Shift: A Gentle Explanation of Anthropic's IPO Filing and the GPT-6.1 Terra Price Cut",
+      "reason": "score 4: Commentary piece, not a news event."
+    },
+    {
+      "title": "Nvidia and Meta expand their Muse partnership, including Meta deploying more Vera Rubin and Vera CPUs; Nvidia will invest $3B in Meta's planned equity fundraise (Wall Street Journal)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Anthropic Reports $974 Million Profit in Q2 2026 Ahead of IPO",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "S-1: Anthropic spent ~$2.50 on compute and infrastructure for every $1 of revenue in Q1 2025, falling to under 50 cents in Q2 2026, as it seeks profitability (Financial Times)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Sources: Broadcom CEO Hock Tan held 11th-hour talks and agreed to higher rates and loan guarantees to secure bank participation in the $63B Anthropic debt deal (Wall Street Journal)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "E2E Networks Plans 5.4 MW NVIDIA Blackwell Expansion in India",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "MakeMyTrip says AI agents can’t replace travel platforms, as its own assistant handles 3,000 bookings a day",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Paytm rolls out enterprise AI service in pivot beyond payments",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Cent Raises $15 Mn To Scale AI-Led Preventive Healthcare Platform",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "7dd51a3e337d",
+      "headline": "India's Ministry of Defence signs AI partnership with Sarvam",
+      "category": "industry",
+      "summary": "The Ministry of Defence signed a five‑year MoU with Sarvam AI to develop and deploy AI applications for the Indian Army, Navy and Air Force. The work will cover decision support, target acquisition and data fusion, with human oversight retained.",
+      "url": "https://inc42.com/buzz/ministry-of-defence-partners-with-sarvam-to-drive-ai-adoption-for-armed-forces",
+      "sources": 2,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "not India desk: 'Anthropic Reports $974 Million Profit in Q2 2026 A'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "6 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 70.4,
+    "audit": 0.0,
+    "plan": 1.6,
+    "judge": 2.7,
+    "verify and write": 439.8,
+    "videos": 1.3,
+    "tagging": 20.6,
+    "explainers": 0.0,
+    "trackers": 42.8,
+    "claims": 20.5,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 42.0,
+    "self-review": 0.0,
+    "photos": 0.2,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 2.2
+  },
+  "fetched": 2888,
+  "fresh": 25,
+  "plan": {
+    "focus": "Tracking Anthropic's IPO financing and broader AI funding while filling gaps in India AI policy coverage.",
+    "priorities": [
+      "S-1: Anthropic spent ~$2.50 on compute and infrastructure for every $1 (Key profitability data for Anthropic ahead of its IPO, central to our IPO storyline.)",
+      "Sources: Broadcom CEO Hock Tan held 11th-hour talks and agreed to high (Details on Broadcom's role in the $63B Anthropic debt deal, showing financing ecosystem.)",
+      "Nvidia and Meta expand their Muse partnership, including Meta deployin (Major Nvidia-Meta partnership and $3B investment, significant industry development.)",
+      "China's Star 50 index of AI and chip leaders is down by 40% in under f (Sharp decline in China's AI chip index, indicating market risk trends.)",
+      "Anthropic Reports $974 Million Profit in Q2 2026 Ahead of IPO (Anthropic's $974M Q2 profit, crucial for assessing IPO valuation.)"
+    ],
+    "thin_areas": [
+      "india",
+      "policy"
+    ],
+    "searches": [
+      "Anthropic IPO pricing: 6 new",
+      "India AI regulation DPDP: 0 new",
+      "US AI policy bill progress: 0 new"
+    ],
+    "dig_deeper": [
+      "S-1: Anthropic spent ~$2.50 on compute and infrastructure for every $1",
+      "Anthropic Reports $974 Million Profit in Q2 2026 Ahead of IPO"
+    ]
+  },
+  "judged": 31,
+  "kept": 9,
+  "research": {
+    "investigated": 5,
+    "confirmed": 0,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "Nvidia and Meta expand their Muse partnership, including Meta deployin: unconfirmed (searched “Nvidia Meta Muse partnership Vera Rubin Vera CPUs $3 billion investment equity fundraise”; read msn.com; read yahoo.com)",
+    "Anthropic Reports $974 Million Profit in Q2 2026 Ahead of IPO: unconfirmed (searched “Anthropic reports $974 million profit Q2 2026”; read forbes.com; read techmeme.com)",
+    "S-1: Anthropic spent ~$2.50 on compute and infrastructure for every $1: unconfirmed (searched “Anthropic prospectus compute spend $2.50 per $1 revenue Q1 2025 Financial Times”; read indiatimes.com; searched “\"Anthropic\" \"compute and infrastructure\" \"2.50\"”)",
+    "Sources: Broadcom CEO Hock Tan held 11th-hour talks and agreed to high: unconfirmed (searched “Broadcom CEO Hock Tan 11th-hour talks higher rates loan guarantees Anthropic debt deal $63B”; read msn.com; read msn.com)",
+    "E2E Networks Plans 5.4 MW NVIDIA Blackwell Expansion in India: unconfirmed (searched “E2E Networks 5.4 MW NVIDIA Blackwell expansion India”; read equitybulls.com; read businessworld.in)"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (7 in feed, 0 new)",
+    "AI at Meta": "ok (8 in feed, 0 new)",
+    "Microsoft Research": "ok (7 in feed, 0 new)",
+    "NVIDIA": "ok (10 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "tagged": 1,
+  "trackers": "filed 1 stories; updated india-ai",
+  "claims": "34 tracked, 33 open, 0 updated this run",
+  "model_tracker": "82 models, 32 changes today",
+  "briefing": "4 themes from 19 stories",
+  "india_briefing": "2 themes from 3 stories",
+  "photos": "1 saved, 0 unavailable",
+  "alerts": "39 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":13}",
+  "ai_requests_run": 33,
+  "ai_tokens_run": 61709,
+  "ai_requests_today": 135,
+  "provider_log": []
+}
