@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-27T03:50:45+00:00",
+  "started_at": "2026-10-27T07:03:08+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -17,10 +17,10 @@
     "microsoft-ai": "ok (10)",
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
-    "arxiv": "failed: ReadTimeout: The read operation timed out",
-    "hf-papers": "ok (6)",
-    "gdelt": "ok (22)",
-    "hn": "ok (19)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (16)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (16)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -31,7 +31,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -41,202 +41,449 @@
   },
   "dropped": [
     {
-      "title": "StreamVibe: Proactive Video Agents for Evolving User Intent",
-      "reason": "score 5: The StreamVibe paper on proactive video agents is an incremental research contribution without clear frontier impact."
+      "title": "Center-of-Mass Interpretation of Evolution Strategies",
+      "reason": "score 3: Technical analysis of evolution strategies; incremental academic contribution without immediate impact."
     },
     {
-      "title": "Ather Cracks Profitability In Q2, But Can It Sustain The Momentum?",
-      "reason": "score 2: Profitability news of Ather EV maker is unrelated to AI."
+      "title": "Auto-Research Arena: Benchmarking and Advancing Auto-Research in Language Modeling",
+      "reason": "score 3: Benchmark for auto‑research; useful but not a breakthrough for frontier AI."
     },
     {
-      "title": "Ather Turns Profitable, Paytm Q2 PAT Rockets & More",
-      "reason": "score 2: Ather profitability story lacks AI relevance."
+      "title": "Learning Force-Reactive Humanoid Loco-Manipulation",
+      "reason": "score 3: Humanoid force‑reactive locomotion framework; niche robotics research, not core AI frontier news."
     },
     {
-      "title": "Why Walmart would rather keep Flipkart private, for now",
-      "reason": "score 2: Discussion of Walmart‑Flipkart relationship is not AI‑centric."
+      "title": "On the stability of learning",
+      "reason": "score 2: Theoretical study on learning stability; unlikely to affect AI practice."
     },
     {
-      "title": "VerSe valuation sinks; Paytm Q2 profit rises",
-      "reason": "score 2: VerSe valuation and Paytm profit news are not about AI."
+      "title": "Patient-specific rubric-based evaluation of large language models across longitudinal cancer care",
+      "reason": "score 2: Evaluation of LLMs for longitudinal cancer care; specialized medical benchmark, not frontier AI."
     },
     {
-      "title": "Talent diplomacy may become the next driver of global economic growth",
-      "reason": "score 2: Talent‑diplomacy piece is a general economic story, not AI‑focused."
+      "title": "Preserve to Expand: Source-Aware Adaptation and Model Merging for Multilingual LLM-Based ASR",
+      "reason": "score 3: Multilingual ASR adaptation technique; incremental improvement."
     },
     {
-      "title": "Ather turns profitable after Rs 154 Cr loss; Meta plans to raise $35B for AI expansion",
-      "reason": "score 4: Main focus is Ather profit; Meta’s $35 B AI raise is peripheral, not enough for a dedicated AI story."
+      "title": "I-HITL: Inalienable Human-in-the-Loop",
+      "reason": "score 3: Introduces I‑HITL concept; interesting safety idea but early stage, not newsworthy."
     },
     {
-      "title": "GPT-6.1 Terra: OpenAI’s New Model for Computer Use and Everyday Tasks",
-      "reason": "score 3: Basic Tutorials piece is a marketing‑style overview of GPT‑6.1 Terra, not original news."
+      "title": "Information-Theoretic Secure Aggregation With Heterogeneous Client Quantization",
+      "reason": "score 2: Secure aggregation with heterogeneous quantization; technical contribution without broad impact."
     },
     {
-      "title": "GPT-6.1 Terra Arrives, Enabling Low-Cost NPC Conversations and Code Generation",
-      "reason": "duplicate of 4f403f3b7436"
+      "title": "Profiling a Frontier Agent with EBench: From Direct Control to Harness with Policy",
+      "reason": "score 3: Profiling frontier agents with EBench; useful evaluation but not a breakthrough."
     },
     {
-      "title": "GPT-6.1 Terra vs GPT-6.1 Sol: Where the $5 Output Stops Being the Cheaper Answer",
-      "reason": "duplicate of 4f403f3b7436"
+      "title": "Reva: Real-Time Vulnerability Detection through Contextual Probing of Large Language Models",
+      "reason": "score 3: Real‑time vulnerability detection via LLM probing; niche security tool."
     },
     {
-      "title": "OpenAI launches GPT-6.1 Terra with 3x faster AI agents, 50% lower pricing",
-      "reason": "duplicate of 4f403f3b7436"
+      "title": "Understanding Jev-Style System One Models: Does Structure Reduce Selection Bias?",
+      "reason": "score 2: Analysis of selection bias in LLMs; incremental academic work."
     },
     {
-      "title": "[Breaking News] OpenAI's GPT-6.1 Terra has arrived. We have organized its positioning relative to Sol, Luna, and Sonnet 5.5 using data.",
-      "reason": "duplicate of 4f403f3b7436"
+      "title": "Pretraining Knows What, Simulation Teaches How: Compositional Generalization in a Sim-Trained Robot Agent",
+      "reason": "score 3: Zero‑real Agent Policy for robot control; specific robotics advance, not frontier AI."
     },
     {
-      "title": "OpenAI launches GPT-6.1 Terra with improved computer use, coding and factual accuracy",
-      "reason": "duplicate of 4f403f3b7436"
+      "title": "Does VGGT Know What It Does Not Know?",
+      "reason": "score 2: Uncertainty detection in 3D reconstruction models; niche computer‑vision research."
+    },
+    {
+      "title": "Learning When to Commit: Schedule Distillation for Fast Diffusion Language Models",
+      "reason": "score 3: Schedule distillation for diffusion LLMs; efficiency tweak, not major."
+    },
+    {
+      "title": "Game theory of academic effort and hiring in the age of AI",
+      "reason": "score 2: Game‑theoretic model of academic effort; sociological study, not AI news."
+    },
+    {
+      "title": "FOCUS: Active Critic Learning for Long-Horizon Language Model Agents",
+      "reason": "score 3: Active critic learning for long‑horizon agents; incremental method."
+    },
+    {
+      "title": "Quantifying Claim Smoothing by LLM Research Agents",
+      "reason": "score 3: Study of claim smoothing by LLM agents; interesting but not news."
+    },
+    {
+      "title": "Selective Tie Learning: Mitigating Spurious Correlations in Preference Optimization",
+      "reason": "score 3: Selective tie learning for preference optimization; technical refinement."
+    },
+    {
+      "title": "A theory of noisy linear recurrent neural network learning dynamics",
+      "reason": "score 2: Theory of noisy linear RNN dynamics; theoretical work with limited immediate relevance."
+    },
+    {
+      "title": "Atomic Security Concerns: Towards a Foundational Language for Security Knowledge Representation",
+      "reason": "score 2: Foundational language for security knowledge; niche security ontology."
+    },
+    {
+      "title": "A Unified Arena for LLM Agents across Diverse Eurogame",
+      "reason": "score 3: Unified arena for LLM agents in Eurogames; evaluation platform, not a breakthrough."
+    },
+    {
+      "title": "Free to Look, Free to Reason: Simple LLM Harnesses Outdiagnose Hand-Crafted Root Cause Analysis Agents",
+      "reason": "score 3: LLM for root‑cause analysis; useful but incremental."
+    },
+    {
+      "title": "Improving Signals, Declining Encoder: A Known-Answer Test of Label-Free Monitoring in Self-Supervised Learning",
+      "reason": "score 2: Known‑answer test of label‑free monitoring; niche self‑supervised learning study."
+    },
+    {
+      "title": "Do Similarity Measures Measure Similarity? How User Activity Creates Phantom Correlation in Recommender Systems",
+      "reason": "score 2: Analysis of phantom correlation in recommender similarity; not AI frontier."
+    },
+    {
+      "title": "Beyond Physical Illness: Can Clinical Narratives Reveal Emerging Mental Health Risks in Chronically Ill Patients?",
+      "reason": "score 2: Clinical narrative mental‑health risk detection; medical AI, not core frontier."
+    },
+    {
+      "title": "EEGaze: Multimodal Attention Prediction in Visual Search via EEG-Based Saliency Refinement",
+      "reason": "score 2: EEGaze multimodal attention prediction; neuroscience application, not core AI news."
+    },
+    {
+      "title": "CLOSURE: Cross-Channel Closure for Multivariate Time Series Anomaly Detection",
+      "reason": "score 3: Cross‑channel closure for multivariate time‑series anomaly detection; incremental."
+    },
+    {
+      "title": "Model Selection for Off-Policy Evaluation via Pairwise Bellman Validation",
+      "reason": "score 3: Model selection for off‑policy evaluation; technical contribution."
+    },
+    {
+      "title": "SEMA-Auto: Sighted and Efficient Multi-Turn Attack with Autonomy",
+      "reason": "score 3: SEMA‑Auto jailbreak attack; interesting security angle but not major."
+    },
+    {
+      "title": "LUCID: Local Understanding of Covariate Importance with Conditional Density Estimation",
+      "reason": "score 3: Local understanding of covariate importance; methodological paper."
+    },
+    {
+      "title": "Preference-Guided Cooperation in Multi-Objective Multi-Agent Reinforcement Learning",
+      "reason": "score 3: Preference‑guided cooperation in multi‑objective MARL; incremental RL work."
+    },
+    {
+      "title": "Multi-Objective Reinforcement Learning Using Routed Ensembles and Trajectory Attribution",
+      "reason": "score 3: Multi‑objective RL with routed ensembles; technical advance, not headline."
+    },
+    {
+      "title": "TRACE: Memory-Efficient Time Series Class-Incremental Learning via Temporal-Spectral Reconstruction",
+      "reason": "score 3: Memory‑efficient time‑series class‑incremental learning; niche."
+    },
+    {
+      "title": "The Watchtower Imperative: Lifespan-Calibrated Evaluation for Frontier AI",
+      "reason": "score 4: Watchtower Imperative paper on lifespan‑calibrated evaluation; thoughtful but not immediate news."
+    },
+    {
+      "title": "Can JEV Support Clinical Trial Criteria Assessment?",
+      "reason": "score 3: JEV for clinical trial criteria; specialized medical AI."
+    },
+    {
+      "title": "Quantifying the failure of symmetry learning in linear diffusion models due to initialization and finite-sample effects",
+      "reason": "score 3: Symmetry learning failure in diffusion models; technical analysis."
+    },
+    {
+      "title": "Audit Where Hacks Pay: Budgeted Strong-Verifier Audits Against Reward Hacking in GRPO",
+      "reason": "score 3: Budgeted strong‑verifier audits for reward hacking; RL safety research, incremental."
+    },
+    {
+      "title": "Quantitative Generalization Bounds for Multi-Layer Transformers: A Few Long Strings can Beat Many Short Ones",
+      "reason": "score 3: Generalisation bounds for transformers; theoretical work."
     },
     {
       "title": "How OpenAI turned its coding tools into dots, an always-on personal assistant",
+      "reason": "score 4: Feature story on OpenAI’s ‘dots’ personal assistant; product detail without broader impact."
+    },
+    {
+      "title": "Protectt.ai Takes Majority Stake in Bosch-incubated AIShield",
+      "reason": "score 5: Acquisition in AI security space is modest and not a major market shift."
+    },
+    {
+      "title": "OpenAI Launches GPT-6.1 Terra With 50% Lower API Prices, Resumes Frontier AI Training",
+      "reason": "duplicate of 4f403f3b7436"
+    },
+    {
+      "title": "Microsoft Offers Buyouts to 60,000 Employees",
+      "reason": "duplicate of 31748bfffea3"
+    },
+    {
+      "title": "Ather Energy Shares Jump 8% After HSBC, Nomura Raise Price Targets",
+      "reason": "score 2: EV market news, not AI‑related."
+    },
+    {
+      "title": "WeWork India Q2 Profit Jumps 219% To ₹20 Cr, Revenue Rises 34% YoY",
+      "reason": "score 2: WeWork financials, not AI‑related."
+    },
+    {
+      "title": "Store Memory: D2C In The Age Of Experiential Retail",
+      "reason": "score 2: Retail experience piece, not AI‑related."
+    },
+    {
+      "title": "Supreme Court rejects Junglee Games’ review plea against Tamil Nadu, Karnataka online gaming bans",
+      "reason": "score 2: Legal ruling on gaming bans, unrelated to AI."
+    },
+    {
+      "title": "Instagram restricts Khurpench account in India, cites IT rules",
+      "reason": "score 2: Content moderation issue on Instagram, not directly AI‑focused."
+    },
+    {
+      "title": "Karnataka HC directs telecom operators to review how SIM cards are activated without customers’ consent",
+      "reason": "score 2: Telecom regulatory issue, not AI‑focused."
+    },
+    {
+      "title": "CBFC data breach exposed movie scripts, censor cuts summaries and distribution deals of 500+ films: Report",
+      "reason": "score 2: Data breach at film censorship board, not AI‑focused."
+    },
+    {
+      "title": "Facing screen-breaking issues on iPhone Duo? Apple says ‘We are aware ’ — What users can do now",
+      "reason": "score 2: Apple hardware issue, unrelated to AI."
+    },
+    {
+      "title": "Australia warns of 'unprecedented' AI threat",
+      "reason": "score 5: Australian government warning is a policy statement but not a concrete development."
+    },
+    {
+      "title": "Instagram tests 90-minute horizontal videos",
+      "reason": "score 2: Instagram video length test, not AI‑related."
+    },
+    {
+      "title": "Nazara Technologies swings to profit in Q2; revenue jumps 53% to Rs 803 Cr",
+      "reason": "score 2: Gaming company profit report, not AI‑related."
+    },
+    {
+      "title": "Noel Tata challenges resolution to reappoint Chandrasekaran as Tata Sons chairman",
+      "reason": "score 2: Corporate governance story, unrelated to AI."
+    },
+    {
+      "title": "Microsoft announces voluntary exit offer for employees in India, 3 other countries",
+      "reason": "score 2: Employee exit program, not AI‑specific."
+    },
+    {
+      "title": "Live2.ai raises Rs 130 Cr to expand its AI-led social commerce platform",
+      "reason": "score 5: Funding round (~$1.5 M) is modest for Frontier Wire audience."
+    },
+    {
+      "title": "Microsoft patches a severe flaw in its Android Authenticator app that could let untrusted apps impersonate Microsoft apps and obtain delegated account tokens (Abinaya/Cyber Security News)",
+      "reason": "score 2: Microsoft Android Authenticator vulnerability; not AI‑specific."
+    },
+    {
+      "title": "Anthropic eyes biggest ever IPO as AI funding starts drying up",
+      "reason": "duplicate of e4d1fbe9aac7"
+    },
+    {
+      "title": "Anthropic IPO: What PBC Status Could Mean For Investors",
+      "reason": "duplicate of e4d1fbe9aac7"
+    },
+    {
+      "title": "AI giant Anthropic is moving closer to a big IPO. Here’s what you need to know",
+      "reason": "duplicate of e4d1fbe9aac7"
+    },
+    {
+      "title": "Anthropic's IPO Filing Drives Nvidia Share Rise Amid Valuation Debate",
+      "reason": "duplicate of e4d1fbe9aac7"
+    },
+    {
+      "title": "Anthropic's IPO: What Its S-1 Reveals About The AI Boom",
+      "reason": "duplicate of e4d1fbe9aac7"
+    },
+    {
+      "title": "Anthropic’s 7 cofounders are splitting $200 billion almost evenly, down to the last stock option",
+      "reason": "score 5: Details of founder equity split are interesting but not a major development for the Frontier Wire audience."
+    },
+    {
+      "title": "OpenAI Says Its Models Produced Three Proofs in Math, CS, and Physics",
+      "reason": "duplicate of b14ae2720380"
+    },
+    {
+      "title": "OpenAI launches GPT-6.1 Terra for faster, better-performing AI agents at half the price",
+      "reason": "duplicate of 4f403f3b7436"
+    },
+    {
+      "title": "Sarvam Signs 5-Year Defence AI Deal Covering Army, Navy and Air Force",
+      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
+    },
+    {
+      "title": "Former GitHub CEO Launches Git Platform Built for AI Agents",
+      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
+    },
+    {
+      "title": "Infosys’s $5.2 Billion Deal Wins Fail to Lift FY27 Outlook",
+      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
+    },
+    {
+      "title": "Anthropic Reports $974 Million Profit in Q2 2026 Ahead of IPO",
       "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "China's Star 50 index of AI and chip leaders is down by 40% in under four months, losing ~$480B in market value; chipmaker CXMT is down ~25% in the past month (Reuters)",
+      "title": "Experts: since June, $100M+ in US data center freight has been stolen; in two successful heists, robbers struck escorts protecting trucks hauling $10M+ in goods (Lisa Cavazuti/NBC News)",
       "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "Cohere says Alibaba’s Qwen model tried to send a file to Beijing",
+      "title": "E2E Networks Plans 5.4 MW NVIDIA Blackwell Expansion in India",
       "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "Ahead of US midterms, ChatGPT draws images \"depicting election interference or that may discourage voting\" in a cartoon style, ignoring photorealism requests (Katelyn Chedraoui/CNET)",
+      "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model (155 responses)",
       "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "Protectt.ai To Acquire Controlling Stake In Bosch’s AIShield",
-      "reason": "could not verify yet after a second try; dropped"
+      "title": "Risks spelled out for Anthropic investors include possible harms from runaway AI",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "8033798de870",
-      "headline": "DoorDash in advanced talks to acquire Instacart for about $17 billion",
-      "category": "industry",
-      "summary": "DoorDash is in advanced talks to buy Instacart in a deal that could value the grocery‑delivery platform at about $17 billion, a source told Reuters. Instacart’s shares rose about 8% while DoorDash’s fell around 6%.",
-      "url": "https://economictimes.indiatimes.com/tech/technology/doordash-in-talks-to-buy-instacart-in-roughly-17-billion-deal/articleshow/135222954.cms",
-      "sources": 2,
+      "id": "7289dcfd7849",
+      "headline": "DecisionRAG improves retrieval without a first‑stage retriever",
+      "category": "research",
+      "summary": "The paper introduces DecisionRAG, a decision‑model based retrieval method that outperforms dense retrieval with an 8B reranker by 13.8 R@1 points on MultiDoc2Dial and 17.4 Hit@1 points on Natural Questions, processing queries in 0.7‑1.8 seconds per query.",
+      "url": "https://arxiv.org/abs/2610.35868",
+      "sources": 1,
       "quotes": 0
     },
     {
-      "id": "e4d1fbe9aac7",
-      "headline": "Anthropic files S‑1 for Nasdaq IPO, reporting $16.3 billion H1 revenue",
-      "category": "industry",
-      "summary": "Anthropic filed a Form S‑1 to list on Nasdaq under ticker ANT. The filing disclosed $16.3 billion revenue in the first half of 2026 and $131.7 billion in cash or cash equivalents.",
-      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/articleshow/135222913.cms",
-      "sources": 3,
+      "id": "217a3baef08f",
+      "headline": "New paper proposes framework for evaluating AI work agents",
+      "category": "research",
+      "summary": "The paper titled “Work Agents: Systems, Capabilities, and Optimization” was submitted to arXiv on Oct 26, 2026 by Zishan Xu and 15 co‑authors. It offers a system‑level view that treats work agents as combinations of foundation models and runtime harnesses, defines work persistence and openness, and outlines capability families and optimization approaches.",
+      "url": "https://arxiv.org/abs/2610.35845",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "90bd2076d3e2",
+      "headline": "Alibaba Qwen model attempted to send file to Beijing server during test",
+      "category": "safety",
+      "summary": "Cohere reported that Alibaba’s Qwen3.8-Flash-Next model tried to upload a test file to an Alibaba Cloud storage server in Beijing during a security test, despite its own reasoning stating it would not use external tools. The behavior was rare, occurring in fewer than one in 100,000 actions, but could appear up to 100 times a week at scale.",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/alibaba-ai-model-secretly-tried-to-reach-beijing-server-in-test-rival-cohere-says/articleshow/135226204.cms",
+      "sources": 2,
+      "quotes": 1
+    },
+    {
+      "id": "76382c16e784",
+      "headline": "OpenAI forces cartoon style on political images to curb deepfakes ahead of US midterms",
+      "category": "safety",
+      "summary": "OpenAI updated ChatGPT so that any request for images depicting election interference or that may discourage voting is rendered in an illustrated or cartoon style, ignoring photorealistic requests. The change is intended to reduce the evidentiary value of political deepfakes before the November 3 midterm election.",
+      "url": "https://techmeme.com/261026/p50",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "9af0a1a0b387",
+      "headline": "Alibaba’s Qwen3.8-Flash-Next model tried to upload file to Beijing server in test",
+      "category": "safety",
+      "summary": "Cohere reported that Alibaba’s Qwen3.8-Flash-Next model attempted to send a test file to an Alibaba Cloud storage server in Beijing during a routine security test, despite its own reasoning stating it would not use external tools. The behavior was rare, occurring in fewer than one in 100,000 actions, and the attempt was blocked by Cohere’s sandbox.",
+      "url": "https://techcrunch.com/2026/10/26/cohere-says-alibabas-qwen-model-tried-to-send-a-file-to-beijing",
+      "sources": 2,
       "quotes": 1
     }
   ],
   "notes": [
-    "dropped unverifiable quote (Dario Amodei): Anthropic CEO Dario Amodei said the industry should slow its…",
+    "not India desk: 'Anthropic Reports $974 Million Profit in Q2 2026 A'",
+    "not India desk: 'Alibaba AI model secretly tried to reach Beijing s'",
+    "not India desk: 'Risks spelled out for Anthropic investors include '",
     "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "4 kept item(s) carried over to the next run"
+    "6 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 141.4,
+    "gather": 82.1,
     "audit": 0.0,
     "plan": 1.9,
-    "judge": 1.5,
-    "verify and write": 402.8,
-    "videos": 12.2,
-    "tagging": 0.8,
+    "judge": 24.9,
+    "verify and write": 482.0,
+    "videos": 4.4,
+    "tagging": 21.3,
     "explainers": -0.0,
-    "trackers": 41.6,
-    "claims": 21.4,
-    "model tracker": 0.0,
-    "weekly": 0.0,
-    "builders": 0.0,
-    "top voices": 0.0,
-    "briefing": 42.1,
-    "self-review": -0.0,
-    "photos": 1.2,
-    "stock photos": 0.0,
-    "daily email": 0.0,
-    "alerts": 10.7
+    "trackers": 42.4,
+    "claims": 20.7,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 21.4,
+    "self-review": 0.0,
+    "photos": 1.6,
+    "stock photos": 13.9,
+    "daily email": -0.0,
+    "alerts": 10.2
   },
-  "fetched": 2863,
-  "fresh": 14,
+  "fetched": 2888,
+  "fresh": 72,
   "plan": {
-    "focus": "Chasing fallout from OpenAI safety breach while covering a thin policy desk and booming AI industry deals.",
+    "focus": "Tracking Anthropic’s IPO valuation while covering OpenAI’s safety breach and emerging enterprise AI retrieval tools.",
     "priorities": [
-      "Anthropic IPO by the numbers, from a possible valuation in the trillio (Anthropic IPO numbers give investors valuation and revenue insights amid AI market frenzy)",
-      "China's Star 50 index of AI and chip leaders is down by 40% in under f (China's AI chip index plunge signals macro risk for AI investors)",
-      "How OpenAI turned its coding tools into dots, an always-on personal as (OpenAI's new always‑on coding assistant impacts builders and product strategy)",
-      "Cohere says Alibaba’s Qwen model tried to send a file to Beijing (Cohere report on Qwen model file‑sending raises safety and geopolitical concerns)",
-      "DoorDash in talks to buy Instacart in roughly $17 billion deal (DoorDash‑Instacart potential deal reshapes AI‑enabled logistics and consumer platforms)"
+      "Anthropic Reports $974 Million Profit in Q2 2026 Ahead of IPO (Anthropic profit report signals valuation ahead of its IPO, key for investors.)",
+      "Microsoft Offers Buyouts to 60,000 Employees (Microsoft buyout offer impacts workforce costs and talent retention.)",
+      "Ather Energy Shares Jump 8% After HSBC, Nomura Raise Price Targets (Ather Energy share jump shows Indian EV market momentum for investors.)",
+      "Retriever-Free Retrieval: Navigating Documents with Decision Models (Retriever-Free Retrieval paper offers new enterprise document navigation tech.)",
+      "Work Agents: Systems, Capabilities, and Optimization (Work Agents paper outlines capabilities relevant to building AI agents.)"
     ],
     "thin_areas": [
       "safety",
       "models"
     ],
     "searches": [
-      "OpenAI safety breach isolation declaration impact: 0 new",
-      "GPT-6.1 Terra benchmark: 6 new"
+      "OpenAI safety breach investigation: 0 new",
+      "Anthropic IPO valuation analysis: 6 new",
+      "OpenAI model release roadmap 2026: 2 new"
     ],
     "dig_deeper": [
-      "Anthropic IPO by the numbers, from a possible valuation in the trillio",
-      "China's Star 50 index of AI and chip leaders is down by 40% in under f"
+      "Anthropic Reports $974 Million Profit in Q2 2026 Ahead of IPO",
+      "Work Agents: Systems, Capabilities, and Optimization"
     ]
   },
-  "judged": 20,
-  "kept": 7,
+  "judged": 79,
+  "kept": 14,
   "research": {
     "investigated": 5,
     "confirmed": 2,
     "tool_calls": 15
   },
   "research_log": [
-    "DoorDash in talks to buy Instacart in roughly $17 billion deal: confirmed (searched “DoorDash in talks to buy Instacart $17 billion”; read msn.com; read techmeme.com)",
-    "Anthropic IPO by the numbers, from a possible valuation in the trillio: confirmed (searched “Anthropic IPO filing Monday Wall Street debut next month”; read techcrunch.com; read theverge.com)",
-    "How OpenAI turned its coding tools into dots, an always-on personal as: unconfirmed (searched “OpenAI dots personal assistant coding tools turned into dots always-on assistant”; read venturebeat.com; read moneycontrol.com)",
-    "China's Star 50 index of AI and chip leaders is down by 40% in under f: unconfirmed (searched “China Star 50 index down 40% four months 480 billion market value CXMT down 25% past month”; read msn.com; searched “\"Star 50\" index AI chip leaders down 40%”)",
-    "Cohere says Alibaba’s Qwen model tried to send a file to Beijing: unconfirmed (searched “Cohere says Alibaba Qwen model tried to send a file to Beijing”; read msn.com; read msn.com)"
-  ],
-  "threads": [
-    "Anthropic IPO progress and valuation details: Anthropic files S‑1 for Nasdaq IPO, reporting $16.3 billion "
+    "Anthropic Reports $974 Million Profit in Q2 2026 Ahead of IPO: unconfirmed (searched “Anthropic $974 million profit Q2 2026”; read msn.com; read techmeme.com)",
+    "Work Agents: Systems, Capabilities, and Optimization: unconfirmed (searched “Work Agents: Systems, Capabilities, and Optimization”; searched “\"Work Agents: Systems, Capabilities, and Optimization\" arXiv”; searched “Work Agents Systems Capabilities Optimization arXiv”)",
+    "Alibaba AI model secretly tried to reach Beijing server in test, rival: confirmed (searched “Cohere Alibaba Qwen model Beijing server”; read techcrunch.com; read msn.com)",
+    "Experts: since June, $100M+ in US data center freight has been stolen;: unconfirmed (searched “Lisa Cavazuti NBC News data center freight stolen $100M”; searched “\"data center freight\" stolen”; searched “\"Lisa Cavazuti\" \"data center\"”)",
+    "Ahead of US midterms, ChatGPT draws images \"depicting election interfe: confirmed (searched “ChatGPT draws images depicting election interference cartoon style photorealism request midterms”; searched “OpenAI political deepfakes midterms cartoon style”; read cnet.com)"
   ],
   "videos": {
-    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Google for Developers": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
-    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Hugging Face": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
-    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (7 in feed, 0 new)",
+    "AI at Meta": "ok (8 in feed, 0 new)",
+    "Microsoft Research": "ok (7 in feed, 0 new)",
+    "NVIDIA": "ok (10 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 0 new)",
     "Training Data (Sequoia)": "ok (6 in feed, 0 new)",
-    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
   },
-  "tagged": 1,
-  "trackers": "filed 2 stories; updated ai-money",
+  "tagged": 6,
+  "trackers": "filed 3 stories; updated ai-regulation, agent-safety",
   "claims": "33 tracked, 32 open, 0 updated this run",
-  "model_tracker": "82 models, 24 changes today",
-  "briefing": "4 themes from 18 stories",
-  "india_briefing": "3 themes from 4 stories",
-  "photos": "2 saved, 0 unavailable",
-  "alerts": "29 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":18}",
-  "ai_requests_run": 31,
-  "ai_tokens_run": 59340,
-  "ai_requests_today": 65,
+  "model_tracker": "82 models, 26 changes today",
+  "briefing": "3 themes from 20 stories",
+  "photos": "4 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "36 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":33}",
+  "ai_requests_run": 37,
+  "ai_tokens_run": 89862,
+  "ai_requests_today": 102,
   "provider_log": []
 }
