@@ -1,0 +1,207 @@
+{
+  "started_at": "2026-10-27T01:04:28+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1325)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (890)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (13)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (19)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
+      "reason": "score 3: Open‑source on‑device alternative to Claude; minor variant, not a frontier model release."
+    },
+    {
+      "title": "Paytm sees 10x rise in net profit in Q2 of FY27",
+      "reason": "score 2: Paytm profit report; not AI‑related."
+    },
+    {
+      "title": "GPT-6.1 Terra",
+      "reason": "duplicate of 4f403f3b7436"
+    },
+    {
+      "title": "webframe: evaluated as a scraper and a sandbox",
+      "reason": "score 2: A technical tool (webframe) unrelated to frontier AI developments."
+    },
+    {
+      "title": "Ethan Mollick: Two and a half years between these. (Tonight, OpenAI announced an unreleased model solved three long-standing problems in physics, math,…",
+      "reason": "score 5: Personal commentary on OpenAI breakthroughs; does not add new news."
+    },
+    {
+      "title": "Fitbit Edge review: notable upgrade over the Charge 6 for GPS and heart rate, Google Health app is an improvement, but lacks software polish and NFC payments (Ray Maker/DC Rainmaker)",
+      "reason": "score 1: Fitbit hardware review; unrelated to AI frontier."
+    },
+    {
+      "title": "Anthropic mum on investment grade as it warns of more debt",
+      "reason": "score 5: Anthropic’s debt warning; modest financial update, not a major AI‑infrastructure story."
+    },
+    {
+      "title": "Sources: DoorDash is in advanced talks to acquire Instacart, and the deal could be finalized as soon as this week and could value Instacart at ~$17B (Heather Haddon/Wall Street Journal)",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Protectt.ai To Acquire Controlling Stake In Bosch’s AIShield",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "b14ae2720380",
+      "headline": "OpenAI reports three new discoveries in math, computer science and physics",
+      "category": "research",
+      "summary": "OpenAI announced three AI‑generated discoveries: a proof of local smoothing for the Euclidean wave equation, a deterministic algorithm that refutes the Exponential Time Hypothesis, and a rigorous existence proof for certain interacting quantum field theories. The company released the model output directly for the math result and enlisted external “shepherds” to guide the computer‑science and physics findings.",
+      "url": "https://theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics",
+      "sources": 5,
+      "quotes": 2
+    },
+    {
+      "id": "193124979d15",
+      "headline": "Broadcom secures $63 billion financing from banks to fund AI chips for Anthropic",
+      "category": "industry",
+      "summary": "Broadcom arranged a $63 billion financing package with Bank of America, Blackstone, Citi and Morgan Stanley to purchase Broadcom XPU AI accelerators for Anthropic via a new special purpose vehicle. Deliveries are slated to start in calendar 2027.",
+      "url": "https://techmeme.com/261026/p47",
+      "sources": 4,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "1 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 83.4,
+    "audit": 3.7,
+    "plan": 1.5,
+    "judge": 1.7,
+    "verify and write": 347.3,
+    "videos": 24.6,
+    "tagging": 0.8,
+    "explainers": -0.0,
+    "trackers": 127.2,
+    "claims": 20.4,
+    "model tracker": 0.6,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 21.2,
+    "self-review": 20.6,
+    "photos": 0.2,
+    "stock photos": 16.0,
+    "daily email": 0.0,
+    "alerts": 5.2
+  },
+  "fetched": 2888,
+  "fresh": 12,
+  "audit": "coverage 56% of 9 significant stories; 4 missed, 0 added to this run; 3 lesson(s) for the editor",
+  "plan": {
+    "focus": "Tracking OpenAI’s safety breach fallout while covering its breakthrough model launch and major AI‑chip financing deals.",
+    "priorities": [
+      "OpenAI announces three big science discoveries and a new way to work w (OpenAI’s announced science breakthroughs impact research, policy, and safety narratives for builders and investors.)",
+      "OpenAI announces three breakthroughs in computer science, math, and ph (Confirms the Exponential Time Hypothesis falsification, a major computer‑science development relevant to AI research.)",
+      "Broadcom arranges a $63B deal with BofA, Blackstone, Citi, and Morgan  (Broadcom’s $63B financing vehicle for Anthropic chips signals huge capital flow into AI infrastructure.)",
+      "Sources: DoorDash is in advanced talks to acquire Instacart, and the d (Potential DoorDash‑Instacart merger reshapes AI‑driven logistics and consumer platforms.)",
+      "GPT-6.1 Terra (GPT‑6.1 Terra launch offers a faster, cheaper multimodal model, filling our thin model coverage.)"
+    ],
+    "thin_areas": [
+      "models",
+      "safety"
+    ],
+    "searches": [
+      "OpenAI isolation policy impact: 0 new",
+      "Anthropic chip financing deal details: 2 new",
+      "GPT-6.1 Terra performance benchmarks: 6 new"
+    ],
+    "dig_deeper": [
+      "OpenAI announces three big science discoveries and a new way to work w",
+      "Broadcom arranges a $63B deal with BofA, Blackstone, Citi, and Morgan "
+    ]
+  },
+  "judged": 20,
+  "kept": 4,
+  "research": {
+    "investigated": 4,
+    "confirmed": 2,
+    "tool_calls": 12
+  },
+  "research_log": [
+    "OpenAI announces three big science discoveries and a new way to work w: confirmed (searched “OpenAI announces three big science discoveries shepherds academics”; read msn.com; read unite.ai)",
+    "Broadcom arranges a $63B deal with BofA, Blackstone, Citi, and Morgan : confirmed (searched “Broadcom $63 billion deal Anthropic chip financing”; read msn.com; read yahoo.com)",
+    "Sources: DoorDash is in advanced talks to acquire Instacart, and the d: unconfirmed (searched “DoorDash advanced talks to acquire Instacart”; read msn.com; searched “Reuters DoorDash Instacart 17 billion”)",
+    "Protectt.ai To Acquire Controlling Stake In Bosch’s AIShield: unconfirmed (searched “Protectt.ai acquire controlling stake Bosch AIShield”; searched “\"Protectt.ai\" \"AIShield\"”; read indiatimes.com)"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 3 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (7 in feed, 0 new)",
+    "AI at Meta": "ok (8 in feed, 0 new)",
+    "Microsoft Research": "ok (7 in feed, 0 new)",
+    "NVIDIA": "ok (10 in feed, 1 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 1 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "1 kept from 5 new",
+  "tagged": 2,
+  "trackers": "filed 3 stories; updated frontier-race, ai-infrastructure, ai-money",
+  "claims": "33 tracked, 32 open, 0 updated this run",
+  "model_tracker": "82 models, 18 changes today",
+  "briefing": "4 themes from 17 stories",
+  "self_review": "19 lines written to data/self_review.md",
+  "photos": "1 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "23 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":34}",
+  "ai_requests_run": 34,
+  "ai_tokens_run": 86925,
+  "ai_requests_today": 34,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
+}

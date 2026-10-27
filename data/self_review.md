@@ -1,40 +1,40 @@
-## Newsroom self-review, 2026-10-26
+## Newsroom self-review, 2026-10-27
 
-Looked at 34 runs over the last 3 days (58 stories written).
+Looked at 33 runs over the last 3 days (50 stories written).
 Tick the suggestions you want applied; nothing changes until a person approves it.
 
-- [ ] **remove source** · `gdelt`: Remove gdelt due to frequent ConnectTimeout errors (22/34 runs)  
-  _Why:_ High failure rate prevents timely news gathering
-- [ ] **remove source** · `gdelt-india`: Remove gdelt-india because it fails in most runs (26/34)  
-  _Why:_ Consistently timing out, wasting resources
-- [ ] **add source** · `xAI lab updates`: Add a source tracking xAI research announcements  
-  _Why:_ xAI is a tracked lab with no stories this week
-- [ ] **add source** · `Alibaba Qwen lab updates`: Add a source for Alibaba (Qwen) research releases  
-  _Why:_ Alibaba (Qwen) is a tracked lab lacking coverage
-- [ ] **tune** · `max_stories_per_run`: Reduce max_stories_per_run from 10 to 5  
-  _Why:_ Fewer stories per run can improve overall quality and reduce overload
+- [ ] **remove source** · `gdelt`: Remove gdelt from sources list  
+  _Why:_ Rate‑limited on 21/33 runs, causing frequent 429 errors and no content
+- [ ] **remove source** · `gdelt-india`: Remove gdelt-india from sources list  
+  _Why:_ Paused after repeated rate‑limiting on 25/33 runs, blocking news intake
+- [ ] **add source** · `xAI`: Add a dedicated XAI news source (e.g., XAI blog / press releases)  
+  _Why:_ Tracked lab xAI has no stories this week
+- [ ] **add source** · `Alibaba (Qwen)`: Add a source for Alibaba Qwen research updates (e.g., Alibaba research blog)  
+  _Why:_ Tracked lab Alibaba (Qwen) has no stories this week
+- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower threshold from 6 to 5  
+  _Why:_ Large number of drops due to score 5 (131) – lowering could increase publishable stories without sacrificing quality
 
 <details><summary>Statistics the agent reviewed</summary>
 
 ```json
 {
- "runs": 34,
- "stories_written": 58,
+ "runs": 33,
+ "stories_written": 50,
  "source_failures": {
-  "arxiv": "4/34 runs; last error: failed: ReadTimeout: The read operation timed out",
-  "gdelt-india": "26/34 runs; last error: failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
-  "gdelt": "22/34 runs; last error: failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out"
+  "gdelt": "21/33 runs; last error: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20",
+  "gdelt-india": "25/33 runs; last error: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+  "arxiv": "2/33 runs; last error: failed: ReadTimeout: The read operation timed out"
  },
  "sources_returning_nothing": {},
  "drop_reasons": {
-  "score 5": 130,
-  "score 2": 113,
-  "score 4": 111,
-  "score 3": 69,
-  "could not verify yet": 58,
-  "score 1": 26,
-  "duplicate of 3f492a65e9c2": 17,
-  "variety": 12
+  "score 5": 131,
+  "score 4": 95,
+  "score 2": 90,
+  "could not verify yet": 66,
+  "score 3": 65,
+  "score 1": 28,
+  "could not verify yet after a second try": 17,
+  "duplicate of 3f492a65e9c2": 17
  },
  "tracked_labs_without_stories_this_week": [
   "xAI",
@@ -44,7 +44,7 @@ Tick the suggestions you want applied; nothing changes until a person approves i
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
-  "cerebras/gpt-oss-120b: unusable answer",
+  "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
