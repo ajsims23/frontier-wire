@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-27T09:54:52+00:00",
+  "started_at": "2026-10-27T13:03:43+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -18,7 +18,7 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (16)",
+    "hf-papers": "ok (18)",
     "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
     "hn": "ok (16)",
     "techcrunch-ai": "ok (20)",
@@ -41,212 +41,329 @@
   },
   "dropped": [
     {
-      "title": "The Mythical Man-Month in the Age of AI",
-      "reason": "not AI: Opinion piece on AI era, not a news event."
+      "title": "Software may be getting worse, but it used to be horrible",
+      "reason": "not AI: General software commentary, no AI angle."
     },
     {
-      "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model (155 responses)",
-      "reason": "score 5: Security vulnerability in GLM‑5.3 Workers model; notable but not a broader safety incident."
+      "title": "16-bit Windows (Windows 1.x, 2.x, 3.0, 3.1, etc.) on 64-bit Windows",
+      "reason": "not AI: Historical OS topic, unrelated to AI."
     },
     {
-      "title": "Luxury Watch Brand Rotoris Raises $8.5 Mn To Grow Retail Footprint",
-      "reason": "not AI: Luxury watch brand funding, no AI angle."
+      "title": "Data center backlash is uniting America",
+      "reason": "not AI: Data‑center backlash is political, not AI‑specific."
     },
     {
-      "title": "Baillie Gifford Funds Slash Value Of Holdings In Dailyhunt Parent VerSe By Up To 80%",
-      "reason": "not AI: Fund holdings cut, no AI angle."
+      "title": "Industrial Intelligence: The next growth opportunity for manufacturing",
+      "reason": "score 4: The piece is a commentary on manufacturing intelligence without a concrete news development."
     },
     {
-      "title": "‘What is the point if the press has to ask for consent?’: News publishers tell SC that DPDP Act could create a pre-censorship regime",
-      "reason": "not AI: Legal challenge about press consent, not AI related."
+      "title": "Anthropic Sued Over Alleged Use of Elvis Presley Songs to Train Claude, Denies Claim",
+      "reason": "duplicate of c07fce9420b1"
     },
     {
-      "title": "Bihar gives Ola, Uber, Rapido until Oct 30 to be more transparent or lose licences",
-      "reason": "not AI: Cab transparency regulation, not AI."
+      "title": "Cent Raises $15 Million to Expand AI-Powered Preventive Healthcare",
+      "reason": "score 5: Cent raises $15 M for AI‑powered preventive healthcare – modest funding below headline threshold."
     },
     {
-      "title": "AI cybersecurity doomsday, or a case of FUD",
-      "reason": "score 5: Debunks AI cybersecurity hype; mainly about human error."
+      "title": "Cohere Says Alibaba’s Qwen Model Tried to Upload Test File to Beijing Server",
+      "reason": "duplicate of 90bd2076d3e2"
     },
     {
-      "title": "Agentic AI could strengthen financial-crime prevention, but governance, cost hurdles limit adoption: McKinsey",
-      "reason": "score 5: McKinsey report on agentic AI for financial crime; interesting but not a core AI breakthrough."
+      "title": "Exclusive: Ex-Pixxel Engineer Effy John’s Parsec Aerospace In Talks To Raise $10 Mn",
+      "reason": "score 4: Parsec Aerospace fundraising is aerospace‑focused, not core AI."
     },
     {
-      "title": "In China, the AI bubble has already burst",
-      "reason": "score 5: Commentary on Chinese AI bubble, peripheral to core AI news."
+      "title": "Live2.ai Raises ₹130 Cr To Scale AI Marketing SaaS Platform",
+      "reason": "score 5: Live2.ai's $13.7M raise for AI marketing SaaS is modest and below headline threshold."
     },
     {
-      "title": "Paytm has proven the resilience of its merchant-led model: JP Morgan",
-      "reason": "not AI: Paytm financial performance report, no AI focus."
+      "title": "Healthy Snacking Brand Troovy Bags ₹100 Cr To Expand Offline Presence, Enter New Categories",
+      "reason": "not AI: Snacking brand funding unrelated to AI."
     },
     {
-      "title": "Tata Motors, Amazon partner to deploy 3,000 electric trucks for ecommerce logistics",
-      "reason": "not AI: Electric truck deployment, not AI related."
+      "title": "Simplismart Bags $14 Mn To Expand AI Inference Platform",
+      "reason": "score 5: Simplismart's $14M Series B is a modest funding round, below headline threshold."
     },
     {
-      "title": "ByteDance founder Zhang Yiming reclaims top spot in China's rich list, thanks to his firm's AI push",
-      "reason": "score 3: ByteDance founder's AI push, not directly relevant to Frontier Wire audience."
+      "title": "Why This Festive Season Is Getting More Expensive For Ecommerce Sellers",
+      "reason": "not AI: Article discusses ecommerce pricing during festive season, no AI component."
     },
     {
-      "title": "Risks spelled out for Anthropic investors include possible harms from runaway AI",
-      "reason": "score 5: Anthropic risk factors already covered in other IPO stories."
+      "title": "IndiaMART Q2 Profit Rises 10% YoY To ₹91 Cr",
+      "reason": "not AI: IndiaMART profit report, no AI angle."
     },
     {
-      "title": "Startup news and updates: daily roundup (October 27, 2026)",
-      "reason": "not AI: Generic startup roundup, no AI focus."
+      "title": "Mochatrade Raises $5.5 Mn To Build A US Stock Trading Platform For Indian Traders",
+      "reason": "not AI: Mochatrade funding announcement, not AI‑related."
     },
     {
-      "title": "Experts: since June, $100M+ in US data center freight has been stolen; in two successful heists, robbers struck escorts protecting trucks hauling $10M+ in goods (Lisa Cavazuti/NBC News)",
-      "reason": "not AI: Data‑center freight theft unrelated to AI."
-    },
-    {
-      "title": "China's Star 50 index of AI and chip leaders is down by 40% in under four months, losing ~$480B in market value; chipmaker CXMT is down ~25% in the past month (Reuters)",
-      "reason": "score 5: Reports Chinese AI chip index decline; market‑level impact but not core AI development."
-    },
-    {
-      "title": "9 juicy numbers that define Anthropic’s mega-IPO",
-      "reason": "score 5: Summary of Anthropic IPO numbers; largely duplicate of existing IPO coverage."
-    },
-    {
-      "title": "Anthropic Files for IPO With Up to $2 Trillion Valuation in Sight: Where to Trade Pre-IPO Exposure",
-      "reason": "score 5: Similar IPO coverage without new angle."
-    },
-    {
-      "title": "Anthropic Just Filed Its IPO Prospectus. Here's What Investors Learned",
-      "reason": "score 5: Redundant report of Anthropic filing its IPO prospectus."
-    },
-    {
-      "title": "Anthropic’s IPO had over 90 pages of risk factors. Should you worry?",
-      "reason": "score 5: Focus on IPO risk factors, already covered elsewhere."
-    },
-    {
-      "title": "Anthropic files for potentially the biggest IPO ever as CEO warns of risk to humanity from AI",
-      "reason": "score 5: CEO warning about AI risk; overlaps existing IPO risk reporting."
-    },
-    {
-      "title": "Claude's Company Goes Public! The Day AI 'Pricing' Started to Shift: A Gentle Explanation of Anthropic's IPO Filing and the GPT-6.1 Terra Price Cut",
-      "reason": "score 4: Commentary piece, not a news event."
-    },
-    {
-      "title": "Nvidia and Meta expand their Muse partnership, including Meta deploying more Vera Rubin and Vera CPUs; Nvidia will invest $3B in Meta's planned equity fundraise (Wall Street Journal)",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Anthropic Reports $974 Million Profit in Q2 2026 Ahead of IPO",
-      "reason": "could not verify yet after a second try; dropped"
-    },
-    {
-      "title": "S-1: Anthropic spent ~$2.50 on compute and infrastructure for every $1 of revenue in Q1 2025, falling to under 50 cents in Q2 2026, as it seeks profitability (Financial Times)",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Sources: Broadcom CEO Hock Tan held 11th-hour talks and agreed to higher rates and loan guarantees to secure bank participation in the $63B Anthropic debt deal (Wall Street Journal)",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "E2E Networks Plans 5.4 MW NVIDIA Blackwell Expansion in India",
-      "reason": "could not verify yet after a second try; dropped"
-    },
-    {
-      "title": "MakeMyTrip says AI agents can’t replace travel platforms, as its own assistant handles 3,000 bookings a day",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Paytm rolls out enterprise AI service in pivot beyond payments",
-      "reason": "could not verify yet; will retry next run"
+      "title": "SoftBank Sells 1.2% Stake In Ola Electric, Offloads 1.12 Cr Rights Entitlements",
+      "reason": "not AI: SoftBank stake sale in Ola Electric, no AI focus."
     },
     {
       "title": "Cent Raises $15 Mn To Scale AI-Led Preventive Healthcare Platform",
+      "reason": "score 5: Cent's $15M raise for preventive health AI is modest funding, below headline threshold."
+    },
+    {
+      "title": "Calcutta HC seeks IP logs in ‘sealed cover’, asks platforms to block copies of Adani-Modi video",
+      "reason": "not AI: Court order for IP logs unrelated to AI."
+    },
+    {
+      "title": "Ofcom wants to regulate body-shaming and depression content. Can platforms even detect it?",
+      "reason": "not AI: Ofcom content regulation unrelated to AI."
+    },
+    {
+      "title": "NoCap asks Kerala High Court to make authorities produce the order behind its Facebook block",
+      "reason": "not AI: Legal challenge over Facebook block unrelated to AI."
+    },
+    {
+      "title": "CoinDCX admits Rs 152 crore loss after CEO dismissed breach claims",
+      "reason": "not AI: CoinDCX loss report unrelated to AI."
+    },
+    {
+      "title": "UPI MDR to uplift payments processing margin: Paytm",
+      "reason": "not AI: Paytm comment on UPI MDR, no AI relevance."
+    },
+    {
+      "title": "MakeMyTrip says AI agents can’t replace travel platforms, as its own assistant handles 3,000 bookings a day",
+      "reason": "score 4: MakeMyTrip's statement about AI agents is a company comment, not a news event."
+    },
+    {
+      "title": "Paytm rolls out enterprise AI service in pivot beyond payments",
+      "reason": "score 5: Paytm's enterprise AI rollout is a product launch but lacks broader impact beyond the company."
+    },
+    {
+      "title": "Big Tech earnings a test of the AI boom amid market turmoil",
+      "reason": "score 4: Earnings analysis of big‑tech firms touches AI spend but is not a distinct AI development."
+    },
+    {
+      "title": "Workshaala targets Rs 1,000 Cr revenue as it scales enterprise workspace business",
+      "reason": "not AI: Focuses on revenue targets for an enterprise workspace provider, no AI relevance."
+    },
+    {
+      "title": "Lessons in Chemistry: 5 Takeaways from Bonnie Garmus’ Novel",
+      "reason": "not AI: Literary review not AI."
+    },
+    {
+      "title": "5 lessons to learn from Sorrow and Bliss by Meg Mason",
+      "reason": "not AI: Literary lesson article, no AI content."
+    },
+    {
+      "title": "Capital no longer creates jobs, and AI is compounding the issue: Yatish Rajawat of Hundred Million Jobs",
+      "reason": "score 4: Opinion piece on AI's impact on employment, not a news event."
+    },
+    {
+      "title": "Rotoris bags Rs 70 Cr to expand its luxury watch business",
+      "reason": "not AI: Funding for luxury watch business, unrelated to AI."
+    },
+    {
+      "title": "Healthtech startup Cent raises $15M in Series A",
+      "reason": "score 5: Duplicate of earlier Cent funding story."
+    },
+    {
+      "title": "Crunchbase Data Shows Q3 Robotics Startup Funding Jumps 185% As US And China Lead Physical AI Push",
+      "reason": "score 5: Robotics funding data is interesting but not a specific AI breakthrough."
+    },
+    {
+      "title": "Your AI Agents Need A Chief Operating Officer, Too",
+      "reason": "score 4: Advice on AI agent governance is editorial, not a news story."
+    },
+    {
+      "title": "The FCC warns TP-Link that three routers exceeded power limits and it may have submitted \"false or incorrect information\", a move that could allow further bans (Bloomberg)",
+      "reason": "not AI: FCC router power‑limit warning concerns Wi‑Fi hardware, not AI."
+    },
+    {
+      "title": "PayPal reports Q3 revenue up 2% YoY to $8.58B, below $8.71B est., TPV up 6% to $487.14B, and raises full-year adjusted EPS guidance to ~$5.60, above $5.39 est. (Elias Schisgall/Wall Street Journal)",
+      "reason": "not AI: PayPal earnings report lacks AI relevance."
+    },
+    {
+      "title": "Analysis: AI political groups have spent $78.5M on US federal candidates during the 2026 cycle; AI accelerationists spent $34M and safeguard-focused groups $39M (Luke Fountain/CNBC)",
+      "reason": "score 5: Analysis of AI political spending is informative but not a breaking news event."
+    },
+    {
+      "title": "Anthropic's S-1 excludes Labs co-lead Ben Mann from its \"Continuing Founders\" and Founder LLC; Anthropic says \"it's still fair to refer to him as a co-founder\" (Zara Stone/The San Francisco Standard)",
+      "reason": "score 5: Anthropic's S‑1 co‑founder dispute is corporate governance news, not a core AI development."
+    },
+    {
+      "title": "A US federal judge orders the Trump administration to halt a ban prohibiting the Pentagon from doing business with companies lobbying for Alibaba (Peter Blumberg/Bloomberg)",
+      "reason": "not AI: Court order on Pentagon‑Alibaba ban is not AI‑focused."
+    },
+    {
+      "title": "S-1: Anthropic spent ~$2.50 on compute and infrastructure for every $1 of revenue in Q1 2025, falling to under 50 cents in Q2 2026, as it seeks profitability (Financial Times)",
+      "reason": "duplicate of e4d1fbe9aac7"
+    },
+    {
+      "title": "Sources: Broadcom CEO Hock Tan held 11th-hour talks and agreed to higher rates and loan guarantees to secure bank participation in the $63B Anthropic debt deal (Wall Street Journal)",
+      "reason": "duplicate of 193124979d15"
+    },
+    {
+      "title": "Broadcom Upgraded By DA Davidson After Anthropic IPO Filing — Analyst Says AI Cycle ‘Isn't Over Quite Yet’",
+      "reason": "not AI: Analyst upgrade after Anthropic IPO filing is not a primary AI news item."
+    },
+    {
+      "title": "I asked Anthropic's own AI model whether I should buy the IPO. Claude's answer shocked me.",
+      "reason": "not AI: Novelty piece asking an AI model about its own IPO lacks news value."
+    },
+    {
+      "title": "Anthropic’s IPO Filing Reveals $80.7 Billion Loss Despite Surge in AI Revenue",
+      "reason": "duplicate of e4d1fbe9aac7"
+    },
+    {
+      "title": "US Stock Futures Edge Lower as Anthropic IPO Filing, Boeing Earnings and Fed Meeting Draw Attention: Dow Jones, S&P, Nasdaq, Wall Street",
+      "reason": "not AI: Stock‑futures movement unrelated to AI."
+    },
+    {
+      "title": "Anthropic files for potentially record-breaking stock market debut",
+      "reason": "duplicate of e4d1fbe9aac7"
+    },
+    {
+      "title": "Anthropic sets out its biopharma ambitions in IPO doc",
+      "reason": "score 5: Anthropic's biopharma ambitions are interesting but not a distinct AI breakthrough."
+    },
+    {
+      "title": "Opera introduces a new web standard to let users deploy AI locally in their browser",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "Tech Mahindra and Mastercard Partner to Integrate B2B Payments Into ERP Platforms",
+      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
+    },
+    {
+      "title": "HCLTech Completes Acquisition of Croatia-Based Robotiq.ai",
+      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
+    },
+    {
+      "title": "General Compute raises $100 million Series A, countering the neocloud disaster narrative",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Maya Research Releases Open-Weight Speech Model Supporting 12 Languages",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "DeepSeek AI model shows safety gaps in independent tests",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Google Cloud’s Gemini voice AI wants to do more than just talk",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Study: non-English languages can consume far more AI tokens, with the most expensive using 1.5x-5x more than the cheapest, resulting in a \"tokenizer tax\" (Ananya Bhattacharya/Rest of World)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Sources: Trend Micro's TrendAI found Israeli adtech company Discover-Tech heavily targeted Starlink users in 100+ countries, likely to geolocate or surveil them (Raphael Satter/Reuters)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Hyphenate, which develops reinforcement-learning-driven AI agents to automate corporate finance tasks, raised a $45M Series A, taking its total funding to $54M (Saritha Rai/Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "CoRover Lists Three BharatGPT Models On Government-Backed AIKosh Platform",
       "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "7dd51a3e337d",
-      "headline": "India's Ministry of Defence signs AI partnership with Sarvam",
+      "id": "bdec57e767d5",
+      "headline": "Nvidia to invest $3 billion as Meta expands Vera Rubin CPU deployment for Muse AI agents",
       "category": "industry",
-      "summary": "The Ministry of Defence signed a five‑year MoU with Sarvam AI to develop and deploy AI applications for the Indian Army, Navy and Air Force. The work will cover decision support, target acquisition and data fusion, with human oversight retained.",
-      "url": "https://inc42.com/buzz/ministry-of-defence-partners-with-sarvam-to-drive-ai-adoption-for-armed-forces",
+      "summary": "Nvidia and Meta announced an expanded Muse partnership, with Meta adding more Nvidia Vera Rubin and Vera CPUs and networking hardware, while Nvidia will put $3 billion into Meta's upcoming equity offering.",
+      "url": "https://techmeme.com/261027/p3",
       "sources": 2,
-      "quotes": 2
+      "quotes": 1
+    },
+    {
+      "id": "02c774ec5299",
+      "headline": "Nvidia backs Indian startup Simplismart with $14 million to cut AI GPU costs",
+      "category": "industry",
+      "summary": "Nvidia led a $14 million Series B round that values Simplismart at about $100 million. The startup says its software helped InVideo cut GPU serving costs by 56%.",
+      "url": "https://techcrunch.com/2026/10/27/nvidia-backs-indian-startup-helping-companies-run-ai-models-with-fewer-gpus",
+      "sources": 2,
+      "quotes": 1
     }
   ],
   "notes": [
-    "not India desk: 'Anthropic Reports $974 Million Profit in Q2 2026 A'",
+    "not India desk: 'Google Cloud’s Gemini voice AI wants to do more th'",
+    "ignored made-up duplicate id 2f5ab9585b4e for 'Healthtech startup Cent raises $15M in Series A'",
     "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "6 kept item(s) carried over to the next run"
+    "9 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 70.4,
-    "audit": 0.0,
-    "plan": 1.6,
-    "judge": 2.7,
-    "verify and write": 439.8,
-    "videos": 1.3,
-    "tagging": 20.6,
+    "gather": 91.8,
+    "audit": -0.0,
+    "plan": 2.1,
+    "judge": 29.6,
+    "verify and write": 401.9,
+    "videos": 23.8,
+    "tagging": 20.7,
     "explainers": 0.0,
-    "trackers": 42.8,
-    "claims": 20.5,
+    "trackers": 105.5,
+    "claims": 20.8,
     "model tracker": 0.1,
-    "weekly": 0.0,
-    "builders": 0.0,
-    "top voices": 0.0,
-    "briefing": 42.0,
-    "self-review": 0.0,
-    "photos": 0.2,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 44.9,
+    "self-review": -0.0,
+    "photos": 0.3,
     "stock photos": -0.0,
     "daily email": -0.0,
-    "alerts": 2.2
+    "alerts": 5.4
   },
-  "fetched": 2888,
-  "fresh": 25,
+  "fetched": 2890,
+  "fresh": 53,
   "plan": {
-    "focus": "Tracking Anthropic's IPO financing and broader AI funding while filling gaps in India AI policy coverage.",
+    "focus": "Tracking Anthropic IPO fallout and AI safety breaches while bolstering coverage of model releases and policy regulation.",
     "priorities": [
-      "S-1: Anthropic spent ~$2.50 on compute and infrastructure for every $1 (Key profitability data for Anthropic ahead of its IPO, central to our IPO storyline.)",
-      "Sources: Broadcom CEO Hock Tan held 11th-hour talks and agreed to high (Details on Broadcom's role in the $63B Anthropic debt deal, showing financing ecosystem.)",
-      "Nvidia and Meta expand their Muse partnership, including Meta deployin (Major Nvidia-Meta partnership and $3B investment, significant industry development.)",
-      "China's Star 50 index of AI and chip leaders is down by 40% in under f (Sharp decline in China's AI chip index, indicating market risk trends.)",
-      "Anthropic Reports $974 Million Profit in Q2 2026 Ahead of IPO (Anthropic's $974M Q2 profit, crucial for assessing IPO valuation.)"
+      "Anthropic's S-1 excludes Labs co-lead Ben Mann from its \"Continuing Fo (Anthropic S‑1 co‑founder dispute deepens IPO valuation narrative)",
+      "General Compute raises $100 million Series A, countering the neocloud  (General Compute $100M raise signals funding shift in AI compute infrastructure)",
+      "Nvidia backs Indian startup helping companies run AI models with fewer (Nvidia backing Indian startup highlights model efficiency and India AI ecosystem)",
+      "Industrial Intelligence: The next growth opportunity for manufacturing (Industrial Intelligence piece outlines next growth wave for manufacturers)",
+      "The FCC warns TP-Link that three routers exceeded power limits and it  (FCC router power‑limit warning adds a concrete policy/regulatory angle)"
     ],
     "thin_areas": [
-      "india",
+      "models",
       "policy"
     ],
     "searches": [
       "Anthropic IPO pricing: 6 new",
-      "India AI regulation DPDP: 0 new",
-      "US AI policy bill progress: 0 new"
+      "OpenAI isolation declaration impact: 0 new",
+      "India AI policy regulation 2026: 0 new"
     ],
     "dig_deeper": [
-      "S-1: Anthropic spent ~$2.50 on compute and infrastructure for every $1",
-      "Anthropic Reports $974 Million Profit in Q2 2026 Ahead of IPO"
+      "General Compute raises $100 million Series A, countering the neocloud ",
+      "Nvidia backs Indian startup helping companies run AI models with fewer"
     ]
   },
-  "judged": 31,
-  "kept": 9,
+  "judged": 59,
+  "kept": 14,
   "research": {
     "investigated": 5,
-    "confirmed": 0,
+    "confirmed": 2,
     "tool_calls": 15
   },
   "research_log": [
-    "Nvidia and Meta expand their Muse partnership, including Meta deployin: unconfirmed (searched “Nvidia Meta Muse partnership Vera Rubin Vera CPUs $3 billion investment equity fundraise”; read msn.com; read yahoo.com)",
-    "Anthropic Reports $974 Million Profit in Q2 2026 Ahead of IPO: unconfirmed (searched “Anthropic reports $974 million profit Q2 2026”; read forbes.com; read techmeme.com)",
-    "S-1: Anthropic spent ~$2.50 on compute and infrastructure for every $1: unconfirmed (searched “Anthropic prospectus compute spend $2.50 per $1 revenue Q1 2025 Financial Times”; read indiatimes.com; searched “\"Anthropic\" \"compute and infrastructure\" \"2.50\"”)",
-    "Sources: Broadcom CEO Hock Tan held 11th-hour talks and agreed to high: unconfirmed (searched “Broadcom CEO Hock Tan 11th-hour talks higher rates loan guarantees Anthropic debt deal $63B”; read msn.com; read msn.com)",
-    "E2E Networks Plans 5.4 MW NVIDIA Blackwell Expansion in India: unconfirmed (searched “E2E Networks 5.4 MW NVIDIA Blackwell expansion India”; read equitybulls.com; read businessworld.in)"
+    "General Compute raises $100 million Series A, countering the neocloud : unconfirmed (searched “General Compute raises $100 million Series A”; searched “\"General Compute\" Series A”; searched “\"General Compute\" AI startup”)",
+    "Nvidia and Meta expand their Muse partnership, including Meta deployin: confirmed (searched “Nvidia Meta Muse partnership Vera Rubin Vera CPUs $3 billion investment equity fundraise”; read yahoo.com; read msn.com)",
+    "Nvidia backs Indian startup helping companies run AI models with fewer: confirmed (searched “Nvidia backs Indian startup Simplismart AI models fewer GPUs”; read cryptobriefing.com; searched “Simplismart $14 million Series B Nvidia”)",
+    "Maya Research Releases Open-Weight Speech Model Supporting 12 Language: unconfirmed (searched “Maya Research open-weight speech model 12 languages”; read msn.com; searched “Maya Research speech model 12 languages Maya 2 Native”)",
+    "DeepSeek AI model shows safety gaps in independent tests: unconfirmed (searched “DeepSeek AI model safety gaps independent tests”; read msn.com; read reuters.com)"
+  ],
+  "threads": [
+    "Muse partnership expands after security pause: Nvidia to invest $3 billion as Meta expands Vera Rubin CPU d"
   ],
   "videos": {
-    "OpenAI": "ok (11 in feed, 0 new)",
+    "OpenAI": "ok (11 in feed, 1 new)",
     "Anthropic": "ok (12 in feed, 0 new)",
     "Google DeepMind": "ok (12 in feed, 0 new)",
     "Google for Developers": "ok (7 in feed, 0 new)",
     "AI at Meta": "ok (8 in feed, 0 new)",
     "Microsoft Research": "ok (7 in feed, 0 new)",
-    "NVIDIA": "ok (10 in feed, 0 new)",
+    "NVIDIA": "ok (10 in feed, 1 new)",
     "Hugging Face": "ok (13 in feed, 0 new)",
     "Mistral AI": "ok (0 in feed, 0 new)",
     "xAI": "ok (1 in feed, 0 new)",
@@ -264,16 +381,20 @@
     "Lenny's Podcast": "ok (3 in feed, 0 new)",
     "20VC": "ok (4 in feed, 0 new)"
   },
+  "videos_kept": "0 kept from 2 new",
   "tagged": 1,
-  "trackers": "filed 1 stories; updated india-ai",
-  "claims": "34 tracked, 33 open, 0 updated this run",
-  "model_tracker": "82 models, 32 changes today",
-  "briefing": "4 themes from 19 stories",
-  "india_briefing": "2 themes from 3 stories",
-  "photos": "1 saved, 0 unavailable",
-  "alerts": "39 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":13}",
-  "ai_requests_run": 33,
-  "ai_tokens_run": 61709,
-  "ai_requests_today": 135,
-  "provider_log": []
+  "trackers": "filed 4 stories; updated india-ai, ai-infrastructure, ai-money",
+  "claims": "35 tracked, 34 open, 0 updated this run",
+  "model_tracker": "82 models, 37 changes today",
+  "briefing": "4 themes from 16 stories",
+  "india_briefing": "3 themes from 5 stories",
+  "photos": "2 saved, 0 unavailable",
+  "alerts": "45 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":21}",
+  "ai_requests_run": 37,
+  "ai_tokens_run": 109630,
+  "ai_requests_today": 172,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
 }
