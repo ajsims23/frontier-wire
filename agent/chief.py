@@ -17,7 +17,7 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
-from .sources import Item, is_ai_headline, news_search
+from .sources import Item, is_adjacent, is_ai_headline, news_search, slate_key
 from .text import canonical_url
 
 AREAS = ["models", "research", "policy", "safety", "industry", "voices", "india", "business"]
@@ -204,7 +204,8 @@ def apply_thin_areas(selected: list[tuple[int, str, list[Item]]], head: list[tup
     for area in thin:
         if any(area in item_areas(k[2], k[1]) for k in head):
             continue
-        cand = next((k for k in selected if k not in head and area in item_areas(k[2], k[1])), None)
+        cand = next((k for k in selected if k not in head and not is_adjacent(k[2])
+                     and area in item_areas(k[2], k[1])), None)
         if not cand:
             continue
         # replace the lowest-scored story that isn't an editor priority and isn't the area's only story
@@ -212,7 +213,7 @@ def apply_thin_areas(selected: list[tuple[int, str, list[Item]]], head: list[tup
             if head[i][2][0].url not in protected:
                 head[i] = cand
                 break
-    return sorted(head, key=lambda k: -k[0])
+    return sorted(head, key=slate_key)
 
 
 def site_plan(plan: dict[str, Any], now_iso: str) -> dict[str, Any] | None:

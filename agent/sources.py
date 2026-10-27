@@ -31,6 +31,7 @@ class Item:
     person: str | None = None
     text: str = ""  # full text when the source gives it (posts), used instead of fetching the page
     desk: str = ""  # specialist desk the source feeds (e.g. "india"), if any
+    ai_relevance: str = "core"  # set by the judge: "core" (AI is the story) or "adjacent" (loosely AI)
     id: str = field(default="")
 
     def __post_init__(self) -> None:
@@ -40,6 +41,16 @@ class Item:
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
+
+
+def is_adjacent(members: list[Item]) -> bool:
+    """A loosely-AI story: eligible, but always ranked below stories where AI is the point."""
+    return any(m.ai_relevance == "adjacent" for m in members)
+
+
+def slate_key(kept: tuple[int, str, list[Item]]) -> tuple[bool, int]:
+    """Sort key for (score, category, members): core-AI stories first, then by score."""
+    return is_adjacent(kept[2]), -kept[0]
 
 
 class Fetcher(Protocol):

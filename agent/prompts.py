@@ -55,6 +55,14 @@ Bare titles: a lab's own page with just a product name (e.g. a new product, mode
 new launch — judge it by what it names, not by how little text it has. A newly launched, named product,
 model or agent from a frontier lab (OpenAI, Anthropic, Google DeepMind, Meta, xAI, Mistral, DeepSeek...)
 scores at least 7.
+AI relevance: Frontier Wire covers AI. For every item set ai_relevance from what the item and its source
+actually say (never invent an AI angle):
+ core      AI is the subject, the cause or the main rationale (model, lab, AI product, AI policy, AI compute/money).
+ adjacent  loosely AI: a real but secondary AI angle stated in the source (a deal where AI is one stated reason,
+           a big company's AI push inside a wider business story, robotics or automation in logistics).
+ none      no AI angle in the source: general tech, M&A, earnings, consumer apps, delivery, social media, crypto.
+           A famous tech company or a large dollar figure does not make a story AI news.
+Score adjacent items on their AI angle only, never above 6. Items with ai_relevance=none get keep=false.
 {UNTRUSTED_NOTE}"""
 
 JUDGE_SCHEMA = {
@@ -72,9 +80,10 @@ JUDGE_SCHEMA = {
                     "duplicate_of_story": {"type": "string"},
                     "same_event_as": {"type": "string"},
                     "about_india": {"type": "boolean"},
+                    "ai_relevance": {"type": "string", "enum": ["core", "adjacent", "none"]},
                     "reason": {"type": "string"},
                 },
-                "required": ["id", "keep", "score", "category", "reason"],
+                "required": ["id", "keep", "score", "category", "ai_relevance", "reason"],
             },
         }
     },

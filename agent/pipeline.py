@@ -10,7 +10,7 @@ from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached
 from . import alerts, audit, builders, chief, claims, top_voices, editorial, photos, models_tracker, newsletter, stock, tagging, trackers, videos, weekly
 from .research import Researcher
-from .sources import Fetcher, Gdelt, Item, gather
+from .sources import Fetcher, Gdelt, Item, gather, is_adjacent, slate_key
 from .store import Store
 from .text import arxiv_id, canonical_url, domain, extract_image, extract_text, paper_figure, quote_in_text, similar, stable_id
 
@@ -181,11 +181,16 @@ class Newsroom:
                 score = int(d.get("score", 0))
             except (TypeError, ValueError):
                 score = 0
+            rel = d.get("ai_relevance") if d.get("ai_relevance") in ("core", "adjacent", "none") else "core"
+            if rel == "adjacent":  # loosely AI: eligible, but capped so it can't outrank real AI news
+                score = min(score, int(self.cfg.run.get("adjacent_max_score", 6)))
             if d.get("duplicate_of_story") and d["duplicate_of_story"] not in recent_ids:
                 self.report["notes"].append(f"ignored made-up duplicate id {d['duplicate_of_story']} for '{title[:50]}'")
                 d["duplicate_of_story"] = ""
             if d.get("duplicate_of_story"):
                 self.report["dropped"].append({"title": title, "reason": f"duplicate of {d['duplicate_of_story']}"})
+            elif rel == "none":
+                self.report["dropped"].append({"title": title, "reason": f"not AI: {d.get('reason', '')}"})
             elif not d.get("keep") or score < self.cfg.run["min_score"]:
                 self.report["dropped"].append({"title": title, "reason": f"score {score}: {d.get('reason', '')}"})
             else:
@@ -195,10 +200,12 @@ class Newsroom:
                         m.desk = ""  # global news from an Indian outlet: no India slot, no India label
                     self.report["notes"].append(f"not India desk: '{title[:50]}'")
                 category = d.get("category") if d.get("category") in P.CATEGORIES else "industry"
-                if cid in pri:  # the editor-in-chief flagged it and the judge agreed it's worth a story
+                for m in members:
+                    m.ai_relevance = rel
+                if cid in pri and rel == "core":  # the editor-in-chief flagged it and the judge agreed it's worth a story
                     score = min(10, score + 1)
                 kept.append((score, category, members))
-        kept.sort(key=lambda k: -k[0])
+        kept.sort(key=slate_key)  # core AI stories always ahead of loosely-AI ones
         self.report["judged"], self.report["kept"] = len(ordered), len(kept)
         return kept
 
@@ -406,6 +413,7 @@ class Newsroom:
             "url": lead.url,
             "source_id": lead.source_id,
             "desk": next((m.desk for m in members if m.desk), ""),
+            "ai_relevance": "adjacent" if is_adjacent(members) else "core",
             "image": next((self._images[s["url"]] for s in sources[:4] if self._images.get(s["url"])), None),
             "sources": sources,
             "research": self._research_meta.get(lead.url),
@@ -467,7 +475,8 @@ class Newsroom:
                       key=lambda s: s["published_at"], reverse=True)
         window = [s for s in live if datetime.fromisoformat(s["published_at"]) >= self.now - timedelta(hours=36)]
         pool = window or live[:20]
-        lead = max(pool, key=lambda s: (s["score"], s["published_at"])) if pool else None
+        # the lead is always a core AI story when there is one
+        lead = max(pool, key=lambda s: (s.get("ai_relevance") != "adjacent", s["score"], s["published_at"])) if pool else None
 
         voices = [{**q, "story_id": s["id"], "headline": s["headline"], "published_at": s["published_at"]}
                   for s in live for q in s.get("quotes", [])]
@@ -547,12 +556,18 @@ class Newsroom:
                 self.report["dropped"].append({"title": lead.title, "reason": f"variety: already {cap} stories from {lead.lab or who} this run"})
             else:
                 selected.append(item)
+        # Loosely-AI stories only fill slots the day's AI news leaves free, and only a few of them per run.
+        adj_cap = int(self.cfg.run.get("max_adjacent_per_run", 1))
+        adjacent = [k for k in selected if is_adjacent(k[2])]
+        for k in adjacent[adj_cap:]:
+            self.report["dropped"].append({"title": k[2][0].title, "reason": "loosely AI: lower priority than this run's AI stories"})
+        selected = [k for k in selected if not is_adjacent(k[2])] + adjacent[:adj_cap]
         # Reserve a few writing slots for desk stories (e.g. India) so global news can't crowd them out.
         reserve = int(self.cfg.run.get("desk_write_slots", 3))
         n = self.cfg.run["max_stories_per_run"]
-        desk_kept = [k for k in selected if any(m.desk for m in k[2])][:reserve]
+        desk_kept = [k for k in selected if any(m.desk for m in k[2]) and not is_adjacent(k[2])][:reserve]
         others = [k for k in selected if k not in desk_kept]
-        head = sorted(others[: max(0, n - len(desk_kept))] + desk_kept, key=lambda k: -k[0])
+        head = sorted(others[: max(0, n - len(desk_kept))] + desk_kept, key=slate_key)
         if self.plan.get("thin_areas"):  # hold a slot for each area the editor-in-chief says we've under-covered
             protected = {ms[0].url for _, _, ms in selected if any(m.id in self._priority for m in ms)}
             protected |= {ms[0].url for _, _, ms in desk_kept}

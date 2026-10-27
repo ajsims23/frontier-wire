@@ -1,4 +1,5 @@
 import json
+import re
 from datetime import datetime, timedelta, timezone
 
 import httpx
@@ -1016,3 +1017,45 @@ def test_stock_photos_fill_gaps_with_credited_unique_photos(tmp_path):
     assert not any("logo.jpg" in u or "nc.jpg" in u for u in seen)                                            # logos and NC licences skipped
     assert sum("api.openverse.org" in u for u in seen) == 1                                                   # one search per topic
     assert "photo_credit" not in stories[2] and "stock_tried" not in stories[3]
+
+
+def test_ai_relevance_tiers(tmp_path, monkeypatch):
+    # core AI news always comes first; loosely-AI items are capped, rationed, and never lead; non-AI items are dropped
+    from tests import fakes
+    base = fakes.judge
+
+    def tiered(prompt):
+        out = base(prompt)
+        titles = dict(re.findall(r'<item id="([^"]+)"[^>]*><title>([^<]+)</title>', prompt))
+        for d in out["decisions"]:
+            t = titles.get(d["id"], "")
+            if "scaling" in t or "agent toolkit" in t:
+                d.update(ai_relevance="adjacent", score=8)  # judge over-scores; the cap must hold it at 6
+            elif "City council" in t:
+                d.update(ai_relevance="none", keep=True, score=9)  # "none" drops even with keep=true
+            else:
+                d["ai_relevance"] = "core"
+        return out
+    monkeypatch.setattr(fakes, "judge", tiered)
+    room, _ = make(tmp_path)
+    report = room.run()
+    dropped = {d["title"]: d["reason"] for d in report["dropped"]}
+    assert dropped["City council approves AI rules for public buses"].startswith("not AI")
+    stories = json.loads((tmp_path / "stories.json").read_text())
+    adjacent = [s for s in stories if s.get("ai_relevance") == "adjacent"]
+    assert len(adjacent) == 1 and adjacent[0]["score"] == 6           # max_adjacent_per_run=1, score capped
+    assert sum(r.startswith("loosely AI") for r in dropped.values()) == 1
+    assert all(s.get("ai_relevance") == "core" for s in stories if s not in adjacent)
+    site = json.loads((tmp_path / "site.json").read_text())
+    assert site["lead"]["ai_relevance"] == "core"
+
+
+def test_loosely_ai_stories_rank_last_and_never_fill_thin_areas():
+    from agent.chief import apply_thin_areas
+    from agent.sources import Item, slate_key
+
+    def k(score, cat, url, rel="core"):
+        return (score, cat, [Item(url=url, title=url, source_id="s", source_name="s", role="news", ai_relevance=rel)])
+    core, adj = k(6, "models", "https://a.example/1"), k(6, "policy", "https://b.example/1", "adjacent")
+    assert sorted([adj, core], key=slate_key) == [core, adj]
+    assert apply_thin_areas([core, adj], [core], ["policy"], set()) == [core]  # a loosely-AI story can't claim the slot
