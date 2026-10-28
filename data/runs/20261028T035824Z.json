@@ -1,0 +1,441 @@
+{
+  "started_at": "2026-10-28T03:58:24+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1331)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (891)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (11)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (24)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Honeycomb-Surfels: Compact Hexagonal Primitives for Efficient Scene Rendering and Reconstruction",
+      "reason": "score 4: Technical contribution on hexagonal primitives for rendering; incremental and not a major AI advance."
+    },
+    {
+      "title": "Attention as Lattice Gauge Theory: Relations Interact Only Through Wilson Loops",
+      "reason": "score 4: Explores attention as lattice gauge theory; interesting theory but not a frontier AI breakthrough."
+    },
+    {
+      "title": "KPPax: preprocess differentiable kinetic ODE for machine learning in atmospheric chemistry",
+      "reason": "score 4: Kinetic ODE preprocessing for atmospheric chemistry; niche application without broad AI impact."
+    },
+    {
+      "title": "Pushing Dexterity and Safety for In-Hand Object Pose Reaching That Works Remarkably Well",
+      "reason": "score 4: In‑hand manipulation safety paper; robotics‑focused, not a major AI model or safety policy story."
+    },
+    {
+      "title": "GEPA-Curator: Curated Learning for Self Improving Agents",
+      "reason": "score 4: Curated learning for self‑improving agents; incremental research without clear frontier impact."
+    },
+    {
+      "title": "Can LLMs Uncover Hidden Physical Laws through Free Exploration?",
+      "reason": "score 4: Explores LLMs discovering hidden physical laws; speculative and not a breakthrough result."
+    },
+    {
+      "title": "Scaling Laws for Tool-Use Agents via Controllable Environment Synthesis",
+      "reason": "score 4: Scaling laws for tool‑use agents; interesting but incremental."
+    },
+    {
+      "title": "MuonGS: Pretraining LLMs with Relaxed Weight-Norm Control",
+      "reason": "score 4: Weight‑norm control in LLM pretraining; technical nuance without major impact."
+    },
+    {
+      "title": "Multi-State Linear Attention with Generalized Second-Order Routing",
+      "reason": "score 4: Multi‑State Linear Attention; efficiency improvement but not a landmark advance."
+    },
+    {
+      "title": "Metacognitive Decoding: Efficient Inference for Diffusion Language Agents",
+      "reason": "score 4: Metacognitive decoding for diffusion agents; incremental method."
+    },
+    {
+      "title": "What Improves During Pretraining? Tracking Knowledge Acquisition with Point-in-Time Models",
+      "reason": "score 4: Analyzes knowledge acquisition in pretraining; interesting but not newsworthy."
+    },
+    {
+      "title": "Rare, Relevant, and Still Wrong: How Memory Fails LLM Group Decisions",
+      "reason": "score 4: Study of memory failures in LLM group decisions; niche research."
+    },
+    {
+      "title": "VideoLVR: Latent Visual Reasoning over Grounded Video Evidence",
+      "reason": "score 4: VideoLVR benchmark; incremental improvement for multimodal reasoning."
+    },
+    {
+      "title": "EnvSched: Environment-Aware Scheduling for Rollout-Efficient Agent Reinforcement Learning",
+      "reason": "score 4: Environment‑aware scheduling for RL agents; technical contribution without broad impact."
+    },
+    {
+      "title": "Beyond Answer Changes: Matched Same-Class Controls for Local Audio Evidence",
+      "reason": "score 4: Audio evidence controls; specialized evaluation study."
+    },
+    {
+      "title": "MoI-Bench: A Benchmark for Image Generation and Editing on Mobile Devices",
+      "reason": "score 4: Mobile device image generation benchmark; niche and not a frontier advance."
+    },
+    {
+      "title": "GAS-PFN: Graph-Aware Spatiotemporal Prior-Data Fitted Networks for Zero-Shot Traffic Forecasting",
+      "reason": "score 4: Graph‑aware traffic forecasting; domain‑specific and incremental."
+    },
+    {
+      "title": "Understanding the limits of latent world models",
+      "reason": "score 4: Limits of latent world models; analytical study without major breakthrough."
+    },
+    {
+      "title": "Timestral",
+      "reason": "score 4: Timestral time‑series foundation models; solid but not a headline AI advance."
+    },
+    {
+      "title": "REGER: Modeling inter-item Relations with Semantic IDs for Generative Recommendation",
+      "reason": "score 4: Generative recommendation with semantic IDs; incremental."
+    },
+    {
+      "title": "Zero-Shot Multimodal Event Spotting in Soccer Broadcasts",
+      "reason": "score 4: Zero‑shot soccer event spotting; domain‑specific application."
+    },
+    {
+      "title": "Spectral Braids: A Topological Descriptor for Dynamic Directed Networks",
+      "reason": "score 4: Spectral Braids for dynamic networks; technical contribution without broad AI relevance."
+    },
+    {
+      "title": "TeamGym: A Gym for Team Decision-Making by AI Agents with Distributed Information",
+      "reason": "score 4: TeamGym environment for distributed decision‑making; interesting but incremental."
+    },
+    {
+      "title": "LCM-Promo: An LLM-Based Uplift Model for Promotion Allocation",
+      "reason": "score 4: LLM‑based uplift model for promotions; niche business application."
+    },
+    {
+      "title": "Gym-Anything-RT: Scaling Real-Time Environments for Vision-Language Agents",
+      "reason": "score 4: Gym‑Anything‑RT for real‑time vision‑language agents; incremental scaling work."
+    },
+    {
+      "title": "Pneuma: A Large-Scale Real-World Time Series Benchmark for Commercial Aircraft Predictive Maintenance",
+      "reason": "score 4: Pneuma benchmark for aircraft maintenance; valuable dataset but not a frontier AI story."
+    },
+    {
+      "title": "When uncertainty quantification fails: structural vulnerabilities and corrections for selective prediction under clinical class imbalance",
+      "reason": "score 4: Study of uncertainty quantification failures in clinical AI; important safety angle but still a technical paper."
+    },
+    {
+      "title": "Collective Dynamics of Self-Reinforcement: How Cross-Task Coupling Drives Policy Collapse in Unsupervised RLVR",
+      "reason": "score 4: Self‑reinforcement dynamics causing policy collapse; research insight without immediate impact."
+    },
+    {
+      "title": "Kinematic Constraint-Referenced Evaluation for Articulated Object Manipulation",
+      "reason": "score 4: Kinematic constraint‑referenced evaluation for manipulation; incremental robotics research."
+    },
+    {
+      "title": "When, Where, and What to Correct: Human-Guided Adaptive Residual Correction for Robot Policies",
+      "reason": "score 4: Human‑guided adaptive residual correction for robot policies; technical contribution."
+    },
+    {
+      "title": "GroundControl: Satellite-Conditioned Multi-View Diffusion for Reconstruction-Free Novel View Synthesis",
+      "reason": "score 4: Satellite‑conditioned diffusion for view synthesis; interesting but not a headline AI advance."
+    },
+    {
+      "title": "Which Hand Was Late? Diagnosis for Robot Failure Recovery in Bimanual Tool Use",
+      "reason": "score 4: Diagnosis for robot failure recovery; niche robotics study."
+    },
+    {
+      "title": "GTFormer: A Syntax-Free Graph Network Alternative to Transformers for 8192$\\times$ Length Extrapolation in Linear Time",
+      "reason": "score 4: GTFormer graph network alternative to Transformers; technical efficiency work."
+    },
+    {
+      "title": "The Structure Gap: When More Data Cannot Replace Structured Reasoning",
+      "reason": "score 4: Paper on structure gap; theoretical analysis without immediate impact."
+    },
+    {
+      "title": "Orthogonal and Parametrized Multi-Attribute Steering of LLMs",
+      "reason": "score 4: Orthogonal and parametrized multi‑attribute steering; incremental method."
+    },
+    {
+      "title": "A note on data-efficient finetuning of vision foundation models",
+      "reason": "score 4: Note on data‑efficient finetuning of vision models; useful but not headline news."
+    },
+    {
+      "title": "Strategyproof Deep Reinforcement Learning for Online Resource Allocation",
+      "reason": "score 4: Strategyproof RL for online resource allocation; niche algorithmic contribution."
+    },
+    {
+      "title": "Hy-Nomas: Towards Free-form Interactive World Generation",
+      "reason": "score 4: Hy‑Nomas world generation model; interesting but not a major AI breakthrough."
+    },
+    {
+      "title": "LociArt: A Unified Paradigm for Free-Style Local Video Stylization",
+      "reason": "score 4: LociArt video stylization; creative application but not frontier AI news."
+    },
+    {
+      "title": "Inside Jio Platforms: Its Tech Bets, Loss-Making Subsidiaries and Hidden Risks",
+      "reason": "not AI: Analysis of Jio Platforms’ finances; not AI‑centric."
+    },
+    {
+      "title": "The Festive Margin Crush, WeWork India’s Q2 Show & More",
+      "reason": "not AI: WeWork India financial update; no AI angle."
+    },
+    {
+      "title": "Nearly 60% of firms yet to move AI beyond pilots as deployment remains key challenge: Report",
+      "reason": "score 5: Report that many Indian firms remain in AI pilot stage; useful but not a high‑impact news item."
+    },
+    {
+      "title": "AI token use may jump 78% as falling prices fail to guarantee lower costs: Accenture",
+      "reason": "score 5: Accenture predicts AI token consumption rise despite lower prices; interesting but not a major development."
+    },
+    {
+      "title": "Nearly 90% of businesses are turning to tokenised money, DBS survey shows",
+      "reason": "not AI: Survey on tokenised money adoption; not AI focused."
+    },
+    {
+      "title": "US agency approves Amazon Leo's $11.5 billion acquisition of Globalstar",
+      "reason": "not AI: FCC approval of Amazon’s satellite acquisition; not AI related."
+    },
+    {
+      "title": "Meta, Snap head to trial in another case about social media's harms",
+      "reason": "not AI: Trial of Meta and Snap over social‑media harms; not AI specific."
+    },
+    {
+      "title": "US agency is again probing if Polymarket broke 2022 settlement, sources says",
+      "reason": "not AI: Regulatory probe of Polymarket; not AI related."
+    },
+    {
+      "title": "When content becomes infinite, what makes people pay attention?",
+      "reason": "not AI: Discussion of content creation at an Indian tech conference; no AI focus."
+    },
+    {
+      "title": "Why women should build their front row; AI automation and its impact on jobs",
+      "reason": "score 5: Opinion piece on AI automation and jobs; interesting commentary but below news threshold."
+    },
+    {
+      "title": "Ethan Mollick: Google's Genie 4 world model: \"Scene: A Victorian high tea. Character: A mouse in appropriate garb.\" \"A porcupine walks by\" \"The mouse…",
+      "reason": "score 5: Ethan Mollick comments on Google’s Genie 4 world model; provides user‑level perspective but not core news, so kept as voice with modest score."
+    },
+    {
+      "title": "Sources: chipmaker Onsemi is in talks to acquire 16-year-old chip startup Ferric for ~$1B; PitchBook: Ferric last raised a $32.1M Series C in December 2024 (Valida Pau/The Information)",
+      "reason": "not AI: Onsemi acquisition of Ferric is a semiconductor deal with no explicit AI angle; not core AI news."
+    },
+    {
+      "title": "Letter: two Democratic senators allege the Trump administration withheld a secret FISC ruling on search filters that let analysts access Americans' messages (Dell Cameron/Wired)",
+      "reason": "not AI: Letter about alleged FISC ruling concealment concerns national security, not AI related."
+    },
+    {
+      "title": "SK Hynix plans to return $22B+ in dividends and ~$15B in buybacks to shareholders, on top of its ~$30B buyback program completed in August (Kwanwoo Jun/Wall Street Journal)",
+      "reason": "not AI: SK Hynix dividend and buyback announcement lacks AI relevance."
+    },
+    {
+      "title": "Heads of Security: Learned Attention Gates Improve Prompt Injection Robustness",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "The US FCC approves Amazon Leo's $11.5B acquisition of Globalstar, giving Amazon access to Globalstar's 24 satellites and mobile satellite spectrum (David Shepardson/Reuters)",
+      "reason": "loosely AI: lower priority than this run's AI stories"
+    },
+    {
+      "title": "Parents sue OpenAI, alleging GPT-4o coached their daughter off seizure medication",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Oracle Partners With OpenAI to Bring ChatGPT and Codex to Enterprise Workflows",
+      "reason": "already covered (story a3a879144b29)"
+    },
+    {
+      "title": "AMD says it will invest $1B in Meta's equity offering, its first Helios rackscale systems are installed at Meta, and its EPYC CPUs power Meta's Muse AI agent (Kai Nicol-Schwarz/CNBC)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Oracle Expands AI Compute Options With NVIDIA, Google TPUs and Cerebras",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Cognizant eyes Sarvam stake; Ather aims for higher market share",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "007a2afe4a6c",
+      "headline": "Anthropic’s IPO faces valuation drop as growth slows and AI prices plunge",
+      "category": "industry",
+      "summary": "Anthropic filed a Wall Street prospectus for a Nasdaq listing amid investor nervousness, noting that its quarterly growth fell from 145% to 45% and its valuation fell from $2 trillion to about $1.5 trillion. The filing warns of three risks: narrowing model differentiation, collapsing AI service prices and rising costs.",
+      "url": "https://economictimes.indiatimes.com/tech/technology/anthropics-record-ipo-faces-some-big-questions/articleshow/135249836.cms",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "887da5b0b980",
+      "headline": "OpenAI to purchase Google’s AI chips, seeks TPU optimization engineer",
+      "category": "industry",
+      "summary": "OpenAI, a major Nvidia GPU buyer, is planning to buy Google’s Tensor Processing Units and has posted a job for an engineer to lead model optimization on the chips.",
+      "url": "https://techmeme.com/261027/p39",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "5d886422e331",
+      "headline": "ThinkWorld framework uses imagined world dynamics to improve robot learning",
+      "category": "research",
+      "summary": "The paper presents ThinkWorld, a Vision‑Language‑Action learning framework that grounds action reasoning in world dynamics using a Chain‑of‑Dynamics (CoD) representation and reinforcement learning with imagined futures. Experiments in simulation and on real robots demonstrate effective human‑to‑robot transfer and strong generalization to unseen tasks and environments.",
+      "url": "https://arxiv.org/abs/2610.37666",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "a78e58d228ac",
+      "headline": "New controller PORTAL decides when to apply test‑time interventions",
+      "category": "research",
+      "summary": "Jiahao Zhang and co‑authors present PORTAL, a controller that decides when to use test‑time adaptation, which inputs to label, and when to stop querying, turning interventions that would lower overall accuracy into useful choices on selected batches.",
+      "url": "https://arxiv.org/abs/2610.37658",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "0419fa07eb02",
+      "headline": "Delaware proposes AI-run companies, prompting congressional investigation",
+      "category": "policy",
+      "summary": "Delaware is drafting legislation for an Artificial Intelligence Company that would let AI agents manage day‑to‑day operations, while owners could avoid liability. House Oversight Committee chair James Comer has asked the state for documents, citing concerns the model could shield powerful AI firms from responsibility.",
+      "url": "https://arstechnica.com/tech-policy/2026/10/no-human-at-the-helm-delaware-plan-would-let-ai-agents-run-entire-businesses",
+      "sources": 3,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "not India desk: 'Oracle Partners With OpenAI to Bring ChatGPT and C'",
+    "not India desk: 'Oracle Expands AI Compute Options With NVIDIA, Goo'",
+    "not India desk: 'Anthropic's record IPO faces some big questions'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "4 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 68.3,
+    "audit": 0.0,
+    "plan": 2.2,
+    "judge": 24.9,
+    "verify and write": 430.1,
+    "videos": 1.8,
+    "tagging": 21.0,
+    "explainers": -0.0,
+    "trackers": 107.0,
+    "claims": 20.8,
+    "model tracker": 0.0,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 20.9,
+    "self-review": -0.0,
+    "photos": 0.8,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 6.4
+  },
+  "fetched": 2898,
+  "fresh": 69,
+  "plan": {
+    "focus": "Tracking Anthropic’s IPO and OpenAI safety fallout while bolstering policy coverage and expert influence insights.",
+    "priorities": [
+      "ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning (ThinkWorld paper links to Genie 4 world model and Mollick AI influence study)",
+      "When Should We Intervene at Test Time? (Examines test‑time intervention, directly relevant to safety and AI influence concerns)",
+      "Heads of Security: Learned Attention Gates Improve Prompt Injection Ro (Addresses prompt‑injection robustness, key for ongoing OpenAI safety breach storyline)",
+      "Anthropic's record IPO faces some big questions (Provides context and questions around Anthropic’s high‑profile IPO)",
+      "The US FCC approves Amazon Leo's $11.5B acquisition of Globalstar, giv (Major industry move affecting AI satellite services and broader AI infrastructure)"
+    ],
+    "thin_areas": [
+      "policy",
+      "voices"
+    ],
+    "searches": [
+      "Mollick AI influence follow-up: 0 new",
+      "EU AI policy draft: 0 new",
+      "OpenAI safety breach response: 0 new"
+    ],
+    "dig_deeper": [
+      "Anthropic's record IPO faces some big questions",
+      "The US FCC approves Amazon Leo's $11.5B acquisition of Globalstar, giv"
+    ]
+  },
+  "judged": 67,
+  "kept": 13,
+  "research": {
+    "investigated": 5,
+    "confirmed": 2,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "Anthropic's record IPO faces some big questions: confirmed (searched “Anthropic record IPO faces some big questions”; read techcrunch.com; read crunchbase.com)",
+    "Source: OpenAI, a major Nvidia customer, plans to buy Google's TPUs; a: unconfirmed (searched “OpenAI plans to buy Google's TPUs job listing engineer lead optimization”; searched “\"OpenAI\" \"Google TPUs\"”; read ijr.com)",
+    "Parents sue OpenAI, alleging GPT-4o coached their daughter off seizure: unconfirmed (searched “parents sue OpenAI GPT-4o coached daughter off seizure medication lawsuit”; searched “OpenAI lawsuit daughter seizure medication GPT-4o”; read yahoo.com)",
+    "\"No human at the helm\": Delaware plan would let AI agents run entire b: confirmed (searched “Delaware AI agents run entire businesses liability Rep. Comer”; read insurancebusinessmag.com; read whyy.org)",
+    "AMD says it will invest $1B in Meta's equity offering, its first Helio: unconfirmed (searched “AMD invest $1 billion Meta equity offering Helios rackscale systems”; read msn.com; read techbooky.com)"
+  ],
+  "threads": [
+    "Anthropic IPO progress: record IPO faces questions: Anthropic’s IPO faces valuation drop as growth slows and AI "
+  ],
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "tagged": 5,
+  "trackers": "filed 3 stories; updated ai-regulation, ai-infrastructure, ai-money",
+  "claims": "39 tracked, 38 open, 0 updated this run",
+  "model_tracker": "82 models, 21 changes today",
+  "briefing": "4 themes from 20 stories",
+  "photos": "5 saved, 0 unavailable",
+  "alerts": "31 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":46}",
+  "ai_requests_run": 38,
+  "ai_tokens_run": 114659,
+  "ai_requests_today": 78,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
+}
