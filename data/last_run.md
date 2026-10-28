@@ -1,24 +1,17 @@
-## Frontier Wire breaking-news check — 2026-10-28T20:42:47+00:00
+## Frontier Wire breaking-news check — 2026-10-28T21:21:49+00:00
 
-Fetched 2397 items · fresh 3 · judged 3 · kept 1 · **written 1**
-AI: 7 requests, 23,971 tokens this run · 261 requests today · providers: cerebras, groq
+Fetched 2397 items · fresh 1 · judged 1 · kept 0 · **written 0**
+AI: 1 requests, 5,084 tokens this run · 262 requests today · providers: cerebras, groq
 Photos: 0 saved, 0 unavailable
-Alerts: 52 events sent: {"subscribers":8,"sent":0,"queued":10}
-Trackers: filed 1 stories; updated frontier-race
-Tagged 1 stories by sector, region and deal
-Time: gather 11s, trackers 44s, stock photos 17s, alerts 21s
+Alerts: 51 events sent: {"subscribers":8,"sent":0,"queued":0}
+Trackers: filed 0 stories; no tracker changed
+Time: gather 13s, alerts 11s
 
 ### New stories
-- **industry** — [OpenAI and ServiceNow expand partnership to embed OpenAI models in ServiceNow workflows](https://openai.com/index/openai-servicenow-partnership-expansion)  
-  OpenAI and ServiceNow announced an expanded partnership that will integrate OpenAI models and agents into ServiceNow platforms and workflows through ChatGPT and Codex.  
-  _1 source(s), 0 verified quote(s)_
+- none
 
 <details><summary>Dropped</summary>
 
-- Microsoft announces first quarter results — not AI: Microsoft's quarterly earnings announcement is a standard financial report without a core AI angle, not news for Frontier Wire's AI-focused audience.
-- Microsoft earnings press release available on Investor Relations website — not AI: A press release of Microsoft earnings provides no AI-specific content and is routine financial communication, not relevant as AI news.
+- Microsoft announces first quarter results — not AI: Microsoft's quarterly earnings announcement is a routine financial report with no AI focus; it does not meet the relevance or significance thresholds for Frontier Wire.
 
 </details>
-
-### Notes
-- cerebras/gpt-oss-120b: answer cut off; retrying with more room
