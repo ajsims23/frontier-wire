@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-28T21:21:49+00:00",
+  "started_at": "2026-10-28T21:54:23+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -15,36 +15,269 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (22)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (19)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
   },
   "dropped": [
     {
-      "title": "Microsoft announces first quarter results",
-      "reason": "not AI: Microsoft's quarterly earnings announcement is a routine financial report with no AI focus; it does not meet the relevance or significance thresholds for Frontier Wire."
+      "title": "Microsoft hits 10 quarters of record- breaking revenue in a row",
+      "reason": "not AI: Microsoft’s record quarterly revenue is a broad financial result; the piece does not focus on AI and therefore falls below the news threshold."
+    },
+    {
+      "title": "Wiz’s CTO on PHP2Shell and the coming ‘vulnpocalypse’",
+      "reason": "not AI: The article discusses PHP security bugs, which are unrelated to AI."
+    },
+    {
+      "title": "Akai is embracing vibe-coded mods with an open-source MPC",
+      "reason": "not AI: The story is about a music hardware product and does not involve AI."
+    },
+    {
+      "title": "Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity",
+      "reason": "duplicate of 41e0dc889e76"
+    },
+    {
+      "title": "Microsoft is ending Copilot support on smart TVs",
+      "reason": "score 5: Microsoft ending Copilot on smart TVs is a product‑support change; while it involves an AI assistant, the impact is modest and does not meet the news threshold."
+    },
+    {
+      "title": "Creating AI value with enterprise context",
+      "reason": "score 4: A thought‑leadership piece on extracting AI value in enterprises; it offers perspective but no new news."
+    },
+    {
+      "title": "ServiceNow reports Q3 subscription revenue up 21% YoY to $3.99B, forecasts Q4 current remaining performance obligations below est.; NOW drops 15%+ after hours (Brody Ford/Bloomberg)",
+      "reason": "not AI: The story reports ServiceNow subscription growth; while it hints at enterprise AI adoption, the announcement itself is not AI‑centric enough to meet the news threshold."
+    },
+    {
+      "title": "Microsoft reports Q1 capex of $45.2B, up from $34.9B a year earlier and below its own $50B projection, and free cash flow of $18.6B, vs. $8.54B est. by analysts (Deborah Sophia/Reuters)",
+      "reason": "not AI: The report details Microsoft’s overall capex; the article does not highlight AI‑specific spending."
+    },
+    {
+      "title": "Alphabet reports Q3 YouTube ad revenue up 9% YoY to $11.2B, below estimates, and Google ad revenue hit $82.01B, up from $74.18B in Q3 2025 (Todd Spangler/Variety)",
+      "reason": "not AI: Alphabet’s ad revenue numbers are not AI‑focused."
+    },
+    {
+      "title": "Alphabet reports Q3 revenue up 25% YoY to $127.6B, Google Cloud revenue up 103% to $30.7B, and Google Services revenue up 11% to $96.3B (Alphabet)",
+      "reason": "not AI: Alphabet’s overall revenue report lacks an AI focus."
+    },
+    {
+      "title": "Microsoft reports Q1 revenue up 19% YoY to $92.3B, Azure revenue up 48% to $33.2B, operating income up 21% to $45.9B, and net income up 32% to $36.6B (Microsoft)",
+      "reason": "not AI: Microsoft’s revenue report is not centered on AI."
+    },
+    {
+      "title": "Oracle pledges to limit new financing to $20B through FY 2030, expects free cash flow to turn positive in H2 FY 2028 and top $30B in FY 2029; ORCL jumps 11%+ (Deborah Sophia/Reuters)",
+      "reason": "not AI: Oracle’s financing plan is a general corporate finance story without an AI angle."
+    },
+    {
+      "title": "OpenAI launching election 'war room'",
+      "reason": "duplicate of e3f879545331"
+    },
+    {
+      "title": "OpenAI launching election war room to track interference efforts",
+      "reason": "duplicate of e3f879545331"
+    },
+    {
+      "title": "OpenAI Launches Election 'War Room' Ahead of Midterms",
+      "reason": "duplicate of e3f879545331"
+    },
+    {
+      "title": "OpenAI starts election war room to monitor its products during midterm races",
+      "reason": "duplicate of e3f879545331"
+    },
+    {
+      "title": "OpenAI brings hundreds of employees together to track election interference ahead of midterms",
+      "reason": "duplicate of e3f879545331"
+    },
+    {
+      "title": "AI in the 2026 Midterms: Deepfakes, Chatbots, and Election Security",
+      "reason": "duplicate of e3f879545331"
+    },
+    {
+      "title": "Anthropic filed to go public—what retail investors should weigh before its IPO",
+      "reason": "duplicate of e4d1fbe9aac7"
+    },
+    {
+      "title": "Anthropic's IPO lists 93 pages of risks. What could go wrong?",
+      "reason": "duplicate of e4d1fbe9aac7"
+    },
+    {
+      "title": "What Anthropic’s IPO filing reveals about its soaring revenues, existential risks from AI",
+      "reason": "duplicate of e4d1fbe9aac7"
+    },
+    {
+      "title": "Anthropic IPO: Can Indian investors get a slice of the AI boom? What to know about access and risks | Experts explain",
+      "reason": "duplicate of e4d1fbe9aac7"
+    },
+    {
+      "title": "UNN health academics trained in AI research",
+      "reason": "not AI: The piece reports on health academics training in AI research, which is not a newsworthy AI development for our audience."
+    },
+    {
+      "title": "Google expands AI Search ads globally as core ad growth slows",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "As AI agents reshape the web, Google opens Gemini and Search to more apps",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "Microsoft recorded $10 billion in revenue from OpenAI",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Anthropic just launched tools to show companies what their AI spending is buying",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Meta says it&#8217;ll probably delay its controversial new business terms again",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Anthropic tells California governor courts should be able to block risky AI models",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
-  "written": [],
-  "notes": [],
-  "mode": "breaking",
+  "written": [
+    {
+      "id": "ef5e2b7c56ff",
+      "headline": "New York governor signs law banning unsafe AI chatbot features for minors",
+      "category": "policy",
+      "summary": "Governor Kathy Hochul signed two bills that prohibit AI chatbots from using unsafe features with users under 18 and require security safeguards on internet‑connected baby monitors. The chatbot law mandates age verification, bans certain behaviors, and imposes up to $25,000 civil penalties per violation; it takes effect in six months.",
+      "url": "https://techmeme.com/261028/p46",
+      "sources": 3,
+      "quotes": 2
+    },
+    {
+      "id": "c517821d0281",
+      "headline": "Anthropic expands AI for Science program to 20 foundations and research groups",
+      "category": "research",
+      "summary": "Anthropic announced that its AI for Science program now includes 20 scientific foundations, institutions and research groups worldwide, providing them with free Claude credits for high‑impact projects. The expansion builds on earlier efforts that already supported hundreds of biology, medicine, physics, chemistry, climate and mathematics projects.",
+      "url": "https://anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "not India desk: 'Anthropic tells California governor courts should '",
+    "3 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
   "timings": {
-    "gather": 12.8,
-    "judge": 0.5,
-    "verify and write": 0.0,
-    "tagging": 0.0,
-    "trackers": 0.0,
-    "photos": 0.0,
-    "stock photos": 0.0,
-    "alerts": 10.7
+    "gather": 83.6,
+    "audit": -0.0,
+    "plan": 2.7,
+    "judge": 2.5,
+    "verify and write": 375.6,
+    "videos": 2.7,
+    "tagging": 20.7,
+    "explainers": -0.0,
+    "trackers": 42.5,
+    "claims": 20.5,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 21.0,
+    "self-review": 0.0,
+    "photos": 0.3,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 8.3
   },
-  "fetched": 2397,
-  "fresh": 1,
-  "judged": 1,
-  "kept": 0,
-  "trackers": "filed 0 stories; no tracker changed",
-  "photos": "0 saved, 0 unavailable",
-  "alerts": "51 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":0}",
-  "ai_requests_run": 1,
-  "ai_tokens_run": 5084,
-  "ai_requests_today": 262,
+  "fetched": 2907,
+  "fresh": 20,
+  "plan": {
+    "focus": "Tracking enterprise AI spend spikes while policy clamps tighten, as major model launches reshape market dynamics.",
+    "priorities": [
+      "Microsoft recorded $10 billion in revenue from OpenAI (Shows OpenAI's revenue impact on Microsoft, key for investors and strategy planners.)",
+      "ServiceNow reports Q3 subscription revenue up 21% YoY to $3.99B, forec (ServiceNow's strong subscription growth signals enterprise AI adoption trends.)",
+      "Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecu (Google's Gemini 4 Carbon launch highlights competitive model advances and cybersecurity implications.)",
+      "Anthropic just launched tools to show companies what their AI spending (Anthropic's AI spend transparency tools help companies manage costs and ROI.)",
+      "NY Gov. Kathy Hochul signs bills banning AI chatbots from using \"unsaf (New NY AI safety legislation affects product compliance and risk management.)"
+    ],
+    "thin_areas": [
+      "research",
+      "voices"
+    ],
+    "searches": [
+      "OpenAI election war room update: 6 new",
+      "Anthropic IPO valuation latest filing: 4 new",
+      "AI for science research collaborations: 1 new"
+    ],
+    "dig_deeper": [
+      "Microsoft recorded $10 billion in revenue from OpenAI",
+      "Anthropic just launched tools to show companies what their AI spending"
+    ]
+  },
+  "judged": 31,
+  "kept": 8,
+  "research": {
+    "investigated": 5,
+    "confirmed": 2,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "Microsoft recorded $10 billion in revenue from OpenAI: unconfirmed (searched “Microsoft $10 billion revenue OpenAI quarter ending September 30”; read techmeme.com; searched “\"$10 billion\" OpenAI Microsoft revenue quarter ending September 30”)",
+    "NY Gov. Kathy Hochul signs bills banning AI chatbots from using \"unsaf: confirmed (searched “Kathy Hochul signs bills banning AI chatbots minors baby monitors”; read engadget.com; read mashable.com)",
+    "Anthropic just launched tools to show companies what their AI spending: unconfirmed (searched “Anthropic launched tools to show companies AI spending buying”; read investopedia.com; read yahoo.com)",
+    "Meta says it&#8217;ll probably delay its controversial new business te: confirmed (searched “Meta delay new business terms November 20th publishers AI training backlash”; read msn.com; searched “Engadget Meta delays new business terms”)",
+    "Anthropic tells California governor courts should be able to block ris: unconfirmed (searched “Anthropic tells California governor courts should be able to block risky AI models”; read msn.com; searched “Reuters Anthropic California courts block risky AI models”)"
+  ],
+  "videos": {
+    "OpenAI": "ok (9 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (9 in feed, 1 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 1 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 2 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "4 kept from 5 new",
+  "tagged": 2,
+  "trackers": "filed 1 stories; updated ai-regulation",
+  "claims": "44 tracked, 43 open, 0 updated this run",
+  "model_tracker": "82 models, 51 changes today",
+  "briefing": "3 themes from 19 stories",
+  "photos": "2 saved, 0 unavailable",
+  "alerts": "60 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":28}",
+  "ai_requests_run": 31,
+  "ai_tokens_run": 66396,
+  "ai_requests_today": 293,
   "provider_log": []
 }

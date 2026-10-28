@@ -284,8 +284,8 @@
       "lab": "DeepSeek",
       "released": "2026-09-10",
       "context": 1048576,
-      "price_in": 0.14,
-      "price_out": 0.42,
+      "price_in": 0.045,
+      "price_out": 0.5,
       "inputs": [
         "text",
         "image"
@@ -355,8 +355,8 @@
       "lab": "Zhipu AI",
       "released": "2026-08-26",
       "context": 1048576,
-      "price_in": 0.15,
-      "price_out": 0.5,
+      "price_in": 0.0285,
+      "price_out": 0.0923,
       "inputs": [
         "text",
         "image",
@@ -574,8 +574,8 @@
       "lab": "Zhipu AI",
       "released": "2026-06-16",
       "context": 1048576,
-      "price_in": 0.0077,
-      "price_out": 7.0,
+      "price_in": 0.006,
+      "price_out": 5.4,
       "inputs": [
         "text"
       ]
@@ -745,7 +745,7 @@
       "name": "Nemotron 3 Super",
       "lab": "NVIDIA",
       "released": "2026-03-11",
-      "context": 262144,
+      "context": 1048576,
       "price_in": 0.3,
       "price_out": 2.4,
       "inputs": [
@@ -1094,55 +1094,6 @@
     }
   ],
   "changes": [
-    {
-      "date": "2026-10-27",
-      "model": "DeepSeek V4 Pro 0423",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4 Pro 0423 input price cut: $0.894 → $0.8804 per 1M tokens"
-    },
-    {
-      "date": "2026-10-27",
-      "model": "DeepSeek V4 Pro 0423",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4 Pro 0423 output price cut: $1.788 → $1.7609 per 1M tokens"
-    },
-    {
-      "date": "2026-10-27",
-      "model": "GLM 5.3 Flash",
-      "lab": "Zhipu AI",
-      "kind": "price_cut",
-      "text": "GLM 5.3 Flash input price cut: $0.15 → $0.0363 per 1M tokens"
-    },
-    {
-      "date": "2026-10-27",
-      "model": "GLM 5.3 Flash",
-      "lab": "Zhipu AI",
-      "kind": "price_cut",
-      "text": "GLM 5.3 Flash output price cut: $0.5 → $0.133 per 1M tokens"
-    },
-    {
-      "date": "2026-10-27",
-      "model": "Kimi K3",
-      "lab": "Moonshot AI",
-      "kind": "price_rise",
-      "text": "Kimi K3 input price raised: $0.179 → $0.2 per 1M tokens"
-    },
-    {
-      "date": "2026-10-27",
-      "model": "Kimi K3",
-      "lab": "Moonshot AI",
-      "kind": "price_cut",
-      "text": "Kimi K3 output price cut: $20 → $11.5 per 1M tokens"
-    },
-    {
-      "date": "2026-10-27",
-      "model": "GLM 5.2",
-      "lab": "Zhipu AI",
-      "kind": "price_cut",
-      "text": "GLM 5.2 input price cut: $0.0341 → $0.0319 per 1M tokens"
-    },
     {
       "date": "2026-10-27",
       "model": "DeepSeek V4 Pro 0423",
@@ -1513,7 +1464,56 @@
       "lab": "Zhipu AI",
       "kind": "price_cut",
       "text": "GLM 5.2 input price cut: $0.014 → $0.0077 per 1M tokens"
+    },
+    {
+      "date": "2026-10-28",
+      "model": "DeepSeek V4.1 Flash",
+      "lab": "DeepSeek",
+      "kind": "price_cut",
+      "text": "DeepSeek V4.1 Flash input price cut: $0.14 → $0.045 per 1M tokens"
+    },
+    {
+      "date": "2026-10-28",
+      "model": "DeepSeek V4.1 Flash",
+      "lab": "DeepSeek",
+      "kind": "price_rise",
+      "text": "DeepSeek V4.1 Flash output price raised: $0.42 → $0.5 per 1M tokens"
+    },
+    {
+      "date": "2026-10-28",
+      "model": "GLM 5.3 Flash",
+      "lab": "Zhipu AI",
+      "kind": "price_cut",
+      "text": "GLM 5.3 Flash input price cut: $0.15 → $0.0285 per 1M tokens"
+    },
+    {
+      "date": "2026-10-28",
+      "model": "GLM 5.3 Flash",
+      "lab": "Zhipu AI",
+      "kind": "price_cut",
+      "text": "GLM 5.3 Flash output price cut: $0.5 → $0.0923 per 1M tokens"
+    },
+    {
+      "date": "2026-10-28",
+      "model": "GLM 5.2",
+      "lab": "Zhipu AI",
+      "kind": "price_cut",
+      "text": "GLM 5.2 input price cut: $0.0077 → $0.006 per 1M tokens"
+    },
+    {
+      "date": "2026-10-28",
+      "model": "GLM 5.2",
+      "lab": "Zhipu AI",
+      "kind": "price_cut",
+      "text": "GLM 5.2 output price cut: $7 → $5.4 per 1M tokens"
+    },
+    {
+      "date": "2026-10-28",
+      "model": "Nemotron 3 Super",
+      "lab": "NVIDIA",
+      "kind": "context",
+      "text": "Nemotron 3 Super context window: 262,144 → 1,048,576 tokens"
     }
   ],
-  "updated_at": "2026-10-28T19:04:39+00:00"
+  "updated_at": "2026-10-28T21:54:23+00:00"
 }
