@@ -1,6 +1,99 @@
 [
   {
     "explainer": {
+      "what_it_means": "Gemini 4 Carbon can automatically find security flaws, suggest exploits and generate patches, helping engineers secure large codebases. It also handles complex, multi‑step engineering problems that require sustained reasoning over long periods.",
+      "terms": [
+        {
+          "term": "SEC-bench Pro",
+          "meaning": "A benchmark that measures a model’s ability to discover software vulnerabilities."
+        },
+        {
+          "term": "ExploitGym",
+          "meaning": "A test suite evaluating how well a model can generate exploit code for known vulnerabilities."
+        },
+        {
+          "term": "CWE-bench",
+          "meaning": "A benchmark assessing a model’s capability to propose correct patches for software weaknesses."
+        }
+      ],
+      "watch_next": [
+        "Starting this week, Carbon will be made available to a subset of cyber defenders.",
+        "Access will be gradually expanded to trusted partners through the Fairwind Program before broader release to developers, businesses, and consumers."
+      ]
+    },
+    "benchmarks": [
+      {
+        "model": "Gemini 4 Carbon",
+        "benchmark": "SEC-bench Pro",
+        "score": "88.2%"
+      },
+      {
+        "model": "Gemini 4 Carbon",
+        "benchmark": "ExploitGym",
+        "score": "54.8%"
+      },
+      {
+        "model": "Gemini 4 Carbon",
+        "benchmark": "CWE-bench",
+        "score": "71.0%"
+      }
+    ],
+    "audiences": {
+      "builders": "The model offers stronger coding assistance and lower rates of misalignment, useful for developers building security‑focused tools.",
+      "business": "It signals DeepMind’s push toward secure AI products, potentially reducing enterprise risk from software bugs.",
+      "investors": "The achievement reinforces DeepMind’s competitive position in high‑value AI capabilities, especially in cybersecurity."
+    },
+    "id": "34b0bf3f94c3",
+    "headline": "Gemini 4 Carbon ranks #1 on AI Index and leads cybersecurity benchmarks",
+    "summary": "Google DeepMind announced Gemini 4 Carbon, its strongest model with state‑of‑the‑art cybersecurity and long‑horizon capabilities. The model ranked #1 on the v5.0 Artificial Analysis Intelligence Index at 59 and led SEC‑bench Pro (88.2%), ExploitGym (54.8%) and CWE‑bench (71.0%).",
+    "why_it_matters": "The model shows how AI is being tuned for security‑critical tasks, offering stronger defenses against software vulnerabilities.",
+    "category": "models",
+    "lab": "Google DeepMind",
+    "model_name": "Gemini 4 Carbon",
+    "model_type": "Language",
+    "tags": [],
+    "quotes": [],
+    "score": 8,
+    "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+    "source_id": "deepmind",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_carbon_102726_social_share.width-1300.png",
+    "sources": [
+      {
+        "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+        "publisher": "Google DeepMind",
+        "title": "Gemini 4 Carbon: Our next frontier model"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "unconfirmed"
+    },
+    "published_at": "2026-10-28T17:00:58+00:00",
+    "created_at": "2026-10-28T17:20:49+00:00",
+    "breaking": true,
+    "sectors": [
+      "cybersecurity"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "88.2%",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "OpenAI will run a dedicated team that watches for false or misleading content related to the upcoming elections. The goal is to spot and respond to attempts to sway voters or undermine confidence.",
       "terms": [
         {
