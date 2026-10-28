@@ -1,12 +1,12 @@
 {
-  "started_at": "2026-10-28T15:21:57+00:00",
+  "started_at": "2026-10-28T16:04:34+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
     "groq"
   ],
   "sources": {
-    "openai": "ok (1332)",
+    "openai": "ok (1333)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
     "huggingface": "ok (891)",
@@ -15,42 +15,265 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (22)",
+    "gdelt": "ok (18)",
+    "hn": "ok (18)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
   },
   "dropped": [
     {
-      "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
-      "reason": "score 5: Hugging Face model upload of a Nemotron 3.5 variant for transcription; incremental update rather than a major frontier model release, not enough significance for Frontier Wire."
+      "title": "Kentucky man becomes the first humanist granted religious exemption from AI",
+      "reason": "not AI: Humanist religious exemption from AI is off‑topic for Frontier Wire."
     },
     {
-      "title": "NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games",
-      "reason": "score 4: NVIDIA blog announcing new RTX Spark laptop models and agent tools; primarily a marketing product push with limited AI novelty, scoring low on relevance."
+      "title": "AI execs may be too out of touch to build for the general public",
+      "reason": "score 4: Opinion piece on AI executives being out of touch; lacks substantive AI news."
+    },
+    {
+      "title": "South Korea’s financial industry hit by fresh wave of cyberattacks",
+      "reason": "score 5: Report of AI‑driven cyberattacks in South Korea; relevant but only an adjacent safety angle and below the news threshold."
+    },
+    {
+      "title": "xAI is buying out homeowners who promise not to sue over data center noise",
+      "reason": "score 3: xAI buying homes to silence lawsuits over data‑center noise is a real‑estate story, not core AI news."
+    },
+    {
+      "title": "Exclusive: Holiday Tribe In Talks To Raise ₹50 Cr From RPSG Capital Ventures, Others",
+      "reason": "not AI: Holiday Tribe fundraising, not AI."
+    },
+    {
+      "title": "Why Indian AI Founders Are Eyeing Silicon Valley And What They Risk Leaving Behind",
+      "reason": "score 4: Commentary on Indian AI founders moving to Silicon Valley; lacks a concrete news hook."
+    },
+    {
+      "title": "Microsoft Visual Studio update brings smarter Copilot AI, bulk conflict resolution and Hot Exit: Details here",
+      "reason": "score 5: Microsoft Visual Studio update adds Copilot AI features; notable but below the keep threshold."
+    },
+    {
+      "title": "Meesho loss narrows; Sanjeev Bikhchandani back as Info Edge CEO",
+      "reason": "not AI: Meesho loss narrowing, not AI."
+    },
+    {
+      "title": "Cognite reports $1 billion in verified AI value, confirming impact of industrial AI solutions",
+      "reason": "score 5: Cognite reports $1 B verified AI value in industrial settings; important but not high enough score."
+    },
+    {
+      "title": "Meesho expects stronger Q3 growth due to change in festive sale timeline",
+      "reason": "not AI: Meesho Q3 growth forecast, no AI angle."
+    },
+    {
+      "title": "Sherpa and the future of AI-powered storytelling at Pocket FM",
+      "reason": "score 5: Pocket FM uses AI‑powered storytelling tool Sherpa; interesting but not a major industry development."
+    },
+    {
+      "title": "Info Edge reports steady business growth ahead of leadership transition",
+      "reason": "not AI: Info Edge business growth, unrelated to AI."
+    },
+    {
+      "title": "Meesho narrows loss by 68% while revenue rises 34% in Q2 of FY27",
+      "reason": "not AI: Meesho financial performance, no AI relevance."
+    },
+    {
+      "title": "The October inflection point for vibe game development",
+      "reason": "score 4: Personal commentary on coding‑agent inflection points; not a news event."
+    },
+    {
+      "title": "Simon Willison: I think October represents another inflection point in capabilities for coding agents and the models that drive them: Claude Opus 5.5 can…",
+      "reason": "score 4: Similar personal commentary on coding agents; lacks news value."
+    },
+    {
+      "title": "Dropbox plans to cut ~6% of its staff, or ~200 jobs, costing $27M to $33M in severance and related costs, and says CTO Ali Dasdan will step down on November 18 (Anhata Rooprai/Reuters)",
+      "reason": "not AI: Dropbox workforce reduction unrelated to AI."
+    },
+    {
+      "title": "X adds an intrusive promotional animation of an arm reaching across the screen to direct users to a \"promote\" post button, targeting verified and Premium users (Andrew Liszewski/The Verge)",
+      "reason": "not AI: X's promotional UI change is not AI‑related."
+    },
+    {
+      "title": "Chinese PCB maker Dongshan rises on its Hong Kong debut, after raising ~$1.3B in an IPO, below its $3B goal, at a $30B valuation, amid a tricky IPO market (Sangmi Cha/Bloomberg)",
+      "reason": "not AI: Chinese PCB maker IPO has no AI angle."
+    },
+    {
+      "title": "Amazon Kindle Paperwhite and Kindle Colorsoft review: premium feel, lightweight, nice colors, and snappy performance, but expensive after price increases (Nena Farrell/Wired)",
+      "reason": "not AI: Kindle product review, not AI."
+    },
+    {
+      "title": "Artificial Analysis launches the Intelligence Index v5, with new coding and science benchmarks, built on private datasets; Claude Opus 5.5 (max) leads at 58 (@artificialanlys)",
+      "reason": "score 5: Artificial Analysis launches Intelligence Index v5; interesting benchmark but not a major breakthrough."
+    },
+    {
+      "title": "Anthropic IPO filings warn of catastrophic risks; attorney says ‘we’re in crazy land’",
+      "reason": "score 5: Anthropic IPO filings mention catastrophic risks; relevant but not core news."
+    },
+    {
+      "title": "Anthropic IPO to limit public shareholder influence on board control",
+      "reason": "score 4: IPO governance limits are commentary rather than a major development."
+    },
+    {
+      "title": "If You Own A 401(k), You May Already Own A Piece Of Anthropic Before The IPO",
+      "reason": "not AI: Financial advice piece about owning Anthropic via 401(k), not AI news."
+    },
+    {
+      "title": "OpenAI launching election war room to track interference efforts",
+      "reason": "score 0: Duplicate of OpenAI election war room announcement."
+    },
+    {
+      "title": "Running NVIDIA Nemotron 3.5 Bolt E4B Without a GPU: Benchmark Results",
+      "reason": "score 4: Benchmark of Nvidia Nemotron 3.5 without a GPU; interesting but not a major news item."
     }
   ],
-  "written": [],
-  "notes": [],
-  "mode": "breaking",
+  "written": [
+    {
+      "id": "e3f879545331",
+      "headline": "OpenAI launches election war room to monitor misinformation ahead of US midterms",
+      "category": "policy",
+      "summary": "OpenAI is standing up an election “war room” ahead of the November 3 midterm elections. The team will track potential spread of misinformation or other efforts to disrupt the vote.",
+      "url": "https://techmeme.com/261028/p34",
+      "sources": 3,
+      "quotes": 1
+    }
+  ],
+  "notes": [
+    "not India desk: 'GitHub Expands Infra With 4 Mn Cores, Debuts Copil'",
+    "ignored made-up duplicate id e3f879545331 for 'OpenAI launching election war room to track interf'",
+    "stopped writing: every configured provider failed: cerebras/gpt-oss-120b: answer cut off; retrying with more room | cerebras: 429 after retry; moving to next provider for this run | groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing | groq: 429 after retry; moving to next provider for this run",
+    "8 kept item(s) carried over to the next run",
+    "videos skipped: every configured provider failed: cerebras/gpt-oss-120b: answer cut off; retrying with more room | cerebras: 429 after retry; moving to next provider for this run | groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing | groq: 429 after retry; moving to next provider for this run",
+    "tagging skipped: every configured provider failed: cerebras/gpt-oss-120b: answer cut off; retrying with more room | cerebras: 429 after retry; moving to next provider for this run | groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing | groq: 429 after retry; moving to next provider for this run",
+    "trackers skipped: every configured provider failed: cerebras/gpt-oss-120b: answer cut off; retrying with more room | cerebras: 429 after retry; moving to next provider for this run | groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing | groq: 429 after retry; moving to next provider for this run",
+    "claims skipped: every configured provider failed: cerebras/gpt-oss-120b: answer cut off; retrying with more room | cerebras: 429 after retry; moving to next provider for this run | groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing | groq: 429 after retry; moving to next provider for this run",
+    "builders skipped: every configured provider failed: cerebras/gpt-oss-120b: answer cut off; retrying with more room | cerebras: 429 after retry; moving to next provider for this run | groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing | groq: 429 after retry; moving to next provider for this run",
+    "top voices skipped: every configured provider failed: cerebras/gpt-oss-120b: answer cut off; retrying with more room | cerebras: 429 after retry; moving to next provider for this run | groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing | groq: 429 after retry; moving to next provider for this run",
+    "briefing skipped: every configured provider failed: cerebras/gpt-oss-120b: answer cut off; retrying with more room | cerebras: 429 after retry; moving to next provider for this run | groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing | groq: 429 after retry; moving to next provider for this run"
+  ],
+  "mode": "full",
   "timings": {
-    "gather": 13.3,
-    "judge": 7.7,
-    "verify and write": 0.0,
-    "tagging": 0.0,
-    "trackers": 0.0,
-    "photos": 0.0,
-    "stock photos": 0.0,
-    "alerts": 13.7
+    "gather": 101.5,
+    "audit": -0.0,
+    "plan": 1.7,
+    "judge": 33.5,
+    "verify and write": 71.6,
+    "explainers": 1.8,
+    "model tracker": 0.2,
+    "weekly": -0.0,
+    "self-review": 17.2,
+    "photos": -0.0,
+    "stock photos": 16.7,
+    "daily email": 0.0,
+    "alerts": 14.2
   },
-  "fetched": 2395,
-  "fresh": 2,
-  "judged": 2,
-  "kept": 0,
-  "trackers": "filed 0 stories; no tracker changed",
+  "fetched": 2923,
+  "fresh": 28,
+  "plan": {
+    "focus": "Chasing the fallout from OpenAI safety breaches while covering the surge in AI‑focused industry deals.",
+    "priorities": [
+      "OpenAI says it's launching an election \"war room\" ahead of the US midt (OpenAI’s election‑war‑room signals a major policy‑safety intersection with upcoming US midterms.)",
+      "Nvidia debuts Nemotron 3.5 Transcribe, an open-weight model for multil (Nvidia’s Nemotron 3.5 Transcribe adds a high‑impact open‑weight model for multilingual voice AI.)",
+      "Foundry, a manufacturing-as-a-service startup that builds factories wi (Foundry’s $100M raise highlights the rise of AI‑driven manufacturing‑as‑a‑service.)",
+      "Legora is building the agentic operating system for legal work (Legora’s agentic OS for legal work showcases emerging enterprise AI agents.)",
+      "AI execs may be too out of touch to build for the general public (TechCrunch piece critiques AI execs’ disconnect, relevant to industry strategy readers.)"
+    ],
+    "thin_areas": [
+      "voices",
+      "models"
+    ],
+    "searches": [
+      "Anthropic IPO valuation: 4 new",
+      "OpenAI election war room: 2 new",
+      "Nvidia Nemotron 3.5 benchmark: 1 new"
+    ],
+    "dig_deeper": [
+      "OpenAI says it's launching an election \"war room\" ahead of the US midt",
+      "Nvidia debuts Nemotron 3.5 Transcribe, an open-weight model for multil"
+    ]
+  },
+  "judged": 35,
+  "kept": 8,
+  "research": {
+    "investigated": 1,
+    "confirmed": 1,
+    "tool_calls": 3
+  },
+  "research_log": [
+    "OpenAI says it's launching an election \"war room\" ahead of the US midt: confirmed (searched “OpenAI election war room midterms Politico”; read yahoo.com; read politico.com)"
+  ],
+  "threads": [
+    "OpenAI election safeguards: war room launch: OpenAI launches election war room to monitor misinformation "
+  ],
+  "videos": {
+    "OpenAI": "ok (9 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (9 in feed, 1 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 1 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "model_tracker": "82 models, 42 changes today",
+  "builders_sources": {
+    "show-hn": "ok (3)",
+    "github-new": "ok (35)",
+    "hf-spaces": "ok (22)",
+    "product-hunt": "ok (15)",
+    "r-localllama": "ok (25)",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
+  },
+  "top_voices_sources": {
+    "tv-mollick": "ok (0)",
+    "tv-lambert": "ok (2)",
+    "tv-swyx": "ok (8)",
+    "tv-dwarkesh": "ok (1)",
+    "tv-raschka": "ok (1)",
+    "tv-karpathy": "ok (0)",
+    "tv-evans": "ok (0)",
+    "x-coverage": "ok (0 of 1 articles, bing)",
+    "hn": "ok (1)"
+  },
   "photos": "0 saved, 0 unavailable",
-  "alerts": "46 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":0}",
-  "ai_requests_run": 1,
-  "ai_tokens_run": 5809,
-  "ai_requests_today": 186,
+  "stock photos": "1 added",
+  "alerts": "50 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":10}",
+  "ai_requests_run": 12,
+  "ai_tokens_run": 51198,
+  "ai_requests_today": 198,
   "provider_log": [
-    "cerebras: 429 after retry; moving to next provider for this run"
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras: 429 after retry; moving to next provider for this run",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq: 429 after retry; moving to next provider for this run"
   ]
 }
