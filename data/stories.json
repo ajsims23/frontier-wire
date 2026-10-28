@@ -1,6 +1,101 @@
 [
   {
     "explainer": {
+      "what_it_means": "Gemini 4 Carbon is a new AI system that can write code, perform complex tasks and spot security flaws better than earlier versions. Google is testing it internally and will release it gradually, starting with select subscribers and API users. Until then, developers cannot use the model directly.",
+      "terms": [
+        {
+          "term": "frontier AI model",
+          "meaning": "A highly advanced AI system that pushes the limits of current capabilities, often used for complex reasoning or coding tasks."
+        },
+        {
+          "term": "vulnerability detection",
+          "meaning": "The ability of an AI to identify security weaknesses in software code."
+        },
+        {
+          "term": "prompt‑injection attack",
+          "meaning": "A technique that tries to trick an AI into ignoring its safeguards by embedding malicious instructions in the user prompt."
+        }
+      ],
+      "watch_next": [
+        "Rollout through Google’s Fairwinds cyber defense program",
+        "First availability for AI Ultra subscribers and developers using the Gemini API"
+      ]
+    },
+    "benchmarks": [
+      {
+        "model": "Gemini 4 Carbon",
+        "benchmark": "Grey Swan evaluation prompt‑injection resistance",
+        "score": "0 percent"
+      }
+    ],
+    "audiences": {
+      "builders": "The model promises stronger coding assistance and security analysis, but it is not yet accessible to developers.",
+      "business": "Google’s claim of leading performance may pressure competitors to accelerate their own AI offerings.",
+      "investors": "The move reinforces Google’s position at the forefront of AI development, though commercial impact is pending due to limited access."
+    },
+    "id": "41e0dc889e76",
+    "headline": "Google announces Gemini 4 Carbon, a more capable frontier AI model not yet released",
+    "summary": "Google unveiled Gemini 4 Carbon, its latest frontier AI model that improves coding, agentic tasks and cybersecurity but is not publicly available. The model shows a “significant leap” in vulnerability detection and scores 89 points higher on WebDev Arena, ranking fourth.",
+    "why_it_matters": "The announcement shows Google’s continued push for leading AI capabilities while restricting access, influencing the competitive landscape for developers and enterprises.",
+    "category": "models",
+    "lab": "Google",
+    "model_name": "Gemini 4 Carbon",
+    "model_type": "Language",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "significant leap\" in vulnerability detection, validation, and remediation",
+        "speaker": "Google",
+        "speaker_role": "",
+        "source_url": "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use"
+      }
+    ],
+    "score": 10,
+    "url": "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use",
+    "source_id": "ars-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/04/gemini-general-2-1152x648.jpg",
+    "sources": [
+      {
+        "url": "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use",
+        "publisher": "Ars Technica AI",
+        "title": "Google announces Gemini 4 Carbon, its latest frontier AI model that you can't use"
+      },
+      {
+        "url": "https://venturebeat.com/technology/google-unveils-gemini-4-carbon-retaking-the-worlds-no-1-spot-on-updated-harder-benchmarks-but-access-is-limited",
+        "publisher": "VentureBeat",
+        "title": "Google unveils Gemini 4 Carbon, retaking the world's no. 1 spot on updated, harder benchmarks — but access is limited"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-28T18:47:27+00:00",
+    "created_at": "2026-10-28T19:04:39+00:00",
+    "sectors": [
+      "software",
+      "cybersecurity"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "89 points higher",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Gemini 4 Carbon can automatically find security flaws, suggest exploits and generate patches, helping engineers secure large codebases. It also handles complex, multi‑step engineering problems that require sustained reasoning over long periods.",
       "terms": [
         {
@@ -184,6 +279,106 @@
     },
     "cover": "",
     "trackers": []
+  },
+  {
+    "explainer": {
+      "what_it_means": "The model can take recorded audio up to an hour long, turn it into text in up to 40 languages, and optionally translate it into English or other languages. It can also label who is speaking, handling up to eight speakers in a single file. Because it runs on a single GPU, developers can deploy it on edge devices or in data‑center servers.",
+      "terms": [
+        {
+          "term": "open-weight",
+          "meaning": "A model whose weights are publicly released, allowing anyone to download and run it."
+        },
+        {
+          "term": "mixture-of-experts",
+          "meaning": "A neural network architecture that activates only a subset of its parameters for each input, reducing compute needs."
+        },
+        {
+          "term": "word error rate",
+          "meaning": "A metric that measures the percentage of words that are incorrectly transcribed."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "Nemotron 3.5 Transcribe",
+        "benchmark": "general word error rate",
+        "score": "30.8%"
+      },
+      {
+        "model": "Nemotron 3.5 Transcribe",
+        "benchmark": "prompted word error rate",
+        "score": "20.8%"
+      },
+      {
+        "model": "Nemotron 3.5 Transcribe",
+        "benchmark": "Eka Care Indian medical speech benchmark",
+        "score": "11.8%"
+      }
+    ],
+    "audiences": {
+      "builders": "Developers can integrate the model into apps for meetings or medical transcription and fine‑tune it with the Granary v2 dataset.",
+      "business": "Enterprises can use the model to automate multilingual meeting notes and improve transcription accuracy without large‑scale hardware.",
+      "investors": "The release shows Nvidia expanding its open‑weight AI portfolio, competing with other voice model providers."
+    },
+    "id": "45d48a94f572",
+    "headline": "Nvidia releases Nemotron 3.5 Transcribe and Granary v2 speech dataset",
+    "summary": "Nvidia unveiled Nemotron 3.5 Transcribe, a 30‑billion‑parameter open‑weight model that can transcribe audio in up to 40 languages, translate 31 languages, and distinguish up to eight speakers. It also released Granary v2, an expanded open‑source multilingual speech dataset.",
+    "why_it_matters": "The model gives developers a free, high‑accuracy tool for multilingual transcription and translation that runs on a single GPU.",
+    "category": "models",
+    "lab": "NVIDIA",
+    "model_name": "Nemotron 3.5 Transcribe",
+    "model_type": "Voice",
+    "tags": [],
+    "quotes": [],
+    "score": 8,
+    "url": "https://techmeme.com/261028/p33",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/10/AI-on-the-tongue.png?resize=1200,600",
+    "sources": [
+      {
+        "url": "https://techmeme.com/261028/p33",
+        "publisher": "techmeme.com",
+        "title": "Nvidia debuts Nemotron 3.5 Transcribe, an open-weight model for multilingual audio transcription and translation, and Granary v2, its open-source speech dataset (Kyt Dotson/SiliconANGLE)"
+      },
+      {
+        "url": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model",
+        "publisher": "TechCrunch AI",
+        "title": "Voice AI in vogue: Nvidia releases new open transcription model"
+      },
+      {
+        "url": "https://siliconangle.com/2026/10/28/nvidia-releases-all-in-one-adaptable-nemotron-3-5-audio-transcription-and-translation-model",
+        "publisher": "SiliconANGLE",
+        "title": "Nvidia releases all-in-one adaptable Nemotron 3.5 audio transcription and translation model"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-28T15:20:02+00:00",
+    "created_at": "2026-10-28T19:04:39+00:00",
+    "thread": "t-5ae7f5cc4417",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "30‑billion",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
   },
   {
     "explainer": {
@@ -2187,6 +2382,102 @@
     "trackers": [
       "ai-money",
       "ai-infrastructure"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Meta is raising money by selling new shares rather than borrowing, which adds cash for building AI data centers and buying chips. The offerings include common stock and a type of preferred stock that can be converted into common shares later. The funds will support construction of large AI superclusters and related equipment.",
+      "terms": [
+        {
+          "term": "Equity offering",
+          "meaning": "A sale of company shares to investors to raise capital."
+        },
+        {
+          "term": "Convertible preferred stock",
+          "meaning": "Preferred shares that can be turned into common shares under certain conditions."
+        },
+        {
+          "term": "Free cash flow",
+          "meaning": "Cash a company generates after accounting for cash outflows to support operations and maintain capital assets."
+        }
+      ],
+      "watch_next": [
+        "Meta plans an at‑the‑market offering of up to $60 billion once new non‑voting Class C shares begin trading, no earlier than Q1 2027.",
+        "Meta is building four AI superclusters each exceeding 1 GW and aims to nearly double infrastructure capacity in 2026."
+      ]
+    },
+    "audiences": {
+      "builders": "The equity raise provides capital for purchasing chips and building AI superclusters, affecting hardware and infrastructure developers.",
+      "business": "The move signals Meta’s commitment to expanding AI capacity despite cash‑flow pressures, impacting competitive dynamics in the AI services market.",
+      "investors": "Equity financing may dilute existing shareholders but shows strong investor appetite for AI‑related growth, influencing valuation considerations."
+    },
+    "id": "495954f10784",
+    "headline": "Meta plans up to $100 billion equity raise to fund AI infrastructure",
+    "summary": "Meta Platforms announced a series of equity offerings totaling up to $100 billion to finance its AI data‑center expansion, including $22.5 billion of Class A common stock, $12.5 billion of mandatory convertible preferred stock, and a potential $60 billion at‑the‑market program. Chipmakers Nvidia, AMD and Broadcom have indicated non‑binding interest in buying up to $5 billion of the common stock.",
+    "why_it_matters": "The financing shows Meta’s reliance on equity to sustain rapid AI‑infrastructure spending amid tight credit markets.",
+    "category": "industry",
+    "lab": "Meta Platforms",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "Hyperscalers turning to equity rather than debt is the more conservative choice given recent credit market strain, and shows the largest buyers are still finding ways to support data center spend,",
+        "speaker": "analysts as Wedbush wrote",
+        "speaker_role": "analysts",
+        "source_url": "https://finance.yahoo.com/technology/ai/articles/meta-equity-raise-signals-continued-183200075.html"
+      },
+      {
+        "text": "given the relatively small amount involved.",
+        "speaker": "Wedbush",
+        "speaker_role": "",
+        "source_url": "https://finance.yahoo.com/technology/ai/articles/meta-equity-raise-signals-continued-183200075.html"
+      }
+    ],
+    "score": 7,
+    "url": "https://finance.yahoo.com/technology/ai/articles/meta-equity-raise-signals-continued-183200075.html",
+    "source_id": "chief",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://s.yimg.com/lo/mysterio/api/b00fc9969ac014b4159a83bb5a5becf5f42c4f37780fb389a03448b74ec66b4c/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fproactive_us_504%2F8c984806e5de242db7c80907a04d8591.jpg",
+    "sources": [
+      {
+        "url": "https://finance.yahoo.com/technology/ai/articles/meta-equity-raise-signals-continued-183200075.html",
+        "publisher": "Yahoo Finance",
+        "title": "Meta equity raise signals continued support for AI spending: analysts"
+      },
+      {
+        "url": "https://cryptobriefing.com/ai-firms-raise-record-funds-for-infrastructure-meta-eyes-98b-equity-raise",
+        "publisher": "Crypto Briefing",
+        "title": "AI firms raise record funds for infrastructure, Meta eyes $98B equity raise"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-10-27T11:32:00+00:00",
+    "created_at": "2026-10-28T19:04:39+00:00",
+    "thread": "t-057256e5c243",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": {
+      "type": "funding",
+      "company": "Meta Platforms",
+      "amount": "$100 billion",
+      "usd": 100000000000.0
+    },
+    "relevance": {
+      "builders": 1,
+      "business": 2,
+      "investors": 3
+    },
+    "cover": "$100 billion",
+    "trackers": [
+      "ai-infrastructure",
+      "ai-money"
     ],
     "photo_local": true
   },
