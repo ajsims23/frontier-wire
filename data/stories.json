@@ -1,6 +1,196 @@
 [
   {
     "explainer": {
+      "what_it_means": "OpenAI’s Model Spec is a set of rules that guide how its AI should behave. By centering the spec on five values, developers and users are expected to align model outputs with those principles, and OpenAI will test new training methods to improve compliance.",
+      "terms": [
+        {
+          "term": "faithfulness to human intent",
+          "meaning": "The model should understand and follow what people actually want, not just the literal wording of a request."
+        },
+        {
+          "term": "harm minimization",
+          "meaning": "The model should avoid generating content that could cause physical, psychological, or societal harm."
+        },
+        {
+          "term": "human agency",
+          "meaning": "The model should support users’ own decisions and not steer them toward a particular outcome."
+        }
+      ],
+      "watch_next": [
+        "OpenAI is testing new training methods to teach the five values to its models",
+        "OpenAI is seeking public feedback on where the new Spec’s balance may be off‑track"
+      ]
+    },
+    "audiences": {
+      "builders": "Developers will need to consider the five values when customizing model behavior and may have to adjust default settings.",
+      "business": "Enterprises can cite the updated Spec as evidence of OpenAI’s commitment to responsible AI deployment.",
+      "investors": "The revision highlights OpenAI’s focus on risk mitigation, which may affect assessments of long‑term safety and regulatory exposure."
+    },
+    "id": "a9f4b70fc71c",
+    "headline": "OpenAI revises Model Spec around five core values",
+    "summary": "OpenAI updated its public Model Spec, reorganizing it around five values: faithfulness to human intent, harm minimization, honesty and transparency, human agency, and care. The update drops most style rules, renames the model as “GPT”, and acknowledges current models do not fully follow the new spec.",
+    "why_it_matters": "The change signals a tighter focus on safety and ethical behavior as AI systems become more capable and impactful.",
+    "category": "safety",
+    "lab": "OpenAI",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "As our models get smarter and take more consequential actions in the world, it becomes increasingly important that they go beyond just interpreting the specific instructions they receive,",
+        "speaker": "OpenAI",
+        "speaker_role": "",
+        "source_url": "https://thenextweb.com/news/openai-model-spec-five-values-update"
+      },
+      {
+        "text": "The model should also not tell people what it thinks they want to hear.",
+        "speaker": "OpenAI",
+        "speaker_role": "",
+        "source_url": "https://thenextweb.com/news/openai-model-spec-five-values-update"
+      }
+    ],
+    "score": 7,
+    "url": "https://techmeme.com/261029/p42",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": null,
+    "sources": [
+      {
+        "url": "https://techmeme.com/261029/p42",
+        "publisher": "techmeme.com",
+        "title": "OpenAI updates Model Spec to reorganize it around five values: faithfulness to human intent, harm minimization, honesty and transparency, human agency, and care (OpenAI)"
+      },
+      {
+        "url": "https://openai.com/index/updated-model-spec",
+        "publisher": "OpenAI",
+        "title": "An updated Model Spec for more capable and beneficial AI"
+      },
+      {
+        "url": "https://thenextweb.com/news/openai-model-spec-five-values-update",
+        "publisher": "The Next Web",
+        "title": "OpenAI rewrites its AI rulebook around five core values"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-29T18:00:01+00:00",
+    "created_at": "2026-10-29T19:07:01+00:00",
+    "sectors": [],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 2,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "",
+    "trackers": [],
+    "stock_tried": "2026-10-29T19:07:01+00:00",
+    "photo_local": true,
+    "image_kind": "stock",
+    "photo_credit": {
+      "key": "wc:28837176",
+      "by": "MoD",
+      "license": "OGL v1.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Computer_Keyboard_MOD_45155531.jpg",
+      "via": "Wikimedia Commons"
+    }
+  },
+  {
+    "explainer": {
+      "what_it_means": "Google’s AI‑mode search returns longer, conversational answers that currently display fewer ads, so each query brings in less ad revenue than a standard web search. The company plans to insert more contextual ads within the AI‑mode conversation to raise revenue per query.",
+      "terms": [
+        {
+          "term": "AI Mode",
+          "meaning": "Google’s conversational search interface powered by Gemini models that answers queries with generated text."
+        },
+        {
+          "term": "Monetization",
+          "meaning": "The process of generating revenue from advertisements shown alongside search results."
+        },
+        {
+          "term": "Multi‑turn ads",
+          "meaning": "Advertisements that appear within a back‑and‑forth conversational flow rather than a static list of links."
+        }
+      ],
+      "watch_next": [
+        "Google will roll out contextual ads in AI Mode to users worldwide, expanding the format beyond the United States."
+      ]
+    },
+    "audiences": {
+      "builders": "Developers building on Google Search APIs may need to adapt to new ad formats in AI‑mode.",
+      "business": "Executives should note the revenue shortfall from AI‑mode and the company’s plan to increase ad inventory to protect profit margins.",
+      "investors": "Investors see the shift to AI‑mode ads as a response to slowing search revenue, indicating potential future earnings impact."
+    },
+    "id": "b394caaea480",
+    "headline": "Google says AI‑mode search generates less ad revenue per query, will add more ads worldwide",
+    "summary": "Google disclosed that AI‑mode queries earn less revenue than traditional web searches because they show fewer and cheaper ads. To close the gap, the company announced it will roll out multi‑turn ads in AI‑mode across international markets.",
+    "why_it_matters": "It shows how the shift to generative AI search is affecting the core advertising business that funds much of Alphabet’s operations.",
+    "category": "industry",
+    "lab": "Google",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "the strong growth in AI Mode queries had an impact because of the lower monetization we were seeing in AI Mode.",
+        "speaker": "Philipp Schindler",
+        "speaker_role": "Chief Business Officer",
+        "source_url": "https://247wallst.com/investing/2026/10/29/google-admits-its-ai-search-makes-less-money-than-regular-search"
+      },
+      {
+        "text": "Queries in AI Mode are on average three times longer than traditional searches, and one in five AI Mode searches globally use voice, images, or documents.",
+        "speaker": "Sundar Pichai",
+        "speaker_role": "CEO",
+        "source_url": "https://247wallst.com/investing/2026/10/29/google-admits-its-ai-search-makes-less-money-than-regular-search"
+      }
+    ],
+    "score": 6,
+    "url": "https://arstechnica.com/gadgets/2026/10/google-admits-ai-search-makes-less-money-but-its-fixing-that-with-more-ads",
+    "source_id": "ars-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://cdn.arstechnica.net/wp-content/uploads/2025/05/Google-sign-IO-1152x648.jpg",
+    "sources": [
+      {
+        "url": "https://arstechnica.com/gadgets/2026/10/google-admits-ai-search-makes-less-money-but-its-fixing-that-with-more-ads",
+        "publisher": "Ars Technica AI",
+        "title": "Google admits AI search makes less money, but it's fixing that with more ads"
+      },
+      {
+        "url": "https://247wallst.com/investing/2026/10/29/google-admits-its-ai-search-makes-less-money-than-regular-search",
+        "publisher": "24/7 Wall St.",
+        "title": "Google Admits Its AI Search Makes Less Money Than Regular Search"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-10-29T16:24:55+00:00",
+    "created_at": "2026-10-29T19:07:01+00:00",
+    "thread": "t-e86271b1dbd5",
+    "sectors": [
+      "media"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 1,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "",
+    "trackers": [],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Solink adds AI software to cameras that are already installed in stores, turning video streams into data that can be analyzed for things like inventory loss or customer traffic. This lets physical‑store operators get digital‑style insights without new hardware.",
       "terms": [
         {
@@ -2063,6 +2253,100 @@
     "cover": "30‑billion",
     "trackers": [
       "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "China's draft export rules will restrict the direct transfer of AI models, data and technical expertise to foreign firms, but will still allow foreign users to access AI services hosted on Chinese websites or cloud platforms. Companies that rely on overseas computing resources will need government approval to move core AI technology abroad. This creates a regulatory barrier for international collaboration on advanced AI systems.",
+      "terms": [
+        {
+          "term": "export control list",
+          "meaning": "A list of items whose export is prohibited or restricted by a government."
+        },
+        {
+          "term": "large language model",
+          "meaning": "A type of AI that processes and generates text based on massive training data."
+        },
+        {
+          "term": "AI agents",
+          "meaning": "Software that can perform tasks with limited human direction, using AI capabilities."
+        }
+      ],
+      "watch_next": [
+        "China is expected to adopt the proposals by the end of the year",
+        "Guidelines on implementation are slated to be issued later, according to an anonymous source"
+      ]
+    },
+    "audiences": {
+      "builders": "Developers must seek approval before transferring core AI models or related data to overseas facilities.",
+      "business": "Chinese AI firms may need to restructure international partnerships and adjust how they sell AI services abroad.",
+      "investors": "The new rules add uncertainty for investors in Chinese AI and semiconductor companies."
+    },
+    "id": "62c0d830968d",
+    "headline": "China drafts export controls on 23 AI technologies, pending adoption by year‑end",
+    "summary": "China released draft rules on Oct. 16 that would add 23 AI‑related technologies, including large language models, agents, chip‑design tools and computing clusters, to its export‑control list. The rules would let overseas users access Chinese AI services online while requiring government approval for transfers of underlying models, data or expertise, and are expected to be adopted by the end of the year.",
+    "why_it_matters": "The measures tighten how Chinese AI capabilities can be shared abroad, affecting global AI development and supply chains.",
+    "category": "policy",
+    "lab": "",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "The structure the leadership prefers, with IP and R&D kept onshore and operations and access sold abroad, is the one the market was already converging on,",
+        "speaker": "Alfredo Montufar-Helu",
+        "speaker_role": "Beijing-based managing director at consultancy Ankura",
+        "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/chinas-new-export-curbs-draw-a-line-around-its-ai-crown-jewels/articleshow/135289950.cms"
+      }
+    ],
+    "score": 8,
+    "url": "https://miamiherald.com/news/business/article317810613.html",
+    "source_id": "chief",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-1953991,resizemode-75,msid-135289950/tech/artificial-intelligence/chinas-new-export-curbs-draw-a-line-around-its-ai-crown-jewels.jpg",
+    "sources": [
+      {
+        "url": "https://miamiherald.com/news/business/article317810613.html",
+        "publisher": "Miami Herald",
+        "title": "China's new export curbs draw a line around its AI crown jewels"
+      },
+      {
+        "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/chinas-new-export-curbs-draw-a-line-around-its-ai-crown-jewels/articleshow/135289950.cms",
+        "publisher": "ET Tech",
+        "title": "China's new export curbs draw a line around its AI crown jewels"
+      },
+      {
+        "url": "https://apnews.com/article/china-export-restrictions-ai-chips-solar-us-5ac381c0c6d6628bbea2e0da7d855a5b",
+        "publisher": "Associated Press News",
+        "title": "China moves to curb tech exports, including AI, citing national security risks"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-28T14:10:00+00:00",
+    "created_at": "2026-10-29T19:07:01+00:00",
+    "thread": "t-146d639e76ac",
+    "sectors": [
+      "government"
+    ],
+    "regions": [
+      "china"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 1,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "23 AI tech",
+    "trackers": [
+      "us-china",
+      "ai-regulation"
     ],
     "photo_local": true
   },

@@ -1,0 +1,299 @@
+{
+  "started_at": "2026-10-29T19:07:01+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1337)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (894)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (21)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (13)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Just wrapped our earnings call. It was a fast start to our fiscal year. Microsoft Cloud revenue surpassed $63B, with growth accelerating to 30% YoY. Lots of innovation as we build the new tech stack…",
+      "reason": "not AI: Microsoft earnings call focuses on cloud revenue; no substantive AI angle."
+    },
+    {
+      "title": "We’re redefining the SDLC for the agentic era. Lots of GitHub updates this morning at Universe [Read more]",
+      "reason": "not AI: Blog post about SDLC for the agentic era is marketing‑style content without news value."
+    },
+    {
+      "title": "I went to Mexico to test-drive the cars Americans can’t buy",
+      "reason": "not AI: Non‑AI story about cars; not relevant."
+    },
+    {
+      "title": "LLM Voice",
+      "reason": "not AI: Generic LLM Voice post without news value."
+    },
+    {
+      "title": "Granola crunches up a dictation feature to compete with Wispr",
+      "reason": "score 4: Product feature war between dictation apps; minor AI angle."
+    },
+    {
+      "title": "Mistral releases weights for its trillion-parameter AI model, targeting cybersecurity",
+      "reason": "duplicate of 8ccea7e89b70"
+    },
+    {
+      "title": "US investigated Chinese spy plot aimed at Nvidia CEO",
+      "reason": "not AI: Investigation of Chinese spy plot targeting Nvidia CEO; not AI‑focused."
+    },
+    {
+      "title": "Amazon updates Alexa to help you manage shopping lists and subscriptions and update delivery instructions",
+      "reason": "score 4: Alexa shopping‑list update is a routine product enhancement."
+    },
+    {
+      "title": "You can generate and edit Google Docs files directly in Gemini chats now",
+      "reason": "score 4: Gemini file‑editing feature is a minor product update."
+    },
+    {
+      "title": "ED Probes Unauthorised Cross-Border Crypto Transfers Worth ₹4,940 Cr",
+      "reason": "not AI: Crypto‑related enforcement action in India; no AI angle."
+    },
+    {
+      "title": "Bijnis Rebrands As Zorit, Raises ₹27 Cr For B2B Quick Commerce",
+      "reason": "not AI: Indian e‑commerce rebrand and funding; not AI‑related."
+    },
+    {
+      "title": "Spacetech Soonicorn Pixxel Eyes US Expansion With New Subsidiary",
+      "reason": "not AI: Indian space‑tech company expansion; no AI focus."
+    },
+    {
+      "title": "Building a multiplayer game world with autonomous Fable-class models",
+      "reason": "score 4: Personal commentary on building a multiplayer game world with autonomous models; interesting but not newsworthy."
+    },
+    {
+      "title": "Ethan Mollick: This is good advice from the Claude Code team (posted on X) for how to think about working with models like Opus 5.5. I would add: build…",
+      "reason": "score 4: Short advice tweet from Ethan Mollick; lacks broader relevance."
+    },
+    {
+      "title": "Utah files 14 criminal charges against Kalshi and its co-founders Tarek Mansour and Luana Lopes Lara for allegedly breaking Utah's gambling laws (Andy Larsen/Salt Lake Tribune)",
+      "reason": "duplicate of 7591cbcc85bc"
+    },
+    {
+      "title": "DeepSeek and Moonshot AI are reportedly using GPT-6 Astra for training",
+      "reason": "duplicate of 7591cbcc85bc"
+    },
+    {
+      "title": "Chinese AI giants DeepSeek, Moonshot used OpenAI's GPT-6 Astra to train their models: report",
+      "reason": "duplicate of 7591cbcc85bc"
+    },
+    {
+      "title": "Moonshot AI and DeepSeek reportedly used OpenAI’s GPT-6 Astra outputs to build new models",
+      "reason": "duplicate of 7591cbcc85bc"
+    },
+    {
+      "title": "Google is ruining AI mode with even more ads — and you can't opt out",
+      "reason": "score 4: Opinion piece on Google adding ads to AI mode; not a major news event."
+    },
+    {
+      "title": "Google expands ads in AI mode to 10 new markets, with UK and Brazil next",
+      "reason": "score 4: Announcement of AI‑mode ad expansion to new markets; routine marketing."
+    },
+    {
+      "title": "Google is sneaking more ads into AI Mode searches",
+      "reason": "score 4: Report on more ads in AI mode; low news value."
+    },
+    {
+      "title": "Google Widens AI Search Ads as Search Revenue Growth Slows",
+      "reason": "score 4: Google widens AI search ads; routine coverage."
+    },
+    {
+      "title": "Google Admits Its AI Search Makes Less Money Than Regular Search",
+      "reason": "score 6: Duplicate of story about Google’s AI search revenue shortfall."
+    },
+    {
+      "title": "Google expands AI Search ads globally as core ad growth slows",
+      "reason": "score 6: Duplicate of story about Google expanding AI search ads globally."
+    },
+    {
+      "title": "Alphabet's stock falls 12%+, wiping a record $500B from its market cap, after reporting negative cash flow amid its AI spending; the Nasdaq falls 1.4%+ (Stephen Morris/Financial Times)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Microsoft’s AI future has fewer jobs",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Source: Dulo, a startup co-founded by Google veteran Sebastian Thrun to build \"foundation models for hardware design\", raised a $130M seed (Rocket Drew/The Information)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Serval, which offers AI agents for enterprise IT operations like access management, raised $150M led by Sequoia at a $3B valuation, up from $1B in December 2025 (Harshita Mary Varghese/Reuters)",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Ex-Palantir execs launch Dream with $17M from a16z to build AI world models for construction",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "62c0d830968d",
+      "headline": "China drafts export controls on 23 AI technologies, pending adoption by year‑end",
+      "category": "policy",
+      "summary": "China released draft rules on Oct. 16 that would add 23 AI‑related technologies, including large language models, agents, chip‑design tools and computing clusters, to its export‑control list. The rules would let overseas users access Chinese AI services online while requiring government approval for transfers of underlying models, data or expertise, and are expected to be adopted by the end of the year.",
+      "url": "https://miamiherald.com/news/business/article317810613.html",
+      "sources": 3,
+      "quotes": 1
+    },
+    {
+      "id": "a9f4b70fc71c",
+      "headline": "OpenAI revises Model Spec around five core values",
+      "category": "safety",
+      "summary": "OpenAI updated its public Model Spec, reorganizing it around five values: faithfulness to human intent, harm minimization, honesty and transparency, human agency, and care. The update drops most style rules, renames the model as “GPT”, and acknowledges current models do not fully follow the new spec.",
+      "url": "https://techmeme.com/261029/p42",
+      "sources": 3,
+      "quotes": 2
+    },
+    {
+      "id": "b394caaea480",
+      "headline": "Google says AI‑mode search generates less ad revenue per query, will add more ads worldwide",
+      "category": "industry",
+      "summary": "Google disclosed that AI‑mode queries earn less revenue than traditional web searches because they show fewer and cheaper ads. To close the gap, the company announced it will roll out multi‑turn ads in AI‑mode across international markets.",
+      "url": "https://arstechnica.com/gadgets/2026/10/google-admits-ai-search-makes-less-money-but-its-fixing-that-with-more-ads",
+      "sources": 2,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "ignored made-up duplicate id b394caaea480 for 'Google Admits Its AI Search Makes Less Money Than '",
+    "ignored made-up duplicate id b394caaea480 for 'Google expands AI Search ads globally as core ad g'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "4 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 78.2,
+    "audit": -0.0,
+    "plan": 1.7,
+    "judge": 2.5,
+    "verify and write": 431.4,
+    "videos": 24.6,
+    "tagging": 0.8,
+    "explainers": 0.0,
+    "trackers": 63.4,
+    "claims": 20.4,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 21.3,
+    "self-review": -0.0,
+    "photos": 0.4,
+    "stock photos": 16.6,
+    "daily email": -0.0,
+    "alerts": 4.3
+  },
+  "fetched": 2906,
+  "fresh": 28,
+  "plan": {
+    "focus": "Tracking OpenAI's new model safety values and the funding surge in AI startups as investors reassess market dynamics.",
+    "priorities": [
+      "OpenAI updates Model Spec to reorganize it around five values: faithfu (OpenAI's model spec overhaul signals shifting safety priorities affecting all AI stakeholders.)",
+      "Mistral releases weights for its trillion-parameter AI model, targetin (Mistral's trillion‑parameter model release targets cybersecurity, a key sector for builders and investors.)",
+      "Alphabet's stock falls 12%+, wiping a record $500B from its market cap (Alphabet's sharp stock drop highlights the financial risk of heavy AI spending for a major tech player.)",
+      "Source: Dulo, a startup co-founded by Google veteran Sebastian Thrun t (Dulo's $130M seed round for foundation models in hardware design shows emerging niche opportunities.)",
+      "Serval, which offers AI agents for enterprise IT operations like acces (Serval's $150M raise underscores growing demand for AI agents in enterprise IT operations.)"
+    ],
+    "thin_areas": [
+      "research",
+      "voices"
+    ],
+    "searches": [
+      "DeepSeek GPT-6 Astra training: 4 new",
+      "China AI export controls updates: 1 new",
+      "Google AI Mode ads revenue Q4: 6 new"
+    ],
+    "dig_deeper": [
+      "OpenAI updates Model Spec to reorganize it around five values: faithfu",
+      "Alphabet's stock falls 12%+, wiping a record $500B from its market cap"
+    ]
+  },
+  "judged": 39,
+  "kept": 8,
+  "research": {
+    "investigated": 5,
+    "confirmed": 2,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "Alphabet's stock falls 12%+, wiping a record $500B from its market cap: unconfirmed (searched “Alphabet stock falls 12% negative cash flow AI spending Nasdaq falls 1.4% Stephen Morris Financial Times”; read indiatimes.com; searched “\"Alphabet\" \"Nasdaq\" \"1.4%\"”)",
+    "China's new export curbs draw a line around its AI crown jewels: confirmed (searched “China new export curbs AI crown jewels export controls AI”; read bloomberg.com; read indiatimes.com)",
+    "Microsoft’s AI future has fewer jobs: unconfirmed (searched “Microsoft voluntary buyouts 60,000 employees buyout offer 2024”; read techrepublic.com; read msn.com)",
+    "OpenAI updates Model Spec to reorganize it around five values: faithfu: confirmed (searched “OpenAI updates Model Spec five values faithfulness to human intent harm minimization honesty transparency human agency care”; read msn.com; searched “Reuters OpenAI model spec five values”)",
+    "Source: Dulo, a startup co-founded by Google veteran Sebastian Thrun t: unconfirmed (searched “Dulo startup $130 million seed round Sebastian Thrun”; searched “\"Dulo\" startup seed 130M”; searched “Sebastian Thrun Dulo startup seed round”)"
+  ],
+  "threads": [
+    "China AI export controls: new curbs: China drafts export controls on 23 AI technologies, pending ",
+    "Google AI Mode ads: fixing lower earnings: Google says AI‑mode search generates less ad revenue per que"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 1 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (8 in feed, 0 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "3 kept from 4 new",
+  "tagged": 3,
+  "trackers": "filed 2 stories; updated us-china, ai-regulation",
+  "claims": "49 tracked, 48 open, 0 updated this run",
+  "model_tracker": "82 models, 36 changes today",
+  "briefing": "3 themes from 20 stories",
+  "photos": "2 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "46 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":31}",
+  "ai_requests_run": 34,
+  "ai_tokens_run": 76384,
+  "ai_requests_today": 270,
+  "provider_log": []
+}
