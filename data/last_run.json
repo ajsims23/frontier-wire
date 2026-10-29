@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-29T10:03:33+00:00",
+  "started_at": "2026-10-29T13:13:50+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -9,307 +9,42 @@
     "openai": "ok (1334)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
-    "huggingface": "ok (891)",
+    "huggingface": "ok (892)",
     "nvidia": "ok (18)",
     "anthropic": "ok (6)",
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)",
-    "hf-models": "ok (57)",
-    "arxiv": "ok (40)",
-    "hf-papers": "ok (22)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (10)",
-    "techcrunch-ai": "ok (20)",
-    "verge-ai": "ok (10)",
-    "mit-tr-ai": "ok (10)",
-    "ars-ai": "ok (20)",
-    "aim": "ok (50)",
-    "inc42": "ok (24)",
-    "medianama": "ok (10)",
-    "mint-tech": "ok (35)",
-    "et-tech": "ok (50)",
-    "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
-    "crunchbase-news": "ok (10)",
-    "import-ai": "ok (10)",
-    "simon-willison": "ok (30)",
-    "sam-altman": "ok (30)",
-    "bluesky": "ok (28)",
-    "auto-techmeme.com": "ok (15)"
+    "mistral": "ok (6)"
   },
   "dropped": [
     {
-      "title": "The Economics of Continuous Inference",
-      "reason": "score 4: Analytical piece on inference economics; lacks a concrete news hook."
-    },
-    {
-      "title": "SAP India Targets 2 Million People for AI Skilling by 2030",
-      "reason": "score 4: AI skilling target by SAP India is a training initiative, not a major industry development."
-    },
-    {
-      "title": "Google Announces Gemini 4 Carbon With Focus on Cybersecurity and Coding",
-      "reason": "duplicate of 41e0dc889e76"
-    },
-    {
-      "title": "BlackBuck Q2: Profit Rises 42% YoY To ₹41 Cr, Revenue Jumps 56%",
-      "reason": "not AI: Financial results of a logistics firm; no AI angle."
-    },
-    {
-      "title": "Shadowfax Q2 Profit Zooms Over 5X YoY To ₹68 Cr, Revenue Crosses ₹1,500 Cr",
-      "reason": "not AI: Logistics profit report; not AI‑related."
-    },
-    {
-      "title": "Pine Labs Q2 Profit Jumps Over 6X YoY To ₹38.6 Cr, Revenue Rises 24%",
-      "reason": "not AI: Pine Labs profit news; no AI relevance."
-    },
-    {
-      "title": "Ace Blend Raises $9.9 Mn To Fund Clinical Trials, Expand Nutrition Portfolio",
-      "reason": "not AI: Nutrition brand funding; no AI angle."
-    },
-    {
-      "title": "Info Edge Q2: Profit jumps 87% to Rs 650 crore, revenue up 12%",
-      "reason": "not AI: Info Edge financial results; not AI‑related."
-    },
-    {
-      "title": "As crypto markets mature, technical analysis moves to the core of investor strategy",
-      "reason": "not AI: Crypto market analysis unrelated to AI."
-    },
-    {
-      "title": "How Pocket FM is using AI to take Indian stories global",
-      "reason": "score 4: Pocket FM’s AI‑assisted writing tool is an interesting use case but not a major industry development."
-    },
-    {
-      "title": "Sell first, build second, automate last: A solo founder’s playbook for the AI era",
-      "reason": "score 3: Founder advice piece; no news value for AI audience."
-    },
-    {
-      "title": "Beyond AI infrastructure, India’s tech boom rests on the efficient use of power and water",
-      "reason": "score 3: Climatetech discussion; AI not central."
-    },
-    {
-      "title": "Vladimir Putin praises Elon Musk as a \"real genius\" and says Russia is in \"close contact\" with Musk and the US to coordinate Rassvet and Starlink satellites (Kali Hays/BBC)",
-      "reason": "not AI: Political commentary about Elon Musk and Putin; no AI angle."
-    },
-    {
-      "title": "Apple's touchscreen MacBook Pro is designed for the iPad generation, with an optimized macOS, and the company is right to move on from Steve Jobs' skepticism (Federico Viticci/MacStories)",
-      "reason": "not AI: Product review of Apple hardware; not AI‑focused."
-    },
-    {
-      "title": "A profile of Nscale CEO Josh Payne, who is proceeding with plans for a US IPO that sources say is targeting a $30B valuation despite some investor pushback (Mark Bergen/Bloomberg)",
-      "reason": "not AI: Profile of a non‑AI startup CEO; not relevant to AI audience."
-    },
-    {
-      "title": "Samsung's shares fall up to 6.6%, as a lack of a new shareholder return plan, higher capex, and its chip unit's Q3 profit miss weigh on investor sentiment (Bloomberg)",
-      "reason": "score 5: Samsung share decline and capex concerns are financial market news; AI relevance is peripheral and the story lacks core AI impact."
-    },
-    {
-      "title": "Google expands ads in AI Mode to 10 new markets, with UK and Brazil next",
-      "reason": "duplicate of 1744c9c4d2ed"
-    },
-    {
-      "title": "Google AI Mode is getting more ads, whether you like it or not",
-      "reason": "duplicate of 1744c9c4d2ed"
-    },
-    {
-      "title": "Google Expands Ads in AI Mode to 10 Countries",
-      "reason": "duplicate of 1744c9c4d2ed"
-    },
-    {
-      "title": "Google expands ads in AI-powered search across 10 global markets, including India",
-      "reason": "duplicate of 1744c9c4d2ed"
-    },
-    {
-      "title": "Google Search ad revenue grows 12% to $63.3 billion despite lower AI Mode monetisation",
-      "reason": "score 5: Duplicate of the Google search revenue story already captured."
-    },
-    {
-      "title": "Google Says Lower AI Mode Monetization Weighed On Search Growth",
-      "reason": "score 5: Duplicate of the Google search revenue story."
-    },
-    {
-      "title": "Alphabet's heavy cloud spending drives bigger-than-expected cash burn",
-      "reason": "variety: already 2 stories from indiatimes.com this run"
-    },
-    {
-      "title": "STMicro nearly doubles quarterly profit, sees Q4 sales exceeding $4 billion",
-      "reason": "variety: already 2 stories from indiatimes.com this run"
-    },
-    {
-      "title": "US officials believe Megaspeed executive Alice Huang is a Chinese asset who maintained a close relationship with Jensen Huang to pass intelligence to Beijing (New York Times)",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Coforge Introduces Autonomous Software Factory to Coordinate AI Agents",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Marvell in advanced talks to buy Lumentum: Bloomberg News",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "AI has come for Arizona’s water",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Freshworks Acquires AI Startup Robusta To Strengthen IT Operations Platform",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "AI-led services to generate up to USD 200 billion in new work by 2030: BCG report",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Sarvam, Krutrim Account for 68% of Indic AI Funding as Sector Raises $687 Million: Tracxn",
-      "reason": "could not verify yet after a second try; dropped"
+      "title": "Slice Into GFN Thursday: ‘Phantom Blade Zero’ Launches on GeForce NOW",
+      "reason": "not AI: The announcement is a gaming title launch on NVIDIA's GeForce NOW service. It has no AI focus, no relevance to frontier AI models, policy, safety, or infrastructure, and is essentially marketing content. Scores low and should not be kept."
     }
   ],
-  "written": [
-    {
-      "id": "a9ed334371b6",
-      "headline": "Samsung plans ~60% capex rise to $63 billion in 2026, HBM sold out through 2027",
-      "category": "industry",
-      "summary": "Samsung Electronics expects its semiconductor capital spending to jump about 60% to roughly $63 billion in 2026, with its high‑bandwidth memory capacity fully booked through 2027 and ten long‑term supply deals secured.",
-      "url": "https://techmeme.com/261029/p4",
-      "sources": 2,
-      "quotes": 0
-    },
-    {
-      "id": "be2d2407c3e0",
-      "headline": "China proposes export controls on 23 AI technologies",
-      "category": "policy",
-      "summary": "China released draft rules on Oct. 16 that would add 23 AI‑related technologies, including large language models, agents, chip designs and computing clusters, to its export‑control list. The measures would let overseas users access Chinese AI services via websites and cloud platforms while requiring government approval for transfers of underlying models, data or expertise.",
-      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/chinas-new-export-curbs-draw-a-line-around-its-ai-crown-jewels/articleshow/135289950.cms",
-      "sources": 2,
-      "quotes": 1
-    },
-    {
-      "id": "588ad71bad86",
-      "headline": "Google Q3 2026 search ad revenue up 12% to $63.25 billion, growth slows",
-      "category": "industry",
-      "summary": "Google said its search advertising revenue rose 12% year‑over‑year to $63.25 billion in Q3 2026, but the growth rate fell from 14.5% a year earlier, which the company linked to lower monetization in its AI‑powered search mode.",
-      "url": "https://techmeme.com/261029/p3",
-      "sources": 2,
-      "quotes": 0
-    }
-  ],
-  "notes": [
-    "not India desk: 'Freshworks Acquires AI Startup Robusta To Strength'",
-    "not India desk: 'AI-led services to generate up to USD 200 billion '",
-    "not India desk: 'Alphabet's heavy cloud spending drives bigger-than'",
-    "not India desk: 'STMicro nearly doubles quarterly profit, sees Q4 s'",
-    "not India desk: 'Marvell in advanced talks to buy Lumentum: Bloombe'",
-    "not India desk: 'China's new export curbs draw a line around its AI'",
-    "ignored made-up duplicate id 588ad71bad86 for 'Google Search ad revenue grows 12% to $63.3 billio'",
-    "ignored made-up duplicate id 588ad71bad86 for 'Google Says Lower AI Mode Monetization Weighed On '",
-    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "6 kept item(s) carried over to the next run"
-  ],
-  "mode": "full",
+  "written": [],
+  "notes": [],
+  "mode": "breaking",
   "timings": {
-    "gather": 81.5,
-    "audit": -0.0,
-    "plan": 1.9,
-    "judge": 25.6,
-    "verify and write": 422.5,
-    "videos": 24.2,
-    "tagging": 1.0,
-    "explainers": -0.0,
-    "trackers": 63.0,
-    "claims": 20.9,
-    "model tracker": 0.0,
-    "weekly": 0.0,
-    "builders": 0.0,
-    "top voices": 0.0,
-    "briefing": 21.0,
-    "self-review": -0.0,
-    "photos": 0.5,
-    "stock photos": 18.0,
-    "daily email": -0.0,
-    "alerts": 8.3
+    "gather": 12.9,
+    "judge": 1.9,
+    "verify and write": 0.0,
+    "tagging": 0.0,
+    "trackers": 0.0,
+    "photos": 0.0,
+    "stock photos": 0.0,
+    "alerts": 3.2
   },
-  "fetched": 2898,
-  "fresh": 29,
-  "plan": {
-    "focus": "Tracking the fallout from Samsung’s capex surge while filling gaps in safety and research coverage.",
-    "priorities": [
-      "Samsung's shares fall up to 6.6%, as a lack of a new shareholder retur (Samsung shares tumble amid capex concerns, key for industry investors)",
-      "Samsung expects capex to rise ~60% to ~$63B in 2026, with HBM capacity (Samsung outlines massive 2026 capex rise, signals supply chain trends)",
-      "Google Announces Gemini 4 Carbon With Focus on Cybersecurity and Codin (Google Gemini 4 Carbon launch ties to cybersecurity, relevant for model readers)",
-      "US officials believe Megaspeed executive Alice Huang is a Chinese asse (US officials allege Megaspeed exec espionage, a safety/policy risk story)",
-      "Coforge Introduces Autonomous Software Factory to Coordinate AI Agents (Coforge’s autonomous software factory showcases India AI ops growth)"
-    ],
-    "thin_areas": [
-      "research",
-      "safety"
-    ],
-    "searches": [
-      "DeepSeek funding round next: 0 new",
-      "Sarvam AI defence partnership expansion: 0 new",
-      "Google AI Mode ads Q4 performance: 6 new"
-    ],
-    "dig_deeper": [
-      "Google Announces Gemini 4 Carbon With Focus on Cybersecurity and Codin",
-      "US officials believe Megaspeed executive Alice Huang is a Chinese asse"
-    ]
-  },
-  "judged": 35,
-  "kept": 12,
-  "research": {
-    "investigated": 5,
-    "confirmed": 2,
-    "tool_calls": 15
-  },
-  "research_log": [
-    "US officials believe Megaspeed executive Alice Huang is a Chinese asse: unconfirmed (searched “Megaspeed executive Alice Huang Chinese asset Jensen Huang intelligence Beijing”; read nytimes.com; searched “Megaspeed Alice Huang Chinese asset Jensen Huang”)",
-    "Samsung expects capex to rise ~60% to ~$63B in 2026, with HBM capacity: confirmed (searched “Samsung expects capex to rise 60% to $63B 2026 HBM capacity sold out through 2027 10 long-term supply deals”; read cryptobriefing.com; read bloomberg.com)",
-    "Coforge Introduces Autonomous Software Factory to Coordinate AI Agents: unconfirmed (searched “Coforge Autonomous Software Factory AI agents”; read cxotoday.com; read taxguru.in)",
-    "Marvell in advanced talks to buy Lumentum: Bloomberg News: unconfirmed (searched “Marvell advanced talks to buy Lumentum”; read msn.com; searched “Reuters Marvell advanced talks to buy Lumentum”)",
-    "China's new export curbs draw a line around its AI crown jewels: confirmed (searched “China export curbs AI draft rules October 16 2024”; read reuters.com; read bloomberg.com)"
-  ],
-  "threads": [
-    "China AI export controls policy update: China proposes export controls on 23 AI technologies",
-    "Google AI Mode ads revenue impact: Google Q3 2026 search ad revenue up 12% to $63.25 billion, g"
-  ],
-  "videos": {
-    "OpenAI": "ok (10 in feed, 0 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 1 new)",
-    "Google for Developers": "ok (8 in feed, 0 new)",
-    "AI at Meta": "ok (7 in feed, 0 new)",
-    "Microsoft Research": "ok (8 in feed, 0 new)",
-    "NVIDIA": "ok (9 in feed, 0 new)",
-    "Hugging Face": "ok (13 in feed, 1 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 0 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (5 in feed, 1 new)",
-    "Latent Space": "ok (14 in feed, 0 new)",
-    "Training Data (Sequoia)": "ok (6 in feed, 1 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 0 new)",
-    "Hard Fork": "ok (1 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (2 in feed, 0 new)",
-    "20VC": "ok (4 in feed, 0 new)"
-  },
-  "videos_kept": "3 kept from 4 new",
-  "tagged": 3,
-  "trackers": "filed 2 stories; updated us-china, ai-infrastructure",
-  "claims": "47 tracked, 46 open, 0 updated this run",
-  "model_tracker": "82 models, 26 changes today",
-  "briefing": "3 themes from 17 stories",
-  "photos": "2 saved, 0 unavailable",
-  "stock photos": "1 added",
-  "alerts": "35 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":27}",
-  "ai_requests_run": 35,
-  "ai_tokens_run": 88749,
-  "ai_requests_today": 137,
-  "provider_log": [
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
-  ]
+  "fetched": 2398,
+  "fresh": 1,
+  "judged": 1,
+  "kept": 0,
+  "trackers": "filed 0 stories; no tracker changed",
+  "photos": "0 saved, 0 unavailable",
+  "alerts": "32 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":0}",
+  "ai_requests_run": 1,
+  "ai_tokens_run": 5184,
+  "ai_requests_today": 138,
+  "provider_log": []
 }
