@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T13:13:50+00:00",
+  "updated_at": "2026-10-29T13:15:34+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Gemini 4 Carbon is a new AI system that can write code, perform complex tasks and spot security flaws better than earlier versions. Google is testing it internally and will release it gradually, starting with select subscribers and API users. Until then, developers cannot use the model directly.",
@@ -96,6 +96,250 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Robusta’s AI agents automatically analyse monitoring data, code changes and infrastructure information to pinpoint the cause of a technology outage and suggest corrective steps. This reduces the number of alerts engineers must review manually and speeds up fixing problems. Human engineers still approve any changes before they affect live systems.",
+        "terms": [
+          {
+            "term": "incident intelligence engine",
+            "meaning": "software that uses AI to examine alerts and system data to determine why a disruption occurred."
+          },
+          {
+            "term": "AI agents",
+            "meaning": "automated programs that apply large language models to process large volumes of raw events and generate diagnostic insights."
+          },
+          {
+            "term": "token cost",
+            "meaning": "the amount of compute (measured in tokens) required for a language model to process input data."
+          }
+        ],
+        "watch_next": [
+          "Integration of Robusta’s capabilities into Freshservice",
+          "Deeper interoperability with FireHydrant incident‑response platform"
+        ]
+      },
+      "audiences": {
+        "builders": "Developers can leverage the new AI‑driven incident diagnosis tools to automate root‑cause analysis and reduce manual alert triage.",
+        "business": "Executives gain faster outage resolution and lower revenue loss by automating investigation and remediation steps.",
+        "investors": "The acquisition broadens Freshworks’ AI portfolio, potentially strengthening its market position in the SaaS IT‑service‑management space."
+      },
+      "id": "fa69c1823833",
+      "headline": "Freshworks acquires Israel AI startup Robusta Dev to boost incident management",
+      "summary": "Freshworks bought Israel‑based AI startup Robusta Dev for an undisclosed sum, adding AI‑driven incident investigation and remediation to its Freshservice platform. The deal expands Freshworks’ AI‑powered IT operations suite.",
+      "why_it_matters": "It shows how AI agents are being used to automate large‑scale incident diagnosis, reducing manual effort and speeding up outage resolution.",
+      "category": "industry",
+      "lab": "Freshworks",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "LLMs are fantastic at troubleshooting incidents,",
+          "speaker": "Natan Yellin",
+          "speaker_role": "co‑founder and CEO of Robusta",
+          "source_url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev"
+        },
+        {
+          "text": "Our technology lets AI Agents do that effectively in large enterprise environments, where there are so many raw events that investigating each one individually would be exorbitant from a token cost perspective.",
+          "speaker": "Natan Yellin",
+          "speaker_role": "co‑founder and CEO of Robusta",
+          "source_url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev"
+        }
+      ],
+      "score": 6,
+      "url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev",
+      "source_id": "yourstory",
+      "desk": "india",
+      "ai_relevance": "core",
+      "image": "https://images.yourstory.com/cs/2/11718bd02d6d11e9aa979329348d4c3e/FreshworksShutterstock1600x900-1785325223708.jpeg",
+      "sources": [
+        {
+          "url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev",
+          "publisher": "YourStory",
+          "title": "Freshworks acquires Israel-based AI startup Robusta Dev"
+        },
+        {
+          "url": "https://inc42.com/buzz/freshworks-acquires-ai-startup-robusta-to-strengthen-it-operations-platform",
+          "publisher": "Inc42",
+          "title": "Freshworks Acquires AI Startup Robusta To Strengthen IT Operations Platform"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-10-29T10:56:05+00:00",
+      "created_at": "2026-10-29T13:15:34+00:00",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "india"
+      ],
+      "deal": {
+        "type": "acquisition",
+        "company": "Freshworks",
+        "amount": "",
+        "usd": null
+      },
+      "relevance": {
+        "builders": 1,
+        "business": 2,
+        "investors": 3
+      },
+      "cover": "Robusta Dev",
+      "trackers": [
+        "ai-money"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Distillation lets a developer send many prompts to a more powerful model, collect its answers, and then train a smaller model on those responses. This can give the smaller model similar abilities at lower cost. The approach is used to build new models without recreating the original training effort.",
+        "terms": [
+          {
+            "term": "distillation",
+            "meaning": "A method where outputs from a larger model are used as training data for a smaller model."
+          },
+          {
+            "term": "prompts",
+            "meaning": "Input queries sent to a model to generate responses."
+          },
+          {
+            "term": "coding benchmark",
+            "meaning": "A test that measures a model’s ability to write or understand code."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "Kimi K3.1 Pro",
+          "benchmark": "coding benchmark",
+          "score": "outperformed GPT-6 Astra"
+        }
+      ],
+      "audiences": {
+        "builders": "Distillation provides a way to improve model capabilities using existing powerful models as data sources.",
+        "business": "The practice highlights competitive pressure as Chinese firms can catch up to US labs without equal training spend.",
+        "investors": "It signals that firms leveraging distillation may achieve rapid capability gains, affecting market dynamics."
+      },
+      "id": "7591cbcc85bc",
+      "headline": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra for distillation training",
+      "summary": "DeepSeek’s V4.1‑Flash‑1017 and Moonshot AI’s Kimi K3.1 Pro were trained using outputs from OpenAI’s GPT‑6 Astra through a distillation process. DeepSeek released V4.1‑Flash‑1017 on Oct 17 and Moonshot AI launched Kimi K3.1 Pro on Oct 23.",
+      "why_it_matters": "The use shows how leading models can be leveraged by rivals to replicate capabilities without comparable training investment.",
+      "category": "models",
+      "lab": "DeepSeek and Moonshot AI",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 8,
+      "url": "https://techmeme.com/261029/p19",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://techmeme.com/261029/p19",
+          "publisher": "techmeme.com",
+          "title": "Sources: DeepSeek and Moonshot AI heavily relied on GPT-6 Astra distillation to train models like Kimi K3.1 Pro and V4.1-Flash 1017, after Anthropic's crackdown (The Information)"
+        },
+        {
+          "url": "https://thenextweb.com/news/deepseek-moonshot-gpt-6-astra-distillation",
+          "publisher": "The Next Web",
+          "title": "DeepSeek and Moonshot trained new models on GPT-6 Astra, report says"
+        },
+        {
+          "url": "https://msn.com/en-ca/technology/artificial-intelligence/deepseek-moonshot-used-openai-s-gpt-6-astra-to-train-latest-models-the-information-reports/ar-AA2ghF3U",
+          "publisher": "Reuters on MSN",
+          "title": "DeepSeek, Moonshot used OpenAI's GPT-6 Astra to train latest models, The Information reports"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-29T10:46:03+00:00",
+      "created_at": "2026-10-29T13:15:34+00:00",
+      "thread": "t-cb46191c10a2",
+      "trackers": [
+        "frontier-race"
+      ],
+      "stock_tried": "2026-10-29T13:15:34+00:00"
+    },
+    {
+      "explainer": {
+        "what_it_means": "Freshworks will embed Robusta’s AI agents into Freshservice so the platform can automatically analyse monitoring data, pinpoint the cause of outages and suggest fixes. Engineers can review and approve any changes before they are applied to live systems.",
+        "terms": [
+          {
+            "term": "AI agents",
+            "meaning": "Software programs that use artificial‑intelligence models to perform tasks such as analysing data and making recommendations."
+          },
+          {
+            "term": "Incident investigation",
+            "meaning": "The process of analysing alerts and system changes to determine why a technology outage occurred."
+          },
+          {
+            "term": "IT service management (ITSM)",
+            "meaning": "A set of practices for delivering and supporting IT services, often using software platforms like Freshservice."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers can leverage the AI‑driven diagnostics to reduce manual troubleshooting effort.",
+        "business": "Enterprises can resolve IT incidents faster, potentially lowering downtime and revenue loss.",
+        "investors": "Freshworks expands its AI portfolio, which may strengthen its competitive position in the SaaS market."
+      },
+      "id": "20ac3a71666f",
+      "headline": "Freshworks acquires Israel AI startup Robusta Dev to add incident‑investigation AI to Freshservice",
+      "summary": "Freshworks bought Israel‑based AI startup Robusta Dev for an undisclosed sum. The acquisition adds AI‑driven outage diagnosis and remediation recommendations to Freshservice, Freshworks’ IT service‑management platform.",
+      "why_it_matters": "It gives enterprises AI tools to speed up IT incident resolution while keeping humans in the loop.",
+      "category": "industry",
+      "lab": "Freshworks",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "Our technology lets AI Agents do that effectively in large enterprise environments, where there are so many raw events that investigating each one individually would be exorbitant from a token cost perspective.",
+          "speaker": "Natan Yellin",
+          "speaker_role": "founder",
+          "source_url": "https://inc42.com/buzz/freshworks-acquires-ai-startup-robusta-to-strengthen-it-operations-platform"
+        },
+        {
+          "text": "LLMs are fantastic at troubleshooting incidents,",
+          "speaker": "Natan Yellin",
+          "speaker_role": "co‑founder and CEO",
+          "source_url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev"
+        }
+      ],
+      "score": 6,
+      "url": "https://inc42.com/buzz/freshworks-acquires-ai-startup-robusta-to-strengthen-it-operations-platform",
+      "source_id": "inc42",
+      "desk": "india",
+      "ai_relevance": "core",
+      "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/freshworks-acquisition-social-.jpg",
+      "sources": [
+        {
+          "url": "https://inc42.com/buzz/freshworks-acquires-ai-startup-robusta-to-strengthen-it-operations-platform",
+          "publisher": "Inc42",
+          "title": "Freshworks Acquires AI Startup Robusta To Strengthen IT Operations Platform"
+        },
+        {
+          "url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev",
+          "publisher": "YourStory",
+          "title": "Freshworks acquires Israel-based AI startup Robusta Dev"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-10-29T07:06:42+00:00",
+      "created_at": "2026-10-29T13:15:34+00:00",
+      "trackers": [
+        "ai-money"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "The MoU creates a framework for the Indian armed forces to use the same AI models and tools across the Army, Navy and Air Force. Projects will focus on helping with decisions, targeting and combining sensor data, while keeping humans in control of final actions.",
@@ -808,6 +1052,66 @@
       "cover": "$400 million",
       "trackers": [
         "ai-money"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "AnySpeechRecognizer lets apps use the same Swift API that Apple provides, but swap in different speech‑recognition engines that run on the device. AnyDecisionModel lets apps ask a model to answer yes/no or multiple‑choice questions and get a probability, without generating text. Both packages download open models from the Hugging Face Hub and run them locally, so data stays on the device.",
+        "terms": [
+          {
+            "term": "Core ML",
+            "meaning": "Apple’s framework for running machine‑learning models efficiently on its devices."
+          },
+          {
+            "term": "Speaker diarization",
+            "meaning": "Identifying and separating different speakers in an audio recording."
+          },
+          {
+            "term": "Speech‑to‑text",
+            "meaning": "Converting spoken audio into written text."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers can integrate open speech and decision models into Swift apps using familiar Apple APIs, with the option to choose engines like Parakeet or Qwen3‑ASR.",
+        "business": "Enterprises can lower reliance on proprietary speech services and keep voice data on‑device, potentially reducing costs and privacy concerns.",
+        "investors": "Investors see Hugging Face expanding its ecosystem into on‑device AI for Apple platforms, opening new market opportunities."
+      },
+      "id": "85d975255b4f",
+      "headline": "Hugging Face releases AnySpeechRecognizer and AnyDecisionModel for Apple devices",
+      "summary": "Hugging Face announced two new Swift packages, AnySpeechRecognizer and AnyDecisionModel, that let developers run open speech‑to‑text and decision models on iOS and macOS. The packages support NVIDIA’s Parakeet and Alibaba’s Qwen3‑ASR engines and can run locally via Core ML.",
+      "why_it_matters": "They give developers more flexibility and lower‑cost alternatives to Apple’s built‑in speech engine.",
+      "category": "models",
+      "lab": "Hugging Face",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "speech",
+        "decision",
+        "Apple",
+        "Swift"
+      ],
+      "quotes": [],
+      "score": 7,
+      "url": "https://huggingface.co/blog/anydecisionmodel",
+      "source_id": "huggingface",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://huggingface.co/blog/assets/anydecisionmodel/banner.png",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/anydecisionmodel",
+          "publisher": "Hugging Face blog",
+          "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-10-29T00:00:00+00:00",
+      "created_at": "2026-10-29T13:15:34+00:00",
+      "trackers": [
+        "ai-infrastructure"
       ],
       "photo_local": true
     },
@@ -5098,347 +5402,45 @@
         "frontier-race"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "DecisionRAG lets a language model evaluate many document candidates in a single forward pass, without generating text. It navigates from broad topics to specific passages, picking branches to explore. The approach speeds up search while improving relevance.",
-        "terms": [
-          {
-            "term": "Decision model",
-            "meaning": "A model that evaluates multiple options and selects among them based on learned criteria."
-          },
-          {
-            "term": "Dense retrieval",
-            "meaning": "A retrieval method that encodes queries and documents into fixed vectors and matches them by similarity."
-          },
-          {
-            "term": "R@1 (Recall at 1)",
-            "meaning": "The proportion of queries where the top retrieved result is relevant."
-          }
-        ],
-        "watch_next": []
-      },
-      "benchmarks": [
-        {
-          "model": "DecisionRAG",
-          "benchmark": "MultiDoc2Dial",
-          "score": "13.8 R@1 points"
-        },
-        {
-          "model": "DecisionRAG",
-          "benchmark": "Natural Questions",
-          "score": "17.4 Hit@1 points"
-        }
-      ],
-      "audiences": {
-        "builders": "Developers can explore retrieval pipelines that replace traditional retrievers with decision‑model based ranking.",
-        "business": "Enterprises could achieve faster and more accurate document search without extra indexing infrastructure."
-      },
-      "id": "7289dcfd7849",
-      "headline": "DecisionRAG improves retrieval without a first‑stage retriever",
-      "summary": "The paper introduces DecisionRAG, a decision‑model based retrieval method that outperforms dense retrieval with an 8B reranker by 13.8 R@1 points on MultiDoc2Dial and 17.4 Hit@1 points on Natural Questions, processing queries in 0.7‑1.8 seconds per query.",
-      "why_it_matters": "It shows that pretrained language models can be used for retrieval directly, reducing reliance on lexical matching.",
-      "category": "research",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://arxiv.org/abs/2610.35868",
-      "source_id": "arxiv",
-      "desk": "",
-      "image": "https://arxiv.org/html/2610.35868v1/figures/motivation_bottleneck3.png",
-      "sources": [
-        {
-          "url": "https://arxiv.org/abs/2610.35868",
-          "publisher": "arXiv (cs.AI, cs.CL, cs.LG)",
-          "title": "Retriever-Free Retrieval: Navigating Documents with Decision Models"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-26T17:59:44+00:00",
-      "created_at": "2026-10-27T07:03:08+00:00",
-      "figure_checked": true,
-      "image_kind": "figure",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 0,
-        "investors": 0
-      },
-      "cover": "13.8 R@1",
-      "trackers": [],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "In practice, the framework suggests AI agents should be built as systems that integrate large foundation models with runtime components that manage stateful workspaces, enabling them to carry out multi‑step tasks across applications. By classifying work conditions and required capabilities, developers can target specific improvements and measure success by the quality of completed work rather than just generated text.",
-        "terms": [
-          {
-            "term": "foundation models",
-            "meaning": "Large AI models trained on broad data that can be adapted to many tasks."
-          },
-          {
-            "term": "work agents",
-            "meaning": "AI systems that combine such models with runtime components to perform tasks in digital work environments."
-          },
-          {
-            "term": "stateful workspaces",
-            "meaning": "Environments where the progress and data of a task are maintained over time, allowing agents to reference prior steps."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "The framework gives developers concrete criteria for designing agents that can reliably execute complex workflows.",
-        "business": "Executives can gauge how AI might be applied to automate and verify digital work across tools.",
-        "investors": "The paper highlights a research direction that could affect the valuation of companies building AI work automation platforms."
-      },
-      "id": "217a3baef08f",
-      "headline": "New paper proposes framework for evaluating AI work agents",
-      "summary": "The paper titled “Work Agents: Systems, Capabilities, and Optimization” was submitted to arXiv on Oct 26, 2026 by Zishan Xu and 15 co‑authors. It offers a system‑level view that treats work agents as combinations of foundation models and runtime harnesses, defines work persistence and openness, and outlines capability families and optimization approaches.",
-      "why_it_matters": "It provides a unified framework for building and assessing AI agents that execute digital work, helping ensure reliable and verifiable outcomes.",
-      "category": "research",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://arxiv.org/abs/2610.35845",
-      "source_id": "arxiv",
-      "desk": "",
-      "image": null,
-      "sources": [
-        {
-          "url": "https://arxiv.org/abs/2610.35845",
-          "publisher": "arXiv (cs.AI, cs.CL, cs.LG)",
-          "title": "Work Agents: Systems, Capabilities, and Optimization"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 0,
-        "decision": "unconfirmed"
-      },
-      "published_at": "2026-10-26T17:56:21+00:00",
-      "created_at": "2026-10-27T07:03:08+00:00",
-      "figure_checked": true,
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 0,
-        "investors": 0
-      },
-      "cover": "Work Agents",
-      "trackers": [],
-      "stock_tried": "2026-10-27T07:03:08+00:00",
-      "photo_local": true,
-      "image_kind": "stock",
-      "photo_credit": {
-        "key": "ov:97f0417e-8b52-47af-9e6b-c5f4ea1bb8d2",
-        "by": "Aaron dp",
-        "license": "CC BY-SA 4.0",
-        "page": "https://commons.wikimedia.org/w/index.php?curid=99949313",
-        "via": "Wikimedia"
-      }
-    },
-    {
-      "audiences": {
-        "builders": "Anthropic’s massive revenue and cash reserves show strong demand for its AI services, but ongoing losses may affect pricing and API availability.",
-        "business": "The potential $2 trillion valuation signals intense market interest in AI, though the company’s governance limits shareholder control over strategic direction.",
-        "investors": "Investors see a large cash pile and possible high valuation, but must weigh significant net losses and extensive risk disclosures."
-      },
-      "id": "09134649a0da",
-      "headline": "Anthropic files S‑1 showing $16.3 billion H1 revenue and $131.7 billion cash",
-      "summary": "Anthropic filed a Form S‑1 for a Nasdaq IPO, reporting $16.3 billion revenue in the first half of 2026 and $131.7 billion in cash or cash equivalents. The filing suggests a potential valuation of up to $2 trillion and an offering that could raise as much as $100 billion.",
-      "why_it_matters": "The IPO highlights the scale of AI startup financing while underscoring governance and safety concerns that could affect the sector’s future.",
-      "category": "industry",
-      "lab": "Anthropic",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "the industry should slow its fast-moving development to give safety measures time to catch up",
-          "speaker": "Dario Amodei",
-          "speaker_role": "CEO",
-          "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/articleshow/135222913.cms"
-        }
-      ],
-      "score": 8,
-      "url": "https://msn.com/en-us/news/other/the-anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/ar-AA2g76lV",
-      "source_id": "chief",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/10/GettyImages-2151610601.jpg?resize=1200,799",
-      "sources": [
-        {
-          "url": "https://msn.com/en-us/news/other/the-anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/ar-AA2g76lV",
-          "publisher": "Associated Press News on MSN",
-          "title": "The Anthropic IPO by the numbers, from a possible valuation in the trillions to surging revenue"
-        },
-        {
-          "url": "https://techcrunch.com/2026/10/27/whos-really-in-charge-at-anthropic-after-the-ipo",
-          "publisher": "TechCrunch AI",
-          "title": "Who’s really in charge at Anthropic after the IPO?"
-        },
-        {
-          "url": "https://arstechnica.com/ai/2026/10/anthropic-ipo-warns-its-ai-could-blackmail-people-become-sentient-end-humanity",
-          "publisher": "Ars Technica AI",
-          "title": "Anthropic IPO warns its AI could blackmail people, become sentient, end humanity"
-        },
-        {
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/articleshow/135222913.cms",
-          "publisher": "ET Tech",
-          "title": "Anthropic IPO by the numbers, from a possible valuation in the trillions to surging revenue"
-        },
-        {
-          "url": "https://cnbc.com/2026/10/27/-anthropic-ipo-investors-growth-losses-s-1.html",
-          "publisher": "CNBC",
-          "title": "Anthropic's IPO could be 'speculative fiction' or a 'generational moment' — investors are split"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-26T16:53:17+00:00",
-      "created_at": "2026-10-27T21:50:06+00:00",
-      "thread": "t-a50b07bc6191",
-      "sectors": [],
-      "regions": [
-        "us"
-      ],
-      "deal": {
-        "type": "ipo",
-        "company": "Anthropic",
-        "amount": "$100 billion",
-        "usd": 100000000000.0
-      },
-      "relevance": {
-        "builders": 1,
-        "business": 2,
-        "investors": 3
-      },
-      "cover": "$2 trillion",
-      "explainer": null,
-      "trackers": [
-        "ai-money"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Microsoft is giving a voluntary exit package to about 60,000 staff members, allowing them to leave the company with a severance‑style payout. The offer applies to employees at the vice‑president level and below in the U.S., Canada, India and the U.K. It is presented as part of a broader effort to reduce costs and shift resources toward AI initiatives.",
-        "terms": [
-          {
-            "term": "buyout",
-            "meaning": "A voluntary severance package that employees can accept to leave the company."
-          },
-          {
-            "term": "voluntary exit offer",
-            "meaning": "An offer that lets eligible employees choose to depart the firm in exchange for a defined benefit package."
-          },
-          {
-            "term": "AI era",
-            "meaning": "The current period in which companies are focusing on artificial‑intelligence technologies and related products."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers may see fewer internal resources as Microsoft trims staff, but the shift could free up budget for AI tooling.",
-        "business": "Executives should note the scale of workforce reductions as Microsoft aligns its cost structure with AI priorities.",
-        "investors": "Investors may interpret the buyouts as a move to improve margins while the company invests in AI."
-      },
-      "id": "31748bfffea3",
-      "headline": "Microsoft offers buyouts to about 60,000 employees at VP level and below",
-      "summary": "Microsoft will offer voluntary exit buyouts to roughly 60,000 employees at the vice‑president level and below across the United States, Canada, India and the United Kingdom. The move is part of a cost‑cutting effort to retool the workforce for the artificial‑intelligence era, and eligible staff will receive severance‑like benefits.",
-      "why_it_matters": "It shows how a major tech firm is reshaping its workforce as it pivots toward AI‑driven products.",
-      "category": "industry",
-      "lab": "Microsoft",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "The Voluntary Exit Offer reflects an important part of how we’re evolving our approach to change: creating greater flexibility and, where possible, more ways for employees to shape their next chapter,",
-          "speaker": "Amy Coleman",
-          "speaker_role": "Chief People Officer",
-          "source_url": "https://techcrunch.com/2026/10/26/microsoft-offers-buyouts-to-around-60000-employees-reports-say"
-        },
-        {
-          "text": "This offer gives eligible employees who may be considering a future outside the company a new choice to make that transition now with support.",
-          "speaker": "Amy Coleman",
-          "speaker_role": "Chief People Officer",
-          "source_url": "https://techcrunch.com/2026/10/26/microsoft-offers-buyouts-to-around-60000-employees-reports-say"
-        }
-      ],
-      "score": 8,
-      "url": "https://techmeme.com/261026/p32",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/04/GettyImages-2269268389.jpg?resize=1200,800",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261026/p32",
-          "publisher": "techmeme.com",
-          "title": "Microsoft offers buyouts to ~60K workers at VP level and below across teams in the US, Canada, India, and the UK; its headcount at the end of June was 223K (Bloomberg)"
-        },
-        {
-          "url": "https://techcrunch.com/2026/10/26/microsoft-offers-buyouts-to-around-60000-employees-reports-say",
-          "publisher": "TechCrunch",
-          "title": "Microsoft offers buyouts to around 60,000 employees, reports say"
-        },
-        {
-          "url": "https://businessinsider.com/microsoft-is-offering-buyouts-read-the-memo-2026-10",
-          "publisher": "Insider",
-          "title": "Microsoft is offering buyouts to around 60,000 employees. Read the memo."
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-26T15:50:03+00:00",
-      "created_at": "2026-10-26T16:13:59+00:00",
-      "sectors": [],
-      "regions": [
-        "global"
-      ],
-      "deal": {
-        "type": "layoffs",
-        "company": "Microsoft",
-        "amount": "",
-        "usd": null
-      },
-      "relevance": {
-        "builders": 1,
-        "business": 2,
-        "investors": 3
-      },
-      "cover": "60,000 employees",
-      "trackers": [],
-      "photo_local": true
     }
   ],
   "voices": [
+    {
+      "text": "LLMs are fantastic at troubleshooting incidents,",
+      "speaker": "Natan Yellin",
+      "speaker_role": "co‑founder and CEO of Robusta",
+      "source_url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev",
+      "story_id": "fa69c1823833",
+      "headline": "Freshworks acquires Israel AI startup Robusta Dev to boost incident management",
+      "published_at": "2026-10-29T10:56:05+00:00"
+    },
+    {
+      "text": "Our technology lets AI Agents do that effectively in large enterprise environments, where there are so many raw events that investigating each one individually would be exorbitant from a token cost perspective.",
+      "speaker": "Natan Yellin",
+      "speaker_role": "co‑founder and CEO of Robusta",
+      "source_url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev",
+      "story_id": "fa69c1823833",
+      "headline": "Freshworks acquires Israel AI startup Robusta Dev to boost incident management",
+      "published_at": "2026-10-29T10:56:05+00:00"
+    },
+    {
+      "text": "Our technology lets AI Agents do that effectively in large enterprise environments, where there are so many raw events that investigating each one individually would be exorbitant from a token cost perspective.",
+      "speaker": "Natan Yellin",
+      "speaker_role": "founder",
+      "source_url": "https://inc42.com/buzz/freshworks-acquires-ai-startup-robusta-to-strengthen-it-operations-platform",
+      "story_id": "20ac3a71666f",
+      "headline": "Freshworks acquires Israel AI startup Robusta Dev to add incident‑investigation AI to Freshservice",
+      "published_at": "2026-10-29T07:06:42+00:00"
+    },
+    {
+      "text": "LLMs are fantastic at troubleshooting incidents,",
+      "speaker": "Natan Yellin",
+      "speaker_role": "co‑founder and CEO",
+      "source_url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev",
+      "story_id": "20ac3a71666f",
+      "headline": "Freshworks acquires Israel AI startup Robusta Dev to add incident‑investigation AI to Freshservice",
+      "published_at": "2026-10-29T07:06:42+00:00"
+    },
     {
       "text": "This includes taking our monetization footprint global for the first time. Today, we’re announcing the expansion of ads in AI mode into international markets alongside multi-turn ads and AI mode in the U.S.",
       "speaker": "Philipp Schindler",
@@ -5456,42 +5458,6 @@
       "story_id": "1744c9c4d2ed",
       "headline": "Google expands AI Mode ads to international markets as search ad growth slows",
       "published_at": "2026-10-29T05:30:11+00:00"
-    },
-    {
-      "text": "What began as a cost and talent strategy is becoming the primary engine for enterprise AI capability building,",
-      "speaker": "Kiran Cherukuri",
-      "speaker_role": "Executive Vice President and Global GCC Practice Leader at HCLTech",
-      "source_url": "https://analyticsindiamag.com/ai-news/hcltech-launches-nano-gcc-model-with-aws-to-build-ai-operations",
-      "story_id": "8e1271eaa2a0",
-      "headline": "HCLTech launches AI‑powered nano GCC offering on AWS for enterprise AI operations",
-      "published_at": "2026-10-29T05:13:08+00:00"
-    },
-    {
-      "text": "the model would allow enterprises to start with focused use cases and expand as their requirements change.",
-      "speaker": "Prabhakar Appana",
-      "speaker_role": "Senior Vice President and Global Head of the AWS Ecosystem Business Unit at HCLTech",
-      "source_url": "https://analyticsindiamag.com/ai-news/hcltech-launches-nano-gcc-model-with-aws-to-build-ai-operations",
-      "story_id": "8e1271eaa2a0",
-      "headline": "HCLTech launches AI‑powered nano GCC offering on AWS for enterprise AI operations",
-      "published_at": "2026-10-29T05:13:08+00:00"
-    },
-    {
-      "text": "The structure the leadership prefers, with IP and R&D kept onshore and operations and access sold abroad, is the one the market was already converging on,",
-      "speaker": "Alfredo Montufar-Helu",
-      "speaker_role": "Beijing-based managing director at consultancy Ankura",
-      "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/chinas-new-export-curbs-draw-a-line-around-its-ai-crown-jewels/articleshow/135289950.cms",
-      "story_id": "be2d2407c3e0",
-      "headline": "China proposes export controls on 23 AI technologies",
-      "published_at": "2026-10-29T04:25:01+00:00"
-    },
-    {
-      "text": "The funding round makes Upwind one of the most capitalized companies in the world that's focused on solving the cloud and AI security problem,",
-      "speaker": "Upwind",
-      "speaker_role": "",
-      "source_url": "https://finance.yahoo.com/technology/ai/articles/ai-security-startup-upwind-raises-201603440.html",
-      "story_id": "429ac0d1a16a",
-      "headline": "Upwind Security raises $400 million Series C at $3.8 billion valuation",
-      "published_at": "2026-10-29T01:14:34+00:00"
     }
   ],
   "videos": [
@@ -5628,12 +5594,12 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-10-29T10:03:33+00:00",
-    "one_line": "Google’s Gemini leads, Nvidia releases model amid probe, AI regulation tightens worldwide.",
+    "written_at": "2026-10-29T13:15:34+00:00",
+    "one_line": "Google's Gemini 4 Carbon tops benchmarks, while US and China tighten AI policies and industry sees big deals.",
     "themes": [
       {
         "title": "Google unveils Gemini 4 Carbon",
-        "text": "Google announced Gemini 4 Carbon, a frontier AI model that improves coding, agentic tasks and cybersecurity, scoring 89 points higher on WebDev Arena and ranking fourth. The model ranked #1 on the AI Index v5.0 and led several cybersecurity benchmarks.",
+        "text": "Google announced Gemini 4 Carbon, its latest frontier model that achieved top rankings on AI Index and leading cybersecurity benchmarks, though it is not yet publicly released.",
         "stories": [
           {
             "id": "41e0dc889e76",
@@ -5648,25 +5614,14 @@
         ]
       },
       {
-        "title": "Nvidia releases model, faces probe",
-        "text": "Nvidia unveiled Nemotron 3.5 Transcribe, a 30‑billion‑parameter open‑weight model that transcribes audio in up to 40 languages, translates 31 languages and distinguishes eight speakers, and released the Granary v2 speech dataset. The U.S. DOJ is probing Nvidia’s planned $12.93 billion acquisition of Hugging Face over competition concerns, and Nvidia shares fell about 1.7%.",
+        "title": "AI policy actions in US and China",
+        "text": "OpenAI set up an election‑war room to monitor misinformation ahead of the U.S. midterms, New York enacted a law restricting unsafe AI chatbot features for minors, and China proposed export controls on 23 AI technologies.",
         "stories": [
           {
-            "id": "45d48a94f572",
-            "headline": "Nvidia releases Nemotron 3.5 Transcribe and Granary v2 speech dataset",
-            "url": "https://techmeme.com/261028/p33"
+            "id": "e3f879545331",
+            "headline": "OpenAI launches election war room to monitor misinformation ahead of US midterms",
+            "url": "https://techmeme.com/261028/p34"
           },
-          {
-            "id": "6fbbc9445480",
-            "headline": "DOJ probes Nvidia's $13 billion Hugging Face acquisition",
-            "url": "https://reuters.com/world/us-doj-is-inquiring-about-nvidias-purchase-hugging-face-sources-say-2026-10-28"
-          }
-        ]
-      },
-      {
-        "title": "AI regulation expands globally",
-        "text": "New York Governor Kathy Hochul signed bills banning unsafe AI chatbot features for users under 18 and imposing up to $25,000 civil penalties. China released draft rules adding 23 AI‑related technologies to its export‑control list, requiring government approval for transfers. OpenAI set up an election “war room” to monitor misinformation ahead of the U.S. midterm elections.",
-        "stories": [
           {
             "id": "ef5e2b7c56ff",
             "headline": "New York governor signs law banning unsafe AI chatbot features for minors",
@@ -5676,28 +5631,44 @@
             "id": "be2d2407c3e0",
             "headline": "China proposes export controls on 23 AI technologies",
             "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/chinas-new-export-curbs-draw-a-line-around-its-ai-crown-jewels/articleshow/135289950.cms"
+          }
+        ]
+      },
+      {
+        "title": "Industry investments and AI partnerships",
+        "text": "Upwind Security raised $400 million in Series C funding, Sarvam AI signed a five‑year MoU with India’s defence ministry to develop AI applications, and Freshworks acquired Israeli startup Robusta Dev to add incident‑investigation AI to its platform.",
+        "stories": [
+          {
+            "id": "429ac0d1a16a",
+            "headline": "Upwind Security raises $400 million Series C at $3.8 billion valuation",
+            "url": "https://tipranks.com/news/ai-cyber-startup-upwind-security-hits-3-8b-valuation-after-new-funding-round"
           },
           {
-            "id": "e3f879545331",
-            "headline": "OpenAI launches election war room to monitor misinformation ahead of US midterms",
-            "url": "https://techmeme.com/261028/p34"
+            "id": "f485bece3674",
+            "headline": "Sarvam AI signs five‑year MoU with Indian defence to develop AI applications",
+            "url": "https://medianama.com/2026/10/223-sarvam-ai-defence-deal-indian-armed-forces"
+          },
+          {
+            "id": "20ac3a71666f",
+            "headline": "Freshworks acquires Israel AI startup Robusta Dev to add incident‑investigation AI to Freshservice",
+            "url": "https://inc42.com/buzz/freshworks-acquires-ai-startup-robusta-to-strengthen-it-operations-platform"
           }
         ]
       }
     ],
-    "from_stories": 17
+    "from_stories": 18
   },
   "plan": {
-    "focus": "Tracking the fallout from Samsung’s capex surge while filling gaps in safety and research coverage.",
-    "updated_at": "2026-10-29T10:03:33+00:00",
+    "focus": "Tracking AI safety debates and model training shifts while covering major industry deals and India's fast‑growing AI market.",
+    "updated_at": "2026-10-29T13:15:34+00:00",
     "thin_areas": [
-      "research",
-      "safety"
+      "safety",
+      "research"
     ],
     "searches": [
-      "DeepSeek funding round next",
-      "Sarvam AI defence partnership expansion",
-      "Google AI Mode ads Q4 performance"
+      "DeepSeek funding round details",
+      "Sarvam AI defence AI applications",
+      "AI safety sandboxing regulations"
     ]
   },
   "builders": {
@@ -5847,6 +5818,34 @@
   },
   "threads": [
     {
+      "id": "t-cb46191c10a2",
+      "title": "DeepSeek model training details",
+      "updated_at": "2026-10-29T10:46:03+00:00",
+      "stories": [
+        {
+          "id": "7591cbcc85bc",
+          "headline": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra for distillation training",
+          "url": "https://techmeme.com/261029/p19",
+          "published_at": "2026-10-29T10:46:03+00:00",
+          "category": "models"
+        },
+        {
+          "id": "ab9ffd5a4035",
+          "headline": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra to train new models",
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/deepseek-moonshot-used-openais-gpt-6-astra-to-train-latest-models-report/articleshow/135286994.cms",
+          "published_at": "2026-10-29T02:36:21+00:00",
+          "category": "models"
+        },
+        {
+          "id": "2bef5e155399",
+          "headline": "DeepSeek raises about $15 billion in funding round days after US restrictions",
+          "url": "https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions",
+          "published_at": "2026-10-22T13:11:13+00:00",
+          "category": "industry"
+        }
+      ]
+    },
+    {
       "id": "t-132a78a59d00",
       "title": "Sarvam AI expands defence partnership",
       "updated_at": "2026-10-29T06:45:50+00:00",
@@ -5915,37 +5914,24 @@
           "category": "policy"
         }
       ]
-    },
-    {
-      "id": "t-cb46191c10a2",
-      "title": "DeepSeek funding round leads to model training",
-      "updated_at": "2026-10-29T02:36:21+00:00",
-      "stories": [
-        {
-          "id": "ab9ffd5a4035",
-          "headline": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra to train new models",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/deepseek-moonshot-used-openais-gpt-6-astra-to-train-latest-models-report/articleshow/135286994.cms",
-          "published_at": "2026-10-29T02:36:21+00:00",
-          "category": "models"
-        },
-        {
-          "id": "2bef5e155399",
-          "headline": "DeepSeek raises about $15 billion in funding round days after US restrictions",
-          "url": "https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions",
-          "published_at": "2026-10-22T13:11:13+00:00",
-          "category": "industry"
-        }
-      ]
     }
   ],
   "labs": [
     {
       "lab": "DeepSeek and Moonshot AI",
-      "model": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra to train new models",
+      "model": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra for distillation training",
       "type": "Other",
-      "date": "2026-10-29T02:36:21+00:00",
-      "story_id": "ab9ffd5a4035",
-      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/deepseek-moonshot-used-openais-gpt-6-astra-to-train-latest-models-report/articleshow/135286994.cms"
+      "date": "2026-10-29T10:46:03+00:00",
+      "story_id": "7591cbcc85bc",
+      "url": "https://techmeme.com/261029/p19"
+    },
+    {
+      "lab": "Hugging Face",
+      "model": "Hugging Face releases AnySpeechRecognizer and AnyDecisionModel for Apple devices",
+      "type": "Other",
+      "date": "2026-10-29T00:00:00+00:00",
+      "story_id": "85d975255b4f",
+      "url": "https://huggingface.co/blog/anydecisionmodel"
     },
     {
       "lab": "Google",
@@ -6061,8 +6047,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 167,
-    "model_releases_this_month": 16,
-    "labs_tracked": 16
+    "stories_this_month": 171,
+    "model_releases_this_month": 18,
+    "labs_tracked": 17
   }
 }

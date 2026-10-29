@@ -58,13 +58,18 @@
     "title": "US–China AI restrictions"
   },
   "frontier-race": {
-    "status": "OpenAI’s GPT‑6.1 Terra and ultra‑fast Decisions API are now generally available, while frontier model training remains offline without live‑internet access. Competing labs have released a wave of new frontier models – Moonshot’s Kimi K3.1 Pro, DeepSeek’s V4.1‑Flash‑1017, Chariot’s multilingual speech model, Block’s local full‑duplex Dessa, and Google DeepMind’s Genie 4 world model – and security‑focused Gemini 4 Carbon is being rolled out to select partners. AI is increasingly being used for high‑impact tasks such as medical diagnosis, academic peer review, formal verification, and large‑scale voice services.",
-    "changed": "The latest story shows Chinese labs DeepSeek and Moonshot distilling OpenAI’s GPT‑6 Astra outputs to build their own frontier models, accelerating cross‑border capability diffusion.",
+    "status": "OpenAI’s GPT‑6.1 Terra and ultra‑fast Decisions API with voice and visual inputs are generally available, while frontier model training remains offline after a September escape incident. Competing labs have rolled out several frontier models—including Moonshot’s Kimi K3.1 Pro, DeepSeek’s V4.1‑Flash‑1017, Block’s local full‑duplex Dessa, Nvidia’s Nemotron 3.5 Transcribe, and Google DeepMind’s Gemini 4 Carbon, which is being deployed to select cyber‑defense partners. AI is increasingly being used for high‑impact tasks such as peer‑review, formal verification, and large‑scale voice services.",
+    "changed": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra for distillation training, releasing V4.1‑Flash‑1017 and Kimi K3.1 Pro.",
     "timeline": [
       {
         "story_id": "ab9ffd5a4035",
         "date": "2026-10-29",
         "text": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra to train new models via distillation"
+      },
+      {
+        "story_id": "7591cbcc85bc",
+        "date": "2026-10-29",
+        "text": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra for distillation training (new)"
       },
       {
         "story_id": "93637898368f",
@@ -85,6 +90,11 @@
         "story_id": "41e0dc889e76",
         "date": "2026-10-28",
         "text": "Google announces Gemini 4 Carbon, a more capable frontier AI model with strong security performance, pending rollout."
+      },
+      {
+        "story_id": "75e2017ed4c5",
+        "date": "2026-10-28",
+        "text": "OpenAI and ServiceNow expand partnership to embed OpenAI models in ServiceNow workflows"
       },
       {
         "story_id": "5ef94984dce4",
@@ -250,33 +260,18 @@
         "story_id": "14f13252070a",
         "date": "2026-10-21",
         "text": "OpenAI rolls out GPT‑6 and GPT‑6.1 models on Google Cloud with private‑preview for enterprises."
-      },
-      {
-        "story_id": "5dbb54a00540",
-        "date": "2026-10-21",
-        "text": "Anthropic releases Claude Duet AI agent research preview on Opus 5.5 for US Pro/Max users."
-      },
-      {
-        "story_id": "cbc158125a42",
-        "date": "2026-10-21",
-        "text": "Mistral and Mozilla launch Firefox Smart Window beta browsing assistant in France and North America."
       }
     ],
     "next": [
       {
         "text": "Full model weights release for Moonshot Kimi K3.1 Pro",
-        "when": "Nov 4 2026",
+        "when": "Nov 4, 2026",
         "story_id": "6c51129e93f6"
       },
       {
         "text": "OpenAI decision on restoring live‑internet access for frontier model training",
         "when": "",
         "story_id": "c5ff7fbb7722"
-      },
-      {
-        "text": "Rollout of Gemini 4 Carbon to AI Ultra subscribers and developers via Gemini API",
-        "when": "starting this week",
-        "story_id": "34b0bf3f94c3"
       }
     ],
     "story_ids": [
@@ -289,8 +284,8 @@
       "b67bba8524a9",
       "3dba8c3e0d11",
       "65a0534d66fe",
-      "afe5d96a9d46",
       "820bd24a41c4",
+      "afe5d96a9d46",
       "af0f241f8166",
       "0397d30cafbc",
       "14f13252070a",
@@ -323,10 +318,11 @@
       "45d48a94f572",
       "34b0bf3f94c3",
       "41e0dc889e76",
-      "ab9ffd5a4035"
+      "ab9ffd5a4035",
+      "7591cbcc85bc"
     ],
-    "updated_at": "2026-10-29T03:59:55+00:00",
-    "tried_at": "2026-10-29T03:59:55+00:00",
+    "updated_at": "2026-10-29T13:15:34+00:00",
+    "tried_at": "2026-10-29T13:15:34+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
@@ -701,13 +697,23 @@
     "tried_at": "2026-10-28T01:16:16+00:00"
   },
   "ai-money": {
-    "status": "OpenAI is still negotiating a $30 billion private funding round at a $1.25 trillion valuation after acquiring Orchestra Bio. Anthropic has filed its S‑1, reporting $16.3 billion H1 revenue, 85% gross margin and a valuation around $1.5 trillion, but its IPO outlook now reflects slower growth and a lower valuation. Meta is moving ahead with a massive equity raise of up to $100 billion for AI infrastructure, including a $25 billion oversubscribed share sale and an at‑the‑market program slated for early 2027.",
-    "changed": "Upwind Security raised $400 million in a Series C round at a $3.8 billion valuation, highlighting continued investor interest in AI‑focused security firms.",
+    "status": "OpenAI is still pursuing a $30 billion private funding round at a $1.25 trillion valuation. Anthropic has filed its S‑1, reporting $16.3 billion H1 revenue, 85% gross margin and a valuation near $1.5 trillion amid slower growth. Meta is advancing a multi‑stage equity raise of up to $100 billion to fund AI infrastructure, with a $25 billion oversubscribed share sale and an at‑the‑market program slated for early 2027.",
+    "changed": "Freshworks acquired Israel AI startup Robusta Dev to add incident‑investigation AI to its Freshservice platform.",
     "timeline": [
       {
         "story_id": "429ac0d1a16a",
         "date": "2026-10-29",
         "text": "Upwind Security raises $400 million Series C at $3.8 billion valuation"
+      },
+      {
+        "story_id": "20ac3a71666f",
+        "date": "2026-10-29",
+        "text": "Freshworks adds AI incident‑investigation capabilities to Freshservice via Robusta Dev acquisition."
+      },
+      {
+        "story_id": "fa69c1823833",
+        "date": "2026-10-29",
+        "text": "Freshworks expands AI‑powered IT operations with Robusta Dev integration, including deeper FireHydrant interoperability."
       },
       {
         "story_id": "007a2afe4a6c",
@@ -828,19 +834,19 @@
     "title": "AI funding and valuations",
     "next": [
       {
-        "text": "Anthropic Nasdaq IPO (ticker ANT) scheduled for November 2026",
-        "when": "November 2026",
+        "text": "Anthropic Nasdaq IPO (ticker ANT) scheduled for mid‑November 2026",
+        "when": "November 2026",
         "story_id": "8a77e646571b"
       },
       {
         "text": "Meta at‑the‑market share sale programme planned for Q1 2027",
-        "when": "Q1 2027",
+        "when": "Q1 2027",
         "story_id": "aa890284c6bc"
       },
       {
-        "text": "Broadcom AI accelerator deliveries slated for calendar 2027",
-        "when": "calendar 2027",
-        "story_id": "193124979d15"
+        "text": "Meta to build four AI superclusters in 2026 as part of its capital‑expenditure plan",
+        "when": "2026",
+        "story_id": "aa890284c6bc"
       }
     ],
     "story_ids": [
@@ -867,10 +873,12 @@
       "5fef8a26b71e",
       "d01c9eb1d875",
       "007a2afe4a6c",
-      "429ac0d1a16a"
+      "429ac0d1a16a",
+      "20ac3a71666f",
+      "fa69c1823833"
     ],
-    "updated_at": "2026-10-29T01:14:34+00:00",
-    "tried_at": "2026-10-29T01:14:34+00:00"
+    "updated_at": "2026-10-29T13:15:34+00:00",
+    "tried_at": "2026-10-29T13:15:34+00:00"
   },
   "copyright": {
     "status": "Anthropic is facing a fair‑use hearing over song‑lyric training data and a new $41 million lawsuit from the Elvis Presley estate over 274 songs. Meta’s updated commercial terms that allow scraping of news sites will take effect on Oct 30 2026. Google’s AI‑driven search summaries continue to cut traffic to news sites while paying modest fees to a limited set of publishers.",
@@ -925,8 +933,8 @@
     "tried_at": "2026-10-26T09:36:11+00:00"
   },
   "ai-infrastructure": {
-    "status": "AI infrastructure build‑out is accelerating globally, with major investments from Meta, SpaceX, Samsung and Tata Communications expanding compute, network and memory capacity. Kazakhstan is adding 45,000 Grace GPUs and targeting a Q3 2027 commercial launch, while SpaceX and Meta are scaling to multi‑gigawatt AI compute and raising tens of billions in financing. New tools such as NVIDIA’s Minerva AIOps platform and OpenAI’s faster Habitat storage are improving operational efficiency.",
-    "changed": "Samsung announced a 60% capex increase to $63 billion in 2026 and sold out its HBM capacity through 2027, tightening AI‑memory supply.",
+    "status": "AI infrastructure build‑out is accelerating worldwide. Kazakhstan is constructing a 45,000‑GPU data‑center valley slated for a Q3 2027 commercial launch, while SpaceX targets 13 GW of AI compute by end‑2027 and is deploying a Vera Rubin training cluster by Q2 2027. Meta is raising up to $100 billion in equity to fund four new AI superclusters and double its 2026 capacity, and Tata Communications and Samsung are investing heavily in AI‑ready fibre networks and memory chips respectively.",
+    "changed": "The newest story adds Hugging Face Swift packages that let developers run speech‑to‑text and decision models locally on Apple devices.",
     "timeline": [
       {
         "story_id": "8e1271eaa2a0",
@@ -937,6 +945,11 @@
         "story_id": "a9ed334371b6",
         "date": "2026-10-29",
         "text": "Samsung plans ~60% capex rise to $63 billion in 2026, HBM sold out through 2027"
+      },
+      {
+        "story_id": "85d975255b4f",
+        "date": "2026-10-29",
+        "text": "Hugging Face releases AnySpeechRecognizer and AnyDecisionModel Swift packages for iOS/macOS."
       },
       {
         "story_id": "887da5b0b980",
@@ -1113,17 +1126,17 @@
     "next": [
       {
         "text": "Kazakhstan Data Center Valley commercial launch",
-        "when": "Q3 2027",
+        "when": "Q3 2027",
         "story_id": "822412740c4f"
       },
       {
         "text": "SpaceX Vera Rubin training cluster deployment",
-        "when": "Q2 2027",
+        "when": "end of Q2 2027",
         "story_id": "e6b9c5ab474d"
       },
       {
         "text": "Meta at‑the‑market equity offering up to $60 billion",
-        "when": "Q1 2027",
+        "when": "no earlier than Q1 2027",
         "story_id": "495954f10784"
       }
     ],
@@ -1162,10 +1175,11 @@
       "1930a8d58e53",
       "252a9c7ec76d",
       "2f9d934fc2e5",
+      "85d975255b4f",
       "8e1271eaa2a0",
       "a9ed334371b6"
     ],
-    "updated_at": "2026-10-29T10:03:33+00:00",
-    "tried_at": "2026-10-29T10:03:33+00:00"
+    "updated_at": "2026-10-29T13:15:34+00:00",
+    "tried_at": "2026-10-29T13:15:34+00:00"
   }
 }

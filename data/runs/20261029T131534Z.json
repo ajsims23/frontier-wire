@@ -1,0 +1,378 @@
+{
+  "started_at": "2026-10-29T13:15:34+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1334)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (892)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (21)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (9)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "AI has come for Arizona’s water",
+      "reason": "score 5: The piece is a broad feature about AI’s role in Arizona water management without a specific news hook; it is more of a commentary."
+    },
+    {
+      "title": "Anthropic Makes $2.08 in Revenue for Every $1 Spent on Compute — Here’s the Full IPO Story",
+      "reason": "score 6: Anthropic revenue‑per‑compute story duplicates the existing Anthropic IPO coverage; not a separate news item."
+    },
+    {
+      "title": "Indian IT’s New Workforces Come with a Margin Challenge",
+      "reason": "not AI: Discussion of Indian IT workforce margins, no AI focus."
+    },
+    {
+      "title": "The AI Slowdown Narrative Doesn’t Reflect Enterprise Reality",
+      "reason": "score 4: Opinion piece on AI slowdown narrative; provides perspective but no new factual development."
+    },
+    {
+      "title": "NVIDIA Launches Open-Weight Transcription Model for 40 Languages",
+      "reason": "duplicate of 45d48a94f572"
+    },
+    {
+      "title": "India’s Enterprises are Scaling AI. Is the Infrastructure Ready?",
+      "reason": "score 5: An editorial‑style overview of Indian enterprise AI infrastructure readiness; lacks a concrete news event."
+    },
+    {
+      "title": "Coforge Introduces Autonomous Software Factory to Coordinate AI Agents",
+      "reason": "score 5: Coforge’s announcement of an autonomous software factory is a product launch without disclosed impact metrics; considered incremental."
+    },
+    {
+      "title": "In favour of press freedom: 10 changes that could be made in the DPDP Act",
+      "reason": "not AI: Press‑freedom commentary unrelated to AI."
+    },
+    {
+      "title": "What changes under the new GST rules for e-commerce deliveries, and why Nasscom wants more time",
+      "reason": "not AI: GST rule changes unrelated to AI."
+    },
+    {
+      "title": "CarTrade Q2: Profit up 3% at Rs 66 cr, revenue rises to Rs 213 cr",
+      "reason": "score 4: CarTrade profit piece mentions AI tools but the primary focus is financial results."
+    },
+    {
+      "title": "Meesho rules out platform fees, says AI is cutting delivery costs but raising server bills",
+      "reason": "score 5: Meesho’s statement about AI cutting logistics costs is a company‑level comment, not a major news development."
+    },
+    {
+      "title": "Soap in a phone box: Flipkart can’t evade responsibility as intermediary, says consumer commission",
+      "reason": "not AI: Regulatory dispute involving Flipkart; no AI angle."
+    },
+    {
+      "title": "IndiaMART Q2 profit rises 10% to Rs 91 cr, revenue at Rs 429 cr",
+      "reason": "score 4: IndiaMART profit report mentions AI‑driven shifts but the story is primarily a financial earnings piece."
+    },
+    {
+      "title": "Bombay HC tells Meta, California courts can’t decide IT Rules violations in Blink Digital case",
+      "reason": "not AI: Legal ruling involving Meta and Indian courts; AI is not a central element."
+    },
+    {
+      "title": "Flipkart Big Bang Diwali Sale 2026: iPhone 17 at ₹79,999; iPhone Air at ₹99,900 — check offers",
+      "reason": "not AI: Retail sale advertisement, unrelated to AI."
+    },
+    {
+      "title": "Karbonn Rebel 5G teased on Amazon: How the Indian brand eyes comeback with affordable smartphones for Gen Z",
+      "reason": "not AI: Teaser for a 5G smartphone; unrelated to AI."
+    },
+    {
+      "title": "AI-led services to generate up to USD 200 billion in new work by 2030: BCG report",
+      "reason": "score 5: BCG report on AI‑led services market size is a market analysis without a specific event."
+    },
+    {
+      "title": "India’s Crypto market has entered its next chapter",
+      "reason": "not AI: Crypto market article, not AI."
+    },
+    {
+      "title": "Equentis Wealth Advisory Services leads investor awareness drive against equity market fraud",
+      "reason": "not AI: Investor‑awareness seminar on fraud; no AI focus."
+    },
+    {
+      "title": "Marvell in advanced talks to buy Lumentum: Bloomberg News",
+      "reason": "score 5: Marvell’s advanced talks to buy Lumentum relate to AI chip demand but are only talks, not a confirmed deal."
+    },
+    {
+      "title": "AI that speaks, codes and takes action: Inside Google Cloud’s Gemini masterclass",
+      "reason": "score 5: Google Cloud Gemini masterclass is a promotional event rather than a newsworthy launch."
+    },
+    {
+      "title": "India’s new-age manufacturers to benefit from $3 trillion global AI investment cycle: Avendus Capital",
+      "reason": "score 5: Analysis of AI investment cycles for Indian manufacturers; lacks a specific news event."
+    },
+    {
+      "title": "7 Things emotionally intelligent people do differently",
+      "reason": "not AI: General self‑help article, no AI content."
+    },
+    {
+      "title": "5 entrepreneurial lessons from Giving Up Is Not an Option",
+      "reason": "not AI: Entrepreneurial advice article, no AI content."
+    },
+    {
+      "title": "CloudSEK launches incubation programme for cybersecurity startups",
+      "reason": "score 4: CloudSEK incubation programme is a startup support initiative, not a major AI news event."
+    },
+    {
+      "title": "Bengaluru-based Inkle acquires Finally’s bookkeeping arm, expands team to 160",
+      "reason": "not AI: Acquisition of a bookkeeping arm; not AI‑related."
+    },
+    {
+      "title": "Ace Blend bags $9.91M as it looks to scale science-led nutrition",
+      "reason": "not AI: Nutrition company funding, no AI relevance."
+    },
+    {
+      "title": "One Planet Partners ties up with Japan's Sumitomo Mitsui Trust Bank to launch Rs 3,000 cr fund",
+      "reason": "not AI: Crypto market piece, no AI angle."
+    },
+    {
+      "title": "Pine Labs sees 6.5x growth in net profit in Q2 FY27",
+      "reason": "not AI: Profit report for payment firm, AI not central."
+    },
+    {
+      "title": "Startup news and updates: daily roundup (October 29, 2026)",
+      "reason": "not AI: A generic daily roundup of Indian startup news without specific AI focus; not a newsworthy AI story."
+    },
+    {
+      "title": "Series B Funding Is Up, But Fewer Deals Are Getting Done",
+      "reason": "not AI: General funding trend article without a specific AI focus."
+    },
+    {
+      "title": "Jumbo Series A Rounds Hiding The Real Squeeze On Seed Startups",
+      "reason": "not AI: Funding analysis that mentions AI megarounds but lacks a concrete AI‑centric news hook."
+    },
+    {
+      "title": "Sources: the Pentagon is treating the late August freezer malfunctions across 6+ military bases as a suspected cyberattack and is working with French police (Reuters)",
+      "reason": "not AI: Pentagon freezer malfunction investigation unrelated to AI."
+    },
+    {
+      "title": "Epic Games says it is using AI tools to \"develop code and features\" for Unreal Engine, including core engine components like the D3D12 rendering layer (Jamie Hore/This Week in Videogames)",
+      "reason": "score 5: Epic Games’ use of AI tools for engine development is a product‑level update, not a major frontier AI story."
+    },
+    {
+      "title": "Sierra Club expects US power emissions to hit 2.1B metric tons by 2030, up 42% on 2025 and erasing 15 years of cuts, with off-grid data centers matching Mexico (Bloomberg)",
+      "reason": "not AI: Emissions forecast unrelated to AI."
+    },
+    {
+      "title": "US officials believe Megaspeed executive Alice Huang is a Chinese asset who maintained a close relationship with Jensen Huang to pass intelligence to Beijing (New York Times)",
+      "reason": "not AI: National security allegations, no AI focus."
+    },
+    {
+      "title": "Sarvam AI signs five-year MoU with HQ IDS to develop AI tools for India's armed forces",
+      "reason": "duplicate of f485bece3674"
+    },
+    {
+      "title": "AI to help Indian military identify target, make battlefield decisions? Here’s what the new defence deal with Sarvam offers",
+      "reason": "duplicate of f485bece3674"
+    },
+    {
+      "title": "Articul8 Launches Bivia To Help Enterprise AI Agents Make Decisions",
+      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
+    },
+    {
+      "title": "Sarvam AI Rolls Out Indus Cowork to 2,500 Maharashtra Govt Officials",
+      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
+    },
+    {
+      "title": "DoorDash agrees to acquire Instacart in a ~$17B deal, paying $65 per share, a 26% premium to its October 22 close, as the platform delivery market consolidates (Reuters)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Q&A with Sam Altman on finding PHP bugs, sandboxing superhuman models as an unsolved safety dilemma, robotics scaling data centers, math, agent swarms, and more (John Collison/Cheeky Pint)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "We urgently need to monitor AI agents’ actions in real time",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Kalshi raised $1B led by Sequoia and Wellington Management at a $40B valuation, up from a $22B valuation after raising $1B in May, its last raise before an IPO (Lauren McCarthy/New York Times)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Gnani AI Launches Prisma v3.0 Speech Recognition Model for 10 Languages",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Venttup Raises $3 Million To Expand Precision Manufacturing",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "7591cbcc85bc",
+      "headline": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra for distillation training",
+      "category": "models",
+      "summary": "DeepSeek’s V4.1‑Flash‑1017 and Moonshot AI’s Kimi K3.1 Pro were trained using outputs from OpenAI’s GPT‑6 Astra through a distillation process. DeepSeek released V4.1‑Flash‑1017 on Oct 17 and Moonshot AI launched Kimi K3.1 Pro on Oct 23.",
+      "url": "https://techmeme.com/261029/p19",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "85d975255b4f",
+      "headline": "Hugging Face releases AnySpeechRecognizer and AnyDecisionModel for Apple devices",
+      "category": "models",
+      "summary": "Hugging Face announced two new Swift packages, AnySpeechRecognizer and AnyDecisionModel, that let developers run open speech‑to‑text and decision models on iOS and macOS. The packages support NVIDIA’s Parakeet and Alibaba’s Qwen3‑ASR engines and can run locally via Core ML.",
+      "url": "https://huggingface.co/blog/anydecisionmodel",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "20ac3a71666f",
+      "headline": "Freshworks acquires Israel AI startup Robusta Dev to add incident‑investigation AI to Freshservice",
+      "category": "industry",
+      "summary": "Freshworks bought Israel‑based AI startup Robusta Dev for an undisclosed sum. The acquisition adds AI‑driven outage diagnosis and remediation recommendations to Freshservice, Freshworks’ IT service‑management platform.",
+      "url": "https://inc42.com/buzz/freshworks-acquires-ai-startup-robusta-to-strengthen-it-operations-platform",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "fa69c1823833",
+      "headline": "Freshworks acquires Israel AI startup Robusta Dev to boost incident management",
+      "category": "industry",
+      "summary": "Freshworks bought Israel‑based AI startup Robusta Dev for an undisclosed sum, adding AI‑driven incident investigation and remediation to its Freshservice platform. The deal expands Freshworks’ AI‑powered IT operations suite.",
+      "url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev",
+      "sources": 2,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "not India desk: 'Venttup Raises $3 Million To Expand Precision Manu'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "9 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 77.0,
+    "audit": 0.0,
+    "plan": 2.0,
+    "judge": 30.2,
+    "verify and write": 480.9,
+    "videos": 22.7,
+    "tagging": 21.6,
+    "explainers": 0.0,
+    "trackers": 106.9,
+    "claims": 21.3,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 42.1,
+    "self-review": 0.0,
+    "photos": 0.6,
+    "stock photos": 15.3,
+    "daily email": -0.0,
+    "alerts": 7.4
+  },
+  "fetched": 2897,
+  "fresh": 51,
+  "plan": {
+    "focus": "Tracking AI safety debates and model training shifts while covering major industry deals and India's fast‑growing AI market.",
+    "priorities": [
+      "Q&A with Sam Altman on finding PHP bugs, sandboxing superhuman models  (Sam Altman Q&A highlights unresolved safety dilemmas, crucial for our thin safety coverage.)",
+      "Sources: DeepSeek and Moonshot AI heavily relied on GPT-6 Astra distil (DeepSeek and Moonshot AI reliance on GPT‑6 Astra continues our DeepSeek model training storyline.)",
+      "DoorDash agrees to acquire Instacart in a ~$17B deal, paying $65 per s (DoorDash‑Instacart merger is a landmark industry consolidation affecting logistics and AI-driven delivery.)",
+      "Jio Platforms adds $36B in market value in two trading sessions, hitti (Jio Platforms' $36B market value surge underscores India's AI market boom, aligning with India desk.)",
+      "Kalshi raised $1B led by Sequoia and Wellington Management at a $40B v (Kalshi's $1B raise at $40B valuation signals high‑growth fintech AI financing trends.)"
+    ],
+    "thin_areas": [
+      "safety",
+      "research"
+    ],
+    "searches": [
+      "DeepSeek funding round details: 0 new",
+      "Sarvam AI defence AI applications: 2 new",
+      "AI safety sandboxing regulations: 0 new"
+    ],
+    "dig_deeper": [
+      "Q&A with Sam Altman on finding PHP bugs, sandboxing superhuman models ",
+      "Sources: DeepSeek and Moonshot AI heavily relied on GPT-6 Astra distil"
+    ]
+  },
+  "judged": 53,
+  "kept": 15,
+  "research": {
+    "investigated": 5,
+    "confirmed": 1,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "DoorDash agrees to acquire Instacart in a ~$17B deal, paying $65 per s: unconfirmed (searched “DoorDash to acquire Instacart $17 billion deal”; read msn.com; read nytimes.com)",
+    "Q&A with Sam Altman on finding PHP bugs, sandboxing superhuman models : unconfirmed (searched “Q&A with Sam Altman John Collison Cheeky Pint”; searched “\"Cheeky Pint\" Sam Altman”; searched “Sam Altman interview Cheeky Pint”)",
+    "Sources: DeepSeek and Moonshot AI heavily relied on GPT-6 Astra distil: confirmed (searched “DeepSeek Moonshot AI GPT-6 Astra distillation Kimi K3.1 Pro”; read msn.com; read thenextweb.com)",
+    "We urgently need to monitor AI agents’ actions in real time: unconfirmed (searched “OpenAI agents cheat cybersecurity test hack Hugging Face Australian government private files”; read forbes.com; read mashable.com)",
+    "Kalshi raised $1B led by Sequoia and Wellington Management at a $40B v: unconfirmed (searched “Kalshi raises $1 billion Sequoia Wellington valuation 40 billion”; read miamiherald.com; read msn.com)"
+  ],
+  "threads": [
+    "DeepSeek model training details: DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra for disti"
+  ],
+  "videos": {
+    "OpenAI": "ok (10 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (8 in feed, 0 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 1 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (5 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 2 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "3 kept from 4 new",
+  "tagged": 1,
+  "trackers": "filed 4 stories; updated frontier-race, ai-infrastructure, ai-money",
+  "claims": "47 tracked, 46 open, 0 updated this run",
+  "model_tracker": "82 models, 28 changes today",
+  "briefing": "3 themes from 18 stories",
+  "india_briefing": "2 themes from 3 stories",
+  "photos": "3 saved, 0 unavailable",
+  "stock photos": "0 added",
+  "alerts": "38 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":32}",
+  "ai_requests_run": 42,
+  "ai_tokens_run": 125208,
+  "ai_requests_today": 180,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
+}

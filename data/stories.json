@@ -1,6 +1,250 @@
 [
   {
     "explainer": {
+      "what_it_means": "Robusta’s AI agents automatically analyse monitoring data, code changes and infrastructure information to pinpoint the cause of a technology outage and suggest corrective steps. This reduces the number of alerts engineers must review manually and speeds up fixing problems. Human engineers still approve any changes before they affect live systems.",
+      "terms": [
+        {
+          "term": "incident intelligence engine",
+          "meaning": "software that uses AI to examine alerts and system data to determine why a disruption occurred."
+        },
+        {
+          "term": "AI agents",
+          "meaning": "automated programs that apply large language models to process large volumes of raw events and generate diagnostic insights."
+        },
+        {
+          "term": "token cost",
+          "meaning": "the amount of compute (measured in tokens) required for a language model to process input data."
+        }
+      ],
+      "watch_next": [
+        "Integration of Robusta’s capabilities into Freshservice",
+        "Deeper interoperability with FireHydrant incident‑response platform"
+      ]
+    },
+    "audiences": {
+      "builders": "Developers can leverage the new AI‑driven incident diagnosis tools to automate root‑cause analysis and reduce manual alert triage.",
+      "business": "Executives gain faster outage resolution and lower revenue loss by automating investigation and remediation steps.",
+      "investors": "The acquisition broadens Freshworks’ AI portfolio, potentially strengthening its market position in the SaaS IT‑service‑management space."
+    },
+    "id": "fa69c1823833",
+    "headline": "Freshworks acquires Israel AI startup Robusta Dev to boost incident management",
+    "summary": "Freshworks bought Israel‑based AI startup Robusta Dev for an undisclosed sum, adding AI‑driven incident investigation and remediation to its Freshservice platform. The deal expands Freshworks’ AI‑powered IT operations suite.",
+    "why_it_matters": "It shows how AI agents are being used to automate large‑scale incident diagnosis, reducing manual effort and speeding up outage resolution.",
+    "category": "industry",
+    "lab": "Freshworks",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "LLMs are fantastic at troubleshooting incidents,",
+        "speaker": "Natan Yellin",
+        "speaker_role": "co‑founder and CEO of Robusta",
+        "source_url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev"
+      },
+      {
+        "text": "Our technology lets AI Agents do that effectively in large enterprise environments, where there are so many raw events that investigating each one individually would be exorbitant from a token cost perspective.",
+        "speaker": "Natan Yellin",
+        "speaker_role": "co‑founder and CEO of Robusta",
+        "source_url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev"
+      }
+    ],
+    "score": 6,
+    "url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev",
+    "source_id": "yourstory",
+    "desk": "india",
+    "ai_relevance": "core",
+    "image": "https://images.yourstory.com/cs/2/11718bd02d6d11e9aa979329348d4c3e/FreshworksShutterstock1600x900-1785325223708.jpeg",
+    "sources": [
+      {
+        "url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev",
+        "publisher": "YourStory",
+        "title": "Freshworks acquires Israel-based AI startup Robusta Dev"
+      },
+      {
+        "url": "https://inc42.com/buzz/freshworks-acquires-ai-startup-robusta-to-strengthen-it-operations-platform",
+        "publisher": "Inc42",
+        "title": "Freshworks Acquires AI Startup Robusta To Strengthen IT Operations Platform"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-10-29T10:56:05+00:00",
+    "created_at": "2026-10-29T13:15:34+00:00",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "india"
+    ],
+    "deal": {
+      "type": "acquisition",
+      "company": "Freshworks",
+      "amount": "",
+      "usd": null
+    },
+    "relevance": {
+      "builders": 1,
+      "business": 2,
+      "investors": 3
+    },
+    "cover": "Robusta Dev",
+    "trackers": [
+      "ai-money"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Distillation lets a developer send many prompts to a more powerful model, collect its answers, and then train a smaller model on those responses. This can give the smaller model similar abilities at lower cost. The approach is used to build new models without recreating the original training effort.",
+      "terms": [
+        {
+          "term": "distillation",
+          "meaning": "A method where outputs from a larger model are used as training data for a smaller model."
+        },
+        {
+          "term": "prompts",
+          "meaning": "Input queries sent to a model to generate responses."
+        },
+        {
+          "term": "coding benchmark",
+          "meaning": "A test that measures a model’s ability to write or understand code."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "Kimi K3.1 Pro",
+        "benchmark": "coding benchmark",
+        "score": "outperformed GPT-6 Astra"
+      }
+    ],
+    "audiences": {
+      "builders": "Distillation provides a way to improve model capabilities using existing powerful models as data sources.",
+      "business": "The practice highlights competitive pressure as Chinese firms can catch up to US labs without equal training spend.",
+      "investors": "It signals that firms leveraging distillation may achieve rapid capability gains, affecting market dynamics."
+    },
+    "id": "7591cbcc85bc",
+    "headline": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra for distillation training",
+    "summary": "DeepSeek’s V4.1‑Flash‑1017 and Moonshot AI’s Kimi K3.1 Pro were trained using outputs from OpenAI’s GPT‑6 Astra through a distillation process. DeepSeek released V4.1‑Flash‑1017 on Oct 17 and Moonshot AI launched Kimi K3.1 Pro on Oct 23.",
+    "why_it_matters": "The use shows how leading models can be leveraged by rivals to replicate capabilities without comparable training investment.",
+    "category": "models",
+    "lab": "DeepSeek and Moonshot AI",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 8,
+    "url": "https://techmeme.com/261029/p19",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": null,
+    "sources": [
+      {
+        "url": "https://techmeme.com/261029/p19",
+        "publisher": "techmeme.com",
+        "title": "Sources: DeepSeek and Moonshot AI heavily relied on GPT-6 Astra distillation to train models like Kimi K3.1 Pro and V4.1-Flash 1017, after Anthropic's crackdown (The Information)"
+      },
+      {
+        "url": "https://thenextweb.com/news/deepseek-moonshot-gpt-6-astra-distillation",
+        "publisher": "The Next Web",
+        "title": "DeepSeek and Moonshot trained new models on GPT-6 Astra, report says"
+      },
+      {
+        "url": "https://msn.com/en-ca/technology/artificial-intelligence/deepseek-moonshot-used-openai-s-gpt-6-astra-to-train-latest-models-the-information-reports/ar-AA2ghF3U",
+        "publisher": "Reuters on MSN",
+        "title": "DeepSeek, Moonshot used OpenAI's GPT-6 Astra to train latest models, The Information reports"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-29T10:46:03+00:00",
+    "created_at": "2026-10-29T13:15:34+00:00",
+    "thread": "t-cb46191c10a2",
+    "trackers": [
+      "frontier-race"
+    ],
+    "stock_tried": "2026-10-29T13:15:34+00:00"
+  },
+  {
+    "explainer": {
+      "what_it_means": "Freshworks will embed Robusta’s AI agents into Freshservice so the platform can automatically analyse monitoring data, pinpoint the cause of outages and suggest fixes. Engineers can review and approve any changes before they are applied to live systems.",
+      "terms": [
+        {
+          "term": "AI agents",
+          "meaning": "Software programs that use artificial‑intelligence models to perform tasks such as analysing data and making recommendations."
+        },
+        {
+          "term": "Incident investigation",
+          "meaning": "The process of analysing alerts and system changes to determine why a technology outage occurred."
+        },
+        {
+          "term": "IT service management (ITSM)",
+          "meaning": "A set of practices for delivering and supporting IT services, often using software platforms like Freshservice."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers can leverage the AI‑driven diagnostics to reduce manual troubleshooting effort.",
+      "business": "Enterprises can resolve IT incidents faster, potentially lowering downtime and revenue loss.",
+      "investors": "Freshworks expands its AI portfolio, which may strengthen its competitive position in the SaaS market."
+    },
+    "id": "20ac3a71666f",
+    "headline": "Freshworks acquires Israel AI startup Robusta Dev to add incident‑investigation AI to Freshservice",
+    "summary": "Freshworks bought Israel‑based AI startup Robusta Dev for an undisclosed sum. The acquisition adds AI‑driven outage diagnosis and remediation recommendations to Freshservice, Freshworks’ IT service‑management platform.",
+    "why_it_matters": "It gives enterprises AI tools to speed up IT incident resolution while keeping humans in the loop.",
+    "category": "industry",
+    "lab": "Freshworks",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "Our technology lets AI Agents do that effectively in large enterprise environments, where there are so many raw events that investigating each one individually would be exorbitant from a token cost perspective.",
+        "speaker": "Natan Yellin",
+        "speaker_role": "founder",
+        "source_url": "https://inc42.com/buzz/freshworks-acquires-ai-startup-robusta-to-strengthen-it-operations-platform"
+      },
+      {
+        "text": "LLMs are fantastic at troubleshooting incidents,",
+        "speaker": "Natan Yellin",
+        "speaker_role": "co‑founder and CEO",
+        "source_url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev"
+      }
+    ],
+    "score": 6,
+    "url": "https://inc42.com/buzz/freshworks-acquires-ai-startup-robusta-to-strengthen-it-operations-platform",
+    "source_id": "inc42",
+    "desk": "india",
+    "ai_relevance": "core",
+    "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/freshworks-acquisition-social-.jpg",
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/freshworks-acquires-ai-startup-robusta-to-strengthen-it-operations-platform",
+        "publisher": "Inc42",
+        "title": "Freshworks Acquires AI Startup Robusta To Strengthen IT Operations Platform"
+      },
+      {
+        "url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev",
+        "publisher": "YourStory",
+        "title": "Freshworks acquires Israel-based AI startup Robusta Dev"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-10-29T07:06:42+00:00",
+    "created_at": "2026-10-29T13:15:34+00:00",
+    "trackers": [
+      "ai-money"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "The MoU creates a framework for the Indian armed forces to use the same AI models and tools across the Army, Navy and Air Force. Projects will focus on helping with decisions, targeting and combining sensor data, while keeping humans in control of final actions.",
       "terms": [
         {
@@ -711,6 +955,66 @@
     "cover": "$400 million",
     "trackers": [
       "ai-money"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "AnySpeechRecognizer lets apps use the same Swift API that Apple provides, but swap in different speech‑recognition engines that run on the device. AnyDecisionModel lets apps ask a model to answer yes/no or multiple‑choice questions and get a probability, without generating text. Both packages download open models from the Hugging Face Hub and run them locally, so data stays on the device.",
+      "terms": [
+        {
+          "term": "Core ML",
+          "meaning": "Apple’s framework for running machine‑learning models efficiently on its devices."
+        },
+        {
+          "term": "Speaker diarization",
+          "meaning": "Identifying and separating different speakers in an audio recording."
+        },
+        {
+          "term": "Speech‑to‑text",
+          "meaning": "Converting spoken audio into written text."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers can integrate open speech and decision models into Swift apps using familiar Apple APIs, with the option to choose engines like Parakeet or Qwen3‑ASR.",
+      "business": "Enterprises can lower reliance on proprietary speech services and keep voice data on‑device, potentially reducing costs and privacy concerns.",
+      "investors": "Investors see Hugging Face expanding its ecosystem into on‑device AI for Apple platforms, opening new market opportunities."
+    },
+    "id": "85d975255b4f",
+    "headline": "Hugging Face releases AnySpeechRecognizer and AnyDecisionModel for Apple devices",
+    "summary": "Hugging Face announced two new Swift packages, AnySpeechRecognizer and AnyDecisionModel, that let developers run open speech‑to‑text and decision models on iOS and macOS. The packages support NVIDIA’s Parakeet and Alibaba’s Qwen3‑ASR engines and can run locally via Core ML.",
+    "why_it_matters": "They give developers more flexibility and lower‑cost alternatives to Apple’s built‑in speech engine.",
+    "category": "models",
+    "lab": "Hugging Face",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "speech",
+      "decision",
+      "Apple",
+      "Swift"
+    ],
+    "quotes": [],
+    "score": 7,
+    "url": "https://huggingface.co/blog/anydecisionmodel",
+    "source_id": "huggingface",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://huggingface.co/blog/assets/anydecisionmodel/banner.png",
+    "sources": [
+      {
+        "url": "https://huggingface.co/blog/anydecisionmodel",
+        "publisher": "Hugging Face blog",
+        "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-10-29T00:00:00+00:00",
+    "created_at": "2026-10-29T13:15:34+00:00",
+    "trackers": [
+      "ai-infrastructure"
     ],
     "photo_local": true
   },
