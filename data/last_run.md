@@ -1,85 +1,74 @@
-## Frontier Wire newsroom run — 2026-10-29T19:07:01+00:00
+## Frontier Wire newsroom run — 2026-10-29T21:56:26+00:00
 
-Fetched 2906 items · fresh 28 · judged 39 · kept 8 · **written 3**
-AI: 34 requests, 76,384 tokens this run · 270 requests today · providers: cerebras, groq
-Editor-in-chief: Tracking OpenAI's new model safety values and the funding surge in AI startups as investors reassess market dynamics.
-  Priorities: OpenAI updates Model Spec to reorganize it around five values: faithfu (OpenAI's model spec overhaul signals shifting safety priorities affecting all AI stakeholders.); Mistral releases weights for its trillion-parameter AI model, targetin (Mistral's trillion‑parameter model release targets cybersecurity, a key sector for builders and investors.); Alphabet's stock falls 12%+, wiping a record $500B from its market cap (Alphabet's sharp stock drop highlights the financial risk of heavy AI spending for a major tech player.); Source: Dulo, a startup co-founded by Google veteran Sebastian Thrun t (Dulo's $130M seed round for foundation models in hardware design shows emerging niche opportunities.); Serval, which offers AI agents for enterprise IT operations like acces (Serval's $150M raise underscores growing demand for AI agents in enterprise IT operations.)
-  Thin areas: research, voices
-  Searches: DeepSeek GPT-6 Astra training: 4 new; China AI export controls updates: 1 new; Google AI Mode ads revenue Q4: 6 new
-  Dig deeper: OpenAI updates Model Spec to reorganize it around five values: faithfu; Alphabet's stock falls 12%+, wiping a record $500B from its market cap
-Research agent: investigated 5 stories with 15 tool calls, confirmed 2
-Daily briefing: 3 themes from 20 stories
-Threads updated: China AI export controls: new curbs: China drafts export controls on 23 AI technologies, pending ; Google AI Mode ads: fixing lower earnings: Google says AI‑mode search generates less ad revenue per que
-Videos: 3 kept from 4 new · OpenAI ok (11 in feed, 1 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 1 new), Google for Developers ok (8 in feed, 0 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (13 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 1 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 0 new), Training Data (Sequoia) ok (6 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (1 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (4 in feed, 0 new)
-Photos: 2 saved, 0 unavailable
-Alerts: 46 events sent: {"subscribers":8,"sent":0,"queued":31}
-Claims: 49 tracked, 48 open, 0 updated this run
-Trackers: filed 2 stories; updated us-china, ai-regulation
-Model tracker: 82 models, 36 changes today
-Tagged 3 stories by sector, region and deal
-Time: gather 78s, plan 2s, judge 2s, verify and write 431s, videos 25s, trackers 63s, claims 20s, briefing 21s, stock photos 17s, alerts 4s
+Fetched 2907 items · fresh 25 · judged 33 · kept 5 · **written 2**
+AI: 28 requests, 73,042 tokens this run · 298 requests today · providers: cerebras, groq
+Editor-in-chief: Tracking OpenAI safety breaches and policy pushback while AI ad revenue stalls and industry seeks new monetization paths.
+  Priorities: Sources: Google, Meta, and other tech companies are resisting broad IC (Shows major policy resistance to data demands, shaping future regulation.); Reddit plans to require users to log in to fully access the site in re (Highlights safety measures against AI scraping, affecting platform user experience.); Sources: an Accenture staffer's Claude agent ran on a DOD network for  (Reveals security concerns with AI agents on defense networks.); OpenAI-backed Thrive Holdings acquires ADT (OpenAI‑backed acquisition signals expansion into AI‑driven security services.); Ex-Palantir execs launch Dream with $17M from a16z to build AI world m (Introduces AI world‑model startup for construction, filling a gap in model coverage.)
+  Thin areas: models, research
+  Searches: DeepSeek GPT-6 Astra training: 0 new; Google AI Mode ad revenue: 6 new; AI world model construction Dream startup: 3 new
+  Dig deeper: Sources: Google, Meta, and other tech companies are resisting broad IC; Reddit plans to require users to log in to fully access the site in re
+Research agent: investigated 4 stories with 12 tool calls, confirmed 1
+Daily briefing: 4 themes from 20 stories
+Videos: 5 kept from 6 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 1 new), Google for Developers ok (9 in feed, 1 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (9 in feed, 1 new), Hugging Face ok (13 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 1 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 1 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 0 new), Training Data (Sequoia) ok (6 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (1 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (4 in feed, 0 new)
+Photos: 1 saved, 0 unavailable
+Alerts: 49 events sent: {"subscribers":8,"sent":0,"queued":16}
+Claims: 50 tracked, 49 open, 0 updated this run
+Trackers: filed 2 stories; updated ai-money
+Model tracker: 82 models, 40 changes today
+Tagged 1 stories by sector, region and deal
+Time: gather 102s, plan 57s, judge 2s, verify and write 280s, videos 23s, tagging 21s, trackers 42s, claims 21s, model tracker 1s, briefing 42s, stock photos 16s, alerts 3s
 
 ### New stories
-- **policy** — [China drafts export controls on 23 AI technologies, pending adoption by year‑end](https://miamiherald.com/news/business/article317810613.html)  
-  China released draft rules on Oct. 16 that would add 23 AI‑related technologies, including large language models, agents, chip‑design tools and computing clusters, to its export‑control list. The rules would let overseas users access Chinese AI services online while requiring government approval for transfers of underlying models, data or expertise, and are expected to be adopted by the end of the year.  
-  _3 source(s), 1 verified quote(s)_
-- **safety** — [OpenAI revises Model Spec around five core values](https://techmeme.com/261029/p42)  
-  OpenAI updated its public Model Spec, reorganizing it around five values: faithfulness to human intent, harm minimization, honesty and transparency, human agency, and care. The update drops most style rules, renames the model as “GPT”, and acknowledges current models do not fully follow the new spec.  
-  _3 source(s), 2 verified quote(s)_
-- **industry** — [Google says AI‑mode search generates less ad revenue per query, will add more ads worldwide](https://arstechnica.com/gadgets/2026/10/google-admits-ai-search-makes-less-money-but-its-fixing-that-with-more-ads)  
-  Google disclosed that AI‑mode queries earn less revenue than traditional web searches because they show fewer and cheaper ads. To close the gap, the company announced it will roll out multi‑turn ads in AI‑mode across international markets.  
+- **industry** — [OpenAI-backed Thrive Holdings to acquire ADT for $15.3 billion](https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt)  
+  Thrive Holdings announced it will buy security firm ADT for $10 per share, valuing the deal at $15.3 billion in enterprise value. The acquisition pairs ADT’s security network with Thrive’s long‑term capital and AI engineering resources.  
   _2 source(s), 2 verified quote(s)_
+- **industry** — [Dream raises $17 million to build AI world models for construction](https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction)  
+  Former Palantir executives Andy Elder and Arjun Mathur launched Dream, a startup that trains AI on over 100 million square feet of permitted U.S. building data to generate engineering‑grade designs. The company emerged from stealth with a $17 million seed round led by Andreessen Horowitz and is already serving as architect of record on ten projects in Texas and California.  
+  _4 source(s), 2 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Just wrapped our earnings call. It was a fast start to our fiscal year. Microsoft Cloud revenue surpassed $63B, with growth accelerating to 30% YoY. Lots of innovation as we build the new tech stack… — not AI: Microsoft earnings call focuses on cloud revenue; no substantive AI angle.
-- We’re redefining the SDLC for the agentic era. Lots of GitHub updates this morning at Universe [Read more] — not AI: Blog post about SDLC for the agentic era is marketing‑style content without news value.
-- I went to Mexico to test-drive the cars Americans can’t buy — not AI: Non‑AI story about cars; not relevant.
-- LLM Voice — not AI: Generic LLM Voice post without news value.
-- Granola crunches up a dictation feature to compete with Wispr — score 4: Product feature war between dictation apps; minor AI angle.
-- Mistral releases weights for its trillion-parameter AI model, targeting cybersecurity — duplicate of 8ccea7e89b70
-- US investigated Chinese spy plot aimed at Nvidia CEO — not AI: Investigation of Chinese spy plot targeting Nvidia CEO; not AI‑focused.
-- Amazon updates Alexa to help you manage shopping lists and subscriptions and update delivery instructions — score 4: Alexa shopping‑list update is a routine product enhancement.
-- You can generate and edit Google Docs files directly in Gemini chats now — score 4: Gemini file‑editing feature is a minor product update.
-- ED Probes Unauthorised Cross-Border Crypto Transfers Worth ₹4,940 Cr — not AI: Crypto‑related enforcement action in India; no AI angle.
-- Bijnis Rebrands As Zorit, Raises ₹27 Cr For B2B Quick Commerce — not AI: Indian e‑commerce rebrand and funding; not AI‑related.
-- Spacetech Soonicorn Pixxel Eyes US Expansion With New Subsidiary — not AI: Indian space‑tech company expansion; no AI focus.
-- Building a multiplayer game world with autonomous Fable-class models — score 4: Personal commentary on building a multiplayer game world with autonomous models; interesting but not newsworthy.
-- Ethan Mollick: This is good advice from the Claude Code team (posted on X) for how to think about working with models like Opus 5.5. I would add: build… — score 4: Short advice tweet from Ethan Mollick; lacks broader relevance.
-- Utah files 14 criminal charges against Kalshi and its co-founders Tarek Mansour and Luana Lopes Lara for allegedly breaking Utah's gambling laws (Andy Larsen/Salt Lake Tribune) — duplicate of 7591cbcc85bc
-- DeepSeek and Moonshot AI are reportedly using GPT-6 Astra for training — duplicate of 7591cbcc85bc
-- Chinese AI giants DeepSeek, Moonshot used OpenAI's GPT-6 Astra to train their models: report — duplicate of 7591cbcc85bc
-- Moonshot AI and DeepSeek reportedly used OpenAI’s GPT-6 Astra outputs to build new models — duplicate of 7591cbcc85bc
-- Google is ruining AI mode with even more ads — and you can't opt out — score 4: Opinion piece on Google adding ads to AI mode; not a major news event.
-- Google expands ads in AI mode to 10 new markets, with UK and Brazil next — score 4: Announcement of AI‑mode ad expansion to new markets; routine marketing.
-- Google is sneaking more ads into AI Mode searches — score 4: Report on more ads in AI mode; low news value.
-- Google Widens AI Search Ads as Search Revenue Growth Slows — score 4: Google widens AI search ads; routine coverage.
-- Google Admits Its AI Search Makes Less Money Than Regular Search — score 6: Duplicate of story about Google’s AI search revenue shortfall.
-- Google expands AI Search ads globally as core ad growth slows — score 6: Duplicate of story about Google expanding AI search ads globally.
-- Alphabet's stock falls 12%+, wiping a record $500B from its market cap, after reporting negative cash flow amid its AI spending; the Nasdaq falls 1.4%+ (Stephen Morris/Financial Times) — could not verify yet; will retry next run
-- Microsoft’s AI future has fewer jobs — could not verify yet; will retry next run
-- Source: Dulo, a startup co-founded by Google veteran Sebastian Thrun to build "foundation models for hardware design", raised a $130M seed (Rocket Drew/The Information) — could not verify yet; will retry next run
-- Serval, which offers AI agents for enterprise IT operations like access management, raised $150M led by Sequoia at a $3B valuation, up from $1B in December 2025 (Harshita Mary Varghese/Reuters) — could not verify yet after a second try; dropped
-- Ex-Palantir execs launch Dream with $17M from a16z to build AI world models for construction — could not verify yet; will retry next run
+- Grace Blackwell needs a new scheduler: 27% more usable GPUs from the same racks — score 4: Technical blog about GPU scheduling improvements is a niche compute tweak with limited relevance to Frontier Wire’s audience.
+- Zombie stats: Where the numbers AI quotes come from — not AI: A listicle about where AI quotes originate lacks news value and has no AI angle beyond superficial mention.
+- As search traffic dries up, Reddit announces it’s shifting to a logged-in experience — score 4: Reddit’s shift to a logged‑in experience is a repeat of the AI‑scraping mitigation story and does not rise to news significance.
+- Rivian expands joint venture with VW to include AI assistant — score 5: Rivian’s joint venture expansion to include an AI assistant is a modest product addition, not a major industry development.
+- Meta quietly launches an AI fashion app called Style Sketch — score 4: Meta’s quietly launched AI fashion app is a minor product feature without broader impact.
+- Trump declares robot imports a national security threat — score 4: Trump’s declaration about robot imports is a geopolitical move with limited AI relevance.
+- Let’s Game Now Bags ₹30 Cr To Organise More Esports Tournaments — not AI: Esports funding story has no AI relevance.
+- Klassroom H1: Profit Jumps 24% YoY To ₹4 Cr, Revenue Up 21% — not AI: Edtech profit report is unrelated to AI.
+- Coinbase reports Q3 revenue down 35% YoY to $1.22B, in line with est., and net income up 66% to $719M, its first profit in a year, on unrealized crypto gains (Olga Kharif/Bloomberg) — not AI: Coinbase earnings report is a finance story without AI content.
+- Roblox reports Q3 bookings down 12% YoY to $1.7B, vs. $1.63B est., and DAUs down 9% to 138M, vs. 145.8M est.; RBLX drops 16%+ after hours (Cecilia D'Anastasio/Bloomberg) — not AI: Roblox earnings are unrelated to AI.
+- Sources: Instagram is offering select creators $50K to $500K to cross-post their long-form YouTube content to its new "Features" product (Business Insider) — not AI: Instagram creator payment program is a marketing/creator story, not AI‑focused.
+- Amazon reports Q3 AWS revenue up 39% YoY to $45.98B, above $45.29B est., and AWS operating income up 55% to $17.77B, above $16.97B est. (Jordan Novet/CNBC) — not AI: Amazon AWS revenue numbers are finance data without AI angle.
+- Sources: Google, Meta, and other tech companies are resisting broad ICE demands for user data as they face future Democratic-led congressional investigations (Wall Street Journal) — score 5: The story concerns tech firms resisting ICE data demands; AI is only a peripheral player, making it an adjacent policy item that does not meet the news threshold.
+- Symbotic says Walmart has committed an additional $6B over several years to deploy Symbotic's supply-chain automation technology across its distribution network (Sanskriti Shekhar/Reuters) — score 5: Walmart’s $6 B commitment to Symbotic’s automation is supply‑chain tech; AI plays a secondary role, not enough for a news story.
+- Reddit reports Q3 revenue up 53% YoY to $895M, vs. $878M est., DAUq up 12% to 130.3M, below est., forecasts Q4 revenue below est.; RDDT drops 17%+ after hours (Jonathan Vanian/CNBC) — not AI: Reddit revenue report lacks AI relevance.
+- Amazon spent $77B+ on property and equipment in Q3, leading to a free cash outflow of $42.4B; Amazon said in July that it would likely spend $220B in 2026 capex (Matt Day/Bloomberg) — not AI: Amazon capex spending is a finance story without AI focus.
+- Intel reports Q3 revenue up 21% YoY to $16.5B, vs. $16.5B est., and forecasts Q4 revenue and adjusted EPS below estimates; INTC drops 16%+ after hours (Katie Tarasov/CNBC) — not AI: Intel earnings are finance‑centric, not AI‑related.
+- Reddit plans to require users to log in to fully access the site in response to AI scraping and will test it in select markets outside the US this quarter (Sara Fischer/Axios) — score 5: Reddit’s login requirement to curb AI scraping is a platform‑policy tweak with limited broader impact; AI relevance is adjacent and the item scores below the keep threshold.
+- Amazon reports Q3 ad revenue up 11% YoY to $19.64B, vs. $20.82B est., and subscription services revenue up 11% YoY to $14B (Annie Palmer/CNBC) — not AI: Amazon ad revenue figures are not AI news.
+- Amazon reports Q3 revenue up 12% YoY to $201.9B, net income down 2% to $20.7B, and operating income up 61% to $28.1B; AMZN drops 8%+ after hours (Amazon) — not AI: Amazon overall revenue report lacks AI angle.
+- Google: AI Mode’s lower monetization slowed Search ad growth — duplicate of b394caaea480
+- Google Stock Sinks as AI Mode Pressures Search Ad Growth — duplicate of b394caaea480
+- Google expands AI search ads: Alphabet pushes global AI mode monetisation; longer multimodal queries surge — duplicate of b394caaea480
+- Google’s AI overhaul of search hits snags as ad revenue growth cools — duplicate of b394caaea480
+- Google stock drops amid AI fears; AI Mode has ‘lower monetization,’ getting more ads — duplicate of b394caaea480
+- More Ads Are Coming to Google AI Mode, and Google Just Explained Why — duplicate of b394caaea480
+- Sources: an Accenture staffer's Claude agent ran on a DOD network for two months and appears to have sent info to a third-party site before it was identified (Vittoria Elliott/Wired) — could not verify yet; will retry next run
+- Microsoft’s AI future has fewer jobs — could not verify yet after a second try; dropped
+- Source: Anthropic is "Customer B" cited by SpaceX in a filing as its single largest customer accounting for 34.5% of Q3 revenue, surpassing the US government (Bloomberg) — could not verify yet; will retry next run
 
 </details>
 
-### Sources with problems
-- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
-- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
-
 <details><summary>Research agent's work</summary>
 
-- Alphabet's stock falls 12%+, wiping a record $500B from its market cap: unconfirmed (searched “Alphabet stock falls 12% negative cash flow AI spending Nasdaq falls 1.4% Stephen Morris Financial Times”; read indiatimes.com; searched “"Alphabet" "Nasdaq" "1.4%"”)
-- China's new export curbs draw a line around its AI crown jewels: confirmed (searched “China new export curbs AI crown jewels export controls AI”; read bloomberg.com; read indiatimes.com)
+- OpenAI-backed Thrive Holdings acquires ADT: confirmed (searched “Thrive Holdings ADT acquisition”; read ft.com; read businessinsider.com)
+- Sources: an Accenture staffer's Claude agent ran on a DOD network for : unconfirmed (searched “Accenture Claude agent DOD network”; read wired.com; searched “Accenture employee Claude AI DOD network two months”)
 - Microsoft’s AI future has fewer jobs: unconfirmed (searched “Microsoft voluntary buyouts 60,000 employees buyout offer 2024”; read techrepublic.com; read msn.com)
-- OpenAI updates Model Spec to reorganize it around five values: faithfu: confirmed (searched “OpenAI updates Model Spec five values faithfulness to human intent harm minimization honesty transparency human agency care”; read msn.com; searched “Reuters OpenAI model spec five values”)
-- Source: Dulo, a startup co-founded by Google veteran Sebastian Thrun t: unconfirmed (searched “Dulo startup $130 million seed round Sebastian Thrun”; searched “"Dulo" startup seed 130M”; searched “Sebastian Thrun Dulo startup seed round”)
+- Source: Anthropic is "Customer B" cited by SpaceX in a filing as its s: unconfirmed (searched “SpaceX filing Anthropic largest customer 34.5% Q3 revenue”; read thenextweb.com; read msn.com)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id b394caaea480 for 'Google Admits Its AI Search Makes Less Money Than '
-- ignored made-up duplicate id b394caaea480 for 'Google expands AI Search ads globally as core ad g'
-- GDELT unavailable: GDELT paused for this run after repeated rate-limiting
-- 4 kept item(s) carried over to the next run
+- 2 kept item(s) carried over to the next run
+- cerebras/gpt-oss-120b: answer cut off; retrying with more room

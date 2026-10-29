@@ -1,0 +1,284 @@
+{
+  "started_at": "2026-10-29T21:56:26+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1337)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (894)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (20)",
+    "gdelt": "ok (0)",
+    "hn": "ok (15)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (0)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Grace Blackwell needs a new scheduler: 27% more usable GPUs from the same racks",
+      "reason": "score 4: Technical blog about GPU scheduling improvements is a niche compute tweak with limited relevance to Frontier Wire’s audience."
+    },
+    {
+      "title": "Zombie stats: Where the numbers AI quotes come from",
+      "reason": "not AI: A listicle about where AI quotes originate lacks news value and has no AI angle beyond superficial mention."
+    },
+    {
+      "title": "As search traffic dries up, Reddit announces it’s shifting to a logged-in experience",
+      "reason": "score 4: Reddit’s shift to a logged‑in experience is a repeat of the AI‑scraping mitigation story and does not rise to news significance."
+    },
+    {
+      "title": "Rivian expands joint venture with VW to include AI assistant",
+      "reason": "score 5: Rivian’s joint venture expansion to include an AI assistant is a modest product addition, not a major industry development."
+    },
+    {
+      "title": "Meta quietly launches an AI fashion app called Style Sketch",
+      "reason": "score 4: Meta’s quietly launched AI fashion app is a minor product feature without broader impact."
+    },
+    {
+      "title": "Trump declares robot imports a national security threat",
+      "reason": "score 4: Trump’s declaration about robot imports is a geopolitical move with limited AI relevance."
+    },
+    {
+      "title": "Let’s Game Now Bags ₹30 Cr To Organise More Esports Tournaments",
+      "reason": "not AI: Esports funding story has no AI relevance."
+    },
+    {
+      "title": "Klassroom H1: Profit Jumps 24% YoY To ₹4 Cr, Revenue Up 21%",
+      "reason": "not AI: Edtech profit report is unrelated to AI."
+    },
+    {
+      "title": "Coinbase reports Q3 revenue down 35% YoY to $1.22B, in line with est., and net income up 66% to $719M, its first profit in a year, on unrealized crypto gains (Olga Kharif/Bloomberg)",
+      "reason": "not AI: Coinbase earnings report is a finance story without AI content."
+    },
+    {
+      "title": "Roblox reports Q3 bookings down 12% YoY to $1.7B, vs. $1.63B est., and DAUs down 9% to 138M, vs. 145.8M est.; RBLX drops 16%+ after hours (Cecilia D'Anastasio/Bloomberg)",
+      "reason": "not AI: Roblox earnings are unrelated to AI."
+    },
+    {
+      "title": "Sources: Instagram is offering select creators $50K to $500K to cross-post their long-form YouTube content to its new \"Features\" product (Business Insider)",
+      "reason": "not AI: Instagram creator payment program is a marketing/creator story, not AI‑focused."
+    },
+    {
+      "title": "Amazon reports Q3 AWS revenue up 39% YoY to $45.98B, above $45.29B est., and AWS operating income up 55% to $17.77B, above $16.97B est. (Jordan Novet/CNBC)",
+      "reason": "not AI: Amazon AWS revenue numbers are finance data without AI angle."
+    },
+    {
+      "title": "Sources: Google, Meta, and other tech companies are resisting broad ICE demands for user data as they face future Democratic-led congressional investigations (Wall Street Journal)",
+      "reason": "score 5: The story concerns tech firms resisting ICE data demands; AI is only a peripheral player, making it an adjacent policy item that does not meet the news threshold."
+    },
+    {
+      "title": "Symbotic says Walmart has committed an additional $6B over several years to deploy Symbotic's supply-chain automation technology across its distribution network (Sanskriti Shekhar/Reuters)",
+      "reason": "score 5: Walmart’s $6 B commitment to Symbotic’s automation is supply‑chain tech; AI plays a secondary role, not enough for a news story."
+    },
+    {
+      "title": "Reddit reports Q3 revenue up 53% YoY to $895M, vs. $878M est., DAUq up 12% to 130.3M, below est., forecasts Q4 revenue below est.; RDDT drops 17%+ after hours (Jonathan Vanian/CNBC)",
+      "reason": "not AI: Reddit revenue report lacks AI relevance."
+    },
+    {
+      "title": "Amazon spent $77B+ on property and equipment in Q3, leading to a free cash outflow of $42.4B; Amazon said in July that it would likely spend $220B in 2026 capex (Matt Day/Bloomberg)",
+      "reason": "not AI: Amazon capex spending is a finance story without AI focus."
+    },
+    {
+      "title": "Intel reports Q3 revenue up 21% YoY to $16.5B, vs. $16.5B est., and forecasts Q4 revenue and adjusted EPS below estimates; INTC drops 16%+ after hours (Katie Tarasov/CNBC)",
+      "reason": "not AI: Intel earnings are finance‑centric, not AI‑related."
+    },
+    {
+      "title": "Reddit plans to require users to log in to fully access the site in response to AI scraping and will test it in select markets outside the US this quarter (Sara Fischer/Axios)",
+      "reason": "score 5: Reddit’s login requirement to curb AI scraping is a platform‑policy tweak with limited broader impact; AI relevance is adjacent and the item scores below the keep threshold."
+    },
+    {
+      "title": "Amazon reports Q3 ad revenue up 11% YoY to $19.64B, vs. $20.82B est., and subscription services revenue up 11% YoY to $14B (Annie Palmer/CNBC)",
+      "reason": "not AI: Amazon ad revenue figures are not AI news."
+    },
+    {
+      "title": "Amazon reports Q3 revenue up 12% YoY to $201.9B, net income down 2% to $20.7B, and operating income up 61% to $28.1B; AMZN drops 8%+ after hours (Amazon)",
+      "reason": "not AI: Amazon overall revenue report lacks AI angle."
+    },
+    {
+      "title": "Google: AI Mode’s lower monetization slowed Search ad growth",
+      "reason": "duplicate of b394caaea480"
+    },
+    {
+      "title": "Google Stock Sinks as AI Mode Pressures Search Ad Growth",
+      "reason": "duplicate of b394caaea480"
+    },
+    {
+      "title": "Google expands AI search ads: Alphabet pushes global AI mode monetisation; longer multimodal queries surge",
+      "reason": "duplicate of b394caaea480"
+    },
+    {
+      "title": "Google’s AI overhaul of search hits snags as ad revenue growth cools",
+      "reason": "duplicate of b394caaea480"
+    },
+    {
+      "title": "Google stock drops amid AI fears; AI Mode has ‘lower monetization,’ getting more ads",
+      "reason": "duplicate of b394caaea480"
+    },
+    {
+      "title": "More Ads Are Coming to Google AI Mode, and Google Just Explained Why",
+      "reason": "duplicate of b394caaea480"
+    },
+    {
+      "title": "Sources: an Accenture staffer's Claude agent ran on a DOD network for two months and appears to have sent info to a third-party site before it was identified (Vittoria Elliott/Wired)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Microsoft’s AI future has fewer jobs",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Source: Anthropic is \"Customer B\" cited by SpaceX in a filing as its single largest customer accounting for 34.5% of Q3 revenue, surpassing the US government (Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "4db20898e948",
+      "headline": "OpenAI-backed Thrive Holdings to acquire ADT for $15.3 billion",
+      "category": "industry",
+      "summary": "Thrive Holdings announced it will buy security firm ADT for $10 per share, valuing the deal at $15.3 billion in enterprise value. The acquisition pairs ADT’s security network with Thrive’s long‑term capital and AI engineering resources.",
+      "url": "https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "4dcfcc0d1943",
+      "headline": "Dream raises $17 million to build AI world models for construction",
+      "category": "industry",
+      "summary": "Former Palantir executives Andy Elder and Arjun Mathur launched Dream, a startup that trains AI on over 100 million square feet of permitted U.S. building data to generate engineering‑grade designs. The company emerged from stealth with a $17 million seed round led by Andreessen Horowitz and is already serving as architect of record on ten projects in Texas and California.",
+      "url": "https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction",
+      "sources": 4,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "2 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 101.6,
+    "audit": 0.0,
+    "plan": 56.6,
+    "judge": 2.3,
+    "verify and write": 280.3,
+    "videos": 22.6,
+    "tagging": 20.7,
+    "explainers": 0.0,
+    "trackers": 41.6,
+    "claims": 20.8,
+    "model tracker": 1.3,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 42.4,
+    "self-review": -0.0,
+    "photos": 0.1,
+    "stock photos": 16.3,
+    "daily email": -0.0,
+    "alerts": 3.0
+  },
+  "fetched": 2907,
+  "fresh": 25,
+  "plan": {
+    "focus": "Tracking OpenAI safety breaches and policy pushback while AI ad revenue stalls and industry seeks new monetization paths.",
+    "priorities": [
+      "Sources: Google, Meta, and other tech companies are resisting broad IC (Shows major policy resistance to data demands, shaping future regulation.)",
+      "Reddit plans to require users to log in to fully access the site in re (Highlights safety measures against AI scraping, affecting platform user experience.)",
+      "Sources: an Accenture staffer's Claude agent ran on a DOD network for  (Reveals security concerns with AI agents on defense networks.)",
+      "OpenAI-backed Thrive Holdings acquires ADT (OpenAI‑backed acquisition signals expansion into AI‑driven security services.)",
+      "Ex-Palantir execs launch Dream with $17M from a16z to build AI world m (Introduces AI world‑model startup for construction, filling a gap in model coverage.)"
+    ],
+    "thin_areas": [
+      "models",
+      "research"
+    ],
+    "searches": [
+      "DeepSeek GPT-6 Astra training: 0 new",
+      "Google AI Mode ad revenue: 6 new",
+      "AI world model construction Dream startup: 3 new"
+    ],
+    "dig_deeper": [
+      "Sources: Google, Meta, and other tech companies are resisting broad IC",
+      "Reddit plans to require users to log in to fully access the site in re"
+    ]
+  },
+  "judged": 33,
+  "kept": 5,
+  "research": {
+    "investigated": 4,
+    "confirmed": 1,
+    "tool_calls": 12
+  },
+  "research_log": [
+    "OpenAI-backed Thrive Holdings acquires ADT: confirmed (searched “Thrive Holdings ADT acquisition”; read ft.com; read businessinsider.com)",
+    "Sources: an Accenture staffer's Claude agent ran on a DOD network for : unconfirmed (searched “Accenture Claude agent DOD network”; read wired.com; searched “Accenture employee Claude AI DOD network two months”)",
+    "Microsoft’s AI future has fewer jobs: unconfirmed (searched “Microsoft voluntary buyouts 60,000 employees buyout offer 2024”; read techrepublic.com; read msn.com)",
+    "Source: Anthropic is \"Customer B\" cited by SpaceX in a filing as its s: unconfirmed (searched “SpaceX filing Anthropic largest customer 34.5% Q3 revenue”; read thenextweb.com; read msn.com)"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (9 in feed, 1 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 1 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 1 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "5 kept from 6 new",
+  "tagged": 1,
+  "trackers": "filed 2 stories; updated ai-money",
+  "claims": "50 tracked, 49 open, 0 updated this run",
+  "model_tracker": "82 models, 40 changes today",
+  "briefing": "4 themes from 20 stories",
+  "photos": "1 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "49 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":16}",
+  "ai_requests_run": 28,
+  "ai_tokens_run": 73042,
+  "ai_requests_today": 298,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
+}
