@@ -1,17 +1,14 @@
-## Frontier Wire breaking-news check — 2026-10-29T16:24:09+00:00
+## Frontier Wire breaking-news check — 2026-10-29T17:22:11+00:00
 
-Fetched 2401 items · fresh 1 · judged 1 · kept 0 · **written 0**
-AI: 1 requests, 5,407 tokens this run · 229 requests today · providers: cerebras, groq
+Fetched 2401 items · fresh 1 · judged 1 · kept 1 · **written 1**
+AI: 6 requests, 14,591 tokens this run · 235 requests today · providers: cerebras, groq
 Photos: 0 saved, 0 unavailable
-Alerts: 39 events sent: {"subscribers":8,"sent":0,"queued":0}
-Trackers: filed 0 stories; no tracker changed
-Time: gather 11s, judge 2s, alerts 4s
+Alerts: 40 events sent: {"subscribers":8,"sent":0,"queued":10}
+Trackers: filed 1 stories; updated agent-safety
+Tagged 1 stories by sector, region and deal
+Time: gather 13s, trackers 21s, stock photos 17s, alerts 5s
 
 ### New stories
-- none
-
-<details><summary>Dropped</summary>
-
-- Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents — score 5: The NVIDIA blog post describes a product/feature using frontier AI agents within Omniverse for simulation development. It is a marketing‑type announcement rather than a new model release, research breakthrough, or major policy/infrastructure deal, so it rates as an incremental update and does not meet the threshold for publication.
-
-</details>
+- **safety** — [OpenAI implements layered monitoring to spot model misalignment](https://openai.com/index/how-we-detect-frontier-model-misalignment)  
+  OpenAI says it uses layered monitoring to detect misalignment and unauthorized agent behavior in frontier models, allowing responders to intervene before incidents grow.  
+  _1 source(s), 0 verified quote(s)_
