@@ -1,79 +1,86 @@
-## Frontier Wire newsroom run — 2026-10-28T21:54:23+00:00
+## Frontier Wire newsroom run — 2026-10-29T01:14:34+00:00
 
-Fetched 2907 items · fresh 20 · judged 31 · kept 8 · **written 2**
-AI: 31 requests, 66,396 tokens this run · 293 requests today · providers: cerebras, groq
-Editor-in-chief: Tracking enterprise AI spend spikes while policy clamps tighten, as major model launches reshape market dynamics.
-  Priorities: Microsoft recorded $10 billion in revenue from OpenAI (Shows OpenAI's revenue impact on Microsoft, key for investors and strategy planners.); ServiceNow reports Q3 subscription revenue up 21% YoY to $3.99B, forec (ServiceNow's strong subscription growth signals enterprise AI adoption trends.); Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecu (Google's Gemini 4 Carbon launch highlights competitive model advances and cybersecurity implications.); Anthropic just launched tools to show companies what their AI spending (Anthropic's AI spend transparency tools help companies manage costs and ROI.); NY Gov. Kathy Hochul signs bills banning AI chatbots from using "unsaf (New NY AI safety legislation affects product compliance and risk management.)
+Fetched 2906 items · fresh 16 · judged 28 · kept 8 · **written 3**
+AI: 37 requests, 81,986 tokens this run · 37 requests today · providers: cerebras, groq
+Editor-in-chief: Tracking AI security valuations and antitrust scrutiny while covering thin research and voice gaps.
+  Priorities: AI Cyber Startup Upwind Security Hits $3.8B Valuation After New Fundin (Upwind Security’s $3.8B valuation highlights rapid growth in AI security, key for builders and investors.); Sources: the US DOJ has inquired about the impact of Nvidia's Hugging  (DOJ probe of Nvidia‑Hugging Face deal signals antitrust risk for major AI infrastructure partnerships.); Sources: Marvell is in advanced talks to buy data center optics maker  (Marvell’s potential Lumentum acquisition shows consolidation in data‑center optics, affecting industry strategy.); Filing: Microsoft recorded $10B in revenue from OpenAI in Q1, nearly 1 (Microsoft disclosed $10 B revenue from OpenAI, underscoring the financial dependence on AI services.); Seoul-based AI chip startup FuriosaAI raised a $620M Series D at a $2. (FuriosaAI’s $620 M Series D reflects booming AI chip startup funding, relevant for hardware roadmaps.)
   Thin areas: research, voices
-  Searches: OpenAI election war room update: 6 new; Anthropic IPO valuation latest filing: 4 new; AI for science research collaborations: 1 new
-  Dig deeper: Microsoft recorded $10 billion in revenue from OpenAI; Anthropic just launched tools to show companies what their AI spending
+  Searches: Nvidia Hugging Face antitrust investigation: 6 new; Anthropic AI spending tool adoption: 3 new; AI research funding trends 2026: 1 new
+  Dig deeper: Sources: the US DOJ has inquired about the impact of Nvidia's Hugging ; Filing: Microsoft recorded $10B in revenue from OpenAI in Q1, nearly 1
 Research agent: investigated 5 stories with 15 tool calls, confirmed 2
-Daily briefing: 3 themes from 19 stories
-Videos: 4 kept from 5 new · OpenAI ok (9 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 1 new), Google for Developers ok (9 in feed, 1 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (13 in feed, 1 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 2 new), Training Data (Sequoia) ok (6 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (1 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (4 in feed, 0 new)
-Photos: 2 saved, 0 unavailable
-Alerts: 60 events sent: {"subscribers":8,"sent":0,"queued":28}
-Claims: 44 tracked, 43 open, 0 updated this run
-Trackers: filed 1 stories; updated ai-regulation
-Model tracker: 82 models, 51 changes today
-Tagged 2 stories by sector, region and deal
-Time: gather 84s, plan 3s, judge 2s, verify and write 376s, videos 3s, tagging 21s, trackers 42s, claims 20s, briefing 21s, alerts 8s
+Daily briefing: 4 themes from 19 stories
+Videos: 0 kept from 1 new · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic ok (12 in feed, 0 new), Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers ok (15 in feed, 1 new), AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors ok (4 in feed, 0 new), Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC ok (4 in feed, 0 new)
+Daily self-check: coverage 18% of 11 significant stories; 9 missed, 3 added to this run; 3 lesson(s) for the editor
+Photos: 3 saved, 0 unavailable
+Alerts: 13 events sent: {"subscribers":8,"sent":0,"queued":28}
+Claims: 45 tracked, 44 open, 0 updated this run
+Trackers: filed 2 stories; updated ai-regulation, ai-money
+Model tracker: 82 models, 8 changes today
+Tagged 1 stories by sector, region and deal
+Self-review written (see the newsroom issue)
+Time: gather 112s, audit 6s, plan 77s, judge 2s, verify and write 418s, videos 22s, tagging 21s, trackers 64s, claims 21s, briefing 21s, self-review 21s, alerts 5s
 
 ### New stories
-- **policy** — [New York governor signs law banning unsafe AI chatbot features for minors](https://techmeme.com/261028/p46)  
-  Governor Kathy Hochul signed two bills that prohibit AI chatbots from using unsafe features with users under 18 and require security safeguards on internet‑connected baby monitors. The chatbot law mandates age verification, bans certain behaviors, and imposes up to $25,000 civil penalties per violation; it takes effect in six months.  
+- **industry** — [Upwind Security raises $400 million Series C at $3.8 billion valuation](https://tipranks.com/news/ai-cyber-startup-upwind-security-hits-3-8b-valuation-after-new-funding-round)  
+  Upwind Security announced a $400 million Series C funding round, valuing the cloud and AI security startup at $3.8 billion. The round was led by Bessemer Venture Partners and will fund product and engineering growth.  
   _3 source(s), 2 verified quote(s)_
-- **research** — [Anthropic expands AI for Science program to 20 foundations and research groups](https://anthropic.com/news/ai-for-science-expands-foundations-research-institutions)  
-  Anthropic announced that its AI for Science program now includes 20 scientific foundations, institutions and research groups worldwide, providing them with free Claude credits for high‑impact projects. The expansion builds on earlier efforts that already supported hundreds of biology, medicine, physics, chemistry, climate and mathematics projects.  
-  _1 source(s), 0 verified quote(s)_
+- **industry** — [DOJ probes Nvidia's $13 billion Hugging Face acquisition](https://reuters.com/world/us-doj-is-inquiring-about-nvidias-purchase-hugging-face-sources-say-2026-10-28)  
+  The U.S. Department of Justice has made inquiries into Nvidia's planned $12.93 billion purchase of open‑source AI hub Hugging Face, citing competition concerns; Nvidia shares fell about 1.7% after the news.  
+  _3 source(s), 0 verified quote(s)_
+- **industry** — [Anthropic launches reporting tools to detail enterprise AI token spend](https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying)  
+  Anthropic introduced a suite of reporting tools that let enterprise customers see team output, token costs, workflow breakdowns and recommendations, while the company reported operating profit and 900% net revenue retention in Q2.  
+  _2 source(s), 2 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Microsoft hits 10 quarters of record- breaking revenue in a row — not AI: Microsoft’s record quarterly revenue is a broad financial result; the piece does not focus on AI and therefore falls below the news threshold.
-- Wiz’s CTO on PHP2Shell and the coming ‘vulnpocalypse’ — not AI: The article discusses PHP security bugs, which are unrelated to AI.
-- Akai is embracing vibe-coded mods with an open-source MPC — not AI: The story is about a music hardware product and does not involve AI.
-- Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity — duplicate of 41e0dc889e76
-- Microsoft is ending Copilot support on smart TVs — score 5: Microsoft ending Copilot on smart TVs is a product‑support change; while it involves an AI assistant, the impact is modest and does not meet the news threshold.
-- Creating AI value with enterprise context — score 4: A thought‑leadership piece on extracting AI value in enterprises; it offers perspective but no new news.
-- ServiceNow reports Q3 subscription revenue up 21% YoY to $3.99B, forecasts Q4 current remaining performance obligations below est.; NOW drops 15%+ after hours (Brody Ford/Bloomberg) — not AI: The story reports ServiceNow subscription growth; while it hints at enterprise AI adoption, the announcement itself is not AI‑centric enough to meet the news threshold.
-- Microsoft reports Q1 capex of $45.2B, up from $34.9B a year earlier and below its own $50B projection, and free cash flow of $18.6B, vs. $8.54B est. by analysts (Deborah Sophia/Reuters) — not AI: The report details Microsoft’s overall capex; the article does not highlight AI‑specific spending.
-- Alphabet reports Q3 YouTube ad revenue up 9% YoY to $11.2B, below estimates, and Google ad revenue hit $82.01B, up from $74.18B in Q3 2025 (Todd Spangler/Variety) — not AI: Alphabet’s ad revenue numbers are not AI‑focused.
-- Alphabet reports Q3 revenue up 25% YoY to $127.6B, Google Cloud revenue up 103% to $30.7B, and Google Services revenue up 11% to $96.3B (Alphabet) — not AI: Alphabet’s overall revenue report lacks an AI focus.
-- Microsoft reports Q1 revenue up 19% YoY to $92.3B, Azure revenue up 48% to $33.2B, operating income up 21% to $45.9B, and net income up 32% to $36.6B (Microsoft) — not AI: Microsoft’s revenue report is not centered on AI.
-- Oracle pledges to limit new financing to $20B through FY 2030, expects free cash flow to turn positive in H2 FY 2028 and top $30B in FY 2029; ORCL jumps 11%+ (Deborah Sophia/Reuters) — not AI: Oracle’s financing plan is a general corporate finance story without an AI angle.
-- OpenAI launching election 'war room' — duplicate of e3f879545331
-- OpenAI launching election war room to track interference efforts — duplicate of e3f879545331
-- OpenAI Launches Election 'War Room' Ahead of Midterms — duplicate of e3f879545331
-- OpenAI starts election war room to monitor its products during midterm races — duplicate of e3f879545331
-- OpenAI brings hundreds of employees together to track election interference ahead of midterms — duplicate of e3f879545331
-- AI in the 2026 Midterms: Deepfakes, Chatbots, and Election Security — duplicate of e3f879545331
-- Anthropic filed to go public—what retail investors should weigh before its IPO — duplicate of e4d1fbe9aac7
-- Anthropic's IPO lists 93 pages of risks. What could go wrong? — duplicate of e4d1fbe9aac7
-- What Anthropic’s IPO filing reveals about its soaring revenues, existential risks from AI — duplicate of e4d1fbe9aac7
-- Anthropic IPO: Can Indian investors get a slice of the AI boom? What to know about access and risks | Experts explain — duplicate of e4d1fbe9aac7
-- UNN health academics trained in AI research — not AI: The piece reports on health academics training in AI research, which is not a newsworthy AI development for our audience.
-- Google expands AI Search ads globally as core ad growth slows — variety: already 2 stories from techcrunch.com this run
-- As AI agents reshape the web, Google opens Gemini and Search to more apps — variety: already 2 stories from techcrunch.com this run
-- Microsoft recorded $10 billion in revenue from OpenAI — could not verify yet; will retry next run
-- Anthropic just launched tools to show companies what their AI spending is buying — could not verify yet; will retry next run
-- Meta says it&#8217;ll probably delay its controversial new business terms again — could not verify yet after a second try; dropped
-- Anthropic tells California governor courts should be able to block risky AI models — could not verify yet; will retry next run
+- Microsoft just shared Azure’s actual revenue in dollars: $33.2 billion — not AI: Azure revenue figure is a cloud‑financial metric without a direct AI angle.
+- Microsoft recorded $10 billion in revenue from OpenAI — score 7: Duplicate of the Microsoft OpenAI revenue story already covered.
+- Adam Mosseri says negativity around AI is ‘going to get worse’ — score 3: Commentary on public sentiment toward AI; lacks a concrete news hook.
+- Anthropic tells California governor courts should be able to block risky AI models — score 5: Anthropic urging California courts to block risky AI models is a policy comment but does not constitute a major regulatory action; score below the keep threshold.
+- Quoting Ted Sanders — score 3: A generic commentary on LLM performance without a concrete development; not significant enough for coverage.
+- Ethan Mollick: I just found out that my new book, Co-Existence, debuted at #3 on the New York Times bestseller list. Thank you so much to everyone who… — not AI: Personal promotion of a bestseller; unrelated to AI developments.
+- Microsoft reports Q1 Xbox hardware revenue down 14% YoY, Xbox content and services revenue down 2%, and Windows OEM and Devices revenue down 22% (Tom Warren/The Verge) — not AI: Quarterly hardware revenue decline for Microsoft; not AI‑focused.
+- Zillow agrees to pay $212.5M to settle an investor class action over its failed Zillow Offers home-flipping venture, after SCOTUS refused to hear its appeal (Jonathan Stempel/Reuters) — not AI: Zillow settlement unrelated to AI.
+- Sources: the US DOJ has inquired about the impact of Nvidia's Hugging Face deal on AI competition, as antitrust enforcers continue to probe Nvidia's conduct (Reuters) — score 8: The DOJ inquiry into Nvidia's $12.9 B acquisition of Hugging Face has already been covered in existing stories; this item is a duplicate.
+- Alphabet reports Q3 negative free cash flow of $9.07B, worse than expected, capex of $51.36B, vs. $55.09B est., and keeps its FY capex forecast at $195B-$205B (Samantha Subin/CNBC) — not AI: Alphabet’s cash‑flow and capex numbers lack a direct AI focus.
+- eBay reports Q3 revenue up 14% YoY to $3.21B, above $3.12B est., and GMV up 15% to $23.17B, above $22.32B est.; EBAY jumps 4%+ after hours (Kelly Cloonan/Wall Street Journal) — not AI: eBay financial results; no AI relevance.
+- AI Security Startup Upwind Raises $400M at $3.8B Valuation — score 7: Duplicate of the Upwind Security funding story.
+- Dept of Justice studying Nvidia's $12.9B acquisition of Hugging Face - Reuters — score 8: Duplicate of the DOJ‑Nvidia/Hugging Face investigation story.
+- Nvidia faces DOJ antitrust scrutiny over $12.9B Hugging Face deal, Reuters says — score 8: Duplicate of the DOJ‑Nvidia/Hugging Face investigation story.
+- The DOJ is reportedly looking into Nvidia’s Hugging Face acquisition. — score 8: Duplicate of the DOJ‑Nvidia/Hugging Face investigation story.
+- US Justice Department examines Nvidia's $12.93 billion Hugging Face deal — score 8: Duplicate of the DOJ‑Nvidia/Hugging Face investigation story.
+- Nvidia’s $12.9 Billion Hugging Face Deal Draws Justice Department Questions — score 8: Duplicate of the DOJ‑Nvidia/Hugging Face investigation story.
+- Anthropic Launches AI Spend Transparency Tools Ahead of IPO — score 6: Duplicate of Anthropic’s AI‑spending transparency tool announcement.
+- Anthropic ships Claude Enterprise cost tools as AI ROI doubts persist — score 6: Duplicate of Anthropic’s AI‑spending transparency tool announcement.
+- Drug Discovery Technologies - Global Market Size, Share, Trends, and Forecast, 2025-2032 | AI and Genomics Fuel 11.7% CAGR, Creating a US$327.3 Billion Market — not AI: Market‑size report on drug discovery; not a specific AI development.
+- Sources: AI coding startup Cognition weighs a new funding round before year's end after receiving offers valuing it at $70B-$80B, up from $48B in September (Katie Roof/Business Insider) — could not verify yet; will retry next run
+- Filing: Microsoft recorded $10B in revenue from OpenAI in Q1, nearly 11% of its total quarterly revenue, and has $7.2B in outstanding receivables from OpenAI (Rebecca Bellan/TechCrunch) — could not verify yet; will retry next run
+- Seoul-based AI chip startup FuriosaAI raised a $620M Series D at a $2.9B valuation, up from $735M in 2025; South Korea's National Growth Fund contributed $280M (Yoolim Lee/Bloomberg) — could not verify yet; will retry next run
+- Sources: Marvell is in advanced talks to buy data center optics maker Lumentum, whose market value is ~$83B; the deal could be announced as soon as next week (Bloomberg) — could not verify yet; will retry next run
+- ‘Quick and painless’: Aussie woman poses as suicidal teen. See AI app’s vile responses — could not verify yet; will retry next run
 
 </details>
 
-### Sources with problems
-- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
-- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
-
 <details><summary>Research agent's work</summary>
 
-- Microsoft recorded $10 billion in revenue from OpenAI: unconfirmed (searched “Microsoft $10 billion revenue OpenAI quarter ending September 30”; read techmeme.com; searched “"$10 billion" OpenAI Microsoft revenue quarter ending September 30”)
-- NY Gov. Kathy Hochul signs bills banning AI chatbots from using "unsaf: confirmed (searched “Kathy Hochul signs bills banning AI chatbots minors baby monitors”; read engadget.com; read mashable.com)
-- Anthropic just launched tools to show companies what their AI spending: unconfirmed (searched “Anthropic launched tools to show companies AI spending buying”; read investopedia.com; read yahoo.com)
-- Meta says it&#8217;ll probably delay its controversial new business te: confirmed (searched “Meta delay new business terms November 20th publishers AI training backlash”; read msn.com; searched “Engadget Meta delays new business terms”)
-- Anthropic tells California governor courts should be able to block ris: unconfirmed (searched “Anthropic tells California governor courts should be able to block risky AI models”; read msn.com; searched “Reuters Anthropic California courts block risky AI models”)
+- Sources: AI coding startup Cognition weighs a new funding round before: unconfirmed (searched “Cognition AI coding startup valuation 70 billion”; read businessinsider.com; read businessinsider.com)
+- Filing: Microsoft recorded $10B in revenue from OpenAI in Q1, nearly 1: unconfirmed (searched “Microsoft recorded $10 billion revenue from OpenAI Q1 filing”; read msn.com; read cnbc.com)
+- AI Cyber Startup Upwind Security Hits $3.8B Valuation After New Fundin: confirmed (searched “Upwind Security $3.8B valuation”; read yahoo.com; read msn.com)
+- US DOJ is inquiring about Nvidia's purchase of Hugging Face, sources s: confirmed (searched “DOJ inquiry Nvidia purchase Hugging Face”; read theverge.com; read yahoo.com)
+- Seoul-based AI chip startup FuriosaAI raised a $620M Series D at a $2.: unconfirmed (searched “FuriosaAI $620 million Series D valuation 2.9 billion National Growth Fund”; read bloomberg.com; searched “FuriosaAI funding round $620 million”)
 
 </details>
 
 ### Notes
-- not India desk: 'Anthropic tells California governor courts should '
-- 3 kept item(s) carried over to the next run
+- ignored made-up duplicate id 383f406db53b for 'Microsoft recorded $10 billion in revenue from Ope'
+- ignored made-up duplicate id 6fbbc9445480 for 'Sources: the US DOJ has inquired about the impact '
+- ignored made-up duplicate id 429ac0d1a16a for 'AI Security Startup Upwind Raises $400M at $3.8B V'
+- ignored made-up duplicate id 6fbbc9445480 for 'Dept of Justice studying Nvidia's $12.9B acquisiti'
+- ignored made-up duplicate id 6fbbc9445480 for 'Nvidia faces DOJ antitrust scrutiny over $12.9B Hu'
+- ignored made-up duplicate id 6fbbc9445480 for 'The DOJ is reportedly looking into Nvidia’s Huggin'
+- ignored made-up duplicate id 6fbbc9445480 for 'US Justice Department examines Nvidia's $12.93 bil'
+- ignored made-up duplicate id 6fbbc9445480 for 'Nvidia’s $12.9 Billion Hugging Face Deal Draws Jus'
+- ignored made-up duplicate id ea370fdd96af for 'Anthropic Launches AI Spend Transparency Tools Ahe'
+- ignored made-up duplicate id ea370fdd96af for 'Anthropic ships Claude Enterprise cost tools as AI'
+- GDELT unavailable: GDELT paused for this run after repeated rate-limiting
+- 5 kept item(s) carried over to the next run
