@@ -1,10 +1,10 @@
 
- ⛅️ wrangler 4.152.0
+ ⛅️ wrangler 4.156.0
 ────────────────────
 
 Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
-Total Upload: 40.82 KiB / gzip: 13.24 KiB
-Worker Startup Time: 1 ms
+Total Upload: 53.76 KiB / gzip: 15.94 KiB
+Worker Startup Time: 2 ms
 Your Worker has access to the following bindings:
 Binding                                                            Resource                  
 env.DB (frontier-wire)                                             D1 Database               
@@ -12,8 +12,9 @@ env.SITE_URL ("https://ajsims23.github.io/frontier-w...")          Environment V
 env.SENDER_NAME ("Frontier Wire")                                  Environment Variable      
 env.SENDER_EMAIL ("(hidden)")                                      Environment Variable      
 
-Uploaded frontier-wire-api (2.46 sec)
-Deployed frontier-wire-api triggers (0.77 sec)
+Uploaded frontier-wire-api (4.63 sec)
+Deployed frontier-wire-api triggers (0.84 sec)
   https://frontier-wire-api.frontier-wire-ed03d1.workers.dev
   schedule: 20 3 * * *
-Current Version ID: 4bf278e7-add7-459f-9cdc-d2d3ad14fcc5
+  schedule: */10 * * * *
+Current Version ID: 13e23d19-42b5-4e76-aac1-a1ff2833804c
