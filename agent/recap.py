@@ -457,7 +457,7 @@ def stamp(script: dict[str, Any], out_dir: Path, now: datetime) -> dict[str, Any
     info = check(out_dir)
     if errs or not info["ok"]:
         raise RuntimeError("; ".join(errs + info["problems"]))
-    script["video"] = {k: info[k] for k in ("duration", "bytes")}
+    script["video"] = {k: info[k] for k in ("duration", "bytes", "poster_bytes", "gif_bytes")}
     script["published_at"] = script.get("published_at") or now.isoformat()
     return script
 
@@ -517,7 +517,7 @@ def feed(rows: list[dict[str, Any]], base: str) -> str:
                 f"<pubDate>{format_datetime(datetime.fromisoformat(r['published_at']))}</pubDate>"
                 f"<description>{escape(' '.join(r['summary']))}</description>"
                 f"<content:encoded><![CDATA[{html}]]></content:encoded>"
-                f'<enclosure url="{r["poster_url"]}" type="image/jpeg" length="0"/>'
+                f'<enclosure url="{r["poster_url"]}" type="image/jpeg" length="{int(r["video"].get("poster_bytes") or 0)}"/>'
                 f'<media:thumbnail url="{r["poster_url"]}" width="1920" height="1080"/></item>')
 
     latest = rows[0]["published_at"] if rows else datetime.now(timezone.utc).isoformat()
