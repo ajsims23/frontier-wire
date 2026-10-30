@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="shell lab-page recap-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><a href="{{ root }}videos/">Daily recaps</a><span aria-hidden="true">/</span><span>{{ r.human }}</span></nav>
+  <header class="lab-head">
+    <p class="recap-eyebrow">Today in AI · {{ r.human }} · {{ r.seconds }} seconds</p>
+    <h1>{{ r.hook }}</h1>
+  </header>
+  <div class="recap-video">
+    {% if r.live %}
+    <video controls playsinline preload="metadata" poster="{{ root }}{{ r.poster }}" src="{{ root }}{{ r.mp4 }}">
+      <a href="{{ root }}{{ r.mp4 }}">Download the video</a>
+    </video>
+    {% else %}
+    <a class="recap-archived" href="{{ r.mp4 }}" rel="noopener">
+      {% if r.poster %}<img src="{{ root }}{{ r.poster }}" alt="" loading="lazy">{% endif %}
+      <span>This recap has moved to the archive. <strong>Download the video</strong></span>
+    </a>
+    {% endif %}
+  </div>
+  <ul class="recap-summary">{% for line in r.summary %}<li>{{ line }}</li>{% endfor %}</ul>
+  <ol class="recap-list">
+    {% for s in r.entries %}
+    <li>
+      <span class="recap-n" style="color: var(--{{ s.category }})">{{ "%02d"|format(loop.index) }}</span>
+      <div>
+        <h2>{% if s.href %}<a href="{{ root }}{{ s.href }}">{{ s.line }}</a>{% else %}{{ s.line }}{% endif %}</h2>
+        <p>{{ s.detail }}</p>
+        <p class="meta">Source: {{ s.source }}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+  <p class="recap-foot">Made by our newsroom agent from stories checked against official sources or two independent outlets. Original graphics; headlines are written by us. <a href="{{ root }}videos/">All recaps</a> · <a href="{{ root }}videos/feed.xml">RSS</a></p>
+</section>
+{% endblock %}

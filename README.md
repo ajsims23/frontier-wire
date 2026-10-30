@@ -66,6 +66,14 @@ Settings → Pages → *Custom domain*. GitHub provides HTTPS for free.
 | **Check** | Quotes must appear word for word in the source, or they're removed. |
 | **Publish** | Front page, frontier lab tracker, RSS feed (`data/feed.xml`) and a run report. |
 
+## Daily 30-second recap
+Every evening a scheduled Claude session picks the day's top five stories (the home page's top-stories rule over
+the last 24 hours, at most two per category), writes paraphrased on-screen lines and renders an original
+motion-graphics video: `python -m agent recap draft | render | publish` (see `agent/recap.py`).
+- Videos, posters and teaser GIFs are stored as GitHub **Releases** (`recap-YYYY-MM-DD`), not in git, so the repo stays light.
+- The deploy workflow copies the last 3 days' videos (and 30 days' posters and GIFs) into the site at `/videos/YYYY-MM-DD/`.
+- `/videos/` is the archive; older videos download from Releases. `/videos/feed.xml` has one item per day for the subscriber email.
+
 ## Free-tier safety
 - Caps of 40 AI requests per run, 300 per day and 700k tokens per day keep you well inside free limits (`config/settings.yaml` → `limits`).
 - Provider fallback: Cerebras → Groq → OpenRouter → Gemini. Rate-limited or retired models are skipped automatically.

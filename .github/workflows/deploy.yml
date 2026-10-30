@@ -44,6 +44,18 @@ jobs:
           API_URL: ${{ vars.API_URL }}
         run: python -m agent.build --out _site
 
+      - name: Add the daily recap videos (stored as GitHub Releases, listed by the build)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -s _site/videos/assets.txt ] || exit 0
+          while read -r tag date file; do
+            mkdir -p "_site/videos/$date"
+            gh release download "$tag" --repo "$GITHUB_REPOSITORY" --pattern "$file" --dir "_site/videos/$date" --clobber \
+              || echo "::warning::could not download $file from $tag"
+          done < _site/videos/assets.txt
+          rm _site/videos/assets.txt
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

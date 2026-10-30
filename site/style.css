@@ -1207,3 +1207,30 @@ body { font-family: var(--sans); }
 .issue-shifts li::marker { color: var(--brand); font-family: var(--sans); font-weight: 800; font-size: 14px; }
 .issue .see-all { margin-left: 0; margin-top: 4px; }
 @media (max-width: 760px) { .issue { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------------------------------------------------------------- daily recap (video) */
+.player-frame video { display: block; width: 100%; height: 100%; background: #000; }
+.recap-strip { display: flex; align-items: center; gap: 16px; padding-top: 18px; }
+.recap-strip .vinline { display: flex; flex-direction: row; align-items: center; margin: 0; max-width: none; flex: 1; min-width: 0; cursor: pointer; }
+.recap-strip .vthumb { width: 196px; }
+.recap-hook { font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.25; font-weight: 700; letter-spacing: -.01em; }
+.recap-sub { font-size: 14px; color: var(--muted); }
+.recap-all { flex: none; }
+@media (max-width: 640px) { .recap-strip { flex-direction: column; align-items: stretch; } .recap-strip .vthumb { width: 132px; } .recap-sub { display: none; } }
+.recap-eyebrow { margin: 0; color: var(--brand); font-weight: 650; font-size: 14px; text-transform: uppercase; letter-spacing: .06em; }
+.recap-video { aspect-ratio: 16 / 9; border-radius: var(--r-lg); overflow: hidden; background: #000; border: 1px solid var(--line); max-width: 1100px; }
+.recap-video video { display: block; width: 100%; height: 100%; }
+.recap-archived { position: relative; display: grid; place-items: center; width: 100%; height: 100%; color: #fff; text-align: center; }
+.recap-archived img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .45; }
+.recap-archived span { position: relative; padding: 0 24px; font-size: 18px; }
+.recap-summary { margin: 28px 0 8px; padding-left: 1.1em; color: var(--soft); font-size: 18px; max-width: 75ch; display: grid; gap: 6px; }
+.recap-list { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 4px; max-width: 900px; }
+.recap-list li { display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 18px 0; border-top: 1px solid var(--line-soft); }
+.recap-n { font-weight: 800; font-size: 28px; font-stretch: 112%; line-height: 1; }
+.recap-list h2 { font-size: clamp(1.15rem, 2vw, 1.45rem); line-height: 1.25; margin: 0 0 6px; }
+.recap-list p { margin: 0 0 4px; color: var(--soft); }
+.recap-list .meta { color: var(--muted); font-size: 14px; }
+.recap-foot { color: var(--muted); font-size: 14px; margin: 28px 0 40px; max-width: 75ch; }
+.recap-grid { list-style: none; padding: 0; margin: 0 0 48px; }
+.recap-tile { display: grid; place-items: center; font-size: 22px; font-weight: 800; color: var(--soft); }
+@media (max-width: 640px) { .recap-strip .vinline { align-items: flex-start; } }

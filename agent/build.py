@@ -496,7 +496,12 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
         '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
         '<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:image" content="{{ base }}og/home.png">'
     ).render(base=base, desc=desc)
+    # daily video recaps: /videos/, one page per day, /videos/feed.xml and the strip at the top of the home page
+    from .recap import build_site as build_recaps
+    repo = os.environ.get("GITHUB_REPOSITORY") or site.get("repo") or "ajsims23/frontier-wire"
+    recap_strip = build_recaps(out, env, common, base, repo, data, now, set(by_id), urls)
     index = (out / "index.html").read_text()
+    index = index.replace("<!--RECAP-->", recap_strip)
     index = index.replace("<!--META-->", meta)
     index = index.replace("<!--NEWSLETTER-->", env.get_template("_newsletter.html").render(**common))
     index = index.replace("<!--HEADER-->", env.get_template("_header.html").render(**common, root=""))

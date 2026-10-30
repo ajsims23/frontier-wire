@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="shell lab-page recap-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>Daily recaps</span></nav>
+  <header class="lab-head">
+    <h1>Daily recaps</h1>
+    <p class="desk-intro">Every evening, the day's top five AI stories in 30 seconds, each with its source. The last three days play here; older recaps download from our archive. <a href="feed.xml">Follow by RSS</a>.</p>
+  </header>
+  {% if rows %}
+  <ol class="watch-grid recap-grid">
+    {% for r in rows %}
+    <li class="vcard">
+      {% if r.live %}
+      <button class="vthumb" type="button" data-mp4="{{ root }}{{ r.mp4 }}" data-poster="{{ root }}{{ r.poster }}" data-title="Recap: {{ r.short }}" aria-label="Play the recap for {{ r.human }}">
+        <img src="{{ root }}{{ r.poster }}" alt="" loading="lazy" decoding="async">
+      </button>
+      {% elif r.poster %}
+      <a class="vthumb" href="{{ r.date }}/"><img src="{{ root }}{{ r.poster }}" alt="" loading="lazy" decoding="async"><span class="vbadge">Archive</span></a>
+      {% else %}
+      <a class="vthumb recap-tile" href="{{ r.date }}/"><span>{{ r.short }}</span><span class="vbadge">Archive</span></a>
+      {% endif %}
+      <div class="vtext">
+        <p class="meta">{{ r.human }} · {{ r.seconds }}s</p>
+        <h3><a href="{{ r.date }}/">{{ r.hook }}</a></h3>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p class="waiting">The first recap appears here this evening.</p>
+  {% endif %}
+</section>
+{% endblock %}
