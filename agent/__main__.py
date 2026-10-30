@@ -6,6 +6,9 @@
   python -m agent check-models  send one tiny request to each configured provider/model
   python -m agent preview-desks plan a run and write the Builders and Top Voices desks now (set DATA_DIR to a copy of
                                 data/ to try changes without touching the live site)
+  python -m agent recap draft   pick today's top five and write data/recaps/<date>.json for the editor to fill
+  python -m agent recap render --out DIR   check the filled script and render recap.mp4, poster.jpg, teaser.gif
+  python -m agent recap check --out DIR    re-check a rendered video (length, size, codec, decodes cleanly)
 """
 from __future__ import annotations
 
@@ -28,7 +31,14 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("sources")
     sub.add_parser("check-models")
     sub.add_parser("preview-desks")
+    rc = sub.add_parser("recap")
+    rc.add_argument("action", choices=["draft", "render", "check"])
+    rc.add_argument("--date", default="", help="YYYY-MM-DD in IST (default: today)")
+    rc.add_argument("--out", default="", help="folder for the rendered files")
+    rc.add_argument("--force", action="store_true", help="draft: replace a script the editor already filled")
     args = ap.parse_args(argv)
+    if args.cmd == "recap":
+        return _recap(args)
 
     cfg = load_config()
     fetcher = HttpFetcher()
@@ -114,6 +124,44 @@ def main(argv: list[str] | None = None) -> int:
             fh.write(f"stories_written={len(report['written'])}\n")
             fh.write(f"self_review={'1' if report.get('self_review') else '0'}\n")
     return 0
+
+
+def _recap(args: argparse.Namespace) -> int:
+    import json
+    from pathlib import Path
+
+    from . import recap
+
+    cfg = load_config()
+    now = utcnow()
+    date = args.date or recap.today(now)
+    path = cfg.data_dir / "recaps" / f"{date}.json"
+    if args.action == "draft":
+        if path.exists() and json.loads(path.read_text()).get("hook") and not args.force:
+            print(f"{path} is already filled; use --force to start again", file=sys.stderr)
+            return 4
+        stories = json.loads((cfg.data_dir / "stories.json").read_text())
+        script = recap.draft(stories, now)
+        print(json.dumps(script, indent=2, ensure_ascii=False))
+        if len(script["stories"]) < 3:
+            print(f"only {len(script['stories'])} stories in the last 24 hours; skipping today's recap", file=sys.stderr)
+            return 3
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(script, indent=2, ensure_ascii=False) + "\n")
+        print(f"wrote {path}", file=sys.stderr)
+        return 0
+    out = Path(args.out or f"_recap/{date}")
+    if args.action == "render":
+        script = json.loads(path.read_text())
+        try:
+            info = recap.render(script, out)
+        except ValueError as exc:
+            print(exc, file=sys.stderr)
+            return 2
+    else:
+        info = recap.check(out)
+    print(json.dumps(info, indent=2))
+    return 0 if info["ok"] else 1
 
 
 if __name__ == "__main__":
