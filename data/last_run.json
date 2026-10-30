@@ -1,12 +1,12 @@
 {
-  "started_at": "2026-10-30T16:01:52+00:00",
+  "started_at": "2026-10-30T17:25:18+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
     "groq"
   ],
   "sources": {
-    "openai": "ok (1338)",
+    "openai": "ok (1339)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
     "huggingface": "ok (894)",
@@ -15,239 +15,43 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)",
-    "hf-models": "ok (57)",
-    "arxiv": "ok (40)",
-    "hf-papers": "ok (16)",
-    "gdelt": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
-    "hn": "ok (20)",
-    "techcrunch-ai": "ok (20)",
-    "verge-ai": "ok (10)",
-    "mit-tr-ai": "ok (10)",
-    "ars-ai": "ok (20)",
-    "aim": "ok (50)",
-    "inc42": "ok (24)",
-    "medianama": "ok (10)",
-    "mint-tech": "ok (35)",
-    "et-tech": "ok (50)",
-    "yourstory": "ok (20)",
-    "gdelt-india": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
-    "crunchbase-news": "ok (10)",
-    "import-ai": "ok (10)",
-    "simon-willison": "ok (30)",
-    "sam-altman": "ok (30)",
-    "bluesky": "ok (28)",
-    "auto-techmeme.com": "ok (15)"
+    "mistral": "ok (6)"
   },
-  "dropped": [
-    {
-      "title": "Claude Code VS Code extension with backdoor released on Cursor marketplace",
-      "reason": "duplicate of 7e2aaf184ac3"
-    },
-    {
-      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
-      "reason": "duplicate of 7e2aaf184ac3"
-    },
-    {
-      "title": "Skip the small talk: Make game-changing connections at TechCrunch Founder Summit with Braindate",
-      "reason": "not AI: Founder summit networking event, not AI news."
-    },
-    {
-      "title": "DoorDash said it’s only received ‘several hundred’ orders from AI agents",
-      "reason": "score 5: DoorDash reports only a few hundred orders from AI agents – limited impact."
-    },
-    {
-      "title": "Pope Leo calls for the disarmament of AI: ‘Machines are tools, not persons’",
-      "reason": "score 5: Papal statement on AI disarmament is notable but not a concrete policy change."
-    },
-    {
-      "title": "Silicon Valley wants you to invest in miracles",
-      "reason": "not AI: Opinion piece about investing, not AI news."
-    },
-    {
-      "title": "[Update] CCI Clears Navi’s $100 Mn Investment From Prosus",
-      "reason": "not AI: CCI clearance of Prosus investment, not AI‑related."
-    },
-    {
-      "title": "Jio Platforms Q2 Profit Rises 14% YoY To ₹8,387 Cr, Revenue Up 11%",
-      "reason": "not AI: Jio Platforms profit report, no AI angle."
-    },
-    {
-      "title": "Decoding The Commerce And Lending Engines Of IPO-Bound OfBusiness",
-      "reason": "not AI: Commerce and lending engine description, not AI news."
-    },
-    {
-      "title": "PUBG fans alert! How the battle royale game became a global gaming phenomenon as Netflix develops live-action series",
-      "reason": "not AI: Gaming phenomenon article, no AI relevance."
-    },
-    {
-      "title": "PB Fintech, Delhivery improve Q2 profits; Binance's $6.3 billion caper",
-      "reason": "not AI: PB Fintech and Delhivery profit update, not AI‑focused."
-    },
-    {
-      "title": "The next AI advantage for India's developers: Turning code into companies",
-      "reason": "score 5: Feature on AI tools for Indian developers; interesting but not a major news development."
-    },
-    {
-      "title": "Delhivery reports net profit of Rs 41 crore in Q2 of FY27",
-      "reason": "not AI: Delhivery profit report, no AI angle."
-    },
-    {
-      "title": "Policybazaar parent PB Fintech net profit rises 43% rise in Q2",
-      "reason": "not AI: Financial results of PB Fintech, not AI‑related."
-    },
-    {
-      "title": "Atomberg Technologies receives SEBI nod for IPO",
-      "reason": "not AI: Atomberg IPO announcement, not AI‑related."
-    },
-    {
-      "title": "Ethan Mollick: I was interviewed in Vox about my new book, and a question on the meaning of work let me discuss something I have been thinking a lot…",
-      "reason": "not AI: Interview about work philosophy, not AI‑related."
-    },
-    {
-      "title": "Binance says it has reserved $6.34B+ in company funds, including $5B already held in impacted token assets, to deal with the fallout from the $6.3B hack (Rajveer Singh Pardesi/Reuters)",
-      "reason": "not AI: Crypto hack and reserve funds unrelated to AI."
-    },
-    {
-      "title": "Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor",
-      "reason": "duplicate of 7e2aaf184ac3"
-    },
-    {
-      "title": "Claude Code Extension Hack Planted SSH Backdoor on Cursor Users",
-      "reason": "duplicate of 7e2aaf184ac3"
-    },
-    {
-      "title": "Cursor Discloses SSH Backdoor Attempt in Malicious Claude Code Extension",
-      "reason": "duplicate of 7e2aaf184ac3"
-    },
-    {
-      "title": "Cursor shuts down extension marketplace after malicious Claude Code puts 5,000 users at risk",
-      "reason": "duplicate of 7e2aaf184ac3"
-    },
-    {
-      "title": "[Action Required] Malicious version (2.1.313) of Cursor's Claude Code extension: Affected times in JST and how to check/remove it in 1 minute",
-      "reason": "duplicate of 7e2aaf184ac3"
-    },
-    {
-      "title": "NAND maker Kioxia reports FY Q2 operating profit up 22x YoY to ~$12.7B, in line with est., but forecasts Q3 operating profit of ~$12.7B, below ~$14.9B est. (Bloomberg)",
-      "reason": "loosely AI: lower priority than this run's AI stories"
-    },
-    {
-      "title": "CXMT reports Q3 revenue of ~$16.7B, up 613.2% YoY, and a net profit of ~$8.17B, swinging to profitability on the back of rising AI-driven memory chip prices (Reuters)",
-      "reason": "could not verify yet after a second try; dropped"
-    }
-  ],
+  "dropped": [],
   "written": [
     {
-      "id": "194d268cc5ac",
-      "headline": "UK competition regulator probes Meta's terms for publishers and advertisers",
-      "category": "policy",
-      "summary": "Britain's Competition and Markets Authority has opened an investigation into whether Meta imposed exploitative terms that allow it to use publisher and advertiser content to develop its AI and other services.",
-      "url": "https://techmeme.com/261030/p10",
-      "sources": 2,
+      "id": "c7606af40dbb",
+      "headline": "OpenAI adds expanded safeguards to ChatGPT for violence prevention",
+      "category": "safety",
+      "summary": "OpenAI announced new safety measures for ChatGPT, including broader safeguards, earlier interventions, and a commitment to public safety reporting.",
+      "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+      "sources": 1,
       "quotes": 0
     }
   ],
   "notes": [],
-  "mode": "full",
+  "mode": "breaking",
   "timings": {
-    "gather": 45.3,
-    "audit": -0.0,
-    "plan": 161.4,
-    "judge": 2.5,
-    "verify and write": 108.4,
-    "videos": 24.3,
-    "tagging": 20.7,
-    "explainers": -0.0,
-    "trackers": 41.3,
-    "claims": 20.4,
-    "model tracker": 0.1,
-    "weekly": 0.0,
-    "builders": 0.0,
-    "top voices": 0.0,
-    "briefing": 41.6,
-    "self-review": 0.0,
-    "photos": 0.0,
-    "stock photos": 16.3,
-    "daily email": -0.0,
-    "alerts": 6.6
+    "gather": 12.6,
+    "judge": 0.6,
+    "verify and write": 0.7,
+    "tagging": 0.5,
+    "trackers": 21.2,
+    "photos": 0.1,
+    "stock photos": 16.9,
+    "alerts": 5.7
   },
-  "fetched": 2909,
-  "fresh": 21,
-  "plan": {
-    "focus": "Chasing the fallout from Binance’s $6.3 B hack while tracking new AI safety backdoors and policy battles.",
-    "priorities": [
-      "Binance says it has reserved $6.34B+ in company funds, including $5B a (Major financial shock affecting crypto markets and broader investor confidence.)",
-      "Claude Code VS Code extension with backdoor released on Cursor marketp (Direct follow‑up to recent safety coverage on malicious Claude extensions.)",
-      "FEC data: AI-oriented PACs spent nearly $80M on the 2026 US elections, (Highlights growing AI‑oriented political spending ahead of 2026 elections.)",
-      "The UK CMA opens a probe into whether Meta imposed exploitative terms  (UK competition probe into Meta’s AI data practices adds regulatory pressure.)",
-      "CXMT reports Q3 revenue of ~$16.7B, up 613.2% YoY, and a net profit of (Shows explosive growth in AI‑driven chip makers, relevant to industry hardware trends.)"
-    ],
-    "thin_areas": [
-      "research",
-      "voices"
-    ],
-    "searches": [
-      "DeepSeek AI breach updates: 0 new",
-      "Claude Code backdoor analysis: 5 new",
-      "AI policy PAC spending 2026: 2 new"
-    ],
-    "dig_deeper": [
-      "Binance says it has reserved $6.34B+ in company funds, including $5B a",
-      "Claude Code VS Code extension with backdoor released on Cursor marketp"
-    ]
-  },
-  "judged": 28,
-  "kept": 3,
-  "research": {
-    "investigated": 2,
-    "confirmed": 1,
-    "tool_calls": 6
-  },
-  "research_log": [
-    "The UK CMA opens a probe into whether Meta imposed exploitative terms : confirmed (searched “UK CMA probe Meta exploitative terms publishers advertisers AI services”; read bloomberg.com; read yahoo.com)",
-    "CXMT reports Q3 revenue of ~$16.7B, up 613.2% YoY, and a net profit of: unconfirmed (searched “CXMT Q3 revenue 16.7 billion 613.2% YoY net profit 8.17 billion”; read msn.com; searched “CXMT third quarter net profit 54.4 billion yuan Reuters”)"
-  ],
-  "threads": [
-    "Meta commercial terms and UK CMA probe: UK competition regulator probes Meta's terms for publishers "
-  ],
-  "videos": {
-    "OpenAI": "ok (11 in feed, 1 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 1 new)",
-    "Google for Developers": "ok (9 in feed, 0 new)",
-    "AI at Meta": "ok (7 in feed, 0 new)",
-    "Microsoft Research": "ok (8 in feed, 0 new)",
-    "NVIDIA": "ok (9 in feed, 0 new)",
-    "Hugging Face": "ok (13 in feed, 0 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 2 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (14 in feed, 0 new)",
-    "Training Data (Sequoia)": "ok (6 in feed, 1 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 0 new)",
-    "Hard Fork": "ok (2 in feed, 1 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (2 in feed, 0 new)",
-    "20VC": "ok (5 in feed, 0 new)"
-  },
-  "videos_kept": "5 kept from 6 new",
+  "fetched": 2405,
+  "fresh": 1,
+  "judged": 1,
+  "kept": 1,
   "tagged": 1,
-  "trackers": "filed 1 stories; updated copyright",
-  "claims": "56 tracked, 55 open, 0 updated this run",
-  "model_tracker": "82 models, 39 changes today",
-  "briefing": "3 themes from 16 stories",
-  "india_briefing": "3 themes from 4 stories",
+  "trackers": "filed 1 stories; updated agent-safety",
   "photos": "0 saved, 0 unavailable",
   "stock photos": "0 added",
-  "alerts": "47 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":16}",
-  "ai_requests_run": 19,
-  "ai_tokens_run": 43949,
-  "ai_requests_today": 209,
+  "alerts": "47 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":10}",
+  "ai_requests_run": 6,
+  "ai_tokens_run": 15059,
+  "ai_requests_today": 215,
   "provider_log": []
 }

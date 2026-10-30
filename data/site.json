@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T16:01:52+00:00",
+  "updated_at": "2026-10-30T17:25:18+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "AM Intelligence plans to buy Nvidia’s next‑generation Vera Rubin chips, which are used to power large AI models. To pay for the purchase it is arranging a multi‑billion‑dollar financing package that may combine bonds, loans and customer pre‑payments. The $300 million advance from offtakers would reduce the amount it needs to borrow upfront.",
@@ -416,6 +416,73 @@
         "agent-safety"
       ],
       "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "OpenAI will tighten the rules that stop ChatGPT from producing violent or harmful content and will intervene sooner when risky behavior is detected. It will also publish regular reports on how the system performs on safety. This gives users and regulators clearer insight into the model’s safety posture.",
+        "terms": [
+          {
+            "term": "violence prevention",
+            "meaning": "Measures designed to stop the AI from generating content that encourages or depicts violence."
+          },
+          {
+            "term": "safeguards",
+            "meaning": "Technical controls that block or filter harmful outputs before they reach the user."
+          },
+          {
+            "term": "public safety reporting",
+            "meaning": "Regular disclosures about the system’s safety performance and incidents."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers using ChatGPT should expect stricter content filters and may need to adjust prompts accordingly.",
+        "business": "Companies deploying ChatGPT can cite stronger safety controls to mitigate liability and brand risk.",
+        "investors": "The focus on safety signals OpenAI’s commitment to responsible AI, which may affect long‑term valuation."
+      },
+      "id": "c7606af40dbb",
+      "headline": "OpenAI adds expanded safeguards to ChatGPT for violence prevention",
+      "summary": "OpenAI announced new safety measures for ChatGPT, including broader safeguards, earlier interventions, and a commitment to public safety reporting.",
+      "why_it_matters": "The changes aim to reduce the risk of the model generating violent content, addressing ongoing concerns about AI misuse.",
+      "category": "safety",
+      "lab": "OpenAI",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 6,
+      "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+      "source_id": "openai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+          "publisher": "OpenAI",
+          "title": "Community safety report and new protections for teens"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-10-30T09:00:00+00:00",
+      "created_at": "2026-10-30T17:25:18+00:00",
+      "breaking": true,
+      "sectors": [],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "OpenAI",
+      "trackers": [
+        "agent-safety"
+      ],
+      "stock_tried": "2026-10-30T17:25:18+00:00"
     },
     {
       "explainer": {
@@ -5293,75 +5360,6 @@
         "ai-regulation"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "The ONNX files contain the learned policy weights for the Metatron G1 robot, allowing developers to run the model with ONNX Runtime Web in a browser. They are not complete demos and need the accompanying observation processing and control logic to function. Using the correct input and output formats is required for the model to operate safely.",
-        "terms": [
-          {
-            "term": "ONNX",
-            "meaning": "An open format for representing machine‑learning models that can be run on different runtimes."
-          },
-          {
-            "term": "deterministic prior",
-            "meaning": "A fixed, non‑random component of the model that guides its predictions."
-          },
-          {
-            "term": "PD targets",
-            "meaning": "Proportional‑Derivative control signals that set joint positions and stiffness for the robot."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers can integrate the Metatron policy into robot control pipelines but must match the required observation and control interfaces.",
-        "business": "Executives see NVIDIA extending its AI portfolio into robotics, potentially opening new application markets.",
-        "investors": "The model release signals NVIDIA’s continued investment in AI tools for specialized hardware, which may affect its market positioning."
-      },
-      "id": "775bf24a023a",
-      "headline": "NVIDIA releases Metatron-v1 ONNX models for G1 robot control on Hugging Face",
-      "summary": "NVIDIA published two ONNX files for its Metatron G1 scene/recovery policy on Hugging Face. The files support interactive humanoid control and locomotion in browser applications but require matching observation and control interfaces.",
-      "why_it_matters": "The release provides a ready-to-use robot control model that can be run in browsers, illustrating how AI models are moving into real‑time robotics.",
-      "category": "models",
-      "lab": "NVIDIA",
-      "model_name": "Metatron-v1",
-      "model_type": "Other",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://huggingface.co/nvidia/Metatron-v1",
-      "source_id": "hf-models",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/nvidia/Metatron-v1.png",
-      "sources": [
-        {
-          "url": "https://huggingface.co/nvidia/Metatron-v1",
-          "publisher": "Hugging Face",
-          "title": "NVIDIA publishes Metatron-v1 on Hugging Face"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-27T21:43:16+00:00",
-      "created_at": "2026-10-28T01:16:16+00:00",
-      "sectors": [
-        "manufacturing",
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "Metatron-v1",
-      "trackers": [
-        "frontier-race"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -6023,7 +6021,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 196,
+    "stories_this_month": 197,
     "model_releases_this_month": 20,
     "labs_tracked": 17
   }
