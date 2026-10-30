@@ -1,75 +1,88 @@
-## Frontier Wire newsroom run — 2026-10-30T01:18:12+00:00
+## Frontier Wire newsroom run — 2026-10-30T04:00:41+00:00
 
-Fetched 2869 items · fresh 15 · judged 23 · kept 8 · **written 1**
-AI: 35 requests, 71,596 tokens this run · 37 requests today · providers: cerebras, groq
-Editor-in-chief: Tracking AI‑related earnings beats and new product rollouts while we still need deeper coverage of research and expert voices.
-  Priorities: Sources: Nvidia is in talks to provide Nscale with billions of dollars (Nvidia credit guarantees for Anthropic data center reveal financing trends for large AI infrastructure projects.); AWS will be a $1T business, Jassy says. But first, it will spend big. (AWS aims for a $1 trillion business, a strategic shift critical for investors and builders.); On Amazon's earnings call, Andy Jassy says outside AI shopping agents  (Amazon’s stance on AI shopping agents impacts e‑commerce AI adoption and market dynamics.); API credits benefit for eligible ChatGPT subscriptions (Voice piece on API credits offers practical insight for developers using ChatGPT APIs.); Twilio reports Q3 revenue up 20% YoY to $1.56B, vs. $1.52B est., net i (Twilio’s strong Q3 results highlight growth in communications APIs, relevant for AI‑enabled services.)
+Fetched 2864 items · fresh 25 · judged 30 · kept 7 · **written 3**
+AI: 38 requests, 118,269 tokens this run · 75 requests today · providers: cerebras, groq
+Editor-in-chief: Tracking AI‑chip supply risks and funding surges while bolstering research and voice coverage.
+  Priorities: S-1: Anthropic says it heavily depends on TSMC chips made in Taiwan an (Anthropic’s reliance on TSMC chips raises geopolitical risk for investors); Sources: DeepSeek doubled its latest round's size due to surging black (DeepSeek’s funding jump tied to black‑market Nvidia Blackwell chips signals market pressure); Sources: Nvidia is in talks to provide Nscale with billions of dollars (Nvidia credit guarantees for Anthropic’s data centre highlight financing trends in AI compute); Sources: Indian AI infrastructure company AM Intelligence seeks to rai (AM Intelligence’s $3 B raise for Nvidia Vera Rubin systems shows major India AI‑infra investment); Ethan Mollick: I had Opus build a game that takes JIRA tickets from an (Ethan Mollick voice piece adds needed creator‑perspective content for our audience)
   Thin areas: research, voices
-  Searches: DeepSeek GPT-6 Astra results: 4 new; Sarvam AI defence partnership update: 0 new; AI research funding 2026: 4 new
-  Dig deeper: Sources: Nvidia is in talks to provide Nscale with billions of dollars; AWS will be a $1T business, Jassy says. But first, it will spend big.
-Research agent: investigated 5 stories with 15 tool calls, confirmed 1
-Daily briefing: 4 themes from 19 stories
-Threads updated: Gpt-6 astra distillation faces chinese labs accusation: Chinese labs DeepSeek and Moonshot AI used OpenAI’s GPT‑6 As
-Videos: 1 kept from 1 new · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face ok (13 in feed, 0 new), Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers ok (15 in feed, 1 new), AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast ok (2 in feed, 0 new), 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
-Daily self-check: coverage 33% of 3 significant stories; 2 missed, 0 added to this run
-Photos: 1 saved, 0 unavailable
-Alerts: 15 events sent: {"subscribers":8,"sent":0,"queued":20}
-Claims: 50 tracked, 49 open, 0 updated this run
-Trackers: filed 2 stories; updated us-china, frontier-race
-Model tracker: 82 models, 12 changes today
-Tagged 1 stories by sector, region and deal
-India briefing: 2 themes from 3 stories
-Self-review written (see the newsroom issue)
-Time: gather 97s, audit 4s, plan 58s, judge 2s, verify and write 377s, videos 22s, tagging 21s, trackers 63s, claims 21s, briefing 42s, self-review 21s, alerts 3s
+  Searches: Chinese labs GPT-6 Astra accusation: 2 new; Google AI Mode ad revenue Q4: 3 new; AI safety research preprint October 2026: 0 new
+  Dig deeper: S-1: Anthropic says it heavily depends on TSMC chips made in Taiwan an; Sources: DeepSeek doubled its latest round's size due to surging black
+Research agent: investigated 5 stories with 15 tool calls, confirmed 3
+Daily briefing: 3 themes from 20 stories
+Threads updated: Anthropic financing expands to data center credit: Nvidia in talks to back Nscale with credit guarantees for An; Chinese labs accused of copying GPT-6 Astra: Chinese AI firms DeepSeek and Moonshot AI used OpenAI's GPT‑
+Videos: no new videos · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/
+Photos: 3 saved, 0 unavailable
+Alerts: 27 events sent: {"subscribers":8,"sent":0,"queued":40}
+Claims: 52 tracked, 51 open, 0 updated this run
+Trackers: filed 5 stories; updated us-china, india-ai, ai-infrastructure, ai-money
+Model tracker: 82 models, 19 changes today
+Tagged 3 stories by sector, region and deal
+India briefing: 3 themes from 4 stories
+Time: gather 68s, plan 87s, judge 26s, verify and write 400s, videos 2s, tagging 21s, trackers 148s, claims 22s, briefing 42s, photos 1s, alerts 5s
 
 ### New stories
-- **policy** — [Chinese labs DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra for model distillation](https://analyticsinsight.net/news/chinese-ai-labs-accused-of-distilling-openais-gpt-6-astra)  
-  Chinese AI developers DeepSeek and Moonshot AI used outputs from OpenAI’s GPT‑6 Astra to train their latest models, DeepSeek’s V4.1‑Flash‑1017 and Moonshot AI’s Kimi K3.1 Pro. The practice, known as distillation, has raised concerns about US‑China AI competition and model‑copying safeguards.  
+- **industry** — [AM Intelligence seeks up to $3 billion to fund Nvidia Vera Rubin chip purchase](https://techmeme.com/261029/p69)  
+  Indian AI infrastructure firm AM Intelligence is looking to raise as much as $3 billion to finance its previously announced order of Nvidia’s Vera Rubin systems. The financing could include bonds, bank loans and a $300 million advance payment from offtakers.  
+  _2 source(s), 0 verified quote(s)_
+- **industry** — [Nvidia in talks to back Nscale with credit guarantees for Anthropic data center](https://techmeme.com/261029/p59)  
+  Nvidia is discussing providing Nscale with billions of dollars in credit guarantees to fund a 460 MW AI data center in West Virginia. Anthropic plans to use the facility and has a separate $45 billion deal to rent computing power from Nscale.  
+  _2 source(s), 0 verified quote(s)_
+- **policy** — [Chinese AI firms DeepSeek and Moonshot AI used OpenAI's GPT‑6 Astra for model distillation](https://msn.com/en-in/news/other/months-after-release-of-gpt-6-astra-report-says-two-top-chinese-ai-companies-copied-what-openai-called-world-s-most-intelligent-and-aligned-model/ar-AA2gmoMm)  
+  DeepSeek's V4.1‑Flash‑1017 and Moonshot AI's Kimi K3.1 Pro were trained using outputs from OpenAI's GPT‑6 Astra through a distillation process, according to a report citing insiders.  
   _3 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- We ran AI agent swarms in Minecraft and Mindustry — score 5: Blog post about AI agent swarms in games is an interesting experiment but not a frontier breakthrough.
-- A tiny world model running games on a Raspberry Pi Pico 2 W — score 5: A tiny world model on a microcontroller is a niche demo, not a major model release.
-- Manifestos, Fear, and 'Loser Thinking': Inside Proton's AI Reckoning — not AI: Opinion piece on Proton’s AI reckoning lacks a concrete AI development.
-- API credits benefit for eligible ChatGPT subscriptions — score 5: A voice piece about Anthropic API credits is a minor commentary without a broader AI impact; score 5 and not kept.
-- Twilio reports Q3 revenue up 20% YoY to $1.56B, vs. $1.52B est., net income up 333% to $161M, and expects slower Q4 revenue growth; TWLO drops 15%+ after hours (Elias Schisgall/MarketWatch) — score 5: Twilio earnings are a routine financial report; AI relevance is peripheral, so it is dropped.
-- Andy Jassy says Prime Video has "a revenue run rate in the tens of billions of dollars and is now profitable in its own right" (Julie Bort/TechCrunch) — not AI: Revenue comment about Prime Video is unrelated to AI.
-- On Amazon's earnings call, Andy Jassy says outside AI shopping agents are "still not great, nor more convenient than coming to a retailer directly" (Sebastian Herrera/Fortune) — score 5: Amazon’s comment on external AI shopping agents is a minor market observation, not a core AI development.
-- Sandisk reports Q1 revenue up 378% YoY to $11B, vs. $10.7B est., forecasts Q2 revenue above est., announces an 8-for-1 stock split; SNDK drops 4%+ after hours (MarketWatch) — not AI: Sandisk earnings are not AI‑related.
-- Pinterest reports Q3 revenue up 12% YoY to $1.17B, vs. $1.21B est., global MAUs up 10% to 661M, and forecasts Q4 revenue below est.; PINS drops 8%+ after hours (Liz Moyer/Barron's Online) — not AI: Pinterest earnings lack AI relevance.
-- Polymarket resumes trading after a security incident with a third-party provider, which a source says is DebugBear, and says it will reimburse affected traders (Reuters) — not AI: Polymarket security incident is not AI‑focused.
-- Binance says it is investigating a "potential security issue" as suspicious outflows reach up to $5.8B; Tether freezes 1.5B+ USDT, Circle freezes 800M+ USDC (The Block) — not AI: Binance security issue is unrelated to AI.
-- DeepSeek, Moonshot accused of distilling OpenAI's Astra — score 6: Duplicate of the Chinese AI labs accusation story.
-- DeepSeek, Moonshot used OpenAI's GPT-6 Astra to train latest models, The Information reports — score 6: Duplicate of the Chinese AI labs accusation story.
-- DeepSeek, Moonshot used OpenAI's GPT-6 Astra to train latest models — score 6: Duplicate of the Chinese AI labs accusation story.
-- $20M grant renews UH role in AI research to improve engineering design — score 5: A $20 M grant for AI research is a routine funding announcement, not a major breakthrough.
-- AWS will be a $1T business, Jassy says. But first, it will spend big. — could not verify yet; will retry next run
-- Sources: Nvidia is in talks to provide Nscale with billions of dollars in credit guarantees for debt to develop a 460MW data center that Anthropic plans to use (Phoebe Liu/The Information) — could not verify yet; will retry next run
-- Claude Duet is the first personal-assistant-type harness that feels useful — could not verify yet; will retry next run
-- Meta quietly launches Style Sketch, an AI fashion app that helps users put together outfit ideas using clothes they own, in Indonesia, Singapore, and Thailand (Aisha Malik/TechCrunch) — could not verify yet; will retry next run
-- Sarvam AI Drives 87% of India's Indic AI Funding in 2026: Tracxn — could not verify yet; will retry next run
-- Solink Secures $100M+ Led by Vertu Capital for AI Vision Growth — already covered (story 17d304e05f25)
-- AI Financial OS Startup Collective Lands $100M Across Series B and Growth Facility — could not verify yet; will retry next run
+- The importance of communities around software — not AI: General discussion of software communities; no AI focus.
+- Show HN: Auto Dismiss Mac OS "Allow <app> to find devices on local networks?" — not AI: Hacker News post about macOS network prompt; unrelated to AI.
+- You don’t need to believe in a god to get a religious exemption from using AI at work — score 4: Religious exemption from AI use at work; peripheral policy issue, not core AI news.
+- Pine Labs Hits New High, Ace Blend Bags $9.9 Mn & More — not AI: Pine Labs profit report; unrelated to AI.
+- Exclusive: Smylo In Talks To Raise ₹30 Cr To Expand Cat Food Portfolio — not AI: Cat‑food startup fundraising; not AI.
+- Nasscom Seeks Deferment Of New GST Rules For Ecommerce Deliveries To Jan 2027 — not AI: Nasscom GST rule deferment; not AI.
+- Amazon Prime Video on track to generate tens of billions in revenue, Andy Jassy confirms — not AI: Amazon Prime Video revenue story; no AI focus.
+- Rivian says it's on track for $250 million Uber funding by year-end, R2 demand strong — not AI: Rivian funding for Uber/self‑driving; not AI‑centric.
+- Nvidia in talks to give credit support for Nscale's deal with Anthropic — score 6: Duplicate of Nvidia credit‑support story for Anthropic data centre.
+- Tech firms take fresh hit as earnings misses fan AI fears — score 3: Tech earnings miss fueling AI investment concerns; peripheral market commentary.
+- Reddit posts search traffic declines, will push visitor sign-ins to curb data scraping — not AI: Reddit traffic changes; no AI angle.
+- Amazon projects fourth quarter sales below estimates — not AI: Amazon sales forecast; not AI.
+- Bitcoin, cryptocurrency prices fall after Binance reports security issue — not AI: Cryptocurrency price movement after Binance issue; not AI.
+- Rising tech costs drive EMI sales; Shadowfax Q2 profit soars — not AI: EMI sales driven by tech costs; unrelated to AI.
+- Pine Labs Q2 net profit soars 6.5x; Cognizant trims 2026 growth outlook — not AI: Pine Labs profit and Cognizant outlook; no AI relevance.
+- Ethan Mollick: I had Opus build a game that takes JIRA tickets from any of your real projects & converts them into dramatic audiologs that are the plot… — score 5: Creator demo using Opus to generate game audiologs; interesting but incremental and not major news.
+- NYSE owner ICE plans US-regulated Hyperliquid-based perpetual markets with Trade.xyz, a market operator on the crypto platform, and takes a stake in Trade.xyz (Katherine Doherty/Bloomberg) — not AI: Crypto market infrastructure news; no AI angle.
+- Binance "temporarily suspended" all deposits and withdrawals as it investigates security issues and works with law enforcement; Binance.US says it's unaffected (George Steer/Financial Times) — not AI: Binance security issue; unrelated to AI.
+- Meta quietly launches Style Sketch, an AI fashion app that helps users put together outfit ideas using clothes they own, in Indonesia, Singapore, and Thailand (Aisha Malik/TechCrunch) — score 5: Meta's Style Sketch AI fashion app launch in SE Asia; modest regional product not major news.
+- Market Chatter: OpenAI's GPT-6 Astra Becomes Top Distillation Target for Chinese AI Labs — score 6: Duplicate coverage of the same GPT‑6 Astra copying allegation.
+- Google’s AI overhaul of search hits snags as ad revenue growth cools — duplicate of 1744c9c4d2ed
+- Google Stock Sinks as AI Mode Pressures Search Ad Growth — duplicate of 1744c9c4d2ed
+- Google Brings AI Mode Advertisements To More Countries — duplicate of 1744c9c4d2ed
+- Sources: DeepSeek doubled its latest round's size due to surging black market Nvidia Blackwell chip prices, with Chinese state-owned investors representing 27% (The Information) — could not verify yet; will retry next run
+- S-1: Anthropic says it heavily depends on TSMC chips made in Taiwan and warns of risks from "potential disruption" amid geopolitical tensions with China (Joseph C. Sternberg/Wall Street Journal) — could not verify yet; will retry next run
+- Claude Duet is the first personal-assistant-type harness that feels useful — could not verify yet after a second try; dropped
+- AWS will be a $1T business, Jassy says. But first, it will spend big. — could not verify yet after a second try; dropped
 
 </details>
 
 ### Sources with problems
 - `arxiv`: failed: ReadTimeout: The read operation timed out
+- `gdelt`: failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out
+- `gdelt-india`: failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out
 
 <details><summary>Research agent's work</summary>
 
-- AWS will be a $1T business, Jassy says. But first, it will spend big.: unconfirmed (searched “AWS will be a $1 trillion business Jassy says spend big capex Thursday”; read seekingalpha.com; read seekingalpha.com)
-- Sources: Nvidia is in talks to provide Nscale with billions of dollars: unconfirmed (searched “Nvidia talks to provide Nscale credit guarantees 460MW data center Anthropic”; read tipranks.com; read forbes.com)
-- Claude Duet is the first personal-assistant-type harness that feels us: unconfirmed (searched “Claude Duet personal assistant harness”; read msn.com; read msn.com)
-- Meta quietly launches Style Sketch, an AI fashion app that helps users: unconfirmed (searched “Meta Style Sketch AI fashion app Indonesia Singapore Thailand”; read gazetaexpress.com; read gazetteexpress.com)
-- Chinese AI Labs Accused Of Distilling OpenAI’s GPT-6 Astra: confirmed (searched “Chinese AI Labs accused of distilling OpenAI GPT-6 Astra”; read digitimes.com; read indiatimes.com)
+- Sources: Indian AI infrastructure company AM Intelligence seeks to rai: confirmed (searched “AM Intelligence raise $3 billion Nvidia Vera Rubin”; read newsbytesapp.com; read thehindubusinessline.com)
+- Sources: DeepSeek doubled its latest round's size due to surging black: unconfirmed (searched “DeepSeek doubled round size black market Nvidia Blackwell chip prices Chinese state-owned investors 27%”; read cnbc.com; searched “Blackwell chip prices DeepSeek funding round doubled black market”)
+- S-1: Anthropic says it heavily depends on TSMC chips made in Taiwan an: unconfirmed (searched “Anthropic depends on TSMC chips Taiwan warns of disruption”; read firstpost.com; searched “Anthropic IPO filing TSMC Taiwan risk disruption”)
+- Sources: Nvidia is in talks to provide Nscale with billions of dollars: confirmed (searched “Nvidia Nscale credit guarantees”; read msn.com; read indiatimes.com)
+- Months after release of GPT-6 Astra, report says two top Chinese AI co: confirmed (searched “GPT-6 Astra Chinese AI companies copied OpenAI model report”; read indiatimes.com; read thenextweb.com)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id 50d3758f9179 for 'DeepSeek, Moonshot accused of distilling OpenAI's '
-- ignored made-up duplicate id 50d3758f9179 for 'DeepSeek, Moonshot used OpenAI's GPT-6 Astra to tr'
-- ignored made-up duplicate id 50d3758f9179 for 'DeepSeek, Moonshot used OpenAI's GPT-6 Astra to tr'
+- ignored made-up duplicate id 41ce547b5dc5 for 'Nvidia in talks to give credit support for Nscale''
+- ignored made-up duplicate id 4dce8a8449f3 for 'Market Chatter: OpenAI's GPT-6 Astra Becomes Top D'
 - GDELT unavailable: GDELT paused for this run after repeated rate-limiting
-- 6 kept item(s) carried over to the next run
+- 2 kept item(s) carried over to the next run
+- cerebras/gpt-oss-120b: answer cut off; retrying with more room
+- cerebras/gpt-oss-120b: answer cut off; retrying with more room
+- cerebras/gpt-oss-120b: answer cut off; retrying with more room

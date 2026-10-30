@@ -48,8 +48,8 @@
       "lab": "DeepSeek",
       "released": "2026-10-17",
       "context": 1048576,
-      "price_in": 0.3,
-      "price_out": 1.2,
+      "price_in": 0.15,
+      "price_out": 0.6,
       "inputs": [
         "text",
         "image"
@@ -355,7 +355,7 @@
       "lab": "Zhipu AI",
       "released": "2026-08-26",
       "context": 1048576,
-      "price_in": 0.0457,
+      "price_in": 0.0487,
       "price_out": 0.0701,
       "inputs": [
         "text",
@@ -394,8 +394,8 @@
       "lab": "Alibaba (Qwen)",
       "released": "2026-08-14",
       "context": 1000000,
-      "price_in": 0.039,
-      "price_out": 1.25,
+      "price_in": 0.15,
+      "price_out": 1.875,
       "inputs": [
         "text",
         "image",
@@ -436,8 +436,8 @@
       "lab": "DeepSeek",
       "released": "2026-08-12",
       "context": 1048576,
-      "price_in": 1.32,
-      "price_out": 3.96,
+      "price_in": 0.66,
+      "price_out": 1.98,
       "inputs": [
         "text"
       ]
@@ -1096,55 +1096,6 @@
   "changes": [
     {
       "date": "2026-10-28",
-      "model": "GLM 5.2",
-      "lab": "Zhipu AI",
-      "kind": "price_cut",
-      "text": "GLM 5.2 input price cut: $0.014 → $0.0077 per 1M tokens"
-    },
-    {
-      "date": "2026-10-28",
-      "model": "DeepSeek V4.1 Flash",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4.1 Flash input price cut: $0.14 → $0.045 per 1M tokens"
-    },
-    {
-      "date": "2026-10-28",
-      "model": "DeepSeek V4.1 Flash",
-      "lab": "DeepSeek",
-      "kind": "price_rise",
-      "text": "DeepSeek V4.1 Flash output price raised: $0.42 → $0.5 per 1M tokens"
-    },
-    {
-      "date": "2026-10-28",
-      "model": "GLM 5.3 Flash",
-      "lab": "Zhipu AI",
-      "kind": "price_cut",
-      "text": "GLM 5.3 Flash input price cut: $0.15 → $0.0285 per 1M tokens"
-    },
-    {
-      "date": "2026-10-28",
-      "model": "GLM 5.3 Flash",
-      "lab": "Zhipu AI",
-      "kind": "price_cut",
-      "text": "GLM 5.3 Flash output price cut: $0.5 → $0.0923 per 1M tokens"
-    },
-    {
-      "date": "2026-10-28",
-      "model": "GLM 5.2",
-      "lab": "Zhipu AI",
-      "kind": "price_cut",
-      "text": "GLM 5.2 input price cut: $0.0077 → $0.006 per 1M tokens"
-    },
-    {
-      "date": "2026-10-28",
-      "model": "GLM 5.2",
-      "lab": "Zhipu AI",
-      "kind": "price_cut",
-      "text": "GLM 5.2 output price cut: $7 → $5.4 per 1M tokens"
-    },
-    {
-      "date": "2026-10-28",
       "model": "Nemotron 3 Super",
       "lab": "NVIDIA",
       "kind": "context",
@@ -1513,7 +1464,56 @@
       "lab": "DeepSeek",
       "kind": "price_cut",
       "text": "DeepSeek V4 Pro 0423 output price cut: $3.2 → $1.6325 per 1M tokens"
+    },
+    {
+      "date": "2026-10-30",
+      "model": "DeepSeek V4.1 Flash 1017",
+      "lab": "DeepSeek",
+      "kind": "price_cut",
+      "text": "DeepSeek V4.1 Flash 1017 input price cut: $0.3 → $0.15 per 1M tokens"
+    },
+    {
+      "date": "2026-10-30",
+      "model": "DeepSeek V4.1 Flash 1017",
+      "lab": "DeepSeek",
+      "kind": "price_cut",
+      "text": "DeepSeek V4.1 Flash 1017 output price cut: $1.2 → $0.6 per 1M tokens"
+    },
+    {
+      "date": "2026-10-30",
+      "model": "GLM 5.3 Flash",
+      "lab": "Zhipu AI",
+      "kind": "price_rise",
+      "text": "GLM 5.3 Flash input price raised: $0.0457 → $0.0487 per 1M tokens"
+    },
+    {
+      "date": "2026-10-30",
+      "model": "Qwen3.8 27B",
+      "lab": "Alibaba (Qwen)",
+      "kind": "price_rise",
+      "text": "Qwen3.8 27B input price raised: $0.039 → $0.15 per 1M tokens"
+    },
+    {
+      "date": "2026-10-30",
+      "model": "Qwen3.8 27B",
+      "lab": "Alibaba (Qwen)",
+      "kind": "price_rise",
+      "text": "Qwen3.8 27B output price raised: $1.25 → $1.875 per 1M tokens"
+    },
+    {
+      "date": "2026-10-30",
+      "model": "DeepSeek V4 Pro 0813",
+      "lab": "DeepSeek",
+      "kind": "price_cut",
+      "text": "DeepSeek V4 Pro 0813 input price cut: $1.32 → $0.66 per 1M tokens"
+    },
+    {
+      "date": "2026-10-30",
+      "model": "DeepSeek V4 Pro 0813",
+      "lab": "DeepSeek",
+      "kind": "price_cut",
+      "text": "DeepSeek V4 Pro 0813 output price cut: $3.96 → $1.98 per 1M tokens"
     }
   ],
-  "updated_at": "2026-10-30T01:18:12+00:00"
+  "updated_at": "2026-10-30T04:00:41+00:00"
 }
