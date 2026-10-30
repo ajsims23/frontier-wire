@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-30T19:09:55+00:00",
+  "started_at": "2026-10-30T19:11:34+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -15,43 +15,252 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (15)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "hn": "ok (24)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
   },
   "dropped": [],
   "written": [
     {
+      "title": "Proton's CEO Cancels AI 'Re-Interviews'",
+      "reason": "score 3: Proton’s CEO cancels AI ‘Re‑Interviews’; a minor corporate announcement with limited relevance to Frontier Wire readers."
+    },
+    {
+      "title": "AI isn't replacing SREs, it's deskilling them",
+      "reason": "score 4: Opinion piece on AI deskilling SREs; interesting but not a major development."
+    },
+    {
+      "title": "Keplearn: Extract Equations from Data in Seconds",
+      "reason": "score 4: GitHub release of Keplearn tool for equation extraction – a modest utility not a frontier model."
+    },
+    {
+      "title": "Zest’s new AI agent finds restaurants and books reservations over text",
+      "reason": "score 4: Zest’s AI concierge for restaurant reservations is a consumer‑oriented product, not a frontier AI development."
+    },
+    {
+      "title": "Google’s first data center satellite is online and writing poetry",
+      "reason": "score 7: Duplicate coverage of Google’s satellite data centre; the earlier item is retained."
+    },
+    {
+      "title": "Theranos whistleblower Tyler Shultz warns that the AI boom is ‘a great opportunity to go deceive people’",
+      "reason": "score 4: Theranos whistleblower warning about AI hype; commentary without new factual development."
+    },
+    {
+      "title": "Google&#8217;s satellite AI server transmits its first response to Earth",
+      "reason": "score 7: Duplicate of the Google satellite data centre story already captured."
+    },
+    {
+      "title": "Starbucks wants to use AI to show you a ‘personalized digital menu’ at the drive-thru",
+      "reason": "score 4: Starbucks exploring AI‑driven personalized drive‑thru menus – a marketing‑focused pilot, not a frontier AI breakthrough."
+    },
+    {
+      "title": "Pope says most urgent challenge facing AI race is need for institutional ethical framework",
+      "reason": "score 3: Pope’s comment on AI ethics is a notable viewpoint but not India‑specific and lacks news value for Frontier Wire."
+    },
+    {
+      "title": "The Week’s 10 Biggest Funding Rounds: Physical AI And Predictions Lead The Lineup",
+      "reason": "score 5: Weekly roundup of large funding rounds, including AI‑related deals, but no single standout event."
+    },
+    {
+      "title": "Salesforce buys Rune Technologies for new defense unit (Chris Metinko/Axios)",
+      "reason": "score 7: Duplicate of the Salesforce‑Rune acquisition story."
+    },
+    {
+      "title": "Triskell Software unveils new AI capabilities in its 2026 SP2 Release",
+      "reason": "score 4: Triskell Software’s AI feature release in SP2 is a routine product update."
+    },
+    {
+      "title": "Google introduces two new advanced AI models to expand technological capabilitiesPublished on: October 29, 2026 2:21 PM",
+      "reason": "score 5: Google announces two new AI models without naming or clear frontier impact; not a major model release."
+    },
+    {
+      "title": "Mace AI funds AI safety research at University of Virginia’s School of Data Science (UVA)",
+      "reason": "score 5: Mace AI funds AI safety research at UVA – modest funding, not a headline‑making development."
+    },
+    {
+      "title": "Salesforce acquires Rune, which makes AI military logistics software, sources say for $375M in cash and stock; Rune raised $30m from a16z and others (Margaux MacColl/Resilience Media)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Thousands of “ghost students” use AI to steal millions in student loans, DOJ says",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "955346c4476d",
+      "headline": "UK high court rejects Meta, TikTok and X challenge to Ofcom data requests",
+      "category": "policy",
+      "summary": "London’s High Court dismissed Meta, TikTok and X’s legal challenge against Ofcom’s information notices issued under the Online Safety Act. The regulator’s request for detailed content‑moderation metrics was deemed proportionate.",
+      "url": "https://techmeme.com/261030/p15",
+      "sources": 3,
+      "quotes": 1
+    },
+    {
+      "id": "41a783f21e16",
+      "headline": "US tech stocks tumble as AI spending approaches $1 trillion",
+      "category": "industry",
+      "summary": "Shares of Intel fell up to 30% and the Nasdaq dropped over 3.5% as investors worry about the $800.6 bn AI spending by major firms. Companies such as Alphabet, Amazon and Reddit also saw steep declines after earnings missed expectations.",
+      "url": "https://bbc.co.uk/news/articles/cvwy72e0n72yo",
+      "sources": 2,
+      "quotes": 1
+    },
+    {
+      "id": "07584bdf878d",
+      "headline": "Google’s Suncatcher prototype satellite is online and runs Gemma 4 model",
+      "category": "industry",
+      "summary": "Google confirmed that its Suncatcher prototype data center satellite, launched on October 1, is now online and communicating with ground stations. The onboard Gemma 4 language model generated a haiku about being in space as part of the initial test.",
+      "url": "https://techmeme.com/261030/p18",
+      "sources": 3,
+      "quotes": 2
+    },
+    {
+      "id": "09484dfee9e7",
+      "headline": "Fujifilm to boost magnetic tape production fivefold as AI drives data archiving",
+      "category": "industry",
+      "summary": "Fujifilm announced a ¥10 billion (~$63 million) investment to expand its Odawara factory and increase magnetic‑tape production capacity fivefold by fiscal 2028. The move targets rising archival demand from generative‑AI workloads and cloud providers seeking low‑cost, air‑gapped storage.",
+      "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
       "id": "25cc4c9bb2e3",
       "headline": "OpenAI says it will honor robots.txt signal for AI training preferences",
       "category": "policy",
-      "summary": "OpenAI announced it will respect a shared robots.txt signal that lets website operators convey their AI training preferences to participating providers.",
+      "summary": "OpenAI announced it will respect a shared robots.txt signal that lets website operators specify their AI training preferences to participating providers.",
       "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
       "sources": 1,
       "quotes": 0
     }
   ],
-  "notes": [],
-  "mode": "breaking",
+  "notes": [
+    "ignored made-up duplicate id 07584bdf878d for 'Google’s first data center satellite is online and'",
+    "ignored made-up duplicate id 07584bdf878d for 'Google&#8217;s satellite AI server transmits its f'",
+    "ignored made-up duplicate id 46a6c2341523 for 'Salesforce buys Rune Technologies for new defense '",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "2 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
   "timings": {
-    "gather": 12.5,
-    "judge": 0.6,
-    "verify and write": 1.0,
-    "tagging": 0.5,
-    "trackers": 23.2,
-    "photos": -0.0,
-    "stock photos": 17.4,
-    "alerts": 6.1
+    "gather": 93.1,
+    "audit": 0.0,
+    "plan": 2.4,
+    "judge": 2.0,
+    "verify and write": 463.1,
+    "videos": 22.3,
+    "tagging": 21.3,
+    "explainers": -0.0,
+    "trackers": 148.1,
+    "claims": 20.9,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 21.6,
+    "self-review": -0.0,
+    "photos": 1.0,
+    "stock photos": 16.6,
+    "daily email": -0.0,
+    "alerts": 5.7
   },
-  "fetched": 2406,
-  "fresh": 1,
-  "judged": 1,
-  "kept": 1,
-  "tagged": 1,
-  "trackers": "filed 1 stories; updated ai-regulation",
-  "photos": "0 saved, 0 unavailable",
+  "fetched": 2914,
+  "fresh": 18,
+  "plan": {
+    "focus": "Tracking AI‑driven market volatility and major defense deals while bolstering our thin coverage of new model releases and research.",
+    "priorities": [
+      "Salesforce acquires Rune, which makes AI military logistics software,  (Large $375M acquisition of AI military logistics firm signals growing defense AI market for investors)",
+      "US tech stocks see sharp falls over AI cost fears (US tech stock plunge over AI cost fears shows immediate market impact of AI spending)",
+      "London's High Court dismisses Meta, TikTok, and X's challenge to Ofcom (High Court ruling on Ofcom's Online Safety Act shapes regulatory landscape for major platforms)",
+      "Fujifilm to boost tape production 5x as AI fuels archiving demand (Fujifilm's 5× tape production boost illustrates rising industrial demand driven by AI archiving needs)",
+      "Google says its Suncatcher prototype data center satellite is online a (Google's satellite data center going live highlights expanding AI infrastructure and novel use‑cases)"
+    ],
+    "thin_areas": [
+      "models",
+      "research"
+    ],
+    "searches": [
+      "new AI model releases October 2026: 2 new",
+      "AI safety research funding 2026: 1 new",
+      "Meta CMA probe next steps: 0 new"
+    ],
+    "dig_deeper": [
+      "Salesforce acquires Rune, which makes AI military logistics software, ",
+      "London's High Court dismisses Meta, TikTok, and X's challenge to Ofcom"
+    ]
+  },
+  "judged": 21,
+  "kept": 7,
+  "research": {
+    "investigated": 5,
+    "confirmed": 4,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "London's High Court dismisses Meta, TikTok, and X's challenge to Ofcom: confirmed (searched “London High Court dismisses Meta TikTok X challenge Ofcom Online Safety Act information requests”; read yahoo.com; read straitstimes.com)",
+    "US tech stocks see sharp falls over AI cost fears: confirmed (searched “US tech stocks sharp falls AI cost fears”; read theguardian.com; read indiatimes.com)",
+    "Google says its Suncatcher prototype data center satellite is online a: confirmed (searched “Google Suncatcher prototype data center satellite online Gemma 4 haiku”; read techcrunch.com; read theverge.com)",
+    "Salesforce acquires Rune, which makes AI military logistics software, : unconfirmed (searched “Salesforce acquires Rune AI military logistics software $375 million”; read indiatimes.com; read shiftdelete.net)",
+    "Fujifilm to boost tape production 5x as AI fuels archiving demand: confirmed (searched “Fujifilm boost tape production 5x AI archiving demand”; read msn.com; read businessinsider.com)"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (9 in feed, 0 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (7 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (2 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (5 in feed, 0 new)"
+  },
+  "videos_kept": "3 kept from 3 new",
+  "tagged": 5,
+  "trackers": "filed 6 stories; updated frontier-race, ai-regulation, ai-infrastructure, ai-money",
+  "claims": "59 tracked, 58 open, 0 updated this run",
+  "model_tracker": "82 models, 39 changes today",
+  "briefing": "3 themes from 17 stories",
+  "photos": "4 saved, 0 unavailable",
   "stock photos": "1 added",
-  "alerts": "48 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":10}",
-  "ai_requests_run": 6,
-  "ai_tokens_run": 15154,
-  "ai_requests_today": 222,
-  "provider_log": []
+  "alerts": "52 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":33}",
+  "ai_requests_run": 39,
+  "ai_tokens_run": 111198,
+  "ai_requests_today": 255,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
 }
