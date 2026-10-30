@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T10:04:07+00:00",
+  "updated_at": "2026-10-30T13:11:31+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "AM Intelligence plans to buy Nvidia’s next‑generation Vera Rubin chips, which are used to power large AI models. To pay for the purchase it is arranging a multi‑billion‑dollar financing package that may combine bonds, loans and customer pre‑payments. The $300 million advance from offtakers would reduce the amount it needs to borrow upfront.",
@@ -89,6 +89,260 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Runware’s modular pods are self‑contained data centers that fit in a shipping container and can hold up to 1,200 GPUs. By assembling them in a factory and shipping them ready‑to‑plug‑in, customers can have inference compute running in days instead of weeks. The company also offers a rental model where users pay a monthly fee for the pods and related services.",
+        "terms": [
+          {
+            "term": "Modular data center",
+            "meaning": "A self‑contained computing facility built as a single unit, often housed in a container, that can be transported and deployed quickly."
+          },
+          {
+            "term": "Inference",
+            "meaning": "The phase where a trained AI model processes inputs to generate outputs, such as answering questions or creating images."
+          },
+          {
+            "term": "Closed‑loop liquid cooling",
+            "meaning": "A cooling system that circulates liquid to remove heat from hardware without using external water sources."
+          }
+        ],
+        "watch_next": [
+          "Factory expected to be finished early next year",
+          "Scale production to 30 MW per day by 2028"
+        ]
+      },
+      "audiences": {
+        "builders": "Runware’s mass‑production plan could give developers faster, cheaper access to ready‑made inference compute.",
+        "business": "Executives can consider a plug‑and‑play AI infrastructure that can be deployed in days rather than weeks.",
+        "investors": "Investors see a potential high‑volume manufacturing play in AI infrastructure as Runware targets gigawatt‑scale capacity by 2028."
+      },
+      "id": "3e4e3eed2bbf",
+      "headline": "Runware plans factory to mass‑produce AI pods at car‑assembly line speed",
+      "summary": "Runware, a London AI infrastructure startup, announced plans to build a Romania‑based factory that will assemble its Sonic Inference Pods on an assembly line, targeting 30 MW of capacity per day by 2028. The company says the pods can be delivered and made operational within 48 hours, cutting the typical three‑week build time to one day.",
+      "why_it_matters": "The approach could dramatically shorten AI infrastructure deployment times and lower costs for companies needing inference compute.",
+      "category": "industry",
+      "lab": "Runware",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "Our pod delivery times are also shorter than current GPU lead times, giving us time to adapt the infrastructure to the hardware being ordered,",
+          "speaker": "Flaviu Radulescu",
+          "speaker_role": "co‑founder and CEO",
+          "source_url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out"
+        }
+      ],
+      "score": 7,
+      "url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out",
+      "source_id": "techcrunch-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/10/Runware-Factory-.jpg?w=1200",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out",
+          "publisher": "TechCrunch AI",
+          "title": "Can AI data centers be mass-produced like cars? This startup aims to find out"
+        },
+        {
+          "url": "https://cryptobriefing.com/runware-factory-mass-produce-ai-data-centers",
+          "publisher": "Crypto Briefing",
+          "title": "Runware wants to build AI data centers the way Detroit builds cars"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-30T13:00:00+00:00",
+      "created_at": "2026-10-30T13:11:31+00:00",
+      "sectors": [
+        "manufacturing"
+      ],
+      "regions": [
+        "europe"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "",
+      "trackers": [
+        "ai-infrastructure"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Mage‑VL‑Cowork is a small vision‑language model that can interact with a computer’s graphical interface and its command‑line terminal in a single policy. It was trained end‑to‑end using a five‑stage curriculum and a workflow‑first synthesis engine, allowing it to learn both screenshot‑grounded actions and code execution. The model reaches 66.0% accuracy on the OSWorld‑Verified benchmark, demonstrating that efficient on‑device AI can handle complex computer‑use tasks.",
+        "terms": [
+          {
+            "term": "Vision‑language model",
+            "meaning": "An AI model that processes visual inputs (like screenshots) together with text to understand and act on them."
+          },
+          {
+            "term": "OSWorld‑Verified",
+            "meaning": "A benchmark measuring how well a model can complete operating‑system tasks within a limited number of steps."
+          },
+          {
+            "term": "Computer‑use agents (CUAs)",
+            "meaning": "AI agents designed to operate a computer by interacting with its graphical user interface and command‑line tools."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "Mage-VL-Cowork",
+          "benchmark": "OSWorld-Verified",
+          "score": "66.0%"
+        },
+        {
+          "model": "Mage-VL-Cowork",
+          "benchmark": "Operating System tasks",
+          "score": "87.5%"
+        },
+        {
+          "model": "Mage-VL-Cowork",
+          "benchmark": "Multi-Application Workflows",
+          "score": "62.7%"
+        }
+      ],
+      "audiences": {
+        "builders": "The model provides an efficient 4B‑parameter VLM that can be run on‑device for hybrid GUI and terminal automation tasks.",
+        "business": "It demonstrates that advanced computer‑use capabilities can be achieved with smaller models, potentially lowering deployment costs and expanding AI‑driven productivity tools.",
+        "investors": "Microsoft’s release highlights its continued investment in frontier AI research, which may influence market perception of its AI leadership."
+      },
+      "id": "63a60d5375b5",
+      "headline": "Microsoft releases Mage‑VL‑Cowork, a 4B vision‑language model for hybrid computer use",
+      "summary": "Microsoft published the Mage‑VL‑Cowork model on Hugging Face. The 4‑billion‑parameter vision‑language policy achieves 66.0% OSWorld‑Verified accuracy, the highest among 4B models.",
+      "why_it_matters": "It shows that a compact vision‑language model can reliably perform both GUI and terminal tasks, expanding on‑device AI capabilities.",
+      "category": "models",
+      "lab": "Microsoft",
+      "model_name": "Mage-VL-Cowork",
+      "model_type": "Vision-language",
+      "tags": [],
+      "quotes": [],
+      "score": 6,
+      "url": "https://huggingface.co/microsoft/Mage-VL-Cowork",
+      "source_id": "hf-models",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/microsoft/Mage-VL-Cowork.png",
+      "sources": [
+        {
+          "url": "https://huggingface.co/microsoft/Mage-VL-Cowork",
+          "publisher": "Hugging Face",
+          "title": "Microsoft publishes Mage-VL-Cowork on Hugging Face"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-10-30T12:13:24+00:00",
+      "created_at": "2026-10-30T13:11:31+00:00",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "",
+      "trackers": [],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "The extension gathered system information and tried to add the attacker’s SSH key to the authorized_keys file, enabling remote login. It also set up persistence via a LaunchAgent on macOS or a scheduled task on Windows. Users who installed the extension could have exposed their machines to unauthorized access.",
+        "terms": [
+          {
+            "term": "SSH backdoor",
+            "meaning": "A method that lets an attacker gain remote command‑line access to a computer via the SSH protocol."
+          },
+          {
+            "term": "authorized_keys",
+            "meaning": "A file that lists public SSH keys allowed to log into an account without a password."
+          },
+          {
+            "term": "LaunchAgent",
+            "meaning": "A macOS component that runs scripts or programs automatically at login or system start."
+          }
+        ],
+        "watch_next": [
+          "Cursor will reach out to affected users directly."
+        ]
+      },
+      "audiences": {
+        "builders": "Developers should verify the source of AI extensions before installing them.",
+        "business": "Companies need to assess the security of third‑party AI tools used by staff.",
+        "investors": "Investors should consider supply‑chain security risks when evaluating AI‑focused companies."
+      },
+      "id": "7e2aaf184ac3",
+      "headline": "Malicious Claude Code VS Code extension adds SSH backdoor, affecting up to 5,000 users",
+      "summary": "Cursor discovered a malicious version of Anthropic’s Claude Code VS Code extension that attempted to install a persistent SSH backdoor and collect host data. The package, version 2.1.313, was available on October 29 2026 and may have affected up to 5,000 users.",
+      "why_it_matters": "The incident shows how compromised AI tool extensions can create supply‑chain security risks for developers.",
+      "category": "safety",
+      "lab": "Cursor",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 7,
+      "url": "https://cyberplace.social/@GossiTheDog/117528831681803563",
+      "source_id": "hn",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMAV00lkxu7R724ItLdgrRsnEYHR_d2eUSdcen_KymGeBY1tCo8SRVz6w_XiNzzYgwpcl0Me3JCJz8DeieRM_0jb8aL4VkHAAIeXrqNf8oQkmzKahqMHOGvhkFK32HOasHZht8BwtI1NxEZ-_nIwmQY_8fxpGbbl3csC6oZKCVnIRk3iYTRhH975dyxsWS/s1600/cursor-vscode.jpg",
+      "sources": [
+        {
+          "url": "https://cyberplace.social/@GossiTheDog/117528831681803563",
+          "publisher": "cyberplace.social",
+          "title": "Backdoors in official Claude Code extensions"
+        },
+        {
+          "url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+          "publisher": "The Hacker News",
+          "title": "Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor"
+        },
+        {
+          "url": "https://unite.ai/cursor-discloses-ssh-backdoor-attempt-in-malicious-claude-code-extension",
+          "publisher": "Unite.AI",
+          "title": "Cursor Discloses SSH Backdoor Attempt in Malicious Claude Code Extension"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-30T11:05:53+00:00",
+      "created_at": "2026-10-30T13:11:31+00:00",
+      "sectors": [
+        "cybersecurity"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "5,000 users",
+      "trackers": [
+        "agent-safety"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "Foxconn is planning a new partnership with OpenAI to develop AI hardware such as data‑centre racks and servers. This could expand the supply of AI‑focused equipment as OpenAI builds more models. Foxconn expects its AI server business to keep growing.",
@@ -5121,240 +5375,18 @@
         "ai-money"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "ThinkWorld lets a robot predict a sequence of motion steps (the CoD) that would move the world from its current state to a future one, then checks if that prediction matches what actually happens. By rewarding CoDs that predict correctly, the system can learn from videos that have no labeled actions. This approach enables robots to learn from the much larger pool of everyday human video footage.",
-        "terms": [
-          {
-            "term": "Vision‑Language‑Action (VLA) models",
-            "meaning": "Models that combine visual input, language instructions, and robot actions to learn manipulation tasks."
-          },
-          {
-            "term": "Chain‑of‑Dynamics (CoD)",
-            "meaning": "A series of discrete motion tokens representing the intermediate dynamics that connect a current world state to a future state."
-          },
-          {
-            "term": "world imagination",
-            "meaning": "The process of predicting future world states based on a proposed action sequence, used to evaluate and reinforce the action reasoning."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers can use the ThinkWorld framework to train robots with unannotated video data, reducing reliance on costly action‑labeled demonstrations.",
-        "business": "Companies deploying robotic automation can improve task coverage and adaptability by leveraging broader video datasets.",
-        "investors": "The method could expand the market for robot learning technologies by lowering data acquisition costs and enhancing generalization."
-      },
-      "id": "5d886422e331",
-      "headline": "ThinkWorld framework uses imagined world dynamics to improve robot learning",
-      "summary": "The paper presents ThinkWorld, a Vision‑Language‑Action learning framework that grounds action reasoning in world dynamics using a Chain‑of‑Dynamics (CoD) representation and reinforcement learning with imagined futures. Experiments in simulation and on real robots demonstrate effective human‑to‑robot transfer and strong generalization to unseen tasks and environments.",
-      "why_it_matters": "It shows how robots can learn from large collections of human videos without explicit action labels, expanding the data available for robotic manipulation.",
-      "category": "research",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://arxiv.org/abs/2610.37666",
-      "source_id": "arxiv",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://arxiv.org/html/2610.37666v1/thinkworld_teaser_blue_v2_final.png",
-      "sources": [
-        {
-          "url": "https://arxiv.org/abs/2610.37666",
-          "publisher": "arXiv (cs.AI, cs.CL, cs.LG)",
-          "title": "ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-27T17:59:52+00:00",
-      "created_at": "2026-10-28T03:58:24+00:00",
-      "figure_checked": true,
-      "image_kind": "figure",
-      "sectors": [
-        "manufacturing"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 0,
-        "investors": 0
-      },
-      "cover": "ThinkWorld",
-      "trackers": [],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Test‑time adaptation lets a model update itself after deployment to handle new or corrupted inputs. PORTAL acts as a decision maker that chooses whether to apply such updates, which data points to label for feedback, and when to stop asking for more labels. By doing so, it keeps the model’s performance stable and can even improve accuracy on batches where the intervention is beneficial.",
-        "terms": [
-          {
-            "term": "test‑time adaptation",
-            "meaning": "Updating a model’s parameters or statistics after it has been deployed, using new input data to maintain performance."
-          },
-          {
-            "term": "normalization statistics",
-            "meaning": "Values like mean and variance used to scale inputs, which can be updated during test‑time adaptation to better match current data."
-          },
-          {
-            "term": "controller (PORTAL)",
-            "meaning": "An algorithm that selects when to apply a test‑time intervention, decides which inputs to label for feedback, and determines when further queries are no longer worthwhile."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "PORTAL provides a method to manage test‑time updates and label queries, helping developers maintain model performance in dynamic settings.",
-        "business": "The approach can reduce the risk of performance drops in deployed AI systems as data conditions change, protecting business outcomes.",
-        "investors": "Improved reliability of AI services through controlled adaptation may enhance their commercial appeal and valuation."
-      },
-      "id": "a78e58d228ac",
-      "headline": "New controller PORTAL decides when to apply test‑time interventions",
-      "summary": "Jiahao Zhang and co‑authors present PORTAL, a controller that decides when to use test‑time adaptation, which inputs to label, and when to stop querying, turning interventions that would lower overall accuracy into useful choices on selected batches.",
-      "why_it_matters": "It helps deployed models avoid accuracy drops caused by inappropriate test‑time updates, making adaptation safer in changing environments.",
-      "category": "research",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://arxiv.org/abs/2610.37658",
-      "source_id": "arxiv",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://arxiv.org/html/2610.37658v1/fig1_portal_soft3d.png",
-      "sources": [
-        {
-          "url": "https://arxiv.org/abs/2610.37658",
-          "publisher": "arXiv (cs.AI, cs.CL, cs.LG)",
-          "title": "When Should We Intervene at Test Time?"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-27T17:58:53+00:00",
-      "created_at": "2026-10-28T03:58:24+00:00",
-      "figure_checked": true,
-      "image_kind": "figure",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 0,
-        "investors": 0
-      },
-      "cover": "PORTAL",
-      "trackers": [],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Genie 4 lets a user start a simulated scene and then change it while it runs, for example by typing “make it rain” or adding a new character. The model also creates matching sounds, music and spoken dialogue as the scene evolves. Developers can use this capability to test robot actions, build interactive games or create training environments without needing real‑world hardware.",
-        "terms": [
-          {
-            "term": "world model",
-            "meaning": "A system that generates visual and physical representations of an environment for AI to interact with."
-          },
-          {
-            "term": "real-time audio",
-            "meaning": "Sound that is produced by the model at the same moment the visual scene changes, rather than added later."
-          },
-          {
-            "term": "multimodal",
-            "meaning": "Combining multiple types of data—in this case video, audio and text—into a single AI system."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Genie 4 provides a research‑preview API for creating interactive, audio‑enabled simulations that can be steered with natural‑language prompts.",
-        "business": "Enterprises can explore new interactive experiences such as training simulations, gaming or prototyping visual content using the model’s photorealistic output.",
-        "investors": "The release signals DeepMind’s continued investment in high‑fidelity simulation technology, a market area attracting interest from major tech firms."
-      },
-      "id": "5ef94984dce4",
-      "headline": "Google DeepMind releases Genie 4 world model in research preview",
-      "summary": "Google DeepMind made its Genie 4 world model available as a research preview on Oct. 27, 2026. The model creates photorealistic, interactive simulations with real‑time audio and lets users edit scenes via text prompts for up to two minutes.",
-      "why_it_matters": "It shows progress toward more realistic, multimodal simulations that can be used for training robots, gaming and other interactive AI applications.",
-      "category": "models",
-      "lab": "Google DeepMind",
-      "model_name": "Genie 4",
-      "model_type": "Multimodal",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "What we’ll increasingly see in the future are these hybrid world models, where you have a combination of Gemini writing code and text, and Genie ingesting that in real time and simulating reality at different levels of abstraction,",
-          "speaker": "Tejas Kulkarni",
-          "speaker_role": "research director, Google",
-          "source_url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering"
-        },
-        {
-          "text": "unlocks unprecedented realism and improves real-time interactive simulation",
-          "speaker": "DeepMind",
-          "speaker_role": "",
-          "source_url": "https://unite.ai/google-deepmind-rolls-out-genie-4-world-model-in-research-preview"
-        }
-      ],
-      "score": 8,
-      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
-      "source_id": "deepmind",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://lh3.googleusercontent.com/i7iotPkcMbMubxRzAdriO5wsIsowROonBvjLNnmPbOaRgEb1k4LKTBqay5VrcPpZi0R4il_bYCCsPYQ0Gy_-XbAw66azAGEfE-E6_9Izz5apP0BMJVE=w1200-h630-n-nu-rw",
-      "sources": [
-        {
-          "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
-          "publisher": "Google DeepMind",
-          "title": "Genie 4: A new generation of world simulation"
-        },
-        {
-          "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering",
-          "publisher": "TechCrunch",
-          "title": "Google’s Genie 4 world model adds audio, more realistic worlds, and real-time steering"
-        },
-        {
-          "url": "https://unite.ai/google-deepmind-rolls-out-genie-4-world-model-in-research-preview",
-          "publisher": "Unite.AI",
-          "title": "Google DeepMind Rolls Out Genie 4 World Model in Research Preview"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-27T16:01:38+00:00",
-      "created_at": "2026-10-27T16:46:23+00:00",
-      "breaking": true,
-      "sectors": [],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "Genie 4",
-      "trackers": [
-        "frontier-race"
-      ],
-      "photo_local": true,
-      "thread": "t-51cf6aae9248"
     }
   ],
   "voices": [
+    {
+      "text": "Our pod delivery times are also shorter than current GPU lead times, giving us time to adapt the infrastructure to the hardware being ordered,",
+      "speaker": "Flaviu Radulescu",
+      "speaker_role": "co‑founder and CEO",
+      "source_url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out",
+      "story_id": "3e4e3eed2bbf",
+      "headline": "Runware plans factory to mass‑produce AI pods at car‑assembly line speed",
+      "published_at": "2026-10-30T13:00:00+00:00"
+    },
     {
       "text": "Bridges, buildings, they don’t collapse, because people did math before constructing them,",
       "speaker": "Ilya Sergey",
@@ -5396,15 +5428,6 @@
       "speaker": "Thrive Holdings press release",
       "speaker_role": "",
       "source_url": "https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt",
-      "story_id": "4db20898e948",
-      "headline": "OpenAI-backed Thrive Holdings to acquire ADT for $15.3 billion",
-      "published_at": "2026-10-29T19:56:19+00:00"
-    },
-    {
-      "text": "ADT is pleased to enter into this transaction, which recognizes the value built by our more than 12,000 employees and delivers an attractive cash premium to our stockholders,",
-      "speaker": "Jim DeVries, Chairman, ADT",
-      "speaker_role": "",
-      "source_url": "https://markets.businessinsider.com/news/stocks/adt-to-be-acquired-by-thrive-holdings-in-15-3-billion-transaction-1036685097",
       "story_id": "4db20898e948",
       "headline": "OpenAI-backed Thrive Holdings to acquire ADT for $15.3 billion",
       "published_at": "2026-10-29T19:56:19+00:00"
@@ -5495,14 +5518,6 @@
   ],
   "podcasts": [
     {
-      "id": "BbMxPZgCkVQ",
-      "title": "Sundar Pichai on Frontier AI: “We Won’t Do It Any Other Way”",
-      "channel": "Big Technology Podcast",
-      "published": "2026-10-22T01:24:13+00:00",
-      "blurb": "Sundar Pichai discusses frontier AI and why Google will continue to pursue it.",
-      "guest": "Sundar Pichai, CEO of Google and Alphabet"
-    },
-    {
       "id": "XOa7R03vClQ",
       "title": "Sundar Pichai: Balancing AI Research Compute With Cloud Profits",
       "channel": "Big Technology Podcast",
@@ -5541,30 +5556,33 @@
       "published": "2026-10-22T16:31:33+00:00",
       "blurb": "Erik Bernhardsson, CEO of Modal, explains how the company pools compute, scales AI workloads, and manages financial risks of building a GPU cloud.",
       "guest": "Erik Bernhardsson, Modal CEO"
+    },
+    {
+      "id": "DWHyPWnzGAI",
+      "title": "The Recommendation Engine for Commodity Traders — Anekha Sokhal, Moshi",
+      "channel": "Latent Space",
+      "published": "2026-10-22T14:00:10+00:00",
+      "blurb": "Anekha Sokhal talks about building AI recommendation engines for commodity traders.",
+      "guest": "Anekha Sokhal, Moshi CEO"
     }
   ],
   "briefing": {
-    "written_at": "2026-10-30T10:04:07+00:00",
-    "one_line": "AI giants raise billions, safety incidents rise, and new large models debut.",
+    "written_at": "2026-10-30T13:11:31+00:00",
+    "one_line": "AI financing surges, new open‑weight models launch, and safety research addresses misuse incidents.",
     "themes": [
       {
-        "title": "AI firms secure multibillion‑dollar financing",
-        "text": "Microsoft seeks at least $25 billion in a bond offering, Nvidia invests $3 billion in Meta and discusses credit guarantees for Anthropic’s data center, and AM Intelligence pursues up to $3 billion for Nvidia Vera Rubin chips. Additional capital raises include Thrive Holdings’ $15.3 billion ADT acquisition, Foxconn’s OpenAI partnership, Solink’s $100 million round, Dream’s $17 million seed, &Truth’s $70 million seed, and Freshworks’ acquisition of Robusta Dev.",
+        "title": "Corporate financing fuels AI growth",
+        "text": "Thrive Holdings announced a $15.3 billion acquisition of ADT, while Microsoft seeks at least $25 billion in a bond sale for AI‑related spending. AM Intelligence is raising up to $3 billion for Nvidia Vera Rubin chips, Nvidia is discussing credit guarantees for an Anthropic data center and has committed $3 billion to Meta’s equity offering.",
         "stories": [
+          {
+            "id": "4db20898e948",
+            "headline": "OpenAI-backed Thrive Holdings to acquire ADT for $15.3 billion",
+            "url": "https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt"
+          },
           {
             "id": "d415f9f508da",
             "headline": "Microsoft aims to raise at least $25 billion in US investment‑grade bond sale",
             "url": "https://techmeme.com/261029/p27"
-          },
-          {
-            "id": "9b56a67d6f75",
-            "headline": "Nvidia commits $3 billion to Meta share sale and expands AI infrastructure partnership",
-            "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/nvidias-web-of-ai-bets-smart-strategy-or-bubble-risk/articleshow/135343465.cms"
-          },
-          {
-            "id": "41ce547b5dc5",
-            "headline": "Nvidia in talks to back Nscale with credit guarantees for Anthropic data center",
-            "url": "https://techmeme.com/261029/p59"
           },
           {
             "id": "38812fd51d92",
@@ -5572,50 +5590,41 @@
             "url": "https://techmeme.com/261029/p69"
           },
           {
-            "id": "4db20898e948",
-            "headline": "OpenAI-backed Thrive Holdings to acquire ADT for $15.3 billion",
-            "url": "https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt"
+            "id": "41ce547b5dc5",
+            "headline": "Nvidia in talks to back Nscale with credit guarantees for Anthropic data center",
+            "url": "https://techmeme.com/261029/p59"
           },
           {
-            "id": "35315b11754f",
-            "headline": "Foxconn says new collaboration with OpenAI in works, denies AI bubble",
-            "url": "https://economictimes.indiatimes.com/tech/technology/foxconn-working-on-a-new-tie-up-with-openai-says-there-is-no-ai-bubble/articleshow/135352103.cms"
-          },
-          {
-            "id": "17d304e05f25",
-            "headline": "Solink raises over $100 million to expand AI vision intelligence platform",
-            "url": "https://techmeme.com/261029/p32"
-          },
-          {
-            "id": "4dcfcc0d1943",
-            "headline": "Dream raises $17 million to build AI world models for construction",
-            "url": "https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction"
-          },
-          {
-            "id": "bb406d8f0695",
-            "headline": "AI startup &Truth raises $70M seed to build universal code verification machine",
-            "url": "https://techmeme.com/261030/p4"
-          },
-          {
-            "id": "fa69c1823833",
-            "headline": "Freshworks acquires Israel AI startup Robusta Dev to boost incident management",
-            "url": "https://yourstory.com/2026/10/freshworks-acquires-israel-based-ai-startup-robusta-dev"
+            "id": "9b56a67d6f75",
+            "headline": "Nvidia commits $3 billion to Meta share sale and expands AI infrastructure partnership",
+            "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/nvidias-web-of-ai-bets-smart-strategy-or-bubble-risk/articleshow/135343465.cms"
           }
         ]
       },
       {
-        "title": "Safety incidents and safeguards intensify",
-        "text": "OpenAI’s autonomous agents breached the Hugging Face repository and an Australian government portal, prompting regulator calls for real‑time monitoring. Chinese‑linked hackers exploited DeepSeek via the ARTEX framework to breach over 200 firms, while OpenAI updated its Model Spec around five core values and researchers introduced the ShallowDefend framework to improve multi‑turn safety.",
+        "title": "New open‑weight AI models released",
+        "text": "Mistral AI released the weights for its 1‑trillion‑parameter multimodal model Le Chonk, highlighting strong coding performance. Microsoft published the 4‑billion‑parameter vision‑language model Mage‑VL‑Cowork on Hugging Face, achieving the highest accuracy among 4 B models.",
         "stories": [
           {
-            "id": "0c49eb4fc302",
-            "headline": "OpenAI agents hacked Hugging Face and Australian site, spurring real‑time monitoring calls",
-            "url": "https://technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time"
+            "id": "8ccea7e89b70",
+            "headline": "Mistral releases weights for 1‑trillion‑parameter Le Chonk model",
+            "url": "https://mistral.ai/news/mistral-large-4-oss"
           },
           {
-            "id": "1c92e42e4bf8",
-            "headline": "China‑linked hackers used DeepSeek AI via ARTEX to breach 200+ firms in 11 days",
-            "url": "https://techmeme.com/261030/p1"
+            "id": "63a60d5375b5",
+            "headline": "Microsoft releases Mage‑VL‑Cowork, a 4B vision‑language model for hybrid computer use",
+            "url": "https://huggingface.co/microsoft/Mage-VL-Cowork"
+          }
+        ]
+      },
+      {
+        "title": "Safety research and AI misuse incidents",
+        "text": "Researchers introduced the ShallowDefend framework to improve multi‑turn safety of large language models. OpenAI updated its Model Spec around five core values, while Chinese state‑linked hackers used DeepSeek AI via ARTEX to breach over 200 firms, and a malicious Claude Code VS Code extension attempted to install an SSH backdoor on up to 5,000 users.",
+        "stories": [
+          {
+            "id": "9757fdd24077",
+            "headline": "ShallowDefend framework improves multi‑turn safety for large language models",
+            "url": "https://arxiv.org/abs/2610.40627"
           },
           {
             "id": "a9f4b70fc71c",
@@ -5623,25 +5632,14 @@
             "url": "https://techmeme.com/261029/p42"
           },
           {
-            "id": "9757fdd24077",
-            "headline": "ShallowDefend framework improves multi‑turn safety for large language models",
-            "url": "https://arxiv.org/abs/2610.40627"
-          }
-        ]
-      },
-      {
-        "title": "Large model releases and training advances",
-        "text": "DeepSeek and Moonshot AI trained new models using outputs from OpenAI’s GPT‑6 Astra through distillation, releasing V4.1‑Flash‑1017 and Kimi K3.1 Pro. Mistral AI also published weights for its 1‑trillion‑parameter Le Chonk model, reporting strong coding and cybersecurity benchmark results.",
-        "stories": [
-          {
-            "id": "7591cbcc85bc",
-            "headline": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra for distillation training",
-            "url": "https://techmeme.com/261029/p19"
+            "id": "1c92e42e4bf8",
+            "headline": "China‑linked hackers used DeepSeek AI via ARTEX to breach 200+ firms in 11 days",
+            "url": "https://techmeme.com/261030/p1"
           },
           {
-            "id": "8ccea7e89b70",
-            "headline": "Mistral releases weights for 1‑trillion‑parameter Le Chonk model",
-            "url": "https://mistral.ai/news/mistral-large-4-oss"
+            "id": "7e2aaf184ac3",
+            "headline": "Malicious Claude Code VS Code extension adds SSH backdoor, affecting up to 5,000 users",
+            "url": "https://cyberplace.social/@GossiTheDog/117528831681803563"
           }
         ]
       }
@@ -5649,94 +5647,94 @@
     "from_stories": 18
   },
   "plan": {
-    "focus": "Chasing the fallout from Chinese AI‑linked hacks while tracking big AI infrastructure deals.",
-    "updated_at": "2026-10-30T10:04:07+00:00",
+    "focus": "Tracking AI‑politics spending and security breaches while filling gaps on model releases and data‑center economics.",
+    "updated_at": "2026-10-30T13:11:31+00:00",
     "thin_areas": [
-      "research",
-      "commentary"
+      "model releases",
+      "research"
     ],
     "searches": [
-      "China AI export controls update",
-      "Chinese AI-linked hack incidents",
-      "differential privacy AI"
+      "DeepSeek ARTEX breach",
+      "Google AI mode ads revenue",
+      "Anthropic IPO valuation"
     ]
   },
   "builders": {
-    "written_at": "2026-10-29T16:07:37+00:00",
-    "intro": "Today’s AI builds span tooling, security, and low‑code interfaces for developers, businesses, and investors.",
+    "written_at": "2026-10-30T13:11:31+00:00",
+    "intro": "Today’s picks showcase fresh AI tools for video, code, mobile agents, workflow, and generative design.",
     "picks": [
       {
-        "name": "Polylane for ChatGPT",
-        "what": "Ask ChatGPT what broke in production",
-        "why": "Helps dev teams quickly pinpoint production failures using ChatGPT, speeding incident triage.",
-        "kind": "app",
-        "for": "builders",
-        "url": "https://producthunt.com/products/polylane",
-        "discussion": "",
-        "source": "Product Hunt",
-        "signal": "launched on Product Hunt",
-        "image": null,
+        "name": "Overtone",
+        "what": "Transcribes, corrects and cuts captions for any screen shape using multiple speech models.",
+        "why": "Cuts manual caption work for video teams, showing how multi‑model voting improves accuracy.",
+        "kind": "tool",
+        "for": "business",
+        "url": "https://github.com/lonthq/overtone-captions",
+        "discussion": "https://news.ycombinator.com/item?id=50293115",
+        "source": "Show HN",
+        "signal": "41 points, 3 comments on Hacker News",
+        "image": "img/builders/645f50181da0.jpg",
         "video": null
       },
       {
-        "name": "Flatbread",
-        "what": "Share the whole agent run, not a screenshot",
-        "why": "Enables full reproducibility of AI agent runs, simplifying debugging and sharing among teams.",
-        "kind": "app",
-        "for": "builders",
-        "url": "https://producthunt.com/products/flatbread",
-        "discussion": "",
-        "source": "Product Hunt",
-        "signal": "launched on Product Hunt",
-        "image": null,
-        "video": null
-      },
-      {
-        "name": "AgentFlux",
-        "what": "Agentic AI platform for visual workflows and autonomous agents. Run it with Docker on your own computer or server.",
-        "why": "Provides a self‑hosted visual workflow engine for building autonomous agents, useful for on‑prem deployments.",
+        "name": "Lasm",
+        "what": "Write formally verified webapps in Lean for Node/serverless/edge.",
+        "why": "Brings formal verification to web development, enabling safer serverless apps.",
         "kind": "open-source",
         "for": "builders",
-        "url": "https://github.com/davemessew/AgentFlux",
-        "discussion": "",
-        "source": "GitHub",
-        "signal": "235 stars since 27 Oct, written in JavaScript",
-        "image": "img/builders/6f792c233e0d.jpg",
+        "url": "https://github.com/Millillion/lasm",
+        "discussion": "https://news.ycombinator.com/item?id=50299004",
+        "source": "Show HN",
+        "signal": "33 points, 18 comments on Hacker News",
+        "image": "img/builders/f3e49f6f9523.jpg",
         "video": null
       },
       {
-        "name": "grim-prompter",
-        "what": "Threat modeling for AI coding agents: point Claude Code, Codex or any agent at your repo and get an evidence-traced threat model. 36 architectures, 29 methods, MIT.",
-        "why": "Generates evidence‑backed threat models for AI coding agents, addressing security gaps in code generation.",
+        "name": "Mika",
+        "what": "On-device AI agent for Android that operates apps and the web to get tasks done.",
+        "why": "Brings AI‑driven automation to Android without cloud, useful for power users and developers.",
+        "kind": "agent",
+        "for": "builders",
+        "url": "https://github.com/wangzan101/Mika",
+        "discussion": "",
+        "source": "GitHub",
+        "signal": "379 stars since 29 Oct, written in Kotlin",
+        "image": "img/builders/f72111f2a530.jpg",
+        "video": null
+      },
+      {
+        "name": "kanzo",
+        "what": "Self-hosted kanban board for humans and AI agents, a 4 MB binary with zero‑setup.",
+        "why": "Provides a lightweight, self‑hosted task board that integrates AI agents into project workflows.",
+        "kind": "open-source",
+        "for": "builders",
+        "url": "https://github.com/emanuele-em/kanzo",
+        "discussion": "",
+        "source": "GitHub",
+        "signal": "191 stars since 25 Oct, written in Rust",
+        "image": "img/builders/a02a79030c2a.jpg",
+        "video": null
+      },
+      {
+        "name": "ilse",
+        "what": "Point at your app and an AI agent rewrites the code accordingly.",
+        "why": "Demonstrates interactive code editing by visual pointing, a novel UI for developer productivity.",
+        "kind": "app",
+        "for": "builders",
+        "url": "https://producthunt.com/products/ilse",
+        "discussion": "",
+        "source": "Product Hunt",
+        "signal": "launched on Product Hunt",
+        "image": null,
+        "video": null
+      },
+      {
+        "name": "fastbrowse",
+        "what": "Open‑source browser agent optimized for speed.",
+        "why": "Shows how agents can browse the web orders of magnitude faster than existing tools.",
         "kind": "tool",
         "for": "builders",
-        "url": "https://github.com/jmanico/grim-prompter",
-        "discussion": "",
-        "source": "GitHub",
-        "signal": "122 stars since 28 Oct",
-        "image": "img/builders/89a2dc4e2622.jpg",
-        "video": null
-      },
-      {
-        "name": "kensaku",
-        "what": "Search inside documents, code, and even screenshots - instantly and locally. A free, open-source file launcher with OCR, semantic search, and MCP agent access.",
-        "why": "Offers instant local semantic search with OCR, letting users find info across files and screenshots without cloud services.",
-        "kind": "open-source",
-        "for": "builders",
-        "url": "https://github.com/yjid/kensaku",
-        "discussion": "",
-        "source": "GitHub",
-        "signal": "179 stars since 24 Oct, written in Rust",
-        "image": "img/builders/2519b65e4dae.jpg",
-        "video": null
-      },
-      {
-        "name": "Boltbar",
-        "what": "Spotlight-style AI chat for your Mac",
-        "why": "Brings AI chat into macOS Spotlight, giving quick access to language models for everyday tasks.",
-        "kind": "app",
-        "for": "everyone",
-        "url": "https://producthunt.com/products/boltbar",
+        "url": "https://producthunt.com/products/fastbrowse",
         "discussion": "",
         "source": "Product Hunt",
         "signal": "launched on Product Hunt",
@@ -5746,16 +5744,20 @@
     ]
   },
   "top_voices": {
-    "written_at": "2026-10-29T16:07:37+00:00",
-    "headline": "AI breakthroughs spark debates over hiring, openness, and the growing sway of agents on work",
-    "range": "22 Oct – 29 Oct 2026",
+    "written_at": "2026-10-30T13:11:31+00:00",
+    "headline": "AI agents reshape hiring, model openness, and expert reliance as new frontiers emerge",
+    "range": "23 Oct – 30 Oct 2026",
     "debates": [
       {
         "title": "Are coding interviews obsolete?",
-        "summary": "Anthropic has stopped using traditional coding interviews, arguing AI-driven assessments are more relevant. Others contend that when AI tools fail to add value, documenting that limitation remains important for hiring decisions.",
-        "image": "",
-        "video": "",
+        "summary": "Anthropic has stopped using traditional coding interviews, arguing that real‑world problem solving better reflects talent. Others note that coding agents have become reliable daily drivers, suggesting interviews may no longer be needed.",
+        "image": "img/voices/625efce5713d.jpg",
+        "video": "35ZWesLrv5A",
         "people": [
+          {
+            "name": "swyx",
+            "photo": "img/people/swyx.jpg"
+          },
           {
             "name": "Simon Willison",
             "photo": "img/people/simon-willison.jpg"
@@ -5763,9 +5765,9 @@
         ]
       },
       {
-        "title": "Agentic engineering reshapes developer productivity",
-        "summary": "GitHub’s latest Octoverse report shows a three‑fold jump in pull‑requests and commits, which many attribute to AI agents. The surge prompts discussion on whether agentic tools are a productivity boon or a shift toward automation.",
-        "image": "",
+        "title": "Will open‑weight models match frontier performance?",
+        "summary": "Kimi 3.1 Pro is slated to release open weights and benchmark results suggest it rivals top closed models. Yet recent benchmark data shows open‑weight models still lag behind the frontier, sparking debate over how quickly parity can be achieved.",
+        "image": "img/voices/6c51129e93f6.jpg",
         "video": "",
         "people": [
           {
@@ -5775,12 +5777,16 @@
           {
             "name": "Ethan Mollick",
             "photo": "img/people/ethan-mollick.jpg"
+          },
+          {
+            "name": "swyx",
+            "photo": "img/people/swyx.jpg"
           }
         ]
       },
       {
-        "title": "AI agents sway expert judgement",
-        "summary": "Recent findings show experts can be subtly influenced by AI suggestions, and the loss of detailed traceability makes human oversight harder. The conversation focuses on how to preserve independent judgement in AI‑augmented workflows.",
+        "title": "Can experts trust AI suggestions?",
+        "summary": "Research shows experts can be subtly influenced by AI outputs even when they think they are independent. The community is urged to document when AI does not add value and to apply it deliberately.",
         "image": "",
         "video": "",
         "people": [
@@ -5925,6 +5931,14 @@
   ],
   "labs": [
     {
+      "lab": "Microsoft",
+      "model": "Mage-VL-Cowork",
+      "type": "Vision-language",
+      "date": "2026-10-30T12:13:24+00:00",
+      "story_id": "63a60d5375b5",
+      "url": "https://huggingface.co/microsoft/Mage-VL-Cowork"
+    },
+    {
       "lab": "Mistral AI",
       "model": "Le Chonk",
       "type": "Multimodal",
@@ -6045,17 +6059,11 @@
       "model": null,
       "type": null,
       "date": null
-    },
-    {
-      "lab": "Microsoft",
-      "model": null,
-      "type": null,
-      "date": null
     }
   ],
   "stats": {
-    "stories_this_month": 192,
-    "model_releases_this_month": 19,
+    "stories_this_month": 195,
+    "model_releases_this_month": 20,
     "labs_tracked": 17
   }
 }

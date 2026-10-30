@@ -595,13 +595,18 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "OpenAI’s frontier models are now trained in offline environments with layered monitoring and new containment safeguards, while regulators in the EU and US are pressing for real‑time oversight after recent agent‑led breaches. Major US banks have blocked third‑party AI agents from accessing customer accounts, and Chinese‑origin AI models (GLM‑5.3, DeepSeek) have demonstrated multi‑stage cyber‑attack capabilities. Anthropic’s Claude is producing large‑scale formal verification proofs and Google Cloud has launched the Gemini Enterprise Agent Platform for orchestrated AI agents.",
-    "changed": "The latest reports show AI agents being used in multi‑stage cyber‑attack simulations and real‑world intrusion campaigns, heightening security concerns.",
+    "status": "AI agents continue to trigger security incidents, from Meta’s Muse sharing pause to large‑scale breaches of ConnectWise and DeepSeek‑enabled campaigns. OpenAI tightens containment, moving training offline and adding layered monitoring, while regulators push for real‑time oversight. Companies such as Anthropic and Google Cloud roll out new safety tools and platforms amid growing scrutiny.",
+    "changed": "The newest story uncovers a malicious Claude Code VS Code extension that installed an SSH backdoor, underscoring supply‑chain security risks.",
     "timeline": [
       {
         "story_id": "1c92e42e4bf8",
         "date": "2026-10-30",
         "text": "China‑linked hackers leveraged DeepSeek AI via ARTEX to breach 200+ firms in 11 days"
+      },
+      {
+        "story_id": "7e2aaf184ac3",
+        "date": "2026-10-30",
+        "text": "Malicious Claude Code VS Code extension adds SSH backdoor, affecting up to 5,000 users"
       },
       {
         "story_id": "0c49eb4fc302",
@@ -727,9 +732,9 @@
         "story_id": "fd2833dd343a"
       },
       {
-        "text": "Google Cloud Gemini roadmap webinar",
-        "when": "Oct 30, 2026",
-        "story_id": "8761e74dc30b"
+        "text": "Cursor will reach out to affected users of the malicious Claude Code extension",
+        "when": "",
+        "story_id": "7e2aaf184ac3"
       }
     ],
     "story_ids": [
@@ -755,10 +760,11 @@
       "d28967fce9c6",
       "0c49eb4fc302",
       "9757fdd24077",
-      "1c92e42e4bf8"
+      "1c92e42e4bf8",
+      "7e2aaf184ac3"
     ],
-    "updated_at": "2026-10-30T10:04:07+00:00",
-    "tried_at": "2026-10-30T10:04:07+00:00"
+    "updated_at": "2026-10-30T13:11:31+00:00",
+    "tried_at": "2026-10-30T13:11:31+00:00"
   },
   "ai-money": {
     "status": "AI financing remains at record levels, with Meta pursuing up to $100 billion of equity raises and Broadcom arranging a $63 billion financing package for Anthropic’s AI chips. Large fundraises and acquisitions continue across the ecosystem, from Bedrock Robotics’ $600 million Series C to Thrive Holdings’ $15.3 billion ADT purchase, while new AI‑focused funds such as Unacademy’s Longshot Capital and Disruptive’s $10 billion megafund add fresh capital. Valuations show pressure, highlighted by Anthropic’s IPO valuation dip amid slowing growth.",
@@ -1033,8 +1039,8 @@
     "tried_at": "2026-10-26T09:36:11+00:00"
   },
   "ai-infrastructure": {
-    "status": "AI infrastructure financing remains intense, with Meta pursuing up to $100 billion in equity raises, SpaceX completing a $40 billion GPU debt round, and Broadcom securing $63 billion for AI chips. Network builds in India and new high‑bandwidth memory capacity from Samsung are advancing, while major chipmakers and investors continue to back AI compute expansions. A Foxconn‑OpenAI collaboration is being prepared, signalling ongoing demand despite market volatility.",
-    "changed": "Foxconn announced a new collaboration with OpenAI, indicating continued AI infrastructure demand despite recent market volatility.",
+    "status": "AI infrastructure financing remains intense: Meta is launching up to $100 billion of equity offerings to fund new super‑clusters, SpaceX has secured $40 billion of GPU debt, and Broadcom obtained $63 billion to buy AI accelerators. Tata Communications is investing $450 million in a 10,000‑km AI‑ready fibre network in India, while Samsung is boosting capex to $63 billion for HBM supply through 2027. Nvidia and AMD are deepening partnerships with Meta, and multiple large‑scale projects are slated for rollout in the coming years.",
+    "changed": "The newest story announces Runware’s plan to build a Romania factory that will mass‑produce AI inference pods at assembly‑line speed, aiming for 30 MW of capacity per day by 2028.",
     "timeline": [
       {
         "story_id": "38812fd51d92",
@@ -1050,6 +1056,11 @@
         "story_id": "35315b11754f",
         "date": "2026-10-30",
         "text": "Foxconn announces new collaboration with OpenAI, denies AI bubble, project pending announcement"
+      },
+      {
+        "story_id": "3e4e3eed2bbf",
+        "date": "2026-10-30",
+        "text": "Runware plans Romania factory to mass‑produce AI pods, targeting 30 MW/day capacity by 2028"
       },
       {
         "story_id": "8e1271eaa2a0",
@@ -1230,28 +1241,23 @@
         "story_id": "9aaacb38b57d",
         "date": "2026-10-22",
         "text": "Schneider Electric, NVIDIA, and HPE introduce Industrial AI Agents at the Edge."
-      },
-      {
-        "story_id": "99c8819be3a7",
-        "date": "2026-10-22",
-        "text": "NVIDIA releases Minerva AIOps platform for AI factory observability."
       }
     ],
     "title": "The AI infrastructure build-out",
     "next": [
       {
-        "text": "Broadcom AI accelerator deliveries start",
-        "when": "2027",
+        "text": "Broadcom AI accelerator deliveries slated to start",
+        "when": "calendar 2027",
         "story_id": "193124979d15"
       },
       {
-        "text": "Chennai‑Singapore subsea cable ready for service",
-        "when": "Q4 2029",
+        "text": "Chennai‑Singapore subsea cable expected ready for service",
+        "when": "Q4 2029",
         "story_id": "adb4aa27ee66"
       },
       {
-        "text": "Meta at‑the‑market equity offering up to $60 billion planned",
-        "when": "Q1 2027",
+        "text": "Meta at‑the‑market equity offering of up to $60 billion planned",
+        "when": "Q1 2027",
         "story_id": "aa890284c6bc"
       }
     ],
@@ -1297,9 +1303,10 @@
       "41ce547b5dc5",
       "38812fd51d92",
       "9b56a67d6f75",
-      "35315b11754f"
+      "35315b11754f",
+      "3e4e3eed2bbf"
     ],
-    "updated_at": "2026-10-30T10:04:07+00:00",
-    "tried_at": "2026-10-30T10:04:07+00:00"
+    "updated_at": "2026-10-30T13:11:31+00:00",
+    "tried_at": "2026-10-30T13:11:31+00:00"
   }
 }

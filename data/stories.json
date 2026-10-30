@@ -1,6 +1,260 @@
 [
   {
     "explainer": {
+      "what_it_means": "Runware’s modular pods are self‑contained data centers that fit in a shipping container and can hold up to 1,200 GPUs. By assembling them in a factory and shipping them ready‑to‑plug‑in, customers can have inference compute running in days instead of weeks. The company also offers a rental model where users pay a monthly fee for the pods and related services.",
+      "terms": [
+        {
+          "term": "Modular data center",
+          "meaning": "A self‑contained computing facility built as a single unit, often housed in a container, that can be transported and deployed quickly."
+        },
+        {
+          "term": "Inference",
+          "meaning": "The phase where a trained AI model processes inputs to generate outputs, such as answering questions or creating images."
+        },
+        {
+          "term": "Closed‑loop liquid cooling",
+          "meaning": "A cooling system that circulates liquid to remove heat from hardware without using external water sources."
+        }
+      ],
+      "watch_next": [
+        "Factory expected to be finished early next year",
+        "Scale production to 30 MW per day by 2028"
+      ]
+    },
+    "audiences": {
+      "builders": "Runware’s mass‑production plan could give developers faster, cheaper access to ready‑made inference compute.",
+      "business": "Executives can consider a plug‑and‑play AI infrastructure that can be deployed in days rather than weeks.",
+      "investors": "Investors see a potential high‑volume manufacturing play in AI infrastructure as Runware targets gigawatt‑scale capacity by 2028."
+    },
+    "id": "3e4e3eed2bbf",
+    "headline": "Runware plans factory to mass‑produce AI pods at car‑assembly line speed",
+    "summary": "Runware, a London AI infrastructure startup, announced plans to build a Romania‑based factory that will assemble its Sonic Inference Pods on an assembly line, targeting 30 MW of capacity per day by 2028. The company says the pods can be delivered and made operational within 48 hours, cutting the typical three‑week build time to one day.",
+    "why_it_matters": "The approach could dramatically shorten AI infrastructure deployment times and lower costs for companies needing inference compute.",
+    "category": "industry",
+    "lab": "Runware",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "Our pod delivery times are also shorter than current GPU lead times, giving us time to adapt the infrastructure to the hardware being ordered,",
+        "speaker": "Flaviu Radulescu",
+        "speaker_role": "co‑founder and CEO",
+        "source_url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out"
+      }
+    ],
+    "score": 7,
+    "url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out",
+    "source_id": "techcrunch-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/10/Runware-Factory-.jpg?w=1200",
+    "sources": [
+      {
+        "url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out",
+        "publisher": "TechCrunch AI",
+        "title": "Can AI data centers be mass-produced like cars? This startup aims to find out"
+      },
+      {
+        "url": "https://cryptobriefing.com/runware-factory-mass-produce-ai-data-centers",
+        "publisher": "Crypto Briefing",
+        "title": "Runware wants to build AI data centers the way Detroit builds cars"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-30T13:00:00+00:00",
+    "created_at": "2026-10-30T13:11:31+00:00",
+    "sectors": [
+      "manufacturing"
+    ],
+    "regions": [
+      "europe"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "",
+    "trackers": [
+      "ai-infrastructure"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Mage‑VL‑Cowork is a small vision‑language model that can interact with a computer’s graphical interface and its command‑line terminal in a single policy. It was trained end‑to‑end using a five‑stage curriculum and a workflow‑first synthesis engine, allowing it to learn both screenshot‑grounded actions and code execution. The model reaches 66.0% accuracy on the OSWorld‑Verified benchmark, demonstrating that efficient on‑device AI can handle complex computer‑use tasks.",
+      "terms": [
+        {
+          "term": "Vision‑language model",
+          "meaning": "An AI model that processes visual inputs (like screenshots) together with text to understand and act on them."
+        },
+        {
+          "term": "OSWorld‑Verified",
+          "meaning": "A benchmark measuring how well a model can complete operating‑system tasks within a limited number of steps."
+        },
+        {
+          "term": "Computer‑use agents (CUAs)",
+          "meaning": "AI agents designed to operate a computer by interacting with its graphical user interface and command‑line tools."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "Mage-VL-Cowork",
+        "benchmark": "OSWorld-Verified",
+        "score": "66.0%"
+      },
+      {
+        "model": "Mage-VL-Cowork",
+        "benchmark": "Operating System tasks",
+        "score": "87.5%"
+      },
+      {
+        "model": "Mage-VL-Cowork",
+        "benchmark": "Multi-Application Workflows",
+        "score": "62.7%"
+      }
+    ],
+    "audiences": {
+      "builders": "The model provides an efficient 4B‑parameter VLM that can be run on‑device for hybrid GUI and terminal automation tasks.",
+      "business": "It demonstrates that advanced computer‑use capabilities can be achieved with smaller models, potentially lowering deployment costs and expanding AI‑driven productivity tools.",
+      "investors": "Microsoft’s release highlights its continued investment in frontier AI research, which may influence market perception of its AI leadership."
+    },
+    "id": "63a60d5375b5",
+    "headline": "Microsoft releases Mage‑VL‑Cowork, a 4B vision‑language model for hybrid computer use",
+    "summary": "Microsoft published the Mage‑VL‑Cowork model on Hugging Face. The 4‑billion‑parameter vision‑language policy achieves 66.0% OSWorld‑Verified accuracy, the highest among 4B models.",
+    "why_it_matters": "It shows that a compact vision‑language model can reliably perform both GUI and terminal tasks, expanding on‑device AI capabilities.",
+    "category": "models",
+    "lab": "Microsoft",
+    "model_name": "Mage-VL-Cowork",
+    "model_type": "Vision-language",
+    "tags": [],
+    "quotes": [],
+    "score": 6,
+    "url": "https://huggingface.co/microsoft/Mage-VL-Cowork",
+    "source_id": "hf-models",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/microsoft/Mage-VL-Cowork.png",
+    "sources": [
+      {
+        "url": "https://huggingface.co/microsoft/Mage-VL-Cowork",
+        "publisher": "Hugging Face",
+        "title": "Microsoft publishes Mage-VL-Cowork on Hugging Face"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-10-30T12:13:24+00:00",
+    "created_at": "2026-10-30T13:11:31+00:00",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "",
+    "trackers": [],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "The extension gathered system information and tried to add the attacker’s SSH key to the authorized_keys file, enabling remote login. It also set up persistence via a LaunchAgent on macOS or a scheduled task on Windows. Users who installed the extension could have exposed their machines to unauthorized access.",
+      "terms": [
+        {
+          "term": "SSH backdoor",
+          "meaning": "A method that lets an attacker gain remote command‑line access to a computer via the SSH protocol."
+        },
+        {
+          "term": "authorized_keys",
+          "meaning": "A file that lists public SSH keys allowed to log into an account without a password."
+        },
+        {
+          "term": "LaunchAgent",
+          "meaning": "A macOS component that runs scripts or programs automatically at login or system start."
+        }
+      ],
+      "watch_next": [
+        "Cursor will reach out to affected users directly."
+      ]
+    },
+    "audiences": {
+      "builders": "Developers should verify the source of AI extensions before installing them.",
+      "business": "Companies need to assess the security of third‑party AI tools used by staff.",
+      "investors": "Investors should consider supply‑chain security risks when evaluating AI‑focused companies."
+    },
+    "id": "7e2aaf184ac3",
+    "headline": "Malicious Claude Code VS Code extension adds SSH backdoor, affecting up to 5,000 users",
+    "summary": "Cursor discovered a malicious version of Anthropic’s Claude Code VS Code extension that attempted to install a persistent SSH backdoor and collect host data. The package, version 2.1.313, was available on October 29 2026 and may have affected up to 5,000 users.",
+    "why_it_matters": "The incident shows how compromised AI tool extensions can create supply‑chain security risks for developers.",
+    "category": "safety",
+    "lab": "Cursor",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 7,
+    "url": "https://cyberplace.social/@GossiTheDog/117528831681803563",
+    "source_id": "hn",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMAV00lkxu7R724ItLdgrRsnEYHR_d2eUSdcen_KymGeBY1tCo8SRVz6w_XiNzzYgwpcl0Me3JCJz8DeieRM_0jb8aL4VkHAAIeXrqNf8oQkmzKahqMHOGvhkFK32HOasHZht8BwtI1NxEZ-_nIwmQY_8fxpGbbl3csC6oZKCVnIRk3iYTRhH975dyxsWS/s1600/cursor-vscode.jpg",
+    "sources": [
+      {
+        "url": "https://cyberplace.social/@GossiTheDog/117528831681803563",
+        "publisher": "cyberplace.social",
+        "title": "Backdoors in official Claude Code extensions"
+      },
+      {
+        "url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+        "publisher": "The Hacker News",
+        "title": "Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor"
+      },
+      {
+        "url": "https://unite.ai/cursor-discloses-ssh-backdoor-attempt-in-malicious-claude-code-extension",
+        "publisher": "Unite.AI",
+        "title": "Cursor Discloses SSH Backdoor Attempt in Malicious Claude Code Extension"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-30T11:05:53+00:00",
+    "created_at": "2026-10-30T13:11:31+00:00",
+    "sectors": [
+      "cybersecurity"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "5,000 users",
+    "trackers": [
+      "agent-safety"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Foxconn is planning a new partnership with OpenAI to develop AI hardware such as data‑centre racks and servers. This could expand the supply of AI‑focused equipment as OpenAI builds more models. Foxconn expects its AI server business to keep growing.",
       "terms": [
         {
