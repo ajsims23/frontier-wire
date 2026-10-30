@@ -64,17 +64,20 @@ jobs:
         uses: actions/deploy-pages@v4
 
       # Today's recap: once the site serves it, email the editor a preview with an "Approve and send" button.
-      # The worker sends one preview per day, however many times this runs. Needs the RECAP_REVIEWER_EMAIL secret.
+      # The worker sends one preview per day, however many times this runs. Needs RECAP_REVIEWER_EMAIL
+      # (a repository secret under Settings -> Secrets and variables -> Actions; a variable also works).
       - name: Email the recap preview
         if: hashFiles('_site/videos/latest.json') != ''
         env:
           SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
-          TO: ${{ secrets.RECAP_REVIEWER_EMAIL }}
+          TO: ${{ secrets.RECAP_REVIEWER_EMAIL || vars.RECAP_REVIEWER_EMAIL }}
           PAGE: ${{ steps.deployment.outputs.page_url }}
         run: |
           date=$(jq -r .date _site/videos/latest.json)
           [ "$date" = "$(TZ=Asia/Kolkata date +%F)" ] || { echo "Latest recap is $date, not today; nothing to preview."; exit 0; }
-          if [ -z "$TO" ] || [ -z "$SECRET" ]; then echo "::notice::Add the RECAP_REVIEWER_EMAIL secret to get recap previews by email."; exit 0; fi
+          [ -n "$SECRET" ] || { echo "::warning::ALERTS_DISPATCH_SECRET is not available to this workflow; can't email the recap preview."; exit 0; }
+          [ -n "$TO" ] || { echo "::notice::No RECAP_REVIEWER_EMAIL repository secret (or variable) found; recap preview not emailed."; exit 0; }
+          case "$TO" in *@*.*) ;; *) echo "::warning::RECAP_REVIEWER_EMAIL doesn't look like an email address."; exit 0;; esac
           for i in $(seq 1 20); do   # wait until the live site serves today's recap
             live=$(curl -s -m 20 "${PAGE}videos/latest.json?t=$(date +%s)" | jq -r .date 2>/dev/null || true)
             [ "$live" = "$date" ] && break; sleep 15
