@@ -1,4 +1,5 @@
 // Frontier Wire video player: any element with data-video="<YouTube id>" opens a pop-up player.
+// Elements with data-mp4="<our own video file>" (the daily recap) play in the same pop-up.
 // On desktop, hovering a video card plays a silent preview in place.
 (function () {
   "use strict";
@@ -29,11 +30,26 @@
     dlg.showModal();
   };
 
+  // our own videos (same-site .mp4 files, or the archive on GitHub Releases)
+  const MP4 = /^(?:[A-Za-z0-9_./-]+|https:\/\/github\.com\/[A-Za-z0-9_.\/-]+)\.mp4$/;
+  const JPG = /^(?:[A-Za-z0-9_./-]+|https:\/\/github\.com\/[A-Za-z0-9_.\/-]+)\.jpg$/;
+  const esc = (t) => String(t || "").replace(/[&"<>]/g, (c) => ({ "&": "&amp;", '"': "&quot;", "<": "&lt;", ">": "&gt;" })[c]);
+  window.FWPlayFile = function (src, title, poster, from) {
+    if (!MP4.test(src || "")) return;
+    if (!dlg) build();
+    opener = from || null;
+    dlg.querySelector(".player-title").textContent = title || "";
+    dlg.querySelector(".player-frame").innerHTML = `<video src="${esc(src)}"${JPG.test(poster || "") ? ` poster="${esc(poster)}"` : ""} controls autoplay playsinline></video>`;
+    document.documentElement.classList.add("no-scroll");
+    dlg.showModal();
+  };
+
   document.addEventListener("click", (e) => {
-    const el = e.target.closest("[data-video]");
+    const el = e.target.closest("[data-video],[data-mp4]");
     if (!el) return;
     e.preventDefault();
-    window.FWPlay(el.dataset.video, el.dataset.title, el);
+    if (el.dataset.mp4) window.FWPlayFile(el.dataset.mp4, el.dataset.title, el.dataset.poster, el);
+    else window.FWPlay(el.dataset.video, el.dataset.title, el);
   });
 
   // silent hover preview (desktop pointers only; skipped for reduced motion)

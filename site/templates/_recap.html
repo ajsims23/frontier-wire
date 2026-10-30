@@ -1,0 +1,11 @@
+<section class="shell recap-strip" aria-labelledby="recap-h">
+  <button class="vinline recap-btn" type="button" data-mp4="{{ r.mp4 }}" data-poster="{{ r.poster }}" data-title="{{ r.label }} {{ r.seconds }}-second recap: {{ r.short }}" aria-describedby="recap-hook">
+    <span class="vthumb"><img src="{{ r.poster }}" alt="" width="1920" height="1080" decoding="async"></span>
+    <span class="vi-text">
+      <span class="meta" id="recap-h">{{ r.label }} {{ r.seconds }}-second recap · {{ r.short }}</span>
+      <strong class="recap-hook" id="recap-hook">{{ r.hook }}</strong>
+      <span class="recap-sub">The top five stories, each with its source.</span>
+    </span>
+  </button>
+  <a class="see-all recap-all" href="videos/">All recaps</a>
+</section>

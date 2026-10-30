@@ -405,3 +405,133 @@ def check(out_dir: Path) -> dict[str, Any]:
     info["ok"] = not problems
     info["problems"] = problems
     return info
+
+
+# ---------------------------------------------------------------- publishing (GitHub Releases) and the website
+ASSETS = ("recap.mp4", "poster.jpg", "teaser.gif")
+LIVE_DAYS = 3     # the video itself is served from the site for this many days, then only from Releases
+IMAGE_DAYS = 30   # poster and teaser stay on the site this long, so images in older emails keep working
+
+
+def tag(date: str) -> str:
+    return f"recap-{date}"
+
+
+def asset_url(repo: str, date: str, name: str) -> str:
+    return f"https://github.com/{repo}/releases/download/{tag(date)}/{name}"
+
+
+def publish(script: dict[str, Any], out_dir: Path, repo: str, now: datetime) -> dict[str, Any]:
+    """Upload the rendered files as a GitHub Release (one per day) and stamp the script as published."""
+    info = check(out_dir)
+    if not info["ok"]:
+        raise RuntimeError("not publishing: " + "; ".join(info["problems"]))
+    files = [str(out_dir / a) for a in ASSETS]
+    t = tag(script["date"])
+    exists = subprocess.run(["gh", "release", "view", t, "--repo", repo], capture_output=True).returncode == 0
+    if exists:
+        _run(["gh", "release", "upload", t, *files, "--repo", repo, "--clobber"])
+    else:
+        _run(["gh", "release", "create", t, *files, "--repo", repo, "--target", "main",
+              "--title", f"Frontier Wire recap, {_human(script['date'])}", "--notes", script["hook"], "--latest=false"])
+    script["video"] = {k: info[k] for k in ("duration", "bytes")}
+    script["published_at"] = script.get("published_at") or now.isoformat()
+    return script
+
+
+def load_published(data_dir: Path) -> list[dict[str, Any]]:
+    out = []
+    for p in sorted((data_dir / "recaps").glob("*.json"), reverse=True):
+        try:
+            r = json.loads(p.read_text())
+        except json.JSONDecodeError:
+            continue
+        if r.get("published_at") and r.get("video") and not validate(r):
+            out.append(r)
+    return out
+
+
+def site_view(recaps: list[dict[str, Any]], now: datetime, base: str, repo: str, story_ids: set[str]) -> list[dict[str, Any]]:
+    """Everything the pages and the feed need about each recap: which files are on the site, URLs, labels."""
+    day = now.astimezone(IST).date()
+    rows = []
+    for r in recaps:
+        d = datetime.fromisoformat(r["date"]).date()
+        age = (day - d).days
+        live, images = age < LIVE_DAYS, age < IMAGE_DAYS
+        page = f"videos/{r['date']}/"
+        rows.append({
+            **r, "age": age, "live": live, "images": images, "page": page, "page_url": base + page,
+            "human": _human(r["date"]), "short": f"{d.day} {d.strftime('%b')}",
+            "label": "Today's" if age == 0 else ("Yesterday's" if age == 1 else "Latest"),
+            "seconds": int(round(r["video"]["duration"])),
+            "mp4": f"{page}recap.mp4" if live else asset_url(repo, r["date"], "recap.mp4"),
+            "poster": f"{page}poster.jpg" if images else "",
+            "poster_url": base + f"{page}poster.jpg" if images else asset_url(repo, r["date"], "poster.jpg"),
+            "gif_url": base + f"{page}teaser.gif" if images else asset_url(repo, r["date"], "teaser.gif"),
+            "release": f"https://github.com/{repo}/releases/tag/{tag(r['date'])}",
+            "entries": [{**s, "href": f"story/{s['id']}/" if s["id"] in story_ids else ""} for s in r["stories"]],
+        })
+    return rows
+
+
+def feed(rows: list[dict[str, Any]], base: str) -> str:
+    """One item per day: the daily email is triggered from this feed (one new item = one email)."""
+    from email.utils import format_datetime
+    from xml.sax.saxutils import escape
+
+    def item(r: dict[str, Any]) -> str:
+        lis = "".join(
+            f'<li style="margin:0 0 12px"><strong>{escape(s["line"])}</strong><br>{escape(s["detail"])} '
+            + (f'<a href="{base}{s["href"]}">Read</a>' if s["href"] else "") + f'<br><small>Source: {escape(s["source"])}</small></li>'
+            for s in r["entries"])
+        html = (f'<p><a href="{r["page_url"]}"><img src="{r["poster_url"]}" width="600" style="width:100%;max-width:600px;height:auto" '
+                f'alt="Play the {r["seconds"]}-second recap for {r["human"]}"></a></p>'
+                f'<p>{"<br>".join(escape(x) for x in r["summary"])}</p><ol>{lis}</ol>'
+                f'<p><a href="{r["page_url"]}">Watch the {r["seconds"]}-second recap</a> · <a href="{base}">Read on Frontier Wire</a></p>')
+        return (f"<item><title>{escape('Today in AI, ' + r['human'] + ': ' + r['hook'])}</title>"
+                f"<link>{r['page_url']}</link><guid isPermaLink=\"false\">{tag(r['date'])}</guid>"
+                f"<pubDate>{format_datetime(datetime.fromisoformat(r['published_at']))}</pubDate>"
+                f"<description>{escape(' '.join(r['summary']))}</description>"
+                f"<content:encoded><![CDATA[{html}]]></content:encoded>"
+                f'<enclosure url="{r["poster_url"]}" type="image/jpeg" length="0"/>'
+                f'<media:thumbnail url="{r["poster_url"]}" width="1920" height="1080"/></item>')
+
+    latest = rows[0]["published_at"] if rows else datetime.now(timezone.utc).isoformat()
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" '
+            'xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
+            f"<title>Frontier Wire: daily recap</title><link>{base}videos/</link>"
+            f'<atom:link href="{base}videos/feed.xml" rel="self" type="application/rss+xml"/>'
+            "<description>The day in AI in 30 seconds: the top five stories, each checked against its sources.</description>"
+            f"<lastBuildDate>{format_datetime(datetime.fromisoformat(latest))}</lastBuildDate>"
+            + "".join(item(r) for r in rows[:30]) + "</channel></rss>\n")
+
+
+def build_site(out: Path, env: Any, common: dict[str, Any], base: str, repo: str, data_dir: Path, now: datetime,
+               story_ids: set[str], urls: list[str]) -> str:
+    """Write /videos/, one page per recap and /videos/feed.xml. Returns the home-page strip (empty if no live recap).
+    Also writes videos/assets.txt: the Release files the deploy workflow downloads into the site."""
+    rows = site_view(load_published(data_dir), now, base, repo, story_ids)
+    vdir = out / "videos"
+    vdir.mkdir(parents=True, exist_ok=True)
+    (vdir / "feed.xml").write_text(feed(rows, base))
+    need = []
+    for r in rows:
+        if r["images"]:
+            need += [f"{tag(r['date'])} {r['date']} {a}" for a in ASSETS if a != "recap.mp4" or r["live"]]
+        page = vdir / r["date"] / "index.html"
+        page.parent.mkdir(parents=True, exist_ok=True)
+        og = r["poster_url"]
+        page.write_text(env.get_template("recap.html").render(
+            **common, r=r, root="../../", title=f"Today in AI, {r['human']}: {r['hook']} | Frontier Wire",
+            og_title=f"Today in AI, {r['human']}", description=" ".join(r["summary"])[:300], canonical=r["page_url"],
+            og_image=og, og_type="video.other"))
+        urls.append(r["page_url"])
+    (vdir / "assets.txt").write_text("\n".join(need) + ("\n" if need else ""))
+    (vdir / "index.html").write_text(env.get_template("videos.html").render(
+        **common, rows=rows, root="../", title="Daily recaps: today in AI in 30 seconds | Frontier Wire",
+        description="Every evening, the day's top five AI stories in a 30-second video, each checked against its sources.",
+        canonical=f"{base}videos/", og_image=rows[0]["poster_url"] if rows else f"{base}og/home.png"))
+    urls.append(f"{base}videos/")
+    top = rows[0] if rows and rows[0]["live"] else None
+    return env.get_template("_recap.html").render(**common, r=top, root="") if top else ""

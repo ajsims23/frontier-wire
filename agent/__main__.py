@@ -9,6 +9,7 @@
   python -m agent recap draft   pick today's top five and write data/recaps/<date>.json for the editor to fill
   python -m agent recap render --out DIR   check the filled script and render the 30s recap.mp4, poster.jpg, teaser.gif
   python -m agent recap check --out DIR    re-check a rendered video (length, size, codec, decodes cleanly)
+  python -m agent recap publish --out DIR  upload the files as the day's GitHub Release and mark the recap published
 """
 from __future__ import annotations
 
@@ -32,7 +33,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("check-models")
     sub.add_parser("preview-desks")
     rc = sub.add_parser("recap")
-    rc.add_argument("action", choices=["draft", "render", "check"])
+    rc.add_argument("action", choices=["draft", "render", "check", "publish"])
     rc.add_argument("--date", default="", help="YYYY-MM-DD in IST (default: today)")
     rc.add_argument("--out", default="", help="folder for the rendered files")
     rc.add_argument("--force", action="store_true", help="draft: replace a script the editor already filled")
@@ -158,6 +159,17 @@ def _recap(args: argparse.Namespace) -> int:
         except ValueError as exc:
             print(exc, file=sys.stderr)
             return 2
+    elif args.action == "publish":
+        script = json.loads(path.read_text())
+        repo = os.environ.get("GITHUB_REPOSITORY") or (cfg.settings.get("site") or {}).get("repo") or "ajsims23/frontier-wire"
+        try:
+            script = recap.publish(script, out, repo, now)
+        except Exception as exc:  # noqa: BLE001
+            print(f"publish failed: {exc}", file=sys.stderr)
+            return 1
+        path.write_text(json.dumps(script, indent=2, ensure_ascii=False) + "\n")
+        print(f"published {recap.tag(date)} to {repo}; commit {path} to put it on the site")
+        return 0
     else:
         info = recap.check(out)
     print(json.dumps(info, indent=2))

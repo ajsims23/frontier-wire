@@ -53,3 +53,32 @@ def test_validate_passes_a_good_script():
         {"headline": f"Original headline {i}", "source_titles": ["Some outlet title"], "source": "Outlet",
          "line": f"A fresh way of saying story {i}", "detail": "One fact that matters."} for i in range(3)]}
     assert recap.validate(script) == []
+
+
+def _published(date="2026-10-30"):
+    return {"date": date, "hook": "Chip money and open weights", "summary": ["one", "two", "three"],
+            "published_at": "2026-10-30T13:10:00+00:00", "video": {"duration": 30.0, "bytes": 3_600_000},
+            "stories": [{"id": f"s{i}", "category": "industry", "headline": f"Original headline {i}", "source_titles": [],
+                         "source": "Outlet", "line": f"A fresh way of saying story {i}", "detail": "One fact."} for i in range(5)]}
+
+
+def test_site_view_ages_out_video_then_images():
+    base, repo = "https://x.github.io/fw/", "o/fw"
+    live, old, older = (recap.site_view([_published()], NOW + timedelta(days=d), base, repo, {"s0"})[0] for d in (0, 4, 40))
+    assert live["live"] and live["mp4"] == "videos/2026-10-30/recap.mp4" and live["label"] == "Today's"
+    assert live["entries"][0]["href"] == "story/s0/" and live["entries"][1]["href"] == ""
+    assert not old["live"] and old["mp4"].startswith("https://github.com/o/fw/releases/download/recap-2026-10-30/")
+    assert old["poster"] and old["poster_url"] == base + "videos/2026-10-30/poster.jpg"
+    assert not older["poster"] and older["poster_url"].endswith("/recap-2026-10-30/poster.jpg")
+
+
+def test_feed_has_one_item_per_day_with_poster_and_link():
+    import xml.dom.minidom
+    rows = recap.site_view([_published("2026-10-30"), _published("2026-10-29")], NOW, "https://x.github.io/fw/", "o/fw", set())
+    xml_text = recap.feed(rows, "https://x.github.io/fw/")
+    doc = xml.dom.minidom.parseString(xml_text)
+    items = doc.getElementsByTagName("item")
+    assert len(items) == 2
+    assert items[0].getElementsByTagName("link")[0].firstChild.data == "https://x.github.io/fw/videos/2026-10-30/"
+    assert "poster.jpg" in items[0].getElementsByTagName("enclosure")[0].getAttribute("url")
+    assert "Read on Frontier Wire" in xml_text
