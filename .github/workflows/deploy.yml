@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths: ["site/**", "data/**", "agent/**", "config/**"]
   workflow_run:                 # after each newsroom run (auto mode publishes straight to main)
-    workflows: ["Newsroom agent"]
+    workflows: ["Newsroom agent", "Recap release"]
     types: [completed]
   workflow_dispatch:
 
