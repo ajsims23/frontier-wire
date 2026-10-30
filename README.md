@@ -69,8 +69,10 @@ Settings → Pages → *Custom domain*. GitHub provides HTTPS for free.
 ## Daily 30-second recap
 Every evening a scheduled Claude session picks the day's top five stories (the home page's top-stories rule over
 the last 24 hours, at most two per category), writes paraphrased on-screen lines and renders an original
-motion-graphics video: `python -m agent recap draft | render | publish` (see `agent/recap.py`).
+motion-graphics video: `python -m agent recap draft | render | upload` (see `agent/recap.py`).
 - Videos, posters and teaser GIFs are stored as GitHub **Releases** (`recap-YYYY-MM-DD`), not in git, so the repo stays light.
+  The session pushes them on a short-lived `recap-upload/<date>` branch; the **Recap release** workflow checks them,
+  creates the Release, marks the recap published on main and deletes the branch.
 - The deploy workflow copies the last 3 days' videos (and 30 days' posters and GIFs) into the site at `/videos/YYYY-MM-DD/`.
 - `/videos/` is the archive; older videos download from Releases. `/videos/feed.xml` has one item per day for the subscriber email.
 

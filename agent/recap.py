@@ -17,7 +17,9 @@ import json
 import math
 import random
 import re
+import shutil
 import subprocess
+import tempfile
 from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from pathlib import Path
@@ -421,41 +423,40 @@ def asset_url(repo: str, date: str, name: str) -> str:
     return f"https://github.com/{repo}/releases/download/{tag(date)}/{name}"
 
 
-MIME = {"recap.mp4": "video/mp4", "poster.jpg": "image/jpeg", "teaser.gif": "image/gif"}
-
-
-def _gh(*args: str, inp: str | None = None) -> Any:
-    """GitHub REST API through the gh CLI (works in Claude sessions and in Actions)."""
-    cmd = ["gh", "api", *args] + (["--input", inp] if inp else [])
-    res = subprocess.run(cmd, capture_output=True, text=True)
-    if res.returncode != 0:
-        raise RuntimeError(f"gh api {' '.join(args[:3])}: {(res.stdout + res.stderr).strip()[:300]}")
-    return json.loads(res.stdout) if res.stdout.strip() else None
-
-
-def publish(script: dict[str, Any], out_dir: Path, repo: str, now: datetime) -> dict[str, Any]:
-    """Upload the rendered files as a GitHub Release (one per day) and stamp the script as published.
-    Safe to re-run: an existing release for the day is reused and its files replaced."""
+def upload(script: dict[str, Any], out_dir: Path, repo_dir: Path) -> str:
+    """Hand the day's files to GitHub Actions: push them on a short-lived branch `recap-upload/<date>` (main plus one
+    commit). The "Recap release" workflow checks them, creates the Release, puts the recap on the site and deletes
+    the branch, so the video never lands on main. (Claude sessions can't create Releases themselves.)"""
+    errs = validate(script)
     info = check(out_dir)
-    if not info["ok"]:
-        raise RuntimeError("not publishing: " + "; ".join(info["problems"]))
-    t = tag(script["date"])
+    if errs or not info["ok"]:
+        raise RuntimeError("not uploading: " + "; ".join(errs + info["problems"]))
+    branch = f"recap-upload/{script['date']}"
+    git = lambda *a: _run(["git", "-C", str(repo_dir), *a], text=True).stdout  # noqa: E731
+    git("fetch", "-q", "origin", "main")
+    wt = Path(tempfile.mkdtemp(prefix="recap-upload-"))
     try:
-        rel = _gh(f"repos/{repo}/releases/tags/{t}")
-    except RuntimeError as exc:
-        if "Not Found" not in str(exc) and "404" not in str(exc):
-            raise
-        rel = _gh("--method", "POST", f"repos/{repo}/releases", "-f", f"tag_name={t}", "-f", "target_commitish=main",
-                  "-f", f"name=Frontier Wire recap, {_human(script['date'])}", "-f", f"body={script['hook']}", "-f", "make_latest=false")
-    existing = {a["name"]: a["id"] for a in _gh(f"repos/{repo}/releases/{rel['id']}/assets")}
-    for name in ASSETS:
-        if name in existing:
-            _gh("--method", "DELETE", f"repos/{repo}/releases/assets/{existing[name]}")
-        _gh("--method", "POST", "-H", f"Content-Type: {MIME[name]}",
-            f"https://uploads.github.com/repos/{repo}/releases/{rel['id']}/assets?name={name}", inp=str(out_dir / name))
-    names = {a["name"] for a in _gh(f"repos/{repo}/releases/{rel['id']}/assets")}
-    if not set(ASSETS) <= names:
-        raise RuntimeError(f"release {t} is missing {sorted(set(ASSETS) - names)}")
+        git("worktree", "add", "-q", "--detach", str(wt), "origin/main")
+        dest = wt / "recap-upload"
+        dest.mkdir()
+        for a in ASSETS:
+            shutil.copy(out_dir / a, dest / a)
+        (dest / "script.json").write_text(json.dumps(script, indent=2, ensure_ascii=False) + "\n")
+        _run(["git", "-C", str(wt), "add", "-f", "recap-upload"])
+        _run(["git", "-C", str(wt), "-c", "user.name=frontier-wire-recap", "-c", "user.email=actions@users.noreply.github.com",
+              "commit", "-q", "-m", f"Recap upload {script['date']}"])
+        _run(["git", "-C", str(wt), "push", "-q", "--force", "origin", f"HEAD:refs/heads/{branch}"])
+    finally:
+        subprocess.run(["git", "-C", str(repo_dir), "worktree", "remove", "--force", str(wt)], capture_output=True)
+    return branch
+
+
+def stamp(script: dict[str, Any], out_dir: Path, now: datetime) -> dict[str, Any]:
+    """Run by the release workflow once the files are checked: mark the recap published so the site shows it."""
+    errs = validate(script)
+    info = check(out_dir)
+    if errs or not info["ok"]:
+        raise RuntimeError("; ".join(errs + info["problems"]))
     script["video"] = {k: info[k] for k in ("duration", "bytes")}
     script["published_at"] = script.get("published_at") or now.isoformat()
     return script
