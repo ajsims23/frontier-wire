@@ -1,98 +1,433 @@
 {
-  "updated_at": "2026-10-30T19:11:34+00:00",
+  "updated_at": "2026-10-30T21:51:51+00:00",
   "lead": {
     "explainer": {
-      "what_it_means": "Ofcom can issue formal information notices requiring platforms to hand over data on how many posts were removed, limited or seen by users, and how much harmful content was encountered. Companies must comply or face legal challenges, and the data helps regulators assess whether platforms are protecting users, especially children, as required by law.",
+      "what_it_means": "Publishers can add a special token to their site’s robots.txt file to tell AI crawlers not to scrape their pages for training. All participating AI companies will read this token and respect the publisher’s preference. This removes the need for each publisher to send separate opt‑out notices to each AI provider.",
       "terms": [
         {
-          "term": "Online Safety Act",
-          "meaning": "A UK law passed in 2023 that sets standards for online platforms to protect users from illegal and harmful content, with enforcement powers for the regulator."
+          "term": "robots.txt",
+          "meaning": "A text file on a website that tells web crawlers which parts of the site they may access."
         },
         {
-          "term": "information notices",
-          "meaning": "Formal requests from Ofcom asking platforms to provide specific data about their content‑moderation practices and user exposure to harmful material."
+          "term": "policy token",
+          "meaning": "A shared signal placed in robots.txt that indicates a publisher’s AI training preferences."
         },
         {
-          "term": "content moderation metrics",
-          "meaning": "Statistics such as the number of posts removed, visibility limits applied, and instances where users were exposed to harmful content."
+          "term": "AI grounding",
+          "meaning": "Linking an AI model’s responses to verified source information to reduce hallucinations."
         }
       ],
       "watch_next": [
-        "Meta’s separate case about how Ofcom calculates fees and potential fines is awaiting a ruling."
+        "OpenAI will implement the shared token in the coming months.",
+        "Google and Microsoft plan to support the token next year."
       ]
     },
     "audiences": {
-      "builders": "Platforms will need to collect and be ready to share detailed moderation data to satisfy regulator requests.",
-      "business": "Companies must factor compliance costs and regulatory risk into their operations under the UK Online Safety regime.",
-      "investors": "Regulatory enforcement actions like this can affect the valuation and risk profile of major social‑media firms."
+      "builders": "Developers can rely on a unified opt‑out signal rather than handling separate requests for each AI service.",
+      "business": "Publishers gain a simpler way to protect their content from being used in AI training.",
+      "investors": "The standard may reduce legal risk for AI firms and clarify content‑use policies."
     },
-    "id": "955346c4476d",
-    "headline": "UK high court rejects Meta, TikTok and X challenge to Ofcom data requests",
-    "summary": "London’s High Court dismissed Meta, TikTok and X’s legal challenge against Ofcom’s information notices issued under the Online Safety Act. The regulator’s request for detailed content‑moderation metrics was deemed proportionate.",
-    "why_it_matters": "The ruling confirms Ofcom’s authority to compel major platforms to provide extensive moderation data, shaping how UK online‑safety rules will be enforced.",
+    "id": "30d3462f4f36",
+    "headline": "OpenAI, Google, Microsoft, Anthropic adopt shared robots.txt opt‑out standard",
+    "summary": "OpenAI, Google, Microsoft and Anthropic announced they will use a shared robots.txt “policy token” that lets publishers opt out of AI scraping across multiple crawlers. The signal will replace the need for separate requests to each AI provider.",
+    "why_it_matters": "It gives publishers a single mechanism to control how their content is used to train AI models.",
     "category": "policy",
-    "lab": "Ofcom",
+    "lab": "",
     "model_name": "",
     "model_type": "",
     "tags": [],
-    "quotes": [
-      {
-        "text": "We’re disappointed with the court’s decision, but we and others across industry pursued this challenge because information-gathering of this scale goes beyond what is necessary or proportionate.",
-        "speaker": "Meta spokesperson",
-        "speaker_role": "spokesperson",
-        "source_url": "https://straitstimes.com/world/europe/meta-tiktok-x-lose-legal-challenge-against-british-watchdog-over-online-safety-data-demands"
-      }
-    ],
+    "quotes": [],
     "score": 9,
-    "url": "https://techmeme.com/261030/p15",
+    "url": "https://techmeme.com/261030/p26",
     "source_id": "auto-techmeme.com",
     "desk": "",
     "ai_relevance": "core",
-    "image": "https://cassette.sphdigital.com.sg/image/straitstimes/43f7b2445ea4ce23be8b4a72864619f1bdea779cccf6990ca5a7b88c882bcb6a?w=1200",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25330660/STK414_AI_CHATBOT_H.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
     "sources": [
       {
-        "url": "https://techmeme.com/261030/p15",
+        "url": "https://techmeme.com/261030/p26",
         "publisher": "techmeme.com",
-        "title": "London's High Court dismisses Meta, TikTok, and X's challenge to Ofcom's Online Safety Act information requests, rejecting arguments they were disproportionate (Sam Tobin/Reuters)"
+        "title": "OpenAI, Google, Microsoft, and Anthropic say they will adopt a new standard that publishers can use to opt out of being scraped by AI across multiple crawlers (Emma Roth/The Verge)"
       },
       {
-        "url": "https://msn.com/en-us/news/other/meta-tiktok-x-lose-legal-challenge-against-uk-watchdog-over-online-safety-data-demands/ar-AA2gq6OW",
-        "publisher": "Reuters on MSN",
-        "title": "Meta, TikTok, X lose legal challenge against UK watchdog over online safety data demands"
-      },
-      {
-        "url": "https://straitstimes.com/world/europe/meta-tiktok-x-lose-legal-challenge-against-british-watchdog-over-online-safety-data-demands",
-        "publisher": "The Straits Times",
-        "title": "Meta, TikTok, X lose legal challenge against British watchdog over online safety data demands"
+        "url": "https://theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
+        "publisher": "The Verge AI",
+        "title": "The biggest names in AI are backing a new way to opt out of scraping"
       }
     ],
     "research": {
       "steps": 3,
-      "read": 2,
-      "decision": "confirmed"
+      "read": 0,
+      "decision": "unconfirmed"
     },
-    "published_at": "2026-10-30T16:10:19+00:00",
-    "created_at": "2026-10-30T19:11:34+00:00",
+    "published_at": "2026-10-30T21:05:00+00:00",
+    "created_at": "2026-10-30T21:51:51+00:00",
+    "thread": "t-80e84b65ba98",
     "sectors": [
-      "government",
-      "legal"
+      "software"
     ],
     "regions": [
-      "uk"
+      "global"
     ],
     "deal": null,
     "relevance": {
-      "builders": 1,
+      "builders": 2,
       "business": 2,
-      "investors": 2
+      "investors": 1
     },
-    "cover": "Meta",
+    "cover": "",
     "trackers": [
       "ai-regulation"
     ],
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Big technology firms are investing hundreds of billions in data centers and chips to support AI, but the spending is outpacing the cash they generate. This creates cash‑flow deficits and fuels market worries about whether the AI investments will deliver returns.",
+        "terms": [
+          {
+            "term": "Free cash flow",
+            "meaning": "The amount of cash a company generates after accounting for cash outflows to support operations and maintain capital assets."
+          },
+          {
+            "term": "Capex",
+            "meaning": "Capital expenditures, money spent on long‑term assets such as data centers, servers and other infrastructure."
+          },
+          {
+            "term": "AI infrastructure",
+            "meaning": "Hardware and facilities like chips and data centers needed to run large AI models."
+          }
+        ],
+        "watch_next": [
+          "Alphabet expects capex to keep rising in 2027."
+        ]
+      },
+      "audiences": {
+        "builders": "The surge in AI‑related capital spending could affect the cost and availability of compute resources for developers.",
+        "business": "Investors see the large outlays as a risk to profitability, with slowing ad revenue and cash‑flow deficits.",
+        "investors": "Stock prices of AI‑linked companies fell sharply, reflecting heightened market volatility."
+      },
+      "id": "07912041c313",
+      "headline": "Big tech AI capex sparks cash‑flow concerns, stocks tumble",
+      "summary": "Alphabet, Amazon, Meta and Microsoft announced over $740 billion in capital expenditures this year, prompting investor anxiety as several firms report negative free cash flow and stock declines.",
+      "why_it_matters": "Heavy AI infrastructure spending is pressuring cash flow and raising doubts about the profitability of the AI boom.",
+      "category": "industry",
+      "lab": "",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "very compute-intensive to run,",
+          "speaker": "Mark Zuckerberg",
+          "speaker_role": "CEO",
+          "source_url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom"
+        }
+      ],
+      "score": 7,
+      "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom",
+      "source_id": "techcrunch-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/10/mick-haupt-7Kv1Elbagcc-unsplash.jpg?resize=1200,800",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom",
+          "publisher": "TechCrunch AI",
+          "title": "Cracks are emerging in the AI spending boom"
+        },
+        {
+          "url": "https://finance.yahoo.com/technology/ai/articles/cracks-emerging-ai-spending-boom-211740864.html",
+          "publisher": "Yahoo Finance",
+          "title": "Cracks are emerging in the AI spending boom"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-30T21:17:40+00:00",
+      "created_at": "2026-10-30T21:51:51+00:00",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 1,
+        "business": 2,
+        "investors": 3
+      },
+      "cover": "$740 billion",
+      "trackers": [
+        "ai-infrastructure"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Developers who installed the Claude Code extension from Cursor may have had a hidden program that enabled SSH access for an attacker and sent system details back to a remote server. Because the extension runs with the same permissions as the IDE, the backdoor could read source code and other files on the machine. The malicious code was active on Windows, macOS and Linux, but the SSH enable step fails unless the IDE is run with administrator rights.",
+        "terms": [
+          {
+            "term": "SSH backdoor",
+            "meaning": "A method that adds an SSH key to a system so an attacker can log in remotely."
+          },
+          {
+            "term": "Supply-chain compromise",
+            "meaning": "An attack where the adversary hijacks a trusted software distribution channel to insert malicious code."
+          },
+          {
+            "term": "Persistent",
+            "meaning": "Designed to remain active across reboots or restarts, often by installing scheduled tasks or services."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers using the Claude Code VS Code extension should verify they are on version 2.1.314 or later and consider disabling auto‑updates.",
+        "business": "Companies should audit developer environments for the compromised extension and assess any potential data exposure.",
+        "investors": "The incident highlights security risks in AI‑tool supply chains, which could affect confidence in companies offering such developer integrations."
+      },
+      "id": "93351cbb4cc4",
+      "headline": "Anthropic’s Claude VS Code extension backdoored on Cursor, affecting up to 5,000 users",
+      "summary": "A malicious version (2.1.313) of Anthropic’s Claude Code VS Code extension was published on the Cursor marketplace, potentially reaching up to 5,000 developers before being replaced by version 2.1.314. The extension attempted to install a persistent SSH backdoor and collect host data across Windows, macOS, and Linux.",
+      "why_it_matters": "The supply‑chain compromise shows that trusted developer tools can be hijacked to gain unauthorized access to developers’ machines.",
+      "category": "safety",
+      "lab": "Anthropic",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "It was a supply-chain compromise where the attacker gained access to the official distribution channel,",
+          "speaker": "Luke Roberts",
+          "speaker_role": "Phorian CTO and co‑founder",
+          "source_url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours"
+        },
+        {
+          "text": "The malicious version 2.1.313 was posted to the official Anthropic account, effectively superseding 2.1.312. Extensions auto-update in Cursor by default, but users can configure this in settings.",
+          "speaker": "Luke Roberts",
+          "speaker_role": "Phorian CTO and co‑founder",
+          "source_url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours"
+        }
+      ],
+      "score": 6,
+      "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours",
+      "source_id": "ars-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2022/05/caution-tape-1000x648.jpeg",
+      "sources": [
+        {
+          "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours",
+          "publisher": "Ars Technica AI",
+          "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours"
+        },
+        {
+          "url": "https://doublepulsar.com/anthropic-hacked-to-deliver-remote-access-trojan-to-claude-developer-laptops-worldwide-1148a92baae2",
+          "publisher": "doublepulsar.com",
+          "title": "Claude Code VS Code extension with backdoor released on Cursor marketplace"
+        },
+        {
+          "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise",
+          "publisher": "phorion.io",
+          "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-10-30T21:09:54+00:00",
+      "created_at": "2026-10-30T21:51:51+00:00",
+      "thread": "t-d56622e1b6e9",
+      "sectors": [
+        "software",
+        "cybersecurity"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 1,
+        "investors": 1
+      },
+      "cover": "5,000 users",
+      "trackers": [
+        "agent-safety"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Publishers can add a special token to their site’s robots.txt file to tell AI crawlers not to scrape their pages for training. All participating AI companies will read this token and respect the publisher’s preference. This removes the need for each publisher to send separate opt‑out notices to each AI provider.",
+        "terms": [
+          {
+            "term": "robots.txt",
+            "meaning": "A text file on a website that tells web crawlers which parts of the site they may access."
+          },
+          {
+            "term": "policy token",
+            "meaning": "A shared signal placed in robots.txt that indicates a publisher’s AI training preferences."
+          },
+          {
+            "term": "AI grounding",
+            "meaning": "Linking an AI model’s responses to verified source information to reduce hallucinations."
+          }
+        ],
+        "watch_next": [
+          "OpenAI will implement the shared token in the coming months.",
+          "Google and Microsoft plan to support the token next year."
+        ]
+      },
+      "audiences": {
+        "builders": "Developers can rely on a unified opt‑out signal rather than handling separate requests for each AI service.",
+        "business": "Publishers gain a simpler way to protect their content from being used in AI training.",
+        "investors": "The standard may reduce legal risk for AI firms and clarify content‑use policies."
+      },
+      "id": "30d3462f4f36",
+      "headline": "OpenAI, Google, Microsoft, Anthropic adopt shared robots.txt opt‑out standard",
+      "summary": "OpenAI, Google, Microsoft and Anthropic announced they will use a shared robots.txt “policy token” that lets publishers opt out of AI scraping across multiple crawlers. The signal will replace the need for separate requests to each AI provider.",
+      "why_it_matters": "It gives publishers a single mechanism to control how their content is used to train AI models.",
+      "category": "policy",
+      "lab": "",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 9,
+      "url": "https://techmeme.com/261030/p26",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25330660/STK414_AI_CHATBOT_H.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261030/p26",
+          "publisher": "techmeme.com",
+          "title": "OpenAI, Google, Microsoft, and Anthropic say they will adopt a new standard that publishers can use to opt out of being scraped by AI across multiple crawlers (Emma Roth/The Verge)"
+        },
+        {
+          "url": "https://theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
+          "publisher": "The Verge AI",
+          "title": "The biggest names in AI are backing a new way to opt out of scraping"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 0,
+        "decision": "unconfirmed"
+      },
+      "published_at": "2026-10-30T21:05:00+00:00",
+      "created_at": "2026-10-30T21:51:51+00:00",
+      "thread": "t-80e84b65ba98",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "",
+      "trackers": [
+        "ai-regulation"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "OpenAI will block ChatGPT from giving step‑by‑step advice on building or using weapons to users it identifies as teens. The system will also interrupt chats that show a focus on violence and can pause the account or alert parents. Users can still ask for help de‑escalating a violent situation or finding support.",
+        "terms": [
+          {
+            "term": "automatic interruptions",
+            "meaning": "The system stops a conversation when it detects the user is focusing on violence, potentially pausing the account."
+          },
+          {
+            "term": "age prediction system",
+            "meaning": "A tool that evaluates signals during use to estimate a user’s age and apply teen‑specific safeguards."
+          },
+          {
+            "term": "Community Safety Report",
+            "meaning": "A periodic report that will detail anonymized safety cases, safeguard changes, and response data."
+          }
+        ],
+        "watch_next": [
+          "Restrictions will start reaching users over the coming weeks.",
+          "OpenAI plans to publish its first Community Safety Report in early 2027."
+        ]
+      },
+      "audiences": {
+        "builders": "Developers will need to account for reduced weapon‑related content when building teen‑focused applications on ChatGPT.",
+        "business": "Companies targeting teen markets must consider the new safety limits that may affect user engagement and support services.",
+        "investors": "The added safeguards may influence OpenAI’s risk profile and regulatory standing, which could affect investor assessments."
+      },
+      "id": "020086432245",
+      "headline": "OpenAI tightens weapons‑related information limits for teen ChatGPT users",
+      "summary": "OpenAI announced new safeguards that further restrict ChatGPT from providing practical guidance on weapons and security systems to users under 18, even when queries appear harmless. The changes will roll out over the coming weeks and include automatic conversation interruptions and parental alerts.",
+      "why_it_matters": "The tighter limits reflect growing concerns about AI misuse and illustrate how providers are expanding safety controls for younger users.",
+      "category": "safety",
+      "lab": "OpenAI",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 7,
+      "url": "https://techmeme.com/261030/p25",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://cdn.technobezz.com/c/why_teens_parent_notification_4b9a148991.webp",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261030/p25",
+          "publisher": "techmeme.com",
+          "title": "OpenAI tightens limits on the weapons-related information that ChatGPT provides teens, even when a question appears harmless, as part of new safeguards (Reuters)"
+        },
+        {
+          "url": "https://technobezz.com/news/openai-restrict-chatgpt-weapons-information-teens",
+          "publisher": "Technobezz",
+          "title": "OpenAI to Restrict ChatGPT Weapons Information for Teens"
+        },
+        {
+          "url": "https://msn.com/en-us/technology/artificial-intelligence/openai-adds-restrictions-on-weapons-related-chatgpt-responses-for-teens/ar-AA2gqVGo",
+          "publisher": "Seeking Alpha on MSN",
+          "title": "OpenAI adds restrictions on weapons-related ChatGPT responses for teens"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-30T20:55:37+00:00",
+      "created_at": "2026-10-30T21:51:51+00:00",
+      "thread": "t-345ea7f8f755",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "teen ChatGPT",
+      "trackers": [
+        "agent-safety"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "Google launched a satellite that carries four AI‑focused Tensor Processing Units and a pre‑loaded language model. The satellite can run the model in orbit, letting engineers see how the chips behave under real space radiation and temperature conditions. The test data will guide future designs of space‑based AI services.",
@@ -195,6 +530,87 @@
     },
     {
       "explainer": {
+        "what_it_means": "Rune’s software uses artificial intelligence to predict how much supply troops will need, plan where resources should go, and operate even when network connectivity is limited. By adding this capability to its Missionforce platform, Salesforce will offer AI‑driven logistics tools to U.S. defense customers.",
+        "terms": [
+          {
+            "term": "AI‑powered logistics software",
+            "meaning": "Software that uses machine‑learning models to forecast supply needs and optimise resource deployment for military operations."
+          },
+          {
+            "term": "Missionforce",
+            "meaning": "Salesforce’s suite of cloud services aimed at U.S. government and military agencies."
+          },
+          {
+            "term": "Fiscal year 2027",
+            "meaning": "Salesforce’s financial year that ends in early 2028; the deal is expected to close in its fourth quarter."
+          }
+        ],
+        "watch_next": [
+          "The acquisition is expected to close in the fourth quarter of Salesforce’s fiscal year 2027."
+        ]
+      },
+      "audiences": {
+        "builders": "The deal shows Salesforce integrating AI logistics capabilities into its cloud platform, potentially offering new APIs for developers.",
+        "business": "Salesforce is broadening its defense AI offerings, which could open additional revenue streams with U.S. military customers.",
+        "investors": "The purchase signals Salesforce’s commitment to growing its AI‑driven defense segment, a factor that may influence future valuation."
+      },
+      "id": "46a6c2341523",
+      "headline": "Salesforce to acquire Rune Technologies for $375 million",
+      "summary": "Salesforce announced it will buy defense‑tech startup Rune Technologies for $375 million in cash and stock. Rune’s AI‑powered logistics software, used by the U.S. Army and Marine Corps, will be added to Salesforce’s Missionforce business, with the deal slated to close in the fourth quarter of fiscal year 2027.",
+      "why_it_matters": "The acquisition expands Salesforce’s AI portfolio into military logistics, showing how generative AI is being applied to defense operations.",
+      "category": "industry",
+      "lab": "Salesforce",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 6,
+      "url": "https://techmeme.com/261030/p17",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-1119087,resizemode-75,msid-135341877/tech/technology/salesforce-to-buy-defense-tech-firm-rune-in-military-business-push.jpg",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261030/p17",
+          "publisher": "techmeme.com",
+          "title": "Salesforce acquires Rune, which makes AI military logistics software, sources say for $375M in cash and stock; Rune raised $30m from a16z and others (Margaux MacColl/Resilience Media)"
+        },
+        {
+          "url": "https://economictimes.indiatimes.com/tech/technology/salesforce-to-buy-defense-tech-firm-rune-in-military-business-push/articleshow/135341877.cms",
+          "publisher": "ET Tech",
+          "title": "Salesforce to buy defense tech firm Rune in military business push"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-10-30T18:20:05+00:00",
+      "created_at": "2026-10-30T21:51:51+00:00",
+      "sectors": [
+        "defense",
+        "software"
+      ],
+      "regions": [
+        "us"
+      ],
+      "deal": {
+        "type": "acquisition",
+        "company": "Salesforce",
+        "amount": "$375 million",
+        "usd": 375000000.0
+      },
+      "relevance": {
+        "builders": 2,
+        "business": 3,
+        "investors": 2
+      },
+      "cover": "$375 million",
+      "trackers": [
+        "ai-money"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
         "what_it_means": "Fujifilm will build more tape‑manufacturing lines so it can make many more LTO Ultrium10 cartridges. These tapes provide long‑term, offline storage that is cheaper and uses less energy than keeping data on always‑on disks or flash drives.",
         "terms": [
           {
@@ -280,6 +696,97 @@
       "cover": "¥10 billion",
       "trackers": [
         "ai-infrastructure"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Credit rating agencies assign investment‑grade ratings to firms seen as low risk and junk ratings to higher‑risk firms. A junk rating means lenders will charge higher interest rates, increasing the cost of capital for Anthropic. This could limit the lab’s ability to fund its compute spending.",
+        "terms": [
+          {
+            "term": "investment‑grade rating",
+            "meaning": "A rating indicating low credit risk for lenders."
+          },
+          {
+            "term": "junk rating",
+            "meaning": "A rating indicating higher credit risk, often double‑B or lower, leading to higher borrowing costs."
+          },
+          {
+            "term": "double‑B range",
+            "meaning": "The top tier of speculative junk ratings, just below investment grade."
+          }
+        ],
+        "watch_next": [
+          "Credit agencies’ rating decision for Anthropic after its IPO"
+        ]
+      },
+      "audiences": {
+        "builders": "The rating outlook does not directly affect developers building on Anthropic’s models.",
+        "business": "A junk rating signals higher financing costs, affecting Anthropic’s strategic plans and competitive position.",
+        "investors": "Investors should view the rating as an indicator of increased credit risk for Anthropic."
+      },
+      "id": "b329cc4aaa4c",
+      "headline": "Blackstone says Anthropic likely to receive junk rating after IPO",
+      "summary": "Blackstone told investors Anthropic may not get an investment‑grade rating after its IPO, expecting a double‑B junk rating. The prediction follows a $63 billion chip financing deal.",
+      "why_it_matters": "A junk rating would raise Anthropic’s borrowing costs and make future financing harder.",
+      "category": "industry",
+      "lab": "Anthropic",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 6,
+      "url": "https://ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
+      "source_id": "hn",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2282033342.jpg?w=1024",
+      "sources": [
+        {
+          "url": "https://ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
+          "publisher": "ft.com",
+          "title": "Anthropic may not secure investment-grade rating after IPO, Blackstone says"
+        },
+        {
+          "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says",
+          "publisher": "TechCrunch AI",
+          "title": "Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, report says"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-anthropic-may-not-171258656.html",
+          "publisher": "Yahoo Finance",
+          "title": "Market Chatter: Anthropic May Not Get Investment-Grade Rating After IPO, Blackstone Says"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-30T17:27:25+00:00",
+      "created_at": "2026-10-30T21:51:51+00:00",
+      "thread": "t-a50b07bc6191",
+      "sectors": [
+        "software",
+        "finance"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": {
+        "type": "ipo",
+        "company": "Anthropic",
+        "amount": "$63 billion",
+        "usd": 63000000000.0
+      },
+      "relevance": {
+        "builders": 1,
+        "business": 2,
+        "investors": 3
+      },
+      "cover": "",
+      "trackers": [
+        "ai-money"
       ],
       "photo_local": true
     },
@@ -788,7 +1295,8 @@
       "trackers": [
         "agent-safety"
       ],
-      "photo_local": true
+      "photo_local": true,
+      "thread": "t-d56622e1b6e9"
     },
     {
       "explainer": {
@@ -860,7 +1368,8 @@
         "license": "Public domain",
         "page": "https://commons.wikimedia.org/wiki/File:Curiosity_-_Robot_Geologist_and_Chemist_in_One!.jpg",
         "via": "Wikimedia Commons"
-      }
+      },
+      "thread": "t-80e84b65ba98"
     },
     {
       "explainer": {
@@ -927,7 +1436,8 @@
       "trackers": [
         "agent-safety"
       ],
-      "stock_tried": "2026-10-30T17:25:18+00:00"
+      "stock_tried": "2026-10-30T17:25:18+00:00",
+      "thread": "t-345ea7f8f755"
     },
     {
       "explainer": {
@@ -4841,539 +5351,36 @@
         "agent-safety"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "The draft rules would restrict the export of certain AI models, their source code and related chip designs. Chinese companies could still offer AI services over the internet, but they would need permission to share the underlying technology with foreign partners. This limits how foreign firms can use Chinese AI breakthroughs in their own products.",
-        "terms": [
-          {
-            "term": "export controls",
-            "meaning": "Government rules that limit the sale or transfer of specific technologies to other countries."
-          },
-          {
-            "term": "large language model",
-            "meaning": "A type of AI that processes and generates text based on massive amounts of language data."
-          },
-          {
-            "term": "agents",
-            "meaning": "AI systems that can perform tasks with limited human direction, often by interacting with other software."
-          }
-        ],
-        "watch_next": [
-          "China is expected to adopt the proposals by the end of the year",
-          "Guidelines on implementation are slated to be issued later, according to a source familiar with the discussions"
-        ]
-      },
-      "audiences": {
-        "builders": "Developers may need to separate domestic and overseas versions of AI models and could lose access to foreign compute resources.",
-        "business": "Chinese AI firms may have to restructure international partnerships and reconsider foreign investment in AI assets.",
-        "investors": "Valuations of Chinese AI companies could be affected as export restrictions may limit growth opportunities abroad."
-      },
-      "id": "a871dcc1ab00",
-      "headline": "China proposes export controls on 23 AI technologies",
-      "summary": "China's draft rules released on Oct. 16 would add 23 AI‑related technologies, including large language models, agents, chip designs and computing clusters, to its export‑control list. The measures would allow overseas users to access Chinese AI services via websites and cloud platforms while requiring government approval for transfers of underlying models, data or expertise.",
-      "why_it_matters": "The curbs could force Chinese AI firms to keep advanced models and related IP in China and limit their ability to use foreign compute resources.",
-      "category": "policy",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "The structure the leadership prefers, with IP and R&D kept onshore and operations and access sold abroad, is the one the market was already converging on,",
-          "speaker": "Alfredo Montufar-Helu",
-          "speaker_role": "managing director, Ankura",
-          "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/chinas-new-export-curbs-draw-a-line-around-its-ai-crown-jewels/articleshow/135257223.cms"
-        }
-      ],
-      "score": 8,
-      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/chinas-new-export-curbs-draw-a-line-around-its-ai-crown-jewels/articleshow/135257223.cms",
-      "source_id": "et-tech",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-2229371,resizemode-75,msid-135257223/tech/artificial-intelligence/chinas-new-export-curbs-draw-a-line-around-its-ai-crown-jewels.jpg",
-      "sources": [
-        {
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/chinas-new-export-curbs-draw-a-line-around-its-ai-crown-jewels/articleshow/135257223.cms",
-          "publisher": "ET Tech",
-          "title": "China's new export curbs draw a line around its AI crown jewels"
-        },
-        {
-          "url": "https://bloomberg.com/news/articles/2026-10-16/china-proposes-export-controls-on-ai-models-chips-and-agents",
-          "publisher": "Bloomberg",
-          "title": "China Plans AI Export Curbs to Exert Control Over Key Tech"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-28T07:49:24+00:00",
-      "created_at": "2026-10-28T10:01:39+00:00",
-      "sectors": [
-        "government",
-        "software"
-      ],
-      "regions": [
-        "china"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 3
-      },
-      "cover": "23 AI tech",
-      "trackers": [
-        "us-china"
-      ],
-      "photo_local": true,
-      "thread": "t-146d639e76ac"
-    },
-    {
-      "explainer": {
-        "what_it_means": "Indian IT firms can help enterprises integrate AI models into their existing systems without building the underlying data‑center infrastructure. This lets companies use AI while avoiding large upfront capital expenditures.",
-        "terms": [
-          {
-            "term": "asset‑light",
-            "meaning": "A business approach that requires little capital investment in physical assets such as hardware."
-          },
-          {
-            "term": "capex intensity",
-            "meaning": "The amount of capital spending required to build and maintain infrastructure."
-          },
-          {
-            "term": "systems integrator",
-            "meaning": "A service provider that connects AI models with a company’s existing software, applications, and workflows."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Indian IT firms can offer integration services, creating new API and implementation work for developers.",
-        "business": "Enterprises can adopt AI models without building costly data centers, reducing financial risk.",
-        "investors": "Investors may see increased earnings potential for Indian IT service companies as AI deployment expands."
-      },
-      "id": "2f9d934fc2e5",
-      "headline": "Indian IT firms positioned to profit from enterprise AI as infrastructure costs rise",
-      "summary": "A research report by Anand Rathi says Indian IT companies can benefit from enterprise AI adoption by offering asset‑light services, avoiding the heavy capital spend of building large AI computing infrastructure. The report highlights rising AI infrastructure costs, citing Anthropic’s $321 billion in future leases and $3.2 billion in sales‑marketing spend.",
-      "why_it_matters": "It shows where AI spending will flow, giving Indian service providers a growth opportunity as firms outsource AI deployment.",
-      "category": "industry",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://livemint.com/technology/indian-it-firms-poised-to-benefit-from-enterprise-ai-adoption-as-infrastructure-costs-rise-report-11793166741416.html",
-      "source_id": "mint-tech",
-      "desk": "india",
-      "ai_relevance": "core",
-      "image": "https://www.livemint.com/lm-img/img/2024/12/18/600x338/tech1_1734536428801_1734536438047.jpg",
-      "sources": [
-        {
-          "url": "https://livemint.com/technology/indian-it-firms-poised-to-benefit-from-enterprise-ai-adoption-as-infrastructure-costs-rise-report-11793166741416.html",
-          "publisher": "Mint Technology",
-          "title": "Indian IT firms poised to benefit from enterprise AI adoption as infrastructure costs rise: Report"
-        },
-        {
-          "url": "https://economictimes.indiatimes.com/tech/information-tech/indian-it-firms-poised-to-benefit-from-enterprise-ai-adoption-as-infrastructure-costs-rise-report/articleshow/135253790.cms",
-          "publisher": "ET Tech",
-          "title": "Indian IT firms poised to benefit from enterprise AI adoption as infrastructure costs rise: Report"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-28T05:52:20+00:00",
-      "created_at": "2026-10-28T07:14:45+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "india"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 1,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": "$321 billion",
-      "trackers": [
-        "india-ai",
-        "ai-infrastructure"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "If the acquisition goes through, TPG will own a network of 27 data centres that host cloud services and AI training jobs. The Crown Hosting joint venture gives Ark access to all UK government data centre contracts, potentially expanding the pool of AI compute resources.",
-        "terms": [
-          {
-            "term": "data centre",
-            "meaning": "A facility that houses servers and networking equipment to provide computing and storage services."
-          },
-          {
-            "term": "valuation",
-            "meaning": "The estimated monetary worth of a company, often used to determine purchase price."
-          },
-          {
-            "term": "joint venture",
-            "meaning": "A business arrangement where two parties collaborate on a specific project, sharing resources and risks."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers could benefit from more data centre capacity for running AI models.",
-        "business": "Executives see further consolidation in the European data centre market, affecting service pricing and availability.",
-        "investors": "Investors note a $5 billion transaction as a sign of strong demand for infrastructure assets supporting AI and cloud services."
-      },
-      "id": "252a9c7ec76d",
-      "headline": "TPG in talks to acquire UK‑based Ark Data Centres for about $5 billion",
-      "summary": "Global alternative asset manager TPG is negotiating to buy British data centre group Ark from Elliott Management at a valuation of roughly $5 billion. Ark operates 27 data centres in the UK and Belgium and runs a joint venture, Crown Hosting Data Centres, serving UK public data centre needs.",
-      "why_it_matters": "The deal would increase the infrastructure capacity available for AI workloads that rely on large‑scale data centre services.",
-      "category": "industry",
-      "lab": "TPG",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://techmeme.com/261028/p7",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-1166321,resizemode-75,msid-135255354/tech/technology/tpg-pursues-5-billion-acquisition-of-british-data-centre-group-ark-ft.jpg",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261028/p7",
-          "publisher": "techmeme.com",
-          "title": "Sources: TPG is in talks to acquire UK-based Ark Data Centres, which operates 27 data centers in the UK and Belgium, from Elliott Management at a ~$5B valuation (Financial Times)"
-        },
-        {
-          "url": "https://economictimes.indiatimes.com/tech/technology/tpg-pursues-5-billion-acquisition-of-british-data-centre-group-ark-ft/articleshow/135255354.cms",
-          "publisher": "ET Tech",
-          "title": "TPG pursues $5 billion acquisition of British data centre group Ark: FT"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-28T05:50:01+00:00",
-      "created_at": "2026-10-28T07:14:45+00:00",
-      "sectors": [
-        "telecom"
-      ],
-      "regions": [
-        "uk"
-      ],
-      "deal": {
-        "type": "acquisition",
-        "company": "TPG",
-        "amount": "$5 billion",
-        "usd": 5000000000.0
-      },
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 3
-      },
-      "cover": "$5 billion",
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Advanced AI chips are high‑performance semiconductors used to run large AI models. Malaysia’s export controls require permits for such chips, especially those of US origin, to prevent them reaching restricted destinations. Smuggling attempts try to hide the chips by mislabeling them, but customs inspections can intercept them.",
-        "terms": [
-          {
-            "term": "advanced artificial intelligence chips",
-            "meaning": "High‑performance semiconductor devices designed for AI workloads such as training and inference."
-          },
-          {
-            "term": "export controls",
-            "meaning": "Government regulations that restrict the export of certain technologies, often for national security reasons."
-          },
-          {
-            "term": "free‑trade zone",
-            "meaning": "A designated area where goods can be stored, handled, or processed with reduced customs oversight, often used for transshipment."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Enforcement actions may tighten the supply chain for AI hardware components.",
-        "business": "Companies dealing with AI chips must ensure compliance with export permits to avoid seizure and legal issues.",
-        "investors": "Regulatory scrutiny of AI semiconductor flows could influence investment decisions in the sector."
-      },
-      "id": "1930a8d58e53",
-      "headline": "Malaysian customs seize $12.1 million worth of advanced AI chips at Kuala Lumpur airport",
-      "summary": "Malaysian customs seized about 49.5 million ringgit ($12.11 million) in advanced AI chips after finding 30 server units in the airport’s free‑trade zone on Oct 15. The shipment, falsely declared as electronic components, was part of a suspected smuggling network linked to earlier cases.",
-      "why_it_matters": "The seizure highlights enforcement of export controls on high‑performance AI semiconductors, affecting global AI hardware supply chains.",
-      "category": "industry",
-      "lab": "Malaysian Customs",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "The servers were falsely declared as electronic components... and shipped through Malaysia to ensure there would be no restrictions imposed while being exported to the next destination,",
-          "speaker": "Aspalila Ag Tuah",
-          "speaker_role": "customs director",
-          "source_url": "https://livemint.com/technology/ai-chips-worth-12-1-million-seized-at-malaysia-airport-customs-authority-says-11793164926684.html"
-        }
-      ],
-      "score": 8,
-      "url": "https://livemint.com/technology/ai-chips-worth-12-1-million-seized-at-malaysia-airport-customs-authority-says-11793164926684.html",
-      "source_id": "mint-tech",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://www.livemint.com/lm-img/img/2024/12/18/600x338/tech3_1734536499109_1734536513984.jpg",
-      "sources": [
-        {
-          "url": "https://livemint.com/technology/ai-chips-worth-12-1-million-seized-at-malaysia-airport-customs-authority-says-11793164926684.html",
-          "publisher": "Mint Technology",
-          "title": "AI chips worth $12.1 million seized at Malaysia airport, customs authority says"
-        },
-        {
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/ai-chips-worth-12-1-million-seized-at-malaysia-airport-customs-authority-says/articleshow/135255556.cms",
-          "publisher": "ET Tech",
-          "title": "AI chips worth $12.1 million seized at Malaysia airport, customs authority says"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "unconfirmed"
-      },
-      "published_at": "2026-10-28T05:22:06+00:00",
-      "created_at": "2026-10-28T07:14:45+00:00",
-      "sectors": [
-        "government"
-      ],
-      "regions": [
-        "asia_pacific"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 1,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "$12.1 million",
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Genie 4 can generate a three‑dimensional scene with realistic visuals and sound that reacts to user commands in real time. Users can type natural‑language prompts to change weather, camera angles, objects or characters while the simulation runs, and the scene can last about two minutes.",
-        "terms": [
-          {
-            "term": "world model",
-            "meaning": "An AI system that creates and simulates virtual environments, including objects, physics and interactions."
-          },
-          {
-            "term": "real‑time audio",
-            "meaning": "Sound that is generated on the fly to match the visual simulation as it happens."
-          },
-          {
-            "term": "Gemini 3.8 Flash",
-            "meaning": "A Gemini AI component that guides the simulation by planning steps, tracking progress and adjusting plans when the environment changes."
-          }
-        ],
-        "watch_next": [
-          "Genie 4 will be coming soon to Google AI Ultra subscribers",
-          "A waitlist is open for Project Genie to let more users try Genie 4"
-        ]
-      },
-      "audiences": {
-        "builders": "Developers can use Genie 4 to prototype 3‑D scenes and test AI agents with real‑time audio and visual feedback.",
-        "business": "Enterprises can explore using Genie 4 for pre‑visualization, training simulations and interactive product demos.",
-        "investors": "The preview signals Google’s push to lead the emerging world‑simulation market."
-      },
-      "id": "93637898368f",
-      "headline": "Google DeepMind releases Genie 4 world model in research preview",
-      "summary": "Google DeepMind made its Genie 4 world model available as a research preview on Oct. 27, 2026. The model creates photorealistic, interactive 3‑D simulations with real‑time audio and lets users edit scenes via text prompts for up to two minutes.",
-      "why_it_matters": "The model shows how AI can generate immersive, editable virtual environments for robotics, gaming, filmmaking and other applications.",
-      "category": "models",
-      "lab": "Google DeepMind",
-      "model_name": "Genie 4",
-      "model_type": "Multimodal",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "Genie 4 is our first real-time world model to generate audio natively,",
-          "speaker": "Google DeepMind",
-          "speaker_role": "company",
-          "source_url": "https://analyticsindiamag.com/ai-news/google-deepmind-unveils-genie-4-for-real-time-world-simulation"
-        },
-        {
-          "text": "What we’ll increasingly see in the future are these hybrid world models, where you have a combination of Gemini writing code and text, and Genie ingesting that in real time and simulating reality at different levels of abstraction,",
-          "speaker": "Tejas Kulkarni",
-          "speaker_role": "research director at Google",
-          "source_url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering"
-        }
-      ],
-      "score": 8,
-      "url": "https://analyticsindiamag.com/ai-news/google-deepmind-unveils-genie-4-for-real-time-world-simulation",
-      "source_id": "aim",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://analyticsindiamag.com/cdn-cgi/image/width=1200,quality=60,format=jpeg,fit=scale-down/https://zdpdvwhvukelzzbzbjvh.supabase.co/storage/v1/object/public/imported-images/1767106252367-d7119fb4-1b09-4002-9c26-0840ee14b316-cdajum.webp",
-      "sources": [
-        {
-          "url": "https://analyticsindiamag.com/ai-news/google-deepmind-unveils-genie-4-for-real-time-world-simulation",
-          "publisher": "Analytics India Magazine",
-          "title": "​​Google DeepMind Unveils Genie 4 for Real-Time World Simulation"
-        },
-        {
-          "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
-          "publisher": "Google DeepMind",
-          "title": "Genie 4: A new generation of world simulation"
-        },
-        {
-          "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering",
-          "publisher": "TechCrunch AI",
-          "title": "Google’s Genie 4 world model adds audio, more realistic worlds, and real-time steering"
-        },
-        {
-          "url": "https://theverge.com/tech/1019076/google-genie-4-ai-model",
-          "publisher": "The Verge AI",
-          "title": "Google’s next Genie AI model generates more realistic experiences"
-        },
-        {
-          "url": "https://arstechnica.com/google/2026/10/deepminds-genie-4-world-model-adds-audio-and-more-realistic-people-to-simulations",
-          "publisher": "Ars Technica AI",
-          "title": "DeepMind unveils Genie 4 world model promising more realistic physics and humans"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-28T04:26:43+00:00",
-      "created_at": "2026-10-28T07:14:45+00:00",
-      "thread": "t-51cf6aae9248",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "Genie 4",
-      "trackers": [
-        "frontier-race"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Anthropic’s revenue now depends heavily on very new AI models, with over 80% coming from models released in the past six months. Prices for AI text processing have fallen dramatically, making it harder to maintain profit margins. These pressures are reflected in a slower growth rate and a lower market valuation as the company prepares for its IPO.",
-        "terms": [
-          {
-            "term": "AI models",
-            "meaning": "Software systems that generate text or other outputs based on patterns learned from large data sets."
-          },
-          {
-            "term": "AI tools",
-            "meaning": "Products or services that let customers use AI models, typically through paid APIs."
-          },
-          {
-            "term": "price per token",
-            "meaning": "The cost charged to process a unit of text (a token) using an AI model."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Anthropic’s reliance on newly released models shows rapid iteration drives revenue.",
-        "business": "Slowing growth and falling AI service prices could pressure valuations of AI firms.",
-        "investors": "Valuation expectations have fallen from $2 trillion to about $1.5 trillion as growth slows."
-      },
-      "id": "007a2afe4a6c",
-      "headline": "Anthropic’s IPO faces valuation drop as growth slows and AI prices plunge",
-      "summary": "Anthropic filed a Wall Street prospectus for a Nasdaq listing amid investor nervousness, noting that its quarterly growth fell from 145% to 45% and its valuation fell from $2 trillion to about $1.5 trillion. The filing warns of three risks: narrowing model differentiation, collapsing AI service prices and rising costs.",
-      "why_it_matters": "The story shows how rapid price competition and slowing growth can reshape valuations for fast‑growing AI companies.",
-      "category": "industry",
-      "lab": "Anthropic",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "the degree of differentiation among advanced AI models may narrow,",
-          "speaker": "",
-          "speaker_role": "",
-          "source_url": "https://economictimes.indiatimes.com/tech/technology/anthropics-record-ipo-faces-some-big-questions/articleshow/135249836.cms"
-        },
-        {
-          "text": "the price of having AI process the same amount of text, at the same level of performance, has dropped 97 percent, from $17 at the end of 2024 to 50 cents today.",
-          "speaker": "",
-          "speaker_role": "",
-          "source_url": "https://economictimes.indiatimes.com/tech/technology/anthropics-record-ipo-faces-some-big-questions/articleshow/135249836.cms"
-        }
-      ],
-      "score": 9,
-      "url": "https://economictimes.indiatimes.com/tech/technology/anthropics-record-ipo-faces-some-big-questions/articleshow/135249836.cms",
-      "source_id": "et-tech",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-26516,resizemode-75,msid-135249836/tech/technology/anthropics-record-ipo-faces-some-big-questions.jpg",
-      "sources": [
-        {
-          "url": "https://economictimes.indiatimes.com/tech/technology/anthropics-record-ipo-faces-some-big-questions/articleshow/135249836.cms",
-          "publisher": "ET Tech",
-          "title": "Anthropic's record IPO faces some big questions"
-        },
-        {
-          "url": "https://businessinsider.com/anthropic-ipo-filing-ai-profit-800-billion-compute-risk-2026-10",
-          "publisher": "Insider",
-          "title": "Anthropic's IPO filing answers one of the biggest questions about the AI boom: Can AI labs actually make money?"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-28T02:42:31+00:00",
-      "created_at": "2026-10-28T03:58:24+00:00",
-      "thread": "t-a50b07bc6191",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": {
-        "type": "ipo",
-        "company": "Anthropic",
-        "amount": "",
-        "usd": null
-      },
-      "relevance": {
-        "builders": 1,
-        "business": 2,
-        "investors": 3
-      },
-      "cover": "$1.5 trillion",
-      "trackers": [
-        "ai-money"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
+    {
+      "text": "very compute-intensive to run,",
+      "speaker": "Mark Zuckerberg",
+      "speaker_role": "CEO",
+      "source_url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom",
+      "story_id": "07912041c313",
+      "headline": "Big tech AI capex sparks cash‑flow concerns, stocks tumble",
+      "published_at": "2026-10-30T21:17:40+00:00"
+    },
+    {
+      "text": "It was a supply-chain compromise where the attacker gained access to the official distribution channel,",
+      "speaker": "Luke Roberts",
+      "speaker_role": "Phorian CTO and co‑founder",
+      "source_url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours",
+      "story_id": "93351cbb4cc4",
+      "headline": "Anthropic’s Claude VS Code extension backdoored on Cursor, affecting up to 5,000 users",
+      "published_at": "2026-10-30T21:09:54+00:00"
+    },
+    {
+      "text": "The malicious version 2.1.313 was posted to the official Anthropic account, effectively superseding 2.1.312. Extensions auto-update in Cursor by default, but users can configure this in settings.",
+      "speaker": "Luke Roberts",
+      "speaker_role": "Phorian CTO and co‑founder",
+      "source_url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours",
+      "story_id": "93351cbb4cc4",
+      "headline": "Anthropic’s Claude VS Code extension backdoored on Cursor, affecting up to 5,000 users",
+      "published_at": "2026-10-30T21:09:54+00:00"
+    },
     {
       "text": "Next, we will continue with a series of tests to evaluate how TPUs perform under thermal stress and radiation exposure in orbit,",
       "speaker": "Google",
@@ -5400,36 +5407,18 @@
       "story_id": "41a783f21e16",
       "headline": "US tech stocks tumble as AI spending approaches $1 trillion",
       "published_at": "2026-10-30T16:13:02+00:00"
-    },
-    {
-      "text": "We’re disappointed with the court’s decision, but we and others across industry pursued this challenge because information-gathering of this scale goes beyond what is necessary or proportionate.",
-      "speaker": "Meta spokesperson",
-      "speaker_role": "spokesperson",
-      "source_url": "https://straitstimes.com/world/europe/meta-tiktok-x-lose-legal-challenge-against-british-watchdog-over-online-safety-data-demands",
-      "story_id": "955346c4476d",
-      "headline": "UK high court rejects Meta, TikTok and X challenge to Ofcom data requests",
-      "published_at": "2026-10-30T16:10:19+00:00"
-    },
-    {
-      "text": "Our pod delivery times are also shorter than current GPU lead times, giving us time to adapt the infrastructure to the hardware being ordered,",
-      "speaker": "Flaviu Radulescu",
-      "speaker_role": "co‑founder and CEO",
-      "source_url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out",
-      "story_id": "3e4e3eed2bbf",
-      "headline": "Runware plans factory to mass‑produce AI pods at car‑assembly line speed",
-      "published_at": "2026-10-30T13:00:00+00:00"
-    },
-    {
-      "text": "Bridges, buildings, they don’t collapse, because people did math before constructing them,",
-      "speaker": "Ilya Sergey",
-      "speaker_role": "chief science officer",
-      "source_url": "https://wired.com/story/software-verification-is-the-hot-new-answer-to-the-ai-safety-crisis",
-      "story_id": "bb406d8f0695",
-      "headline": "AI startup &Truth raises $70M seed to build universal code verification machine",
-      "published_at": "2026-10-30T06:30:03+00:00"
     }
   ],
   "videos": [
+    {
+      "id": "ndtnt5kWT5A",
+      "title": "NVIDIA Halos SAFE: Autonomous Vehicle Safety Evaluation From Road Testing to Simulation",
+      "channel": "NVIDIA",
+      "lab": "NVIDIA",
+      "published": "2026-10-30T19:47:01+00:00",
+      "blurb": "The video demonstrates NVIDIA Halos SAFE AV evaluating autonomous vehicle safety through real-world testing, simulation, and hardware integration.",
+      "story_id": ""
+    },
     {
       "id": "CWdTBLsbaQs",
       "title": "OpenAI Claims It Just Did The Impossible",
@@ -5501,15 +5490,6 @@
       "published": "2026-10-28T17:32:40+00:00",
       "blurb": "DeepSeek v4.1 Flash 1017 model is introduced, highlighting its capabilities and linking to Lambda GPU Cloud.",
       "story_id": ""
-    },
-    {
-      "id": "pQ_Dnr9Q4k8",
-      "title": "Functional smart devices using Gemini 4 Argon and Google Antigravity",
-      "channel": "Google for Developers",
-      "lab": "Google",
-      "published": "2026-10-28T15:08:11+00:00",
-      "blurb": "Makers build a custom 'Surf Clock' prototype using Gemini 4 Argon and Google Antigravity, demonstrating functional smart devices.",
-      "story_id": ""
     }
   ],
   "podcasts": [
@@ -5563,17 +5543,17 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-10-30T19:11:34+00:00",
-    "one_line": "AI deals surge, regulators act, and security incidents highlight growing ecosystem challenges.",
+    "written_at": "2026-10-30T21:51:51+00:00",
+    "one_line": "AI infrastructure funding rises, regulators act, safety safeguards tighten, and tech stocks fall.",
     "themes": [
       {
-        "title": "AI infrastructure financing expands",
-        "text": "Thrive Holdings announced a $15.3 billion acquisition of ADT, linking its AI engineering resources with ADT’s security network. Nvidia discussed credit guarantees for a 460 MW data center for Anthropic, committed $3 billion to Meta’s equity offering, and AM Intelligence seeks up to $3 billion to fund Nvidia Vera Rubin chip purchases; Foxconn announced a collaboration with OpenAI, Runware plans a factory to mass‑produce AI pods, and Fujifilm will boost magnetic‑tape production fivefold for AI data archiving.",
+        "title": "AI hardware financing expands globally",
+        "text": "AM Intelligence is seeking up to $3 billion to fund Nvidia Vera Rubin chip purchases. Nvidia is discussing credit guarantees for a 460 MW data center and has committed $3 billion to a Meta equity offering, while Foxconn is preparing a joint project with OpenAI on AI data‑centre racks and hardware.",
         "stories": [
           {
-            "id": "4db20898e948",
-            "headline": "OpenAI-backed Thrive Holdings to acquire ADT for $15.3 billion",
-            "url": "https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt"
+            "id": "38812fd51d92",
+            "headline": "AM Intelligence seeks up to $3 billion to fund Nvidia Vera Rubin chip purchase",
+            "url": "https://techmeme.com/261029/p69"
           },
           {
             "id": "41ce547b5dc5",
@@ -5586,30 +5566,15 @@
             "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/nvidias-web-of-ai-bets-smart-strategy-or-bubble-risk/articleshow/135343465.cms"
           },
           {
-            "id": "38812fd51d92",
-            "headline": "AM Intelligence seeks up to $3 billion to fund Nvidia Vera Rubin chip purchase",
-            "url": "https://techmeme.com/261029/p69"
-          },
-          {
             "id": "35315b11754f",
             "headline": "Foxconn says new collaboration with OpenAI in works, denies AI bubble",
             "url": "https://economictimes.indiatimes.com/tech/technology/foxconn-working-on-a-new-tie-up-with-openai-says-there-is-no-ai-bubble/articleshow/135352103.cms"
-          },
-          {
-            "id": "3e4e3eed2bbf",
-            "headline": "Runware plans factory to mass‑produce AI pods at car‑assembly line speed",
-            "url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out"
-          },
-          {
-            "id": "09484dfee9e7",
-            "headline": "Fujifilm to boost magnetic tape production fivefold as AI drives data archiving",
-            "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand"
           }
         ]
       },
       {
-        "title": "Regulators tighten AI oversight",
-        "text": "London’s High Court dismissed challenges by Meta, TikTok and X to Ofcom’s data‑request notices. The UK Competition and Markets Authority opened a probe into Meta’s terms for publishers and advertisers, while OpenAI announced it will honor a robots.txt signal for training preferences and added expanded safeguards to ChatGPT for violence prevention.",
+        "title": "Regulators push AI data and competition rules",
+        "text": "The UK High Court dismissed challenges by Meta, TikTok and X to Ofcom’s data‑request notices. Britain’s competition regulator opened a probe into Meta’s terms for publishers and advertisers. OpenAI, Google, Microsoft and Anthropic announced a shared robots.txt opt‑out token, and OpenAI said it will honor that signal for training preferences.",
         "stories": [
           {
             "id": "955346c4476d",
@@ -5622,20 +5587,20 @@
             "url": "https://techmeme.com/261030/p10"
           },
           {
+            "id": "30d3462f4f36",
+            "headline": "OpenAI, Google, Microsoft, Anthropic adopt shared robots.txt opt‑out standard",
+            "url": "https://techmeme.com/261030/p26"
+          },
+          {
             "id": "25cc4c9bb2e3",
             "headline": "OpenAI says it will honor robots.txt signal for AI training preferences",
             "url": "https://openai.com/index/helping-websites-express-ai-training-preferences"
-          },
-          {
-            "id": "c7606af40dbb",
-            "headline": "OpenAI adds expanded safeguards to ChatGPT for violence prevention",
-            "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens"
           }
         ]
       },
       {
-        "title": "AI security incidents rise",
-        "text": "Chinese state‑linked hackers employed the DeepSeek large language model via the ARTEX framework to breach over 200 organizations in at least 14 countries. A malicious version of Anthropic’s Claude Code VS Code extension attempted to install a persistent SSH backdoor and may have affected up to 5,000 users.",
+        "title": "New AI safety measures follow breaches",
+        "text": "Chinese state‑linked hackers used the DeepSeek model via the ARTEX framework to target over 200 organizations. A malicious version of Anthropic’s Claude Code VS Code extension attempted to install an SSH backdoor affecting up to 5,000 users. OpenAI introduced tighter limits on weapons‑related information for teen ChatGPT users and added expanded safeguards to prevent violence.",
         "stories": [
           {
             "id": "1c92e42e4bf8",
@@ -5646,23 +5611,49 @@
             "id": "7e2aaf184ac3",
             "headline": "Malicious Claude Code VS Code extension adds SSH backdoor, affecting up to 5,000 users",
             "url": "https://cyberplace.social/@GossiTheDog/117528831681803563"
+          },
+          {
+            "id": "020086432245",
+            "headline": "OpenAI tightens weapons‑related information limits for teen ChatGPT users",
+            "url": "https://techmeme.com/261030/p25"
+          },
+          {
+            "id": "c7606af40dbb",
+            "headline": "OpenAI adds expanded safeguards to ChatGPT for violence prevention",
+            "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens"
+          }
+        ]
+      },
+      {
+        "title": "AI spending drives tech stock declines",
+        "text": "Shares of Intel fell up to 30 % and the Nasdaq dropped over 3.5 % as investors reacted to $800.6 bn AI spending by major firms. Alphabet, Amazon, Meta and Microsoft reported cash‑flow concerns after announcing over $740 bn in capital expenditures this year, contributing to broader market declines.",
+        "stories": [
+          {
+            "id": "41a783f21e16",
+            "headline": "US tech stocks tumble as AI spending approaches $1 trillion",
+            "url": "https://bbc.co.uk/news/articles/cvwy72e0n72yo"
+          },
+          {
+            "id": "07912041c313",
+            "headline": "Big tech AI capex sparks cash‑flow concerns, stocks tumble",
+            "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom"
           }
         ]
       }
     ],
-    "from_stories": 17
+    "from_stories": 20
   },
   "plan": {
-    "focus": "Tracking AI‑driven market volatility and major defense deals while bolstering our thin coverage of new model releases and research.",
-    "updated_at": "2026-10-30T19:11:34+00:00",
+    "focus": "Chasing the fallout from AI spending slowdown while tracking new policy moves on data scraping and safety.",
+    "updated_at": "2026-10-30T21:51:51+00:00",
     "thin_areas": [
       "model releases",
-      "research"
+      "AI in India"
     ],
     "searches": [
-      "new AI model releases October 2026",
-      "AI safety research funding 2026",
-      "Meta CMA probe next steps"
+      "DeepSeek ARTEX breach",
+      "Meta CMA advertising terms",
+      "DeepSeek-V4.1 model specs"
     ]
   },
   "builders": {
@@ -5816,99 +5807,106 @@
   },
   "threads": [
     {
-      "id": "t-d7a01aeaafe9",
-      "title": "Meta commercial terms and UK CMA probe",
-      "updated_at": "2026-10-30T11:40:12+00:00",
+      "id": "t-d56622e1b6e9",
+      "title": "Anthropic VS Code extension backdoor",
+      "updated_at": "2026-10-30T21:09:54+00:00",
       "stories": [
         {
-          "id": "194d268cc5ac",
-          "headline": "UK competition regulator probes Meta's terms for publishers and advertisers",
-          "url": "https://techmeme.com/261030/p10",
-          "published_at": "2026-10-30T11:40:12+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "c744e4ea5afb",
-          "headline": "Meta’s new commercial terms could let it scrape news sites for AI training",
-          "url": "https://theverge.com/tech/1017082/meta-terms-update-ai-training-concerns",
-          "published_at": "2026-10-22T20:32:05+00:00",
-          "category": "policy"
-        }
-      ]
-    },
-    {
-      "id": "t-697cffe58943",
-      "title": "Chinese hackers using AI tools",
-      "updated_at": "2026-10-30T04:01:16+00:00",
-      "stories": [
-        {
-          "id": "1c92e42e4bf8",
-          "headline": "China‑linked hackers used DeepSeek AI via ARTEX to breach 200+ firms in 11 days",
-          "url": "https://techmeme.com/261030/p1",
-          "published_at": "2026-10-30T04:01:16+00:00",
+          "id": "93351cbb4cc4",
+          "headline": "Anthropic’s Claude VS Code extension backdoored on Cursor, affecting up to 5,000 users",
+          "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours",
+          "published_at": "2026-10-30T21:09:54+00:00",
           "category": "safety"
         },
         {
-          "id": "d1b19037538a",
-          "headline": "Chinese hackers used AI agents to breach ConnectWise and access 2,250 Microsoft 365 tenants",
-          "url": "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise",
-          "published_at": "2026-10-22T16:47:17+00:00",
+          "id": "7e2aaf184ac3",
+          "headline": "Malicious Claude Code VS Code extension adds SSH backdoor, affecting up to 5,000 users",
+          "url": "https://cyberplace.social/@GossiTheDog/117528831681803563",
+          "published_at": "2026-10-30T11:05:53+00:00",
           "category": "safety"
         }
       ]
     },
     {
-      "id": "t-43fa5737591f",
-      "title": "Anthropic financing expands to data center credit",
-      "updated_at": "2026-10-29T22:55:00+00:00",
+      "id": "t-80e84b65ba98",
+      "title": "AI firms adopt publisher opt‑out standard",
+      "updated_at": "2026-10-30T21:05:00+00:00",
       "stories": [
         {
-          "id": "41ce547b5dc5",
-          "headline": "Nvidia in talks to back Nscale with credit guarantees for Anthropic data center",
-          "url": "https://techmeme.com/261029/p59",
-          "published_at": "2026-10-29T22:55:00+00:00",
-          "category": "industry"
+          "id": "30d3462f4f36",
+          "headline": "OpenAI, Google, Microsoft, Anthropic adopt shared robots.txt opt‑out standard",
+          "url": "https://techmeme.com/261030/p26",
+          "published_at": "2026-10-30T21:05:00+00:00",
+          "category": "policy"
         },
         {
-          "id": "193124979d15",
-          "headline": "Broadcom secures $63 billion financing from banks to fund AI chips for Anthropic",
-          "url": "https://techmeme.com/261026/p47",
-          "published_at": "2026-10-26T21:35:01+00:00",
-          "category": "industry"
+          "id": "25cc4c9bb2e3",
+          "headline": "OpenAI says it will honor robots.txt signal for AI training preferences",
+          "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+          "published_at": "2026-10-30T09:30:00+00:00",
+          "category": "policy"
         }
       ]
     },
     {
-      "id": "t-e86271b1dbd5",
-      "title": "Google AI Mode ads: fixing lower earnings",
-      "updated_at": "2026-10-29T16:24:55+00:00",
+      "id": "t-345ea7f8f755",
+      "title": "OpenAI expands safeguards for teen safety",
+      "updated_at": "2026-10-30T20:55:37+00:00",
       "stories": [
         {
-          "id": "b394caaea480",
-          "headline": "Google says AI‑mode search generates less ad revenue per query, will add more ads worldwide",
-          "url": "https://arstechnica.com/gadgets/2026/10/google-admits-ai-search-makes-less-money-but-its-fixing-that-with-more-ads",
-          "published_at": "2026-10-29T16:24:55+00:00",
+          "id": "020086432245",
+          "headline": "OpenAI tightens weapons‑related information limits for teen ChatGPT users",
+          "url": "https://techmeme.com/261030/p25",
+          "published_at": "2026-10-30T20:55:37+00:00",
+          "category": "safety"
+        },
+        {
+          "id": "c7606af40dbb",
+          "headline": "OpenAI adds expanded safeguards to ChatGPT for violence prevention",
+          "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
+          "published_at": "2026-10-30T09:00:00+00:00",
+          "category": "safety"
+        }
+      ]
+    },
+    {
+      "id": "t-a50b07bc6191",
+      "title": "Anthropic IPO progress: rating concerns",
+      "updated_at": "2026-10-30T17:27:25+00:00",
+      "stories": [
+        {
+          "id": "b329cc4aaa4c",
+          "headline": "Blackstone says Anthropic likely to receive junk rating after IPO",
+          "url": "https://ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
+          "published_at": "2026-10-30T17:27:25+00:00",
           "category": "industry"
         },
         {
-          "id": "1744c9c4d2ed",
-          "headline": "Google expands AI Mode ads to international markets as search ad growth slows",
-          "url": "https://techmeme.com/261029/p6",
-          "published_at": "2026-10-29T05:30:11+00:00",
+          "id": "007a2afe4a6c",
+          "headline": "Anthropic’s IPO faces valuation drop as growth slows and AI prices plunge",
+          "url": "https://economictimes.indiatimes.com/tech/technology/anthropics-record-ipo-faces-some-big-questions/articleshow/135249836.cms",
+          "published_at": "2026-10-28T02:42:31+00:00",
           "category": "industry"
         },
         {
-          "id": "588ad71bad86",
-          "headline": "Google Q3 2026 search ad revenue up 12% to $63.25 billion, growth slows",
-          "url": "https://techmeme.com/261029/p3",
-          "published_at": "2026-10-29T05:10:01+00:00",
+          "id": "e4d1fbe9aac7",
+          "headline": "Anthropic files S‑1 for Nasdaq IPO, reporting $16.3 billion H1 revenue",
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/articleshow/135222913.cms",
+          "published_at": "2026-10-27T02:33:06+00:00",
           "category": "industry"
         },
         {
-          "id": "6f9ed043fa8a",
-          "headline": "Google’s AI search overhaul reduces traffic and pays tiny fees to publishers",
-          "url": "https://theverge.com/column/1017983/google-ai-search-online-publishing",
-          "published_at": "2026-10-25T12:00:00+00:00",
+          "id": "09134649a0da",
+          "headline": "Anthropic files S‑1 showing $16.3 billion H1 revenue and $131.7 billion cash",
+          "url": "https://msn.com/en-us/news/other/the-anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/ar-AA2g76lV",
+          "published_at": "2026-10-26T16:53:17+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "8a77e646571b",
+          "headline": "Anthropic files S‑1 for IPO, plans Nasdaq listing under ticker ANT",
+          "url": "https://anthropic.com/news/s1-sec",
+          "published_at": "2026-10-26T00:00:00+00:00",
           "category": "industry"
         }
       ]
@@ -6047,7 +6045,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 202,
+    "stories_this_month": 208,
     "model_releases_this_month": 20,
     "labs_tracked": 17
   }

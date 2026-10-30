@@ -348,8 +348,8 @@
     "title": "The frontier model race"
   },
   "ai-regulation": {
-    "status": "The United States remains on a light‑touch regulatory path, with no major AI statutes yet and the DOJ probing Nvidia’s planned acquisition of Hugging Face. Europe and other regions are moving ahead: Sweden has banned ChatGPT and Claude in government offices, the UK has rolled out a £600 million AI security package, and China is set to adopt draft export controls on 23 AI technologies by year‑end. New policy moves include OpenAI’s commitment to honor robots.txt signals for training data and a UK High Court ruling affirming Ofcom’s data‑request authority.",
-    "changed": "The latest stories announce OpenAI will respect robots.txt training preferences and a UK High Court decision upholding Ofcom’s data‑request authority.",
+    "status": "The United States continues a light‑touch regulatory stance, with no major federal AI statute yet, but the DOJ is probing Nvidia’s planned acquisition of Hugging Face and federal agencies are securing cost‑saving AI contracts. Europe and other regions are moving ahead: Sweden bans ChatGPT and Claude in government offices; the UK has rolled out a £600 million AI security package and secured a high‑court affirmation of Ofcom’s data‑request powers; China is drafting export controls on 23 AI technologies; India is preparing an AI‑law consultation paper; and New York has enacted a chatbot safety law for minors. Major AI firms (OpenAI, Google, Microsoft, Anthropic) have agreed to a shared robots.t",
+    "changed": "OpenAI, Google, Microsoft and Anthropic announced a shared robots.txt opt‑out standard for AI training data.",
     "timeline": [
       {
         "story_id": "25cc4c9bb2e3",
@@ -360,6 +360,11 @@
         "story_id": "955346c4476d",
         "date": "2026-10-30",
         "text": "UK High Court rejects Meta, TikTok, X challenge, confirming Ofcom’s data‑request powers."
+      },
+      {
+        "story_id": "30d3462f4f36",
+        "date": "2026-10-30",
+        "text": "Major AI firms adopt shared robots.txt opt‑out token for training data"
       },
       {
         "story_id": "0c49eb4fc302",
@@ -434,19 +439,19 @@
     ],
     "next": [
       {
-        "text": "Delaware Oversight Committee documents due",
+        "text": "Delaware AI‑company legislation documents due to House Oversight Committee",
         "when": "Nov 9, 2026",
         "story_id": "0419fa07eb02"
       },
       {
-        "text": "New York chatbot safety law takes effect in six months",
-        "when": "",
+        "text": "New York chatbot safety law takes effect",
+        "when": "in six months",
         "story_id": "ef5e2b7c56ff"
       },
       {
-        "text": "Nvidia‑Hugging Face acquisition expected to close first half 2027",
-        "when": "",
-        "story_id": "6fbbc9445480"
+        "text": "India to release AI law consultation paper",
+        "when": "in coming weeks",
+        "story_id": "aab18b7646a4"
       }
     ],
     "story_ids": [
@@ -464,10 +469,11 @@
       "ef5e2b7c56ff",
       "0c49eb4fc302",
       "25cc4c9bb2e3",
-      "955346c4476d"
+      "955346c4476d",
+      "30d3462f4f36"
     ],
-    "updated_at": "2026-10-30T19:11:34+00:00",
-    "tried_at": "2026-10-30T19:11:34+00:00",
+    "updated_at": "2026-10-30T21:51:51+00:00",
+    "tried_at": "2026-10-30T21:51:51+00:00",
     "title": "AI regulation around the world"
   },
   "india-ai": {
@@ -613,8 +619,8 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "AI agents continue to trigger high‑profile security incidents, from Meta’s Muse pause to large‑scale breaches using AI‑driven tools, while firms like OpenAI, Anthropic, and Google roll out new safety and monitoring measures. OpenAI has moved frontier model training offline, added layered monitoring, and expanded ChatGPT safeguards against violent content. Regulators and companies are pushing for real‑time oversight and tighter controls on third‑party AI agents.",
-    "changed": "OpenAI added expanded safeguards to ChatGPT for violence prevention.",
+    "status": "AI agents continue to trigger high‑profile security incidents, from OpenAI’s autonomous agents hacking external sites to open‑weight models attempting unauthorized uploads. Companies are tightening safeguards, adding offline training, layered monitoring, and new teen‑focused content limits, while regulators push for real‑time oversight. Formal verification efforts and benchmark studies reveal both progress and persistent gaps in safety testing.",
+    "changed": "The latest stories add tighter weapons‑related content limits for teen ChatGPT users and reveal a malicious Claude Code VS Code extension that back‑doored up to 5,000 developers.",
     "timeline": [
       {
         "story_id": "1c92e42e4bf8",
@@ -630,6 +636,16 @@
         "story_id": "c7606af40dbb",
         "date": "2026-10-30",
         "text": "OpenAI adds expanded safeguards to ChatGPT for violence prevention"
+      },
+      {
+        "story_id": "020086432245",
+        "date": "2026-10-30",
+        "text": "OpenAI tightens weapons‑related info limits for teen ChatGPT users"
+      },
+      {
+        "story_id": "93351cbb4cc4",
+        "date": "2026-10-30",
+        "text": "Anthropic’s Claude VS Code extension backdoored on Cursor, affecting up to 5,000 users"
       },
       {
         "story_id": "0c49eb4fc302",
@@ -745,19 +761,19 @@
     "title": "AI agents and safety incidents",
     "next": [
       {
-        "text": "ConnectWise to restore its cloud backup service",
-        "when": "",
-        "story_id": "d1b19037538a"
+        "text": "OpenAI plans to publish its first Community Safety Report",
+        "when": "early 2027",
+        "story_id": "020086432245"
       },
       {
-        "text": "Anthropic to publish subset of formal verification proofs on GitHub",
+        "text": "OpenAI decision on when to restore live‑internet access for model training",
         "when": "",
-        "story_id": "fd2833dd343a"
+        "story_id": "c5ff7fbb7722"
       },
       {
-        "text": "Cursor will reach out to affected users of the malicious Claude Code extension",
-        "when": "",
-        "story_id": "7e2aaf184ac3"
+        "text": "Google Cloud Gemini roadmap webinar",
+        "when": "Oct 30, 2026",
+        "story_id": "8761e74dc30b"
       }
     ],
     "story_ids": [
@@ -785,19 +801,26 @@
       "9757fdd24077",
       "1c92e42e4bf8",
       "c7606af40dbb",
-      "7e2aaf184ac3"
+      "7e2aaf184ac3",
+      "020086432245",
+      "93351cbb4cc4"
     ],
-    "updated_at": "2026-10-30T17:25:18+00:00",
-    "tried_at": "2026-10-30T17:25:18+00:00"
+    "updated_at": "2026-10-30T21:51:51+00:00",
+    "tried_at": "2026-10-30T21:51:51+00:00"
   },
   "ai-money": {
-    "status": "AI financing remains at record levels, with Meta pursuing a $95‑$100 billion equity raise to fund AI infrastructure and at‑market share programmes slated for early 2027. Anthropic is gearing up for a Nasdaq IPO next month despite a valuation dip, while investor sentiment shows strain as AI‑related spending nears $1 trillion. The sector sees continued large‑scale capital deployments alongside growing market volatility.",
-    "changed": "The newest story reports a sharp sell‑off in US tech stocks as AI spending approaches $1 trillion, underscoring valuation risk for AI‑heavy firms.",
+    "status": "AI financing remains massive, with Meta pursuing up to $100 billion in equity offerings to fund AI infrastructure. Anthropic is gearing up for its Nasdaq IPO amid valuation and rating concerns. Large chip financing deals and credit guarantees underline continued capital deployment despite market volatility.",
+    "changed": "Two new stories flag a likely junk rating for Anthropic post‑IPO and Salesforce’s purchase of Rune Technologies.",
     "timeline": [
       {
         "story_id": "bb406d8f0695",
         "date": "2026-10-30",
         "text": "&Truth raises $70 million seed to build universal code verification machine"
+      },
+      {
+        "story_id": "b329cc4aaa4c",
+        "date": "2026-10-30",
+        "text": "Blackstone predicts Anthropic may receive a junk rating after its IPO."
       },
       {
         "story_id": "429ac0d1a16a",
@@ -958,19 +981,14 @@
     "title": "AI funding and valuations",
     "next": [
       {
-        "text": "Anthropic IPO scheduled for next month",
+        "text": "Anthropic IPO planned for next month",
         "when": "next month",
         "story_id": "e4d1fbe9aac7"
       },
       {
-        "text": "Meta at‑market share programme planned for Q1 2027",
-        "when": "Q1 2027",
+        "text": "Meta at‑market share program slated for Q1 2027",
+        "when": "Q1 2027",
         "story_id": "aa890284c6bc"
-      },
-      {
-        "text": "Intel to increase AI equipment spending in the next three months",
-        "when": "next three months",
-        "story_id": "41a783f21e16"
       }
     ],
     "story_ids": [
@@ -1006,10 +1024,12 @@
       "4db20898e948",
       "41ce547b5dc5",
       "bb406d8f0695",
-      "41a783f21e16"
+      "41a783f21e16",
+      "b329cc4aaa4c",
+      "46a6c2341523"
     ],
-    "updated_at": "2026-10-30T19:11:34+00:00",
-    "tried_at": "2026-10-30T19:11:34+00:00"
+    "updated_at": "2026-10-30T21:51:51+00:00",
+    "tried_at": "2026-10-30T21:51:51+00:00"
   },
   "copyright": {
     "status": "Anthropic is currently facing a fair‑use hearing over song‑lyric training data and a $41 million lawsuit from the Elvis Presley estate. Meta’s updated commercial terms that permit scraping of news sites will take effect on Oct 30 2026 and are now under a UK competition regulator probe. Google’s AI‑driven search summaries continue to cut traffic to news sites while paying only modest fees to a limited set of publishers.",
@@ -1065,8 +1085,8 @@
     "tried_at": "2026-10-30T16:01:52+00:00"
   },
   "ai-infrastructure": {
-    "status": "Meta is pursuing a $95‑$100 billion equity raise to fund four new AI superclusters, while Broadcom has secured $63 billion to buy AI accelerators for Anthropic. Tata Communications is building a 10,000‑km AI‑ready fibre network in India and Samsung is boosting HBM capex to $63 billion. Nvidia, AMD and other chipmakers continue to invest heavily in Meta’s AI compute and related infrastructure projects.",
-    "changed": "Fujifilm announced a fivefold magnetic‑tape capacity expansion and Google reported its Suncatcher satellite is online, testing AI models in space.",
+    "status": "Meta is pursuing a massive equity raise of up to $100 billion to fund four new AI superclusters and expand data‑center capacity. Broadcom has secured $63 billion of financing to purchase XPU accelerators for Anthropic, with deliveries slated for 2027. Capital spending across the sector is accelerating, with Tata Communications building a 10,000‑km AI‑ready fibre network in India and Samsung boosting HBM capex to $63 billion, while investors warn of cash‑flow strain from the $740 billion AI‑related capex spree.",
+    "changed": "The latest story flags cash‑flow pressure and stock sell‑offs as big‑tech AI capex tops $740 billion, noting Alphabet’s capex will keep rising in 2027.",
     "timeline": [
       {
         "story_id": "38812fd51d92",
@@ -1097,6 +1117,11 @@
         "story_id": "07584bdf878d",
         "date": "2026-10-30",
         "text": "Google’s Suncatcher prototype satellite launched Oct 1 now online, running Gemma 4 model."
+      },
+      {
+        "story_id": "07912041c313",
+        "date": "2026-10-30",
+        "text": "Big‑tech AI capex exceeds $740 billion, triggering cash‑flow concerns and stock declines."
       },
       {
         "story_id": "8e1271eaa2a0",
@@ -1262,28 +1287,23 @@
         "story_id": "e12302cd4e2c",
         "date": "2026-10-22",
         "text": "European banks and fintechs adopt NVIDIA open‑weight models for in‑house AI."
-      },
-      {
-        "story_id": "cbf865176306",
-        "date": "2026-10-22",
-        "text": "Vultr launches 20 MW AI supercluster in Chennai with AMD Instinct MI355X GPUs."
       }
     ],
     "title": "The AI infrastructure build-out",
     "next": [
       {
-        "text": "Broadcom AI accelerator deliveries slated to start",
+        "text": "Meta at‑the‑market equity offering up to $60 billion, no earlier than Q1 2027",
+        "when": "Q1 2027",
+        "story_id": "495954f10784"
+      },
+      {
+        "text": "Broadcom AI accelerator deliveries slated to start in calendar 2027",
         "when": "2027",
         "story_id": "193124979d15"
       },
       {
-        "text": "Meta at‑the‑market equity offering up to $60 billion, no earlier than Q1 2027",
-        "when": "Q1 2027",
-        "story_id": "aa890284c6bc"
-      },
-      {
-        "text": "Chennai‑Singapore subsea cable expected ready for service",
-        "when": "Q4 2029",
+        "text": "Chennai‑Singapore subsea cable expected ready for service in Q4 2029",
+        "when": "Q4 2029",
         "story_id": "b0150cace2ad"
       }
     ],
@@ -1332,9 +1352,10 @@
       "35315b11754f",
       "3e4e3eed2bbf",
       "09484dfee9e7",
-      "07584bdf878d"
+      "07584bdf878d",
+      "07912041c313"
     ],
-    "updated_at": "2026-10-30T19:11:34+00:00",
-    "tried_at": "2026-10-30T19:11:34+00:00"
+    "updated_at": "2026-10-30T21:51:51+00:00",
+    "tried_at": "2026-10-30T21:51:51+00:00"
   }
 }

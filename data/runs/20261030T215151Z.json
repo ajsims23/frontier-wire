@@ -1,0 +1,275 @@
+{
+  "started_at": "2026-10-30T21:51:51+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1340)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (894)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (16)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (28)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "NVIDIA publishes DeepSeek-V4.1-Flash-1017-NVFP4 on Hugging Face",
+      "reason": "score 5: Minor variant model upload on Hugging Face; not a major new model, score below threshold."
+    },
+    {
+      "title": "GitHub Incident with Actions, Pages, and Webhooks",
+      "reason": "not AI: GitHub incident unrelated to AI."
+    },
+    {
+      "title": "Show HN: A working Nintendo in ~1GB of Qwen weights",
+      "reason": "score 4: Interesting hack using Qwen weights but not a new model or major development."
+    },
+    {
+      "title": "Florilegium: Procedural Flowers in LaTeX",
+      "reason": "not AI: Procedural flowers in LaTeX, no AI relevance."
+    },
+    {
+      "title": "Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, report says",
+      "reason": "score 5: Altman's comment on RAM shortages is a peripheral supply‑chain remark, not core AI news."
+    },
+    {
+      "title": "United Airlines CEO doubts supersonic airliner from Boom will be ready by 2029",
+      "reason": "not AI: Article about supersonic airliner, not AI."
+    },
+    {
+      "title": "Dartmouth's provost warned us about AI cheating—but his own AI use cost him his job",
+      "reason": "score 4: Academic cheating story, peripheral to AI."
+    },
+    {
+      "title": "Basically no one is using AI agents for their DoorDash orders",
+      "reason": "score 3: Early use of AI agents for DoorDash orders, not a notable development."
+    },
+    {
+      "title": "Intel stock closed down 28.58% on Friday, its worst day since the 1970s and wiping ~$12B off US government's stake, after issuing weaker-than-expected guidance (CNBC)",
+      "reason": "not AI: Intel stock drop unrelated to AI."
+    },
+    {
+      "title": "Reddit closed down 29.27% on Friday, the worst drop since becoming a public company in 2024, after it forecast weak Q4 revenue (Caleigh Keating/CNBC)",
+      "reason": "not AI: Reddit stock drop unrelated to AI."
+    },
+    {
+      "title": "Chainalysis says Binance hackers used automated money-laundering patterns not seen before; Elliptic: almost all of the $6.3B was taken in the first 30 minutes (Financial Times)",
+      "reason": "not AI: Crypto theft story not AI focused."
+    },
+    {
+      "title": "Microsoft, Alphabet, Amazon, Meta, and Oracle returned just 9.3% of cash to shareholders in the first three quarters of 2026, a 15-year low amid AI spending (Patturaja Murugaboopathy/Reuters)",
+      "reason": "score 5: Cash return low due to AI spending; peripheral financial metric."
+    },
+    {
+      "title": "Anthropic renames its $100 per month Max 5x plan as Max and the $200 per month Max 20x plan as Ultra, and removes the 5-hour limit for verified Ultra accounts (Claude/@claudeai)",
+      "reason": "score 4: Pricing plan rename, not a major development."
+    },
+    {
+      "title": "Alphabet, Meta, Microsoft, Amazon, and Oracle have a collective $3T+ in AI spending commitments over the coming years, including Alphabet's $1T and Meta's $800B (Brody Ford/Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Thousands of “ghost students” use AI to steal millions in student loans, DOJ says",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "MeitY Floats New Privacy-Led Framework To Unlock Data For Training AI Models",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "30d3462f4f36",
+      "headline": "OpenAI, Google, Microsoft, Anthropic adopt shared robots.txt opt‑out standard",
+      "category": "policy",
+      "summary": "OpenAI, Google, Microsoft and Anthropic announced they will use a shared robots.txt “policy token” that lets publishers opt out of AI scraping across multiple crawlers. The signal will replace the need for separate requests to each AI provider.",
+      "url": "https://techmeme.com/261030/p26",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "07912041c313",
+      "headline": "Big tech AI capex sparks cash‑flow concerns, stocks tumble",
+      "category": "industry",
+      "summary": "Alphabet, Amazon, Meta and Microsoft announced over $740 billion in capital expenditures this year, prompting investor anxiety as several firms report negative free cash flow and stock declines.",
+      "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom",
+      "sources": 2,
+      "quotes": 1
+    },
+    {
+      "id": "020086432245",
+      "headline": "OpenAI tightens weapons‑related information limits for teen ChatGPT users",
+      "category": "safety",
+      "summary": "OpenAI announced new safeguards that further restrict ChatGPT from providing practical guidance on weapons and security systems to users under 18, even when queries appear harmless. The changes will roll out over the coming weeks and include automatic conversation interruptions and parental alerts.",
+      "url": "https://techmeme.com/261030/p25",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "b329cc4aaa4c",
+      "headline": "Blackstone says Anthropic likely to receive junk rating after IPO",
+      "category": "industry",
+      "summary": "Blackstone told investors Anthropic may not get an investment‑grade rating after its IPO, expecting a double‑B junk rating. The prediction follows a $63 billion chip financing deal.",
+      "url": "https://ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "93351cbb4cc4",
+      "headline": "Anthropic’s Claude VS Code extension backdoored on Cursor, affecting up to 5,000 users",
+      "category": "safety",
+      "summary": "A malicious version (2.1.313) of Anthropic’s Claude Code VS Code extension was published on the Cursor marketplace, potentially reaching up to 5,000 developers before being replaced by version 2.1.314. The extension attempted to install a persistent SSH backdoor and collect host data across Windows, macOS, and Linux.",
+      "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours",
+      "sources": 3,
+      "quotes": 2
+    },
+    {
+      "id": "46a6c2341523",
+      "headline": "Salesforce to acquire Rune Technologies for $375 million",
+      "category": "industry",
+      "summary": "Salesforce announced it will buy defense‑tech startup Rune Technologies for $375 million in cash and stock. Rune’s AI‑powered logistics software, used by the U.S. Army and Marine Corps, will be added to Salesforce’s Missionforce business, with the deal slated to close in the fourth quarter of fiscal year 2027.",
+      "url": "https://techmeme.com/261030/p17",
+      "sources": 2,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "2 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 77.4,
+    "audit": -0.0,
+    "plan": 2.1,
+    "judge": 2.2,
+    "verify and write": 546.3,
+    "videos": 24.0,
+    "tagging": 21.6,
+    "explainers": -0.0,
+    "trackers": 126.7,
+    "claims": 21.9,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 21.0,
+    "self-review": -0.0,
+    "photos": 1.3,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 18.7
+  },
+  "fetched": 2919,
+  "fresh": 25,
+  "plan": {
+    "focus": "Chasing the fallout from AI spending slowdown while tracking new policy moves on data scraping and safety.",
+    "priorities": [
+      "Cracks are emerging in the AI spending boom (Highlights emerging cracks in the AI spending boom, key for industry and investor outlook)",
+      "Alphabet, Meta, Microsoft, Amazon, and Oracle have a collective $3T+ i (Details massive AI spending commitments, contextualising the slowdown narrative)",
+      "OpenAI, Google, Microsoft, and Anthropic say they will adopt a new sta (Covers the new opt‑out standard for AI training data, a major policy development)",
+      "OpenAI tightens limits on the weapons-related information that ChatGPT (Reports OpenAI's tightened weapons‑info safeguards, relevant to safety concerns)",
+      "NVIDIA publishes DeepSeek-V4.1-Flash-1017-NVFP4 on Hugging Face (Introduces NVIDIA's DeepSeek‑V4.1‑Flash model, filling the thin models coverage)"
+    ],
+    "thin_areas": [
+      "models",
+      "india"
+    ],
+    "searches": [
+      "DeepSeek ARTEX breach: 0 new",
+      "Meta CMA advertising terms: 0 new",
+      "DeepSeek-V4.1 model specs: 0 new"
+    ],
+    "dig_deeper": [
+      "Cracks are emerging in the AI spending boom",
+      "OpenAI, Google, Microsoft, and Anthropic say they will adopt a new sta"
+    ]
+  },
+  "judged": 25,
+  "kept": 9,
+  "research": {
+    "investigated": 5,
+    "confirmed": 3,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "OpenAI, Google, Microsoft, and Anthropic say they will adopt a new sta: unconfirmed (searched “OpenAI Google Microsoft Anthropic adopt new standard opt out AI scraping publishers”; searched “\"opt out\" AI scraping standard publishers”; searched “\"AI training\" opt-out standard publishers”)",
+    "Alphabet, Meta, Microsoft, Amazon, and Oracle have a collective $3T+ i: unconfirmed (searched “Alphabet $1 trillion AI spending commitment Meta $800 billion AI spending commitments $3 trillion Bloomberg Brody Ford”; searched “Brody Ford Bloomberg AI spending commitments $3 trillion”; searched “\"Brody Ford\" AI spending commitments”)",
+    "Cracks are emerging in the AI spending boom: confirmed (searched “cracks are emerging in the AI spending boom”; read yahoo.com; read msn.com)",
+    "OpenAI tightens limits on the weapons-related information that ChatGPT: confirmed (searched “OpenAI tightens limits weapons-related information ChatGPT teens”; read msn.com; read technobezz.com)",
+    "Anthropic may not secure investment-grade rating after IPO, Blackstone: confirmed (searched “Anthropic investment-grade rating after IPO Blackstone says”; read techcrunch.com; read yahoo.com)"
+  ],
+  "threads": [
+    "AI firms adopt publisher opt‑out standard: OpenAI, Google, Microsoft, Anthropic adopt shared robots.txt",
+    "OpenAI expands safeguards for teen safety: OpenAI tightens weapons‑related information limits for teen ",
+    "Anthropic IPO progress: rating concerns: Blackstone says Anthropic likely to receive junk rating afte",
+    "Anthropic VS Code extension backdoor: Anthropic’s Claude VS Code extension backdoored on Cursor, a"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 1 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (9 in feed, 0 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 2 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (3 in feed, 1 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (5 in feed, 0 new)"
+  },
+  "videos_kept": "4 kept from 7 new",
+  "tagged": 6,
+  "trackers": "filed 6 stories; updated ai-regulation, agent-safety, ai-infrastructure, ai-money",
+  "claims": "66 tracked, 65 open, 1 updated this run",
+  "model_tracker": "82 models, 43 changes today",
+  "briefing": "4 themes from 20 stories",
+  "photos": "6 saved, 0 unavailable",
+  "alerts": "58 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":59}",
+  "ai_requests_run": 42,
+  "ai_tokens_run": 110314,
+  "ai_requests_today": 297,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
+}

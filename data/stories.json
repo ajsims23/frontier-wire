@@ -1,6 +1,352 @@
 [
   {
     "explainer": {
+      "what_it_means": "Big technology firms are investing hundreds of billions in data centers and chips to support AI, but the spending is outpacing the cash they generate. This creates cash‑flow deficits and fuels market worries about whether the AI investments will deliver returns.",
+      "terms": [
+        {
+          "term": "Free cash flow",
+          "meaning": "The amount of cash a company generates after accounting for cash outflows to support operations and maintain capital assets."
+        },
+        {
+          "term": "Capex",
+          "meaning": "Capital expenditures, money spent on long‑term assets such as data centers, servers and other infrastructure."
+        },
+        {
+          "term": "AI infrastructure",
+          "meaning": "Hardware and facilities like chips and data centers needed to run large AI models."
+        }
+      ],
+      "watch_next": [
+        "Alphabet expects capex to keep rising in 2027."
+      ]
+    },
+    "audiences": {
+      "builders": "The surge in AI‑related capital spending could affect the cost and availability of compute resources for developers.",
+      "business": "Investors see the large outlays as a risk to profitability, with slowing ad revenue and cash‑flow deficits.",
+      "investors": "Stock prices of AI‑linked companies fell sharply, reflecting heightened market volatility."
+    },
+    "id": "07912041c313",
+    "headline": "Big tech AI capex sparks cash‑flow concerns, stocks tumble",
+    "summary": "Alphabet, Amazon, Meta and Microsoft announced over $740 billion in capital expenditures this year, prompting investor anxiety as several firms report negative free cash flow and stock declines.",
+    "why_it_matters": "Heavy AI infrastructure spending is pressuring cash flow and raising doubts about the profitability of the AI boom.",
+    "category": "industry",
+    "lab": "",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "very compute-intensive to run,",
+        "speaker": "Mark Zuckerberg",
+        "speaker_role": "CEO",
+        "source_url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom"
+      }
+    ],
+    "score": 7,
+    "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom",
+    "source_id": "techcrunch-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/10/mick-haupt-7Kv1Elbagcc-unsplash.jpg?resize=1200,800",
+    "sources": [
+      {
+        "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom",
+        "publisher": "TechCrunch AI",
+        "title": "Cracks are emerging in the AI spending boom"
+      },
+      {
+        "url": "https://finance.yahoo.com/technology/ai/articles/cracks-emerging-ai-spending-boom-211740864.html",
+        "publisher": "Yahoo Finance",
+        "title": "Cracks are emerging in the AI spending boom"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-30T21:17:40+00:00",
+    "created_at": "2026-10-30T21:51:51+00:00",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 1,
+      "business": 2,
+      "investors": 3
+    },
+    "cover": "$740 billion",
+    "trackers": [
+      "ai-infrastructure"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Developers who installed the Claude Code extension from Cursor may have had a hidden program that enabled SSH access for an attacker and sent system details back to a remote server. Because the extension runs with the same permissions as the IDE, the backdoor could read source code and other files on the machine. The malicious code was active on Windows, macOS and Linux, but the SSH enable step fails unless the IDE is run with administrator rights.",
+      "terms": [
+        {
+          "term": "SSH backdoor",
+          "meaning": "A method that adds an SSH key to a system so an attacker can log in remotely."
+        },
+        {
+          "term": "Supply-chain compromise",
+          "meaning": "An attack where the adversary hijacks a trusted software distribution channel to insert malicious code."
+        },
+        {
+          "term": "Persistent",
+          "meaning": "Designed to remain active across reboots or restarts, often by installing scheduled tasks or services."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers using the Claude Code VS Code extension should verify they are on version 2.1.314 or later and consider disabling auto‑updates.",
+      "business": "Companies should audit developer environments for the compromised extension and assess any potential data exposure.",
+      "investors": "The incident highlights security risks in AI‑tool supply chains, which could affect confidence in companies offering such developer integrations."
+    },
+    "id": "93351cbb4cc4",
+    "headline": "Anthropic’s Claude VS Code extension backdoored on Cursor, affecting up to 5,000 users",
+    "summary": "A malicious version (2.1.313) of Anthropic’s Claude Code VS Code extension was published on the Cursor marketplace, potentially reaching up to 5,000 developers before being replaced by version 2.1.314. The extension attempted to install a persistent SSH backdoor and collect host data across Windows, macOS, and Linux.",
+    "why_it_matters": "The supply‑chain compromise shows that trusted developer tools can be hijacked to gain unauthorized access to developers’ machines.",
+    "category": "safety",
+    "lab": "Anthropic",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "It was a supply-chain compromise where the attacker gained access to the official distribution channel,",
+        "speaker": "Luke Roberts",
+        "speaker_role": "Phorian CTO and co‑founder",
+        "source_url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours"
+      },
+      {
+        "text": "The malicious version 2.1.313 was posted to the official Anthropic account, effectively superseding 2.1.312. Extensions auto-update in Cursor by default, but users can configure this in settings.",
+        "speaker": "Luke Roberts",
+        "speaker_role": "Phorian CTO and co‑founder",
+        "source_url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours"
+      }
+    ],
+    "score": 6,
+    "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours",
+    "source_id": "ars-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://cdn.arstechnica.net/wp-content/uploads/2022/05/caution-tape-1000x648.jpeg",
+    "sources": [
+      {
+        "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours",
+        "publisher": "Ars Technica AI",
+        "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours"
+      },
+      {
+        "url": "https://doublepulsar.com/anthropic-hacked-to-deliver-remote-access-trojan-to-claude-developer-laptops-worldwide-1148a92baae2",
+        "publisher": "doublepulsar.com",
+        "title": "Claude Code VS Code extension with backdoor released on Cursor marketplace"
+      },
+      {
+        "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise",
+        "publisher": "phorion.io",
+        "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-10-30T21:09:54+00:00",
+    "created_at": "2026-10-30T21:51:51+00:00",
+    "thread": "t-d56622e1b6e9",
+    "sectors": [
+      "software",
+      "cybersecurity"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 1,
+      "investors": 1
+    },
+    "cover": "5,000 users",
+    "trackers": [
+      "agent-safety"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Publishers can add a special token to their site’s robots.txt file to tell AI crawlers not to scrape their pages for training. All participating AI companies will read this token and respect the publisher’s preference. This removes the need for each publisher to send separate opt‑out notices to each AI provider.",
+      "terms": [
+        {
+          "term": "robots.txt",
+          "meaning": "A text file on a website that tells web crawlers which parts of the site they may access."
+        },
+        {
+          "term": "policy token",
+          "meaning": "A shared signal placed in robots.txt that indicates a publisher’s AI training preferences."
+        },
+        {
+          "term": "AI grounding",
+          "meaning": "Linking an AI model’s responses to verified source information to reduce hallucinations."
+        }
+      ],
+      "watch_next": [
+        "OpenAI will implement the shared token in the coming months.",
+        "Google and Microsoft plan to support the token next year."
+      ]
+    },
+    "audiences": {
+      "builders": "Developers can rely on a unified opt‑out signal rather than handling separate requests for each AI service.",
+      "business": "Publishers gain a simpler way to protect their content from being used in AI training.",
+      "investors": "The standard may reduce legal risk for AI firms and clarify content‑use policies."
+    },
+    "id": "30d3462f4f36",
+    "headline": "OpenAI, Google, Microsoft, Anthropic adopt shared robots.txt opt‑out standard",
+    "summary": "OpenAI, Google, Microsoft and Anthropic announced they will use a shared robots.txt “policy token” that lets publishers opt out of AI scraping across multiple crawlers. The signal will replace the need for separate requests to each AI provider.",
+    "why_it_matters": "It gives publishers a single mechanism to control how their content is used to train AI models.",
+    "category": "policy",
+    "lab": "",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 9,
+    "url": "https://techmeme.com/261030/p26",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25330660/STK414_AI_CHATBOT_H.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+    "sources": [
+      {
+        "url": "https://techmeme.com/261030/p26",
+        "publisher": "techmeme.com",
+        "title": "OpenAI, Google, Microsoft, and Anthropic say they will adopt a new standard that publishers can use to opt out of being scraped by AI across multiple crawlers (Emma Roth/The Verge)"
+      },
+      {
+        "url": "https://theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
+        "publisher": "The Verge AI",
+        "title": "The biggest names in AI are backing a new way to opt out of scraping"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 0,
+      "decision": "unconfirmed"
+    },
+    "published_at": "2026-10-30T21:05:00+00:00",
+    "created_at": "2026-10-30T21:51:51+00:00",
+    "thread": "t-80e84b65ba98",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 2,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "",
+    "trackers": [
+      "ai-regulation"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "OpenAI will block ChatGPT from giving step‑by‑step advice on building or using weapons to users it identifies as teens. The system will also interrupt chats that show a focus on violence and can pause the account or alert parents. Users can still ask for help de‑escalating a violent situation or finding support.",
+      "terms": [
+        {
+          "term": "automatic interruptions",
+          "meaning": "The system stops a conversation when it detects the user is focusing on violence, potentially pausing the account."
+        },
+        {
+          "term": "age prediction system",
+          "meaning": "A tool that evaluates signals during use to estimate a user’s age and apply teen‑specific safeguards."
+        },
+        {
+          "term": "Community Safety Report",
+          "meaning": "A periodic report that will detail anonymized safety cases, safeguard changes, and response data."
+        }
+      ],
+      "watch_next": [
+        "Restrictions will start reaching users over the coming weeks.",
+        "OpenAI plans to publish its first Community Safety Report in early 2027."
+      ]
+    },
+    "audiences": {
+      "builders": "Developers will need to account for reduced weapon‑related content when building teen‑focused applications on ChatGPT.",
+      "business": "Companies targeting teen markets must consider the new safety limits that may affect user engagement and support services.",
+      "investors": "The added safeguards may influence OpenAI’s risk profile and regulatory standing, which could affect investor assessments."
+    },
+    "id": "020086432245",
+    "headline": "OpenAI tightens weapons‑related information limits for teen ChatGPT users",
+    "summary": "OpenAI announced new safeguards that further restrict ChatGPT from providing practical guidance on weapons and security systems to users under 18, even when queries appear harmless. The changes will roll out over the coming weeks and include automatic conversation interruptions and parental alerts.",
+    "why_it_matters": "The tighter limits reflect growing concerns about AI misuse and illustrate how providers are expanding safety controls for younger users.",
+    "category": "safety",
+    "lab": "OpenAI",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 7,
+    "url": "https://techmeme.com/261030/p25",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://cdn.technobezz.com/c/why_teens_parent_notification_4b9a148991.webp",
+    "sources": [
+      {
+        "url": "https://techmeme.com/261030/p25",
+        "publisher": "techmeme.com",
+        "title": "OpenAI tightens limits on the weapons-related information that ChatGPT provides teens, even when a question appears harmless, as part of new safeguards (Reuters)"
+      },
+      {
+        "url": "https://technobezz.com/news/openai-restrict-chatgpt-weapons-information-teens",
+        "publisher": "Technobezz",
+        "title": "OpenAI to Restrict ChatGPT Weapons Information for Teens"
+      },
+      {
+        "url": "https://msn.com/en-us/technology/artificial-intelligence/openai-adds-restrictions-on-weapons-related-chatgpt-responses-for-teens/ar-AA2gqVGo",
+        "publisher": "Seeking Alpha on MSN",
+        "title": "OpenAI adds restrictions on weapons-related ChatGPT responses for teens"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-30T20:55:37+00:00",
+    "created_at": "2026-10-30T21:51:51+00:00",
+    "thread": "t-345ea7f8f755",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 2,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "teen ChatGPT",
+    "trackers": [
+      "agent-safety"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Google launched a satellite that carries four AI‑focused Tensor Processing Units and a pre‑loaded language model. The satellite can run the model in orbit, letting engineers see how the chips behave under real space radiation and temperature conditions. The test data will guide future designs of space‑based AI services.",
       "terms": [
         {
@@ -101,6 +447,87 @@
   },
   {
     "explainer": {
+      "what_it_means": "Rune’s software uses artificial intelligence to predict how much supply troops will need, plan where resources should go, and operate even when network connectivity is limited. By adding this capability to its Missionforce platform, Salesforce will offer AI‑driven logistics tools to U.S. defense customers.",
+      "terms": [
+        {
+          "term": "AI‑powered logistics software",
+          "meaning": "Software that uses machine‑learning models to forecast supply needs and optimise resource deployment for military operations."
+        },
+        {
+          "term": "Missionforce",
+          "meaning": "Salesforce’s suite of cloud services aimed at U.S. government and military agencies."
+        },
+        {
+          "term": "Fiscal year 2027",
+          "meaning": "Salesforce’s financial year that ends in early 2028; the deal is expected to close in its fourth quarter."
+        }
+      ],
+      "watch_next": [
+        "The acquisition is expected to close in the fourth quarter of Salesforce’s fiscal year 2027."
+      ]
+    },
+    "audiences": {
+      "builders": "The deal shows Salesforce integrating AI logistics capabilities into its cloud platform, potentially offering new APIs for developers.",
+      "business": "Salesforce is broadening its defense AI offerings, which could open additional revenue streams with U.S. military customers.",
+      "investors": "The purchase signals Salesforce’s commitment to growing its AI‑driven defense segment, a factor that may influence future valuation."
+    },
+    "id": "46a6c2341523",
+    "headline": "Salesforce to acquire Rune Technologies for $375 million",
+    "summary": "Salesforce announced it will buy defense‑tech startup Rune Technologies for $375 million in cash and stock. Rune’s AI‑powered logistics software, used by the U.S. Army and Marine Corps, will be added to Salesforce’s Missionforce business, with the deal slated to close in the fourth quarter of fiscal year 2027.",
+    "why_it_matters": "The acquisition expands Salesforce’s AI portfolio into military logistics, showing how generative AI is being applied to defense operations.",
+    "category": "industry",
+    "lab": "Salesforce",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 6,
+    "url": "https://techmeme.com/261030/p17",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-1119087,resizemode-75,msid-135341877/tech/technology/salesforce-to-buy-defense-tech-firm-rune-in-military-business-push.jpg",
+    "sources": [
+      {
+        "url": "https://techmeme.com/261030/p17",
+        "publisher": "techmeme.com",
+        "title": "Salesforce acquires Rune, which makes AI military logistics software, sources say for $375M in cash and stock; Rune raised $30m from a16z and others (Margaux MacColl/Resilience Media)"
+      },
+      {
+        "url": "https://economictimes.indiatimes.com/tech/technology/salesforce-to-buy-defense-tech-firm-rune-in-military-business-push/articleshow/135341877.cms",
+        "publisher": "ET Tech",
+        "title": "Salesforce to buy defense tech firm Rune in military business push"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-10-30T18:20:05+00:00",
+    "created_at": "2026-10-30T21:51:51+00:00",
+    "sectors": [
+      "defense",
+      "software"
+    ],
+    "regions": [
+      "us"
+    ],
+    "deal": {
+      "type": "acquisition",
+      "company": "Salesforce",
+      "amount": "$375 million",
+      "usd": 375000000.0
+    },
+    "relevance": {
+      "builders": 2,
+      "business": 3,
+      "investors": 2
+    },
+    "cover": "$375 million",
+    "trackers": [
+      "ai-money"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Fujifilm will build more tape‑manufacturing lines so it can make many more LTO Ultrium10 cartridges. These tapes provide long‑term, offline storage that is cheaper and uses less energy than keeping data on always‑on disks or flash drives.",
       "terms": [
         {
@@ -186,6 +613,97 @@
     "cover": "¥10 billion",
     "trackers": [
       "ai-infrastructure"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Credit rating agencies assign investment‑grade ratings to firms seen as low risk and junk ratings to higher‑risk firms. A junk rating means lenders will charge higher interest rates, increasing the cost of capital for Anthropic. This could limit the lab’s ability to fund its compute spending.",
+      "terms": [
+        {
+          "term": "investment‑grade rating",
+          "meaning": "A rating indicating low credit risk for lenders."
+        },
+        {
+          "term": "junk rating",
+          "meaning": "A rating indicating higher credit risk, often double‑B or lower, leading to higher borrowing costs."
+        },
+        {
+          "term": "double‑B range",
+          "meaning": "The top tier of speculative junk ratings, just below investment grade."
+        }
+      ],
+      "watch_next": [
+        "Credit agencies’ rating decision for Anthropic after its IPO"
+      ]
+    },
+    "audiences": {
+      "builders": "The rating outlook does not directly affect developers building on Anthropic’s models.",
+      "business": "A junk rating signals higher financing costs, affecting Anthropic’s strategic plans and competitive position.",
+      "investors": "Investors should view the rating as an indicator of increased credit risk for Anthropic."
+    },
+    "id": "b329cc4aaa4c",
+    "headline": "Blackstone says Anthropic likely to receive junk rating after IPO",
+    "summary": "Blackstone told investors Anthropic may not get an investment‑grade rating after its IPO, expecting a double‑B junk rating. The prediction follows a $63 billion chip financing deal.",
+    "why_it_matters": "A junk rating would raise Anthropic’s borrowing costs and make future financing harder.",
+    "category": "industry",
+    "lab": "Anthropic",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 6,
+    "url": "https://ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
+    "source_id": "hn",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2282033342.jpg?w=1024",
+    "sources": [
+      {
+        "url": "https://ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
+        "publisher": "ft.com",
+        "title": "Anthropic may not secure investment-grade rating after IPO, Blackstone says"
+      },
+      {
+        "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says",
+        "publisher": "TechCrunch AI",
+        "title": "Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, report says"
+      },
+      {
+        "url": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-anthropic-may-not-171258656.html",
+        "publisher": "Yahoo Finance",
+        "title": "Market Chatter: Anthropic May Not Get Investment-Grade Rating After IPO, Blackstone Says"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-30T17:27:25+00:00",
+    "created_at": "2026-10-30T21:51:51+00:00",
+    "thread": "t-a50b07bc6191",
+    "sectors": [
+      "software",
+      "finance"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": {
+      "type": "ipo",
+      "company": "Anthropic",
+      "amount": "$63 billion",
+      "usd": 63000000000.0
+    },
+    "relevance": {
+      "builders": 1,
+      "business": 2,
+      "investors": 3
+    },
+    "cover": "",
+    "trackers": [
+      "ai-money"
     ],
     "photo_local": true
   },
@@ -694,7 +1212,8 @@
     "trackers": [
       "agent-safety"
     ],
-    "photo_local": true
+    "photo_local": true,
+    "thread": "t-d56622e1b6e9"
   },
   {
     "explainer": {
@@ -766,7 +1285,8 @@
       "license": "Public domain",
       "page": "https://commons.wikimedia.org/wiki/File:Curiosity_-_Robot_Geologist_and_Chemist_in_One!.jpg",
       "via": "Wikimedia Commons"
-    }
+    },
+    "thread": "t-80e84b65ba98"
   },
   {
     "explainer": {
@@ -833,7 +1353,8 @@
     "trackers": [
       "agent-safety"
     ],
-    "stock_tried": "2026-10-30T17:25:18+00:00"
+    "stock_tried": "2026-10-30T17:25:18+00:00",
+    "thread": "t-345ea7f8f755"
   },
   {
     "explainer": {
