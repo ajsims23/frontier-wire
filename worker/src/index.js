@@ -4,17 +4,21 @@
 //   POST /api/subscribe    {email, follows, frequency} sends a confirmation email (double opt-in)
 //   GET  /api/confirm?t=   confirms or applies changes; GET /api/unsubscribe?t= removes the subscriber
 //   POST /api/dispatch     (newsroom only, bearer secret) new events -> instant emails or the daily digest queue
-//   cron                   sends daily digests
+//   POST /api/recap/preview (bearer secret) {date, to} emails the editor a preview of the daily recap email
+//   GET|POST /api/recap/approve?d=&s=  the editor's signed link: confirm, then send the recap to its subscribers
+//   cron                   08:50 IST daily digests; every 10 minutes, continues sending an approved recap
 //
 // Secrets: CEREBRAS_API_KEY (and optional GROQ_API_KEY), BREVO_API_KEY, DISPATCH_SECRET.
 // Vars: SITE_URL, SENDER_EMAIL, SENDER_NAME. Binding: DB (D1).
 import { buildIndex, rank } from "../../site/search.js";
-import { digestSubject, renderEmail } from "./email.js";
+import { digestSubject, recapSubject, renderEmail, renderRecap } from "./email.js";
 
 const ASK_PER_IP_PER_DAY = 25;
 const ASK_PER_DAY = 600;
 const EMAILS_PER_DAY = 280; // Brevo's free plan allows 300 a day
-const FOLLOW_KEY = /^(lab:[^<>"]{1,60}|tracker:[a-z0-9-]{1,40}|sector:[a-z_]{1,30}|topic:[a-z]{1,20}|region:india|deals|models)$/;
+const FOLLOW_KEY = /^(lab:[^<>"]{1,60}|tracker:[a-z0-9-]{1,40}|sector:[a-z_]{1,30}|topic:[a-z]{1,20}|region:india|deals|models|recap)$/;
+const RECAP_BATCH = 40;   // emails per run, inside the free plan's 50 outgoing requests per invocation
+const DIGEST_CRON = "20 3 * * *";
 
 const json = (data, status, cors) => new Response(JSON.stringify(data), { status: status || 200, headers: { "content-type": "application/json", ...cors } });
 const today = () => new Date().toISOString().slice(0, 10);
@@ -244,10 +248,16 @@ async function subscribe(env, body) {
   const follows = [...new Set((body.follows || []).map(String))].filter((k) => FOLLOW_KEY.test(k)).slice(0, 60);
   if (!follows.length) return [400, { error: "Follow at least one thing first." }];
   const labels = Object.fromEntries((body.labels || []).filter((l) => l && FOLLOW_KEY.test(String(l.key))).map((l) => [l.key, String(l.label || l.key).slice(0, 80)]));
-  const freq = body.frequency === "daily" ? "daily" : "instant";
+  let freq = body.frequency === "daily" ? "daily" : "instant";
   if (!(await bump(env, "subscribe", await sha(email), 4))) return [429, { error: "Too many requests for this email today." }];
   const t = token();
-  const existing = await env.DB.prepare("SELECT id, utoken FROM subscribers WHERE email = ?1").bind(email).first();
+  const existing = await env.DB.prepare("SELECT id, utoken, follows, labels, frequency, confirmed FROM subscribers WHERE email = ?1").bind(email).first();
+  if (existing && body.merge && existing.confirmed) {  // add to what they already follow (e.g. the recap signup)
+    const merged = mergeFollows(JSON.parse(existing.follows || "[]"), JSON.parse(existing.labels || "{}"), follows, labels);
+    follows.splice(0, follows.length, ...merged.follows);
+    Object.assign(labels, merged.labels);
+    freq = existing.frequency;
+  }
   if (existing) {
     await env.DB.prepare("UPDATE subscribers SET pending = ?1, ctoken = ?2 WHERE id = ?3")
       .bind(JSON.stringify({ follows, labels, freq }), t, existing.id).run();
@@ -262,6 +272,10 @@ async function subscribe(env, body) {
      <p><a href="${link}" style="display:inline-block;background:#2f5bd8;color:#fff;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:700">Confirm alerts</a></p>
      <p style="font-size:12px;color:#5a6380">If you didn't ask for this, ignore this email.</p>`));
   return ok ? [200, { ok: true }] : [503, { error: "We couldn't send the email right now. Try again later." }];
+}
+
+export function mergeFollows(curFollows, curLabels, addFollows, addLabels) {
+  return { follows: [...new Set([...curFollows, ...addFollows])].slice(0, 60), labels: { ...curLabels, ...addLabels } };
 }
 
 async function confirm(env, t) {
@@ -287,6 +301,13 @@ async function latestFor(env, follows, labels, n) {
 }
 
 async function sendWelcome(env, email, p, utoken) {
+  if (p.follows.length === 1 && p.follows[0] === "recap") {  // signed up for the recap only: send them the latest one
+    const recap = await getRecap(env);
+    if (!recap) return false;
+    const html = renderRecap({ site: env.SITE_URL, api: env.API_URL, recap, unsub: utoken,
+      intro: { title: "You're in.", text: "Every evening we'll send the day's top five AI stories in 30 seconds. Here's the latest recap." } });
+    return sendEmail(env, email, recapSubject(recap), html);
+  }
   const { events, briefing } = await latestFor(env, p.follows, p.labels || {}, 5);
   const names = p.follows.map((k) => (p.labels || {})[k] || k.replace(/^[a-z]+:/, "")).slice(0, 4).join(", ");
   const when = p.freq === "daily" ? "every morning around 8:50 India time" : "as soon as something you follow happens";
@@ -375,6 +396,75 @@ async function testDigest(env, to) {
   return { subscribers: subs.length, sent };
 }
 
+// ---------------------------------------------------------------- daily recap email
+async function getRecap(env) {
+  try {
+    const r = await fetch(new URL(`videos/latest.json?t=${Date.now()}`, env.SITE_URL), { cf: { cacheTtl: 0 } });
+    return r.ok ? await r.json() : null;
+  } catch (e) { return null; }
+}
+
+export async function signRecap(secret, date) {
+  const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  const mac = await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(`recap:${date}`));
+  return [...new Uint8Array(mac)].slice(0, 16).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function validApproval(env, d, s) {
+  if (!env.DISPATCH_SECRET || !/^\d{4}-\d{2}-\d{2}$/.test(d || "") || !/^[0-9a-f]{32}$/.test(s || "")) return false;
+  return (await signRecap(env.DISPATCH_SECRET, d)) === s;
+}
+
+const RECAP_SUBS = "FROM subscribers WHERE confirmed = 1 AND follows LIKE '%\"recap\"%'";
+
+async function recapAudience(env) {
+  return ((await env.DB.prepare(`SELECT COUNT(*) AS n ${RECAP_SUBS}`).first()) || {}).n || 0;
+}
+
+async function recapPreview(env, date, to, force) {
+  const done = await env.DB.prepare("SELECT v FROM meta WHERE k = ?1").bind(`recap_preview:${date}`).first();
+  if (done && !force) return { skipped: "preview already sent", sent: 0 };
+  const recap = await getRecap(env);
+  if (!recap || recap.date !== date) return { error: `the site's latest recap is ${recap ? recap.date : "missing"}, not ${date}` };
+  const audience = await recapAudience(env);
+  const approveUrl = `${env.API_URL}/api/recap/approve?d=${date}&s=${await signRecap(env.DISPATCH_SECRET, date)}`;
+  const html = renderRecap({ site: env.SITE_URL, api: env.API_URL, recap, approveUrl, audience });
+  const sent = await sendEmail(env, to, `[Preview] ${recapSubject(recap)}`, html);
+  if (sent) await env.DB.prepare("INSERT OR REPLACE INTO meta (k, v) VALUES (?1, ?2)").bind(`recap_preview:${date}`, new Date().toISOString()).run();
+  return { sent: sent ? 1 : 0, audience };
+}
+
+// Sends the approved recap to subscribers who haven't had it yet, a batch at a time (the cron finishes the rest).
+async function sendRecap(env, date) {
+  const recap = await getRecap(env);
+  if (!recap || recap.date !== date) return { sent: 0, remaining: 0, error: "recap not on the site" };
+  const subs = (await env.DB.prepare(`SELECT id, email, utoken ${RECAP_SUBS} AND id NOT IN (SELECT sub_id FROM sent WHERE event_key = ?1)`)
+    .bind(`recap:${date}`).all()).results || [];
+  let sent = 0;
+  for (const s of subs.slice(0, RECAP_BATCH)) {
+    const claim = await env.DB.prepare("INSERT OR IGNORE INTO sent (sub_id, event_key) VALUES (?1, ?2)").bind(s.id, `recap:${date}`).run();
+    if (!claim.meta || !claim.meta.changes) continue;
+    const html = renderRecap({ site: env.SITE_URL, api: env.API_URL, recap, unsub: s.utoken });
+    if (await sendEmail(env, s.email, recapSubject(recap), html)) sent++;
+    else { await env.DB.prepare("DELETE FROM sent WHERE sub_id = ?1 AND event_key = ?2").bind(s.id, `recap:${date}`).run(); break; }
+  }
+  const remaining = Math.max(0, subs.length - sent);
+  if (!remaining) await env.DB.prepare("DELETE FROM meta WHERE k = 'recap_approved'").run();
+  return { sent, remaining };
+}
+
+function approvePage(env, d, s, audience, done) {
+  const body = done
+    ? `<h1 style="font-size:24px">${done.remaining ? "Sending" : "Sent"}</h1><p>Sent to ${done.sent} subscriber${done.sent === 1 ? "" : "s"}${done.remaining ? `. The other ${done.remaining} go out within the next few minutes.` : "."}</p>`
+    : `<h1 style="font-size:24px">Send the ${esc(d)} recap?</h1><p>It goes to ${audience} subscriber${audience === 1 ? "" : "s"} of the daily recap. Each email is sent once, however many times you press this.</p>
+       <form method="post" action="/api/recap/approve"><input type="hidden" name="d" value="${esc(d)}"><input type="hidden" name="s" value="${esc(s)}">
+       <button style="font-size:16px;font-weight:700;background:#5fe3cf;color:#051416;border:0;border-radius:999px;padding:12px 22px;cursor:pointer">Send to subscribers</button></form>`;
+  return new Response(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frontier Wire recap</title>
+    <body style="font-family:Arial,sans-serif;background:#051416;color:#e9f5f3;display:grid;place-items:center;min-height:90vh;margin:0;padding:16px">
+    <div style="max-width:480px">${body}<p><a style="color:#5fe3cf" href="${env.SITE_URL}videos/">Frontier Wire recaps</a></p></div>`,
+  { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" } });
+}
+
 function page(env, title, text) {
   return new Response(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title>
     <body style="font-family:Arial,sans-serif;background:#051416;color:#e9f5f3;display:grid;place-items:center;min-height:90vh;margin:0;padding:16px">
@@ -431,6 +521,21 @@ export default {
         try { to = String((await req.json()).to || "").trim().toLowerCase(); } catch (e) { /* no body */ }
         return json(await testDigest(env, /^[^\s@<>"]{1,64}@[^\s@<>"]{1,190}\.[a-z]{2,}$/i.test(to) ? to : ""));
       }
+      if (url.pathname === "/api/recap/preview" && req.method === "POST") {
+        if (!env.DISPATCH_SECRET || req.headers.get("authorization") !== `Bearer ${env.DISPATCH_SECRET}`) return json({ error: "forbidden" }, 403);
+        const b = await req.json();
+        const to = String(b.to || "").trim().toLowerCase();
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(String(b.date || "")) || !/^[^\s@<>"]{1,64}@[^\s@<>"]{1,190}\.[a-z]{2,}$/i.test(to)) return json({ error: "date and to are required" }, 400);
+        return json(await recapPreview(env, b.date, to, !!b.force));
+      }
+      if (url.pathname === "/api/recap/approve") {
+        let d = url.searchParams.get("d"), s = url.searchParams.get("s");
+        if (req.method === "POST") { const f = await req.formData(); d = String(f.get("d") || ""); s = String(f.get("s") || ""); }
+        if (!(await validApproval(env, d, s))) return page(env, "Link not valid", "This approval link is not valid.");
+        if (req.method !== "POST") return approvePage(env, d, s, await recapAudience(env));  // a GET never sends (mail scanners open links)
+        await env.DB.prepare("INSERT OR REPLACE INTO meta (k, v) VALUES ('recap_approved', ?1)").bind(d).run();
+        return approvePage(env, d, s, 0, await sendRecap(env, d));
+      }
       if (url.pathname === "/api/health") return json({ ok: true }, 200, cors);
       return json({ error: "not found" }, 404, cors);
     } catch (e) {
@@ -442,6 +547,9 @@ export default {
       const row = await env.DB.prepare("SELECT v FROM meta WHERE k = 'api_url'").first();
       env.API_URL = row ? row.v : "";
     }
-    ctx.waitUntil(digests(env));
+    if (event.cron === DIGEST_CRON) { ctx.waitUntil(digests(env)); return; }
+    // every 10 minutes: finish sending an approved recap (only within two days of its date)
+    const row = await env.DB.prepare("SELECT v FROM meta WHERE k = 'recap_approved'").first();
+    if (row && Date.now() - Date.parse(row.v) < 2 * 86400000) ctx.waitUntil(sendRecap(env, row.v));
   },
 };

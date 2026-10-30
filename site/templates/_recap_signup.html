@@ -1,0 +1,32 @@
+{% if api_url %}
+<section class="recap-signup" id="recap-email" aria-labelledby="rs-h">
+  <div>
+    <h2 id="rs-h">Get the recap by email</h2>
+    <p>Every evening: the day's top five AI stories in 30 seconds, with a one-line take on each. Free. We'll email you to confirm, and every email has an unsubscribe link.</p>
+  </div>
+  <form class="nl-form" data-api="{{ api_url }}" novalidate>
+    <label class="sr" for="rs-email">Email address</label>
+    <input id="rs-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <button class="btn" type="submit" data-goatcounter-click="recap-signup">Subscribe</button>
+    <p class="rs-msg" role="status" aria-live="polite"></p>
+  </form>
+</section>
+<script>
+(function () {
+  var f = document.querySelector(".recap-signup form"); if (!f) return;
+  var msg = f.querySelector(".rs-msg"), btn = f.querySelector("button");
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var email = f.email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { msg.textContent = "Please enter a valid email."; return; }
+    btn.disabled = true; msg.textContent = "Sending…";
+    fetch(f.dataset.api.replace(/\/$/, "") + "/api/subscribe", { method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email, follows: ["recap"], labels: [{ key: "recap", label: "the daily 30-second recap" }], frequency: "daily", merge: true }) })
+      .then(function (r) { return r.json().then(function (j) { return [r.ok, j]; }); })
+      .then(function (x) { msg.textContent = x[0] ? "Check your inbox and click the link to confirm." : (x[1].error || "Something went wrong. Try again."); })
+      .catch(function () { msg.textContent = "Something went wrong. Try again in a minute."; })
+      .finally(function () { btn.disabled = false; });
+  });
+})();
+</script>
+{% endif %}

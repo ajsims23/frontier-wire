@@ -82,3 +82,12 @@ def test_feed_has_one_item_per_day_with_poster_and_link():
     assert items[0].getElementsByTagName("link")[0].firstChild.data == "https://x.github.io/fw/videos/2026-10-30/"
     assert "poster.jpg" in items[0].getElementsByTagName("enclosure")[0].getAttribute("url")
     assert "Read on Frontier Wire" in xml_text
+
+
+def test_latest_json_for_the_email_worker():
+    base = "https://x.github.io/fw/"
+    r = recap.site_view([_published()], NOW, base, "o/fw", {"s0"})[0]
+    j = recap.latest_json(r, base)
+    assert j["date"] == "2026-10-30" and j["gif_url"] == base + "videos/2026-10-30/teaser.gif"
+    assert j["entries"][0]["url"] == base + "story/s0/" and j["entries"][1]["url"] == ""
+    assert len(j["entries"]) == 5 and all(e["line"] and e["source"] for e in j["entries"])

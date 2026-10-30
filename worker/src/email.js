@@ -151,3 +151,61 @@ export function renderEmail({ site, api, events, briefing, unsub, kind, intro })
   </td></tr>
 </table></td></tr></table></body></html>`;
 }
+
+// ---------------------------------------------------------------- daily 30-second recap
+// recap: videos/latest.json from the site (date, human, hook, summary[3], page_url, gif_url, poster_url, seconds,
+// entries[{line, detail, source, url}]). approveUrl is set only on the preview sent to the editor.
+export function recapSubject(recap) {
+  const hook = String(recap.hook || "Today in AI");
+  return `Today in AI: ${hook.length > 70 ? hook.slice(0, 67).replace(/\s+\S*$/, "") + "…" : hook}`;
+}
+
+export function renderRecap({ site, api, recap, unsub, approveUrl, audience, intro }) {
+  const r = recap;
+  const watch = safeUrl(r.page_url) || esc(site);
+  const hero = safeUrl(r.gif_url) || safeUrl(r.poster_url);
+  const banner = approveUrl ? `<tr><td style="padding:0 0 22px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fff7e0;border:1px solid #f3d27a;border-radius:12px"><tr><td style="padding:16px 18px">
+      <p style="margin:0 0 6px;${FONT};font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#8a5a00">Preview: only you got this</p>
+      <p style="margin:0 0 12px;${FONT};font-size:15px;line-height:1.5;color:${INK}">This is exactly what ${audience === 1 ? "1 subscriber" : `${audience ?? "your"} subscribers`} will get. Nothing is sent until you approve.</p>
+      <a href="${esc(approveUrl)}" style="display:inline-block;background:#0f9c8a;color:#ffffff;${FONT};font-size:15px;font-weight:800;text-decoration:none;padding:12px 20px;border-radius:999px">Approve and send to subscribers</a>
+    </td></tr></table></td></tr>` : "";
+  const welcome = intro ? `<tr><td style="padding:0 0 18px"><p style="margin:0 0 6px;${FONT};font-size:20px;font-weight:800;color:${INK}">${esc(intro.title)}</p>
+      <p style="margin:0;${FONT};font-size:15px;line-height:1.6;color:${SOFT}">${esc(intro.text)}</p></td></tr>` : "";
+  const items = (r.entries || []).map((s, i) => `<tr><td style="padding:14px 0;border-top:1px solid ${LINE}">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td width="40" valign="top" style="${FONT};font-size:20px;font-weight:800;color:${TEAL}">${String(i + 1).padStart(2, "0")}</td>
+        <td valign="top">
+          ${safeUrl(s.url) ? `<a href="${esc(s.url)}" style="${FONT};font-size:17px;line-height:1.35;font-weight:800;color:${INK};text-decoration:none">${esc(s.line)}</a>`
+            : `<span style="${FONT};font-size:17px;line-height:1.35;font-weight:800;color:${INK}">${esc(s.line)}</span>`}
+          <p style="margin:6px 0 0;${FONT};font-size:15px;line-height:1.5;color:${SOFT}">${esc(s.detail)}</p>
+          <p style="margin:6px 0 0;${FONT};font-size:12px;color:${MUTED}">Source: ${esc(s.source)}</p>
+        </td></tr></table></td></tr>`).join("");
+  const summary = (r.summary || []).map((l) => `<li style="margin:0 0 6px">${esc(l)}</li>`).join("");
+  return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light only"><title>Frontier Wire</title></head>
+<body style="margin:0;padding:0;background:#eef1f5">
+<span style="display:none;max-height:0;overflow:hidden;opacity:0">${esc((r.summary || [])[0] || r.hook)}</span>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef1f5"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#ffffff;border-radius:16px;overflow:hidden">
+  <tr><td style="background:${DARK};padding:22px 24px">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+      <td style="${FONT};font-size:20px;font-weight:800;color:#ffffff;letter-spacing:-.01em"><span style="color:#5fe3cf">▌</span> Frontier Wire</td>
+      <td align="right" style="${FONT};font-size:12px;color:#84a6a1">Daily ${esc(r.seconds || 30)}-second recap<br>${esc(r.human || r.date)}</td>
+    </tr></table>
+  </td></tr>
+  <tr><td style="padding:24px 24px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+    ${banner}${welcome}
+    ${hero ? `<tr><td style="padding:0 0 10px"><a href="${watch}"><img src="${hero}" width="552" alt="Play today's ${esc(r.seconds || 30)}-second recap: ${esc(r.hook)}" style="display:block;width:100%;max-width:552px;height:auto;border:0;border-radius:12px;background:${DARK};color:#e9f5f3;${FONT};font-size:16px;font-weight:700;line-height:1.4"></a></td></tr>` : ""}
+    <tr><td style="padding:0 0 18px"><a href="${watch}" style="${FONT};font-size:14px;font-weight:800;color:${TEAL};text-decoration:none">▶ Watch the ${esc(r.seconds || 30)}-second recap</a></td></tr>
+    <tr><td style="padding:0 0 8px"><p style="margin:0;${FONT};font-size:24px;line-height:1.25;font-weight:800;color:${INK};letter-spacing:-.01em">${esc(r.hook)}</p></td></tr>
+    ${summary ? `<tr><td style="padding:6px 0 18px"><ul style="margin:0;padding-left:18px;${FONT};font-size:15px;line-height:1.5;color:${SOFT}">${summary}</ul></td></tr>` : ""}
+    <tr><td style="padding:4px 0 8px"><p style="margin:0;${FONT};font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:${INK}">Today's top five</p></td></tr>
+    ${items}
+    <tr><td align="center" style="padding:22px 0 26px">${button(site, "Read on Frontier Wire")}</td></tr>
+  </table></td></tr>
+  <tr><td style="padding:0 24px 24px;${FONT};font-size:12px;line-height:1.5;color:${MUTED}">
+    Every story on Frontier Wire is checked against official sources or two independent outlets by our newsroom agent. Headlines are written by us; original graphics, no third-party footage.
+    You get this because you signed up for the daily recap on <a href="${esc(site)}videos/" style="color:${MUTED}">Frontier Wire</a>.
+    ${unsub ? `<a href="${esc(api)}/api/unsubscribe?t=${esc(unsub)}" style="color:${MUTED}">Unsubscribe</a>.` : ""}
+  </td></tr>
+</table></td></tr></table></body></html>`;
+}

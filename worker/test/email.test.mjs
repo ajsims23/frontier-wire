@@ -42,3 +42,28 @@ test("welcome emails open with an introduction", () => {
   const html = renderEmail({ site, api: "x", events: events.slice(0, 1), kind: "welcome", intro: { title: "You're in.", text: "Following OpenAI." } });
   assert.ok(html.includes("You&#39;re in.") && html.includes("Following OpenAI.") && html.includes(">Welcome<"));
 });
+
+import { recapSubject, renderRecap } from "../src/email.js";
+
+const recap = {
+  date: "2026-10-30", human: "30 October 2026", hook: "Chip financing, a $15B buyout <b>", seconds: 30,
+  summary: ["One.", "Two.", "Three."], page_url: `${site}videos/2026-10-30/`, gif_url: `${site}videos/2026-10-30/teaser.gif`,
+  poster_url: `${site}videos/2026-10-30/poster.jpg`,
+  entries: [{ line: "Line one", detail: "Detail one", source: "Bloomberg", category: "industry", url: `${site}story/a/` },
+            { line: "Line two", detail: "Detail two", source: "Mistral AI", category: "models", url: "" }],
+};
+
+test("recap email: poster links to the video, five lines, button, unsubscribe; escaped", () => {
+  const html = renderRecap({ site, api: "https://api.example", recap, unsub: "tok" });
+  assert.ok(html.includes(`href="${site}videos/2026-10-30/"><img src="${site}videos/2026-10-30/teaser.gif"`));
+  assert.ok(html.includes("Line one") && html.includes("Source: Mistral AI") && html.includes(`href="${site}story/a/"`));
+  assert.ok(html.includes("Read on Frontier Wire") && html.includes("api.example/api/unsubscribe?t=tok"));
+  assert.ok(!html.includes("<b>") && html.includes("&lt;b&gt;"));
+  assert.ok(!html.includes("Approve and send"));
+  assert.equal(recapSubject(recap), "Today in AI: Chip financing, a $15B buyout <b>");
+});
+
+test("recap preview carries the approve button and no unsubscribe link", () => {
+  const html = renderRecap({ site, api: "https://api.example", recap, approveUrl: "https://api.example/api/recap/approve?d=2026-10-30&s=ab", audience: 3 });
+  assert.ok(html.includes("Approve and send to subscribers") && html.includes("3 subscribers") && !html.includes("/api/unsubscribe"));
+});

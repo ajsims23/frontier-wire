@@ -59,3 +59,19 @@ test("question words are dropped before searching the news", () => {
   assert.equal(searchTerms("what's going on with tesla?"), "tesla");
   assert.equal(searchTerms("Latest news about OpenAI GPT-7"), "openai gpt-7");
 });
+
+import { mergeFollows, signRecap } from "../src/index.js";
+
+test("recap approval links are signed per date", async () => {
+  const a = await signRecap("secret", "2026-10-30");
+  assert.match(a, /^[0-9a-f]{32}$/);
+  assert.equal(a, await signRecap("secret", "2026-10-30"));
+  assert.notEqual(a, await signRecap("secret", "2026-10-31"));
+  assert.notEqual(a, await signRecap("other", "2026-10-30"));
+});
+
+test("signing up for the recap adds to what a subscriber already follows", () => {
+  const m = mergeFollows(["lab:OpenAI", "deals"], { "lab:OpenAI": "OpenAI" }, ["recap"], { recap: "the daily recap" });
+  assert.deepEqual(m.follows, ["lab:OpenAI", "deals", "recap"]);
+  assert.deepEqual(m.labels, { "lab:OpenAI": "OpenAI", recap: "the daily recap" });
+});

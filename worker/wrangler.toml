@@ -14,4 +14,4 @@ database_name = "frontier-wire"
 database_id = "REPLACED_IN_CI"
 
 [triggers]
-crons = ["20 3 * * *"]   # daily digests at 08:50 IST
+crons = ["20 3 * * *", "*/10 * * * *"]   # daily digests at 08:50 IST; finish sending an approved recap
