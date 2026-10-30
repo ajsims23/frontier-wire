@@ -421,19 +421,41 @@ def asset_url(repo: str, date: str, name: str) -> str:
     return f"https://github.com/{repo}/releases/download/{tag(date)}/{name}"
 
 
+MIME = {"recap.mp4": "video/mp4", "poster.jpg": "image/jpeg", "teaser.gif": "image/gif"}
+
+
+def _gh(*args: str, inp: str | None = None) -> Any:
+    """GitHub REST API through the gh CLI (works in Claude sessions and in Actions)."""
+    cmd = ["gh", "api", *args] + (["--input", inp] if inp else [])
+    res = subprocess.run(cmd, capture_output=True, text=True)
+    if res.returncode != 0:
+        raise RuntimeError(f"gh api {' '.join(args[:3])}: {(res.stdout + res.stderr).strip()[:300]}")
+    return json.loads(res.stdout) if res.stdout.strip() else None
+
+
 def publish(script: dict[str, Any], out_dir: Path, repo: str, now: datetime) -> dict[str, Any]:
-    """Upload the rendered files as a GitHub Release (one per day) and stamp the script as published."""
+    """Upload the rendered files as a GitHub Release (one per day) and stamp the script as published.
+    Safe to re-run: an existing release for the day is reused and its files replaced."""
     info = check(out_dir)
     if not info["ok"]:
         raise RuntimeError("not publishing: " + "; ".join(info["problems"]))
-    files = [str(out_dir / a) for a in ASSETS]
     t = tag(script["date"])
-    exists = subprocess.run(["gh", "release", "view", t, "--repo", repo], capture_output=True).returncode == 0
-    if exists:
-        _run(["gh", "release", "upload", t, *files, "--repo", repo, "--clobber"])
-    else:
-        _run(["gh", "release", "create", t, *files, "--repo", repo, "--target", "main",
-              "--title", f"Frontier Wire recap, {_human(script['date'])}", "--notes", script["hook"], "--latest=false"])
+    try:
+        rel = _gh(f"repos/{repo}/releases/tags/{t}")
+    except RuntimeError as exc:
+        if "Not Found" not in str(exc) and "404" not in str(exc):
+            raise
+        rel = _gh("--method", "POST", f"repos/{repo}/releases", "-f", f"tag_name={t}", "-f", "target_commitish=main",
+                  "-f", f"name=Frontier Wire recap, {_human(script['date'])}", "-f", f"body={script['hook']}", "-f", "make_latest=false")
+    existing = {a["name"]: a["id"] for a in _gh(f"repos/{repo}/releases/{rel['id']}/assets")}
+    for name in ASSETS:
+        if name in existing:
+            _gh("--method", "DELETE", f"repos/{repo}/releases/assets/{existing[name]}")
+        _gh("--method", "POST", "-H", f"Content-Type: {MIME[name]}",
+            f"https://uploads.github.com/repos/{repo}/releases/{rel['id']}/assets?name={name}", inp=str(out_dir / name))
+    names = {a["name"] for a in _gh(f"repos/{repo}/releases/{rel['id']}/assets")}
+    if not set(ASSETS) <= names:
+        raise RuntimeError(f"release {t} is missing {sorted(set(ASSETS) - names)}")
     script["video"] = {k: info[k] for k in ("duration", "bytes")}
     script["published_at"] = script.get("published_at") or now.isoformat()
     return script
