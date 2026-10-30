@@ -1234,3 +1234,12 @@ body { font-family: var(--sans); }
 .recap-grid { list-style: none; padding: 0; margin: 0 0 48px; }
 .recap-tile { display: grid; place-items: center; font-size: 22px; font-weight: 800; color: var(--soft); }
 @media (max-width: 640px) { .recap-strip .vinline { align-items: flex-start; } }
+.recap-links { display: flex; flex-direction: column; gap: 8px; flex: none; }
+@media (max-width: 640px) { .recap-links { flex-direction: row; gap: 18px; } }
+.recap-signup { display: grid; grid-template-columns: 1fr minmax(280px, 420px); gap: 20px 32px; align-items: center; margin: 36px 0 44px; padding: 24px; border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--panel); max-width: 1100px; }
+.recap-signup h2 { margin: 0 0 6px; font-size: 1.35rem; }
+.recap-signup p { margin: 0; color: var(--soft); }
+.recap-signup .nl-form { display: flex; flex-wrap: wrap; gap: 10px; }
+.recap-signup input { flex: 1; min-width: 200px; }
+.recap-signup .rs-msg { flex-basis: 100%; font-size: 14px; color: var(--brand); min-height: 1.2em; }
+@media (max-width: 760px) { .recap-signup { grid-template-columns: 1fr; } }

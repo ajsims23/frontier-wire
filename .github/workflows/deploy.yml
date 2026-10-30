@@ -62,3 +62,26 @@ jobs:
           path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
+
+      # Today's recap: once the site serves it, email the editor a preview with an "Approve and send" button.
+      # The worker sends one preview per day, however many times this runs. Needs the RECAP_REVIEWER_EMAIL secret.
+      - name: Email the recap preview
+        if: hashFiles('_site/videos/latest.json') != ''
+        env:
+          SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
+          TO: ${{ secrets.RECAP_REVIEWER_EMAIL }}
+          PAGE: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          date=$(jq -r .date _site/videos/latest.json)
+          [ "$date" = "$(TZ=Asia/Kolkata date +%F)" ] || { echo "Latest recap is $date, not today; nothing to preview."; exit 0; }
+          if [ -z "$TO" ] || [ -z "$SECRET" ]; then echo "::notice::Add the RECAP_REVIEWER_EMAIL secret to get recap previews by email."; exit 0; fi
+          for i in $(seq 1 20); do   # wait until the live site serves today's recap
+            live=$(curl -s -m 20 "${PAGE}videos/latest.json?t=$(date +%s)" | jq -r .date 2>/dev/null || true)
+            [ "$live" = "$date" ] && break; sleep 15
+          done
+          [ "$live" = "$date" ] || { echo "::warning::the site isn't serving the $date recap yet; the next deploy will retry"; exit 0; }
+          api=$(cat config/api_url.txt)
+          body=$(jq -nc --arg d "$date" --arg to "$TO" '{date: $d, to: $to}')
+          res=$(curl -s -m 60 -X POST -H "Authorization: Bearer $SECRET" -H "Content-Type: application/json" -d "$body" "$api/api/recap/preview")
+          echo "$res" | sed 's/"to":"[^"]*"/"to":"[hidden]"/'
+          echo "$res" | jq -e '.sent == 1 or .skipped' >/dev/null || echo "::warning::recap preview not sent: $res"

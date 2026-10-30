@@ -530,14 +530,24 @@ def feed(rows: list[dict[str, Any]], base: str) -> str:
             + "".join(item(r) for r in rows[:30]) + "</channel></rss>\n")
 
 
+def latest_json(r: dict[str, Any], base: str) -> dict[str, Any]:
+    """What the email worker needs to write the recap email (read from videos/latest.json)."""
+    return {"date": r["date"], "human": r["human"], "hook": r["hook"], "summary": r["summary"], "seconds": r["seconds"],
+            "page_url": r["page_url"], "poster_url": r["poster_url"], "gif_url": r["gif_url"],
+            "entries": [{"line": s["line"], "detail": s["detail"], "source": s["source"], "category": s["category"],
+                         "url": base + s["href"] if s["href"] else ""} for s in r["entries"]]}
+
+
 def build_site(out: Path, env: Any, common: dict[str, Any], base: str, repo: str, data_dir: Path, now: datetime,
-               story_ids: set[str], urls: list[str]) -> str:
+               story_ids: set[str], urls: list[str], api_url: str = "") -> str:
     """Write /videos/, one page per recap and /videos/feed.xml. Returns the home-page strip (empty if no live recap).
     Also writes videos/assets.txt: the Release files the deploy workflow downloads into the site."""
     rows = site_view(load_published(data_dir), now, base, repo, story_ids)
     vdir = out / "videos"
     vdir.mkdir(parents=True, exist_ok=True)
     (vdir / "feed.xml").write_text(feed(rows, base))
+    if rows:
+        (vdir / "latest.json").write_text(json.dumps(latest_json(rows[0], base), ensure_ascii=False))
     need = []
     for r in rows:
         if r["images"]:
@@ -546,13 +556,13 @@ def build_site(out: Path, env: Any, common: dict[str, Any], base: str, repo: str
         page.parent.mkdir(parents=True, exist_ok=True)
         og = r["poster_url"]
         page.write_text(env.get_template("recap.html").render(
-            **common, r=r, root="../../", title=f"Today in AI, {r['human']}: {r['hook']} | Frontier Wire",
+            **common, r=r, root="../../", api_url=api_url, title=f"Today in AI, {r['human']}: {r['hook']} | Frontier Wire",
             og_title=f"Today in AI, {r['human']}", description=" ".join(r["summary"])[:300], canonical=r["page_url"],
             og_image=og, og_type="video.other"))
         urls.append(r["page_url"])
     (vdir / "assets.txt").write_text("\n".join(need) + ("\n" if need else ""))
     (vdir / "index.html").write_text(env.get_template("videos.html").render(
-        **common, rows=rows, root="../", title="Daily recaps: today in AI in 30 seconds | Frontier Wire",
+        **common, rows=rows, root="../", api_url=api_url, title="Daily recaps: today in AI in 30 seconds | Frontier Wire",
         description="Every evening, the day's top five AI stories in a 30-second video, each checked against its sources.",
         canonical=f"{base}videos/", og_image=rows[0]["poster_url"] if rows else f"{base}og/home.png"))
     urls.append(f"{base}videos/")
