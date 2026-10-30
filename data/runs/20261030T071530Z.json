@@ -1,0 +1,423 @@
+{
+  "started_at": "2026-10-30T07:15:30+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1337)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (894)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (16)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (18)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Elucidating the Design Space of LM Data Attribution",
+      "reason": "score 4: Analysis of LM data attribution methods is incremental and lacks a breakthrough result."
+    },
+    {
+      "title": "Rethinking Neural Thickets Without Weight Perturbations",
+      "reason": "score 4: Re‑evaluation of neural thickets does not present a novel advance."
+    },
+    {
+      "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
+      "reason": "score 4: Tokenization improvement for pixel‑space transformers is incremental."
+    },
+    {
+      "title": "Adaptive Scenario Generation for KL-DRO Around a Learned Density Model",
+      "reason": "score 4: Robust optimization method for distributionally robust optimization is incremental and not a major advance."
+    },
+    {
+      "title": "Luggage re-identification: A study of strategies towards a real-world application",
+      "reason": "score 3: Application‑focused luggage re‑identification study is not frontier AI news."
+    },
+    {
+      "title": "From extreme weather to agricultural consequences with agentic AI",
+      "reason": "score 5: Agentic AI for agriculture is an interesting niche but not a major breakthrough."
+    },
+    {
+      "title": "world2vec: Mechanistic world models through latent dynamics learning",
+      "reason": "score 5: Mechanistic world‑model work is interesting but remains incremental for construction‑AI applications."
+    },
+    {
+      "title": "Probing Spatial State Representations in Visual Foundation Models",
+      "reason": "score 4: Probing spatial representations in visual models is incremental."
+    },
+    {
+      "title": "Testimony from Timelines: Evidence-Grounded Significance Testing of Temporal Clinical Hypotheses",
+      "reason": "score 4: Temporal clinical hypothesis testing via LLMs is a niche application without major impact."
+    },
+    {
+      "title": "An ODE-based Sampler for Discrete Diffusion Models",
+      "reason": "score 4: ODE‑based sampler for discrete diffusion models is a technical refinement."
+    },
+    {
+      "title": "Difficulty Calibration Across Time for Membership Inference in Diffusion Models",
+      "reason": "score 4: Membership inference calibration for diffusion models is incremental."
+    },
+    {
+      "title": "When to Assist and What to Suggest: Joint Gating and Memory-Grounded Hint Generation in One Compact Decoder",
+      "reason": "score 4: Joint gating and hint generation improves assistants modestly."
+    },
+    {
+      "title": "Collaborative AI agents for autonomous experimental research with solid-state quantum spins",
+      "reason": "score 5: Collaborative AI agents for quantum experiments are promising but still early‑stage."
+    },
+    {
+      "title": "Pre-Crime for Agents, at the Last Second: Probing When a Recruited Agent Gives In",
+      "reason": "score 5: Pre‑crime probing of agent collusion is an interesting safety angle but not a breakthrough."
+    },
+    {
+      "title": "Multistatic ISAC with Deep Learning-Based Clutter Suppression for 5G and Beyond",
+      "reason": "score 3: Multistatic ISAC with deep‑learning clutter suppression is a communications application, not core AI news."
+    },
+    {
+      "title": "VeriCUA: Verification as Agentic Exploration for Computer-Using Agents",
+      "reason": "score 5: Verification for computer‑using agents is a useful safety tool but not a major advance."
+    },
+    {
+      "title": "Multi-View MoE: Letting Every Router Shape Expert Computation",
+      "reason": "score 4: Multi‑View MoE analysis is incremental."
+    },
+    {
+      "title": "PIVOT: Progressive Intervention via Online Teacher Correction",
+      "reason": "score 4: Progressive intervention via online teacher correction is a modest RL contribution."
+    },
+    {
+      "title": "Every Token Needs Its Own Teacher: Multi-teacher Adaptive On-policy Self-distillation",
+      "reason": "score 4: Multi‑teacher adaptive self‑distillation is incremental."
+    },
+    {
+      "title": "Gym-Anything for Robotics: Scaling physical simulations with digital agents",
+      "reason": "score 4: Gym‑Anything for robotics scaling simulations is a useful tool but not a frontier breakthrough."
+    },
+    {
+      "title": "Comparing Human Role-Players and LLM-Simulated Clients in Online Counselling Training: An Analysis of Counselling Patterns",
+      "reason": "score 3: Study of LLM‑simulated counselling clients is peripheral to core AI developments."
+    },
+    {
+      "title": "FARMS: A Verifiable Foundation for Automated Computational Science",
+      "reason": "score 5: FARMS proposes a verifiable foundation for automated computational science, an interesting but early‑stage effort."
+    },
+    {
+      "title": "Advancing Clinical Genomic Analysis with a Skill-Centred Agent",
+      "reason": "score 5: Skill‑centred agent for clinical genomics is a notable application but not a major model release."
+    },
+    {
+      "title": "Ramanujan Challenge Results: AI-Assisted Evaluation Pipeline for Multi-Format Proofs",
+      "reason": "score 5: AI‑assisted evaluation pipeline for Ramanujan Challenge is a useful benchmark, not a breakthrough."
+    },
+    {
+      "title": "Retrieval as Traversal: Value-Indexed Memory for Stateful Long-Context Agents",
+      "reason": "score 4: Retrieval as traversal for long‑context agents is a technical refinement."
+    },
+    {
+      "title": "Machine Learning-Based Detection of Mobile Money Scan Messages in Ghana: A Comparative Evaluation of Naive Bayes, Support Vector Machine, and Randon Forest Classifiers",
+      "reason": "score 3: Mobile money fraud detection in Ghana is a regional application, not core AI news."
+    },
+    {
+      "title": "On the Fundamental Limits of Prefill-Based Decoding Length Prediction",
+      "reason": "score 4: Prefill‑based decoding length prediction analysis is incremental."
+    },
+    {
+      "title": "TRACER, a time-to-event EHR foundation model for disease detection across health systems",
+      "reason": "score 5: TRACER time‑to‑event EHR model is a promising health application but not a frontier breakthrough."
+    },
+    {
+      "title": "Efficient Scalable Oversight via Rewinding",
+      "reason": "score 5: Efficient scalable oversight via rewinding offers a novel safety approach, notable but not yet a major advance."
+    },
+    {
+      "title": "Homebrewed SLMs: Autoregressive and Masked Diffusion Language Models Built at Home for Portuguese",
+      "reason": "score 2: Homebrewed SLMs tutorial for Portuguese is a how‑to piece, not news."
+    },
+    {
+      "title": "BURGER: Benchmarking and Understanding Robotic Generalization via Embodied Drawing",
+      "reason": "score 4: BURGER benchmark for robotic generalization is useful but not a breakthrough."
+    },
+    {
+      "title": "NEOPIC: A Neural Operator Framework for Particle-based Kinetic Plasma Simulations",
+      "reason": "score 3: Neural operator framework for plasma simulations is domain‑specific, not core AI news."
+    },
+    {
+      "title": "IndicIPR-QA: A Benchmark for Extractive Question Answering on Indian IPR Laws",
+      "reason": "score 3: IndicIPR‑QA benchmark for Indian legal QA is a niche application, not core AI."
+    },
+    {
+      "title": "How I Aligned Your Model: Scaling Up Multilingual Safety Training with Templates",
+      "reason": "score 5: Multilingual safety training scaling with templates addresses an important gap in low‑resource languages."
+    },
+    {
+      "title": "A Low-Rank Space Captures Linear Alignment Between LLM and Human Neural Activity During Naturalistic Language Listening",
+      "reason": "score 4: Low‑rank space aligning LLM and human neural activity is an interesting neuroscience study, not a major AI advance."
+    },
+    {
+      "title": "Discovering Interpretable Acoustic Features in Autoregressive Voice-Cloning TTS Models",
+      "reason": "score 4: Interpretable acoustic features in voice‑cloning TTS models is incremental."
+    },
+    {
+      "title": "Intrinsic Distribution Matching",
+      "reason": "score 4: Intrinsic Distribution Matching paper is a modest contribution to diffusion generation."
+    },
+    {
+      "title": "Pico CSS is no longer maintained",
+      "reason": "not AI: GitHub notice about CSS library maintenance is unrelated to AI."
+    },
+    {
+      "title": "Herdr has released native app",
+      "reason": "not AI: GitHub notice about a native app release is unrelated to AI."
+    },
+    {
+      "title": "Pine Labs Q2: Profit grows sixfold to Rs 39 cr, revenue up 24%",
+      "reason": "not AI: Financial results of Indian payments firm; no AI relevance."
+    },
+    {
+      "title": "Indus Appstore becomes PhonePe Appstore: What’s new for users?",
+      "reason": "not AI: Rebranding of an Indian app store; not AI‑related."
+    },
+    {
+      "title": "SC says RBI rules must make banks fully compensate digital arrest victims if banks fail due diligence",
+      "reason": "not AI: Indian court ruling on bank liability for digital arrests; no AI component."
+    },
+    {
+      "title": "Shubman Gill joins Temple wearable users: What Deepinder Goyal's ₹85,000 device can track",
+      "reason": "score 4: Wearable device with AI‑based fitness tracking; interesting but not a major AI development."
+    },
+    {
+      "title": "Polymarket paused international trading after a security issue involving a third-party provider",
+      "reason": "not AI: Polymarket trading pause due to security issue; no AI relevance."
+    },
+    {
+      "title": "Blockchain analysis firm TRM says North Korea behind Binance crypto theft",
+      "reason": "not AI: Attribution of Binance hack to North Korea; no AI component."
+    },
+    {
+      "title": "Salesforce to buy defense tech firm Rune in military business push",
+      "reason": "not AI: Salesforce acquisition of defense‑tech firm; not AI‑focused."
+    },
+    {
+      "title": "Omio founder’s advice to entrepreneurs: Find a problem worth solving and stick with it",
+      "reason": "not AI: General entrepreneurship advice; no AI angle."
+    },
+    {
+      "title": "Pixxel deepens US push with dedicated federal subsidiary",
+      "reason": "score 5: Indian satellite firm expanding US government work; AI mentioned only as part of broader remote‑sensing tech."
+    },
+    {
+      "title": "Hero MotoCorp to increase EV capacity to 80,000 units per month by Q2 FY28",
+      "reason": "not AI: Hero MotoCorp EV capacity increase; unrelated to AI."
+    },
+    {
+      "title": "Too much code, too little shipped: Why AI needs a software factory",
+      "reason": "score 4: Commentary on AI agents for software development; interesting but below the significance threshold."
+    },
+    {
+      "title": "How Stelcore helps brands go global without building everything from scratch",
+      "reason": "not AI: Company profile on global branding services; not AI‑focused."
+    },
+    {
+      "title": "TRM Labs attributes the Binance hack to North Korea-based TraderTraitor, which drained ~$6.36B from Binance wallets across 10 blockchains, mostly in ~20 minutes (Tom Westbrook/Reuters)",
+      "reason": "not AI: Binance hack attribution is a crypto security story, not AI."
+    },
+    {
+      "title": "Binance pledges to cover all losses from a ~$6.3B hack, potentially the largest crypto theft ever, surpassing the $1.5B Bybit hack in February 2025 (South China Morning Post)",
+      "reason": "not AI: Crypto theft unrelated to AI; not relevant for Frontier Wire audience."
+    },
+    {
+      "title": "TextSeal2: Distortion-Free LLM Watermarking with Copula Mixing and Memoryless Races",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "Training Foundation Models with a Single Algorithm",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "How a wave of startups are betting on AI to make formal software verification practical and essential, including &Truth, which launches with a $70M seed (Paresh Dave/Wired)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Sources: DeepSeek doubled its latest round's size due to surging black market Nvidia Blackwell chip prices, with Chinese state-owned investors representing 27% (The Information)",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "D2C brands don't need an AI team to get discovered and grow, says Shopflo",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "76ef0f5ad48b",
+      "headline": "New propose-filter-release method scales noise to typical sensitivity in DP",
+      "category": "research",
+      "summary": "The paper introduces propose-filter-release (PFR), a technique that privately filters input to reduce noise scaling in differentially private mechanisms. It uses a concave friendliness score and a friendly-DP release mechanism, and is illustrated on tasks such as scalar statistics, principal subspace estimation, and graph effective resistances.",
+      "url": "https://arxiv.org/abs/2610.40654",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "9757fdd24077",
+      "headline": "ShallowDefend framework improves multi‑turn safety for large language models",
+      "category": "safety",
+      "summary": "Researchers introduced ShallowDefend, a framework that lets a language model first assess user intent, commit to an explicit safety decision, and then generate a response. In tests across two model families and fourteen benchmarks, the approach achieved the strongest multi‑turn safety while keeping utility high and only modestly reducing helpfulness.",
+      "url": "https://arxiv.org/abs/2610.40627",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "9b56a67d6f75",
+      "headline": "Nvidia commits $3 billion to Meta share sale and expands AI infrastructure partnership",
+      "category": "industry",
+      "summary": "Nvidia announced a $3 billion investment in Meta’s equity offering and said the deal will broaden collaboration on Meta’s Muse AI models and the use of Nvidia hardware in Meta data centers. The move adds to Nvidia’s portfolio of stakes, loans and guarantees across the AI ecosystem.",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/nvidias-web-of-ai-bets-smart-strategy-or-bubble-risk/articleshow/135343465.cms",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "1c92e42e4bf8",
+      "headline": "China‑linked hackers used DeepSeek AI via ARTEX to breach 200+ firms in 11 days",
+      "category": "safety",
+      "summary": "Chinese state‑linked hackers employed the open‑source ARTEX framework running on the DeepSeek large language model to target more than 200 organizations in at least 14 countries over 11 days, compromising at least nine and attempting attacks on many others.",
+      "url": "https://techmeme.com/261030/p1",
+      "sources": 3,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "not India desk: 'Nvidia's web of AI bets: smart strategy or bubble '",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "2 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 81.0,
+    "audit": 0.0,
+    "plan": 1.9,
+    "judge": 24.6,
+    "verify and write": 462.9,
+    "videos": 22.5,
+    "tagging": 43.3,
+    "explainers": -0.0,
+    "trackers": 84.0,
+    "claims": 20.9,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 20.9,
+    "self-review": -0.0,
+    "photos": 0.7,
+    "stock photos": 16.2,
+    "daily email": 0.0,
+    "alerts": 6.1
+  },
+  "fetched": 2906,
+  "fresh": 66,
+  "plan": {
+    "focus": "Cover the surge of new AI research papers while tracking the fallout from the Binance hack and China export controls.",
+    "priorities": [
+      "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Priva (Privacy‑focused scaling paper relevant to data‑handling regulations for builders and investors)",
+      "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defe (Safety‑alignment work that informs product risk and compliance strategies)",
+      "TextSeal2: Distortion-Free LLM Watermarking with Copula Mixing and Mem (Watermarking technique important for IP protection and model provenance)",
+      "world2vec: Mechanistic world models through latent dynamics learning (Mechanistic world‑model research linking to construction‑AI applications)",
+      "Adaptive Scenario Generation for KL-DRO Around a Learned Density Model (Robust optimization method useful for risk‑aware AI deployments)"
+    ],
+    "thin_areas": [
+      "research"
+    ],
+    "searches": [
+      "China AI export controls 2026: 0 new",
+      "Binance hack North Korea response: 0 new",
+      "AI safety alignment benchmarks 2026: 0 new"
+    ],
+    "dig_deeper": [
+      "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Priva",
+      "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defe"
+    ]
+  },
+  "judged": 66,
+  "kept": 9,
+  "research": {
+    "investigated": 5,
+    "confirmed": 2,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Priva: unconfirmed (searched “\"Propose-Filter-Release\"”; searched “\"propose filter\" private filtering”; searched “\"Scaling Noise to Typical Sensitivity via Private Filtering\"”)",
+    "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defe: unconfirmed (searched “ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender”; searched “ShallowDefend”; searched “\"Shallow Safety Alignment\"”)",
+    "Nvidia's web of AI bets: smart strategy or bubble risk?: confirmed (searched “Nvidia $3 billion investment in Meta share sale Tuesday”; read yahoo.com; read msn.com)",
+    "CrowdStrike: China-linked hackers used AI tool ARTEX with a DeepSeek L: confirmed (searched “CrowdStrike China-linked hackers AI tool ARTEX DeepSeek LLM 200 organizations 11 days”; read nbcnews.com; read hngn.com)",
+    "How a wave of startups are betting on AI to make formal software verif: unconfirmed (searched “\"&Truth\" startup AI formal verification $70M seed”; read unite.ai; searched “\"&Truth\" seed funding $70 million”)"
+  ],
+  "threads": [
+    "Chinese hackers using AI tools: China‑linked hackers used DeepSeek AI via ARTEX to breach 20"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (9 in feed, 0 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 1 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 1 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "4 kept from 5 new",
+  "tagged": 1,
+  "trackers": "filed 4 stories; updated us-china, agent-safety, ai-infrastructure",
+  "claims": "52 tracked, 51 open, 2 updated this run",
+  "model_tracker": "82 models, 25 changes today",
+  "briefing": "4 themes from 17 stories",
+  "photos": "3 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "35 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":35}",
+  "ai_requests_run": 39,
+  "ai_tokens_run": 106678,
+  "ai_requests_today": 114,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
+}

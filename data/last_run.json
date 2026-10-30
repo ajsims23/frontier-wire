@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-30T04:00:41+00:00",
+  "started_at": "2026-10-30T07:15:30+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -17,9 +17,9 @@
     "microsoft-ai": "ok (10)",
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
-    "arxiv": "failed: ReadTimeout: The read operation timed out",
-    "hf-papers": "ok (14)",
-    "gdelt": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (16)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
     "hn": "ok (18)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
@@ -31,7 +31,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -41,254 +41,383 @@
   },
   "dropped": [
     {
-      "title": "The importance of communities around software",
-      "reason": "not AI: General discussion of software communities; no AI focus."
+      "title": "Elucidating the Design Space of LM Data Attribution",
+      "reason": "score 4: Analysis of LM data attribution methods is incremental and lacks a breakthrough result."
     },
     {
-      "title": "Show HN: Auto Dismiss Mac OS \"Allow <app> to find devices on local networks?\"",
-      "reason": "not AI: Hacker News post about macOS network prompt; unrelated to AI."
+      "title": "Rethinking Neural Thickets Without Weight Perturbations",
+      "reason": "score 4: Re‑evaluation of neural thickets does not present a novel advance."
     },
     {
-      "title": "You don’t need to believe in a god to get a religious exemption from using AI at work",
-      "reason": "score 4: Religious exemption from AI use at work; peripheral policy issue, not core AI news."
+      "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
+      "reason": "score 4: Tokenization improvement for pixel‑space transformers is incremental."
     },
     {
-      "title": "Pine Labs Hits New High, Ace Blend Bags $9.9 Mn & More",
-      "reason": "not AI: Pine Labs profit report; unrelated to AI."
+      "title": "Adaptive Scenario Generation for KL-DRO Around a Learned Density Model",
+      "reason": "score 4: Robust optimization method for distributionally robust optimization is incremental and not a major advance."
     },
     {
-      "title": "Exclusive: Smylo In Talks To Raise ₹30 Cr To Expand Cat Food Portfolio",
-      "reason": "not AI: Cat‑food startup fundraising; not AI."
+      "title": "Luggage re-identification: A study of strategies towards a real-world application",
+      "reason": "score 3: Application‑focused luggage re‑identification study is not frontier AI news."
     },
     {
-      "title": "Nasscom Seeks Deferment Of New GST Rules For Ecommerce Deliveries To Jan 2027",
-      "reason": "not AI: Nasscom GST rule deferment; not AI."
+      "title": "From extreme weather to agricultural consequences with agentic AI",
+      "reason": "score 5: Agentic AI for agriculture is an interesting niche but not a major breakthrough."
     },
     {
-      "title": "Amazon Prime Video on track to generate tens of billions in revenue, Andy Jassy confirms",
-      "reason": "not AI: Amazon Prime Video revenue story; no AI focus."
+      "title": "world2vec: Mechanistic world models through latent dynamics learning",
+      "reason": "score 5: Mechanistic world‑model work is interesting but remains incremental for construction‑AI applications."
     },
     {
-      "title": "Rivian says it's on track for $250 million Uber funding by year-end, R2 demand strong",
-      "reason": "not AI: Rivian funding for Uber/self‑driving; not AI‑centric."
+      "title": "Probing Spatial State Representations in Visual Foundation Models",
+      "reason": "score 4: Probing spatial representations in visual models is incremental."
     },
     {
-      "title": "Nvidia in talks to give credit support for Nscale's deal with Anthropic",
-      "reason": "score 6: Duplicate of Nvidia credit‑support story for Anthropic data centre."
+      "title": "Testimony from Timelines: Evidence-Grounded Significance Testing of Temporal Clinical Hypotheses",
+      "reason": "score 4: Temporal clinical hypothesis testing via LLMs is a niche application without major impact."
     },
     {
-      "title": "Tech firms take fresh hit as earnings misses fan AI fears",
-      "reason": "score 3: Tech earnings miss fueling AI investment concerns; peripheral market commentary."
+      "title": "An ODE-based Sampler for Discrete Diffusion Models",
+      "reason": "score 4: ODE‑based sampler for discrete diffusion models is a technical refinement."
     },
     {
-      "title": "Reddit posts search traffic declines, will push visitor sign-ins to curb data scraping",
-      "reason": "not AI: Reddit traffic changes; no AI angle."
+      "title": "Difficulty Calibration Across Time for Membership Inference in Diffusion Models",
+      "reason": "score 4: Membership inference calibration for diffusion models is incremental."
     },
     {
-      "title": "Amazon projects fourth quarter sales below estimates",
-      "reason": "not AI: Amazon sales forecast; not AI."
+      "title": "When to Assist and What to Suggest: Joint Gating and Memory-Grounded Hint Generation in One Compact Decoder",
+      "reason": "score 4: Joint gating and hint generation improves assistants modestly."
     },
     {
-      "title": "Bitcoin, cryptocurrency prices fall after Binance reports security issue",
-      "reason": "not AI: Cryptocurrency price movement after Binance issue; not AI."
+      "title": "Collaborative AI agents for autonomous experimental research with solid-state quantum spins",
+      "reason": "score 5: Collaborative AI agents for quantum experiments are promising but still early‑stage."
     },
     {
-      "title": "Rising tech costs drive EMI sales; Shadowfax Q2 profit soars",
-      "reason": "not AI: EMI sales driven by tech costs; unrelated to AI."
+      "title": "Pre-Crime for Agents, at the Last Second: Probing When a Recruited Agent Gives In",
+      "reason": "score 5: Pre‑crime probing of agent collusion is an interesting safety angle but not a breakthrough."
     },
     {
-      "title": "Pine Labs Q2 net profit soars 6.5x; Cognizant trims 2026 growth outlook",
-      "reason": "not AI: Pine Labs profit and Cognizant outlook; no AI relevance."
+      "title": "Multistatic ISAC with Deep Learning-Based Clutter Suppression for 5G and Beyond",
+      "reason": "score 3: Multistatic ISAC with deep‑learning clutter suppression is a communications application, not core AI news."
     },
     {
-      "title": "Ethan Mollick: I had Opus build a game that takes JIRA tickets from any of your real projects & converts them into dramatic audiologs that are the plot…",
-      "reason": "score 5: Creator demo using Opus to generate game audiologs; interesting but incremental and not major news."
+      "title": "VeriCUA: Verification as Agentic Exploration for Computer-Using Agents",
+      "reason": "score 5: Verification for computer‑using agents is a useful safety tool but not a major advance."
     },
     {
-      "title": "NYSE owner ICE plans US-regulated Hyperliquid-based perpetual markets with Trade.xyz, a market operator on the crypto platform, and takes a stake in Trade.xyz (Katherine Doherty/Bloomberg)",
-      "reason": "not AI: Crypto market infrastructure news; no AI angle."
+      "title": "Multi-View MoE: Letting Every Router Shape Expert Computation",
+      "reason": "score 4: Multi‑View MoE analysis is incremental."
     },
     {
-      "title": "Binance \"temporarily suspended\" all deposits and withdrawals as it investigates security issues and works with law enforcement; Binance.US says it's unaffected (George Steer/Financial Times)",
-      "reason": "not AI: Binance security issue; unrelated to AI."
+      "title": "PIVOT: Progressive Intervention via Online Teacher Correction",
+      "reason": "score 4: Progressive intervention via online teacher correction is a modest RL contribution."
     },
     {
-      "title": "Meta quietly launches Style Sketch, an AI fashion app that helps users put together outfit ideas using clothes they own, in Indonesia, Singapore, and Thailand (Aisha Malik/TechCrunch)",
-      "reason": "score 5: Meta's Style Sketch AI fashion app launch in SE Asia; modest regional product not major news."
+      "title": "Every Token Needs Its Own Teacher: Multi-teacher Adaptive On-policy Self-distillation",
+      "reason": "score 4: Multi‑teacher adaptive self‑distillation is incremental."
     },
     {
-      "title": "Market Chatter: OpenAI's GPT-6 Astra Becomes Top Distillation Target for Chinese AI Labs",
-      "reason": "score 6: Duplicate coverage of the same GPT‑6 Astra copying allegation."
+      "title": "Gym-Anything for Robotics: Scaling physical simulations with digital agents",
+      "reason": "score 4: Gym‑Anything for robotics scaling simulations is a useful tool but not a frontier breakthrough."
     },
     {
-      "title": "Google’s AI overhaul of search hits snags as ad revenue growth cools",
-      "reason": "duplicate of 1744c9c4d2ed"
+      "title": "Comparing Human Role-Players and LLM-Simulated Clients in Online Counselling Training: An Analysis of Counselling Patterns",
+      "reason": "score 3: Study of LLM‑simulated counselling clients is peripheral to core AI developments."
     },
     {
-      "title": "Google Stock Sinks as AI Mode Pressures Search Ad Growth",
-      "reason": "duplicate of 1744c9c4d2ed"
+      "title": "FARMS: A Verifiable Foundation for Automated Computational Science",
+      "reason": "score 5: FARMS proposes a verifiable foundation for automated computational science, an interesting but early‑stage effort."
     },
     {
-      "title": "Google Brings AI Mode Advertisements To More Countries",
-      "reason": "duplicate of 1744c9c4d2ed"
+      "title": "Advancing Clinical Genomic Analysis with a Skill-Centred Agent",
+      "reason": "score 5: Skill‑centred agent for clinical genomics is a notable application but not a major model release."
+    },
+    {
+      "title": "Ramanujan Challenge Results: AI-Assisted Evaluation Pipeline for Multi-Format Proofs",
+      "reason": "score 5: AI‑assisted evaluation pipeline for Ramanujan Challenge is a useful benchmark, not a breakthrough."
+    },
+    {
+      "title": "Retrieval as Traversal: Value-Indexed Memory for Stateful Long-Context Agents",
+      "reason": "score 4: Retrieval as traversal for long‑context agents is a technical refinement."
+    },
+    {
+      "title": "Machine Learning-Based Detection of Mobile Money Scan Messages in Ghana: A Comparative Evaluation of Naive Bayes, Support Vector Machine, and Randon Forest Classifiers",
+      "reason": "score 3: Mobile money fraud detection in Ghana is a regional application, not core AI news."
+    },
+    {
+      "title": "On the Fundamental Limits of Prefill-Based Decoding Length Prediction",
+      "reason": "score 4: Prefill‑based decoding length prediction analysis is incremental."
+    },
+    {
+      "title": "TRACER, a time-to-event EHR foundation model for disease detection across health systems",
+      "reason": "score 5: TRACER time‑to‑event EHR model is a promising health application but not a frontier breakthrough."
+    },
+    {
+      "title": "Efficient Scalable Oversight via Rewinding",
+      "reason": "score 5: Efficient scalable oversight via rewinding offers a novel safety approach, notable but not yet a major advance."
+    },
+    {
+      "title": "Homebrewed SLMs: Autoregressive and Masked Diffusion Language Models Built at Home for Portuguese",
+      "reason": "score 2: Homebrewed SLMs tutorial for Portuguese is a how‑to piece, not news."
+    },
+    {
+      "title": "BURGER: Benchmarking and Understanding Robotic Generalization via Embodied Drawing",
+      "reason": "score 4: BURGER benchmark for robotic generalization is useful but not a breakthrough."
+    },
+    {
+      "title": "NEOPIC: A Neural Operator Framework for Particle-based Kinetic Plasma Simulations",
+      "reason": "score 3: Neural operator framework for plasma simulations is domain‑specific, not core AI news."
+    },
+    {
+      "title": "IndicIPR-QA: A Benchmark for Extractive Question Answering on Indian IPR Laws",
+      "reason": "score 3: IndicIPR‑QA benchmark for Indian legal QA is a niche application, not core AI."
+    },
+    {
+      "title": "How I Aligned Your Model: Scaling Up Multilingual Safety Training with Templates",
+      "reason": "score 5: Multilingual safety training scaling with templates addresses an important gap in low‑resource languages."
+    },
+    {
+      "title": "A Low-Rank Space Captures Linear Alignment Between LLM and Human Neural Activity During Naturalistic Language Listening",
+      "reason": "score 4: Low‑rank space aligning LLM and human neural activity is an interesting neuroscience study, not a major AI advance."
+    },
+    {
+      "title": "Discovering Interpretable Acoustic Features in Autoregressive Voice-Cloning TTS Models",
+      "reason": "score 4: Interpretable acoustic features in voice‑cloning TTS models is incremental."
+    },
+    {
+      "title": "Intrinsic Distribution Matching",
+      "reason": "score 4: Intrinsic Distribution Matching paper is a modest contribution to diffusion generation."
+    },
+    {
+      "title": "Pico CSS is no longer maintained",
+      "reason": "not AI: GitHub notice about CSS library maintenance is unrelated to AI."
+    },
+    {
+      "title": "Herdr has released native app",
+      "reason": "not AI: GitHub notice about a native app release is unrelated to AI."
+    },
+    {
+      "title": "Pine Labs Q2: Profit grows sixfold to Rs 39 cr, revenue up 24%",
+      "reason": "not AI: Financial results of Indian payments firm; no AI relevance."
+    },
+    {
+      "title": "Indus Appstore becomes PhonePe Appstore: What’s new for users?",
+      "reason": "not AI: Rebranding of an Indian app store; not AI‑related."
+    },
+    {
+      "title": "SC says RBI rules must make banks fully compensate digital arrest victims if banks fail due diligence",
+      "reason": "not AI: Indian court ruling on bank liability for digital arrests; no AI component."
+    },
+    {
+      "title": "Shubman Gill joins Temple wearable users: What Deepinder Goyal's ₹85,000 device can track",
+      "reason": "score 4: Wearable device with AI‑based fitness tracking; interesting but not a major AI development."
+    },
+    {
+      "title": "Polymarket paused international trading after a security issue involving a third-party provider",
+      "reason": "not AI: Polymarket trading pause due to security issue; no AI relevance."
+    },
+    {
+      "title": "Blockchain analysis firm TRM says North Korea behind Binance crypto theft",
+      "reason": "not AI: Attribution of Binance hack to North Korea; no AI component."
+    },
+    {
+      "title": "Salesforce to buy defense tech firm Rune in military business push",
+      "reason": "not AI: Salesforce acquisition of defense‑tech firm; not AI‑focused."
+    },
+    {
+      "title": "Omio founder’s advice to entrepreneurs: Find a problem worth solving and stick with it",
+      "reason": "not AI: General entrepreneurship advice; no AI angle."
+    },
+    {
+      "title": "Pixxel deepens US push with dedicated federal subsidiary",
+      "reason": "score 5: Indian satellite firm expanding US government work; AI mentioned only as part of broader remote‑sensing tech."
+    },
+    {
+      "title": "Hero MotoCorp to increase EV capacity to 80,000 units per month by Q2 FY28",
+      "reason": "not AI: Hero MotoCorp EV capacity increase; unrelated to AI."
+    },
+    {
+      "title": "Too much code, too little shipped: Why AI needs a software factory",
+      "reason": "score 4: Commentary on AI agents for software development; interesting but below the significance threshold."
+    },
+    {
+      "title": "How Stelcore helps brands go global without building everything from scratch",
+      "reason": "not AI: Company profile on global branding services; not AI‑focused."
+    },
+    {
+      "title": "TRM Labs attributes the Binance hack to North Korea-based TraderTraitor, which drained ~$6.36B from Binance wallets across 10 blockchains, mostly in ~20 minutes (Tom Westbrook/Reuters)",
+      "reason": "not AI: Binance hack attribution is a crypto security story, not AI."
+    },
+    {
+      "title": "Binance pledges to cover all losses from a ~$6.3B hack, potentially the largest crypto theft ever, surpassing the $1.5B Bybit hack in February 2025 (South China Morning Post)",
+      "reason": "not AI: Crypto theft unrelated to AI; not relevant for Frontier Wire audience."
+    },
+    {
+      "title": "TextSeal2: Distortion-Free LLM Watermarking with Copula Mixing and Memoryless Races",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "Training Foundation Models with a Single Algorithm",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "How a wave of startups are betting on AI to make formal software verification practical and essential, including &Truth, which launches with a $70M seed (Paresh Dave/Wired)",
+      "reason": "could not verify yet; will retry next run"
     },
     {
       "title": "Sources: DeepSeek doubled its latest round's size due to surging black market Nvidia Blackwell chip prices, with Chinese state-owned investors representing 27% (The Information)",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "S-1: Anthropic says it heavily depends on TSMC chips made in Taiwan and warns of risks from \"potential disruption\" amid geopolitical tensions with China (Joseph C. Sternberg/Wall Street Journal)",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Claude Duet is the first personal-assistant-type harness that feels useful",
       "reason": "could not verify yet after a second try; dropped"
     },
     {
-      "title": "AWS will be a $1T business, Jassy says. But first, it will spend big.",
-      "reason": "could not verify yet after a second try; dropped"
+      "title": "D2C brands don't need an AI team to get discovered and grow, says Shopflo",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "38812fd51d92",
-      "headline": "AM Intelligence seeks up to $3 billion to fund Nvidia Vera Rubin chip purchase",
-      "category": "industry",
-      "summary": "Indian AI infrastructure firm AM Intelligence is looking to raise as much as $3 billion to finance its previously announced order of Nvidia’s Vera Rubin systems. The financing could include bonds, bank loans and a $300 million advance payment from offtakers.",
-      "url": "https://techmeme.com/261029/p69",
-      "sources": 2,
+      "id": "76ef0f5ad48b",
+      "headline": "New propose-filter-release method scales noise to typical sensitivity in DP",
+      "category": "research",
+      "summary": "The paper introduces propose-filter-release (PFR), a technique that privately filters input to reduce noise scaling in differentially private mechanisms. It uses a concave friendliness score and a friendly-DP release mechanism, and is illustrated on tasks such as scalar statistics, principal subspace estimation, and graph effective resistances.",
+      "url": "https://arxiv.org/abs/2610.40654",
+      "sources": 1,
       "quotes": 0
     },
     {
-      "id": "41ce547b5dc5",
-      "headline": "Nvidia in talks to back Nscale with credit guarantees for Anthropic data center",
-      "category": "industry",
-      "summary": "Nvidia is discussing providing Nscale with billions of dollars in credit guarantees to fund a 460 MW AI data center in West Virginia. Anthropic plans to use the facility and has a separate $45 billion deal to rent computing power from Nscale.",
-      "url": "https://techmeme.com/261029/p59",
-      "sources": 2,
+      "id": "9757fdd24077",
+      "headline": "ShallowDefend framework improves multi‑turn safety for large language models",
+      "category": "safety",
+      "summary": "Researchers introduced ShallowDefend, a framework that lets a language model first assess user intent, commit to an explicit safety decision, and then generate a response. In tests across two model families and fourteen benchmarks, the approach achieved the strongest multi‑turn safety while keeping utility high and only modestly reducing helpfulness.",
+      "url": "https://arxiv.org/abs/2610.40627",
+      "sources": 1,
       "quotes": 0
     },
     {
-      "id": "4dce8a8449f3",
-      "headline": "Chinese AI firms DeepSeek and Moonshot AI used OpenAI's GPT‑6 Astra for model distillation",
-      "category": "policy",
-      "summary": "DeepSeek's V4.1‑Flash‑1017 and Moonshot AI's Kimi K3.1 Pro were trained using outputs from OpenAI's GPT‑6 Astra through a distillation process, according to a report citing insiders.",
-      "url": "https://msn.com/en-in/news/other/months-after-release-of-gpt-6-astra-report-says-two-top-chinese-ai-companies-copied-what-openai-called-world-s-most-intelligent-and-aligned-model/ar-AA2gmoMm",
+      "id": "9b56a67d6f75",
+      "headline": "Nvidia commits $3 billion to Meta share sale and expands AI infrastructure partnership",
+      "category": "industry",
+      "summary": "Nvidia announced a $3 billion investment in Meta’s equity offering and said the deal will broaden collaboration on Meta’s Muse AI models and the use of Nvidia hardware in Meta data centers. The move adds to Nvidia’s portfolio of stakes, loans and guarantees across the AI ecosystem.",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/nvidias-web-of-ai-bets-smart-strategy-or-bubble-risk/articleshow/135343465.cms",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "1c92e42e4bf8",
+      "headline": "China‑linked hackers used DeepSeek AI via ARTEX to breach 200+ firms in 11 days",
+      "category": "safety",
+      "summary": "Chinese state‑linked hackers employed the open‑source ARTEX framework running on the DeepSeek large language model to target more than 200 organizations in at least 14 countries over 11 days, compromising at least nine and attempting attacks on many others.",
+      "url": "https://techmeme.com/261030/p1",
       "sources": 3,
       "quotes": 0
     }
   ],
   "notes": [
-    "ignored made-up duplicate id 41ce547b5dc5 for 'Nvidia in talks to give credit support for Nscale''",
-    "ignored made-up duplicate id 4dce8a8449f3 for 'Market Chatter: OpenAI's GPT-6 Astra Becomes Top D'",
+    "not India desk: 'Nvidia's web of AI bets: smart strategy or bubble '",
     "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
     "2 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 68.3,
+    "gather": 81.0,
     "audit": 0.0,
-    "plan": 86.7,
-    "judge": 25.5,
-    "verify and write": 399.9,
-    "videos": 1.8,
-    "tagging": 21.0,
-    "explainers": 0.0,
-    "trackers": 148.2,
-    "claims": 21.7,
+    "plan": 1.9,
+    "judge": 24.6,
+    "verify and write": 462.9,
+    "videos": 22.5,
+    "tagging": 43.3,
+    "explainers": -0.0,
+    "trackers": 84.0,
+    "claims": 20.9,
     "model tracker": 0.1,
-    "weekly": -0.0,
-    "builders": -0.0,
-    "top voices": -0.0,
-    "briefing": 42.3,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 20.9,
     "self-review": -0.0,
-    "photos": 1.0,
-    "stock photos": 0.0,
+    "photos": 0.7,
+    "stock photos": 16.2,
     "daily email": 0.0,
-    "alerts": 5.4
+    "alerts": 6.1
   },
-  "fetched": 2864,
-  "fresh": 25,
+  "fetched": 2906,
+  "fresh": 66,
   "plan": {
-    "focus": "Tracking AI‑chip supply risks and funding surges while bolstering research and voice coverage.",
+    "focus": "Cover the surge of new AI research papers while tracking the fallout from the Binance hack and China export controls.",
     "priorities": [
-      "S-1: Anthropic says it heavily depends on TSMC chips made in Taiwan an (Anthropic’s reliance on TSMC chips raises geopolitical risk for investors)",
-      "Sources: DeepSeek doubled its latest round's size due to surging black (DeepSeek’s funding jump tied to black‑market Nvidia Blackwell chips signals market pressure)",
-      "Sources: Nvidia is in talks to provide Nscale with billions of dollars (Nvidia credit guarantees for Anthropic’s data centre highlight financing trends in AI compute)",
-      "Sources: Indian AI infrastructure company AM Intelligence seeks to rai (AM Intelligence’s $3 B raise for Nvidia Vera Rubin systems shows major India AI‑infra investment)",
-      "Ethan Mollick: I had Opus build a game that takes JIRA tickets from an (Ethan Mollick voice piece adds needed creator‑perspective content for our audience)"
+      "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Priva (Privacy‑focused scaling paper relevant to data‑handling regulations for builders and investors)",
+      "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defe (Safety‑alignment work that informs product risk and compliance strategies)",
+      "TextSeal2: Distortion-Free LLM Watermarking with Copula Mixing and Mem (Watermarking technique important for IP protection and model provenance)",
+      "world2vec: Mechanistic world models through latent dynamics learning (Mechanistic world‑model research linking to construction‑AI applications)",
+      "Adaptive Scenario Generation for KL-DRO Around a Learned Density Model (Robust optimization method useful for risk‑aware AI deployments)"
     ],
     "thin_areas": [
-      "research",
-      "voices"
+      "research"
     ],
     "searches": [
-      "Chinese labs GPT-6 Astra accusation: 2 new",
-      "Google AI Mode ad revenue Q4: 3 new",
-      "AI safety research preprint October 2026: 0 new"
+      "China AI export controls 2026: 0 new",
+      "Binance hack North Korea response: 0 new",
+      "AI safety alignment benchmarks 2026: 0 new"
     ],
     "dig_deeper": [
-      "S-1: Anthropic says it heavily depends on TSMC chips made in Taiwan an",
-      "Sources: DeepSeek doubled its latest round's size due to surging black"
+      "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Priva",
+      "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defe"
     ]
   },
-  "judged": 30,
-  "kept": 7,
+  "judged": 66,
+  "kept": 9,
   "research": {
     "investigated": 5,
-    "confirmed": 3,
+    "confirmed": 2,
     "tool_calls": 15
   },
   "research_log": [
-    "Sources: Indian AI infrastructure company AM Intelligence seeks to rai: confirmed (searched “AM Intelligence raise $3 billion Nvidia Vera Rubin”; read newsbytesapp.com; read thehindubusinessline.com)",
-    "Sources: DeepSeek doubled its latest round's size due to surging black: unconfirmed (searched “DeepSeek doubled round size black market Nvidia Blackwell chip prices Chinese state-owned investors 27%”; read cnbc.com; searched “Blackwell chip prices DeepSeek funding round doubled black market”)",
-    "S-1: Anthropic says it heavily depends on TSMC chips made in Taiwan an: unconfirmed (searched “Anthropic depends on TSMC chips Taiwan warns of disruption”; read firstpost.com; searched “Anthropic IPO filing TSMC Taiwan risk disruption”)",
-    "Sources: Nvidia is in talks to provide Nscale with billions of dollars: confirmed (searched “Nvidia Nscale credit guarantees”; read msn.com; read indiatimes.com)",
-    "Months after release of GPT-6 Astra, report says two top Chinese AI co: confirmed (searched “GPT-6 Astra Chinese AI companies copied OpenAI model report”; read indiatimes.com; read thenextweb.com)"
+    "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Priva: unconfirmed (searched “\"Propose-Filter-Release\"”; searched “\"propose filter\" private filtering”; searched “\"Scaling Noise to Typical Sensitivity via Private Filtering\"”)",
+    "ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defe: unconfirmed (searched “ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender”; searched “ShallowDefend”; searched “\"Shallow Safety Alignment\"”)",
+    "Nvidia's web of AI bets: smart strategy or bubble risk?: confirmed (searched “Nvidia $3 billion investment in Meta share sale Tuesday”; read yahoo.com; read msn.com)",
+    "CrowdStrike: China-linked hackers used AI tool ARTEX with a DeepSeek L: confirmed (searched “CrowdStrike China-linked hackers AI tool ARTEX DeepSeek LLM 200 organizations 11 days”; read nbcnews.com; read hngn.com)",
+    "How a wave of startups are betting on AI to make formal software verif: unconfirmed (searched “\"&Truth\" startup AI formal verification $70M seed”; read unite.ai; searched “\"&Truth\" seed funding $70 million”)"
   ],
   "threads": [
-    "Anthropic financing expands to data center credit: Nvidia in talks to back Nscale with credit guarantees for An",
-    "Chinese labs accused of copying GPT-6 Astra: Chinese AI firms DeepSeek and Moonshot AI used OpenAI's GPT‑"
+    "Chinese hackers using AI tools: China‑linked hackers used DeepSeek AI via ARTEX to breach 20"
   ],
   "videos": {
-    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "20VC": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/"
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (9 in feed, 0 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 1 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 1 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
   },
-  "tagged": 3,
-  "trackers": "filed 5 stories; updated us-china, india-ai, ai-infrastructure, ai-money",
-  "claims": "52 tracked, 51 open, 0 updated this run",
-  "model_tracker": "82 models, 19 changes today",
-  "briefing": "3 themes from 20 stories",
-  "india_briefing": "3 themes from 4 stories",
+  "videos_kept": "4 kept from 5 new",
+  "tagged": 1,
+  "trackers": "filed 4 stories; updated us-china, agent-safety, ai-infrastructure",
+  "claims": "52 tracked, 51 open, 2 updated this run",
+  "model_tracker": "82 models, 25 changes today",
+  "briefing": "4 themes from 17 stories",
   "photos": "3 saved, 0 unavailable",
-  "alerts": "27 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":40}",
-  "ai_requests_run": 38,
-  "ai_tokens_run": 118269,
-  "ai_requests_today": 75,
+  "stock photos": "1 added",
+  "alerts": "35 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":35}",
+  "ai_requests_run": 39,
+  "ai_tokens_run": 106678,
+  "ai_requests_today": 114,
   "provider_log": [
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
     "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
   ]
 }

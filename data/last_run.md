@@ -1,88 +1,117 @@
-## Frontier Wire newsroom run — 2026-10-30T04:00:41+00:00
+## Frontier Wire newsroom run — 2026-10-30T07:15:30+00:00
 
-Fetched 2864 items · fresh 25 · judged 30 · kept 7 · **written 3**
-AI: 38 requests, 118,269 tokens this run · 75 requests today · providers: cerebras, groq
-Editor-in-chief: Tracking AI‑chip supply risks and funding surges while bolstering research and voice coverage.
-  Priorities: S-1: Anthropic says it heavily depends on TSMC chips made in Taiwan an (Anthropic’s reliance on TSMC chips raises geopolitical risk for investors); Sources: DeepSeek doubled its latest round's size due to surging black (DeepSeek’s funding jump tied to black‑market Nvidia Blackwell chips signals market pressure); Sources: Nvidia is in talks to provide Nscale with billions of dollars (Nvidia credit guarantees for Anthropic’s data centre highlight financing trends in AI compute); Sources: Indian AI infrastructure company AM Intelligence seeks to rai (AM Intelligence’s $3 B raise for Nvidia Vera Rubin systems shows major India AI‑infra investment); Ethan Mollick: I had Opus build a game that takes JIRA tickets from an (Ethan Mollick voice piece adds needed creator‑perspective content for our audience)
-  Thin areas: research, voices
-  Searches: Chinese labs GPT-6 Astra accusation: 2 new; Google AI Mode ad revenue Q4: 3 new; AI safety research preprint October 2026: 0 new
-  Dig deeper: S-1: Anthropic says it heavily depends on TSMC chips made in Taiwan an; Sources: DeepSeek doubled its latest round's size due to surging black
-Research agent: investigated 5 stories with 15 tool calls, confirmed 3
-Daily briefing: 3 themes from 20 stories
-Threads updated: Anthropic financing expands to data center credit: Nvidia in talks to back Nscale with credit guarantees for An; Chinese labs accused of copying GPT-6 Astra: Chinese AI firms DeepSeek and Moonshot AI used OpenAI's GPT‑
-Videos: no new videos · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/
+Fetched 2906 items · fresh 66 · judged 66 · kept 9 · **written 4**
+AI: 39 requests, 106,678 tokens this run · 114 requests today · providers: cerebras, groq
+Editor-in-chief: Cover the surge of new AI research papers while tracking the fallout from the Binance hack and China export controls.
+  Priorities: Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Priva (Privacy‑focused scaling paper relevant to data‑handling regulations for builders and investors); ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defe (Safety‑alignment work that informs product risk and compliance strategies); TextSeal2: Distortion-Free LLM Watermarking with Copula Mixing and Mem (Watermarking technique important for IP protection and model provenance); world2vec: Mechanistic world models through latent dynamics learning (Mechanistic world‑model research linking to construction‑AI applications); Adaptive Scenario Generation for KL-DRO Around a Learned Density Model (Robust optimization method useful for risk‑aware AI deployments)
+  Thin areas: research
+  Searches: China AI export controls 2026: 0 new; Binance hack North Korea response: 0 new; AI safety alignment benchmarks 2026: 0 new
+  Dig deeper: Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Priva; ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defe
+Research agent: investigated 5 stories with 15 tool calls, confirmed 2
+Daily briefing: 4 themes from 17 stories
+Threads updated: Chinese hackers using AI tools: China‑linked hackers used DeepSeek AI via ARTEX to breach 20
+Videos: 4 kept from 5 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 1 new), Google for Developers ok (9 in feed, 0 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (13 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 1 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 1 new), Training Data (Sequoia) ok (6 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 1 new), Hard Fork ok (1 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (4 in feed, 0 new)
 Photos: 3 saved, 0 unavailable
-Alerts: 27 events sent: {"subscribers":8,"sent":0,"queued":40}
-Claims: 52 tracked, 51 open, 0 updated this run
-Trackers: filed 5 stories; updated us-china, india-ai, ai-infrastructure, ai-money
-Model tracker: 82 models, 19 changes today
-Tagged 3 stories by sector, region and deal
-India briefing: 3 themes from 4 stories
-Time: gather 68s, plan 87s, judge 26s, verify and write 400s, videos 2s, tagging 21s, trackers 148s, claims 22s, briefing 42s, photos 1s, alerts 5s
+Alerts: 35 events sent: {"subscribers":8,"sent":0,"queued":35}
+Claims: 52 tracked, 51 open, 2 updated this run
+Trackers: filed 4 stories; updated us-china, agent-safety, ai-infrastructure
+Model tracker: 82 models, 25 changes today
+Tagged 1 stories by sector, region and deal
+Time: gather 81s, plan 2s, judge 25s, verify and write 463s, videos 22s, tagging 43s, trackers 84s, claims 21s, briefing 21s, stock photos 16s, alerts 6s
 
 ### New stories
-- **industry** — [AM Intelligence seeks up to $3 billion to fund Nvidia Vera Rubin chip purchase](https://techmeme.com/261029/p69)  
-  Indian AI infrastructure firm AM Intelligence is looking to raise as much as $3 billion to finance its previously announced order of Nvidia’s Vera Rubin systems. The financing could include bonds, bank loans and a $300 million advance payment from offtakers.  
-  _2 source(s), 0 verified quote(s)_
-- **industry** — [Nvidia in talks to back Nscale with credit guarantees for Anthropic data center](https://techmeme.com/261029/p59)  
-  Nvidia is discussing providing Nscale with billions of dollars in credit guarantees to fund a 460 MW AI data center in West Virginia. Anthropic plans to use the facility and has a separate $45 billion deal to rent computing power from Nscale.  
-  _2 source(s), 0 verified quote(s)_
-- **policy** — [Chinese AI firms DeepSeek and Moonshot AI used OpenAI's GPT‑6 Astra for model distillation](https://msn.com/en-in/news/other/months-after-release-of-gpt-6-astra-report-says-two-top-chinese-ai-companies-copied-what-openai-called-world-s-most-intelligent-and-aligned-model/ar-AA2gmoMm)  
-  DeepSeek's V4.1‑Flash‑1017 and Moonshot AI's Kimi K3.1 Pro were trained using outputs from OpenAI's GPT‑6 Astra through a distillation process, according to a report citing insiders.  
+- **research** — [New propose-filter-release method scales noise to typical sensitivity in DP](https://arxiv.org/abs/2610.40654)  
+  The paper introduces propose-filter-release (PFR), a technique that privately filters input to reduce noise scaling in differentially private mechanisms. It uses a concave friendliness score and a friendly-DP release mechanism, and is illustrated on tasks such as scalar statistics, principal subspace estimation, and graph effective resistances.  
+  _1 source(s), 0 verified quote(s)_
+- **safety** — [ShallowDefend framework improves multi‑turn safety for large language models](https://arxiv.org/abs/2610.40627)  
+  Researchers introduced ShallowDefend, a framework that lets a language model first assess user intent, commit to an explicit safety decision, and then generate a response. In tests across two model families and fourteen benchmarks, the approach achieved the strongest multi‑turn safety while keeping utility high and only modestly reducing helpfulness.  
+  _1 source(s), 0 verified quote(s)_
+- **industry** — [Nvidia commits $3 billion to Meta share sale and expands AI infrastructure partnership](https://economictimes.indiatimes.com/tech/artificial-intelligence/nvidias-web-of-ai-bets-smart-strategy-or-bubble-risk/articleshow/135343465.cms)  
+  Nvidia announced a $3 billion investment in Meta’s equity offering and said the deal will broaden collaboration on Meta’s Muse AI models and the use of Nvidia hardware in Meta data centers. The move adds to Nvidia’s portfolio of stakes, loans and guarantees across the AI ecosystem.  
+  _2 source(s), 2 verified quote(s)_
+- **safety** — [China‑linked hackers used DeepSeek AI via ARTEX to breach 200+ firms in 11 days](https://techmeme.com/261030/p1)  
+  Chinese state‑linked hackers employed the open‑source ARTEX framework running on the DeepSeek large language model to target more than 200 organizations in at least 14 countries over 11 days, compromising at least nine and attempting attacks on many others.  
   _3 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- The importance of communities around software — not AI: General discussion of software communities; no AI focus.
-- Show HN: Auto Dismiss Mac OS "Allow <app> to find devices on local networks?" — not AI: Hacker News post about macOS network prompt; unrelated to AI.
-- You don’t need to believe in a god to get a religious exemption from using AI at work — score 4: Religious exemption from AI use at work; peripheral policy issue, not core AI news.
-- Pine Labs Hits New High, Ace Blend Bags $9.9 Mn & More — not AI: Pine Labs profit report; unrelated to AI.
-- Exclusive: Smylo In Talks To Raise ₹30 Cr To Expand Cat Food Portfolio — not AI: Cat‑food startup fundraising; not AI.
-- Nasscom Seeks Deferment Of New GST Rules For Ecommerce Deliveries To Jan 2027 — not AI: Nasscom GST rule deferment; not AI.
-- Amazon Prime Video on track to generate tens of billions in revenue, Andy Jassy confirms — not AI: Amazon Prime Video revenue story; no AI focus.
-- Rivian says it's on track for $250 million Uber funding by year-end, R2 demand strong — not AI: Rivian funding for Uber/self‑driving; not AI‑centric.
-- Nvidia in talks to give credit support for Nscale's deal with Anthropic — score 6: Duplicate of Nvidia credit‑support story for Anthropic data centre.
-- Tech firms take fresh hit as earnings misses fan AI fears — score 3: Tech earnings miss fueling AI investment concerns; peripheral market commentary.
-- Reddit posts search traffic declines, will push visitor sign-ins to curb data scraping — not AI: Reddit traffic changes; no AI angle.
-- Amazon projects fourth quarter sales below estimates — not AI: Amazon sales forecast; not AI.
-- Bitcoin, cryptocurrency prices fall after Binance reports security issue — not AI: Cryptocurrency price movement after Binance issue; not AI.
-- Rising tech costs drive EMI sales; Shadowfax Q2 profit soars — not AI: EMI sales driven by tech costs; unrelated to AI.
-- Pine Labs Q2 net profit soars 6.5x; Cognizant trims 2026 growth outlook — not AI: Pine Labs profit and Cognizant outlook; no AI relevance.
-- Ethan Mollick: I had Opus build a game that takes JIRA tickets from any of your real projects & converts them into dramatic audiologs that are the plot… — score 5: Creator demo using Opus to generate game audiologs; interesting but incremental and not major news.
-- NYSE owner ICE plans US-regulated Hyperliquid-based perpetual markets with Trade.xyz, a market operator on the crypto platform, and takes a stake in Trade.xyz (Katherine Doherty/Bloomberg) — not AI: Crypto market infrastructure news; no AI angle.
-- Binance "temporarily suspended" all deposits and withdrawals as it investigates security issues and works with law enforcement; Binance.US says it's unaffected (George Steer/Financial Times) — not AI: Binance security issue; unrelated to AI.
-- Meta quietly launches Style Sketch, an AI fashion app that helps users put together outfit ideas using clothes they own, in Indonesia, Singapore, and Thailand (Aisha Malik/TechCrunch) — score 5: Meta's Style Sketch AI fashion app launch in SE Asia; modest regional product not major news.
-- Market Chatter: OpenAI's GPT-6 Astra Becomes Top Distillation Target for Chinese AI Labs — score 6: Duplicate coverage of the same GPT‑6 Astra copying allegation.
-- Google’s AI overhaul of search hits snags as ad revenue growth cools — duplicate of 1744c9c4d2ed
-- Google Stock Sinks as AI Mode Pressures Search Ad Growth — duplicate of 1744c9c4d2ed
-- Google Brings AI Mode Advertisements To More Countries — duplicate of 1744c9c4d2ed
-- Sources: DeepSeek doubled its latest round's size due to surging black market Nvidia Blackwell chip prices, with Chinese state-owned investors representing 27% (The Information) — could not verify yet; will retry next run
-- S-1: Anthropic says it heavily depends on TSMC chips made in Taiwan and warns of risks from "potential disruption" amid geopolitical tensions with China (Joseph C. Sternberg/Wall Street Journal) — could not verify yet; will retry next run
-- Claude Duet is the first personal-assistant-type harness that feels useful — could not verify yet after a second try; dropped
-- AWS will be a $1T business, Jassy says. But first, it will spend big. — could not verify yet after a second try; dropped
+- Elucidating the Design Space of LM Data Attribution — score 4: Analysis of LM data attribution methods is incremental and lacks a breakthrough result.
+- Rethinking Neural Thickets Without Weight Perturbations — score 4: Re‑evaluation of neural thickets does not present a novel advance.
+- Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers — score 4: Tokenization improvement for pixel‑space transformers is incremental.
+- Adaptive Scenario Generation for KL-DRO Around a Learned Density Model — score 4: Robust optimization method for distributionally robust optimization is incremental and not a major advance.
+- Luggage re-identification: A study of strategies towards a real-world application — score 3: Application‑focused luggage re‑identification study is not frontier AI news.
+- From extreme weather to agricultural consequences with agentic AI — score 5: Agentic AI for agriculture is an interesting niche but not a major breakthrough.
+- world2vec: Mechanistic world models through latent dynamics learning — score 5: Mechanistic world‑model work is interesting but remains incremental for construction‑AI applications.
+- Probing Spatial State Representations in Visual Foundation Models — score 4: Probing spatial representations in visual models is incremental.
+- Testimony from Timelines: Evidence-Grounded Significance Testing of Temporal Clinical Hypotheses — score 4: Temporal clinical hypothesis testing via LLMs is a niche application without major impact.
+- An ODE-based Sampler for Discrete Diffusion Models — score 4: ODE‑based sampler for discrete diffusion models is a technical refinement.
+- Difficulty Calibration Across Time for Membership Inference in Diffusion Models — score 4: Membership inference calibration for diffusion models is incremental.
+- When to Assist and What to Suggest: Joint Gating and Memory-Grounded Hint Generation in One Compact Decoder — score 4: Joint gating and hint generation improves assistants modestly.
+- Collaborative AI agents for autonomous experimental research with solid-state quantum spins — score 5: Collaborative AI agents for quantum experiments are promising but still early‑stage.
+- Pre-Crime for Agents, at the Last Second: Probing When a Recruited Agent Gives In — score 5: Pre‑crime probing of agent collusion is an interesting safety angle but not a breakthrough.
+- Multistatic ISAC with Deep Learning-Based Clutter Suppression for 5G and Beyond — score 3: Multistatic ISAC with deep‑learning clutter suppression is a communications application, not core AI news.
+- VeriCUA: Verification as Agentic Exploration for Computer-Using Agents — score 5: Verification for computer‑using agents is a useful safety tool but not a major advance.
+- Multi-View MoE: Letting Every Router Shape Expert Computation — score 4: Multi‑View MoE analysis is incremental.
+- PIVOT: Progressive Intervention via Online Teacher Correction — score 4: Progressive intervention via online teacher correction is a modest RL contribution.
+- Every Token Needs Its Own Teacher: Multi-teacher Adaptive On-policy Self-distillation — score 4: Multi‑teacher adaptive self‑distillation is incremental.
+- Gym-Anything for Robotics: Scaling physical simulations with digital agents — score 4: Gym‑Anything for robotics scaling simulations is a useful tool but not a frontier breakthrough.
+- Comparing Human Role-Players and LLM-Simulated Clients in Online Counselling Training: An Analysis of Counselling Patterns — score 3: Study of LLM‑simulated counselling clients is peripheral to core AI developments.
+- FARMS: A Verifiable Foundation for Automated Computational Science — score 5: FARMS proposes a verifiable foundation for automated computational science, an interesting but early‑stage effort.
+- Advancing Clinical Genomic Analysis with a Skill-Centred Agent — score 5: Skill‑centred agent for clinical genomics is a notable application but not a major model release.
+- Ramanujan Challenge Results: AI-Assisted Evaluation Pipeline for Multi-Format Proofs — score 5: AI‑assisted evaluation pipeline for Ramanujan Challenge is a useful benchmark, not a breakthrough.
+- Retrieval as Traversal: Value-Indexed Memory for Stateful Long-Context Agents — score 4: Retrieval as traversal for long‑context agents is a technical refinement.
+- Machine Learning-Based Detection of Mobile Money Scan Messages in Ghana: A Comparative Evaluation of Naive Bayes, Support Vector Machine, and Randon Forest Classifiers — score 3: Mobile money fraud detection in Ghana is a regional application, not core AI news.
+- On the Fundamental Limits of Prefill-Based Decoding Length Prediction — score 4: Prefill‑based decoding length prediction analysis is incremental.
+- TRACER, a time-to-event EHR foundation model for disease detection across health systems — score 5: TRACER time‑to‑event EHR model is a promising health application but not a frontier breakthrough.
+- Efficient Scalable Oversight via Rewinding — score 5: Efficient scalable oversight via rewinding offers a novel safety approach, notable but not yet a major advance.
+- Homebrewed SLMs: Autoregressive and Masked Diffusion Language Models Built at Home for Portuguese — score 2: Homebrewed SLMs tutorial for Portuguese is a how‑to piece, not news.
+- BURGER: Benchmarking and Understanding Robotic Generalization via Embodied Drawing — score 4: BURGER benchmark for robotic generalization is useful but not a breakthrough.
+- NEOPIC: A Neural Operator Framework for Particle-based Kinetic Plasma Simulations — score 3: Neural operator framework for plasma simulations is domain‑specific, not core AI news.
+- IndicIPR-QA: A Benchmark for Extractive Question Answering on Indian IPR Laws — score 3: IndicIPR‑QA benchmark for Indian legal QA is a niche application, not core AI.
+- How I Aligned Your Model: Scaling Up Multilingual Safety Training with Templates — score 5: Multilingual safety training scaling with templates addresses an important gap in low‑resource languages.
+- A Low-Rank Space Captures Linear Alignment Between LLM and Human Neural Activity During Naturalistic Language Listening — score 4: Low‑rank space aligning LLM and human neural activity is an interesting neuroscience study, not a major AI advance.
+- Discovering Interpretable Acoustic Features in Autoregressive Voice-Cloning TTS Models — score 4: Interpretable acoustic features in voice‑cloning TTS models is incremental.
+- Intrinsic Distribution Matching — score 4: Intrinsic Distribution Matching paper is a modest contribution to diffusion generation.
+- Pico CSS is no longer maintained — not AI: GitHub notice about CSS library maintenance is unrelated to AI.
+- Herdr has released native app — not AI: GitHub notice about a native app release is unrelated to AI.
+- Pine Labs Q2: Profit grows sixfold to Rs 39 cr, revenue up 24% — not AI: Financial results of Indian payments firm; no AI relevance.
+- Indus Appstore becomes PhonePe Appstore: What’s new for users? — not AI: Rebranding of an Indian app store; not AI‑related.
+- SC says RBI rules must make banks fully compensate digital arrest victims if banks fail due diligence — not AI: Indian court ruling on bank liability for digital arrests; no AI component.
+- Shubman Gill joins Temple wearable users: What Deepinder Goyal's ₹85,000 device can track — score 4: Wearable device with AI‑based fitness tracking; interesting but not a major AI development.
+- Polymarket paused international trading after a security issue involving a third-party provider — not AI: Polymarket trading pause due to security issue; no AI relevance.
+- Blockchain analysis firm TRM says North Korea behind Binance crypto theft — not AI: Attribution of Binance hack to North Korea; no AI component.
+- Salesforce to buy defense tech firm Rune in military business push — not AI: Salesforce acquisition of defense‑tech firm; not AI‑focused.
+- Omio founder’s advice to entrepreneurs: Find a problem worth solving and stick with it — not AI: General entrepreneurship advice; no AI angle.
+- Pixxel deepens US push with dedicated federal subsidiary — score 5: Indian satellite firm expanding US government work; AI mentioned only as part of broader remote‑sensing tech.
+- Hero MotoCorp to increase EV capacity to 80,000 units per month by Q2 FY28 — not AI: Hero MotoCorp EV capacity increase; unrelated to AI.
+- Too much code, too little shipped: Why AI needs a software factory — score 4: Commentary on AI agents for software development; interesting but below the significance threshold.
+- How Stelcore helps brands go global without building everything from scratch — not AI: Company profile on global branding services; not AI‑focused.
+- TRM Labs attributes the Binance hack to North Korea-based TraderTraitor, which drained ~$6.36B from Binance wallets across 10 blockchains, mostly in ~20 minutes (Tom Westbrook/Reuters) — not AI: Binance hack attribution is a crypto security story, not AI.
+- Binance pledges to cover all losses from a ~$6.3B hack, potentially the largest crypto theft ever, surpassing the $1.5B Bybit hack in February 2025 (South China Morning Post) — not AI: Crypto theft unrelated to AI; not relevant for Frontier Wire audience.
+- TextSeal2: Distortion-Free LLM Watermarking with Copula Mixing and Memoryless Races — variety: already 2 stories from arxiv.org this run
+- Training Foundation Models with a Single Algorithm — variety: already 2 stories from arxiv.org this run
+- How a wave of startups are betting on AI to make formal software verification practical and essential, including &Truth, which launches with a $70M seed (Paresh Dave/Wired) — could not verify yet; will retry next run
+- Sources: DeepSeek doubled its latest round's size due to surging black market Nvidia Blackwell chip prices, with Chinese state-owned investors representing 27% (The Information) — could not verify yet after a second try; dropped
+- D2C brands don't need an AI team to get discovered and grow, says Shopflo — could not verify yet; will retry next run
 
 </details>
 
 ### Sources with problems
-- `arxiv`: failed: ReadTimeout: The read operation timed out
-- `gdelt`: failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out
-- `gdelt-india`: failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out
+- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
 
 <details><summary>Research agent's work</summary>
 
-- Sources: Indian AI infrastructure company AM Intelligence seeks to rai: confirmed (searched “AM Intelligence raise $3 billion Nvidia Vera Rubin”; read newsbytesapp.com; read thehindubusinessline.com)
-- Sources: DeepSeek doubled its latest round's size due to surging black: unconfirmed (searched “DeepSeek doubled round size black market Nvidia Blackwell chip prices Chinese state-owned investors 27%”; read cnbc.com; searched “Blackwell chip prices DeepSeek funding round doubled black market”)
-- S-1: Anthropic says it heavily depends on TSMC chips made in Taiwan an: unconfirmed (searched “Anthropic depends on TSMC chips Taiwan warns of disruption”; read firstpost.com; searched “Anthropic IPO filing TSMC Taiwan risk disruption”)
-- Sources: Nvidia is in talks to provide Nscale with billions of dollars: confirmed (searched “Nvidia Nscale credit guarantees”; read msn.com; read indiatimes.com)
-- Months after release of GPT-6 Astra, report says two top Chinese AI co: confirmed (searched “GPT-6 Astra Chinese AI companies copied OpenAI model report”; read indiatimes.com; read thenextweb.com)
+- Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Priva: unconfirmed (searched “"Propose-Filter-Release"”; searched “"propose filter" private filtering”; searched “"Scaling Noise to Typical Sensitivity via Private Filtering"”)
+- ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defe: unconfirmed (searched “ShallowDefend: Harnessing Shallow Safety Alignment for Multi-Turn Defender”; searched “ShallowDefend”; searched “"Shallow Safety Alignment"”)
+- Nvidia's web of AI bets: smart strategy or bubble risk?: confirmed (searched “Nvidia $3 billion investment in Meta share sale Tuesday”; read yahoo.com; read msn.com)
+- CrowdStrike: China-linked hackers used AI tool ARTEX with a DeepSeek L: confirmed (searched “CrowdStrike China-linked hackers AI tool ARTEX DeepSeek LLM 200 organizations 11 days”; read nbcnews.com; read hngn.com)
+- How a wave of startups are betting on AI to make formal software verif: unconfirmed (searched “"&Truth" startup AI formal verification $70M seed”; read unite.ai; searched “"&Truth" seed funding $70 million”)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id 41ce547b5dc5 for 'Nvidia in talks to give credit support for Nscale''
-- ignored made-up duplicate id 4dce8a8449f3 for 'Market Chatter: OpenAI's GPT-6 Astra Becomes Top D'
+- not India desk: 'Nvidia's web of AI bets: smart strategy or bubble '
 - GDELT unavailable: GDELT paused for this run after repeated rate-limiting
 - 2 kept item(s) carried over to the next run
-- cerebras/gpt-oss-120b: answer cut off; retrying with more room
-- cerebras/gpt-oss-120b: answer cut off; retrying with more room
 - cerebras/gpt-oss-120b: answer cut off; retrying with more room
