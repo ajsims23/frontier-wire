@@ -7,7 +7,7 @@
   python -m agent preview-desks plan a run and write the Builders and Top Voices desks now (set DATA_DIR to a copy of
                                 data/ to try changes without touching the live site)
   python -m agent recap draft   pick today's top five and write data/recaps/<date>.json for the editor to fill
-  python -m agent recap render --out DIR   check the filled script and render recap.mp4, poster.jpg, teaser.gif
+  python -m agent recap render --out DIR   check the filled script and render the 30s recap.mp4, poster.jpg, teaser.gif
   python -m agent recap check --out DIR    re-check a rendered video (length, size, codec, decodes cleanly)
 """
 from __future__ import annotations

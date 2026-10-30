@@ -1,4 +1,4 @@
-"""Daily 60-second recap: pick the day's top five stories, check the on-screen script, render the video.
+"""Daily 30-second recap: pick the day's top five stories, check the on-screen script, render the video.
 
 The script (hook, one line and one detail per story, a three-line summary) is written by the editor in a Claude
 session and saved to data/recaps/YYYY-MM-DD.json. This module drafts that file from the site's own data, checks
@@ -7,6 +7,9 @@ motion graphics with Pillow and ffmpeg: no photos, no logos, no third-party foot
 
     python -m agent recap draft            # pick today's five, write the skeleton for the editor to fill
     python -m agent recap render --out DIR # check the script, render recap.mp4, poster.jpg, teaser.gif
+
+On screen: a 3s hook, 5s per story (the paraphrased line and its source), a 2s outro with the site address.
+Each story's detail line is not shown in the video; it goes on the video page, in the feed and in the email.
 """
 from __future__ import annotations
 
@@ -27,7 +30,8 @@ from .cards import GROUND, LABEL, MUTED, TEXT, TOPIC, _font, _wrap
 
 IST = timezone(timedelta(hours=5, minutes=30))
 W, H, FPS = 1920, 1080, 30
-HOOK_S, STORY_S, OUTRO_S = 5.0, 10.0, 5.0
+HOOK_S, STORY_S, OUTRO_S = 3.0, 5.0, 2.0   # 3s hook, 5s per story (headline + source), 2s outro
+MIN_S, MAX_S = 27, 33
 SOFT = (179, 207, 203)
 PANEL = (10, 31, 34)
 LIMITS = {"hook": 64, "line": 72, "detail": 120, "summary": 150}
@@ -245,7 +249,7 @@ class Renderer:
         f, lines = _fit(script["hook"], 1500, (104, 96, 88, 80), 2, 800)
         self.hook = _text_layer(lines, f, TEXT, 1.08)
         self.eyebrow = _text_layer([f"TODAY IN AI  ·  {self.date_h.upper()}"], _font(34, 700, 112), TOPIC["research"])
-        self.count = _text_layer([f"{self.n} stories. 60 seconds."], _font(40, 500), SOFT)
+        self.count = _text_layer([f"{self.n} stories. {int(round(self.total))} seconds."], _font(40, 500), SOFT)
         self.out1 = _text_layer(["Every story, with its sources."], _font(78, 800), TEXT)
         self.out2 = _text_layer([site_label], _font(58, 700, 110), TOPIC["research"])
         self.out3 = _text_layer(["Updated every three hours. Written by our newsroom agent, checked against its sources."], _font(32, 500), MUTED)
@@ -254,13 +258,11 @@ class Renderer:
         color = TOPIC.get(st["category"], TOPIC["industry"])
         label = LABEL.get(st["category"], "News").upper() + (f"  ·  {st['lab']}" if st.get("lab") else "")
         f, lines = _fit(st["line"], 1600, (92, 84, 76, 68), 2, 800)
-        fd, dlines = _fit(st["detail"], 1500, (46, 42, 38), 2, 500)
         return {
             "color": color, "seed": st["id"],
             "num": _text_layer([f"{i + 1:02d}"], _font(190, 800, 112), color),
             "chip": _text_layer([label], _font(34, 700, 112), color),
             "line": _text_layer(lines, f, TEXT, 1.06),
-            "detail": _text_layer(dlines, fd, SOFT, 1.2),
             "source": _text_layer([f"Source: {st['source']}"], _font(34, 600), MUTED),
         }
 
@@ -312,9 +314,7 @@ class Renderer:
             self._place(img, L["num"], 130, 150, lt, 0.0, out_k)
             self._place(img, L["chip"], 140, 400, lt, 0.12, out_k)
             self._place(img, L["line"], 140, 470, lt, 0.25, out_k)
-            y = 470 + L["line"].height + 34
-            self._place(img, L["detail"], 140, y, lt, 0.45, out_k)
-            self._place(img, L["source"], 140, 900, lt, 0.6, out_k)
+            self._place(img, L["source"], 140, 470 + L["line"].height + 48, lt, 0.45, out_k)
             return img.convert("RGB")
         lt = t2 - self.n * STORY_S
         _signal(d, "frontier-wire-outro", TOPIC["research"], (980, 160, 1800, 470), t)
@@ -329,7 +329,7 @@ class Renderer:
         d = ImageDraw.Draw(img)
         _brand(d, 140, 72)
         _signal(d, "frontier-wire-hook", TOPIC["research"], (1180, 40, 1800, 190), 1.0)
-        d.text((140, 200), f"TODAY'S 60-SECOND RECAP  ·  {self.date_h.upper()}", font=_font(34, 700, 112), fill=TOPIC["research"])
+        d.text((140, 200), f"TODAY'S {int(round(self.total))}-SECOND RECAP  ·  {self.date_h.upper()}", font=_font(34, 700, 112), fill=TOPIC["research"])
         f, lines = _fit(self.s["hook"], 1500, (88, 80, 72), 2, 800)
         img.alpha_composite(_text_layer(lines, f, TEXT, 1.06), (140, 260))
         y = 290 + _text_layer(lines, f, TEXT, 1.06).height + 30
@@ -378,7 +378,7 @@ def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.gi
         raise RuntimeError("ffmpeg failed while encoding")
     r.poster().save(poster, quality=86, optimize=True, progressive=True)
     # teaser: the hook into the first story, small enough for an email
-    _run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "1.2", "-t", "6", "-i", str(mp4), "-vf",
+    _run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "0.8", "-t", "5", "-i", str(mp4), "-vf",
           "fps=10,scale=600:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=64:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4",
           "-loop", "0", str(gif)])
     return check(out_dir)
@@ -394,8 +394,8 @@ def check(out_dir: Path) -> dict[str, Any]:
     info = {"duration": round(dur, 2), "bytes": mp4.stat().st_size, "codec": v["codec_name"], "size": f"{v['width']}x{v['height']}",
             "poster_bytes": (out_dir / "poster.jpg").stat().st_size, "gif_bytes": (out_dir / "teaser.gif").stat().st_size}
     problems = []
-    if not 55 <= dur <= 65:
-        problems.append(f"duration {dur:.1f}s is outside 55-65s")
+    if not MIN_S <= dur <= MAX_S:
+        problems.append(f"duration {dur:.1f}s is outside {MIN_S}-{MAX_S}s")
     if info["bytes"] >= MAX_BYTES:
         problems.append(f"video is {info['bytes'] / 1e6:.1f} MB (limit 15 MB)")
     if v["codec_name"] != "h264" or (v["width"], v["height"]) != (W, H):
