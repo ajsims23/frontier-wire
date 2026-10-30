@@ -595,8 +595,8 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "OpenAI has resumed offline training of its frontier models with layered monitoring, while regulators push for real‑time oversight after recent agent hacks. Major banks are blocking third‑party AI agents, ConnectWise is working to restore its backup service, and Anthropic is preparing to release formal verification proofs. New safety research (ShallowDefend) and a large‑scale AI‑driven intrusion campaign using DeepSeek highlight both progress and rising threats.",
-    "changed": "The latest stories introduced the ShallowDefend safety framework and reported a China‑linked campaign using DeepSeek AI via ARTEX to breach over 200 firms.",
+    "status": "OpenAI’s frontier models are now trained in offline environments with layered monitoring and new containment safeguards, while regulators in the EU and US are pressing for real‑time oversight after recent agent‑led breaches. Major US banks have blocked third‑party AI agents from accessing customer accounts, and Chinese‑origin AI models (GLM‑5.3, DeepSeek) have demonstrated multi‑stage cyber‑attack capabilities. Anthropic’s Claude is producing large‑scale formal verification proofs and Google Cloud has launched the Gemini Enterprise Agent Platform for orchestrated AI agents.",
+    "changed": "The latest reports show AI agents being used in multi‑stage cyber‑attack simulations and real‑world intrusion campaigns, heightening security concerns.",
     "timeline": [
       {
         "story_id": "1c92e42e4bf8",
@@ -617,6 +617,11 @@
         "story_id": "9757fdd24077",
         "date": "2026-10-29",
         "text": "ShallowDefend framework achieves strongest multi‑turn safety on benchmarks"
+      },
+      {
+        "story_id": "4a5589d743c4",
+        "date": "2026-10-29",
+        "text": "Chinese Z.AI GLM‑5.3 conducts multi‑stage cyber‑attack simulations, ignoring code‑generation bans"
       },
       {
         "story_id": "9af0a1a0b387",
@@ -717,7 +722,7 @@
         "story_id": "d1b19037538a"
       },
       {
-        "text": "Anthropic to publish subset of formal proofs on GitHub",
+        "text": "Anthropic to publish subset of formal verification proofs on GitHub",
         "when": "",
         "story_id": "fd2833dd343a"
       },
@@ -746,18 +751,24 @@
       "90bd2076d3e2",
       "9cd0a1e9465b",
       "8c47676bd7b9",
+      "4a5589d743c4",
       "d28967fce9c6",
       "0c49eb4fc302",
       "9757fdd24077",
       "1c92e42e4bf8"
     ],
-    "updated_at": "2026-10-30T07:15:30+00:00",
-    "tried_at": "2026-10-30T07:15:30+00:00"
+    "updated_at": "2026-10-30T10:04:07+00:00",
+    "tried_at": "2026-10-30T10:04:07+00:00"
   },
   "ai-money": {
-    "status": "AI financing remains at record levels, with Meta pursuing a $95‑$100 billion equity raise to fund AI superclusters and Broadcom arranging a $63 billion financing package for Anthropic’s AI chips. Anthropic is moving toward a Nasdaq IPO despite a valuation dip, while a wave of large fundraises, investments and acquisitions—from Bedrock Robotics’ $600 million Series C to Thrive Holdings’ $15.3 billion ADT purchase—shows continued capital appetite across the AI ecosystem. New AI‑focused funds and deals, such as Disruptive’s $10 billion megafund and Unacademy’s Longshot Capital, further underscore the sector’s deep liquidity.",
-    "changed": "Recent filings reveal Anthropic’s IPO now targeting a roughly $1.5‑trillion valuation amid slower growth, while Meta’s equity offerings have been heavily oversubscribed, pushing its AI‑infrastructure raise toward $100 billion.",
+    "status": "AI financing remains at record levels, with Meta pursuing up to $100 billion of equity raises and Broadcom arranging a $63 billion financing package for Anthropic’s AI chips. Large fundraises and acquisitions continue across the ecosystem, from Bedrock Robotics’ $600 million Series C to Thrive Holdings’ $15.3 billion ADT purchase, while new AI‑focused funds such as Unacademy’s Longshot Capital and Disruptive’s $10 billion megafund add fresh capital. Valuations show pressure, highlighted by Anthropic’s IPO valuation dip amid slowing growth.",
+    "changed": "The newest story adds &Truth’s $70 million seed round to develop a universal AI‑driven code verification machine.",
     "timeline": [
+      {
+        "story_id": "bb406d8f0695",
+        "date": "2026-10-30",
+        "text": "&Truth raises $70 million seed to build universal code verification machine"
+      },
       {
         "story_id": "429ac0d1a16a",
         "date": "2026-10-29",
@@ -919,16 +930,16 @@
       {
         "text": "Anthropic IPO scheduled for next month",
         "when": "next month",
-        "story_id": "8a77e646571b"
+        "story_id": "e4d1fbe9aac7"
       },
       {
-        "text": "Meta at‑the‑market share programme planned for Q1 2027",
-        "when": "Q1 2027",
+        "text": "Meta at‑market share programme planned for Q1 2027",
+        "when": "Q1 2027",
         "story_id": "aa890284c6bc"
       },
       {
         "text": "Unacademy Longshot Capital first close targeted for January 2027",
-        "when": "January 2027",
+        "when": "January 2027",
         "story_id": "17944c853d9a"
       }
     ],
@@ -963,10 +974,11 @@
       "17d304e05f25",
       "4dcfcc0d1943",
       "4db20898e948",
-      "41ce547b5dc5"
+      "41ce547b5dc5",
+      "bb406d8f0695"
     ],
-    "updated_at": "2026-10-30T04:00:41+00:00",
-    "tried_at": "2026-10-30T04:00:41+00:00"
+    "updated_at": "2026-10-30T10:04:07+00:00",
+    "tried_at": "2026-10-30T10:04:07+00:00"
   },
   "copyright": {
     "status": "Anthropic is facing a fair‑use hearing over song‑lyric training data and a new $41 million lawsuit from the Elvis Presley estate over 274 songs. Meta’s updated commercial terms that allow scraping of news sites will take effect on Oct 30 2026. Google’s AI‑driven search summaries continue to cut traffic to news sites while paying modest fees to a limited set of publishers.",
@@ -1021,8 +1033,8 @@
     "tried_at": "2026-10-26T09:36:11+00:00"
   },
   "ai-infrastructure": {
-    "status": "AI infrastructure financing is surging, with SpaceX closing a $40 billion GPU debt round, Meta launching up to $100 billion of equity offerings, and Broadcom arranging $63 billion to fund AI accelerators for Anthropic. Major network builds are underway, including Tata Communications’ $450 million 10,000 km fibre rollout in India and a Chennai‑Singapore subsea cable slated for Q4 2029, while Nvidia has pledged $3 billion to support Meta’s share sale and deepen its hardware partnership. New government funding such as the UK’s £100 million AI Biosecurity Lab reflects growing regulatory focus on AI‑related risks.",
-    "changed": "The latest story adds Nvidia’s $3 billion commitment to Meta’s equity offering, expanding their AI infrastructure partnership.",
+    "status": "AI infrastructure financing remains intense, with Meta pursuing up to $100 billion in equity raises, SpaceX completing a $40 billion GPU debt round, and Broadcom securing $63 billion for AI chips. Network builds in India and new high‑bandwidth memory capacity from Samsung are advancing, while major chipmakers and investors continue to back AI compute expansions. A Foxconn‑OpenAI collaboration is being prepared, signalling ongoing demand despite market volatility.",
+    "changed": "Foxconn announced a new collaboration with OpenAI, indicating continued AI infrastructure demand despite recent market volatility.",
     "timeline": [
       {
         "story_id": "38812fd51d92",
@@ -1033,6 +1045,11 @@
         "story_id": "9b56a67d6f75",
         "date": "2026-10-30",
         "text": "Nvidia invests $3 billion in Meta’s equity offering, extending AI hardware partnership"
+      },
+      {
+        "story_id": "35315b11754f",
+        "date": "2026-10-30",
+        "text": "Foxconn announces new collaboration with OpenAI, denies AI bubble, project pending announcement"
       },
       {
         "story_id": "8e1271eaa2a0",
@@ -1218,18 +1235,13 @@
         "story_id": "99c8819be3a7",
         "date": "2026-10-22",
         "text": "NVIDIA releases Minerva AIOps platform for AI factory observability."
-      },
-      {
-        "story_id": "82603c5be230",
-        "date": "2026-10-21",
-        "text": "NVIDIA launches Confidential Bare Metal for secure third‑party AI workloads."
       }
     ],
     "title": "The AI infrastructure build-out",
     "next": [
       {
         "text": "Broadcom AI accelerator deliveries start",
-        "when": "calendar 2027",
+        "when": "2027",
         "story_id": "193124979d15"
       },
       {
@@ -1238,7 +1250,7 @@
         "story_id": "adb4aa27ee66"
       },
       {
-        "text": "Meta at‑the‑market equity offering up to $60 billion",
+        "text": "Meta at‑the‑market equity offering up to $60 billion planned",
         "when": "Q1 2027",
         "story_id": "aa890284c6bc"
       }
@@ -1284,9 +1296,10 @@
       "d415f9f508da",
       "41ce547b5dc5",
       "38812fd51d92",
-      "9b56a67d6f75"
+      "9b56a67d6f75",
+      "35315b11754f"
     ],
-    "updated_at": "2026-10-30T07:15:30+00:00",
-    "tried_at": "2026-10-30T07:15:30+00:00"
+    "updated_at": "2026-10-30T10:04:07+00:00",
+    "tried_at": "2026-10-30T10:04:07+00:00"
   }
 }
