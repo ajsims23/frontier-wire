@@ -1,0 +1,180 @@
+{
+  "started_at": "2026-10-31T13:03:49+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1341)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (894)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (16)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "hn": "ok (16)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Digital Minimalism",
+      "reason": "not AI: The post is unrelated to AI developments and lacks relevance for our audience."
+    },
+    {
+      "title": "India Can Build Rockets, But Can Its VCs Fund The Next One?",
+      "reason": "not AI: The article focuses on rocket launches and VC funding for aerospace, not on AI; therefore it lacks AI relevance."
+    },
+    {
+      "title": "eMudhra Has Quit TLS. The Accountability Questions Haven’t",
+      "reason": "not AI: The piece about eMudhra TLS removal does not pertain to AI."
+    },
+    {
+      "title": "SEBI chairman says market regulator keeping eye on Tata Group developments",
+      "reason": "not AI: Coverage of SEBI chair comments on Tata Group governance is unrelated to AI."
+    },
+    {
+      "title": "[Video Explanation] Download the ~1 Trillion Parameter \"Mistral Large 4\" Yourself. What Can You Do With the Released Weights? Where, How Much, and What to Watch Out For ...",
+      "reason": "duplicate of 05c952b5cb3a"
+    }
+  ],
+  "written": [
+    {
+      "id": "208dc15d456d",
+      "headline": "Bipartisan opposition rises to AI data centers in drought‑stricken Arizona",
+      "category": "industry",
+      "summary": "State lawmakers and officials are pushing back against new AI data center projects in Arizona, citing the state's long‑term water depletion and recent drought, even as earlier TSMC chip fabs were approved.",
+      "url": "https://techmeme.com/261031/p7",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "a7393ac399d1",
+      "headline": "MeitY releases DEPA handbook to enable trusted data sharing for AI training",
+      "category": "policy",
+      "summary": "The Ministry of Electronics and Information Technology launched a handbook on the Data Empowerment and Protection Architecture (DEPA) for AI training, outlining a techno‑legal framework for secure data collaboration. The framework lets institutions share data while retaining control, using contractual permissions, clean rooms and privacy safeguards.",
+      "url": "https://yourstory.com/2026/10/meity-unveils-depa-handbook-to-enable-trusted-data-sharing-for-ai-training",
+      "sources": 3,
+      "quotes": 2
+    }
+  ],
+  "notes": [],
+  "mode": "full",
+  "timings": {
+    "gather": 143.1,
+    "audit": -0.0,
+    "plan": 1.7,
+    "judge": 1.7,
+    "verify and write": 151.9,
+    "videos": 22.3,
+    "tagging": 20.7,
+    "explainers": -0.0,
+    "trackers": 83.5,
+    "claims": 20.7,
+    "model tracker": 0.2,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 41.8,
+    "self-review": -0.0,
+    "photos": 0.2,
+    "stock photos": 16.2,
+    "daily email": 0.0,
+    "alerts": 2.9
+  },
+  "fetched": 2908,
+  "fresh": 6,
+  "plan": {
+    "focus": "Chasing fallout from big‑tech AI capex slowdown while filling thin model coverage and tracking policy pushback on AI data centers.",
+    "priorities": [
+      "India Can Build Rockets, But Can Its VCs Fund The Next One? (Highlights VC funding challenges for Indian deep‑tech startups, key for investors.)",
+      "SEBI chairman says market regulator keeping eye on Tata Group developm (SEBI chair comments on Tata Group signal regulatory shifts affecting large Indian conglomerates.)",
+      "MeitY unveils DEPA handbook to enable trusted data sharing for AI trai (MeitY DEPA handbook impacts data sharing for AI training, crucial for compliance.)",
+      "A look at growing bipartisan opposition to AI data centers in drought- (Bipartisan opposition to AI data centers in Arizona affects industry capex and policy.)"
+    ],
+    "thin_areas": [
+      "models"
+    ],
+    "searches": [
+      "Mistral Large 4 release date: 1 new",
+      "Arizona AI data center opposition legislation: 1 new"
+    ],
+    "dig_deeper": [
+      "India Can Build Rockets, But Can Its VCs Fund The Next One?",
+      "A look at growing bipartisan opposition to AI data centers in drought-"
+    ]
+  },
+  "judged": 8,
+  "kept": 2,
+  "research": {
+    "investigated": 2,
+    "confirmed": 1,
+    "tool_calls": 6
+  },
+  "research_log": [
+    "A look at growing bipartisan opposition to AI data centers in drought-: unconfirmed (searched “bipartisan opposition AI data centers Arizona drought TSMC”; read msn.com; searched “\"AI data centers\" Arizona drought opposition”)",
+    "MeitY unveils DEPA handbook to enable trusted data sharing for AI trai: confirmed (searched “MeitY DEPA handbook trusted data sharing AI training”; read business-standard.com; read inc42.com)"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (9 in feed, 0 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 1 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (3 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (5 in feed, 0 new)"
+  },
+  "videos_kept": "4 kept from 4 new",
+  "tagged": 2,
+  "trackers": "filed 3 stories; updated ai-regulation, india-ai, ai-infrastructure",
+  "claims": "68 tracked, 66 open, 0 updated this run",
+  "model_tracker": "82 models, 10 changes today",
+  "briefing": "3 themes from 18 stories",
+  "india_briefing": "2 themes from 3 stories",
+  "photos": "1 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "18 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":24}",
+  "ai_requests_run": 22,
+  "ai_tokens_run": 56440,
+  "ai_requests_today": 129,
+  "provider_log": []
+}
