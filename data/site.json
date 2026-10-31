@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T07:10:02+00:00",
+  "updated_at": "2026-10-31T09:54:05+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Publishers can add a special token to their site’s robots.txt file to tell AI crawlers not to scrape their pages for training. All participating AI companies will read this token and respect the publisher’s preference. This removes the need for each publisher to send separate opt‑out notices to each AI provider.",
@@ -82,6 +82,177 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "The listed machine is a former hyperscaler supercomputer built from Nvidia’s A100 data‑center GPUs and AMD EPYC CPUs. If purchased, a buyer would obtain enough compute to run large AI models, but the hardware dates to the Ampere generation and may be less efficient than newer chips.",
+        "terms": [
+          {
+            "term": "A100 GPU",
+            "meaning": "Nvidia’s data‑center accelerator introduced in 2020, used for AI and high‑performance computing."
+          },
+          {
+            "term": "AMD EPYC Rome processor",
+            "meaning": "AMD’s 64‑core server CPU based on the Zen 2 architecture."
+          },
+          {
+            "term": "petabyte",
+            "meaning": "One quadrillion bytes of storage, roughly 1,000 terabytes."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Provides a bulk source of A100 GPUs and EPYC CPUs for building AI training clusters, though at older performance levels.",
+        "business": "Offers a potential cost‑effective way for companies to acquire large compute capacity without waiting for newer hardware.",
+        "investors": "Highlights a market for reselling decommissioned AI infrastructure, indicating demand for legacy compute assets."
+      },
+      "id": "27cc0656103d",
+      "headline": "Core 4 Solutions lists decommissioned Nvidia A100 supercomputer on eBay for $59.7 million",
+      "summary": "Core 4 Solutions, an IT hardware reseller, posted a 300‑rack AI supercomputer on eBay with an asking price of $59.7 million. The system contains 9,600 Nvidia A100 GPUs, 4,200 AMD EPYC Rome processors, 384 TB of GPU memory and about 1.4 PB of system memory.",
+      "why_it_matters": "The sale shows a secondary market for large‑scale AI compute hardware, offering a potential source of capacity at older‑generation prices.",
+      "category": "industry",
+      "lab": "Core 4 Solutions",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 7,
+      "url": "https://livemint.com/technology/nvidia-supercomputer-decommissioned-ebay-sale-a100-chips-gpus-it-hardware-reseller-60-million-best-offer-free-shipping-11793434326099.html",
+      "source_id": "mint-tech",
+      "desk": "india",
+      "ai_relevance": "core",
+      "image": "https://www.livemint.com/lm-img/img/2026/10/31/600x338/META-NVIDIA-MUSE-0_1793436890569_nbo0_1793436914437_cwbr_fbfd5a9b-1414-43b7-b833-d80d530065ce_rtU0.JPG",
+      "sources": [
+        {
+          "url": "https://livemint.com/technology/nvidia-supercomputer-decommissioned-ebay-sale-a100-chips-gpus-it-hardware-reseller-60-million-best-offer-free-shipping-11793434326099.html",
+          "publisher": "Mint Technology",
+          "title": "IT hardware reseller lists GPUs from decommissioned Nvidia supercomputer on eBay for $60 million — What we know"
+        },
+        {
+          "url": "https://msn.com/en-us/technology/tech-companies/it-vendor-lists-massive-60-million-ai-supercomputer-on-ebay-with-300-racks-of-decommissioned-gpus/ar-AA2gfqpH",
+          "publisher": "Tom's Hardware on MSN",
+          "title": "IT vendor lists massive $60 million AI supercomputer on eBay with 300 racks of decommissioned GPUs"
+        },
+        {
+          "url": "https://tech.yahoo.com/computing/articles/vendor-lists-massive-60-million-105404751.html",
+          "publisher": "YAHOO!",
+          "title": "IT vendor lists massive $60 million AI supercomputer on eBay with 300 racks of decommissioned GPUs — includes 9,600 Nvidia A100 GPUs and 4,200 AMD EPYC CPUs, plus free shipping"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-31T09:02:56+00:00",
+      "created_at": "2026-10-31T09:54:05+00:00",
+      "sectors": [],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 1,
+        "investors": 3
+      },
+      "cover": "$59.7 million",
+      "trackers": [
+        "ai-infrastructure"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Large 4 is a very large AI model that can process text and other data types. Because its weights are open, organisations can run it on their own hardware, giving them control over how it is used. This can help security teams scan code, logs, and network data for vulnerabilities without sending data to external services.",
+        "terms": [
+          {
+            "term": "open weights",
+            "meaning": "The model’s parameters are publicly available, allowing anyone to download and run the model locally."
+          },
+          {
+            "term": "multimodal model",
+            "meaning": "An AI system that can handle multiple types of input such as text, images, or other data."
+          },
+          {
+            "term": "active parameters",
+            "meaning": "The subset of a model’s total parameters that are used during inference, here 52 billion."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers can integrate Large 4 into security tools and run it on‑premises without relying on cloud APIs.",
+        "business": "Enterprises gain a self‑hosted AI option to detect and remediate security flaws, potentially lowering third‑party costs.",
+        "investors": "The move positions Mistral AI against Chinese competitors in the cybersecurity AI market, highlighting its open‑weight strategy."
+      },
+      "id": "05c952b5cb3a",
+      "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
+      "summary": "Mistral AI released its Large 4 model, a 1‑trillion‑parameter multimodal AI with 52 billion active parameters, aimed at helping organisations identify and fix cybersecurity vulnerabilities. The model can be downloaded and run independently, unlike many cloud‑based AI services.",
+      "why_it_matters": "It provides an open‑weight, high‑capacity AI tool for cybersecurity, reducing reliance on proprietary cloud services.",
+      "category": "models",
+      "lab": "Mistral AI",
+      "model_name": "Large 4",
+      "model_type": "Multimodal",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "I'm not comfortable living in a world in which open weights do not exist,",
+          "speaker": "Pierre Stock",
+          "speaker_role": "Vice President of Science",
+          "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms"
+        },
+        {
+          "text": "once the model is out, it's impossible to contain access,",
+          "speaker": "Pierre Stock",
+          "speaker_role": "Vice President of Science",
+          "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms"
+        }
+      ],
+      "score": 8,
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms",
+      "source_id": "et-tech",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-1701395,resizemode-75,msid-135390933/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users.jpg",
+      "sources": [
+        {
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms",
+          "publisher": "ET Tech",
+          "title": "Mistral AI publicly releases Large 4, targets cybersecurity users"
+        },
+        {
+          "url": "https://techrepublic.com/article/news-mistral-large-4-ai-cybersecurity-open-weights",
+          "publisher": "TechRepublic",
+          "title": "Mistral Releases 1-Trillion-Parameter AI Model for Cybersecurity"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-31T06:13:40+00:00",
+      "created_at": "2026-10-31T09:54:05+00:00",
+      "thread": "t-1f4231610437",
+      "sectors": [
+        "cybersecurity"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "Large 4",
+      "trackers": [
+        "frontier-race"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "Baseten is raising about $2 billion from investors, which would increase its valuation to as much as $30 billion. The company provides a platform that lets enterprises deploy and run multiple AI models for inference. The larger valuation reflects market belief that AI inference infrastructure will be in high demand.",
@@ -5149,203 +5320,27 @@
       },
       "cover": "",
       "trackers": []
-    },
-    {
-      "explainer": {
-        "what_it_means": "The model can take recorded audio up to an hour long, turn it into text in up to 40 languages, and optionally translate it into English or other languages. It can also label who is speaking, handling up to eight speakers in a single file. Because it runs on a single GPU, developers can deploy it on edge devices or in data‑center servers.",
-        "terms": [
-          {
-            "term": "open-weight",
-            "meaning": "A model whose weights are publicly released, allowing anyone to download and run it."
-          },
-          {
-            "term": "mixture-of-experts",
-            "meaning": "A neural network architecture that activates only a subset of its parameters for each input, reducing compute needs."
-          },
-          {
-            "term": "word error rate",
-            "meaning": "A metric that measures the percentage of words that are incorrectly transcribed."
-          }
-        ],
-        "watch_next": []
-      },
-      "benchmarks": [
-        {
-          "model": "Nemotron 3.5 Transcribe",
-          "benchmark": "general word error rate",
-          "score": "30.8%"
-        },
-        {
-          "model": "Nemotron 3.5 Transcribe",
-          "benchmark": "prompted word error rate",
-          "score": "20.8%"
-        },
-        {
-          "model": "Nemotron 3.5 Transcribe",
-          "benchmark": "Eka Care Indian medical speech benchmark",
-          "score": "11.8%"
-        }
-      ],
-      "audiences": {
-        "builders": "Developers can integrate the model into apps for meetings or medical transcription and fine‑tune it with the Granary v2 dataset.",
-        "business": "Enterprises can use the model to automate multilingual meeting notes and improve transcription accuracy without large‑scale hardware.",
-        "investors": "The release shows Nvidia expanding its open‑weight AI portfolio, competing with other voice model providers."
-      },
-      "id": "45d48a94f572",
-      "headline": "Nvidia releases Nemotron 3.5 Transcribe and Granary v2 speech dataset",
-      "summary": "Nvidia unveiled Nemotron 3.5 Transcribe, a 30‑billion‑parameter open‑weight model that can transcribe audio in up to 40 languages, translate 31 languages, and distinguish up to eight speakers. It also released Granary v2, an expanded open‑source multilingual speech dataset.",
-      "why_it_matters": "The model gives developers a free, high‑accuracy tool for multilingual transcription and translation that runs on a single GPU.",
-      "category": "models",
-      "lab": "NVIDIA",
-      "model_name": "Nemotron 3.5 Transcribe",
-      "model_type": "Voice",
-      "tags": [],
-      "quotes": [],
-      "score": 8,
-      "url": "https://techmeme.com/261028/p33",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/10/AI-on-the-tongue.png?resize=1200,600",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261028/p33",
-          "publisher": "techmeme.com",
-          "title": "Nvidia debuts Nemotron 3.5 Transcribe, an open-weight model for multilingual audio transcription and translation, and Granary v2, its open-source speech dataset (Kyt Dotson/SiliconANGLE)"
-        },
-        {
-          "url": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model",
-          "publisher": "TechCrunch AI",
-          "title": "Voice AI in vogue: Nvidia releases new open transcription model"
-        },
-        {
-          "url": "https://siliconangle.com/2026/10/28/nvidia-releases-all-in-one-adaptable-nemotron-3-5-audio-transcription-and-translation-model",
-          "publisher": "SiliconANGLE",
-          "title": "Nvidia releases all-in-one adaptable Nemotron 3.5 audio transcription and translation model"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-28T15:20:02+00:00",
-      "created_at": "2026-10-28T19:04:39+00:00",
-      "thread": "t-5ae7f5cc4417",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "30‑billion",
-      "trackers": [
-        "frontier-race"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "China's draft export rules will restrict the direct transfer of AI models, data and technical expertise to foreign firms, but will still allow foreign users to access AI services hosted on Chinese websites or cloud platforms. Companies that rely on overseas computing resources will need government approval to move core AI technology abroad. This creates a regulatory barrier for international collaboration on advanced AI systems.",
-        "terms": [
-          {
-            "term": "export control list",
-            "meaning": "A list of items whose export is prohibited or restricted by a government."
-          },
-          {
-            "term": "large language model",
-            "meaning": "A type of AI that processes and generates text based on massive training data."
-          },
-          {
-            "term": "AI agents",
-            "meaning": "Software that can perform tasks with limited human direction, using AI capabilities."
-          }
-        ],
-        "watch_next": [
-          "China is expected to adopt the proposals by the end of the year",
-          "Guidelines on implementation are slated to be issued later, according to an anonymous source"
-        ]
-      },
-      "audiences": {
-        "builders": "Developers must seek approval before transferring core AI models or related data to overseas facilities.",
-        "business": "Chinese AI firms may need to restructure international partnerships and adjust how they sell AI services abroad.",
-        "investors": "The new rules add uncertainty for investors in Chinese AI and semiconductor companies."
-      },
-      "id": "62c0d830968d",
-      "headline": "China drafts export controls on 23 AI technologies, pending adoption by year‑end",
-      "summary": "China released draft rules on Oct. 16 that would add 23 AI‑related technologies, including large language models, agents, chip‑design tools and computing clusters, to its export‑control list. The rules would let overseas users access Chinese AI services online while requiring government approval for transfers of underlying models, data or expertise, and are expected to be adopted by the end of the year.",
-      "why_it_matters": "The measures tighten how Chinese AI capabilities can be shared abroad, affecting global AI development and supply chains.",
-      "category": "policy",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "The structure the leadership prefers, with IP and R&D kept onshore and operations and access sold abroad, is the one the market was already converging on,",
-          "speaker": "Alfredo Montufar-Helu",
-          "speaker_role": "Beijing-based managing director at consultancy Ankura",
-          "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/chinas-new-export-curbs-draw-a-line-around-its-ai-crown-jewels/articleshow/135289950.cms"
-        }
-      ],
-      "score": 8,
-      "url": "https://miamiherald.com/news/business/article317810613.html",
-      "source_id": "chief",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-1953991,resizemode-75,msid-135289950/tech/artificial-intelligence/chinas-new-export-curbs-draw-a-line-around-its-ai-crown-jewels.jpg",
-      "sources": [
-        {
-          "url": "https://miamiherald.com/news/business/article317810613.html",
-          "publisher": "Miami Herald",
-          "title": "China's new export curbs draw a line around its AI crown jewels"
-        },
-        {
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/chinas-new-export-curbs-draw-a-line-around-its-ai-crown-jewels/articleshow/135289950.cms",
-          "publisher": "ET Tech",
-          "title": "China's new export curbs draw a line around its AI crown jewels"
-        },
-        {
-          "url": "https://apnews.com/article/china-export-restrictions-ai-chips-solar-us-5ac381c0c6d6628bbea2e0da7d855a5b",
-          "publisher": "Associated Press News",
-          "title": "China moves to curb tech exports, including AI, citing national security risks"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-28T14:10:00+00:00",
-      "created_at": "2026-10-29T19:07:01+00:00",
-      "thread": "t-146d639e76ac",
-      "sectors": [
-        "government"
-      ],
-      "regions": [
-        "china"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 1,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "23 AI tech",
-      "trackers": [
-        "us-china",
-        "ai-regulation"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
+    {
+      "text": "I'm not comfortable living in a world in which open weights do not exist,",
+      "speaker": "Pierre Stock",
+      "speaker_role": "Vice President of Science",
+      "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms",
+      "story_id": "05c952b5cb3a",
+      "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
+      "published_at": "2026-10-31T06:13:40+00:00"
+    },
+    {
+      "text": "once the model is out, it's impossible to contain access,",
+      "speaker": "Pierre Stock",
+      "speaker_role": "Vice President of Science",
+      "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms",
+      "story_id": "05c952b5cb3a",
+      "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
+      "published_at": "2026-10-31T06:13:40+00:00"
+    },
     {
       "text": "Our customers began signaling a PC slowdown based on the memory prices and availability. Year-to-date system endpoint prices have increased significantly, placing additional pressure on already limited IT budgets,",
       "speaker": "Lip-Bu Tan",
@@ -5381,24 +5376,6 @@
       "story_id": "93351cbb4cc4",
       "headline": "Anthropic’s Claude VS Code extension backdoored on Cursor, affecting up to 5,000 users",
       "published_at": "2026-10-30T21:09:54+00:00"
-    },
-    {
-      "text": "We expect to continue investing aggressively to support both our core business and emerging AI initiatives,",
-      "speaker": "Susan Li",
-      "speaker_role": "Chief Financial Officer, Meta Platforms Inc.",
-      "source_url": "https://finance.yahoo.com/technology/ai/articles/big-tech-holds-3-trillion-192531716.html",
-      "story_id": "db3eb85081cc",
-      "headline": "Big tech firms commit over $3 trillion to AI data‑center spending",
-      "published_at": "2026-10-30T20:00:58+00:00"
-    },
-    {
-      "text": "Next, we will continue with a series of tests to evaluate how TPUs perform under thermal stress and radiation exposure in orbit,",
-      "speaker": "Google",
-      "speaker_role": "",
-      "source_url": "https://theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission",
-      "story_id": "07584bdf878d",
-      "headline": "Google’s Suncatcher prototype satellite is online and runs Gemma 4 model",
-      "published_at": "2026-10-30T18:40:31+00:00"
     }
   ],
   "videos": [
@@ -5535,12 +5512,43 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-10-31T03:57:44+00:00",
-    "one_line": "Regulators act, AI spending soars, and safety measures rise after breaches.",
+    "written_at": "2026-10-31T09:54:05+00:00",
+    "one_line": "AI spending surges, regulators act, and safety incidents surface across the industry.",
     "themes": [
       {
-        "title": "Regulators tighten AI oversight",
-        "text": "UK courts upheld Ofcom’s data‑moderation requests and the Competition Authority opened a probe into Meta’s publisher terms. India’s TRAI released draft AI governance rules and major AI providers adopted a shared robots.txt opt‑out signal.",
+        "title": "AI spending drives infrastructure expansion",
+        "text": "Big tech firms have committed over $3 trillion to data‑center leases, equipment and energy, while startups such as Runware plan a factory to mass‑produce AI inference pods and Fujifilm is expanding magnetic‑tape capacity fivefold for generative‑AI archiving. Baseten raised $2 billion, and Core 4 Solutions listed a 300‑rack Nvidia A100 supercomputer for $59.7 million.",
+        "stories": [
+          {
+            "id": "db3eb85081cc",
+            "headline": "Big tech firms commit over $3 trillion to AI data‑center spending",
+            "url": "https://techmeme.com/261030/p22"
+          },
+          {
+            "id": "3e4e3eed2bbf",
+            "headline": "Runware plans factory to mass‑produce AI pods at car‑assembly line speed",
+            "url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out"
+          },
+          {
+            "id": "09484dfee9e7",
+            "headline": "Fujifilm to boost magnetic tape production fivefold as AI drives data archiving",
+            "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand"
+          },
+          {
+            "id": "d5c6bb8a1621",
+            "headline": "Baseten launches $2 billion funding round, valuation up to $30 billion",
+            "url": "https://techmeme.com/261030/p29"
+          },
+          {
+            "id": "27cc0656103d",
+            "headline": "Core 4 Solutions lists decommissioned Nvidia A100 supercomputer on eBay for $59.7 million",
+            "url": "https://livemint.com/technology/nvidia-supercomputer-decommissioned-ebay-sale-a100-chips-gpus-it-hardware-reseller-60-million-best-offer-free-shipping-11793434326099.html"
+          }
+        ]
+      },
+      {
+        "title": "Regulators tighten AI data rules",
+        "text": "The UK High Court dismissed Meta, TikTok and X’s challenge to Ofcom’s data‑request notices, while the Competition and Markets Authority opened a probe into Meta’s terms for publishers and advertisers. OpenAI, Google, Microsoft and Anthropic also adopted a shared robots.txt token to let publishers opt out of AI scraping.",
         "stories": [
           {
             "id": "955346c4476d",
@@ -5553,71 +5561,20 @@
             "url": "https://techmeme.com/261030/p10"
           },
           {
-            "id": "592442a93539",
-            "headline": "TRAI drafts AI policy framework requiring board approval and incident reporting for telecoms",
-            "url": "https://fortuneindia.com/business-news/trai-proposes-board-approved-ai-policies-mandatory-reporting-of-serious-incidents-by-telcos-2/167781"
-          },
-          {
             "id": "30d3462f4f36",
             "headline": "OpenAI, Google, Microsoft, Anthropic adopt shared robots.txt opt‑out standard",
             "url": "https://techmeme.com/261030/p26"
-          },
-          {
-            "id": "25cc4c9bb2e3",
-            "headline": "OpenAI says it will honor robots.txt signal for AI training preferences",
-            "url": "https://openai.com/index/helping-websites-express-ai-training-preferences"
           }
         ]
       },
       {
-        "title": "AI infrastructure spending hits trillions",
-        "text": "Alphabet, Meta, Microsoft, Amazon and Oracle disclosed over $3 trillion in data‑center commitments, prompting stock declines and cash‑flow concerns. Nvidia pledged $3 billion to Meta’s equity offering, while Baseten raised $2 billion and Foxconn, Runware and Fujifilm announced hardware and storage expansions.",
+        "title": "AI safety measures and threats",
+        "text": "OpenAI added stricter limits on weapon‑related advice for teen ChatGPT users. A malicious version of Anthropic’s Claude Code VS Code extension and a similar Claude Code extension from Cursor were found to install persistent SSH backdoors, potentially affecting up to 5,000 developers before being replaced.",
         "stories": [
           {
-            "id": "db3eb85081cc",
-            "headline": "Big tech firms commit over $3 trillion to AI data‑center spending",
-            "url": "https://techmeme.com/261030/p22"
-          },
-          {
-            "id": "41a783f21e16",
-            "headline": "US tech stocks tumble as AI spending approaches $1 trillion",
-            "url": "https://bbc.co.uk/news/articles/cvwy72e0n72yo"
-          },
-          {
-            "id": "9b56a67d6f75",
-            "headline": "Nvidia commits $3 billion to Meta share sale and expands AI infrastructure partnership",
-            "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/nvidias-web-of-ai-bets-smart-strategy-or-bubble-risk/articleshow/135343465.cms"
-          },
-          {
-            "id": "d5c6bb8a1621",
-            "headline": "Baseten launches $2 billion funding round, valuation up to $30 billion",
-            "url": "https://techmeme.com/261030/p29"
-          },
-          {
-            "id": "35315b11754f",
-            "headline": "Foxconn says new collaboration with OpenAI in works, denies AI bubble",
-            "url": "https://economictimes.indiatimes.com/tech/technology/foxconn-working-on-a-new-tie-up-with-openai-says-there-is-no-ai-bubble/articleshow/135352103.cms"
-          },
-          {
-            "id": "3e4e3eed2bbf",
-            "headline": "Runware plans factory to mass‑produce AI pods at car‑assembly line speed",
-            "url": "https://techcrunch.com/2026/10/30/can-ai-data-centers-be-mass-produced-like-cars-and-online-in-48-hours-this-startup-aims-to-find-out"
-          },
-          {
-            "id": "09484dfee9e7",
-            "headline": "Fujifilm to boost magnetic tape production fivefold as AI drives data archiving",
-            "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand"
-          }
-        ]
-      },
-      {
-        "title": "New safety measures after breaches",
-        "text": "Chinese state‑linked hackers used DeepSeek via ARTEX to target hundreds of firms, and a malicious Claude Code VS Code extension attempted to install an SSH backdoor. OpenAI responded with tighter teen weapons limits and broader violence‑prevention safeguards for ChatGPT.",
-        "stories": [
-          {
-            "id": "1c92e42e4bf8",
-            "headline": "China‑linked hackers used DeepSeek AI via ARTEX to breach 200+ firms in 11 days",
-            "url": "https://techmeme.com/261030/p1"
+            "id": "020086432245",
+            "headline": "OpenAI tightens weapons‑related information limits for teen ChatGPT users",
+            "url": "https://techmeme.com/261030/p25"
           },
           {
             "id": "7e2aaf184ac3",
@@ -5625,14 +5582,9 @@
             "url": "https://cyberplace.social/@GossiTheDog/117528831681803563"
           },
           {
-            "id": "020086432245",
-            "headline": "OpenAI tightens weapons‑related information limits for teen ChatGPT users",
-            "url": "https://techmeme.com/261030/p25"
-          },
-          {
-            "id": "c7606af40dbb",
-            "headline": "OpenAI adds expanded safeguards to ChatGPT for violence prevention",
-            "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens"
+            "id": "93351cbb4cc4",
+            "headline": "Anthropic’s Claude VS Code extension backdoored on Cursor, affecting up to 5,000 users",
+            "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours"
           }
         ]
       }
@@ -5640,81 +5592,42 @@
     "from_stories": 20
   },
   "plan": {
-    "focus": "Chasing the fallout from Anthropic’s VS Code backdoor while covering the under‑reported model‑release race.",
-    "updated_at": "2026-10-31T07:10:02+00:00",
+    "focus": "Tracking AI funding crunch and policy pushback while filling gaps on model releases and research updates.",
+    "updated_at": "2026-10-31T09:54:05+00:00",
     "thin_areas": [
       "model releases",
       "research"
     ],
     "searches": [
-      "Anthropic IPO rating",
-      "Chinese hackers AI tools breach",
-      "new AI model release October 2026"
+      "Anthropic IPO rating update",
+      "Chinese AI hacking incidents",
+      "new AI model release 2026"
     ]
   },
   "builders": {
-    "written_at": "2026-10-30T13:11:31+00:00",
-    "intro": "Today’s picks showcase fresh AI tools for video, code, mobile agents, workflow, and generative design.",
+    "written_at": "2026-10-31T09:54:05+00:00",
+    "intro": "Today’s picks showcase fresh AI demos, voice‑coding tools, privacy‑focused agents, and fast media models for builders and businesses.",
     "picks": [
       {
-        "name": "Overtone",
-        "what": "Transcribes, corrects and cuts captions for any screen shape using multiple speech models.",
-        "why": "Cuts manual caption work for video teams, showing how multi‑model voting improves accuracy.",
-        "kind": "tool",
-        "for": "business",
-        "url": "https://github.com/lonthq/overtone-captions",
-        "discussion": "https://news.ycombinator.com/item?id=50293115",
+        "name": "Sketch Stadium",
+        "what": "Lets you watch or connect AI agents playing Pictionary as a standalone demonstration.",
+        "why": "Shows compelling multi‑agent interaction and push‑notification integration for builders exploring collaborative agents.",
+        "kind": "demo",
+        "for": "everyone",
+        "url": "https://sketch.wakeshift.ai/games/q5ucru",
+        "discussion": "https://news.ycombinator.com/item?id=50305218",
         "source": "Show HN",
-        "signal": "41 points, 3 comments on Hacker News",
-        "image": "img/builders/645f50181da0.jpg",
+        "signal": "32 points, 10 comments on Hacker News",
+        "image": null,
         "video": null
       },
       {
-        "name": "Lasm",
-        "what": "Write formally verified webapps in Lean for Node/serverless/edge.",
-        "why": "Brings formal verification to web development, enabling safer serverless apps.",
-        "kind": "open-source",
-        "for": "builders",
-        "url": "https://github.com/Millillion/lasm",
-        "discussion": "https://news.ycombinator.com/item?id=50299004",
-        "source": "Show HN",
-        "signal": "33 points, 18 comments on Hacker News",
-        "image": "img/builders/f3e49f6f9523.jpg",
-        "video": null
-      },
-      {
-        "name": "Mika",
-        "what": "On-device AI agent for Android that operates apps and the web to get tasks done.",
-        "why": "Brings AI‑driven automation to Android without cloud, useful for power users and developers.",
-        "kind": "agent",
-        "for": "builders",
-        "url": "https://github.com/wangzan101/Mika",
-        "discussion": "",
-        "source": "GitHub",
-        "signal": "379 stars since 29 Oct, written in Kotlin",
-        "image": "img/builders/f72111f2a530.jpg",
-        "video": null
-      },
-      {
-        "name": "kanzo",
-        "what": "Self-hosted kanban board for humans and AI agents, a 4 MB binary with zero‑setup.",
-        "why": "Provides a lightweight, self‑hosted task board that integrates AI agents into project workflows.",
-        "kind": "open-source",
-        "for": "builders",
-        "url": "https://github.com/emanuele-em/kanzo",
-        "discussion": "",
-        "source": "GitHub",
-        "signal": "191 stars since 25 Oct, written in Rust",
-        "image": "img/builders/a02a79030c2a.jpg",
-        "video": null
-      },
-      {
-        "name": "ilse",
-        "what": "Point at your app and an AI agent rewrites the code accordingly.",
-        "why": "Demonstrates interactive code editing by visual pointing, a novel UI for developer productivity.",
+        "name": "SKI",
+        "what": "Provides a voice‑first interface for coding tasks.",
+        "why": "Enables developers to code hands‑free, boosting productivity for builders.",
         "kind": "app",
         "for": "builders",
-        "url": "https://producthunt.com/products/ilse",
+        "url": "https://producthunt.com/products/ski",
         "discussion": "",
         "source": "Product Hunt",
         "signal": "launched on Product Hunt",
@@ -5722,28 +5635,67 @@
         "video": null
       },
       {
-        "name": "fastbrowse",
-        "what": "Open‑source browser agent optimized for speed.",
-        "why": "Shows how agents can browse the web orders of magnitude faster than existing tools.",
+        "name": "Agnos",
+        "what": "Cleans documents for AI consumption and visualizes what content was removed.",
+        "why": "Helps businesses ensure data privacy and relevance before feeding models.",
         "kind": "tool",
-        "for": "builders",
-        "url": "https://producthunt.com/products/fastbrowse",
+        "for": "business",
+        "url": "https://producthunt.com/products/agnos",
         "discussion": "",
         "source": "Product Hunt",
         "signal": "launched on Product Hunt",
         "image": null,
+        "video": null
+      },
+      {
+        "name": "kinetograph",
+        "what": "A blazingly fast programmatic video engine designed for AI agents to generate video.",
+        "why": "Gives builders a high‑performance tool for video generation pipelines.",
+        "kind": "open-source",
+        "for": "builders",
+        "url": "https://github.com/0xS4N4TG/kinetograph",
+        "discussion": "",
+        "source": "GitHub",
+        "signal": "381 stars since 23 Oct, written in TypeScript",
+        "image": null,
+        "video": null
+      },
+      {
+        "name": "agentring",
+        "what": "Enables AI agents to make and receive VoIP phone calls without external services.",
+        "why": "Provides a privacy‑preserving way for agents to interact via phone, useful for builders.",
+        "kind": "agent",
+        "for": "builders",
+        "url": "https://github.com/mutonby/agentring",
+        "discussion": "",
+        "source": "GitHub",
+        "signal": "202 stars since 23 Oct, written in Python",
+        "image": "img/builders/cc825d29433c.jpg",
+        "video": null
+      },
+      {
+        "name": "BLA",
+        "what": "Shields binaries, Electron apps, JS bundles, Python, and WebAssembly from AI reverse‑engineering attacks.",
+        "why": "Offers developers security against emerging AI‑powered code analysis threats.",
+        "kind": "tool",
+        "for": "business",
+        "url": "https://github.com/qybaihe/bla",
+        "discussion": "",
+        "source": "GitHub",
+        "signal": "1,565 stars since 25 Oct, written in TypeScript",
+        "image": "img/builders/e8bb9b5c5c77.jpg",
         "video": null
       }
     ]
   },
   "top_voices": {
-    "written_at": "2026-10-30T13:11:31+00:00",
-    "headline": "AI agents reshape hiring, model openness, and expert reliance as new frontiers emerge",
-    "range": "23 Oct – 30 Oct 2026",
+    "written_at": "2026-10-31T09:54:05+00:00",
+    "headline": "AI agents reshape software, visual‑reasoning races, and safety hype sparks fresh debate",
+    "range": "24 Oct – 31 Oct 2026",
     "debates": [
       {
         "title": "Are coding interviews obsolete?",
-        "summary": "Anthropic has stopped using traditional coding interviews, arguing that real‑world problem solving better reflects talent. Others note that coding agents have become reliable daily drivers, suggesting interviews may no longer be needed.",
+        "summary": "Industry leaders debate whether traditional coding interviews have been supplanted by AI‑driven assessments. The discussion weighs productivity gains against the need for human oversight.",
         "image": "img/voices/625efce5713d.jpg",
         "video": "35ZWesLrv5A",
         "people": [
@@ -5754,32 +5706,32 @@
           {
             "name": "Simon Willison",
             "photo": "img/people/simon-willison.jpg"
-          }
-        ]
-      },
-      {
-        "title": "Will open‑weight models match frontier performance?",
-        "summary": "Kimi 3.1 Pro is slated to release open weights and benchmark results suggest it rivals top closed models. Yet recent benchmark data shows open‑weight models still lag behind the frontier, sparking debate over how quickly parity can be achieved.",
-        "image": "img/voices/6c51129e93f6.jpg",
-        "video": "",
-        "people": [
-          {
-            "name": "Simon Willison",
-            "photo": "img/people/simon-willison.jpg"
           },
           {
             "name": "Ethan Mollick",
             "photo": "img/people/ethan-mollick.jpg"
-          },
-          {
-            "name": "swyx",
-            "photo": "img/people/swyx.jpg"
           }
         ]
       },
       {
-        "title": "Can experts trust AI suggestions?",
-        "summary": "Research shows experts can be subtly influenced by AI outputs even when they think they are independent. The community is urged to document when AI does not add value and to apply it deliberately.",
+        "title": "Which visual reasoning model leads?",
+        "summary": "Competing frontier models vie for supremacy in visual reasoning benchmarks, with each camp touting new capabilities. The race highlights how quickly performance gaps can shift.",
+        "image": "img/voices/2812ff85caf0.jpg",
+        "video": "",
+        "people": [
+          {
+            "name": "swyx",
+            "photo": "img/people/swyx.jpg"
+          },
+          {
+            "name": "Simon Willison",
+            "photo": "img/people/simon-willison.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Is existential risk hype driving AI?",
+        "summary": "Some see talk of existential risk as marketing, while others view it as a genuine safety priority. The clash reflects differing views on how AI risk should be communicated and addressed.",
         "image": "",
         "video": "",
         "people": [
@@ -5788,8 +5740,8 @@
             "photo": "img/people/ethan-mollick.jpg"
           },
           {
-            "name": "Simon Willison",
-            "photo": "img/people/simon-willison.jpg"
+            "name": "Jack Clark",
+            "photo": ""
           }
         ]
       }
@@ -5802,6 +5754,27 @@
     "range": "18 Oct – 25 Oct 2026"
   },
   "threads": [
+    {
+      "id": "t-1f4231610437",
+      "title": "Mistral Large 4 preview to public release",
+      "updated_at": "2026-10-31T06:13:40+00:00",
+      "stories": [
+        {
+          "id": "05c952b5cb3a",
+          "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms",
+          "published_at": "2026-10-31T06:13:40+00:00",
+          "category": "models"
+        },
+        {
+          "id": "820bd24a41c4",
+          "headline": "Mistral AI opens preview of Mistral Large 4, a 1‑trillion‑parameter multimodal model",
+          "url": "https://mistral.ai/news/mistral-large-4",
+          "published_at": "2026-10-21T17:16:05+00:00",
+          "category": "models"
+        }
+      ]
+    },
     {
       "id": "t-d56622e1b6e9",
       "title": "Anthropic VS Code extension backdoor",
@@ -5864,51 +5837,17 @@
           "category": "safety"
         }
       ]
-    },
-    {
-      "id": "t-a50b07bc6191",
-      "title": "Anthropic IPO progress: rating concerns",
-      "updated_at": "2026-10-30T17:27:25+00:00",
-      "stories": [
-        {
-          "id": "b329cc4aaa4c",
-          "headline": "Blackstone says Anthropic likely to receive junk rating after IPO",
-          "url": "https://ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
-          "published_at": "2026-10-30T17:27:25+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "007a2afe4a6c",
-          "headline": "Anthropic’s IPO faces valuation drop as growth slows and AI prices plunge",
-          "url": "https://economictimes.indiatimes.com/tech/technology/anthropics-record-ipo-faces-some-big-questions/articleshow/135249836.cms",
-          "published_at": "2026-10-28T02:42:31+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "e4d1fbe9aac7",
-          "headline": "Anthropic files S‑1 for Nasdaq IPO, reporting $16.3 billion H1 revenue",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/articleshow/135222913.cms",
-          "published_at": "2026-10-27T02:33:06+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "09134649a0da",
-          "headline": "Anthropic files S‑1 showing $16.3 billion H1 revenue and $131.7 billion cash",
-          "url": "https://msn.com/en-us/news/other/the-anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/ar-AA2g76lV",
-          "published_at": "2026-10-26T16:53:17+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "8a77e646571b",
-          "headline": "Anthropic files S‑1 for IPO, plans Nasdaq listing under ticker ANT",
-          "url": "https://anthropic.com/news/s1-sec",
-          "published_at": "2026-10-26T00:00:00+00:00",
-          "category": "industry"
-        }
-      ]
     }
   ],
   "labs": [
+    {
+      "lab": "Mistral AI",
+      "model": "Large 4",
+      "type": "Multimodal",
+      "date": "2026-10-31T06:13:40+00:00",
+      "story_id": "05c952b5cb3a",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms"
+    },
     {
       "lab": "Microsoft",
       "model": "Mage-VL-Cowork",
@@ -5916,14 +5855,6 @@
       "date": "2026-10-30T12:13:24+00:00",
       "story_id": "63a60d5375b5",
       "url": "https://huggingface.co/microsoft/Mage-VL-Cowork"
-    },
-    {
-      "lab": "Mistral AI",
-      "model": "Le Chonk",
-      "type": "Multimodal",
-      "date": "2026-10-29T14:17:41+00:00",
-      "story_id": "8ccea7e89b70",
-      "url": "https://mistral.ai/news/mistral-large-4-oss"
     },
     {
       "lab": "DeepSeek and Moonshot AI",
@@ -6041,8 +5972,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 213,
-    "model_releases_this_month": 20,
+    "stories_this_month": 215,
+    "model_releases_this_month": 21,
     "labs_tracked": 17
   }
 }
