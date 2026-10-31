@@ -1,63 +1,55 @@
-## Frontier Wire newsroom run — 2026-10-31T03:57:44+00:00
+## Frontier Wire newsroom run — 2026-10-31T07:10:02+00:00
 
-Fetched 2914 items · fresh 17 · judged 21 · kept 1 · **written 1**
-AI: 12 requests, 33,086 tokens this run · 56 requests today · providers: cerebras, groq
-Editor-in-chief: Tracking OpenAI's reduced funding round and Nvidia's data‑center partnership while filling gaps in model and research coverage.
-  Priorities: Sources: OpenAI has secured ~$11B in commitments for its latest fundin (OpenAI's funding shortfall signals market shift, crucial for investors and strategy readers); Nvidia weighs playing the cosigner for Nscale’s AI data center in West (Nvidia's potential cosign role could reshape AI data‑center financing and supply chain); Sources: Baseten is raising ~$2B in two tranches, one valuing it at $2 (Baseten's multi‑billion raise highlights scaling AI platform market dynamics); Filing: Vancouver, WA-based Powerlattice, which makes a power delivery (Powerlattice's chiplet raise addresses AI compute power efficiency, relevant to safety and hardware trends); Sources: OpenAI now seeks ~$20B at a $1.25T valuation for its latest r (Further detail on OpenAI's valuation drop adds depth to funding story)
+Fetched 2915 items · fresh 16 · judged 19 · kept 4 · **written 0**
+AI: 16 requests, 33,099 tokens this run · 72 requests today · providers: cerebras, groq
+Editor-in-chief: Chasing the fallout from Anthropic’s VS Code backdoor while covering the under‑reported model‑release race.
+  Priorities: Anthropic says a malicious actor used access to Cursor's marketplace t (Safety breach affecting Anthropic’s Claude extension, critical for investors and developers to understand impact.); S&P downgraded Meta's outlook from stable to negative, citing high cap (Meta’s downgrade signals major market risk for AI‑heavy capex stocks, key for investors.); OpenAI raises less than half of $30B target (OpenAI’s fundraising shortfall raises questions about financing of leading AI labs.); Mistral AI publicly releases Large 4, targets cybersecurity users (Mistral AI’s Large 4 release adds a new model to the market, filling our thin models coverage.); As AI models commoditize, lasting wealth will accrue to those controll (Analysis of AI model commoditization offers strategic insight for builders and investors.)
   Thin areas: models, research
-  Searches: Anthropic IPO rating update: 3 new; China AI hacking incidents: 2 new; latest large language model release: 0 new
-  Dig deeper: Sources: OpenAI has secured ~$11B in commitments for its latest fundin; Nvidia weighs playing the cosigner for Nscale’s AI data center in West
-Research agent: investigated 1 stories with 3 tool calls, confirmed 1
-Daily briefing: 3 themes from 20 stories
-Videos: no new videos · OpenAI failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Anthropic failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
-Photos: 1 saved, 0 unavailable
-Alerts: 10 events sent: {"subscribers":8,"sent":0,"queued":7}
-Claims: 68 tracked, 66 open, 0 updated this run
-Trackers: filed 1 stories; updated ai-money
-Model tracker: 82 models, 4 changes today
-Tagged 1 stories by sector, region and deal
-Time: gather 98s, plan 2s, judge 2s, verify and write 23s, videos 2s, tagging 20s, trackers 21s, claims 20s, briefing 21s, alerts 2s
+  Searches: Anthropic IPO rating: 3 new; Chinese hackers AI tools breach: 0 new; new AI model release October 2026: 0 new
+  Dig deeper: Anthropic says a malicious actor used access to Cursor's marketplace t; S&P downgraded Meta's outlook from stable to negative, citing high cap
+Research agent: investigated 3 stories with 9 tool calls, confirmed 0
+Videos: 4 kept from 5 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 1 new), Google for Developers ok (9 in feed, 0 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (13 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 1 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 1 new), Training Data (Sequoia) ok (6 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 1 new), Hard Fork ok (3 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (5 in feed, 0 new)
+Photos: 0 saved, 0 unavailable
+Alerts: 13 events sent: {"subscribers":8,"sent":0,"queued":6}
+Claims: 68 tracked, 66 open
+Trackers: filed 0 stories; no tracker changed
+Model tracker: 82 models, 8 changes today
+Time: gather 96s, plan 44s, judge 2s, verify and write 186s, videos 23s, alerts 3s
 
 ### New stories
-- **industry** — [Baseten launches $2 billion funding round, valuation up to $30 billion](https://techmeme.com/261030/p29)  
-  AI inference platform Baseten announced a new $2 billion funding round that could value the company at up to $30 billion. The round follows a $1.5 billion raise in June that set its valuation at $13 billion.  
-  _2 source(s), 0 verified quote(s)_
+- none
 
 <details><summary>Dropped</summary>
 
-- Cisco gives engineer unlimited AI tokens to rewrite legacy code — score 3: A quirky internal Cisco story about AI token allocation; not a news‑worthy development.
-- Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia — duplicate of 41ce547b5dc5
-- From To Cent to Matiks — Indian Startups Raised Over $132 Mn This Week — not AI: Funding roundup of Indian startups; not focused on AI developments.
-- Exclusive: upliance.ai In Talks To Raise Up To $4 Mn For R&D, Global Expansion — not AI: Small $4 M raise for a home‑appliance AI startup; not frontier‑scale.
-- Alliant targets 1 GW of new data-center contracts in six months as power demand surges — score 5: Alliant’s data‑center power‑contract target is about electricity demand, only tangentially linked to AI.
-- Isro successfully launches NVS-03 satellite to bolster NavIC constellation — not AI: ISRO satellite launch; no AI relevance.
-- Big Tech returns smallest share of cash to shareholders in 15 years, given AI spending — score 5: Share‑buyback decline tied to AI spending; broader financial trend, not core AI news.
-- October ends with a thud for Intel, Reddit, AI stalwarts — not AI: Market recap of Intel, Reddit, etc.; not AI‑specific.
-- S&amp;P Global revises outlook on Meta to negative on cashflow concerns — not AI: S&P outlook on Meta cash‑flow; not centered on AI.
-- OpenAI cuts funding target by $10 billion: FT — score 7: Already published story on OpenAI cutting its funding target; duplicate.
-- This art festival reveals why the creative economy is as much about audiences as creators — not AI: Arts festival coverage; unrelated to AI.
-- Binance hit with $6.3B breach; Delhivery reports net profit of Rs 41 Cr in Q2 — not AI: Binance breach and Delhivery profit; not AI‑focused.
-- Sources: OpenAI has secured ~$11B in commitments for its latest funding round, less than half its initial $30B target, and expects to raise more in coming weeks (Berber Jin/Wall Street Journal) — score 8: Duplicate of already‑published coverage of OpenAI’s reduced $11 B funding commitment.
-- Sources: OpenAI now seeks ~$20B at a $1.25T valuation for its latest round, from $30B at a $1.4T valuation, as some investors cut commitments amid an AI selloff (Financial Times) — score 8: Duplicate of the same OpenAI funding‑round story already covered.
-- Filing: Vancouver, WA-based Powerlattice, which makes a power delivery chiplet to reduce AI compute power needs by 50%+, raised $86M, after raising $31M in 2025 (Kurt Schlosser/GeekWire) — score 5: Modest $86 M raise for a power‑delivery chiplet; interesting but not a frontier‑scale development.
-- Wall Street Just Cast a Big Doubt on Anthropic’s $800 Billion AI Bet — duplicate of b329cc4aaa4c
-- Forget Anthropic's IPO, I'm Buying AMD — not AI: Opinion piece advocating buying AMD; not a news item.
-- Anthropic may not secure investment-grade rating after IPO, Blackstone tells investors: Report — duplicate of b329cc4aaa4c
-- AI model GLM-5.3 succeeds in cyberattacks but raises safety concerns — duplicate of 4a5589d743c4
-- AI is rewriting the rules of cybersecurity. Who has the advantage? — score 4: General commentary on AI and cybersecurity; lacks a specific news hook.
+- France is getting download tax for content providers (€0.055/GB) — not AI: France download tax for content providers is unrelated to AI.
+- Are Boutique AI Firms India’s Next Big Thing? — score 4: Opinion piece on boutique AI firms in India; no concrete news event.
+- AU SFB Probes Potential Data Leak, Vijay Sales’ Admin Access Allegedly Listed For $25K — not AI: Potential data leak at AU Small Finance Bank; not AI‑related.
+- Special newsletter: Unanswered questions, October edition — score 4: Newsletter roundup of unanswered questions; no original news.
+- AU Small Finance Bank probes ‘potential data leak’ as hackers claim breach on dark web — not AI: AU Small Finance Bank data‑leak investigation; not AI‑focused.
+- North Korean hackers linked to crypto thefts among world's best, experts say — not AI: North Korean hackers linked to crypto thefts; not AI‑focused.
+- New-age beauty brands enjoy revenue glow-up — not AI: Beauty‑brand revenue growth story unrelated to AI.
+- TVS Capital bets on private credit with Rs 750-Cr fund — not AI: TVS Capital private‑credit fund is not AI‑related.
+- As AI models commoditize, lasting wealth will accrue to those controlling chokepoints like distribution, payment rails, and a stablecoin dollar, not to the labs (The Commanding Heights) — score 4: Opinion piece on AI model commoditisation; no new event or concrete development.
+- When talking about local inference, Sam Altman says supply-constrained DRAM is better used in data centers than sitting in PCs and "being used 5% of the time" (Andrew E. Freedman/Tom's Hardware) — score 4: Sam Altman’s comment on DRAM usage is a quote, not a substantive development.
+- Anthropic says a malicious actor used access to Cursor's marketplace to publish a "tampered" copy of the Claude Code extension, which it didn't build or publish (Felix Rieseberg/@felixrieseberg) — duplicate of 93351cbb4cc4
+- John Ternus says Apple doesn't "want to ship AI for AI's sake" and that Tim Cook is "available to help wherever I ask" on policy; Ternus has yet to meet Trump (Steven Levy/Wired) — score 4: Apple exec’s statement about not shipping AI for its own sake is a policy comment, not a news event.
+- Anthropic IPO Could Receive Junk Credit Rating Despite $800 Billion AI Spending Plan — duplicate of b329cc4aaa4c
+- Blackstone Predicts Anthropic May Receive a Speculative-Grade Rating Upon IPO, Amid Funding Pressure from an $800 Billion AI Compute Plan — duplicate of b329cc4aaa4c
+- Blackstone Doubts Anthropic's Credit Rating After Record IPO — duplicate of b329cc4aaa4c
+- S&P downgraded Meta's outlook from stable to negative, citing high capex and negative free cash flow; META fell 15% in October, its worst month in four years (Jonathan Vanian/CNBC) — loosely AI: lower priority than this run's AI stories
+- Mistral AI publicly releases Large 4, targets cybersecurity users — could not verify yet; will retry next run
+- OpenAI raises less than half of $30B target — could not verify yet; will retry next run
+- Sources: neoclouds CoreWeave, Nebius, and Nscale have effectively been shut out of the bond market in recent weeks as lenders and investors demand tougher terms (Wall Street Journal) — could not verify yet; will retry next run
 
 </details>
 
-### Sources with problems
-- `gdelt-india`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
-
 <details><summary>Research agent's work</summary>
 
-- Sources: Baseten is raising ~$2B in two tranches, one valuing it at $2: confirmed (searched “Baseten raising $2 billion valuation 30 billion”; read bloomberg.com; read kucoin.com)
+- Mistral AI publicly releases Large 4, targets cybersecurity users: unconfirmed (searched “Mistral AI Large 4 cybersecurity”; read msn.com; read reuters.com)
+- OpenAI raises less than half of $30B target: unconfirmed (searched “OpenAI raises less than half of $30 billion target funding round”; read techmeme.com; read techmeme.com)
+- Sources: neoclouds CoreWeave, Nebius, and Nscale have effectively been: unconfirmed (searched “CoreWeave bond market shut out investors tougher terms”; read msn.com; searched “Nebius bond market shut out”)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id 06f955752c78 for 'OpenAI cuts funding target by $10 billion: FT'
-- ignored made-up duplicate id 06f955752c78 for 'Sources: OpenAI has secured ~$11B in commitments f'
-- ignored made-up duplicate id 06f955752c78 for 'Sources: OpenAI now seeks ~$20B at a $1.25T valuat'
+- 3 kept item(s) carried over to the next run
