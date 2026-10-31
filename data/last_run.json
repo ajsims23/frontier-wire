@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-31T13:03:49+00:00",
+  "started_at": "2026-10-31T15:48:33+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -18,8 +18,8 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (16)",
-    "gdelt": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "hf-papers": "ok (17)",
+    "gdelt": "ok (0)",
     "hn": "ok (16)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
@@ -31,7 +31,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "gdelt-india": "ok (0)",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -41,93 +41,109 @@
   },
   "dropped": [
     {
-      "title": "Digital Minimalism",
-      "reason": "not AI: The post is unrelated to AI developments and lacks relevance for our audience."
+      "title": "New-Age Tech Stocks Gain This Week Led By Ather & Zetwerk, CarTrade Sinks 22%",
+      "reason": "not AI: General tech stock movements; no AI angle."
     },
     {
-      "title": "India Can Build Rockets, But Can Its VCs Fund The Next One?",
-      "reason": "not AI: The article focuses on rocket launches and VC funding for aerospace, not on AI; therefore it lacks AI relevance."
+      "title": "E2W Registrations Rise 2.9% MoM To 2.15 Lakh In October, TVS & Hero Gain Market Share",
+      "reason": "not AI: Electric two-wheeler registrations; not AI related."
     },
     {
-      "title": "eMudhra Has Quit TLS. The Accountability Questions Haven’t",
-      "reason": "not AI: The piece about eMudhra TLS removal does not pertain to AI."
+      "title": "[Update] Forensic Audit Finds External Breach Behind €3 Mn Capillary Fraud",
+      "reason": "not AI: Forensic audit fraud story; no AI content."
     },
     {
-      "title": "SEBI chairman says market regulator keeping eye on Tata Group developments",
-      "reason": "not AI: Coverage of SEBI chair comments on Tata Group governance is unrelated to AI."
+      "title": "Ethan Mollick: For Halloween, I asked Opus 5.5 to suggest a spooky project based on my existing work, and it came up with the idea of the ghost census.…",
+      "reason": "not AI: Personal Halloween project suggestion; no AI news."
     },
     {
-      "title": "[Video Explanation] Download the ~1 Trillion Parameter \"Mistral Large 4\" Yourself. What Can You Do With the Released Weights? Where, How Much, and What to Watch Out For ...",
-      "reason": "duplicate of 05c952b5cb3a"
+      "title": "Gary Marcus: I got to meet Pope Leo XIV! Highlights from his terrific speech yesterday and some thoughts of my own:…",
+      "reason": "not AI: Personal anecdote about meeting a pope; no AI content or relevance."
+    },
+    {
+      "title": "Binance says it has covered 90% of its hack losses, having set aside $6.34B+ of company funds; the remaining 10% is in less liquid tokens (Angela Christy/Reuters)",
+      "reason": "not AI: Binance hack loss coverage unrelated to AI."
+    },
+    {
+      "title": "How AI detectors like Pangram are changing human writing: authors drop em dashes, \"not X, but Y\" phrasing, and words like \"delve\", or add typos, to look human (Morgan Meaker/Bloomberg)",
+      "reason": "score 5: Discussion of AI detectors influencing human writing; interesting trend but not a major news item."
+    },
+    {
+      "title": "Anthropic IPO: Blackstone warns AI firm may receive junk credit rating: report",
+      "reason": "duplicate of b329cc4aaa4c"
+    },
+    {
+      "title": "Anthropic faces junk rating after Blackstone reversal",
+      "reason": "duplicate of b329cc4aaa4c"
+    },
+    {
+      "title": "We Took over ChatGPT Accounts",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "208dc15d456d",
-      "headline": "Bipartisan opposition rises to AI data centers in drought‑stricken Arizona",
+      "id": "18e2b05a8e61",
+      "headline": "CapGrid raises ₹50 cr funding, valued at ₹430 cr to expand into drones and data centres",
       "category": "industry",
-      "summary": "State lawmakers and officials are pushing back against new AI data center projects in Arizona, citing the state's long‑term water depletion and recent drought, even as earlier TSMC chip fabs were approved.",
-      "url": "https://techmeme.com/261031/p7",
+      "summary": "CapGrid secured ₹50 cr in a pre‑Series B round led by Hero Enterprise Venture Partners, valuing the startup at ₹430 cr. The money will fund R&D for higher‑end precision components and entry into drone manufacturing and data‑centre markets.",
+      "url": "https://inc42.com/buzz/capgrid-secures-%e2%82%b950-cr-funding-to-deepen-its-manufacturing-play",
       "sources": 2,
       "quotes": 0
-    },
-    {
-      "id": "a7393ac399d1",
-      "headline": "MeitY releases DEPA handbook to enable trusted data sharing for AI training",
-      "category": "policy",
-      "summary": "The Ministry of Electronics and Information Technology launched a handbook on the Data Empowerment and Protection Architecture (DEPA) for AI training, outlining a techno‑legal framework for secure data collaboration. The framework lets institutions share data while retaining control, using contractual permissions, clean rooms and privacy safeguards.",
-      "url": "https://yourstory.com/2026/10/meity-unveils-depa-handbook-to-enable-trusted-data-sharing-for-ai-training",
-      "sources": 3,
-      "quotes": 2
     }
   ],
-  "notes": [],
+  "notes": [
+    "1 kept item(s) carried over to the next run"
+  ],
   "mode": "full",
   "timings": {
-    "gather": 143.1,
-    "audit": -0.0,
-    "plan": 1.7,
-    "judge": 1.7,
-    "verify and write": 151.9,
-    "videos": 22.3,
-    "tagging": 20.7,
+    "gather": 67.3,
+    "audit": 0.0,
+    "plan": 56.8,
+    "judge": 1.4,
+    "verify and write": 90.2,
+    "videos": 3.6,
+    "tagging": 20.8,
     "explainers": -0.0,
-    "trackers": 83.5,
-    "claims": 20.7,
-    "model tracker": 0.2,
+    "trackers": 71.0,
+    "claims": 21.3,
+    "model tracker": 0.1,
     "weekly": 0.0,
     "builders": 0.0,
     "top voices": 0.0,
-    "briefing": 41.8,
+    "briefing": 43.9,
     "self-review": -0.0,
     "photos": 0.2,
-    "stock photos": 16.2,
-    "daily email": 0.0,
-    "alerts": 2.9
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 4.1
   },
-  "fetched": 2908,
-  "fresh": 6,
+  "fetched": 2909,
+  "fresh": 9,
   "plan": {
-    "focus": "Chasing fallout from big‑tech AI capex slowdown while filling thin model coverage and tracking policy pushback on AI data centers.",
+    "focus": "Chasing the fallout from Binance’s hack recovery while filling gaps in model coverage and voice perspectives.",
     "priorities": [
-      "India Can Build Rockets, But Can Its VCs Fund The Next One? (Highlights VC funding challenges for Indian deep‑tech startups, key for investors.)",
-      "SEBI chairman says market regulator keeping eye on Tata Group developm (SEBI chair comments on Tata Group signal regulatory shifts affecting large Indian conglomerates.)",
-      "MeitY unveils DEPA handbook to enable trusted data sharing for AI trai (MeitY DEPA handbook impacts data sharing for AI training, crucial for compliance.)",
-      "A look at growing bipartisan opposition to AI data centers in drought- (Bipartisan opposition to AI data centers in Arizona affects industry capex and policy.)"
+      "Binance says it has covered 90% of its hack losses, having set aside $ (Major financial loss recovery impacts investors and market confidence.)",
+      "How AI detectors like Pangram are changing human writing: authors drop (AI detector trends affect content strategy and detection tools for businesses.)",
+      "CapGrid Secures ₹50 Cr Funding To Deepen Its Manufacturing Play (CapGrid funding signals growing AI manufacturing play in India, relevant for investors.)",
+      "Gary Marcus: I got to meet Pope Leo XIV! Highlights from his terrific  (Gary Marcus voice offers high‑profile AI commentary for strategy readers.)",
+      "We Took over ChatGPT Accounts (Potential security breach of ChatGPT accounts raises concerns for enterprise AI usage.)"
     ],
     "thin_areas": [
-      "models"
+      "models",
+      "voices"
     ],
     "searches": [
-      "Mistral Large 4 release date: 1 new",
-      "Arizona AI data center opposition legislation: 1 new"
+      "Mistral Large 4 release date: 0 new",
+      "Anthropic IPO rating: 2 new",
+      "Chinese AI hacking tools incidents: 0 new"
     ],
     "dig_deeper": [
-      "India Can Build Rockets, But Can Its VCs Fund The Next One?",
-      "A look at growing bipartisan opposition to AI data centers in drought-"
+      "Binance says it has covered 90% of its hack losses, having set aside $",
+      "How AI detectors like Pangram are changing human writing: authors drop"
     ]
   },
-  "judged": 8,
+  "judged": 11,
   "kept": 2,
   "research": {
     "investigated": 2,
@@ -135,8 +151,8 @@
     "tool_calls": 6
   },
   "research_log": [
-    "A look at growing bipartisan opposition to AI data centers in drought-: unconfirmed (searched “bipartisan opposition AI data centers Arizona drought TSMC”; read msn.com; searched “\"AI data centers\" Arizona drought opposition”)",
-    "MeitY unveils DEPA handbook to enable trusted data sharing for AI trai: confirmed (searched “MeitY DEPA handbook trusted data sharing AI training”; read business-standard.com; read inc42.com)"
+    "We Took over ChatGPT Accounts: unconfirmed (searched “\"We Took over ChatGPT Accounts\"”; searched “ChatGPT accounts taken over hack”; searched “\"parameter.ai\" \"ChatGPT accounts\"”)",
+    "CapGrid Secures ₹50 Cr Funding To Deepen Its Manufacturing Play: confirmed (searched “CapGrid raises ₹50 crore funding”; searched “CapGrid funding”; read indiatimes.com)"
   ],
   "videos": {
     "OpenAI": "ok (11 in feed, 0 new)",
@@ -157,24 +173,26 @@
     "Latent Space": "ok (14 in feed, 1 new)",
     "Training Data (Sequoia)": "ok (6 in feed, 1 new)",
     "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 0 new)",
-    "Hard Fork": "ok (3 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 1 new)",
+    "Hard Fork": "ok (4 in feed, 1 new)",
     "The Cognitive Revolution": "ok (9 in feed, 0 new)",
     "Lenny's Podcast": "ok (2 in feed, 0 new)",
     "20VC": "ok (5 in feed, 0 new)"
   },
-  "videos_kept": "4 kept from 4 new",
-  "tagged": 2,
-  "trackers": "filed 3 stories; updated ai-regulation, india-ai, ai-infrastructure",
-  "claims": "68 tracked, 66 open, 0 updated this run",
+  "videos_kept": "4 kept from 6 new",
+  "tagged": 1,
+  "trackers": "filed 2 stories; updated india-ai, ai-infrastructure",
+  "claims": "69 tracked, 67 open, 0 updated this run",
   "model_tracker": "82 models, 10 changes today",
-  "briefing": "3 themes from 18 stories",
-  "india_briefing": "2 themes from 3 stories",
+  "briefing": "4 themes from 19 stories",
+  "india_briefing": "2 themes from 4 stories",
   "photos": "1 saved, 0 unavailable",
-  "stock photos": "1 added",
-  "alerts": "18 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":24}",
-  "ai_requests_run": 22,
-  "ai_tokens_run": 56440,
-  "ai_requests_today": 129,
-  "provider_log": []
+  "alerts": "17 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":15}",
+  "ai_requests_run": 21,
+  "ai_tokens_run": 59171,
+  "ai_requests_today": 150,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
 }
