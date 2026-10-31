@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T18:58:17+00:00",
+  "updated_at": "2026-10-31T21:48:00+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Publishers can add a special token to their site’s robots.txt file to tell AI crawlers not to scrape their pages for training. All participating AI companies will read this token and respect the publisher’s preference. This removes the need for each publisher to send separate opt‑out notices to each AI provider.",
@@ -82,6 +82,92 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Apple will incorporate artificial‑intelligence techniques into its upcoming devices, but the AI will be hidden behind the product’s functionality. Users should notice the benefit of the feature, not the underlying AI technology.",
+        "terms": [
+          {
+            "term": "AI",
+            "meaning": "Artificial intelligence, computer methods that can perform tasks that normally require human intelligence."
+          },
+          {
+            "term": "agents",
+            "meaning": "Software programs that can act autonomously to perform tasks, such as handling user requests without direct input."
+          },
+          {
+            "term": "cybersecurity",
+            "meaning": "Practices and technologies that protect devices and data from unauthorized access or attacks."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Apple will embed AI capabilities in its hardware and software, but it does not currently offer public AI APIs for developers.",
+        "business": "Apple’s focus on seamless AI integration suggests AI will be a feature rather than a headline product, influencing competitive dynamics.",
+        "investors": "The comment indicates Apple may prioritize incremental AI improvements over bold, market‑disrupting launches, tempering expectations for rapid AI‑driven revenue growth."
+      },
+      "id": "9f56e268b05e",
+      "headline": "Apple CEO says the company won’t ship AI for AI’s sake",
+      "summary": "Apple chief executive John Ternus told Wired that Apple will use AI in new products but only when it enhances the experience, not as a goal in itself. He emphasized that successful products should feel seamless, regardless of whether AI or traditional software powers them.",
+      "why_it_matters": "It signals Apple’s cautious approach to AI integration, focusing on user experience over hype.",
+      "category": "voices",
+      "lab": "Apple",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "We don’t want to ship AI for AI’s sake",
+          "speaker": "John Ternus",
+          "speaker_role": "",
+          "source_url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake"
+        },
+        {
+          "text": "When we’re doing it right, people won’t have to think about whether it was AI that made this happen or more traditional software. What matters is, did we build something that they really love?",
+          "speaker": "John Ternus",
+          "speaker_role": "",
+          "source_url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake"
+        }
+      ],
+      "score": 7,
+      "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake",
+      "source_id": "techcrunch-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/10/GettyImages-2302418320.jpg?w=1024",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake",
+          "publisher": "TechCrunch AI",
+          "title": "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’"
+        },
+        {
+          "url": "https://thenextweb.com/news/john-ternus-wired-apple-ai-for-ais-sake",
+          "publisher": "The Next Web",
+          "title": "John Ternus tells WIRED Apple won’t ship AI for AI’s sake"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-31T21:41:00+00:00",
+      "created_at": "2026-10-31T21:48:00+00:00",
+      "sectors": [],
+      "regions": [
+        "us"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 1,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "won’t ship AI",
+      "trackers": [],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "OpenAI is seeking $20 billion in new capital, down from a previously announced $30 billion. The company has already raised $11 billion, and the round’s first close is expected to be smaller than the $20 billion goal. A later retail offering for wealthy individuals may bring the total to the target amount.",
@@ -5234,82 +5320,27 @@
         "frontier-race"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "AnySpeechRecognizer lets apps use the same Swift API that Apple provides, but swap in different speech‑recognition engines that run on the device. AnyDecisionModel lets apps ask a model to answer yes/no or multiple‑choice questions and get a probability, without generating text. Both packages download open models from the Hugging Face Hub and run them locally, so data stays on the device.",
-        "terms": [
-          {
-            "term": "Core ML",
-            "meaning": "Apple’s framework for running machine‑learning models efficiently on its devices."
-          },
-          {
-            "term": "Speaker diarization",
-            "meaning": "Identifying and separating different speakers in an audio recording."
-          },
-          {
-            "term": "Speech‑to‑text",
-            "meaning": "Converting spoken audio into written text."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers can integrate open speech and decision models into Swift apps using familiar Apple APIs, with the option to choose engines like Parakeet or Qwen3‑ASR.",
-        "business": "Enterprises can lower reliance on proprietary speech services and keep voice data on‑device, potentially reducing costs and privacy concerns.",
-        "investors": "Investors see Hugging Face expanding its ecosystem into on‑device AI for Apple platforms, opening new market opportunities."
-      },
-      "id": "85d975255b4f",
-      "headline": "Hugging Face releases AnySpeechRecognizer and AnyDecisionModel for Apple devices",
-      "summary": "Hugging Face announced two new Swift packages, AnySpeechRecognizer and AnyDecisionModel, that let developers run open speech‑to‑text and decision models on iOS and macOS. The packages support NVIDIA’s Parakeet and Alibaba’s Qwen3‑ASR engines and can run locally via Core ML.",
-      "why_it_matters": "They give developers more flexibility and lower‑cost alternatives to Apple’s built‑in speech engine.",
-      "category": "models",
-      "lab": "Hugging Face",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "speech",
-        "decision",
-        "Apple",
-        "Swift"
-      ],
-      "quotes": [],
-      "score": 7,
-      "url": "https://huggingface.co/blog/anydecisionmodel",
-      "source_id": "huggingface",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://huggingface.co/blog/assets/anydecisionmodel/banner.png",
-      "sources": [
-        {
-          "url": "https://huggingface.co/blog/anydecisionmodel",
-          "publisher": "Hugging Face blog",
-          "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-29T00:00:00+00:00",
-      "created_at": "2026-10-29T13:15:34+00:00",
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "photo_local": true,
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "AnyDecisionModel"
     }
   ],
   "voices": [
+    {
+      "text": "We don’t want to ship AI for AI’s sake",
+      "speaker": "John Ternus",
+      "speaker_role": "",
+      "source_url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake",
+      "story_id": "9f56e268b05e",
+      "headline": "Apple CEO says the company won’t ship AI for AI’s sake",
+      "published_at": "2026-10-31T21:41:00+00:00"
+    },
+    {
+      "text": "When we’re doing it right, people won’t have to think about whether it was AI that made this happen or more traditional software. What matters is, did we build something that they really love?",
+      "speaker": "John Ternus",
+      "speaker_role": "",
+      "source_url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake",
+      "story_id": "9f56e268b05e",
+      "headline": "Apple CEO says the company won’t ship AI for AI’s sake",
+      "published_at": "2026-10-31T21:41:00+00:00"
+    },
     {
       "text": "It compiles all of those things together, ultimately producing a serialized dossier that it can send to a couple LLM models. It’s asking the model to act like an intelligence analyst and produce structured citation-backed assessment of the victim.",
       "speaker": "Ryan Fetterman",
@@ -5345,24 +5376,6 @@
       "story_id": "a7393ac399d1",
       "headline": "MeitY releases DEPA handbook to enable trusted data sharing for AI training",
       "published_at": "2026-10-31T10:46:16+00:00"
-    },
-    {
-      "text": "I'm not comfortable living in a world in which open weights do not exist,",
-      "speaker": "Pierre Stock",
-      "speaker_role": "Vice President of Science",
-      "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms",
-      "story_id": "05c952b5cb3a",
-      "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
-      "published_at": "2026-10-31T06:13:40+00:00"
-    },
-    {
-      "text": "once the model is out, it's impossible to contain access,",
-      "speaker": "Pierre Stock",
-      "speaker_role": "Vice President of Science",
-      "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms",
-      "story_id": "05c952b5cb3a",
-      "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
-      "published_at": "2026-10-31T06:13:40+00:00"
     }
   ],
   "videos": [
@@ -5499,39 +5512,24 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-10-31T18:58:17+00:00",
-    "one_line": "AI spending surges, policy steps tighten data use, safety incidents rise, and a new cybersecurity model launches.",
+    "written_at": "2026-10-31T21:48:00+00:00",
+    "one_line": "Mistral releases a cybersecurity model, policy actions rise, AI financing shifts, and LLM‑powered malware emerges.",
     "themes": [
       {
-        "title": "AI data‑center spending spikes",
-        "text": "Alphabet, Meta, Microsoft, Amazon and Oracle disclosed over $3 trillion in data‑center commitments, while investors reacted to $740 billion in AI capex and Intel’s 28% stock drop.",
+        "title": "Mistral launches cybersecurity AI model",
+        "text": "Mistral AI released Large 4, a multimodal AI with 1 trillion parameters and 52 billion active parameters, intended to help organisations identify and fix cybersecurity vulnerabilities. The model can be downloaded and run independently.",
         "stories": [
           {
-            "id": "db3eb85081cc",
-            "headline": "Big tech firms commit over $3 trillion to AI data‑center spending",
-            "url": "https://techmeme.com/261030/p22"
-          },
-          {
-            "id": "07912041c313",
-            "headline": "Big tech AI capex sparks cash‑flow concerns, stocks tumble",
-            "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom"
-          },
-          {
-            "id": "a977761811a9",
-            "headline": "Intel stock falls 28% after weak Q4 outlook, erasing $12B from US government stake",
-            "url": "https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake"
+            "id": "05c952b5cb3a",
+            "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
+            "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms"
           }
         ]
       },
       {
-        "title": "Policy moves on AI data use",
-        "text": "OpenAI, Google, Microsoft and Anthropic adopted a shared robots.txt opt‑out token, India’s MeitY issued a DEPA handbook for trusted data sharing, and bipartisan lawmakers in Arizona opposed new AI data‑center projects.",
+        "title": "Policy moves shape AI data and infrastructure",
+        "text": "The Ministry of Electronics and Information Technology issued a handbook on the Data Empowerment and Protection Architecture to enable secure data sharing for AI training. In Arizona, state lawmakers and officials opposed new AI data center projects due to water depletion concerns.",
         "stories": [
-          {
-            "id": "30d3462f4f36",
-            "headline": "OpenAI, Google, Microsoft, Anthropic adopt shared robots.txt opt‑out standard",
-            "url": "https://techmeme.com/261030/p26"
-          },
           {
             "id": "a7393ac399d1",
             "headline": "MeitY releases DEPA handbook to enable trusted data sharing for AI training",
@@ -5545,51 +5543,55 @@
         ]
       },
       {
-        "title": "Safety incidents target AI tools",
-        "text": "OpenAI added stricter weapon‑info limits for teen ChatGPT users, Anthropic’s Claude VS Code extension was backdoored on Cursor, and the Volta‑Autodoxer malware leveraged LLMs to rank victims.",
+        "title": "Funding rounds and valuations shift in AI",
+        "text": "Baseten announced a $2 billion funding round that could value it at up to $30 billion, following a previous $1.5 billion raise. OpenAI lowered its fundraising target to $20 billion while maintaining a $1.25 trillion valuation. CapGrid secured ₹50 cr in a pre‑Series B round, valuing it at ₹430 cr for expansion into drones and data centres. Intel shares fell 28% after a weak fourth‑quarter outlook, erasing about $12 billion from the U.S. government’s stake.",
         "stories": [
           {
-            "id": "020086432245",
-            "headline": "OpenAI tightens weapons‑related information limits for teen ChatGPT users",
-            "url": "https://techmeme.com/261030/p25"
+            "id": "d5c6bb8a1621",
+            "headline": "Baseten launches $2 billion funding round, valuation up to $30 billion",
+            "url": "https://techmeme.com/261030/p29"
           },
           {
-            "id": "93351cbb4cc4",
-            "headline": "Anthropic’s Claude VS Code extension backdoored on Cursor, affecting up to 5,000 users",
-            "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours"
+            "id": "c10fef6ec816",
+            "headline": "OpenAI cuts funding target to $20 billion, valuation stays at $1.25 trillion",
+            "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round"
           },
+          {
+            "id": "18e2b05a8e61",
+            "headline": "CapGrid raises ₹50 cr funding, valued at ₹430 cr to expand into drones and data centres",
+            "url": "https://inc42.com/buzz/capgrid-secures-%e2%82%b950-cr-funding-to-deepen-its-manufacturing-play"
+          },
+          {
+            "id": "a977761811a9",
+            "headline": "Intel stock falls 28% after weak Q4 outlook, erasing $12B from US government stake",
+            "url": "https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake"
+          }
+        ]
+      },
+      {
+        "title": "Malware leverages LLMs for victim ranking",
+        "text": "The VOLTA‑AUTODOXER infostealer sends structured evidence bundles to large language models to assess and rank victims’ assets by value, using a fallback chain of three models if a model refuses the request.",
+        "stories": [
           {
             "id": "5b0ac3b976a1",
             "headline": "Volta‑Autodoxer malware uses LLMs to rank victims by monetizable assets",
             "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer"
           }
         ]
-      },
-      {
-        "title": "Mistral releases cybersecurity model",
-        "text": "Mistral AI launched Large 4, a 1‑trillion‑parameter multimodal model designed to detect and remediate cybersecurity vulnerabilities, available for independent download.",
-        "stories": [
-          {
-            "id": "05c952b5cb3a",
-            "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
-            "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms"
-          }
-        ]
       }
     ],
-    "from_stories": 15
+    "from_stories": 11
   },
   "plan": {
-    "focus": "Tracking big‑tech AI spending, safety setbacks, and funding shifts while we catch up on under‑reported research and voices.",
-    "updated_at": "2026-10-31T18:58:17+00:00",
+    "focus": "Tracking AI data‑center legal risks while assessing big‑tech hardware moves and model performance breakthroughs.",
+    "updated_at": "2026-10-31T21:48:00+00:00",
     "thin_areas": [
-      "commentary",
-      "research"
+      "model releases"
     ],
     "searches": [
-      "Mistral Large 4 release",
-      "Anthropic IPO rating",
-      "AI research breakthroughs October"
+      "Mistral Large 4 benchmarks",
+      "OpenAI funding target investor response",
+      "xAI data center lawsuit status"
     ]
   },
   "builders": {
@@ -5960,7 +5962,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 220,
+    "stories_this_month": 221,
     "model_releases_this_month": 21,
     "labs_tracked": 17
   }
