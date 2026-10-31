@@ -1,6 +1,189 @@
 [
   {
     "explainer": {
+      "what_it_means": "OpenAI is seeking $20 billion in new capital, down from a previously announced $30 billion. The company has already raised $11 billion, and the round’s first close is expected to be smaller than the $20 billion goal. A later retail offering for wealthy individuals may bring the total to the target amount.",
+      "terms": [
+        {
+          "term": "funding round",
+          "meaning": "A process where a company raises capital from investors, often in multiple stages."
+        },
+        {
+          "term": "valuation",
+          "meaning": "The estimated monetary worth of a company, used to determine share prices in fundraising."
+        },
+        {
+          "term": "IPO",
+          "meaning": "Initial public offering, when a private company first sells shares to the public on a stock exchange."
+        }
+      ],
+      "watch_next": [
+        "first close expected to be lower than $20 billion",
+        "retail offering for wealthy individuals could bring total to $20 billion"
+      ]
+    },
+    "audiences": {
+      "builders": "Developers may see slower rollout of new OpenAI services if funding constraints limit resources.",
+      "business": "Executives should note that investor wariness could affect AI product pricing and partnership plans.",
+      "investors": "The lowered target highlights valuation challenges and may influence future AI startup investments."
+    },
+    "id": "c10fef6ec816",
+    "headline": "OpenAI cuts funding target to $20 billion, valuation stays at $1.25 trillion",
+    "summary": "OpenAI lowered its latest fundraising goal to $20 billion at a $1.25 trillion valuation after securing $11 billion so far. A first close is expected to be below the $20 billion target, with a later retail offering for wealthy individuals potentially reaching the goal.",
+    "why_it_matters": "The reduced target signals investor caution toward AI infrastructure spending, which could impact OpenAI’s growth and the broader AI market.",
+    "category": "industry",
+    "lab": "OpenAI",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 7,
+    "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round",
+    "source_id": "techcrunch-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-2890809,resizemode-75,msid-135384941/tech/artificial-intelligence/openai-cuts-funding-target-by-10-billion-ft.jpg",
+    "sources": [
+      {
+        "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round",
+        "publisher": "TechCrunch AI",
+        "title": "OpenAI reportedly lowers funding target for new round"
+      },
+      {
+        "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/openai-cuts-funding-target-by-10-billion-ft/articleshow/135384941.cms",
+        "publisher": "ET Tech",
+        "title": "OpenAI cuts funding target by $10 billion: FT"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 0,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-31T16:12:55+00:00",
+    "created_at": "2026-10-31T18:58:17+00:00",
+    "thread": "t-61a06eede6a3",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": {
+      "type": "funding",
+      "company": "OpenAI",
+      "amount": "$20 billion",
+      "usd": 20000000000.0
+    },
+    "relevance": {
+      "builders": 1,
+      "business": 2,
+      "investors": 3
+    },
+    "cover": "$20 billion",
+    "trackers": [
+      "ai-money"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "The malware first steals credentials, cookies, payment data and other files from an infected computer. It then packages this information and queries an LLM to produce a report that ranks the victim’s assets as low, medium or high value. The resulting dossier helps attackers focus on the most profitable targets without manual analysis.",
+      "terms": [
+        {
+          "term": "infostealer",
+          "meaning": "Malware that extracts saved passwords, cookies, and other personal data from a victim’s device."
+        },
+        {
+          "term": "large language model",
+          "meaning": "An AI system that generates text responses based on prompts, such as Claude or GPT."
+        },
+        {
+          "term": "multi‑model architecture",
+          "meaning": "A setup where the malware queries several AI models in sequence, switching if one refuses to answer."
+        }
+      ],
+      "watch_next": [
+        "Talos plans to share additional findings on AI‑integrated malware over time"
+      ]
+    },
+    "audiences": {
+      "builders": "Developers of LLM APIs should consider implementing safeguards against misuse in malware pipelines.",
+      "business": "Executives need to recognize that stolen data can be automatically prioritized by AI, increasing the speed and impact of credential‑theft attacks.",
+      "investors": "The story highlights a risk factor for companies offering LLM services, as their models may be exploited for illicit profit‑driven activities."
+    },
+    "id": "5b0ac3b976a1",
+    "headline": "Volta‑Autodoxer malware uses LLMs to rank victims by monetizable assets",
+    "summary": "The self‑deleting Windows infostealer VOLTA‑AUTODOXER sends a structured evidence bundle to large language models to assess and rank each victim’s assets by value. The malware falls back to a three‑model chain if a model refuses the request.",
+    "why_it_matters": "It shows how commercial LLMs can be repurposed by cybercriminals to automate victim prioritization, raising new AI safety and security concerns.",
+    "category": "safety",
+    "lab": "Cisco Talos",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "It compiles all of those things together, ultimately producing a serialized dossier that it can send to a couple LLM models. It’s asking the model to act like an intelligence analyst and produce structured citation-backed assessment of the victim.",
+        "speaker": "Ryan Fetterman",
+        "speaker_role": "security researcher, Cisco Talos",
+        "source_url": "https://wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware"
+      },
+      {
+        "text": "VOLTA uses a multi-model architecture to fall back resiliently if it hits a model’s refusal, checking each response for phrases like “I can’t” or “I’m not able,” before passing on to a chain of up to three models.",
+        "speaker": "Ryan Fetterman",
+        "speaker_role": "security researcher, Cisco Talos",
+        "source_url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer"
+      }
+    ],
+    "score": 7,
+    "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer",
+    "source_id": "hn",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://storage.ghost.io/c/af/a0/afa04ee3-414f-4481-8d23-7e7c146f192e/content/images/size/w1200/2026/10/VOLTA.jpg",
+    "sources": [
+      {
+        "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer",
+        "publisher": "blog.talosintelligence.com",
+        "title": "Malware uses LLMs to rank victims by how much they're worth"
+      },
+      {
+        "url": "https://wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware",
+        "publisher": "Wired",
+        "title": "Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims"
+      },
+      {
+        "url": "https://unite.ai/cisco-talos-details-volta-infostealers-llm-victim-ranking-stage",
+        "publisher": "Unite.AI",
+        "title": "Cisco Talos Details VOLTA Infostealer’s LLM Victim-Ranking Stage"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-10-31T14:29:03+00:00",
+    "created_at": "2026-10-31T18:58:17+00:00",
+    "sectors": [
+      "cybersecurity"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 2,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "Volta‑Autodoxer",
+    "trackers": [
+      "agent-safety"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "CapGrid runs a cloud manufacturing platform that uses AI and machine‑learning to match component orders with third‑party factories, helping OEMs use spare capacity. The new funding will support development of higher‑precision parts and expansion into drone and data‑centre component production.",
       "terms": [
         {
@@ -14495,7 +14678,8 @@
       "builders": 1,
       "business": 2,
       "investors": 3
-    }
+    },
+    "thread": "t-61a06eede6a3"
   },
   {
     "explainer": {

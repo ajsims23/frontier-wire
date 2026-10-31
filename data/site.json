@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T15:48:33+00:00",
+  "updated_at": "2026-10-31T18:58:17+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Publishers can add a special token to their site’s robots.txt file to tell AI crawlers not to scrape their pages for training. All participating AI companies will read this token and respect the publisher’s preference. This removes the need for each publisher to send separate opt‑out notices to each AI provider.",
@@ -82,6 +82,189 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "OpenAI is seeking $20 billion in new capital, down from a previously announced $30 billion. The company has already raised $11 billion, and the round’s first close is expected to be smaller than the $20 billion goal. A later retail offering for wealthy individuals may bring the total to the target amount.",
+        "terms": [
+          {
+            "term": "funding round",
+            "meaning": "A process where a company raises capital from investors, often in multiple stages."
+          },
+          {
+            "term": "valuation",
+            "meaning": "The estimated monetary worth of a company, used to determine share prices in fundraising."
+          },
+          {
+            "term": "IPO",
+            "meaning": "Initial public offering, when a private company first sells shares to the public on a stock exchange."
+          }
+        ],
+        "watch_next": [
+          "first close expected to be lower than $20 billion",
+          "retail offering for wealthy individuals could bring total to $20 billion"
+        ]
+      },
+      "audiences": {
+        "builders": "Developers may see slower rollout of new OpenAI services if funding constraints limit resources.",
+        "business": "Executives should note that investor wariness could affect AI product pricing and partnership plans.",
+        "investors": "The lowered target highlights valuation challenges and may influence future AI startup investments."
+      },
+      "id": "c10fef6ec816",
+      "headline": "OpenAI cuts funding target to $20 billion, valuation stays at $1.25 trillion",
+      "summary": "OpenAI lowered its latest fundraising goal to $20 billion at a $1.25 trillion valuation after securing $11 billion so far. A first close is expected to be below the $20 billion target, with a later retail offering for wealthy individuals potentially reaching the goal.",
+      "why_it_matters": "The reduced target signals investor caution toward AI infrastructure spending, which could impact OpenAI’s growth and the broader AI market.",
+      "category": "industry",
+      "lab": "OpenAI",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 7,
+      "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round",
+      "source_id": "techcrunch-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-2890809,resizemode-75,msid-135384941/tech/artificial-intelligence/openai-cuts-funding-target-by-10-billion-ft.jpg",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round",
+          "publisher": "TechCrunch AI",
+          "title": "OpenAI reportedly lowers funding target for new round"
+        },
+        {
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/openai-cuts-funding-target-by-10-billion-ft/articleshow/135384941.cms",
+          "publisher": "ET Tech",
+          "title": "OpenAI cuts funding target by $10 billion: FT"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 0,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-31T16:12:55+00:00",
+      "created_at": "2026-10-31T18:58:17+00:00",
+      "thread": "t-61a06eede6a3",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": {
+        "type": "funding",
+        "company": "OpenAI",
+        "amount": "$20 billion",
+        "usd": 20000000000.0
+      },
+      "relevance": {
+        "builders": 1,
+        "business": 2,
+        "investors": 3
+      },
+      "cover": "$20 billion",
+      "trackers": [
+        "ai-money"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "The malware first steals credentials, cookies, payment data and other files from an infected computer. It then packages this information and queries an LLM to produce a report that ranks the victim’s assets as low, medium or high value. The resulting dossier helps attackers focus on the most profitable targets without manual analysis.",
+        "terms": [
+          {
+            "term": "infostealer",
+            "meaning": "Malware that extracts saved passwords, cookies, and other personal data from a victim’s device."
+          },
+          {
+            "term": "large language model",
+            "meaning": "An AI system that generates text responses based on prompts, such as Claude or GPT."
+          },
+          {
+            "term": "multi‑model architecture",
+            "meaning": "A setup where the malware queries several AI models in sequence, switching if one refuses to answer."
+          }
+        ],
+        "watch_next": [
+          "Talos plans to share additional findings on AI‑integrated malware over time"
+        ]
+      },
+      "audiences": {
+        "builders": "Developers of LLM APIs should consider implementing safeguards against misuse in malware pipelines.",
+        "business": "Executives need to recognize that stolen data can be automatically prioritized by AI, increasing the speed and impact of credential‑theft attacks.",
+        "investors": "The story highlights a risk factor for companies offering LLM services, as their models may be exploited for illicit profit‑driven activities."
+      },
+      "id": "5b0ac3b976a1",
+      "headline": "Volta‑Autodoxer malware uses LLMs to rank victims by monetizable assets",
+      "summary": "The self‑deleting Windows infostealer VOLTA‑AUTODOXER sends a structured evidence bundle to large language models to assess and rank each victim’s assets by value. The malware falls back to a three‑model chain if a model refuses the request.",
+      "why_it_matters": "It shows how commercial LLMs can be repurposed by cybercriminals to automate victim prioritization, raising new AI safety and security concerns.",
+      "category": "safety",
+      "lab": "Cisco Talos",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "It compiles all of those things together, ultimately producing a serialized dossier that it can send to a couple LLM models. It’s asking the model to act like an intelligence analyst and produce structured citation-backed assessment of the victim.",
+          "speaker": "Ryan Fetterman",
+          "speaker_role": "security researcher, Cisco Talos",
+          "source_url": "https://wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware"
+        },
+        {
+          "text": "VOLTA uses a multi-model architecture to fall back resiliently if it hits a model’s refusal, checking each response for phrases like “I can’t” or “I’m not able,” before passing on to a chain of up to three models.",
+          "speaker": "Ryan Fetterman",
+          "speaker_role": "security researcher, Cisco Talos",
+          "source_url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer"
+        }
+      ],
+      "score": 7,
+      "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer",
+      "source_id": "hn",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://storage.ghost.io/c/af/a0/afa04ee3-414f-4481-8d23-7e7c146f192e/content/images/size/w1200/2026/10/VOLTA.jpg",
+      "sources": [
+        {
+          "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer",
+          "publisher": "blog.talosintelligence.com",
+          "title": "Malware uses LLMs to rank victims by how much they're worth"
+        },
+        {
+          "url": "https://wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware",
+          "publisher": "Wired",
+          "title": "Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims"
+        },
+        {
+          "url": "https://unite.ai/cisco-talos-details-volta-infostealers-llm-victim-ranking-stage",
+          "publisher": "Unite.AI",
+          "title": "Cisco Talos Details VOLTA Infostealer’s LLM Victim-Ranking Stage"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-31T14:29:03+00:00",
+      "created_at": "2026-10-31T18:58:17+00:00",
+      "sectors": [
+        "cybersecurity"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "Volta‑Autodoxer",
+      "trackers": [
+        "agent-safety"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "CapGrid runs a cloud manufacturing platform that uses AI and machine‑learning to match component orders with third‑party factories, helping OEMs use spare capacity. The new funding will support development of higher‑precision parts and expansion into drone and data‑centre component production.",
@@ -5124,192 +5307,27 @@
         "investors": 1
       },
       "cover": "AnyDecisionModel"
-    },
-    {
-      "explainer": {
-        "what_it_means": "Anthropic’s new suite lets managers view how much AI token usage costs, what work was produced, and where processes failed. The reports also suggest ways to improve efficiency. This gives companies clearer insight into the value they get from AI tools.",
-        "terms": [
-          {
-            "term": "Token spend",
-            "meaning": "The amount of AI model usage measured in tokens, which translates to cost."
-          },
-          {
-            "term": "Net revenue retention",
-            "meaning": "A metric showing how much existing customers increase their spending over time."
-          },
-          {
-            "term": "Agentic coding tool",
-            "meaning": "An AI system that can write or modify code autonomously for developers."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "The reporting suite provides developers with visibility into token costs and workflow efficiency.",
-        "business": "Executives can use the data to evaluate AI ROI and control budgets.",
-        "investors": "Operating profit and high net revenue retention indicate strong financial performance for Anthropic."
-      },
-      "id": "ea370fdd96af",
-      "headline": "Anthropic launches reporting tools to detail enterprise AI token spend",
-      "summary": "Anthropic introduced a suite of reporting tools that let enterprise customers see team output, token costs, workflow breakdowns and recommendations, while the company reported operating profit and 900% net revenue retention in Q2.",
-      "why_it_matters": "The tools give businesses concrete data to assess the return on investment of AI services and manage spending more effectively.",
-      "category": "industry",
-      "lab": "Anthropic",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "Even if you’re saying 2% is still small, that 10x growth is growth that most CFOs didn’t plan for,",
-          "speaker": "Nicholas Arcolano",
-          "speaker_role": "chief scientist at Jellyfish",
-          "source_url": "https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying"
-        },
-        {
-          "text": "It took a long time for us to see Codex really pop in our data at all, and it has come up with Astra [OpenAI’s latest model],",
-          "speaker": "Nikolas Albarran",
-          "speaker_role": "AI product lead at Jellyfish",
-          "source_url": "https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying"
-        }
-      ],
-      "score": 6,
-      "url": "https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying",
-      "source_id": "techcrunch-ai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/10/claude-enterprise-social-smartreports-five-beats-gray200-animated-1080x608-v032.gif?w=1080",
-      "sources": [
-        {
-          "url": "https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying",
-          "publisher": "TechCrunch AI",
-          "title": "Anthropic just launched tools to show companies what their AI spending is buying"
-        },
-        {
-          "url": "https://msn.com/en-us/news/other/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/ar-AA2gg7Gb",
-          "publisher": "TechCrunch on MSN",
-          "title": "Anthropic just launched tools to show companies what their AI spending is buying"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-28T19:19:58+00:00",
-      "created_at": "2026-10-29T01:14:34+00:00",
-      "trackers": [],
-      "photo_local": true,
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": ""
-    },
-    {
-      "explainer": {
-        "what_it_means": "In practice, AI companies that offer chatbots in New York must check a user’s age before allowing access and block any chatbot functions that could mislead or harm minors, such as pretending to be a person or giving self‑harm advice. They also must add security safeguards to internet‑connected baby monitors and can be fined if they violate the rules.",
-        "terms": [
-          {
-            "term": "age verification",
-            "meaning": "Process to confirm a user’s age, required to include at least one method that does not rely solely on government ID."
-          },
-          {
-            "term": "civil penalty",
-            "meaning": "Monetary fine imposed for each violation of the law, up to $25,000 per instance."
-          },
-          {
-            "term": "AI chatbot",
-            "meaning": "Software that can converse with users using natural language."
-          }
-        ],
-        "watch_next": [
-          "The law will take effect in six months.",
-          "A public website for filing complaints against chatbot companies will be launched."
-        ]
-      },
-      "audiences": {
-        "builders": "AI firms must implement age‑verification systems and restrict prohibited chatbot features for users under 18.",
-        "business": "Companies operating in New York need to assess compliance costs, adjust product offerings for minors, and manage potential fines.",
-        "investors": "The regulation could affect the market potential of AI chatbot services targeting younger users and increase compliance risk for AI firms."
-      },
-      "id": "ef5e2b7c56ff",
-      "headline": "New York governor signs law banning unsafe AI chatbot features for minors",
-      "summary": "Governor Kathy Hochul signed two bills that prohibit AI chatbots from using unsafe features with users under 18 and require security safeguards on internet‑connected baby monitors. The chatbot law mandates age verification, bans certain behaviors, and imposes up to $25,000 civil penalties per violation; it takes effect in six months.",
-      "why_it_matters": "The legislation creates a state‑level regulatory framework aimed at protecting children from AI‑driven harms, influencing how AI companies design and deploy chatbots.",
-      "category": "policy",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "No company should be peddling chatbots to kids encouraging self-harm or pretending to be their friend or more,",
-          "speaker": "Kathy Hochul",
-          "speaker_role": "Governor of New York",
-          "source_url": "https://mashable.com/tech/ai-chatbot-law-new-york-hochul-signs-bill"
-        },
-        {
-          "text": "Under this new law sponsored by Senator Gonzalez and Assemblymember Bores, no longer will minors have access to chatbots that pretend to be their friends and boyfriends and girlfriends,",
-          "speaker": "Kathy Hochul",
-          "speaker_role": "Governor of New York",
-          "source_url": "https://engadget.com/2299823/new-york-governor-signs-ai-chatbot-child-safety-law"
-        }
-      ],
-      "score": 8,
-      "url": "https://techmeme.com/261028/p46",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://www.engadget.com/img/gallery/new-york-governor-signs-ai-chatbot-child-safety-law/l-intro-1793205110.jpg",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261028/p46",
-          "publisher": "techmeme.com",
-          "title": "NY Gov. Kathy Hochul signs bills banning AI chatbots from using \"unsafe features\" for minors and requiring security features in internet-connected baby monitors (Raga Justin/Bloomberg Government)"
-        },
-        {
-          "url": "https://engadget.com/2299823/new-york-governor-signs-ai-chatbot-child-safety-law",
-          "publisher": "Engadget",
-          "title": "New York governor signs AI chatbot child safety law"
-        },
-        {
-          "url": "https://mashable.com/tech/ai-chatbot-law-new-york-hochul-signs-bill",
-          "publisher": "Mashable",
-          "title": "NY governor signs major chatbot safety bill into law"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-28T19:10:00+00:00",
-      "created_at": "2026-10-28T21:54:23+00:00",
-      "sectors": [
-        "software",
-        "government"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "$25,000",
-      "trackers": [
-        "ai-regulation"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
+    {
+      "text": "It compiles all of those things together, ultimately producing a serialized dossier that it can send to a couple LLM models. It’s asking the model to act like an intelligence analyst and produce structured citation-backed assessment of the victim.",
+      "speaker": "Ryan Fetterman",
+      "speaker_role": "security researcher, Cisco Talos",
+      "source_url": "https://wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware",
+      "story_id": "5b0ac3b976a1",
+      "headline": "Volta‑Autodoxer malware uses LLMs to rank victims by monetizable assets",
+      "published_at": "2026-10-31T14:29:03+00:00"
+    },
+    {
+      "text": "VOLTA uses a multi-model architecture to fall back resiliently if it hits a model’s refusal, checking each response for phrases like “I can’t” or “I’m not able,” before passing on to a chain of up to three models.",
+      "speaker": "Ryan Fetterman",
+      "speaker_role": "security researcher, Cisco Talos",
+      "source_url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer",
+      "story_id": "5b0ac3b976a1",
+      "headline": "Volta‑Autodoxer malware uses LLMs to rank victims by monetizable assets",
+      "published_at": "2026-10-31T14:29:03+00:00"
+    },
     {
       "text": "India's AI ambitions must be matched by the ability to use data responsibly and securely.",
       "speaker": "S. Krishnan",
@@ -5345,24 +5363,6 @@
       "story_id": "05c952b5cb3a",
       "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
       "published_at": "2026-10-31T06:13:40+00:00"
-    },
-    {
-      "text": "Our customers began signaling a PC slowdown based on the memory prices and availability. Year-to-date system endpoint prices have increased significantly, placing additional pressure on already limited IT budgets,",
-      "speaker": "Lip-Bu Tan",
-      "speaker_role": "Intel CEO",
-      "source_url": "https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake",
-      "story_id": "a977761811a9",
-      "headline": "Intel stock falls 28% after weak Q4 outlook, erasing $12B from US government stake",
-      "published_at": "2026-10-30T21:54:34+00:00"
-    },
-    {
-      "text": "very compute-intensive to run,",
-      "speaker": "Mark Zuckerberg",
-      "speaker_role": "CEO",
-      "source_url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom",
-      "story_id": "07912041c313",
-      "headline": "Big tech AI capex sparks cash‑flow concerns, stocks tumble",
-      "published_at": "2026-10-30T21:17:40+00:00"
     }
   ],
   "videos": [
@@ -5499,43 +5499,17 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-10-31T15:48:33+00:00",
-    "one_line": "Regulators tighten AI data rules, massive capex drives market swings, infrastructure expands, and safety safeguards intensify.",
+    "written_at": "2026-10-31T18:58:17+00:00",
+    "one_line": "AI spending surges, policy steps tighten data use, safety incidents rise, and a new cybersecurity model launches.",
     "themes": [
       {
-        "title": "Regulators shape AI data rules",
-        "text": "The UK High Court upheld Ofcom’s data‑request notices, while OpenAI, Google, Microsoft and Anthropic introduced a joint robots.txt opt‑out token, and India’s MeitY published a DEPA handbook for secure AI data sharing.",
-        "stories": [
-          {
-            "id": "955346c4476d",
-            "headline": "UK high court rejects Meta, TikTok and X challenge to Ofcom data requests",
-            "url": "https://techmeme.com/261030/p15"
-          },
-          {
-            "id": "30d3462f4f36",
-            "headline": "OpenAI, Google, Microsoft, Anthropic adopt shared robots.txt opt‑out standard",
-            "url": "https://techmeme.com/261030/p26"
-          },
-          {
-            "id": "a7393ac399d1",
-            "headline": "MeitY releases DEPA handbook to enable trusted data sharing for AI training",
-            "url": "https://yourstory.com/2026/10/meity-unveils-depa-handbook-to-enable-trusted-data-sharing-for-ai-training"
-          }
-        ]
-      },
-      {
-        "title": "AI capex fuels market turbulence",
-        "text": "Alphabet, Meta, Microsoft, Amazon and Oracle disclosed over $3 trillion in data‑center commitments, and investors reacted with steep declines in US tech stocks as AI spending nears $1 trillion, including a 28% fall in Intel shares after a weak outlook.",
+        "title": "AI data‑center spending spikes",
+        "text": "Alphabet, Meta, Microsoft, Amazon and Oracle disclosed over $3 trillion in data‑center commitments, while investors reacted to $740 billion in AI capex and Intel’s 28% stock drop.",
         "stories": [
           {
             "id": "db3eb85081cc",
             "headline": "Big tech firms commit over $3 trillion to AI data‑center spending",
             "url": "https://techmeme.com/261030/p22"
-          },
-          {
-            "id": "41a783f21e16",
-            "headline": "US tech stocks tumble as AI spending approaches $1 trillion",
-            "url": "https://bbc.co.uk/news/articles/cvwy72e0n72yo"
           },
           {
             "id": "07912041c313",
@@ -5550,34 +5524,29 @@
         ]
       },
       {
-        "title": "AI infrastructure projects scale up",
-        "text": "Google’s Suncatcher prototype satellite is now online running the Gemma 4 model, Fujifilm is expanding magnetic‑tape capacity fivefold for AI archiving, Core 4 Solutions listed a 300‑rack Nvidia A100 supercomputer on eBay for $59.7 million, and CapGrid raised funding to develop drones and data‑centre components.",
+        "title": "Policy moves on AI data use",
+        "text": "OpenAI, Google, Microsoft and Anthropic adopted a shared robots.txt opt‑out token, India’s MeitY issued a DEPA handbook for trusted data sharing, and bipartisan lawmakers in Arizona opposed new AI data‑center projects.",
         "stories": [
           {
-            "id": "07584bdf878d",
-            "headline": "Google’s Suncatcher prototype satellite is online and runs Gemma 4 model",
-            "url": "https://techmeme.com/261030/p18"
+            "id": "30d3462f4f36",
+            "headline": "OpenAI, Google, Microsoft, Anthropic adopt shared robots.txt opt‑out standard",
+            "url": "https://techmeme.com/261030/p26"
           },
           {
-            "id": "09484dfee9e7",
-            "headline": "Fujifilm to boost magnetic tape production fivefold as AI drives data archiving",
-            "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand"
+            "id": "a7393ac399d1",
+            "headline": "MeitY releases DEPA handbook to enable trusted data sharing for AI training",
+            "url": "https://yourstory.com/2026/10/meity-unveils-depa-handbook-to-enable-trusted-data-sharing-for-ai-training"
           },
           {
-            "id": "27cc0656103d",
-            "headline": "Core 4 Solutions lists decommissioned Nvidia A100 supercomputer on eBay for $59.7 million",
-            "url": "https://livemint.com/technology/nvidia-supercomputer-decommissioned-ebay-sale-a100-chips-gpus-it-hardware-reseller-60-million-best-offer-free-shipping-11793434326099.html"
-          },
-          {
-            "id": "18e2b05a8e61",
-            "headline": "CapGrid raises ₹50 cr funding, valued at ₹430 cr to expand into drones and data centres",
-            "url": "https://inc42.com/buzz/capgrid-secures-%e2%82%b950-cr-funding-to-deepen-its-manufacturing-play"
+            "id": "208dc15d456d",
+            "headline": "Bipartisan opposition rises to AI data centers in drought‑stricken Arizona",
+            "url": "https://techmeme.com/261031/p7"
           }
         ]
       },
       {
-        "title": "Safety measures target AI misuse",
-        "text": "OpenAI added stricter limits on weapon‑related advice for teen ChatGPT users, and a malicious version of Anthropic’s Claude VS Code extension was briefly distributed, installing a persistent SSH backdoor on up to 5,000 developers’ machines.",
+        "title": "Safety incidents target AI tools",
+        "text": "OpenAI added stricter weapon‑info limits for teen ChatGPT users, Anthropic’s Claude VS Code extension was backdoored on Cursor, and the Volta‑Autodoxer malware leveraged LLMs to rank victims.",
         "stories": [
           {
             "id": "020086432245",
@@ -5588,23 +5557,39 @@
             "id": "93351cbb4cc4",
             "headline": "Anthropic’s Claude VS Code extension backdoored on Cursor, affecting up to 5,000 users",
             "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours"
+          },
+          {
+            "id": "5b0ac3b976a1",
+            "headline": "Volta‑Autodoxer malware uses LLMs to rank victims by monetizable assets",
+            "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer"
+          }
+        ]
+      },
+      {
+        "title": "Mistral releases cybersecurity model",
+        "text": "Mistral AI launched Large 4, a 1‑trillion‑parameter multimodal model designed to detect and remediate cybersecurity vulnerabilities, available for independent download.",
+        "stories": [
+          {
+            "id": "05c952b5cb3a",
+            "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
+            "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms"
           }
         ]
       }
     ],
-    "from_stories": 19
+    "from_stories": 15
   },
   "plan": {
-    "focus": "Chasing the fallout from Binance’s hack recovery while filling gaps in model coverage and voice perspectives.",
-    "updated_at": "2026-10-31T15:48:33+00:00",
+    "focus": "Tracking big‑tech AI spending, safety setbacks, and funding shifts while we catch up on under‑reported research and voices.",
+    "updated_at": "2026-10-31T18:58:17+00:00",
     "thin_areas": [
-      "model releases",
-      "commentary"
+      "commentary",
+      "research"
     ],
     "searches": [
-      "Mistral Large 4 release date",
+      "Mistral Large 4 release",
       "Anthropic IPO rating",
-      "Chinese AI hacking tools incidents"
+      "AI research breakthroughs October"
     ]
   },
   "builders": {
@@ -5758,6 +5743,27 @@
   },
   "threads": [
     {
+      "id": "t-61a06eede6a3",
+      "title": "OpenAI funding target adjustment",
+      "updated_at": "2026-10-31T16:12:55+00:00",
+      "stories": [
+        {
+          "id": "c10fef6ec816",
+          "headline": "OpenAI cuts funding target to $20 billion, valuation stays at $1.25 trillion",
+          "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round",
+          "published_at": "2026-10-31T16:12:55+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "6372ebaa66c8",
+          "headline": "OpenAI seeks up to $30 billion funding at $1.25 trillion valuation ahead of IPO",
+          "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo",
+          "published_at": "2026-10-22T22:08:24+00:00",
+          "category": "industry"
+        }
+      ]
+    },
+    {
       "id": "t-1f4231610437",
       "title": "Mistral Large 4 preview to public release",
       "updated_at": "2026-10-31T06:13:40+00:00",
@@ -5817,27 +5823,6 @@
           "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
           "published_at": "2026-10-30T09:30:00+00:00",
           "category": "policy"
-        }
-      ]
-    },
-    {
-      "id": "t-345ea7f8f755",
-      "title": "OpenAI expands safeguards for teen safety",
-      "updated_at": "2026-10-30T20:55:37+00:00",
-      "stories": [
-        {
-          "id": "020086432245",
-          "headline": "OpenAI tightens weapons‑related information limits for teen ChatGPT users",
-          "url": "https://techmeme.com/261030/p25",
-          "published_at": "2026-10-30T20:55:37+00:00",
-          "category": "safety"
-        },
-        {
-          "id": "c7606af40dbb",
-          "headline": "OpenAI adds expanded safeguards to ChatGPT for violence prevention",
-          "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
-          "published_at": "2026-10-30T09:00:00+00:00",
-          "category": "safety"
         }
       ]
     }
@@ -5975,7 +5960,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 218,
+    "stories_this_month": 220,
     "model_releases_this_month": 21,
     "labs_tracked": 17
   }
