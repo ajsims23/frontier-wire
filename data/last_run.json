@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-01T07:17:09+00:00",
+  "started_at": "2026-11-01T09:57:06+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -18,9 +18,9 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (16)",
+    "hf-papers": "ok (17)",
     "gdelt": "ok (0)",
-    "hn": "ok (11)",
+    "hn": "ok (13)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -31,7 +31,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "ok (0)",
+    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -41,144 +41,133 @@
   },
   "dropped": [
     {
-      "title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
-      "reason": "score 5: Benchmark result showing Qwen3.8‑27B models beating Fable 5 is an incremental performance update without broader impact."
+      "title": "Altoids Project",
+      "reason": "not AI: The Altoids Project appears unrelated to AI and lacks a clear AI angle."
     },
     {
-      "title": "The Bengaluru Founder Building a Bridge to San Francisco",
-      "reason": "not AI: Profile piece about a founder, not AI‑focused news."
+      "title": "Millennials lead AI shopping adoption in India at 84%, ahead of Gen Z: McKinsey",
+      "reason": "score 5: The McKinsey report on AI shopping adoption in India is a market insight without a concrete news event; score below the keep threshold."
     },
     {
-      "title": "Netflix Flips Its India Script",
-      "reason": "not AI: Entertainment content about Netflix, not AI."
+      "title": "Get Apple iPhone 18 Pro 512 GB for ₹56,970, 1 TB model at ₹51,447; iPhone 17 Pro for ₹39,147: Reliance Digital offers",
+      "reason": "not AI: Promotional pricing of iPhones has no AI relevance."
     },
     {
-      "title": "Festive spending drives record UPI transactions in October",
-      "reason": "not AI: Record UPI transaction volume is a financial metric with no AI relevance."
+      "title": "[Weekly funding roundup Oct 24-30] VC inflow continues to remain modest",
+      "reason": "not AI: Weekly VC funding roundup lacks a specific AI‑focused news hook."
     },
     {
-      "title": "How voice AI is transforming banking and insurance: Desible.ai founders on the business behind the technology",
-      "reason": "score 4: Podcast on voice AI in banking/insurance is a feature piece rather than a news event; score below threshold."
+      "title": "Design and experience: How Essensai 067 crafts an open-air lifestyle and community destination",
+      "reason": "not AI: Design and experience photo essay is unrelated to AI."
     },
     {
-      "title": "Health, sustainability, AI: test your business creativity with Edition 256 of our weekly quiz!",
-      "reason": "not AI: Quiz feature unrelated to AI news."
+      "title": "EKA Mobility expands manufacturing footprint",
+      "reason": "not AI: EKA Mobility’s manufacturing expansion does not contain a substantive AI component."
     },
     {
-      "title": "TVS Capital’s Rs 750-Cr private-credit bet; What makes people pay attention to content?",
-      "reason": "not AI: Private‑credit platform launch unrelated to AI."
+      "title": "OpenAI pares fundraising goal, now seeking up to $20 billion in latest round",
+      "reason": "duplicate of c10fef6ec816"
     },
     {
-      "title": "A look at a crude campaign of cyberattacks by Russia-linked hacktivist groups that have caused physical damage in NATO-aligned countries over the past two years (Ryan Gallagher/Bloomberg)",
-      "reason": "not AI: Article about Russian‑linked cyberattacks; no AI component."
+      "title": "OpenAI reportedly cuts funding target by $10B ahead of IPO",
+      "reason": "duplicate of c10fef6ec816"
     },
     {
-      "title": "Binance says it plans to resume withdrawals in phases starting Sunday, after covering 95% of the ~$6.3B in tokens stolen in the hack, including BTC and ETH (Reuters)",
-      "reason": "not AI: The story concerns a cryptocurrency exchange hack recovery and has no AI angle."
+      "title": "OpenAI valued at $1.25 trillion as funding round falls short of its target",
+      "reason": "duplicate of c10fef6ec816"
+    },
+    {
+      "title": "OpenAI lowers fundraising target to $20 billion: implied valuation cut to $1.25 trillion",
+      "reason": "duplicate of c10fef6ec816"
+    },
+    {
+      "title": "OpenAI Funding Target Cut By $10 Billion As AI Slumps: Report",
+      "reason": "duplicate of c10fef6ec816"
     },
     {
       "title": "Lumaril, which develops AI software for optimizing industrial production by connecting to existing control systems, raised a $66M Series A at a $400M valuation (Sarah Klearman/Wall Street Journal)",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Shanghai-based NeuroXess, which is developing BCI technology for movement support, speech decoding, and control of external devices, raised a ~$105M Series B (TechNode)",
-      "reason": "could not verify yet; will retry next run"
+      "reason": "could not verify yet after a second try; dropped"
     }
   ],
   "written": [
     {
-      "id": "4876a0382496",
-      "headline": "DeepSeek releases open‑source Super‑Agent, a proactive coding assistant prototype",
-      "category": "models",
-      "summary": "DeepSeek announced Super‑Agent, an open‑source research prototype that monitors a GitHub repo and developer chats, then suggests fixes or opens pull requests without being prompted. The code is under an MIT license and not production‑ready.",
-      "url": "https://techmeme.com/261101/p2",
-      "sources": 5,
-      "quotes": 1
-    },
-    {
-      "id": "21e7f81eb42d",
-      "headline": "Guidewire to acquire Hyperexponential for $1.7 billion in cash",
+      "id": "aeb06b5117e3",
+      "headline": "NeuroXess raises RMB 700 million Series B to expand BCI trials and manufacturing",
       "category": "industry",
-      "summary": "Insurance software maker Guidewire announced it will buy AI underwriting firm Hyperexponential for $1.7 billion in cash, with an additional earn‑out of up to $400 million. The deal adds AI‑powered pricing tools to Guidewire’s portfolio.",
-      "url": "https://techmeme.com/261101/p1",
+      "summary": "Chinese brain‑computer interface startup NeuroXess secured RMB 700 million in Series B funding, co‑led by SDIC Juli, Shenzhen Capital Group and Qinzhi Capital. The money will fund multicenter clinical trials, regulatory submissions, a new manufacturing plant and next‑generation product development.",
+      "url": "https://techmeme.com/261101/p4",
       "sources": 2,
       "quotes": 0
     },
     {
-      "id": "31a674d237a5",
-      "headline": "Deepgram acquires Daily, keeping open‑source Pipecat framework intact",
-      "category": "industry",
-      "summary": "Deepgram bought Daily, the maker of the open‑source voice AI framework Pipecat, for an undisclosed sum. Pipecat will remain open source under its BSD V2 licence and Daily’s team joins Deepgram.",
-      "url": "https://techmeme.com/261101/p3",
-      "sources": 3,
-      "quotes": 2
+      "id": "85c82f0a9571",
+      "headline": "OpenAI merges usage limits for ChatGPT and Codex",
+      "category": "policy",
+      "summary": "OpenAI announced that the separate usage limits for its ChatGPT and Codex models are now combined into a single quota, as detailed in its help article.",
+      "url": "https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
+      "sources": 1,
+      "quotes": 0
     }
   ],
-  "notes": [
-    "dropped unverifiable quote (): the new open-source offering, dubbed “Super-agent” can proac…",
-    "2 kept item(s) carried over to the next run"
-  ],
+  "notes": [],
   "mode": "full",
   "timings": {
-    "gather": 146.6,
-    "audit": 0.0,
-    "plan": 56.3,
-    "judge": 1.4,
-    "verify and write": 401.9,
-    "videos": 26.3,
-    "tagging": 0.8,
+    "gather": 92.1,
+    "audit": -0.0,
+    "plan": 2.0,
+    "judge": 1.8,
+    "verify and write": 129.6,
+    "videos": 22.3,
+    "tagging": 20.5,
     "explainers": 0.0,
-    "trackers": 85.3,
-    "claims": 20.6,
-    "model tracker": 0.1,
-    "weekly": -0.0,
-    "builders": 31.0,
-    "top voices": 20.4,
-    "briefing": 21.5,
+    "trackers": 41.4,
+    "claims": 20.7,
+    "model tracker": 0.0,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 20.9,
     "self-review": 0.0,
-    "photos": 1.3,
-    "stock photos": 17.0,
+    "photos": 0.2,
+    "stock photos": 16.8,
     "daily email": 0.0,
-    "alerts": 6.3
+    "alerts": 1.6
   },
-  "fetched": 2903,
-  "fresh": 14,
+  "fetched": 2906,
+  "fresh": 9,
   "plan": {
-    "focus": "Tracking Binance's hack recovery and fresh AI industrial funding amid ongoing policy and safety coverage.",
+    "focus": "Tracking OpenAI's funding target cut while expanding coverage of India's fast‑growing AI sector.",
     "priorities": [
-      "Binance says it plans to resume withdrawals in phases starting Sunday, (Major security incident affecting a leading exchange, relevant to investors and policy readers)",
-      "Lumaril, which develops AI software for optimizing industrial producti (Significant Series A for AI-driven industrial optimization, key for industry audience)",
-      "Insurance software maker Guidewire agrees to acquire Hyperexponential, (Large acquisition in AI insurance underwriting, important business impact)",
-      "Enterprise voice AI tools provider Deepgram acquires Daily, which has  (Voice AI platform acquisition, shows consolidation trends in AI services)",
-      "DeepSeek open sources Super-Agent as a research prototype, a proactive (Open-source Super-Agent prototype, advances model research and tooling)"
+      "Lumaril, which develops AI software for optimizing industrial producti (Major $66M Series A for industrial AI software, relevant to investors and builders in production automation)",
+      "Shanghai-based NeuroXess, which is developing BCI technology for movem (~$105M Series B for BCI tech, high‑impact health‑AI market insight for strategy readers)",
+      "EKA Mobility expands manufacturing footprint (EKA Mobility's manufacturing expansion signals growth in India's AI‑enabled mobility sector)",
+      "Millennials lead AI shopping adoption in India at 84%, ahead of Gen Z: (McKinsey data on AI shopping adoption in India highlights consumer trends for investors)",
+      "ChatGPT and Codex usage limits merging (ChatGPT and Codex usage limits merge, a policy shift affecting developers and enterprise users)"
     ],
     "thin_areas": [
-      "models",
+      "india",
       "research"
     ],
     "searches": [
-      "Mistral Large 4 release: 0 new",
-      "DeepSeek Super-Agent open source: 4 new",
-      "AI industrial funding series A: 0 new"
+      "OpenAI funding round: 5 new",
+      "Mistral Large 4 public release: 0 new",
+      "AI research breakthroughs 2026: 0 new"
     ],
     "dig_deeper": [
-      "Binance says it plans to resume withdrawals in phases starting Sunday,",
-      "Lumaril, which develops AI software for optimizing industrial producti"
+      "Lumaril, which develops AI software for optimizing industrial producti",
+      "Shanghai-based NeuroXess, which is developing BCI technology for movem"
     ]
   },
-  "judged": 18,
-  "kept": 5,
+  "judged": 14,
+  "kept": 3,
   "research": {
-    "investigated": 5,
-    "confirmed": 2,
-    "tool_calls": 15
+    "investigated": 2,
+    "confirmed": 1,
+    "tool_calls": 6
   },
   "research_log": [
-    "DeepSeek open sources Super-Agent as a research prototype, a proactive: unconfirmed (read techmeme.com; read shiftdelete.net; read straitstimes.com)",
-    "Insurance software maker Guidewire agrees to acquire Hyperexponential,: confirmed (searched “Guidewire Hyperexponential acquisition $1.7 billion”; read techcrunch.com; searched “Reuters Guidewire Hyperexponential”)",
-    "Lumaril, which develops AI software for optimizing industrial producti: unconfirmed (searched “Lumaril $66 million Series A”; read wsj.com; searched “Lumaril Series A $66 million”)",
-    "Enterprise voice AI tools provider Deepgram acquires Daily, which has : confirmed (searched “Deepgram acquires Daily voice AI”; read msn.com; read thenextweb.com)",
-    "Shanghai-based NeuroXess, which is developing BCI technology for movem: unconfirmed (searched “NeuroXess Series B funding 105 million”; searched “NeuroXess”; read businessinsider.com)"
+    "Shanghai-based NeuroXess, which is developing BCI technology for movem: confirmed (searched “NeuroXess Series B funding RMB 700 million”; read technode.com; searched “NeuroXess funding series B”)",
+    "Lumaril, which develops AI software for optimizing industrial producti: unconfirmed (searched “Lumaril Series A $66 million”; read wsj.com; searched “Lumaril raises $66 million Series A”)"
   ],
   "videos": {
     "OpenAI": "ok (11 in feed, 0 new)",
@@ -199,47 +188,23 @@
     "Latent Space": "ok (14 in feed, 1 new)",
     "Training Data (Sequoia)": "ok (6 in feed, 1 new)",
     "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 1 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
     "Hard Fork": "ok (3 in feed, 0 new)",
     "The Cognitive Revolution": "ok (9 in feed, 0 new)",
     "Lenny's Podcast": "ok (2 in feed, 0 new)",
-    "20VC": "ok (5 in feed, 0 new)"
+    "20VC": "ok (6 in feed, 1 new)"
   },
   "videos_kept": "3 kept from 4 new",
-  "tagged": 3,
-  "trackers": "filed 3 stories; updated frontier-race, ai-money",
-  "claims": "70 tracked, 68 open, 0 updated this run",
-  "model_tracker": "82 models, 10 changes today",
-  "builders_sources": {
-    "show-hn": "ok (6)",
-    "github-new": "ok (36)",
-    "hf-spaces": "ok (21)",
-    "product-hunt": "ok (6)",
-    "r-localllama": "ok (25)",
-    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
-  },
-  "builders": "picked 7 from 60 candidates; 3 with pictures, 0 with videos",
-  "top_voices_sources": {
-    "tv-mollick": "ok (0)",
-    "tv-lambert": "ok (3)",
-    "tv-swyx": "ok (8)",
-    "tv-dwarkesh": "ok (2)",
-    "tv-raschka": "ok (0)",
-    "tv-karpathy": "ok (1)",
-    "tv-evans": "ok (0)",
-    "x-coverage": "ok (0 of 4 articles, bing)",
-    "hn": "ok (1)"
-  },
-  "top_voices": "2 debates from 50 posts by 9 people; 2 portraits, 3 pictures",
-  "briefing": "4 themes from 12 stories",
-  "photos": "2 saved, 0 unavailable",
+  "tagged": 1,
+  "trackers": "filed 1 stories; updated ai-money",
+  "claims": "71 tracked, 69 open, 0 updated this run",
+  "model_tracker": "82 models, 12 changes today",
+  "briefing": "3 themes from 12 stories",
+  "photos": "1 saved, 0 unavailable",
   "stock photos": "1 added",
-  "alerts": "16 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":26}",
-  "ai_requests_run": 37,
-  "ai_tokens_run": 109233,
-  "ai_requests_today": 97,
-  "provider_log": [
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
-    "cerebras/gpt-oss-120b: unusable answer"
-  ]
+  "alerts": "17 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":15}",
+  "ai_requests_run": 19,
+  "ai_tokens_run": 44401,
+  "ai_requests_today": 116,
+  "provider_log": []
 }
