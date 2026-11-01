@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-10-31T21:48:00+00:00",
+  "started_at": "2026-11-01T01:25:03+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -19,8 +19,8 @@
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
     "hf-papers": "ok (17)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (18)",
+    "gdelt": "ok (0)",
+    "hn": "ok (17)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -31,7 +31,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "gdelt-india": "ok (0)",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -41,175 +41,153 @@
   },
   "dropped": [
     {
-      "title": "Jepsen: ParticleDB 1.1.4",
-      "reason": "not AI: Jepsen release of ParticleDB is a database update with no AI focus."
+      "title": "GPT-5.6 Sol can beat Factorio on peaceful mode",
+      "reason": "score 4: A hobbyist claim that a GPT‑5.6 model can beat Factorio in peaceful mode; not a frontier‑level advancement."
     },
     {
-      "title": "4 days left: How TechCrunch Founder Summit helps you make more useful connections to scale",
-      "reason": "not AI: Promotional event listing; not AI news."
+      "title": "datasette-llm 0.1a9",
+      "reason": "score 5: Minor version bump of the datasette‑llm plugin; an incremental improvement not newsworthy for Frontier Wire."
     },
     {
-      "title": "I built an AI Tamagotchi before Meta could",
-      "reason": "not AI: Personal project description, not a newsworthy AI development."
+      "title": "Dan Ives says Anthropic IPO faces a 'perfect storm' — Aswath Damodaran warns 'if one falls, they drag the others down'",
+      "reason": "score 5: Analyst commentary on Anthropic’s IPO outlook; lacks a new development and duplicates existing coverage of the IPO."
     },
     {
-      "title": "Here’s Why Doctors Are Betting On Docterz’s Hospital Management Software",
-      "reason": "not AI: Article about hospital management software; no AI angle."
-    },
-    {
-      "title": "ED Arrests Armstrong Exchange Founder Over Alleged Online Betting Scam",
-      "reason": "not AI: Report on arrest related to betting scam; unrelated to AI."
-    },
-    {
-      "title": "OpenAI reportedly lowers funding target for new round",
-      "reason": "duplicate of c10fef6ec816"
-    },
-    {
-      "title": "OpenAI Cuts Funding Target to $20B as Report Puts Commitments Near $11B",
-      "reason": "duplicate of c10fef6ec816"
-    },
-    {
-      "title": "OpenAI cuts its funding round target to $20bn, FT reports",
-      "reason": "duplicate of c10fef6ec816"
-    },
-    {
-      "title": "OpenAI Raises Less Than Half of $30 Billion Target in Latest Round",
-      "reason": "duplicate of c10fef6ec816"
-    },
-    {
-      "title": "OpenAI Cuts Funding Target by $10 Billion, FT Reports",
-      "reason": "duplicate of c10fef6ec816"
-    },
-    {
-      "title": "OpenAI slashes funding goal by $10B amid tech selloff: FT",
-      "reason": "duplicate of c10fef6ec816"
-    },
-    {
-      "title": "Sources: Meta built a prototype humanoid robot with Chinese firm Fourier in three months and is building a second; Meta says it has no plans to sell these units (Jyoti Mann/The Information)",
-      "reason": "loosely AI: lower priority than this run's AI stories"
+      "title": "Sarvam AI co-founder warns India risks becoming a 'digital colony' over dependence on foreign AI",
+      "reason": "score 5: Opinion interview with Sarvam AI co‑founder warning about India’s AI dependence; interesting but not a major news event."
     },
     {
       "title": "Researchers are paid $5K for reporting a bug to OpenAI that would let attackers run code in logged-in sessions of all who opened the hacker's ChatGPT share link (Swati Khandelwal/The Hacker News)",
-      "reason": "could not verify yet; will retry next run"
+      "reason": "could not verify yet after a second try; dropped"
     },
     {
-      "title": "GPT-5.6 Sol can beat Factorio on peaceful mode",
+      "title": "Anthropic blocks users for anything touching training larger models",
       "reason": "could not verify yet; will retry next run"
     },
     {
       "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Tests: chatbots rely on three obscure AI-built voter sites for US midterm answers; Copilot cited the error-prone Ballot Brief in 75% of tests and ChatGPT in 22% (Washington Post)",
       "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "9f56e268b05e",
-      "headline": "Apple CEO says the company won’t ship AI for AI’s sake",
+      "id": "dd35d009aad6",
+      "headline": "OpenAI patches HTML preview exploit that let attackers hijack ChatGPT accounts",
       "category": "voices",
-      "summary": "Apple chief executive John Ternus told Wired that Apple will use AI in new products but only when it enhances the experience, not as a goal in itself. He emphasized that successful products should feel seamless, regardless of whether AI or traditional software powers them.",
-      "url": "https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake",
-      "sources": 2,
-      "quotes": 2
+      "summary": "Parameter Labs discovered a chain of vulnerabilities in ChatGPT’s HTML preview sandbox that allowed malicious code to exfiltrate user data. OpenAI fixed the issue and paid a $5,000 bug bounty.",
+      "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts",
+      "sources": 1,
+      "quotes": 0
     }
   ],
   "notes": [
-    "3 kept item(s) carried over to the next run"
+    "2 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 76.3,
-    "audit": -0.0,
-    "plan": 2.0,
-    "judge": 1.6,
-    "verify and write": 290.9,
-    "videos": 22.8,
-    "tagging": 20.6,
+    "gather": 66.7,
+    "audit": 4.0,
+    "plan": 83.8,
+    "judge": 1.4,
+    "verify and write": 273.2,
+    "videos": 3.8,
+    "tagging": 20.8,
     "explainers": 0.0,
-    "trackers": 20.3,
-    "claims": 20.4,
+    "trackers": 21.5,
+    "claims": 20.6,
     "model tracker": 0.1,
-    "weekly": 0.0,
-    "builders": 0.0,
-    "top voices": 0.0,
-    "briefing": 21.2,
-    "self-review": -0.0,
-    "photos": 0.1,
-    "stock photos": 0.0,
+    "weekly": 43.5,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 20.9,
+    "self-review": 20.8,
+    "photos": 0.0,
+    "stock photos": 16.8,
     "daily email": 0.0,
-    "alerts": 1.8
+    "alerts": 4.0
   },
-  "fetched": 2911,
-  "fresh": 10,
+  "fetched": 2910,
+  "fresh": 7,
+  "audit": "coverage 67% of 9 significant stories; 3 missed, 0 added to this run",
   "plan": {
-    "focus": "Tracking AI data‑center legal risks while assessing big‑tech hardware moves and model performance breakthroughs.",
+    "focus": "Chasing safety fallout from new OpenAI bug bounty and voter‑site misuse while bolstering our thin voices coverage.",
     "priorities": [
-      "Judge allows NAACP lawsuit over xAI data center pollution to move forw (NAACP lawsuit over xAI data center pollution highlights regulatory risk for AI infrastructure investors)",
-      "Sources: Meta built a prototype humanoid robot with Chinese firm Fouri (Meta's humanoid robot prototype signals new hardware direction and potential market impact)",
-      "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’ (Apple CEO's stance on AI informs strategic positioning of a major tech player)",
-      "Researchers are paid $5K for reporting a bug to OpenAI that would let  (OpenAI bug bounty reveals critical security vulnerability affecting all ChatGPT users)",
-      "GPT-5.6 Sol can beat Factorio on peaceful mode (GPT‑5.6 beating Factorio showcases model capabilities relevant to builders and investors)"
+      "Tests: chatbots rely on three obscure AI-built voter sites for US midt (Shows AI chatbots feeding on unreliable voter‑site data, raising policy and election‑integrity concerns.)",
+      "Judge allows NAACP lawsuit over xAI data center pollution to move forw (Legal challenge to xAI data center highlights environmental policy and industry pushback.)",
+      "Researchers are paid $5K for reporting a bug to OpenAI that would let  (Serious OpenAI bug bounty reveals code‑execution risk affecting many users, critical safety story.)",
+      "Anthropic blocks users for anything touching training larger models (Anthropic blocks on training larger models signal emerging policy/safety restrictions.)",
+      "How We Took Over ChatGPT Accounts (Voice piece adds needed perspective on account takeover tactics, filling our voices gap.)"
     ],
     "thin_areas": [
-      "models"
+      "voices",
+      "research"
     ],
     "searches": [
-      "Mistral Large 4 benchmarks: 0 new",
-      "OpenAI funding target investor response: 6 new",
-      "xAI data center lawsuit status: 0 new"
+      "Anthropic IPO rating: 1 new",
+      "Mistral Large 4 release date: 0 new",
+      "AI founder interview: 1 new"
     ],
     "dig_deeper": [
-      "Judge allows NAACP lawsuit over xAI data center pollution to move forw",
-      "Sources: Meta built a prototype humanoid robot with Chinese firm Fouri"
+      "Researchers are paid $5K for reporting a bug to OpenAI that would let ",
+      "Judge allows NAACP lawsuit over xAI data center pollution to move forw"
     ]
   },
-  "judged": 16,
+  "judged": 9,
   "kept": 5,
   "research": {
     "investigated": 4,
-    "confirmed": 1,
+    "confirmed": 0,
     "tool_calls": 12
   },
   "research_log": [
-    "Researchers are paid $5K for reporting a bug to OpenAI that would let : unconfirmed (searched “OpenAI bug $5K researchers run code logged-in sessions ChatGPT share link”; searched “\"ChatGPT share link\" bug $5K”; searched “\"paid $5,000\" OpenAI bug”)",
-    "GPT-5.6 Sol can beat Factorio on peaceful mode: unconfirmed (searched “GPT-5.6 Sol beats Factorio peaceful mode”; searched “\"Factorio\" \"GPT-5.6\"”; searched “AI beats Factorio peaceful mode”)",
-    "Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’: confirmed (searched “Apple CEO says we don't want to ship AI for AI's sake”; read techmeme.com; read thenextweb.com)",
-    "Judge allows NAACP lawsuit over xAI data center pollution to move forw: unconfirmed (searched “NAACP lawsuit xAI data center pollution judge allows move forward”; read msn.com; read atlantadailyworld.com)"
+    "Researchers are paid $5K for reporting a bug to OpenAI that would let : unconfirmed (searched “OpenAI bug $5K ChatGPT share link run code logged-in session researchers paid”; read thehackernews.com; searched “\"ChatGPT share link\" bug $5,000 OpenAI researchers paid”)",
+    "Anthropic blocks users for anything touching training larger models: unconfirmed (searched “Anthropic blocks users for anything touching training larger models”; read msn.com; searched “Anthropic blocks users for training larger models policy”)",
+    "Judge allows NAACP lawsuit over xAI data center pollution to move forw: unconfirmed (searched “judge allows NAACP lawsuit over xAI data center pollution”; read reuters.com; read reuters.com)",
+    "Tests: chatbots rely on three obscure AI-built voter sites for US midt: unconfirmed (searched “ChatGPT Ballot Brief 75% tests midterm answers obscure AI-built voter sites”; searched “\"Ballot Brief\" ChatGPT”; read msn.com)"
   ],
   "videos": {
-    "OpenAI": "ok (11 in feed, 0 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 0 new)",
-    "Google for Developers": "ok (9 in feed, 0 new)",
-    "AI at Meta": "ok (7 in feed, 0 new)",
-    "Microsoft Research": "ok (8 in feed, 0 new)",
-    "NVIDIA": "ok (8 in feed, 0 new)",
-    "Hugging Face": "ok (13 in feed, 0 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 1 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (14 in feed, 1 new)",
-    "Training Data (Sequoia)": "ok (6 in feed, 1 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 0 new)",
-    "Hard Fork": "ok (4 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (2 in feed, 0 new)",
-    "20VC": "ok (5 in feed, 0 new)"
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
   },
-  "videos_kept": "3 kept from 3 new",
   "tagged": 1,
-  "trackers": "filed 0 stories; no tracker changed",
+  "trackers": "filed 1 stories; updated agent-safety",
   "claims": "69 tracked, 67 open, 0 updated this run",
-  "model_tracker": "82 models, 14 changes today",
-  "briefing": "4 themes from 11 stories",
-  "photos": "1 saved, 0 unavailable",
-  "alerts": "22 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":4}",
-  "ai_requests_run": 25,
-  "ai_tokens_run": 43418,
-  "ai_requests_today": 201,
-  "provider_log": []
+  "model_tracker": "82 models, 5 changes today",
+  "weekly": "wrote 2026-W44 with 5 shifts",
+  "briefing": "4 themes from 9 stories",
+  "self_review": "19 lines written to data/self_review.md",
+  "photos": "0 saved, 0 unavailable",
+  "stock photos": "0 added",
+  "alerts": "7 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":17}",
+  "ai_requests_run": 29,
+  "ai_tokens_run": 69117,
+  "ai_requests_today": 29,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
 }

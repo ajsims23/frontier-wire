@@ -1,40 +1,40 @@
-## Newsroom self-review, 2026-10-31
+## Newsroom self-review, 2026-11-01
 
-Looked at 41 runs over the last 3 days (79 stories written).
+Looked at 35 runs over the last 3 days (63 stories written).
 Tick the suggestions you want applied; nothing changes until a person approves it.
 
-- [ ] **remove source** · `gdelt`: Remove gdelt source due to frequent 429 errors  
-  _Why:_ 16/41 runs failed, causing delays
-- [ ] **remove source** · `gdelt-india`: Remove gdelt-india source  
-  _Why:_ 17/41 runs failed, rate limiting
-- [ ] **add source** · `xAI`: Add a dedicated XAI news source to capture lab updates  
-  _Why:_ xAI lab has no stories this week
-- [ ] **tune** · `min_score_to_publish_1_to_10`: Increase to 7  
-  _Why:_ Many drops due to low scores (5,4,3) reducing content quality
-- [ ] **tune** · `max_stories_per_run`: Reduce to 8  
-  _Why:_ Current max 10 may strain processing and cause provider cut-offs
+- [ ] **fix source** · `arxiv`: Add a longer read timeout and retry logic for arxiv queries  
+  _Why:_ 3 of 35 runs timed out, causing missed papers
+- [ ] **remove source** · `gdelt`: Temporarily disable gdelt source and replace with a free alternative like newsapi.org to avoid 429 rate limits _(contains an address suggested by the agent; check it before using)_  
+  _Why:_ 14 of 35 runs hit 429 Too Many Requests
+- [ ] **remove source** · `gdelt-india`: Disable gdelt-india source and replace with a free alternative (e.g., Reddit AI subreddit) to avoid repeated rate‑limiting pauses  
+  _Why:_ 17 of 35 runs paused due to rate‑limiting
+- [ ] **add source** · `xAI blog`: Add a simple RSS/HTML scraper for the official xAI blog to capture lab announcements  
+  _Why:_ xAI lab had no stories this week despite being tracked
+- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower the minimum score from 6 to 5  
+  _Why:_ 95 stories dropped at score 5; lowering the threshold would increase published content without major quality loss
 
 <details><summary>Statistics the agent reviewed</summary>
 
 ```json
 {
- "runs": 41,
- "stories_written": 79,
+ "runs": 35,
+ "stories_written": 63,
  "source_failures": {
-  "gdelt": "16/41 runs; last error: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20",
-  "gdelt-india": "17/41 runs; last error: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
-  "arxiv": "3/41 runs; last error: failed: ReadTimeout: The read operation timed out"
+  "arxiv": "3/35 runs; last error: failed: ReadTimeout: The read operation timed out",
+  "gdelt": "14/35 runs; last error: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20",
+  "gdelt-india": "17/35 runs; last error: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting"
  },
  "sources_returning_nothing": {},
  "drop_reasons": {
-  "not AI": 259,
-  "score 5": 134,
-  "score 4": 123,
-  "could not verify yet": 83,
-  "could not verify yet after a second try": 24,
-  "score 3": 21,
-  "variety": 14,
-  "duplicate of 007a2afe4a6c": 11
+  "not AI": 199,
+  "score 5": 95,
+  "score 4": 74,
+  "could not verify yet": 65,
+  "could not verify yet after a second try": 21,
+  "score 3": 14,
+  "variety": 10,
+  "duplicate of b329cc4aaa4c": 10
  },
  "tracked_labs_without_stories_this_week": [
   "xAI"

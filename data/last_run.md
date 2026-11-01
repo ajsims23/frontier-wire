@@ -1,60 +1,53 @@
-## Frontier Wire newsroom run — 2026-10-31T21:48:00+00:00
+## Frontier Wire newsroom run — 2026-11-01T01:25:03+00:00
 
-Fetched 2911 items · fresh 10 · judged 16 · kept 5 · **written 1**
-AI: 25 requests, 43,418 tokens this run · 201 requests today · providers: cerebras, groq
-Editor-in-chief: Tracking AI data‑center legal risks while assessing big‑tech hardware moves and model performance breakthroughs.
-  Priorities: Judge allows NAACP lawsuit over xAI data center pollution to move forw (NAACP lawsuit over xAI data center pollution highlights regulatory risk for AI infrastructure investors); Sources: Meta built a prototype humanoid robot with Chinese firm Fouri (Meta's humanoid robot prototype signals new hardware direction and potential market impact); Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’ (Apple CEO's stance on AI informs strategic positioning of a major tech player); Researchers are paid $5K for reporting a bug to OpenAI that would let  (OpenAI bug bounty reveals critical security vulnerability affecting all ChatGPT users); GPT-5.6 Sol can beat Factorio on peaceful mode (GPT‑5.6 beating Factorio showcases model capabilities relevant to builders and investors)
-  Thin areas: models
-  Searches: Mistral Large 4 benchmarks: 0 new; OpenAI funding target investor response: 6 new; xAI data center lawsuit status: 0 new
-  Dig deeper: Judge allows NAACP lawsuit over xAI data center pollution to move forw; Sources: Meta built a prototype humanoid robot with Chinese firm Fouri
-Research agent: investigated 4 stories with 12 tool calls, confirmed 1
-Daily briefing: 4 themes from 11 stories
-Videos: 3 kept from 3 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (9 in feed, 0 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (8 in feed, 0 new), Hugging Face ok (13 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 1 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 1 new), Training Data (Sequoia) ok (6 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (4 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (5 in feed, 0 new)
-Photos: 1 saved, 0 unavailable
-Alerts: 22 events sent: {"subscribers":8,"sent":0,"queued":4}
+Fetched 2910 items · fresh 7 · judged 9 · kept 5 · **written 1**
+AI: 29 requests, 69,117 tokens this run · 29 requests today · providers: cerebras, groq
+Editor-in-chief: Chasing safety fallout from new OpenAI bug bounty and voter‑site misuse while bolstering our thin voices coverage.
+  Priorities: Tests: chatbots rely on three obscure AI-built voter sites for US midt (Shows AI chatbots feeding on unreliable voter‑site data, raising policy and election‑integrity concerns.); Judge allows NAACP lawsuit over xAI data center pollution to move forw (Legal challenge to xAI data center highlights environmental policy and industry pushback.); Researchers are paid $5K for reporting a bug to OpenAI that would let  (Serious OpenAI bug bounty reveals code‑execution risk affecting many users, critical safety story.); Anthropic blocks users for anything touching training larger models (Anthropic blocks on training larger models signal emerging policy/safety restrictions.); How We Took Over ChatGPT Accounts (Voice piece adds needed perspective on account takeover tactics, filling our voices gap.)
+  Thin areas: voices, research
+  Searches: Anthropic IPO rating: 1 new; Mistral Large 4 release date: 0 new; AI founder interview: 1 new
+  Dig deeper: Researchers are paid $5K for reporting a bug to OpenAI that would let ; Judge allows NAACP lawsuit over xAI data center pollution to move forw
+Research agent: investigated 4 stories with 12 tool calls, confirmed 0
+Daily briefing: 4 themes from 9 stories
+Videos: no new videos · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
+Daily self-check: coverage 67% of 9 significant stories; 3 missed, 0 added to this run
+Photos: 0 saved, 0 unavailable
+Alerts: 7 events sent: {"subscribers":8,"sent":0,"queued":17}
 Claims: 69 tracked, 67 open, 0 updated this run
-Trackers: filed 0 stories; no tracker changed
-Model tracker: 82 models, 14 changes today
+Trackers: filed 1 stories; updated agent-safety
+Weekly deep dive: wrote 2026-W44 with 5 shifts
+Model tracker: 82 models, 5 changes today
 Tagged 1 stories by sector, region and deal
-Time: gather 76s, plan 2s, judge 2s, verify and write 291s, videos 23s, tagging 21s, trackers 20s, claims 20s, briefing 21s, alerts 2s
+Self-review written (see the newsroom issue)
+Time: gather 67s, audit 4s, plan 84s, judge 1s, verify and write 273s, videos 4s, tagging 21s, trackers 22s, claims 21s, weekly 44s, briefing 21s, self-review 21s, stock photos 17s, alerts 4s
 
 ### New stories
-- **voices** — [Apple CEO says the company won’t ship AI for AI’s sake](https://techcrunch.com/2026/10/31/apple-ceo-says-the-company-doesnt-want-to-ship-ai-for-ais-sake)  
-  Apple chief executive John Ternus told Wired that Apple will use AI in new products but only when it enhances the experience, not as a goal in itself. He emphasized that successful products should feel seamless, regardless of whether AI or traditional software powers them.  
-  _2 source(s), 2 verified quote(s)_
+- **voices** — [OpenAI patches HTML preview exploit that let attackers hijack ChatGPT accounts](https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts)  
+  Parameter Labs discovered a chain of vulnerabilities in ChatGPT’s HTML preview sandbox that allowed malicious code to exfiltrate user data. OpenAI fixed the issue and paid a $5,000 bug bounty.  
+  _1 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Jepsen: ParticleDB 1.1.4 — not AI: Jepsen release of ParticleDB is a database update with no AI focus.
-- 4 days left: How TechCrunch Founder Summit helps you make more useful connections to scale — not AI: Promotional event listing; not AI news.
-- I built an AI Tamagotchi before Meta could — not AI: Personal project description, not a newsworthy AI development.
-- Here’s Why Doctors Are Betting On Docterz’s Hospital Management Software — not AI: Article about hospital management software; no AI angle.
-- ED Arrests Armstrong Exchange Founder Over Alleged Online Betting Scam — not AI: Report on arrest related to betting scam; unrelated to AI.
-- OpenAI reportedly lowers funding target for new round — duplicate of c10fef6ec816
-- OpenAI Cuts Funding Target to $20B as Report Puts Commitments Near $11B — duplicate of c10fef6ec816
-- OpenAI cuts its funding round target to $20bn, FT reports — duplicate of c10fef6ec816
-- OpenAI Raises Less Than Half of $30 Billion Target in Latest Round — duplicate of c10fef6ec816
-- OpenAI Cuts Funding Target by $10 Billion, FT Reports — duplicate of c10fef6ec816
-- OpenAI slashes funding goal by $10B amid tech selloff: FT — duplicate of c10fef6ec816
-- Sources: Meta built a prototype humanoid robot with Chinese firm Fourier in three months and is building a second; Meta says it has no plans to sell these units (Jyoti Mann/The Information) — loosely AI: lower priority than this run's AI stories
-- Researchers are paid $5K for reporting a bug to OpenAI that would let attackers run code in logged-in sessions of all who opened the hacker's ChatGPT share link (Swati Khandelwal/The Hacker News) — could not verify yet; will retry next run
-- GPT-5.6 Sol can beat Factorio on peaceful mode — could not verify yet; will retry next run
-- Judge allows NAACP lawsuit over xAI data center pollution to move forward — could not verify yet; will retry next run
+- GPT-5.6 Sol can beat Factorio on peaceful mode — score 4: A hobbyist claim that a GPT‑5.6 model can beat Factorio in peaceful mode; not a frontier‑level advancement.
+- datasette-llm 0.1a9 — score 5: Minor version bump of the datasette‑llm plugin; an incremental improvement not newsworthy for Frontier Wire.
+- Dan Ives says Anthropic IPO faces a 'perfect storm' — Aswath Damodaran warns 'if one falls, they drag the others down' — score 5: Analyst commentary on Anthropic’s IPO outlook; lacks a new development and duplicates existing coverage of the IPO.
+- Sarvam AI co-founder warns India risks becoming a 'digital colony' over dependence on foreign AI — score 5: Opinion interview with Sarvam AI co‑founder warning about India’s AI dependence; interesting but not a major news event.
+- Researchers are paid $5K for reporting a bug to OpenAI that would let attackers run code in logged-in sessions of all who opened the hacker's ChatGPT share link (Swati Khandelwal/The Hacker News) — could not verify yet after a second try; dropped
+- Anthropic blocks users for anything touching training larger models — could not verify yet; will retry next run
+- Judge allows NAACP lawsuit over xAI data center pollution to move forward — could not verify yet after a second try; dropped
+- Tests: chatbots rely on three obscure AI-built voter sites for US midterm answers; Copilot cited the error-prone Ballot Brief in 75% of tests and ChatGPT in 22% (Washington Post) — could not verify yet; will retry next run
 
 </details>
 
-### Sources with problems
-- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
-- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
-
 <details><summary>Research agent's work</summary>
 
-- Researchers are paid $5K for reporting a bug to OpenAI that would let : unconfirmed (searched “OpenAI bug $5K researchers run code logged-in sessions ChatGPT share link”; searched “"ChatGPT share link" bug $5K”; searched “"paid $5,000" OpenAI bug”)
-- GPT-5.6 Sol can beat Factorio on peaceful mode: unconfirmed (searched “GPT-5.6 Sol beats Factorio peaceful mode”; searched “"Factorio" "GPT-5.6"”; searched “AI beats Factorio peaceful mode”)
-- Apple CEO says the company doesn’t ‘want to ship AI for AI’s sake’: confirmed (searched “Apple CEO says we don't want to ship AI for AI's sake”; read techmeme.com; read thenextweb.com)
-- Judge allows NAACP lawsuit over xAI data center pollution to move forw: unconfirmed (searched “NAACP lawsuit xAI data center pollution judge allows move forward”; read msn.com; read atlantadailyworld.com)
+- Researchers are paid $5K for reporting a bug to OpenAI that would let : unconfirmed (searched “OpenAI bug $5K ChatGPT share link run code logged-in session researchers paid”; read thehackernews.com; searched “"ChatGPT share link" bug $5,000 OpenAI researchers paid”)
+- Anthropic blocks users for anything touching training larger models: unconfirmed (searched “Anthropic blocks users for anything touching training larger models”; read msn.com; searched “Anthropic blocks users for training larger models policy”)
+- Judge allows NAACP lawsuit over xAI data center pollution to move forw: unconfirmed (searched “judge allows NAACP lawsuit over xAI data center pollution”; read reuters.com; read reuters.com)
+- Tests: chatbots rely on three obscure AI-built voter sites for US midt: unconfirmed (searched “ChatGPT Ballot Brief 75% tests midterm answers obscure AI-built voter sites”; searched “"Ballot Brief" ChatGPT”; read msn.com)
 
 </details>
 
 ### Notes
-- 3 kept item(s) carried over to the next run
+- 2 kept item(s) carried over to the next run
+- cerebras/gpt-oss-120b: answer cut off; retrying with more room

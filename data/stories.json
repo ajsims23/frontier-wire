@@ -1,6 +1,74 @@
 [
   {
     "explainer": {
+      "what_it_means": "The exploit used a combination of the MathLive virtual keyboard, postMessage, and innerHTML to inject malicious HTML into the parent page, bypassing the sandbox. This allowed attackers to run JavaScript, fetch private user data via OpenAI APIs, and send it out using an image request. The vulnerability was closed after it was reported, and a bug bounty was awarded.",
+      "terms": [
+        {
+          "term": "sandboxed iframe",
+          "meaning": "An iframe that runs in a restricted environment, isolated from the rest of the page to limit what code can do."
+        },
+        {
+          "term": "content-security-policy",
+          "meaning": "A set of rules that tells the browser which sources of content (scripts, images, etc.) are allowed to load."
+        },
+        {
+          "term": "postMessage",
+          "meaning": "A browser API that lets a page send messages to another window or iframe, even across origins."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers must ensure that any HTML or script content rendered in AI tools is properly isolated to prevent similar attacks.",
+      "business": "Companies using ChatGPT for internal workflows need to verify that account security cannot be bypassed via embedded content.",
+      "investors": "The incident underscores security risks in AI platforms, which could affect investor confidence if not addressed."
+    },
+    "id": "dd35d009aad6",
+    "headline": "OpenAI patches HTML preview exploit that let attackers hijack ChatGPT accounts",
+    "summary": "Parameter Labs discovered a chain of vulnerabilities in ChatGPT’s HTML preview sandbox that allowed malicious code to exfiltrate user data. OpenAI fixed the issue and paid a $5,000 bug bounty.",
+    "why_it_matters": "The flaw showed how untrusted content in AI interfaces can be leveraged to compromise user accounts, highlighting the need for robust sandboxing.",
+    "category": "voices",
+    "lab": "OpenAI",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 7,
+    "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts",
+    "source_id": "simon-willison",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": null,
+    "sources": [
+      {
+        "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts",
+        "publisher": "Simon Willison",
+        "title": "How We Took Over ChatGPT Accounts"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-10-31T23:15:22+00:00",
+    "created_at": "2026-11-01T01:25:03+00:00",
+    "sectors": [
+      "cybersecurity"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "5,000 bug bounty",
+    "trackers": [
+      "agent-safety"
+    ],
+    "stock_tried": "2026-11-01T01:25:03+00:00"
+  },
+  {
+    "explainer": {
       "what_it_means": "Apple will incorporate artificial‑intelligence techniques into its upcoming devices, but the AI will be hidden behind the product’s functionality. Users should notice the benefit of the feature, not the underlying AI technology.",
       "terms": [
         {

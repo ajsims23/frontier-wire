@@ -1,14 +1,5 @@
 {
   "posts": {
-    "9b95642b62ce": {
-      "id": "9b95642b62ce",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mynwzdkgwc2m",
-      "person": "Ethan Mollick",
-      "text": "An OpenAI researcher (Noam Brown) was generally mocked last month for suggesting that even air-gapped AI models on separate computers would find a way to communicate with each other, perhaps through CPU temperature changes. Given this latest report from OpenAI, it doesn’t seem so implausible.",
-      "published": "2026-10-25T00:25:03.233Z",
-      "via": "Bluesky",
-      "kind": "post"
-    },
     "17d85836242d": {
       "id": "17d85836242d",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3mypr5rwh4k2n",
@@ -487,6 +478,24 @@
       "text": "This thread is a good summary of how dramatically the craft of software engineering has changed over the past 12 months",
       "published": "2026-10-31T18:15:29.982Z",
       "via": "Bluesky",
+      "kind": "post"
+    },
+    "dd35d009aad6": {
+      "id": "dd35d009aad6",
+      "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts",
+      "person": "Simon Willison",
+      "text": "How We Took Over ChatGPT Accounts. How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found against ChatGPT's implementation of the artifacts pattern (OpenAI used to call this \"Canvas\" but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are displayed in a sandboxed iframe. It's important that HTML in these stays tightly sandboxed to avoid untrusted code interacting with OpenAI APIs and accessing private data. Parameter found quite a complex attack chain. OpenAI use the MathLive JavaScript library as part of their graph support, and that library includes its",
+      "published": "2026-10-31T23:15:22+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "4c77a0dfd633": {
+      "id": "4c77a0dfd633",
+      "url": "https://simonwillison.net/2026/Oct/31/datasette-llm",
+      "person": "Simon Willison",
+      "text": "datasette-llm 0.1a9. Release: datasette-llm 0.1a9 I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here's a tiny user experience improvement to the underlying datasette-llm plugin. It now picks up the default model used by LLM , which means you can start using Datasette Agent without needing to explicitly configure a default model: uvx --with datasette-agent datasette content.db --internal internal.db Previously you would also need to specify a model with -s plugins.datasette-agent.default_model gpt-6-astra . Tags: datasette , llm , datasette-agent",
+      "published": "2026-10-31T22:10:01+00:00",
+      "via": "Simon Willison",
       "kind": "post"
     }
   },

@@ -355,8 +355,8 @@
       "lab": "Zhipu AI",
       "released": "2026-08-26",
       "context": 1048576,
-      "price_in": 0.0149,
-      "price_out": 0.1543,
+      "price_in": 0.013,
+      "price_out": 0.0168,
       "inputs": [
         "text",
         "image",
@@ -381,7 +381,7 @@
       "name": "GLM 5.3",
       "lab": "Zhipu AI",
       "released": "2026-08-18",
-      "context": 1048576,
+      "context": 1050000,
       "price_in": 0.0699,
       "price_out": 1.4,
       "inputs": [
@@ -394,8 +394,8 @@
       "lab": "Alibaba (Qwen)",
       "released": "2026-08-14",
       "context": 1000000,
-      "price_in": 0.04,
-      "price_out": 2.3,
+      "price_in": 0.15,
+      "price_out": 1.875,
       "inputs": [
         "text",
         "image",
@@ -1095,41 +1095,6 @@
   ],
   "changes": [
     {
-      "date": "2026-10-29",
-      "model": "GLM 5.3 Flash",
-      "lab": "Zhipu AI",
-      "kind": "price_cut",
-      "text": "GLM 5.3 Flash output price cut: $0.5 → $0.0701 per 1M tokens"
-    },
-    {
-      "date": "2026-10-29",
-      "model": "Qwen3.8 27B",
-      "lab": "Alibaba (Qwen)",
-      "kind": "price_rise",
-      "text": "Qwen3.8 27B input price raised: $0.039 → $0.2 per 1M tokens"
-    },
-    {
-      "date": "2026-10-29",
-      "model": "Qwen3.8 27B",
-      "lab": "Alibaba (Qwen)",
-      "kind": "price_rise",
-      "text": "Qwen3.8 27B output price raised: $1.25 → $2.5 per 1M tokens"
-    },
-    {
-      "date": "2026-10-30",
-      "model": "DeepSeek V4.1 Flash 1017",
-      "lab": "DeepSeek",
-      "kind": "price_rise",
-      "text": "DeepSeek V4.1 Flash 1017 input price raised: $0.15 → $0.3 per 1M tokens"
-    },
-    {
-      "date": "2026-10-30",
-      "model": "DeepSeek V4.1 Flash 1017",
-      "lab": "DeepSeek",
-      "kind": "price_rise",
-      "text": "DeepSeek V4.1 Flash 1017 output price raised: $0.6 → $1.2 per 1M tokens"
-    },
-    {
       "date": "2026-10-30",
       "model": "GLM 5.3",
       "lab": "Zhipu AI",
@@ -1513,7 +1478,42 @@
       "lab": "Zhipu AI",
       "kind": "price_rise",
       "text": "GLM 5.3 Flash output price raised: $0.1479 → $0.1543 per 1M tokens"
+    },
+    {
+      "date": "2026-11-01",
+      "model": "GLM 5.3 Flash",
+      "lab": "Zhipu AI",
+      "kind": "price_cut",
+      "text": "GLM 5.3 Flash input price cut: $0.0149 → $0.013 per 1M tokens"
+    },
+    {
+      "date": "2026-11-01",
+      "model": "GLM 5.3 Flash",
+      "lab": "Zhipu AI",
+      "kind": "price_cut",
+      "text": "GLM 5.3 Flash output price cut: $0.1543 → $0.0168 per 1M tokens"
+    },
+    {
+      "date": "2026-11-01",
+      "model": "GLM 5.3",
+      "lab": "Zhipu AI",
+      "kind": "context",
+      "text": "GLM 5.3 context window: 1,048,576 → 1,050,000 tokens"
+    },
+    {
+      "date": "2026-11-01",
+      "model": "Qwen3.8 27B",
+      "lab": "Alibaba (Qwen)",
+      "kind": "price_rise",
+      "text": "Qwen3.8 27B input price raised: $0.04 → $0.15 per 1M tokens"
+    },
+    {
+      "date": "2026-11-01",
+      "model": "Qwen3.8 27B",
+      "lab": "Alibaba (Qwen)",
+      "kind": "price_cut",
+      "text": "Qwen3.8 27B output price cut: $2.3 → $1.875 per 1M tokens"
     }
   ],
-  "updated_at": "2026-10-31T21:48:00+00:00"
+  "updated_at": "2026-11-01T01:25:03+00:00"
 }

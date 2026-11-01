@@ -1,0 +1,193 @@
+{
+  "started_at": "2026-11-01T01:25:03+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1341)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (894)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (17)",
+    "gdelt": "ok (0)",
+    "hn": "ok (17)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (0)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "GPT-5.6 Sol can beat Factorio on peaceful mode",
+      "reason": "score 4: A hobbyist claim that a GPT‑5.6 model can beat Factorio in peaceful mode; not a frontier‑level advancement."
+    },
+    {
+      "title": "datasette-llm 0.1a9",
+      "reason": "score 5: Minor version bump of the datasette‑llm plugin; an incremental improvement not newsworthy for Frontier Wire."
+    },
+    {
+      "title": "Dan Ives says Anthropic IPO faces a 'perfect storm' — Aswath Damodaran warns 'if one falls, they drag the others down'",
+      "reason": "score 5: Analyst commentary on Anthropic’s IPO outlook; lacks a new development and duplicates existing coverage of the IPO."
+    },
+    {
+      "title": "Sarvam AI co-founder warns India risks becoming a 'digital colony' over dependence on foreign AI",
+      "reason": "score 5: Opinion interview with Sarvam AI co‑founder warning about India’s AI dependence; interesting but not a major news event."
+    },
+    {
+      "title": "Researchers are paid $5K for reporting a bug to OpenAI that would let attackers run code in logged-in sessions of all who opened the hacker's ChatGPT share link (Swati Khandelwal/The Hacker News)",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Anthropic blocks users for anything touching training larger models",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Judge allows NAACP lawsuit over xAI data center pollution to move forward",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Tests: chatbots rely on three obscure AI-built voter sites for US midterm answers; Copilot cited the error-prone Ballot Brief in 75% of tests and ChatGPT in 22% (Washington Post)",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "dd35d009aad6",
+      "headline": "OpenAI patches HTML preview exploit that let attackers hijack ChatGPT accounts",
+      "category": "voices",
+      "summary": "Parameter Labs discovered a chain of vulnerabilities in ChatGPT’s HTML preview sandbox that allowed malicious code to exfiltrate user data. OpenAI fixed the issue and paid a $5,000 bug bounty.",
+      "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "2 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 66.7,
+    "audit": 4.0,
+    "plan": 83.8,
+    "judge": 1.4,
+    "verify and write": 273.2,
+    "videos": 3.8,
+    "tagging": 20.8,
+    "explainers": 0.0,
+    "trackers": 21.5,
+    "claims": 20.6,
+    "model tracker": 0.1,
+    "weekly": 43.5,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 20.9,
+    "self-review": 20.8,
+    "photos": 0.0,
+    "stock photos": 16.8,
+    "daily email": 0.0,
+    "alerts": 4.0
+  },
+  "fetched": 2910,
+  "fresh": 7,
+  "audit": "coverage 67% of 9 significant stories; 3 missed, 0 added to this run",
+  "plan": {
+    "focus": "Chasing safety fallout from new OpenAI bug bounty and voter‑site misuse while bolstering our thin voices coverage.",
+    "priorities": [
+      "Tests: chatbots rely on three obscure AI-built voter sites for US midt (Shows AI chatbots feeding on unreliable voter‑site data, raising policy and election‑integrity concerns.)",
+      "Judge allows NAACP lawsuit over xAI data center pollution to move forw (Legal challenge to xAI data center highlights environmental policy and industry pushback.)",
+      "Researchers are paid $5K for reporting a bug to OpenAI that would let  (Serious OpenAI bug bounty reveals code‑execution risk affecting many users, critical safety story.)",
+      "Anthropic blocks users for anything touching training larger models (Anthropic blocks on training larger models signal emerging policy/safety restrictions.)",
+      "How We Took Over ChatGPT Accounts (Voice piece adds needed perspective on account takeover tactics, filling our voices gap.)"
+    ],
+    "thin_areas": [
+      "voices",
+      "research"
+    ],
+    "searches": [
+      "Anthropic IPO rating: 1 new",
+      "Mistral Large 4 release date: 0 new",
+      "AI founder interview: 1 new"
+    ],
+    "dig_deeper": [
+      "Researchers are paid $5K for reporting a bug to OpenAI that would let ",
+      "Judge allows NAACP lawsuit over xAI data center pollution to move forw"
+    ]
+  },
+  "judged": 9,
+  "kept": 5,
+  "research": {
+    "investigated": 4,
+    "confirmed": 0,
+    "tool_calls": 12
+  },
+  "research_log": [
+    "Researchers are paid $5K for reporting a bug to OpenAI that would let : unconfirmed (searched “OpenAI bug $5K ChatGPT share link run code logged-in session researchers paid”; read thehackernews.com; searched “\"ChatGPT share link\" bug $5,000 OpenAI researchers paid”)",
+    "Anthropic blocks users for anything touching training larger models: unconfirmed (searched “Anthropic blocks users for anything touching training larger models”; read msn.com; searched “Anthropic blocks users for training larger models policy”)",
+    "Judge allows NAACP lawsuit over xAI data center pollution to move forw: unconfirmed (searched “judge allows NAACP lawsuit over xAI data center pollution”; read reuters.com; read reuters.com)",
+    "Tests: chatbots rely on three obscure AI-built voter sites for US midt: unconfirmed (searched “ChatGPT Ballot Brief 75% tests midterm answers obscure AI-built voter sites”; searched “\"Ballot Brief\" ChatGPT”; read msn.com)"
+  ],
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "tagged": 1,
+  "trackers": "filed 1 stories; updated agent-safety",
+  "claims": "69 tracked, 67 open, 0 updated this run",
+  "model_tracker": "82 models, 5 changes today",
+  "weekly": "wrote 2026-W44 with 5 shifts",
+  "briefing": "4 themes from 9 stories",
+  "self_review": "19 lines written to data/self_review.md",
+  "photos": "0 saved, 0 unavailable",
+  "stock photos": "0 added",
+  "alerts": "7 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":17}",
+  "ai_requests_run": 29,
+  "ai_tokens_run": 69117,
+  "ai_requests_today": 29,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
+}
