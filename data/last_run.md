@@ -1,56 +1,68 @@
-## Frontier Wire newsroom run — 2026-11-01T04:04:41+00:00
+## Frontier Wire newsroom run — 2026-11-01T07:17:09+00:00
 
-Fetched 2908 items · fresh 8 · judged 10 · kept 5 · **written 1**
-AI: 31 requests, 54,991 tokens this run · 60 requests today · providers: cerebras, groq
-Editor-in-chief: Chasing fallout from the Binance hack attribution while filling gaps in model coverage and AI research reporting.
-  Priorities: The FBI attributes the $6B+ Binance hack to North Korea's TraderTraito (Major security breach affecting crypto markets; critical for investors and risk assessment); Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench (New high‑performing Qwen3.8 model outperforms Fable 5, key for builders evaluating cutting‑edge models); How voice AI is transforming banking and insurance: Desible.ai founder (Voice AI use cases in banking/insurance highlight emerging Indian market opportunities); TVS Capital’s Rs 750-Cr private-credit bet; What makes people pay atte (Large private‑credit deal signals capital trends for AI‑related businesses); Tests: chatbots rely on three obscure AI-built voter sites for US midt (Reveals safety/policy risks of AI chatbots relying on obscure voter‑info sites)
+Fetched 2903 items · fresh 14 · judged 18 · kept 5 · **written 3**
+AI: 37 requests, 109,233 tokens this run · 97 requests today · providers: cerebras, groq
+Editor-in-chief: Tracking Binance's hack recovery and fresh AI industrial funding amid ongoing policy and safety coverage.
+  Priorities: Binance says it plans to resume withdrawals in phases starting Sunday, (Major security incident affecting a leading exchange, relevant to investors and policy readers); Lumaril, which develops AI software for optimizing industrial producti (Significant Series A for AI-driven industrial optimization, key for industry audience); Insurance software maker Guidewire agrees to acquire Hyperexponential, (Large acquisition in AI insurance underwriting, important business impact); Enterprise voice AI tools provider Deepgram acquires Daily, which has  (Voice AI platform acquisition, shows consolidation trends in AI services); DeepSeek open sources Super-Agent as a research prototype, a proactive (Open-source Super-Agent prototype, advances model research and tooling)
   Thin areas: models, research
-  Searches: Mistral Large 4 benchmark: 0 new; AI safety research funding 2026: 0 new; Anthropic Claude VS Code backdoor details: 2 new
-  Dig deeper: The FBI attributes the $6B+ Binance hack to North Korea's TraderTraito; Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench
-Research agent: investigated 5 stories with 15 tool calls, confirmed 1
-Daily briefing: 4 themes from 10 stories
-Videos: no new videos · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
-Photos: 1 saved, 0 unavailable
-Alerts: 10 events sent: {"subscribers":8,"sent":0,"queued":13}
-Claims: 69 tracked, 67 open, 0 updated this run
-Trackers: filed 1 stories; updated agent-safety
-Model tracker: 82 models, 8 changes today
-Tagged 1 stories by sector, region and deal
-India briefing: 2 themes from 3 stories
-Time: gather 115s, plan 2s, judge 2s, verify and write 376s, videos 3s, tagging 21s, trackers 43s, claims 21s, briefing 42s, alerts 4s
+  Searches: Mistral Large 4 release: 0 new; DeepSeek Super-Agent open source: 4 new; AI industrial funding series A: 0 new
+  Dig deeper: Binance says it plans to resume withdrawals in phases starting Sunday,; Lumaril, which develops AI software for optimizing industrial producti
+Research agent: investigated 5 stories with 15 tool calls, confirmed 2
+Daily briefing: 4 themes from 12 stories
+Videos: 3 kept from 4 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (9 in feed, 0 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (8 in feed, 0 new), Hugging Face ok (13 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 1 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 1 new), Training Data (Sequoia) ok (6 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 1 new), Hard Fork ok (3 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (5 in feed, 0 new)
+Builders desk: picked 7 from 60 candidates; 3 with pictures, 0 with videos
+Top Voices: 2 debates from 50 posts by 9 people; 2 portraits, 3 pictures
+Photos: 2 saved, 0 unavailable
+Alerts: 16 events sent: {"subscribers":8,"sent":0,"queued":26}
+Claims: 70 tracked, 68 open, 0 updated this run
+Trackers: filed 3 stories; updated frontier-race, ai-money
+Model tracker: 82 models, 10 changes today
+Tagged 3 stories by sector, region and deal
+Time: gather 147s, plan 56s, judge 1s, verify and write 402s, videos 26s, trackers 85s, claims 21s, builders 31s, top voices 20s, briefing 22s, photos 1s, stock photos 17s, alerts 6s
 
 ### New stories
-- **safety** — [Anthropic adds rule to block AI-generated video game clones](https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering)  
-  Anthropic updated Claude Code and Opus 5.5 with a rule that forbids recreating existing games. The change stops the model from assisting with modding, decompiling, or other reverse‑engineering tasks.  
+- **models** — [DeepSeek releases open‑source Super‑Agent, a proactive coding assistant prototype](https://techmeme.com/261101/p2)  
+  DeepSeek announced Super‑Agent, an open‑source research prototype that monitors a GitHub repo and developer chats, then suggests fixes or opens pull requests without being prompted. The code is under an MIT license and not production‑ready.  
+  _5 source(s), 1 verified quote(s)_
+- **industry** — [Guidewire to acquire Hyperexponential for $1.7 billion in cash](https://techmeme.com/261101/p1)  
+  Insurance software maker Guidewire announced it will buy AI underwriting firm Hyperexponential for $1.7 billion in cash, with an additional earn‑out of up to $400 million. The deal adds AI‑powered pricing tools to Guidewire’s portfolio.  
+  _2 source(s), 0 verified quote(s)_
+- **industry** — [Deepgram acquires Daily, keeping open‑source Pipecat framework intact](https://techmeme.com/261101/p3)  
+  Deepgram bought Daily, the maker of the open‑source voice AI framework Pipecat, for an undisclosed sum. Pipecat will remain open source under its BSD V2 licence and Daily’s team joins Deepgram.  
   _3 source(s), 2 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Anthropic blocks users for anything touching training larger models — score 5: A brief tweet about Anthropic blocking users for training larger models lacks depth and does not rise to news status.
-- Ethan Mollick: The Pro series of GPT models continues to be really impressive for one-shot problems that involve complex calculations, references, or… — score 5: A personal commentary praising GPT‑6 Astra Pro’s capabilities; it does not constitute a newsworthy development.
-- The FBI attributes the $6B+ Binance hack to North Korea's TraderTraitor hacking group, which the agency also previously blamed for the ~$1.5B Bybit hack (Kevin Whitelaw/Bloomberg) — not AI: The story concerns a cryptocurrency hack and FBI attribution; it contains no AI angle for Frontier Wire’s audience.
-- Tampered Claude Code extension in Cursor planted an SSH backdoor — duplicate of 93351cbb4cc4
-- Anthropic denies breach as tampered Claude Code extension hits Cursor users — duplicate of 93351cbb4cc4
-- Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard — could not verify yet; will retry next run
-- Tests: chatbots rely on three obscure AI-built voter sites for US midterm answers; Copilot cited the error-prone Ballot Brief in 75% of tests and ChatGPT in 22% (Washington Post) — could not verify yet after a second try; dropped
-- How voice AI is transforming banking and insurance: Desible.ai founders on the business behind the technology — could not verify yet; will retry next run
-- TVS Capital’s Rs 750-Cr private-credit bet; What makes people pay attention to content? — could not verify yet; will retry next run
+- Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard — score 5: Benchmark result showing Qwen3.8‑27B models beating Fable 5 is an incremental performance update without broader impact.
+- The Bengaluru Founder Building a Bridge to San Francisco — not AI: Profile piece about a founder, not AI‑focused news.
+- Netflix Flips Its India Script — not AI: Entertainment content about Netflix, not AI.
+- Festive spending drives record UPI transactions in October — not AI: Record UPI transaction volume is a financial metric with no AI relevance.
+- How voice AI is transforming banking and insurance: Desible.ai founders on the business behind the technology — score 4: Podcast on voice AI in banking/insurance is a feature piece rather than a news event; score below threshold.
+- Health, sustainability, AI: test your business creativity with Edition 256 of our weekly quiz! — not AI: Quiz feature unrelated to AI news.
+- TVS Capital’s Rs 750-Cr private-credit bet; What makes people pay attention to content? — not AI: Private‑credit platform launch unrelated to AI.
+- A look at a crude campaign of cyberattacks by Russia-linked hacktivist groups that have caused physical damage in NATO-aligned countries over the past two years (Ryan Gallagher/Bloomberg) — not AI: Article about Russian‑linked cyberattacks; no AI component.
+- Binance says it plans to resume withdrawals in phases starting Sunday, after covering 95% of the ~$6.3B in tokens stolen in the hack, including BTC and ETH (Reuters) — not AI: The story concerns a cryptocurrency exchange hack recovery and has no AI angle.
+- Lumaril, which develops AI software for optimizing industrial production by connecting to existing control systems, raised a $66M Series A at a $400M valuation (Sarah Klearman/Wall Street Journal) — could not verify yet; will retry next run
+- Shanghai-based NeuroXess, which is developing BCI technology for movement support, speech decoding, and control of external devices, raised a ~$105M Series B (TechNode) — could not verify yet; will retry next run
 
 </details>
 
 ### Sources with problems
-- `gdelt-india`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+- `r-sideproject`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'
+F
 
 <details><summary>Research agent's work</summary>
 
-- Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench: unconfirmed (searched “Memdoor team of 5 Qwen3.8-27B beats Fable 5 LiveCodeBench Hard 123 points”; searched “"LiveCodeBench Hard" 123”; searched “Memdoor LiveCodeBench”)
-- Tests: chatbots rely on three obscure AI-built voter sites for US midt: unconfirmed (searched “Ballot Brief Copilot 75% tests ChatGPT 22%”; searched “"Ballot Brief" "Washington Post"”; read techmeme.com)
-- How voice AI is transforming banking and insurance: Desible.ai founder: unconfirmed (searched “Desible.ai Prime Venture Partners Podcast”; searched “Desible.ai voice AI banking insurance podcast”; searched “Desible.ai founders interview”)
-- TVS Capital’s Rs 750-Cr private-credit bet; What makes people pay atte: unconfirmed (searched “TVS Capital private credit Rs 750 crore TVS Alts launch”; read msn.com; searched “Economic Times TVS Alts private credit Rs 750 crore”)
-- Anthropic takes steps to block Claude from reverse-engineering video g: confirmed (searched “Anthropic Claude video game reverse engineering block”; read tomshardware.com; read ign.com)
+- DeepSeek open sources Super-Agent as a research prototype, a proactive: unconfirmed (read techmeme.com; read shiftdelete.net; read straitstimes.com)
+- Insurance software maker Guidewire agrees to acquire Hyperexponential,: confirmed (searched “Guidewire Hyperexponential acquisition $1.7 billion”; read techcrunch.com; searched “Reuters Guidewire Hyperexponential”)
+- Lumaril, which develops AI software for optimizing industrial producti: unconfirmed (searched “Lumaril $66 million Series A”; read wsj.com; searched “Lumaril Series A $66 million”)
+- Enterprise voice AI tools provider Deepgram acquires Daily, which has : confirmed (searched “Deepgram acquires Daily voice AI”; read msn.com; read thenextweb.com)
+- Shanghai-based NeuroXess, which is developing BCI technology for movem: unconfirmed (searched “NeuroXess Series B funding 105 million”; searched “NeuroXess”; read businessinsider.com)
 
 </details>
 
 ### Notes
-- 3 kept item(s) carried over to the next run
+- dropped unverifiable quote (): the new open-source offering, dubbed “Super-agent” can proac…
+- 2 kept item(s) carried over to the next run
 - cerebras/gpt-oss-120b: answer cut off; retrying with more room
+- cerebras/gpt-oss-120b: unusable answer

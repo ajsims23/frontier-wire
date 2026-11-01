@@ -506,33 +506,38 @@
       "published": "2026-11-01T02:59:51.629Z",
       "via": "Bluesky",
       "kind": "post"
+    },
+    "18eadc7cf156": {
+      "id": "18eadc7cf156",
+      "url": "https://latent.space/p/arca",
+      "person": "swyx",
+      "text": "Agents Prompt People: Using Agents for Long-Horizon Financial Work. At AI Engineer New York this month, we sat down with Aman Singh , the lead AI Engineer at Arca , an “AI-native” company providing wealth management services. We discovered that while agents do most of the background work in the firm, there are guardrails in place to ensure that human advisors are making the final decisions. The goal is for AI to guide the process; or as Singh nicely put it, “agents prompt people more than people prompt agents.” Arca recently raised $48.5 Million in a round led by General Catalyst, with participation from Index Ventures and Venrock. One of the features of using AI in financial services,…",
+      "published": "2026-10-31T16:05:00+00:00",
+      "via": "Latent Space",
+      "kind": "post"
+    },
+    "a7e11bfba6b1": {
+      "id": "a7e11bfba6b1",
+      "url": "https://karpathy.bearblog.dev/hacker-tube",
+      "person": "Andrej Karpathy",
+      "text": "HackerTube. It was Friday night at 11pm, I was tired, I went to YouTube to watch something and realized that I was looking at an enshittified wall of slop. Insanely exaggerated thumbnails, dumb recommendations of the same tired topics, truly terrible idiocracy-grade content. I'm sure this algorithm works well for the median person on the internet, but it definitely does not work for me. So this morning (Saturday) I took a hold of my Opus 5.5 and gave it the task: Let's write our own YouTube clone based on whatever videos have been recommended on Hacker News. And Opus came back with: hackertube.org ! Opus downloaded all comments of HackerNews , filtered them, ran Sonnet over them in a…",
+      "published": "2026-10-31T17:00:00+00:00",
+      "via": "Karpathy's blog",
+      "kind": "post"
     }
   },
   "digest": {
-    "written_at": "2026-10-31T09:54:05+00:00",
-    "range": "24 Oct – 31 Oct 2026",
-    "headline": "AI agents reshape software, visual‑reasoning races, and safety hype sparks fresh debate",
+    "written_at": "2026-11-01T07:17:09+00:00",
+    "range": "25 Oct – 1 Nov 2026",
+    "headline": "AI agents reshape software, spark security worries, and challenge Google’s search revenue",
     "debates": [
       {
-        "title": "Are coding interviews obsolete?",
-        "summary": "Industry leaders debate whether traditional coding interviews have been supplanted by AI‑driven assessments. The discussion weighs productivity gains against the need for human oversight.",
+        "title": "Coding agents reshape software engineering",
+        "summary": "Agentic tools are driving unprecedented productivity gains in codebases, while access gaps raise concerns. The debate centers on whether these agents are a sustainable boost or a fleeting advantage for closed‑model providers.",
         "positions": [
           {
-            "person": "swyx",
-            "stance": "Claims traditional coding interviews are no longer useful and should be replaced by AI assessments",
-            "posts": [
-              {
-                "id": "625efce5713d",
-                "url": "https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure",
-                "via": "Latent Space",
-                "kind": "post",
-                "date": "2026-10-28"
-              }
-            ]
-          },
-          {
             "person": "Simon Willison",
-            "stance": "Points to GitHub Octoverse data showing merged pull requests tripled, driven by AI agents",
+            "stance": "Reports a three‑fold rise in merged pull requests and commits, attributing the surge to agentic engineering on GitHub.",
             "posts": [
               {
                 "id": "94bdedac0696",
@@ -545,83 +550,62 @@
           },
           {
             "person": "Ethan Mollick",
-            "stance": "Recommends building checkpoints and feedback loops when using AI models to maintain human judgment",
+            "stance": "Notes that open‑weight models are falling further behind closed models, suggesting a disparity in who can leverage top coding agents.",
             "posts": [
               {
-                "id": "1ab79ad65005",
-                "url": "https://bsky.app/profile/emollick.bsky.social/post/3myzwg2oxgk25",
+                "id": "81af9a1e6190",
+                "url": "https://bsky.app/profile/emollick.bsky.social/post/3mywnjrmkb22z",
                 "via": "Bluesky",
                 "kind": "post",
-                "date": "2026-10-29"
+                "date": "2026-10-28"
+              }
+            ]
+          },
+          {
+            "person": "Nathan Lambert",
+            "stance": "Argues that evaluating model progress is difficult, making it hard to judge the true impact of coding agents.",
+            "posts": [
+              {
+                "id": "65e05126788d",
+                "url": "https://interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers",
+                "via": "Interconnects",
+                "kind": "post",
+                "date": "2026-10-28"
               }
             ]
           }
         ],
-        "image": "img/voices/625efce5713d.jpg",
-        "image_credit": "Latent Space",
-        "video": "35ZWesLrv5A"
+        "image": "img/voices/65e05126788d.jpg",
+        "image_credit": "Interconnects",
+        "video": "79Pnm5hANsA"
       },
       {
-        "title": "Which visual reasoning model leads?",
-        "summary": "Competing frontier models vie for supremacy in visual reasoning benchmarks, with each camp touting new capabilities. The race highlights how quickly performance gaps can shift.",
+        "title": "AI model security under fire",
+        "summary": "Recent disclosures expose vulnerabilities in AI sandboxing and open‑model ecosystems, reigniting fears of misuse. Stakeholders clash over how to secure models without stifling innovation.",
         "positions": [
-          {
-            "person": "swyx",
-            "stance": "Reports Elorian Glimpse’s strong results on the DecoyCount benchmark, suggesting it rivals other frontier models",
-            "posts": [
-              {
-                "id": "2df0e95472f6",
-                "url": "https://latent.space/p/elorian",
-                "via": "Latent Space",
-                "kind": "post",
-                "date": "2026-10-29"
-              }
-            ]
-          },
           {
             "person": "Simon Willison",
-            "stance": "Flags GPT‑6.1 Terra as a step up with detailed visual reasoning and precise computer use",
+            "stance": "Details a complex exploit against ChatGPT’s HTML preview sandbox, urging tighter isolation to prevent data leaks.",
             "posts": [
               {
-                "id": "2812ff85caf0",
-                "url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra",
+                "id": "dd35d009aad6",
+                "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts",
                 "via": "Simon Willison",
                 "kind": "post",
-                "date": "2026-10-26"
-              }
-            ]
-          }
-        ],
-        "image": "img/voices/2812ff85caf0.jpg",
-        "image_credit": "Simon Willison"
-      },
-      {
-        "title": "Is existential risk hype driving AI?",
-        "summary": "Some see talk of existential risk as marketing, while others view it as a genuine safety priority. The clash reflects differing views on how AI risk should be communicated and addressed.",
-        "positions": [
-          {
-            "person": "Ethan Mollick",
-            "stance": "Argues AI labs use existential‑risk rhetoric to create hype and boost stock prices, not to foster adoption or regulation",
-            "posts": [
-              {
-                "id": "895f2e8c6f6e",
-                "url": "https://bsky.app/profile/emollick.bsky.social/post/3myuvyco2fs2z",
-                "via": "Bluesky",
-                "kind": "post",
-                "date": "2026-10-27"
+                "date": "2026-10-31"
               }
             ]
           },
           {
-            "person": "Jack Clark",
-            "stance": "Highlights serious alignment research using mathematics, indicating authentic concern for AI safety",
+            "person": "Nathan Lambert",
+            "stance": "Frames the “Black October” wave of vulnerabilities as evidence that AI models now pose real cyber risks.",
             "posts": [
               {
-                "id": "6352bc5d9cf3",
-                "url": "https://jack-clark.net/2026/10/26/import-ai-478-math-for-alignment-programbench-and-mirendil-shows-what-rsi-means",
-                "via": "Import AI (Jack Clark)",
+                "id": "21d66635327b",
+                "url": "https://interconnects.ai/p/was-i-wrong-about-open-models-and",
+                "via": "Interconnects",
                 "kind": "post",
-                "date": "2026-10-26"
+                "date": "2026-10-30"
               }
             ]
           }
@@ -630,48 +614,45 @@
     ],
     "standouts": [
       {
-        "id": "4505f5f4bd09",
-        "person": "swyx",
-        "why": "Reveals Google’s AI Mode cutting search revenue, signaling a major market shift",
-        "url": "https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c",
-        "via": "Latent Space",
+        "id": "5e638af84ceb",
+        "person": "Ethan Mollick",
+        "why": "Shows the latest GPT‑6 Astra Pro’s impressive one‑shot reasoning despite speed trade‑offs.",
+        "url": "https://bsky.app/profile/emollick.bsky.social/post/3mz7swluwac2w",
+        "via": "Bluesky",
         "kind": "post",
-        "title": "[AINews] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?. As…",
-        "image": "img/voices/4505f5f4bd09.jpg",
-        "video": "35ZWesLrv5A"
+        "title": "The Pro series of GPT models continues to be really impressive for one-shot problems that involve complex…"
+      },
+      {
+        "id": "a7e11bfba6b1",
+        "person": "Andrej Karpathy",
+        "why": "Describes building a Hacker‑focused YouTube clone using AI‑generated recommendations.",
+        "url": "https://karpathy.bearblog.dev/hacker-tube",
+        "via": "Karpathy's blog",
+        "kind": "post",
+        "title": "HackerTube. It was Friday night at 11pm, I was tired, I went to YouTube to watch something and realized that I was…",
+        "image": "img/voices/a7e11bfba6b1.jpg"
       },
       {
         "id": "21d66635327b",
         "person": "Nathan Lambert",
-        "why": "Raises the question of open‑model cyber risks after the ‘Black October’ disclosures",
+        "why": "Analyzes the surge of AI‑related cyber vulnerabilities dubbed “Black October.”",
         "url": "https://interconnects.ai/p/was-i-wrong-about-open-models-and",
         "via": "Interconnects",
         "kind": "post",
         "title": "Was I wrong about open models & cyber risks?. Last week coined the term “ Black October “ after an onslaught of…",
         "image": "img/voices/21d66635327b.jpg"
-      },
-      {
-        "id": "94bdedac0696",
-        "person": "Simon Willison",
-        "why": "Shows a three‑fold increase in merged PRs, illustrating AI agents’ impact on software productivity",
-        "url": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026",
-        "via": "Simon Willison",
-        "kind": "post",
-        "title": "GitHub Octoverse 2026. GitHub Octoverse 2026 I'm at GitHub Universe today (GitHub gave me a free ticket through their…"
       }
     ],
     "people": [
       "Ethan Mollick",
-      "Jack Clark",
-      "Simon Willison",
-      "swyx"
+      "Nathan Lambert",
+      "Simon Willison"
     ],
     "from_posts": 50,
-    "reported": 1,
+    "reported": 0,
     "portraits": {
       "Simon Willison": "img/people/simon-willison.jpg",
-      "Ethan Mollick": "img/people/ethan-mollick.jpg",
-      "swyx": "img/people/swyx.jpg"
+      "Ethan Mollick": "img/people/ethan-mollick.jpg"
     },
     "portrait_credits": [
       "Bluesky"
@@ -712,6 +693,11 @@
       "file": "img/people/melanie-mitchell.jpg",
       "credit": "Bluesky",
       "checked": "2026-10-27T15:58:51+00:00"
+    },
+    "Andrej Karpathy": {
+      "file": "",
+      "credit": "",
+      "checked": "2026-11-01T07:17:09+00:00"
     }
   }
 }
