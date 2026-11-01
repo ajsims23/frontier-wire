@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T01:25:03+00:00",
+  "updated_at": "2026-11-01T04:04:41+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Publishers can add a special token to their site’s robots.txt file to tell AI crawlers not to scrape their pages for training. All participating AI companies will read this token and respect the publisher’s preference. This removes the need for each publisher to send separate opt‑out notices to each AI provider.",
@@ -234,6 +234,101 @@
       },
       "cover": "won’t ship AI",
       "trackers": [],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Anthropic has programmed Claude to refuse requests that try to copy or rebuild an existing video game, even if the user changes the name. Developers can still use Claude for original game ideas, but cannot rely on it for cloning or porting existing titles.",
+        "terms": [
+          {
+            "term": "reverse engineering",
+            "meaning": "Analyzing a game’s code or assets to recreate or modify it without the original developer’s permission."
+          },
+          {
+            "term": "AI policy rule",
+            "meaning": "A text instruction added to an AI model that tells it which kinds of requests to reject."
+          },
+          {
+            "term": "Claude Code",
+            "meaning": "Anthropic’s language model used for coding assistance."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers using Claude will encounter refusals when asking the model to replicate or port existing games.",
+        "business": "Game publishers gain protection against AI‑generated copies that could undermine their IP.",
+        "investors": "The move shows Anthropic is managing legal risk, which may affect its market perception."
+      },
+      "id": "71145972f162",
+      "headline": "Anthropic adds rule to block AI-generated video game clones",
+      "summary": "Anthropic updated Claude Code and Opus 5.5 with a rule that forbids recreating existing games. The change stops the model from assisting with modding, decompiling, or other reverse‑engineering tasks.",
+      "why_it_matters": "It limits AI‑driven copyright infringement risks for game developers.",
+      "category": "safety",
+      "lab": "Anthropic",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "Do build original games, games in a genre, and games from the user’s own designs and assets. Don’t build a recreation of a specific existing game, even if it is renamed or called original.",
+          "speaker": "Chasm",
+          "speaker_role": "Twitter user",
+          "source_url": "https://ign.com/articles/anthropic-blocks-ai-game-clones-in-claude-opus-update"
+        },
+        {
+          "text": "We added two sentences to Claude Code's prompt on Opus 5.5 to steer it away from recreating someone else's speci",
+          "speaker": "Addy Osmani",
+          "speaker_role": "Technical staff at Anthropic",
+          "source_url": "https://ign.com/articles/anthropic-blocks-ai-game-clones-in-claude-opus-update"
+        }
+      ],
+      "score": 6,
+      "url": "https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering",
+      "source_id": "hn",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://helios-i.mashable.com/imagery/articles/00cSAXoWdRYObLNtN71MkCO/hero-image.fill.size_1200x675.v1793455880.png",
+      "sources": [
+        {
+          "url": "https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering",
+          "publisher": "mashable.com",
+          "title": "Anthropic takes steps to block Claude from reverse-engineering video games"
+        },
+        {
+          "url": "https://tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked",
+          "publisher": "tomshardware.com",
+          "title": "Anthropic's Claude AI blocks video game cloning and reverse-engineering"
+        },
+        {
+          "url": "https://ign.com/articles/anthropic-blocks-ai-game-clones-in-claude-opus-update",
+          "publisher": "IGN",
+          "title": "Anthropic Blocks AI Game Clones in Claude Opus Update"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-10-31T21:07:58+00:00",
+      "created_at": "2026-11-01T04:04:41+00:00",
+      "sectors": [
+        "media"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "",
+      "trackers": [
+        "agent-safety"
+      ],
       "photo_local": true
     },
     {
@@ -5202,106 +5297,6 @@
         "agent-safety"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Upwind's platform collects data from cloud workloads, APIs and AI agents while they are running, giving security teams continuous visibility instead of periodic scans. This allows organizations to see real‑time activity and respond to threats as they happen.",
-        "terms": [
-          {
-            "term": "runtime intelligence",
-            "meaning": "Data collected from cloud workloads, APIs and AI agents during execution, providing continuous insight."
-          },
-          {
-            "term": "cloud security",
-            "meaning": "Protection of data and services hosted on cloud platforms such as AWS, Azure, Google Cloud, and Oracle Cloud."
-          },
-          {
-            "term": "AI agents",
-            "meaning": "Software that uses large language models to act autonomously within an organization’s systems."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Upwind’s runtime‑native platform provides developers with continuous visibility into cloud workloads and AI agents, enabling faster detection and remediation of security issues.",
-        "business": "The funding highlights the strategic importance of AI‑driven cloud security for enterprises managing large, dynamic environments.",
-        "investors": "The $400 million round and $3.8 billion valuation signal strong market appetite for security solutions that address AI‑enabled threats."
-      },
-      "id": "429ac0d1a16a",
-      "headline": "Upwind Security raises $400 million Series C at $3.8 billion valuation",
-      "summary": "Upwind Security announced a $400 million Series C funding round, valuing the cloud and AI security startup at $3.8 billion. The round was led by Bessemer Venture Partners and will fund product and engineering growth.",
-      "why_it_matters": "The financing underscores growing investor interest in AI‑focused cloud security solutions.",
-      "category": "industry",
-      "lab": "Upwind Security",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "The funding round makes Upwind one of the most capitalized companies in the world that's focused on solving the cloud and AI security problem,",
-          "speaker": "Upwind",
-          "speaker_role": "",
-          "source_url": "https://finance.yahoo.com/technology/ai/articles/ai-security-startup-upwind-raises-201603440.html"
-        },
-        {
-          "text": "uses runtime intelligence to help security, development, and DevOps teams identify their most critical exposures, remediate risks proactively, and detect attacks in real time.",
-          "speaker": "Upwind",
-          "speaker_role": "",
-          "source_url": "https://securityweek.com/upwind-security-raises-400-million-at-3-8-billion-valuation"
-        }
-      ],
-      "score": 8,
-      "url": "https://tipranks.com/news/ai-cyber-startup-upwind-security-hits-3-8b-valuation-after-new-funding-round",
-      "source_id": "audit",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://s.yimg.com/lo/mysterio/api/04e5b8ec338fe6bae594710c9123fc7814a5462444625e3679e398a3b03e2903/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fdecrypt_157%2F5cee4149aaef5fa8de548197b38c983b.png",
-      "sources": [
-        {
-          "url": "https://tipranks.com/news/ai-cyber-startup-upwind-security-hits-3-8b-valuation-after-new-funding-round",
-          "publisher": "TipRanks",
-          "title": "AI Cyber Startup Upwind Security Hits $3.8B Valuation After New Funding Round"
-        },
-        {
-          "url": "https://finance.yahoo.com/technology/ai/articles/ai-security-startup-upwind-raises-201603440.html",
-          "publisher": "Yahoo Finance",
-          "title": "AI Security Startup Upwind Raises $400M at $3.8B Valuation"
-        },
-        {
-          "url": "https://securityweek.com/upwind-security-raises-400-million-at-3-8-billion-valuation",
-          "publisher": "SecurityWeek",
-          "title": "Upwind Security Raises $400 Million at $3.8 Billion Valuation"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-29T01:14:34+00:00",
-      "created_at": "2026-10-29T01:14:34+00:00",
-      "sectors": [
-        "cybersecurity"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": {
-        "type": "funding",
-        "company": "Upwind Security",
-        "amount": "$400 million",
-        "usd": 400000000.0
-      },
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 3
-      },
-      "cover": "$400 million",
-      "trackers": [
-        "ai-money"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -5324,6 +5319,24 @@
       "published_at": "2026-10-31T21:41:00+00:00"
     },
     {
+      "text": "Do build original games, games in a genre, and games from the user’s own designs and assets. Don’t build a recreation of a specific existing game, even if it is renamed or called original.",
+      "speaker": "Chasm",
+      "speaker_role": "Twitter user",
+      "source_url": "https://ign.com/articles/anthropic-blocks-ai-game-clones-in-claude-opus-update",
+      "story_id": "71145972f162",
+      "headline": "Anthropic adds rule to block AI-generated video game clones",
+      "published_at": "2026-10-31T21:07:58+00:00"
+    },
+    {
+      "text": "We added two sentences to Claude Code's prompt on Opus 5.5 to steer it away from recreating someone else's speci",
+      "speaker": "Addy Osmani",
+      "speaker_role": "Technical staff at Anthropic",
+      "source_url": "https://ign.com/articles/anthropic-blocks-ai-game-clones-in-claude-opus-update",
+      "story_id": "71145972f162",
+      "headline": "Anthropic adds rule to block AI-generated video game clones",
+      "published_at": "2026-10-31T21:07:58+00:00"
+    },
+    {
       "text": "It compiles all of those things together, ultimately producing a serialized dossier that it can send to a couple LLM models. It’s asking the model to act like an intelligence analyst and produce structured citation-backed assessment of the victim.",
       "speaker": "Ryan Fetterman",
       "speaker_role": "security researcher, Cisco Talos",
@@ -5340,24 +5353,6 @@
       "story_id": "5b0ac3b976a1",
       "headline": "Volta‑Autodoxer malware uses LLMs to rank victims by monetizable assets",
       "published_at": "2026-10-31T14:29:03+00:00"
-    },
-    {
-      "text": "India's AI ambitions must be matched by the ability to use data responsibly and securely.",
-      "speaker": "S. Krishnan",
-      "speaker_role": "IT Secretary, MeitY",
-      "source_url": "https://yourstory.com/2026/10/meity-unveils-depa-handbook-to-enable-trusted-data-sharing-for-ai-training",
-      "story_id": "a7393ac399d1",
-      "headline": "MeitY releases DEPA handbook to enable trusted data sharing for AI training",
-      "published_at": "2026-10-31T10:46:16+00:00"
-    },
-    {
-      "text": "The model travels to the data rather than the reverse.",
-      "speaker": "Ajay Kumar Sood",
-      "speaker_role": "Principal Scientific Adviser",
-      "source_url": "https://yourstory.com/2026/10/meity-unveils-depa-handbook-to-enable-trusted-data-sharing-for-ai-training",
-      "story_id": "a7393ac399d1",
-      "headline": "MeitY releases DEPA handbook to enable trusted data sharing for AI training",
-      "published_at": "2026-10-31T10:46:16+00:00"
     }
   ],
   "videos": [
@@ -5494,12 +5489,12 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-11-01T01:25:03+00:00",
-    "one_line": "Mistral unveils cybersecurity model; India releases data‑sharing handbook; AI infrastructure faces pushback and market moves; safety flaws emerge",
+    "written_at": "2026-11-01T04:04:41+00:00",
+    "one_line": "New AI model targets security, data‑sharing rules issued, data‑centre growth faces pushback, safety patches roll out.",
     "themes": [
       {
-        "title": "Mistral launches cybersecurity AI model",
-        "text": "Mistral AI released Large 4, a 1‑trillion‑parameter multimodal model with 52 billion active parameters for cybersecurity, downloadable and runnable independently.",
+        "title": "Mistral launches security‑focused AI model",
+        "text": "Mistral AI released Large 4, a multimodal model with 1 trillion parameters and 52 billion active parameters, designed to help organisations identify and fix cybersecurity vulnerabilities. The model can be downloaded and run independently, unlike many cloud‑based AI services.",
         "stories": [
           {
             "id": "05c952b5cb3a",
@@ -5509,8 +5504,8 @@
         ]
       },
       {
-        "title": "India issues DEPA data‑sharing handbook",
-        "text": "India's Ministry of Electronics and Information Technology published a handbook on the Data Empowerment and Protection Architecture, outlining a techno‑legal framework that enables institutions to share data for AI training while retaining control through contracts, clean rooms, and privacy safeguards.",
+        "title": "India releases DEPA data‑sharing handbook",
+        "text": "The Ministry of Electronics and Information Technology launched a handbook on the Data Empowerment and Protection Architecture (DEPA), outlining a techno‑legal framework that enables institutions to share data for AI training while retaining control through contractual permissions, clean rooms and privacy safeguards.",
         "stories": [
           {
             "id": "a7393ac399d1",
@@ -5520,8 +5515,8 @@
         ]
       },
       {
-        "title": "AI data‑center expansion meets pushback",
-        "text": "State lawmakers in Arizona are opposing new AI data‑center projects due to water depletion concerns, while CapGrid raised ₹50 cr to enter the data‑centre market and Core 4 Solutions listed a decommissioned Nvidia A100 supercomputer on eBay for $59.7 million, reflecting heightened activity in AI infrastructure.",
+        "title": "AI data‑centre expansion meets opposition",
+        "text": "State lawmakers in Arizona are pushing back against new AI data centre projects due to water depletion concerns, while Indian startup CapGrid raised ₹50 cr to expand into drone manufacturing and data‑centre markets, and Core 4 Solutions listed a decommissioned Nvidia A100 supercomputer on eBay for $59.7 million.",
         "stories": [
           {
             "id": "208dc15d456d",
@@ -5541,8 +5536,8 @@
         ]
       },
       {
-        "title": "New AI safety vulnerabilities discovered",
-        "text": "The Volta‑Autodoxer malware sends victim data to large language models to rank assets, and OpenAI patched a chain of HTML preview sandbox vulnerabilities that could have allowed attackers to hijack ChatGPT accounts, with a $5,000 bug bounty awarded.",
+        "title": "Safety updates target AI misuse",
+        "text": "The Volta‑Autodoxer malware sends victim data to large language models to rank assets, Anthropic added a rule to Claude Code and Opus 5.5 that blocks AI‑generated video‑game clones, and OpenAI patched a chain of vulnerabilities in ChatGPT’s HTML preview sandbox, issuing a $5,000 bug bounty.",
         "stories": [
           {
             "id": "5b0ac3b976a1",
@@ -5553,23 +5548,28 @@
             "id": "dd35d009aad6",
             "headline": "OpenAI patches HTML preview exploit that let attackers hijack ChatGPT accounts",
             "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts"
+          },
+          {
+            "id": "71145972f162",
+            "headline": "Anthropic adds rule to block AI-generated video game clones",
+            "url": "https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering"
           }
         ]
       }
     ],
-    "from_stories": 9
+    "from_stories": 10
   },
   "plan": {
-    "focus": "Chasing safety fallout from new OpenAI bug bounty and voter‑site misuse while bolstering our thin voices coverage.",
-    "updated_at": "2026-11-01T01:25:03+00:00",
+    "focus": "Chasing fallout from the Binance hack attribution while filling gaps in model coverage and AI research reporting.",
+    "updated_at": "2026-11-01T04:04:41+00:00",
     "thin_areas": [
-      "commentary",
+      "model releases",
       "research"
     ],
     "searches": [
-      "Anthropic IPO rating",
-      "Mistral Large 4 release date",
-      "AI founder interview"
+      "Mistral Large 4 benchmark",
+      "AI safety research funding 2026",
+      "Anthropic Claude VS Code backdoor details"
     ]
   },
   "builders": {
