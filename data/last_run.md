@@ -1,36 +1,38 @@
-## Frontier Wire newsroom run — 2026-11-01T15:48:37+00:00
+## Frontier Wire newsroom run — 2026-11-01T18:58:19+00:00
 
-Fetched 2904 items · fresh 3 · judged 10 · kept 3 · **written 0**
-AI: 16 requests, 27,860 tokens this run · 141 requests today · providers: cerebras, groq
-Editor-in-chief: Covering the Trump administration's AI policy moves while tracking Indian AI startup IPOs and hyperscaler insurance risks.
-  Priorities: A profile of White House OSTP Director Michael Kratsios, an ex-Peter T (Provides insight into the new AI policy direction under the Trump administration, crucial for builders and investors.); Indian Startup IPO Tracker 2026 (Offers a comprehensive view of upcoming Indian AI IPOs, valuable for market participants.); Solve: the cost of insuring against debt defaults at hyperscalers Amaz (Highlights rising insurance costs for major hyperscalers, a key risk factor for the AI industry.)
-  Thin areas: research, india
-  Searches: OpenAI funding target 2026: 5 new; AI research breakthroughs 2026: 2 new; Indian AI startup IPO 2026: 0 new
-  Dig deeper: A profile of White House OSTP Director Michael Kratsios, an ex-Peter T; Solve: the cost of insuring against debt defaults at hyperscalers Amaz
-Research agent: investigated 3 stories with 9 tool calls, confirmed 0
-Videos: 3 kept from 4 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (9 in feed, 0 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (8 in feed, 0 new), Hugging Face ok (13 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 1 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 1 new), Training Data (Sequoia) ok (6 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (3 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 1 new), 20VC ok (5 in feed, 0 new)
+Fetched 2905 items · fresh 9 · judged 9 · kept 5 · **written 1**
+AI: 26 requests, 47,237 tokens this run · 167 requests today · providers: cerebras, groq
+Editor-in-chief: Tracking AI data‑center policy battles while noting major market shifts in crypto and Indian IPOs.
+  Priorities: Analysis: candidates backing a data center moratorium could win up to  (Shows political stakes of AI data‑center moratoriums, directly affecting builders and investors); Google's data center energy head says space data centers cost up to 10 (Highlights regulatory and cost challenges for next‑gen data centers, key for industry strategy); Binance says net outflows were $3.64B, or 2.1% of assets, in the 9.5 h (Provides latest crypto market impact data after Binance withdrawal issues, relevant for investors); A profile of White House OSTP Director Michael Kratsios, an ex-Peter T (Profiles the White House OSTP director shaping US AI policy, crucial for strategic outlook); Indian Startup IPO Tracker 2026 (Offers a comprehensive view of Indian AI startup IPOs, a growing investment arena)
+  Searches: Mistral Large 4 release date: 0 new; OpenAI funding target 2026 update: 0 new; Anthropic IPO rating update: 0 new
+  Dig deeper: Analysis: candidates backing a data center moratorium could win up to ; Binance says net outflows were $3.64B, or 2.1% of assets, in the 9.5 h
+Research agent: investigated 4 stories with 12 tool calls, confirmed 0
+Daily briefing: 4 themes from 9 stories
+Videos: 3 kept from 4 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (9 in feed, 0 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (8 in feed, 0 new), Hugging Face ok (13 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 1 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 1 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 1 new), Training Data (Sequoia) ok (6 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (3 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (5 in feed, 0 new)
 Photos: 0 saved, 0 unavailable
-Alerts: 15 events sent: {"subscribers":8,"sent":0,"queued":0}
-Claims: 71 tracked, 69 open
+Alerts: 16 events sent: {"subscribers":8,"sent":0,"queued":4}
+Claims: 71 tracked, 69 open, 0 updated this run
 Trackers: filed 0 stories; no tracker changed
 Model tracker: 82 models, 12 changes today
-Time: gather 72s, plan 2s, judge 1s, verify and write 187s, videos 23s
+Tagged 1 stories by sector, region and deal
+India briefing: 2 themes from 2 stories
+Time: gather 76s, plan 2s, judge 1s, verify and write 265s, videos 23s, trackers 21s, claims 20s, briefing 41s, stock photos 16s, alerts 3s
 
 ### New stories
-- none
+- **voices** — [Kyle Kingsbury warns LLMs erode trust in software documentation](https://simonwillison.net/2026/Nov/1/kyle-kingsbury)  
+  Kyle Kingsbury raised concerns that large language models are eroding trust in software documentation and code. The comment was posted on Simon Willison’s blog on 1 November 2026.  
+  _1 source(s), 1 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Reports say OpenAI has lowered its fundraising target by about $10 billion. Checking the numbers to see if this is the 'end of the AI boom' — duplicate of c10fef6ec816
-- Is the AI Funding Boom Starting to Crack? OpenAI Cuts Target by $10 Billion — duplicate of c10fef6ec816
-- OpenAI Valuation Takes a $150 Billion Haircut Before 2027 IPO — duplicate of c10fef6ec816
-- OpenAI Cuts Fundraising Target to $20 Billion in Latest Round — duplicate of c10fef6ec816
-- OpenAI Offers Wealthy Investors Access to $1.25 Trillion Valuation — duplicate of c10fef6ec816
-- Can AI Save The Planet? How Nine Innovators Are Fighting Climate Change — score 4: A Forbes listicle on AI innovators tackling climate change; interesting but not a major news development.
-- A Thorough Explanation of 'AI 2027': A Future Prediction That All Humanity Must Read — score 2: Speculative future‑prediction piece on AI 2027; low news value for Frontier Wire audience.
-- A profile of White House OSTP Director Michael Kratsios, an ex-Peter Thiel aide who is among a handful of players steering the Trump administration's AI policy (Harry Lambert/Colossus) — could not verify yet; will retry next run
-- Indian Startup IPO Tracker 2026 — could not verify yet; will retry next run
-- Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal) — could not verify yet after a second try; dropped
+- AI agent swarms in Minecraft fail to build civilization, drown in bureaucracy — score 5: The report on AI agent swarms in Minecraft is an interesting experiment but an incremental result without broader impact.
+- Show HN: HackerBooks – HackerTube, but for books mentioned on HN — not AI: The HackerBooks project is unrelated to AI.
+- A look at VC-backed glossy magazine Colossus, whose glowing profiles of Zuckerberg and other tech titans win industry praise, while Kara Swisher says it is PR (Andrew Fedorov/The San Francisco… — not AI: The piece about the magazine Colossus does not involve AI.
+- Binance says net outflows were $3.64B, or 2.1% of assets, in the 9.5 hours after it began restoring withdrawals; DefiLlama puts 24-hour net outflows at $4.05B (Zack Abrams/The Block) — not AI: The story is about Binance crypto‑withdrawal outflows and has no AI angle.
+- A profile of White House OSTP Director Michael Kratsios, an ex-Peter Thiel aide who is among a handful of players steering the Trump administration's AI policy (Harry Lambert/Colossus) — could not verify yet after a second try; dropped
+- Analysis: candidates backing a data center moratorium could win up to 15 of 36 US governors' races on Tuesday, including in Texas, Ohio, Michigan, and New York (Shane Burke/The Information) — could not verify yet; will retry next run
+- Indian Startup IPO Tracker 2026 — could not verify yet after a second try; dropped
+- Google's data center energy head says space data centers cost up to 100x more than Earth-based ones, and US power supply is sufficient but permits are slow (Amir Efrati/The Information) — could not verify yet; will retry next run
 
 </details>
 
@@ -40,9 +42,10 @@ Time: gather 72s, plan 2s, judge 1s, verify and write 187s, videos 23s
 
 <details><summary>Research agent's work</summary>
 
-- A profile of White House OSTP Director Michael Kratsios, an ex-Peter T: unconfirmed (searched “Michael Kratsios profile White House OSTP Director AI policy”; searched “"Harry Lambert" Michael Kratosios”; searched “"Harry Lambert" "Colossus"”)
-- Indian Startup IPO Tracker 2026: unconfirmed (searched “Indian Startup IPO Tracker 2026”; read msn.com; searched “"Indian Startup IPO Tracker"”)
-- Solve: the cost of insuring against debt defaults at hyperscalers Amaz: unconfirmed (searched “Gunjan Banerji cost of insuring against debt defaults hyperscalers highest since 2021”; searched “"insuring against debt defaults" Amazon Microsoft Meta”; searched “"Gunjan Banerji" "Wall Street Journal"”)
+- A profile of White House OSTP Director Michael Kratsios, an ex-Peter T: unconfirmed (searched “Michael Kratsios profile White House OSTP Director AI policy”; read nypost.com; searched “"Michael Kratsios" profile”)
+- Analysis: candidates backing a data center moratorium could win up to : unconfirmed (searched “Shane Burke The Information data center moratorium governors races”; searched “"data center moratorium" "governors"”; searched “"candidates backing a data center moratorium"”)
+- Indian Startup IPO Tracker 2026: unconfirmed (searched “Indian Startup IPO Tracker 2026”; read msn.com; searched “"Indian Startup IPO Tracker" 2026”)
+- Google's data center energy head says space data centers cost up to 10: unconfirmed (searched “Google data center energy head space data centers cost 100 times”; searched “"Amir Efrati" Google space data centers”; searched “"space data centers" Google cost 100”)
 
 </details>
 
