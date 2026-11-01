@@ -1,0 +1,170 @@
+{
+  "started_at": "2026-11-01T13:05:51+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1341)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (894)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (16)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "hn": "ok (13)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "The AI cost of JavaScript frameworks",
+      "reason": "score 5: The post quantifies AI overhead in JavaScript frameworks; it is a commentary without a major AI development, scoring as an incremental insight (5) and not kept."
+    },
+    {
+      "title": "Leaking Secrets from Air-Gap Computers by Spelling Radio Signals from RAM (2024)",
+      "reason": "not AI: The arXiv paper describes an air‑gap attack using RAM radio signals; it does not involve AI, giving it an adjacent/none relevance and a low score, so it is dropped."
+    },
+    {
+      "title": "Meesho’s Next Monetisation Engines",
+      "reason": "not AI: Meesho monetisation story lacks AI angle; low score and not kept."
+    },
+    {
+      "title": "Prosus investment in Sachin Bansal's Navi gets CCI nod",
+      "reason": "not AI: Prosus investment in Navi is an Indian fintech deal without AI relevance; scores low and is dropped."
+    },
+    {
+      "title": "OpenAI Cuts $10B from Fundraising Target Amid AI Stock Selloff",
+      "reason": "duplicate of c10fef6ec816"
+    },
+    {
+      "title": "OpenAI slashes funding target by $10 billion",
+      "reason": "duplicate of c10fef6ec816"
+    },
+    {
+      "title": "Solve: the cost of insuring against debt defaults at hyperscalers Amazon, Alphabet, Microsoft, Meta, and Oracle has hit its highest level since 2021 (Gunjan Banerji/Wall Street Journal)",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [],
+  "notes": [
+    "1 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 135.2,
+    "audit": 0.0,
+    "plan": 1.7,
+    "judge": 1.2,
+    "verify and write": 25.2,
+    "videos": 23.9,
+    "tagging": 0.4,
+    "explainers": 0.0,
+    "trackers": 0.0,
+    "claims": 0.0,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 0.0,
+    "self-review": 0.0,
+    "photos": 0.0,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 2.2
+  },
+  "fetched": 2905,
+  "fresh": 5,
+  "plan": {
+    "focus": "Tracking hyperscaler insurance costs and AI tooling expenses while hunting for new model releases and security research gaps.",
+    "priorities": [
+      "Solve: the cost of insuring against debt defaults at hyperscalers Amaz (Highlights rising insurance risk for major cloud providers, crucial for investors and strategy planners.)",
+      "The AI cost of JavaScript frameworks (Quantifies AI‑driven overhead in JavaScript frameworks, directly impacting developers and cost‑focused builders.)",
+      "Prosus investment in Sachin Bansal's Navi gets CCI nod (Prosus‑Navi deal signals major Indian tech investment, relevant for market‑focused readers.)",
+      "Meesho’s Next Monetisation Engines (Meesho’s monetisation strategy offers insight into Indian e‑commerce growth and investor angles.)",
+      "Leaking Secrets from Air-Gap Computers by Spelling Radio Signals from  (New air‑gap attack research raises safety concerns for enterprise security teams.)"
+    ],
+    "thin_areas": [
+      "models",
+      "research"
+    ],
+    "searches": [
+      "Mistral Large 4 release: 0 new",
+      "OpenAI funding target reaction: 3 new",
+      "LLM side-channel attacks 2024: 0 new"
+    ],
+    "dig_deeper": [
+      "Solve: the cost of insuring against debt defaults at hyperscalers Amaz",
+      "The AI cost of JavaScript frameworks"
+    ]
+  },
+  "judged": 8,
+  "kept": 1,
+  "research": {
+    "investigated": 1,
+    "confirmed": 0,
+    "tool_calls": 3
+  },
+  "research_log": [
+    "Solve: the cost of insuring against debt defaults at hyperscalers Amaz: unconfirmed (searched “cost of insuring against debt defaults hyperscalers Amazon Alphabet Microsoft Meta Oracle highest since 2021”; read yahoo.com; read thehill.com)"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (9 in feed, 0 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (8 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 1 new)",
+    "Training Data (Sequoia)": "ok (6 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (3 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (5 in feed, 0 new)"
+  },
+  "videos_kept": "3 kept from 3 new",
+  "tagged": 1,
+  "trackers": "filed 0 stories; no tracker changed",
+  "claims": "71 tracked, 69 open",
+  "model_tracker": "82 models, 12 changes today",
+  "photos": "0 saved, 0 unavailable",
+  "alerts": "15 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":0}",
+  "ai_requests_run": 9,
+  "ai_tokens_run": 21784,
+  "ai_requests_today": 125,
+  "provider_log": []
+}
