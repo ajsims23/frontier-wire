@@ -48,8 +48,8 @@
       "lab": "DeepSeek",
       "released": "2026-10-17",
       "context": 1048576,
-      "price_in": 0.15,
-      "price_out": 0.6,
+      "price_in": 0.3,
+      "price_out": 1.2,
       "inputs": [
         "text",
         "image"
@@ -393,7 +393,7 @@
       "name": "Qwen3.8 27B",
       "lab": "Alibaba (Qwen)",
       "released": "2026-08-14",
-      "context": 1000000,
+      "context": 1024000,
       "price_in": 0.15,
       "price_out": 1.875,
       "inputs": [
@@ -1096,27 +1096,6 @@
   "changes": [
     {
       "date": "2026-10-30",
-      "model": "Qwen3.8 27B",
-      "lab": "Alibaba (Qwen)",
-      "kind": "price_rise",
-      "text": "Qwen3.8 27B input price raised: $0.039 → $0.15 per 1M tokens"
-    },
-    {
-      "date": "2026-10-30",
-      "model": "Qwen3.8 27B",
-      "lab": "Alibaba (Qwen)",
-      "kind": "price_rise",
-      "text": "Qwen3.8 27B output price raised: $1.25 → $1.875 per 1M tokens"
-    },
-    {
-      "date": "2026-10-30",
-      "model": "DeepSeek V4 Pro 0813",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4 Pro 0813 input price cut: $1.32 → $0.66 per 1M tokens"
-    },
-    {
-      "date": "2026-10-30",
       "model": "DeepSeek V4 Pro 0813",
       "lab": "DeepSeek",
       "kind": "price_cut",
@@ -1513,7 +1492,28 @@
       "lab": "DeepSeek",
       "kind": "price_cut",
       "text": "DeepSeek V4.1 Flash 1017 output price cut: $1.2 → $0.6 per 1M tokens"
+    },
+    {
+      "date": "2026-11-02",
+      "model": "DeepSeek V4.1 Flash 1017",
+      "lab": "DeepSeek",
+      "kind": "price_rise",
+      "text": "DeepSeek V4.1 Flash 1017 input price raised: $0.15 → $0.3 per 1M tokens"
+    },
+    {
+      "date": "2026-11-02",
+      "model": "DeepSeek V4.1 Flash 1017",
+      "lab": "DeepSeek",
+      "kind": "price_rise",
+      "text": "DeepSeek V4.1 Flash 1017 output price raised: $0.6 → $1.2 per 1M tokens"
+    },
+    {
+      "date": "2026-11-02",
+      "model": "Qwen3.8 27B",
+      "lab": "Alibaba (Qwen)",
+      "kind": "context",
+      "text": "Qwen3.8 27B context window: 1,000,000 → 1,024,000 tokens"
     }
   ],
-  "updated_at": "2026-11-02T04:12:35+00:00"
+  "updated_at": "2026-11-02T07:41:13+00:00"
 }
