@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T19:11:41+00:00",
+  "updated_at": "2026-11-02T21:54:56+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Aramco will own nearly half of Humain and provide cash plus AI hardware and expertise. Humain plans to use the resources to build AI data centers and launch an Arabic multimodal language model. The effort aims to meet growing AI demand in the region and globally.",
@@ -91,6 +91,195 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "The Qwen3.5-0.8B model had a tiny fraction of its parameters altered by another AI system, GPT-6 Astra. This small change led to large gains in math problem solving and following instructions, without the usual training process.",
+        "terms": [
+          {
+            "term": "weights",
+            "meaning": "The numerical parameters inside a neural network that determine how it processes inputs."
+          },
+          {
+            "term": "gradient",
+            "meaning": "A value used in training neural networks to adjust weights; here, no gradients were used."
+          },
+          {
+            "term": "LLM",
+            "meaning": "Large language model, a type of AI that processes and generates text."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Direct weight editing offers a new method to improve model performance without full retraining.",
+        "business": "Companies could enhance AI capabilities more cheaply, affecting product development and cost structures.",
+        "investors": "The technique may increase the value of models that can be upgraded with minimal compute."
+      },
+      "id": "1818a08f7975",
+      "headline": "GPT-6 Astra edits 0.016% of Qwen3.5-0.8B weights, boosting math performance sixfold",
+      "summary": "Researchers used GPT-6 Astra to edit the weights of the Qwen3.5-0.8B language model. The edit changed 0.016% of the weights and reportedly improved math reasoning up to six times and instruction following three times, without gradients or additional training.",
+      "why_it_matters": "It shows that large language models can be refined by directly modifying a tiny portion of their parameters, potentially reducing the cost of model improvement.",
+      "category": "research",
+      "lab": "",
+      "model_name": "Qwen3.5-0.8B",
+      "model_type": "Language",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "We asked GPT-6 Astra to edit Qwen3.5-0.8B weights to improve math. It directly changed only 0.016% of weights, fixing 0.8B's reasoning loops & improving math up to 6x and even instruction following 3x, without gradients or training.",
+          "speaker": "Ethan Mollick",
+          "speaker_role": "",
+          "source_url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l"
+        }
+      ],
+      "score": 7,
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l",
+      "source_id": "bluesky",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l",
+          "publisher": "Ethan Mollick on Bluesky",
+          "title": "Ethan Mollick: If this holds up, it is big: \"We asked GPT-6 Astra to edit Qwen3.5-0.8B weights to improve math. It directly changed only 0.016% of…"
+        },
+        {
+          "url": "https://techmeme.com/261102/p36",
+          "publisher": "techmeme.com",
+          "title": "Researchers say LLMs can be good at natively reading and writing neural network weights; GPT-6 Astra edited Qwen3.5-0.8B's weights to make it better at math (Rikiya Takehi)"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-02T21:00:10.481000+00:00",
+      "created_at": "2026-11-02T21:54:56+00:00",
+      "sectors": [
+        "science"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "0.016%",
+      "trackers": [
+        "frontier-race"
+      ],
+      "stock_tried": "2026-11-02T21:54:56+00:00",
+      "photo_local": true,
+      "image_kind": "stock",
+      "photo_credit": {
+        "key": "wc:35997074",
+        "by": "",
+        "license": "CC BY 4.0",
+        "page": "https://commons.wikimedia.org/wiki/File:Archives_of_the_Lister_Institute;_laboratory_Wellcome_L0022000.jpg",
+        "via": "Wikimedia Commons"
+      }
+    },
+    {
+      "explainer": {
+        "what_it_means": "Claude Code will no longer help users rebuild an existing video game, even if they rename it. It can still be used to create new games or variations based on a user’s own ideas and assets.",
+        "terms": [
+          {
+            "term": "system prompt",
+            "meaning": "A set of instructions baked into an AI model that guides its behavior on each request."
+          },
+          {
+            "term": "IP (intellectual property)",
+            "meaning": "Legal rights that protect creations such as video games from unauthorized copying."
+          },
+          {
+            "term": "reverse‑engineering",
+            "meaning": "Analyzing a game’s code or assets to recreate or modify it."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers using Claude Code must now ensure they work on original content rather than recreating existing games.",
+        "business": "Game publishers gain a tool that may reduce unauthorized AI‑generated copies of their titles.",
+        "investors": "Anthropic’s policy change signals a focus on IP compliance, which could affect its risk profile and market perception."
+      },
+      "id": "cf87f0f49a6c",
+      "headline": "Anthropic adds rule to stop Claude Code from cloning existing video games",
+      "summary": "Anthropic updated Claude Code’s system prompt to forbid recreating specific games, adding a rule that allows only original or genre‑based games. The change was first spotted on Oct 27 and confirmed by engineer Addy Osmani.",
+      "why_it_matters": "It aims to protect game developers’ intellectual property and limit AI‑driven game cloning.",
+      "category": "policy",
+      "lab": "Anthropic",
+      "model_name": "Claude Code",
+      "model_type": "Code",
+      "tags": [
+        "AI policy",
+        "IP protection",
+        "gaming"
+      ],
+      "quotes": [
+        {
+          "text": "We added two sentences to Claude Code’s prompt on Opus 5.5 to steer it away from recreating someone else’s specific game because using Claude to infringe IP is against our usage policy.",
+          "speaker": "Addy Osmani",
+          "speaker_role": "Anthropic software engineer",
+          "source_url": "https://arstechnica.com/ai/2026/11/claudes-new-rules-against-game-cloning-wont-stop-the-ai-copying-boom"
+        },
+        {
+          "text": "Original games, genre games, and games built from your own designs and assets are meant to keep working.",
+          "speaker": "Addy Osmani",
+          "speaker_role": "Anthropic software engineer",
+          "source_url": "https://gamesindustry.biz/anthropic-adds-rule-to-stop-claude-code-recreating-existing-games"
+        }
+      ],
+      "score": 8,
+      "url": "https://theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+      "source_id": "verge-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/STK269_ANTHROPIC_2_B.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "sources": [
+        {
+          "url": "https://theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+          "publisher": "The Verge AI",
+          "title": "Anthropic clamps down on Claude’s AI video game clones"
+        },
+        {
+          "url": "https://arstechnica.com/ai/2026/11/claudes-new-rules-against-game-cloning-wont-stop-the-ai-copying-boom",
+          "publisher": "Ars Technica AI",
+          "title": "Claude’s new rules against game cloning won’t stop the AI copying boom"
+        },
+        {
+          "url": "https://gamesindustry.biz/anthropic-adds-rule-to-stop-claude-code-recreating-existing-games",
+          "publisher": "GamesIndustry.biz",
+          "title": "Anthropic adds rule to stop Claude Code recreating existing games"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-02T18:56:02+00:00",
+      "created_at": "2026-11-02T21:54:56+00:00",
+      "thread": "t-bfc921828b74",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "Claude Code",
+      "trackers": [
+        "agent-safety"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "Brave’s web‑crawling service collects billions of pages and sells the data to AI developers. Publishers say the content was taken without permission and that the browser also lets users skip paywalls. The lawsuits seek to stop the alleged copyright infringement and to force compensation.",
@@ -633,7 +822,8 @@
       "trackers": [
         "ai-money"
       ],
-      "photo_local": true
+      "photo_local": true,
+      "thread": "t-06beb73dfeb8"
     },
     {
       "explainer": {
@@ -956,6 +1146,96 @@
       },
       "cover": "",
       "trackers": [],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "The AI model analyzed scientific literature, selected a gene‑therapy and the brain target, then operated a robotic arm to deliver the treatment into the mouse brain. The system included a veterinarian‑approved safety gate that could stop the procedure if the AI tried to exceed its limits.",
+        "terms": [
+          {
+            "term": "gene therapy",
+            "meaning": "A technique that introduces genetic material into cells to treat disease."
+          },
+          {
+            "term": "stereotaxic injection",
+            "meaning": "A precise method of delivering substances into a specific brain location using a coordinate system."
+          },
+          {
+            "term": "AI agent",
+            "meaning": "A software system that can make decisions and act autonomously based on its programming and inputs."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "The experiment demonstrates that language models can be integrated with robotic rigs to perform precise biomedical procedures, requiring careful safety interlocks.",
+        "business": "It illustrates a potential new workflow for biotech firms to accelerate drug testing by letting AI handle experimental execution.",
+        "investors": "The approach signals a novel application of AI in drug development that could affect valuation and funding decisions for AI‑enabled biotech startups."
+      },
+      "id": "d7eb8c9ceea3",
+      "headline": "AI agent selects gene therapy and performs brain injection on live mouse",
+      "summary": "An AI agent running on Anthropic’s Claude Sonnet 5 chose a gene‑therapy vector, brain region and injection coordinates, then controlled a motorized surgical rig to inject 250 nanolitres into a mouse model of epilepsy. A licensed veterinarian approved each irreversible step and held a physical kill switch, and the agent stopped when it detected a calibration error.",
+      "why_it_matters": "It shows that language models can autonomously direct laboratory equipment, raising both opportunities for research automation and safety concerns.",
+      "category": "research",
+      "lab": "Exin Therapeutics",
+      "model_name": "Claude Sonnet 5",
+      "model_type": "Language",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "We’ve realized that we need to connect these agents to a lab to get the maximum value from them,",
+          "speaker": "Gabriel Ocana Santero",
+          "speaker_role": "CEO and cofounder",
+          "source_url": "https://wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse"
+        }
+      ],
+      "score": 7,
+      "url": "https://twitter.com/OcanaSantero/status/2115442964574908902",
+      "source_id": "hn",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://pbs.twimg.com/media/HVtOKh7aIAAFGeA?format=webp&name=large",
+      "sources": [
+        {
+          "url": "https://twitter.com/OcanaSantero/status/2115442964574908902",
+          "publisher": "twitter.com",
+          "title": "Last night an AI agent performed brain surgery on a mouse"
+        },
+        {
+          "url": "https://wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse",
+          "publisher": "Wired",
+          "title": "An AI Agent Injected Drugs Into a Live Mouse’s Brain"
+        },
+        {
+          "url": "https://the-decoder.com/a-claude-model-autonomously-chose-a-gene-therapy-and-operated-on-a-mouse-brain-with-no-human-decision-making",
+          "publisher": "THE DECODER",
+          "title": "A Claude model autonomously chose a gene therapy and operated on a mouse brain with no human decision-making"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-02T12:50:59+00:00",
+      "created_at": "2026-11-02T21:54:56+00:00",
+      "sectors": [
+        "healthcare",
+        "science"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "250 nanolitres",
+      "trackers": [
+        "agent-safety"
+      ],
       "photo_local": true
     },
     {
@@ -1583,6 +1863,143 @@
       "trackers": [
         "ai-money"
       ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Codex can now use a company's own guidelines when reviewing code, so it flags the most severe problems before code is submitted for review. Developers get automated feedback that reflects their specific standards.",
+        "terms": [
+          {
+            "term": "Codex",
+            "meaning": "OpenAI's AI system that can understand and generate code."
+          },
+          {
+            "term": "P0 issues",
+            "meaning": "Priority‑0 problems, the most critical bugs that must be fixed before release."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers can rely on AI to surface top‑priority bugs before code review, saving time.",
+        "business": "Companies can lower the chance of serious defects reaching production, protecting reputation."
+      },
+      "id": "598c6194c0d3",
+      "headline": "Qodo adds company knowledge to Codex for pre‑pull‑request code review",
+      "summary": "Qodo integrates its internal coding standards and knowledge into OpenAI's Codex, enabling developers to detect priority‑0 issues across repositories before opening a pull request.",
+      "why_it_matters": "It lets teams catch critical bugs earlier, improving code quality and reducing release risk.",
+      "category": "industry",
+      "lab": "Qodo",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 7,
+      "url": "https://openai.com/index/qodo-codex-plugin",
+      "source_id": "openai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://openai.com/index/qodo-codex-plugin",
+          "publisher": "OpenAI",
+          "title": "Qodo builds context into AI code review with Codex"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-02T00:00:00+00:00",
+      "created_at": "2026-11-02T21:54:56+00:00",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "priority‑0",
+      "trackers": [],
+      "stock_tried": "2026-11-02T21:54:56+00:00",
+      "photo_local": true,
+      "image_kind": "stock",
+      "photo_credit": {
+        "key": "wc:61684334",
+        "by": "Crew crew",
+        "license": "CC0",
+        "page": "https://commons.wikimedia.org/wiki/File:Programmer_at_work_(Unsplash).jpg",
+        "via": "Wikimedia Commons"
+      }
+    },
+    {
+      "explainer": {
+        "what_it_means": "Data Bot is an AI agent that uses the same skills the data‑science team teaches it, allowing any employee to ask questions of the company’s data and receive answers, charts, or dashboards without writing code. It reduces bottlenecks by handling routine queries that would otherwise require a data scientist.",
+        "terms": [
+          {
+            "term": "Team Bot",
+            "meaning": "An AI assistant that operates for an entire team rather than an individual, using shared skills and knowledge."
+          },
+          {
+            "term": "Skills",
+            "meaning": "Structured instructions that tell the bot how to interpret data, run analyses, and format results."
+          },
+          {
+            "term": "Data warehouse",
+            "meaning": "A centralized repository where a company stores its structured data for analysis."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers can integrate Data Bot into Slack or other tools to automate data retrieval and reporting.",
+        "business": "Executives can get faster answers to key metrics, speeding decision‑making.",
+        "investors": "Investors see AI‑driven efficiency gains as a potential cost‑saving factor for SpaceX."
+      },
+      "id": "95e7a57b9036",
+      "headline": "xAI launches Data Bot, a team AI assistant for data queries at SpaceX",
+      "summary": "xAI introduced Data Bot, a Team Bot built into Grok Bot that can query SpaceX’s data warehouse, run analyses, and return results in chat or dashboards. The bot is shared across teams and can be added to Slack channels.",
+      "why_it_matters": "It shows how AI agents can automate routine data‑science tasks, giving non‑technical staff direct access to analytics.",
+      "category": "industry",
+      "lab": "xAI",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 7,
+      "url": "https://x.ai/news/data-bot",
+      "source_id": "xai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://media.x.ai/v1/website/heres-your-og-image-i-used-the-grok-bot-og-template-in-pink-b3fd12e9.png",
+      "sources": [
+        {
+          "url": "https://x.ai/news/data-bot",
+          "publisher": "xAI",
+          "title": "Product · Nov 2, 2026 Giving every team a data scientist with Grok Bot"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-02T00:00:00+00:00",
+      "created_at": "2026-11-02T21:54:56+00:00",
+      "thread": "t-06beb73dfeb8",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "us"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "Data Bot",
+      "trackers": [],
       "photo_local": true
     },
     {
@@ -2937,7 +3354,8 @@
       "trackers": [
         "agent-safety"
       ],
-      "photo_local": true
+      "photo_local": true,
+      "thread": "t-bfc921828b74"
     },
     {
       "explainer": {
@@ -4957,391 +5375,36 @@
       "cover": "",
       "trackers": [],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "The CMA is examining if Meta's commercial agreements force publishers and advertisers to give Meta permission to scrape their content for AI development, which could limit creators' control over their material.",
-        "terms": [
-          {
-            "term": "exploitative terms",
-            "meaning": "Contract clauses that may unfairly benefit one party at the expense of another."
-          },
-          {
-            "term": "AI training data",
-            "meaning": "Content used to teach artificial intelligence systems how to understand and generate language or other media."
-          }
-        ],
-        "watch_next": []
-      },
-      "id": "194d268cc5ac",
-      "headline": "UK competition regulator probes Meta's terms for publishers and advertisers",
-      "summary": "Britain's Competition and Markets Authority has opened an investigation into whether Meta imposed exploitative terms that allow it to use publisher and advertiser content to develop its AI and other services.",
-      "why_it_matters": "The probe could affect how large platforms access and monetize third‑party content for AI training.",
-      "category": "policy",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 8,
-      "url": "https://techmeme.com/261030/p10",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": null,
-      "sources": [
-        {
-          "url": "https://techmeme.com/261030/p10",
-          "publisher": "techmeme.com",
-          "title": "The UK CMA opens a probe into whether Meta imposed exploitative terms on publishers and advertisers to use their content to develop its AI and other services (Reuters)"
-        },
-        {
-          "url": "https://msn.com/en-gb/technology/tech-companies/uk-s-cma-opens-investigation-into-meta-s-terms-for-publishers-and-advertisers/ar-AA2gpw4N",
-          "publisher": "Reuters on MSN",
-          "title": "UK's CMA opens investigation into Meta's terms for publishers and advertisers"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-30T11:40:12+00:00",
-      "created_at": "2026-10-30T16:01:52+00:00",
-      "thread": "t-d7a01aeaafe9",
-      "sectors": [
-        "media"
-      ],
-      "regions": [
-        "uk"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 3,
-        "investors": 2
-      },
-      "audiences": {
-        "builders": "Potential limits on using publisher content to train AI models.",
-        "business": "Regulators may force Meta to change terms, affecting advertising revenue and platform economics.",
-        "investors": "Uncertainty over Meta's AI data practices could impact valuation and regulatory risk."
-      },
-      "cover": "Meta",
-      "trackers": [
-        "copyright"
-      ],
-      "stock_tried": "2026-10-30T16:01:52+00:00"
-    },
-    {
-      "explainer": {
-        "what_it_means": "The extension gathered system information and tried to add the attacker’s SSH key to the authorized_keys file, enabling remote login. It also set up persistence via a LaunchAgent on macOS or a scheduled task on Windows. Users who installed the extension could have exposed their machines to unauthorized access.",
-        "terms": [
-          {
-            "term": "SSH backdoor",
-            "meaning": "A method that lets an attacker gain remote command‑line access to a computer via the SSH protocol."
-          },
-          {
-            "term": "authorized_keys",
-            "meaning": "A file that lists public SSH keys allowed to log into an account without a password."
-          },
-          {
-            "term": "LaunchAgent",
-            "meaning": "A macOS component that runs scripts or programs automatically at login or system start."
-          }
-        ],
-        "watch_next": [
-          "Cursor will reach out to affected users directly."
-        ]
-      },
-      "audiences": {
-        "builders": "Developers should verify the source of AI extensions before installing them.",
-        "business": "Companies need to assess the security of third‑party AI tools used by staff.",
-        "investors": "Investors should consider supply‑chain security risks when evaluating AI‑focused companies."
-      },
-      "id": "7e2aaf184ac3",
-      "headline": "Malicious Claude Code VS Code extension adds SSH backdoor, affecting up to 5,000 users",
-      "summary": "Cursor discovered a malicious version of Anthropic’s Claude Code VS Code extension that attempted to install a persistent SSH backdoor and collect host data. The package, version 2.1.313, was available on October 29 2026 and may have affected up to 5,000 users.",
-      "why_it_matters": "The incident shows how compromised AI tool extensions can create supply‑chain security risks for developers.",
-      "category": "safety",
-      "lab": "Cursor",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://cyberplace.social/@GossiTheDog/117528831681803563",
-      "source_id": "hn",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMAV00lkxu7R724ItLdgrRsnEYHR_d2eUSdcen_KymGeBY1tCo8SRVz6w_XiNzzYgwpcl0Me3JCJz8DeieRM_0jb8aL4VkHAAIeXrqNf8oQkmzKahqMHOGvhkFK32HOasHZht8BwtI1NxEZ-_nIwmQY_8fxpGbbl3csC6oZKCVnIRk3iYTRhH975dyxsWS/s1600/cursor-vscode.jpg",
-      "sources": [
-        {
-          "url": "https://cyberplace.social/@GossiTheDog/117528831681803563",
-          "publisher": "cyberplace.social",
-          "title": "Backdoors in official Claude Code extensions"
-        },
-        {
-          "url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
-          "publisher": "The Hacker News",
-          "title": "Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor"
-        },
-        {
-          "url": "https://unite.ai/cursor-discloses-ssh-backdoor-attempt-in-malicious-claude-code-extension",
-          "publisher": "Unite.AI",
-          "title": "Cursor Discloses SSH Backdoor Attempt in Malicious Claude Code Extension"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-30T11:05:53+00:00",
-      "created_at": "2026-10-30T13:11:31+00:00",
-      "sectors": [
-        "cybersecurity"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "5,000 users",
-      "trackers": [
-        "agent-safety"
-      ],
-      "photo_local": true,
-      "thread": "t-d56622e1b6e9"
-    },
-    {
-      "explainer": {
-        "what_it_means": "Websites can add a line to their robots.txt file indicating they do not want their content used for AI training. OpenAI will read this signal and exclude such sites from its training data.",
-        "terms": [
-          {
-            "term": "robots.txt",
-            "meaning": "A plain‑text file placed on a website that tells web crawlers which parts of the site may be accessed."
-          },
-          {
-            "term": "AI training preferences",
-            "meaning": "Instructions from site owners about whether their content can be used to train AI models."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers can rely on a standard signal to respect site owners' wishes when scraping data for AI.",
-        "business": "Website operators can set a simple robots.txt entry to block their content from being used in AI training."
-      },
-      "id": "25cc4c9bb2e3",
-      "headline": "OpenAI says it will honor robots.txt signal for AI training preferences",
-      "summary": "OpenAI announced it will respect a shared robots.txt signal that lets website operators specify their AI training preferences to participating providers.",
-      "why_it_matters": "It gives website owners a way to control how their content is used to train AI models.",
-      "category": "policy",
-      "lab": "OpenAI",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 6,
-      "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
-      "source_id": "openai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": null,
-      "sources": [
-        {
-          "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
-          "publisher": "OpenAI",
-          "title": "Making it easier for websites to express AI training preferences"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-30T09:30:00+00:00",
-      "created_at": "2026-10-30T19:11:34+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "",
-      "trackers": [
-        "ai-regulation"
-      ],
-      "stock_tried": "2026-10-30T19:11:34+00:00",
-      "photo_local": true,
-      "image_kind": "stock",
-      "photo_credit": {
-        "key": "wc:22929212",
-        "by": "NASA/JPL-Caltech",
-        "license": "Public domain",
-        "page": "https://commons.wikimedia.org/wiki/File:Curiosity_-_Robot_Geologist_and_Chemist_in_One!.jpg",
-        "via": "Wikimedia Commons"
-      },
-      "thread": "t-80e84b65ba98"
-    },
-    {
-      "explainer": {
-        "what_it_means": "OpenAI will tighten the rules that stop ChatGPT from producing violent or harmful content and will intervene sooner when risky behavior is detected. It will also publish regular reports on how the system performs on safety. This gives users and regulators clearer insight into the model’s safety posture.",
-        "terms": [
-          {
-            "term": "violence prevention",
-            "meaning": "Measures designed to stop the AI from generating content that encourages or depicts violence."
-          },
-          {
-            "term": "safeguards",
-            "meaning": "Technical controls that block or filter harmful outputs before they reach the user."
-          },
-          {
-            "term": "public safety reporting",
-            "meaning": "Regular disclosures about the system’s safety performance and incidents."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers using ChatGPT should expect stricter content filters and may need to adjust prompts accordingly.",
-        "business": "Companies deploying ChatGPT can cite stronger safety controls to mitigate liability and brand risk.",
-        "investors": "The focus on safety signals OpenAI’s commitment to responsible AI, which may affect long‑term valuation."
-      },
-      "id": "c7606af40dbb",
-      "headline": "OpenAI adds expanded safeguards to ChatGPT for violence prevention",
-      "summary": "OpenAI announced new safety measures for ChatGPT, including broader safeguards, earlier interventions, and a commitment to public safety reporting.",
-      "why_it_matters": "The changes aim to reduce the risk of the model generating violent content, addressing ongoing concerns about AI misuse.",
-      "category": "safety",
-      "lab": "OpenAI",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 6,
-      "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
-      "source_id": "openai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": null,
-      "sources": [
-        {
-          "url": "https://openai.com/index/community-safety-report-and-new-protections-for-teens",
-          "publisher": "OpenAI",
-          "title": "Community safety report and new protections for teens"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-30T09:00:00+00:00",
-      "created_at": "2026-10-30T17:25:18+00:00",
-      "breaking": true,
-      "sectors": [],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "OpenAI",
-      "trackers": [
-        "agent-safety"
-      ],
-      "stock_tried": "2026-10-30T17:25:18+00:00",
-      "thread": "t-345ea7f8f755"
-    },
-    {
-      "explainer": {
-        "what_it_means": "Foxconn is planning a new partnership with OpenAI to develop AI hardware such as data‑centre racks and servers. This could expand the supply of AI‑focused equipment as OpenAI builds more models. Foxconn expects its AI server business to keep growing.",
-        "terms": [
-          {
-            "term": "AI server",
-            "meaning": "A computer system designed to run artificial‑intelligence workloads."
-          },
-          {
-            "term": "Data‑centre rack",
-            "meaning": "A framework that holds multiple servers and networking equipment in a data centre."
-          },
-          {
-            "term": "AI hardware",
-            "meaning": "Physical components like processors and servers built to run AI models efficiently."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "The possible partnership may create new hardware platforms for developers building AI applications.",
-        "business": "Foxconn’s confidence in double‑digit growth signals ongoing opportunities in AI infrastructure for enterprises.",
-        "investors": "The announcement suggests Foxconn is betting on AI hardware demand, which could support its revenue outlook despite broader AI sector slowdown."
-      },
-      "id": "35315b11754f",
-      "headline": "Foxconn says new collaboration with OpenAI in works, denies AI bubble",
-      "summary": "Foxconn Chairman Young Liu said he met OpenAI CEO Sam Altman and that a joint project will be announced once details are confirmed. The partnership would extend last year’s work on AI data‑centre racks and hardware, while Foxconn expects double‑digit growth next year.",
-      "why_it_matters": "It shows continued demand for AI infrastructure despite recent market volatility.",
-      "category": "industry",
-      "lab": "Foxconn",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 8,
-      "url": "https://economictimes.indiatimes.com/tech/technology/foxconn-working-on-a-new-tie-up-with-openai-says-there-is-no-ai-bubble/articleshow/135352103.cms",
-      "source_id": "et-tech",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-768004,resizemode-75,msid-135352103/tech/technology/foxconn-working-on-a-new-tie-up-with-openai-says-there-is-no-ai-bubble.jpg",
-      "sources": [
-        {
-          "url": "https://economictimes.indiatimes.com/tech/technology/foxconn-working-on-a-new-tie-up-with-openai-says-there-is-no-ai-bubble/articleshow/135352103.cms",
-          "publisher": "ET Tech",
-          "title": "Foxconn working on a new tie-up with OpenAI, says there is no AI bubble"
-        },
-        {
-          "url": "https://marketscreener.com/news/foxconn-working-on-new-openai-collaboration-ce785fdbdb8cf120",
-          "publisher": "MarketScreener",
-          "title": "Foxconn Working on New OpenAI Collaboration"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-30T08:41:40+00:00",
-      "created_at": "2026-10-30T10:04:07+00:00",
-      "sectors": [
-        "manufacturing"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": {
-        "type": "partnership",
-        "company": "Foxconn",
-        "amount": "",
-        "usd": null
-      },
-      "relevance": {
-        "builders": 1,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": "Foxconn",
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
+    {
+      "text": "We asked GPT-6 Astra to edit Qwen3.5-0.8B weights to improve math. It directly changed only 0.016% of weights, fixing 0.8B's reasoning loops & improving math up to 6x and even instruction following 3x, without gradients or training.",
+      "speaker": "Ethan Mollick",
+      "speaker_role": "",
+      "source_url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l",
+      "story_id": "1818a08f7975",
+      "headline": "GPT-6 Astra edits 0.016% of Qwen3.5-0.8B weights, boosting math performance sixfold",
+      "published_at": "2026-11-02T21:00:10.481000+00:00"
+    },
+    {
+      "text": "We added two sentences to Claude Code’s prompt on Opus 5.5 to steer it away from recreating someone else’s specific game because using Claude to infringe IP is against our usage policy.",
+      "speaker": "Addy Osmani",
+      "speaker_role": "Anthropic software engineer",
+      "source_url": "https://arstechnica.com/ai/2026/11/claudes-new-rules-against-game-cloning-wont-stop-the-ai-copying-boom",
+      "story_id": "cf87f0f49a6c",
+      "headline": "Anthropic adds rule to stop Claude Code from cloning existing video games",
+      "published_at": "2026-11-02T18:56:02+00:00"
+    },
+    {
+      "text": "Original games, genre games, and games built from your own designs and assets are meant to keep working.",
+      "speaker": "Addy Osmani",
+      "speaker_role": "Anthropic software engineer",
+      "source_url": "https://gamesindustry.biz/anthropic-adds-rule-to-stop-claude-code-recreating-existing-games",
+      "story_id": "cf87f0f49a6c",
+      "headline": "Anthropic adds rule to stop Claude Code from cloning existing video games",
+      "published_at": "2026-11-02T18:56:02+00:00"
+    },
     {
       "text": "While we believe in the ethical and responsible use and development of AI, Brave has flouted established copyright law and ignored repeated requests by The Times to stop its infringing conduct,",
       "speaker": "Graham James",
@@ -5368,33 +5431,6 @@
       "story_id": "de3657a54534",
       "headline": "Lumen and Microsoft expand co‑selling to deliver AI‑ready enterprise networks",
       "published_at": "2026-11-02T17:51:17+00:00"
-    },
-    {
-      "text": "Enterprises are moving quickly to adopt AI, but many are still figuring out how to connect the data, applications and infrastructure behind it,",
-      "speaker": "Ryan Asdourian",
-      "speaker_role": "Chief Strategy and Marketing Officer at Lumen",
-      "source_url": "https://news.microsoft.com/source/2026/11/02/lumen-and-microsoft-expand-collaboration-to-co-sell-enterprise-ai-ready-networks",
-      "story_id": "de3657a54534",
-      "headline": "Lumen and Microsoft expand co‑selling to deliver AI‑ready enterprise networks",
-      "published_at": "2026-11-02T17:51:17+00:00"
-    },
-    {
-      "text": "Tutor's insight is that deployment isn't just the destination for robotics research—it's how you overcome its limitations.",
-      "speaker": "Raghu Raghuram",
-      "speaker_role": "general partner at Andreessen Horowitz and former CEO of VMware",
-      "source_url": "https://finance.yahoo.com/technology/ai/articles/tutor-intelligence-raises-75-million-160000524.html",
-      "story_id": "82336eccbad5",
-      "headline": "Tutor Intelligence raises $75 million Series B to expand robot model training and deployments",
-      "published_at": "2026-11-02T17:50:01+00:00"
-    },
-    {
-      "text": "substantially all of which is related to compute and infrastructure",
-      "speaker": "Anthropic",
-      "speaker_role": "",
-      "source_url": "https://techmeme.com/261102/p29",
-      "story_id": "1b0209f81f9f",
-      "headline": "Anthropic reports $895.4 billion in compute‑related purchase commitments and leases",
-      "published_at": "2026-11-02T16:35:00+00:00"
     }
   ],
   "videos": [
@@ -5482,12 +5518,12 @@
   ],
   "podcasts": [
     {
-      "id": "DWHyPWnzGAI",
-      "title": "The Recommendation Engine for Commodity Traders — Anekha Sokhal, Moshi",
+      "id": "IiZ9yd2Do8I",
+      "title": "Why AI Compute Comes in Rectangles — Erik Bernhardsson, Modal",
       "channel": "Latent Space",
-      "published": "2026-10-22T14:00:10+00:00",
-      "blurb": "Anekha Sokhal talks about building AI recommendation engines for commodity traders.",
-      "guest": "Anekha Sokhal, Moshi CEO"
+      "published": "2026-10-22T16:31:33+00:00",
+      "blurb": "Erik Bernhardsson, CEO of Modal, explains how the company pools compute, scales AI workloads, and manages financial risks of building a GPU cloud.",
+      "guest": "Erik Bernhardsson, Modal CEO"
     },
     {
       "id": "v-d1WTqIULs",
@@ -5496,6 +5532,14 @@
       "published": "2026-10-31T03:41:20+00:00",
       "blurb": "Joseph Kim explains how OpenAI builds ChatGPT for finance, covering training financial reasoning into the model.",
       "guest": "Joseph Kim, OpenAI Head of Financial Services"
+    },
+    {
+      "id": "bJBEFzlKPoQ",
+      "title": "Building Legal Agents When You Can't See the Data — Jacob Lauritzen, CTO of Legora",
+      "channel": "Latent Space",
+      "published": "2026-11-02T20:50:24+00:00",
+      "blurb": "Jacob Lauritzen discusses how Legora builds legal AI agents while keeping client data hidden.",
+      "guest": "Jacob Lauritzen, CTO of Legora"
     },
     {
       "id": "BbMxPZgCkVQ",
@@ -5520,45 +5564,21 @@
       "published": "2026-10-26T22:51:51+00:00",
       "blurb": "The podcast discusses how AI has tackled major mathematical problems like Navier‑Stokes and the Riemann hypothesis with guests Ankur Moitra, Steven Brunton, and Alex Kontorovich.",
       "guest": "Ankur Moitra, mathematician"
-    },
-    {
-      "id": "zHG6sAss_kE",
-      "title": "Why Agents Love Supabase — with Paul Copplestone and Ant Wilson",
-      "channel": "Latent Space",
-      "published": "2026-10-28T19:34:35+00:00",
-      "blurb": "The podcast discusses why AI agents prefer Supabase, featuring Supabase co‑founders Paul Copplestone and Ant Wilson.",
-      "guest": "Paul Copplestone, CEO of Supabase"
     }
   ],
   "briefing": {
-    "written_at": "2026-11-02T19:11:41+00:00",
-    "one_line": "OpenAI launches policy push and safety programs as AI funding surges and Anthropic expands financially.",
+    "written_at": "2026-11-02T21:54:56+00:00",
+    "one_line": "AI sector sees massive funding, Anthropic expands operations, new benchmarks launch, and enterprise tools get major updates.",
     "themes": [
       {
-        "title": "OpenAI rolls out policy initiatives",
-        "text": "OpenAI will start a post‑midterm policy campaign proposing safety safeguards, AI speed limits, and rebranding its data centers as “AI compute campuses.” It also unveiled a LifeVal benchmark to assess everyday assistance and a Grid Protectors Program to partner with utilities on power reliability.",
+        "title": "AI funding surge worldwide",
+        "text": "Major investors poured billions into AI firms, from Saudi Aramco’s $2.6 billion stake in Humain to Hex Technologies’ $100 million Series D and multiple Series A/B rounds for Vera Health, Casap, Bites, Tutor Intelligence, and Oracle’s $20 billion stock‑bond offering.",
         "stories": [
           {
-            "id": "d30bd3f5a099",
-            "headline": "OpenAI to launch post‑midterm policy push, propose AI speed limits and rename data centers",
-            "url": "https://techmeme.com/261101/p16"
+            "id": "b9addf9bc543",
+            "headline": "Saudi Aramco buys 49% of AI startup Humain, adds $2.6 billion cash",
+            "url": "https://techmeme.com/261101/p17"
           },
-          {
-            "id": "ed4b58253682",
-            "headline": "OpenAI launches LifeVal benchmark for AI assistance with everyday tasks",
-            "url": "https://openai.com/index/lifeval"
-          },
-          {
-            "id": "19244c7aa206",
-            "headline": "OpenAI launches Grid Protectors Program to aid utilities with compute campus power reliability",
-            "url": "https://openai.com/index/grid-protectors-program"
-          }
-        ]
-      },
-      {
-        "title": "AI startup funding and acquisitions boom",
-        "text": "Hex Technologies raised $100 million to launch Hex 4.0 for AI agents, while Vera Health, Casap, Bites, 42AI, Tutor Intelligence, ServiceNow, and others secured funding or acquisitions totaling hundreds of millions to expand AI‑driven platforms. These deals highlight a broad surge of capital into AI applications across finance, healthcare, enterprise software, and robotics.",
-        "stories": [
           {
             "id": "d5d97060cb47",
             "headline": "Hex Technologies raises $100 million Series D, launches Hex 4.0 for AI agents",
@@ -5580,35 +5600,82 @@
             "url": "https://techmeme.com/261102/p3"
           },
           {
-            "id": "133799eedc2b",
-            "headline": "42AI emerges from stealth with $62.5 million seed to build behavioral world model",
-            "url": "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior"
-          },
-          {
             "id": "82336eccbad5",
             "headline": "Tutor Intelligence raises $75 million Series B to expand robot model training and deployments",
             "url": "https://techmeme.com/261102/p33"
           },
           {
-            "id": "52a5c603493e",
-            "headline": "ServiceNow acquires Israeli startup Sweep to speed CRM migrations",
-            "url": "https://techmeme.com/261101/p14"
+            "id": "2c1f025c89cb",
+            "headline": "Oracle to raise $20 billion via stock and bond sales for AI data centers",
+            "url": "https://techmeme.com/261102/p25"
           }
         ]
       },
       {
-        "title": "Anthropic pursues massive compute commitments",
-        "text": "Anthropic plans to raise up to ¥552.9 billion from Japanese investors in its U.S. IPO and disclosed $895.4 billion in compute‑related purchase commitments and leases. The filings show rapid revenue growth but also a large net loss as the company scales its infrastructure.",
+        "title": "Anthropic expands and regulates",
+        "text": "Anthropic added a rule to block Claude Code from cloning existing games, disclosed $895.4 billion in compute commitments, and announced a ¥552.9 bn raise from Japanese investors for its U.S. IPO.",
         "stories": [
           {
-            "id": "038e188345e4",
-            "headline": "Anthropic to raise up to ¥552.9 bn ($3.5 bn) from Japanese investors in US IPO",
-            "url": "https://bloomberg.com/news/articles/2026-11-02/anthropic-seeks-up-to-3-5-billion-in-japan-for-its-mega-us-ipo"
+            "id": "cf87f0f49a6c",
+            "headline": "Anthropic adds rule to stop Claude Code from cloning existing video games",
+            "url": "https://theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones"
           },
           {
             "id": "1b0209f81f9f",
             "headline": "Anthropic reports $895.4 billion in compute‑related purchase commitments and leases",
             "url": "https://techmeme.com/261102/p29"
+          },
+          {
+            "id": "038e188345e4",
+            "headline": "Anthropic to raise up to ¥552.9 bn ($3.5 bn) from Japanese investors in US IPO",
+            "url": "https://bloomberg.com/news/articles/2026-11-02/anthropic-seeks-up-to-3-5-billion-in-japan-for-its-mega-us-ipo"
+          }
+        ]
+      },
+      {
+        "title": "New AI benchmarks released",
+        "text": "SemiAnalysis introduced the GDPx benchmark where Anthropic’s Claude Opus 5.5 led with 12% score; OpenAI launched LifeVal for everyday assistance tasks; researchers used GPT‑6 Astra to edit 0.016% of Qwen3.5‑0.8B weights, boosting math performance sixfold.",
+        "stories": [
+          {
+            "id": "3ee2035ff53e",
+            "headline": "SemiAnalysis releases GDPx benchmark; Anthropic’s Claude Opus 5.5 scores 12%",
+            "url": "https://techmeme.com/261102/p1"
+          },
+          {
+            "id": "ed4b58253682",
+            "headline": "OpenAI launches LifeVal benchmark for AI assistance with everyday tasks",
+            "url": "https://openai.com/index/lifeval"
+          },
+          {
+            "id": "1818a08f7975",
+            "headline": "GPT-6 Astra edits 0.016% of Qwen3.5-0.8B weights, boosting math performance sixfold",
+            "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l"
+          }
+        ]
+      },
+      {
+        "title": "Enterprise AI tools updated",
+        "text": "xAI deployed Data Bot for SpaceX data queries, Qodo integrated company knowledge into Codex for pre‑pull‑request reviews, OpenAI merged Chat and Work tabs in its desktop app, and Elon Musk limited Grok Bot usage due to high costs.",
+        "stories": [
+          {
+            "id": "95e7a57b9036",
+            "headline": "xAI launches Data Bot, a team AI assistant for data queries at SpaceX",
+            "url": "https://x.ai/news/data-bot"
+          },
+          {
+            "id": "598c6194c0d3",
+            "headline": "Qodo adds company knowledge to Codex for pre‑pull‑request code review",
+            "url": "https://openai.com/index/qodo-codex-plugin"
+          },
+          {
+            "id": "f6025fbafac9",
+            "headline": "OpenAI to merge Chat and Work tabs in ChatGPT desktop app for select users",
+            "url": "https://techmeme.com/261102/p21"
+          },
+          {
+            "id": "272a05aa5da7",
+            "headline": "Elon Musk throttles Grok Bot usage limits citing unsustainably high costs",
+            "url": "https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs"
           }
         ]
       }
@@ -5616,16 +5683,16 @@
     "from_stories": 20
   },
   "plan": {
-    "focus": "Tracking OpenAI’s power‑grid safeguards while Anthropic’s massive compute deals reshape funding and valuation dynamics.",
-    "updated_at": "2026-11-02T19:11:41+00:00",
+    "focus": "Tracking AI code‑tool rollouts and safety gaps while monitoring high‑growth AI business earnings.",
+    "updated_at": "2026-11-02T21:54:56+00:00",
     "thin_areas": [
-      "model releases",
+      "safety",
       "AI in India"
     ],
     "searches": [
-      "Anthropic Japan IPO investors",
-      "OpenAI Grid Protectors program details",
-      "India AI startup profitability Q2"
+      "AI safety incidents mouse surgery",
+      "Ubuntu kernel vulnerability patch status",
+      "AI health startups India funding"
     ]
   },
   "builders": {
@@ -5771,6 +5838,27 @@
   },
   "threads": [
     {
+      "id": "t-bfc921828b74",
+      "title": "Anthropic blocks AI video game clones",
+      "updated_at": "2026-11-02T18:56:02+00:00",
+      "stories": [
+        {
+          "id": "cf87f0f49a6c",
+          "headline": "Anthropic adds rule to stop Claude Code from cloning existing video games",
+          "url": "https://theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+          "published_at": "2026-11-02T18:56:02+00:00",
+          "category": "policy"
+        },
+        {
+          "id": "71145972f162",
+          "headline": "Anthropic adds rule to block AI-generated video game clones",
+          "url": "https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering",
+          "published_at": "2026-10-31T21:07:58+00:00",
+          "category": "safety"
+        }
+      ]
+    },
+    {
       "id": "t-a50b07bc6191",
       "title": "Anthropic IPO filing: amended S-1 adds commitments",
       "updated_at": "2026-11-02T16:35:00+00:00",
@@ -5827,6 +5915,27 @@
       ]
     },
     {
+      "id": "t-06beb73dfeb8",
+      "title": "Musk throttles Grok Bot; teams get AI",
+      "updated_at": "2026-11-02T16:23:21+00:00",
+      "stories": [
+        {
+          "id": "272a05aa5da7",
+          "headline": "Elon Musk throttles Grok Bot usage limits citing unsustainably high costs",
+          "url": "https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs",
+          "published_at": "2026-11-02T16:23:21+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "95e7a57b9036",
+          "headline": "xAI launches Data Bot, a team AI assistant for data queries at SpaceX",
+          "url": "https://x.ai/news/data-bot",
+          "published_at": "2026-11-02T00:00:00+00:00",
+          "category": "industry"
+        }
+      ]
+    },
+    {
       "id": "t-bacac24a0d6f",
       "title": "Google Suncatcher satellite first AI response",
       "updated_at": "2026-11-02T07:13:09+00:00",
@@ -5844,55 +5953,6 @@
           "url": "https://techmeme.com/261030/p18",
           "published_at": "2026-10-30T18:40:31+00:00",
           "category": "industry"
-        }
-      ]
-    },
-    {
-      "id": "t-61a06eede6a3",
-      "title": "OpenAI funding target adjustment trims valuation",
-      "updated_at": "2026-11-01T17:44:00+00:00",
-      "stories": [
-        {
-          "id": "1abccbd7be8e",
-          "headline": "OpenAI cuts fundraising target by $10 billion, seeks $20 billion at $1.25 trillion valuation",
-          "url": "https://crowdfundinsider.com/2026/11/320984-openai-trims-10b-from-fundraising-target-and-lowers-valuation-amid-ai-market-pullback",
-          "published_at": "2026-11-01T17:44:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "c10fef6ec816",
-          "headline": "OpenAI cuts funding target to $20 billion, valuation stays at $1.25 trillion",
-          "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round",
-          "published_at": "2026-10-31T16:12:55+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "6372ebaa66c8",
-          "headline": "OpenAI seeks up to $30 billion funding at $1.25 trillion valuation ahead of IPO",
-          "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo",
-          "published_at": "2026-10-22T22:08:24+00:00",
-          "category": "industry"
-        }
-      ]
-    },
-    {
-      "id": "t-1f4231610437",
-      "title": "Mistral Large 4 preview to public release",
-      "updated_at": "2026-10-31T06:13:40+00:00",
-      "stories": [
-        {
-          "id": "05c952b5cb3a",
-          "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms",
-          "published_at": "2026-10-31T06:13:40+00:00",
-          "category": "models"
-        },
-        {
-          "id": "820bd24a41c4",
-          "headline": "Mistral AI opens preview of Mistral Large 4, a 1‑trillion‑parameter multimodal model",
-          "url": "https://mistral.ai/news/mistral-large-4",
-          "published_at": "2026-10-21T17:16:05+00:00",
-          "category": "models"
         }
       ]
     }
@@ -6032,7 +6092,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 28,
+    "stories_this_month": 33,
     "model_releases_this_month": 1,
     "labs_tracked": 17
   }

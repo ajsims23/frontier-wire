@@ -1,6 +1,195 @@
 [
   {
     "explainer": {
+      "what_it_means": "The Qwen3.5-0.8B model had a tiny fraction of its parameters altered by another AI system, GPT-6 Astra. This small change led to large gains in math problem solving and following instructions, without the usual training process.",
+      "terms": [
+        {
+          "term": "weights",
+          "meaning": "The numerical parameters inside a neural network that determine how it processes inputs."
+        },
+        {
+          "term": "gradient",
+          "meaning": "A value used in training neural networks to adjust weights; here, no gradients were used."
+        },
+        {
+          "term": "LLM",
+          "meaning": "Large language model, a type of AI that processes and generates text."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Direct weight editing offers a new method to improve model performance without full retraining.",
+      "business": "Companies could enhance AI capabilities more cheaply, affecting product development and cost structures.",
+      "investors": "The technique may increase the value of models that can be upgraded with minimal compute."
+    },
+    "id": "1818a08f7975",
+    "headline": "GPT-6 Astra edits 0.016% of Qwen3.5-0.8B weights, boosting math performance sixfold",
+    "summary": "Researchers used GPT-6 Astra to edit the weights of the Qwen3.5-0.8B language model. The edit changed 0.016% of the weights and reportedly improved math reasoning up to six times and instruction following three times, without gradients or additional training.",
+    "why_it_matters": "It shows that large language models can be refined by directly modifying a tiny portion of their parameters, potentially reducing the cost of model improvement.",
+    "category": "research",
+    "lab": "",
+    "model_name": "Qwen3.5-0.8B",
+    "model_type": "Language",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "We asked GPT-6 Astra to edit Qwen3.5-0.8B weights to improve math. It directly changed only 0.016% of weights, fixing 0.8B's reasoning loops & improving math up to 6x and even instruction following 3x, without gradients or training.",
+        "speaker": "Ethan Mollick",
+        "speaker_role": "",
+        "source_url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l"
+      }
+    ],
+    "score": 7,
+    "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l",
+    "source_id": "bluesky",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": null,
+    "sources": [
+      {
+        "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l",
+        "publisher": "Ethan Mollick on Bluesky",
+        "title": "Ethan Mollick: If this holds up, it is big: \"We asked GPT-6 Astra to edit Qwen3.5-0.8B weights to improve math. It directly changed only 0.016% of…"
+      },
+      {
+        "url": "https://techmeme.com/261102/p36",
+        "publisher": "techmeme.com",
+        "title": "Researchers say LLMs can be good at natively reading and writing neural network weights; GPT-6 Astra edited Qwen3.5-0.8B's weights to make it better at math (Rikiya Takehi)"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-02T21:00:10.481000+00:00",
+    "created_at": "2026-11-02T21:54:56+00:00",
+    "sectors": [
+      "science"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "0.016%",
+    "trackers": [
+      "frontier-race"
+    ],
+    "stock_tried": "2026-11-02T21:54:56+00:00",
+    "photo_local": true,
+    "image_kind": "stock",
+    "photo_credit": {
+      "key": "wc:35997074",
+      "by": "",
+      "license": "CC BY 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Archives_of_the_Lister_Institute;_laboratory_Wellcome_L0022000.jpg",
+      "via": "Wikimedia Commons"
+    }
+  },
+  {
+    "explainer": {
+      "what_it_means": "Claude Code will no longer help users rebuild an existing video game, even if they rename it. It can still be used to create new games or variations based on a user’s own ideas and assets.",
+      "terms": [
+        {
+          "term": "system prompt",
+          "meaning": "A set of instructions baked into an AI model that guides its behavior on each request."
+        },
+        {
+          "term": "IP (intellectual property)",
+          "meaning": "Legal rights that protect creations such as video games from unauthorized copying."
+        },
+        {
+          "term": "reverse‑engineering",
+          "meaning": "Analyzing a game’s code or assets to recreate or modify it."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers using Claude Code must now ensure they work on original content rather than recreating existing games.",
+      "business": "Game publishers gain a tool that may reduce unauthorized AI‑generated copies of their titles.",
+      "investors": "Anthropic’s policy change signals a focus on IP compliance, which could affect its risk profile and market perception."
+    },
+    "id": "cf87f0f49a6c",
+    "headline": "Anthropic adds rule to stop Claude Code from cloning existing video games",
+    "summary": "Anthropic updated Claude Code’s system prompt to forbid recreating specific games, adding a rule that allows only original or genre‑based games. The change was first spotted on Oct 27 and confirmed by engineer Addy Osmani.",
+    "why_it_matters": "It aims to protect game developers’ intellectual property and limit AI‑driven game cloning.",
+    "category": "policy",
+    "lab": "Anthropic",
+    "model_name": "Claude Code",
+    "model_type": "Code",
+    "tags": [
+      "AI policy",
+      "IP protection",
+      "gaming"
+    ],
+    "quotes": [
+      {
+        "text": "We added two sentences to Claude Code’s prompt on Opus 5.5 to steer it away from recreating someone else’s specific game because using Claude to infringe IP is against our usage policy.",
+        "speaker": "Addy Osmani",
+        "speaker_role": "Anthropic software engineer",
+        "source_url": "https://arstechnica.com/ai/2026/11/claudes-new-rules-against-game-cloning-wont-stop-the-ai-copying-boom"
+      },
+      {
+        "text": "Original games, genre games, and games built from your own designs and assets are meant to keep working.",
+        "speaker": "Addy Osmani",
+        "speaker_role": "Anthropic software engineer",
+        "source_url": "https://gamesindustry.biz/anthropic-adds-rule-to-stop-claude-code-recreating-existing-games"
+      }
+    ],
+    "score": 8,
+    "url": "https://theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+    "source_id": "verge-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/STK269_ANTHROPIC_2_B.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+    "sources": [
+      {
+        "url": "https://theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+        "publisher": "The Verge AI",
+        "title": "Anthropic clamps down on Claude’s AI video game clones"
+      },
+      {
+        "url": "https://arstechnica.com/ai/2026/11/claudes-new-rules-against-game-cloning-wont-stop-the-ai-copying-boom",
+        "publisher": "Ars Technica AI",
+        "title": "Claude’s new rules against game cloning won’t stop the AI copying boom"
+      },
+      {
+        "url": "https://gamesindustry.biz/anthropic-adds-rule-to-stop-claude-code-recreating-existing-games",
+        "publisher": "GamesIndustry.biz",
+        "title": "Anthropic adds rule to stop Claude Code recreating existing games"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-02T18:56:02+00:00",
+    "created_at": "2026-11-02T21:54:56+00:00",
+    "thread": "t-bfc921828b74",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "Claude Code",
+    "trackers": [
+      "agent-safety"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Brave’s web‑crawling service collects billions of pages and sells the data to AI developers. Publishers say the content was taken without permission and that the browser also lets users skip paywalls. The lawsuits seek to stop the alleged copyright infringement and to force compensation.",
       "terms": [
         {
@@ -541,7 +730,8 @@
     "trackers": [
       "ai-money"
     ],
-    "photo_local": true
+    "photo_local": true,
+    "thread": "t-06beb73dfeb8"
   },
   {
     "explainer": {
@@ -864,6 +1054,96 @@
     },
     "cover": "",
     "trackers": [],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "The AI model analyzed scientific literature, selected a gene‑therapy and the brain target, then operated a robotic arm to deliver the treatment into the mouse brain. The system included a veterinarian‑approved safety gate that could stop the procedure if the AI tried to exceed its limits.",
+      "terms": [
+        {
+          "term": "gene therapy",
+          "meaning": "A technique that introduces genetic material into cells to treat disease."
+        },
+        {
+          "term": "stereotaxic injection",
+          "meaning": "A precise method of delivering substances into a specific brain location using a coordinate system."
+        },
+        {
+          "term": "AI agent",
+          "meaning": "A software system that can make decisions and act autonomously based on its programming and inputs."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "The experiment demonstrates that language models can be integrated with robotic rigs to perform precise biomedical procedures, requiring careful safety interlocks.",
+      "business": "It illustrates a potential new workflow for biotech firms to accelerate drug testing by letting AI handle experimental execution.",
+      "investors": "The approach signals a novel application of AI in drug development that could affect valuation and funding decisions for AI‑enabled biotech startups."
+    },
+    "id": "d7eb8c9ceea3",
+    "headline": "AI agent selects gene therapy and performs brain injection on live mouse",
+    "summary": "An AI agent running on Anthropic’s Claude Sonnet 5 chose a gene‑therapy vector, brain region and injection coordinates, then controlled a motorized surgical rig to inject 250 nanolitres into a mouse model of epilepsy. A licensed veterinarian approved each irreversible step and held a physical kill switch, and the agent stopped when it detected a calibration error.",
+    "why_it_matters": "It shows that language models can autonomously direct laboratory equipment, raising both opportunities for research automation and safety concerns.",
+    "category": "research",
+    "lab": "Exin Therapeutics",
+    "model_name": "Claude Sonnet 5",
+    "model_type": "Language",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "We’ve realized that we need to connect these agents to a lab to get the maximum value from them,",
+        "speaker": "Gabriel Ocana Santero",
+        "speaker_role": "CEO and cofounder",
+        "source_url": "https://wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse"
+      }
+    ],
+    "score": 7,
+    "url": "https://twitter.com/OcanaSantero/status/2115442964574908902",
+    "source_id": "hn",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://pbs.twimg.com/media/HVtOKh7aIAAFGeA?format=webp&name=large",
+    "sources": [
+      {
+        "url": "https://twitter.com/OcanaSantero/status/2115442964574908902",
+        "publisher": "twitter.com",
+        "title": "Last night an AI agent performed brain surgery on a mouse"
+      },
+      {
+        "url": "https://wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse",
+        "publisher": "Wired",
+        "title": "An AI Agent Injected Drugs Into a Live Mouse’s Brain"
+      },
+      {
+        "url": "https://the-decoder.com/a-claude-model-autonomously-chose-a-gene-therapy-and-operated-on-a-mouse-brain-with-no-human-decision-making",
+        "publisher": "THE DECODER",
+        "title": "A Claude model autonomously chose a gene therapy and operated on a mouse brain with no human decision-making"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-02T12:50:59+00:00",
+    "created_at": "2026-11-02T21:54:56+00:00",
+    "sectors": [
+      "healthcare",
+      "science"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "250 nanolitres",
+    "trackers": [
+      "agent-safety"
+    ],
     "photo_local": true
   },
   {
@@ -1491,6 +1771,143 @@
     "trackers": [
       "ai-money"
     ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Codex can now use a company's own guidelines when reviewing code, so it flags the most severe problems before code is submitted for review. Developers get automated feedback that reflects their specific standards.",
+      "terms": [
+        {
+          "term": "Codex",
+          "meaning": "OpenAI's AI system that can understand and generate code."
+        },
+        {
+          "term": "P0 issues",
+          "meaning": "Priority‑0 problems, the most critical bugs that must be fixed before release."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers can rely on AI to surface top‑priority bugs before code review, saving time.",
+      "business": "Companies can lower the chance of serious defects reaching production, protecting reputation."
+    },
+    "id": "598c6194c0d3",
+    "headline": "Qodo adds company knowledge to Codex for pre‑pull‑request code review",
+    "summary": "Qodo integrates its internal coding standards and knowledge into OpenAI's Codex, enabling developers to detect priority‑0 issues across repositories before opening a pull request.",
+    "why_it_matters": "It lets teams catch critical bugs earlier, improving code quality and reducing release risk.",
+    "category": "industry",
+    "lab": "Qodo",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 7,
+    "url": "https://openai.com/index/qodo-codex-plugin",
+    "source_id": "openai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": null,
+    "sources": [
+      {
+        "url": "https://openai.com/index/qodo-codex-plugin",
+        "publisher": "OpenAI",
+        "title": "Qodo builds context into AI code review with Codex"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-02T00:00:00+00:00",
+    "created_at": "2026-11-02T21:54:56+00:00",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "priority‑0",
+    "trackers": [],
+    "stock_tried": "2026-11-02T21:54:56+00:00",
+    "photo_local": true,
+    "image_kind": "stock",
+    "photo_credit": {
+      "key": "wc:61684334",
+      "by": "Crew crew",
+      "license": "CC0",
+      "page": "https://commons.wikimedia.org/wiki/File:Programmer_at_work_(Unsplash).jpg",
+      "via": "Wikimedia Commons"
+    }
+  },
+  {
+    "explainer": {
+      "what_it_means": "Data Bot is an AI agent that uses the same skills the data‑science team teaches it, allowing any employee to ask questions of the company’s data and receive answers, charts, or dashboards without writing code. It reduces bottlenecks by handling routine queries that would otherwise require a data scientist.",
+      "terms": [
+        {
+          "term": "Team Bot",
+          "meaning": "An AI assistant that operates for an entire team rather than an individual, using shared skills and knowledge."
+        },
+        {
+          "term": "Skills",
+          "meaning": "Structured instructions that tell the bot how to interpret data, run analyses, and format results."
+        },
+        {
+          "term": "Data warehouse",
+          "meaning": "A centralized repository where a company stores its structured data for analysis."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers can integrate Data Bot into Slack or other tools to automate data retrieval and reporting.",
+      "business": "Executives can get faster answers to key metrics, speeding decision‑making.",
+      "investors": "Investors see AI‑driven efficiency gains as a potential cost‑saving factor for SpaceX."
+    },
+    "id": "95e7a57b9036",
+    "headline": "xAI launches Data Bot, a team AI assistant for data queries at SpaceX",
+    "summary": "xAI introduced Data Bot, a Team Bot built into Grok Bot that can query SpaceX’s data warehouse, run analyses, and return results in chat or dashboards. The bot is shared across teams and can be added to Slack channels.",
+    "why_it_matters": "It shows how AI agents can automate routine data‑science tasks, giving non‑technical staff direct access to analytics.",
+    "category": "industry",
+    "lab": "xAI",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 7,
+    "url": "https://x.ai/news/data-bot",
+    "source_id": "xai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://media.x.ai/v1/website/heres-your-og-image-i-used-the-grok-bot-og-template-in-pink-b3fd12e9.png",
+    "sources": [
+      {
+        "url": "https://x.ai/news/data-bot",
+        "publisher": "xAI",
+        "title": "Product · Nov 2, 2026 Giving every team a data scientist with Grok Bot"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-02T00:00:00+00:00",
+    "created_at": "2026-11-02T21:54:56+00:00",
+    "thread": "t-06beb73dfeb8",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "us"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "Data Bot",
+    "trackers": [],
     "photo_local": true
   },
   {
@@ -2845,7 +3262,8 @@
     "trackers": [
       "agent-safety"
     ],
-    "photo_local": true
+    "photo_local": true,
+    "thread": "t-bfc921828b74"
   },
   {
     "explainer": {
