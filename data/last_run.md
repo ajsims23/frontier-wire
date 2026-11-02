@@ -1,77 +1,69 @@
-## Frontier Wire newsroom run — 2026-11-02T10:21:18+00:00
+## Frontier Wire newsroom run — 2026-11-02T13:26:34+00:00
 
-Fetched 2853 items · fresh 27 · judged 31 · kept 5 · **written 2**
-AI: 31 requests, 69,678 tokens this run · 129 requests today · providers: cerebras, groq
-Editor-in-chief: Tracking OpenAI’s funding cut and Anthropic’s IPO while scouting new AI‑agent startups and model trends.
-  Priorities: Casap, whose AI tools automate dispute and anti-fraud operations for b (AI‑powered dispute‑resolution platform for banks raises $56M, relevant for fintech investors and builders); Broccoli AI, which sells AI agents to plumbing, HVAC, and electrical c (Broccoli AI sells agents to trades, $52M raised, shows emerging market for AI‑agent services); Anthropic plans to sell $3.5 billion of shares to Japan investors in I (Anthropic plans $3.5B share sale to Japan investors, key IPO development for investors); NAND maker Kioxia's shares fell up to 15% on Monday after its cautious (Kioxia shares tumble amid AI‑driven growth concerns, signals industry slowdown); The agentic web is here (The agentic web is here – signals shift toward autonomous AI agents for builders)
-  Thin areas: models
-  Searches: OpenAI fundraising round 2026: 1 new; Anthropic IPO pricing Japan investors: 4 new; new open-source LLM 2026: 0 new
-  Dig deeper: Anthropic plans to sell $3.5 billion of shares to Japan investors in I; Casap, whose AI tools automate dispute and anti-fraud operations for b
-Research agent: investigated 5 stories with 15 tool calls, confirmed 2
-Daily briefing: 4 themes from 13 stories
-Threads updated: Anthropic IPO progress: Japan funding request: Anthropic to raise up to ¥552.9 bn ($3.5 bn) from Japanese i
+Fetched 2901 items · fresh 39 · judged 39 · kept 8 · **written 0**
+AI: 24 requests, 45,825 tokens this run · 153 requests today · providers: cerebras, groq
+Editor-in-chief: Tracking Anthropic’s Japanese IPO push while examining Elon Musk’s AI cost concerns and the growing AI safety debate.
+  Priorities: Elon Musk says the cost of serving Grok Bot was "unsustainably high re (Highlights sustainability of AI services, relevant to investors and pricing strategy.); A look at AI safety debates and the rising popularity of "Stop Unilate (Captures emerging safety discourse (SURA) affecting policy and research directions.); Analysis: Elon Musk contributed a record $474M to political groups for (Shows Musk’s political influence, impacting AI regulation and market dynamics.); Filing: Anthropic plans to raise up to $3.5B from Japanese investors a (Key update on Anthropic’s multi‑billion IPO fundraising from Japanese investors.); Marvell's $115B Lumentum acquisition is one of the biggest tech deals  (One of the year’s largest tech M&A deals, reshaping the semiconductor and AI hardware landscape.)
+  Thin areas: models, policy
+  Searches: Anthropic IPO pricing: 0 new; Mistral Large 4 release date: 0 new; AI regulation bill 2026: 0 new
+  Dig deeper: A look at AI safety debates and the rising popularity of "Stop Unilate; Analysis: Elon Musk contributed a record $474M to political groups for
+Research agent: investigated 5 stories with 15 tool calls, confirmed 0
 Videos: 2 kept from 2 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (9 in feed, 0 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (8 in feed, 0 new), Hugging Face ok (13 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 1 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 1 new), Training Data (Sequoia) ok (5 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (3 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (4 in feed, 0 new)
-Photos: 2 saved, 0 unavailable
-Alerts: 16 events sent: {"subscribers":8,"sent":0,"queued":16}
-Claims: 73 tracked, 71 open, 0 updated this run
-Trackers: filed 2 stories; updated ai-money
+Photos: 0 saved, 0 unavailable
+Alerts: 14 events sent: {"subscribers":8,"sent":0,"queued":0}
+Claims: 73 tracked, 71 open
+Trackers: filed 0 stories; no tracker changed
 Model tracker: 82 models, 11 changes today
-Tagged 2 stories by sector, region and deal
-Time: gather 87s, plan 2s, judge 3s, verify and write 396s, videos 22s, tagging 21s, trackers 41s, claims 21s, briefing 21s, alerts 2s
+Time: gather 111s, plan 57s, judge 3s, verify and write 316s, videos 23s
 
 ### New stories
-- **industry** — [Casap raises $56 million Series B to expand AI dispute and fraud tools for banks](https://techmeme.com/261101/p27)  
-  Casap, an AI platform for financial services, secured $56 million in Series B funding led by Base10 Partners, bringing total capital to $90 million. The round will fund expansion of its dispute‑resolution and anti‑fraud automation tools for banks.  
-  _3 source(s), 0 verified quote(s)_
-- **industry** — [Anthropic to raise up to ¥552.9 bn ($3.5 bn) from Japanese investors in US IPO](https://bloomberg.com/news/articles/2026-11-02/anthropic-seeks-up-to-3-5-billion-in-japan-for-its-mega-us-ipo)  
-  Anthropic plans to sell up to 552.9 billion yen of shares to Japanese investors as part of its U.S. public listing, with proceeds earmarked for working capital, operating expenses and capital expenditure.  
-  _6 source(s), 0 verified quote(s)_
+- none
 
 <details><summary>Dropped</summary>
 
-- Show HN: Wikihack – HackerTube, but for Wikipedia articles mentioned on HN — not AI: Show HN tool unrelated to AI.
-- The agentic web is here — score 5: MIT Technology Review piece discusses autonomous AI agents but is a commentary rather than a news event.
-- Pronto Founder’s Provision Labs Acquires Hardware Startup Basilisk Industries — score 5: Provision Labs (AI venture) acquires hardware startup; notable but not a major AI event.
-- MobiKwik Reports ₹11.8 Cr Profit In Q2, Revenue Rises 9% YoY — not AI: MobiKwik profit report, no AI angle.
-- Capillary Q2: Profit Jumps To ₹21.9 Cr, Revenue Surges 51.3% YoY — not AI: Capillary profit report, no AI relevance.
-- Delhivery Shares Jump Nearly 10% After Q2 Swing To ₹41 Cr Profit — not AI: Delhivery share movement, not AI.
-- Can Indrajaal Build A ₹100 Cr Business Protecting India’s Skies? — score 3: Discussion of drone business protecting Indian skies; AI only tangential.
-- PB Fintech Q2: Profit jumps 43% to Rs 192 cr, revenue at Rs 2,178 cr — not AI: Fintech profit report, no AI angle.
-- Is Meta blocking keywords and hashtags in India at the government’s request? Neither will say — score 3: Speculation about Meta keyword blocking; not a concrete AI policy development.
-- Redmi M100 Pro launched with Dimensity 7300-Ultra, 50MP camera and 5,500mAh battery: Check price — not AI: Smartphone launch, unrelated to AI.
-- Realme P4 series up to ₹6,000 cheaper on Flipkart; AIMRA urges company to fix pricing — not AI: Realme pricing issue, unrelated to AI.
-- Mint Primer | From SBI to Binance: why even the biggest financial platforms are under cyber siege — not AI: Cyber‑security article, not AI specific.
-- From code to content: How AI could make India the world’s next story exporter — score 5: Feature on Dolphin AI video‑production suite; interesting but not a news development.
-- WOI India launches venture studios, investor network, and startup support platforms at TechSparks 2026 — not AI: WOI India venture‑studio launch, no AI focus.
-- Crypto’s next chapter: Regulatory sandboxes, AI co-pilots and the rise of derivatives — score 4: Crypto regulatory sandbox discussion with minor AI mention; not core AI news.
-- antimattr is building voice AI wearables that cut through the noise — score 5: Antimattr building voice‑AI wearables; product announcement without major impact.
-- Startup news and updates: daily roundup (November 02, 2026) — not AI: Daily startup roundup, not AI specific.
-- ValueQuest Tristar Fund raises over Rs 2,100 Cr for advanced manufacturing — not AI: Fundraise for advanced manufacturing, no AI focus.
-- Fan fiction site AO3 says it could take two to four weeks to restore service after a security incident; AO3 hosts 18M+ works and has 11M+ registered users (Bruce Gil/Gizmodo) — not AI: Security incident at fan‑fiction site, no AI angle.
-- A profile of UCLA professor Terence Tao, who was once enthusiastic about AI's role in math but now warns of AI destroying the field's deliberative process (Rivka Galchen/New Yorker) — score 5: Profile of Terence Tao warning about AI’s impact on mathematics; interesting but not a news event.
-- How SF's AI boom is reshaping dating: founders treat first dates as interviews, use tech terms like "conversion rate" to track dates, and pay coaches $5K/month (Emmy Martin/New York Times) — score 4: Cultural piece on dating trends in AI‑rich San Francisco, not core AI news.
-- NAND maker Kioxia's shares fell up to 15% on Monday after its cautious Q3 outlook disappointed investors, raising concerns that AI-driven growth may be slowing (Bloomberg) — score 5: Stock price decline tied to AI growth concerns; financial market reaction not substantive AI news.
-- AI News Morning Edition | November 1, 2026 (Sun) OpenAI's Fundraising: $11 Billion Committed Against $30 Billion Goal—AI Competition Shifts from 'Technical Prowess' to ... — not AI: Newsletter roundup, not a news story.
-- Broccoli AI, which sells AI agents to plumbing, HVAC, and electrical companies, raised a $22M Series A and a $30M Series B; a source says it is valued at $300M (Nick Lichtenberg/Fortune) — could not verify yet after a second try; dropped
-- Telcos must answer for third-party AI failures under TRAI’s draft rules, as Anthropic flags unsettled AI liability — could not verify yet after a second try; dropped
-- YC details multi-agent tests in games like Minecraft, where agents exhibit emergent capabilities, forming roles, hierarchies, and complex coordination patterns (YC Labs) — could not verify yet; will retry next run
+- Show HN: HackerHack – HackerBooks but for Posts Posted on HN — not AI: Show HN post about a generic hacking tool; no AI relevance.
+- TBO TEK Q2 Profit Rises 12.5% YoY To ₹76 Cr, Revenue Up 53% — not AI: Profit report of a travel tech firm; no AI relevance.
+- ESDS Q2 Profit Zooms 41% YoY To ₹31.1 Cr, Revenue Up 48% — not AI: Profit report of an AI‑related cloud firm but the story is a routine earnings update without broader impact.
+- Why is the IT ministry’s blocking desk confirming takedowns under a different provision? — not AI: Discussion of IT ministry blocking desk; no AI angle.
+- Technical UPI declines rise to 0.24% among top 20 banks in September — not AI: UPI technical decline stats; no AI component.
+- MobiKwik swings to Rs 12 cr profit in Q2, revenue up 9% — not AI: MobiKwik profit story without AI focus.
+- Hostinger briefly takes down Journalist Paranjoy Guha Thakurta’s personal website over an old NewsClick article — not AI: Website takedown incident unrelated to AI.
+- Red Dead Redemption 2 players can claim free outfits, gold bars and Halloween rewards before November 4 deadline — not AI: Gaming reward announcement; unrelated to AI.
+- Binance to resume withdrawals after recovering bulk of $6 billion in stolen funds — not AI: Binance crypto news without AI relevance.
+- NTT DATA explores expansion in Mangaluru and Udupi, meets Priyank Kharge — score 4: NTT DATA expansion mentions digital infrastructure and AI but is a broader corporate move, not a core AI news item.
+- How the open-source route helped Uzair Ali land global roles — not AI: Career story about open‑source work; not AI‑focused.
+- More Money, Fewer Checks: These 3 Charts Show The Divide Behind VC’s Record Funding Year — score 5: Chart analysis of VC funding trends is interesting but does not rise to a news threshold for Frontier Wire.
+- Analysis: Elon Musk contributed a record $474M to political groups for the 2026 midterms, including $216M to America PAC, the highest non-candidate spend ever (Theodore Schleifer/New York Times) — score 5: The story is about Musk's political spending; AI is only tangentially relevant and the item does not meet the 6‑point news threshold.
+- Sources: SpaceX is in talks with EchoStar to acquire Boost Mobile or access its network, after Verizon, T-Mobile, and AT&T rebuffed requests for network access (Washington Post) — not AI: Telecom acquisition talks involve SpaceX but lack a direct AI angle.
+- Marvell agrees to acquire optical components maker Lumentum in a $115B all-stock deal, as it aims to rival Broadcom; Nvidia invested $2B in each company in 2026 (Anhata Rooprai/Reuters) — score 8: Duplicate coverage of the Marvell‑Lumentum deal already captured.
+- Supermarkets across Belgium and Sweden report sudden overnight temperature spikes in fridges and freezers due to suspected hacks, mirroring French cyberattacks (Bloomberg) — not AI: Cyber‑attack on supermarkets unrelated to AI.
+- British physicist and materials scientist Cyril Hilsum, widely recognized as "the father of liquid crystals" for enabling flat-panel display tech, died at 101 (Michael S. Rosenwald/New York Times) — not AI: Obituary of a physicist; no AI content.
+- Ukraine says its air raid alert app was compromised late Sunday, sending false warnings of "nuclear danger"; Russia confirms a similar hack of its alerts app (Bloomberg) — not AI: Cyber‑attack on alert apps, no AI relevance.
+- Filing: Anthropic plans to raise up to $3.5B from Japanese investors as part of its IPO, joining Australia, Canada, and parts of Europe in having direct access (Yasutaka Tamura/Bloomberg) — duplicate of 038e188345e4
+- Marvell's $115B Lumentum acquisition is one of the biggest tech deals ever and 2026's top M&A deal; Lumentum is up 128% YTD, giving it a ~$76B market cap (Bloomberg) — could not verify yet; will retry next run
+- OpenAI Signs Four Agreements With Abu Dhabi Across Government, Energy And Investment — could not verify yet; will retry next run
+- Elon Musk says the cost of serving Grok Bot was "unsustainably high relative to revenue", following subscriber complaints regarding rapid usage limit depletion (Siladitya Ray/Forbes) — could not verify yet; will retry next run
+- A look at AI safety debates and the rising popularity of "Stop Unilaterally + Raise Awareness", or SURA; safety-focused AI labs shouldn't abandon the AI race (Scott Alexander/LessWrong) — could not verify yet; will retry next run
+- Investigation: a network of 400+ domains and apps linked to Chinese-language developers bypasses app store reviews to generate nonconsensual deepfakes and CSAM (Matt Burgess/Wired) — could not verify yet; will retry next run
+- India’s Frontier AI Race Gets a 240M Model That Beats Liquid AI — could not verify yet after a second try; dropped
+- Clinics On Cloud raises $12.5M to expand microclinic network — could not verify yet; will retry next run
+- Hirundo, Lazarus, and others are applying machine unlearning and weight edits to Chinese models to remove censorship and harden security for Western companies (Rest of World) — could not verify yet; will retry next run
 
 </details>
 
-### Sources with problems
-- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
-- `aim`: failed: ReadTimeout: The read operation timed out
-- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
-
 <details><summary>Research agent's work</summary>
 
-- Casap, whose AI tools automate dispute and anti-fraud operations for b: confirmed (searched “Casap Series B $56 million Base10 Partners”; read yahoo.com; read ventureburn.com)
-- Broccoli AI, which sells AI agents to plumbing, HVAC, and electrical c: unconfirmed (searched “Broccoli AI Series A $22 million Series B $30 million funding”; searched “"Broccoli AI"”; read indiatimes.com)
-- Telcos must answer for third-party AI failures under TRAI’s draft rule: unconfirmed (searched “TRAI draft rules telcos AI liability Anthropic”; searched “TRAI AI draft rules Anthropic”; read msn.com)
-- Anthropic Seeks Up to $3.5 Billion in Japan for Its Mega US IPO: confirmed (searched “Anthropic Japan investors IPO 3.5 billion”; read techcrunch.com; read moneycontrol.com)
-- YC details multi-agent tests in games like Minecraft, where agents exh: unconfirmed (searched “YC Labs multi-agent Minecraft emergent capabilities”; searched “"YC Labs" multi-agent”; searched “"YC Labs" Minecraft”)
+- Marvell's $115B Lumentum acquisition is one of the biggest tech deals : unconfirmed (searched “Marvell Lumentum acquisition $115 billion”; read msn.com; read businesswire.com)
+- OpenAI Signs Four Agreements With Abu Dhabi Across Government, Energy : unconfirmed (searched “OpenAI signs four agreements with Abu Dhabi government energy investment ADNOC GPT models operational decision-making AI-powered food import compliance checks”; read msn.com; searched “Reuters OpenAI Abu Dhabi four agreements Sam Altman ADNADOC G42”)
+- Elon Musk says the cost of serving Grok Bot was "unsustainably high re: unconfirmed (searched “Elon Musk cost of serving Grok Bot unsustainably high relative to revenue”; read msn.com; read tempo.co)
+- A look at AI safety debates and the rising popularity of "Stop Unilate: unconfirmed (searched “Stop Unilaterally Raise Awareness SURA Scott Alexander”; searched “"SURA" "AI safety" "Scott Alexander"”; searched “"Stop Unilaterally" "AI"”)
+- Investigation: a network of 400+ domains and apps linked to Chinese-la: unconfirmed (searched “Matt Burgess Wired investigation 400 domains deepfakes CSAM Chinese-language developers”; read wired.com; searched “network of 400 apps deepfake Chinese developers app store review bypass”)
 
 </details>
 
 ### Notes
-- 1 kept item(s) carried over to the next run
+- not India desk: 'OpenAI Signs Four Agreements With Abu Dhabi Across'
+- not India desk: 'Clinics On Cloud raises $12.5M to expand microclin'
+- ignored made-up duplicate id 23ee6f882d56 for 'Marvell agrees to acquire optical components maker'
+- GDELT unavailable: GDELT paused for this run after repeated rate-limiting
+- 7 kept item(s) carried over to the next run

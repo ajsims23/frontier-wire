@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-02T10:21:18+00:00",
+  "started_at": "2026-11-02T13:26:34+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -18,20 +18,20 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (16)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (11)",
+    "hf-papers": "ok (15)",
+    "gdelt": "ok (0)",
+    "hn": "ok (10)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
     "ars-ai": "ok (20)",
-    "aim": "failed: ReadTimeout: The read operation timed out",
+    "aim": "ok (50)",
     "inc42": "ok (24)",
     "medianama": "ok (10)",
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "gdelt-india": "ok (0)",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -41,196 +41,183 @@
   },
   "dropped": [
     {
-      "title": "Show HN: Wikihack – HackerTube, but for Wikipedia articles mentioned on HN",
-      "reason": "not AI: Show HN tool unrelated to AI."
+      "title": "Show HN: HackerHack – HackerBooks but for Posts Posted on HN",
+      "reason": "not AI: Show HN post about a generic hacking tool; no AI relevance."
     },
     {
-      "title": "The agentic web is here",
-      "reason": "score 5: MIT Technology Review piece discusses autonomous AI agents but is a commentary rather than a news event."
+      "title": "TBO TEK Q2 Profit Rises 12.5% YoY To ₹76 Cr, Revenue Up 53%",
+      "reason": "not AI: Profit report of a travel tech firm; no AI relevance."
     },
     {
-      "title": "Pronto Founder’s Provision Labs Acquires Hardware Startup Basilisk Industries",
-      "reason": "score 5: Provision Labs (AI venture) acquires hardware startup; notable but not a major AI event."
+      "title": "ESDS Q2 Profit Zooms 41% YoY To ₹31.1 Cr, Revenue Up 48%",
+      "reason": "not AI: Profit report of an AI‑related cloud firm but the story is a routine earnings update without broader impact."
     },
     {
-      "title": "MobiKwik Reports ₹11.8 Cr Profit In Q2, Revenue Rises 9% YoY",
-      "reason": "not AI: MobiKwik profit report, no AI angle."
+      "title": "Why is the IT ministry’s blocking desk confirming takedowns under a different provision?",
+      "reason": "not AI: Discussion of IT ministry blocking desk; no AI angle."
     },
     {
-      "title": "Capillary Q2: Profit Jumps To ₹21.9 Cr, Revenue Surges 51.3% YoY",
-      "reason": "not AI: Capillary profit report, no AI relevance."
+      "title": "Technical UPI declines rise to 0.24% among top 20 banks in September",
+      "reason": "not AI: UPI technical decline stats; no AI component."
     },
     {
-      "title": "Delhivery Shares Jump Nearly 10% After Q2 Swing To ₹41 Cr Profit",
-      "reason": "not AI: Delhivery share movement, not AI."
+      "title": "MobiKwik swings to Rs 12 cr profit in Q2, revenue up 9%",
+      "reason": "not AI: MobiKwik profit story without AI focus."
     },
     {
-      "title": "Can Indrajaal Build A ₹100 Cr Business Protecting India’s Skies?",
-      "reason": "score 3: Discussion of drone business protecting Indian skies; AI only tangential."
+      "title": "Hostinger briefly takes down Journalist Paranjoy Guha Thakurta’s personal website over an old NewsClick article",
+      "reason": "not AI: Website takedown incident unrelated to AI."
     },
     {
-      "title": "PB Fintech Q2: Profit jumps 43% to Rs 192 cr, revenue at Rs 2,178 cr",
-      "reason": "not AI: Fintech profit report, no AI angle."
+      "title": "Red Dead Redemption 2 players can claim free outfits, gold bars and Halloween rewards before November 4 deadline",
+      "reason": "not AI: Gaming reward announcement; unrelated to AI."
     },
     {
-      "title": "Is Meta blocking keywords and hashtags in India at the government’s request? Neither will say",
-      "reason": "score 3: Speculation about Meta keyword blocking; not a concrete AI policy development."
+      "title": "Binance to resume withdrawals after recovering bulk of $6 billion in stolen funds",
+      "reason": "not AI: Binance crypto news without AI relevance."
     },
     {
-      "title": "Redmi M100 Pro launched with Dimensity 7300-Ultra, 50MP camera and 5,500mAh battery: Check price",
-      "reason": "not AI: Smartphone launch, unrelated to AI."
+      "title": "NTT DATA explores expansion in Mangaluru and Udupi, meets Priyank Kharge",
+      "reason": "score 4: NTT DATA expansion mentions digital infrastructure and AI but is a broader corporate move, not a core AI news item."
     },
     {
-      "title": "Realme P4 series up to ₹6,000 cheaper on Flipkart; AIMRA urges company to fix pricing",
-      "reason": "not AI: Realme pricing issue, unrelated to AI."
+      "title": "How the open-source route helped Uzair Ali land global roles",
+      "reason": "not AI: Career story about open‑source work; not AI‑focused."
     },
     {
-      "title": "Mint Primer | From SBI to Binance: why even the biggest financial platforms are under cyber siege",
-      "reason": "not AI: Cyber‑security article, not AI specific."
+      "title": "More Money, Fewer Checks: These 3 Charts Show The Divide Behind VC’s Record Funding Year",
+      "reason": "score 5: Chart analysis of VC funding trends is interesting but does not rise to a news threshold for Frontier Wire."
     },
     {
-      "title": "From code to content: How AI could make India the world’s next story exporter",
-      "reason": "score 5: Feature on Dolphin AI video‑production suite; interesting but not a news development."
+      "title": "Analysis: Elon Musk contributed a record $474M to political groups for the 2026 midterms, including $216M to America PAC, the highest non-candidate spend ever (Theodore Schleifer/New York Times)",
+      "reason": "score 5: The story is about Musk's political spending; AI is only tangentially relevant and the item does not meet the 6‑point news threshold."
     },
     {
-      "title": "WOI India launches venture studios, investor network, and startup support platforms at TechSparks 2026",
-      "reason": "not AI: WOI India venture‑studio launch, no AI focus."
+      "title": "Sources: SpaceX is in talks with EchoStar to acquire Boost Mobile or access its network, after Verizon, T-Mobile, and AT&T rebuffed requests for network access (Washington Post)",
+      "reason": "not AI: Telecom acquisition talks involve SpaceX but lack a direct AI angle."
     },
     {
-      "title": "Crypto’s next chapter: Regulatory sandboxes, AI co-pilots and the rise of derivatives",
-      "reason": "score 4: Crypto regulatory sandbox discussion with minor AI mention; not core AI news."
+      "title": "Marvell agrees to acquire optical components maker Lumentum in a $115B all-stock deal, as it aims to rival Broadcom; Nvidia invested $2B in each company in 2026 (Anhata Rooprai/Reuters)",
+      "reason": "score 8: Duplicate coverage of the Marvell‑Lumentum deal already captured."
     },
     {
-      "title": "antimattr is building voice AI wearables that cut through the noise",
-      "reason": "score 5: Antimattr building voice‑AI wearables; product announcement without major impact."
+      "title": "Supermarkets across Belgium and Sweden report sudden overnight temperature spikes in fridges and freezers due to suspected hacks, mirroring French cyberattacks (Bloomberg)",
+      "reason": "not AI: Cyber‑attack on supermarkets unrelated to AI."
     },
     {
-      "title": "Startup news and updates: daily roundup (November 02, 2026)",
-      "reason": "not AI: Daily startup roundup, not AI specific."
+      "title": "British physicist and materials scientist Cyril Hilsum, widely recognized as \"the father of liquid crystals\" for enabling flat-panel display tech, died at 101 (Michael S. Rosenwald/New York Times)",
+      "reason": "not AI: Obituary of a physicist; no AI content."
     },
     {
-      "title": "ValueQuest Tristar Fund raises over Rs 2,100 Cr for advanced manufacturing",
-      "reason": "not AI: Fundraise for advanced manufacturing, no AI focus."
+      "title": "Ukraine says its air raid alert app was compromised late Sunday, sending false warnings of \"nuclear danger\"; Russia confirms a similar hack of its alerts app (Bloomberg)",
+      "reason": "not AI: Cyber‑attack on alert apps, no AI relevance."
     },
     {
-      "title": "Fan fiction site AO3 says it could take two to four weeks to restore service after a security incident; AO3 hosts 18M+ works and has 11M+ registered users (Bruce Gil/Gizmodo)",
-      "reason": "not AI: Security incident at fan‑fiction site, no AI angle."
+      "title": "Filing: Anthropic plans to raise up to $3.5B from Japanese investors as part of its IPO, joining Australia, Canada, and parts of Europe in having direct access (Yasutaka Tamura/Bloomberg)",
+      "reason": "duplicate of 038e188345e4"
     },
     {
-      "title": "A profile of UCLA professor Terence Tao, who was once enthusiastic about AI's role in math but now warns of AI destroying the field's deliberative process (Rivka Galchen/New Yorker)",
-      "reason": "score 5: Profile of Terence Tao warning about AI’s impact on mathematics; interesting but not a news event."
+      "title": "Marvell's $115B Lumentum acquisition is one of the biggest tech deals ever and 2026's top M&A deal; Lumentum is up 128% YTD, giving it a ~$76B market cap (Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "How SF's AI boom is reshaping dating: founders treat first dates as interviews, use tech terms like \"conversion rate\" to track dates, and pay coaches $5K/month (Emmy Martin/New York Times)",
-      "reason": "score 4: Cultural piece on dating trends in AI‑rich San Francisco, not core AI news."
+      "title": "OpenAI Signs Four Agreements With Abu Dhabi Across Government, Energy And Investment",
+      "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "NAND maker Kioxia's shares fell up to 15% on Monday after its cautious Q3 outlook disappointed investors, raising concerns that AI-driven growth may be slowing (Bloomberg)",
-      "reason": "score 5: Stock price decline tied to AI growth concerns; financial market reaction not substantive AI news."
+      "title": "Elon Musk says the cost of serving Grok Bot was \"unsustainably high relative to revenue\", following subscriber complaints regarding rapid usage limit depletion (Siladitya Ray/Forbes)",
+      "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "AI News Morning Edition | November 1, 2026 (Sun) OpenAI's Fundraising: $11 Billion Committed Against $30 Billion Goal—AI Competition Shifts from 'Technical Prowess' to ...",
-      "reason": "not AI: Newsletter roundup, not a news story."
+      "title": "A look at AI safety debates and the rising popularity of \"Stop Unilaterally + Raise Awareness\", or SURA; safety-focused AI labs shouldn't abandon the AI race (Scott Alexander/LessWrong)",
+      "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "Broccoli AI, which sells AI agents to plumbing, HVAC, and electrical companies, raised a $22M Series A and a $30M Series B; a source says it is valued at $300M (Nick Lichtenberg/Fortune)",
+      "title": "Investigation: a network of 400+ domains and apps linked to Chinese-language developers bypasses app store reviews to generate nonconsensual deepfakes and CSAM (Matt Burgess/Wired)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "India’s Frontier AI Race Gets a 240M Model That Beats Liquid AI",
       "reason": "could not verify yet after a second try; dropped"
     },
     {
-      "title": "Telcos must answer for third-party AI failures under TRAI’s draft rules, as Anthropic flags unsettled AI liability",
-      "reason": "could not verify yet after a second try; dropped"
+      "title": "Clinics On Cloud raises $12.5M to expand microclinic network",
+      "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "YC details multi-agent tests in games like Minecraft, where agents exhibit emergent capabilities, forming roles, hierarchies, and complex coordination patterns (YC Labs)",
+      "title": "Hirundo, Lazarus, and others are applying machine unlearning and weight edits to Chinese models to remove censorship and harden security for Western companies (Rest of World)",
       "reason": "could not verify yet; will retry next run"
     }
   ],
-  "written": [
-    {
-      "id": "f44620e5c7ce",
-      "headline": "Casap raises $56 million Series B to expand AI dispute and fraud tools for banks",
-      "category": "industry",
-      "summary": "Casap, an AI platform for financial services, secured $56 million in Series B funding led by Base10 Partners, bringing total capital to $90 million. The round will fund expansion of its dispute‑resolution and anti‑fraud automation tools for banks.",
-      "url": "https://techmeme.com/261101/p27",
-      "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "038e188345e4",
-      "headline": "Anthropic to raise up to ¥552.9 bn ($3.5 bn) from Japanese investors in US IPO",
-      "category": "industry",
-      "summary": "Anthropic plans to sell up to 552.9 billion yen of shares to Japanese investors as part of its U.S. public listing, with proceeds earmarked for working capital, operating expenses and capital expenditure.",
-      "url": "https://bloomberg.com/news/articles/2026-11-02/anthropic-seeks-up-to-3-5-billion-in-japan-for-its-mega-us-ipo",
-      "sources": 6,
-      "quotes": 0
-    }
-  ],
+  "written": [],
   "notes": [
-    "1 kept item(s) carried over to the next run"
+    "not India desk: 'OpenAI Signs Four Agreements With Abu Dhabi Across'",
+    "not India desk: 'Clinics On Cloud raises $12.5M to expand microclin'",
+    "ignored made-up duplicate id 23ee6f882d56 for 'Marvell agrees to acquire optical components maker'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "7 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 87.0,
+    "gather": 111.2,
     "audit": -0.0,
-    "plan": 1.9,
-    "judge": 2.9,
-    "verify and write": 395.9,
-    "videos": 21.9,
-    "tagging": 20.6,
+    "plan": 56.7,
+    "judge": 2.8,
+    "verify and write": 316.0,
+    "videos": 23.3,
+    "tagging": -0.0,
     "explainers": -0.0,
-    "trackers": 41.2,
-    "claims": 20.9,
-    "model tracker": 0.1,
-    "weekly": -0.0,
-    "builders": -0.0,
-    "top voices": -0.0,
-    "briefing": 21.2,
-    "self-review": -0.0,
-    "photos": 0.2,
-    "stock photos": 0.0,
-    "daily email": 0.0,
-    "alerts": 2.1
+    "trackers": -0.0,
+    "claims": -0.0,
+    "model tracker": 0.0,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 0.0,
+    "self-review": 0.0,
+    "photos": 0.1,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 0.8
   },
-  "fetched": 2853,
-  "fresh": 27,
+  "fetched": 2901,
+  "fresh": 39,
   "plan": {
-    "focus": "Tracking OpenAI’s funding cut and Anthropic’s IPO while scouting new AI‑agent startups and model trends.",
+    "focus": "Tracking Anthropic’s Japanese IPO push while examining Elon Musk’s AI cost concerns and the growing AI safety debate.",
     "priorities": [
-      "Casap, whose AI tools automate dispute and anti-fraud operations for b (AI‑powered dispute‑resolution platform for banks raises $56M, relevant for fintech investors and builders)",
-      "Broccoli AI, which sells AI agents to plumbing, HVAC, and electrical c (Broccoli AI sells agents to trades, $52M raised, shows emerging market for AI‑agent services)",
-      "Anthropic plans to sell $3.5 billion of shares to Japan investors in I (Anthropic plans $3.5B share sale to Japan investors, key IPO development for investors)",
-      "NAND maker Kioxia's shares fell up to 15% on Monday after its cautious (Kioxia shares tumble amid AI‑driven growth concerns, signals industry slowdown)",
-      "The agentic web is here (The agentic web is here – signals shift toward autonomous AI agents for builders)"
+      "Elon Musk says the cost of serving Grok Bot was \"unsustainably high re (Highlights sustainability of AI services, relevant to investors and pricing strategy.)",
+      "A look at AI safety debates and the rising popularity of \"Stop Unilate (Captures emerging safety discourse (SURA) affecting policy and research directions.)",
+      "Analysis: Elon Musk contributed a record $474M to political groups for (Shows Musk’s political influence, impacting AI regulation and market dynamics.)",
+      "Filing: Anthropic plans to raise up to $3.5B from Japanese investors a (Key update on Anthropic’s multi‑billion IPO fundraising from Japanese investors.)",
+      "Marvell's $115B Lumentum acquisition is one of the biggest tech deals  (One of the year’s largest tech M&A deals, reshaping the semiconductor and AI hardware landscape.)"
     ],
     "thin_areas": [
-      "models"
+      "models",
+      "policy"
     ],
     "searches": [
-      "OpenAI fundraising round 2026: 1 new",
-      "Anthropic IPO pricing Japan investors: 4 new",
-      "new open-source LLM 2026: 0 new"
+      "Anthropic IPO pricing: 0 new",
+      "Mistral Large 4 release date: 0 new",
+      "AI regulation bill 2026: 0 new"
     ],
     "dig_deeper": [
-      "Anthropic plans to sell $3.5 billion of shares to Japan investors in I",
-      "Casap, whose AI tools automate dispute and anti-fraud operations for b"
+      "A look at AI safety debates and the rising popularity of \"Stop Unilate",
+      "Analysis: Elon Musk contributed a record $474M to political groups for"
     ]
   },
-  "judged": 31,
-  "kept": 5,
+  "judged": 39,
+  "kept": 8,
   "research": {
     "investigated": 5,
-    "confirmed": 2,
+    "confirmed": 0,
     "tool_calls": 15
   },
   "research_log": [
-    "Casap, whose AI tools automate dispute and anti-fraud operations for b: confirmed (searched “Casap Series B $56 million Base10 Partners”; read yahoo.com; read ventureburn.com)",
-    "Broccoli AI, which sells AI agents to plumbing, HVAC, and electrical c: unconfirmed (searched “Broccoli AI Series A $22 million Series B $30 million funding”; searched “\"Broccoli AI\"”; read indiatimes.com)",
-    "Telcos must answer for third-party AI failures under TRAI’s draft rule: unconfirmed (searched “TRAI draft rules telcos AI liability Anthropic”; searched “TRAI AI draft rules Anthropic”; read msn.com)",
-    "Anthropic Seeks Up to $3.5 Billion in Japan for Its Mega US IPO: confirmed (searched “Anthropic Japan investors IPO 3.5 billion”; read techcrunch.com; read moneycontrol.com)",
-    "YC details multi-agent tests in games like Minecraft, where agents exh: unconfirmed (searched “YC Labs multi-agent Minecraft emergent capabilities”; searched “\"YC Labs\" multi-agent”; searched “\"YC Labs\" Minecraft”)"
-  ],
-  "threads": [
-    "Anthropic IPO progress: Japan funding request: Anthropic to raise up to ¥552.9 bn ($3.5 bn) from Japanese i"
+    "Marvell's $115B Lumentum acquisition is one of the biggest tech deals : unconfirmed (searched “Marvell Lumentum acquisition $115 billion”; read msn.com; read businesswire.com)",
+    "OpenAI Signs Four Agreements With Abu Dhabi Across Government, Energy : unconfirmed (searched “OpenAI signs four agreements with Abu Dhabi government energy investment ADNOC GPT models operational decision-making AI-powered food import compliance checks”; read msn.com; searched “Reuters OpenAI Abu Dhabi four agreements Sam Altman ADNADOC G42”)",
+    "Elon Musk says the cost of serving Grok Bot was \"unsustainably high re: unconfirmed (searched “Elon Musk cost of serving Grok Bot unsustainably high relative to revenue”; read msn.com; read tempo.co)",
+    "A look at AI safety debates and the rising popularity of \"Stop Unilate: unconfirmed (searched “Stop Unilaterally Raise Awareness SURA Scott Alexander”; searched “\"SURA\" \"AI safety\" \"Scott Alexander\"”; searched “\"Stop Unilaterally\" \"AI\"”)",
+    "Investigation: a network of 400+ domains and apps linked to Chinese-la: unconfirmed (searched “Matt Burgess Wired investigation 400 domains deepfakes CSAM Chinese-language developers”; read wired.com; searched “network of 400 apps deepfake Chinese developers app store review bypass”)"
   ],
   "videos": {
     "OpenAI": "ok (11 in feed, 0 new)",
@@ -258,15 +245,13 @@
     "20VC": "ok (4 in feed, 0 new)"
   },
   "videos_kept": "2 kept from 2 new",
-  "tagged": 2,
-  "trackers": "filed 2 stories; updated ai-money",
-  "claims": "73 tracked, 71 open, 0 updated this run",
+  "trackers": "filed 0 stories; no tracker changed",
+  "claims": "73 tracked, 71 open",
   "model_tracker": "82 models, 11 changes today",
-  "briefing": "4 themes from 13 stories",
-  "photos": "2 saved, 0 unavailable",
-  "alerts": "16 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":16}",
-  "ai_requests_run": 31,
-  "ai_tokens_run": 69678,
-  "ai_requests_today": 129,
+  "photos": "0 saved, 0 unavailable",
+  "alerts": "14 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":0}",
+  "ai_requests_run": 24,
+  "ai_tokens_run": 45825,
+  "ai_requests_today": 153,
   "provider_log": []
 }
