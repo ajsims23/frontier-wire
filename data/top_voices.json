@@ -1,14 +1,5 @@
 {
   "posts": {
-    "208b5b91fbb0": {
-      "id": "208b5b91fbb0",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3myqfelxuxs2q",
-      "person": "Ethan Mollick",
-      "text": "My general advice for using AI for any purpose is to ask yourself: \"how do I make what I am doing even more ambitious?\" You do this over and over until you either hit a wall and thus learn the shape of the jagged frontier (useful!) or you find out that the AI can do more than you think (common!)",
-      "published": "2026-10-25T23:47:13.028Z",
-      "via": "Bluesky",
-      "kind": "post"
-    },
     "6352bc5d9cf3": {
       "id": "6352bc5d9cf3",
       "url": "https://jack-clark.net/2026/10/26/import-ai-478-math-for-alignment-programbench-and-mirendil-shows-what-rsi-means",
@@ -495,6 +486,15 @@
       "person": "Simon Willison",
       "text": "Quoting Kyle Kingsbury. More broadly, the use of LLMs erodes trust in documentation, in software, and in the organizations which produce them. Perhaps engineers will begin to treat any new software project with suspicion—the signals we used to rely on as markers of a mature system are now easier to counterfeit. [...] In the age of LLMs, what can maintainers do to ensure correct software and accurate documentation? Having done that work, how can they demonstrate its quality to users? — Kyle Kingsbury , Jepsen results for ParticleDB 1.1.4 Tags: kyle-kingsbury , llms , ai , generative-ai , ai-misuse",
       "published": "2026-11-01T16:49:04+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "7d7291538279": {
+      "id": "7d7291538279",
+      "url": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first",
+      "person": "Simon Willison",
+      "text": "If in doubt, delete the uv.lock file. I've been getting the occasional confusing Python dependency error since switching over to Python 3.15 and the rule I'm having to remember is: If in doubt, delete the uv.lock file Most of my projects are libraries which don't include a uv.lock file, since it's rude for a library dependency to lock versions for anything else that uses it. Running uv run pytest etc tends to leave uv.lock files lying around, which are listed in .gitignore and so do not get committed to my repositories. But... sometimes that uv.lock pins a version of a dependency that doesn't yet have a Python 3.15 wheel. An examp",
+      "published": "2026-11-01T23:24:22+00:00",
       "via": "Simon Willison",
       "kind": "post"
     }

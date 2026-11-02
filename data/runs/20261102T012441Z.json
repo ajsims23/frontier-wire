@@ -1,0 +1,208 @@
+{
+  "started_at": "2026-11-02T01:24:41+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1341)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (894)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (17)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (16)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
+      "reason": "not AI: Open‑source Git difftool announcement, not AI related."
+    },
+    {
+      "title": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
+      "reason": "duplicate of d30bd3f5a099"
+    },
+    {
+      "title": "Two Point O Bags $10 Mn To Bridge The Financing Gap In Clean Energy",
+      "reason": "not AI: Clean‑energy financing story lacks an AI focus."
+    },
+    {
+      "title": "Two Point O raises $10M led by Transition Venture Capital",
+      "reason": "not AI: Funding round for a clean‑energy company, no AI angle."
+    },
+    {
+      "title": "If in doubt, delete the uv.lock file",
+      "reason": "not AI: Personal advice on Python dependency files, no AI relevance."
+    },
+    {
+      "title": "A look at Binance's efforts to contain the hack, including creating a global war room of ~100 people, coordinating with other crypto firms and the FBI, and more (Bloomberg)",
+      "reason": "not AI: The story focuses on a crypto hack response and contains no AI angle."
+    },
+    {
+      "title": "How IShowSpeed became YouTube's top livestreamer with 62M+ subscribers, as his 24/7 \"IRL streams\" that last days mingle childlike wonder with teenage mischief (Jon Caramanica/New York Times)",
+      "reason": "not AI: Feature on a YouTube livestreamer, no AI angle."
+    },
+    {
+      "title": "OpenAI Slashes Funding Goal by $10 Billion to $20 Billion as AI Stock Selloff Intensifies",
+      "reason": "duplicate of c10fef6ec816"
+    },
+    {
+      "title": "OpenAI Cuts Funding Target By $10 Bn: Report",
+      "reason": "duplicate of c10fef6ec816"
+    },
+    {
+      "title": "Hyperbolic, which lets companies rent AI compute across ~30 neoclouds, raised a $30M Series A-1 led by Lip-Bu Tan's Walden Catalyst; it has raised $50M to date (Geoff Weiss/Business Insider)",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "b9addf9bc543",
+      "headline": "Saudi Aramco buys 49% of AI startup Humain, adds $2.6 billion cash",
+      "category": "industry",
+      "summary": "Aramco acquired a 49% stake in Saudi AI firm Humain, contributing about $2.6 billion in cash in 2026 and AI, compute and digital assets. The Public Investment Fund retains a 51% controlling interest.",
+      "url": "https://techmeme.com/261101/p17",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "ee3e81e1a046",
+      "headline": "Semicon Europa 2026 focuses on advanced packaging and AI-driven fab management",
+      "category": "industry",
+      "summary": "Semiconductor experts will gather in Munich from Nov 10‑13, 2026 for SEMICON Europa. The event will include an Advanced Packaging Conference and a Fab Management Forum on AI‑driven manufacturing.",
+      "url": "https://dqindia.com/semiconductors/semicon-europa-2026-to-spotlight-advanced-packaging-fab-management-and-europes-semiconductor-strategy-for-ai-era-12757431",
+      "sources": 2,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "1 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 75.9,
+    "audit": 2.9,
+    "plan": 1.4,
+    "judge": 1.4,
+    "verify and write": 250.5,
+    "videos": 1.4,
+    "tagging": 20.7,
+    "explainers": 0.0,
+    "trackers": 106.8,
+    "claims": 20.4,
+    "model tracker": 0.3,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 20.7,
+    "self-review": 20.7,
+    "photos": 0.2,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 1.8
+  },
+  "fetched": 2909,
+  "fresh": 9,
+  "audit": "coverage 50% of 6 significant stories; 3 missed, 0 added to this run",
+  "plan": {
+    "focus": "Tracking OpenAI’s data‑center rebrand while covering major AI funding moves and emerging security threats.",
+    "priorities": [
+      "OpenAI might rebrand its data centers as ‘AI compute campuses’ (OpenAI policy shift on data center branding impacts compute strategy and regulation.)",
+      "Hyperbolic, which lets companies rent AI compute across ~30 neoclouds, (Significant $30M raise for AI compute platform signals market momentum.)",
+      "Saudi Aramco acquires a 49% stake in AI startup Humain, contributing ~ (Saudi Aramco’s stake in AI startup Humain shows sovereign wealth entry into AI.)",
+      "A look at Binance's efforts to contain the hack, including creating a  (Binance hack response highlights ongoing AI‑related security challenges.)",
+      "Two Point O Bags $10 Mn To Bridge The Financing Gap In Clean Energy (India clean‑energy financing ties AI investment to sustainability sector.)"
+    ],
+    "thin_areas": [
+      "research",
+      "models"
+    ],
+    "searches": [
+      "Mistral Large 4 release: 0 new",
+      "OpenAI funding target 2027: 2 new",
+      "AI research breakthroughs 2026: 1 new"
+    ],
+    "dig_deeper": [
+      "OpenAI might rebrand its data centers as ‘AI compute campuses’",
+      "Saudi Aramco acquires a 49% stake in AI startup Humain, contributing ~"
+    ]
+  },
+  "judged": 12,
+  "kept": 3,
+  "research": {
+    "investigated": 3,
+    "confirmed": 2,
+    "tool_calls": 9
+  },
+  "research_log": [
+    "Saudi Aramco acquires a 49% stake in AI startup Humain, contributing ~: confirmed (searched “Saudi Aramco 49% stake Humain AI startup $2.6 billion cash 2026”; read cryptobriefing.com; read marketscreener.com)",
+    "Hyperbolic, which lets companies rent AI compute across ~30 neoclouds,: unconfirmed (searched “Hyperbolic AI compute Series A-1 $30 million Walden Catalyst”; read businessinsider.com; read kucoin.com)",
+    "SEMICON Europa 2026 to spotlight advanced packaging, fab management, a: confirmed (searched “SEMICON Europa 2026 advanced packaging fab management Europe semiconductor strategy AI era”; searched “\"SEMICON Europa 2026\"”; read eenewseurope.com)"
+  ],
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "ok (8 in feed, 0 new)",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "tagged": 2,
+  "trackers": "filed 2 stories; updated ai-infrastructure, ai-money",
+  "claims": "72 tracked, 70 open, 0 updated this run",
+  "model_tracker": "82 models, 4 changes today",
+  "briefing": "4 themes from 9 stories",
+  "self_review": "19 lines written to data/self_review.md",
+  "photos": "2 saved, 0 unavailable",
+  "alerts": "8 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":19}",
+  "ai_requests_run": 27,
+  "ai_tokens_run": 74021,
+  "ai_requests_today": 27,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
+}

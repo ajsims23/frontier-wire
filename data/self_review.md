@@ -1,39 +1,38 @@
-## Newsroom self-review, 2026-11-01
+## Newsroom self-review, 2026-11-02
 
-Looked at 35 runs over the last 3 days (63 stories written).
+Looked at 29 runs over the last 3 days (52 stories written).
 Tick the suggestions you want applied; nothing changes until a person approves it.
 
-- [ ] **fix source** · `arxiv`: Add a longer read timeout and retry logic for arxiv queries  
-  _Why:_ 3 of 35 runs timed out, causing missed papers
-- [ ] **remove source** · `gdelt`: Temporarily disable gdelt source and replace with a free alternative like newsapi.org to avoid 429 rate limits _(contains an address suggested by the agent; check it before using)_  
-  _Why:_ 14 of 35 runs hit 429 Too Many Requests
-- [ ] **remove source** · `gdelt-india`: Disable gdelt-india source and replace with a free alternative (e.g., Reddit AI subreddit) to avoid repeated rate‑limiting pauses  
-  _Why:_ 17 of 35 runs paused due to rate‑limiting
-- [ ] **add source** · `xAI blog`: Add a simple RSS/HTML scraper for the official xAI blog to capture lab announcements  
-  _Why:_ xAI lab had no stories this week despite being tracked
-- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower the minimum score from 6 to 5  
-  _Why:_ 95 stories dropped at score 5; lowering the threshold would increase published content without major quality loss
+- [ ] **remove source** · `gdelt`: Remove gdelt source due to repeated 429 errors  
+  _Why:_ 14/29 runs failed with rate‑limit, causing frequent interruptions
+- [ ] **remove source** · `gdelt-india`: Remove gdelt‑india source due to rate‑limiting pauses  
+  _Why:_ 17/29 runs failed, blocking data collection
+- [ ] **add source** · `xai`: Add a dedicated xAI news source to capture lab updates  
+  _Why:_ xAI lab has no stories this week, indicating a coverage gap
+- [ ] **tune** · `source_query_filter`: Add AI‑specific keyword filter (e.g., "AI", "artificial intelligence") to source queries  
+  _Why:_ 135 drops labelled "not AI" show the current queries pull many irrelevant items
+- [ ] **tune** · `min_score_to_publish_1_to_10`: Raise minimum score to 7  
+  _Why:_ Many stories are dropped at scores 5‑6; a higher threshold will improve overall story quality
 
 <details><summary>Statistics the agent reviewed</summary>
 
 ```json
 {
- "runs": 35,
- "stories_written": 63,
+ "runs": 29,
+ "stories_written": 52,
  "source_failures": {
-  "arxiv": "3/35 runs; last error: failed: ReadTimeout: The read operation timed out",
-  "gdelt": "14/35 runs; last error: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20",
-  "gdelt-india": "17/35 runs; last error: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting"
+  "gdelt": "14/29 runs; last error: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20",
+  "gdelt-india": "17/29 runs; last error: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting"
  },
  "sources_returning_nothing": {},
  "drop_reasons": {
-  "not AI": 199,
-  "score 5": 95,
-  "score 4": 74,
-  "could not verify yet": 65,
-  "could not verify yet after a second try": 21,
-  "score 3": 14,
-  "variety": 10,
+  "not AI": 135,
+  "score 5": 64,
+  "score 4": 48,
+  "could not verify yet": 41,
+  "duplicate of c10fef6ec816": 20,
+  "could not verify yet after a second try": 19,
+  "score 3": 11,
   "duplicate of b329cc4aaa4c": 10
  },
  "tracked_labs_without_stories_this_week": [
@@ -46,7 +45,7 @@ Tick the suggestions you want applied; nothing changes until a person approves i
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
-  "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+  "cerebras/gpt-oss-120b: unusable answer",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
  ],
  "current_settings": {
