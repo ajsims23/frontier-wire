@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-02T07:41:13+00:00",
+  "started_at": "2026-11-02T10:21:18+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -18,20 +18,20 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (17)",
-    "gdelt": "ok (0)",
-    "hn": "ok (12)",
+    "hf-papers": "ok (16)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (11)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
     "ars-ai": "ok (20)",
-    "aim": "ok (50)",
+    "aim": "failed: ReadTimeout: The read operation timed out",
     "inc42": "ok (24)",
     "medianama": "ok (10)",
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -41,229 +41,232 @@
   },
   "dropped": [
     {
-      "title": "Genpact Certified as a Best Firm for Data Scientists",
-      "reason": "not AI: Genpact certification for data scientists; not AI‑specific news."
+      "title": "Show HN: Wikihack – HackerTube, but for Wikipedia articles mentioned on HN",
+      "reason": "not AI: Show HN tool unrelated to AI."
     },
     {
-      "title": "DeepSeek Proposes Super-Agent Architecture to Automate AI Coding Workflows",
-      "reason": "duplicate of 4876a0382496"
+      "title": "The agentic web is here",
+      "reason": "score 5: MIT Technology Review piece discusses autonomous AI agents but is a commentary rather than a news event."
     },
     {
-      "title": "UPI Transactions Rise 5.8% MoM To Record 25.47 Bn In October",
-      "reason": "not AI: UPI transaction volume report; unrelated to AI."
+      "title": "Pronto Founder’s Provision Labs Acquires Hardware Startup Basilisk Industries",
+      "reason": "score 5: Provision Labs (AI venture) acquires hardware startup; notable but not a major AI event."
     },
     {
-      "title": "CBI Extradites Mahadev Betting App Promoter Sourabh Chandrakar From Oman",
-      "reason": "not AI: CBI extradition story unrelated to AI."
+      "title": "MobiKwik Reports ₹11.8 Cr Profit In Q2, Revenue Rises 9% YoY",
+      "reason": "not AI: MobiKwik profit report, no AI angle."
     },
     {
-      "title": "IndiaMART moves content behind logins to defend its data moat against Search and AI agents",
-      "reason": "score 4: IndiaMART restricts content to protect data moat; impact on AI agents is peripheral."
+      "title": "Capillary Q2: Profit Jumps To ₹21.9 Cr, Revenue Surges 51.3% YoY",
+      "reason": "not AI: Capillary profit report, no AI relevance."
     },
     {
-      "title": "AI Agents Break Web Ad Model | Lightspeed’s Harsha, Hemant Mohapatra | Corner Office Conversation",
-      "reason": "not AI: Podcast‑style piece without substantive news content."
+      "title": "Delhivery Shares Jump Nearly 10% After Q2 Swing To ₹41 Cr Profit",
+      "reason": "not AI: Delhivery share movement, not AI."
     },
     {
-      "title": "HSBC to open Hong Kong AI Institute following Singapore launch",
-      "reason": "score 4: HSBC AI Institute announcement; corporate initiative but not a frontier AI development."
+      "title": "Can Indrajaal Build A ₹100 Cr Business Protecting India’s Skies?",
+      "reason": "score 3: Discussion of drone business protecting Indian skies; AI only tangential."
     },
     {
-      "title": "Apple's new CEO John Ternus to face first earnings test as memory costs surge",
-      "reason": "not AI: Apple CEO earnings focus; no AI angle."
+      "title": "PB Fintech Q2: Profit jumps 43% to Rs 192 cr, revenue at Rs 2,178 cr",
+      "reason": "not AI: Fintech profit report, no AI angle."
     },
     {
-      "title": "Code is no longer scarce: Hostinger’s Auksė Žirgulė on what founders should build instead",
-      "reason": "not AI: Article about code scarcity and founder advice; no AI focus."
+      "title": "Is Meta blocking keywords and hashtags in India at the government’s request? Neither will say",
+      "reason": "score 3: Speculation about Meta keyword blocking; not a concrete AI policy development."
     },
     {
-      "title": "How Zocket is building the brain behind enterprise marketing",
-      "reason": "score 3: Discussion of enterprise marketing brain; AI mentioned only as background."
+      "title": "Redmi M100 Pro launched with Dimensity 7300-Ultra, 50MP camera and 5,500mAh battery: Check price",
+      "reason": "not AI: Smartphone launch, unrelated to AI."
     },
     {
-      "title": "The Hague-based Braid, whose API lets companies sell eSIM mobile plans under their own brand via 600+ carriers, raised a ~$38M Series A led by Octopus Ventures (Rahul Raj/EU-Startups)",
-      "reason": "not AI: Funding round for eSIM API; no AI focus."
+      "title": "Realme P4 series up to ₹6,000 cheaper on Flipkart; AIMRA urges company to fix pricing",
+      "reason": "not AI: Realme pricing issue, unrelated to AI."
     },
     {
-      "title": "Arrowhead AI Launches Fletch Voice Model for Multilingual Customer Calls",
-      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
+      "title": "Mint Primer | From SBI to Binance: why even the biggest financial platforms are under cyber siege",
+      "reason": "not AI: Cyber‑security article, not AI specific."
     },
     {
-      "title": "Anthropic’s Claude AI found ways to hack Chrome, Android, Windows and Linux",
-      "reason": "variety: already 2 stories from medianama.com this run"
+      "title": "From code to content: How AI could make India the world’s next story exporter",
+      "reason": "score 5: Feature on Dolphin AI video‑production suite; interesting but not a news development."
     },
     {
-      "title": "UK High Court rejects Meta, X and TikTok’s challenge to Ofcom’s online safety data demands",
-      "reason": "already covered (story 955346c4476d)"
+      "title": "WOI India launches venture studios, investor network, and startup support platforms at TechSparks 2026",
+      "reason": "not AI: WOI India venture‑studio launch, no AI focus."
+    },
+    {
+      "title": "Crypto’s next chapter: Regulatory sandboxes, AI co-pilots and the rise of derivatives",
+      "reason": "score 4: Crypto regulatory sandbox discussion with minor AI mention; not core AI news."
+    },
+    {
+      "title": "antimattr is building voice AI wearables that cut through the noise",
+      "reason": "score 5: Antimattr building voice‑AI wearables; product announcement without major impact."
+    },
+    {
+      "title": "Startup news and updates: daily roundup (November 02, 2026)",
+      "reason": "not AI: Daily startup roundup, not AI specific."
+    },
+    {
+      "title": "ValueQuest Tristar Fund raises over Rs 2,100 Cr for advanced manufacturing",
+      "reason": "not AI: Fundraise for advanced manufacturing, no AI focus."
+    },
+    {
+      "title": "Fan fiction site AO3 says it could take two to four weeks to restore service after a security incident; AO3 hosts 18M+ works and has 11M+ registered users (Bruce Gil/Gizmodo)",
+      "reason": "not AI: Security incident at fan‑fiction site, no AI angle."
+    },
+    {
+      "title": "A profile of UCLA professor Terence Tao, who was once enthusiastic about AI's role in math but now warns of AI destroying the field's deliberative process (Rivka Galchen/New Yorker)",
+      "reason": "score 5: Profile of Terence Tao warning about AI’s impact on mathematics; interesting but not a news event."
+    },
+    {
+      "title": "How SF's AI boom is reshaping dating: founders treat first dates as interviews, use tech terms like \"conversion rate\" to track dates, and pay coaches $5K/month (Emmy Martin/New York Times)",
+      "reason": "score 4: Cultural piece on dating trends in AI‑rich San Francisco, not core AI news."
+    },
+    {
+      "title": "NAND maker Kioxia's shares fell up to 15% on Monday after its cautious Q3 outlook disappointed investors, raising concerns that AI-driven growth may be slowing (Bloomberg)",
+      "reason": "score 5: Stock price decline tied to AI growth concerns; financial market reaction not substantive AI news."
+    },
+    {
+      "title": "AI News Morning Edition | November 1, 2026 (Sun) OpenAI's Fundraising: $11 Billion Committed Against $30 Billion Goal—AI Competition Shifts from 'Technical Prowess' to ...",
+      "reason": "not AI: Newsletter roundup, not a news story."
+    },
+    {
+      "title": "Broccoli AI, which sells AI agents to plumbing, HVAC, and electrical companies, raised a $22M Series A and a $30M Series B; a source says it is valued at $300M (Nick Lichtenberg/Fortune)",
+      "reason": "could not verify yet after a second try; dropped"
     },
     {
       "title": "Telcos must answer for third-party AI failures under TRAI’s draft rules, as Anthropic flags unsettled AI liability",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "AI debt surge pushes Magnificent Seven borrowing to $578 billion, up 45%: SBI Research",
       "reason": "could not verify yet after a second try; dropped"
     },
     {
-      "title": "Letter: the White House argues it doesn't have to share the full draft of its voluntary AI testing framework, citing national security and commercial exemptions (Leo Schwartz/The Information)",
-      "reason": "could not verify yet after a second try; dropped"
-    },
-    {
-      "title": "India’s Frontier AI Race Gets a 240M Model That Beats Liquid AI",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Casap, whose AI tools automate dispute and anti-fraud operations for banks, raised a $56M Series B led by Base10 Partners, bringing its total funding to $90M (Jeff John Roberts/Fortune)",
+      "title": "YC details multi-agent tests in games like Minecraft, where agents exhibit emergent capabilities, forming roles, hierarchies, and complex coordination patterns (YC Labs)",
       "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "3ee2035ff53e",
-      "headline": "SemiAnalysis releases GDPx benchmark; Anthropic’s Claude Opus 5.5 scores 12%",
-      "category": "research",
-      "summary": "SemiAnalysis unveiled the GDPx benchmark on Nov. 2, 2026, testing 206 agentic tasks across 11 professional domains. Anthropic’s Claude Opus 5.5 achieved the highest average score of 12.0%.",
-      "url": "https://techmeme.com/261102/p1",
-      "sources": 3,
-      "quotes": 1
-    },
-    {
-      "id": "1abccbd7be8e",
-      "headline": "OpenAI cuts fundraising target by $10 billion, seeks $20 billion at $1.25 trillion valuation",
+      "id": "f44620e5c7ce",
+      "headline": "Casap raises $56 million Series B to expand AI dispute and fraud tools for banks",
       "category": "industry",
-      "summary": "OpenAI lowered its latest funding round goal to $20 billion, down from $30 billion, while keeping a $1.25 trillion valuation. The company has secured $11 billion so far and expects a first close below the target, with a later retail offering for wealthy investors.",
-      "url": "https://crowdfundinsider.com/2026/11/320984-openai-trims-10b-from-fundraising-target-and-lowers-valuation-amid-ai-market-pullback",
+      "summary": "Casap, an AI platform for financial services, secured $56 million in Series B funding led by Base10 Partners, bringing total capital to $90 million. The round will fund expansion of its dispute‑resolution and anti‑fraud automation tools for banks.",
+      "url": "https://techmeme.com/261101/p27",
       "sources": 3,
       "quotes": 0
     },
     {
-      "id": "7c887a063db0",
-      "headline": "Bites raises $40 million Series A to expand AI‑driven frontline training platform",
+      "id": "038e188345e4",
+      "headline": "Anthropic to raise up to ¥552.9 bn ($3.5 bn) from Japanese investors in US IPO",
       "category": "industry",
-      "summary": "Bites, an Israeli AI startup that creates short branded videos for frontline workers delivered through WhatsApp, SMS, Slack and other channels, secured $40 million in Series A funding led by PeakSpan Capital.",
-      "url": "https://techmeme.com/261102/p3",
-      "sources": 3,
+      "summary": "Anthropic plans to sell up to 552.9 billion yen of shares to Japanese investors as part of its U.S. public listing, with proceeds earmarked for working capital, operating expenses and capital expenditure.",
+      "url": "https://bloomberg.com/news/articles/2026-11-02/anthropic-seeks-up-to-3-5-billion-in-japan-for-its-mega-us-ipo",
+      "sources": 6,
       "quotes": 0
-    },
-    {
-      "id": "cce544b44602",
-      "headline": "Google’s Project Suncatcher satellite generates first AI response in orbit",
-      "category": "research",
-      "summary": "Google’s prototype Suncatcher satellite, launched on Oct 1, ran the Gemma 4 language model on a data‑centre‑class TPU and returned a haiku about space during its first ground‑station pass.",
-      "url": "https://analyticsindiamag.com/ai-news/googles-project-suncatcher-satellite-generates-first-ai-response-in-orbit",
-      "sources": 3,
-      "quotes": 2
     }
   ],
   "notes": [
-    "not India desk: 'Arrowhead AI Launches Fletch Voice Model for Multi'",
-    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "5 kept item(s) carried over to the next run"
+    "1 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 81.4,
+    "gather": 87.0,
     "audit": -0.0,
-    "plan": 1.6,
-    "judge": 4.0,
-    "verify and write": 459.0,
-    "videos": 1.6,
-    "tagging": 21.0,
-    "explainers": 0.0,
-    "trackers": 86.2,
-    "claims": 21.6,
+    "plan": 1.9,
+    "judge": 2.9,
+    "verify and write": 395.9,
+    "videos": 21.9,
+    "tagging": 20.6,
+    "explainers": -0.0,
+    "trackers": 41.2,
+    "claims": 20.9,
     "model tracker": 0.1,
     "weekly": -0.0,
     "builders": -0.0,
     "top voices": -0.0,
-    "briefing": 62.3,
-    "self-review": 0.0,
-    "photos": 0.6,
-    "stock photos": -0.0,
-    "daily email": -0.0,
-    "alerts": 3.2
+    "briefing": 21.2,
+    "self-review": -0.0,
+    "photos": 0.2,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 2.1
   },
-  "fetched": 2905,
-  "fresh": 23,
+  "fetched": 2853,
+  "fresh": 27,
   "plan": {
-    "focus": "Tracking AI funding shifts and policy battles while filling gaps in model coverage and India market developments.",
+    "focus": "Tracking OpenAI’s funding cut and Anthropic’s IPO while scouting new AI‑agent startups and model trends.",
     "priorities": [
-      "Bites, whose AI tools deliver personalized training to frontline worke (Series A funding for AI tools targeting frontline workers, relevant for investors and enterprise adoption)",
-      "SemiAnalysis launches GDPx, an agentic capability benchmark measuring  (New agentic benchmark GDPx offers insight into model capabilities across domains, valuable for builders and investors)",
-      "DeepSeek Proposes Super-Agent Architecture to Automate AI Coding Workf (DeepSeek's Super‑Agent architecture showcases emerging open‑source model innovations)",
-      "Arrowhead AI Launches Fletch Voice Model for Multilingual Customer Cal (Arrowhead AI's multilingual voice model highlights advances in AI agents for customer calls)",
-      "UK High Court rejects Meta, X and TikTok’s challenge to Ofcom’s online (UK High Court ruling on data demands impacts major platforms, key for policy and compliance readers)"
+      "Casap, whose AI tools automate dispute and anti-fraud operations for b (AI‑powered dispute‑resolution platform for banks raises $56M, relevant for fintech investors and builders)",
+      "Broccoli AI, which sells AI agents to plumbing, HVAC, and electrical c (Broccoli AI sells agents to trades, $52M raised, shows emerging market for AI‑agent services)",
+      "Anthropic plans to sell $3.5 billion of shares to Japan investors in I (Anthropic plans $3.5B share sale to Japan investors, key IPO development for investors)",
+      "NAND maker Kioxia's shares fell up to 15% on Monday after its cautious (Kioxia shares tumble amid AI‑driven growth concerns, signals industry slowdown)",
+      "The agentic web is here (The agentic web is here – signals shift toward autonomous AI agents for builders)"
     ],
     "thin_areas": [
-      "models",
-      "india"
+      "models"
     ],
     "searches": [
-      "Mistral Large 4 release date: 0 new",
-      "OpenAI funding target 2026: 2 new",
-      "latest AI research breakthroughs 2026: 0 new"
+      "OpenAI fundraising round 2026: 1 new",
+      "Anthropic IPO pricing Japan investors: 4 new",
+      "new open-source LLM 2026: 0 new"
     ],
     "dig_deeper": [
-      "SemiAnalysis launches GDPx, an agentic capability benchmark measuring ",
-      "UK High Court rejects Meta, X and TikTok’s challenge to Ofcom’s online"
+      "Anthropic plans to sell $3.5 billion of shares to Japan investors in I",
+      "Casap, whose AI tools automate dispute and anti-fraud operations for b"
     ]
   },
-  "judged": 25,
-  "kept": 14,
+  "judged": 31,
+  "kept": 5,
   "research": {
     "investigated": 5,
-    "confirmed": 3,
+    "confirmed": 2,
     "tool_calls": 15
   },
   "research_log": [
-    "SemiAnalysis launches GDPx, an agentic capability benchmark measuring : confirmed (searched “SemiAnalysis GDPx Opus 5.5”; read unite.ai; read shiftdelete.net)",
-    "OpenAI Trims $10B from Fundraising Target and Lowers Valuation Amid AI: confirmed (searched “OpenAI trims $10 billion fundraising target valuation pullback”; read techcrunch.com; read indiatimes.com)",
-    "Telcos must answer for third-party AI failures under TRAI’s draft rule: unconfirmed (searched “TRAI draft rules telecom AI liability Anthropic”; read msn.com; read eoto.tech)",
-    "AI debt surge pushes Magnificent Seven borrowing to $578 billion, up 4: unconfirmed (searched “Magnificent Seven borrowing 578 billion SBI Research”; read moneycontrol.com; read firstpost.com)",
-    "Bites, whose AI tools deliver personalized training to frontline worke: confirmed (searched “Bites $40M Series A PeakSpan”; read yahoo.com; read privateequityinternational.com)"
+    "Casap, whose AI tools automate dispute and anti-fraud operations for b: confirmed (searched “Casap Series B $56 million Base10 Partners”; read yahoo.com; read ventureburn.com)",
+    "Broccoli AI, which sells AI agents to plumbing, HVAC, and electrical c: unconfirmed (searched “Broccoli AI Series A $22 million Series B $30 million funding”; searched “\"Broccoli AI\"”; read indiatimes.com)",
+    "Telcos must answer for third-party AI failures under TRAI’s draft rule: unconfirmed (searched “TRAI draft rules telcos AI liability Anthropic”; searched “TRAI AI draft rules Anthropic”; read msn.com)",
+    "Anthropic Seeks Up to $3.5 Billion in Japan for Its Mega US IPO: confirmed (searched “Anthropic Japan investors IPO 3.5 billion”; read techcrunch.com; read moneycontrol.com)",
+    "YC details multi-agent tests in games like Minecraft, where agents exh: unconfirmed (searched “YC Labs multi-agent Minecraft emergent capabilities”; searched “\"YC Labs\" multi-agent”; searched “\"YC Labs\" Minecraft”)"
   ],
   "threads": [
-    "OpenAI funding target adjustment trims valuation: OpenAI cuts fundraising target by $10 billion, seeks $20 bil",
-    "Google Suncatcher satellite first AI response: Google’s Project Suncatcher satellite generates first AI res"
+    "Anthropic IPO progress: Japan funding request: Anthropic to raise up to ¥552.9 bn ($3.5 bn) from Japanese i"
   ],
   "videos": {
-    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Dwarkesh Patel": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
-    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (9 in feed, 0 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (8 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (14 in feed, 1 new)",
+    "Training Data (Sequoia)": "ok (5 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (3 in feed, 0 new)",
     "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
   },
-  "tagged": 4,
-  "trackers": "filed 4 stories; updated frontier-race, ai-infrastructure, ai-money",
-  "claims": "73 tracked, 71 open, 1 updated this run",
-  "model_tracker": "82 models, 9 changes today",
-  "briefing": "3 themes from 11 stories",
-  "india_briefing": "2 themes from 2 stories",
-  "photos": "4 saved, 0 unavailable",
-  "alerts": "16 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":38}",
-  "ai_requests_run": 38,
-  "ai_tokens_run": 96909,
-  "ai_requests_today": 98,
-  "provider_log": [
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
-  ]
+  "videos_kept": "2 kept from 2 new",
+  "tagged": 2,
+  "trackers": "filed 2 stories; updated ai-money",
+  "claims": "73 tracked, 71 open, 0 updated this run",
+  "model_tracker": "82 models, 11 changes today",
+  "briefing": "4 themes from 13 stories",
+  "photos": "2 saved, 0 unavailable",
+  "alerts": "16 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":16}",
+  "ai_requests_run": 31,
+  "ai_tokens_run": 69678,
+  "ai_requests_today": 129,
+  "provider_log": []
 }
