@@ -1,6 +1,20 @@
 {
   "models": [
     {
+      "id": "z-ai/glm-5.3-flashx-legal",
+      "name": "GLM 5.3 FlashX Legal",
+      "lab": "Zhipu AI",
+      "released": "2026-11-02",
+      "context": 1048576,
+      "price_in": 0.37,
+      "price_out": 1.25,
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ]
+    },
+    {
       "id": "openai/gpt-6.1-terra-pro",
       "name": "GPT-6.1 Terra Pro",
       "lab": "OpenAI",
@@ -702,18 +716,6 @@
       ]
     },
     {
-      "id": "z-ai/glm-5.1",
-      "name": "GLM 5.1",
-      "lab": "Zhipu AI",
-      "released": "2026-04-07",
-      "context": 204800,
-      "price_in": 1.4,
-      "price_out": 4.4,
-      "inputs": [
-        "text"
-      ]
-    },
-    {
       "id": "x-ai/grok-4.20-multi-agent",
       "name": "Grok 4.20 Multi-Agent",
       "lab": "xAI",
@@ -1094,13 +1096,6 @@
     }
   ],
   "changes": [
-    {
-      "date": "2026-10-30",
-      "model": "DeepSeek V4.1 Flash 1017",
-      "lab": "DeepSeek",
-      "kind": "price_rise",
-      "text": "DeepSeek V4.1 Flash 1017 output price raised: $0.6 → $1.2 per 1M tokens"
-    },
     {
       "date": "2026-10-30",
       "model": "GLM 5.3 Flash",
@@ -1513,7 +1508,14 @@
       "lab": "DeepSeek",
       "kind": "price_cut",
       "text": "DeepSeek V4.1 Flash 1017 output price cut: $1.2 → $0.6 per 1M tokens"
+    },
+    {
+      "date": "2026-11-02",
+      "model": "GLM 5.3 FlashX Legal",
+      "lab": "Zhipu AI",
+      "kind": "new",
+      "text": "Now available: GLM 5.3 FlashX Legal ($0.37 in / $1.25 out per 1M tokens)"
     }
   ],
-  "updated_at": "2026-11-02T13:26:34+00:00"
+  "updated_at": "2026-11-02T16:15:43+00:00"
 }
