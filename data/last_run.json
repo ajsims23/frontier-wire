@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-02T01:24:41+00:00",
+  "started_at": "2026-11-02T04:12:35+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -17,10 +17,10 @@
     "microsoft-ai": "ok (10)",
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
-    "arxiv": "ok (40)",
-    "hf-papers": "ok (17)",
+    "arxiv": "failed: ReadTimeout: The read operation timed out",
+    "hf-papers": "ok (18)",
     "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (16)",
+    "hn": "ok (14)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -41,168 +41,208 @@
   },
   "dropped": [
     {
-      "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
-      "reason": "not AI: Open‑source Git difftool announcement, not AI related."
+      "title": "India’s Deeptech Dilemma, Weekly Funding Rundown & More",
+      "reason": "not AI: General deep‑tech funding roundup without a specific AI focus."
     },
     {
-      "title": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
+      "title": "Tesla, Samsung oppose new US tariffs on Vietnam as probe deadline nears",
+      "reason": "not AI: The story concerns US tariff opposition by Tesla and Samsung; it has no AI angle."
+    },
+    {
+      "title": "China's robot makers have mastered the moves. Now comes the race for brains",
+      "reason": "score 5: The piece on China’s robot makers focuses on embodied AI; while relevant, it is not a core AI breakthrough and scores below the keep threshold."
+    },
+    {
+      "title": "South Korea's Lee vows to make bold AI investment in record budget push",
+      "reason": "score 7: Duplicate coverage of South Korea’s AI budget already captured in story 9eb429cdbde1."
+    },
+    {
+      "title": "Binance sees outflows stabilising as exchange returns online after $6.3 billion heist",
+      "reason": "not AI: Binance outflows after a crypto heist are unrelated to AI."
+    },
+    {
+      "title": "Fintechs fortify cyber defences; Logistics cos in the speed lane",
+      "reason": "not AI: Fintech cyber‑defence news does not pertain to AI."
+    },
+    {
+      "title": "Weekly VC funding stays subdued at $115M; Prosus gets CCI nod for Navi investment",
+      "reason": "not AI: Weekly VC funding summary lacks a distinct AI angle."
+    },
+    {
+      "title": "Midstream Health, whose AI tools help 250 hospitals recover revenue from rebates and vendor and payer underpayments, raised a $20M Series A led by Valtrius (Will Maddox/Axios)",
+      "reason": "score 5: Midstream Health’s $20 M Series A for hospital revenue‑recovery AI tools is a modest financing round, below the threshold for keeping."
+    },
+    {
+      "title": "OpenAI plans post-midterm push to reshape the AI debate in Washington",
       "reason": "duplicate of d30bd3f5a099"
     },
     {
-      "title": "Two Point O Bags $10 Mn To Bridge The Financing Gap In Clean Energy",
-      "reason": "not AI: Clean‑energy financing story lacks an AI focus."
+      "title": "OpenAI wants you to stop calling them data centers",
+      "reason": "score 5: Commentary about OpenAI’s naming of data centres is a minor branding note, not a substantive AI development."
     },
     {
-      "title": "Two Point O raises $10M led by Transition Venture Capital",
-      "reason": "not AI: Funding round for a clean‑energy company, no AI angle."
+      "title": "What does a credit rating determine for a company building AI infrastructure with debt? ── Reading the clauses in Anthropic's S-1 and the FT headlines separately",
+      "reason": "score 5: Analysis of credit‑rating clauses for AI infrastructure debt is a niche financial commentary, below the news threshold."
     },
     {
-      "title": "If in doubt, delete the uv.lock file",
-      "reason": "not AI: Personal advice on Python dependency files, no AI relevance."
+      "title": "Broccoli AI, which sells AI agents to plumbing, HVAC, and electrical companies, raised a $22M Series A and a $30M Series B; a source says it is valued at $300M (Nick Lichtenberg/Fortune)",
+      "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "A look at Binance's efforts to contain the hack, including creating a global war room of ~100 people, coordinating with other crypto firms and the FBI, and more (Bloomberg)",
-      "reason": "not AI: The story focuses on a crypto hack response and contains no AI angle."
+      "title": "AI debt surge pushes Magnificent Seven borrowing to $578 billion, up 45%: SBI Research",
+      "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "How IShowSpeed became YouTube's top livestreamer with 62M+ subscribers, as his 24/7 \"IRL streams\" that last days mingle childlike wonder with teenage mischief (Jon Caramanica/New York Times)",
-      "reason": "not AI: Feature on a YouTube livestreamer, no AI angle."
-    },
-    {
-      "title": "OpenAI Slashes Funding Goal by $10 Billion to $20 Billion as AI Stock Selloff Intensifies",
-      "reason": "duplicate of c10fef6ec816"
-    },
-    {
-      "title": "OpenAI Cuts Funding Target By $10 Bn: Report",
-      "reason": "duplicate of c10fef6ec816"
+      "title": "Letter: the White House argues it doesn't have to share the full draft of its voluntary AI testing framework, citing national security and commercial exemptions (Leo Schwartz/The Information)",
+      "reason": "could not verify yet; will retry next run"
     },
     {
       "title": "Hyperbolic, which lets companies rent AI compute across ~30 neoclouds, raised a $30M Series A-1 led by Lip-Bu Tan's Walden Catalyst; it has raised $50M to date (Geoff Weiss/Business Insider)",
-      "reason": "could not verify yet; will retry next run"
+      "reason": "could not verify yet after a second try; dropped"
     }
   ],
   "written": [
     {
-      "id": "b9addf9bc543",
-      "headline": "Saudi Aramco buys 49% of AI startup Humain, adds $2.6 billion cash",
+      "id": "d5d97060cb47",
+      "headline": "Hex Technologies raises $100 million Series D, launches Hex 4.0 for AI agents",
       "category": "industry",
-      "summary": "Aramco acquired a 49% stake in Saudi AI firm Humain, contributing about $2.6 billion in cash in 2026 and AI, compute and digital assets. The Public Investment Fund retains a 51% controlling interest.",
-      "url": "https://techmeme.com/261101/p17",
-      "sources": 3,
-      "quotes": 0
+      "summary": "Hex Technologies announced a $100 million Series D round at a $1.2 billion valuation, led by Peak XV and 137 Ventures. The funding supports the launch of Hex 4.0, a clean‑sheet rewrite built for AI‑agent workflows.",
+      "url": "https://techmeme.com/261101/p23",
+      "sources": 2,
+      "quotes": 1
     },
     {
-      "id": "ee3e81e1a046",
-      "headline": "Semicon Europa 2026 focuses on advanced packaging and AI-driven fab management",
+      "id": "731177bb56eb",
+      "headline": "Vera Health raises $28.5 million Series A to expand AI-powered clinical search platform",
       "category": "industry",
-      "summary": "Semiconductor experts will gather in Munich from Nov 10‑13, 2026 for SEMICON Europa. The event will include an Advanced Packaging Conference and a Fab Management Forum on AI‑driven manufacturing.",
-      "url": "https://dqindia.com/semiconductors/semicon-europa-2026-to-spotlight-advanced-packaging-fab-management-and-europes-semiconductor-strategy-for-ai-era-12757431",
-      "sources": 2,
-      "quotes": 2
+      "summary": "Vera Health announced a $28.5 million Series A led by Threshold Ventures, bringing total funding to $32 million. The AI‑driven medical search engine now serves over 800,000 clinicians in 190 countries.",
+      "url": "https://techmeme.com/261101/p25",
+      "sources": 3,
+      "quotes": 0
     }
   ],
   "notes": [
-    "1 kept item(s) carried over to the next run"
+    "not India desk: 'AI debt surge pushes Magnificent Seven borrowing t'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "3 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 75.9,
-    "audit": 2.9,
-    "plan": 1.4,
-    "judge": 1.4,
-    "verify and write": 250.5,
-    "videos": 1.4,
+    "gather": 83.8,
+    "audit": 0.0,
+    "plan": 2.4,
+    "judge": 1.9,
+    "verify and write": 399.0,
+    "videos": 22.5,
     "tagging": 20.7,
-    "explainers": 0.0,
-    "trackers": 106.8,
-    "claims": 20.4,
+    "explainers": -0.0,
+    "trackers": 41.7,
+    "claims": 20.9,
     "model tracker": 0.3,
     "weekly": -0.0,
-    "builders": -0.0,
-    "top voices": -0.0,
-    "briefing": 20.7,
-    "self-review": 20.7,
-    "photos": 0.2,
-    "stock photos": 0.0,
-    "daily email": 0.0,
-    "alerts": 1.8
+    "builders": 52.7,
+    "top voices": 11.7,
+    "briefing": 0.9,
+    "self-review": -0.0,
+    "photos": 0.7,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 1.9
   },
-  "fetched": 2909,
-  "fresh": 9,
-  "audit": "coverage 50% of 6 significant stories; 3 missed, 0 added to this run",
+  "fetched": 2868,
+  "fresh": 15,
   "plan": {
-    "focus": "Tracking OpenAI’s data‑center rebrand while covering major AI funding moves and emerging security threats.",
+    "focus": "Tracking major AI funding moves in Asia while monitoring policy shifts and safety concerns from recent industry deals.",
     "priorities": [
-      "OpenAI might rebrand its data centers as ‘AI compute campuses’ (OpenAI policy shift on data center branding impacts compute strategy and regulation.)",
-      "Hyperbolic, which lets companies rent AI compute across ~30 neoclouds, (Significant $30M raise for AI compute platform signals market momentum.)",
-      "Saudi Aramco acquires a 49% stake in AI startup Humain, contributing ~ (Saudi Aramco’s stake in AI startup Humain shows sovereign wealth entry into AI.)",
-      "A look at Binance's efforts to contain the hack, including creating a  (Binance hack response highlights ongoing AI‑related security challenges.)",
-      "Two Point O Bags $10 Mn To Bridge The Financing Gap In Clean Energy (India clean‑energy financing ties AI investment to sustainability sector.)"
+      "Tesla, Samsung oppose new US tariffs on Vietnam as probe deadline near (US tariff opposition by Tesla and Samsung could reshape supply chains and AI hardware sourcing.)",
+      "South Korean President Lee Jae Myung vows $15.97B for AI, chips, physi (South Korea’s massive AI budget signals a regional investment surge relevant to builders and investors.)",
+      "AI-powered medical search engine Vera Health, which says it is used by (Vera Health’s $28.5M raise shows growing AI adoption in healthcare, a key vertical for strategy.)",
+      "Data analytics provider Hex Technologies, which says it has rebuilt it (Hex Technologies’ $100M Series D highlights scaling AI agent platforms, important for business models.)",
+      "Broccoli AI, which sells AI agents to plumbing, HVAC, and electrical c (Broccoli AI’s funding underscores niche AI agent markets, offering insight into emerging use‑cases.)"
     ],
     "thin_areas": [
-      "research",
-      "models"
+      "india"
     ],
     "searches": [
-      "Mistral Large 4 release: 0 new",
-      "OpenAI funding target 2027: 2 new",
-      "AI research breakthroughs 2026: 1 new"
+      "OpenAI policy push: 2 new",
+      "Anthropic rating update: 1 new",
+      "India AI policy 2027 budget: 0 new"
     ],
     "dig_deeper": [
-      "OpenAI might rebrand its data centers as ‘AI compute campuses’",
-      "Saudi Aramco acquires a 49% stake in AI startup Humain, contributing ~"
+      "South Korean President Lee Jae Myung vows $15.97B for AI, chips, physi",
+      "Data analytics provider Hex Technologies, which says it has rebuilt it"
     ]
   },
-  "judged": 12,
-  "kept": 3,
+  "judged": 18,
+  "kept": 6,
   "research": {
-    "investigated": 3,
+    "investigated": 5,
     "confirmed": 2,
-    "tool_calls": 9
+    "tool_calls": 15
   },
   "research_log": [
-    "Saudi Aramco acquires a 49% stake in AI startup Humain, contributing ~: confirmed (searched “Saudi Aramco 49% stake Humain AI startup $2.6 billion cash 2026”; read cryptobriefing.com; read marketscreener.com)",
-    "Hyperbolic, which lets companies rent AI compute across ~30 neoclouds,: unconfirmed (searched “Hyperbolic AI compute Series A-1 $30 million Walden Catalyst”; read businessinsider.com; read kucoin.com)",
-    "SEMICON Europa 2026 to spotlight advanced packaging, fab management, a: confirmed (searched “SEMICON Europa 2026 advanced packaging fab management Europe semiconductor strategy AI era”; searched “\"SEMICON Europa 2026\"”; read eenewseurope.com)"
+    "Data analytics provider Hex Technologies, which says it has rebuilt it: confirmed (searched “Hex Technologies $100 million Series D Peak XV”; read cryptobriefing.com; read forbes.com)",
+    "AI-powered medical search engine Vera Health, which says it is used by: confirmed (searched “Vera Health $28.5 million Series A Threshold Ventures”; read mobihealthnews.com; read pulse2.com)",
+    "Broccoli AI, which sells AI agents to plumbing, HVAC, and electrical c: unconfirmed (searched “Broccoli AI Series A $22 million Series B $30 million funding”; read msn.com; searched “\"Broccoli AI\" funding”)",
+    "AI debt surge pushes Magnificent Seven borrowing to $578 billion, up 4: unconfirmed (searched “Magnificent Seven borrowing $578 billion 45% SBI Research”; read msn.com; searched “\"AI debt surge\" Magnificent Seven”)",
+    "Letter: the White House argues it doesn't have to share the full draft: unconfirmed (searched “White House does not have to share full draft voluntary AI testing framework national security commercial exemptions letter”; read thenextweb.com; read wired.com)"
   ],
   "videos": {
     "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Anthropic": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
-    "Google DeepMind": "ok (12 in feed, 0 new)",
-    "Google for Developers": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Google DeepMind": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "NVIDIA": "ok (8 in feed, 0 new)",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "xAI": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "AI Explained": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "No Priors": "ok (4 in feed, 0 new)",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "a16z": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
   },
+  "videos_kept": "1 kept from 1 new",
   "tagged": 2,
-  "trackers": "filed 2 stories; updated ai-infrastructure, ai-money",
-  "claims": "72 tracked, 70 open, 0 updated this run",
-  "model_tracker": "82 models, 4 changes today",
-  "briefing": "4 themes from 9 stories",
-  "self_review": "19 lines written to data/self_review.md",
+  "trackers": "filed 2 stories; updated ai-money",
+  "claims": "73 tracked, 71 open, 0 updated this run",
+  "model_tracker": "82 models, 6 changes today",
+  "builders_sources": {
+    "show-hn": "ok (6)",
+    "github-new": "ok (33)",
+    "hf-spaces": "ok (21)",
+    "product-hunt": "ok (3)",
+    "r-localllama": "ok (25)",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
+  },
+  "builders": "picked 7 from 60 candidates; 6 with pictures, 0 with videos",
+  "top_voices_sources": {
+    "tv-mollick": "ok (0)",
+    "tv-lambert": "ok (2)",
+    "tv-swyx": "ok (8)",
+    "tv-dwarkesh": "ok (2)",
+    "tv-raschka": "ok (0)",
+    "tv-karpathy": "ok (1)",
+    "tv-evans": "ok (0)",
+    "x-coverage": "ok (1 of 3 articles, bing)",
+    "hn": "ok (1)"
+  },
+  "top_voices": "3 debates from 50 posts by 8 people (1 removed by checks); 3 portraits, 3 pictures",
+  "briefing": "4 themes from 11 stories",
   "photos": "2 saved, 0 unavailable",
-  "alerts": "8 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":19}",
-  "ai_requests_run": 27,
-  "ai_tokens_run": 74021,
-  "ai_requests_today": 27,
-  "provider_log": [
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
-  ]
+  "alerts": "10 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":13}",
+  "ai_requests_run": 33,
+  "ai_tokens_run": 79139,
+  "ai_requests_today": 60,
+  "provider_log": []
 }
