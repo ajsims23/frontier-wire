@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-03T03:47:07+00:00",
+  "started_at": "2026-11-03T04:06:31+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -15,56 +15,259 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (18)",
+    "gdelt": "ok (2)",
+    "hn": "ok (21)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (0)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
   },
-  "dropped": [],
-  "written": [
+  "dropped": [
     {
-      "id": "6fd6ad7938fa",
-      "headline": "OpenAI raises security bug bounty rewards and adds new researcher bonuses",
-      "category": "safety",
-      "summary": "OpenAI announced increased bug bounty payouts and introduced report quality, loyalty, and priority campaign bonuses for independent security researchers.",
-      "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
-      "sources": 1,
-      "quotes": 1
+      "title": "John Ivison : Red flags all over Carney government buy - in of AI company Cohere",
+      "reason": "score 5: The piece flags a government investment in Cohere but offers limited new information beyond the announcement; score stays at the lower end of news."
     },
     {
-      "id": "262cfa35f430",
-      "headline": "OpenAI teams with Cathedral Systems for next internal security sprint",
-      "category": "safety",
-      "summary": "OpenAI announced it is partnering with Cathedral Systems to run its next internal security sprint, using AI to test and harden its defenses. The effort follows recent patches to vulnerabilities in ChatGPT’s HTML preview sandbox.",
-      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
-      "sources": 1,
+      "title": "Intel stock collapse worsens as $3.5T chip rout spreads",
+      "reason": "score 5: Intel stock plunge is a finance‑focused market move; while it reflects chip market stress for AI, it is primarily a stock‑price story and scores below the threshold for keeping."
+    },
+    {
+      "title": "Apple may try to increase revenue by doing…something with third-party AI apps",
+      "reason": "score 4: Speculative commentary on Apple’s possible revenue moves with third‑party AI apps lacks concrete news and falls below the keep threshold."
+    },
+    {
+      "title": "MobiKwik’s Q2 Snapshot, Pixxel Clears The Air & More",
+      "reason": "not AI: MobiKwik snapshot is unrelated to AI."
+    },
+    {
+      "title": "Big ticket tech deals needed to keep pace with AI growth boom, financial leaders say",
+      "reason": "score 5: Discussion of large tech deals needed for AI growth is a high‑level commentary lacking a specific news hook."
+    },
+    {
+      "title": "Ukraine's 280-g drone detector intercepts real-time video feeds from Russian Molniya UAVs",
+      "reason": "not AI: Drone detector story is unrelated to AI."
+    },
+    {
+      "title": "Singapore's Grab lifts 2026 forecasts on strong ride-hailing, delivery demand",
+      "reason": "not AI: Grab’s forecast lift is a general business story without AI relevance."
+    },
+    {
+      "title": "Blackstone president says more tech sector fundraising ahead to keep up with AI industry growth",
+      "reason": "score 5: Blackstone’s comment on future fundraising is a generic market outlook, not a concrete AI‑infrastructure development."
+    },
+    {
+      "title": "Binance to reopen withdrawals for more assets on several networks",
+      "reason": "not AI: Binance withdrawal reopening is not AI‑related."
+    },
+    {
+      "title": "Apple beats sales and profit expectations but AI costs weigh on holiday sales",
+      "reason": "score 5: Apple’s earnings note about AI costs is a routine earnings commentary, not a major AI story."
+    },
+    {
+      "title": "Why AI-powered intelligence is every winning brand’s secret sauce",
+      "reason": "score 5: General discussion of AI‑powered brand intelligence lacks a specific news event."
+    },
+    {
+      "title": "MobiKwik reports Rs 11.83 Cr profit in Q2; Indian female workforce growth lacks quality jobs",
+      "reason": "not AI: MobiKwik profit report has no AI angle."
+    },
+    {
+      "title": "Ethan Mollick: Here is a mass attempted replication of old findings of LLMs with new models. Much conventional wisdom is outdated. Recent models no…",
+      "reason": "score 5: A social‑media commentary on LLM replication is interesting but does not rise above the 5‑point threshold for news."
+    },
+    {
+      "title": "Anthropic Plans Australian Share Offer in IPO, CommSec Says",
+      "reason": "score 5: Announcement of an Australian share offer is a routine financing detail without broader impact, scoring below the keep threshold."
+    },
+    {
+      "title": "Anthropic Just Released Updated Numbers Ahead of Its Nov. IPO. Revenue Growth Slowed Sharply.",
+      "reason": "score 5: Duplicate of the revenue‑growth story already covered; does not add new information."
+    },
+    {
+      "title": "Buy Google Stock Or The Anthropic IPO?",
+      "reason": "not AI: Opinion‑style piece about buying Google stock lacks a direct AI angle."
+    },
+    {
+      "title": "OpenAI Wanted To Raise $30 Billion. Now It's Asking Investors For a Third Less.",
+      "reason": "score 5: Repeats the OpenAI fundraising reduction already reported; treated as duplicate."
+    },
+    {
+      "title": "Anthropic says revenue surged 1,100% ahead of IPO",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "OpenAI Slashes Funding Target to $20 Billion as AI Spending Jitters Spread",
+      "reason": "already covered (story 1abccbd7be8e)"
+    },
+    {
+      "title": "Why India wants telecom operators to report critical AI cybersecurity incidents",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "OpenAI’s India user base doubles; Rapido GOV quadruples",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "AI chatbots are becoming political advisers . Their answers can mislead voters",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Google takes Dreambeans to India in bid to bring AI-generated personal stories to the masses",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Larridin, which helps companies track how AI affects employee output and identifies areas for better AI adoption, raised a $30M Series A led by Pelion Ventures (Aditi Bharade/Business Insider)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Anthropic Investors Push for Cautious Valuation Closer to $1.5 Trillion",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "64bc8daf91a3",
+      "headline": "Salesforce to acquire Cresta for $2.7 billion",
+      "category": "industry",
+      "summary": "Salesforce announced a definitive agreement to buy Cresta, an AI‑powered contact‑center automation provider, for $2.7 billion. The deal is slated to close in the first quarter of Salesforce’s fiscal 2028, pending regulatory approval.",
+      "url": "https://techmeme.com/261102/p48",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "1add63be5a11",
+      "headline": "Anthropic revenue growth slows as compute financing risks rise ahead of IPO",
+      "category": "industry",
+      "summary": "Anthropic reported slower revenue growth and highlighted financing risks for AI compute ahead of its planned IPO, with investors questioning valuation and development acceleration.",
+      "url": "https://msn.com/en-us/technology/tech-companies/anthropic-revenue-growth-slows-compute-financing-risks-mount-ahead-of-ipo/ar-AA2gDadI",
+      "sources": 3,
       "quotes": 0
     }
   ],
-  "notes": [],
-  "mode": "breaking",
-  "timings": {
-    "gather": 10.2,
-    "judge": 0.6,
-    "verify and write": 1.8,
-    "tagging": 0.6,
-    "trackers": 41.5,
-    "photos": -0.0,
-    "stock photos": 16.3,
-    "alerts": 2.1
-  },
-  "fetched": 2414,
-  "fresh": 2,
-  "judged": 2,
-  "kept": 2,
-  "threads": [
-    "OpenAI security patch and bounty program: OpenAI raises security bug bounty rewards and adds new resea",
-    "OpenAI security patch and bounty program: OpenAI teams with Cathedral Systems for next internal securi"
+  "notes": [
+    "not India desk: 'Anthropic says revenue surged 1,100% ahead of IPO'",
+    "ignored made-up duplicate id 1add63be5a11 for 'Anthropic Just Released Updated Numbers Ahead of I'",
+    "ignored made-up duplicate id 10a3eecea6b4 for 'OpenAI Wanted To Raise $30 Billion. Now It's Askin'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "8 kept item(s) carried over to the next run"
   ],
+  "mode": "full",
+  "timings": {
+    "gather": 121.3,
+    "audit": 0.0,
+    "plan": 59.5,
+    "judge": 2.9,
+    "verify and write": 379.6,
+    "videos": 4.2,
+    "tagging": 22.0,
+    "explainers": 0.0,
+    "trackers": 21.6,
+    "claims": 20.9,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 21.5,
+    "self-review": -0.0,
+    "photos": 0.2,
+    "stock photos": 16.1,
+    "daily email": 0.0,
+    "alerts": 4.8
+  },
+  "fetched": 2924,
+  "fresh": 22,
+  "plan": {
+    "focus": "Chasing the fallout from Anthropic’s IPO filing while tracking AI‑driven funding and market shifts.",
+    "priorities": [
+      "Anthropic says revenue surged 1,100% ahead of IPO (Anthropic revenue surge signals massive market impact ahead of its IPO)",
+      "Sources: institutional investors told Anthropic that its IPO valuation (Investor valuation expectations reshape the IPO narrative)",
+      "Anthropic S-1 claims it may \"imminently meet\" its RSI threshold and ma (S‑1 claims on RSI threshold raise questions about growth timing)",
+      "Salesforce announces plans to acquire Cresta, a provider of AI-powered (Salesforce‑Cresta deal shows continued consolidation in AI‑powered enterprise tools)",
+      "Intel stock collapse worsens as $3.5T chip rout spreads (Intel stock collapse reflects broader chip market stress affecting AI investments)"
+    ],
+    "thin_areas": [
+      "models",
+      "policy"
+    ],
+    "searches": [
+      "Anthropic IPO valuation: 5 new",
+      "OpenAI fundraising target: 2 new",
+      "AI policy India: 1 new"
+    ],
+    "dig_deeper": [
+      "Anthropic says revenue surged 1,100% ahead of IPO",
+      "Sources: institutional investors told Anthropic that its IPO valuation"
+    ]
+  },
+  "judged": 30,
+  "kept": 11,
+  "research": {
+    "investigated": 5,
+    "confirmed": 1,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "Anthropic says revenue surged 1,100% ahead of IPO: unconfirmed (searched “Anthropic revenue surged 1100% ahead of IPO”; read msn.com; read msn.com)",
+    "Salesforce announces plans to acquire Cresta, a provider of AI-powered: confirmed (searched “Salesforce to acquire Cresta $2.7 billion”; searched “Cresta acquisition Salesforce”; read msn.com)",
+    "Anthropic revenue growth slows, compute financing risks mount ahead of: unconfirmed (searched “Anthropic revenue growth slows compute financing risks mount ahead of IPO”; read cnbc.com; searched “Anthropic compute financing risks IPO”)",
+    "Why India wants telecom operators to report critical AI cybersecurity : unconfirmed (searched “India telecom operators report critical AI cybersecurity incidents TRAI guidelines”; read msn.com; read newsbytesapp.com)",
+    "OpenAI’s India user base doubles; Rapido GOV quadruples: unconfirmed (searched “OpenAI India user base doubles”; read thehindubusinessline.com; read thehindubusinessline.com)"
+  ],
+  "threads": [
+    "Anthropic financing risks ahead of IPO: Anthropic revenue growth slows as compute financing risks ri"
+  ],
+  "videos": {
+    "OpenAI": "ok (10 in feed, 0 new)",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
   "tagged": 2,
-  "trackers": "filed 2 stories; updated agent-safety",
-  "photos": "0 saved, 0 unavailable",
-  "stock photos": "0 added",
-  "alerts": "10 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":17}",
-  "ai_requests_run": 7,
-  "ai_tokens_run": 19802,
-  "ai_requests_today": 38,
+  "trackers": "filed 2 stories; updated ai-money",
+  "claims": "77 tracked, 73 open, 1 updated this run",
+  "model_tracker": "82 models, 10 changes today",
+  "briefing": "4 themes from 20 stories",
+  "photos": "1 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "14 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":16}",
+  "ai_requests_run": 30,
+  "ai_tokens_run": 65151,
+  "ai_requests_today": 68,
   "provider_log": []
 }
