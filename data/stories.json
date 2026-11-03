@@ -1,6 +1,96 @@
 [
   {
     "explainer": {
+      "what_it_means": "Engineers can run many more design and process simulations in a fraction of the time it used to take, so they can test alternatives virtually before building hardware. This reduces costly trial‑and‑error on the fab floor and helps identify problems earlier. The use of AI‑driven digital twins creates a virtual replica of the manufacturing line for rapid experimentation.",
+      "terms": [
+        {
+          "term": "accelerated computing",
+          "meaning": "Using specialized hardware and software to perform calculations much faster than traditional CPUs."
+        },
+        {
+          "term": "digital twin",
+          "meaning": "A virtual model of a physical system that can be used to simulate and test changes without affecting the real system."
+        },
+        {
+          "term": "computational lithography",
+          "meaning": "Simulation of how circuit patterns are printed onto silicon, a process that requires intensive calculations."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "NVIDIA cuDSS with COMSOL",
+        "benchmark": "multiphysics simulation speedup",
+        "score": "up to 10x"
+      },
+      {
+        "model": "Applied Materials ACE+ platform with PhysicsNeMo",
+        "benchmark": "topography simulation speedup",
+        "score": "up to 35x"
+      }
+    ],
+    "audiences": {
+      "builders": "Engineers can explore many more process alternatives quickly, reducing the time spent waiting for simulation results.",
+      "business": "Chip manufacturers can shorten development cycles and improve yield, potentially lowering costs and speeding product launches.",
+      "investors": "The integration of AI acceleration in semiconductor fabs could increase demand for AI hardware and services, influencing market dynamics."
+    },
+    "id": "3bafb7904533",
+    "headline": "AI accelerates semiconductor fab simulations up to 35x",
+    "summary": "AI is transforming semiconductor manufacturing by speeding up simulations and enabling digital twins, allowing engineers to evaluate more alternatives before physical trials. NVIDIA’s cuDSS and PhysicsNeMo libraries deliver up to 35× faster multiphysics simulations for Applied Materials and up to 17× acceleration for Siemens lithography software.",
+    "why_it_matters": "Faster, more accurate simulations let chip makers cut development cycles and improve yield, affecting the supply of advanced chips.",
+    "category": "industry",
+    "lab": "NVIDIA",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 6,
+    "url": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs",
+    "source_id": "nvidia",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": null,
+    "sources": [
+      {
+        "url": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs",
+        "publisher": "NVIDIA blog",
+        "title": "AI Is Changing How Semiconductor Fabs Work — and Engineers Are Moving Faster Because of It"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-03T16:00:45+00:00",
+    "created_at": "2026-11-03T16:27:13+00:00",
+    "breaking": true,
+    "sectors": [
+      "manufacturing"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "35× faster",
+    "trackers": [
+      "ai-infrastructure"
+    ],
+    "stock_tried": "2026-11-03T16:27:13+00:00",
+    "photo_local": true,
+    "image_kind": "stock",
+    "photo_credit": {
+      "key": "wc:49024290",
+      "by": "Santeri Viinamäki",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Integrated_circuit_explodes.jpg",
+      "via": "Wikimedia Commons"
+    }
+  },
+  {
+    "explainer": {
       "what_it_means": "Apollo World creates a virtual road that produces camera and lidar data like a real drive. Developers can feed that data to autonomous‑driving software to improve perception and decision‑making without putting cars on actual streets. This reduces the amount of real‑world mileage needed for testing.",
       "terms": [
         {

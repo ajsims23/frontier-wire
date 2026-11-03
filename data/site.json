@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T16:05:50+00:00",
+  "updated_at": "2026-11-03T16:27:13+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "The researchers let a language model look at the numbers (weights) that define another AI model and change only the ones that cause problems. By editing a tiny fraction of those numbers, they boosted the model’s performance on math tests. This approach avoids the usual lengthy training process that adjusts millions of weights gradually.",
@@ -107,6 +107,96 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Engineers can run many more design and process simulations in a fraction of the time it used to take, so they can test alternatives virtually before building hardware. This reduces costly trial‑and‑error on the fab floor and helps identify problems earlier. The use of AI‑driven digital twins creates a virtual replica of the manufacturing line for rapid experimentation.",
+        "terms": [
+          {
+            "term": "accelerated computing",
+            "meaning": "Using specialized hardware and software to perform calculations much faster than traditional CPUs."
+          },
+          {
+            "term": "digital twin",
+            "meaning": "A virtual model of a physical system that can be used to simulate and test changes without affecting the real system."
+          },
+          {
+            "term": "computational lithography",
+            "meaning": "Simulation of how circuit patterns are printed onto silicon, a process that requires intensive calculations."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "NVIDIA cuDSS with COMSOL",
+          "benchmark": "multiphysics simulation speedup",
+          "score": "up to 10x"
+        },
+        {
+          "model": "Applied Materials ACE+ platform with PhysicsNeMo",
+          "benchmark": "topography simulation speedup",
+          "score": "up to 35x"
+        }
+      ],
+      "audiences": {
+        "builders": "Engineers can explore many more process alternatives quickly, reducing the time spent waiting for simulation results.",
+        "business": "Chip manufacturers can shorten development cycles and improve yield, potentially lowering costs and speeding product launches.",
+        "investors": "The integration of AI acceleration in semiconductor fabs could increase demand for AI hardware and services, influencing market dynamics."
+      },
+      "id": "3bafb7904533",
+      "headline": "AI accelerates semiconductor fab simulations up to 35x",
+      "summary": "AI is transforming semiconductor manufacturing by speeding up simulations and enabling digital twins, allowing engineers to evaluate more alternatives before physical trials. NVIDIA’s cuDSS and PhysicsNeMo libraries deliver up to 35× faster multiphysics simulations for Applied Materials and up to 17× acceleration for Siemens lithography software.",
+      "why_it_matters": "Faster, more accurate simulations let chip makers cut development cycles and improve yield, affecting the supply of advanced chips.",
+      "category": "industry",
+      "lab": "NVIDIA",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 6,
+      "url": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs",
+      "source_id": "nvidia",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs",
+          "publisher": "NVIDIA blog",
+          "title": "AI Is Changing How Semiconductor Fabs Work — and Engineers Are Moving Faster Because of It"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-03T16:00:45+00:00",
+      "created_at": "2026-11-03T16:27:13+00:00",
+      "breaking": true,
+      "sectors": [
+        "manufacturing"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "35× faster",
+      "trackers": [
+        "ai-infrastructure"
+      ],
+      "stock_tried": "2026-11-03T16:27:13+00:00",
+      "photo_local": true,
+      "image_kind": "stock",
+      "photo_credit": {
+        "key": "wc:49024290",
+        "by": "Santeri Viinamäki",
+        "license": "CC BY-SA 4.0",
+        "page": "https://commons.wikimedia.org/wiki/File:Integrated_circuit_explodes.jpg",
+        "via": "Wikimedia Commons"
+      }
+    },
     {
       "explainer": {
         "what_it_means": "Apollo World creates a virtual road that produces camera and lidar data like a real drive. Developers can feed that data to autonomous‑driving software to improve perception and decision‑making without putting cars on actual streets. This reduces the amount of real‑world mileage needed for testing.",
@@ -5309,91 +5399,6 @@
         "ai-money"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Apple Intelligence is a set of AI-powered tools such as translation, writing assistance, and photo editing. The iOS 27.3 update will make these tools available on iPhone 15 Pro and newer devices in China, but only after the beta test period. Users must set language to English or Simplified Chinese to use the features.",
-        "terms": [
-          {
-            "term": "Apple Intelligence",
-            "meaning": "Apple’s suite of AI features that include translation, writing assistance, notification summarization, and visual editing tools."
-          },
-          {
-            "term": "Live Translation",
-            "meaning": "Real‑time translation of messages, FaceTime calls, and phone conversations."
-          },
-          {
-            "term": "Qwen",
-            "meaning": "Alibaba’s chatbot model that Apple integrates into Siri, Writing Tools, and Visual Intelligence for Chinese users."
-          }
-        ],
-        "watch_next": [
-          "Full iOS 27.3 public release in December 2026.",
-          "Siri AI and other Apple Intelligence features await regulatory approval for release in China."
-        ]
-      },
-      "audiences": {
-        "builders": "Developers can test the new Apple Intelligence capabilities in the iOS 27.3 beta from Nov 4 on supported iPhone models.",
-        "business": "Chinese consumers will gain AI‑enhanced notification, translation, and photo tools, expanding Apple’s service ecosystem in the market.",
-        "investors": "The rollout demonstrates Apple’s progress in localizing AI services, which could affect its competitive position and revenue growth in China."
-      },
-      "id": "1fff1698b18b",
-      "headline": "Apple rolls out Apple Intelligence features in China with iOS 27.3 beta",
-      "summary": "Apple announced that iOS 27.3 beta, releasing Nov 4, will bring several Apple Intelligence tools to iPhone 15 Pro and newer in China, with a full public release slated for December. The rollout excludes Siri AI and other new features.",
-      "why_it_matters": "It shows how major AI capabilities are being adapted for the Chinese market under regulatory constraints.",
-      "category": "industry",
-      "lab": "Apple",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 6,
-      "url": "https://theverge.com/tech/1023974/apple-intelligence-china-ios-27-3",
-      "source_id": "verge-ai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25699392/DSC08596_processed.jpg?quality=90&strip=all&crop=0%2C10.723165084465%2C100%2C78.55366983107&w=1200",
-      "sources": [
-        {
-          "url": "https://theverge.com/tech/1023974/apple-intelligence-china-ios-27-3",
-          "publisher": "The Verge AI",
-          "title": "Apple Intelligence is finally coming to China with iOS 27.3"
-        },
-        {
-          "url": "https://macrumors.com/2026/10/30/apple-says-ios-27-3-beta-coming-next-week",
-          "publisher": "MacRumors",
-          "title": "Apple Says iOS 27.3 Beta Coming Next Week With Apple Intelligence on iPhone in China"
-        },
-        {
-          "url": "https://thenextweb.com/news/apple-intelligence-china-ios-27-3-alibaba-qwen",
-          "publisher": "The Next Web",
-          "title": "Apple confirms its AI features reach China in December, with Qwen"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-30T22:32:53+00:00",
-      "created_at": "2026-10-31T01:17:40+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "asia_pacific"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "iOS 27.3 beta",
-      "trackers": [
-        "us-china"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -6100,7 +6105,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 47,
+    "stories_this_month": 48,
     "model_releases_this_month": 2,
     "labs_tracked": 18
   }
