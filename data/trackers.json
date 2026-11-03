@@ -84,8 +84,8 @@
     "title": "US–China AI restrictions"
   },
   "frontier-race": {
-    "status": "OpenAI continues training frontier models without live‑internet access, recently launching GPT‑6.1 Terra and publishing major scientific results, while its GPT‑6 Astra is being used for weight‑editing research. Google DeepMind’s Gemini 4 Carbon leads cybersecurity benchmarks and is in phased rollout to cyber‑defender partners, with broader release planned. Mistral, DeepSeek and other labs have released large open‑weight models for coding, security and autonomous agents, and a new StateBench benchmark highlights limits of current transformers on long‑context state tracking.",
-    "changed": "The latest story adds a StateBench benchmark showing frontier transformers lag on long‑context state tracking.",
+    "status": "OpenAI is training frontier models without live‑internet access, releasing GPT‑6.1 Terra and pioneering weight‑editing techniques. Google DeepMind’s Gemini 4 Carbon now leads cybersecurity benchmarks while its Genie 4 world model is in research preview. Open‑weight large models from Mistral, DeepSeek and others expand coding, security and autonomous‑agent capabilities, even as new benchmarks expose limits in long‑context state tracking.",
+    "changed": "A demonstration showed that Qwen 3.8 27B can read and reason about raw model weights, highlighting new capabilities for model introspection.",
     "timeline": [
       {
         "story_id": "544cab3b9fc5",
@@ -96,6 +96,11 @@
         "story_id": "a55665cf4895",
         "date": "2026-11-03",
         "text": "StateBench benchmark shows frontier transformers struggle with long‑context state tracking"
+      },
+      {
+        "story_id": "9b0f1b3870f8",
+        "date": "2026-11-03",
+        "text": "Qwen 3.8 27B can interpret raw model weights on a laptop"
       },
       {
         "story_id": "3ee2035ff53e",
@@ -281,11 +286,6 @@
         "story_id": "1de8e62ff715",
         "date": "2026-10-21",
         "text": "OpenAI, PerturbAI, Scripps deploy AI agents to analyze millions of brain cells, identifying research leads."
-      },
-      {
-        "story_id": "140f65345f1e",
-        "date": "2026-10-21",
-        "text": "NVIDIA releases open-weight Nemotron 3.5 and Kumo models for European industry customization."
       }
     ],
     "next": [
@@ -359,10 +359,11 @@
       "3ee2035ff53e",
       "1818a08f7975",
       "544cab3b9fc5",
+      "9b0f1b3870f8",
       "a55665cf4895"
     ],
-    "updated_at": "2026-11-03T17:26:00+00:00",
-    "tried_at": "2026-11-03T17:26:00+00:00",
+    "updated_at": "2026-11-03T19:10:17+00:00",
+    "tried_at": "2026-11-03T19:10:17+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
@@ -685,9 +686,14 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "AI agents remain a source of high‑profile security incidents, prompting regulators to demand real‑time monitoring, while firms tighten safeguards such as offline training, layered monitoring, and formal verification. OpenAI resumed frontier model training with offline environments and added bug‑bounty incentives, and Anthropic blocked AI‑generated video‑game cloning. Recent hacks of Hugging Face, supply‑chain backdoors, and cyber‑attack simulations underscore ongoing safety challenges.",
-    "changed": "OpenAI increased bug‑bounty rewards and launched a partnership with Cathedral Systems for an internal security sprint.",
+    "status": "AI agents continue to trigger high‑profile security incidents, prompting regulators to demand real‑time monitoring. OpenAI has banned live‑internet access for frontier model training, added layered monitoring, and rolled out new safety safeguards, while Anthropic and Google Cloud introduced rules and platforms to curb misuse. Recent corporate moves, such as CrowdStrike’s acquisition of AI‑agent observability and testing firms, aim to strengthen defenses as threats expand.",
+    "changed": "The latest stories announce CrowdStrike’s acquisition of Fiddler AI and Dreadnode, bringing AI‑agent observability and testing capabilities into its Falcon platform.",
     "timeline": [
+      {
+        "story_id": "6a9cc38190a7",
+        "date": "2026-11-03",
+        "text": "CrowdStrike acquires Fiddler AI and Dreadnode to add AI‑agent monitoring and testing to Falcon"
+      },
       {
         "story_id": "d7eb8c9ceea3",
         "date": "2026-11-02",
@@ -862,19 +868,19 @@
     "title": "AI agents and safety incidents",
     "next": [
       {
-        "text": "Publish first Community Safety Report",
+        "text": "First Community Safety Report to be published",
         "when": "early 2027",
         "story_id": "020086432245"
       },
       {
-        "text": "Decision on restoring live‑internet access for frontier model training",
-        "when": "",
-        "story_id": "c5ff7fbb7722"
+        "text": "Dreadnode testing capabilities expected",
+        "when": "Q4 fiscal 2027",
+        "story_id": "6a9cc38190a7"
       },
       {
-        "text": "OpenAI's next internal security sprint with Cathedral Systems",
+        "text": "Decision on restoring live‑internet access for model training",
         "when": "",
-        "story_id": "262cfa35f430"
+        "story_id": "c5ff7fbb7722"
       }
     ],
     "story_ids": [
@@ -911,19 +917,30 @@
       "d7eb8c9ceea3",
       "6fd6ad7938fa",
       "262cfa35f430",
-      "cf87f0f49a6c"
+      "cf87f0f49a6c",
+      "6a9cc38190a7"
     ],
-    "updated_at": "2026-11-03T03:47:07+00:00",
-    "tried_at": "2026-11-03T03:47:07+00:00"
+    "updated_at": "2026-11-03T19:10:17+00:00",
+    "tried_at": "2026-11-03T19:10:17+00:00"
   },
   "ai-money": {
-    "status": "AI funding remains robust with multi‑billion rounds and high valuations, but market sentiment is cautious after tech sell‑offs. OpenAI has trimmed its fundraising target to $20 billion while keeping a $1.25 trillion valuation. Anthropic is showing explosive revenue growth and committing massive compute spending ahead of its imminent IPO, and large acquisitions such as Salesforce’s purchase of Cresta continue.",
-    "changed": "Anthropic reported a 1,100% revenue surge and pledged roughly $895 billion in compute spending ahead of its upcoming IPO.",
+    "status": "AI funding remains robust with several multi‑billion rounds, yet investor caution is evident as OpenAI trimmed its target and Anthropic faces high compute costs. Anthropic is preparing for an IPO amid massive spending and slowing revenue growth, while major acquisitions continue across the sector. Security and enterprise AI deals, such as Salesforce’s Creta purchase and CrowdStrike’s new buys, signal ongoing consolidation.",
+    "changed": "The newest stories announce CrowdStrike’s acquisition of Fiddler AI and Dreadnode, and show Anthropic’s compute costs now eating 58% of revenue, widening its loss.",
     "timeline": [
       {
         "story_id": "d059424a86f5",
         "date": "2026-11-03",
         "text": "Anthropic reports 1,100% revenue surge and pledges $895 B compute spend ahead of IPO."
+      },
+      {
+        "story_id": "6a9cc38190a7",
+        "date": "2026-11-03",
+        "text": "CrowdStrike acquires Fiddler AI ($400 M) and Dreadnode ($95 M) to add AI‑agent observability and testing."
+      },
+      {
+        "story_id": "a4abd1e2a1c1",
+        "date": "2026-11-03",
+        "text": "Anthropic reports compute costs at 58% of Q3 revenue, widening loss."
       },
       {
         "story_id": "d5d97060cb47",
@@ -1109,29 +1126,19 @@
         "story_id": "dbd43ebc2cc0",
         "date": "2026-10-27",
         "text": "Anthropic reports 85% gross margin in H1 from model services."
-      },
-      {
-        "story_id": "5fef8a26b71e",
-        "date": "2026-10-27",
-        "text": "Meta’s $25 billion share offering oversubscribed fivefold, part of $98 billion AI funding plan."
-      },
-      {
-        "story_id": "495954f10784",
-        "date": "2026-10-27",
-        "text": "Meta plans up to $100 billion equity raise for AI infrastructure, including $60 billion at‑the‑market program."
       }
     ],
     "title": "AI funding and valuations",
     "next": [
       {
-        "text": "OpenAI first close expected below $20 billion",
-        "when": "",
-        "story_id": "c10fef6ec816"
-      },
-      {
         "text": "Anthropic IPO scheduled later this month",
         "when": "later this month",
-        "story_id": "d059424a86f5"
+        "story_id": "038e188345e4"
+      },
+      {
+        "text": "Dreadnode testing capabilities expected Q4 fiscal 2027",
+        "when": "Q4 fiscal 2027",
+        "story_id": "6a9cc38190a7"
       }
     ],
     "story_ids": [
@@ -1190,10 +1197,12 @@
       "82336eccbad5",
       "b2485c91dd17",
       "64bc8daf91a3",
-      "d059424a86f5"
+      "d059424a86f5",
+      "6a9cc38190a7",
+      "a4abd1e2a1c1"
     ],
-    "updated_at": "2026-11-03T07:28:48+00:00",
-    "tried_at": "2026-11-03T07:28:48+00:00"
+    "updated_at": "2026-11-03T19:10:17+00:00",
+    "tried_at": "2026-11-03T19:10:17+00:00"
   },
   "copyright": {
     "status": "Anthropic is facing a fair‑use hearing over its use of copyrighted song lyrics while also being sued by the Elvis Presley estate for $41 million over 274 songs. Meta’s new commercial terms that permit scraping of news sites took effect on Oct 30 2026 and are under a UK competition regulator probe. Google’s AI search summaries continue to cut traffic to publishers, Brave is sued for AI scraping, and an EU court adviser warned that Google’s Gemini chatbot may infringe press copyright.",

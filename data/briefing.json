@@ -1,10 +1,10 @@
 {
-  "written_at": "2026-11-03T16:05:50+00:00",
-  "one_line": "LLMs edit weights directly, Anthropic ramps up compute, AI faces copyright lawsuits, OpenAI tightens security.",
+  "written_at": "2026-11-03T19:10:17+00:00",
+  "one_line": "LLMs edit weights, Anthropic spends compute, AI firms acquire startups, NVIDIA expands services and simulation speed.",
   "themes": [
     {
-      "title": "LLMs edit neural weights directly",
-      "text": "MIT researchers showed that GPT‑6 Astra can modify a language model’s weights by changing only 0.016 % of parameters, raising MATH‑500 and GSM8K scores dramatically. Similar experiments reported a sixfold math improvement and threefold instruction gain without additional training.",
+      "title": "LLMs edit and read weights",
+      "text": "MIT researchers demonstrated that GPT‑6 Astra can modify a neural network’s weights by changing only 0.016% of parameters, raising math scores dramatically. Separately, Simon Willison showed that the Qwen 3.8 27B model can read and reason about raw model weights on a laptop.",
       "stories": [
         {
           "id": "544cab3b9fc5",
@@ -15,67 +15,72 @@
           "id": "1818a08f7975",
           "headline": "GPT-6 Astra edits 0.016% of Qwen3.5-0.8B weights, boosting math performance sixfold",
           "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l"
+        },
+        {
+          "id": "9b0f1b3870f8",
+          "headline": "Simon Willison shows Qwen 3.8 27B can interpret raw model weights",
+          "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights"
         }
       ]
     },
     {
-      "title": "Anthropic scales compute and revenue",
-      "text": "Anthropic disclosed roughly $895 billion in compute purchase commitments and reported a 1,100 % year‑over‑year revenue increase to $17 billion as it prepares for an IPO, while also noting slower growth and financing risks for AI compute.",
+      "title": "Anthropic reports huge revenue rise",
+      "text": "Anthropic’s Q3 revenue grew to $17 billion, a 1,100% year‑over‑year increase, while compute spending reached $10 billion, representing 58% of revenue.",
       "stories": [
+        {
+          "id": "a4abd1e2a1c1",
+          "headline": "Anthropic compute costs rise to 58% of revenue in Q3, widening operating loss",
+          "url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute"
+        },
         {
           "id": "d059424a86f5",
           "headline": "Anthropic reports 1,100% revenue surge ahead of IPO, commits $895B to compute",
           "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-says-revenue-surged-1100-ahead-of-ipo/articleshow/135479762.cms"
-        },
-        {
-          "id": "1b0209f81f9f",
-          "headline": "Anthropic reports $895.4 billion in compute‑related purchase commitments and leases",
-          "url": "https://techmeme.com/261102/p29"
-        },
-        {
-          "id": "1add63be5a11",
-          "headline": "Anthropic revenue growth slows as compute financing risks rise ahead of IPO",
-          "url": "https://msn.com/en-us/technology/tech-companies/anthropic-revenue-growth-slows-compute-financing-risks-mount-ahead-of-ipo/ar-AA2gDadI"
         }
       ]
     },
     {
-      "title": "AI faces copyright and content lawsuits",
-      "text": "The New York Times and other publishers sued Brave Software for scraping articles and enabling paywall bypass for AI firms, while an EU court adviser warned that Google’s Gemini chatbot may infringe press copyrights when reproducing paywalled content. Anthropic also added a rule to prevent Claude Code from cloning existing video games.",
+      "title": "AI firms pursue acquisitions",
+      "text": "Salesforce agreed to buy Cresta for $2.7 billion, and CrowdStrike announced purchases of Fiddler AI for $400 million and Dreadnode for $95 million. Meanwhile, Trajectory raised $45 million Series A and PowerUp Money secured $10 million to expand AI‑led services.",
       "stories": [
         {
-          "id": "9abae69701c4",
-          "headline": "New York Times and other papers sue Brave over AI scraping and paywall bypass",
-          "url": "https://theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times"
+          "id": "64bc8daf91a3",
+          "headline": "Salesforce to acquire Cresta for $2.7 billion",
+          "url": "https://techmeme.com/261102/p48"
         },
         {
-          "id": "5bf107852b8f",
-          "headline": "EU court adviser says Google’s Gemini may infringe press copyright",
-          "url": "https://livemint.com/technology/google-ai-chatbots-use-of-press-items-may-infringe-copyright-rules-eu-court-adviser-says-11793703192614.html"
+          "id": "6a9cc38190a7",
+          "headline": "CrowdStrike to acquire Fiddler AI for $400 million and Dreadnode for $95 million",
+          "url": "https://techmeme.com/261103/p17"
         },
         {
-          "id": "cf87f0f49a6c",
-          "headline": "Anthropic adds rule to stop Claude Code from cloning existing video games",
-          "url": "https://theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones"
+          "id": "b2485c91dd17",
+          "headline": "Trajectory raises $45 million Series A to automate AI model post‑training",
+          "url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts"
+        },
+        {
+          "id": "c4e747ef2346",
+          "headline": "PowerUp Money raises $10 million to expand AI‑led wealth management in India",
+          "url": "https://yourstory.com/2026/11/powerup-money-raises-10m-expand-ai-led-wealth-management-india"
         }
       ]
     },
     {
-      "title": "OpenAI expands security programs",
-      "text": "OpenAI increased bug bounty payouts and introduced new researcher bonuses, and partnered with Cathedral Systems to run an internal security sprint using AI to test and harden its defenses.",
+      "title": "NVIDIA expands AI services",
+      "text": "NVIDIA and partners are deploying physical and agentic AI, including digital twins, in cities across Europe, Asia and the United States. NVIDIA’s cuDSS and PhysicsNeMo libraries also deliver up to 35× faster semiconductor simulations for industry customers.",
       "stories": [
         {
-          "id": "6fd6ad7938fa",
-          "headline": "OpenAI raises security bug bounty rewards and adds new researcher bonuses",
-          "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties"
+          "id": "4d836f21a02f",
+          "headline": "NVIDIA expands physical and agentic AI services to cities worldwide",
+          "url": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications"
         },
         {
-          "id": "262cfa35f430",
-          "headline": "OpenAI teams with Cathedral Systems for next internal security sprint",
-          "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai"
+          "id": "3bafb7904533",
+          "headline": "AI accelerates semiconductor fab simulations up to 35x",
+          "url": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs"
         }
       ]
     }
   ],
-  "from_stories": 20
+  "from_stories": 17
 }

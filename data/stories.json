@@ -70,6 +70,91 @@
   },
   {
     "explainer": {
+      "what_it_means": "The company’s spend on computer hardware and cloud services now consumes more than half of its sales, meaning less profit is left after paying for the servers that run its models. To meet fast‑growing demand, Anthropic is buying short‑term compute at higher rates from smaller providers, which pushes costs up. Until it secures cheaper long‑term contracts or builds its own hardware, the high expense will limit margins.",
+      "terms": [
+        {
+          "term": "compute margins",
+          "meaning": "The proportion of revenue that must be spent on compute resources."
+        },
+        {
+          "term": "neoclouds",
+          "meaning": "Smaller cloud providers that offer flexible but more expensive compute deals compared with large hyperscalers."
+        },
+        {
+          "term": "multi-year commitments",
+          "meaning": "Contracts with cloud providers that lock in usage and price for several years, usually at lower rates than short‑term deals."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers should expect higher costs for accessing Anthropic’s models while the company secures cheaper compute.",
+      "business": "Executives need to consider the impact of rising compute expenses on profitability and valuation ahead of the IPO.",
+      "investors": "Investors see the growing compute share as a risk factor for Anthropic’s near‑term earnings."
+    },
+    "id": "a4abd1e2a1c1",
+    "headline": "Anthropic compute costs rise to 58% of revenue in Q3, widening operating loss",
+    "summary": "Anthropic reported Q3 revenue of $17 billion, up from $11.5 billion in the prior quarter. Compute spending rose to $10 billion, or 58% of revenue, widening its operating loss.",
+    "why_it_matters": "High compute costs highlight the financial challenges of scaling AI models for investors and the broader AI market.",
+    "category": "industry",
+    "lab": "Anthropic",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "We expect compute and infrastructure expenses to increase in absolute dollars and remain our largest operating expense for the foreseeable future as additional committed compute becomes available to us under multi-year arrangements with CSPs, and as we continue to invest in additional compute.",
+        "speaker": "Anthropic",
+        "speaker_role": "company filing",
+        "source_url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute"
+      }
+    ],
+    "score": 8,
+    "url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute",
+    "source_id": "techcrunch-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2294935494.jpg?resize=1200,800",
+    "sources": [
+      {
+        "url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute",
+        "publisher": "TechCrunch AI",
+        "title": "Anthropic is still grappling with the economics of compute"
+      },
+      {
+        "url": "https://msn.com/en-us/technology/tech-companies/anthropic-is-still-grappling-with-the-economics-of-compute/ar-AA2gGccO",
+        "publisher": "TechCrunch on MSN",
+        "title": "Anthropic is still grappling with the economics of compute"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "unconfirmed"
+    },
+    "published_at": "2026-11-03T17:07:01+00:00",
+    "created_at": "2026-11-03T19:10:17+00:00",
+    "thread": "t-43fa5737591f",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 2,
+      "business": 2,
+      "investors": 3
+    },
+    "cover": "$17 billion",
+    "trackers": [
+      "ai-money"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Google Antigravity uses AI to explore chemical space and predict peptide sequences that can kill microbes. Researchers can test fewer candidates, shortening the development cycle for new antibiotics.",
       "terms": [
         {
@@ -116,7 +201,117 @@
     "created_at": "2026-11-03T17:26:00+00:00",
     "breaking": true,
     "trackers": [],
-    "photo_local": true
+    "photo_local": true,
+    "sectors": [
+      "healthcare",
+      "science"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 2,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "Antigravity"
+  },
+  {
+    "explainer": {
+      "what_it_means": "The Qwen 3.8 27B language model can read a list of floating‑point numbers that represent another neural network’s parameters and infer what the network does. It can also suggest edits to those numbers to improve performance, all without running external code. This demonstrates a new way to inspect and tweak AI models directly through natural‑language prompts.",
+      "terms": [
+        {
+          "term": "Weight‑Space Programming",
+          "meaning": "A technique where a language model analyzes and modifies the raw numeric weights of another neural network."
+        },
+        {
+          "term": "raw weights",
+          "meaning": "The unprocessed floating‑point numbers that define a neural network’s parameters."
+        },
+        {
+          "term": "floating point numbers",
+          "meaning": "Numeric values that represent real numbers in computer memory, commonly used for model weights."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers can experiment with LLMs to read and edit model parameters directly, offering a novel debugging tool.",
+      "business": "Executives see potential for faster model improvements without costly retraining pipelines.",
+      "investors": "Investors note emerging capabilities that could increase the value of companies owning models that support weight‑space programming."
+    },
+    "id": "9b0f1b3870f8",
+    "headline": "Simon Willison shows Qwen 3.8 27B can interpret raw model weights",
+    "summary": "Simon Willison reported that the Qwen 3.8 27B model running on his laptop was able to read and reason about raw neural network weights. The experiment took about 45 minutes and reproduced results described in the paper on Weight‑Space Programming.",
+    "why_it_matters": "It shows that large language models can analyze and potentially modify model parameters without external code, opening new avenues for model debugging and self‑optimization.",
+    "category": "voices",
+    "lab": "Alibaba (Qwen)",
+    "model_name": "Qwen 3.8 27B",
+    "model_type": "Language",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "I’ve been playing with one of the examples from the paper and I’m delighted to share that Qwen 3.8 27B running on my laptop can do this as well!",
+        "speaker": "Simon Willison",
+        "speaker_role": "",
+        "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights"
+      },
+      {
+        "text": "There's a buzzy new paper about GPT-6 Astra being able to directly interpret model weights (prompts full of floating point numbers) - I tried it with Qwen 3.8 27B on my laptop and found that, after 45+ minutes, that model could achieve the same thing",
+        "speaker": "Simon Willison",
+        "speaker_role": "",
+        "source_url": "https://bsky.app/profile/simonwillison.net/post/3mzgb77cpis2w"
+      }
+    ],
+    "score": 6,
+    "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights",
+    "source_id": "simon-willison",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": null,
+    "sources": [
+      {
+        "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights",
+        "publisher": "Simon Willison",
+        "title": "Qwen 3.8 27B on my laptop can interpret model weights, too"
+      },
+      {
+        "url": "https://bsky.app/profile/simonwillison.net/post/3mzgb77cpis2w",
+        "publisher": "Simon Willison on Bluesky",
+        "title": "Simon Willison: There's a buzzy new paper about GPT-6 Astra being able to directly interpret model weights (prompts full of floating point numbers) - I…"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-03T16:29:48+00:00",
+    "created_at": "2026-11-03T19:10:17+00:00",
+    "thread": "t-e36d39e56dce",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 1,
+      "investors": 1
+    },
+    "cover": "Qwen 3.8",
+    "trackers": [
+      "frontier-race"
+    ],
+    "stock_tried": "2026-11-03T19:10:17+00:00",
+    "photo_local": true,
+    "image_kind": "stock",
+    "photo_credit": {
+      "key": "wc:36466640",
+      "by": "Joel Kowsky",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Antares_Orb-3_launch_failure_(201410280009HQ).jpg",
+      "via": "Wikimedia Commons"
+    }
   },
   {
     "explainer": {
@@ -207,6 +402,110 @@
       "page": "https://commons.wikimedia.org/wiki/File:Integrated_circuit_explodes.jpg",
       "via": "Wikimedia Commons"
     }
+  },
+  {
+    "explainer": {
+      "what_it_means": "CrowdStrike will add tools that watch AI agents after they are deployed, record their decisions and flag unexpected behavior. It will also test agents before release by running known attack methods to find weaknesses. Together these capabilities let companies audit AI actions and stop agents that misbehave.",
+      "terms": [
+        {
+          "term": "AI agent observability",
+          "meaning": "Monitoring and explaining the decisions and tool calls made by an AI agent during operation."
+        },
+        {
+          "term": "jailbreak",
+          "meaning": "A technique that tricks a model into bypassing its built‑in safety or policy restrictions."
+        },
+        {
+          "term": "OWASP Top 10 for LLMs",
+          "meaning": "A set of security standards that identify the most critical risks for large language model applications."
+        }
+      ],
+      "watch_next": [
+        "CrowdStrike’s AI Kill Switch in Falcon Guardian will let administrators halt misbehaving agents at runtime",
+        "Dreadnode testing capabilities are expected to become generally available in the fourth quarter of fiscal 2027"
+      ]
+    },
+    "audiences": {
+      "builders": "CrowdStrike’s Falcon Observe and Dreadnode testing give developers ways to monitor, debug, and secure AI agents before they go live.",
+      "business": "Enterprises gain audit trails and a kill‑switch to control AI agents, reducing compliance and operational risk.",
+      "investors": "The acquisitions broaden CrowdStrike’s AI‑security portfolio, potentially boosting its market position and valuation."
+    },
+    "id": "6a9cc38190a7",
+    "headline": "CrowdStrike to acquire Fiddler AI for $400 million and Dreadnode for $95 million",
+    "summary": "CrowdStrike announced agreements to buy AI‑agent observability firm Fiddler AI and AI‑security testing startup Dreadnode, in deals reported at roughly $400 million and $95 million respectively, paid mostly in cash. The acquisitions will be integrated into CrowdStrike’s Falcon platform as Falcon Observe and expanded testing capabilities.",
+    "why_it_matters": "The moves give security vendors tools to monitor, explain and control AI agents, addressing emerging risks as companies deploy them faster than traditional security can keep up.",
+    "category": "industry",
+    "lab": "CrowdStrike",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "When a regulator or your board asks what an agent did, saying ‘the model did it’ is not an answer,",
+        "speaker": "George Kurtz",
+        "speaker_role": "chief executive and founder",
+        "source_url": "https://cyberscoop.com/crowdstrike-acquires-fiddler-dreadnode-ai-security"
+      },
+      {
+        "text": "the people best equipped to find those failures think like attackers.",
+        "speaker": "Brad Palm",
+        "speaker_role": "Chief Executive",
+        "source_url": "https://cyberscoop.com/crowdstrike-acquires-fiddler-dreadnode-ai-security"
+      }
+    ],
+    "score": 7,
+    "url": "https://techmeme.com/261103/p17",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://cyberscoop.com/wp-content/uploads/sites/3/2026/11/GettyImages-2281430142-1.jpg",
+    "sources": [
+      {
+        "url": "https://techmeme.com/261103/p17",
+        "publisher": "techmeme.com",
+        "title": "CrowdStrike agrees to buy Fiddler AI, which helps monitor AI agents, for ~$400M, and Dreadnode, an automated security AI testing tool, for ~$95M, mostly in cash (James Rundle/Wall Street Journal)"
+      },
+      {
+        "url": "https://cyberscoop.com/crowdstrike-acquires-fiddler-dreadnode-ai-security",
+        "publisher": "CyberScoop",
+        "title": "CrowdStrike moves to acquire Fiddler and Dreadnode, adding AI observability and testing to its security platform"
+      },
+      {
+        "url": "https://securityweek.com/crowdstrike-reportedly-paying-495-million-for-ai-security-firms-fiddler-dreadnode",
+        "publisher": "SecurityWeek",
+        "title": "CrowdStrike Reportedly Paying $495 Million for AI Security Firms Fiddler, Dreadnode"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-03T14:50:01+00:00",
+    "created_at": "2026-11-03T19:10:17+00:00",
+    "sectors": [
+      "cybersecurity"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": {
+      "type": "acquisition",
+      "company": "CrowdStrike",
+      "amount": "$400 million and $95 million",
+      "usd": 400000000.0
+    },
+    "relevance": {
+      "builders": 2,
+      "business": 3,
+      "investors": 2
+    },
+    "cover": "$400 million",
+    "trackers": [
+      "agent-safety",
+      "ai-money"
+    ],
+    "photo_local": true
   },
   {
     "explainer": {
@@ -13454,7 +13753,8 @@
     "trackers": [
       "agent-safety"
     ],
-    "photo_local": true
+    "photo_local": true,
+    "thread": "t-e36d39e56dce"
   },
   {
     "explainer": {

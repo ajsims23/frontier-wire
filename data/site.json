@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T17:26:00+00:00",
+  "updated_at": "2026-11-03T19:10:17+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "The researchers let a language model look at the numbers (weights) that define another AI model and change only the ones that cause problems. By editing a tiny fraction of those numbers, they boosted the model’s performance on math tests. This approach avoids the usual lengthy training process that adjusts millions of weights gradually.",
@@ -178,6 +178,91 @@
     },
     {
       "explainer": {
+        "what_it_means": "The company’s spend on computer hardware and cloud services now consumes more than half of its sales, meaning less profit is left after paying for the servers that run its models. To meet fast‑growing demand, Anthropic is buying short‑term compute at higher rates from smaller providers, which pushes costs up. Until it secures cheaper long‑term contracts or builds its own hardware, the high expense will limit margins.",
+        "terms": [
+          {
+            "term": "compute margins",
+            "meaning": "The proportion of revenue that must be spent on compute resources."
+          },
+          {
+            "term": "neoclouds",
+            "meaning": "Smaller cloud providers that offer flexible but more expensive compute deals compared with large hyperscalers."
+          },
+          {
+            "term": "multi-year commitments",
+            "meaning": "Contracts with cloud providers that lock in usage and price for several years, usually at lower rates than short‑term deals."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers should expect higher costs for accessing Anthropic’s models while the company secures cheaper compute.",
+        "business": "Executives need to consider the impact of rising compute expenses on profitability and valuation ahead of the IPO.",
+        "investors": "Investors see the growing compute share as a risk factor for Anthropic’s near‑term earnings."
+      },
+      "id": "a4abd1e2a1c1",
+      "headline": "Anthropic compute costs rise to 58% of revenue in Q3, widening operating loss",
+      "summary": "Anthropic reported Q3 revenue of $17 billion, up from $11.5 billion in the prior quarter. Compute spending rose to $10 billion, or 58% of revenue, widening its operating loss.",
+      "why_it_matters": "High compute costs highlight the financial challenges of scaling AI models for investors and the broader AI market.",
+      "category": "industry",
+      "lab": "Anthropic",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "We expect compute and infrastructure expenses to increase in absolute dollars and remain our largest operating expense for the foreseeable future as additional committed compute becomes available to us under multi-year arrangements with CSPs, and as we continue to invest in additional compute.",
+          "speaker": "Anthropic",
+          "speaker_role": "company filing",
+          "source_url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute"
+        }
+      ],
+      "score": 8,
+      "url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute",
+      "source_id": "techcrunch-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2294935494.jpg?resize=1200,800",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute",
+          "publisher": "TechCrunch AI",
+          "title": "Anthropic is still grappling with the economics of compute"
+        },
+        {
+          "url": "https://msn.com/en-us/technology/tech-companies/anthropic-is-still-grappling-with-the-economics-of-compute/ar-AA2gGccO",
+          "publisher": "TechCrunch on MSN",
+          "title": "Anthropic is still grappling with the economics of compute"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "unconfirmed"
+      },
+      "published_at": "2026-11-03T17:07:01+00:00",
+      "created_at": "2026-11-03T19:10:17+00:00",
+      "thread": "t-43fa5737591f",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 2,
+        "investors": 3
+      },
+      "cover": "$17 billion",
+      "trackers": [
+        "ai-money"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
         "what_it_means": "Google Antigravity uses AI to explore chemical space and predict peptide sequences that can kill microbes. Researchers can test fewer candidates, shortening the development cycle for new antibiotics.",
         "terms": [
           {
@@ -224,7 +309,117 @@
       "created_at": "2026-11-03T17:26:00+00:00",
       "breaking": true,
       "trackers": [],
-      "photo_local": true
+      "photo_local": true,
+      "sectors": [
+        "healthcare",
+        "science"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "Antigravity"
+    },
+    {
+      "explainer": {
+        "what_it_means": "The Qwen 3.8 27B language model can read a list of floating‑point numbers that represent another neural network’s parameters and infer what the network does. It can also suggest edits to those numbers to improve performance, all without running external code. This demonstrates a new way to inspect and tweak AI models directly through natural‑language prompts.",
+        "terms": [
+          {
+            "term": "Weight‑Space Programming",
+            "meaning": "A technique where a language model analyzes and modifies the raw numeric weights of another neural network."
+          },
+          {
+            "term": "raw weights",
+            "meaning": "The unprocessed floating‑point numbers that define a neural network’s parameters."
+          },
+          {
+            "term": "floating point numbers",
+            "meaning": "Numeric values that represent real numbers in computer memory, commonly used for model weights."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers can experiment with LLMs to read and edit model parameters directly, offering a novel debugging tool.",
+        "business": "Executives see potential for faster model improvements without costly retraining pipelines.",
+        "investors": "Investors note emerging capabilities that could increase the value of companies owning models that support weight‑space programming."
+      },
+      "id": "9b0f1b3870f8",
+      "headline": "Simon Willison shows Qwen 3.8 27B can interpret raw model weights",
+      "summary": "Simon Willison reported that the Qwen 3.8 27B model running on his laptop was able to read and reason about raw neural network weights. The experiment took about 45 minutes and reproduced results described in the paper on Weight‑Space Programming.",
+      "why_it_matters": "It shows that large language models can analyze and potentially modify model parameters without external code, opening new avenues for model debugging and self‑optimization.",
+      "category": "voices",
+      "lab": "Alibaba (Qwen)",
+      "model_name": "Qwen 3.8 27B",
+      "model_type": "Language",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "I’ve been playing with one of the examples from the paper and I’m delighted to share that Qwen 3.8 27B running on my laptop can do this as well!",
+          "speaker": "Simon Willison",
+          "speaker_role": "",
+          "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights"
+        },
+        {
+          "text": "There's a buzzy new paper about GPT-6 Astra being able to directly interpret model weights (prompts full of floating point numbers) - I tried it with Qwen 3.8 27B on my laptop and found that, after 45+ minutes, that model could achieve the same thing",
+          "speaker": "Simon Willison",
+          "speaker_role": "",
+          "source_url": "https://bsky.app/profile/simonwillison.net/post/3mzgb77cpis2w"
+        }
+      ],
+      "score": 6,
+      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights",
+      "source_id": "simon-willison",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights",
+          "publisher": "Simon Willison",
+          "title": "Qwen 3.8 27B on my laptop can interpret model weights, too"
+        },
+        {
+          "url": "https://bsky.app/profile/simonwillison.net/post/3mzgb77cpis2w",
+          "publisher": "Simon Willison on Bluesky",
+          "title": "Simon Willison: There's a buzzy new paper about GPT-6 Astra being able to directly interpret model weights (prompts full of floating point numbers) - I…"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-03T16:29:48+00:00",
+      "created_at": "2026-11-03T19:10:17+00:00",
+      "thread": "t-e36d39e56dce",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 1,
+        "investors": 1
+      },
+      "cover": "Qwen 3.8",
+      "trackers": [
+        "frontier-race"
+      ],
+      "stock_tried": "2026-11-03T19:10:17+00:00",
+      "photo_local": true,
+      "image_kind": "stock",
+      "photo_credit": {
+        "key": "wc:36466640",
+        "by": "Joel Kowsky",
+        "license": "Public domain",
+        "page": "https://commons.wikimedia.org/wiki/File:Antares_Orb-3_launch_failure_(201410280009HQ).jpg",
+        "via": "Wikimedia Commons"
+      }
     },
     {
       "explainer": {
@@ -315,6 +510,110 @@
         "page": "https://commons.wikimedia.org/wiki/File:Integrated_circuit_explodes.jpg",
         "via": "Wikimedia Commons"
       }
+    },
+    {
+      "explainer": {
+        "what_it_means": "CrowdStrike will add tools that watch AI agents after they are deployed, record their decisions and flag unexpected behavior. It will also test agents before release by running known attack methods to find weaknesses. Together these capabilities let companies audit AI actions and stop agents that misbehave.",
+        "terms": [
+          {
+            "term": "AI agent observability",
+            "meaning": "Monitoring and explaining the decisions and tool calls made by an AI agent during operation."
+          },
+          {
+            "term": "jailbreak",
+            "meaning": "A technique that tricks a model into bypassing its built‑in safety or policy restrictions."
+          },
+          {
+            "term": "OWASP Top 10 for LLMs",
+            "meaning": "A set of security standards that identify the most critical risks for large language model applications."
+          }
+        ],
+        "watch_next": [
+          "CrowdStrike’s AI Kill Switch in Falcon Guardian will let administrators halt misbehaving agents at runtime",
+          "Dreadnode testing capabilities are expected to become generally available in the fourth quarter of fiscal 2027"
+        ]
+      },
+      "audiences": {
+        "builders": "CrowdStrike’s Falcon Observe and Dreadnode testing give developers ways to monitor, debug, and secure AI agents before they go live.",
+        "business": "Enterprises gain audit trails and a kill‑switch to control AI agents, reducing compliance and operational risk.",
+        "investors": "The acquisitions broaden CrowdStrike’s AI‑security portfolio, potentially boosting its market position and valuation."
+      },
+      "id": "6a9cc38190a7",
+      "headline": "CrowdStrike to acquire Fiddler AI for $400 million and Dreadnode for $95 million",
+      "summary": "CrowdStrike announced agreements to buy AI‑agent observability firm Fiddler AI and AI‑security testing startup Dreadnode, in deals reported at roughly $400 million and $95 million respectively, paid mostly in cash. The acquisitions will be integrated into CrowdStrike’s Falcon platform as Falcon Observe and expanded testing capabilities.",
+      "why_it_matters": "The moves give security vendors tools to monitor, explain and control AI agents, addressing emerging risks as companies deploy them faster than traditional security can keep up.",
+      "category": "industry",
+      "lab": "CrowdStrike",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "When a regulator or your board asks what an agent did, saying ‘the model did it’ is not an answer,",
+          "speaker": "George Kurtz",
+          "speaker_role": "chief executive and founder",
+          "source_url": "https://cyberscoop.com/crowdstrike-acquires-fiddler-dreadnode-ai-security"
+        },
+        {
+          "text": "the people best equipped to find those failures think like attackers.",
+          "speaker": "Brad Palm",
+          "speaker_role": "Chief Executive",
+          "source_url": "https://cyberscoop.com/crowdstrike-acquires-fiddler-dreadnode-ai-security"
+        }
+      ],
+      "score": 7,
+      "url": "https://techmeme.com/261103/p17",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://cyberscoop.com/wp-content/uploads/sites/3/2026/11/GettyImages-2281430142-1.jpg",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261103/p17",
+          "publisher": "techmeme.com",
+          "title": "CrowdStrike agrees to buy Fiddler AI, which helps monitor AI agents, for ~$400M, and Dreadnode, an automated security AI testing tool, for ~$95M, mostly in cash (James Rundle/Wall Street Journal)"
+        },
+        {
+          "url": "https://cyberscoop.com/crowdstrike-acquires-fiddler-dreadnode-ai-security",
+          "publisher": "CyberScoop",
+          "title": "CrowdStrike moves to acquire Fiddler and Dreadnode, adding AI observability and testing to its security platform"
+        },
+        {
+          "url": "https://securityweek.com/crowdstrike-reportedly-paying-495-million-for-ai-security-firms-fiddler-dreadnode",
+          "publisher": "SecurityWeek",
+          "title": "CrowdStrike Reportedly Paying $495 Million for AI Security Firms Fiddler, Dreadnode"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-03T14:50:01+00:00",
+      "created_at": "2026-11-03T19:10:17+00:00",
+      "sectors": [
+        "cybersecurity"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": {
+        "type": "acquisition",
+        "company": "CrowdStrike",
+        "amount": "$400 million and $95 million",
+        "usd": 400000000.0
+      },
+      "relevance": {
+        "builders": 2,
+        "business": 3,
+        "investors": 2
+      },
+      "cover": "$400 million",
+      "trackers": [
+        "agent-safety",
+        "ai-money"
+      ],
+      "photo_local": true
     },
     {
       "explainer": {
@@ -5087,271 +5386,54 @@
         "ai-infrastructure"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "The DEPA handbook sets rules and technical measures that let organisations train AI models without moving the underlying data. Data stays with its owner, while the model is sent to a secure environment to learn from it. This approach aims to protect privacy, intellectual property and compliance with India's data laws.",
-        "terms": [
-          {
-            "term": "Confidential clean rooms",
-            "meaning": "Secure computing spaces where multiple parties can process data together without exposing the raw data to each other."
-          },
-          {
-            "term": "Differential privacy",
-            "meaning": "A technique that adds statistical noise to data outputs so individual records cannot be identified."
-          },
-          {
-            "term": "Zero‑trust security",
-            "meaning": "A security model that requires verification and encryption for every access request, regardless of location."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "The handbook defines technical and legal tools that developers can use to train models without moving raw data.",
-        "business": "Companies can collaborate on AI projects while keeping their proprietary datasets secure.",
-        "investors": "The framework could unlock new AI ventures in India, potentially expanding the market for data‑driven startups."
-      },
-      "id": "a7393ac399d1",
-      "headline": "MeitY releases DEPA handbook to enable trusted data sharing for AI training",
-      "summary": "The Ministry of Electronics and Information Technology launched a handbook on the Data Empowerment and Protection Architecture (DEPA) for AI training, outlining a techno‑legal framework for secure data collaboration. The framework lets institutions share data while retaining control, using contractual permissions, clean rooms and privacy safeguards.",
-      "why_it_matters": "It provides a structured way for Indian organisations to access high‑quality data for AI while protecting privacy and intellectual property.",
-      "category": "policy",
-      "lab": "Ministry of Electronics and Information Technology (MeitY)",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "India's AI ambitions must be matched by the ability to use data responsibly and securely.",
-          "speaker": "S. Krishnan",
-          "speaker_role": "IT Secretary, MeitY",
-          "source_url": "https://yourstory.com/2026/10/meity-unveils-depa-handbook-to-enable-trusted-data-sharing-for-ai-training"
-        },
-        {
-          "text": "The model travels to the data rather than the reverse.",
-          "speaker": "Ajay Kumar Sood",
-          "speaker_role": "Principal Scientific Adviser",
-          "source_url": "https://yourstory.com/2026/10/meity-unveils-depa-handbook-to-enable-trusted-data-sharing-for-ai-training"
-        }
-      ],
-      "score": 8,
-      "url": "https://yourstory.com/2026/10/meity-unveils-depa-handbook-to-enable-trusted-data-sharing-for-ai-training",
-      "source_id": "yourstory",
-      "desk": "india",
-      "ai_relevance": "core",
-      "image": "https://images.yourstory.com/cs/286/07f6d7f0ed8e11ed819979969b4b51e2/AINEWS2-1790336707001.png",
-      "sources": [
-        {
-          "url": "https://yourstory.com/2026/10/meity-unveils-depa-handbook-to-enable-trusted-data-sharing-for-ai-training",
-          "publisher": "YourStory",
-          "title": "MeitY unveils DEPA handbook to enable trusted data sharing for AI training"
-        },
-        {
-          "url": "https://inc42.com/buzz/meity-floats-new-privacy-led-framework-to-unlock-data-for-training-ai-models",
-          "publisher": "Inc42",
-          "title": "MeitY Floats New Privacy-Led Framework To Unlock Data For Training AI Models"
-        },
-        {
-          "url": "https://thehindubusinessline.com/info-tech/meity-launches-depa-handbook-to-enable-secure-data-sharing-for-ai-training/article71648821.ece",
-          "publisher": "The Hindu BusinessLine",
-          "title": "MeitY launches DEPA handbook to enable secure data sharing for AI training"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-31T10:46:16+00:00",
-      "created_at": "2026-10-31T13:03:49+00:00",
-      "sectors": [
-        "government"
-      ],
-      "regions": [
-        "india"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "DEPA handbook",
-      "trackers": [
-        "india-ai",
-        "ai-regulation"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "AI data centers require large amounts of water for cooling. In Arizona, where water reserves are already low due to decades of industrial use and current drought, new projects face political opposition. This could slow the rollout of AI services that rely on such facilities.",
-        "terms": [
-          {
-            "term": "AI data center",
-            "meaning": "A facility that houses servers for AI workloads, often needing significant cooling water."
-          },
-          {
-            "term": "Water reserves",
-            "meaning": "The stored water resources available in a region, used for municipal and industrial purposes."
-          },
-          {
-            "term": "Chip fab",
-            "meaning": "A manufacturing plant that produces semiconductor chips, such as those built by TSMC."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers should anticipate possible delays or restrictions on building AI data centers in water‑scarce regions.",
-        "business": "Companies planning AI services in Arizona may need to consider water availability and regulatory pushback.",
-        "investors": "Investors should factor in political and environmental risks when funding AI infrastructure projects in drought‑prone areas."
-      },
-      "id": "208dc15d456d",
-      "headline": "Bipartisan opposition rises to AI data centers in drought‑stricken Arizona",
-      "summary": "State lawmakers and officials are pushing back against new AI data center projects in Arizona, citing the state's long‑term water depletion and recent drought, even as earlier TSMC chip fabs were approved.",
-      "why_it_matters": "AI data centers' water demands are prompting political resistance, highlighting resource constraints for AI infrastructure expansion.",
-      "category": "industry",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 8,
-      "url": "https://techmeme.com/261031/p7",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": null,
-      "sources": [
-        {
-          "url": "https://techmeme.com/261031/p7",
-          "publisher": "techmeme.com",
-          "title": "A look at growing bipartisan opposition to AI data centers in drought-stricken Arizona, where TSMC's chip fabs were welcomed but newer projects face backlash (Gaby Del Valle/The Verge)"
-        },
-        {
-          "url": "https://msn.com/en-us/news/other/why-ai-data-centers-near-arizona-bases-are-raising-security-questions/ar-AA2grTRH",
-          "publisher": "AZ Family on MSN",
-          "title": "Why AI data centers near Arizona bases are raising security questions"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "unconfirmed"
-      },
-      "published_at": "2026-10-31T09:25:55+00:00",
-      "created_at": "2026-10-31T13:03:49+00:00",
-      "sectors": [
-        "government"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 1,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "",
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "stock_tried": "2026-10-31T13:03:49+00:00",
-      "photo_local": true,
-      "image_kind": "stock",
-      "photo_credit": {
-        "key": "wc:129587488",
-        "by": "Mister rf",
-        "license": "CC BY-SA 4.0",
-        "page": "https://commons.wikimedia.org/wiki/File:HP_1820-0250.jpg",
-        "via": "Wikimedia Commons"
-      }
-    },
-    {
-      "explainer": {
-        "what_it_means": "The listed machine is a former hyperscaler supercomputer built from Nvidia’s A100 data‑center GPUs and AMD EPYC CPUs. If purchased, a buyer would obtain enough compute to run large AI models, but the hardware dates to the Ampere generation and may be less efficient than newer chips.",
-        "terms": [
-          {
-            "term": "A100 GPU",
-            "meaning": "Nvidia’s data‑center accelerator introduced in 2020, used for AI and high‑performance computing."
-          },
-          {
-            "term": "AMD EPYC Rome processor",
-            "meaning": "AMD’s 64‑core server CPU based on the Zen 2 architecture."
-          },
-          {
-            "term": "petabyte",
-            "meaning": "One quadrillion bytes of storage, roughly 1,000 terabytes."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Provides a bulk source of A100 GPUs and EPYC CPUs for building AI training clusters, though at older performance levels.",
-        "business": "Offers a potential cost‑effective way for companies to acquire large compute capacity without waiting for newer hardware.",
-        "investors": "Highlights a market for reselling decommissioned AI infrastructure, indicating demand for legacy compute assets."
-      },
-      "id": "27cc0656103d",
-      "headline": "Core 4 Solutions lists decommissioned Nvidia A100 supercomputer on eBay for $59.7 million",
-      "summary": "Core 4 Solutions, an IT hardware reseller, posted a 300‑rack AI supercomputer on eBay with an asking price of $59.7 million. The system contains 9,600 Nvidia A100 GPUs, 4,200 AMD EPYC Rome processors, 384 TB of GPU memory and about 1.4 PB of system memory.",
-      "why_it_matters": "The sale shows a secondary market for large‑scale AI compute hardware, offering a potential source of capacity at older‑generation prices.",
-      "category": "industry",
-      "lab": "Core 4 Solutions",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://livemint.com/technology/nvidia-supercomputer-decommissioned-ebay-sale-a100-chips-gpus-it-hardware-reseller-60-million-best-offer-free-shipping-11793434326099.html",
-      "source_id": "mint-tech",
-      "desk": "india",
-      "ai_relevance": "core",
-      "image": "https://www.livemint.com/lm-img/img/2026/10/31/600x338/META-NVIDIA-MUSE-0_1793436890569_nbo0_1793436914437_cwbr_fbfd5a9b-1414-43b7-b833-d80d530065ce_rtU0.JPG",
-      "sources": [
-        {
-          "url": "https://livemint.com/technology/nvidia-supercomputer-decommissioned-ebay-sale-a100-chips-gpus-it-hardware-reseller-60-million-best-offer-free-shipping-11793434326099.html",
-          "publisher": "Mint Technology",
-          "title": "IT hardware reseller lists GPUs from decommissioned Nvidia supercomputer on eBay for $60 million — What we know"
-        },
-        {
-          "url": "https://msn.com/en-us/technology/tech-companies/it-vendor-lists-massive-60-million-ai-supercomputer-on-ebay-with-300-racks-of-decommissioned-gpus/ar-AA2gfqpH",
-          "publisher": "Tom's Hardware on MSN",
-          "title": "IT vendor lists massive $60 million AI supercomputer on eBay with 300 racks of decommissioned GPUs"
-        },
-        {
-          "url": "https://tech.yahoo.com/computing/articles/vendor-lists-massive-60-million-105404751.html",
-          "publisher": "YAHOO!",
-          "title": "IT vendor lists massive $60 million AI supercomputer on eBay with 300 racks of decommissioned GPUs — includes 9,600 Nvidia A100 GPUs and 4,200 AMD EPYC CPUs, plus free shipping"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-31T09:02:56+00:00",
-      "created_at": "2026-10-31T09:54:05+00:00",
-      "sectors": [],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 1,
-        "investors": 3
-      },
-      "cover": "$59.7 million",
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
+    {
+      "text": "We expect compute and infrastructure expenses to increase in absolute dollars and remain our largest operating expense for the foreseeable future as additional committed compute becomes available to us under multi-year arrangements with CSPs, and as we continue to invest in additional compute.",
+      "speaker": "Anthropic",
+      "speaker_role": "company filing",
+      "source_url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute",
+      "story_id": "a4abd1e2a1c1",
+      "headline": "Anthropic compute costs rise to 58% of revenue in Q3, widening operating loss",
+      "published_at": "2026-11-03T17:07:01+00:00"
+    },
+    {
+      "text": "I’ve been playing with one of the examples from the paper and I’m delighted to share that Qwen 3.8 27B running on my laptop can do this as well!",
+      "speaker": "Simon Willison",
+      "speaker_role": "",
+      "source_url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights",
+      "story_id": "9b0f1b3870f8",
+      "headline": "Simon Willison shows Qwen 3.8 27B can interpret raw model weights",
+      "published_at": "2026-11-03T16:29:48+00:00"
+    },
+    {
+      "text": "There's a buzzy new paper about GPT-6 Astra being able to directly interpret model weights (prompts full of floating point numbers) - I tried it with Qwen 3.8 27B on my laptop and found that, after 45+ minutes, that model could achieve the same thing",
+      "speaker": "Simon Willison",
+      "speaker_role": "",
+      "source_url": "https://bsky.app/profile/simonwillison.net/post/3mzgb77cpis2w",
+      "story_id": "9b0f1b3870f8",
+      "headline": "Simon Willison shows Qwen 3.8 27B can interpret raw model weights",
+      "published_at": "2026-11-03T16:29:48+00:00"
+    },
+    {
+      "text": "When a regulator or your board asks what an agent did, saying ‘the model did it’ is not an answer,",
+      "speaker": "George Kurtz",
+      "speaker_role": "chief executive and founder",
+      "source_url": "https://cyberscoop.com/crowdstrike-acquires-fiddler-dreadnode-ai-security",
+      "story_id": "6a9cc38190a7",
+      "headline": "CrowdStrike to acquire Fiddler AI for $400 million and Dreadnode for $95 million",
+      "published_at": "2026-11-03T14:50:01+00:00"
+    },
+    {
+      "text": "the people best equipped to find those failures think like attackers.",
+      "speaker": "Brad Palm",
+      "speaker_role": "Chief Executive",
+      "source_url": "https://cyberscoop.com/crowdstrike-acquires-fiddler-dreadnode-ai-security",
+      "story_id": "6a9cc38190a7",
+      "headline": "CrowdStrike to acquire Fiddler AI for $400 million and Dreadnode for $95 million",
+      "published_at": "2026-11-03T14:50:01+00:00"
+    },
     {
       "text": "They still have the capex of training models ... and vehicles, a challenge that every autonomous vehicle company is going to face,",
       "speaker": "Frank McCleary",
@@ -5360,54 +5442,27 @@
       "story_id": "6d35255f07b8",
       "headline": "Baidu launches Apollo World AI system to simulate up to 100,000 km of robotaxi driving daily",
       "published_at": "2026-11-03T12:41:17+00:00"
-    },
-    {
-      "text": "The speed at which you can launch comes down to your technology's ability to adapt and understand and learn that environment,",
-      "speaker": "Frank McCleary",
-      "speaker_role": "expert in autonomous mobility and urban transportation at Arthur D. Little",
-      "source_url": "https://livemint.com/technology/chinas-baidu-launches-ai-model-simulating-road-environment-for-robotaxis-11793709678345.html",
-      "story_id": "6d35255f07b8",
-      "headline": "Baidu launches Apollo World AI system to simulate up to 100,000 km of robotaxi driving daily",
-      "published_at": "2026-11-03T12:41:17+00:00"
-    },
-    {
-      "text": "When an LLM (large language model)-driven chatbot retrieves a publication from a press publisher's website, reuses that publication to generate an answer, and provides that answer to the user, the press publisher's right may be infringed in certain circumstances,",
-      "speaker": "Advocate General Maciej Szpunar",
-      "speaker_role": "advocate general",
-      "source_url": "https://livemint.com/technology/google-ai-chatbots-use-of-press-items-may-infringe-copyright-rules-eu-court-adviser-says-11793703192614.html",
-      "story_id": "5bf107852b8f",
-      "headline": "EU court adviser says Google’s Gemini may infringe press copyright",
-      "published_at": "2026-11-03T10:53:12+00:00"
-    },
-    {
-      "text": "Copyright rules do not protect the \"mere facts\" reported by press publications, but \"only the specific form of expression",
-      "speaker": "Advocate General Maciej Szpunar",
-      "speaker_role": "advocate general",
-      "source_url": "https://livemint.com/technology/google-ai-chatbots-use-of-press-items-may-infringe-copyright-rules-eu-court-adviser-says-11793703192614.html",
-      "story_id": "5bf107852b8f",
-      "headline": "EU court adviser says Google’s Gemini may infringe press copyright",
-      "published_at": "2026-11-03T10:53:12+00:00"
-    },
-    {
-      "text": "We find that frontier LLMs are surprisingly good at natively reading and writing neural network weights, well past what we'd expect from humans or conventional algorithms,",
-      "speaker": "MIT researchers",
-      "speaker_role": "",
-      "source_url": "https://analyticsindiamag.com/ai-news/mit-researchers-show-llms-can-read-and-edit-neural-network-weights-without-retraining",
-      "story_id": "544cab3b9fc5",
-      "headline": "MIT researchers show LLMs can read and edit neural network weights without retraining",
-      "published_at": "2026-11-03T05:35:25+00:00"
-    },
-    {
-      "text": "AI makes it possible to deliver a much more comprehensive, wealth-manager-like experience digitally",
-      "speaker": "Prateek Jindal",
-      "speaker_role": "founder and chief executive officer",
-      "source_url": "https://yourstory.com/2026/11/powerup-money-raises-10m-expand-ai-led-wealth-management-india",
-      "story_id": "c4e747ef2346",
-      "headline": "PowerUp Money raises $10 million to expand AI‑led wealth management in India",
-      "published_at": "2026-11-03T05:34:32+00:00"
     }
   ],
   "videos": [
+    {
+      "id": "NCxD-qsQcN0",
+      "title": "TamaGPT",
+      "channel": "OpenAI",
+      "lab": "OpenAI",
+      "published": "2026-11-03T18:30:30+00:00",
+      "blurb": "Shows GPT-6 Astra helping non‑engineers design physical hardware.",
+      "story_id": ""
+    },
+    {
+      "id": "63pcV4z0DwI",
+      "title": "ChatGPT Voice is now in Finances",
+      "channel": "OpenAI",
+      "lab": "OpenAI",
+      "published": "2026-11-03T18:04:51+00:00",
+      "blurb": "Demonstrates ChatGPT Voice integration for managing personal finances via spoken interaction.",
+      "story_id": ""
+    },
     {
       "id": "yLMjEpMio2w",
       "title": "From AI Infrastructure to the 6G Future",
@@ -5470,24 +5525,6 @@
       "published": "2026-10-29T20:00:20+00:00",
       "blurb": "Google Antigravity enables Move Cars to go from idea to fully tested production code in a single day, showcasing rapid scaling of complex logistics with AI agents.",
       "story_id": ""
-    },
-    {
-      "id": "FczbSauVvjw",
-      "title": "Science Behind the Open Cyber Frontier with Mistral Large 4",
-      "channel": "Hugging Face",
-      "lab": "Hugging Face",
-      "published": "2026-10-29T15:15:17+00:00",
-      "blurb": "The video discusses the science behind Mistral Large 4, an open-weight model suited for frontier cybersecurity work, with insights from Mistral team members.",
-      "story_id": "820bd24a41c4"
-    },
-    {
-      "id": "ujmyzWSj8IU",
-      "title": "API credits, now in ChatGPT Pro and Business plans",
-      "channel": "OpenAI",
-      "lab": "OpenAI",
-      "published": "2026-10-28T23:45:26+00:00",
-      "blurb": "The video announces that ChatGPT Pro and Business plans now include up to $500 per month in API credits for building apps and agents.",
-      "story_id": ""
     }
   ],
   "podcasts": [
@@ -5541,12 +5578,12 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-11-03T16:05:50+00:00",
-    "one_line": "LLMs edit weights directly, Anthropic ramps up compute, AI faces copyright lawsuits, OpenAI tightens security.",
+    "written_at": "2026-11-03T19:10:17+00:00",
+    "one_line": "LLMs edit weights, Anthropic spends compute, AI firms acquire startups, NVIDIA expands services and simulation speed.",
     "themes": [
       {
-        "title": "LLMs edit neural weights directly",
-        "text": "MIT researchers showed that GPT‑6 Astra can modify a language model’s weights by changing only 0.016 % of parameters, raising MATH‑500 and GSM8K scores dramatically. Similar experiments reported a sixfold math improvement and threefold instruction gain without additional training.",
+        "title": "LLMs edit and read weights",
+        "text": "MIT researchers demonstrated that GPT‑6 Astra can modify a neural network’s weights by changing only 0.016% of parameters, raising math scores dramatically. Separately, Simon Willison showed that the Qwen 3.8 27B model can read and reason about raw model weights on a laptop.",
         "stories": [
           {
             "id": "544cab3b9fc5",
@@ -5557,81 +5594,86 @@
             "id": "1818a08f7975",
             "headline": "GPT-6 Astra edits 0.016% of Qwen3.5-0.8B weights, boosting math performance sixfold",
             "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l"
+          },
+          {
+            "id": "9b0f1b3870f8",
+            "headline": "Simon Willison shows Qwen 3.8 27B can interpret raw model weights",
+            "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights"
           }
         ]
       },
       {
-        "title": "Anthropic scales compute and revenue",
-        "text": "Anthropic disclosed roughly $895 billion in compute purchase commitments and reported a 1,100 % year‑over‑year revenue increase to $17 billion as it prepares for an IPO, while also noting slower growth and financing risks for AI compute.",
+        "title": "Anthropic reports huge revenue rise",
+        "text": "Anthropic’s Q3 revenue grew to $17 billion, a 1,100% year‑over‑year increase, while compute spending reached $10 billion, representing 58% of revenue.",
         "stories": [
+          {
+            "id": "a4abd1e2a1c1",
+            "headline": "Anthropic compute costs rise to 58% of revenue in Q3, widening operating loss",
+            "url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute"
+          },
           {
             "id": "d059424a86f5",
             "headline": "Anthropic reports 1,100% revenue surge ahead of IPO, commits $895B to compute",
             "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-says-revenue-surged-1100-ahead-of-ipo/articleshow/135479762.cms"
-          },
-          {
-            "id": "1b0209f81f9f",
-            "headline": "Anthropic reports $895.4 billion in compute‑related purchase commitments and leases",
-            "url": "https://techmeme.com/261102/p29"
-          },
-          {
-            "id": "1add63be5a11",
-            "headline": "Anthropic revenue growth slows as compute financing risks rise ahead of IPO",
-            "url": "https://msn.com/en-us/technology/tech-companies/anthropic-revenue-growth-slows-compute-financing-risks-mount-ahead-of-ipo/ar-AA2gDadI"
           }
         ]
       },
       {
-        "title": "AI faces copyright and content lawsuits",
-        "text": "The New York Times and other publishers sued Brave Software for scraping articles and enabling paywall bypass for AI firms, while an EU court adviser warned that Google’s Gemini chatbot may infringe press copyrights when reproducing paywalled content. Anthropic also added a rule to prevent Claude Code from cloning existing video games.",
+        "title": "AI firms pursue acquisitions",
+        "text": "Salesforce agreed to buy Cresta for $2.7 billion, and CrowdStrike announced purchases of Fiddler AI for $400 million and Dreadnode for $95 million. Meanwhile, Trajectory raised $45 million Series A and PowerUp Money secured $10 million to expand AI‑led services.",
         "stories": [
           {
-            "id": "9abae69701c4",
-            "headline": "New York Times and other papers sue Brave over AI scraping and paywall bypass",
-            "url": "https://theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times"
+            "id": "64bc8daf91a3",
+            "headline": "Salesforce to acquire Cresta for $2.7 billion",
+            "url": "https://techmeme.com/261102/p48"
           },
           {
-            "id": "5bf107852b8f",
-            "headline": "EU court adviser says Google’s Gemini may infringe press copyright",
-            "url": "https://livemint.com/technology/google-ai-chatbots-use-of-press-items-may-infringe-copyright-rules-eu-court-adviser-says-11793703192614.html"
+            "id": "6a9cc38190a7",
+            "headline": "CrowdStrike to acquire Fiddler AI for $400 million and Dreadnode for $95 million",
+            "url": "https://techmeme.com/261103/p17"
           },
           {
-            "id": "cf87f0f49a6c",
-            "headline": "Anthropic adds rule to stop Claude Code from cloning existing video games",
-            "url": "https://theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones"
+            "id": "b2485c91dd17",
+            "headline": "Trajectory raises $45 million Series A to automate AI model post‑training",
+            "url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts"
+          },
+          {
+            "id": "c4e747ef2346",
+            "headline": "PowerUp Money raises $10 million to expand AI‑led wealth management in India",
+            "url": "https://yourstory.com/2026/11/powerup-money-raises-10m-expand-ai-led-wealth-management-india"
           }
         ]
       },
       {
-        "title": "OpenAI expands security programs",
-        "text": "OpenAI increased bug bounty payouts and introduced new researcher bonuses, and partnered with Cathedral Systems to run an internal security sprint using AI to test and harden its defenses.",
+        "title": "NVIDIA expands AI services",
+        "text": "NVIDIA and partners are deploying physical and agentic AI, including digital twins, in cities across Europe, Asia and the United States. NVIDIA’s cuDSS and PhysicsNeMo libraries also deliver up to 35× faster semiconductor simulations for industry customers.",
         "stories": [
           {
-            "id": "6fd6ad7938fa",
-            "headline": "OpenAI raises security bug bounty rewards and adds new researcher bonuses",
-            "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties"
+            "id": "4d836f21a02f",
+            "headline": "NVIDIA expands physical and agentic AI services to cities worldwide",
+            "url": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications"
           },
           {
-            "id": "262cfa35f430",
-            "headline": "OpenAI teams with Cathedral Systems for next internal security sprint",
-            "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai"
+            "id": "3bafb7904533",
+            "headline": "AI accelerates semiconductor fab simulations up to 35x",
+            "url": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs"
           }
         ]
       }
     ],
-    "from_stories": 20
+    "from_stories": 17
   },
   "plan": {
-    "focus": "Chasing the fallout from the Binance $6.3 billion hack while bolstering our thin policy and safety coverage.",
-    "updated_at": "2026-11-03T16:05:50+00:00",
+    "focus": "Tracking Anthropic's compute spending and IPO risks while covering new AI policy moves at Google and DeepMind.",
+    "updated_at": "2026-11-03T19:10:17+00:00",
     "thin_areas": [
       "model releases",
       "safety"
     ],
     "searches": [
-      "Anthropic chip design Claude",
-      "China AI safety standards rollout",
-      "model harness techniques"
+      "Anthropic compute commitments",
+      "DeepMind non-disparagement clause policy",
+      "Google AI tools school policy 2027"
     ]
   },
   "builders": {
@@ -5766,9 +5808,16 @@
   "threads": [
     {
       "id": "t-43fa5737591f",
-      "title": "Anthropic financing risks IPO: quarterly loss shrinks",
-      "updated_at": "2026-11-03T02:54:33+00:00",
+      "title": "Anthropic financing risks IPO: compute economics",
+      "updated_at": "2026-11-03T17:07:01+00:00",
       "stories": [
+        {
+          "id": "a4abd1e2a1c1",
+          "headline": "Anthropic compute costs rise to 58% of revenue in Q3, widening operating loss",
+          "url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute",
+          "published_at": "2026-11-03T17:07:01+00:00",
+          "category": "industry"
+        },
         {
           "id": "d059424a86f5",
           "headline": "Anthropic reports 1,100% revenue surge ahead of IPO, commits $895B to compute",
@@ -5803,6 +5852,27 @@
           "url": "https://techmeme.com/261026/p47",
           "published_at": "2026-10-26T21:35:01+00:00",
           "category": "industry"
+        }
+      ]
+    },
+    {
+      "id": "t-e36d39e56dce",
+      "title": "Qwen model developments: laptop weight interpretation",
+      "updated_at": "2026-11-03T16:29:48+00:00",
+      "stories": [
+        {
+          "id": "9b0f1b3870f8",
+          "headline": "Simon Willison shows Qwen 3.8 27B can interpret raw model weights",
+          "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights",
+          "published_at": "2026-11-03T16:29:48+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "90bd2076d3e2",
+          "headline": "Alibaba Qwen model attempted to send file to Beijing server during test",
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/alibaba-ai-model-secretly-tried-to-reach-beijing-server-in-test-rival-cohere-says/articleshow/135226204.cms",
+          "published_at": "2026-10-27T06:16:44+00:00",
+          "category": "safety"
         }
       ]
     },
@@ -5852,62 +5922,6 @@
           "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts",
           "published_at": "2026-10-31T23:15:22+00:00",
           "category": "voices"
-        }
-      ]
-    },
-    {
-      "id": "t-a50b07bc6191",
-      "title": "Anthropic IPO filing: amended S-1 adds commitments",
-      "updated_at": "2026-11-02T16:35:00+00:00",
-      "stories": [
-        {
-          "id": "1b0209f81f9f",
-          "headline": "Anthropic reports $895.4 billion in compute‑related purchase commitments and leases",
-          "url": "https://techmeme.com/261102/p29",
-          "published_at": "2026-11-02T16:35:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "038e188345e4",
-          "headline": "Anthropic to raise up to ¥552.9 bn ($3.5 bn) from Japanese investors in US IPO",
-          "url": "https://bloomberg.com/news/articles/2026-11-02/anthropic-seeks-up-to-3-5-billion-in-japan-for-its-mega-us-ipo",
-          "published_at": "2026-11-01T22:23:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "b329cc4aaa4c",
-          "headline": "Blackstone says Anthropic likely to receive junk rating after IPO",
-          "url": "https://ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
-          "published_at": "2026-10-30T17:27:25+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "007a2afe4a6c",
-          "headline": "Anthropic’s IPO faces valuation drop as growth slows and AI prices plunge",
-          "url": "https://economictimes.indiatimes.com/tech/technology/anthropics-record-ipo-faces-some-big-questions/articleshow/135249836.cms",
-          "published_at": "2026-10-28T02:42:31+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "e4d1fbe9aac7",
-          "headline": "Anthropic files S‑1 for Nasdaq IPO, reporting $16.3 billion H1 revenue",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/articleshow/135222913.cms",
-          "published_at": "2026-10-27T02:33:06+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "09134649a0da",
-          "headline": "Anthropic files S‑1 showing $16.3 billion H1 revenue and $131.7 billion cash",
-          "url": "https://msn.com/en-us/news/other/the-anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/ar-AA2g76lV",
-          "published_at": "2026-10-26T16:53:17+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "8a77e646571b",
-          "headline": "Anthropic files S‑1 for IPO, plans Nasdaq listing under ticker ANT",
-          "url": "https://anthropic.com/news/s1-sec",
-          "published_at": "2026-10-26T00:00:00+00:00",
-          "category": "industry"
         }
       ]
     }
@@ -6055,7 +6069,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 50,
+    "stories_this_month": 53,
     "model_releases_this_month": 2,
     "labs_tracked": 18
   }
