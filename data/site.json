@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T00:52:10+00:00",
+  "updated_at": "2026-11-03T01:21:54+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Aramco will own nearly half of Humain and provide cash plus AI hardware and expertise. Humain plans to use the resources to build AI data centers and launch an Arabic multimodal language model. The effort aims to meet growing AI demand in the region and globally.",
@@ -91,6 +91,97 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Trajectory provides a platform where companies can connect an open‑source AI model to their own applications, collect user feedback, and have the system automatically retrain the model to improve on specific tasks. This lets users without deep machine‑learning expertise keep the model up‑to‑date for their domain, such as legal contract review or financial analysis.",
+        "terms": [
+          {
+            "term": "continual learning",
+            "meaning": "A method where an AI model is repeatedly updated with new data after deployment, allowing it to improve over time."
+          },
+          {
+            "term": "post‑training",
+            "meaning": "The process of adapting a pre‑trained model to a specific task after its initial training phase."
+          },
+          {
+            "term": "fine‑tuning",
+            "meaning": "Adjusting a pre‑trained model’s parameters on a smaller, task‑specific dataset to improve performance for that task."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Trajectory’s platform automates model retraining, reducing the need for in‑house ML research teams.",
+        "business": "Companies can customize AI for niche functions more cheaply and quickly, lowering deployment costs.",
+        "investors": "The $45 million raise and $300 million valuation signal strong investor confidence in AI post‑training tools."
+      },
+      "id": "b2485c91dd17",
+      "headline": "Trajectory raises $45 million Series A to automate AI model post‑training",
+      "summary": "Trajectory, a startup founded by three Stanford alumni, announced a $45 million Series A round at a $300 million valuation, led by Sequoia with participation from Nvidia, Bessemer and Bain Capital. The company’s platform lets non‑technical users continuously fine‑tune open‑source models through feedback‑driven continual learning.",
+      "why_it_matters": "It lowers the technical barrier and cost for businesses to adapt AI models to specialized tasks, speeding wider AI adoption.",
+      "category": "industry",
+      "lab": "Trajectory",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "But what the economy values is someone who worked on the job for 30 years,",
+          "speaker": "Ronak Malde",
+          "speaker_role": "co‑founder",
+          "source_url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts"
+        },
+        {
+          "text": "keeping humans involved in the training process makes Trajectory’s approach safer, since autonomous self-improvement could lead to unintended or even dangerous outcomes.",
+          "speaker": "Michael Elabd",
+          "speaker_role": "co‑founder",
+          "source_url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts"
+        }
+      ],
+      "score": 6,
+      "url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts",
+      "source_id": "techcrunch-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/11/Trajectory_3.jpg?resize=1200,900",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts",
+          "publisher": "TechCrunch AI",
+          "title": "Trajectory raises $45M to make AI model training accessible to nontechnical experts"
+        },
+        {
+          "url": "https://techmeme.com/261102/p45",
+          "publisher": "techmeme.com",
+          "title": "Trajectory, which is developing AI model post-training tools for nontechnical customers, raised a $45M Series A led by Sequoia at a $300M valuation (Marina Temkin/TechCrunch)"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-02T23:13:53+00:00",
+      "created_at": "2026-11-03T01:21:54+00:00",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": {
+        "type": "funding",
+        "company": "Trajectory",
+        "amount": "$45 million",
+        "usd": 45000000.0
+      },
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "$45 million",
+      "trackers": [
+        "ai-money"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "The Qwen3.5-0.8B model had a tiny fraction of its parameters altered by another AI system, GPT-6 Astra. This small change led to large gains in math problem solving and following instructions, without the usual training process.",
@@ -5292,92 +5383,27 @@
         "ai-infrastructure"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Mage‑VL‑Cowork is a small vision‑language model that can interact with a computer’s graphical interface and its command‑line terminal in a single policy. It was trained end‑to‑end using a five‑stage curriculum and a workflow‑first synthesis engine, allowing it to learn both screenshot‑grounded actions and code execution. The model reaches 66.0% accuracy on the OSWorld‑Verified benchmark, demonstrating that efficient on‑device AI can handle complex computer‑use tasks.",
-        "terms": [
-          {
-            "term": "Vision‑language model",
-            "meaning": "An AI model that processes visual inputs (like screenshots) together with text to understand and act on them."
-          },
-          {
-            "term": "OSWorld‑Verified",
-            "meaning": "A benchmark measuring how well a model can complete operating‑system tasks within a limited number of steps."
-          },
-          {
-            "term": "Computer‑use agents (CUAs)",
-            "meaning": "AI agents designed to operate a computer by interacting with its graphical user interface and command‑line tools."
-          }
-        ],
-        "watch_next": []
-      },
-      "benchmarks": [
-        {
-          "model": "Mage-VL-Cowork",
-          "benchmark": "OSWorld-Verified",
-          "score": "66.0%"
-        },
-        {
-          "model": "Mage-VL-Cowork",
-          "benchmark": "Operating System tasks",
-          "score": "87.5%"
-        },
-        {
-          "model": "Mage-VL-Cowork",
-          "benchmark": "Multi-Application Workflows",
-          "score": "62.7%"
-        }
-      ],
-      "audiences": {
-        "builders": "The model provides an efficient 4B‑parameter VLM that can be run on‑device for hybrid GUI and terminal automation tasks.",
-        "business": "It demonstrates that advanced computer‑use capabilities can be achieved with smaller models, potentially lowering deployment costs and expanding AI‑driven productivity tools.",
-        "investors": "Microsoft’s release highlights its continued investment in frontier AI research, which may influence market perception of its AI leadership."
-      },
-      "id": "63a60d5375b5",
-      "headline": "Microsoft releases Mage‑VL‑Cowork, a 4B vision‑language model for hybrid computer use",
-      "summary": "Microsoft published the Mage‑VL‑Cowork model on Hugging Face. The 4‑billion‑parameter vision‑language policy achieves 66.0% OSWorld‑Verified accuracy, the highest among 4B models.",
-      "why_it_matters": "It shows that a compact vision‑language model can reliably perform both GUI and terminal tasks, expanding on‑device AI capabilities.",
-      "category": "models",
-      "lab": "Microsoft",
-      "model_name": "Mage-VL-Cowork",
-      "model_type": "Vision-language",
-      "tags": [],
-      "quotes": [],
-      "score": 6,
-      "url": "https://huggingface.co/microsoft/Mage-VL-Cowork",
-      "source_id": "hf-models",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/microsoft/Mage-VL-Cowork.png",
-      "sources": [
-        {
-          "url": "https://huggingface.co/microsoft/Mage-VL-Cowork",
-          "publisher": "Hugging Face",
-          "title": "Microsoft publishes Mage-VL-Cowork on Hugging Face"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-30T12:13:24+00:00",
-      "created_at": "2026-10-30T13:11:31+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "",
-      "trackers": [],
-      "photo_local": true
     }
   ],
   "voices": [
+    {
+      "text": "But what the economy values is someone who worked on the job for 30 years,",
+      "speaker": "Ronak Malde",
+      "speaker_role": "co‑founder",
+      "source_url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts",
+      "story_id": "b2485c91dd17",
+      "headline": "Trajectory raises $45 million Series A to automate AI model post‑training",
+      "published_at": "2026-11-02T23:13:53+00:00"
+    },
+    {
+      "text": "keeping humans involved in the training process makes Trajectory’s approach safer, since autonomous self-improvement could lead to unintended or even dangerous outcomes.",
+      "speaker": "Michael Elabd",
+      "speaker_role": "co‑founder",
+      "source_url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts",
+      "story_id": "b2485c91dd17",
+      "headline": "Trajectory raises $45 million Series A to automate AI model post‑training",
+      "published_at": "2026-11-02T23:13:53+00:00"
+    },
     {
       "text": "We asked GPT-6 Astra to edit Qwen3.5-0.8B weights to improve math. It directly changed only 0.016% of weights, fixing 0.8B's reasoning loops & improving math up to 6x and even instruction following 3x, without gradients or training.",
       "speaker": "Ethan Mollick",
@@ -5413,24 +5439,6 @@
       "story_id": "9abae69701c4",
       "headline": "New York Times and other papers sue Brave over AI scraping and paywall bypass",
       "published_at": "2026-11-02T17:51:19+00:00"
-    },
-    {
-      "text": "AI giants are now desperate to avoid getting caught red-handed stealing news from publishers, so Brave Software is selling them a back door to the journalism they know they have no right to.",
-      "speaker": "Steven Lieberman",
-      "speaker_role": "Attorney for MediaNews Group and Tribune Publishing",
-      "source_url": "https://thenextweb.com/news/nyt-newspapers-sue-brave-ai-scraping",
-      "story_id": "9abae69701c4",
-      "headline": "New York Times and other papers sue Brave over AI scraping and paywall bypass",
-      "published_at": "2026-11-02T17:51:19+00:00"
-    },
-    {
-      "text": "AI is reshaping where applications run and how organizations use and move data,",
-      "speaker": "Katy Brown",
-      "speaker_role": "Corporate Vice President, Americas Markets and Industries at Microsoft",
-      "source_url": "https://news.microsoft.com/source/2026/11/02/lumen-and-microsoft-expand-collaboration-to-co-sell-enterprise-ai-ready-networks",
-      "story_id": "de3657a54534",
-      "headline": "Lumen and Microsoft expand co‑selling to deliver AI‑ready enterprise networks",
-      "published_at": "2026-11-02T17:51:17+00:00"
     }
   ],
   "videos": [
@@ -5567,18 +5575,13 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-11-02T21:54:56+00:00",
-    "one_line": "AI sector sees massive funding, Anthropic expands operations, new benchmarks launch, and enterprise tools get major updates.",
+    "written_at": "2026-11-03T01:21:54+00:00",
+    "one_line": "AI sector sees major funding rounds, new benchmarks, governance actions, and infrastructure expansions.",
     "themes": [
       {
-        "title": "AI funding surge worldwide",
-        "text": "Major investors poured billions into AI firms, from Saudi Aramco’s $2.6 billion stake in Humain to Hex Technologies’ $100 million Series D and multiple Series A/B rounds for Vera Health, Casap, Bites, Tutor Intelligence, and Oracle’s $20 billion stock‑bond offering.",
+        "title": "AI startups secure major funding",
+        "text": "Hex Technologies announced a $100 million Series D round at a $1.2 billion valuation to launch Hex 4.0 for AI agents. Vera Health raised $28.5 million Series A, Casap secured $56 million Series B, Bites obtained $40 million Series A, Tutor Intelligence received $75 million Series B, and 42AI raised $62.5 million seed, expanding AI capabilities in health, finance, frontline training, robotics, and trading.",
         "stories": [
-          {
-            "id": "b9addf9bc543",
-            "headline": "Saudi Aramco buys 49% of AI startup Humain, adds $2.6 billion cash",
-            "url": "https://techmeme.com/261101/p17"
-          },
           {
             "id": "d5d97060cb47",
             "headline": "Hex Technologies raises $100 million Series D, launches Hex 4.0 for AI agents",
@@ -5605,36 +5608,15 @@
             "url": "https://techmeme.com/261102/p33"
           },
           {
-            "id": "2c1f025c89cb",
-            "headline": "Oracle to raise $20 billion via stock and bond sales for AI data centers",
-            "url": "https://techmeme.com/261102/p25"
+            "id": "133799eedc2b",
+            "headline": "42AI emerges from stealth with $62.5 million seed to build behavioral world model",
+            "url": "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior"
           }
         ]
       },
       {
-        "title": "Anthropic expands and regulates",
-        "text": "Anthropic added a rule to block Claude Code from cloning existing games, disclosed $895.4 billion in compute commitments, and announced a ¥552.9 bn raise from Japanese investors for its U.S. IPO.",
-        "stories": [
-          {
-            "id": "cf87f0f49a6c",
-            "headline": "Anthropic adds rule to stop Claude Code from cloning existing video games",
-            "url": "https://theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones"
-          },
-          {
-            "id": "1b0209f81f9f",
-            "headline": "Anthropic reports $895.4 billion in compute‑related purchase commitments and leases",
-            "url": "https://techmeme.com/261102/p29"
-          },
-          {
-            "id": "038e188345e4",
-            "headline": "Anthropic to raise up to ¥552.9 bn ($3.5 bn) from Japanese investors in US IPO",
-            "url": "https://bloomberg.com/news/articles/2026-11-02/anthropic-seeks-up-to-3-5-billion-in-japan-for-its-mega-us-ipo"
-          }
-        ]
-      },
-      {
-        "title": "New AI benchmarks released",
-        "text": "SemiAnalysis introduced the GDPx benchmark where Anthropic’s Claude Opus 5.5 led with 12% score; OpenAI launched LifeVal for everyday assistance tasks; researchers used GPT‑6 Astra to edit 0.016% of Qwen3.5‑0.8B weights, boosting math performance sixfold.",
+        "title": "New benchmarks gauge agentic AI",
+        "text": "SemiAnalysis released the GDPx benchmark testing 206 agentic tasks, where Anthropic’s Claude Opus 5.5 achieved a 12 % average score. OpenAI introduced the LifeVal benchmark for everyday assistance tasks, and researchers demonstrated that GPT‑6 Astra edited 0.016 % of Qwen3.5‑0.8B weights to boost math performance sixfold; Google’s Suncatcher satellite ran the Gemma 4 model in orbit, returning its first AI response.",
         "stories": [
           {
             "id": "3ee2035ff53e",
@@ -5650,27 +5632,58 @@
             "id": "1818a08f7975",
             "headline": "GPT-6 Astra edits 0.016% of Qwen3.5-0.8B weights, boosting math performance sixfold",
             "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l"
+          },
+          {
+            "id": "cce544b44602",
+            "headline": "Google’s Project Suncatcher satellite generates first AI response in orbit",
+            "url": "https://analyticsindiamag.com/ai-news/googles-project-suncatcher-satellite-generates-first-ai-response-in-orbit"
           }
         ]
       },
       {
-        "title": "Enterprise AI tools updated",
-        "text": "xAI deployed Data Bot for SpaceX data queries, Qodo integrated company knowledge into Codex for pre‑pull‑request reviews, OpenAI merged Chat and Work tabs in its desktop app, and Elon Musk limited Grok Bot usage due to high costs.",
+        "title": "Governance steps target AI content",
+        "text": "Anthropic updated Claude Code’s system prompt to forbid recreating existing video games, allowing only original or genre‑based games. The New York Times, New York Daily News, Chicago Tribune and Orlando Sentinel sued Brave Software for allegedly scraping their articles and providing them to AI firms, claiming paywall bypass.",
         "stories": [
           {
-            "id": "95e7a57b9036",
-            "headline": "xAI launches Data Bot, a team AI assistant for data queries at SpaceX",
-            "url": "https://x.ai/news/data-bot"
+            "id": "cf87f0f49a6c",
+            "headline": "Anthropic adds rule to stop Claude Code from cloning existing video games",
+            "url": "https://theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones"
           },
           {
-            "id": "598c6194c0d3",
-            "headline": "Qodo adds company knowledge to Codex for pre‑pull‑request code review",
-            "url": "https://openai.com/index/qodo-codex-plugin"
-          },
+            "id": "9abae69701c4",
+            "headline": "New York Times and other papers sue Brave over AI scraping and paywall bypass",
+            "url": "https://theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times"
+          }
+        ]
+      },
+      {
+        "title": "AI firms expand infrastructure and tools",
+        "text": "OpenAI will combine the Chat and Work tabs in its desktop app for select users. Oracle announced a $20 billion stock and bond sale to fund AI data‑center expansion, Alphabet sold €6 billion in bonds with strong demand, Lumen and Microsoft expanded co‑selling for AI‑ready networks, OpenAI launched a Grid Protectors Program for utility power reliability, and SpaceX throttled Grok Bot usage citing high costs.",
+        "stories": [
           {
             "id": "f6025fbafac9",
             "headline": "OpenAI to merge Chat and Work tabs in ChatGPT desktop app for select users",
             "url": "https://techmeme.com/261102/p21"
+          },
+          {
+            "id": "2c1f025c89cb",
+            "headline": "Oracle to raise $20 billion via stock and bond sales for AI data centers",
+            "url": "https://techmeme.com/261102/p25"
+          },
+          {
+            "id": "b4f9b3921fdc",
+            "headline": "Alphabet launches €6 billion euro‑denominated bond sale, €17 billion demand",
+            "url": "https://techmeme.com/261102/p22"
+          },
+          {
+            "id": "de3657a54534",
+            "headline": "Lumen and Microsoft expand co‑selling to deliver AI‑ready enterprise networks",
+            "url": "https://news.microsoft.com/source/2026/11/02/lumen-and-microsoft-expand-collaboration-to-co-sell-enterprise-ai-ready-networks"
+          },
+          {
+            "id": "19244c7aa206",
+            "headline": "OpenAI launches Grid Protectors Program to aid utilities with compute campus power reliability",
+            "url": "https://openai.com/index/grid-protectors-program"
           },
           {
             "id": "272a05aa5da7",
@@ -5683,42 +5696,55 @@
     "from_stories": 20
   },
   "plan": {
-    "focus": "Tracking AI code‑tool rollouts and safety gaps while monitoring high‑growth AI business earnings.",
-    "updated_at": "2026-11-02T21:54:56+00:00",
+    "focus": "Tracking Anthropic's IPO valuation scramble and related policy debates as deal flow dominates recent coverage.",
+    "updated_at": "2026-11-03T01:21:54+00:00",
     "thin_areas": [
       "safety",
-      "AI in India"
+      "model releases"
     ],
     "searches": [
-      "AI safety incidents mouse surgery",
-      "Ubuntu kernel vulnerability patch status",
-      "AI health startups India funding"
+      "AI safety regulations 2026",
+      "new AI model releases November 2026",
+      "OpenAI national security modernization"
     ]
   },
   "builders": {
-    "written_at": "2026-11-02T04:12:35+00:00",
-    "intro": "Today’s picks showcase fast diff tools, collaborative AI agents, privacy‑first chatbots, curated knowledge, security automation, and on‑device inference demos.",
+    "written_at": "2026-11-03T01:21:54+00:00",
+    "intro": "Today's AI builds span silent speech interfaces, mobile agents, AI‑enhanced mind‑maps, and self‑hosted developer tools.",
     "picks": [
       {
-        "name": "OmniDiff",
-        "what": "Open-source, super fast, content-aware diff tool that handles code, configs, images, PDFs, archives, fonts, and more, written in Rust.",
-        "why": "Provides near-instant diffs even for huge files, useful for developers needing precise multi-format comparisons.",
-        "kind": "open-source",
+        "name": "Subvocal",
+        "what": "Smart glasses decode silent mouth movements into text for hands‑free computer control.",
+        "why": "Enables discreet, on‑the‑go interaction, opening new UI possibilities for builders.",
+        "kind": "tool",
         "for": "builders",
-        "url": "https://github.com/ivankovic/omnidiff",
-        "discussion": "https://news.ycombinator.com/item?id=50325253",
+        "url": "https://news.ycombinator.com/item?id=50340088",
+        "discussion": "https://news.ycombinator.com/item?id=50340088",
         "source": "Show HN",
-        "signal": "186 points, 44 comments on Hacker News",
-        "image": "img/builders/89307f734cfd.jpg",
+        "signal": "539 points, 296 comments on Hacker News",
+        "image": null,
         "video": null
       },
       {
-        "name": "agentmash",
-        "what": "Open-source platform that lets multiple AI coding agents collaborate in real time on shared projects.",
-        "why": "Enables teams to harness AI agents for pair programming and code review, accelerating development workflows.",
-        "kind": "open-source",
+        "name": "dsh-Go",
+        "what": "Runs DeepSeek locally on Android and lets the LLM agent remotely control your computer.",
+        "why": "Brings powerful AI agents to phones without cloud dependencies, useful for mobile AI workflows.",
+        "kind": "app",
         "for": "builders",
-        "url": "https://producthunt.com/products/agentmash",
+        "url": "https://github.com/ccch1mneyyy/dsh-Go",
+        "discussion": "",
+        "source": "GitHub",
+        "signal": "5,910 stars since 25 Oct, written in Dart",
+        "image": "img/builders/97c28dfefe84.jpg",
+        "video": null
+      },
+      {
+        "name": "Xmind 2027",
+        "what": "AI‑augmented mind‑mapping app that suggests ideas and connections as a thinking partner.",
+        "why": "Helps creators and businesses brainstorm faster with AI‑driven insights.",
+        "kind": "app",
+        "for": "business",
+        "url": "https://producthunt.com/products/xmind",
         "discussion": "",
         "source": "Product Hunt",
         "signal": "launched on Product Hunt",
@@ -5726,67 +5752,54 @@
         "video": null
       },
       {
-        "name": "AnyModelBot",
-        "what": "Local-first chatbot that connects to over 70 LLM providers via a single Modelflare key, with memory and computer-use abilities.",
-        "why": "Gives developers control over model choice and privacy while offering a versatile AI assistant across chat, WeChat, and Feishu.",
-        "kind": "app",
-        "for": "builders",
-        "url": "https://github.com/modelflare-ai/AnyModelBot",
-        "discussion": "",
-        "source": "GitHub",
-        "signal": "670 stars since 27 Oct, written in TypeScript",
-        "image": "img/builders/b6fd0b882821.jpg",
-        "video": null
-      },
-      {
-        "name": "HackerBooks",
-        "what": "A searchable catalog of ~16.5k books mentioned on Hacker News, with links back to the original comments and downloadable data.",
-        "why": "Curates community‑vetted reading lists for tech professionals and investors seeking curated knowledge.",
-        "kind": "app",
-        "for": "everyone",
-        "url": "https://hackerbooks.org/",
-        "discussion": "https://news.ycombinator.com/item?id=50326821",
-        "source": "Show HN",
-        "signal": "1065 points, 195 comments on Hacker News",
-        "image": "img/builders/eeaedb8347d0.jpg",
-        "video": null
-      },
-      {
-        "name": "CVEngine",
-        "what": "AI‑first external attack surface assessment platform that continuously discovers assets, validates vulnerabilities, and integrates with developer agents.",
-        "why": "Helps security teams automate surface monitoring and evidence‑based remediation, reducing manual effort.",
+        "name": "Agent Inbox",
+        "what": "Provides email, Slack and Telegram endpoints for AI agents to receive messages.",
+        "why": "Integrates agents into existing communication channels, simplifying deployment in real‑world workflows.",
         "kind": "tool",
-        "for": "business",
-        "url": "https://github.com/hevnsnt/CVEngine",
+        "for": "builders",
+        "url": "https://producthunt.com/products/agent-inbox",
         "discussion": "",
-        "source": "GitHub",
-        "signal": "562 stars since 24 Oct, written in Python",
-        "image": "img/builders/db8d281c1d17.jpg",
+        "source": "Product Hunt",
+        "signal": "launched on Product Hunt",
+        "image": null,
         "video": null
       },
       {
-        "name": "LFM3 Omni 2B WebGPU",
-        "what": "Runs the LFM3‑Omni‑2B language model entirely in the browser using WebGPU.",
-        "why": "Demonstrates high‑performance on‑device inference, opening possibilities for privacy‑preserving AI apps.",
+        "name": "Persona AI SDK",
+        "what": "SDK offering default personas, durable memory, and Bedrock/OpenAI adapters for LLMs.",
+        "why": "Streamlines building consistent character agents, valuable for developers creating personalized AI experiences.",
+        "kind": "open-source",
+        "for": "builders",
+        "url": "https://github.com/tavern-labs-ai/persona-ai-sdk",
+        "discussion": "",
+        "source": "GitHub",
+        "signal": "197 stars since 31 Oct, written in TypeScript",
+        "image": "img/builders/cc5ced81480e.jpg",
+        "video": null
+      },
+      {
+        "name": "Idol",
+        "what": "Generates a 3‑D Gaussian‑splat model from a single image.",
+        "why": "Provides rapid 3‑D asset creation for creators and game developers without manual modeling.",
         "kind": "demo",
         "for": "builders",
-        "url": "https://huggingface.co/spaces/LiquidAI/LFM3-Omni-2B-WebGPU",
+        "url": "https://huggingface.co/spaces/speridlabs/idol",
         "discussion": "",
         "source": "Hugging Face Spaces",
-        "signal": "trending on Hugging Face, 69 likes",
-        "image": "img/builders/4471ed7db03e.jpg",
+        "signal": "trending on Hugging Face, 76 likes",
+        "image": "img/builders/6dd9576bff0d.jpg",
         "video": null
       }
     ]
   },
   "top_voices": {
-    "written_at": "2026-11-02T04:12:35+00:00",
-    "headline": "AI’s rapid advances spark debates over trust, security, and the future of hiring",
-    "range": "26 Oct – 2 Nov 2026",
+    "written_at": "2026-11-03T01:21:54+00:00",
+    "headline": "AI agents, trust, and benchmarks clash as legal privacy, software reliability, and evaluation standards take center stage",
+    "range": "27 Oct – 3 Nov 2026",
     "debates": [
       {
-        "title": "Can LLMs preserve trustworthy documentation?",
-        "summary": "Engineers worry that LLM‑generated code and docs can be easily forged, undermining confidence in software artifacts. The debate centers on how maintainers can prove correctness and retain user trust in the age of generative AI.",
+        "title": "LLMs and trust in software documentation",
+        "summary": "Kyle Kingsbury warns that generative models make it easier to counterfeit documentation, while recent tooling glitches and exploding pull‑request volumes illustrate the growing tension between speed and reliability. The debate matters as software reliability hinges on verifiable artifacts in an AI‑augmented era.",
         "image": "",
         "video": "",
         "people": [
@@ -5797,30 +5810,18 @@
         ]
       },
       {
-        "title": "Are AI models becoming new attack vectors?",
-        "summary": "Recent disclosures of vulnerabilities in AI models and platforms raise alarms about a growing cyber‑risk landscape. The conversation pits concerns about systemic AI security against concrete exploit demonstrations.",
-        "image": "img/voices/21d66635327b.jpg",
-        "video": "",
+        "title": "AI benchmarking and evaluation standards",
+        "summary": "Researchers debate whether current benchmarks capture real progress, with concerns about LLMs’ weakness on low‑latency tasks, the difficulty of designing meaningful tests, and a shift toward closed evaluations that hide open‑model performance. The discussion matters because benchmark claims drive investment, safety assessments, and public perception.",
+        "image": "img/voices/65e05126788d.jpg",
+        "video": "sFfPkUJd_Jk",
         "people": [
           {
-            "name": "Nathan Lambert",
+            "name": "Jack Clark",
             "photo": ""
           },
           {
-            "name": "Simon Willison",
-            "photo": "img/people/simon-willison.jpg"
-          }
-        ]
-      },
-      {
-        "title": "Do AI coding agents replace traditional hiring tests?",
-        "summary": "Anthropic’s decision to drop coding interviews reflects confidence in AI‑assisted development, while others argue that AI tools are not universally beneficial and human judgment remains essential. The debate examines hiring practices versus AI‑driven coding productivity.",
-        "image": "img/voices/625efce5713d.jpg",
-        "video": "35ZWesLrv5A",
-        "people": [
-          {
-            "name": "swyx",
-            "photo": "img/people/swyx.jpg"
+            "name": "Nathan Lambert",
+            "photo": ""
           },
           {
             "name": "Ethan Mollick",
@@ -6092,7 +6093,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 33,
+    "stories_this_month": 34,
     "model_releases_this_month": 1,
     "labs_tracked": 17
   }

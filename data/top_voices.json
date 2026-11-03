@@ -1,23 +1,5 @@
 {
   "posts": {
-    "2812ff85caf0": {
-      "id": "2812ff85caf0",
-      "url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra",
-      "person": "Simon Willison",
-      "text": "GPT-6.1 Terra. GPT-6.1 Terra It's always interesting to note which aspects of a new model are emphasized in the release announcement. In the case of GPT-6.1 Terra, OpenAI went with visual reasoning and computer use: We’re introducing GPT-6.1 Terra , a fast, efficient model that combines detailed visual reasoning and precise computer use alongside clearer, more natural writing. A significant step up from GPT‑5.6 Terra, it excels at the communication and computer-based tasks that fill the workday, from drafting proposals and interpreting technical drawings to filling out forms and editing videos. Terra sits in",
-      "published": "2026-10-26T23:53:07+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
-    "7a3fece08005": {
-      "id": "7a3fece08005",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mysy6zyphs25",
-      "person": "Ethan Mollick",
-      "text": "Two and a half years between these. (Tonight, OpenAI announced an unreleased model solved three long-standing problems in physics, math, and computer science, one of which was proving the Exponential Time Hypothesis was false)",
-      "published": "2026-10-27T00:29:26.974Z",
-      "via": "Bluesky",
-      "kind": "post"
-    },
     "00bf05796b74": {
       "id": "00bf05796b74",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3myucj4frec2l",
@@ -516,78 +498,101 @@
       "published": "2026-11-02T20:12:42.614Z",
       "via": "Bluesky",
       "kind": "post"
+    },
+    "db8b36c17fea": {
+      "id": "db8b36c17fea",
+      "url": "https://simonwillison.net/2026/Nov/2/llm",
+      "person": "Simon Willison",
+      "text": "llm 0.37. Release: llm 0.37 There's a lot of stuff in this new release of my LLM CLI tool and Python library, representing around two months of accumulated features and fixes. I added gpt-6.1-sol and gpt-6.1-terra , plus a new llm openai endpoint add command to make it easier to configure additional models that use OpenAI-compatible endpoints. I switched the default model (if you have not set your own default) to gpt-6-luna - half the price of the previous default, gpt-5.6-luna . LLM's support for embeddings now accepts that different binary content may have different content-type - necessary for models",
+      "published": "2026-11-02T23:49:30+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "69a46671059b": {
+      "id": "69a46671059b",
+      "url": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora",
+      "person": "swyx",
+      "text": "Building AI for Lawyers - Jacob Lauritzen, CTO of Legora. In this episode, we chat with Jacob Lauritzen, CTO of Legora, following the announcement of their $550M Series E at an $8.8B valuation a couple weeks ago. We talk about what it takes to build AI agents for lawyers and what other people building agents can learn from that work. Legora started in a Stockholm basement with a simple product: ChatGPT, Swedish law, and a search tool. Jacob had already been through YC with his own startup when he helped Max Junestrand with the application for Leya (now Legora). He later joined as head of engineering and is now CTO. Today the agent drafts and edits Word documents, reviews thousands of…",
+      "published": "2026-11-02T23:01:02+00:00",
+      "via": "Latent Space",
+      "kind": "post"
+    },
+    "e33216d0e243": {
+      "id": "e33216d0e243",
+      "url": "https://latent.space/p/building_legal_agents_when_you_can_t_see_the_data_-_jacob_lauritzen_cto_of_legora",
+      "person": "swyx",
+      "text": "Building Legal Agents When You Can't See the Data - Jacob Lauritzen, CTO of Legora. Legora can’t read a single trace of what its agent does for a lawyer. The data belongs to the law firm’s clients. How do you build and test an agent when you can’t see its work? Jacob Lauritzen is the CTO of Legora, one of the fastest-growing companies in legal tech history. The team started in a Stockholm basement with ChatGPT, Swedish law, and a search tool. Today, a lawyer can use Legora to draft and edit Word documents, review 10,000 contracts in a single table, or run due diligence. The agent also coordinates work between lawyers, clients, and other agents. When Legora made its own acquisitions, the…",
+      "published": "2026-11-02T22:54:03+00:00",
+      "via": "Latent Space",
+      "kind": "post"
+    },
+    "1c51367ec29b": {
+      "id": "1c51367ec29b",
+      "url": "https://news.ycombinator.com/item?id=50336791",
+      "person": "Sam Altman",
+      "text": "Sam Altman: All the RAM Should Belong to Me, So I Can Charge People to Use It (119 points, 108 comments)",
+      "published": "2026-11-02T13:51:06Z",
+      "via": "Hacker News",
+      "kind": "discussion",
+      "link": "https://gizmodo.com/sam-altman-all-the-ram-should-belong-to-me-so-i-can-charge-people-to-use-it-2000833412"
     }
   },
   "digest": {
-    "written_at": "2026-11-02T04:12:35+00:00",
-    "range": "26 Oct – 2 Nov 2026",
-    "headline": "AI’s rapid advances spark debates over trust, security, and the future of hiring",
+    "written_at": "2026-11-03T01:21:54+00:00",
+    "range": "27 Oct – 3 Nov 2026",
+    "headline": "AI agents, trust, and benchmarks clash as legal privacy, software reliability, and evaluation standards take center stage",
     "debates": [
       {
-        "title": "Can LLMs preserve trustworthy documentation?",
-        "summary": "Engineers worry that LLM‑generated code and docs can be easily forged, undermining confidence in software artifacts. The debate centers on how maintainers can prove correctness and retain user trust in the age of generative AI.",
+        "title": "LLMs and trust in software documentation",
+        "summary": "Kyle Kingsbury warns that generative models make it easier to counterfeit documentation, while recent tooling glitches and exploding pull‑request volumes illustrate the growing tension between speed and reliability. The debate matters as software reliability hinges on verifiable artifacts in an AI‑augmented era.",
         "positions": [
           {
             "person": "Simon Willison",
-            "stance": "Calls for new verification practices and ways for maintainers to demonstrate quality to users",
+            "stance": "Shares practical issues like hidden dependency bugs from lockfiles and points to a surge in merged PRs, showing how agentic engineering reshapes development at scale.",
             "posts": [
               {
-                "id": "7a06514023fd",
-                "url": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury",
+                "id": "7d7291538279",
+                "url": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first",
                 "via": "Simon Willison",
                 "kind": "post",
                 "date": "2026-11-01"
+              },
+              {
+                "id": "94bdedac0696",
+                "url": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026",
+                "via": "Simon Willison",
+                "kind": "post",
+                "date": "2026-10-28"
               }
             ]
           }
         ]
       },
       {
-        "title": "Are AI models becoming new attack vectors?",
-        "summary": "Recent disclosures of vulnerabilities in AI models and platforms raise alarms about a growing cyber‑risk landscape. The conversation pits concerns about systemic AI security against concrete exploit demonstrations.",
+        "title": "AI benchmarking and evaluation standards",
+        "summary": "Researchers debate whether current benchmarks capture real progress, with concerns about LLMs’ weakness on low‑latency tasks, the difficulty of designing meaningful tests, and a shift toward closed evaluations that hide open‑model performance. The discussion matters because benchmark claims drive investment, safety assessments, and public perception.",
         "positions": [
           {
-            "person": "Nathan Lambert",
-            "stance": "Labels the surge of AI model vulnerabilities as “Black October,” indicating emerging cyber risks",
+            "person": "Jack Clark",
+            "stance": "Notes that LLMs perform poorly on low‑latency tasks, indicating a gap in existing evaluation suites.",
             "posts": [
               {
-                "id": "21d66635327b",
-                "url": "https://interconnects.ai/p/was-i-wrong-about-open-models-and",
-                "via": "Interconnects",
+                "id": "e5f6124c6872",
+                "url": "https://jack-clark.net/2026/11/02/import-ai-479-spacewar-low-latency-tasks-versus-llms-genie-4",
+                "via": "Import AI (Jack Clark)",
                 "kind": "post",
-                "date": "2026-10-30"
+                "date": "2026-11-02"
               }
             ]
           },
           {
-            "person": "Simon Willison",
-            "stance": "Describes a complex exploit against ChatGPT’s HTML preview sandbox that could expose private data",
+            "person": "Nathan Lambert",
+            "stance": "Describes the benchmarker’s dilemma, warning that score improvements may not reflect true frontier advances.",
             "posts": [
               {
-                "id": "dd35d009aad6",
-                "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts",
-                "via": "Simon Willison",
-                "kind": "post",
-                "date": "2026-10-31"
-              }
-            ]
-          }
-        ],
-        "image": "img/voices/21d66635327b.jpg",
-        "image_credit": "Interconnects"
-      },
-      {
-        "title": "Do AI coding agents replace traditional hiring tests?",
-        "summary": "Anthropic’s decision to drop coding interviews reflects confidence in AI‑assisted development, while others argue that AI tools are not universally beneficial and human judgment remains essential. The debate examines hiring practices versus AI‑driven coding productivity.",
-        "positions": [
-          {
-            "person": "swyx",
-            "stance": "Flags Anthropic ending coding interviews, arguing that practical ability outweighs tenure‑based assessments",
-            "posts": [
-              {
-                "id": "625efce5713d",
-                "url": "https://latent.space/p/ainews-anthropic-ends-coding-interviews-hunger-beats-tenure",
-                "via": "Latent Space",
+                "id": "65e05126788d",
+                "url": "https://interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers",
+                "via": "Interconnects",
                 "kind": "post",
                 "date": "2026-10-28"
               }
@@ -595,59 +600,59 @@
           },
           {
             "person": "Ethan Mollick",
-            "stance": "Points out that experts can be subtly swayed by AI agents, emphasizing the need for human oversight",
+            "stance": "Reports that Artificial Analysis moved to closed benchmarks, showing open‑weight models falling further behind and raising transparency concerns.",
             "posts": [
               {
-                "id": "8c47676bd7b9",
-                "url": "https://bsky.app/profile/emollick.bsky.social/post/3myvcgatpbs2q",
+                "id": "81af9a1e6190",
+                "url": "https://bsky.app/profile/emollick.bsky.social/post/3mywnjrmkb22z",
                 "via": "Bluesky",
                 "kind": "post",
-                "date": "2026-10-27"
+                "date": "2026-10-28"
               }
             ]
           }
         ],
-        "image": "img/voices/625efce5713d.jpg",
-        "image_credit": "Latent Space",
-        "video": "35ZWesLrv5A"
+        "video": "sFfPkUJd_Jk",
+        "image": "img/voices/65e05126788d.jpg",
+        "image_credit": "Interconnects"
       }
     ],
     "standouts": [
       {
+        "id": "1818a08f7975",
+        "person": "Ethan Mollick",
+        "why": "Claims a novel weight‑editing technique that dramatically improves math reasoning in a 0.8B model without gradients.",
+        "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l",
+        "via": "Bluesky",
+        "kind": "post",
+        "title": "If this holds up, it is big: \"We asked GPT-6 Astra to edit Qwen3.5-0.8B weights to improve math. It directly changed…"
+      },
+      {
         "id": "dd35d009aad6",
         "person": "Simon Willison",
-        "why": "Details a sophisticated exploit chain against ChatGPT, highlighting concrete AI platform security risks",
+        "why": "Details a complex exploit against ChatGPT’s HTML preview sandbox, highlighting security risks in AI‑driven interfaces.",
         "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts",
         "via": "Simon Willison",
         "kind": "post",
         "title": "How We Took Over ChatGPT Accounts. How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found…"
       },
       {
-        "id": "7a06514023fd",
-        "person": "Simon Willison",
-        "why": "Frames the broader crisis of trust in software documentation caused by LLMs",
-        "url": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury",
-        "via": "Simon Willison",
-        "kind": "post",
-        "title": "Quoting Kyle Kingsbury. More broadly, the use of LLMs erodes trust in documentation, in software, and in the…"
-      },
-      {
-        "id": "8266ea920e51",
+        "id": "4505f5f4bd09",
         "person": "swyx",
-        "why": "Shows Gemini 4 Carbon leading visual‑reasoning benchmarks, illustrating frontier model capabilities",
-        "url": "https://latent.space/p/ainews-gemini-4-carbon",
+        "why": "Reveals Google’s AI‑generated overview feature hurting search revenue, signaling a potential AI bear market.",
+        "url": "https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c",
         "via": "Latent Space",
         "kind": "post",
-        "title": "[AINews] Gemini 4 Carbon tops leaderboards, launches for cyber defenders. It’s a good thing we published our Opus 5.5…",
-        "image": "img/voices/8266ea920e51.jpg",
+        "title": "[AINews] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?. As…",
+        "image": "img/voices/4505f5f4bd09.jpg",
         "video": "35ZWesLrv5A"
       }
     ],
     "people": [
       "Ethan Mollick",
+      "Jack Clark",
       "Nathan Lambert",
-      "Simon Willison",
-      "swyx"
+      "Simon Willison"
     ],
     "from_posts": 50,
     "reported": 0,

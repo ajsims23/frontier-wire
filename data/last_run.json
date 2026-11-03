@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-03T00:52:10+00:00",
+  "started_at": "2026-11-03T01:21:54+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -15,36 +15,242 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (19)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (22)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
   },
   "dropped": [
     {
-      "title": "Scaling Git at OpenAI",
-      "reason": "score 5: The post describes OpenAI's internal Git‑compatible backend Pando, an incremental tooling update aimed at supporting Codex development. It is not a major model release, research breakthrough, policy change, or significant industry financing, so it scores as an incremental product feature (5) and is not kept as a story."
+      "title": "OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization",
+      "reason": "score 5: OpenAI’s appointment of Dan Driscoll as senior counselor for national‑security modernization is a notable hire but not a major development."
+    },
+    {
+      "title": "Egoless Mathematics in the AI Era",
+      "reason": "score 2: Essay on mathematics and AI; lacks news value."
+    },
+    {
+      "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+      "reason": "score 4: Startup Momentic launches bug‑catching agents; interesting but not a significant AI‑industry event."
+    },
+    {
+      "title": "Anthropic's growth just flattened",
+      "reason": "score 4: Analysis that Anthropic’s growth has flattened; no new data or major impact."
+    },
+    {
+      "title": "The SEC Should Block Anthropic's IPO to Protect the Public",
+      "reason": "score 4: Opinion piece urging the SEC to block Anthropic’s IPO; no actual regulatory action, so not newsworthy enough."
+    },
+    {
+      "title": "Y Combinator’s Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
+      "reason": "score 4: Garry Tan’s personal spending on AI agents is anecdotal and not a broader industry development."
+    },
+    {
+      "title": "Anthropic warns that it’s very close to RSI capability, aka self-building AI",
+      "reason": "score 5: Anthropic’s warning about nearing RSI capability repeats the claim already covered in the S‑1 filing; not a separate news item."
+    },
+    {
+      "title": "PowerUp Money Raises $10 Mn To Expand Wealth Management Services",
+      "reason": "not AI: Wealth‑tech funding round in India; not AI‑related."
+    },
+    {
+      "title": "llm 0.37",
+      "reason": "score 3: Personal release of llm 0.37 CLI tool; not a frontier model or major AI advance."
+    },
+    {
+      "title": "John Ternus says Apple expects memory costs to increase into December and beyond; Apple's inventory grew to $14.54B in Q4, up 31.1% QoQ and 154.3% YoY (Sarah Perez/TechCrunch)",
+      "reason": "score 3: Apple’s memory‑cost outlook is a supply‑chain issue, not directly AI‑focused."
+    },
+    {
+      "title": "Match Group reports Q3 revenue fell 3% YoY to $891M, below estimates, and total paying users fell 5% to 13.8M; Q4 forecast has adjusted EBITDA below estimates (Samantha Kelly/Bloomberg)",
+      "reason": "not AI: Match Group earnings report; unrelated to AI."
+    },
+    {
+      "title": "Brazil's largest crypto exchange Mercado Bitcoin halts withdrawals after a breach involving $46M+ in assets, per Arkham; Tether froze 4.5M+ USDT in response (Jason Shubnell/The Block)",
+      "reason": "not AI: Brazil crypto exchange breach; not AI‑related."
+    },
+    {
+      "title": "Apple reports Q4 revenue from Services, which includes the App Store, Apple TV, Apple Music, iCloud, and more, grew 10% YoY to $31.57B, vs. $31.58B est. (Loree Seitz/The Wrap)",
+      "reason": "not AI: Apple services revenue report; not AI‑focused."
+    },
+    {
+      "title": "EXCLUSIVE: AI Safety Could Decide House Majority And Beyond, Poll Shows",
+      "reason": "score 5: Poll on AI safety influencing politics; interesting but not a concrete policy development."
+    },
+    {
+      "title": "Oracle files to sell $20B in new stock, bonds to finance AI buildout",
+      "reason": "already covered (story 2c1f025c89cb)"
+    },
+    {
+      "title": "Salesforce announces plans to acquire Cresta, a provider of AI-powered contact center automation software; source: Salesforce agreed to pay $2.7B for Cresta (The Information)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Anthropic S-1 claims it may \"imminently meet\" its RSI threshold and may fail to identify \"significant acceleration\" in its development until after it's occurred (Julie Bort/TechCrunch)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Sources: institutional investors told Anthropic that its IPO valuation should be around $1.5T to $1.6T, down from estimates of $2T, citing a tech stock selloff (Wall Street Journal)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "California AI Companion Chatbot Regulations Initiative (2026)",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
-  "written": [],
-  "notes": [],
-  "mode": "breaking",
+  "written": [
+    {
+      "id": "b2485c91dd17",
+      "headline": "Trajectory raises $45 million Series A to automate AI model post‑training",
+      "category": "industry",
+      "summary": "Trajectory, a startup founded by three Stanford alumni, announced a $45 million Series A round at a $300 million valuation, led by Sequoia with participation from Nvidia, Bessemer and Bain Capital. The company’s platform lets non‑technical users continuously fine‑tune open‑source models through feedback‑driven continual learning.",
+      "url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts",
+      "sources": 2,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "4 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
   "timings": {
-    "gather": 12.9,
-    "judge": 1.5,
-    "verify and write": 0.0,
-    "tagging": 0.0,
-    "trackers": 0.0,
-    "photos": 0.0,
-    "stock photos": 0.0,
-    "alerts": 0.0
+    "gather": 79.0,
+    "audit": 3.5,
+    "plan": 1.5,
+    "judge": 3.3,
+    "verify and write": 314.7,
+    "videos": 3.5,
+    "tagging": 20.6,
+    "explainers": 0.0,
+    "trackers": 43.4,
+    "claims": 20.5,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 24.8,
+    "top voices": 17.2,
+    "briefing": 21.5,
+    "self-review": 0.5,
+    "photos": 0.2,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 3.2
   },
-  "fetched": 2412,
-  "fresh": 1,
-  "judged": 1,
-  "kept": 0,
-  "trackers": "filed 0 stories; no tracker changed",
-  "photos": "0 saved, 0 unavailable",
-  "alerts": "no events",
-  "ai_requests_run": 1,
-  "ai_tokens_run": 5955,
-  "ai_requests_today": 1,
-  "provider_log": []
+  "fetched": 2922,
+  "fresh": 19,
+  "audit": "coverage 54% of 13 significant stories; 6 missed, 0 added to this run",
+  "plan": {
+    "focus": "Tracking Anthropic's IPO valuation scramble and related policy debates as deal flow dominates recent coverage.",
+    "priorities": [
+      "Anthropic S-1 claims it may \"imminently meet\" its RSI threshold and ma (Anthropic S‑1 claims about imminent RSI capability, key to IPO storyline)",
+      "Sources: institutional investors told Anthropic that its IPO valuation (Investors’ revised valuation range fuels market debate on Anthropic's worth)",
+      "The SEC Should Block Anthropic's IPO to Protect the Public (Policy angle: SEC opposition to Anthropic IPO adds regulatory context)",
+      "Salesforce announces plans to acquire Cresta, a provider of AI-powered (Major AI‑focused acquisition, illustrates ongoing deal activity)",
+      "Oracle files to sell $20B in new stock, bonds to finance AI buildout (Oracle's $20 B financing move signals industry investment trends)"
+    ],
+    "thin_areas": [
+      "safety",
+      "models"
+    ],
+    "searches": [
+      "AI safety regulations 2026: 2 new",
+      "new AI model releases November 2026: 0 new",
+      "OpenAI national security modernization: 3 new"
+    ],
+    "dig_deeper": [
+      "Anthropic S-1 claims it may \"imminently meet\" its RSI threshold and ma",
+      "Sources: institutional investors told Anthropic that its IPO valuation"
+    ]
+  },
+  "judged": 24,
+  "kept": 6,
+  "research": {
+    "investigated": 4,
+    "confirmed": 0,
+    "tool_calls": 12
+  },
+  "research_log": [
+    "Salesforce announces plans to acquire Cresta, a provider of AI-powered: unconfirmed (searched “Salesforce to acquire Cresta $2.7 billion”; read binance.com; searched “Salesforce acquisition Cresta 2.7 billion announced Monday”)",
+    "Anthropic S-1 claims it may \"imminently meet\" its RSI threshold and ma: unconfirmed (searched “Anthropic S-1 RSI threshold significant acceleration development”; read cnbc.com; read techcrunch.com)",
+    "Sources: institutional investors told Anthropic that its IPO valuation: unconfirmed (searched “Anthropic IPO valuation 1.5 trillion institutional investors”; read msn.com; searched “institutional investors told Anthropic IPO valuation 1.5 trillion tech stock selloff”)",
+    "California AI Companion Chatbot Regulations Initiative (2026): unconfirmed (searched “California AI Companion Chatbot Regulations Initiative 2026”; read jdsupra.com; searched “\"AI Companion Chatbot\" California initiative”)"
+  ],
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "tagged": 1,
+  "trackers": "filed 1 stories; updated ai-money",
+  "claims": "76 tracked, 72 open, 0 updated this run",
+  "model_tracker": "82 models, 6 changes today",
+  "builders_sources": {
+    "show-hn": "ok (7)",
+    "github-new": "ok (34)",
+    "hf-spaces": "ok (21)",
+    "product-hunt": "ok (2)",
+    "r-localllama": "ok (25)",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
+  },
+  "builders": "picked 7 from 60 candidates; 4 with pictures, 0 with videos",
+  "top_voices_sources": {
+    "tv-mollick": "ok (0)",
+    "tv-lambert": "ok (2)",
+    "tv-swyx": "ok (8)",
+    "tv-dwarkesh": "ok (2)",
+    "tv-raschka": "ok (0)",
+    "tv-karpathy": "ok (1)",
+    "tv-evans": "ok (0)",
+    "x-coverage": "ok (0 of 4 articles, bing)",
+    "hn": "ok (2)"
+  },
+  "top_voices": "2 debates from 50 posts by 8 people (4 removed by checks); 3 portraits, 2 pictures",
+  "briefing": "4 themes from 20 stories",
+  "self_review": "19 lines written to data/self_review.md",
+  "photos": "1 saved, 0 unavailable",
+  "alerts": "8 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":13}",
+  "ai_requests_run": 30,
+  "ai_tokens_run": 86826,
+  "ai_requests_today": 31,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
 }
