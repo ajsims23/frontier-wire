@@ -1,63 +1,84 @@
 {
-  "updated_at": "2026-11-03T07:28:48+00:00",
+  "updated_at": "2026-11-03T10:08:05+00:00",
   "lead": {
     "explainer": {
-      "what_it_means": "Aramco will own nearly half of Humain and provide cash plus AI hardware and expertise. Humain plans to use the resources to build AI data centers and launch an Arabic multimodal language model. The effort aims to meet growing AI demand in the region and globally.",
+      "what_it_means": "The researchers let a language model look at the numbers (weights) that define another AI model and change only the ones that cause problems. By editing a tiny fraction of those numbers, they boosted the model’s performance on math tests. This approach avoids the usual lengthy training process that adjusts millions of weights gradually.",
       "terms": [
         {
-          "term": "AI assets",
-          "meaning": "Hardware, software and expertise related to artificial‑intelligence computing that can be used to run AI models."
+          "term": "Weight‑space programming",
+          "meaning": "A technique where an LLM reads and writes the raw weight values of a neural network based on natural‑language instructions."
         },
         {
-          "term": "Data center capacity",
-          "meaning": "The amount of compute power, measured in gigawatts, that a data center can provide for AI workloads."
+          "term": "Neural network weights",
+          "meaning": "The numerical parameters inside a model that store what it has learned; changing them changes the model’s behavior."
         },
         {
-          "term": "Multimodal Arabic large language model",
-          "meaning": "An AI model that can understand and generate text, images, or other data types in Arabic."
+          "term": "Gradient descent",
+          "meaning": "A common training method that repeatedly adjusts all weights in small steps to reduce error."
         }
       ],
-      "watch_next": [
-        "Humain aims to deploy 3 gigawatts of AI data‑center capacity by 2030",
-        "Aramco’s cash contribution is scheduled for 2026"
-      ]
+      "watch_next": []
     },
+    "benchmarks": [
+      {
+        "model": "Qwen3.5-0.8B",
+        "benchmark": "MATH-500",
+        "score": "48.1%"
+      },
+      {
+        "model": "Qwen3.5-0.8B",
+        "benchmark": "GSM8K",
+        "score": "67.1%"
+      },
+      {
+        "model": "Qwen3.5-0.8B",
+        "benchmark": "IFEval",
+        "score": "62.3%"
+      }
+    ],
     "audiences": {
-      "builders": "The deal expands access to AI compute resources and a new Arabic language model for developers.",
-      "business": "It signals Aramco’s diversification into AI services, creating potential partnerships for industry AI solutions.",
-      "investors": "The transaction highlights Saudi Arabia’s investment in AI infrastructure, indicating growth opportunities for investors in the sector."
+      "builders": "LLMs can directly edit model weights, offering a new way to debug or improve models without retraining.",
+      "business": "The technique could reduce costs and time for updating AI products, enabling quicker fixes to deployed models.",
+      "investors": "Demonstrates novel capabilities that may affect the valuation and competitive landscape of AI model providers."
     },
-    "id": "b9addf9bc543",
-    "headline": "Saudi Aramco buys 49% of AI startup Humain, adds $2.6 billion cash",
-    "summary": "Aramco acquired a 49% stake in Saudi AI firm Humain, contributing about $2.6 billion in cash in 2026 and AI, compute and digital assets. The Public Investment Fund retains a 51% controlling interest.",
-    "why_it_matters": "The partnership positions Aramco as a key player in Saudi Arabia’s push to build a large‑scale AI infrastructure and ecosystem.",
-    "category": "industry",
-    "lab": "Humain",
+    "id": "544cab3b9fc5",
+    "headline": "MIT researchers show LLMs can read and edit neural network weights without retraining",
+    "summary": "MIT’s CSAIL team demonstrated that a large language model (GPT‑6 Astra) can examine and modify a neural network’s weights directly, improving a small language model by changing only 0.016% of its parameters. In experiments the model raised the MATH‑500 score from 7.9% to 48.1% and GSM8K from 13.8% to 67.1%.",
+    "why_it_matters": "It shows a way to fix or enhance AI models without costly retraining, opening new debugging and optimization pathways.",
+    "category": "research",
+    "lab": "MIT CSAIL",
     "model_name": "",
     "model_type": "",
     "tags": [],
-    "quotes": [],
+    "quotes": [
+      {
+        "text": "We find that frontier LLMs are surprisingly good at natively reading and writing neural network weights, well past what we'd expect from humans or conventional algorithms,",
+        "speaker": "MIT researchers",
+        "speaker_role": "",
+        "source_url": "https://analyticsindiamag.com/ai-news/mit-researchers-show-llms-can-read-and-edit-neural-network-weights-without-retraining"
+      }
+    ],
     "score": 9,
-    "url": "https://techmeme.com/261101/p17",
-    "source_id": "auto-techmeme.com",
+    "url": "https://analyticsindiamag.com/ai-news/mit-researchers-show-llms-can-read-and-edit-neural-network-weights-without-retraining",
+    "source_id": "aim",
     "desk": "",
     "ai_relevance": "core",
-    "image": "https://static.cryptobriefing.com/wp-content/uploads/2026/11/01153315/library-aramco-takes-49-stake-in-saudi-ai-company-humain-for-2-6-800x450.png",
+    "image": "https://analyticsindiamag.com/cdn-cgi/image/width=1200,quality=60,format=jpeg,fit=scale-down/https://zdpdvwhvukelzzbzbjvh.supabase.co/storage/v1/object/public/imported-images/1769001372847-19619404-6ae6-4f3f-8daa-84a92798a544-jg48vd.webp",
     "sources": [
       {
-        "url": "https://techmeme.com/261101/p17",
-        "publisher": "techmeme.com",
-        "title": "Saudi Aramco acquires a 49% stake in AI startup Humain, contributing ~$2.6B in cash in 2026 plus AI, compute, and digital assets; Saudi Arabia's PIF retains 51% (Dean Takahashi/GamesBeat)"
+        "url": "https://analyticsindiamag.com/ai-news/mit-researchers-show-llms-can-read-and-edit-neural-network-weights-without-retraining",
+        "publisher": "Analytics India Magazine",
+        "title": "MIT Researchers Show LLMs Can Read and Edit Neural Network Weights Without Retraining"
       },
       {
-        "url": "https://cryptobriefing.com/aramco-49-percent-stake-humain-ai",
-        "publisher": "Crypto Briefing",
-        "title": "Aramco takes 49% stake in Saudi AI company HUMAIN for $2.6 billion plus assets"
+        "url": "https://digit.in/features/general/mit-researchers-show-llms-can-edit-neural-network-weights-without-training-heres-what-it-means.html",
+        "publisher": "Digit",
+        "title": "MIT Researchers show LLMs can edit neural network weights without training: Here’s what it means"
       },
       {
-        "url": "https://marketscreener.com/news/aramco-pif-and-aramco-close-humain-transaction-to-accelerate-humaina-s-global-growth-ce785fd8da88f722",
-        "publisher": "MarketScreener",
-        "title": "Aramco : PIF and Aramco close HUMAIN transaction to accelerate HUMAIN’s global growth"
+        "url": "https://msn.com/en-in/news/other/can-ai-fix-another-ais-brain-mit-researchers-use-gpt-6-astra-to-boost-qwens-maths-skills/ar-AA2gDlwH",
+        "publisher": "India Today on MSN",
+        "title": "Can AI fix another AI's brain? MIT researchers use GPT-6 Astra to boost Qwen's maths skills"
       }
     ],
     "research": {
@@ -65,28 +86,23 @@
       "read": 2,
       "decision": "confirmed"
     },
-    "published_at": "2026-11-01T22:15:02+00:00",
-    "created_at": "2026-11-02T01:24:41+00:00",
+    "published_at": "2026-11-03T05:35:25+00:00",
+    "created_at": "2026-11-03T10:08:05+00:00",
     "sectors": [
-      "software"
+      "science"
     ],
     "regions": [
-      "middle_east"
+      "us"
     ],
-    "deal": {
-      "type": "acquisition",
-      "company": "Saudi Aramco",
-      "amount": "$2.6 billion",
-      "usd": 2600000000.0
-    },
+    "deal": null,
     "relevance": {
-      "builders": 1,
-      "business": 2,
-      "investors": 3
+      "builders": 3,
+      "business": 1,
+      "investors": 1
     },
-    "cover": "$2.6 billion",
+    "cover": "0.016%",
     "trackers": [
-      "ai-money"
+      "frontier-race"
     ],
     "photo_local": true
   },
@@ -246,6 +262,302 @@
       "trackers": [
         "india-ai",
         "ai-infrastructure"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "The researchers let a language model look at the numbers (weights) that define another AI model and change only the ones that cause problems. By editing a tiny fraction of those numbers, they boosted the model’s performance on math tests. This approach avoids the usual lengthy training process that adjusts millions of weights gradually.",
+        "terms": [
+          {
+            "term": "Weight‑space programming",
+            "meaning": "A technique where an LLM reads and writes the raw weight values of a neural network based on natural‑language instructions."
+          },
+          {
+            "term": "Neural network weights",
+            "meaning": "The numerical parameters inside a model that store what it has learned; changing them changes the model’s behavior."
+          },
+          {
+            "term": "Gradient descent",
+            "meaning": "A common training method that repeatedly adjusts all weights in small steps to reduce error."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "Qwen3.5-0.8B",
+          "benchmark": "MATH-500",
+          "score": "48.1%"
+        },
+        {
+          "model": "Qwen3.5-0.8B",
+          "benchmark": "GSM8K",
+          "score": "67.1%"
+        },
+        {
+          "model": "Qwen3.5-0.8B",
+          "benchmark": "IFEval",
+          "score": "62.3%"
+        }
+      ],
+      "audiences": {
+        "builders": "LLMs can directly edit model weights, offering a new way to debug or improve models without retraining.",
+        "business": "The technique could reduce costs and time for updating AI products, enabling quicker fixes to deployed models.",
+        "investors": "Demonstrates novel capabilities that may affect the valuation and competitive landscape of AI model providers."
+      },
+      "id": "544cab3b9fc5",
+      "headline": "MIT researchers show LLMs can read and edit neural network weights without retraining",
+      "summary": "MIT’s CSAIL team demonstrated that a large language model (GPT‑6 Astra) can examine and modify a neural network’s weights directly, improving a small language model by changing only 0.016% of its parameters. In experiments the model raised the MATH‑500 score from 7.9% to 48.1% and GSM8K from 13.8% to 67.1%.",
+      "why_it_matters": "It shows a way to fix or enhance AI models without costly retraining, opening new debugging and optimization pathways.",
+      "category": "research",
+      "lab": "MIT CSAIL",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "We find that frontier LLMs are surprisingly good at natively reading and writing neural network weights, well past what we'd expect from humans or conventional algorithms,",
+          "speaker": "MIT researchers",
+          "speaker_role": "",
+          "source_url": "https://analyticsindiamag.com/ai-news/mit-researchers-show-llms-can-read-and-edit-neural-network-weights-without-retraining"
+        }
+      ],
+      "score": 9,
+      "url": "https://analyticsindiamag.com/ai-news/mit-researchers-show-llms-can-read-and-edit-neural-network-weights-without-retraining",
+      "source_id": "aim",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://analyticsindiamag.com/cdn-cgi/image/width=1200,quality=60,format=jpeg,fit=scale-down/https://zdpdvwhvukelzzbzbjvh.supabase.co/storage/v1/object/public/imported-images/1769001372847-19619404-6ae6-4f3f-8daa-84a92798a544-jg48vd.webp",
+      "sources": [
+        {
+          "url": "https://analyticsindiamag.com/ai-news/mit-researchers-show-llms-can-read-and-edit-neural-network-weights-without-retraining",
+          "publisher": "Analytics India Magazine",
+          "title": "MIT Researchers Show LLMs Can Read and Edit Neural Network Weights Without Retraining"
+        },
+        {
+          "url": "https://digit.in/features/general/mit-researchers-show-llms-can-edit-neural-network-weights-without-training-heres-what-it-means.html",
+          "publisher": "Digit",
+          "title": "MIT Researchers show LLMs can edit neural network weights without training: Here’s what it means"
+        },
+        {
+          "url": "https://msn.com/en-in/news/other/can-ai-fix-another-ais-brain-mit-researchers-use-gpt-6-astra-to-boost-qwens-maths-skills/ar-AA2gDlwH",
+          "publisher": "India Today on MSN",
+          "title": "Can AI fix another AI's brain? MIT researchers use GPT-6 Astra to boost Qwen's maths skills"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-03T05:35:25+00:00",
+      "created_at": "2026-11-03T10:08:05+00:00",
+      "sectors": [
+        "science"
+      ],
+      "regions": [
+        "us"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 1,
+        "investors": 1
+      },
+      "cover": "0.016%",
+      "trackers": [
+        "frontier-race"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "PowerUp’s AI‑driven platform analyses users’ financial goals, risk appetite and existing holdings to suggest asset allocation, SIPs, lump‑sum investments and portfolio rebalancing. An AI wealth coach and personal assistant help users understand recommendations and make informed decisions.",
+        "terms": [
+          {
+            "term": "AI wealth coach",
+            "meaning": "A conversational AI tool that explains investment advice and assists users in applying recommendations."
+          },
+          {
+            "term": "Systematic investment plan (SIP)",
+            "meaning": "A method of investing a fixed amount regularly in mutual funds, used for disciplined long‑term investing."
+          },
+          {
+            "term": "Assets under management (AUM)",
+            "meaning": "The total market value of assets that a financial service manages on behalf of its clients."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers can observe how PowerUp integrates AI into its advisory platform for potential API or model integration ideas.",
+        "business": "Executives see AI enabling cost‑effective, personalized wealth management services that can attract mass‑market investors.",
+        "investors": "The $10 million raise signals confidence in AI‑driven fintech ventures and may attract further capital into the sector."
+      },
+      "id": "c4e747ef2346",
+      "headline": "PowerUp Money raises $10 million to expand AI‑led wealth management in India",
+      "summary": "PowerUp Money secured $10 million in a round led by Flourish Ventures and will use the funds to develop its AI‑powered wealth advisory platform and expand its managed advisory service Infinite. The Bengaluru startup, with over 1.5 million users and 1 lakh paid Elite members, says Infinite has amassed nearly Rs 500 crore AUM.",
+      "why_it_matters": "The investment shows AI is being used to deliver more comprehensive, personalized digital wealth management at lower cost, a trend relevant to AI followers.",
+      "category": "industry",
+      "lab": "PowerUp Money",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "AI makes it possible to deliver a much more comprehensive, wealth-manager-like experience digitally",
+          "speaker": "Prateek Jindal",
+          "speaker_role": "founder and chief executive officer",
+          "source_url": "https://yourstory.com/2026/11/powerup-money-raises-10m-expand-ai-led-wealth-management-india"
+        },
+        {
+          "text": "We started by making high-quality investment advice accessible to every Indian. Today, AI makes it possible to deliver a much more comprehensive, wealth-manager-like experience digitally and at a fraction of traditional costs.",
+          "speaker": "Prateek Jindal",
+          "speaker_role": "founder and chief executive officer",
+          "source_url": "https://inc42.com/buzz/powerup-money-raises-10-mn-to-expand-wealth-management-services"
+        }
+      ],
+      "score": 6,
+      "url": "https://yourstory.com/2026/11/powerup-money-raises-10m-expand-ai-led-wealth-management-india",
+      "source_id": "yourstory",
+      "desk": "india",
+      "ai_relevance": "core",
+      "image": "https://images.yourstory.com/cs/2/d99b1110116911ed9e63f54395117598/PowerUpMoneyPrateekJindal-1793683857677.png",
+      "sources": [
+        {
+          "url": "https://yourstory.com/2026/11/powerup-money-raises-10m-expand-ai-led-wealth-management-india",
+          "publisher": "YourStory",
+          "title": "PowerUp Money raises $10M to expand AI-led wealth management"
+        },
+        {
+          "url": "https://inc42.com/buzz/powerup-money-raises-10-mn-to-expand-wealth-management-services",
+          "publisher": "Inc42",
+          "title": "PowerUp Money Raises $10 Mn To Expand Wealth Management Services"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-03T05:34:32+00:00",
+      "created_at": "2026-11-03T10:08:05+00:00",
+      "sectors": [
+        "finance"
+      ],
+      "regions": [
+        "india"
+      ],
+      "deal": {
+        "type": "funding",
+        "company": "PowerUp Money",
+        "amount": "$10 million",
+        "usd": 10000000.0
+      },
+      "relevance": {
+        "builders": 2,
+        "business": 3,
+        "investors": 2
+      },
+      "cover": "$10 million",
+      "trackers": [
+        "ai-money",
+        "india-ai"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Huawei's next AI processor will rely on high‑speed memory chips made by Samsung and SK Hynix. Those memory chips are being moved into China by hiding them on circuit boards with low‑cost server processors, allowing them to avoid export bans. The practice shows that Chinese AI hardware still needs foreign components despite domestic production limits.",
+        "terms": [
+          {
+            "term": "HBM (high‑bandwidth memory)",
+            "meaning": "Fast memory stacked in layers, used to feed data to AI accelerators."
+          },
+          {
+            "term": "Export controls",
+            "meaning": "Government rules that restrict the shipment of certain technologies to specific countries."
+          },
+          {
+            "term": "Board‑packaging smuggling",
+            "meaning": "A method of shipping memory chips together with server processors on a circuit board to classify the shipment as a processor, not a memory device."
+          }
+        ],
+        "watch_next": [
+          "A smuggler said they plan to sell most of the company's equity next year."
+        ]
+      },
+      "audiences": {
+        "builders": "HBM shortages mean developers may need to design around limited memory supply or source components through indirect channels.",
+        "business": "Companies relying on Huawei's AI chips must consider supply‑chain risks tied to foreign memory components and export‑control work‑arounds.",
+        "investors": "The high profit margins from smuggled HBM and the planned equity sale indicate financial exposure and potential market shifts in the AI hardware sector."
+      },
+      "id": "5a6391ab7400",
+      "headline": "Huawei says Ascend 960DT AI chip will use Samsung and SK Hynix HBM",
+      "summary": "Huawei told some customers that a large share of its upcoming flagship AI chip, Ascend 960DT, will be equipped with high‑bandwidth memory from Samsung and SK Hynix, which is being smuggled into China via board‑packaging loopholes.",
+      "why_it_matters": "It shows how U.S. export controls are being bypassed and that Chinese AI hardware still depends on foreign memory components.",
+      "category": "industry",
+      "lab": "Huawei",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "A year ago, one HBM3E traded in China for hundreds of dollars, but now it trades for about $4,000.",
+          "speaker": "Broker in China",
+          "speaker_role": "",
+          "source_url": "https://biz.chosun.com/en/en-it/2026/11/03/P3A2NI3KJZAS7LGIFQZDR4VR5U"
+        },
+        {
+          "text": "Next year, I plan to sell most of the company's equity.",
+          "speaker": "Smuggler",
+          "speaker_role": "",
+          "source_url": "https://biz.chosun.com/en/en-it/2026/11/03/P3A2NI3KJZAS7LGIFQZDR4VR5U"
+        }
+      ],
+      "score": 7,
+      "url": "https://techmeme.com/261102/p50",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://biz.chosun.com/resizer/v2/TBXS5GEG7NJ67PRWYA7PVN53VE.jpg?auth=e9a939996b9a2624f0edc37df08d0e289ec4d3ef279f2c3553799c9574168985&width=1200&height=630&smart=true",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261102/p50",
+          "publisher": "techmeme.com",
+          "title": "Sources: Huawei told some clients that a large share of its upcoming flagship AI chip, Ascend 960DT, will run largely on HBM made by Samsung and SK Hynix (The Information)"
+        },
+        {
+          "url": "https://biz.chosun.com/en/en-it/2026/11/03/P3A2NI3KJZAS7LGIFQZDR4VR5U",
+          "publisher": "Chosunbiz",
+          "title": "Smugglers funnel Korea's HBM to China for Huawei via server chip loophole"
+        },
+        {
+          "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008828674",
+          "publisher": "SBS News",
+          "title": "Chinese Smugglers Sneak South Korean HBM Chips Into China Calling It 'Patriotism' — How Do They Do It?"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-03T03:25:00+00:00",
+      "created_at": "2026-11-03T10:08:05+00:00",
+      "sectors": [
+        "manufacturing"
+      ],
+      "regions": [
+        "china"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 0,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "Ascend 960DT",
+      "trackers": [
+        "ai-infrastructure",
+        "us-china"
       ],
       "photo_local": true
     },
@@ -2061,6 +2373,100 @@
       "cover": "",
       "trackers": [
         "ai-infrastructure"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Anthropic expects to spend nearly $895 billion on computing hardware and cloud services over the next decade to train and run its AI models. The company’s revenue growth is slowing, so covering these costs will depend on continued sales. The filing warns that revenue may not keep rising at the same pace, creating financial risk.",
+        "terms": [
+          {
+            "term": "compute commitments",
+            "meaning": "Long‑term contracts to purchase computing power, often from cloud providers, used to train large AI models."
+          },
+          {
+            "term": "IPO prospectus",
+            "meaning": "A regulatory filing that provides detailed financial and operational information before a company goes public."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Anthropic’s large compute spend signals high infrastructure costs for AI model training.",
+        "business": "Investors and executives must weigh the risk that revenue growth may not keep pace with massive compute obligations.",
+        "investors": "The company’s financial outlook depends on sustaining revenue growth to meet its near‑trillion‑dollar compute commitments."
+      },
+      "id": "a11455d91110",
+      "headline": "Anthropic reports Q3 revenue near $17 billion as compute commitments rise to $895 billion",
+      "summary": "Anthropic's amended IPO filing shows third‑quarter revenue of about $17 billion, a 46% increase from the prior quarter, while compute and infrastructure commitments total roughly $895 billion, including $70 billion due by September 2027.",
+      "why_it_matters": "The scale of Anthropic's spending on compute highlights the growing cost pressures on AI developers as they scale models.",
+      "category": "industry",
+      "lab": "Anthropic",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 8,
+      "url": "https://msn.com/en-us/news/other/anthropics-quarterly-loss-shrinks-revenue-jumps-ahead-of-blockbuster-ipo/ar-AA2gBhP1",
+      "source_id": "chief",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://image.theregister.com/5307099.jpg?imageId=5307099&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+      "sources": [
+        {
+          "url": "https://msn.com/en-us/news/other/anthropics-quarterly-loss-shrinks-revenue-jumps-ahead-of-blockbuster-ipo/ar-AA2gBhP1",
+          "publisher": "Reuters on MSN",
+          "title": "Anthropic's quarterly loss shrinks, revenue jumps ahead of blockbuster IPO"
+        },
+        {
+          "url": "https://msn.com/en-us/news/other/anthropics-amended-ipo-paperwork-reveals-soaring-q3-revenue-and-a-stunning-compute-bill/ar-AA2gBu3X",
+          "publisher": "Insider on MSN",
+          "title": "Anthropic's amended IPO paperwork reveals soaring Q3 revenue and a stunning compute bill"
+        },
+        {
+          "url": "https://msn.com/en-us/money/markets/anthropic-releases-amended-ipo-prospectus-with-third-quarter-financials/ar-AA2gBhF0",
+          "publisher": "CNBC on MSN",
+          "title": "Anthropic reports $17 billion in Q3 revenue, purchase commitments of $895.4 billion in revised S-1"
+        },
+        {
+          "url": "https://theregister.com/ai-and-ml/2026/11/02/anthropics-compute-tab-could-top-1t-as-q3-revenue-nears-17b/5307089",
+          "publisher": "The Register",
+          "title": "Anthropic's compute tab could top $1T as Q3 revenue nears $17B"
+        },
+        {
+          "url": "https://msn.com/en-us/technology/artificial-intelligence/anthropic-reveals-amended-s-1-outlining-huge-spending-commitments-rising-sales/ar-AA2gBnc0",
+          "publisher": "Yahoo Finance on MSN",
+          "title": "Anthropic reveals amended S-1 outlining huge spending commitments, rising sales"
+        },
+        {
+          "url": "https://unite.ai/anthropic-details-long-term-compute-commitments-in-amended-ipo-filing",
+          "publisher": "Unite.AI",
+          "title": "Anthropic Details Long-Term Compute Commitments in Amended IPO Filing"
+        }
+      ],
+      "research": {
+        "steps": 2,
+        "read": 1,
+        "decision": "unconfirmed"
+      },
+      "published_at": "2026-11-02T06:50:20+00:00",
+      "created_at": "2026-11-03T10:08:05+00:00",
+      "thread": "t-43fa5737591f",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "us"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 3,
+        "investors": 3
+      },
+      "cover": "$17 billion",
+      "trackers": [
+        "ai-money"
       ],
       "photo_local": true
     },
@@ -4976,360 +5382,54 @@
         "ai-infrastructure"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Developers who installed the Claude Code extension from Cursor may have had a hidden program that enabled SSH access for an attacker and sent system details back to a remote server. Because the extension runs with the same permissions as the IDE, the backdoor could read source code and other files on the machine. The malicious code was active on Windows, macOS and Linux, but the SSH enable step fails unless the IDE is run with administrator rights.",
-        "terms": [
-          {
-            "term": "SSH backdoor",
-            "meaning": "A method that adds an SSH key to a system so an attacker can log in remotely."
-          },
-          {
-            "term": "Supply-chain compromise",
-            "meaning": "An attack where the adversary hijacks a trusted software distribution channel to insert malicious code."
-          },
-          {
-            "term": "Persistent",
-            "meaning": "Designed to remain active across reboots or restarts, often by installing scheduled tasks or services."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers using the Claude Code VS Code extension should verify they are on version 2.1.314 or later and consider disabling auto‑updates.",
-        "business": "Companies should audit developer environments for the compromised extension and assess any potential data exposure.",
-        "investors": "The incident highlights security risks in AI‑tool supply chains, which could affect confidence in companies offering such developer integrations."
-      },
-      "id": "93351cbb4cc4",
-      "headline": "Anthropic’s Claude VS Code extension backdoored on Cursor, affecting up to 5,000 users",
-      "summary": "A malicious version (2.1.313) of Anthropic’s Claude Code VS Code extension was published on the Cursor marketplace, potentially reaching up to 5,000 developers before being replaced by version 2.1.314. The extension attempted to install a persistent SSH backdoor and collect host data across Windows, macOS, and Linux.",
-      "why_it_matters": "The supply‑chain compromise shows that trusted developer tools can be hijacked to gain unauthorized access to developers’ machines.",
-      "category": "safety",
-      "lab": "Anthropic",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "It was a supply-chain compromise where the attacker gained access to the official distribution channel,",
-          "speaker": "Luke Roberts",
-          "speaker_role": "Phorian CTO and co‑founder",
-          "source_url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours"
-        },
-        {
-          "text": "The malicious version 2.1.313 was posted to the official Anthropic account, effectively superseding 2.1.312. Extensions auto-update in Cursor by default, but users can configure this in settings.",
-          "speaker": "Luke Roberts",
-          "speaker_role": "Phorian CTO and co‑founder",
-          "source_url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours"
-        }
-      ],
-      "score": 6,
-      "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours",
-      "source_id": "ars-ai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://cdn.arstechnica.net/wp-content/uploads/2022/05/caution-tape-1000x648.jpeg",
-      "sources": [
-        {
-          "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours",
-          "publisher": "Ars Technica AI",
-          "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours"
-        },
-        {
-          "url": "https://doublepulsar.com/anthropic-hacked-to-deliver-remote-access-trojan-to-claude-developer-laptops-worldwide-1148a92baae2",
-          "publisher": "doublepulsar.com",
-          "title": "Claude Code VS Code extension with backdoor released on Cursor marketplace"
-        },
-        {
-          "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise",
-          "publisher": "phorion.io",
-          "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-10-30T21:09:54+00:00",
-      "created_at": "2026-10-30T21:51:51+00:00",
-      "thread": "t-d56622e1b6e9",
-      "sectors": [
-        "software",
-        "cybersecurity"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 1,
-        "investors": 1
-      },
-      "cover": "5,000 users",
-      "trackers": [
-        "agent-safety"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Publishers can add a special token to their site’s robots.txt file to tell AI crawlers not to scrape their pages for training. All participating AI companies will read this token and respect the publisher’s preference. This removes the need for each publisher to send separate opt‑out notices to each AI provider.",
-        "terms": [
-          {
-            "term": "robots.txt",
-            "meaning": "A text file on a website that tells web crawlers which parts of the site they may access."
-          },
-          {
-            "term": "policy token",
-            "meaning": "A shared signal placed in robots.txt that indicates a publisher’s AI training preferences."
-          },
-          {
-            "term": "AI grounding",
-            "meaning": "Linking an AI model’s responses to verified source information to reduce hallucinations."
-          }
-        ],
-        "watch_next": [
-          "OpenAI will implement the shared token in the coming months.",
-          "Google and Microsoft plan to support the token next year."
-        ]
-      },
-      "audiences": {
-        "builders": "Developers can rely on a unified opt‑out signal rather than handling separate requests for each AI service.",
-        "business": "Publishers gain a simpler way to protect their content from being used in AI training.",
-        "investors": "The standard may reduce legal risk for AI firms and clarify content‑use policies."
-      },
-      "id": "30d3462f4f36",
-      "headline": "OpenAI, Google, Microsoft, Anthropic adopt shared robots.txt opt‑out standard",
-      "summary": "OpenAI, Google, Microsoft and Anthropic announced they will use a shared robots.txt “policy token” that lets publishers opt out of AI scraping across multiple crawlers. The signal will replace the need for separate requests to each AI provider.",
-      "why_it_matters": "It gives publishers a single mechanism to control how their content is used to train AI models.",
-      "category": "policy",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 9,
-      "url": "https://techmeme.com/261030/p26",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25330660/STK414_AI_CHATBOT_H.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261030/p26",
-          "publisher": "techmeme.com",
-          "title": "OpenAI, Google, Microsoft, and Anthropic say they will adopt a new standard that publishers can use to opt out of being scraped by AI across multiple crawlers (Emma Roth/The Verge)"
-        },
-        {
-          "url": "https://theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
-          "publisher": "The Verge AI",
-          "title": "The biggest names in AI are backing a new way to opt out of scraping"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 0,
-        "decision": "unconfirmed"
-      },
-      "published_at": "2026-10-30T21:05:00+00:00",
-      "created_at": "2026-10-30T21:51:51+00:00",
-      "thread": "t-80e84b65ba98",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "",
-      "trackers": [
-        "ai-regulation"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "OpenAI will block ChatGPT from giving step‑by‑step advice on building or using weapons to users it identifies as teens. The system will also interrupt chats that show a focus on violence and can pause the account or alert parents. Users can still ask for help de‑escalating a violent situation or finding support.",
-        "terms": [
-          {
-            "term": "automatic interruptions",
-            "meaning": "The system stops a conversation when it detects the user is focusing on violence, potentially pausing the account."
-          },
-          {
-            "term": "age prediction system",
-            "meaning": "A tool that evaluates signals during use to estimate a user’s age and apply teen‑specific safeguards."
-          },
-          {
-            "term": "Community Safety Report",
-            "meaning": "A periodic report that will detail anonymized safety cases, safeguard changes, and response data."
-          }
-        ],
-        "watch_next": [
-          "Restrictions will start reaching users over the coming weeks.",
-          "OpenAI plans to publish its first Community Safety Report in early 2027."
-        ]
-      },
-      "audiences": {
-        "builders": "Developers will need to account for reduced weapon‑related content when building teen‑focused applications on ChatGPT.",
-        "business": "Companies targeting teen markets must consider the new safety limits that may affect user engagement and support services.",
-        "investors": "The added safeguards may influence OpenAI’s risk profile and regulatory standing, which could affect investor assessments."
-      },
-      "id": "020086432245",
-      "headline": "OpenAI tightens weapons‑related information limits for teen ChatGPT users",
-      "summary": "OpenAI announced new safeguards that further restrict ChatGPT from providing practical guidance on weapons and security systems to users under 18, even when queries appear harmless. The changes will roll out over the coming weeks and include automatic conversation interruptions and parental alerts.",
-      "why_it_matters": "The tighter limits reflect growing concerns about AI misuse and illustrate how providers are expanding safety controls for younger users.",
-      "category": "safety",
-      "lab": "OpenAI",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://techmeme.com/261030/p25",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://cdn.technobezz.com/c/why_teens_parent_notification_4b9a148991.webp",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261030/p25",
-          "publisher": "techmeme.com",
-          "title": "OpenAI tightens limits on the weapons-related information that ChatGPT provides teens, even when a question appears harmless, as part of new safeguards (Reuters)"
-        },
-        {
-          "url": "https://technobezz.com/news/openai-restrict-chatgpt-weapons-information-teens",
-          "publisher": "Technobezz",
-          "title": "OpenAI to Restrict ChatGPT Weapons Information for Teens"
-        },
-        {
-          "url": "https://msn.com/en-us/technology/artificial-intelligence/openai-adds-restrictions-on-weapons-related-chatgpt-responses-for-teens/ar-AA2gqVGo",
-          "publisher": "Seeking Alpha on MSN",
-          "title": "OpenAI adds restrictions on weapons-related ChatGPT responses for teens"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-30T20:55:37+00:00",
-      "created_at": "2026-10-30T21:51:51+00:00",
-      "thread": "t-345ea7f8f755",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "teen ChatGPT",
-      "trackers": [
-        "agent-safety"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "The five companies are pledging more than $3 trillion to build and lease data‑center capacity, buy equipment and secure energy. This investment will increase the computing power available for AI models and services. The spending also puts pressure on each company’s cash flow, with some already in negative free cash flow.",
-        "terms": [
-          {
-            "term": "data center",
-            "meaning": "Facilities that house servers and networking equipment used to run AI workloads."
-          },
-          {
-            "term": "leases",
-            "meaning": "Long‑term contracts to rent space or equipment, often lasting decades."
-          },
-          {
-            "term": "free cash flow",
-            "meaning": "Money a company has left after paying operating expenses and capital expenditures."
-          }
-        ],
-        "watch_next": [
-          "Oracle expects to turn positive cash flow again in 2028."
-        ]
-      },
-      "audiences": {
-        "builders": "The commitments indicate a surge in demand for AI‑focused hardware, cloud infrastructure and related services.",
-        "business": "Executives must weigh the large capital outlays against potential returns and the impact on cash flow.",
-        "investors": "Investors should monitor how these massive spending commitments affect profitability and cash‑flow risk for the firms involved."
-      },
-      "id": "db3eb85081cc",
-      "headline": "Big tech firms commit over $3 trillion to AI data‑center spending",
-      "summary": "Alphabet, Meta, Microsoft, Amazon and Oracle have disclosed more than $3 trillion in commitments for data‑center leases, equipment and energy over the coming years. Alphabet leads with over $1 trillion and Meta with more than $800 billion.",
-      "why_it_matters": "The scale of spending signals a massive expansion of AI infrastructure that will shape cloud services, hardware demand and corporate cash flows.",
-      "category": "industry",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "We expect to continue investing aggressively to support both our core business and emerging AI initiatives,",
-          "speaker": "Susan Li",
-          "speaker_role": "Chief Financial Officer, Meta Platforms Inc.",
-          "source_url": "https://finance.yahoo.com/technology/ai/articles/big-tech-holds-3-trillion-192531716.html"
-        }
-      ],
-      "score": 9,
-      "url": "https://techmeme.com/261030/p22",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://media.thenextweb.com/2026/10/ai-microchip-green-pastel-reflective-surface.jpg",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261030/p22",
-          "publisher": "techmeme.com",
-          "title": "Alphabet, Meta, Microsoft, Amazon, and Oracle have a collective $3T+ in AI spending commitments over the coming years, including Alphabet's $1T and Meta's $800B (Brody Ford/Bloomberg)"
-        },
-        {
-          "url": "https://thenextweb.com/news/big-tech-3-trillion-ai-spending-commitments",
-          "publisher": "The Next Web",
-          "title": "Big Tech has now committed more than $3 trillion to the AI build-out"
-        },
-        {
-          "url": "https://finance.yahoo.com/technology/ai/articles/big-tech-holds-3-trillion-192531716.html",
-          "publisher": "Yahoo Finance",
-          "title": "Big Tech Holds $3 Trillion in Spending Commitments for AI Boom"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-30T20:00:58+00:00",
-      "created_at": "2026-10-31T01:17:40+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 3,
-        "investors": 3
-      },
-      "cover": "$3 trillion",
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
+    {
+      "text": "We find that frontier LLMs are surprisingly good at natively reading and writing neural network weights, well past what we'd expect from humans or conventional algorithms,",
+      "speaker": "MIT researchers",
+      "speaker_role": "",
+      "source_url": "https://analyticsindiamag.com/ai-news/mit-researchers-show-llms-can-read-and-edit-neural-network-weights-without-retraining",
+      "story_id": "544cab3b9fc5",
+      "headline": "MIT researchers show LLMs can read and edit neural network weights without retraining",
+      "published_at": "2026-11-03T05:35:25+00:00"
+    },
+    {
+      "text": "AI makes it possible to deliver a much more comprehensive, wealth-manager-like experience digitally",
+      "speaker": "Prateek Jindal",
+      "speaker_role": "founder and chief executive officer",
+      "source_url": "https://yourstory.com/2026/11/powerup-money-raises-10m-expand-ai-led-wealth-management-india",
+      "story_id": "c4e747ef2346",
+      "headline": "PowerUp Money raises $10 million to expand AI‑led wealth management in India",
+      "published_at": "2026-11-03T05:34:32+00:00"
+    },
+    {
+      "text": "We started by making high-quality investment advice accessible to every Indian. Today, AI makes it possible to deliver a much more comprehensive, wealth-manager-like experience digitally and at a fraction of traditional costs.",
+      "speaker": "Prateek Jindal",
+      "speaker_role": "founder and chief executive officer",
+      "source_url": "https://inc42.com/buzz/powerup-money-raises-10-mn-to-expand-wealth-management-services",
+      "story_id": "c4e747ef2346",
+      "headline": "PowerUp Money raises $10 million to expand AI‑led wealth management in India",
+      "published_at": "2026-11-03T05:34:32+00:00"
+    },
+    {
+      "text": "A year ago, one HBM3E traded in China for hundreds of dollars, but now it trades for about $4,000.",
+      "speaker": "Broker in China",
+      "speaker_role": "",
+      "source_url": "https://biz.chosun.com/en/en-it/2026/11/03/P3A2NI3KJZAS7LGIFQZDR4VR5U",
+      "story_id": "5a6391ab7400",
+      "headline": "Huawei says Ascend 960DT AI chip will use Samsung and SK Hynix HBM",
+      "published_at": "2026-11-03T03:25:00+00:00"
+    },
+    {
+      "text": "Next year, I plan to sell most of the company's equity.",
+      "speaker": "Smuggler",
+      "speaker_role": "",
+      "source_url": "https://biz.chosun.com/en/en-it/2026/11/03/P3A2NI3KJZAS7LGIFQZDR4VR5U",
+      "story_id": "5a6391ab7400",
+      "headline": "Huawei says Ascend 960DT AI chip will use Samsung and SK Hynix HBM",
+      "published_at": "2026-11-03T03:25:00+00:00"
+    },
     {
       "text": "But what the economy values is someone who worked on the job for 30 years,",
       "speaker": "Ronak Malde",
@@ -5338,51 +5438,6 @@
       "story_id": "b2485c91dd17",
       "headline": "Trajectory raises $45 million Series A to automate AI model post‑training",
       "published_at": "2026-11-02T23:13:53+00:00"
-    },
-    {
-      "text": "keeping humans involved in the training process makes Trajectory’s approach safer, since autonomous self-improvement could lead to unintended or even dangerous outcomes.",
-      "speaker": "Michael Elabd",
-      "speaker_role": "co‑founder",
-      "source_url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts",
-      "story_id": "b2485c91dd17",
-      "headline": "Trajectory raises $45 million Series A to automate AI model post‑training",
-      "published_at": "2026-11-02T23:13:53+00:00"
-    },
-    {
-      "text": "We asked GPT-6 Astra to edit Qwen3.5-0.8B weights to improve math. It directly changed only 0.016% of weights, fixing 0.8B's reasoning loops & improving math up to 6x and even instruction following 3x, without gradients or training.",
-      "speaker": "Ethan Mollick",
-      "speaker_role": "",
-      "source_url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l",
-      "story_id": "1818a08f7975",
-      "headline": "GPT-6 Astra edits 0.016% of Qwen3.5-0.8B weights, boosting math performance sixfold",
-      "published_at": "2026-11-02T21:00:10.481000+00:00"
-    },
-    {
-      "text": "We added two sentences to Claude Code’s prompt on Opus 5.5 to steer it away from recreating someone else’s specific game because using Claude to infringe IP is against our usage policy.",
-      "speaker": "Addy Osmani",
-      "speaker_role": "Anthropic software engineer",
-      "source_url": "https://arstechnica.com/ai/2026/11/claudes-new-rules-against-game-cloning-wont-stop-the-ai-copying-boom",
-      "story_id": "cf87f0f49a6c",
-      "headline": "Anthropic adds rule to stop Claude Code from cloning existing video games",
-      "published_at": "2026-11-02T18:56:02+00:00"
-    },
-    {
-      "text": "Original games, genre games, and games built from your own designs and assets are meant to keep working.",
-      "speaker": "Addy Osmani",
-      "speaker_role": "Anthropic software engineer",
-      "source_url": "https://gamesindustry.biz/anthropic-adds-rule-to-stop-claude-code-recreating-existing-games",
-      "story_id": "cf87f0f49a6c",
-      "headline": "Anthropic adds rule to stop Claude Code from cloning existing video games",
-      "published_at": "2026-11-02T18:56:02+00:00"
-    },
-    {
-      "text": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers.",
-      "speaker": "OpenAI",
-      "speaker_role": "",
-      "source_url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
-      "story_id": "6fd6ad7938fa",
-      "headline": "OpenAI raises security bug bounty rewards and adds new researcher bonuses",
-      "published_at": "2026-11-02T18:00:00+00:00"
     }
   ],
   "videos": [
@@ -5519,22 +5574,38 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-11-03T07:28:48+00:00",
-    "one_line": "Anthropic readies IPO with massive compute spend, AI firms raise billions, research breakthroughs appear, safety actions grow.",
+    "written_at": "2026-11-03T10:08:05+00:00",
+    "one_line": "LLMs edit weights, Anthropic ramps compute, AI infrastructure investments surge.",
     "themes": [
       {
-        "title": "Anthropic readies IPO with compute spend",
-        "text": "Anthropic disclosed $895 billion in compute commitments and a 1,100% revenue surge, while noting slower growth ahead of its planned listing.",
+        "title": "LLMs edit weights directly",
+        "text": "MIT researchers demonstrated that a large language model (GPT‑6 Astra) can examine and modify a neural network’s weights, changing only 0.016% of parameters and raising MATH‑500 and GSM8K scores. In a separate experiment, GPT‑6 Astra edited 0.016% of Qwen3.5‑0.8B weights, boosting math reasoning up to sixfold and instruction following threefold.",
         "stories": [
           {
-            "id": "1b0209f81f9f",
-            "headline": "Anthropic reports $895.4 billion in compute‑related purchase commitments and leases",
-            "url": "https://techmeme.com/261102/p29"
+            "id": "544cab3b9fc5",
+            "headline": "MIT researchers show LLMs can read and edit neural network weights without retraining",
+            "url": "https://analyticsindiamag.com/ai-news/mit-researchers-show-llms-can-read-and-edit-neural-network-weights-without-retraining"
           },
+          {
+            "id": "1818a08f7975",
+            "headline": "GPT-6 Astra edits 0.016% of Qwen3.5-0.8B weights, boosting math performance sixfold",
+            "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l"
+          }
+        ]
+      },
+      {
+        "title": "Anthropic's compute spending and IPO prep",
+        "text": "Anthropic disclosed $895.4 billion in compute purchase commitments and leases while reporting a 1,100% revenue increase to $17 billion for the quarter. The company also highlighted slower revenue growth and financing risks as it prepares for an upcoming IPO.",
+        "stories": [
           {
             "id": "d059424a86f5",
             "headline": "Anthropic reports 1,100% revenue surge ahead of IPO, commits $895B to compute",
             "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-says-revenue-surged-1100-ahead-of-ipo/articleshow/135479762.cms"
+          },
+          {
+            "id": "1b0209f81f9f",
+            "headline": "Anthropic reports $895.4 billion in compute‑related purchase commitments and leases",
+            "url": "https://techmeme.com/261102/p29"
           },
           {
             "id": "1add63be5a11",
@@ -5544,8 +5615,8 @@
         ]
       },
       {
-        "title": "AI firms secure billions for growth",
-        "text": "Oracle announced $20 billion in stock and bond sales for AI data centers, Alphabet sold €6 billion in bonds, Salesforce agreed to acquire Cresta for $2.7 billion, Tutor Intelligence raised $75 million for robot model training, 42AI secured $62.5 million seed funding, Lumen and Microsoft expanded co‑selling for AI‑ready networks, and OpenAI launched a Grid Protectors program with utilities.",
+        "title": "Investments in AI infrastructure",
+        "text": "Oracle announced $20 billion in stock and bond sales to fund AI data‑center expansion. NVIDIA is deploying physical and agentic AI services in cities worldwide. OpenAI launched a Grid Protectors Program to improve compute‑campus power reliability. Lumen Technologies and Microsoft expanded co‑selling to deliver AI‑ready enterprise networks.",
         "stories": [
           {
             "id": "2c1f025c89cb",
@@ -5553,71 +5624,19 @@
             "url": "https://techmeme.com/261102/p25"
           },
           {
-            "id": "b4f9b3921fdc",
-            "headline": "Alphabet launches €6 billion euro‑denominated bond sale, €17 billion demand",
-            "url": "https://techmeme.com/261102/p22"
-          },
-          {
-            "id": "64bc8daf91a3",
-            "headline": "Salesforce to acquire Cresta for $2.7 billion",
-            "url": "https://techmeme.com/261102/p48"
-          },
-          {
-            "id": "82336eccbad5",
-            "headline": "Tutor Intelligence raises $75 million Series B to expand robot model training and deployments",
-            "url": "https://techmeme.com/261102/p33"
-          },
-          {
-            "id": "133799eedc2b",
-            "headline": "42AI emerges from stealth with $62.5 million seed to build behavioral world model",
-            "url": "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior"
-          },
-          {
-            "id": "de3657a54534",
-            "headline": "Lumen and Microsoft expand co‑selling to deliver AI‑ready enterprise networks",
-            "url": "https://news.microsoft.com/source/2026/11/02/lumen-and-microsoft-expand-collaboration-to-co-sell-enterprise-ai-ready-networks"
+            "id": "4d836f21a02f",
+            "headline": "NVIDIA expands physical and agentic AI services to cities worldwide",
+            "url": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications"
           },
           {
             "id": "19244c7aa206",
             "headline": "OpenAI launches Grid Protectors Program to aid utilities with compute campus power reliability",
             "url": "https://openai.com/index/grid-protectors-program"
-          }
-        ]
-      },
-      {
-        "title": "New AI research applications",
-        "text": "An Anthropic‑based Claude agent selected a gene‑therapy vector and performed a precise brain injection in a mouse, GPT‑6 Astra edited a small fraction of Qwen3.5 weights to boost math performance sixfold, and OpenAI released the LifeVal benchmark to evaluate AI assistance on everyday tasks.",
-        "stories": [
-          {
-            "id": "d7eb8c9ceea3",
-            "headline": "AI agent selects gene therapy and performs brain injection on live mouse",
-            "url": "https://twitter.com/OcanaSantero/status/2115442964574908902"
           },
           {
-            "id": "1818a08f7975",
-            "headline": "GPT-6 Astra edits 0.016% of Qwen3.5-0.8B weights, boosting math performance sixfold",
-            "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l"
-          },
-          {
-            "id": "ed4b58253682",
-            "headline": "OpenAI launches LifeVal benchmark for AI assistance with everyday tasks",
-            "url": "https://openai.com/index/lifeval"
-          }
-        ]
-      },
-      {
-        "title": "Legal and safety actions rise",
-        "text": "The New York Times and other publishers sued Brave for alleged AI scraping and paywall bypass, while OpenAI increased bug bounty rewards and added new researcher bonuses to strengthen security.",
-        "stories": [
-          {
-            "id": "9abae69701c4",
-            "headline": "New York Times and other papers sue Brave over AI scraping and paywall bypass",
-            "url": "https://theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times"
-          },
-          {
-            "id": "6fd6ad7938fa",
-            "headline": "OpenAI raises security bug bounty rewards and adds new researcher bonuses",
-            "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties"
+            "id": "de3657a54534",
+            "headline": "Lumen and Microsoft expand co‑selling to deliver AI‑ready enterprise networks",
+            "url": "https://news.microsoft.com/source/2026/11/02/lumen-and-microsoft-expand-collaboration-to-co-sell-enterprise-ai-ready-networks"
           }
         ]
       }
@@ -5625,16 +5644,16 @@
     "from_stories": 20
   },
   "plan": {
-    "focus": "Tracking Anthropic’s IPO fallout while bolstering coverage of model contracts and policy shifts.",
-    "updated_at": "2026-11-03T07:28:48+00:00",
+    "focus": "Tracking Anthropic’s compute financing risks while covering emerging AI policy moves and India’s market surge.",
+    "updated_at": "2026-11-03T10:08:05+00:00",
     "thin_areas": [
       "model releases",
-      "policy"
+      "research"
     ],
     "searches": [
-      "Anthropic IPO pricing",
-      "Mistral Large 4 benchmarks",
-      "AI model integration contracts"
+      "Anthropic compute commitments update",
+      "Nvidia cloud compute client China restrictions",
+      "AI safety political standard 2028"
     ]
   },
   "builders": {
@@ -5769,7 +5788,7 @@
   "threads": [
     {
       "id": "t-43fa5737591f",
-      "title": "Anthropic financing risks IPO: revenue surge",
+      "title": "Anthropic financing risks IPO: quarterly loss shrinks",
       "updated_at": "2026-11-03T02:54:33+00:00",
       "stories": [
         {
@@ -5784,6 +5803,13 @@
           "headline": "Anthropic revenue growth slows as compute financing risks rise ahead of IPO",
           "url": "https://msn.com/en-us/technology/tech-companies/anthropic-revenue-growth-slows-compute-financing-risks-mount-ahead-of-ipo/ar-AA2gDadI",
           "published_at": "2026-11-02T17:04:03+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "a11455d91110",
+          "headline": "Anthropic reports Q3 revenue near $17 billion as compute commitments rise to $895 billion",
+          "url": "https://msn.com/en-us/news/other/anthropics-quarterly-loss-shrinks-revenue-jumps-ahead-of-blockbuster-ipo/ar-AA2gBhP1",
+          "published_at": "2026-11-02T06:50:20+00:00",
           "category": "industry"
         },
         {
@@ -6043,7 +6069,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 41,
+    "stories_this_month": 45,
     "model_releases_this_month": 1,
     "labs_tracked": 17
   }

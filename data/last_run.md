@@ -1,112 +1,81 @@
-## Frontier Wire newsroom run — 2026-11-03T07:28:48+00:00
+## Frontier Wire newsroom run — 2026-11-03T10:08:05+00:00
 
-Fetched 2925 items · fresh 83 · judged 80 · kept 13 · **written 3**
-AI: 37 requests, 110,948 tokens this run · 105 requests today · providers: cerebras, groq
-Editor-in-chief: Tracking Anthropic’s IPO fallout while bolstering coverage of model contracts and policy shifts.
-  Priorities: Cities Worldwide Build and Scale AI Services With NVIDIA Physical and  (Shows how cities and enterprises are scaling AI services – key industry trend); Transformers Model Integration Contracts (Highlights emerging legal frameworks for model integration, a thin‑policy area); Apple Watch’s AI features for rewinding and recapping conversations be (Apple Watch AI features illustrate consumer‑facing AI adoption, relevant to business readers); OpenAI partners with Cathedral to test its security defenses and revam (OpenAI‑Cathedral security partnership updates the safety landscape and ties to ongoing policy story); VC funding into Indian startups plunges 66% in October (India VC funding plunge signals broader market risk for AI investors)
-  Thin areas: models, policy
-  Searches: Anthropic IPO pricing: 6 new; Mistral Large 4 benchmarks: 1 new; AI model integration contracts: 0 new
-  Dig deeper: Cities Worldwide Build and Scale AI Services With NVIDIA Physical and ; OpenAI partners with Cathedral to test its security defenses and revam
-Research agent: investigated 5 stories with 15 tool calls, confirmed 2
-Daily briefing: 4 themes from 20 stories
-Threads updated: Anthropic financing risks IPO: revenue surge: Anthropic reports 1,100% revenue surge ahead of IPO, commits
-Videos: no new videos · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
-Photos: 3 saved, 0 unavailable
-Alerts: 21 events sent: {"subscribers":8,"sent":0,"queued":32}
-Claims: 81 tracked, 77 open, 0 updated this run
-Trackers: filed 5 stories; updated india-ai, ai-infrastructure, ai-money
-Model tracker: 82 models, 14 changes today
-Tagged 3 stories by sector, region and deal
-Time: gather 51s, plan 86s, judge 7s, verify and write 446s, videos 3s, tagging 21s, trackers 65s, claims 21s, briefing 43s, alerts 8s
+Fetched 2917 items · fresh 24 · judged 33 · kept 12 · **written 4**
+AI: 39 requests, 98,752 tokens this run · 144 requests today · providers: cerebras, groq
+Editor-in-chief: Tracking Anthropic’s compute financing risks while covering emerging AI policy moves and India’s market surge.
+  Priorities: Sources: Nvidia verbally told cloud compute clients to sell 51%+ of th (Nvidia’s client restrictions could reshape AI chip supply chains and affect global cloud markets); How Alex Bores' Who Decides seeks to make AI safety a standard Democra (Highlights a new political push to embed AI safety in US policy, relevant for regulators and investors); MIT Researchers Show LLMs Can Read and Edit Neural Network Weights Wit (MIT paper shows LLMs editing weights, a breakthrough for model efficiency and research); Indian companies trust AI with greater autonomy but struggle to prove  (India’s AI adoption faces ROI proof challenges, key for investors in the region); VC funding into Indian startups plunges 66% in October (Sharp drop in VC funding signals funding climate shift for Indian AI startups)
+  Thin areas: models, research
+  Searches: Anthropic compute commitments update: 6 new; Nvidia cloud compute client China restrictions: 1 new; AI safety political standard 2028: 2 new
+  Dig deeper: Sources: Nvidia verbally told cloud compute clients to sell 51%+ of th; How Alex Bores' Who Decides seeks to make AI safety a standard Democra
+Research agent: investigated 5 stories with 14 tool calls, confirmed 2
+Daily briefing: 3 themes from 20 stories
+Threads updated: Anthropic financing risks IPO: quarterly loss shrinks: Anthropic reports Q3 revenue near $17 billion as compute com
+Videos: 2 kept from 2 new · OpenAI ok (10 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (9 in feed, 0 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (8 in feed, 0 new), Hugging Face ok (13 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 2 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (14 in feed, 0 new), Training Data (Sequoia) ok (3 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (1 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (4 in feed, 0 new)
+Photos: 4 saved, 0 unavailable
+Alerts: 28 events sent: {"subscribers":8,"sent":0,"queued":44}
+Claims: 81 tracked, 77 open, 1 updated this run
+Trackers: filed 6 stories; updated us-china, frontier-race, india-ai, ai-infrastructure
+Model tracker: 82 models, 18 changes today
+Tagged 4 stories by sector, region and deal
+India briefing: 2 themes from 2 stories
+Time: gather 79s, plan 2s, judge 3s, verify and write 487s, videos 23s, tagging 1s, trackers 106s, claims 21s, briefing 42s, photos 1s, alerts 7s
 
 ### New stories
-- **industry** — [NVIDIA expands physical and agentic AI services to cities worldwide](https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications)  
-  NVIDIA and partners are deploying physical AI, agentic AI and digital twins in cities across Europe, Asia and the United States, using shared computing infrastructure to let local governments run AI locally. Projects include resident‑service bots in Madrid, vision agents in Poland and traffic‑management agents in Malaysia that aim to support over 17,000 cameras by 2027.  
-  _2 source(s), 0 verified quote(s)_
-- **industry** — [India becomes ChatGPT’s largest market by weekly active users, base doubles since Jan 2026](https://inc42.com/buzz/india-becomes-chatgpts-largest-market-globally-user-base-doubles-since-january)  
-  OpenAI says India now has the highest weekly active user count for ChatGPT worldwide, with the local user base having doubled since January 2026. The company is expanding local computing capacity, Indian-language features and Android‑first products, and plans UPI‑related announcements.  
-  _2 source(s), 0 verified quote(s)_
-- **industry** — [Anthropic reports 1,100% revenue surge ahead of IPO, commits $895B to compute](https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-says-revenue-surged-1100-ahead-of-ipo/articleshow/135479762.cms)  
-  Anthropic said quarterly revenue jumped to $17 billion, a 1,100% increase year‑over‑year. It also pledged roughly $895 billion in spending on computing, including $70 billion due before September 2027, as it prepares for a Wall Street listing later this month.  
-  _3 source(s), 0 verified quote(s)_
+- **research** — [MIT researchers show LLMs can read and edit neural network weights without retraining](https://analyticsindiamag.com/ai-news/mit-researchers-show-llms-can-read-and-edit-neural-network-weights-without-retraining)  
+  MIT’s CSAIL team demonstrated that a large language model (GPT‑6 Astra) can examine and modify a neural network’s weights directly, improving a small language model by changing only 0.016% of its parameters. In experiments the model raised the MATH‑500 score from 7.9% to 48.1% and GSM8K from 13.8% to 67.1%.  
+  _3 source(s), 1 verified quote(s)_
+- **industry** — [Anthropic reports Q3 revenue near $17 billion as compute commitments rise to $895 billion](https://msn.com/en-us/news/other/anthropics-quarterly-loss-shrinks-revenue-jumps-ahead-of-blockbuster-ipo/ar-AA2gBhP1)  
+  Anthropic's amended IPO filing shows third‑quarter revenue of about $17 billion, a 46% increase from the prior quarter, while compute and infrastructure commitments total roughly $895 billion, including $70 billion due by September 2027.  
+  _6 source(s), 0 verified quote(s)_
+- **industry** — [Huawei says Ascend 960DT AI chip will use Samsung and SK Hynix HBM](https://techmeme.com/261102/p50)  
+  Huawei told some customers that a large share of its upcoming flagship AI chip, Ascend 960DT, will be equipped with high‑bandwidth memory from Samsung and SK Hynix, which is being smuggled into China via board‑packaging loopholes.  
+  _3 source(s), 2 verified quote(s)_
+- **industry** — [PowerUp Money raises $10 million to expand AI‑led wealth management in India](https://yourstory.com/2026/11/powerup-money-raises-10m-expand-ai-led-wealth-management-india)  
+  PowerUp Money secured $10 million in a round led by Flourish Ventures and will use the funds to develop its AI‑powered wealth advisory platform and expand its managed advisory service Infinite. The Bengaluru startup, with over 1.5 million users and 1 lakh paid Elite members, says Infinite has amassed nearly Rs 500 crore AUM.  
+  _2 source(s), 2 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Transformers Model Integration Contracts — score 5: Discusses emerging legal contracts for model integration; a niche policy angle without major regulatory impact, scoring below the news threshold.
-- Pixel-UMI: Learning Environment-Aware Whole-Body Manipulation from Sensorized Human Demonstrations — score 4: Robotics manipulation paper is incremental research without frontier impact.
-- Pixel: A Co-Designed Full-Stack Robot System for Learning General-Purpose Mobile Manipulation — score 4: Similar to above; a robot system paper that is incremental.
-- From Natural Language to Exact Cover: A Neuro-Symbolic Approach to Zebra Puzzles — score 3: Neuro‑symbolic puzzle solving is a modest contribution, not newsworthy.
-- WebHarbor: Docking Real Websites for Evolving GUI Agent Environments — score 5: Provides a new benchmark environment for GUI agents but is an incremental research tool.
-- Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap — score 4: Technical optimizer comparison lacks broad impact.
-- Not All Reasoning Generalizes: A Case Study on Learning Generalizable Reasoning Strategies in RLVR — score 4: Study of reasoning generalization is incremental.
-- FADE: Factored Ability--Difficulty Filtering for Online RLVR Scheduling — score 4: Filtering method for RLVR is a modest technical contribution.
-- Thought-deciphering via hierarchical EEG-to-text alignment — score 4: EEG‑to‑text alignment is niche BCI work, not frontier AI news.
-- D&A: Decoupling Description and Assessment Enables VLMs as Zero-Shot Robotic Reward Models — score 5: Decoupling description/assessment for VLM reward models is an incremental research result.
-- Strategist: Evolving Reasoning with Agents — score 5: Introduces a meta‑agent for reasoning strategies; interesting but not a major breakthrough.
-- Tracing the Scientific Discovery Capacity of LLMs to Their Training Data — score 5: Analyzes LLM scientific discovery capacity; useful but not news‑worthy.
-- Benchmark Prediction with Sparse and Unpaired Cached Responses — score 4: Benchmark prediction technique is a modest contribution.
-- Efficient Closure Learning in Dynamical Systems: A Comparison of Data-Assimilated and Embedded Approaches — score 4: Closure learning comparison is incremental.
-- ufakzeka-kulak: Building and Evaluating a 31.6M-Parameter Turkish Speech Recognizer from Scratch — score 3: Turkish speech recognizer model release is a small‑scale contribution.
-- DiabAgent: Toward Agentic Physiological Control — score 5: Medical agentic control research is notable but remains a paper rather than a product launch.
-- Four Bridges: Measuring Deception Propensity in a Multi-Agent Game — score 5: Deception measurement in multi‑agent games is a safety‑oriented study, but not a headline story.
-- Should We Combine Our Data? Algorithms and Limits for Privately Assessing Data Sharing — score 5: Privacy‑focused data sharing analysis is relevant but not a major policy development.
-- Structured Visual Landscape: Generating Preferred Representations in Biological and Artificial Neural Networks — score 4: Visual landscape generation is incremental.
-- Spacetime Emergence in the Memory of a Learning Agent — score 4: Spacetime emergence in agent memory is speculative research.
-- DynaSolver: A Neural Operator for Autoregressive 4D Flow Prediction with Dynamic Boundaries — score 4: Neural operator for dynamic CFD is a technical advance, not frontier news.
-- Evaluating Uncertainty Calibration in Probabilistic Time Series Foundation Models — score 5: Uncertainty calibration study for TSFMs is useful but not a headline.
-- A Scaling Theory of Multi-Epoch Pretraining: Late-Time Overfitting and Ensembling — score 5: Scaling theory for multi‑epoch pretraining offers insight but is not a breakthrough.
-- FedReady: Bounded Agents for Federation Formation — score 4: Federated agents framework is incremental.
-- Sonar-MoE: In-Backward Expert Updates for Memory-Efficient Mixture-of-Experts Training — score 5: Memory‑efficient MoE training improves efficiency but is a technical refinement.
-- NitiBench+: A Temporal Thai Legal Question Answering Benchmark Across 17 Domains — score 3: Legal QA benchmark is a niche dataset, not core AI news.
-- VeriHarm-Bench: Measuring Harmful Success in LLM Coding Agents Verifiably — score 5: VeriHarm‑Bench measures harmful outcomes in coding agents; safety‑relevant but not headline.
-- BISECT: Bilevel Spectral Decomposition for Low-Rank Continual Learning — score 4: Continual learning decomposition is incremental.
-- PlantVLM-Edge: Quantized Vision-Language Models for On-Device Crop Health Diagnosis — score 5: Quantized VLM for crop health is an application‑focused paper, not a major industry move.
-- MCP Tool Poisoning in Agentic AI Frameworks: A Cross-Framework Measurement Study — score 5: Tool poisoning measurement highlights a security risk but is a research study.
-- Nonparametric Intensity Estimation for Covariate-Driven Poisson Processes Using Deep Learning — score 3: Statistical intensity estimation is not AI‑centric.
-- Can LLM Agents Be Forward-Deployed Engineers? Requirement Discovery and Delivery for Enterprise Text-to-SQL — score 5: Explores LLM agents as forward‑deployed engineers; interesting but not a breakthrough.
-- Can LLM Agents Improve Imperfect Earth System Model Parameterizations? — score 5: Applying LLM agents to Earth system model parameterizations is a niche research direction.
-- Variational Functional Neural Networks (vfNN) — score 4: Variational functional networks are a methodological contribution.
-- An Agentic Framework for Automated Power System Studies and Grid Connection Assessment — score 5: Agentic framework for power‑system studies is an industry‑focused AI application.
-- Contrastive Adapter Training and Consensus Knowledge Distillation for Multi-Source-Free Domain Adaptation in Skin Cancer Diagnosis — score 5: AI‑enhanced skin cancer diagnosis is a medical AI application, but a research paper rather than a product launch.
-- Library of Layers (LoL): Adaptively Ordering Transformer Layers at Runtime — score 5: Library of Layers proposes a new model architecture concept; notable but not a major breakthrough.
-- Grading the Unannotated: Insights from the WorkRB Skill Extraction Challenge at RecSys-HR 2026 — score 4: Skill extraction benchmark analysis is incremental.
-- DistDebug-Bench: Can LLM Agents Diagnose Bugs in Distributed Systems? — score 5: DistDebug‑Bench for diagnosing bugs in distributed systems is a useful benchmark but not headline news.
-- PanoTac: A Dense Three-Axis Tactile Sensor for Robust Touch-Centric Manipulation — score 4: Tactile sensor for manipulation is a hardware contribution, not a frontier AI story.
-- VIAS: Value-Isolating Activation Steering for Multi-Value Alignment and Compliance for Organisations — score 5: Activation steering for value alignment is a safety‑oriented research study.
-- CUA-Master: Scaling Computer-use Agents through Open-World Recursive Improvements — score 5: CUA‑Master paper on scaling agents is interesting but not a major advance for coverage.
-- DiscImageStudio: burn visible artwork onto CDs, DVDs and Blu-ray discs — not AI: Disc image software, unrelated to AI.
-- Apple Watch’s AI features for rewinding and recapping conversations begin beta testing — score 5: Consumer‑facing AI features on Apple Watch are interesting but not a major frontier development for the audience.
-- Here’s who is falling in line for Trump’s “Super Intelligence” loyalty test — score 5: Political piece about a loyalty test; relevance to AI is peripheral.
-- Coforge Launches BridgeCX With Pega, Mastercard for Customer Personalisation — not AI: Customer personalization launch, not AI specific.
-- The AI-First Employee is Not What You Think — score 4: Opinion piece on AI‑first employees, not breaking news.
-- AI's Next Agritech Frontier Is India's Fragmented Supply Chain — score 4: Agritech commentary, not a concrete AI development.
-- LenDenClub Parent Vartis Platforms Launches UdhaarSaathi For Small Business Loans — not AI: Loan marketplace launch, not AI.
-- The Second Life Of Festive Gift Boxes — not AI: Gift box article, no AI angle.
-- Exclusive: Nuuk To Raise ₹100 Cr From Wipro Consumer Care Ventures, RPSG At ₹500 Cr Valuation — not AI: Funding round for home‑appliance brand, not AI.
-- Mobile internet suspended in Upper Siang ahead of anti-dam bandh — not AI: Internet shutdown unrelated to AI.
-- Jio Platforms Q2 profit rises 14% to Rs 8,387 cr, revenue up 11% — not AI: Jio Platforms profit report, no AI focus.
-- Allahabad HC says free speech laws must be ‘recast’ to protect judges from social media falsehoods — not AI: Free speech law discussion, not AI.
-- Bombay HC grants dynamic injunction to protect Ramayana from online piracy — not AI: Court injunction on piracy, unrelated to AI.
-- Australias highest court hears challenges to social media ban for children — not AI: Australian court case about social media ban, not AI.
-- Samsung Galaxy S27 Ultra could get new camera design and upgraded privacy display: What we know — not AI: Smartphone leak, no AI content.
-- Vivo Y32 5G launched with 8,000mAh battery, 120Hz display and 2TB expandable storage — not AI: Smartphone launch, no AI.
-- Reddit blasts Australia's 'inept' social media ban as court challenge begins — not AI: Reddit comment on Australian ban, not AI.
-- From SBI to Binance, how financial institutions are becoming cyberattack targets — not AI: Cyber‑attack targets, not AI.
+- Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning — score 5: Incremental multimodal captioning paper; not a frontier breakthrough.
+- CoworkOS:Scaling Agent Coworkers for Real-world Automation — score 5: Paper on scaling coworker agents; interesting but not a major advance.
+- Does the World Need a New GitHub? — score 4: Opinion piece on GitHub architecture; AI angle is peripheral.
+- Apple Posts Record Revenue in India for Q4 FY26 — not AI: Apple revenue record in India, not AI‑focused.
+- Can India’s AI Boom Reach Bharat? — score 4: Broad analysis of AI education divide; not breaking news.
+- Apple Logs Record India Revenue, Mac And Services Hit New Highs — not AI: Apple revenue record in India, unrelated to AI.
+- Why SIM-binding mandate is concern for consumers, MSMEs, and cybersecurity, a new study decodes — not AI: SIM‑binding mandate study; no AI relevance.
+- Binance co-CEO says company is in very strong financial health after $6.3 billion heist — not AI: Binance financial health update, no AI angle.
+- Global markets were already fragile. Big AI bets could break them — score 4: Macro‑finance commentary on AI bets; not a core AI development.
+- How Anju turned a personal food experiment into a snack brand expanding to 41 retail stores — not AI: Snack‑brand story, no AI relevance.
+- Sachin Tendulkar backs Hitwicket maker Metasports Interactive — not AI: Celebrity investment in gaming; no AI component.
+- How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine) — score 5: Same political‑AI safety story already published; no new information.
+- Sources: Nvidia verbally told cloud compute clients to sell 51%+ of their services to non-Chinese companies, imposing new limits on China's access to AI chips (Financial Times) — score 5: Duplicate of already‑published Nvidia client‑restriction story.
+- VC funding into Indian startups plunges 66% in October — could not verify yet; will retry next run
+- Oracle plans to raise $20 billion through bonds and stock sales — already covered (story 2c1f025c89cb)
+- OpenAI’s Lehane Calls AI the Number-One Issue of the 2028 Election — could not verify yet; will retry next run
+- TRAI allows AI Agents in telecom customer support; mandates 24×7 availability — could not verify yet; will retry next run
+- Indian companies trust AI with greater autonomy but struggle to prove financial returns: Report — could not verify yet after a second try; dropped
+- Dispatch Network Raises ₹5 Cr Pre-Seed Led by Antler India to Build AI-Powered Delivery Network — could not verify yet after a second try; dropped
 
 </details>
 
+### Sources with problems
+- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
+
 <details><summary>Research agent's work</summary>
 
-- Cities Worldwide Build and Scale AI Services With NVIDIA Physical and : confirmed (searched “NVIDIA physical and agentic AI cities announcement”; read blockchain.news; searched “NVIDIA physical and agentic AI cities Europe announcement October 2026”)
-- Google takes Dreambeans to India in bid to bring AI-generated personal: unconfirmed (searched “Google Dreambeans India 13 Indian languages”; read siliconangle.com; read msn.com)
-- Sources: Nvidia verbally told cloud compute clients to sell 51%+ of th: unconfirmed (searched “Nvidia verbally told cloud compute clients to sell 51% of services to non-Chinese companies limits on China's access to AI chips”; read cryptobriefing.com; searched “Nvidia cloud clients 51% non-Chinese services Reuters November 2026”)
-- MIT Researchers Show LLMs Can Read and Edit Neural Network Weights Wit: unconfirmed (searched “MIT researchers LLMs read edit neural network weights without retraining Astra 0.016% MATH-500”; read venturebeat.com; read msn.com)
-- India Becomes ChatGPT’s Largest Market Globally, User Base Doubles Sin: confirmed (searched “India becomes ChatGPT's largest market globally”; read indiatimes.com; read newsbytesapp.com)
+- MIT Researchers Show LLMs Can Read and Edit Neural Network Weights Wit: confirmed (searched “MIT researchers LLM read edit neural network weights Astra MATH-500”; read digit.in; read msn.com)
+- Anthropic's quarterly loss shrinks, revenue jumps ahead of blockbuster: unconfirmed (read msn.com; searched “Anthropic quarterly loss shrinks revenue jumps ahead of blockbuster IPO Reuters”)
+- VC funding into Indian startups plunges 66% in October: unconfirmed (searched “VC funding into Indian startups plunges 66% in October”; searched “"VC funding" "Indian startups" October 66”; searched “venture capital funding Indian startups October 2026”)
+- Sources: Huawei told some clients that a large share of its upcoming f: confirmed (searched “Huawei Ascend 960DT HBM Samsung SK Hynix”; read chosun.com; read sbs.co.kr)
+- OpenAI’s Lehane Calls AI the Number-One Issue of the 2028 Election: unconfirmed (searched “Lehane AI number one issue 2028 election OpenAI”; read thenextweb.com; searched “Politico Chris Lehane memo 2028 AI election”)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id bd4eadb64696 for 'OpenAI’s India user base doubles; Rapido GOV quadr'
+- not India desk: 'MIT Researchers Show LLMs Can Read and Edit Neural'
+- not India desk: 'Oracle plans to raise $20 billion through bonds an'
+- ignored made-up duplicate id c2e7ac5975dc for 'How Alex Bores' Who Decides seeks to make AI safet'
+- ignored made-up duplicate id 485ef28c1a11 for 'Sources: Nvidia verbally told cloud compute client'
 - GDELT unavailable: GDELT paused for this run after repeated rate-limiting
-- 7 kept item(s) carried over to the next run
-- cerebras/gpt-oss-120b: answer cut off; retrying with more room
+- 6 kept item(s) carried over to the next run

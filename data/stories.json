@@ -159,6 +159,302 @@
   },
   {
     "explainer": {
+      "what_it_means": "The researchers let a language model look at the numbers (weights) that define another AI model and change only the ones that cause problems. By editing a tiny fraction of those numbers, they boosted the model’s performance on math tests. This approach avoids the usual lengthy training process that adjusts millions of weights gradually.",
+      "terms": [
+        {
+          "term": "Weight‑space programming",
+          "meaning": "A technique where an LLM reads and writes the raw weight values of a neural network based on natural‑language instructions."
+        },
+        {
+          "term": "Neural network weights",
+          "meaning": "The numerical parameters inside a model that store what it has learned; changing them changes the model’s behavior."
+        },
+        {
+          "term": "Gradient descent",
+          "meaning": "A common training method that repeatedly adjusts all weights in small steps to reduce error."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "Qwen3.5-0.8B",
+        "benchmark": "MATH-500",
+        "score": "48.1%"
+      },
+      {
+        "model": "Qwen3.5-0.8B",
+        "benchmark": "GSM8K",
+        "score": "67.1%"
+      },
+      {
+        "model": "Qwen3.5-0.8B",
+        "benchmark": "IFEval",
+        "score": "62.3%"
+      }
+    ],
+    "audiences": {
+      "builders": "LLMs can directly edit model weights, offering a new way to debug or improve models without retraining.",
+      "business": "The technique could reduce costs and time for updating AI products, enabling quicker fixes to deployed models.",
+      "investors": "Demonstrates novel capabilities that may affect the valuation and competitive landscape of AI model providers."
+    },
+    "id": "544cab3b9fc5",
+    "headline": "MIT researchers show LLMs can read and edit neural network weights without retraining",
+    "summary": "MIT’s CSAIL team demonstrated that a large language model (GPT‑6 Astra) can examine and modify a neural network’s weights directly, improving a small language model by changing only 0.016% of its parameters. In experiments the model raised the MATH‑500 score from 7.9% to 48.1% and GSM8K from 13.8% to 67.1%.",
+    "why_it_matters": "It shows a way to fix or enhance AI models without costly retraining, opening new debugging and optimization pathways.",
+    "category": "research",
+    "lab": "MIT CSAIL",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "We find that frontier LLMs are surprisingly good at natively reading and writing neural network weights, well past what we'd expect from humans or conventional algorithms,",
+        "speaker": "MIT researchers",
+        "speaker_role": "",
+        "source_url": "https://analyticsindiamag.com/ai-news/mit-researchers-show-llms-can-read-and-edit-neural-network-weights-without-retraining"
+      }
+    ],
+    "score": 9,
+    "url": "https://analyticsindiamag.com/ai-news/mit-researchers-show-llms-can-read-and-edit-neural-network-weights-without-retraining",
+    "source_id": "aim",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://analyticsindiamag.com/cdn-cgi/image/width=1200,quality=60,format=jpeg,fit=scale-down/https://zdpdvwhvukelzzbzbjvh.supabase.co/storage/v1/object/public/imported-images/1769001372847-19619404-6ae6-4f3f-8daa-84a92798a544-jg48vd.webp",
+    "sources": [
+      {
+        "url": "https://analyticsindiamag.com/ai-news/mit-researchers-show-llms-can-read-and-edit-neural-network-weights-without-retraining",
+        "publisher": "Analytics India Magazine",
+        "title": "MIT Researchers Show LLMs Can Read and Edit Neural Network Weights Without Retraining"
+      },
+      {
+        "url": "https://digit.in/features/general/mit-researchers-show-llms-can-edit-neural-network-weights-without-training-heres-what-it-means.html",
+        "publisher": "Digit",
+        "title": "MIT Researchers show LLMs can edit neural network weights without training: Here’s what it means"
+      },
+      {
+        "url": "https://msn.com/en-in/news/other/can-ai-fix-another-ais-brain-mit-researchers-use-gpt-6-astra-to-boost-qwens-maths-skills/ar-AA2gDlwH",
+        "publisher": "India Today on MSN",
+        "title": "Can AI fix another AI's brain? MIT researchers use GPT-6 Astra to boost Qwen's maths skills"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-03T05:35:25+00:00",
+    "created_at": "2026-11-03T10:08:05+00:00",
+    "sectors": [
+      "science"
+    ],
+    "regions": [
+      "us"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 1,
+      "investors": 1
+    },
+    "cover": "0.016%",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "PowerUp’s AI‑driven platform analyses users’ financial goals, risk appetite and existing holdings to suggest asset allocation, SIPs, lump‑sum investments and portfolio rebalancing. An AI wealth coach and personal assistant help users understand recommendations and make informed decisions.",
+      "terms": [
+        {
+          "term": "AI wealth coach",
+          "meaning": "A conversational AI tool that explains investment advice and assists users in applying recommendations."
+        },
+        {
+          "term": "Systematic investment plan (SIP)",
+          "meaning": "A method of investing a fixed amount regularly in mutual funds, used for disciplined long‑term investing."
+        },
+        {
+          "term": "Assets under management (AUM)",
+          "meaning": "The total market value of assets that a financial service manages on behalf of its clients."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers can observe how PowerUp integrates AI into its advisory platform for potential API or model integration ideas.",
+      "business": "Executives see AI enabling cost‑effective, personalized wealth management services that can attract mass‑market investors.",
+      "investors": "The $10 million raise signals confidence in AI‑driven fintech ventures and may attract further capital into the sector."
+    },
+    "id": "c4e747ef2346",
+    "headline": "PowerUp Money raises $10 million to expand AI‑led wealth management in India",
+    "summary": "PowerUp Money secured $10 million in a round led by Flourish Ventures and will use the funds to develop its AI‑powered wealth advisory platform and expand its managed advisory service Infinite. The Bengaluru startup, with over 1.5 million users and 1 lakh paid Elite members, says Infinite has amassed nearly Rs 500 crore AUM.",
+    "why_it_matters": "The investment shows AI is being used to deliver more comprehensive, personalized digital wealth management at lower cost, a trend relevant to AI followers.",
+    "category": "industry",
+    "lab": "PowerUp Money",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "AI makes it possible to deliver a much more comprehensive, wealth-manager-like experience digitally",
+        "speaker": "Prateek Jindal",
+        "speaker_role": "founder and chief executive officer",
+        "source_url": "https://yourstory.com/2026/11/powerup-money-raises-10m-expand-ai-led-wealth-management-india"
+      },
+      {
+        "text": "We started by making high-quality investment advice accessible to every Indian. Today, AI makes it possible to deliver a much more comprehensive, wealth-manager-like experience digitally and at a fraction of traditional costs.",
+        "speaker": "Prateek Jindal",
+        "speaker_role": "founder and chief executive officer",
+        "source_url": "https://inc42.com/buzz/powerup-money-raises-10-mn-to-expand-wealth-management-services"
+      }
+    ],
+    "score": 6,
+    "url": "https://yourstory.com/2026/11/powerup-money-raises-10m-expand-ai-led-wealth-management-india",
+    "source_id": "yourstory",
+    "desk": "india",
+    "ai_relevance": "core",
+    "image": "https://images.yourstory.com/cs/2/d99b1110116911ed9e63f54395117598/PowerUpMoneyPrateekJindal-1793683857677.png",
+    "sources": [
+      {
+        "url": "https://yourstory.com/2026/11/powerup-money-raises-10m-expand-ai-led-wealth-management-india",
+        "publisher": "YourStory",
+        "title": "PowerUp Money raises $10M to expand AI-led wealth management"
+      },
+      {
+        "url": "https://inc42.com/buzz/powerup-money-raises-10-mn-to-expand-wealth-management-services",
+        "publisher": "Inc42",
+        "title": "PowerUp Money Raises $10 Mn To Expand Wealth Management Services"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-03T05:34:32+00:00",
+    "created_at": "2026-11-03T10:08:05+00:00",
+    "sectors": [
+      "finance"
+    ],
+    "regions": [
+      "india"
+    ],
+    "deal": {
+      "type": "funding",
+      "company": "PowerUp Money",
+      "amount": "$10 million",
+      "usd": 10000000.0
+    },
+    "relevance": {
+      "builders": 2,
+      "business": 3,
+      "investors": 2
+    },
+    "cover": "$10 million",
+    "trackers": [
+      "ai-money",
+      "india-ai"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Huawei's next AI processor will rely on high‑speed memory chips made by Samsung and SK Hynix. Those memory chips are being moved into China by hiding them on circuit boards with low‑cost server processors, allowing them to avoid export bans. The practice shows that Chinese AI hardware still needs foreign components despite domestic production limits.",
+      "terms": [
+        {
+          "term": "HBM (high‑bandwidth memory)",
+          "meaning": "Fast memory stacked in layers, used to feed data to AI accelerators."
+        },
+        {
+          "term": "Export controls",
+          "meaning": "Government rules that restrict the shipment of certain technologies to specific countries."
+        },
+        {
+          "term": "Board‑packaging smuggling",
+          "meaning": "A method of shipping memory chips together with server processors on a circuit board to classify the shipment as a processor, not a memory device."
+        }
+      ],
+      "watch_next": [
+        "A smuggler said they plan to sell most of the company's equity next year."
+      ]
+    },
+    "audiences": {
+      "builders": "HBM shortages mean developers may need to design around limited memory supply or source components through indirect channels.",
+      "business": "Companies relying on Huawei's AI chips must consider supply‑chain risks tied to foreign memory components and export‑control work‑arounds.",
+      "investors": "The high profit margins from smuggled HBM and the planned equity sale indicate financial exposure and potential market shifts in the AI hardware sector."
+    },
+    "id": "5a6391ab7400",
+    "headline": "Huawei says Ascend 960DT AI chip will use Samsung and SK Hynix HBM",
+    "summary": "Huawei told some customers that a large share of its upcoming flagship AI chip, Ascend 960DT, will be equipped with high‑bandwidth memory from Samsung and SK Hynix, which is being smuggled into China via board‑packaging loopholes.",
+    "why_it_matters": "It shows how U.S. export controls are being bypassed and that Chinese AI hardware still depends on foreign memory components.",
+    "category": "industry",
+    "lab": "Huawei",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "A year ago, one HBM3E traded in China for hundreds of dollars, but now it trades for about $4,000.",
+        "speaker": "Broker in China",
+        "speaker_role": "",
+        "source_url": "https://biz.chosun.com/en/en-it/2026/11/03/P3A2NI3KJZAS7LGIFQZDR4VR5U"
+      },
+      {
+        "text": "Next year, I plan to sell most of the company's equity.",
+        "speaker": "Smuggler",
+        "speaker_role": "",
+        "source_url": "https://biz.chosun.com/en/en-it/2026/11/03/P3A2NI3KJZAS7LGIFQZDR4VR5U"
+      }
+    ],
+    "score": 7,
+    "url": "https://techmeme.com/261102/p50",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://biz.chosun.com/resizer/v2/TBXS5GEG7NJ67PRWYA7PVN53VE.jpg?auth=e9a939996b9a2624f0edc37df08d0e289ec4d3ef279f2c3553799c9574168985&width=1200&height=630&smart=true",
+    "sources": [
+      {
+        "url": "https://techmeme.com/261102/p50",
+        "publisher": "techmeme.com",
+        "title": "Sources: Huawei told some clients that a large share of its upcoming flagship AI chip, Ascend 960DT, will run largely on HBM made by Samsung and SK Hynix (The Information)"
+      },
+      {
+        "url": "https://biz.chosun.com/en/en-it/2026/11/03/P3A2NI3KJZAS7LGIFQZDR4VR5U",
+        "publisher": "Chosunbiz",
+        "title": "Smugglers funnel Korea's HBM to China for Huawei via server chip loophole"
+      },
+      {
+        "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008828674",
+        "publisher": "SBS News",
+        "title": "Chinese Smugglers Sneak South Korean HBM Chips Into China Calling It 'Patriotism' — How Do They Do It?"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-03T03:25:00+00:00",
+    "created_at": "2026-11-03T10:08:05+00:00",
+    "sectors": [
+      "manufacturing"
+    ],
+    "regions": [
+      "china"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 0,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "Ascend 960DT",
+    "trackers": [
+      "ai-infrastructure",
+      "us-china"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "The revenue jump reflects rapid adoption of Anthropic’s AI services, but the company still runs at a loss. The massive spending commitments mean Anthropic must secure long‑term compute capacity to continue developing its models.",
       "terms": [
         {
@@ -1969,6 +2265,100 @@
     "cover": "",
     "trackers": [
       "ai-infrastructure"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Anthropic expects to spend nearly $895 billion on computing hardware and cloud services over the next decade to train and run its AI models. The company’s revenue growth is slowing, so covering these costs will depend on continued sales. The filing warns that revenue may not keep rising at the same pace, creating financial risk.",
+      "terms": [
+        {
+          "term": "compute commitments",
+          "meaning": "Long‑term contracts to purchase computing power, often from cloud providers, used to train large AI models."
+        },
+        {
+          "term": "IPO prospectus",
+          "meaning": "A regulatory filing that provides detailed financial and operational information before a company goes public."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Anthropic’s large compute spend signals high infrastructure costs for AI model training.",
+      "business": "Investors and executives must weigh the risk that revenue growth may not keep pace with massive compute obligations.",
+      "investors": "The company’s financial outlook depends on sustaining revenue growth to meet its near‑trillion‑dollar compute commitments."
+    },
+    "id": "a11455d91110",
+    "headline": "Anthropic reports Q3 revenue near $17 billion as compute commitments rise to $895 billion",
+    "summary": "Anthropic's amended IPO filing shows third‑quarter revenue of about $17 billion, a 46% increase from the prior quarter, while compute and infrastructure commitments total roughly $895 billion, including $70 billion due by September 2027.",
+    "why_it_matters": "The scale of Anthropic's spending on compute highlights the growing cost pressures on AI developers as they scale models.",
+    "category": "industry",
+    "lab": "Anthropic",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 8,
+    "url": "https://msn.com/en-us/news/other/anthropics-quarterly-loss-shrinks-revenue-jumps-ahead-of-blockbuster-ipo/ar-AA2gBhP1",
+    "source_id": "chief",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://image.theregister.com/5307099.jpg?imageId=5307099&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "sources": [
+      {
+        "url": "https://msn.com/en-us/news/other/anthropics-quarterly-loss-shrinks-revenue-jumps-ahead-of-blockbuster-ipo/ar-AA2gBhP1",
+        "publisher": "Reuters on MSN",
+        "title": "Anthropic's quarterly loss shrinks, revenue jumps ahead of blockbuster IPO"
+      },
+      {
+        "url": "https://msn.com/en-us/news/other/anthropics-amended-ipo-paperwork-reveals-soaring-q3-revenue-and-a-stunning-compute-bill/ar-AA2gBu3X",
+        "publisher": "Insider on MSN",
+        "title": "Anthropic's amended IPO paperwork reveals soaring Q3 revenue and a stunning compute bill"
+      },
+      {
+        "url": "https://msn.com/en-us/money/markets/anthropic-releases-amended-ipo-prospectus-with-third-quarter-financials/ar-AA2gBhF0",
+        "publisher": "CNBC on MSN",
+        "title": "Anthropic reports $17 billion in Q3 revenue, purchase commitments of $895.4 billion in revised S-1"
+      },
+      {
+        "url": "https://theregister.com/ai-and-ml/2026/11/02/anthropics-compute-tab-could-top-1t-as-q3-revenue-nears-17b/5307089",
+        "publisher": "The Register",
+        "title": "Anthropic's compute tab could top $1T as Q3 revenue nears $17B"
+      },
+      {
+        "url": "https://msn.com/en-us/technology/artificial-intelligence/anthropic-reveals-amended-s-1-outlining-huge-spending-commitments-rising-sales/ar-AA2gBnc0",
+        "publisher": "Yahoo Finance on MSN",
+        "title": "Anthropic reveals amended S-1 outlining huge spending commitments, rising sales"
+      },
+      {
+        "url": "https://unite.ai/anthropic-details-long-term-compute-commitments-in-amended-ipo-filing",
+        "publisher": "Unite.AI",
+        "title": "Anthropic Details Long-Term Compute Commitments in Amended IPO Filing"
+      }
+    ],
+    "research": {
+      "steps": 2,
+      "read": 1,
+      "decision": "unconfirmed"
+    },
+    "published_at": "2026-11-02T06:50:20+00:00",
+    "created_at": "2026-11-03T10:08:05+00:00",
+    "thread": "t-43fa5737591f",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "us"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 2,
+      "business": 3,
+      "investors": 3
+    },
+    "cover": "$17 billion",
+    "trackers": [
+      "ai-money"
     ],
     "photo_local": true
   },
