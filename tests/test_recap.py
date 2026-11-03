@@ -91,3 +91,24 @@ def test_latest_json_for_the_email_worker():
     assert j["date"] == "2026-10-30" and j["gif_url"] == base + "videos/2026-10-30/teaser.gif"
     assert j["entries"][0]["url"] == base + "story/s0/" and j["entries"][1]["url"] == ""
     assert len(j["entries"]) == 5 and all(e["line"] and e["source"] for e in j["entries"])
+
+
+def test_key_figure_prefers_the_number_then_the_company():
+    assert recap.key_figure({"line": "Salesforce is paying $2.7 billion for Cresta", "detail": ""}) == "$2.7B"
+    assert recap.key_figure({"line": "Model edits", "detail": "lifted MATH-500 from 7.9% to 48.1%"}) == "7.9%"
+    assert recap.key_figure({"line": "Hackers hit 200+ organizations", "detail": ""}) == "200+"
+    assert recap.key_figure({"line": "A rule change", "detail": "", "lab": "Anthropic"}) == "Anthropic"
+    assert recap.key_figure({"line": "A rule change", "detail": "", "lab": "A very long organisation name"}) == ""
+
+
+def test_frames_with_and_without_ai_images(tmp_path):
+    from PIL import Image
+    script = _published()
+    for i, st in enumerate(script["stories"]):
+        st["category"] = ["models", "research", "policy", "safety", "industry"][i]
+    Image.new("RGB", (1024, 1024), (40, 120, 140)).save(tmp_path / "1.jpg")
+    (tmp_path / "2.jpg").write_bytes(b"not an image")  # broken file: falls back to the drawn illustration
+    r = recap.Renderer(script, "example.org", tmp_path)
+    assert set(r.images) == {0}
+    for t in (1.0, 5.5, 10.5, 15.5, 20.5, 25.5, 29.0):
+        assert r.frame(t).size == (1920, 1080)

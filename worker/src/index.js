@@ -6,9 +6,10 @@
 //   POST /api/dispatch     (newsroom only, bearer secret) new events -> instant emails or the daily digest queue
 //   POST /api/recap/preview (bearer secret) {date, to} emails the editor a preview of the daily recap email
 //   GET|POST /api/recap/approve?d=&s=  the editor's signed link: confirm, then send the recap to its subscribers
+//   POST /api/recap/image  (bearer secret) {prompt} -> an AI illustration (Workers AI, FLUX schnell) as base64 JPEG
 //   cron                   08:50 IST daily digests; every 10 minutes, continues sending an approved recap
 //
-// Secrets: CEREBRAS_API_KEY (and optional GROQ_API_KEY), BREVO_API_KEY, DISPATCH_SECRET.
+// Secrets: CEREBRAS_API_KEY (and optional GROQ_API_KEY), BREVO_API_KEY, DISPATCH_SECRET. Binding: AI (Workers AI).
 // Vars: SITE_URL, SENDER_EMAIL, SENDER_NAME. Binding: DB (D1).
 import { buildIndex, rank } from "../../site/search.js";
 import { digestSubject, recapSubject, renderEmail, renderRecap } from "./email.js";
@@ -19,6 +20,14 @@ const EMAILS_PER_DAY = 280; // Brevo's free plan allows 300 a day
 const FOLLOW_KEY = /^(lab:[^<>"]{1,60}|tracker:[a-z0-9-]{1,40}|sector:[a-z_]{1,30}|topic:[a-z]{1,20}|region:india|deals|models|recap)$/;
 const RECAP_BATCH = 40;   // emails per run, inside the free plan's 50 outgoing requests per invocation
 const DIGEST_CRON = "20 3 * * *";
+const IMAGES_PER_DAY = 40;   // recap illustrations; about 60 Workers AI neurons each, far inside the free 10,000 a day
+// Every illustration prompt ends with this, so images stay within the recap's rules whatever the prompt says.
+export const IMAGE_STYLE = "Editorial illustration for a technology news video, cinematic lighting, deep teal and navy palette with one accent colour, clean composition, high detail. No text, no letters, no numbers, no logos, no brand marks, no recognisable people, no faces.";
+
+export function imagePrompt(p) {
+  const clean = String(p || "").replace(/[\u0000-\u001f<>]/g, " ").replace(/\s+/g, " ").trim().slice(0, 400);
+  return clean ? `${clean}. ${IMAGE_STYLE}` : "";
+}
 
 const json = (data, status, cors) => new Response(JSON.stringify(data), { status: status || 200, headers: { "content-type": "application/json", ...cors } });
 const today = () => new Date().toISOString().slice(0, 10);
@@ -535,6 +544,15 @@ export default {
         if (req.method !== "POST") return approvePage(env, d, s, await recapAudience(env));  // a GET never sends (mail scanners open links)
         await env.DB.prepare("INSERT OR REPLACE INTO meta (k, v) VALUES ('recap_approved', ?1)").bind(d).run();
         return approvePage(env, d, s, 0, await sendRecap(env, d));
+      }
+      if (url.pathname === "/api/recap/image" && req.method === "POST") {
+        if (!env.DISPATCH_SECRET || req.headers.get("authorization") !== `Bearer ${env.DISPATCH_SECRET}`) return json({ error: "forbidden" }, 403);
+        if (!env.AI) return json({ error: "Workers AI is not bound to this worker" }, 501);
+        const prompt = imagePrompt((await req.json()).prompt);
+        if (!prompt) return json({ error: "prompt is required" }, 400);
+        if (!(await bump(env, "image", "all", IMAGES_PER_DAY))) return json({ error: "daily image limit reached" }, 429);
+        const out = await env.AI.run("@cf/black-forest-labs/flux-1-schnell", { prompt, steps: 6 });
+        return out && out.image ? json({ image: out.image }) : json({ error: "no image returned" }, 502);
       }
       if (url.pathname === "/api/health") return json({ ok: true }, 200, cors);
       return json({ error: "not found" }, 404, cors);
