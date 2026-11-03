@@ -1,0 +1,481 @@
+{
+  "started_at": "2026-11-03T07:28:48+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1348)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (895)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (18)",
+    "gdelt": "ok (2)",
+    "hn": "ok (21)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (0)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Transformers Model Integration Contracts",
+      "reason": "score 5: Discusses emerging legal contracts for model integration; a niche policy angle without major regulatory impact, scoring below the news threshold."
+    },
+    {
+      "title": "Pixel-UMI: Learning Environment-Aware Whole-Body Manipulation from Sensorized Human Demonstrations",
+      "reason": "score 4: Robotics manipulation paper is incremental research without frontier impact."
+    },
+    {
+      "title": "Pixel: A Co-Designed Full-Stack Robot System for Learning General-Purpose Mobile Manipulation",
+      "reason": "score 4: Similar to above; a robot system paper that is incremental."
+    },
+    {
+      "title": "From Natural Language to Exact Cover: A Neuro-Symbolic Approach to Zebra Puzzles",
+      "reason": "score 3: Neuro‑symbolic puzzle solving is a modest contribution, not newsworthy."
+    },
+    {
+      "title": "WebHarbor: Docking Real Websites for Evolving GUI Agent Environments",
+      "reason": "score 5: Provides a new benchmark environment for GUI agents but is an incremental research tool."
+    },
+    {
+      "title": "Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap",
+      "reason": "score 4: Technical optimizer comparison lacks broad impact."
+    },
+    {
+      "title": "Not All Reasoning Generalizes: A Case Study on Learning Generalizable Reasoning Strategies in RLVR",
+      "reason": "score 4: Study of reasoning generalization is incremental."
+    },
+    {
+      "title": "FADE: Factored Ability--Difficulty Filtering for Online RLVR Scheduling",
+      "reason": "score 4: Filtering method for RLVR is a modest technical contribution."
+    },
+    {
+      "title": "Thought-deciphering via hierarchical EEG-to-text alignment",
+      "reason": "score 4: EEG‑to‑text alignment is niche BCI work, not frontier AI news."
+    },
+    {
+      "title": "D&A: Decoupling Description and Assessment Enables VLMs as Zero-Shot Robotic Reward Models",
+      "reason": "score 5: Decoupling description/assessment for VLM reward models is an incremental research result."
+    },
+    {
+      "title": "Strategist: Evolving Reasoning with Agents",
+      "reason": "score 5: Introduces a meta‑agent for reasoning strategies; interesting but not a major breakthrough."
+    },
+    {
+      "title": "Tracing the Scientific Discovery Capacity of LLMs to Their Training Data",
+      "reason": "score 5: Analyzes LLM scientific discovery capacity; useful but not news‑worthy."
+    },
+    {
+      "title": "Benchmark Prediction with Sparse and Unpaired Cached Responses",
+      "reason": "score 4: Benchmark prediction technique is a modest contribution."
+    },
+    {
+      "title": "Efficient Closure Learning in Dynamical Systems: A Comparison of Data-Assimilated and Embedded Approaches",
+      "reason": "score 4: Closure learning comparison is incremental."
+    },
+    {
+      "title": "ufakzeka-kulak: Building and Evaluating a 31.6M-Parameter Turkish Speech Recognizer from Scratch",
+      "reason": "score 3: Turkish speech recognizer model release is a small‑scale contribution."
+    },
+    {
+      "title": "DiabAgent: Toward Agentic Physiological Control",
+      "reason": "score 5: Medical agentic control research is notable but remains a paper rather than a product launch."
+    },
+    {
+      "title": "Four Bridges: Measuring Deception Propensity in a Multi-Agent Game",
+      "reason": "score 5: Deception measurement in multi‑agent games is a safety‑oriented study, but not a headline story."
+    },
+    {
+      "title": "Should We Combine Our Data? Algorithms and Limits for Privately Assessing Data Sharing",
+      "reason": "score 5: Privacy‑focused data sharing analysis is relevant but not a major policy development."
+    },
+    {
+      "title": "Structured Visual Landscape: Generating Preferred Representations in Biological and Artificial Neural Networks",
+      "reason": "score 4: Visual landscape generation is incremental."
+    },
+    {
+      "title": "Spacetime Emergence in the Memory of a Learning Agent",
+      "reason": "score 4: Spacetime emergence in agent memory is speculative research."
+    },
+    {
+      "title": "DynaSolver: A Neural Operator for Autoregressive 4D Flow Prediction with Dynamic Boundaries",
+      "reason": "score 4: Neural operator for dynamic CFD is a technical advance, not frontier news."
+    },
+    {
+      "title": "Evaluating Uncertainty Calibration in Probabilistic Time Series Foundation Models",
+      "reason": "score 5: Uncertainty calibration study for TSFMs is useful but not a headline."
+    },
+    {
+      "title": "A Scaling Theory of Multi-Epoch Pretraining: Late-Time Overfitting and Ensembling",
+      "reason": "score 5: Scaling theory for multi‑epoch pretraining offers insight but is not a breakthrough."
+    },
+    {
+      "title": "FedReady: Bounded Agents for Federation Formation",
+      "reason": "score 4: Federated agents framework is incremental."
+    },
+    {
+      "title": "Sonar-MoE: In-Backward Expert Updates for Memory-Efficient Mixture-of-Experts Training",
+      "reason": "score 5: Memory‑efficient MoE training improves efficiency but is a technical refinement."
+    },
+    {
+      "title": "NitiBench+: A Temporal Thai Legal Question Answering Benchmark Across 17 Domains",
+      "reason": "score 3: Legal QA benchmark is a niche dataset, not core AI news."
+    },
+    {
+      "title": "VeriHarm-Bench: Measuring Harmful Success in LLM Coding Agents Verifiably",
+      "reason": "score 5: VeriHarm‑Bench measures harmful outcomes in coding agents; safety‑relevant but not headline."
+    },
+    {
+      "title": "BISECT: Bilevel Spectral Decomposition for Low-Rank Continual Learning",
+      "reason": "score 4: Continual learning decomposition is incremental."
+    },
+    {
+      "title": "PlantVLM-Edge: Quantized Vision-Language Models for On-Device Crop Health Diagnosis",
+      "reason": "score 5: Quantized VLM for crop health is an application‑focused paper, not a major industry move."
+    },
+    {
+      "title": "MCP Tool Poisoning in Agentic AI Frameworks: A Cross-Framework Measurement Study",
+      "reason": "score 5: Tool poisoning measurement highlights a security risk but is a research study."
+    },
+    {
+      "title": "Nonparametric Intensity Estimation for Covariate-Driven Poisson Processes Using Deep Learning",
+      "reason": "score 3: Statistical intensity estimation is not AI‑centric."
+    },
+    {
+      "title": "Can LLM Agents Be Forward-Deployed Engineers? Requirement Discovery and Delivery for Enterprise Text-to-SQL",
+      "reason": "score 5: Explores LLM agents as forward‑deployed engineers; interesting but not a breakthrough."
+    },
+    {
+      "title": "Can LLM Agents Improve Imperfect Earth System Model Parameterizations?",
+      "reason": "score 5: Applying LLM agents to Earth system model parameterizations is a niche research direction."
+    },
+    {
+      "title": "Variational Functional Neural Networks (vfNN)",
+      "reason": "score 4: Variational functional networks are a methodological contribution."
+    },
+    {
+      "title": "An Agentic Framework for Automated Power System Studies and Grid Connection Assessment",
+      "reason": "score 5: Agentic framework for power‑system studies is an industry‑focused AI application."
+    },
+    {
+      "title": "Contrastive Adapter Training and Consensus Knowledge Distillation for Multi-Source-Free Domain Adaptation in Skin Cancer Diagnosis",
+      "reason": "score 5: AI‑enhanced skin cancer diagnosis is a medical AI application, but a research paper rather than a product launch."
+    },
+    {
+      "title": "Library of Layers (LoL): Adaptively Ordering Transformer Layers at Runtime",
+      "reason": "score 5: Library of Layers proposes a new model architecture concept; notable but not a major breakthrough."
+    },
+    {
+      "title": "Grading the Unannotated: Insights from the WorkRB Skill Extraction Challenge at RecSys-HR 2026",
+      "reason": "score 4: Skill extraction benchmark analysis is incremental."
+    },
+    {
+      "title": "DistDebug-Bench: Can LLM Agents Diagnose Bugs in Distributed Systems?",
+      "reason": "score 5: DistDebug‑Bench for diagnosing bugs in distributed systems is a useful benchmark but not headline news."
+    },
+    {
+      "title": "PanoTac: A Dense Three-Axis Tactile Sensor for Robust Touch-Centric Manipulation",
+      "reason": "score 4: Tactile sensor for manipulation is a hardware contribution, not a frontier AI story."
+    },
+    {
+      "title": "VIAS: Value-Isolating Activation Steering for Multi-Value Alignment and Compliance for Organisations",
+      "reason": "score 5: Activation steering for value alignment is a safety‑oriented research study."
+    },
+    {
+      "title": "CUA-Master: Scaling Computer-use Agents through Open-World Recursive Improvements",
+      "reason": "score 5: CUA‑Master paper on scaling agents is interesting but not a major advance for coverage."
+    },
+    {
+      "title": "DiscImageStudio: burn visible artwork onto CDs, DVDs and Blu-ray discs",
+      "reason": "not AI: Disc image software, unrelated to AI."
+    },
+    {
+      "title": "Apple Watch’s AI features for rewinding and recapping conversations begin beta testing",
+      "reason": "score 5: Consumer‑facing AI features on Apple Watch are interesting but not a major frontier development for the audience."
+    },
+    {
+      "title": "Here’s who is falling in line for Trump’s “Super Intelligence” loyalty test",
+      "reason": "score 5: Political piece about a loyalty test; relevance to AI is peripheral."
+    },
+    {
+      "title": "Coforge Launches BridgeCX With Pega, Mastercard for Customer Personalisation",
+      "reason": "not AI: Customer personalization launch, not AI specific."
+    },
+    {
+      "title": "The AI-First Employee is Not What You Think",
+      "reason": "score 4: Opinion piece on AI‑first employees, not breaking news."
+    },
+    {
+      "title": "AI's Next Agritech Frontier Is India's Fragmented Supply Chain",
+      "reason": "score 4: Agritech commentary, not a concrete AI development."
+    },
+    {
+      "title": "LenDenClub Parent Vartis Platforms Launches UdhaarSaathi For Small Business Loans",
+      "reason": "not AI: Loan marketplace launch, not AI."
+    },
+    {
+      "title": "The Second Life Of Festive Gift Boxes",
+      "reason": "not AI: Gift box article, no AI angle."
+    },
+    {
+      "title": "Exclusive: Nuuk To Raise ₹100 Cr From Wipro Consumer Care Ventures, RPSG At ₹500 Cr Valuation",
+      "reason": "not AI: Funding round for home‑appliance brand, not AI."
+    },
+    {
+      "title": "Mobile internet suspended in Upper Siang ahead of anti-dam bandh",
+      "reason": "not AI: Internet shutdown unrelated to AI."
+    },
+    {
+      "title": "Jio Platforms Q2 profit rises 14% to Rs 8,387 cr, revenue up 11%",
+      "reason": "not AI: Jio Platforms profit report, no AI focus."
+    },
+    {
+      "title": "Allahabad HC says free speech laws must be ‘recast’ to protect judges from social media falsehoods",
+      "reason": "not AI: Free speech law discussion, not AI."
+    },
+    {
+      "title": "Bombay HC grants dynamic injunction to protect Ramayana from online piracy",
+      "reason": "not AI: Court injunction on piracy, unrelated to AI."
+    },
+    {
+      "title": "Australias highest court hears challenges to social media ban for children",
+      "reason": "not AI: Australian court case about social media ban, not AI."
+    },
+    {
+      "title": "Samsung Galaxy S27 Ultra could get new camera design and upgraded privacy display: What we know",
+      "reason": "not AI: Smartphone leak, no AI content."
+    },
+    {
+      "title": "Vivo Y32 5G launched with 8,000mAh battery, 120Hz display and 2TB expandable storage",
+      "reason": "not AI: Smartphone launch, no AI."
+    },
+    {
+      "title": "Reddit blasts Australia's 'inept' social media ban as court challenge begins",
+      "reason": "not AI: Reddit comment on Australian ban, not AI."
+    },
+    {
+      "title": "From SBI to Binance, how financial institutions are becoming cyberattack targets",
+      "reason": "not AI: Cyber‑attack targets, not AI."
+    },
+    {
+      "title": "OpenAI’s India user base doubles; Rapido GOV quadruples",
+      "reason": "score 7: Duplicate of existing story on India becoming ChatGPT’s largest market."
+    },
+    {
+      "title": "India shines in Apple’s record September quarter",
+      "reason": "not AI: Apple revenue record in India, not AI specific."
+    },
+    {
+      "title": "I discovered a sound that leaks your exact location (and it's everywhere) - YouTube",
+      "reason": "not AI: The piece is about an OSINT sound technique, not AI related."
+    },
+    {
+      "title": "October sponsors-only newsletter",
+      "reason": "not AI: Sponsor newsletter announcement, no AI news."
+    },
+    {
+      "title": "Ethan Mollick: \"Opus, great, now turn that into a movie, i know you can make it amazing. figure it out.\" Yes, that was the only prompt",
+      "reason": "score 3: A user comment about using Claude Opus, not a newsworthy development."
+    },
+    {
+      "title": "Ethan Mollick: Opus 5.5: \"Give me 10 brilliant ideas for a science fiction short short story, pick the most brilliant and execute it terribly\"",
+      "reason": "score 3: Similar user prompt, not a substantive AI development."
+    },
+    {
+      "title": "OpenAI partners with Cathedral to test its security defenses and revamps its Security Bug Bounty program, including quadrupling rewards for critical findings (OpenAI)",
+      "reason": "duplicate of 6fd6ad7938fa"
+    },
+    {
+      "title": "HCLTech Launches AI Agents to Support Mainframe Operations",
+      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
+    },
+    {
+      "title": "Google takes Dreambeans to India in bid to bring AI-generated personal stories to the masses",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Sources: Nvidia verbally told cloud compute clients to sell 51%+ of their services to non-Chinese companies, imposing new limits on China's access to AI chips (Financial Times)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "MIT Researchers Show LLMs Can Read and Edit Neural Network Weights Without Retraining",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "AI chatbots are becoming political advisers . Their answers can mislead voters",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Dispatch Network Raises ₹5 Cr Pre-Seed Led by Antler India to Build AI-Powered Delivery Network",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Indian companies trust AI with greater autonomy but struggle to prove financial returns: Report",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Global markets were already fragile. Big AI bets could break them",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "4d836f21a02f",
+      "headline": "NVIDIA expands physical and agentic AI services to cities worldwide",
+      "category": "industry",
+      "summary": "NVIDIA and partners are deploying physical AI, agentic AI and digital twins in cities across Europe, Asia and the United States, using shared computing infrastructure to let local governments run AI locally. Projects include resident‑service bots in Madrid, vision agents in Poland and traffic‑management agents in Malaysia that aim to support over 17,000 cameras by 2027.",
+      "url": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "bd4eadb64696",
+      "headline": "India becomes ChatGPT’s largest market by weekly active users, base doubles since Jan 2026",
+      "category": "industry",
+      "summary": "OpenAI says India now has the highest weekly active user count for ChatGPT worldwide, with the local user base having doubled since January 2026. The company is expanding local computing capacity, Indian-language features and Android‑first products, and plans UPI‑related announcements.",
+      "url": "https://inc42.com/buzz/india-becomes-chatgpts-largest-market-globally-user-base-doubles-since-january",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "d059424a86f5",
+      "headline": "Anthropic reports 1,100% revenue surge ahead of IPO, commits $895B to compute",
+      "category": "industry",
+      "summary": "Anthropic said quarterly revenue jumped to $17 billion, a 1,100% increase year‑over‑year. It also pledged roughly $895 billion in spending on computing, including $70 billion due before September 2027, as it prepares for a Wall Street listing later this month.",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-says-revenue-surged-1100-ahead-of-ipo/articleshow/135479762.cms",
+      "sources": 3,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "ignored made-up duplicate id bd4eadb64696 for 'OpenAI’s India user base doubles; Rapido GOV quadr'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "7 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 50.9,
+    "audit": 0.0,
+    "plan": 86.0,
+    "judge": 7.2,
+    "verify and write": 446.4,
+    "videos": 3.4,
+    "tagging": 21.2,
+    "explainers": 0.0,
+    "trackers": 64.7,
+    "claims": 21.0,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 43.3,
+    "self-review": 0.0,
+    "photos": 0.5,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 8.1
+  },
+  "fetched": 2925,
+  "fresh": 83,
+  "plan": {
+    "focus": "Tracking Anthropic’s IPO fallout while bolstering coverage of model contracts and policy shifts.",
+    "priorities": [
+      "Cities Worldwide Build and Scale AI Services With NVIDIA Physical and  (Shows how cities and enterprises are scaling AI services – key industry trend)",
+      "Transformers Model Integration Contracts (Highlights emerging legal frameworks for model integration, a thin‑policy area)",
+      "Apple Watch’s AI features for rewinding and recapping conversations be (Apple Watch AI features illustrate consumer‑facing AI adoption, relevant to business readers)",
+      "OpenAI partners with Cathedral to test its security defenses and revam (OpenAI‑Cathedral security partnership updates the safety landscape and ties to ongoing policy story)",
+      "VC funding into Indian startups plunges 66% in October (India VC funding plunge signals broader market risk for AI investors)"
+    ],
+    "thin_areas": [
+      "models",
+      "policy"
+    ],
+    "searches": [
+      "Anthropic IPO pricing: 6 new",
+      "Mistral Large 4 benchmarks: 1 new",
+      "AI model integration contracts: 0 new"
+    ],
+    "dig_deeper": [
+      "Cities Worldwide Build and Scale AI Services With NVIDIA Physical and ",
+      "OpenAI partners with Cathedral to test its security defenses and revam"
+    ]
+  },
+  "judged": 80,
+  "kept": 13,
+  "research": {
+    "investigated": 5,
+    "confirmed": 2,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "Cities Worldwide Build and Scale AI Services With NVIDIA Physical and : confirmed (searched “NVIDIA physical and agentic AI cities announcement”; read blockchain.news; searched “NVIDIA physical and agentic AI cities Europe announcement October 2026”)",
+    "Google takes Dreambeans to India in bid to bring AI-generated personal: unconfirmed (searched “Google Dreambeans India 13 Indian languages”; read siliconangle.com; read msn.com)",
+    "Sources: Nvidia verbally told cloud compute clients to sell 51%+ of th: unconfirmed (searched “Nvidia verbally told cloud compute clients to sell 51% of services to non-Chinese companies limits on China's access to AI chips”; read cryptobriefing.com; searched “Nvidia cloud clients 51% non-Chinese services Reuters November 2026”)",
+    "MIT Researchers Show LLMs Can Read and Edit Neural Network Weights Wit: unconfirmed (searched “MIT researchers LLMs read edit neural network weights without retraining Astra 0.016% MATH-500”; read venturebeat.com; read msn.com)",
+    "India Becomes ChatGPT’s Largest Market Globally, User Base Doubles Sin: confirmed (searched “India becomes ChatGPT's largest market globally”; read indiatimes.com; read newsbytesapp.com)"
+  ],
+  "threads": [
+    "Anthropic financing risks IPO: revenue surge: Anthropic reports 1,100% revenue surge ahead of IPO, commits"
+  ],
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "tagged": 3,
+  "trackers": "filed 5 stories; updated india-ai, ai-infrastructure, ai-money",
+  "claims": "81 tracked, 77 open, 0 updated this run",
+  "model_tracker": "82 models, 14 changes today",
+  "briefing": "4 themes from 20 stories",
+  "photos": "3 saved, 0 unavailable",
+  "alerts": "21 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":32}",
+  "ai_requests_run": 37,
+  "ai_tokens_run": 110948,
+  "ai_requests_today": 105,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
+}
