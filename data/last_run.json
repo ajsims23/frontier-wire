@@ -1,12 +1,12 @@
 {
-  "started_at": "2026-11-03T20:22:40+00:00",
+  "started_at": "2026-11-03T21:59:52+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
     "groq"
   ],
   "sources": {
-    "openai": "ok (1352)",
+    "openai": "ok (1354)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
     "huggingface": "ok (896)",
@@ -15,36 +15,324 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (20)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "hn": "ok (27)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
   },
   "dropped": [
     {
-      "title": "An alligator swallowed an XBOX Series X, and you could win it",
-      "reason": "not AI: The story is a promotional gimmick about an alligator swallowing an Xbox console, with no AI focus or relevance. It falls under marketing/entertainment, not a newsworthy AI development, so it scores low and is not kept."
+      "title": "How Cisco defends at machine speed with OpenAI",
+      "reason": "score 4: Cisco case study is a marketing piece that showcases a specific use of OpenAI models but does not constitute a broader news development."
+    },
+    {
+      "title": "OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer",
+      "reason": "score 0: Duplicate of OpenAI’s Jill Hazelbaker hire already covered by another candidate."
+    },
+    {
+      "title": "Preparing for the Flipper One Kickstarter and opening pre-orders",
+      "reason": "not AI: Kickstarter pre‑order announcement unrelated to AI."
+    },
+    {
+      "title": "Hiding inside Palantir’s skyrocketing quarter is a foreboding signal",
+      "reason": "not AI: Palantir earnings analysis does not focus on AI."
+    },
+    {
+      "title": "Those Jeff Bezos hair transplant photos are very fake",
+      "reason": "not AI: Fake images of Jeff Bezos are unrelated to AI technology."
+    },
+    {
+      "title": "Apple’s latest watchOS beta includes its new always-on Audio Intelligence features",
+      "reason": "score 5: Apple watchOS beta adds Audio Intelligence features; incremental product update without broader industry impact."
+    },
+    {
+      "title": "OpenAI says ChatGPT is catching up to Google in search",
+      "reason": "score 5: OpenAI’s claim about matching Google search volume is a marketing statement rather than a substantive AI breakthrough."
+    },
+    {
+      "title": "Indie games are missing launch dates because Steam is backed up",
+      "reason": "not AI: Steam backlog issue unrelated to AI."
+    },
+    {
+      "title": "Netflix will show you themed recommendations through a new ‘AI Discover’ tab",
+      "reason": "score 5: Netflix’s AI Discover tab is an experimental UI feature, not a major AI industry development."
+    },
+    {
+      "title": "Ukraine’s drone strikes spur hasty Russian plans for underground data centers",
+      "reason": "score 5: Report on Russian underground data centres is tangential to AI infrastructure and lacks a direct AI focus."
+    },
+    {
+      "title": "DevX Q2: Profit Zooms To ₹5.5 Cr, Revenue Surges 55% YoY",
+      "reason": "not AI: Financial results of an office‑space provider, not AI‑related."
+    },
+    {
+      "title": "Ethan Mollick: We are in an era of flux & fighting over how AI should be used to review academic work & by whom. But it is worth proving to yourself that…",
+      "reason": "score 4: Ethan Mollick’s commentary on academic review is a personal opinion piece without a broader industry impact."
+    },
+    {
+      "title": "Sources: Ubisoft and at least two other gaming companies made offers to Microsoft to acquire the French game developer Arkane Studios (Jason Schreier/Bloomberg)",
+      "reason": "not AI: Gaming studio acquisition talks are not AI‑focused."
+    },
+    {
+      "title": "Sources: US officials have held up approval for US chipmaking equipment needed by SK Hynix to expand in China, complicating its plans for new plants in New York (Karen Freifeld/Reuters)",
+      "reason": "not AI: Regulatory hold on chip equipment unrelated to AI content."
+    },
+    {
+      "title": "AI inference startup Fal raised $1.3B led by Bessemer at a $16B valuation, up from $8B in April; source: Fal hit $800M in annualized revenue earlier in 2026 (Natasha Mascarenhas/Bloomberg)",
+      "reason": "score 0: Duplicate of Fal funding story."
+    },
+    {
+      "title": "Sources: UK-based Google DeepMind employees urge leaders to drop non-disparagement clauses barring public warnings about AI risks even after they leave Google (Gerrit De Vynck/Washington Post)",
+      "reason": "duplicate of a4abd1e2a1c1"
+    },
+    {
+      "title": "Anthropic is still grappling with the economics of compute",
+      "reason": "duplicate of a4abd1e2a1c1"
+    },
+    {
+      "title": "Anthropic Posts A $567 Million Operating Loss From Buying Extra Compute",
+      "reason": "duplicate of a4abd1e2a1c1"
+    },
+    {
+      "title": "CrowdStrike Looks To An AI Kill Switch To Beat Rogue Agents",
+      "reason": "score 0: Duplicate of CrowdStrike AI kill switch announcement."
+    },
+    {
+      "title": "CrowdStrike Adds AI Agent Kill Switch to Expanded Portfolio",
+      "reason": "score 0: Duplicate of CrowdStrike AI kill switch announcement."
+    },
+    {
+      "title": "CrowdStrike Launches AI Kill Switch for Rogue Agents",
+      "reason": "score 0: Duplicate of CrowdStrike AI kill switch announcement."
+    },
+    {
+      "title": "CrowdStrike debuts an AI kill switch in Falcon Guardian to stop internal AI agents that go rogue, and announces a Falcon Guardian integration with Claude Cowork (Samantha Subin/CNBC)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Super Micro reports Q1 revenue up 298% YoY to $19.95B, vs. $16.39B est., and forecasts Q2 revenue above estimates; SMCI jumps 7%+ after hours (Reuters)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "AMD reports Q3 revenue up 45% YoY to $13.38B, vs. $13.09B est., Data Center revenue up 97% to $8.5B, forecasts Q4 revenue above est.; AMD jumps 7%+ after hours (Katie Tarasov/CNBC)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Soket Labs & ZenteiQ Launch Indigenous AI Models",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
-  "written": [],
-  "notes": [],
-  "mode": "breaking",
+  "written": [
+    {
+      "id": "c7ca507a9ed8",
+      "headline": "Anthropic releases FlashProve to cryptographically verify AI model responses",
+      "category": "safety",
+      "summary": "Anthropic unveiled FlashProve, an open‑source prototype that generates cryptographic proofs showing a language‑model reply came from a specific set of weights. The system runs at about 110 tokens per second on Meta’s Llama 4 Maverick, with proofs around 19 MB that a CPU can check in 17‑21 seconds.",
+      "url": "https://techmeme.com/261103/p32",
+      "sources": 3,
+      "quotes": 2
+    },
+    {
+      "id": "2d3b8471f026",
+      "headline": "Revolut cuts AI coding inference costs by about 90% with self‑hosted GLM",
+      "category": "industry",
+      "summary": "Revolut reduced its AI coding inference spend to roughly one‑tenth of prior costs by self‑hosting open‑weight GLM models from Z.ai on its own NVIDIA GPUs. The change improved engineering lead time by 70% and coding time by 60% for about 2,000 engineers.",
+      "url": "https://techmeme.com/261103/p36",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "2422d50634d5",
+      "headline": "Apple opens Siri AI to all developers via App Intents in iOS 27.3 beta",
+      "category": "industry",
+      "summary": "Apple announced that developers can integrate Siri AI into any iOS, iPadOS, macOS, and visionOS app using App Intents, starting with the iOS 27.3 beta. The preview lets apps expose content and actions for natural‑language requests without naming the app.",
+      "url": "https://techmeme.com/261103/p27",
+      "sources": 5,
+      "quotes": 2
+    },
+    {
+      "id": "595052804154",
+      "headline": "Meta targets at least $20 billion in cross‑border bond offering, debuting euro tranche",
+      "category": "industry",
+      "summary": "Meta Platforms is preparing a cross‑border investment‑grade bond sale that could raise at least $20 billion, including its first euro‑denominated tranche and its first major debt transaction in six months. Citigroup and Morgan Stanley will host investor calls as the company seeks funding for AI and data‑center expansion.",
+      "url": "https://techmeme.com/261103/p25",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "42ec3b43220b",
+      "headline": "AI inference startup Fal valued at $16B after $1.3B funding round",
+      "category": "industry",
+      "summary": "Fal, a San Francisco AI inference startup, raised $1.3 billion in a Series F round led by Bessemer Venture Partners, valuing the company at $16 billion after reporting $800 million in annualized revenue.",
+      "url": "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "6df21e5a1561",
+      "headline": "Google disables Search for schools that reject its AI tools",
+      "category": "policy",
+      "summary": "Google will turn off Search for K‑12 accounts unless administrators enable its Gemini AI suite, meaning schools that block AI lose web search access.",
+      "url": "https://theverge.com/tech/1025411/google-turn-off-search-ai-features",
+      "sources": 2,
+      "quotes": 1
+    }
+  ],
+  "notes": [
+    "ignored made-up duplicate id d1cebb1d6c2d for 'OpenAI appoints Jill Hazelbaker as Chief Corporate'",
+    "ignored made-up duplicate id 42ec3b43220b for 'AI inference startup Fal raised $1.3B led by Besse'",
+    "ignored made-up duplicate id 0f988b970fe5 for 'CrowdStrike Looks To An AI Kill Switch To Beat Rog'",
+    "ignored made-up duplicate id 0f988b970fe5 for 'CrowdStrike Adds AI Agent Kill Switch to Expanded '",
+    "ignored made-up duplicate id 0f988b970fe5 for 'CrowdStrike Launches AI Kill Switch for Rogue Agen'",
+    "dropped unverifiable benchmark: CPU verification Check time 17‑21 seconds",
+    "dropped unverifiable quote (David Abitbol): Self-hosting GLM brings our blended cost of tokens to 30 cen…",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "8 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
   "timings": {
-    "gather": 11.2,
-    "judge": 0.6,
-    "verify and write": -0.0,
-    "tagging": -0.0,
-    "trackers": -0.0,
-    "photos": -0.0,
-    "stock photos": -0.0,
-    "alerts": 2.3
+    "gather": 86.9,
+    "audit": 0.0,
+    "plan": 58.2,
+    "judge": 26.3,
+    "verify and write": 482.1,
+    "videos": 23.7,
+    "tagging": 21.6,
+    "explainers": -0.0,
+    "trackers": 127.9,
+    "claims": 42.4,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 29.6,
+    "top voices": 14.0,
+    "briefing": 21.2,
+    "self-review": 0.0,
+    "photos": 1.6,
+    "stock photos": 16.2,
+    "daily email": -0.0,
+    "alerts": 15.4
   },
-  "fetched": 2420,
-  "fresh": 1,
-  "judged": 1,
-  "kept": 0,
-  "trackers": "filed 0 stories; no tracker changed",
-  "photos": "0 saved, 0 unavailable",
-  "alerts": "28 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":0}",
-  "ai_requests_run": 1,
-  "ai_tokens_run": 5735,
-  "ai_requests_today": 260,
-  "provider_log": []
+  "fetched": 2938,
+  "fresh": 33,
+  "plan": {
+    "focus": "Tracking Anthropic's mounting compute costs and new AI safety tools while covering scarce model release updates.",
+    "priorities": [
+      "Anthropic releases FlashProve, open-source code that cryptographically (Anthropic's FlashProve offers cryptographic verification of AI outputs, key for its IPO financing risk story.)",
+      "CrowdStrike debuts an AI kill switch in Falcon Guardian to stop intern (CrowdStrike's AI kill switch showcases emerging safety mechanisms for rogue AI agents.)",
+      "Revolut says it cut AI coding inference costs by ~90% in less than a y (Revolut's 90% inference cost cut demonstrates rapid industry cost efficiencies relevant to builders.)",
+      "Apple opens Siri AI to all developers, letting any app on iOS 27.3 bet (Apple opening Siri AI to all developers raises policy and integration implications for enterprises.)",
+      "OpenAI hires Jill Hazelbaker, Uber's president and chief corporate aff (OpenAI's new chief corporate affairs officer signals strategic shifts affecting the AI business landscape.)"
+    ],
+    "thin_areas": [
+      "models",
+      "safety"
+    ],
+    "searches": [
+      "Anthropic compute cost Q4: 3 new",
+      "AI kill switch implementations: 3 new",
+      "latest open-source model releases 2026: 0 new"
+    ],
+    "dig_deeper": [
+      "Anthropic releases FlashProve, open-source code that cryptographically",
+      "CrowdStrike debuts an AI kill switch in Falcon Guardian to stop intern"
+    ]
+  },
+  "judged": 39,
+  "kept": 14,
+  "research": {
+    "investigated": 5,
+    "confirmed": 4,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "Anthropic releases FlashProve, open-source code that cryptographically: confirmed (searched “Anthropic FlashProve”; read unite.ai; read yahoo.com)",
+    "Revolut says it cut AI coding inference costs by ~90% in less than a y: confirmed (searched “Revolut cut AI coding inference costs 90% self-hosted GLM models Claude Code”; read analyticsindiamag.com; read cryptobriefing.com)",
+    "CrowdStrike debuts an AI kill switch in Falcon Guardian to stop intern: unconfirmed (searched “CrowdStrike AI kill switch Falcon Guardian”; read forbes.com; read securityboulevard.com)",
+    "Apple opens Siri AI to all developers, letting any app on iOS 27.3 bet: confirmed (searched “Apple opens Siri AI to all developers iOS 27.3 beta App Intents”; read cultofmac.com; read macrumors.com)",
+    "Sources: Meta eyes $20B+ from a potential cross-border investment-grad: confirmed (searched “Meta $20 billion bond offering euros cross-border investment-grade”; read msn.com; read yahoo.com)"
+  ],
+  "videos": {
+    "OpenAI": "ok (10 in feed, 1 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (9 in feed, 0 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 3 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 1 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 1 new)",
+    "Training Data (Sequoia)": "ok (3 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (0 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "4 kept from 6 new",
+  "tagged": 6,
+  "trackers": "filed 6 stories; updated ai-regulation, agent-safety, ai-infrastructure, ai-money",
+  "claims": "85 tracked, 81 open, 1 updated this run",
+  "model_tracker": "82 models, 22 changes today",
+  "builders_sources": {
+    "show-hn": "ok (11)",
+    "github-new": "ok (34)",
+    "hf-spaces": "ok (21)",
+    "product-hunt": "ok (17)",
+    "r-localllama": "ok (25)",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
+  },
+  "builders": "picked 7 from 60 candidates; 2 with pictures, 0 with videos",
+  "top_voices_sources": {
+    "tv-mollick": "ok (0)",
+    "tv-lambert": "ok (2)",
+    "tv-swyx": "ok (8)",
+    "tv-dwarkesh": "ok (2)",
+    "tv-raschka": "ok (0)",
+    "tv-karpathy": "ok (1)",
+    "tv-evans": "ok (0)",
+    "x-coverage": "ok (2 of 3 articles, bing)",
+    "hn": "ok (2)"
+  },
+  "top_voices": "3 debates from 50 posts by 8 people (1 removed by checks); 3 portraits, 2 pictures",
+  "briefing": "3 themes from 20 stories",
+  "photos": "5 saved, 1 unavailable",
+  "stock photos": "1 added",
+  "alerts": "37 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":55}",
+  "ai_requests_run": 47,
+  "ai_tokens_run": 175477,
+  "ai_requests_today": 307,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras/gpt-oss-120b: unusable answer"
+  ]
 }

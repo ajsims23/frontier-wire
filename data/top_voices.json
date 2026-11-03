@@ -1,14 +1,5 @@
 {
   "posts": {
-    "f376eece8b40": {
-      "id": "f376eece8b40",
-      "url": "https://simonwillison.net/2026/Oct/27/game-boy-color-on-my-conference-badge",
-      "person": "Simon Willison",
-      "text": "Game Boy Color on My Conference Badge. Game Boy Color on My Conference Badge I'm at GitHub Universe this week and, similar to last year , the conference badge is a full-blown color screen computer. I've been hacking around with it again, and then I ran into with Steve Francia... who worked with Gemini to get a full NES emulator working on it, and then went a step further and deployed an emulator for both the Game Boy and the Game Boy Color. Which means, if you can obtain the ROM, you can run The Legend of Zelda: Link's Awakening on your conference badge! A neat feature of the badge is that you can turn it upside down and then use g",
-      "published": "2026-10-27T19:34:18+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
     "8c47676bd7b9": {
       "id": "8c47676bd7b9",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3myvcgatpbs2q",
@@ -526,131 +517,171 @@
       "published": "2026-11-03T16:31:11.256Z",
       "via": "Bluesky",
       "kind": "post"
+    },
+    "88769bf30e53": {
+      "id": "88769bf30e53",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzgkbp6o4c2x",
+      "person": "Ethan Mollick",
+      "text": "We are in an era of flux & fighting over how AI should be used to review academic work & by whom. But it is worth proving to yourself that yes, AI used properly can be very insightful at this, by asking GPT-6 Pro/Opus 5.5 High to give helpful, substantive feedback on one of your papers.",
+      "published": "2026-11-03T19:13:38.685Z",
+      "via": "Bluesky",
+      "kind": "post"
+    },
+    "360a3a5d8e13": {
+      "id": "360a3a5d8e13",
+      "url": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of",
+      "person": "swyx",
+      "text": "[AINews] LLMs can read & write neural network weights: \"Weight Space Programming\" cuts Autoresearch out of the RSI loop. Amid a deepening bear market for AI/tech (worthy of dark humor ) with Anthropic bonds receiving a “junk” rating and OpenAI fundraise headlines , we continue to see very surprising capability finds in the community, such as today. The best way to put today’s blockbuster paper in context is to recall Karpathy’s autoresearch from a mere 8 months ago , which presaged a summer of recursive self improvement fears : Abstractly, the demonstration is that you can take a sufficiently smart model and through running a series of experiments across a compute cluster, train a model…",
+      "published": "2026-11-03T05:35:00+00:00",
+      "via": "Latent Space",
+      "kind": "post"
+    },
+    "48709632cae2": {
+      "id": "48709632cae2",
+      "url": "https://news.meaww.com/fact-check-did-bill-gates-slam-elon-musk-over-tesla-x-and-spacex",
+      "person": "Elon Musk",
+      "text": "The alleged conversation shows Bill Gates criticizing Elon Musk for acquiring the companies like Tesla, X and SpaceX’s use of NASA technology BY SHANMUGAPRIYA MURUGESAN UPDATED 20 HOURS AGO The image shows an alleged tweet from Bill Gates criticizing Elon Musk (Getty Images) WASHINGTON, DC: A viral post has sparked widespread debate, claiming Bill Gates and Elon Musk had a heated exchange over Tesla, X (formerly Twitter), and SpaceX’s use of NASA technology. The image shows an alleged tweet from Bill Gates criticizing Elon Musk. Community Notes on the original post also confirm that neither Bill Gates nor Elon Musk posted the tweets shown in the image.",
+      "published": "2026-11-02T17:59:00+00:00",
+      "via": "MEAWW News",
+      "kind": "reported",
+      "headline": "Fact Check: Did Bill Gates slam Elon Musk over Tesla, X, and SpaceX?"
     }
   },
   "digest": {
-    "written_at": "2026-11-03T01:21:54+00:00",
+    "written_at": "2026-11-03T21:59:52+00:00",
     "range": "27 Oct – 3 Nov 2026",
-    "headline": "AI agents, trust, and benchmarks clash as legal privacy, software reliability, and evaluation standards take center stage",
+    "headline": "Weight‑space programming, legal AI, and software trust dominate AI debates this week.",
     "debates": [
       {
-        "title": "LLMs and trust in software documentation",
-        "summary": "Kyle Kingsbury warns that generative models make it easier to counterfeit documentation, while recent tooling glitches and exploding pull‑request volumes illustrate the growing tension between speed and reliability. The debate matters as software reliability hinges on verifiable artifacts in an AI‑augmented era.",
+        "title": "Weight‑space programming sparks safety concerns",
+        "summary": "New research shows frontier models can read and edit raw neural network weights, opening powerful new capabilities. The community is split between excitement over practical gains and alarm about recursive self‑improvement risks.",
         "positions": [
           {
             "person": "Simon Willison",
-            "stance": "Shares practical issues like hidden dependency bugs from lockfiles and points to a surge in merged PRs, showing how agentic engineering reshapes development at scale.",
+            "stance": "Highlights the paper that demonstrates GPT‑6 Astra and other frontier models can directly interpret model weights, calling it a breakthrough capability.",
             "posts": [
               {
-                "id": "7d7291538279",
-                "url": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first",
-                "via": "Simon Willison",
+                "id": "58b2621d532f",
+                "url": "https://bsky.app/profile/simonwillison.net/post/3mzgb77cpis2w",
+                "via": "Bluesky",
                 "kind": "post",
-                "date": "2026-11-01"
-              },
-              {
-                "id": "94bdedac0696",
-                "url": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026",
-                "via": "Simon Willison",
-                "kind": "post",
-                "date": "2026-10-28"
+                "date": "2026-11-03"
               }
             ]
-          }
-        ]
-      },
-      {
-        "title": "AI benchmarking and evaluation standards",
-        "summary": "Researchers debate whether current benchmarks capture real progress, with concerns about LLMs’ weakness on low‑latency tasks, the difficulty of designing meaningful tests, and a shift toward closed evaluations that hide open‑model performance. The discussion matters because benchmark claims drive investment, safety assessments, and public perception.",
-        "positions": [
+          },
           {
-            "person": "Jack Clark",
-            "stance": "Notes that LLMs perform poorly on low‑latency tasks, indicating a gap in existing evaluation suites.",
+            "person": "Ethan Mollick",
+            "stance": "Reports an experiment where GPT‑6 Astra edited only 0.016% of a smaller model’s weights, boosting its math performance sixfold, showing immediate practical impact.",
             "posts": [
               {
-                "id": "e5f6124c6872",
-                "url": "https://jack-clark.net/2026/11/02/import-ai-479-spacewar-low-latency-tasks-versus-llms-genie-4",
-                "via": "Import AI (Jack Clark)",
+                "id": "1818a08f7975",
+                "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l",
+                "via": "Bluesky",
                 "kind": "post",
                 "date": "2026-11-02"
               }
             ]
           },
           {
-            "person": "Nathan Lambert",
-            "stance": "Describes the benchmarker’s dilemma, warning that score improvements may not reflect true frontier advances.",
+            "person": "swyx",
+            "stance": "Warns that weight‑space programming removes autoresearch from the recursive self‑improvement loop, raising existential safety fears.",
             "posts": [
               {
-                "id": "65e05126788d",
-                "url": "https://interconnects.ai/p/artificial-analysis-v5-and-the-benchmarkers",
-                "via": "Interconnects",
+                "id": "360a3a5d8e13",
+                "url": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of",
+                "via": "Latent Space",
                 "kind": "post",
-                "date": "2026-10-28"
-              }
-            ]
-          },
-          {
-            "person": "Ethan Mollick",
-            "stance": "Reports that Artificial Analysis moved to closed benchmarks, showing open‑weight models falling further behind and raising transparency concerns.",
-            "posts": [
-              {
-                "id": "81af9a1e6190",
-                "url": "https://bsky.app/profile/emollick.bsky.social/post/3mywnjrmkb22z",
-                "via": "Bluesky",
-                "kind": "post",
-                "date": "2026-10-28"
+                "date": "2026-11-03"
               }
             ]
           }
         ],
-        "video": "sFfPkUJd_Jk",
-        "image": "img/voices/65e05126788d.jpg",
-        "image_credit": "Interconnects"
+        "image": "img/voices/360a3a5d8e13.jpg",
+        "image_credit": "Latent Space",
+        "video": "2YWfVGpVtvc"
+      },
+      {
+        "title": "Legal AI agents clash with data privacy",
+        "summary": "Legora’s lawyer‑focused AI agents can draft contracts and coordinate work, but the firm cannot inspect any of the agent’s actions because client data must stay private. This tension raises questions about testing, accountability, and regulatory compliance.",
+        "positions": [
+          {
+            "person": "swyx",
+            "stance": "Describes how Legora builds agents that draft, edit, and review thousands of contracts for lawyers, showcasing the promise of AI‑augmented legal work.",
+            "posts": [
+              {
+                "id": "69a46671059b",
+                "url": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora",
+                "via": "Latent Space",
+                "kind": "post",
+                "date": "2026-11-02"
+              }
+            ]
+          }
+        ],
+        "video": "bJBEFzlKPoQ"
+      },
+      {
+        "title": "LLMs erode trust in software documentation",
+        "summary": "A quote from Kyle Kingsbury notes that generative models make it easier to counterfeit documentation, threatening engineers’ confidence in software reliability. Maintainers are now asked to devise new verification methods to preserve quality and prove correctness.",
+        "positions": [
+          {
+            "person": "Simon Willison",
+            "stance": "Raises the question of what maintainers can do to ensure correct software and demonstrate quality in an era where LLM‑generated artifacts dominate.",
+            "posts": [
+              {
+                "id": "7a06514023fd",
+                "url": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury",
+                "via": "Simon Willison",
+                "kind": "post",
+                "date": "2026-11-01"
+              }
+            ]
+          }
+        ]
       }
     ],
     "standouts": [
       {
         "id": "1818a08f7975",
         "person": "Ethan Mollick",
-        "why": "Claims a novel weight‑editing technique that dramatically improves math reasoning in a 0.8B model without gradients.",
+        "why": "Shows a concrete, dramatic improvement from editing a tiny fraction of model weights, illustrating the practical power of weight‑space programming.",
         "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l",
         "via": "Bluesky",
         "kind": "post",
         "title": "If this holds up, it is big: \"We asked GPT-6 Astra to edit Qwen3.5-0.8B weights to improve math. It directly changed…"
       },
       {
-        "id": "dd35d009aad6",
-        "person": "Simon Willison",
-        "why": "Details a complex exploit against ChatGPT’s HTML preview sandbox, highlighting security risks in AI‑driven interfaces.",
-        "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts",
-        "via": "Simon Willison",
-        "kind": "post",
-        "title": "How We Took Over ChatGPT Accounts. How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found…"
-      },
-      {
-        "id": "4505f5f4bd09",
+        "id": "69a46671059b",
         "person": "swyx",
-        "why": "Reveals Google’s AI‑generated overview feature hurting search revenue, signaling a potential AI bear market.",
-        "url": "https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c",
+        "why": "Provides a detailed look at building AI agents for lawyers, highlighting a fast‑growing industry use case.",
+        "url": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora",
         "via": "Latent Space",
         "kind": "post",
-        "title": "[AINews] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?. As…",
-        "image": "img/voices/4505f5f4bd09.jpg",
-        "video": "35ZWesLrv5A"
+        "title": "Building AI for Lawyers - Jacob Lauritzen, CTO of Legora. In this episode, we chat with Jacob Lauritzen, CTO of…",
+        "image": "img/voices/69a46671059b.jpg",
+        "video": "bJBEFzlKPoQ"
+      },
+      {
+        "id": "978b589fa01e",
+        "person": "Simon Willison",
+        "why": "Reveals how an executive order compromised Census data, calling into question the reliability of AI adoption metrics.",
+        "url": "https://bsky.app/profile/simonwillison.net/post/3mze2gvcx4s2u",
+        "via": "Bluesky",
+        "kind": "post",
+        "title": "In updating a graphic showing U.S. company AI adoption over time according to a long-running U.S. Census Bureau…"
       }
     ],
     "people": [
       "Ethan Mollick",
-      "Jack Clark",
-      "Nathan Lambert",
-      "Simon Willison"
+      "Simon Willison",
+      "swyx"
     ],
     "from_posts": 50,
     "reported": 0,
     "portraits": {
-      "swyx": "img/people/swyx.jpg",
+      "Simon Willison": "img/people/simon-willison.jpg",
       "Ethan Mollick": "img/people/ethan-mollick.jpg",
-      "Simon Willison": "img/people/simon-willison.jpg"
+      "swyx": "img/people/swyx.jpg"
     },
     "portrait_credits": [
       "Bluesky"
