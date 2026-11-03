@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T16:27:13+00:00",
+  "updated_at": "2026-11-03T17:26:00+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "The researchers let a language model look at the numbers (weights) that define another AI model and change only the ones that cause problems. By editing a tiny fraction of those numbers, they boosted the model’s performance on math tests. This approach avoids the usual lengthy training process that adjusts millions of weights gradually.",
@@ -107,6 +107,125 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "State tracking means keeping an up‑to‑date record of information about entities as it changes throughout a long text. In practice, a model must recall the latest value of a variable or the current location of a character when answering questions.",
+        "terms": [
+          {
+            "term": "state tracking",
+            "meaning": "The ability of a model to follow and update information about entities as it reads a document."
+          },
+          {
+            "term": "recurrent architecture",
+            "meaning": "A model design that maintains a memory of past inputs and updates it as new data arrives, allowing it to handle long‑range dependencies."
+          },
+          {
+            "term": "transformer",
+            "meaning": "A neural network architecture that processes input tokens in parallel, but can struggle with very long dependency chains."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Builders see that transformer APIs may miss updates in long texts, so they may need to adopt recurrent or hybrid models for reliable state tracking.",
+        "business": "Businesses relying on AI to process lengthy documents should be aware that top‑tier models can lose track of changing information, affecting reliability.",
+        "investors": "Investors should note that model architecture choices impact performance on complex long‑context tasks, influencing competitive positioning."
+      },
+      "id": "a55665cf4895",
+      "headline": "StateBench benchmark reveals transformers struggle with long-context state tracking",
+      "summary": "AllenAI introduced StateBench, a benchmark that measures how well language models track entity states over long documents. Tests show recurrent and hybrid models outperform frontier transformer models such as Gemini 3.8 Flash, Claude Opus 5.5, and GPT-6 Sol and Luna on harder state‑tracking tasks.",
+      "why_it_matters": "Accurate state tracking is essential for applications like code analysis and narrative understanding, highlighting current limits of leading AI models.",
+      "category": "research",
+      "lab": "AllenAI",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 6,
+      "url": "https://huggingface.co/blog/allenai/statebench",
+      "source_id": "huggingface",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/5g9HfQLFFaQE0fslWrxh0.png",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/statebench",
+          "publisher": "Hugging Face blog",
+          "title": "StateBench: Testing how language models track state changes over long documents"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-03T17:15:21+00:00",
+      "created_at": "2026-11-03T17:26:00+00:00",
+      "breaking": true,
+      "sectors": [
+        "science"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "StateBench",
+      "trackers": [
+        "frontier-race"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Google Antigravity uses AI to explore chemical space and predict peptide sequences that can kill microbes. Researchers can test fewer candidates, shortening the development cycle for new antibiotics.",
+        "terms": [
+          {
+            "term": "antimicrobial peptides",
+            "meaning": "Short proteins that can kill bacteria and are potential new antibiotics."
+          },
+          {
+            "term": "agentic cheminformatics",
+            "meaning": "AI-driven methods that autonomously generate and evaluate chemical compounds."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "The system shows how AI can automate parts of drug discovery, offering new APIs for chemical design.",
+        "business": "Pharma companies may use the technology to reduce R&D costs and speed time‑to‑market for new antibiotics.",
+        "investors": "Investors may see opportunities in firms adopting AI‑driven drug discovery platforms."
+      },
+      "id": "adafdd4764cb",
+      "headline": "Google Antigravity AI accelerates antimicrobial peptide discovery",
+      "summary": "DeepMind announced that its agentic cheminformatics system, Google Antigravity, is being used to speed the search for antimicrobial peptides, according to a Science article in October 2026.",
+      "why_it_matters": "The tool could help identify new antibiotics faster, addressing growing antimicrobial resistance.",
+      "category": "industry",
+      "lab": "Google DeepMind",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 7,
+      "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity",
+      "source_id": "deepmind",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://lh3.googleusercontent.com/UFTBrp1IrRBrc6_f4ibNgtV35iY8F2iTYaqOb1lzR-qZNy-Mb5726xrLKTozohfdZ_3quHe50uyn8z-Wh_Eril_8CVh7py7gH0188sl_EXkoJknlqg=w1200-h630-n-nu-rw",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity",
+          "publisher": "Google DeepMind",
+          "title": "Agentic cheminformatics with Google Antigravity"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-03T17:01:49+00:00",
+      "created_at": "2026-11-03T17:26:00+00:00",
+      "breaking": true,
+      "trackers": [],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "Engineers can run many more design and process simulations in a fraction of the time it used to take, so they can test alternatives virtually before building hardware. This reduces costly trial‑and‑error on the fab floor and helps identify problems earlier. The use of AI‑driven digital twins creates a virtual replica of the manufacturing line for rapid experimentation.",
@@ -5230,175 +5349,6 @@
         "ai-infrastructure"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Large 4 is a very large AI model that can process text and other data types. Because its weights are open, organisations can run it on their own hardware, giving them control over how it is used. This can help security teams scan code, logs, and network data for vulnerabilities without sending data to external services.",
-        "terms": [
-          {
-            "term": "open weights",
-            "meaning": "The model’s parameters are publicly available, allowing anyone to download and run the model locally."
-          },
-          {
-            "term": "multimodal model",
-            "meaning": "An AI system that can handle multiple types of input such as text, images, or other data."
-          },
-          {
-            "term": "active parameters",
-            "meaning": "The subset of a model’s total parameters that are used during inference, here 52 billion."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers can integrate Large 4 into security tools and run it on‑premises without relying on cloud APIs.",
-        "business": "Enterprises gain a self‑hosted AI option to detect and remediate security flaws, potentially lowering third‑party costs.",
-        "investors": "The move positions Mistral AI against Chinese competitors in the cybersecurity AI market, highlighting its open‑weight strategy."
-      },
-      "id": "05c952b5cb3a",
-      "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
-      "summary": "Mistral AI released its Large 4 model, a 1‑trillion‑parameter multimodal AI with 52 billion active parameters, aimed at helping organisations identify and fix cybersecurity vulnerabilities. The model can be downloaded and run independently, unlike many cloud‑based AI services.",
-      "why_it_matters": "It provides an open‑weight, high‑capacity AI tool for cybersecurity, reducing reliance on proprietary cloud services.",
-      "category": "models",
-      "lab": "Mistral AI",
-      "model_name": "Large 4",
-      "model_type": "Multimodal",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "I'm not comfortable living in a world in which open weights do not exist,",
-          "speaker": "Pierre Stock",
-          "speaker_role": "Vice President of Science",
-          "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms"
-        },
-        {
-          "text": "once the model is out, it's impossible to contain access,",
-          "speaker": "Pierre Stock",
-          "speaker_role": "Vice President of Science",
-          "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms"
-        }
-      ],
-      "score": 8,
-      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms",
-      "source_id": "et-tech",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-1701395,resizemode-75,msid-135390933/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users.jpg",
-      "sources": [
-        {
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms",
-          "publisher": "ET Tech",
-          "title": "Mistral AI publicly releases Large 4, targets cybersecurity users"
-        },
-        {
-          "url": "https://techrepublic.com/article/news-mistral-large-4-ai-cybersecurity-open-weights",
-          "publisher": "TechRepublic",
-          "title": "Mistral Releases 1-Trillion-Parameter AI Model for Cybersecurity"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-31T06:13:40+00:00",
-      "created_at": "2026-10-31T09:54:05+00:00",
-      "thread": "t-1f4231610437",
-      "sectors": [
-        "cybersecurity"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "Large 4",
-      "trackers": [
-        "frontier-race"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Baseten is raising about $2 billion from investors, which would increase its valuation to as much as $30 billion. The company provides a platform that lets enterprises deploy and run multiple AI models for inference. The larger valuation reflects market belief that AI inference infrastructure will be in high demand.",
-        "terms": [
-          {
-            "term": "AI inference",
-            "meaning": "Running trained AI models to generate predictions or outputs, typically in real‑time for applications."
-          },
-          {
-            "term": "valuation",
-            "meaning": "The monetary worth assigned to a company, often based on recent funding rounds."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Baseten's expanded funding may accelerate development of its model deployment platform, affecting developers who use its services.",
-        "business": "The high valuation signals strong market interest in AI inference platforms, informing enterprise AI strategy decisions.",
-        "investors": "The $2 billion raise and $30 billion valuation highlight a potentially lucrative investment opportunity in AI infrastructure."
-      },
-      "id": "d5c6bb8a1621",
-      "headline": "Baseten launches $2 billion funding round, valuation up to $30 billion",
-      "summary": "AI inference platform Baseten announced a new $2 billion funding round that could value the company at up to $30 billion. The round follows a $1.5 billion raise in June that set its valuation at $13 billion.",
-      "why_it_matters": "The financing underscores growing investor confidence in AI inference services as a critical part of enterprise AI deployment.",
-      "category": "industry",
-      "lab": "Baseten",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://techmeme.com/261030/p29",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://assets.staticimg.com/@kudos/runtime/0.6.23/assets/og-ea52b6f9440e857c.jpg",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261030/p29",
-          "publisher": "techmeme.com",
-          "title": "Sources: Baseten is raising ~$2B in two tranches, one valuing it at $26B and the other at $30B; Baseten was valued at $13B in June after raising $1.5B (Bloomberg)"
-        },
-        {
-          "url": "https://kucoin.com/news/flash/baseten-kicks-off-200m-funding-round-at-30b-valuation",
-          "publisher": "kucoin",
-          "title": "Baseten Launches $200 Million Funding Round at a $30 Billion Valuation"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-10-31T00:20:02+00:00",
-      "created_at": "2026-10-31T03:57:44+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": {
-        "type": "funding",
-        "company": "Baseten",
-        "amount": "$2 billion",
-        "usd": 2000000000.0
-      },
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 3
-      },
-      "cover": "$2 billion",
-      "trackers": [
-        "ai-money"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -6105,7 +6055,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 48,
+    "stories_this_month": 50,
     "model_releases_this_month": 2,
     "labs_tracked": 18
   }

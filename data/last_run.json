@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-03T16:27:13+00:00",
+  "started_at": "2026-11-03T17:26:00+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -9,7 +9,7 @@
     "openai": "ok (1349)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
-    "huggingface": "ok (895)",
+    "huggingface": "ok (896)",
     "nvidia": "ok (18)",
     "anthropic": "ok (6)",
     "meta-ai": "ok (6)",
@@ -17,43 +17,56 @@
     "microsoft-ai": "ok (10)",
     "mistral": "ok (6)"
   },
-  "dropped": [],
+  "dropped": [
+    {
+      "title": "Palette: teaching a small model to build decks in your design language",
+      "reason": "score 5: Palette is a small model for generating design decks; it is an incremental product feature rather than a major AI advance, so it does not meet the significance threshold."
+    }
+  ],
   "written": [
     {
-      "id": "3bafb7904533",
-      "headline": "AI accelerates semiconductor fab simulations up to 35x",
+      "id": "adafdd4764cb",
+      "headline": "Google Antigravity AI accelerates antimicrobial peptide discovery",
       "category": "industry",
-      "summary": "AI is transforming semiconductor manufacturing by speeding up simulations and enabling digital twins, allowing engineers to evaluate more alternatives before physical trials. NVIDIA’s cuDSS and PhysicsNeMo libraries deliver up to 35× faster multiphysics simulations for Applied Materials and up to 17× acceleration for Siemens lithography software.",
-      "url": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs",
+      "summary": "DeepMind announced that its agentic cheminformatics system, Google Antigravity, is being used to speed the search for antimicrobial peptides, according to a Science article in October 2026.",
+      "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "a55665cf4895",
+      "headline": "StateBench benchmark reveals transformers struggle with long-context state tracking",
+      "category": "research",
+      "summary": "AllenAI introduced StateBench, a benchmark that measures how well language models track entity states over long documents. Tests show recurrent and hybrid models outperform frontier transformer models such as Gemini 3.8 Flash, Claude Opus 5.5, and GPT-6 Sol and Luna on harder state‑tracking tasks.",
+      "url": "https://huggingface.co/blog/allenai/statebench",
       "sources": 1,
       "quotes": 0
     }
   ],
-  "notes": [
-    "dropped unverifiable benchmark: Siemens cuLitho with Calibre key lithography simulation acceleration up to 17x"
-  ],
+  "notes": [],
   "mode": "breaking",
   "timings": {
-    "gather": 10.0,
-    "judge": 0.6,
-    "verify and write": 1.7,
-    "tagging": 0.5,
-    "trackers": 22.6,
-    "photos": 0.0,
-    "stock photos": 16.3,
-    "alerts": 2.1
+    "gather": 15.6,
+    "judge": 1.0,
+    "verify and write": 4.6,
+    "tagging": 0.6,
+    "trackers": 43.1,
+    "photos": 0.5,
+    "stock photos": 0.0,
+    "alerts": 4.5
   },
-  "fetched": 2416,
-  "fresh": 1,
-  "judged": 1,
-  "kept": 1,
+  "fetched": 2417,
+  "fresh": 3,
+  "judged": 3,
+  "kept": 2,
   "tagged": 1,
-  "trackers": "filed 1 stories; updated ai-infrastructure",
-  "photos": "0 saved, 0 unavailable",
-  "stock photos": "1 added",
-  "alerts": "29 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":10}",
-  "ai_requests_run": 6,
-  "ai_tokens_run": 18005,
-  "ai_requests_today": 214,
-  "provider_log": []
+  "trackers": "filed 1 stories; updated frontier-race",
+  "photos": "2 saved, 0 unavailable",
+  "alerts": "30 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":17}",
+  "ai_requests_run": 8,
+  "ai_tokens_run": 25747,
+  "ai_requests_today": 222,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
 }
