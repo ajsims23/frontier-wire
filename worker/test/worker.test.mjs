@@ -75,3 +75,12 @@ test("signing up for the recap adds to what a subscriber already follows", () =>
   assert.deepEqual(m.follows, ["lab:OpenAI", "deals", "recap"]);
   assert.deepEqual(m.labels, { "lab:OpenAI": "OpenAI", recap: "the daily recap" });
 });
+
+import { imagePrompt, IMAGE_STYLE } from "../src/index.js";
+
+test("illustration prompts always carry the no-logos, no-people style rules", () => {
+  const p = imagePrompt("A server rack glowing in a dark data centre <script>");
+  assert.ok(p.startsWith("A server rack glowing in a dark data centre") && p.endsWith(IMAGE_STYLE));
+  assert.ok(!p.includes("<"));
+  assert.equal(imagePrompt("   "), "");
+});

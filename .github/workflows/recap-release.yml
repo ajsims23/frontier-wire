@@ -1,8 +1,9 @@
 name: Recap release
 
-# The daily recap session pushes the rendered files to recap-upload/<date> (main plus one commit).
-# This checks them, stores them as the GitHub Release recap-<date>, marks the recap published on main
-# (which redeploys the site) and deletes the upload branch, so video files never land on main.
+# The daily recap session pushes the day's script to recap-upload/<date> (main plus one commit).
+# This generates an AI illustration per story (Workers AI via our API worker), renders and checks the video,
+# stores the files as the GitHub Release recap-<date>, marks the recap published on main (which redeploys
+# the site) and deletes the upload branch, so video files never land on main.
 on:
   push:
     branches: ["recap-upload/**"]
@@ -17,19 +18,19 @@ concurrency:
 jobs:
   release:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Take the uploaded files
+      - name: Take the uploaded script
         run: |
           DATE="${GITHUB_REF_NAME#recap-upload/}"
           [[ "$DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]] || { echo "::error::branch must be recap-upload/YYYY-MM-DD"; exit 1; }
           echo "DATE=$DATE" >> "$GITHUB_ENV"
           mkdir -p "_recap/$DATE"
-          cp recap-upload/recap.mp4 recap-upload/poster.jpg recap-upload/teaser.gif recap-upload/script.json "_recap/$DATE/"
+          cp recap-upload/script.json "_recap/$DATE/"
           git checkout -q -B main origin/main
 
       - uses: actions/setup-python@v5
@@ -39,8 +40,16 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Install ffmpeg (to check the video)
+      - name: Install ffmpeg
         run: command -v ffprobe || { sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null; }
+
+      - name: AI illustrations (Workers AI; a story without one gets the drawn illustration)
+        env:
+          RECAP_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
+        run: RECAP_API="$(cat config/api_url.txt)" python -m agent recap images --date "$DATE" --out "_recap/$DATE"
+
+      - name: Render the video
+        run: python -m agent recap render --date "$DATE" --out "_recap/$DATE"
 
       - name: Check the video and script
         run: python -m agent recap stamp --date "$DATE" --out "_recap/$DATE"

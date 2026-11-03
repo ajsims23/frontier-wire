@@ -107,7 +107,7 @@ def draft(stories: list[dict[str, Any]], now: datetime) -> dict[str, Any]:
             "id": s["id"], "category": s["category"], "lab": s.get("lab", ""), "source": credit(s),
             "headline": s["headline"], "summary": s["summary"], "why_it_matters": s.get("why_it_matters", ""),
             "source_titles": [x.get("title", "") for x in s.get("sources") or []],
-            "line": "", "detail": "",
+            "line": "", "detail": "", "image_prompt": "",
         } for s in picks],
     }
 
@@ -142,6 +142,8 @@ def validate(script: dict[str, Any]) -> list[str]:
                 errs.append(f"story {i}: {key} must be 1-{LIMITS[key]} characters (has {len(v)})")
         if not (s.get("source") or "").strip():
             errs.append(f"story {i}: no source")
+        if len(s.get("image_prompt") or "") > 300:
+            errs.append(f"story {i}: image_prompt must be at most 300 characters")
         originals = [s.get("headline", "")] + list(s.get("source_titles") or [])
         for key in ("line", "detail"):
             v = s.get(key) or ""
@@ -234,20 +236,133 @@ def _brand(d: ImageDraw.ImageDraw, x: int, y: int, scale: float = 1.0, grow: flo
     d.text((x + 46 * scale, y - 2 * scale), "Frontier Wire", font=_font(int(30 * scale), 800, 125), fill=TEXT)
 
 
+def key_figure(st: dict[str, Any]) -> str:
+    """The number that carries the story ($2.7B, 48.1%, 200+), else the company or lab, for the big visual."""
+    text = f"{st.get('line', '')} {st.get('detail', '')}"
+    m = re.search(r"[$₹€£]\s?\d[\d.,]*\s?(?:billion|million|trillion|[BMKT]\b)?", text, re.I)
+    if m:
+        return re.sub(r"\s?billion", "B", re.sub(r"\s?million", "M", re.sub(r"\s?trillion", "T", m.group(0).replace(" ", ""), flags=re.I), flags=re.I), flags=re.I)
+    for pat in (r"\d[\d.,]*%", r"\d[\d,]*\+", r"\b\d[\d.,]*\s?(?:x|GW|MW|countries|parameters)\b"):
+        m = re.search(pat, text, re.I)
+        if m:
+            return m.group(0)
+    lab = (st.get("lab") or "").strip()
+    return lab if 0 < len(lab) <= 14 else ""
+
+
+def _illustration(d: ImageDraw.ImageDraw, cat: str, box: tuple[int, int, int, int], color: tuple[int, int, int], t: float) -> None:
+    """An original line illustration per beat (no photos, no logos), gently animated."""
+    x0, y0, x1, y1 = box
+    w, h = x1 - x0, y1 - y0
+    dim = tuple(int(c * 0.42 + g * 0.58) for c, g in zip(color, GROUND))
+    faint = tuple(int(c * 0.2 + g * 0.8) for c, g in zip(color, GROUND))
+    pulse = 0.5 + 0.5 * math.sin(t * 2.2)
+    if cat == "models":  # a small neural network
+        layers = [3, 5, 5, 2]
+        pts = [[(x0 + w * (0.12 + 0.76 * i / (len(layers) - 1)), y0 + h * (j + 1) / (n + 1)) for j in range(n)] for i, n in enumerate(layers)]
+        for a, b in zip(pts, pts[1:]):
+            for p in a:
+                for q in b:
+                    d.line((p, q), fill=faint, width=2)
+        for i, layer in enumerate(pts):
+            for j, (px, py) in enumerate(layer):
+                r = 13 + 5 * (pulse if (i + j) % 2 else 1 - pulse)
+                d.ellipse((px - r, py - r, px + r, py + r), fill=color if (i + j) % 3 == 0 else dim)
+    elif cat == "research":  # a rising result curve with data points
+        d.line((x0 + 30, y1 - 30, x1 - 20, y1 - 30), fill=faint, width=3)
+        d.line((x0 + 30, y0 + 20, x0 + 30, y1 - 30), fill=faint, width=3)
+        n = 9
+        grow = min(1.0, t % 5 / 1.4)
+        pts = [(x0 + 50 + (w - 90) * i / (n - 1), y1 - 50 - (h - 100) * (i / (n - 1)) ** 1.6 * grow) for i in range(n)]
+        d.line(pts, fill=color, width=6, joint="curve")
+        for px, py in pts:
+            d.ellipse((px - 9, py - 9, px + 9, py + 9), fill=color)
+    elif cat == "policy":  # balance scale
+        cx, top = x0 + w / 2, y0 + 40
+        tilt = math.sin(t * 1.3) * 18
+        d.line((cx, top, cx, y1 - 40), fill=dim, width=8)
+        d.rounded_rectangle((cx - 110, y1 - 52, cx + 110, y1 - 32), radius=8, fill=dim)
+        lx, ly, rx, ry = cx - w * 0.36, top + 30 - tilt, cx + w * 0.36, top + 30 + tilt
+        d.line((lx, ly, rx, ry), fill=color, width=8)
+        for px, py in ((lx, ly), (rx, ry)):
+            d.line((px, py, px - 60, py + 130), fill=faint, width=3)
+            d.line((px, py, px + 60, py + 130), fill=faint, width=3)
+            d.chord((px - 80, py + 90, px + 80, py + 170), 0, 180, fill=color)
+    elif cat == "safety":  # shield with a lock
+        cx, cy = x0 + w / 2, y0 + h / 2
+        sw, sh = w * 0.62, h * 0.86
+        shield = [(cx - sw / 2, cy - sh / 2), (cx + sw / 2, cy - sh / 2), (cx + sw / 2, cy), (cx, cy + sh / 2), (cx - sw / 2, cy)]
+        d.polygon(shield, outline=color, fill=faint, width=8)
+        d.rounded_rectangle((cx - 60, cy - 10, cx + 60, cy + 80), radius=12, fill=color)
+        d.arc((cx - 42, cy - 80, cx + 42, cy + 10), 180, 360, fill=color, width=14)
+        r = 60 + 40 * pulse
+        d.ellipse((cx - sw / 2 - r * 0.2, cy - sh / 2 - r * 0.2, cx + sw / 2 + r * 0.2, cy + sh / 2 + r * 0.2), outline=faint, width=2)
+    elif cat == "voices":  # speech bubbles
+        d.rounded_rectangle((x0 + 20, y0 + 30, x1 - 80, y0 + h * 0.55), radius=36, outline=color, width=8)
+        d.rounded_rectangle((x0 + 90, y0 + h * 0.5, x1 - 10, y1 - 20), radius=36, fill=faint, outline=dim, width=6)
+    else:  # industry: bars and a rising trend
+        n = 6
+        bw = (w - 60) / n
+        for i in range(n):
+            bh = (h - 70) * (0.25 + 0.75 * (i + 1) / n) * (0.92 + 0.08 * math.sin(t * 2 + i))
+            bx = x0 + 30 + i * bw
+            d.rounded_rectangle((bx + 10, y1 - 30 - bh, bx + bw - 10, y1 - 30), radius=10, fill=color if i == n - 1 else dim)
+        d.line((x0 + 30, y1 - 30, x1 - 30, y1 - 30), fill=faint, width=3)
+
+
 def _human(date: str) -> str:
     d = datetime.fromisoformat(date)
     return f"{d.day} {d.strftime('%B %Y')}"
 
 
+def _cover(img: Image.Image, w: int, h: int) -> Image.Image:
+    """Scale and centre-crop to exactly w x h."""
+    k = max(w / img.width, h / img.height)
+    img = img.resize((max(w, round(img.width * k)), max(h, round(img.height * k))), Image.LANCZOS)
+    x, y = (img.width - w) // 2, (img.height - h) // 2
+    return img.crop((x, y, x + w, y + h))
+
+
+IMG_X = 1000          # the AI illustration fills the frame from here to the right edge
+IMG_W = W - IMG_X
+
+
+def _fade_mask() -> Image.Image:
+    """Opaque on the right, fading into the background towards the text column and at the top and bottom."""
+    from PIL import ImageChops
+    horiz = Image.new("L", (IMG_W, H))
+    hd = ImageDraw.Draw(horiz)
+    for x in range(IMG_W):
+        hd.line((x, 0, x, H), fill=int(235 * min(1.0, x / (IMG_W * 0.42)) ** 1.6))
+    vert = Image.new("L", (IMG_W, H))
+    vd = ImageDraw.Draw(vert)
+    for y in range(H):
+        f = min(1.0, y / (H * 0.12), (H - 1 - y) / (H * 0.18))
+        vd.line((0, y, IMG_W, y), fill=int(255 * max(0.0, f)))
+    return ImageChops.multiply(horiz, vert)
+
+
 class Renderer:
-    def __init__(self, script: dict[str, Any], site_label: str):
+    def __init__(self, script: dict[str, Any], site_label: str, images: Path | None = None):
         self.s = script
+        self.images: dict[int, Image.Image] = {}
+        if images:
+            for i in range(len(script["stories"])):
+                f = images / f"{i + 1}.jpg"
+                if f.exists():
+                    try:
+                        # a little larger than the area, so it can zoom slowly
+                        self.images[i] = _cover(Image.open(f).convert("RGB"), int(IMG_W * 1.08), int(H * 1.08))
+                    except Exception:  # noqa: BLE001 - a broken image falls back to the drawn illustration
+                        pass
+        self.mask = _fade_mask() if self.images else None
         self.site = site_label
         self.n = len(script["stories"])
         self.total = HOOK_S + STORY_S * self.n + OUTRO_S
         self.bg = _background()
         self.date_h = _human(script["date"])
         self._scenes = [self._story_layers(st, i) for i, st in enumerate(script["stories"])]
+        self.ai_label = _text_layer(["AI-generated illustration"], _font(24, 600), (205, 220, 218))
         f, lines = _fit(script["hook"], 1500, (104, 96, 88, 80), 2, 800)
         self.hook = _text_layer(lines, f, TEXT, 1.08)
         self.eyebrow = _text_layer([f"TODAY IN AI  ·  {self.date_h.upper()}"], _font(34, 700, 112), TOPIC["research"])
@@ -259,9 +374,19 @@ class Renderer:
     def _story_layers(self, st: dict[str, Any], i: int) -> dict[str, Any]:
         color = TOPIC.get(st["category"], TOPIC["industry"])
         label = LABEL.get(st["category"], "News").upper() + (f"  ·  {st['lab']}" if st.get("lab") else "")
-        f, lines = _fit(st["line"], 1600, (92, 84, 76, 68), 2, 800)
+        f, lines = _fit(st["line"], 1000, (80, 72, 66, 60), 3, 800)
+        fig = key_figure(st)
+        ffig, figlines = None, []
+        if fig:  # largest size at which the figure fits the panel on one line
+            tmp = ImageDraw.Draw(Image.new("L", (1, 1)))
+            for size in range(150, 54, -6):
+                ffig = _font(size, 800, 100 if len(fig) > 8 else 105)
+                if tmp.textlength(fig, font=ffig) <= 470:
+                    break
+            figlines = [fig]
         return {
-            "color": color, "seed": st["id"],
+            "color": color, "seed": st["id"], "cat": st["category"],
+            "figure": _text_layer(figlines, ffig, TEXT, 1.0) if fig else None,
             "num": _text_layer([f"{i + 1:02d}"], _font(190, 800, 112), color),
             "chip": _text_layer([label], _font(34, 700, 112), color),
             "line": _text_layer(lines, f, TEXT, 1.06),
@@ -311,8 +436,34 @@ class Renderer:
             lt = t2 - idx * STORY_S
             L = self._scenes[idx]
             out_k = 1 - _ease((lt - (STORY_S - 0.35)) / 0.35)
-            self._chrome(d, idx, lt / STORY_S)
-            _signal(d, L["seed"], L["color"], (1000, 150, 1800, 400), t)
+            # the visual: an AI illustration of the story (else a drawn one) and the story's key figure
+            k = _ease(lt / 0.6) * out_k
+            if k > 0 and idx in self.images:
+                big = self.images[idx]
+                z = 1.0 + 0.06 * (lt / STORY_S)  # slow push-in over the story's five seconds
+                cw, ch = int(big.width / 1.08 * (1.08 - (z - 1))), int(big.height / 1.08 * (1.08 - (z - 1)))
+                ox, oy = (big.width - cw) // 2, (big.height - ch) // 2
+                pic = big.crop((ox, oy, ox + cw, oy + ch)).resize((IMG_W, H), Image.BILINEAR).convert("RGBA")
+                pic.putalpha(self.mask.point(lambda v: int(v * k)))
+                img.alpha_composite(pic, (IMG_X, 0))
+                if L["figure"] is not None:
+                    fw, fh = L["figure"].width + 64, L["figure"].height + 40
+                    plate = Image.new("RGBA", (fw, fh), (0, 0, 0, 0))
+                    ImageDraw.Draw(plate).rounded_rectangle((0, 0, fw - 1, fh - 1), radius=26, fill=(5, 20, 22, 205))
+                    plate.alpha_composite(L["figure"], (32, 14))
+                    img.alpha_composite(_fade(plate, k), (W - 120 - fw, 820 - fh + int((1 - k) * 30)))
+                img.alpha_composite(_fade(self.ai_label, k * 0.8), (W - 120 - self.ai_label.width, 846))
+            elif k > 0:
+                panel = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+                pd = ImageDraw.Draw(panel)
+                tint = tuple(int(c * 0.10 + g * 0.90) for c, g in zip(L["color"], GROUND))
+                pd.rounded_rectangle((1220, 150, 1780, 900), radius=36, fill=tint + (255,), outline=tuple(int(c * 0.35 + g * 0.65) for c, g in zip(L["color"], GROUND)) + (255,), width=2)
+                _illustration(pd, L["cat"], (1290, 210, 1710, 590), L["color"], t)
+                if L["figure"] is not None:
+                    fx = 1500 - L["figure"].width // 2
+                    panel.alpha_composite(L["figure"], (max(1240, fx), 640))
+                img.alpha_composite(_fade(panel, k), (0, int((1 - k) * 30)))
+            self._chrome(d, idx, lt / STORY_S)  # drawn over the picture so the date and progress stay visible
             self._place(img, L["num"], 130, 150, lt, 0.0, out_k)
             self._place(img, L["chip"], 140, 400, lt, 0.12, out_k)
             self._place(img, L["line"], 140, 470, lt, 0.25, out_k)
@@ -359,12 +510,13 @@ def _run(cmd: list[str], **kw: Any) -> subprocess.CompletedProcess:
     return subprocess.run(cmd, check=True, capture_output=True, **kw)
 
 
-def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.github.io/frontier-wire") -> dict[str, Any]:
+def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.github.io/frontier-wire",
+           images: Path | None = None) -> dict[str, Any]:
     errs = validate(script)
     if errs:
         raise ValueError("script problems:\n- " + "\n- ".join(errs))
     out_dir.mkdir(parents=True, exist_ok=True)
-    r = Renderer(script, site_label)
+    r = Renderer(script, site_label, images if images and images.exists() else None)
     mp4, poster, gif = out_dir / "recap.mp4", out_dir / "poster.jpg", out_dir / "teaser.gif"
     frames = int(round(r.total * FPS))
     enc = subprocess.Popen(
@@ -424,13 +576,13 @@ def asset_url(repo: str, date: str, name: str) -> str:
 
 
 def upload(script: dict[str, Any], out_dir: Path, repo_dir: Path) -> str:
-    """Hand the day's files to GitHub Actions: push them on a short-lived branch `recap-upload/<date>` (main plus one
-    commit). The "Recap release" workflow checks them, creates the Release, puts the recap on the site and deletes
-    the branch, so the video never lands on main. (Claude sessions can't create Releases themselves.)"""
+    """Hand the day's script to GitHub Actions on a short-lived branch `recap-upload/<date>` (main plus one commit).
+    The "Recap release" workflow generates the AI illustrations, renders and checks the video, creates the Release,
+    puts the recap on the site and deletes the branch. (Claude sessions can't reach the image model or create
+    Releases themselves.) `out_dir` is unused; kept so the command line stays the same."""
     errs = validate(script)
-    info = check(out_dir)
-    if errs or not info["ok"]:
-        raise RuntimeError("not uploading: " + "; ".join(errs + info["problems"]))
+    if errs:
+        raise RuntimeError("not uploading: " + "; ".join(errs))
     branch = f"recap-upload/{script['date']}"
     git = lambda *a: _run(["git", "-C", str(repo_dir), *a], text=True).stdout  # noqa: E731
     git("fetch", "-q", "origin", "main")
@@ -439,8 +591,6 @@ def upload(script: dict[str, Any], out_dir: Path, repo_dir: Path) -> str:
         git("worktree", "add", "-q", "--detach", str(wt), "origin/main")
         dest = wt / "recap-upload"
         dest.mkdir()
-        for a in ASSETS:
-            shutil.copy(out_dir / a, dest / a)
         (dest / "script.json").write_text(json.dumps(script, indent=2, ensure_ascii=False) + "\n")
         _run(["git", "-C", str(wt), "add", "-f", "recap-upload"])
         _run(["git", "-C", str(wt), "-c", "user.name=frontier-wire-recap", "-c", "user.email=actions@users.noreply.github.com",
@@ -449,6 +599,37 @@ def upload(script: dict[str, Any], out_dir: Path, repo_dir: Path) -> str:
     finally:
         subprocess.run(["git", "-C", str(repo_dir), "worktree", "remove", "--force", str(wt)], capture_output=True)
     return branch
+
+
+def fetch_images(script: dict[str, Any], out: Path, api: str, secret: str) -> list[str]:
+    """Run in GitHub Actions: one AI illustration per story from the worker (Workers AI). Failures are reported
+    and that story falls back to the drawn illustration."""
+    import base64
+    import httpx
+    out.mkdir(parents=True, exist_ok=True)
+    notes = []
+    for i, st in enumerate(script["stories"], 1):
+        prompt = (st.get("image_prompt") or "").strip() or DEFAULT_PROMPT.get(st["category"], DEFAULT_PROMPT["industry"])
+        try:
+            r = httpx.post(f"{api.rstrip('/')}/api/recap/image", json={"prompt": prompt}, timeout=120,
+                           headers={"Authorization": f"Bearer {secret}"})
+            data = r.json() if r.headers.get("content-type", "").startswith("application/json") else {}
+            if r.status_code != 200 or not data.get("image"):
+                raise RuntimeError(f"HTTP {r.status_code}: {str(data.get('error') or r.text)[:120]}")
+            Image.open(__import__("io").BytesIO(base64.b64decode(data["image"]))).convert("RGB").save(out / f"{i}.jpg", quality=90)
+        except Exception as exc:  # noqa: BLE001
+            notes.append(f"story {i}: no AI image ({exc}); using the drawn illustration")
+    return notes
+
+
+DEFAULT_PROMPT = {
+    "models": "An abstract glowing neural network of light filaments floating above a dark server room",
+    "research": "A laboratory desk at night with glowing charts on screens and a scientific instrument, close-up",
+    "policy": "A government building's stone columns at dusk with a faint digital grid in the sky",
+    "safety": "A glowing digital padlock over streams of code in a dark security operations room",
+    "industry": "Rows of data-centre server racks with blue light, seen down a long corridor",
+    "voices": "An empty conference stage with a single microphone under a spotlight",
+}
 
 
 def stamp(script: dict[str, Any], out_dir: Path, now: datetime) -> dict[str, Any]:

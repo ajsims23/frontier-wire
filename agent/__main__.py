@@ -34,7 +34,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("check-models")
     sub.add_parser("preview-desks")
     rc = sub.add_parser("recap")
-    rc.add_argument("action", choices=["draft", "render", "check", "upload", "stamp"])
+    rc.add_argument("action", choices=["draft", "render", "check", "upload", "stamp", "images"])
     rc.add_argument("--date", default="", help="YYYY-MM-DD in IST (default: today)")
     rc.add_argument("--out", default="", help="folder for the rendered files")
     rc.add_argument("--force", action="store_true", help="draft: replace a script the editor already filled")
@@ -153,13 +153,20 @@ def _recap(args: argparse.Namespace) -> int:
         print(f"wrote {path}", file=sys.stderr)
         return 0
     out = Path(args.out or f"_recap/{date}")
-    if args.action == "render":
-        script = json.loads(path.read_text())
+    if args.action == "render":  # in Actions the uploaded script sits next to the output; locally it's in data/recaps
+        script = json.loads(((out / "script.json") if (out / "script.json").exists() else path).read_text())
         try:
-            info = recap.render(script, out)
+            info = recap.render(script, out, images=out / "img")
         except ValueError as exc:
             print(exc, file=sys.stderr)
             return 2
+    elif args.action == "images":
+        script = json.loads((out / "script.json").read_text())
+        notes = recap.fetch_images(script, out / "img", os.environ.get("RECAP_API", ""), os.environ.get("RECAP_SECRET", ""))
+        for n in notes:
+            print(f"::warning::{n}")
+        print(f"{len(script['stories']) - len(notes)} of {len(script['stories'])} AI illustrations")
+        return 0
     elif args.action == "upload":
         script = json.loads(path.read_text())
         try:
