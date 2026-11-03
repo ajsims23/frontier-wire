@@ -1,12 +1,12 @@
 {
-  "started_at": "2026-11-03T10:08:05+00:00",
+  "started_at": "2026-11-03T10:25:40+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
     "groq"
   ],
   "sources": {
-    "openai": "ok (1348)",
+    "openai": "ok (1349)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
     "huggingface": "ok (895)",
@@ -15,255 +15,36 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)",
-    "hf-models": "ok (57)",
-    "arxiv": "ok (40)",
-    "hf-papers": "ok (16)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (17)",
-    "techcrunch-ai": "ok (20)",
-    "verge-ai": "ok (10)",
-    "mit-tr-ai": "ok (10)",
-    "ars-ai": "ok (20)",
-    "aim": "ok (50)",
-    "inc42": "ok (24)",
-    "medianama": "ok (10)",
-    "mint-tech": "ok (35)",
-    "et-tech": "ok (50)",
-    "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
-    "crunchbase-news": "ok (10)",
-    "import-ai": "ok (10)",
-    "simon-willison": "ok (30)",
-    "sam-altman": "ok (30)",
-    "bluesky": "ok (28)",
-    "auto-techmeme.com": "ok (15)"
+    "mistral": "ok (6)"
   },
   "dropped": [
     {
-      "title": "Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning",
-      "reason": "score 5: Incremental multimodal captioning paper; not a frontier breakthrough."
-    },
-    {
-      "title": "CoworkOS:Scaling Agent Coworkers for Real-world Automation",
-      "reason": "score 5: Paper on scaling coworker agents; interesting but not a major advance."
-    },
-    {
-      "title": "Does the World Need a New GitHub?",
-      "reason": "score 4: Opinion piece on GitHub architecture; AI angle is peripheral."
-    },
-    {
-      "title": "Apple Posts Record Revenue in India for Q4 FY26",
-      "reason": "not AI: Apple revenue record in India, not AI‑focused."
-    },
-    {
-      "title": "Can India’s AI Boom Reach Bharat?",
-      "reason": "score 4: Broad analysis of AI education divide; not breaking news."
-    },
-    {
-      "title": "Apple Logs Record India Revenue, Mac And Services Hit New Highs",
-      "reason": "not AI: Apple revenue record in India, unrelated to AI."
-    },
-    {
-      "title": "Why SIM-binding mandate is concern for consumers, MSMEs, and cybersecurity, a new study decodes",
-      "reason": "not AI: SIM‑binding mandate study; no AI relevance."
-    },
-    {
-      "title": "Binance co-CEO says company is in very strong financial health after $6.3 billion heist",
-      "reason": "not AI: Binance financial health update, no AI angle."
-    },
-    {
-      "title": "Global markets were already fragile. Big AI bets could break them",
-      "reason": "score 4: Macro‑finance commentary on AI bets; not a core AI development."
-    },
-    {
-      "title": "How Anju turned a personal food experiment into a snack brand expanding to 41 retail stores",
-      "reason": "not AI: Snack‑brand story, no AI relevance."
-    },
-    {
-      "title": "Sachin Tendulkar backs Hitwicket maker Metasports Interactive",
-      "reason": "not AI: Celebrity investment in gaming; no AI component."
-    },
-    {
-      "title": "How Alex Bores' Who Decides seeks to make AI safety a standard Democratic position, like being pro-choice, in 2028, as tech-funded rivals vie for influence (David Freedlander/New York Magazine)",
-      "reason": "score 5: Same political‑AI safety story already published; no new information."
-    },
-    {
-      "title": "Sources: Nvidia verbally told cloud compute clients to sell 51%+ of their services to non-Chinese companies, imposing new limits on China's access to AI chips (Financial Times)",
-      "reason": "score 5: Duplicate of already‑published Nvidia client‑restriction story."
-    },
-    {
-      "title": "VC funding into Indian startups plunges 66% in October",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Oracle plans to raise $20 billion through bonds and stock sales",
-      "reason": "already covered (story 2c1f025c89cb)"
-    },
-    {
-      "title": "OpenAI’s Lehane Calls AI the Number-One Issue of the 2028 Election",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "TRAI allows AI Agents in telecom customer support; mandates 24×7 availability",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Indian companies trust AI with greater autonomy but struggle to prove financial returns: Report",
-      "reason": "could not verify yet after a second try; dropped"
-    },
-    {
-      "title": "Dispatch Network Raises ₹5 Cr Pre-Seed Led by Antler India to Build AI-Powered Delivery Network",
-      "reason": "could not verify yet after a second try; dropped"
+      "title": "Heimstaden is changing residential real estate management with AI",
+      "reason": "score 4: The piece is a marketing case study of a real‑estate firm using OpenAI’s ChatGPT Enterprise and Codex. It is an incremental industry use‑case rather than a major model release, funding round, or policy change, so it scores low on significance and does not merit a story for Frontier Wire."
     }
   ],
-  "written": [
-    {
-      "id": "544cab3b9fc5",
-      "headline": "MIT researchers show LLMs can read and edit neural network weights without retraining",
-      "category": "research",
-      "summary": "MIT’s CSAIL team demonstrated that a large language model (GPT‑6 Astra) can examine and modify a neural network’s weights directly, improving a small language model by changing only 0.016% of its parameters. In experiments the model raised the MATH‑500 score from 7.9% to 48.1% and GSM8K from 13.8% to 67.1%.",
-      "url": "https://analyticsindiamag.com/ai-news/mit-researchers-show-llms-can-read-and-edit-neural-network-weights-without-retraining",
-      "sources": 3,
-      "quotes": 1
-    },
-    {
-      "id": "a11455d91110",
-      "headline": "Anthropic reports Q3 revenue near $17 billion as compute commitments rise to $895 billion",
-      "category": "industry",
-      "summary": "Anthropic's amended IPO filing shows third‑quarter revenue of about $17 billion, a 46% increase from the prior quarter, while compute and infrastructure commitments total roughly $895 billion, including $70 billion due by September 2027.",
-      "url": "https://msn.com/en-us/news/other/anthropics-quarterly-loss-shrinks-revenue-jumps-ahead-of-blockbuster-ipo/ar-AA2gBhP1",
-      "sources": 6,
-      "quotes": 0
-    },
-    {
-      "id": "5a6391ab7400",
-      "headline": "Huawei says Ascend 960DT AI chip will use Samsung and SK Hynix HBM",
-      "category": "industry",
-      "summary": "Huawei told some customers that a large share of its upcoming flagship AI chip, Ascend 960DT, will be equipped with high‑bandwidth memory from Samsung and SK Hynix, which is being smuggled into China via board‑packaging loopholes.",
-      "url": "https://techmeme.com/261102/p50",
-      "sources": 3,
-      "quotes": 2
-    },
-    {
-      "id": "c4e747ef2346",
-      "headline": "PowerUp Money raises $10 million to expand AI‑led wealth management in India",
-      "category": "industry",
-      "summary": "PowerUp Money secured $10 million in a round led by Flourish Ventures and will use the funds to develop its AI‑powered wealth advisory platform and expand its managed advisory service Infinite. The Bengaluru startup, with over 1.5 million users and 1 lakh paid Elite members, says Infinite has amassed nearly Rs 500 crore AUM.",
-      "url": "https://yourstory.com/2026/11/powerup-money-raises-10m-expand-ai-led-wealth-management-india",
-      "sources": 2,
-      "quotes": 2
-    }
-  ],
-  "notes": [
-    "not India desk: 'MIT Researchers Show LLMs Can Read and Edit Neural'",
-    "not India desk: 'Oracle plans to raise $20 billion through bonds an'",
-    "ignored made-up duplicate id c2e7ac5975dc for 'How Alex Bores' Who Decides seeks to make AI safet'",
-    "ignored made-up duplicate id 485ef28c1a11 for 'Sources: Nvidia verbally told cloud compute client'",
-    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "6 kept item(s) carried over to the next run"
-  ],
-  "mode": "full",
+  "written": [],
+  "notes": [],
+  "mode": "breaking",
   "timings": {
-    "gather": 79.0,
-    "audit": -0.0,
-    "plan": 1.6,
-    "judge": 2.9,
-    "verify and write": 487.2,
-    "videos": 23.3,
-    "tagging": 1.0,
-    "explainers": 0.0,
-    "trackers": 106.1,
-    "claims": 21.2,
-    "model tracker": 0.1,
-    "weekly": -0.0,
-    "builders": -0.0,
-    "top voices": -0.0,
-    "briefing": 41.9,
-    "self-review": -0.0,
-    "photos": 1.1,
-    "stock photos": -0.0,
-    "daily email": -0.0,
-    "alerts": 6.8
+    "gather": 9.7,
+    "judge": 0.9,
+    "verify and write": 0.0,
+    "tagging": 0.0,
+    "trackers": 0.0,
+    "photos": 0.0,
+    "stock photos": 0.0,
+    "alerts": 0.9
   },
-  "fetched": 2917,
-  "fresh": 24,
-  "plan": {
-    "focus": "Tracking Anthropic’s compute financing risks while covering emerging AI policy moves and India’s market surge.",
-    "priorities": [
-      "Sources: Nvidia verbally told cloud compute clients to sell 51%+ of th (Nvidia’s client restrictions could reshape AI chip supply chains and affect global cloud markets)",
-      "How Alex Bores' Who Decides seeks to make AI safety a standard Democra (Highlights a new political push to embed AI safety in US policy, relevant for regulators and investors)",
-      "MIT Researchers Show LLMs Can Read and Edit Neural Network Weights Wit (MIT paper shows LLMs editing weights, a breakthrough for model efficiency and research)",
-      "Indian companies trust AI with greater autonomy but struggle to prove  (India’s AI adoption faces ROI proof challenges, key for investors in the region)",
-      "VC funding into Indian startups plunges 66% in October (Sharp drop in VC funding signals funding climate shift for Indian AI startups)"
-    ],
-    "thin_areas": [
-      "models",
-      "research"
-    ],
-    "searches": [
-      "Anthropic compute commitments update: 6 new",
-      "Nvidia cloud compute client China restrictions: 1 new",
-      "AI safety political standard 2028: 2 new"
-    ],
-    "dig_deeper": [
-      "Sources: Nvidia verbally told cloud compute clients to sell 51%+ of th",
-      "How Alex Bores' Who Decides seeks to make AI safety a standard Democra"
-    ]
-  },
-  "judged": 33,
-  "kept": 12,
-  "research": {
-    "investigated": 5,
-    "confirmed": 2,
-    "tool_calls": 14
-  },
-  "research_log": [
-    "MIT Researchers Show LLMs Can Read and Edit Neural Network Weights Wit: confirmed (searched “MIT researchers LLM read edit neural network weights Astra MATH-500”; read digit.in; read msn.com)",
-    "Anthropic's quarterly loss shrinks, revenue jumps ahead of blockbuster: unconfirmed (read msn.com; searched “Anthropic quarterly loss shrinks revenue jumps ahead of blockbuster IPO Reuters”)",
-    "VC funding into Indian startups plunges 66% in October: unconfirmed (searched “VC funding into Indian startups plunges 66% in October”; searched “\"VC funding\" \"Indian startups\" October 66”; searched “venture capital funding Indian startups October 2026”)",
-    "Sources: Huawei told some clients that a large share of its upcoming f: confirmed (searched “Huawei Ascend 960DT HBM Samsung SK Hynix”; read chosun.com; read sbs.co.kr)",
-    "OpenAI’s Lehane Calls AI the Number-One Issue of the 2028 Election: unconfirmed (searched “Lehane AI number one issue 2028 election OpenAI”; read thenextweb.com; searched “Politico Chris Lehane memo 2028 AI election”)"
-  ],
-  "threads": [
-    "Anthropic financing risks IPO: quarterly loss shrinks: Anthropic reports Q3 revenue near $17 billion as compute com"
-  ],
-  "videos": {
-    "OpenAI": "ok (10 in feed, 0 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 0 new)",
-    "Google for Developers": "ok (9 in feed, 0 new)",
-    "AI at Meta": "ok (7 in feed, 0 new)",
-    "Microsoft Research": "ok (8 in feed, 0 new)",
-    "NVIDIA": "ok (8 in feed, 0 new)",
-    "Hugging Face": "ok (13 in feed, 0 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 2 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (14 in feed, 0 new)",
-    "Training Data (Sequoia)": "ok (3 in feed, 0 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 0 new)",
-    "Hard Fork": "ok (1 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (2 in feed, 0 new)",
-    "20VC": "ok (4 in feed, 0 new)"
-  },
-  "videos_kept": "2 kept from 2 new",
-  "tagged": 4,
-  "trackers": "filed 6 stories; updated us-china, frontier-race, india-ai, ai-infrastructure",
-  "claims": "81 tracked, 77 open, 1 updated this run",
-  "model_tracker": "82 models, 18 changes today",
-  "briefing": "3 themes from 20 stories",
-  "india_briefing": "2 themes from 2 stories",
-  "photos": "4 saved, 0 unavailable",
-  "alerts": "28 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":44}",
-  "ai_requests_run": 39,
-  "ai_tokens_run": 98752,
-  "ai_requests_today": 144,
+  "fetched": 2416,
+  "fresh": 1,
+  "judged": 1,
+  "kept": 0,
+  "trackers": "filed 0 stories; no tracker changed",
+  "photos": "0 saved, 0 unavailable",
+  "alerts": "24 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":0}",
+  "ai_requests_run": 1,
+  "ai_tokens_run": 5928,
+  "ai_requests_today": 145,
   "provider_log": []
 }
