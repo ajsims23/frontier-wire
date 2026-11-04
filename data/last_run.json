@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-04T18:35:24+00:00",
+  "started_at": "2026-11-04T19:14:51+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -15,36 +15,336 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (19)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "hn": "ok (22)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
   },
   "dropped": [
     {
-      "title": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
-      "reason": "score 5: The Hugging Face blog post announces a new tool/model (Dharma Field Extractor) that extracts structured fields from documents. While it is an AI model, it appears to be a modest utility rather than a major frontier model release, so it scores as an incremental update and does not merit a story for Frontier Wire."
+      "title": "Show HN: Kairos – Open-source risk and fraud decisioning platform",
+      "reason": "score 4: Show HN announcement of an open‑source risk platform; not core AI news."
+    },
+    {
+      "title": "Debian apt security update (man-in-the-middle)",
+      "reason": "not AI: Security update unrelated to AI."
+    },
+    {
+      "title": "Microsoft fixes a Windows 11 annoyance as PC revenue declines",
+      "reason": "not AI: Windows 11 fix unrelated to AI."
+    },
+    {
+      "title": "I tried Apple’s Siri Recaps. They’re surprisingly useful — and a little unsettling",
+      "reason": "score 3: Product review of Siri Recaps; not a news development."
+    },
+    {
+      "title": "Google faces backlash for plan that would turn off Search for schools that restrict AI",
+      "reason": "duplicate of f3cef08b4a75"
+    },
+    {
+      "title": "Nothing teases a screen-free AI device ahead of launch next month",
+      "reason": "score 5: Teaser of upcoming AI device; insufficient concrete news."
+    },
+    {
+      "title": "My therapist thinks I should chuck the Amazon Bee Frontier out a window",
+      "reason": "not AI: Opinion piece unrelated to AI developments."
+    },
+    {
+      "title": "Data centers lost the midterms",
+      "reason": "score 5: Opinion on data‑center constraints after midterms; lacks a concrete news hook."
+    },
+    {
+      "title": "Uber only fulfilled 4 rides from AI agents last quarter",
+      "reason": "score 5: Uber reports only four AI‑agent rides; low impact and not a broader industry shift."
+    },
+    {
+      "title": "datasette-llm 0.1a10",
+      "reason": "score 4: Minor bug‑fix release for datasette‑llm; not a notable AI development."
+    },
+    {
+      "title": "datasette-apps 0.3a0",
+      "reason": "score 4: Small update to datasette‑apps; not newsworthy for Frontier Wire."
+    },
+    {
+      "title": "datasette-agent 0.5a0",
+      "reason": "score 4: Minor release of datasette‑agent; insufficient significance."
+    },
+    {
+      "title": "llm 0.37.1",
+      "reason": "score 4: Bug‑fix release for llm library; not a notable AI story."
+    },
+    {
+      "title": "Ethan Mollick: AI semiotics: cool paper suggests that AIs are strongly impacted by visual symbols in ways they do not always recognize in their own…",
+      "reason": "score 5: Commentary on an academic paper; not a news event."
+    },
+    {
+      "title": "Sequoia raised ~$10B in new funds, and announces it is shutting down its Arc accelerator and Scouts program, merging its early-stage and growth teams, and more (Connie Loizos/TechCrunch)",
+      "reason": "score 4: Sequoia fundraise and accelerator shutdown; not directly AI‑centric."
+    },
+    {
+      "title": "Titan OS, which monetizes smart TVs via ads and FAST deals, raised $46M in equity and debt, taking its total funding to $110M, and says it now has 30M users (Ivan Mehta/TechCrunch)",
+      "reason": "score 4: Funding round for smart‑TV OS; not core AI news."
+    },
+    {
+      "title": "Democratic Sweep Could Slow AI Build Out",
+      "reason": "score 6: Duplicate coverage of market reaction to Democratic sweep already captured."
+    },
+    {
+      "title": "Policy, AI, and High-Cost Therapies Shape AMCP Nexus 2026 Discussions",
+      "reason": "score 3: Conference agenda mention; not a news event."
+    },
+    {
+      "title": "Lawmakers weigh AI regulations, data center oversight ahead of 2027 Legislative Session",
+      "reason": "score 5: Local legislative session preview; lacks broader AI impact."
+    },
+    {
+      "title": "Mayor Zohran Mamdani Blasts Google After Schools Are Told They Can’t Separate Search From AI",
+      "reason": "duplicate of f3cef08b4a75"
+    },
+    {
+      "title": "Google’s new opt-in policy for AI presents a problem for schools",
+      "reason": "duplicate of f3cef08b4a75"
+    },
+    {
+      "title": "Google’s School AI Strategy Raises Questions Over Market Power",
+      "reason": "duplicate of f3cef08b4a75"
+    },
+    {
+      "title": "Google's school AI backlash",
+      "reason": "duplicate of f3cef08b4a75"
+    },
+    {
+      "title": "Google Insists It Is Not Extorting Schools with Forced AI to Keep Search",
+      "reason": "duplicate of f3cef08b4a75"
+    },
+    {
+      "title": "Google Changes AI Access Rules for Schools Ahead of 2027",
+      "reason": "duplicate of f3cef08b4a75"
+    },
+    {
+      "title": "Pangram’s new models spot AI fakes in images and video, it says",
+      "reason": "score 6: Duplicate coverage of Pangram detection models."
+    },
+    {
+      "title": "Pangram Launches Two Models for AI Image and Video Detection",
+      "reason": "score 6: Duplicate coverage of Pangram detection models."
+    },
+    {
+      "title": "CoreWeave's stock and unsecured bonds fall after sweeping Democratic midterm victories, as Texas Governor-elect Gina Hinojosa calls for a data center moratorium (Katherine Schwartz/Bloomberg)",
+      "reason": "loosely AI: lower priority than this run's AI stories"
+    },
+    {
+      "title": "Democrats' sweep of Congress raises the likelihood of strong frontier AI legislation passing in early 2027, including mandatory testing and developer liability (Shakeel Hashim/Transformer)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Meta acquires Conductor, which lets developers run multiple AI coding agents in parallel; CEO Charlie Holtz says the team will join Meta Superintelligence Labs (Madison Mills/Axios)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Building on open source AI? Hugging Face’s policy chief on the costs, risks, and trade-offs",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "ChatGPT will now make you animated GIFs",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Snowflake Introduces Business Ontology, Cortex AI Gateway to Bring AI Agents Into Enterprise Workflows",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "OpenAI's Codex Helps in Aerodynamic Engineering for Mazda",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "What is Hangang? South Korea unveils a $276 million supercomputer with 614.7 petaflops of computing power",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
-  "written": [],
-  "notes": [],
-  "mode": "breaking",
+  "written": [
+    {
+      "id": "87bf89c71a3c",
+      "headline": "Pangram launches Image 1.0 and Image Flash 1.0 AI detection models",
+      "category": "safety",
+      "summary": "Pangram released two computer‑vision models—Image 1.0 for still images and Image Flash 1.0 for video—claiming 99.2% detection of AI‑generated images with 0.27% false‑positives and 98.7% accuracy on the DF26 video benchmark.",
+      "url": "https://techmeme.com/261104/p43",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "a4c0d644033a",
+      "headline": "TeraWulf secures Google credit backstop for Anthropic Kentucky data center project",
+      "category": "industry",
+      "summary": "TeraWulf announced a credit backstop agreement with Google to support debt financing for its Justified Data Campus in Hawesville, Kentucky, tied to roughly $19 billion of Anthropic lease commitments and slated to be operational in the second half of 2027.",
+      "url": "https://techmeme.com/261104/p36",
+      "sources": 3,
+      "quotes": 2
+    },
+    {
+      "id": "e23ef49eca80",
+      "headline": "AMD records $1.1 billion non‑cash charge from OpenAI, Meta AI chip warrants",
+      "category": "industry",
+      "summary": "AMD logged a $1.1 billion non‑cash charge in Q3 as it began accounting for stock warrants tied to AI chip supply agreements with OpenAI and Meta. The warrants could let the two companies buy up to 10% of AMD if performance milestones are met.",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/amds-openai-meta-chip-deals-trigger-1-billion-quarterly-charge/articleshow/135531648.cms",
+      "sources": 2,
+      "quotes": 1
+    }
+  ],
+  "notes": [
+    "not India desk: 'Snowflake Introduces Business Ontology, Cortex AI '",
+    "ignored made-up duplicate id bff8a2cab8f5 for 'Democratic Sweep Could Slow AI Build Out'",
+    "ignored made-up duplicate id 87bf89c71a3c for 'Pangram’s new models spot AI fakes in images and v'",
+    "ignored made-up duplicate id 87bf89c71a3c for 'Pangram Launches Two Models for AI Image and Video'",
+    "dropped unverifiable benchmark: Pangram Image 1.0 AI‑generated image detection (company test) 99.2% detection, 0.27% false‑positive",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "10 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
   "timings": {
-    "gather": 11.0,
-    "judge": 1.3,
-    "verify and write": 0.0,
-    "tagging": 0.0,
-    "trackers": 0.0,
-    "photos": 0.1,
-    "stock photos": -0.0,
-    "alerts": 1.0
+    "gather": 143.1,
+    "audit": -0.0,
+    "plan": 1.9,
+    "judge": 3.0,
+    "verify and write": 460.5,
+    "videos": 23.2,
+    "tagging": 20.8,
+    "explainers": 0.0,
+    "trackers": 83.2,
+    "claims": 20.9,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": 39.1,
+    "top voices": 13.3,
+    "briefing": 21.3,
+    "self-review": 0.0,
+    "photos": 1.6,
+    "stock photos": 9.4,
+    "daily email": 0.0,
+    "alerts": 30.2
   },
-  "fetched": 2425,
-  "fresh": 1,
-  "judged": 1,
-  "kept": 0,
-  "trackers": "filed 0 stories; no tracker changed",
-  "photos": "0 saved, 0 unavailable",
-  "alerts": "23 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":0}",
-  "ai_requests_run": 1,
-  "ai_tokens_run": 5738,
-  "ai_requests_today": 214,
-  "provider_log": []
+  "fetched": 2934,
+  "fresh": 31,
+  "plan": {
+    "focus": "Chasing the fallout from the Democratic midterm sweep on AI policy and financing, while bolstering safety coverage and community voices.",
+    "priorities": [
+      "Shares of US tech giants jump after Democrats' midterm sweep as invest (Shows market reaction to the midterm sweep, key for investors and policy outlook)",
+      "Democrats' sweep of Congress raises the likelihood of strong frontier  (Signals upcoming frontier AI legislation, directly tied to the political shift)",
+      "CoreWeave's stock and unsecured bonds fall after sweeping Democratic m (Highlights data‑center financing risks tied to new political climate)",
+      "Google faces backlash for plan that would turn off Search for schools  (Updates the Google school AI tool rollout storyline amid backlash)",
+      "Pangram releases Pangram Image 1.0, which it says is state-of-the-art  (Introduces a new safety tool for AI video detection, filling a thin safety area)"
+    ],
+    "thin_areas": [
+      "safety",
+      "voices"
+    ],
+    "searches": [
+      "AI legislation 2027: 3 new",
+      "Google school AI policy: 6 new",
+      "Pangram Image detection benchmark: 2 new"
+    ],
+    "dig_deeper": [
+      "Shares of US tech giants jump after Democrats' midterm sweep as invest",
+      "Google faces backlash for plan that would turn off Search for schools "
+    ]
+  },
+  "judged": 42,
+  "kept": 15,
+  "research": {
+    "investigated": 5,
+    "confirmed": 3,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "Democrats' sweep of Congress raises the likelihood of strong frontier : unconfirmed (searched “Democrats sweep Congress AI legislation 2027 mandatory testing developer liability”; read techmeme.com; searched “midterm Democrats AI legislation mandatory testing developer liability early 2027”)",
+    "Meta acquires Conductor, which lets developers run multiple AI coding : unconfirmed (searched “Meta acquires Conductor AI coding startup”; read msn.com; searched “Meta acquisition Conductor AI coding agents”)",
+    "Pangram releases Pangram Image 1.0, which it says is state-of-the-art : confirmed (searched “Pangram Image 1.0 release”; read unite.ai; read thenextweb.com)",
+    "TeraWulf secures a credit backstop agreement with Google to support fi: confirmed (searched “TeraWulf credit backstop agreement Google Anthropic Kentucky”; read businessinsider.com; read msn.com)",
+    "AMD's OpenAI, Meta chip deals trigger $1 billion quarterly charge: confirmed (searched “AMD OpenAI Meta chip deal $1 billion quarterly charge”; read msn.com; searched “Reuters AMD OpenAI Meta chip deals quarterly charge”)"
+  ],
+  "threads": [
+    "Anthropic financing risks IPO: data center credit: TeraWulf secures Google credit backstop for Anthropic Kentuc",
+    "Meta equity raise analysis: AMD charge: AMD records $1.1 billion non‑cash charge from OpenAI, Meta A"
+  ],
+  "videos": {
+    "OpenAI": "ok (10 in feed, 1 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (9 in feed, 0 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 3 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 1 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (3 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "4 kept from 6 new",
+  "tagged": 3,
+  "trackers": "filed 3 stories; updated frontier-race, ai-infrastructure, ai-money",
+  "claims": "95 tracked, 90 open, 0 updated this run",
+  "model_tracker": "82 models, 23 changes today",
+  "builders_sources": {
+    "show-hn": "ok (8)",
+    "github-new": "ok (33)",
+    "hf-spaces": "ok (21)",
+    "product-hunt": "ok (13)",
+    "r-localllama": "ok (25)",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
+  },
+  "builders": "picked 8 from 60 candidates; 3 with pictures, 0 with videos",
+  "top_voices_sources": {
+    "tv-mollick": "ok (0)",
+    "tv-lambert": "ok (2)",
+    "tv-swyx": "ok (8)",
+    "tv-dwarkesh": "ok (2)",
+    "tv-raschka": "ok (0)",
+    "tv-karpathy": "ok (1)",
+    "tv-evans": "ok (0)",
+    "x-coverage": "ok (1 of 5 articles, bing)",
+    "hn": "ok (2)"
+  },
+  "top_voices": "3 debates from 50 posts by 8 people; 3 portraits, 2 pictures",
+  "briefing": "3 themes from 14 stories",
+  "india_briefing": "3 themes from 3 stories",
+  "photos": "1 saved, 2 unavailable",
+  "stock photos": "1 added",
+  "alerts": "dispatch failed: ReadTimeout",
+  "ai_requests_run": 40,
+  "ai_tokens_run": 118089,
+  "ai_requests_today": 254,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
 }

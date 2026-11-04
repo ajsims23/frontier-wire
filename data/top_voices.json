@@ -1,14 +1,5 @@
 {
   "posts": {
-    "94bdedac0696": {
-      "id": "94bdedac0696",
-      "url": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026",
-      "person": "Simon Willison",
-      "text": "GitHub Octoverse 2026. GitHub Octoverse 2026 I'm at GitHub Universe today (GitHub gave me a free ticket through their \"GitHub Stars\" program). EVP Jay Parikh just announced this year's Octoverse report, and highlighted these numbers in particular: This is a pretty stark representation of the impact of agentic engineering on GitHub. In 2026, merged pull requests tripled in less than a year to 220 million per month. Commits more than tripled to 7.38 billion per month, with most of that increase in the second half of this year. New repository rate doubled this year, to 30.3 million per month. The report includes new nu",
-      "published": "2026-10-28T16:45:23+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
     "52ced88a57d9": {
       "id": "52ced88a57d9",
       "url": "https://simonwillison.net/2026/Oct/28/ted-sanders",
@@ -462,33 +453,96 @@
       "published": "2026-11-04T00:45:42.988Z",
       "via": "Bluesky",
       "kind": "post"
+    },
+    "1d83ea98ce0c": {
+      "id": "1d83ea98ce0c",
+      "url": "https://simonwillison.net/2026/Nov/4/datasette-llm",
+      "person": "Simon Willison",
+      "text": "datasette-llm 0.1a10. Release: datasette-llm 0.1a10 Fixes a bug that affected my agent.datasette.io demo site, where the set of available LLM models was not correctly restricted to just those in the configuration. Tags: datasette , llm",
+      "published": "2026-11-04T15:26:02+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "42f4810ce572": {
+      "id": "42f4810ce572",
+      "url": "https://simonwillison.net/2026/Nov/4/datasette-apps",
+      "person": "Simon Willison",
+      "text": "datasette-apps 0.3a0. Release: datasette-apps 0.3a0 Datasette Apps adds support for hosting and editing custom HTML applications inside of Datasette. These can be created by hand, but it's easier to create them using LLMs via Datasette Agent . This release improves that integration: Apps can now be tagged in Datasette Agent chat messages by typing # , which autocompletes from the apps the user has permission to view. New app_add_stored_queries() and app_remove_stored_queries() tools let the agent manage which stored queries an app is allowed to call. Granting a write query requires approval from the user first. app",
+      "published": "2026-11-04T00:29:36+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "7c1041935d0b": {
+      "id": "7c1041935d0b",
+      "url": "https://simonwillison.net/2026/Nov/3/datasette-agent",
+      "person": "Simon Willison",
+      "text": "datasette-agent 0.5a0. Release: datasette-agent 0.5a0 This is a significant release of Datasette Agent . The most notable new feature is called the panel - it lets the agent chat open and then sit next to pages from Datasette, for example a table or query page. When combined with datasette-apps this means you can prompt a database-backed app into existence and then modify it from the chat that sits next to that app. You can try it by signing in with your GitHub account to agent.datasette.io . Tags: projects , datasette , datasette-agent",
+      "published": "2026-11-03T23:13:45+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "dc5e1e6807a1": {
+      "id": "dc5e1e6807a1",
+      "url": "https://simonwillison.net/2026/Nov/3/llm",
+      "person": "Simon Willison",
+      "text": "llm 0.37.1. Release: llm 0.37.1 A bugfix release for LLM , with contributions from Steven Huang , Tao An , Arjan Mossel , and XQ . Tags: llm",
+      "published": "2026-11-03T21:41:42+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "960bb9e491ed": {
+      "id": "960bb9e491ed",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mziqgazkbc2x",
+      "person": "Ethan Mollick",
+      "text": "AI semiotics: cool paper suggests that AIs are strongly impacted by visual symbols in ways they do not always recognize in their own chains-of-thought. The way they react to those symbols is very different than how a human might interpret them as well. arxiv.org/pdf/2610.364...",
+      "published": "2026-11-04T16:08:53.537Z",
+      "via": "Bluesky",
+      "kind": "post"
+    },
+    "93ee83f44d29": {
+      "id": "93ee83f44d29",
+      "url": "https://interconnects.ai/p/how-well-can-we-measure-open-model",
+      "person": "Nathan Lambert",
+      "text": "How big is the open model economy today?. My longest running agent testbed has been building the Interconnects Dashboard — an aggregator of all of the best data on open model adoption and performance from across the web. This dashboard is freely available and becoming quite useful. Still, all the measurements we have on open model adoption are incredibly imprecise. We have noisy platform metrics, marketing-related metrics from startups, and imperfect public evaluations. It takes an informed eye to figure out where things are going. These research notes are my current best approximations of where we stand. As with most things on Interconnects, our goal is to build well more value than we…",
+      "published": "2026-11-04T16:35:44+00:00",
+      "via": "Interconnects",
+      "kind": "post"
+    },
+    "e9efb1446d7a": {
+      "id": "e9efb1446d7a",
+      "url": "https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai",
+      "person": "swyx",
+      "text": "[AINews] Behind Latent Space: Kill My SaaS, Jev & AI in 2026 | AIEi Shanghai. There’s a lot of dispute to yesterday’s title story on “ Weight Space Programming ” — and we agree that some of the claims are presented in overly favorable light and overall took away from the impact of the paper’s more substantial discoveries. However it is still a big wakeup moment and has had multiple independent replications by now that it is not worth either doing some kind of retraction or a followup title story saying it was bogus. Instead today we’re featuring AI Engineer Shanghai and also sharing an exclusive interview on the history of Latent Space ! AI News for 11/02/2026-11/03/2026. We checked 12…",
+      "published": "2026-11-04T19:17:30+00:00",
+      "via": "Latent Space",
+      "kind": "post"
     }
   },
   "digest": {
-    "written_at": "2026-11-03T21:59:52+00:00",
-    "range": "27 Oct – 3 Nov 2026",
-    "headline": "Weight‑space programming, legal AI, and software trust dominate AI debates this week.",
+    "written_at": "2026-11-04T19:14:51+00:00",
+    "range": "28 Oct – 4 Nov 2026",
+    "headline": "AI breakthroughs clash with market woes as weight‑space programming, open‑model metrics, and trust in code spark debate",
     "debates": [
       {
-        "title": "Weight‑space programming sparks safety concerns",
-        "summary": "New research shows frontier models can read and edit raw neural network weights, opening powerful new capabilities. The community is split between excitement over practical gains and alarm about recursive self‑improvement risks.",
+        "title": "Weight‑space programming: breakthrough or hype?",
+        "summary": "New papers claim LLMs can read and edit neural network weights, promising performance gains, but critics warn the results may be overstated and raise safety concerns. The discussion intensifies as multiple teams replicate the technique on different models.",
         "positions": [
           {
-            "person": "Simon Willison",
-            "stance": "Highlights the paper that demonstrates GPT‑6 Astra and other frontier models can directly interpret model weights, calling it a breakthrough capability.",
+            "person": "swyx",
+            "stance": "Calls the paper’s claims overly favorable yet treats the finding as a significant wake‑up moment that should not be retracted.",
             "posts": [
               {
-                "id": "58b2621d532f",
-                "url": "https://bsky.app/profile/simonwillison.net/post/3mzgb77cpis2w",
-                "via": "Bluesky",
+                "id": "e9efb1446d7a",
+                "url": "https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai",
+                "via": "Latent Space",
                 "kind": "post",
-                "date": "2026-11-03"
+                "date": "2026-11-04"
               }
             ]
           },
           {
             "person": "Ethan Mollick",
-            "stance": "Reports an experiment where GPT‑6 Astra edited only 0.016% of a smaller model’s weights, boosting its math performance sixfold, showing immediate practical impact.",
+            "stance": "Reports that editing a tiny fraction of weights in Qwen3.5 dramatically improves math and instruction following, viewing it as a major breakthrough.",
             "posts": [
               {
                 "id": "1818a08f7975",
@@ -500,50 +554,52 @@
             ]
           },
           {
-            "person": "swyx",
-            "stance": "Warns that weight‑space programming removes autoresearch from the recursive self‑improvement loop, raising existential safety fears.",
+            "person": "Simon Willison",
+            "stance": "Shows that Qwen 3.8 can interpret model weights and shares his excitement about the capability.",
             "posts": [
               {
-                "id": "360a3a5d8e13",
-                "url": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of",
-                "via": "Latent Space",
+                "id": "9b0f1b3870f8",
+                "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights",
+                "via": "Simon Willison",
                 "kind": "post",
                 "date": "2026-11-03"
               }
             ]
           }
         ],
-        "image": "img/voices/360a3a5d8e13.jpg",
+        "image": "img/voices/e9efb1446d7a.jpg",
         "image_credit": "Latent Space",
-        "video": "2YWfVGpVtvc"
+        "video": "QmDLDy3ZSNE"
       },
       {
-        "title": "Legal AI agents clash with data privacy",
-        "summary": "Legora’s lawyer‑focused AI agents can draft contracts and coordinate work, but the firm cannot inspect any of the agent’s actions because client data must stay private. This tension raises questions about testing, accountability, and regulatory compliance.",
+        "title": "Open‑model economy: measuring adoption amid security fears",
+        "summary": "Nathan Lambert’s dashboard highlights the difficulty of accurately tracking open‑model usage, while recent vulnerability disclosures raise alarm about the cyber risks of openly available models. The community debates how to gauge growth without ignoring emerging threats.",
         "positions": [
           {
-            "person": "swyx",
-            "stance": "Describes how Legora builds agents that draft, edit, and review thousands of contracts for lawyers, showcasing the promise of AI‑augmented legal work.",
+            "person": "Nathan Lambert",
+            "stance": "Notes that current metrics for open‑model adoption are noisy and imprecise, urging careful analysis.",
             "posts": [
               {
-                "id": "69a46671059b",
-                "url": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora",
-                "via": "Latent Space",
+                "id": "93ee83f44d29",
+                "url": "https://interconnects.ai/p/how-well-can-we-measure-open-model",
+                "via": "Interconnects",
                 "kind": "post",
-                "date": "2026-11-02"
+                "date": "2026-11-04"
               }
             ]
           }
         ],
-        "video": "bJBEFzlKPoQ"
+        "image": "img/voices/93ee83f44d29.jpg",
+        "image_credit": "Interconnects",
+        "video": "zsO5RktNB7k"
       },
       {
-        "title": "LLMs erode trust in software documentation",
-        "summary": "A quote from Kyle Kingsbury notes that generative models make it easier to counterfeit documentation, threatening engineers’ confidence in software reliability. Maintainers are now asked to devise new verification methods to preserve quality and prove correctness.",
+        "title": "LLMs eroding trust in software documentation",
+        "summary": "Quotes from Kyle Kingsbury, shared by Simon Willison, argue that generative AI makes documentation and code harder to verify, prompting a call for new maintainer practices. Engineers discuss how to preserve reliability in an AI‑augmented workflow.",
         "positions": [
           {
             "person": "Simon Willison",
-            "stance": "Raises the question of what maintainers can do to ensure correct software and demonstrate quality in an era where LLM‑generated artifacts dominate.",
+            "stance": "Highlights Kyle Kingsbury’s claim that LLMs undermine confidence in documentation and urges maintainers to devise ways to prove quality.",
             "posts": [
               {
                 "id": "7a06514023fd",
@@ -551,6 +607,19 @@
                 "via": "Simon Willison",
                 "kind": "post",
                 "date": "2026-11-01"
+              }
+            ]
+          },
+          {
+            "person": "Ethan Mollick",
+            "stance": "Points out that the Labs’ approach treats software as a short‑term fundraising tool, which fuels skepticism about long‑term reliability.",
+            "posts": [
+              {
+                "id": "a38a31fd70bd",
+                "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzdotrufck2l",
+                "via": "Bluesky",
+                "kind": "post",
+                "date": "2026-11-02"
               }
             ]
           }
@@ -561,35 +630,35 @@
       {
         "id": "1818a08f7975",
         "person": "Ethan Mollick",
-        "why": "Shows a concrete, dramatic improvement from editing a tiny fraction of model weights, illustrating the practical power of weight‑space programming.",
+        "why": "Claims a 6× math improvement from editing just 0.016% of model weights, a striking performance boost.",
         "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l",
         "via": "Bluesky",
         "kind": "post",
         "title": "If this holds up, it is big: \"We asked GPT-6 Astra to edit Qwen3.5-0.8B weights to improve math. It directly changed…"
       },
       {
-        "id": "69a46671059b",
-        "person": "swyx",
-        "why": "Provides a detailed look at building AI agents for lawyers, highlighting a fast‑growing industry use case.",
-        "url": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora",
-        "via": "Latent Space",
+        "id": "93ee83f44d29",
+        "person": "Nathan Lambert",
+        "why": "Provides the most comprehensive dashboard for tracking open‑model adoption across the ecosystem.",
+        "url": "https://interconnects.ai/p/how-well-can-we-measure-open-model",
+        "via": "Interconnects",
         "kind": "post",
-        "title": "Building AI for Lawyers - Jacob Lauritzen, CTO of Legora. In this episode, we chat with Jacob Lauritzen, CTO of…",
-        "image": "img/voices/69a46671059b.jpg",
-        "video": "bJBEFzlKPoQ"
+        "title": "How big is the open model economy today?. My longest running agent testbed has been building the Interconnects…",
+        "video": "zsO5RktNB7k"
       },
       {
-        "id": "978b589fa01e",
+        "id": "7a06514023fd",
         "person": "Simon Willison",
-        "why": "Reveals how an executive order compromised Census data, calling into question the reliability of AI adoption metrics.",
-        "url": "https://bsky.app/profile/simonwillison.net/post/3mze2gvcx4s2u",
-        "via": "Bluesky",
+        "why": "Raises fundamental concerns about how AI‑generated code and docs threaten trust in software engineering.",
+        "url": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury",
+        "via": "Simon Willison",
         "kind": "post",
-        "title": "In updating a graphic showing U.S. company AI adoption over time according to a long-running U.S. Census Bureau…"
+        "title": "Quoting Kyle Kingsbury. More broadly, the use of LLMs erodes trust in documentation, in software, and in the…"
       }
     ],
     "people": [
       "Ethan Mollick",
+      "Nathan Lambert",
       "Simon Willison",
       "swyx"
     ],
