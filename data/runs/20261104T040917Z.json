@@ -1,0 +1,433 @@
+{
+  "started_at": "2026-11-04T04:09:17+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1354)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (896)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (17)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (28)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Training Specialist LLMs on Your Phone: Forward-Only Optimization via Block-Spectral Coordinates",
+      "reason": "score 4: On-device LLM training paper is incremental research without a major breakthrough; not newsworthy for Frontier Wire."
+    },
+    {
+      "title": "Accelerating Offloading-Based MoE Inference by Interleaving Concurrent Requests",
+      "reason": "score 4: MoE inference acceleration paper is a technical contribution but not a major advance; not news."
+    },
+    {
+      "title": "Density-Aware Reward Scaling: A Reinforcement Learning Framework for Reward-Proportional Sampling",
+      "reason": "score 4: Density-Aware Reward Scaling is an incremental RL method, not news."
+    },
+    {
+      "title": "ReSI-Math: Exploring Recoverable Capability Frontiers for Efficient Reasoning Improvement",
+      "reason": "score 4: ReSI-Math reasoning efficiency paper is incremental and lacks headline impact."
+    },
+    {
+      "title": "Kierston & KierstonBench: Simulation of Allentown, PA and Evaluation of Language Models in Crime Investigation and Surveillance Tasks",
+      "reason": "score 4: Benchmark for crime investigation is niche and not a major development."
+    },
+    {
+      "title": "Reducing Logprob Without Causal Verification: Diagnosing SAE-Based PII Suppression in LLMs",
+      "reason": "score 4: PII suppression safety paper is a niche study, not a major news item."
+    },
+    {
+      "title": "LIPS-PC: Learning Illumination Patterns for Single-Pixel Classification",
+      "reason": "score 4: LIPS-PC illumination patterns paper is a specialized imaging study."
+    },
+    {
+      "title": "Replica-Aware Split Inference for Edge IoT Systems",
+      "reason": "score 4: Replica-Aware Split Inference for Edge IoT is incremental IoT research."
+    },
+    {
+      "title": "Cooperative Multi-Agent Reinforcement Learning with Submodular Trajectory Rewards",
+      "reason": "score 4: Cooperative multi-agent RL with submodular rewards is a technical contribution, not headline news."
+    },
+    {
+      "title": "TactiNavi: Serving and Revising an LLM Game Coach with Explicit Strategy Conditions",
+      "reason": "score 4: TactiNavi LLM game coach system is a niche deployment case."
+    },
+    {
+      "title": "Koopman Generative Operators for Efficient Probabilistic Time-Series Forecasting",
+      "reason": "score 4: Koopman Generative Operators for time-series forecasting is incremental research."
+    },
+    {
+      "title": "When Should an LLM Steering Edit Depend on the Input?",
+      "reason": "score 4: Steering edit dependence paper is a technical study without broad impact."
+    },
+    {
+      "title": "Non-Interfering Asymmetric AdamW Updates for Constrained Exploration of Equifinality in Hybrid Models",
+      "reason": "score 4: Non-interfering asymmetric AdamW updates are a niche optimizer improvement."
+    },
+    {
+      "title": "What Does It Mean to Remove an Edge? Intervention-Aware Fidelity for Graph Neural Network Explanations",
+      "reason": "score 4: Intervention-aware fidelity for GNN explanations is a specialized ML paper."
+    },
+    {
+      "title": "TAPES: Task-Aligned Joint Predictive Pretraining for Transaction Event Sequences",
+      "reason": "score 4: TAPES for transaction event sequences is an applied ML paper, not a major breakthrough."
+    },
+    {
+      "title": "Hybrid acoustic and pretrained embedding feature fusion for unmanned aerial vehicle detection using stacking ensemble learning under a leakage-aware evaluation protocol",
+      "reason": "score 4: Hybrid acoustic and pretrained embedding for UAV detection is a niche application."
+    },
+    {
+      "title": "Cycle WAM: Coupling Action and Video through Cycle Consistency",
+      "reason": "score 4: Cycle WAM linking action and video is an incremental vision-language study."
+    },
+    {
+      "title": "DenseTwins: Dense Modality Decoupling for Multimodal Self-Supervision",
+      "reason": "score 4: DenseTwins multimodal self-supervision is a technical contribution."
+    },
+    {
+      "title": "CLARA: A Cognitively-Driven Clarification Framework for Grounding Ambiguous Requests",
+      "reason": "score 4: CLARA clarification framework is a niche robotics/LLM integration paper."
+    },
+    {
+      "title": "One-shot Distributed Learning via Weighted Averaging with Server-side Information",
+      "reason": "score 4: One-shot distributed learning via weighted averaging is incremental ML research."
+    },
+    {
+      "title": "When Ground Truth Is Not Ground Truth: Automatic Labeling for Hallucination Detection",
+      "reason": "score 4: Automatic labeling for hallucination detection is a useful but incremental study."
+    },
+    {
+      "title": "Surrogate Models for Stochastic Al-Cu Phase-Field Solidification",
+      "reason": "score 4: Surrogate models for phase-field solidification are a niche materials ML paper."
+    },
+    {
+      "title": "Uncertainty-Aware Prototype Learning for Open-Set Test-Time Adaptation",
+      "reason": "score 4: Uncertainty-aware prototype learning for open-set TTA is incremental."
+    },
+    {
+      "title": "CardioVascBench:Prioritized Diagnosis Generation from Real-World Chinese Cardiovascular Records",
+      "reason": "score 4: CardioVascBench benchmark is a valuable dataset but not a headline breakthrough."
+    },
+    {
+      "title": "MIMIC-Note-Extract: A Large-Scale Structured Dataset Extracted from MIMIC-IV-Note Discharge Summaries",
+      "reason": "score 4: MIMIC-Note-Extract dataset is useful for health AI but not a major news item."
+    },
+    {
+      "title": "Sheaf-MPNN: A Library for Sheaf Neural Networks as Message Passing",
+      "reason": "score 4: Sheaf-MPNN library is a software contribution, not headline news."
+    },
+    {
+      "title": "FedCSGA: Client Selection Based on Genetic Algorithm for Federated Learning",
+      "reason": "score 4: FedCSGA client selection for FL is incremental research."
+    },
+    {
+      "title": "Feature-Based and Deep Learning Methods for Astronomical Light Curve Classification",
+      "reason": "score 4: Astronomical light curve classification study is a niche application."
+    },
+    {
+      "title": "Best-of-Depth: Learning Exploratory Dynamics in Looped Transformers",
+      "reason": "score 4: Best-of-Depth for looped transformers is an incremental model training technique."
+    },
+    {
+      "title": "Leakage-free evaluation of residual graph convolutional networks for network intrusion detection",
+      "reason": "score 4: Leakage-free evaluation of residual GCNs for intrusion detection is a niche security ML paper."
+    },
+    {
+      "title": "Exploiting Biases in Attention for Transformers",
+      "reason": "score 4: Exploiting biases in attention for transformers is a technical analysis."
+    },
+    {
+      "title": "Therapy-FIS: A Dataset for Assessing Facilitative Interpersonal Skills in Psychotherapeutic Setting",
+      "reason": "score 4: Therapy-FIS dataset for psychotherapeutic skills is a niche health AI study."
+    },
+    {
+      "title": "Does LinUCB Need Valid Confidence Sets?",
+      "reason": "score 4: LinUCB confidence set analysis is an incremental bandit theory paper."
+    },
+    {
+      "title": "SAT Encoding for Set of At-Most-K Cardinality Constraints with Ladder Shape",
+      "reason": "score 4: SAT encoding for cardinality constraints is a specialized CS paper."
+    },
+    {
+      "title": "Self-Privileged Fine-Tuning",
+      "reason": "score 4: Self-Privileged Fine-Tuning is an incremental SFT improvement."
+    },
+    {
+      "title": "Evaluating LLMs as Judges of Counterspeech Quality Against Online Hate Speech",
+      "reason": "score 4: Evaluating LLMs as judges of counterspeech is an interesting study but not a breakthrough."
+    },
+    {
+      "title": "QueryFlow: Multi-Hop Graph Retrieval with Adaptive Query Evolution",
+      "reason": "score 4: QueryFlow multi-hop graph retrieval is a technical contribution."
+    },
+    {
+      "title": "Polyp Matching Using Deep Learning",
+      "reason": "score 4: Polyp matching using deep learning is a medical imaging study, not headline news."
+    },
+    {
+      "title": "Policy Network Diffusion",
+      "reason": "score 4: Policy Network Diffusion explores diffusion for RL policies, an incremental idea."
+    },
+    {
+      "title": "CAPSkip: Cancellation-Aware Prefix Skipping for Selective Backpropagation",
+      "reason": "score 4: CAPSkip selective backpropagation is a technical optimization paper."
+    },
+    {
+      "title": "Behind Video Generation: Observations and Insights on Multimodal Understanding from Kling",
+      "reason": "score 4: Hugging Face daily paper is a summary, not a new model release."
+    },
+    {
+      "title": "How I use AI (Oct 2026)",
+      "reason": "not AI: Personal blog post about individual AI usage; not newsworthy."
+    },
+    {
+      "title": "Canva to Lay Off 1,271 Employees, 22% of Workforce to Be Affected",
+      "reason": "not AI: Canva layoff story has no AI angle."
+    },
+    {
+      "title": "Human control must set limits on superintelligence, says OpenAI's Sam Altman",
+      "reason": "score 5: Sam Altman commentary on superintelligence control; interesting but not a major news event."
+    },
+    {
+      "title": "Google will cut off search access for students at schools that reject AI",
+      "reason": "duplicate of e420e884477a"
+    },
+    {
+      "title": "Tesla misled South Korean customers about automated-driving tech, consumer group alleges",
+      "reason": "score 4: Tesla mis‑leading claims about automated‑driving are about autonomous vehicles; AI is a secondary angle and not a major development."
+    },
+    {
+      "title": "Premji's deeptech bets; Razorpay gets IPO nod",
+      "reason": "score 5: Premji’s deep‑tech bets mention AI‑related investments but lack a concrete, news‑worthy AI development."
+    },
+    {
+      "title": "Why best consumer brands are built on everyday habits, not one-time marketing campaign",
+      "reason": "not AI: Consumer‑brand marketing piece; no AI relevance."
+    },
+    {
+      "title": "Meta raised $15B in a US dollar bond sale; sources: the offering drew as much as $58B in orders and is the biggest portion of a $20B+ cross-border bond offering (Bloomberg)",
+      "reason": "duplicate of 595052804154"
+    },
+    {
+      "title": "California accepts $1.42B in federal broadband funding, but challenges the Trump administration's demand that it stop enforcing state net neutrality rules (Jon Brodkin/Ars Technica)",
+      "reason": "not AI: Broadband funding and net neutrality are not AI related."
+    },
+    {
+      "title": "How Nvidia uses soft power to influence customers and shape US chip policy; sources: OpenAI took no public stance on China chip exports to avoid angering Nvidia (The Information)",
+      "reason": "score 5: Article discusses Nvidia's influence on US chip policy; AI is a secondary angle and the story lacks a major breakthrough or deal."
+    },
+    {
+      "title": "Anthropic's IPO Update: Compute Costs Absorb Most of Its Revenue Gain",
+      "reason": "duplicate of a4abd1e2a1c1"
+    },
+    {
+      "title": "Anthropic Posts Operating Loss in Q3, Compute Commitments Reach $895.4 Billion",
+      "reason": "duplicate of a4abd1e2a1c1"
+    },
+    {
+      "title": "Anthropic's S-1 Commits $500-800 Billion to Compute as Intel's Capacity Planning Fails Again",
+      "reason": "duplicate of a4abd1e2a1c1"
+    },
+    {
+      "title": "Anthropic’s Amended IPO Filing in 5 Numbers Before Its Nasdaq Debut",
+      "reason": "duplicate of a4abd1e2a1c1"
+    },
+    {
+      "title": "Google will let schools turn off AI, but they may also lose Search",
+      "reason": "duplicate of e420e884477a"
+    },
+    {
+      "title": "Google Is Forcing Schools to Choose Between Its Search Engine and AI",
+      "reason": "duplicate of e420e884477a"
+    },
+    {
+      "title": "Google Faces Political Backlash Over AI in School Search Policy",
+      "reason": "duplicate of e420e884477a"
+    },
+    {
+      "title": "Google ties school search access to its AI in K–12 policy reversal",
+      "reason": "duplicate of e420e884477a"
+    },
+    {
+      "title": "Schools Opting Out of AI Lose Google Search in 2027 [2026]",
+      "reason": "duplicate of e420e884477a"
+    },
+    {
+      "title": "Google responds to political backlash over removing search from schools that ban AI",
+      "reason": "duplicate of e420e884477a"
+    },
+    {
+      "title": "AMD's OpenAI, Meta chip deals trigger $1 billion quarterly charge",
+      "reason": "loosely AI: lower priority than this run's AI stories"
+    },
+    {
+      "title": "GIVA raises $100M in Multiples-led round; India’s Rs 3 lakh Cr data centre buildout",
+      "reason": "loosely AI: lower priority than this run's AI stories"
+    },
+    {
+      "title": "US tech giants' hidden AI debt swells 90% to $3.2T in 6 months",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Q&A with NYC Mayor Zohran Mamdani on new municipal AI policy measures, like an AI ban for some students, support for a one-year data center pause, and more (Katie Drummond/Wired)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Ted Schlein’s Ballistic Ventures seeks $490M for new funds amid AI-driven cybersecurity boom",
+      "reason": "could not verify yet after a second try; dropped"
+    }
+  ],
+  "written": [
+    {
+      "id": "ae8a522c4221",
+      "headline": "IndiaAI Mission unveils three indigenous AI foundation models",
+      "category": "models",
+      "summary": "The IndiaAI Mission released three domestically developed foundation models—EKA‑1 by Soket AI Labs and Dhīr 2B and Dhīr 5B by ZenteiQ AiTech Innovations—at a New Delhi event on Nov 3. EKA‑1 is a 26.3‑billion‑parameter model supporting 22 Indian languages, while the Dhīr models are open‑source multilingual assistants designed for on‑premise and offline use.",
+      "url": "https://analyticsindiamag.com/ai-news/indiaai-mission-releases-3-indigenous-ai-models-developed-by-soket-zenteiq",
+      "sources": 3,
+      "quotes": 2
+    },
+    {
+      "id": "88d7432c1d48",
+      "headline": "Anthropic open-sources FlashProve for provable inference on Llama 4 Maverick",
+      "category": "research",
+      "summary": "Anthropic released an open‑source prototype called FlashProve that can cryptographically prove a response came from a specified model. On a single H100 GPU it generates proofs for the 400‑billion‑parameter Llama 4 Maverick at about 110 tokens per second, with proof files around 19 MB per 1,024‑token request.",
+      "url": "https://blockchain.news/news/anthropic-provable-inference-flashprove-llama-4-maverick",
+      "sources": 3,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "not India desk: 'AMD's OpenAI, Meta chip deals trigger $1 billion q'",
+    "1 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 83.5,
+    "audit": 0.0,
+    "plan": 2.2,
+    "judge": 26.2,
+    "verify and write": 386.0,
+    "videos": 2.4,
+    "tagging": 20.8,
+    "explainers": 0.0,
+    "trackers": 107.0,
+    "claims": 20.7,
+    "model tracker": 0.2,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 41.5,
+    "self-review": -0.0,
+    "photos": 0.5,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 4.8
+  },
+  "fetched": 2936,
+  "fresh": 59,
+  "plan": {
+    "focus": "Tracking Anthropic’s financing strain and Google’s school AI rollout while bolstering model‑tech coverage.",
+    "priorities": [
+      "Training Specialist LLMs on Your Phone: Forward-Only Optimization via  (On‑device LLM training paper links to cost‑saving trends relevant to school AI tool debates and emerging business models.)",
+      "Accelerating Offloading-Based MoE Inference by Interleaving Concurrent (MoE inference acceleration directly addresses Anthropic’s compute‑cost pressures and industry‑wide inference cost cuts.)",
+      "Reducing Logprob Without Causal Verification: Diagnosing SAE-Based PII (Paper on PII suppression offers safety insights amid rising scrutiny of model privacy practices.)",
+      "Evaluating LLMs as Judges of Counterspeech Quality Against Online Hate (Evaluating LLMs as judges of counterspeech ties to policy discussions around AI in education and content moderation.)",
+      "ReSI-Math: Exploring Recoverable Capability Frontiers for Efficient Re (ReSI‑Math advances reasoning efficiency, useful for developers building AI‑assisted tools in the industry.)"
+    ],
+    "thin_areas": [
+      "models"
+    ],
+    "searches": [
+      "Anthropic compute cost Q4 2026: 4 new",
+      "Google school AI policy response: 6 new",
+      "latest large language model release 2026: 1 new"
+    ],
+    "dig_deeper": [
+      "Accelerating Offloading-Based MoE Inference by Interleaving Concurrent",
+      "Training Specialist LLMs on Your Phone: Forward-Only Optimization via "
+    ]
+  },
+  "judged": 70,
+  "kept": 7,
+  "research": {
+    "investigated": 5,
+    "confirmed": 2,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "US tech giants' hidden AI debt swells 90% to $3.2T in 6 months: unconfirmed (searched “\"hidden AI debt\" \"3.2 trillion\"”; searched “\"$3.2 trillion\" AI debt”; searched “\"AI debt\" \"3.2 trillion\"”)",
+    "IndiaAI Mission Releases 3 Indigenous AI Models Developed by Soket, Ze: confirmed (searched “IndiaAI Mission releases 3 indigenous AI models Soket ZenteiQ”; read inc42.com; read livemint.com)",
+    "Q&A with NYC Mayor Zohran Mamdani on new municipal AI policy measures,: unconfirmed (searched “Zohran Mamdani AI policy Wired interview”; read wired.com; searched “\"AI ban\" \"Zohran Mamdani\"”)",
+    "Anthropic reports progress on provable inference for large language mo: confirmed (searched “Anthropic provable inference large language models Flashprove”; read techcrunch.com; read 36kr.com)",
+    "Ted Schlein’s Ballistic Ventures seeks $490M for new funds amid AI-dri: unconfirmed (searched “Ballistic Ventures seeks $490 million new fund AI cybersecurity”; read startupfortune.com; read androguider.com)"
+  ],
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "tagged": 2,
+  "trackers": "filed 2 stories; updated frontier-race, india-ai",
+  "claims": "87 tracked, 82 open, 0 updated this run",
+  "model_tracker": "82 models, 9 changes today",
+  "briefing": "3 themes from 20 stories (1 removed by checks)",
+  "india_briefing": "3 themes from 3 stories",
+  "photos": "2 saved, 0 unavailable",
+  "alerts": "14 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":26}",
+  "ai_requests_run": 35,
+  "ai_tokens_run": 108864,
+  "ai_requests_today": 73,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
+}

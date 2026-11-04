@@ -1,6 +1,101 @@
 [
   {
     "explainer": {
+      "what_it_means": "EKA‑1 can understand and generate text in all 22 scheduled Indian languages and English, enabling applications in banking, finance and cybersecurity. The Dhīr models can run on devices such as phones or local servers without internet, allowing private data to stay on‑premise. Their open‑source licences let developers modify and integrate them into custom solutions.",
+      "terms": [
+        {
+          "term": "Foundation model",
+          "meaning": "A large AI model trained on broad data that can be adapted for many downstream tasks."
+        },
+        {
+          "term": "Sparse hybrid language model",
+          "meaning": "A model that combines dense and sparse parameters to reduce compute while maintaining performance."
+        },
+        {
+          "term": "Mixture-of-experts",
+          "meaning": "An architecture that activates only a subset of model components for each input, making inference more efficient."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers can access multilingual, offline‑capable models for building applications in Indian languages.",
+      "business": "Enterprises can deploy AI locally, reducing reliance on cloud services and enhancing data security.",
+      "investors": "The launch showcases the growth of Indian AI startups backed by government support, indicating potential investment opportunities."
+    },
+    "id": "ae8a522c4221",
+    "headline": "IndiaAI Mission unveils three indigenous AI foundation models",
+    "summary": "The IndiaAI Mission released three domestically developed foundation models—EKA‑1 by Soket AI Labs and Dhīr 2B and Dhīr 5B by ZenteiQ AiTech Innovations—at a New Delhi event on Nov 3. EKA‑1 is a 26.3‑billion‑parameter model supporting 22 Indian languages, while the Dhīr models are open‑source multilingual assistants designed for on‑premise and offline use.",
+    "why_it_matters": "The models provide India with locally tailored AI capabilities and the ability to run AI securely without cloud connectivity.",
+    "category": "models",
+    "lab": "Soket AI Labs and ZenteiQ AiTech Innovations",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "The development of indigenous models would strengthen India's technological autonomy in artificial intelligence and create opportunities to improve productivity across government, industry, research and education.",
+        "speaker": "S. Krishnan",
+        "speaker_role": "Secretary, Ministry of Electronics and Information Technology (MeitY)",
+        "source_url": "https://analyticsindiamag.com/ai-news/indiaai-mission-releases-3-indigenous-ai-models-developed-by-soket-zenteiq"
+      },
+      {
+        "text": "Models like Dhīr 2B and Dhīr 5B offer the flexibility to run across different computing platforms, including GPUs and TPUs. Their lightweight architecture also enables on-device deployment on mobile phones, without dependence on cloud connectivity,",
+        "speaker": "Prof Sashikumar",
+        "speaker_role": "CEO, ZenteiQ AiTech Innovations",
+        "source_url": "https://analyticsindiamag.com/ai-news/indiaai-mission-releases-3-indigenous-ai-models-developed-by-soket-zenteiq"
+      }
+    ],
+    "score": 7,
+    "url": "https://analyticsindiamag.com/ai-news/indiaai-mission-releases-3-indigenous-ai-models-developed-by-soket-zenteiq",
+    "source_id": "aim",
+    "desk": "india",
+    "ai_relevance": "core",
+    "image": "https://analyticsindiamag.com/cdn-cgi/image/width=1200,quality=60,format=jpeg,fit=scale-down/https://zdpdvwhvukelzzbzbjvh.supabase.co/storage/v1/object/public/imported-images/1767147175632-53779a8a-0e60-4305-a5f5-338681ee4b2f-it5t7e.webp",
+    "sources": [
+      {
+        "url": "https://analyticsindiamag.com/ai-news/indiaai-mission-releases-3-indigenous-ai-models-developed-by-soket-zenteiq",
+        "publisher": "Analytics India Magazine",
+        "title": "IndiaAI Mission Releases 3 Indigenous AI Models Developed by Soket, ZenteiQ"
+      },
+      {
+        "url": "https://inc42.com/buzz/soket-labs-zenteiq-launch-indigenous-ai-models",
+        "publisher": "Inc42",
+        "title": "Soket Labs & ZenteiQ Launch Indigenous AI Models"
+      },
+      {
+        "url": "https://livemint.com/technology/meity-unveils-indigenous-ai-models-eka-1-dh-r-2b-and-5b-under-indiaai-mission-11793720433461.html",
+        "publisher": "Mint Technology",
+        "title": "MeitY unveils indigenous AI Models EKA-1, Dhīr 2B and 5B under IndiaAI mission"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-04T03:28:05+00:00",
+    "created_at": "2026-11-04T04:09:17+00:00",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "india"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "26.3‑billion",
+    "trackers": [
+      "india-ai"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Schools can turn on or off each Google AI component—Gemini, NotebookLM, and the AI‑enhanced Search—separately. If a school disables all AI tools, the integrated search engine will also be unavailable.",
       "terms": [
         {
@@ -2254,6 +2349,104 @@
     "cover": "$45 million",
     "trackers": [
       "ai-money"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "FlashProve lets anyone check that a piece of text was generated by a particular AI model without revealing the model’s internal weights. It creates a cryptographic proof that can be verified on a local device. The proof is larger than the text itself, about 19 MB for a 1,024‑token output.",
+      "terms": [
+        {
+          "term": "zkSNARK",
+          "meaning": "A type of zero‑knowledge proof that is short and can be verified quickly, used here to hide model weights while proving inference results."
+        },
+        {
+          "term": "provable inference",
+          "meaning": "A method that produces a mathematical guarantee that a model’s output originated from that model."
+        },
+        {
+          "term": "mixture‑of‑experts model",
+          "meaning": "A large neural network that routes parts of the computation to specialized sub‑models, allowing very large parameter counts."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "Llama 4 Maverick",
+        "benchmark": "Proof generation throughput",
+        "score": "110 tokens per second on a single H100 GPU"
+      },
+      {
+        "model": "Llama 4 Maverick",
+        "benchmark": "Proof size per 1,024‑token request",
+        "score": "19 MB"
+      }
+    ],
+    "audiences": {
+      "builders": "FlashProve provides an open‑source tool and code for generating and verifying model‑identity proofs, useful for developers building AI pipelines that need provenance guarantees.",
+      "business": "The prototype offers a way for companies to confirm that AI services are delivering the promised model, helping address compliance and cost‑verification concerns.",
+      "investors": "The work signals growing interest in technical solutions for AI trust and could influence future investments in verification infrastructure."
+    },
+    "id": "88d7432c1d48",
+    "headline": "Anthropic open-sources FlashProve for provable inference on Llama 4 Maverick",
+    "summary": "Anthropic released an open‑source prototype called FlashProve that can cryptographically prove a response came from a specified model. On a single H100 GPU it generates proofs for the 400‑billion‑parameter Llama 4 Maverick at about 110 tokens per second, with proof files around 19 MB per 1,024‑token request.",
+    "why_it_matters": "It gives users a way to verify that AI outputs are produced by the model they expect, addressing trust and compliance concerns.",
+    "category": "research",
+    "lab": "Anthropic",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "provable inference",
+      "zero-knowledge",
+      "open source"
+    ],
+    "quotes": [],
+    "score": 6,
+    "url": "https://blockchain.news/news/anthropic-provable-inference-flashprove-llama-4-maverick",
+    "source_id": "chief",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://image.blockchain.news:443/features/EEF942587C092BBC865AE434AF7F9392163C996AC4BB6F3A474D06B1E81E0F4F.jpg",
+    "sources": [
+      {
+        "url": "https://blockchain.news/news/anthropic-provable-inference-flashprove-llama-4-maverick",
+        "publisher": "Blockchain News",
+        "title": "Anthropic reports progress on provable inference for large language models"
+      },
+      {
+        "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity",
+        "publisher": "TechCrunch AI",
+        "title": "Anthropic is working on a system to prove AI models’ identity"
+      },
+      {
+        "url": "https://eu.36kr.com/en/p/4054648135930754",
+        "publisher": "eu.36kr",
+        "title": "Just now, Anthropic open-sourced FlashProve, issuing an \"anti-counterfeiting ID card\" for large language models."
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-02T21:46:00+00:00",
+    "created_at": "2026-11-04T04:09:17+00:00",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "400‑billion",
+    "trackers": [
+      "frontier-race"
     ],
     "photo_local": true
   },
