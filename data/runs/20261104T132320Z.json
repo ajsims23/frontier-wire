@@ -1,0 +1,405 @@
+{
+  "started_at": "2026-11-04T13:23:20+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1354)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (896)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (19)",
+    "gdelt": "ok (19)",
+    "hn": "ok (18)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (1)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Google , accused of trying to bully schools into using AI , backs off from announced change",
+      "reason": "duplicate of e420e884477a"
+    },
+    {
+      "title": "Alaska U . S . Senate race draws significant donations from AI company employees",
+      "reason": "score 4: Mentions AI‑company employee donations in an Alaska Senate race – peripheral political finance, not core AI news."
+    },
+    {
+      "title": "Google Search Volume Is About 5x ChatGPT , OpenAI Says",
+      "reason": "score 5: Compares Google search volume to ChatGPT; interesting but only a minor market metric."
+    },
+    {
+      "title": "Existential AI threat triggers Canva mass job cuts",
+      "reason": "score 5: Canva job cuts attributed to AI threat; notable but not a major industry shift."
+    },
+    {
+      "title": "The Trust Gap in AI - Powered Cybersecurity",
+      "reason": "score 4: Opinion piece on AI‑powered cybersecurity trust gap; lacks a news hook."
+    },
+    {
+      "title": "S & P 500 rises as Nvidia , AI stocks rally despite Apple decline",
+      "reason": "score 5: Market move (Nvidia rally) without a specific AI development; falls below news threshold."
+    },
+    {
+      "title": "AI Has Low Impact On Job Vacancies In August : Australia",
+      "reason": "score 4: Australian analysis showing low AI impact on job vacancies; minor regional insight."
+    },
+    {
+      "title": "Most AI Labs Stay Mum on the Risks They Create",
+      "reason": "score 4: General commentary on AI labs’ risk communication; not a news event."
+    },
+    {
+      "title": "Google will cut off search access for students at schools that reject AI",
+      "reason": "duplicate of e420e884477a"
+    },
+    {
+      "title": "St . Louis County , Mo ., Council Turns to AI for Budget Cuts",
+      "reason": "score 5: Local council exploring AI for budget cuts; interesting but not a major AI development."
+    },
+    {
+      "title": "In the news today : U . S . midterms today , Carney in Antigua , is AI stealing youth jobs ?",
+      "reason": "not AI: General news roundup with only a passing mention of AI; not a dedicated AI story."
+    },
+    {
+      "title": "AI is forcing us to pay off 40 years of technical debt",
+      "reason": "score 4: Opinion on technical debt; no concrete AI news."
+    },
+    {
+      "title": "Geoffrey Hinton: it might turn out we were better off without AI",
+      "reason": "score 4: Geoffrey Hinton’s cautionary remarks; commentary rather than news."
+    },
+    {
+      "title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
+      "reason": "score 5: Nvidia RTX Spark firmware slowdown; technical detail not a major AI story."
+    },
+    {
+      "title": "Giant canyon on Mars is still tectonically active",
+      "reason": "not AI: Mars geology article unrelated to AI."
+    },
+    {
+      "title": "Incident with Pull Requests, Git Operations and Issues",
+      "reason": "not AI: GitHub incident unrelated to AI."
+    },
+    {
+      "title": "TechCrunch Founder Summit 2026: Doors open at 9 a.m. ET in Boston",
+      "reason": "not AI: TechCrunch Founder Summit announcement, not AI‑specific news."
+    },
+    {
+      "title": "Securing the agentic enterprise with data lineage",
+      "reason": "score 5: Discussion of data lineage for agentic enterprises; interesting but not a breakthrough."
+    },
+    {
+      "title": "Bengaluru Accounts for 34% of India's FDE Talent: Report",
+      "reason": "not AI: Talent distribution report; no AI angle."
+    },
+    {
+      "title": "84% See AI Productivity Gains, but Only 10% Allow Agent Autonomy: TCS Study",
+      "reason": "score 5: TCS study on AI productivity gains; interesting but only adjacent insight and below threshold."
+    },
+    {
+      "title": "PhysicsWallah Returns To The Black In Q2, Posts A Profit of ₹143.6 Cr",
+      "reason": "not AI: PhysicsWallah financial results; no AI relevance."
+    },
+    {
+      "title": "Nykaa’s Q2 Profit More Than Triples To ₹101 Cr, Revenue Up 28% YoY",
+      "reason": "not AI: Nykaa financials; no AI component."
+    },
+    {
+      "title": "Lenskart Q2 Profit Jumps 125% YoY To ₹233 Cr, Revenue Rises 36%",
+      "reason": "not AI: Lenskart profit report; no AI relevance."
+    },
+    {
+      "title": "MapmyIndia Q2: Profit Rises 90% YoY To ₹35 Cr, Revenue Up 16%",
+      "reason": "not AI: MapmyIndia profit; not AI."
+    },
+    {
+      "title": "Pine Labs Partners With Stripe To Unify Online, In-Store Payments In Singapore",
+      "reason": "not AI: Pine Labs‑Stripe partnership; AI not central."
+    },
+    {
+      "title": "Decision Models Go Live, GIVA Nets $103 Mn & More",
+      "reason": "score 5: Decision‑model launch news; not significant enough for coverage."
+    },
+    {
+      "title": "AI moves beyond recommendations to reshape entire shopping experience on e-commerce apps: Report",
+      "reason": "score 5: Report on AI reshaping e‑commerce experience; not a major breakthrough."
+    },
+    {
+      "title": "Realme 17T 5G live images reveal redesigned camera module and slimmer bezels ahead of launch",
+      "reason": "not AI: Realme phone leak; not AI."
+    },
+    {
+      "title": "Uber's profit forecast disappoints as driver shortages, Middle East conflict hurt",
+      "reason": "not AI: Uber profit forecast; AI not central."
+    },
+    {
+      "title": "Tech funding hits 12-month low of $592 million in October; late-stage funding plunges 72%",
+      "reason": "not AI: Tech funding dip; no AI focus."
+    },
+    {
+      "title": "Lenskart's profit doubles, revenue grows 36% in Q2",
+      "reason": "not AI: Financial results of Lenskart; no AI angle."
+    },
+    {
+      "title": "Frammer AI partners with Collective Newsroom to power BBC News video in India",
+      "reason": "score 5: Frammer AI partnership for BBC video workflows in India; interesting but not a major news item."
+    },
+    {
+      "title": "Cabinet approves Rs 2,814 Cr scheme to promote processing of lithium, nickel",
+      "reason": "not AI: Cabinet scheme for lithium/nickel processing; no AI component."
+    },
+    {
+      "title": "Razorpay gets Sebi nod for Rs 5,000-6,000 Cr IPO; eyes $5B valuation",
+      "reason": "not AI: Razorpay IPO filing; not AI‑related."
+    },
+    {
+      "title": "Stockal investors allege unauthorised sale of US stocks worth millions",
+      "reason": "not AI: Stockal alleged unauthorized trades; not AI."
+    },
+    {
+      "title": "Most Venture Capital Is Going To Companies That Are Founded Or Led By Billionaires",
+      "reason": "score 4: VC funding trends focusing on billionaire‑led firms; not AI‑centric."
+    },
+    {
+      "title": "Uber reports Q3 revenue up 10% YoY to $14.8B, Gross Bookings up 20% to $59.8B, trips up 16% to 4B, and plans to scale its autonomous fleet to 2,000+ in 2027 (Rafe Rosner-Uddin/Financial Times)",
+      "reason": "score 4: Uber earnings and autonomous fleet plans; AI component not central."
+    },
+    {
+      "title": "HP names former GSK CEO Emma Walmsley as its new CEO, effective January 4, permanently filling the role after HP's Enrique Lores departed in February 2026 (Bloomberg)",
+      "reason": "not AI: HP CEO appointment unrelated to AI."
+    },
+    {
+      "title": "Elon Musk's preferred US midterm candidates, including Ken Paxton and Vivek Ramaswamy, lost almost everywhere; Musk spent ~$446M, a record for a non-candidate (Calder Mchugh/Politico)",
+      "reason": "score 4: Political analysis of Musk‑backed candidates; AI relevance limited to data‑center context."
+    },
+    {
+      "title": "NBC exit poll: 56% said AI and data centers had been a \"crucial or a major factor\" in their Congress votes, as Democratic candidates pledged to halt development (Financial Times)",
+      "reason": "score 5: Exit poll showing AI/data‑center influence on votes; interesting but not a standalone news piece."
+    },
+    {
+      "title": "Could Google block schools that opt out of AI from search function?",
+      "reason": "duplicate of e420e884477a"
+    },
+    {
+      "title": "Google Is Holding Its Search Engine Hostage From Schools That Don’t Want AI",
+      "reason": "duplicate of e420e884477a"
+    },
+    {
+      "title": "Bernie Sanders Calls Google’s AI-in-Schools Move “Extortion”",
+      "reason": "duplicate of e420e884477a"
+    },
+    {
+      "title": "Google ties school Search access to its AI in K–12 policy reversal",
+      "reason": "duplicate of e420e884477a"
+    },
+    {
+      "title": "Google criticized by NYC mayor Zohran Mamdani for trying 'to force AI into our public schools'",
+      "reason": "duplicate of e420e884477a"
+    },
+    {
+      "title": "Voters reject data centers across the country as the AI backlash grows",
+      "reason": "score 5: Duplicate of broader data‑center ban coverage; story already captured."
+    },
+    {
+      "title": "Anthropic’s FlashProve Could Verify the True Identity of AI Models",
+      "reason": "duplicate of c7ca507a9ed8"
+    },
+    {
+      "title": "Anthropic Releases FlashProve to Verify AI Model Responses",
+      "reason": "duplicate of c7ca507a9ed8"
+    },
+    {
+      "title": "Anthropic uses cryptography to verify model outputs without exposing weights",
+      "reason": "duplicate of c7ca507a9ed8"
+    },
+    {
+      "title": "US voters in 29+ jurisdictions overwhelmingly pass data center bans or restrictions; S&P says 145+ US projects were delayed or canceled through early August (Washington Post)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Democrats' US midterms victory is a win for hyperscalers and AI labs, a mixed bag for Nvidia, an advantage to China, and may make space data centers attractive (Ben Thompson/Stratechery)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Tencent releases its Hy4 open-weight foundation model, which it says joins the top tier of Chinese open-weight AI for the first time, and plans a Flash version (Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Google hasn&#8217;t figured out how to make AI pay like its search engine",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Snowflake Introduces Business Ontology, Cortex AI Gateway to Bring AI Agents Into Enterprise Workflows",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Interview: CERT-In chief on AI agent incidents, prompt injection and who must report them",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "NPCI Expands Beyond Payments With AI, Blockchain-Focused Subsidiary",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "DSCI Floats Framework To Determine Liability For Harm Caused By AI Agents",
+      "reason": "could not verify yet after a second try; dropped"
+    }
+  ],
+  "written": [
+    {
+      "id": "f3cef08b4a75",
+      "headline": "Google lets schools disable Gemini but forces AI in Search",
+      "category": "policy",
+      "summary": "Google announced that K‑12 administrators can turn off Gemini, Gemini Notebook and AI features individually. However, schools that block AI will also lose access to Google Search, which now always includes AI Mode and AI Overviews.",
+      "url": "https://medianama.com/2026/11/223-google-schools-switch-off-gemini",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "b7b76f1b4a35",
+      "headline": "CrowdStrike to acquire Fiddler AI and Dreadnode for $495 million",
+      "category": "industry",
+      "summary": "CrowdStrike announced agreements to buy AI agent observability firm Fiddler AI for about $400 million and AI security testing startup Dreadnode for about $95 million. The deals are slated to close by Jan. 31 2027 and will extend the Falcon platform with pre‑deployment testing and runtime monitoring tools.",
+      "url": "https://govinfosecurity.com/crowdstrike-to-buy-ai-security-startups-for-495m-a-33285",
+      "sources": 3,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "not India desk: 'Snowflake Introduces Business Ontology, Cortex AI '",
+    "not India desk: 'Google lets schools switch off Gemini, but AI in S'",
+    "not India desk: 'AMD's OpenAI, Meta chip deals trigger $1 billion q'",
+    "not India desk: 'Microsoft $25 Billion Bond Sale for AI Growth - Pr'",
+    "ignored made-up duplicate id bf2c324372a8 for 'Voters reject data centers across the country as t'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "24 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 109.6,
+    "audit": 0.0,
+    "plan": 59.8,
+    "judge": 5.3,
+    "verify and write": 406.2,
+    "videos": 22.0,
+    "tagging": 20.7,
+    "explainers": -0.0,
+    "trackers": 84.5,
+    "claims": 20.7,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 21.2,
+    "self-review": -0.0,
+    "photos": 0.2,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 1.7
+  },
+  "fetched": 2948,
+  "fresh": 67,
+  "plan": {
+    "focus": "Tracking the fallout from Google’s school AI restrictions while bolstering our thin policy and safety coverage.",
+    "priorities": [
+      "Google lets schools switch off Gemini, but AI in Search is all or noth (Direct update on Google’s school AI opt‑out move, key to the ongoing policy storyline.)",
+      "Google hasn&#8217;t figured out how to make AI pay like its search eng (Analyzes Google’s struggle to monetize AI in Search, tying into broader AI‑finance policy debate.)",
+      "Democrats running on AI regulation and anti-data center platforms won  (Shows political momentum for AI regulation after midterms, relevant to policy coverage.)",
+      "US voters in 29+ jurisdictions overwhelmingly pass data center bans or (Data‑center bans signal regulatory pressure affecting AI infrastructure, a policy hot‑spot.)",
+      "Democrats' US midterms victory is a win for hyperscalers and AI labs,  (Midterm results impact hyperscalers and AI labs, extending the policy narrative.)"
+    ],
+    "thin_areas": [
+      "policy",
+      "safety"
+    ],
+    "searches": [
+      "Google school AI opt out policy: 6 new",
+      "US data center AI regulation bills: 6 new",
+      "AI model response verification standards: 3 new"
+    ],
+    "dig_deeper": [
+      "Google lets schools switch off Gemini, but AI in Search is all or noth",
+      "US voters in 29+ jurisdictions overwhelmingly pass data center bans or"
+    ]
+  },
+  "judged": 77,
+  "kept": 23,
+  "research": {
+    "investigated": 5,
+    "confirmed": 2,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "Google lets schools switch off Gemini, but AI in Search is all or noth: confirmed (searched “Google schools switch off Gemini AI Search AI Overviews AI Mode”; read nytimes.com; read techcrunch.com)",
+    "US voters in 29+ jurisdictions overwhelmingly pass data center bans or: unconfirmed (searched “US voters 29 jurisdictions data center bans S&P 145 projects delayed August”; read msn.com; searched “\"145\" US data center projects delayed or canceled S&P August”)",
+    "Democrats' US midterms victory is a win for hyperscalers and AI labs, : unconfirmed (searched “Democrats US midterms victory win for hyperscalers AI labs mixed bag for Nvidia advantage to China space data centers Stratechery”; searched “Ben Thompson Stratechery Democrats midterms hyperscalers AI labs mixed bag Nvidia advantage China space data centers”; searched “\"Democrats' US midterms victory\" \"hyperscalers\"”)",
+    "Tencent releases its Hy4 open-weight foundation model, which it says j: unconfirmed (searched “Tencent Hy4 foundation model”; read yahoo.com; read msn.com)",
+    "CrowdStrike to Buy AI Security Startups for $495M: confirmed (searched “CrowdStrike to buy AI security startups for $495 million”; read wsj.com; read securityweek.com)"
+  ],
+  "threads": [
+    "Google school AI tool rollout response: Google lets schools disable Gemini but forces AI in Search"
+  ],
+  "videos": {
+    "OpenAI": "ok (10 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (9 in feed, 0 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 3 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 1 new)",
+    "Training Data (Sequoia)": "ok (3 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (0 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "4 kept from 5 new",
+  "tagged": 2,
+  "trackers": "filed 2 stories; updated agent-safety, ai-money",
+  "claims": "91 tracked, 86 open, 0 updated this run",
+  "model_tracker": "82 models, 17 changes today",
+  "briefing": "4 themes from 19 stories",
+  "photos": "2 saved, 0 unavailable",
+  "alerts": "23 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":15}",
+  "ai_requests_run": 35,
+  "ai_tokens_run": 107728,
+  "ai_requests_today": 168,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
+}

@@ -1,10 +1,10 @@
 {
-  "written_at": "2026-11-04T07:32:58+00:00",
-  "one_line": "AI safety tools debut, Anthropic’s costs rise, Google faces Gemini policy pressure, and AI firms secure billions.",
+  "written_at": "2026-11-04T13:23:20+00:00",
+  "one_line": "AI safety tools, funding deals, product integrations, and new models dominate today's AI landscape.",
   "themes": [
     {
-      "title": "New tools verify AI safety",
-      "text": "Anthropic released FlashProve, an open‑source system that generates cryptographic proofs that a language‑model reply came from a specific set of weights. Researchers also introduced PEARL, a reinforcement‑learning method that suppresses misaligned behaviors and remains effective after further fine‑tuning.",
+      "title": "Tools to verify and align AI",
+      "text": "Anthropic released FlashProve, an open‑source prototype that generates cryptographic proofs that a language‑model reply came from a specific set of weights, running at about 110 tokens per second with proofs of ~19 MB. Researchers also introduced PEARL, a reinforcement‑learning method that suppresses misaligned behaviors in language models and remains effective after further fine‑tuning, demonstrated on Qwen3‑4B and GPT‑OSS‑20B.",
       "stories": [
         {
           "id": "c7ca507a9ed8",
@@ -19,45 +19,8 @@
       ]
     },
     {
-      "title": "Anthropic’s costs and staff changes",
-      "text": "Anthropic’s compute spending rose to $10 billion, representing 58 % of its Q3 revenue and widening its operating loss. In the same period, product leaders Cat Wu and Thariq Shihipar left the company’s Claude Code team.",
-      "stories": [
-        {
-          "id": "a4abd1e2a1c1",
-          "headline": "Anthropic compute costs rise to 58% of revenue in Q3, widening operating loss",
-          "url": "https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute"
-        },
-        {
-          "id": "d0607802272d",
-          "headline": "Cat Wu and Thariq Shihipar leave Anthropic product team for Claude Code",
-          "url": "https://techmeme.com/261103/p43"
-        }
-      ]
-    },
-    {
-      "title": "Google policy pressures on Gemini",
-      "text": "An EU court adviser warned that Google’s Gemini chatbot may infringe press copyrights when reproducing articles. Google also announced that schools blocking Gemini will lose Search access, while later allowing administrators to enable Gemini, NotebookLM, and Search separately.",
-      "stories": [
-        {
-          "id": "5bf107852b8f",
-          "headline": "EU court adviser says Google’s Gemini may infringe press copyright",
-          "url": "https://livemint.com/technology/google-ai-chatbots-use-of-press-items-may-infringe-copyright-rules-eu-court-adviser-says-11793703192614.html"
-        },
-        {
-          "id": "6df21e5a1561",
-          "headline": "Google disables Search for schools that reject its AI tools",
-          "url": "https://theverge.com/tech/1025411/google-turn-off-search-ai-features"
-        },
-        {
-          "id": "e420e884477a",
-          "headline": "Google lets schools enable Gemini, NotebookLM and Search separately after backlash",
-          "url": "https://techmeme.com/261103/p44"
-        }
-      ]
-    },
-    {
-      "title": "AI firms secure major funding",
-      "text": "Meta announced a cross‑border bond offering that could raise at least $20 billion for AI and data‑center expansion. AI inference startup Fal was valued at $16 billion after a $1.3 billion round, Traversal raised $120 million at a $1 billion valuation, and CrowdStrike agreed to acquire Fiddler AI for $400 million and Dreadnode for $95 million.",
+      "title": "AI funding and acquisitions surge",
+      "text": "Meta Platforms is preparing a cross‑border investment‑grade bond sale that could raise at least $20 billion to fund AI and data‑center expansion. AI inference startup Fal raised $1.3 billion in a Series F round, valuing it at $16 billion after reporting $800 million in annualized revenue. Traversal secured $120 million in a Series B round, reaching a $1 billion valuation for its AI‑agent platform used in site reliability engineering. CrowdStrike announced agreements to acquire Fiddler AI for about $400 million and Dreadnode for about $95 million to extend its Falcon platform.",
       "stories": [
         {
           "id": "595052804154",
@@ -78,6 +41,43 @@
           "id": "6a9cc38190a7",
           "headline": "CrowdStrike to acquire Fiddler AI for $400 million and Dreadnode for $95 million",
           "url": "https://techmeme.com/261103/p17"
+        }
+      ]
+    },
+    {
+      "title": "AI features in consumer and schools",
+      "text": "Apple announced that developers can integrate Siri AI into any iOS, iPadOS, macOS, and visionOS app via App Intents, starting with the iOS 27.3 beta. Google said K‑12 administrators can turn off Gemini, Gemini Notebook, and other AI features, but schools that block AI will also lose access to Google Search, which now always includes AI Mode and AI Overviews.",
+      "stories": [
+        {
+          "id": "2422d50634d5",
+          "headline": "Apple opens Siri AI to all developers via App Intents in iOS 27.3 beta",
+          "url": "https://techmeme.com/261103/p27"
+        },
+        {
+          "id": "f3cef08b4a75",
+          "headline": "Google lets schools disable Gemini but forces AI in Search",
+          "url": "https://medianama.com/2026/11/223-google-schools-switch-off-gemini"
+        }
+      ]
+    },
+    {
+      "title": "New models and benchmark released",
+      "text": "The IndiaAI Mission unveiled three domestically developed foundation models—EKA‑1, Dhīr 2B, and Dhīr 5B—supporting multiple Indian languages and designed for on‑premise and offline use. Simon Willison demonstrated that the Qwen 3.8 27B model can read and reason about raw neural network weights on a laptop, reproducing results from a weight‑space programming paper. AllenAI released StateBench, a benchmark showing that current frontier transformer models struggle with long‑context state tracking compared to recurrent and hybrid models.",
+      "stories": [
+        {
+          "id": "ae8a522c4221",
+          "headline": "IndiaAI Mission unveils three indigenous AI foundation models",
+          "url": "https://analyticsindiamag.com/ai-news/indiaai-mission-releases-3-indigenous-ai-models-developed-by-soket-zenteiq"
+        },
+        {
+          "id": "9b0f1b3870f8",
+          "headline": "Simon Willison shows Qwen 3.8 27B can interpret raw model weights",
+          "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights"
+        },
+        {
+          "id": "a55665cf4895",
+          "headline": "StateBench benchmark reveals transformers struggle with long-context state tracking",
+          "url": "https://huggingface.co/blog/allenai/statebench"
         }
       ]
     }
