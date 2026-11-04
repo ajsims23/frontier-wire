@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-03T21:59:52+00:00",
+  "started_at": "2026-11-04T01:23:19+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -18,9 +18,9 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (20)",
-    "gdelt": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
-    "hn": "ok (27)",
+    "hf-papers": "ok (19)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (30)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -31,7 +31,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: ConnectTimeout: _ssl.c:993: The handshake operation timed out",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -41,298 +41,231 @@
   },
   "dropped": [
     {
-      "title": "How Cisco defends at machine speed with OpenAI",
-      "reason": "score 4: Cisco case study is a marketing piece that showcases a specific use of OpenAI models but does not constitute a broader news development."
+      "title": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
+      "reason": "not AI: A mathematical primer on generative AI; not a new research advance."
     },
     {
-      "title": "OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer",
-      "reason": "score 0: Duplicate of OpenAI’s Jill Hazelbaker hire already covered by another candidate."
+      "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+      "reason": "score 5: Postman auto‑installs AI plugins and shares data; security issue but not core AI news."
     },
     {
-      "title": "Preparing for the Flipper One Kickstarter and opening pre-orders",
-      "reason": "not AI: Kickstarter pre‑order announcement unrelated to AI."
+      "title": "Show HN: HackerTV – HN's most-recommended Youtube videos as 24/7 TV channels",
+      "reason": "not AI: Show HN project unrelated to AI."
     },
     {
-      "title": "Hiding inside Palantir’s skyrocketing quarter is a foreboding signal",
-      "reason": "not AI: Palantir earnings analysis does not focus on AI."
+      "title": "macOS 27 does not support CoreStorage volumes",
+      "reason": "not AI: macOS storage change, no AI relevance."
     },
     {
-      "title": "Those Jeff Bezos hair transplant photos are very fake",
-      "reason": "not AI: Fake images of Jeff Bezos are unrelated to AI technology."
+      "title": "Anthropic is working on a system to prove AI models’ identity",
+      "reason": "duplicate of c7ca507a9ed8"
     },
     {
-      "title": "Apple’s latest watchOS beta includes its new always-on Audio Intelligence features",
-      "reason": "score 5: Apple watchOS beta adds Audio Intelligence features; incremental product update without broader industry impact."
+      "title": "Data centers are turning to old jet engines as the wait for power grows",
+      "reason": "score 5: Data centres using old jet engines; peripheral to AI infrastructure."
     },
     {
-      "title": "OpenAI says ChatGPT is catching up to Google in search",
-      "reason": "score 5: OpenAI’s claim about matching Google search volume is a marketing statement rather than a substantive AI breakthrough."
+      "title": "The biggest modding site in PC gaming is taking a stance on AI",
+      "reason": "score 5: Nexus Mods AI disclosure policy is an industry reaction, not a core AI development."
     },
     {
-      "title": "Indie games are missing launch dates because Steam is backed up",
-      "reason": "not AI: Steam backlog issue unrelated to AI."
+      "title": "Please stop asking me when the AI bubble will pop",
+      "reason": "not AI: Opinion piece about AI bubble, not news."
     },
     {
-      "title": "Netflix will show you themed recommendations through a new ‘AI Discover’ tab",
-      "reason": "score 5: Netflix’s AI Discover tab is an experimental UI feature, not a major AI industry development."
+      "title": "Simon Willison: Anyone know how to stop the New York Times app from hijacking my phone's top bar like this?",
+      "reason": "not AI: Personal complaint about NYT app; no AI angle."
     },
     {
-      "title": "Ukraine’s drone strikes spur hasty Russian plans for underground data centers",
-      "reason": "score 5: Report on Russian underground data centres is tangential to AI infrastructure and lacks a direct AI focus."
+      "title": "We want to clarify what we announced today about our education services. Today's announcements give schools more choice, not less. Here's what we announced: - Gemini, Gemini Notebook, and Search…",
+      "reason": "score 6: Duplicate clarification of Google education policy."
     },
     {
-      "title": "DevX Q2: Profit Zooms To ₹5.5 Cr, Revenue Surges 55% YoY",
-      "reason": "not AI: Financial results of an office‑space provider, not AI‑related."
+      "title": "Valve announces changes to Steam's review process, as a surge in game submissions pushes review times to \"up to 12 business days\", instead of the usual 3-5 days (Jay Peters/The Verge)",
+      "reason": "not AI: Valve review process change, unrelated to AI."
     },
     {
-      "title": "Ethan Mollick: We are in an era of flux & fighting over how AI should be used to review academic work & by whom. But it is worth proving to yourself that…",
-      "reason": "score 4: Ethan Mollick’s commentary on academic review is a personal opinion piece without a broader industry impact."
+      "title": "Block reports Q3 revenue up 10% YoY to $6.7B, above est., Cash App gross profit up 27% to $2.07B, raises its full-year profit outlook; XYZ jumps 5%+ after hours (Reuters)",
+      "reason": "not AI: Block financial results, no AI angle."
     },
     {
-      "title": "Sources: Ubisoft and at least two other gaming companies made offers to Microsoft to acquire the French game developer Arkane Studios (Jason Schreier/Bloomberg)",
-      "reason": "not AI: Gaming studio acquisition talks are not AI‑focused."
+      "title": "Canva says it is restructuring, which will impact 1,271 workers, or 22% of its workforce, as it merges its product, growth, and platform teams (David Swan/The Age)",
+      "reason": "not AI: Canva restructuring, not AI related."
     },
     {
-      "title": "Sources: US officials have held up approval for US chipmaking equipment needed by SK Hynix to expand in China, complicating its plans for new plants in New York (Karen Freifeld/Reuters)",
-      "reason": "not AI: Regulatory hold on chip equipment unrelated to AI content."
+      "title": "How Nvidia Uses Its Soft Power to Influence Customers and Shape Policy",
+      "reason": "score 7: Duplicate of Nvidia soft‑power influence story."
     },
     {
-      "title": "AI inference startup Fal raised $1.3B led by Bessemer at a $16B valuation, up from $8B in April; source: Fal hit $800M in annualized revenue earlier in 2026 (Natasha Mascarenhas/Bloomberg)",
-      "reason": "score 0: Duplicate of Fal funding story."
-    },
-    {
-      "title": "Sources: UK-based Google DeepMind employees urge leaders to drop non-disparagement clauses barring public warnings about AI risks even after they leave Google (Gerrit De Vynck/Washington Post)",
-      "reason": "duplicate of a4abd1e2a1c1"
-    },
-    {
-      "title": "Anthropic is still grappling with the economics of compute",
-      "reason": "duplicate of a4abd1e2a1c1"
-    },
-    {
-      "title": "Anthropic Posts A $567 Million Operating Loss From Buying Extra Compute",
-      "reason": "duplicate of a4abd1e2a1c1"
-    },
-    {
-      "title": "CrowdStrike Looks To An AI Kill Switch To Beat Rogue Agents",
-      "reason": "score 0: Duplicate of CrowdStrike AI kill switch announcement."
-    },
-    {
-      "title": "CrowdStrike Adds AI Agent Kill Switch to Expanded Portfolio",
-      "reason": "score 0: Duplicate of CrowdStrike AI kill switch announcement."
-    },
-    {
-      "title": "CrowdStrike Launches AI Kill Switch for Rogue Agents",
-      "reason": "score 0: Duplicate of CrowdStrike AI kill switch announcement."
-    },
-    {
-      "title": "CrowdStrike debuts an AI kill switch in Falcon Guardian to stop internal AI agents that go rogue, and announces a Falcon Guardian integration with Claude Cowork (Samantha Subin/CNBC)",
+      "title": "How Nvidia uses soft power to influence customers and shape US chip policy; sources: OpenAI took no public stance on China chip exports to avoid angering Nvidia (The Information)",
       "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "Super Micro reports Q1 revenue up 298% YoY to $19.95B, vs. $16.39B est., and forecasts Q2 revenue above estimates; SMCI jumps 7%+ after hours (Reuters)",
+      "title": "US tech giants' hidden AI debt swells 90% to $3.2T in 6 months",
       "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "AMD reports Q3 revenue up 45% YoY to $13.38B, vs. $13.09B est., Data Center revenue up 97% to $8.5B, forecasts Q4 revenue above est.; AMD jumps 7%+ after hours (Katie Tarasov/CNBC)",
+      "title": "The Era of AI Programming AI: 'Weight-Space Programming' Demonstrated by GPT-6 Astra",
       "reason": "could not verify yet; will retry next run"
     },
     {
       "title": "Soket Labs & ZenteiQ Launch Indigenous AI Models",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Ted Schlein’s Ballistic Ventures seeks $490M for new funds amid AI-driven cybersecurity boom",
       "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Super Micro reports Q1 revenue up 298% YoY to $19.95B, vs. $16.39B est., and forecasts Q2 revenue above estimates; SMCI jumps 7%+ after hours (Reuters)",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "AMD reports Q3 revenue up 45% YoY to $13.38B, vs. $13.09B est., Data Center revenue up 97% to $8.5B, forecasts Q4 revenue above est.; AMD jumps 7%+ after hours (Katie Tarasov/CNBC)",
+      "reason": "could not verify yet after a second try; dropped"
     }
   ],
   "written": [
     {
-      "id": "c7ca507a9ed8",
-      "headline": "Anthropic releases FlashProve to cryptographically verify AI model responses",
-      "category": "safety",
-      "summary": "Anthropic unveiled FlashProve, an open‑source prototype that generates cryptographic proofs showing a language‑model reply came from a specific set of weights. The system runs at about 110 tokens per second on Meta’s Llama 4 Maverick, with proofs around 19 MB that a CPU can check in 17‑21 seconds.",
-      "url": "https://techmeme.com/261103/p32",
+      "id": "d0607802272d",
+      "headline": "Cat Wu and Thariq Shihipar leave Anthropic product team for Claude Code",
+      "category": "industry",
+      "summary": "Cat Wu, head of product for Claude Code and Cowork, announced on Nov 3 2026 that she is leaving Anthropic after two years; Thariq Shihipar, who also worked on Claude Code, announced his departure the month before.",
+      "url": "https://techmeme.com/261103/p43",
       "sources": 3,
       "quotes": 2
     },
     {
-      "id": "2d3b8471f026",
-      "headline": "Revolut cuts AI coding inference costs by about 90% with self‑hosted GLM",
+      "id": "db13679c868f",
+      "headline": "Traversal raises $120 million at $1 billion valuation to expand AI‑driven site reliability engineering",
       "category": "industry",
-      "summary": "Revolut reduced its AI coding inference spend to roughly one‑tenth of prior costs by self‑hosting open‑weight GLM models from Z.ai on its own NVIDIA GPUs. The change improved engineering lead time by 70% and coding time by 60% for about 2,000 engineers.",
-      "url": "https://techmeme.com/261103/p36",
+      "summary": "Traversal announced a $120 million Series B funding round co‑led by Kleiner Perkins, Redpoint Ventures and Khosla Ventures, valuing the company at $1 billion. The AI‑agent platform is used by firms such as American Express, PepsiCo, Nubank and DigitalOcean to automate incident investigation and other SRE tasks.",
+      "url": "https://techmeme.com/261103/p39",
       "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "2422d50634d5",
-      "headline": "Apple opens Siri AI to all developers via App Intents in iOS 27.3 beta",
-      "category": "industry",
-      "summary": "Apple announced that developers can integrate Siri AI into any iOS, iPadOS, macOS, and visionOS app using App Intents, starting with the iOS 27.3 beta. The preview lets apps expose content and actions for natural‑language requests without naming the app.",
-      "url": "https://techmeme.com/261103/p27",
-      "sources": 5,
-      "quotes": 2
-    },
-    {
-      "id": "595052804154",
-      "headline": "Meta targets at least $20 billion in cross‑border bond offering, debuting euro tranche",
-      "category": "industry",
-      "summary": "Meta Platforms is preparing a cross‑border investment‑grade bond sale that could raise at least $20 billion, including its first euro‑denominated tranche and its first major debt transaction in six months. Citigroup and Morgan Stanley will host investor calls as the company seeks funding for AI and data‑center expansion.",
-      "url": "https://techmeme.com/261103/p25",
-      "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "42ec3b43220b",
-      "headline": "AI inference startup Fal valued at $16B after $1.3B funding round",
-      "category": "industry",
-      "summary": "Fal, a San Francisco AI inference startup, raised $1.3 billion in a Series F round led by Bessemer Venture Partners, valuing the company at $16 billion after reporting $800 million in annualized revenue.",
-      "url": "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges",
-      "sources": 2,
-      "quotes": 0
-    },
-    {
-      "id": "6df21e5a1561",
-      "headline": "Google disables Search for schools that reject its AI tools",
-      "category": "policy",
-      "summary": "Google will turn off Search for K‑12 accounts unless administrators enable its Gemini AI suite, meaning schools that block AI lose web search access.",
-      "url": "https://theverge.com/tech/1025411/google-turn-off-search-ai-features",
-      "sources": 2,
       "quotes": 1
+    },
+    {
+      "id": "e420e884477a",
+      "headline": "Google lets schools enable Gemini, NotebookLM and Search separately after backlash",
+      "category": "policy",
+      "summary": "Google announced that schools can choose to enable Gemini, Gemini Notebook (NotebookLM), and Search individually. Administrators who block AI tools will also lose access to Google Search.",
+      "url": "https://techmeme.com/261103/p44",
+      "sources": 2,
+      "quotes": 2
     }
   ],
   "notes": [
-    "ignored made-up duplicate id d1cebb1d6c2d for 'OpenAI appoints Jill Hazelbaker as Chief Corporate'",
-    "ignored made-up duplicate id 42ec3b43220b for 'AI inference startup Fal raised $1.3B led by Besse'",
-    "ignored made-up duplicate id 0f988b970fe5 for 'CrowdStrike Looks To An AI Kill Switch To Beat Rog'",
-    "ignored made-up duplicate id 0f988b970fe5 for 'CrowdStrike Adds AI Agent Kill Switch to Expanded '",
-    "ignored made-up duplicate id 0f988b970fe5 for 'CrowdStrike Launches AI Kill Switch for Rogue Agen'",
-    "dropped unverifiable benchmark: CPU verification Check time 17‑21 seconds",
-    "dropped unverifiable quote (David Abitbol): Self-hosting GLM brings our blended cost of tokens to 30 cen…",
+    "ignored made-up duplicate id e420e884477a for 'We want to clarify what we announced today about o'",
+    "ignored made-up duplicate id 30a851fbccc3 for 'How Nvidia Uses Its Soft Power to Influence Custom'",
+    "dropped unverifiable quote (David Vélez): Five weeks into our Traversal rollout, and it's already beco…",
     "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
     "8 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 86.9,
-    "audit": 0.0,
-    "plan": 58.2,
-    "judge": 26.3,
-    "verify and write": 482.1,
-    "videos": 23.7,
-    "tagging": 21.6,
-    "explainers": -0.0,
-    "trackers": 127.9,
-    "claims": 42.4,
-    "model tracker": 0.1,
+    "gather": 77.0,
+    "audit": 3.6,
+    "plan": 2.1,
+    "judge": 2.2,
+    "verify and write": 500.9,
+    "videos": 26.6,
+    "tagging": 0.8,
+    "explainers": 0.0,
+    "trackers": 41.4,
+    "claims": 20.9,
+    "model tracker": 0.0,
     "weekly": 0.0,
-    "builders": 29.6,
-    "top voices": 14.0,
-    "briefing": 21.2,
-    "self-review": 0.0,
-    "photos": 1.6,
-    "stock photos": 16.2,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 41.4,
+    "self-review": 20.7,
+    "photos": 0.4,
+    "stock photos": 16.3,
     "daily email": -0.0,
-    "alerts": 15.4
+    "alerts": 5.1
   },
-  "fetched": 2938,
-  "fresh": 33,
+  "fetched": 2940,
+  "fresh": 23,
+  "audit": "coverage 73% of 11 significant stories; 3 missed, 0 added to this run; 3 lesson(s) for the editor",
   "plan": {
-    "focus": "Tracking Anthropic's mounting compute costs and new AI safety tools while covering scarce model release updates.",
+    "focus": "Chasing fallout from Anthropic’s mounting compute costs while filling a thin model verification desk.",
     "priorities": [
-      "Anthropic releases FlashProve, open-source code that cryptographically (Anthropic's FlashProve offers cryptographic verification of AI outputs, key for its IPO financing risk story.)",
-      "CrowdStrike debuts an AI kill switch in Falcon Guardian to stop intern (CrowdStrike's AI kill switch showcases emerging safety mechanisms for rogue AI agents.)",
-      "Revolut says it cut AI coding inference costs by ~90% in less than a y (Revolut's 90% inference cost cut demonstrates rapid industry cost efficiencies relevant to builders.)",
-      "Apple opens Siri AI to all developers, letting any app on iOS 27.3 bet (Apple opening Siri AI to all developers raises policy and integration implications for enterprises.)",
-      "OpenAI hires Jill Hazelbaker, Uber's president and chief corporate aff (OpenAI's new chief corporate affairs officer signals strategic shifts affecting the AI business landscape.)"
+      "How Nvidia uses soft power to influence customers and shape US chip po (Nvidia’s soft‑power influence on US chip policy impacts investors and policy makers)",
+      "Anthropic is working on a system to prove AI models’ identity (Anthropic’s model‑identity system tackles safety and verification gaps)",
+      "Cat Wu, product lead for Claude Code and Cowork, has left Anthropic; T (Key staff exits at Anthropic signal risks for its IPO financing storyline)",
+      "The biggest modding site in PC gaming is taking a stance on AI (Top PC‑gaming modding site’s AI stance shows industry pushback and market impact)",
+      "Traversal, which provides AI agents for site reliability engineering,  (Traversal’s $120M raise for AI agents in SRE highlights enterprise AI growth)"
     ],
     "thin_areas": [
       "models",
       "safety"
     ],
     "searches": [
-      "Anthropic compute cost Q4: 3 new",
-      "AI kill switch implementations: 3 new",
-      "latest open-source model releases 2026: 0 new"
+      "Anthropic IPO filing amendment: 3 new",
+      "Qwen model weight interpretation: 1 new",
+      "Nvidia chip policy lobbying: 1 new"
     ],
     "dig_deeper": [
-      "Anthropic releases FlashProve, open-source code that cryptographically",
-      "CrowdStrike debuts an AI kill switch in Falcon Guardian to stop intern"
+      "How Nvidia uses soft power to influence customers and shape US chip po",
+      "Anthropic is working on a system to prove AI models’ identity"
     ]
   },
-  "judged": 39,
-  "kept": 14,
+  "judged": 28,
+  "kept": 12,
   "research": {
     "investigated": 5,
-    "confirmed": 4,
+    "confirmed": 2,
     "tool_calls": 15
   },
   "research_log": [
-    "Anthropic releases FlashProve, open-source code that cryptographically: confirmed (searched “Anthropic FlashProve”; read unite.ai; read yahoo.com)",
-    "Revolut says it cut AI coding inference costs by ~90% in less than a y: confirmed (searched “Revolut cut AI coding inference costs 90% self-hosted GLM models Claude Code”; read analyticsindiamag.com; read cryptobriefing.com)",
-    "CrowdStrike debuts an AI kill switch in Falcon Guardian to stop intern: unconfirmed (searched “CrowdStrike AI kill switch Falcon Guardian”; read forbes.com; read securityboulevard.com)",
-    "Apple opens Siri AI to all developers, letting any app on iOS 27.3 bet: confirmed (searched “Apple opens Siri AI to all developers iOS 27.3 beta App Intents”; read cultofmac.com; read macrumors.com)",
-    "Sources: Meta eyes $20B+ from a potential cross-border investment-grad: confirmed (searched “Meta $20 billion bond offering euros cross-border investment-grade”; read msn.com; read yahoo.com)"
+    "How Nvidia uses soft power to influence customers and shape US chip po: unconfirmed (searched “The Information Nvidia soft power influence customers shape US chip policy OpenAI no public stance China chip exports”; read theinformation.com; searched “\"Nvidia\" \"soft power\" OpenAI China chip exports”)",
+    "US tech giants' hidden AI debt swells 90% to $3.2T in 6 months: unconfirmed (searched “\"US tech giants' hidden AI debt\"”; searched “\"AI debt\" $3.2 trillion”; searched “\"$3.2 trillion\" AI spending”)",
+    "Cat Wu, product lead for Claude Code and Cowork, has left Anthropic; T: confirmed (searched “Cat Wu Anthropic departure”; read unite.ai; read businessinsider.com)",
+    "Traversal, which provides AI agents for site reliability engineering, : confirmed (searched “Traversal AI agents site reliability engineering $120 million funding”; read yahoo.com; read securities.io)",
+    "The Era of AI Programming AI: 'Weight-Space Programming' Demonstrated : unconfirmed (searched “GPT-6 Astra weight-space programming”; read venturebeat.com; searched “MIT CSAIL GPT-6 Astra weight-space programming”)"
+  ],
+  "threads": [
+    "Anthropic Claude Code backdoor product departure: Cat Wu and Thariq Shihipar leave Anthropic product team for ",
+    "Google school AI tool rollout response: Google lets schools enable Gemini, NotebookLM and Search sep"
   ],
   "videos": {
-    "OpenAI": "ok (10 in feed, 1 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Google for Developers": "ok (9 in feed, 0 new)",
-    "AI at Meta": "ok (7 in feed, 0 new)",
-    "Microsoft Research": "ok (8 in feed, 0 new)",
-    "NVIDIA": "ok (9 in feed, 0 new)",
-    "Hugging Face": "ok (13 in feed, 0 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Two Minute Papers": "ok (15 in feed, 3 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 1 new)",
-    "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (15 in feed, 1 new)",
-    "Training Data (Sequoia)": "ok (3 in feed, 0 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 0 new)",
-    "Hard Fork": "ok (0 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (2 in feed, 0 new)",
-    "20VC": "ok (4 in feed, 0 new)"
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
   },
-  "videos_kept": "4 kept from 6 new",
-  "tagged": 6,
-  "trackers": "filed 6 stories; updated ai-regulation, agent-safety, ai-infrastructure, ai-money",
-  "claims": "85 tracked, 81 open, 1 updated this run",
-  "model_tracker": "82 models, 22 changes today",
-  "builders_sources": {
-    "show-hn": "ok (11)",
-    "github-new": "ok (34)",
-    "hf-spaces": "ok (21)",
-    "product-hunt": "ok (17)",
-    "r-localllama": "ok (25)",
-    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
-  },
-  "builders": "picked 7 from 60 candidates; 2 with pictures, 0 with videos",
-  "top_voices_sources": {
-    "tv-mollick": "ok (0)",
-    "tv-lambert": "ok (2)",
-    "tv-swyx": "ok (8)",
-    "tv-dwarkesh": "ok (2)",
-    "tv-raschka": "ok (0)",
-    "tv-karpathy": "ok (1)",
-    "tv-evans": "ok (0)",
-    "x-coverage": "ok (2 of 3 articles, bing)",
-    "hn": "ok (2)"
-  },
-  "top_voices": "3 debates from 50 posts by 8 people (1 removed by checks); 3 portraits, 2 pictures",
-  "briefing": "3 themes from 20 stories",
-  "photos": "5 saved, 1 unavailable",
+  "videos_kept": "3 kept from 3 new",
+  "tagged": 3,
+  "trackers": "filed 1 stories; updated ai-money",
+  "claims": "87 tracked, 82 open, 0 updated this run",
+  "model_tracker": "82 models, 4 changes today",
+  "briefing": "4 themes from 20 stories",
+  "india_briefing": "2 themes from 2 stories",
+  "self_review": "19 lines written to data/self_review.md",
+  "photos": "2 saved, 0 unavailable",
   "stock photos": "1 added",
-  "alerts": "37 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":55}",
-  "ai_requests_run": 47,
-  "ai_tokens_run": 175477,
-  "ai_requests_today": 307,
-  "provider_log": [
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
-    "cerebras/gpt-oss-120b: unusable answer"
-  ]
+  "alerts": "8 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":20}",
+  "ai_requests_run": 38,
+  "ai_tokens_run": 82770,
+  "ai_requests_today": 38,
+  "provider_log": []
 }
