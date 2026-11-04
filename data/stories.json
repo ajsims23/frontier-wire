@@ -858,6 +858,76 @@
   },
   {
     "explainer": {
+      "what_it_means": "PEARL adds adversarial rollouts from intermediate states during training, allowing a model to unlearn specific harmful patterns while keeping its overall performance. The approach works both immediately after training and after additional fine‑tuning, meaning unsafe behavior can be removed without retraining from scratch.",
+      "terms": [
+        {
+          "term": "Misaligned behavior",
+          "meaning": "Outputs from a language model that are undesirable, unsafe, or contrary to intended use."
+        },
+        {
+          "term": "Post‑hoc behavioral suppression",
+          "meaning": "Techniques applied after a model is trained to reduce or eliminate specific unwanted responses."
+        },
+        {
+          "term": "Prefix‑Expanded Adversarial Reinforcemen",
+          "meaning": "A training method that augments reinforcement learning rollouts with continuations from intermediate states to more thoroughly unlearn harmful behavior."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "PEARL offers a new tool for developers to remove unsafe patterns from models without sacrificing accuracy.",
+      "business": "Companies can use the method to improve the safety of AI products, reducing liability and user risk."
+    },
+    "id": "cc0bbf95c7e7",
+    "headline": "New PEARL method durably suppresses misaligned behaviors in language models",
+    "summary": "Researchers introduced Prefix-Expanded Adversarial Reinforcement Learning (PEARL), a GRPO variant that suppresses undesired model behaviors and remains effective after further fine‑tuning, tested on Qwen3‑4B and GPT‑OSS‑20B.",
+    "why_it_matters": "It shows a practical way to reduce harmful or unsafe outputs from deployed language models.",
+    "category": "safety",
+    "lab": "",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 7,
+    "url": "https://arxiv.org/abs/2611.05358",
+    "source_id": "arxiv",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": null,
+    "sources": [
+      {
+        "url": "https://arxiv.org/abs/2611.05358",
+        "publisher": "arXiv (cs.AI, cs.CL, cs.LG)",
+        "title": "Suppressing Misaligned Behaviors in Language Models, Durably"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 0,
+      "decision": "unconfirmed"
+    },
+    "published_at": "2026-11-03T18:54:08+00:00",
+    "created_at": "2026-11-04T07:32:58+00:00",
+    "figure_checked": true,
+    "sectors": [],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "PEARL",
+    "trackers": [
+      "agent-safety"
+    ],
+    "stock_tried": "2026-11-04T07:32:58+00:00"
+  },
+  {
+    "explainer": {
       "what_it_means": "State tracking means keeping an up‑to‑date record of information about entities as it changes throughout a long text. In practice, a model must recall the latest value of a variable or the current location of a character when answering questions.",
       "terms": [
         {
