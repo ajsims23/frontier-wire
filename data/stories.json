@@ -1,6 +1,201 @@
 [
   {
     "explainer": {
+      "what_it_means": "Attackers are using AI software to automatically find and exploit weak or unpatched systems in banks and fintechs, then use payment interfaces to move large sums of money quickly. The speed and automation make it harder for banks to detect and stop the fraud before funds are transferred.",
+      "terms": [
+        {
+          "term": "AI agents",
+          "meaning": "Software that can act autonomously to perform tasks, in this case exploiting vulnerabilities and initiating transactions."
+        },
+        {
+          "term": "payment APIs",
+          "meaning": "Program interfaces that allow applications to initiate and process financial transfers."
+        },
+        {
+          "term": "IMPS/NEFT",
+          "meaning": "Indian electronic payment systems used for instant and batch fund transfers between banks."
+        }
+      ],
+      "watch_next": [
+        "Implement CERT‑In’s critical advisories on payment and disbursement APIs urgently",
+        "Report cyber incidents to CERT‑In within six hours"
+      ]
+    },
+    "audiences": {
+      "builders": "Developers must secure AI components and harden payment APIs to prevent automated exploitation.",
+      "business": "Banks and fintech firms need to patch vulnerabilities, monitor transaction patterns and enforce KYC checks to curb AI‑driven fraud.",
+      "investors": "Investors should monitor companies’ AI security measures, as breaches could impact financial performance and valuation."
+    },
+    "id": "a0bfb68fc6a8",
+    "headline": "I4C warns Indian banks and fintechs of AI‑led cyberattacks",
+    "summary": "The Indian Cyber Crime Coordination Centre (I4C) issued an advisory warning banks, NBFCs and fintech firms that attackers are using AI agents to exploit unpatched software and payment APIs for multi‑crore fraudulent transactions. It urges institutions to implement CERT‑In advisories, set transaction limits and report incidents within six hours.",
+    "why_it_matters": "AI‑driven attacks can compromise financial systems at machine speed, increasing fraud risk and making investigations harder.",
+    "category": "safety",
+    "lab": "Indian Cyber Crime Coordination Centre (I4C)",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "AI agents",
+      "cybersecurity",
+      "financial fraud"
+    ],
+    "quotes": [
+      {
+        "text": "The attacks are financially motivated and are being carried out with the help of Artificial Intelligence (AI) agents leading to machine-speed compromise.",
+        "speaker": "",
+        "speaker_role": "",
+        "source_url": "https://livemint.com/technology/central-cyber-security-agency-warns-banks-fintech-firms-of-frauds-through-ai-agents-11793805354383.html"
+      },
+      {
+        "text": "The money is sent to 'mule' accounts (accounts used by criminals) across different banks and then quickly moved or withdrawn through IMPS/NEFT. Then the perpetrators delete records and hide their tracks so that investigation becomes difficult,",
+        "speaker": "",
+        "speaker_role": "",
+        "source_url": "https://livemint.com/technology/central-cyber-security-agency-warns-banks-fintech-firms-of-frauds-through-ai-agents-11793805354383.html"
+      }
+    ],
+    "score": 6,
+    "url": "https://inc42.com/buzz/cybersecurity-agency-i4c-warns-banks-fintechs-against-ai-led-cyberattacks",
+    "source_id": "inc42",
+    "desk": "india",
+    "ai_relevance": "core",
+    "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/11/ai-fraud-social-.png",
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/cybersecurity-agency-i4c-warns-banks-fintechs-against-ai-led-cyberattacks",
+        "publisher": "Inc42",
+        "title": "Cybersecurity Agency I4C Warns Banks & Fintechs Against AI-Led Cyberattacks"
+      },
+      {
+        "url": "https://livemint.com/technology/central-cyber-security-agency-warns-banks-fintech-firms-of-frauds-through-ai-agents-11793805354383.html",
+        "publisher": "Mint Technology",
+        "title": "Central cyber security agency warns banks, fintech firms of frauds through AI agents"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-04T18:59:46+00:00",
+    "created_at": "2026-11-04T21:59:45+00:00",
+    "thread": "t-5a5f5c902747",
+    "sectors": [
+      "finance",
+      "cybersecurity"
+    ],
+    "regions": [
+      "india"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 2,
+      "business": 3,
+      "investors": 2
+    },
+    "cover": "",
+    "trackers": [
+      "india-ai",
+      "agent-safety"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "FlashProve creates a cryptographic proof that a specific AI model generated a given output, similar to a digital signature for messages. The proof can be checked locally without revealing the model’s internal weights. This lets users confirm the provenance of AI responses before trusting them.",
+      "terms": [
+        {
+          "term": "zkSNARK",
+          "meaning": "A type of zero‑knowledge proof that allows one party to prove a computation was performed correctly without revealing any underlying data."
+        },
+        {
+          "term": "fingerprint",
+          "meaning": "A public identifier for a model that can be matched to outputs to verify which model produced them, without exposing the model’s weights."
+        },
+        {
+          "term": "4‑bit quantization",
+          "meaning": "A technique that reduces model weight precision to 4 bits, lowering memory and compute requirements while preserving accuracy enough for inference."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "Llama 4 Maverick",
+        "benchmark": "proof generation speed",
+        "score": "110 tokens/second"
+      }
+    ],
+    "audiences": {
+      "builders": "Developers can use the open‑source code to experiment with generating cryptographic proofs for model outputs.",
+      "business": "Companies could use provable inference to ensure they are not misled by swapped or tampered models, protecting cost and performance claims.",
+      "investors": "Investors may watch the development as a potential differentiator for AI labs that can prove model provenance."
+    },
+    "id": "7b93706aafff",
+    "headline": "Anthropic releases FlashProve prototype for provable inference on Llama 4 Maverick",
+    "summary": "Anthropic unveiled FlashProve, an open‑source system that generates cryptographic proofs that a response came from a specified model. On a single H100 GPU it produces proofs for the 400‑billion‑parameter Llama 4 Maverick at about 110 tokens per second, with proof files around 19 MB per 1,024‑token request.",
+    "why_it_matters": "It gives users a way to verify that AI outputs truly originate from the claimed model, addressing trust and security concerns.",
+    "category": "research",
+    "lab": "Anthropic",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "A developer might claim that their software library was scanned for vulnerabilities by a frontier cybersecurity model, or a company might claim that its business plan was given the go-ahead by an appropriate model,",
+        "speaker": "Anthropic researchers",
+        "speaker_role": "",
+        "source_url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity"
+      },
+      {
+        "text": "This research post is meant to share intermediate progress, and not a completed research agenda,",
+        "speaker": "Anthropic researchers",
+        "speaker_role": "",
+        "source_url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity"
+      }
+    ],
+    "score": 8,
+    "url": "https://anthropic.com/research/provable-inference",
+    "source_id": "hn",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://www-cdn.anthropic.com/images/4zrzovbb/website/2eba335a28661a8253187053fa36add230af728b-2000x1125.jpg",
+    "sources": [
+      {
+        "url": "https://anthropic.com/research/provable-inference",
+        "publisher": "anthropic.com",
+        "title": "Progress on provable inference for large language models"
+      },
+      {
+        "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity",
+        "publisher": "TechCrunch AI",
+        "title": "Anthropic is working on a system to prove AI models’ identity"
+      }
+    ],
+    "research": {
+      "steps": 2,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-04T17:17:46+00:00",
+    "created_at": "2026-11-04T21:59:45+00:00",
+    "thread": "t-fb8ff26888db",
+    "sectors": [
+      "software",
+      "cybersecurity"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "FlashProve",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Image 1.0 can examine a photo and highlight any AI‑generated elements with a heatmap, while Image Flash 1.0 processes video frame‑by‑frame to flag synthetic content. Both models are available via a web app, API and a Chrome extension for easy integration.",
       "terms": [
         {
@@ -206,6 +401,82 @@
       "page": "https://commons.wikimedia.org/w/index.php?curid=26602336",
       "via": "Wikimedia"
     }
+  },
+  {
+    "explainer": {
+      "what_it_means": "Hackers are using artificial‑intelligence software to automatically breach banking systems and move money at machine speed. The attacks target payment APIs and fund‑disbursement tools, sending money to mule accounts before erasing logs. Institutions must harden software, limit rapid transfers and report breaches quickly.",
+      "terms": [
+        {
+          "term": "AI agents",
+          "meaning": "Software that uses artificial intelligence to perform tasks autonomously, in this case to find and exploit vulnerabilities in financial systems."
+        },
+        {
+          "term": "APIs",
+          "meaning": "Application programming interfaces that allow different software systems to communicate, such as payment or fund‑transfer services."
+        },
+        {
+          "term": "mule accounts",
+          "meaning": "Bank accounts controlled by criminals that receive stolen funds before the money is moved or withdrawn."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers need to patch software and secure APIs to prevent AI‑driven exploits.",
+      "business": "Executives must enforce stricter transaction monitoring and incident‑reporting to protect customers.",
+      "investors": "Investors should watch for firms that strengthen AI security as a risk mitigation factor."
+    },
+    "id": "b607b0928983",
+    "headline": "India's cyber agency warns banks and fintechs of AI-driven fraud attacks",
+    "summary": "The Indian Cyber Crime Coordination Centre (I4C) issued an advisory warning banks, NBFCs and fintech firms that attackers are using AI agents to compromise systems and execute multi‑crore unauthorized transactions via APIs. It urges institutions to implement critical CERT‑In advisories, set transaction limits and report incidents within six hours.",
+    "why_it_matters": "It highlights how AI can accelerate cyber fraud, prompting financial firms to tighten security and monitoring.",
+    "category": "safety",
+    "lab": "Indian Cyber Crime Coordination Centre (I4C)",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 6,
+    "url": "https://livemint.com/technology/central-cyber-security-agency-warns-banks-fintech-firms-of-frauds-through-ai-agents-11793805354383.html",
+    "source_id": "mint-tech",
+    "desk": "india",
+    "ai_relevance": "core",
+    "image": "https://www.livemint.com/lm-img/img/2024/12/18/600x338/tech4_1734536476058_1734536482186.png",
+    "sources": [
+      {
+        "url": "https://livemint.com/technology/central-cyber-security-agency-warns-banks-fintech-firms-of-frauds-through-ai-agents-11793805354383.html",
+        "publisher": "Mint Technology",
+        "title": "Central cyber security agency warns banks, fintech firms of frauds through AI agents"
+      },
+      {
+        "url": "https://inc42.com/buzz/cybersecurity-agency-i4c-warns-banks-fintechs-against-ai-led-cyberattacks",
+        "publisher": "Inc42",
+        "title": "Cybersecurity Agency I4C Warns Banks & Fintechs Against AI-Led Cyberattacks"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-04T15:15:53+00:00",
+    "created_at": "2026-11-04T21:59:45+00:00",
+    "thread": "t-5a5f5c902747",
+    "sectors": [
+      "finance",
+      "cybersecurity"
+    ],
+    "regions": [
+      "india"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 2,
+      "business": 3,
+      "investors": 2
+    },
+    "cover": "",
+    "trackers": [
+      "india-ai",
+      "agent-safety"
+    ],
+    "photo_local": true
   },
   {
     "explainer": {
@@ -3184,7 +3455,8 @@
     "trackers": [
       "frontier-race"
     ],
-    "photo_local": true
+    "photo_local": true,
+    "thread": "t-fb8ff26888db"
   },
   {
     "explainer": {
@@ -21058,7 +21330,8 @@
       "builders": 1,
       "business": 3,
       "investors": 0
-    }
+    },
+    "thread": "t-5a5f5c902747"
   },
   {
     "explainer": {
