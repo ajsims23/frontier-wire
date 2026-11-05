@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-05T19:12:12+00:00",
+  "started_at": "2026-11-05T19:49:22+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -15,148 +15,53 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)",
-    "hf-models": "ok (57)",
-    "arxiv": "ok (40)",
-    "hf-papers": "ok (11)",
-    "gdelt": "ok (2)",
-    "hn": "ok (19)",
-    "techcrunch-ai": "ok (20)",
-    "verge-ai": "ok (10)",
-    "mit-tr-ai": "ok (10)",
-    "ars-ai": "ok (20)",
-    "aim": "ok (50)",
-    "inc42": "ok (24)",
-    "medianama": "ok (10)",
-    "mint-tech": "ok (35)",
-    "et-tech": "ok (50)",
-    "yourstory": "ok (20)",
-    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "crunchbase-news": "ok (10)",
-    "import-ai": "ok (10)",
-    "simon-willison": "ok (30)",
-    "sam-altman": "ok (30)",
-    "bluesky": "ok (27)",
-    "auto-techmeme.com": "ok (15)"
+    "mistral": "ok (6)"
   },
-  "dropped": [],
-  "written": [],
-  "notes": [
-    "judging skipped: every configured provider failed: groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-arabic-saudi (update settings.yaml when convenient) | groq/qwen/qwen3.8-27b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input | groq/openai/gpt-oss-20b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok | groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons",
-    "videos skipped: every configured provider failed: groq/openai/gpt-oss-20b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok | groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq: 429 after retry; moving to next provider for this run",
-    "trackers skipped: every configured provider failed: groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq: 429 after retry; moving to next provider for this run | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "builders skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq: 429 after retry; moving to next provider for this run | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "top voices skipped: every configured provider failed: groq: 429 after retry; moving to next provider for this run | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "briefing skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require"
+  "dropped": [
+    {
+      "title": "A faster, simpler XBOX experience is coming to more screens",
+      "reason": "not AI: The announcement concerns a faster Xbox experience, a product marketing piece without a clear AI focus, thus not newsworthy for Frontier Wire."
+    }
   ],
-  "mode": "full",
+  "written": [
+    {
+      "id": "e8690f74b67f",
+      "headline": "Nvidia adds four open-weight Cosmos 3 Nano checkpoints for interactive simulation",
+      "category": "models",
+      "summary": "Nvidia released four open-weight checkpoints—Cosmos3-Nano-Transfer-Auto, Cosmos3-Nano-Sim-Auto, Cosmos3-Nano-Sim-Transfer and Cosmos3-Nano-Sim-Bimanual—each built on the 16-billion-parameter Cosmos 3 Nano model. They generate interactive world simulations and multi-sensor driving scenes.",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "tagging skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq: 429 after retry; moving to next provider for this run",
+    "trackers skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq: 429 after retry; moving to next provider for this run | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require"
+  ],
+  "mode": "breaking",
   "timings": {
-    "gather": 136.8,
-    "audit": -0.0,
-    "plan": 6.5,
-    "judge": 1.6,
-    "verify and write": 0.0,
-    "tagging": 9.2,
-    "explainers": -0.0,
-    "claims": 0.1,
-    "model tracker": 0.1,
-    "weekly": 0.0,
-    "self-review": 17.9,
-    "photos": 0.0,
-    "stock photos": 0.0,
-    "daily email": 0.0,
-    "alerts": 4.4
+    "gather": 14.7,
+    "judge": 1.7,
+    "verify and write": 6.3,
+    "photos": 9.6,
+    "stock photos": -0.0,
+    "alerts": 2.9
   },
-  "fetched": 2931,
-  "fresh": 79,
-  "plan": {
-    "focus": "Tracking OpenAI's new cybersecurity model and the post‑midterm data‑center policy push while filling gaps in research and voices.",
-    "priorities": [
-      "OpenAI launches GPT-6 Cyber, which it says outperforms GPT-6 Astra on  (OpenAI's GPT-6 Cyber launch claims performance gains – core to security focus.)",
-      "OpenAI says GPT-6 Cyber will first launch to a limited number of custo (Details on limited rollout and 81+ novel vulnerabilities add depth to the cybersecurity story.)",
-      "Meta’s warns that election backlash against data centers could make AI (Meta warns election backlash could curb AI data‑center expansion – key policy angle.)",
-      "METR: Anthropic's models are improving about twice as fast as they did (Anthropic model acceleration signals rapid industry progress worth tracking.)",
-      "Anthropic launches Personal Finance in Claude, letting users connect b (Claude's Personal Finance tool shows AI moving into consumer finance products.)"
-    ],
-    "thin_areas": [
-      "research",
-      "voices"
-    ],
-    "searches": [
-      "AI data center legislation: 1 new",
-      "SpaceX AI compute financing investors: 5 new",
-      "AI safety research 2026: 5 new"
-    ],
-    "dig_deeper": [
-      "OpenAI launches GPT-6 Cyber, which it says outperforms GPT-6 Astra on ",
-      "Meta’s warns that election backlash against data centers could make AI"
-    ]
-  },
-  "videos": {
-    "OpenAI": "ok (10 in feed, 1 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 4 new)",
-    "Google for Developers": "ok (9 in feed, 0 new)",
-    "AI at Meta": "ok (7 in feed, 0 new)",
-    "Microsoft Research": "ok (8 in feed, 0 new)",
-    "NVIDIA": "ok (9 in feed, 0 new)",
-    "Hugging Face": "ok (13 in feed, 0 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 3 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (15 in feed, 1 new)",
-    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 0 new)",
-    "Hard Fork": "ok (1 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (2 in feed, 0 new)",
-    "20VC": "ok (4 in feed, 0 new)"
-  },
-  "claims": "102 tracked, 97 open",
-  "model_tracker": "82 models, 24 changes today",
-  "builders_sources": {
-    "show-hn": "ok (9)",
-    "github-new": "ok (34)",
-    "hf-spaces": "ok (20)",
-    "product-hunt": "ok (9)",
-    "r-localllama": "ok (25)",
-    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
-  },
-  "top_voices_sources": {
-    "tv-mollick": "ok (0)",
-    "tv-lambert": "ok (2)",
-    "tv-swyx": "ok (8)",
-    "tv-dwarkesh": "ok (1)",
-    "tv-raschka": "ok (0)",
-    "tv-karpathy": "ok (1)",
-    "tv-evans": "ok (0)",
-    "x-coverage": "ok (1 of 5 articles, bing)",
-    "hn": "ok (2)"
-  },
-  "photos": "0 saved, 0 unavailable",
-  "alerts": "29 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":9}",
-  "ai_requests_run": 1,
-  "ai_tokens_run": 6866,
-  "ai_requests_today": 148,
+  "fetched": 2431,
+  "fresh": 2,
+  "judged": 2,
+  "kept": 1,
+  "photos": "1 saved, 0 unavailable",
+  "alerts": "30 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":8}",
+  "ai_requests_run": 3,
+  "ai_tokens_run": 9910,
+  "ai_requests_today": 151,
   "provider_log": [
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "groq/openai/gpt-oss-120b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on to",
-    "groq/llama-3.3-70b-versatile: model unavailable (404); trying next model",
-    "groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-arabic-saudi (update settings.yaml when convenient)",
-    "groq/qwen/qwen3.8-27b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input",
-    "groq/openai/gpt-oss-20b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok",
-    "groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons",
+    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
     "groq: 429 after retry; moving to next provider for this run",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require"
   ]
 }

@@ -1,0 +1,67 @@
+{
+  "started_at": "2026-11-05T19:49:22+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1361)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (898)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)"
+  },
+  "dropped": [
+    {
+      "title": "A faster, simpler XBOX experience is coming to more screens",
+      "reason": "not AI: The announcement concerns a faster Xbox experience, a product marketing piece without a clear AI focus, thus not newsworthy for Frontier Wire."
+    }
+  ],
+  "written": [
+    {
+      "id": "e8690f74b67f",
+      "headline": "Nvidia adds four open-weight Cosmos 3 Nano checkpoints for interactive simulation",
+      "category": "models",
+      "summary": "Nvidia released four open-weight checkpoints—Cosmos3-Nano-Transfer-Auto, Cosmos3-Nano-Sim-Auto, Cosmos3-Nano-Sim-Transfer and Cosmos3-Nano-Sim-Bimanual—each built on the 16-billion-parameter Cosmos 3 Nano model. They generate interactive world simulations and multi-sensor driving scenes.",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "tagging skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq: 429 after retry; moving to next provider for this run",
+    "trackers skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq: 429 after retry; moving to next provider for this run | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require"
+  ],
+  "mode": "breaking",
+  "timings": {
+    "gather": 14.7,
+    "judge": 1.7,
+    "verify and write": 6.3,
+    "photos": 9.6,
+    "stock photos": -0.0,
+    "alerts": 2.9
+  },
+  "fetched": 2431,
+  "fresh": 2,
+  "judged": 2,
+  "kept": 1,
+  "photos": "1 saved, 0 unavailable",
+  "alerts": "30 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":8}",
+  "ai_requests_run": 3,
+  "ai_tokens_run": 9910,
+  "ai_requests_today": 151,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
+    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
+    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
+    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
+    "groq: 429 after retry; moving to next provider for this run",
+    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require"
+  ]
+}

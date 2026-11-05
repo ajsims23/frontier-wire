@@ -1,45 +1,28 @@
-## Frontier Wire newsroom run — 2026-11-05T19:12:12+00:00
+## Frontier Wire breaking-news check — 2026-11-05T19:49:22+00:00
 
-Fetched 2931 items · fresh 79 · judged 0 · kept 0 · **written 0**
-AI: 1 requests, 6,866 tokens this run · 148 requests today · providers: cerebras, groq
-Editor-in-chief: Tracking OpenAI's new cybersecurity model and the post‑midterm data‑center policy push while filling gaps in research and voices.
-  Priorities: OpenAI launches GPT-6 Cyber, which it says outperforms GPT-6 Astra on  (OpenAI's GPT-6 Cyber launch claims performance gains – core to security focus.); OpenAI says GPT-6 Cyber will first launch to a limited number of custo (Details on limited rollout and 81+ novel vulnerabilities add depth to the cybersecurity story.); Meta’s warns that election backlash against data centers could make AI (Meta warns election backlash could curb AI data‑center expansion – key policy angle.); METR: Anthropic's models are improving about twice as fast as they did (Anthropic model acceleration signals rapid industry progress worth tracking.); Anthropic launches Personal Finance in Claude, letting users connect b (Claude's Personal Finance tool shows AI moving into consumer finance products.)
-  Thin areas: research, voices
-  Searches: AI data center legislation: 1 new; SpaceX AI compute financing investors: 5 new; AI safety research 2026: 5 new
-  Dig deeper: OpenAI launches GPT-6 Cyber, which it says outperforms GPT-6 Astra on ; Meta’s warns that election backlash against data centers could make AI
-Videos: no new videos · OpenAI ok (10 in feed, 1 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 4 new), Google for Developers ok (9 in feed, 0 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (13 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (15 in feed, 1 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (1 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (4 in feed, 0 new)
-Photos: 0 saved, 0 unavailable
-Alerts: 29 events sent: {"subscribers":8,"sent":0,"queued":9}
-Claims: 102 tracked, 97 open
-Model tracker: 82 models, 24 changes today
-Time: gather 137s, plan 6s, judge 2s, tagging 9s, self-review 18s, alerts 4s
+Fetched 2431 items · fresh 2 · judged 2 · kept 1 · **written 1**
+AI: 3 requests, 9,910 tokens this run · 151 requests today · providers: cerebras, groq
+Photos: 1 saved, 0 unavailable
+Alerts: 30 events sent: {"subscribers":8,"sent":0,"queued":8}
+Time: gather 15s, judge 2s, verify and write 6s, photos 10s, alerts 3s
 
 ### New stories
-- none
+- **models** — [Nvidia adds four open-weight Cosmos 3 Nano checkpoints for interactive simulation](https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation)  
+  Nvidia released four open-weight checkpoints—Cosmos3-Nano-Transfer-Auto, Cosmos3-Nano-Sim-Auto, Cosmos3-Nano-Sim-Transfer and Cosmos3-Nano-Sim-Bimanual—each built on the 16-billion-parameter Cosmos 3 Nano model. They generate interactive world simulations and multi-sensor driving scenes.  
+  _1 source(s), 0 verified quote(s)_
 
-### Sources with problems
-- `gdelt-india`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
-- `r-sideproject`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'
-F
+<details><summary>Dropped</summary>
+
+- A faster, simpler XBOX experience is coming to more screens — not AI: The announcement concerns a faster Xbox experience, a product marketing piece without a clear AI focus, thus not newsworthy for Frontier Wire.
+
+</details>
 
 ### Notes
-- judging skipped: every configured provider failed: groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-arabic-saudi (update settings.yaml when convenient) | groq/qwen/qwen3.8-27b: HTTP 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input | groq/openai/gpt-oss-20b: HTTP 413: {"error":{"message":"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok | groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {"error":{"message":"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons
-- videos skipped: every configured provider failed: groq/openai/gpt-oss-20b: HTTP 413: {"error":{"message":"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok | groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {"error":{"message":"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | groq: 429 after retry; moving to next provider for this run
-- trackers skipped: every configured provider failed: groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {"error":{"message":"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | groq: 429 after retry; moving to next provider for this run | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
-- builders skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | groq: 429 after retry; moving to next provider for this run | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
-- top voices skipped: every configured provider failed: groq: 429 after retry; moving to next provider for this run | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
-- briefing skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
+- tagging skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | groq: 429 after retry; moving to next provider for this run
+- trackers skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | groq: 429 after retry; moving to next provider for this run | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
 - cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
-- cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
-- groq/openai/gpt-oss-120b: HTTP 413: {"error":{"message":"Request too large for model `openai/gpt-oss-120b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on to
-- groq/llama-3.3-70b-versatile: model unavailable (404); trying next model
-- groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-arabic-saudi (update settings.yaml when convenient)
-- groq/qwen/qwen3.8-27b: HTTP 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input
-- groq/openai/gpt-oss-20b: HTTP 413: {"error":{"message":"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok
-- groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {"error":{"message":"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons
-- cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
-- groq: 429 after retry; moving to next provider for this run
 - cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
 - cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
 - cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
+- groq: 429 after retry; moving to next provider for this run
 - cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require

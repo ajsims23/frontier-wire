@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T19:12:12+00:00",
+  "updated_at": "2026-11-05T19:49:22+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Investors can purchase chunks of the financing before the full syndication, giving the lenders quick capital and spreading risk. The financing supports SpaceX’s AI compute services that rely on GPUs.",
@@ -85,6 +85,59 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "The checkpoints can generate synchronized video and LiDAR data for many camera views, allowing developers to simulate driving conditions with varied weather, lighting and traffic signals. They also predict visual outcomes from robot actions, enabling interactive simulation loops. Because the weights are open, anyone can fine‑tune or compare methods without licensing barriers.",
+        "terms": [
+          {
+            "term": "open-weight",
+            "meaning": "A model whose trained parameters are publicly released for anyone to use."
+          },
+          {
+            "term": "LiDAR",
+            "meaning": "A sensor that measures distance by illuminating a target with laser light and measuring the reflected light."
+          },
+          {
+            "term": "trainable parameters",
+            "meaning": "The adjustable numbers inside a neural network that are learned during training; here 16 billion of them."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers can use the checkpoints to generate synthetic multi-view sensor data for testing and training perception models.",
+        "business": "Companies building autonomous-driving or robotics platforms can prototype with realistic simulated data without building their own world models.",
+        "investors": "The open release may accelerate adoption of Nvidia’s simulation ecosystem, potentially expanding its market in autonomous-vehicle and robotics AI."
+      },
+      "id": "e8690f74b67f",
+      "headline": "Nvidia adds four open-weight Cosmos 3 Nano checkpoints for interactive simulation",
+      "summary": "Nvidia released four open-weight checkpoints—Cosmos3-Nano-Transfer-Auto, Cosmos3-Nano-Sim-Auto, Cosmos3-Nano-Sim-Transfer and Cosmos3-Nano-Sim-Bimanual—each built on the 16-billion-parameter Cosmos 3 Nano model. They generate interactive world simulations and multi-sensor driving scenes.",
+      "why_it_matters": "The models give researchers and developers open tools to create realistic, multi-sensor simulated environments for robotics and autonomous-vehicle training.",
+      "category": "models",
+      "lab": "NVIDIA",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 7,
+      "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+      "source_id": "huggingface",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/677c471f8b4c4e271e57eaa5/rtmGVvFdD6JqkjBc26vsp.png",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+          "publisher": "Hugging Face blog",
+          "title": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-05T19:35:16+00:00",
+      "created_at": "2026-11-05T19:49:22+00:00",
+      "breaking": true,
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "The model can generate a video up to 15 seconds long in a single request, and users can refine parts of the clip by chatting with the system instead of re‑creating the whole video. It keeps visual details like faces, clothing, and brand colors consistent across frames, which helps turn product photos into short ads or virtual try‑on videos.",
@@ -5345,105 +5398,6 @@
         "agent-safety"
       ],
       "stock_tried": "2026-11-03T03:47:07+00:00"
-    },
-    {
-      "explainer": {
-        "what_it_means": "Brave’s web‑crawling service collects billions of pages and sells the data to AI developers. Publishers say the content was taken without permission and that the browser also lets users skip paywalls. The lawsuits seek to stop the alleged copyright infringement and to force compensation.",
-        "terms": [
-          {
-            "term": "scraping",
-            "meaning": "Automated copying of website content by a program, often for indexing or data analysis."
-          },
-          {
-            "term": "DMCA",
-            "meaning": "U.S. law that protects copyrighted material from unauthorized circumvention of technical safeguards."
-          },
-          {
-            "term": "Brave Index",
-            "meaning": "A collection of over 30 billion web pages that powers Brave Search and is offered to AI companies via an API."
-          }
-        ],
-        "watch_next": [
-          "Court rulings on the lawsuits filed by the newspapers",
-          "Potential injunctions on Brave’s data‑selling practices"
-        ]
-      },
-      "audiences": {
-        "builders": "The lawsuit warns developers that using scraped web data from services like Brave may expose them to copyright infringement claims.",
-        "business": "Publishers are asserting legal rights to protect their content, which could affect how AI firms source training data and how browsers handle paywalls.",
-        "investors": "Litigation against Brave and its AI customers could impact the valuation and risk profile of both the browser maker and the AI companies involved."
-      },
-      "id": "9abae69701c4",
-      "headline": "New York Times and other papers sue Brave over AI scraping and paywall bypass",
-      "summary": "The New York Times, New York Daily News, Chicago Tribune and Orlando Sentinel have filed lawsuits in Manhattan federal court accusing Brave Software of illegally scraping their journalism, providing it to AI companies and enabling users to bypass paywalls. The complaints allege that Brave’s “Brave Index” contains more than 30 billion web pages and that the company sold access to AI firms such as Anthropic, Perplexity, Mistral, xAI and Cohere.",
-      "why_it_matters": "The case highlights how AI training data practices can clash with copyright law and could shape future rules for using web content in AI models.",
-      "category": "policy",
-      "lab": "Brave Software",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "While we believe in the ethical and responsible use and development of AI, Brave has flouted established copyright law and ignored repeated requests by The Times to stop its infringing conduct,",
-          "speaker": "Graham James",
-          "speaker_role": "NYT spokesperson",
-          "source_url": "https://theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times"
-        },
-        {
-          "text": "AI giants are now desperate to avoid getting caught red-handed stealing news from publishers, so Brave Software is selling them a back door to the journalism they know they have no right to.",
-          "speaker": "Steven Lieberman",
-          "speaker_role": "Attorney for MediaNews Group and Tribune Publishing",
-          "source_url": "https://thenextweb.com/news/nyt-newspapers-sue-brave-ai-scraping"
-        }
-      ],
-      "score": 7,
-      "url": "https://theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times",
-      "source_id": "verge-ai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/gettyimages-2289911637.jpg?quality=90&strip=all&crop=0%2C10.232235952618%2C100%2C79.535528094764&w=1200",
-      "sources": [
-        {
-          "url": "https://theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times",
-          "publisher": "The Verge AI",
-          "title": "The New York Times sues Brave web browser for AI scraping and bypassing paywalls"
-        },
-        {
-          "url": "https://reuters.com/legal/litigation/new-york-times-sues-maker-brave-web-browser-over-copyrights-2026-11-02",
-          "publisher": "Reuters",
-          "title": "New York Times sues maker of Brave web browser over copyrights"
-        },
-        {
-          "url": "https://thenextweb.com/news/nyt-newspapers-sue-brave-ai-scraping",
-          "publisher": "The Next Web",
-          "title": "New York Times and three other US papers sue Brave over AI scraping"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-02T17:51:19+00:00",
-      "created_at": "2026-11-02T19:11:41+00:00",
-      "sectors": [
-        "media",
-        "software"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": "30 billion",
-      "trackers": [
-        "copyright"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -5996,6 +5950,14 @@
   ],
   "labs": [
     {
+      "lab": "NVIDIA",
+      "model": "Nvidia adds four open-weight Cosmos 3 Nano checkpoints for interactive simulatio",
+      "type": "Other",
+      "date": "2026-11-05T19:35:16+00:00",
+      "story_id": "e8690f74b67f",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation"
+    },
+    {
       "lab": "Google DeepMind",
       "model": "Gemini Omni 1.2 Flash",
       "type": "Multimodal",
@@ -6076,14 +6038,6 @@
       "url": "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use"
     },
     {
-      "lab": "NVIDIA",
-      "model": "Nemotron 3.5 Transcribe",
-      "type": "Voice",
-      "date": "2026-10-28T15:20:02+00:00",
-      "story_id": "45d48a94f572",
-      "url": "https://techmeme.com/261028/p33"
-    },
-    {
       "lab": "Block",
       "model": "Dessa",
       "type": "Voice",
@@ -6145,8 +6099,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 92,
-    "model_releases_this_month": 7,
+    "stories_this_month": 93,
+    "model_releases_this_month": 8,
     "labs_tracked": 19
   }
 }
