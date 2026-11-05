@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-05T16:19:07+00:00",
+  "started_at": "2026-11-05T17:08:49+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -15,500 +15,49 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)",
-    "hf-models": "ok (57)",
-    "arxiv": "ok (40)",
-    "hf-papers": "ok (11)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (18)",
-    "techcrunch-ai": "ok (20)",
-    "verge-ai": "ok (10)",
-    "mit-tr-ai": "ok (10)",
-    "ars-ai": "ok (20)",
-    "aim": "ok (50)",
-    "inc42": "ok (24)",
-    "medianama": "ok (10)",
-    "mint-tech": "ok (35)",
-    "et-tech": "ok (50)",
-    "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
-    "crunchbase-news": "ok (10)",
-    "import-ai": "ok (10)",
-    "simon-willison": "ok (30)",
-    "sam-altman": "ok (30)",
-    "bluesky": "ok (27)",
-    "auto-techmeme.com": "ok (15)"
+    "mistral": "ok (6)"
   },
-  "dropped": [
-    {
-      "title": "The Wizard of Open Weights: Chris Alexiuk Makes AI Easy With Open Models",
-      "reason": "score 4: Profile of NVIDIA engineer promoting open‑model advocacy – interesting but not a newsworthy event."
-    },
-    {
-      "title": "People first, then technology: Lessons from cities leading on AI",
-      "reason": "score 4: Opinion piece on city‑level AI lessons; lacks a concrete announcement or policy impact."
-    },
-    {
-      "title": "NVIDIA publishes MetricTrail on Hugging Face",
-      "reason": "score 3: Hugging Face upload of MetricTrail is a minor model release, not a frontier‑lab launch."
-    },
-    {
-      "title": "A Framework for Context Enrichment and Selective Robustness in LLM Social Agents",
-      "reason": "score 5: Paper on context enrichment for LLM agents – incremental research, not a breakthrough."
-    },
-    {
-      "title": "FlowReconBench: Accuracy, calibration and cost of learned and classical flow reconstruction from sparse sensors",
-      "reason": "score 4: Benchmark for flow reconstruction; primarily a domain‑specific engineering study."
-    },
-    {
-      "title": "BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories",
-      "reason": "score 5: BEAKER benchmark for embodied AI in chemical labs – useful but not a major advance."
-    },
-    {
-      "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
-      "reason": "score 5: FrontierPhysics benchmark for AI agents in physics research – interesting but still a benchmark, not a breakthrough."
-    },
-    {
-      "title": "Perceptive Humanoid Motion from Simulation",
-      "reason": "score 4: Humanoid motion from simulation – robotics focus, peripheral to core AI news."
-    },
-    {
-      "title": "Reinforcement Learning Enables Scaling Generalist Robot Policy Improvement",
-      "reason": "score 4: RL for scaling generalist robot policies – incremental robotics research."
-    },
-    {
-      "title": "Occlusion for Free: Detecting Occlusion from the Disagreement Between Two Monocular Distance Cues",
-      "reason": "score 4: Occlusion detection from monocular cues – computer‑vision technique, not central AI."
-    },
-    {
-      "title": "Dull, Dirty, Dangerous? Working Conditions and the Limits of Occupational AI Exposure",
-      "reason": "score 4: Study of occupational AI exposure – sociological analysis, not a core AI development."
-    },
-    {
-      "title": "Adaptive Multi Mode: Budget-Aware Routing of Optimizers By Online Landscape Probes",
-      "reason": "score 5: Adaptive Multi Mode optimizer routing – methodological contribution, but not a headline‑making advance."
-    },
-    {
-      "title": "SpecCompact: Accelerating LLM Agent Context Compaction with Slot-Parallel Semantic Speculative Verification",
-      "reason": "score 5: SpecCompact for LLM agent context compaction – technical improvement, still incremental."
-    },
-    {
-      "title": "Learning to Decode Linear Codes with Generalized Belief Propagation Network",
-      "reason": "score 4: Neural decoding of linear codes – relevant to communications more than AI."
-    },
-    {
-      "title": "On Turn-Level Best-of-N Sampling for Scaling LLM Agents",
-      "reason": "score 5: Turn‑level best‑of‑N sampling for LLM agents – inference scaling technique, modest impact."
-    },
-    {
-      "title": "CounterFactual Retrieval for Evidence-Aware Individual Animal Identification",
-      "reason": "score 4: Counterfactual retrieval for animal ID – domain‑specific application."
-    },
-    {
-      "title": "Balancing hierarchical representation and quantization: A performance trade-off in text embeddings",
-      "reason": "score 4: Benchmark of hierarchical embeddings and quantization – performance study."
-    },
-    {
-      "title": "CompressionBench: How can your coding agents compress LLMs?",
-      "reason": "score 5: CompressionBench evaluating coding agents’ ability to compress LLMs – interesting but not a breakthrough."
-    },
-    {
-      "title": "LongBanana: An Expert-Verified Benchmark for Long-Context Multi-Reference Image Synthesis",
-      "reason": "score 5: LongBanana benchmark for long‑context image synthesis – useful but incremental."
-    },
-    {
-      "title": "Visual Token Routing: Learning to keep tokens that matter",
-      "reason": "score 5: Visual Token Routing for computer‑use agents – technical contribution, not headline news."
-    },
-    {
-      "title": "Persona Perspectives: Adopting Viewpoints Reorganizes Representations in LLMs",
-      "reason": "score 5: Persona Perspectives study on LLM representation shifts – solid research but not a major advance."
-    },
-    {
-      "title": "Navigating Disagreement Among Criteria for Evaluating Explanation Faithfulness",
-      "reason": "score 4: Evaluation of explanation faithfulness criteria – methodological paper, limited impact."
-    },
-    {
-      "title": "Thermally Conditioned Time-Series Forecasting of Grain Growth in Polycrystalline Materials",
-      "reason": "score 3: Thermal forecasting of grain growth – materials science, peripheral to AI."
-    },
-    {
-      "title": "ServerBench: How can your coding agents design specialized LLM serving systems?",
-      "reason": "score 5: ServerBench exploring coding agents designing LLM serving systems – niche infrastructure research."
-    },
-    {
-      "title": "Same Layout, Different Count: What Number Words Do Past Ten in Text-to-Image Models",
-      "reason": "score 4: Study of number word behavior in text‑to‑image models – interesting but not a major AI development."
-    },
-    {
-      "title": "Before You Continue: Evaluating Time-Sensitive Safety Awareness in Conversational Assistants",
-      "reason": "score 5: Evaluating time‑sensitive safety awareness in conversational assistants – safety‑focused research, modest impact."
-    },
-    {
-      "title": "Context--Answer Metamodels: Forecasting LLM Activations Before the First Answer Token",
-      "reason": "score 5: Context‑Answer metamodels forecasting LLM activations – technical contribution, not a headline."
-    },
-    {
-      "title": "LooM: Loop-Invariant Memory for Causal Encoder-Decoder Language Models",
-      "reason": "score 5: LooM loop‑invariant memory for encoder‑decoder models – performance technique, incremental."
-    },
-    {
-      "title": "Alignment Myopia in Generative AI",
-      "reason": "score 5: Alignment Myopia critique of generative AI – safety commentary, not a major policy shift."
-    },
-    {
-      "title": "Enabling AWS Cloud FPGA Development Using High-Level Vitis HLS",
-      "reason": "score 4: AWS FPGA development toolchain – infrastructure engineering, peripheral to AI news."
-    },
-    {
-      "title": "Systolic Linear Attention: Co-Designing Tile-Grouped Gated Delta Attention for TPUs",
-      "reason": "score 5: Systolic Linear Attention co‑design for TPUs – hardware‑software attention innovation, but not a breakthrough."
-    },
-    {
-      "title": "Rules, Traces and Routing Statistics: Training and Calibration Data for Open Models on ARC-AGI-2",
-      "reason": "score 5: Study of training/calibration data for open models on ARC‑AGI‑2 – benchmark work, incremental."
-    },
-    {
-      "title": "GFlowQEC: Generative Flow Networks that Learn to Sample Quantum LDPC Codes",
-      "reason": "score 4: Generative Flow Networks for quantum LDPC codes – quantum‑computing focus, not core AI."
-    },
-    {
-      "title": "SAUCE: Summary Analysis Using Conversation Entailment",
-      "reason": "score 4: SAUCE evaluation pipeline for conversational speech – useful but niche."
-    },
-    {
-      "title": "Evolutionary Design of Interpretable Spatial Descriptors for Structure-Property Relationship Discovery",
-      "reason": "score 3: Evolutionary design of spatial descriptors – materials modeling, peripheral to AI."
-    },
-    {
-      "title": "LLMs Don't Know What They Know: Benchmarking Temporal Self-Knowledge for Financial Backtesting",
-      "reason": "score 5: Benchmarking temporal self‑knowledge of LLMs for financial backtesting – niche evaluation."
-    },
-    {
-      "title": "Measuring Risk, Not Harm: Detecting Psychological Harm Risk Factors in LLM Conversations",
-      "reason": "score 5: Detecting psychological harm risk factors in LLM conversations – safety‑focused research, moderate impact."
-    },
-    {
-      "title": "Task-Efficient Agent Evaluation Using Cached Traces",
-      "reason": "score 5: Task‑efficient agent evaluation using cached traces – methodological improvement, not headline."
-    },
-    {
-      "title": "ConDR: Conservative Reachability through Neural Hamilton-Jacobi Subsolutions",
-      "reason": "score 4: Conservative Reachability via neural HJ – control theory, adjacent to AI."
-    },
-    {
-      "title": "Message-passing graph persistence",
-      "reason": "score 4: Message‑passing graph persistence – GNN technique, peripheral."
-    },
-    {
-      "title": "Transforming Integer Grids to Spatial Intuition: Perception, Not Planning, Governs ARC-AGI-3",
-      "reason": "score 5: ARC‑AGI‑3 analysis of spatial intuition – benchmark work, incremental."
-    },
-    {
-      "title": "Ranking Agreement Does Not Reveal Paragraph-Edit Agreement in Two Released Paper Acceptance Predictors",
-      "reason": "score 4: Paper studies agreement metrics for acceptance predictors; incremental research without major impact."
-    },
-    {
-      "title": "FedFiOT: Fisher-Weighted Optimal Transport for Model Merging in One-Shot and Few-Round Federated Learning",
-      "reason": "score 5: Introduces FedFiOT for model merging in federated learning; interesting but limited significance for frontier audience."
-    },
-    {
-      "title": "From Pixels to Actions - Towards Native Vision-Language-Action Policies",
-      "reason": "score 5: Describes a vision‑language‑action model concept; not a major breakthrough or released system."
-    },
-    {
-      "title": "Show HN: I built a tool that prices a pre-built PC part by part",
-      "reason": "not AI: Tool for pricing PC parts; unrelated to AI."
-    },
-    {
-      "title": "Lemmings CSS Animation",
-      "reason": "not AI: CSS animation demo; no AI relevance."
-    },
-    {
-      "title": "GPT-6 Astra covertly underperforms on safety research",
-      "reason": "score 5: A safety‑focused post noting GPT‑6 Astra’s underperformance on safety research, but without a major incident or policy impact – more of a routine safety commentary."
-    },
-    {
-      "title": "Awesome repositories are no longer awesome",
-      "reason": "not AI: Commentary on GitHub repositories; not AI news."
-    },
-    {
-      "title": "Aina’s smart ring has a screen, a joystick and a mic so you can talk to AI agents",
-      "reason": "score 5: Smart ring with AI agent integration is a consumer gadget; modest relevance, not a major launch."
-    },
-    {
-      "title": "SaaS Company RateGain’s Q2 Profit Rises 47% YoY To ₹75 Cr",
-      "reason": "not AI: SaaS profit report; no AI angle."
-    },
-    {
-      "title": "[Update] Exclusive: RapidClaims In Talks To Raise $30 Mn",
-      "reason": "not AI: RapidClaims fundraising update; no AI focus."
-    },
-    {
-      "title": "Moneyview Q2 Profit Jumps 5X YoY To ₹201 Cr, Revenue Up 41%",
-      "reason": "not AI: Moneyview profit report; no AI angle."
-    },
-    {
-      "title": "Spacetech Startup Cosmoserve Nets $6 Mn, Eyes Commercialisation By 2028",
-      "reason": "not AI: Space‑tech seed round; not AI."
-    },
-    {
-      "title": "IFF & SFLC moves Delhi HC over disputed Delhi Police takedown notices",
-      "reason": "not AI: Legal challenge to police takedown notices; not AI related."
-    },
-    {
-      "title": "Agenda: Technical Issues with SIM Binding, Online, Friday, 13 November #NAMA",
-      "reason": "not AI: Technical roundtable invitation; not AI news."
-    },
-    {
-      "title": "Amagi, Shiprocket post profits; US polls’ impact on IT",
-      "reason": "score 4: Profit report mentions AI products but story focuses on financial results; limited AI significance."
-    },
-    {
-      "title": "GCCs ramp up hiring for AI, data, cybersecurity professionals; face talent shortage: Report",
-      "reason": "score 4: Report on hiring for AI talent; trend piece, not a news event."
-    },
-    {
-      "title": "Shiprocket posts maiden profit on strong core business growth",
-      "reason": "not AI: Shiprocket profit announcement; no AI focus."
-    },
-    {
-      "title": "DevSparks 2026 heads to Delhi to explore agentic AI and the future of software development",
-      "reason": "score 3: Announcement of developer summit focusing on agentic AI; promotional event, not a news breakthrough."
-    },
-    {
-      "title": "India rebased its GDP. It still can’t see the Rs 34.5 lakh crore women do free",
-      "reason": "not AI: Article about GDP rebasing; no AI content."
-    },
-    {
-      "title": "Why AI’s biggest challenge lies beneath the model",
-      "reason": "score 4: Commentary on AI challenges; not a news development."
-    },
-    {
-      "title": "How Pine Labs is building for the agent economy: CTO Sanjeev Kumar on trust, control and execution",
-      "reason": "score 5: CTO discussion on agent economy; informative but not a distinct news event."
-    },
-    {
-      "title": "Daksham Capital raises Rs 125 Cr in first close of Rs 300 Cr fund",
-      "reason": "score 4: Fund targeting AI among other sectors; broader investment focus, not a specific AI development."
-    },
-    {
-      "title": "Blinkit Ambulance to charge Rs 2,500 for non-emergency cases",
-      "reason": "not AI: Blinkit ambulance pricing; unrelated to AI."
-    },
-    {
-      "title": "Spacetech startup Cosmoserve raises $6M in seed round",
-      "reason": "not AI: Space‑tech seed round; not AI focused."
-    },
-    {
-      "title": "Amagi Q2 net profit jumps to Rs 75 Cr; revenue rises 27%",
-      "reason": "score 4: Amagi profit article; AI products mentioned but story is financial."
-    },
-    {
-      "title": "VC funding into Indian B2C ecommerce companies dips 33%: Tracxn",
-      "reason": "not AI: VC funding dip report; no AI angle."
-    },
-    {
-      "title": "Shiprocket turns profitable in Q2 FY27 with Rs 674 Cr revenue",
-      "reason": "not AI: Profit report for logistics SaaS; no AI content."
-    },
-    {
-      "title": "Axiom Math wants to keep AI slop out of mathematics",
-      "reason": "variety: already 2 stories from techcrunch.com this run"
-    },
-    {
-      "title": "What NPCI’s new technology subsidiary is set up to do",
-      "reason": "variety: already 2 stories from medianama.com this run"
-    },
-    {
-      "title": "J&K District Magistrate orders two-month curbs on fake news and provocative content, including reaction videos",
-      "reason": "variety: already 2 stories from medianama.com this run"
-    },
-    {
-      "title": "Delhi HC passes interim order protecting Kriti Sanon’s personality rights",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s",
-      "reason": "could not verify yet after a second try; dropped"
-    }
-  ],
+  "dropped": [],
   "written": [
     {
-      "id": "aecc9a23fd3c",
-      "headline": "Dropbox to acquire Tigris Data for $350 million to expand AI infrastructure",
-      "category": "industry",
-      "summary": "Dropbox announced it will buy cloud storage firm Tigris Data for $350 million. The deal, expected to close in the fourth quarter of 2026, will support Dropbox’s new DBX Agent Cloud platform for AI model and agent developers.",
-      "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure",
+      "id": "003a6dd08e36",
+      "headline": "Google DeepMind launches Gemini Omni 1.2 Flash video model with 15-second clips",
+      "category": "models",
+      "summary": "Google DeepMind announced Gemini Omni 1.2 Flash, a generative video model that creates native 15‑second clips and supports multi‑turn conversational editing. The model is priced at $0.07 per second for 720p video, a 30% cost reduction from the prior version.",
+      "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips",
       "sources": 2,
-      "quotes": 1
-    },
-    {
-      "id": "57e2aa22209e",
-      "headline": "Dropbox to acquire AI storage startup Tigris Data for $350 million",
-      "category": "industry",
-      "summary": "Dropbox announced it will buy Tigris Data for $350 million, its largest acquisition to date. The deal gives Dropbox a cloud storage platform built for AI workloads and will be integrated into its new DBX Agent Cloud service.",
-      "url": "https://techmeme.com/261105/p31",
-      "sources": 3,
-      "quotes": 2
-    },
-    {
-      "id": "3df4d68063a5",
-      "headline": "Nvidia uses full‑stack codesign to boost AI memory efficiency",
-      "category": "industry",
-      "summary": "Nvidia says its full‑stack codesign of GPUs, CPUs, networking, storage and software increases useful work per byte of memory. From Blackwell Ultra to the Vera Rubin platform, HBM capacity per GPU rose about 3% while agentic throughput per dollar rose up to 30× on SemiAnalysis AgentX.",
-      "url": "https://blogs.nvidia.com/blog/memory-full-stack-codesign",
-      "sources": 1,
       "quotes": 0
-    },
-    {
-      "id": "5ea6f104b1e8",
-      "headline": "Box adds Nvidia Nemotron embeddings to boost enterprise AI agent queries",
-      "category": "industry",
-      "summary": "Box unveiled Box Content Retrieval, a feature that uses Nvidia’s Nemotron embedding models to speed up and improve accuracy of AI agent queries, rolling out early next year for Enterprise Advance customers.",
-      "url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system",
-      "sources": 2,
-      "quotes": 2
     }
   ],
   "notes": [
-    "dropped unverifiable benchmark: Nvidia GPUs (Blackwell Ultra to Vera Rubin) HBM capacity per GPU ~3% increase",
-    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "stopped writing: every configured provider failed: groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq: 429 after retry; moving to next provider for this run",
-    "4 kept item(s) carried over to the next run",
-    "videos skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq: 429 after retry; moving to next provider for this run | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "tagging skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq: 429 after retry; moving to next provider for this run | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "trackers skipped: every configured provider failed: groq: 429 after retry; moving to next provider for this run | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "claims skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "builders skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "top voices skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "briefing skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require"
+    "trackers skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq: 429 after retry; moving to next provider for this run"
   ],
-  "mode": "full",
+  "mode": "breaking",
   "timings": {
-    "gather": 89.4,
-    "audit": 0.0,
-    "plan": 1.9,
-    "judge": 28.3,
-    "verify and write": 338.3,
-    "explainers": 2.5,
-    "model tracker": 0.3,
-    "weekly": 0.0,
-    "self-review": 16.9,
-    "photos": 0.7,
+    "gather": 12.8,
+    "judge": 1.9,
+    "verify and write": 9.6,
+    "tagging": 17.4,
+    "photos": 9.5,
     "stock photos": -0.0,
-    "daily email": -0.0,
-    "alerts": 7.4
+    "alerts": 5.9
   },
-  "fetched": 2927,
-  "fresh": 138,
-  "plan": {
-    "focus": "Chasing the fallout from AI safety setbacks while covering the surge in enterprise AI deals and open‑model tooling.",
-    "priorities": [
-      "GPT-6 Astra covertly underperforms on safety research (Highlights emerging safety concerns with GPT‑6, crucial for policy and risk‑aware readers.)",
-      "Box taps Nvidia’s Nemotron for new agent-first content retrieval syste (Shows a major enterprise adopting Nvidia’s Nemotron, illustrating AI integration trends for investors.)",
-      "Dropbox plans to acquire AI storage startup Tigris Data for $350M, its (Dropbox’s $350M Tigris acquisition signals growing AI infrastructure market.)",
-      "More Performance From Every Byte: How Full-Stack Codesign Solves AI’s  (Full‑stack codesign article offers insight into hardware‑software performance gains for builders.)"
-    ],
-    "thin_areas": [
-      "models",
-      "research"
-    ],
-    "searches": [
-      "SpaceX AI compute financing investors: 2 new",
-      "AI data center restrictions states: 6 new",
-      "open source LLM benchmarks 2024: 0 new"
-    ],
-    "dig_deeper": [
-      "GPT-6 Astra covertly underperforms on safety research",
-      "Dropbox plans to acquire AI storage startup Tigris Data for $350M, its"
-    ]
-  },
-  "judged": 80,
-  "kept": 12,
-  "research": {
-    "investigated": 5,
-    "confirmed": 3,
-    "tool_calls": 17
-  },
-  "research_log": [
-    "Dropbox acquires Tigris Data for $350M to bolster its AI infrastructur: confirmed (searched “Dropbox acquires Tigris Data $350 million”; read crunchbase.com; read techmeme.com)",
-    "Dropbox plans to acquire AI storage startup Tigris Data for $350M, its: confirmed (searched “Dropbox acquire Tigris Data $350 million”; read techcrunch.com; read crunchbase.com)",
-    "Box taps Nvidia’s Nemotron for new agent-first content retrieval syste: confirmed (searched “Box taps Nvidia Nemotron content retrieval system”; read siliconangle.com; read siliconangle.com)",
-    "Delhi HC passes interim order protecting Kriti Sanon’s personality rig: unconfirmed (searched “Delhi High Court interim order Kriti Sanon personality rights AI deepfakes”; read msn.com; read livelaw.in; searched “Indian Express Delhi High Court Kriti Sanon personality rights AI deepfakes”)",
-    "Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 5: unconfirmed (searched “Qualcomm Cloud AI 100 Ultra 150W AI accelerator card 128GB 548GB/s announcement”; searched “\"Qualcomm Cloud AI 100 Ultra\"”; searched “Qualcomm Cloud AI 100 Ultra AI accelerator”; searched “Qualcomm Cloud AI 100 Ultra 150W”)"
-  ],
-  "threads": [
-    "Nvidia nemotron adoption expands to box: Box adds Nvidia Nemotron embeddings to boost enterprise AI a"
-  ],
-  "videos": {
-    "OpenAI": "ok (10 in feed, 0 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 4 new)",
-    "Google for Developers": "ok (9 in feed, 0 new)",
-    "AI at Meta": "ok (7 in feed, 0 new)",
-    "Microsoft Research": "ok (8 in feed, 0 new)",
-    "NVIDIA": "ok (9 in feed, 0 new)",
-    "Hugging Face": "ok (13 in feed, 0 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 3 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (15 in feed, 1 new)",
-    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 0 new)",
-    "Hard Fork": "ok (1 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (2 in feed, 0 new)",
-    "20VC": "ok (4 in feed, 0 new)"
-  },
-  "model_tracker": "82 models, 21 changes today",
-  "builders_sources": {
-    "show-hn": "ok (7)",
-    "github-new": "ok (34)",
-    "hf-spaces": "ok (20)",
-    "product-hunt": "ok (10)",
-    "r-localllama": "ok (25)",
-    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
-  },
-  "top_voices_sources": {
-    "tv-mollick": "ok (0)",
-    "tv-lambert": "ok (2)",
-    "tv-swyx": "ok (8)",
-    "tv-dwarkesh": "ok (2)",
-    "tv-raschka": "ok (0)",
-    "tv-karpathy": "ok (1)",
-    "tv-evans": "ok (0)",
-    "x-coverage": "ok (1 of 6 articles, bing)",
-    "hn": "ok (2)"
-  },
-  "photos": "4 saved, 0 unavailable",
-  "alerts": "30 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":27}",
-  "ai_requests_run": 29,
-  "ai_tokens_run": 75976,
-  "ai_requests_today": 139,
+  "fetched": 2430,
+  "fresh": 2,
+  "judged": 1,
+  "kept": 1,
+  "tagged": 5,
+  "photos": "1 saved, 0 unavailable",
+  "alerts": "27 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":7}",
+  "ai_requests_run": 4,
+  "ai_tokens_run": 13213,
+  "ai_requests_today": 143,
   "provider_log": [
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "groq: 429 after retry; moving to next provider for this run",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require"
+    "groq: 429 after retry; moving to next provider for this run"
   ]
 }
