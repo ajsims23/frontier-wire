@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-05T11:37:06+00:00",
+  "started_at": "2026-11-05T13:28:47+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -15,48 +15,127 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (11)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (18)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
   },
-  "dropped": [
-    {
-      "title": "A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.",
-      "reason": "score 5: Hugging Face blog post about Phonon TTS model is an incremental release from a platform, not a frontier lab, and does not constitute major news."
-    }
+  "dropped": [],
+  "written": [],
+  "notes": [
+    "judging skipped: every configured provider failed: groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-arabic-saudi (update settings.yaml when convenient) | groq/qwen/qwen3.8-27b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input | groq/openai/gpt-oss-20b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok | groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons"
   ],
-  "written": [
-    {
-      "id": "f93567576105",
-      "headline": "OpenAI launches National Community Compact and Compute Campus Policy Blueprint",
-      "category": "policy",
-      "summary": "OpenAI released a National Community Compact and Compute Campus Policy Blueprint aimed at protecting local resources, creating jobs, and guiding responsible AI infrastructure development.",
-      "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
-      "sources": 1,
-      "quotes": 0
-    }
-  ],
-  "notes": [],
-  "mode": "breaking",
+  "mode": "full",
   "timings": {
-    "gather": 10.4,
-    "judge": 0.6,
-    "verify and write": 0.8,
-    "tagging": 0.5,
-    "trackers": 1.5,
-    "photos": 0.1,
-    "stock photos": 11.4,
-    "alerts": 2.2
+    "gather": 81.0,
+    "audit": -0.0,
+    "plan": 1.8,
+    "judge": 24.6,
+    "verify and write": 0.0,
+    "videos": 7.8,
+    "tagging": -0.0,
+    "explainers": -0.0,
+    "trackers": -0.0,
+    "claims": -0.0,
+    "model tracker": 0.0,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 6.8,
+    "self-review": -0.0,
+    "photos": 0.0,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 1.5
   },
-  "fetched": 2430,
-  "fresh": 2,
-  "judged": 2,
-  "kept": 1,
-  "tagged": 1,
-  "trackers": "filed 1 stories; updated ai-infrastructure",
+  "fetched": 2927,
+  "fresh": 117,
+  "plan": {
+    "focus": "Chasing fallout from post‑midterm data‑center restrictions while filling gaps in model metrics and safety research.",
+    "priorities": [
+      "NVIDIA publishes MetricTrail on Hugging Face (Introduces a new model evaluation metric, addressing our thin coverage of model performance tools.)",
+      "Apple rolls out Retention Messaging, letting developers present person (Apple's retention messaging impacts developer monetization strategies, key for business readers.)",
+      "Agility Robotics is set to begin trading on the Nasdaq under AGLT afte (Agility Robotics' Nasdaq debut marks a milestone for humanoid robotics investors.)",
+      "CERT-In flags an AI threat actor targeting BFSI payment APIs for unaut (CERT‑In alert on AI‑driven BFSI attacks adds critical safety and India relevance.)",
+      "Sources detail Dario Amodei's AI beliefs, shaped by forums like GiveWe (Dario Amodei interview offers rare AI leadership perspective, filling the voices gap.)"
+    ],
+    "thin_areas": [
+      "models",
+      "voices"
+    ],
+    "searches": [
+      "AI data center regulations: 5 new",
+      "LLM evaluation benchmark release: 0 new",
+      "AI founder interview 2026: 1 new"
+    ],
+    "dig_deeper": [
+      "NVIDIA publishes MetricTrail on Hugging Face",
+      "Sources detail Dario Amodei's AI beliefs, shaped by forums like GiveWe"
+    ]
+  },
+  "videos": {
+    "OpenAI": "ok (10 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 3 new)",
+    "Google for Developers": "ok (9 in feed, 0 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (13 in feed, 1 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 3 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 1 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "8 kept from 9 new",
+  "trackers": "filed 0 stories; no tracker changed",
+  "claims": "97 tracked, 92 open",
+  "model_tracker": "82 models, 18 changes today",
+  "briefing": "3 themes from 12 stories",
   "photos": "0 saved, 0 unavailable",
-  "stock photos": "1 added",
-  "alerts": "23 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":10}",
-  "ai_requests_run": 6,
-  "ai_tokens_run": 17089,
-  "ai_requests_today": 97,
-  "provider_log": []
+  "alerts": "23 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":1}",
+  "ai_requests_run": 4,
+  "ai_tokens_run": 31678,
+  "ai_requests_today": 101,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras: 429 after retry; moving to next provider for this run",
+    "groq/openai/gpt-oss-120b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on to",
+    "groq/llama-3.3-70b-versatile: model unavailable (404); trying next model",
+    "groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-arabic-saudi (update settings.yaml when convenient)",
+    "groq/qwen/qwen3.8-27b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input",
+    "groq/openai/gpt-oss-20b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok",
+    "groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing"
+  ]
 }
