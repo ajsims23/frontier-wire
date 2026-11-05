@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-05T20:45:11+00:00",
+  "started_at": "2026-11-05T21:28:44+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -17,48 +17,36 @@
     "microsoft-ai": "ok (10)",
     "mistral": "ok (6)"
   },
-  "dropped": [],
-  "written": [
+  "dropped": [
     {
-      "id": "7eab5dddcfa7",
-      "headline": "Nvidia vera cpu offers higher agent throughput and better power efficiency",
-      "category": "industry",
-      "summary": "Nvidia announced its Vera CPU can run AI agents faster while using less power than leading x86 CPUs. Early partners such as Perplexity, DeepInfra and others reported 1.5‑2.2× speed gains and up to 1.6× more agents per watt.",
-      "url": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents",
-      "sources": 1,
-      "quotes": 0
+      "title": "AI is speeding up how Windows security flaws are found and fixed",
+      "reason": "score 5: Microsoft blog announcing internal use of AI to accelerate Windows security flaw detection is an incremental product feature, not a major model release, policy change, or large-scale infrastructure deal. Scores as a routine industry update (5) and does not meet the 6+ threshold for publication."
     }
   ],
+  "written": [],
   "notes": [
-    "dropped unverifiable benchmark: Nvidia Vera CPU coding task speed 1.5x faster (Perplexity)",
-    "dropped unverifiable benchmark: Nvidia Vera CPU agentic orchestration speed 2.2x faster (DeepInfra)",
-    "dropped unverifiable benchmark: Nvidia Vera CPU TPC‑H SF1000 performance 1.5x median performance (DuckLabs)",
-    "dropped unverifiable benchmark: Nvidia Vera CPU sandbox throughput per core 2x (Modal)",
     "trackers skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq: 429 after retry; moving to next provider for this run"
   ],
   "mode": "breaking",
   "timings": {
-    "gather": 12.2,
-    "judge": 2.1,
-    "verify and write": 5.3,
-    "tagging": 12.8,
-    "photos": 12.5,
+    "gather": 15.5,
+    "judge": 1.7,
+    "verify and write": -0.0,
+    "tagging": -0.0,
+    "photos": 22.3,
     "stock photos": 0.0,
-    "alerts": 3.0
+    "alerts": 2.1
   },
   "fetched": 2431,
   "fresh": 1,
   "judged": 1,
-  "kept": 1,
-  "tagged": 2,
-  "photos": "1 saved, 0 unavailable",
-  "alerts": "30 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":7}",
-  "ai_requests_run": 4,
-  "ai_tokens_run": 11816,
-  "ai_requests_today": 155,
+  "kept": 0,
+  "photos": "0 saved, 0 unavailable",
+  "alerts": "29 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":0}",
+  "ai_requests_run": 2,
+  "ai_tokens_run": 7702,
+  "ai_requests_today": 157,
   "provider_log": [
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
