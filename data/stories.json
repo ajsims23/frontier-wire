@@ -1,6 +1,84 @@
 [
   {
     "explainer": {
+      "what_it_means": "The Vera processor can complete more AI‑agent tasks in the same time and with less electricity than typical server CPUs. This means data‑center operators can run larger numbers of agents, such as code‑writing bots or search assistants, without adding extra hardware or power costs.",
+      "terms": [
+        {
+          "term": "agentic AI",
+          "meaning": "AI systems that perform a sequence of actions like searching, coding, or controlling other software, often moving between CPU and GPU work."
+        },
+        {
+          "term": "throughput",
+          "meaning": "The amount of work (such as number of agent tasks) a processor can handle in a given time."
+        },
+        {
+          "term": "agents per watt",
+          "meaning": "A measure of how many AI agents can be run for each watt of power consumed."
+        }
+      ],
+      "watch_next": [
+        "Perplexity plans to deploy Vera in an upcoming production system."
+      ]
+    },
+    "benchmarks": [
+      {
+        "model": "Nvidia Vera CPU",
+        "benchmark": "agents per watt vs fastest x86 CPU",
+        "score": "1.6x more agents per watt"
+      },
+      {
+        "model": "Nvidia Vera CPU",
+        "benchmark": "agent speed vs most energy‑efficient x86 CPU",
+        "score": "2x faster"
+      }
+    ],
+    "audiences": {
+      "builders": "Vera offers higher throughput and better power efficiency, letting developers run more agent workloads per CPU.",
+      "business": "Providers can support more AI agents without extra power cost, improving cost efficiency.",
+      "investors": "Nvidia's Vera CPU could capture AI infrastructure market share by delivering performance and efficiency advantages."
+    },
+    "id": "7eab5dddcfa7",
+    "headline": "Nvidia vera cpu offers higher agent throughput and better power efficiency",
+    "summary": "Nvidia announced its Vera CPU can run AI agents faster while using less power than leading x86 CPUs. Early partners such as Perplexity, DeepInfra and others reported 1.5‑2.2× speed gains and up to 1.6× more agents per watt.",
+    "why_it_matters": "The CPU lets AI infrastructure providers handle more agent workloads without increasing power consumption.",
+    "category": "industry",
+    "lab": "NVIDIA",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 6,
+    "url": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents",
+    "source_id": "nvidia",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/tech-blog-cpu-architecture-angled-vera-rack-5769445-1920x1080-1.png",
+    "sources": [
+      {
+        "url": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents",
+        "publisher": "NVIDIA blog",
+        "title": "Vera Delivers the Best of Both Worlds: Highest Throughput and Fastest Agents"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-05T20:00:41+00:00",
+    "created_at": "2026-11-05T20:45:11+00:00",
+    "breaking": true,
+    "sectors": [],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "1.5‑2.2× speed",
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "The checkpoints can generate synchronized video and LiDAR data for many camera views, allowing developers to simulate driving conditions with varied weather, lighting and traffic signals. They also predict visual outcomes from robot actions, enabling interactive simulation loops. Because the weights are open, anyone can fine‑tune or compare methods without licensing barriers.",
       "terms": [
         {
@@ -50,7 +128,21 @@
     "published_at": "2026-11-05T19:35:16+00:00",
     "created_at": "2026-11-05T19:49:22+00:00",
     "breaking": true,
-    "photo_local": true
+    "photo_local": true,
+    "sectors": [
+      "transport",
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "Cosmos 3 Nano"
   },
   {
     "explainer": {

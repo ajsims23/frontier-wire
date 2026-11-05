@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T19:49:22+00:00",
+  "updated_at": "2026-11-05T20:45:11+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Investors can purchase chunks of the financing before the full syndication, giving the lenders quick capital and spreading risk. The financing supports SpaceX’s AI compute services that rely on GPUs.",
@@ -87,6 +87,84 @@
   "stories": [
     {
       "explainer": {
+        "what_it_means": "The Vera processor can complete more AI‑agent tasks in the same time and with less electricity than typical server CPUs. This means data‑center operators can run larger numbers of agents, such as code‑writing bots or search assistants, without adding extra hardware or power costs.",
+        "terms": [
+          {
+            "term": "agentic AI",
+            "meaning": "AI systems that perform a sequence of actions like searching, coding, or controlling other software, often moving between CPU and GPU work."
+          },
+          {
+            "term": "throughput",
+            "meaning": "The amount of work (such as number of agent tasks) a processor can handle in a given time."
+          },
+          {
+            "term": "agents per watt",
+            "meaning": "A measure of how many AI agents can be run for each watt of power consumed."
+          }
+        ],
+        "watch_next": [
+          "Perplexity plans to deploy Vera in an upcoming production system."
+        ]
+      },
+      "benchmarks": [
+        {
+          "model": "Nvidia Vera CPU",
+          "benchmark": "agents per watt vs fastest x86 CPU",
+          "score": "1.6x more agents per watt"
+        },
+        {
+          "model": "Nvidia Vera CPU",
+          "benchmark": "agent speed vs most energy‑efficient x86 CPU",
+          "score": "2x faster"
+        }
+      ],
+      "audiences": {
+        "builders": "Vera offers higher throughput and better power efficiency, letting developers run more agent workloads per CPU.",
+        "business": "Providers can support more AI agents without extra power cost, improving cost efficiency.",
+        "investors": "Nvidia's Vera CPU could capture AI infrastructure market share by delivering performance and efficiency advantages."
+      },
+      "id": "7eab5dddcfa7",
+      "headline": "Nvidia vera cpu offers higher agent throughput and better power efficiency",
+      "summary": "Nvidia announced its Vera CPU can run AI agents faster while using less power than leading x86 CPUs. Early partners such as Perplexity, DeepInfra and others reported 1.5‑2.2× speed gains and up to 1.6× more agents per watt.",
+      "why_it_matters": "The CPU lets AI infrastructure providers handle more agent workloads without increasing power consumption.",
+      "category": "industry",
+      "lab": "NVIDIA",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 6,
+      "url": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents",
+      "source_id": "nvidia",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/tech-blog-cpu-architecture-angled-vera-rack-5769445-1920x1080-1.png",
+      "sources": [
+        {
+          "url": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents",
+          "publisher": "NVIDIA blog",
+          "title": "Vera Delivers the Best of Both Worlds: Highest Throughput and Fastest Agents"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-05T20:00:41+00:00",
+      "created_at": "2026-11-05T20:45:11+00:00",
+      "breaking": true,
+      "sectors": [],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "1.5‑2.2× speed",
+      "photo_local": true
+    },
+    {
+      "explainer": {
         "what_it_means": "The checkpoints can generate synchronized video and LiDAR data for many camera views, allowing developers to simulate driving conditions with varied weather, lighting and traffic signals. They also predict visual outcomes from robot actions, enabling interactive simulation loops. Because the weights are open, anyone can fine‑tune or compare methods without licensing barriers.",
         "terms": [
           {
@@ -136,7 +214,21 @@
       "published_at": "2026-11-05T19:35:16+00:00",
       "created_at": "2026-11-05T19:49:22+00:00",
       "breaking": true,
-      "photo_local": true
+      "photo_local": true,
+      "sectors": [
+        "transport",
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "Cosmos 3 Nano"
     },
     {
       "explainer": {
@@ -5323,81 +5415,6 @@
         "agent-safety"
       ],
       "stock_tried": "2026-11-03T03:47:07+00:00"
-    },
-    {
-      "explainer": {
-        "what_it_means": "A security sprint is a focused period where engineers probe a system for weaknesses. By using AI, OpenAI can automatically generate attacks and assess how its models and infrastructure respond. The goal is to find and fix flaws before attackers exploit them.",
-        "terms": [
-          {
-            "term": "security sprint",
-            "meaning": "A short, intensive testing phase aimed at identifying and fixing security vulnerabilities."
-          },
-          {
-            "term": "AI-driven testing",
-            "meaning": "Using artificial intelligence to automatically create and execute attacks against a system to evaluate its defenses."
-          },
-          {
-            "term": "Cathedral Systems",
-            "meaning": "A security consultancy that works with companies to assess and improve their cyber defenses."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "The sprint may produce new security tools or guidelines that developers can apply when building on OpenAI’s platforms.",
-        "business": "Executives see OpenAI investing in protecting its products, which can reduce risk and maintain trust with customers.",
-        "investors": "Investors receive reassurance that OpenAI is proactively managing security risks to protect its operations and reputation."
-      },
-      "id": "262cfa35f430",
-      "headline": "OpenAI teams with Cathedral Systems for next internal security sprint",
-      "summary": "OpenAI announced it is partnering with Cathedral Systems to run its next internal security sprint, using AI to test and harden its defenses. The effort follows recent patches to vulnerabilities in ChatGPT’s HTML preview sandbox.",
-      "why_it_matters": "Strengthening OpenAI’s security helps protect the reliability of its AI services and user data.",
-      "category": "safety",
-      "lab": "OpenAI",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 6,
-      "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
-      "source_id": "openai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": null,
-      "sources": [
-        {
-          "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
-          "publisher": "OpenAI",
-          "title": "Preparing our next security sprint to harden OpenAI"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-11-02T18:00:00+00:00",
-      "created_at": "2026-11-03T03:47:07+00:00",
-      "breaking": true,
-      "thread": "t-12a44e97c092",
-      "sectors": [
-        "cybersecurity"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": {
-        "type": "partnership",
-        "company": "OpenAI",
-        "amount": "",
-        "usd": null
-      },
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "Cathedral",
-      "trackers": [
-        "agent-safety"
-      ],
-      "stock_tried": "2026-11-03T03:47:07+00:00"
     }
   ],
   "voices": [
@@ -6099,7 +6116,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 93,
+    "stories_this_month": 94,
     "model_releases_this_month": 8,
     "labs_tracked": 19
   }

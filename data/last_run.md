@@ -1,28 +1,26 @@
-## Frontier Wire breaking-news check — 2026-11-05T19:49:22+00:00
+## Frontier Wire breaking-news check — 2026-11-05T20:45:11+00:00
 
-Fetched 2431 items · fresh 2 · judged 2 · kept 1 · **written 1**
-AI: 3 requests, 9,910 tokens this run · 151 requests today · providers: cerebras, groq
+Fetched 2431 items · fresh 1 · judged 1 · kept 1 · **written 1**
+AI: 4 requests, 11,816 tokens this run · 155 requests today · providers: cerebras, groq
 Photos: 1 saved, 0 unavailable
-Alerts: 30 events sent: {"subscribers":8,"sent":0,"queued":8}
-Time: gather 15s, judge 2s, verify and write 6s, photos 10s, alerts 3s
+Alerts: 30 events sent: {"subscribers":8,"sent":0,"queued":7}
+Tagged 2 stories by sector, region and deal
+Time: gather 12s, judge 2s, verify and write 5s, tagging 13s, photos 12s, alerts 3s
 
 ### New stories
-- **models** — [Nvidia adds four open-weight Cosmos 3 Nano checkpoints for interactive simulation](https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation)  
-  Nvidia released four open-weight checkpoints—Cosmos3-Nano-Transfer-Auto, Cosmos3-Nano-Sim-Auto, Cosmos3-Nano-Sim-Transfer and Cosmos3-Nano-Sim-Bimanual—each built on the 16-billion-parameter Cosmos 3 Nano model. They generate interactive world simulations and multi-sensor driving scenes.  
+- **industry** — [Nvidia vera cpu offers higher agent throughput and better power efficiency](https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents)  
+  Nvidia announced its Vera CPU can run AI agents faster while using less power than leading x86 CPUs. Early partners such as Perplexity, DeepInfra and others reported 1.5‑2.2× speed gains and up to 1.6× more agents per watt.  
   _1 source(s), 0 verified quote(s)_
 
-<details><summary>Dropped</summary>
-
-- A faster, simpler XBOX experience is coming to more screens — not AI: The announcement concerns a faster Xbox experience, a product marketing piece without a clear AI focus, thus not newsworthy for Frontier Wire.
-
-</details>
-
 ### Notes
-- tagging skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | groq: 429 after retry; moving to next provider for this run
-- trackers skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | groq: 429 after retry; moving to next provider for this run | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
+- dropped unverifiable benchmark: Nvidia Vera CPU coding task speed 1.5x faster (Perplexity)
+- dropped unverifiable benchmark: Nvidia Vera CPU agentic orchestration speed 2.2x faster (DeepInfra)
+- dropped unverifiable benchmark: Nvidia Vera CPU TPC‑H SF1000 performance 1.5x median performance (DuckLabs)
+- dropped unverifiable benchmark: Nvidia Vera CPU sandbox throughput per core 2x (Modal)
+- trackers skipped: every configured provider failed: cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | groq: 429 after retry; moving to next provider for this run
+- cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
 - cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
 - cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
 - cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
 - cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
 - groq: 429 after retry; moving to next provider for this run
-- cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
