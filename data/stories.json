@@ -1,6 +1,69 @@
 [
   {
     "explainer": {
+      "what_it_means": "Nvidia designs the whole hardware‑software stack together so that each layer of the memory hierarchy is used efficiently. This means more AI work can be done with the same amount of fast, expensive memory, lowering cost and power use.",
+      "terms": [
+        {
+          "term": "HBM",
+          "meaning": "High‑bandwidth memory, a fast but costly memory tier located on the GPU."
+        },
+        {
+          "term": "KV cache",
+          "meaning": "Key‑value cache that stores context information for a model during inference, reducing the need to recompute past data."
+        },
+        {
+          "term": "Agentic inference",
+          "meaning": "AI workloads that maintain and reuse context across multiple model or tool calls, often requiring large amounts of memory."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "SemiAnalysis AgentX",
+        "benchmark": "Agentic throughput per dollar",
+        "score": "up to 30x"
+      }
+    ],
+    "audiences": {
+      "builders": "The full‑stack approach shows how coordinated hardware and software design can extract more performance from each byte of memory.",
+      "business": "Greater memory efficiency can reduce the cost of running large AI models and support more demanding applications.",
+      "investors": "Demonstrated performance gains reinforce Nvidia's competitive edge in the AI hardware market."
+    },
+    "id": "3df4d68063a5",
+    "headline": "Nvidia uses full‑stack codesign to boost AI memory efficiency",
+    "summary": "Nvidia says its full‑stack codesign of GPUs, CPUs, networking, storage and software increases useful work per byte of memory. From Blackwell Ultra to the Vera Rubin platform, HBM capacity per GPU rose about 3% while agentic throughput per dollar rose up to 30× on SemiAnalysis AgentX.",
+    "why_it_matters": "Improving memory efficiency lets AI systems handle larger models and longer contexts without costly hardware upgrades.",
+    "category": "industry",
+    "lab": "NVIDIA",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "memory",
+      "HBM",
+      "AI hardware"
+    ],
+    "quotes": [],
+    "score": 7,
+    "url": "https://blogs.nvidia.com/blog/memory-full-stack-codesign",
+    "source_id": "nvidia",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/memory-codesign-1920x1080-1.jpg",
+    "sources": [
+      {
+        "url": "https://blogs.nvidia.com/blog/memory-full-stack-codesign",
+        "publisher": "NVIDIA blog",
+        "title": "More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-05T16:00:00+00:00",
+    "created_at": "2026-11-05T16:19:07+00:00",
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Mistral Studio lets companies run the Le Chonk model as part of agents, workflows or apps that can be hosted in the cloud, a private VPC or on‑premises. The platform gives developers tools to connect the model to internal data and systems while keeping full visibility and control over how the AI works.",
       "terms": [
         {
@@ -81,6 +144,234 @@
       "frontier-race",
       "ai-infrastructure"
     ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Dropbox will own Tigris’s storage platform, allowing developers to store and retrieve large data sets needed for AI models. The technology will be offered through DBX Agent Cloud as a standalone object‑storage product. This expands Dropbox’s business beyond personal file sharing into AI‑focused infrastructure services.",
+      "terms": [
+        {
+          "term": "Object storage",
+          "meaning": "A way to store and retrieve large collections of data such as images, video, and files used to train AI models."
+        },
+        {
+          "term": "AI workloads",
+          "meaning": "Computational tasks that involve training or running artificial‑intelligence models, which require large amounts of data."
+        },
+        {
+          "term": "Distributed compute",
+          "meaning": "Processing that runs across multiple machines or locations, often needed for large‑scale AI tasks."
+        }
+      ],
+      "watch_next": [
+        "The acquisition is expected to close in the fourth quarter of 2026.",
+        "Broader availability of DBX Agent Cloud is planned for 2027."
+      ]
+    },
+    "audiences": {
+      "builders": "Developers can now access Tigris’s object storage via DBX Agent Cloud to host data for AI models.",
+      "business": "Dropbox expands its product line into AI infrastructure, opening a new revenue stream beyond its traditional file‑sharing services.",
+      "investors": "The $350 million deal signals Dropbox’s strategic shift toward higher‑margin AI services, which could affect its valuation and growth prospects."
+    },
+    "id": "57e2aa22209e",
+    "headline": "Dropbox to acquire AI storage startup Tigris Data for $350 million",
+    "summary": "Dropbox announced it will buy Tigris Data for $350 million, its largest acquisition to date. The deal gives Dropbox a cloud storage platform built for AI workloads and will be integrated into its new DBX Agent Cloud service.",
+    "why_it_matters": "The acquisition moves Dropbox from file‑sharing into AI infrastructure, giving developers a ready‑made storage solution for training and running AI models.",
+    "category": "industry",
+    "lab": "Dropbox",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "Tigris brings together a product already running in production, an experienced team, and established relationships with AI developers,",
+        "speaker": "Eric Webster",
+        "speaker_role": "chief business officer",
+        "source_url": "https://news.crunchbase.com/ma/dbx-ai-infrastructure-deal-tigris-acquisition"
+      },
+      {
+        "text": "That combination would accelerate our entry into infrastructure for AI applications through DBX Agent Cloud.",
+        "speaker": "Eric Webster",
+        "speaker_role": "chief business officer",
+        "source_url": "https://news.crunchbase.com/ma/dbx-ai-infrastructure-deal-tigris-acquisition"
+      }
+    ],
+    "score": 8,
+    "url": "https://techmeme.com/261105/p31",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://techcrunch.com/wp-content/uploads/2021/03/GettyImages-1211180751.jpg?w=1024",
+    "sources": [
+      {
+        "url": "https://techmeme.com/261105/p31",
+        "publisher": "techmeme.com",
+        "title": "Dropbox plans to acquire AI storage startup Tigris Data for $350M, its largest acquisition to date; Tigris raised ~$31.9M from Spark, a16z, and others (Mary Ann Azevedo/Crunchbase News)"
+      },
+      {
+        "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure",
+        "publisher": "TechCrunch AI",
+        "title": "Dropbox acquires Tigris Data for $350M to bolster its AI infrastructure"
+      },
+      {
+        "url": "https://news.crunchbase.com/ma/dbx-ai-infrastructure-deal-tigris-acquisition",
+        "publisher": "Crunchbase News",
+        "title": "Dropbox Plans $350M AI Infrastructure Deal With Tigris Buy, Its Biggest Acquisition Yet"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-05T15:40:02+00:00",
+    "created_at": "2026-11-05T16:19:07+00:00",
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Dropbox is buying Tigris Data to add a cloud storage system that can keep data close to where AI models run. This will let developers store large datasets and files needed for training and running AI models on Dropbox’s DBX Agent Cloud platform. The service will initially be offered as object storage compatible with Amazon S3.",
+      "terms": [
+        {
+          "term": "Object storage",
+          "meaning": "A type of data storage that manages data as discrete units (objects) and is suited for large, unstructured data such as images, video, and AI training files."
+        },
+        {
+          "term": "Distributed compute",
+          "meaning": "Processing that is spread across multiple machines or locations, often needed for large AI model training."
+        },
+        {
+          "term": "AI workloads",
+          "meaning": "Computational tasks that involve training, running, or supporting artificial‑intelligence models."
+        }
+      ],
+      "watch_next": [
+        "Transaction expected to close in the fourth quarter of 2026",
+        "Broader availability of DBX Agent Cloud planned for 2027"
+      ]
+    },
+    "audiences": {
+      "builders": "Developers will get a ready‑to‑use object storage service that works with existing S3 tools, helping them build AI models faster.",
+      "business": "Enterprises can store and retrieve large AI training data on Dropbox’s platform, extending beyond simple file sharing.",
+      "investors": "The $350 million deal marks Dropbox’s largest acquisition, signaling a strategic shift toward AI infrastructure markets."
+    },
+    "id": "aecc9a23fd3c",
+    "headline": "Dropbox to acquire Tigris Data for $350 million to expand AI infrastructure",
+    "summary": "Dropbox announced it will buy cloud storage firm Tigris Data for $350 million. The deal, expected to close in the fourth quarter of 2026, will support Dropbox’s new DBX Agent Cloud platform for AI model and agent developers.",
+    "why_it_matters": "The acquisition gives Dropbox a ready‑made storage platform for the distributed compute needs of modern AI workloads.",
+    "category": "industry",
+    "lab": "Dropbox",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "Tigris brings together a product already running in production, an experienced team, and established relationships with AI developers,",
+        "speaker": "Eric Webster",
+        "speaker_role": "Chief Business Officer",
+        "source_url": "https://news.crunchbase.com/ma/dbx-ai-infrastructure-deal-tigris-acquisition"
+      }
+    ],
+    "score": 8,
+    "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure",
+    "source_id": "techcrunch-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://techcrunch.com/wp-content/uploads/2021/03/GettyImages-1211180751.jpg?w=1024",
+    "sources": [
+      {
+        "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure",
+        "publisher": "TechCrunch AI",
+        "title": "Dropbox acquires Tigris Data for $350M to bolster its AI infrastructure"
+      },
+      {
+        "url": "https://news.crunchbase.com/ma/dbx-ai-infrastructure-deal-tigris-acquisition",
+        "publisher": "Crunchbase News",
+        "title": "Dropbox Plans $350M AI Infrastructure Deal With Tigris Buy, Its Biggest Acquisition Yet"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-05T15:19:05+00:00",
+    "created_at": "2026-11-05T16:19:07+00:00",
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Box Content Retrieval creates vector embeddings of documents, images, audio and video so AI agents can quickly find the most relevant pieces of information. This reduces the amount of text the agent must process, cutting response time and cost. The system also respects existing metadata and permission settings, keeping data secure.",
+      "terms": [
+        {
+          "term": "embedding",
+          "meaning": "Turning data such as text or images into numeric vectors that capture meaning for similarity search."
+        },
+        {
+          "term": "token",
+          "meaning": "A small piece of text (like a word or part of a word) that language models process."
+        },
+        {
+          "term": "multimodal",
+          "meaning": "Handling multiple data types—text, images, audio, video—in a single model."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers can integrate Box’s API with Nemotron embeddings to give autonomous agents richer, faster context for tasks.",
+      "business": "Enterprises gain quicker, more accurate AI‑driven answers while using fewer compute resources, lowering operational costs.",
+      "investors": "The partnership signals Box’s strategic move to strengthen its AI offering, potentially boosting its market position against rivals."
+    },
+    "id": "5ea6f104b1e8",
+    "headline": "Box adds Nvidia Nemotron embeddings to boost enterprise AI agent queries",
+    "summary": "Box unveiled Box Content Retrieval, a feature that uses Nvidia’s Nemotron embedding models to speed up and improve accuracy of AI agent queries, rolling out early next year for Enterprise Advance customers.",
+    "why_it_matters": "Embedding unstructured data lets autonomous agents retrieve relevant information faster and cheaper, addressing a key bottleneck in enterprise AI adoption.",
+    "category": "industry",
+    "lab": "Box",
+    "model_name": "Nemotron",
+    "model_type": "Multimodal",
+    "tags": [],
+    "quotes": [
+      {
+        "text": "This dramatically boosts both the relevance of our search technology for agents,” Box CEO Aaron Levie said.",
+        "speaker": "Aaron Levie",
+        "speaker_role": "Box CEO",
+        "source_url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system"
+      },
+      {
+        "text": "We’re probably packing in five different technologies into one simple API,” Levie told TechCrunch.",
+        "speaker": "Aaron Levie",
+        "speaker_role": "Box CEO",
+        "source_url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system"
+      }
+    ],
+    "score": 7,
+    "url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system",
+    "source_id": "techcrunch-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://techcrunch.com/wp-content/uploads/2024/08/GettyImages-1178603809.jpg?w=1024",
+    "sources": [
+      {
+        "url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system",
+        "publisher": "TechCrunch AI",
+        "title": "Box taps Nvidia’s Nemotron for new agent-first content retrieval system"
+      },
+      {
+        "url": "https://siliconangle.com/2026/11/05/box-taps-nvidias-ai-models-to-build-a-rich-context-layer-for-autonomous-enterprise-agents",
+        "publisher": "SiliconANGLE",
+        "title": "Box taps Nvidia’s AI models to build a rich context layer for autonomous enterprise agents"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-05T14:00:00+00:00",
+    "created_at": "2026-11-05T16:19:07+00:00",
+    "thread": "t-5ae7f5cc4417",
     "photo_local": true
   },
   {

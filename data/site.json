@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T15:56:59+00:00",
+  "updated_at": "2026-11-05T16:19:07+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Investors can purchase chunks of the financing before the full syndication, giving the lenders quick capital and spreading risk. The financing supports SpaceX’s AI compute services that rely on GPUs.",
@@ -87,6 +87,69 @@
   "stories": [
     {
       "explainer": {
+        "what_it_means": "Nvidia designs the whole hardware‑software stack together so that each layer of the memory hierarchy is used efficiently. This means more AI work can be done with the same amount of fast, expensive memory, lowering cost and power use.",
+        "terms": [
+          {
+            "term": "HBM",
+            "meaning": "High‑bandwidth memory, a fast but costly memory tier located on the GPU."
+          },
+          {
+            "term": "KV cache",
+            "meaning": "Key‑value cache that stores context information for a model during inference, reducing the need to recompute past data."
+          },
+          {
+            "term": "Agentic inference",
+            "meaning": "AI workloads that maintain and reuse context across multiple model or tool calls, often requiring large amounts of memory."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "SemiAnalysis AgentX",
+          "benchmark": "Agentic throughput per dollar",
+          "score": "up to 30x"
+        }
+      ],
+      "audiences": {
+        "builders": "The full‑stack approach shows how coordinated hardware and software design can extract more performance from each byte of memory.",
+        "business": "Greater memory efficiency can reduce the cost of running large AI models and support more demanding applications.",
+        "investors": "Demonstrated performance gains reinforce Nvidia's competitive edge in the AI hardware market."
+      },
+      "id": "3df4d68063a5",
+      "headline": "Nvidia uses full‑stack codesign to boost AI memory efficiency",
+      "summary": "Nvidia says its full‑stack codesign of GPUs, CPUs, networking, storage and software increases useful work per byte of memory. From Blackwell Ultra to the Vera Rubin platform, HBM capacity per GPU rose about 3% while agentic throughput per dollar rose up to 30× on SemiAnalysis AgentX.",
+      "why_it_matters": "Improving memory efficiency lets AI systems handle larger models and longer contexts without costly hardware upgrades.",
+      "category": "industry",
+      "lab": "NVIDIA",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "memory",
+        "HBM",
+        "AI hardware"
+      ],
+      "quotes": [],
+      "score": 7,
+      "url": "https://blogs.nvidia.com/blog/memory-full-stack-codesign",
+      "source_id": "nvidia",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/memory-codesign-1920x1080-1.jpg",
+      "sources": [
+        {
+          "url": "https://blogs.nvidia.com/blog/memory-full-stack-codesign",
+          "publisher": "NVIDIA blog",
+          "title": "More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-05T16:00:00+00:00",
+      "created_at": "2026-11-05T16:19:07+00:00",
+      "photo_local": true
+    },
+    {
+      "explainer": {
         "what_it_means": "Mistral Studio lets companies run the Le Chonk model as part of agents, workflows or apps that can be hosted in the cloud, a private VPC or on‑premises. The platform gives developers tools to connect the model to internal data and systems while keeping full visibility and control over how the AI works.",
         "terms": [
           {
@@ -167,6 +230,234 @@
         "frontier-race",
         "ai-infrastructure"
       ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Dropbox will own Tigris’s storage platform, allowing developers to store and retrieve large data sets needed for AI models. The technology will be offered through DBX Agent Cloud as a standalone object‑storage product. This expands Dropbox’s business beyond personal file sharing into AI‑focused infrastructure services.",
+        "terms": [
+          {
+            "term": "Object storage",
+            "meaning": "A way to store and retrieve large collections of data such as images, video, and files used to train AI models."
+          },
+          {
+            "term": "AI workloads",
+            "meaning": "Computational tasks that involve training or running artificial‑intelligence models, which require large amounts of data."
+          },
+          {
+            "term": "Distributed compute",
+            "meaning": "Processing that runs across multiple machines or locations, often needed for large‑scale AI tasks."
+          }
+        ],
+        "watch_next": [
+          "The acquisition is expected to close in the fourth quarter of 2026.",
+          "Broader availability of DBX Agent Cloud is planned for 2027."
+        ]
+      },
+      "audiences": {
+        "builders": "Developers can now access Tigris’s object storage via DBX Agent Cloud to host data for AI models.",
+        "business": "Dropbox expands its product line into AI infrastructure, opening a new revenue stream beyond its traditional file‑sharing services.",
+        "investors": "The $350 million deal signals Dropbox’s strategic shift toward higher‑margin AI services, which could affect its valuation and growth prospects."
+      },
+      "id": "57e2aa22209e",
+      "headline": "Dropbox to acquire AI storage startup Tigris Data for $350 million",
+      "summary": "Dropbox announced it will buy Tigris Data for $350 million, its largest acquisition to date. The deal gives Dropbox a cloud storage platform built for AI workloads and will be integrated into its new DBX Agent Cloud service.",
+      "why_it_matters": "The acquisition moves Dropbox from file‑sharing into AI infrastructure, giving developers a ready‑made storage solution for training and running AI models.",
+      "category": "industry",
+      "lab": "Dropbox",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "Tigris brings together a product already running in production, an experienced team, and established relationships with AI developers,",
+          "speaker": "Eric Webster",
+          "speaker_role": "chief business officer",
+          "source_url": "https://news.crunchbase.com/ma/dbx-ai-infrastructure-deal-tigris-acquisition"
+        },
+        {
+          "text": "That combination would accelerate our entry into infrastructure for AI applications through DBX Agent Cloud.",
+          "speaker": "Eric Webster",
+          "speaker_role": "chief business officer",
+          "source_url": "https://news.crunchbase.com/ma/dbx-ai-infrastructure-deal-tigris-acquisition"
+        }
+      ],
+      "score": 8,
+      "url": "https://techmeme.com/261105/p31",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://techcrunch.com/wp-content/uploads/2021/03/GettyImages-1211180751.jpg?w=1024",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261105/p31",
+          "publisher": "techmeme.com",
+          "title": "Dropbox plans to acquire AI storage startup Tigris Data for $350M, its largest acquisition to date; Tigris raised ~$31.9M from Spark, a16z, and others (Mary Ann Azevedo/Crunchbase News)"
+        },
+        {
+          "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure",
+          "publisher": "TechCrunch AI",
+          "title": "Dropbox acquires Tigris Data for $350M to bolster its AI infrastructure"
+        },
+        {
+          "url": "https://news.crunchbase.com/ma/dbx-ai-infrastructure-deal-tigris-acquisition",
+          "publisher": "Crunchbase News",
+          "title": "Dropbox Plans $350M AI Infrastructure Deal With Tigris Buy, Its Biggest Acquisition Yet"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-05T15:40:02+00:00",
+      "created_at": "2026-11-05T16:19:07+00:00",
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Dropbox is buying Tigris Data to add a cloud storage system that can keep data close to where AI models run. This will let developers store large datasets and files needed for training and running AI models on Dropbox’s DBX Agent Cloud platform. The service will initially be offered as object storage compatible with Amazon S3.",
+        "terms": [
+          {
+            "term": "Object storage",
+            "meaning": "A type of data storage that manages data as discrete units (objects) and is suited for large, unstructured data such as images, video, and AI training files."
+          },
+          {
+            "term": "Distributed compute",
+            "meaning": "Processing that is spread across multiple machines or locations, often needed for large AI model training."
+          },
+          {
+            "term": "AI workloads",
+            "meaning": "Computational tasks that involve training, running, or supporting artificial‑intelligence models."
+          }
+        ],
+        "watch_next": [
+          "Transaction expected to close in the fourth quarter of 2026",
+          "Broader availability of DBX Agent Cloud planned for 2027"
+        ]
+      },
+      "audiences": {
+        "builders": "Developers will get a ready‑to‑use object storage service that works with existing S3 tools, helping them build AI models faster.",
+        "business": "Enterprises can store and retrieve large AI training data on Dropbox’s platform, extending beyond simple file sharing.",
+        "investors": "The $350 million deal marks Dropbox’s largest acquisition, signaling a strategic shift toward AI infrastructure markets."
+      },
+      "id": "aecc9a23fd3c",
+      "headline": "Dropbox to acquire Tigris Data for $350 million to expand AI infrastructure",
+      "summary": "Dropbox announced it will buy cloud storage firm Tigris Data for $350 million. The deal, expected to close in the fourth quarter of 2026, will support Dropbox’s new DBX Agent Cloud platform for AI model and agent developers.",
+      "why_it_matters": "The acquisition gives Dropbox a ready‑made storage platform for the distributed compute needs of modern AI workloads.",
+      "category": "industry",
+      "lab": "Dropbox",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "Tigris brings together a product already running in production, an experienced team, and established relationships with AI developers,",
+          "speaker": "Eric Webster",
+          "speaker_role": "Chief Business Officer",
+          "source_url": "https://news.crunchbase.com/ma/dbx-ai-infrastructure-deal-tigris-acquisition"
+        }
+      ],
+      "score": 8,
+      "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure",
+      "source_id": "techcrunch-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://techcrunch.com/wp-content/uploads/2021/03/GettyImages-1211180751.jpg?w=1024",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure",
+          "publisher": "TechCrunch AI",
+          "title": "Dropbox acquires Tigris Data for $350M to bolster its AI infrastructure"
+        },
+        {
+          "url": "https://news.crunchbase.com/ma/dbx-ai-infrastructure-deal-tigris-acquisition",
+          "publisher": "Crunchbase News",
+          "title": "Dropbox Plans $350M AI Infrastructure Deal With Tigris Buy, Its Biggest Acquisition Yet"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-05T15:19:05+00:00",
+      "created_at": "2026-11-05T16:19:07+00:00",
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Box Content Retrieval creates vector embeddings of documents, images, audio and video so AI agents can quickly find the most relevant pieces of information. This reduces the amount of text the agent must process, cutting response time and cost. The system also respects existing metadata and permission settings, keeping data secure.",
+        "terms": [
+          {
+            "term": "embedding",
+            "meaning": "Turning data such as text or images into numeric vectors that capture meaning for similarity search."
+          },
+          {
+            "term": "token",
+            "meaning": "A small piece of text (like a word or part of a word) that language models process."
+          },
+          {
+            "term": "multimodal",
+            "meaning": "Handling multiple data types—text, images, audio, video—in a single model."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers can integrate Box’s API with Nemotron embeddings to give autonomous agents richer, faster context for tasks.",
+        "business": "Enterprises gain quicker, more accurate AI‑driven answers while using fewer compute resources, lowering operational costs.",
+        "investors": "The partnership signals Box’s strategic move to strengthen its AI offering, potentially boosting its market position against rivals."
+      },
+      "id": "5ea6f104b1e8",
+      "headline": "Box adds Nvidia Nemotron embeddings to boost enterprise AI agent queries",
+      "summary": "Box unveiled Box Content Retrieval, a feature that uses Nvidia’s Nemotron embedding models to speed up and improve accuracy of AI agent queries, rolling out early next year for Enterprise Advance customers.",
+      "why_it_matters": "Embedding unstructured data lets autonomous agents retrieve relevant information faster and cheaper, addressing a key bottleneck in enterprise AI adoption.",
+      "category": "industry",
+      "lab": "Box",
+      "model_name": "Nemotron",
+      "model_type": "Multimodal",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "This dramatically boosts both the relevance of our search technology for agents,” Box CEO Aaron Levie said.",
+          "speaker": "Aaron Levie",
+          "speaker_role": "Box CEO",
+          "source_url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system"
+        },
+        {
+          "text": "We’re probably packing in five different technologies into one simple API,” Levie told TechCrunch.",
+          "speaker": "Aaron Levie",
+          "speaker_role": "Box CEO",
+          "source_url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system"
+        }
+      ],
+      "score": 7,
+      "url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system",
+      "source_id": "techcrunch-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://techcrunch.com/wp-content/uploads/2024/08/GettyImages-1178603809.jpg?w=1024",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system",
+          "publisher": "TechCrunch AI",
+          "title": "Box taps Nvidia’s Nemotron for new agent-first content retrieval system"
+        },
+        {
+          "url": "https://siliconangle.com/2026/11/05/box-taps-nvidias-ai-models-to-build-a-rich-context-layer-for-autonomous-enterprise-agents",
+          "publisher": "SiliconANGLE",
+          "title": "Box taps Nvidia’s AI models to build a rich context layer for autonomous enterprise agents"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-05T14:00:00+00:00",
+      "created_at": "2026-11-05T16:19:07+00:00",
+      "thread": "t-5ae7f5cc4417",
       "photo_local": true
     },
     {
@@ -5139,347 +5430,6 @@
         "ai-money"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Anthropic's slower revenue growth and financing concerns signal potential hurdles in securing the capital needed for AI compute, which could impact its IPO timing and valuation. Investors are scrutinizing the company's ability to fund its AI development and meet growth expectations.",
-        "terms": [
-          {
-            "term": "RSI threshold",
-            "meaning": "A metric used by Anthropic to assess revenue or growth targets, though the exact definition is not detailed in the source."
-          },
-          {
-            "term": "S-1A",
-            "meaning": "A filing with the SEC that provides updated financial information for a company planning an IPO."
-          }
-        ],
-        "watch_next": []
-      },
-      "id": "1add63be5a11",
-      "headline": "Anthropic revenue growth slows as compute financing risks rise ahead of IPO",
-      "summary": "Anthropic reported slower revenue growth and highlighted financing risks for AI compute ahead of its planned IPO, with investors questioning valuation and development acceleration.",
-      "why_it_matters": "The story shows how funding and growth challenges can affect AI companies preparing for public markets.",
-      "category": "industry",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://msn.com/en-us/technology/tech-companies/anthropic-revenue-growth-slows-compute-financing-risks-mount-ahead-of-ipo/ar-AA2gDadI",
-      "source_id": "chief",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": null,
-      "sources": [
-        {
-          "url": "https://msn.com/en-us/technology/tech-companies/anthropic-revenue-growth-slows-compute-financing-risks-mount-ahead-of-ipo/ar-AA2gDadI",
-          "publisher": "Reuters on MSN",
-          "title": "Anthropic revenue growth slows, compute financing risks mount ahead of IPO"
-        },
-        {
-          "url": "https://techmeme.com/261102/p44",
-          "publisher": "techmeme.com",
-          "title": "Anthropic S-1 claims it may \"imminently meet\" its RSI threshold and may fail to identify \"significant acceleration\" in its development until after it's occurred (Julie Bort/TechCrunch)"
-        },
-        {
-          "url": "https://techmeme.com/261102/p42",
-          "publisher": "techmeme.com",
-          "title": "Sources: institutional investors told Anthropic that its IPO valuation should be around $1.5T to $1.6T, down from estimates of $2T, citing a tech stock selloff (Wall Street Journal)"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "unconfirmed"
-      },
-      "published_at": "2026-11-02T17:04:03+00:00",
-      "created_at": "2026-11-03T04:06:31+00:00",
-      "thread": "t-43fa5737591f",
-      "sectors": [],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 1,
-        "business": 2,
-        "investors": 3
-      },
-      "audiences": {
-        "builders": "Developers may face tighter compute budgets as Anthropic signals financing constraints.",
-        "business": "Executives should note slowing AI revenue growth signals market slowdown.",
-        "investors": "Investors see Anthropic’s IPO outlook clouded by funding risks."
-      },
-      "cover": "Anthropic",
-      "trackers": [
-        "ai-money"
-      ],
-      "stock_tried": "2026-11-03T04:06:31+00:00",
-      "photo_local": true,
-      "image_kind": "stock",
-      "photo_credit": {
-        "key": "wc:177804546",
-        "by": "The SABR Office",
-        "license": "CC BY-SA 2.0",
-        "page": "https://commons.wikimedia.org/wiki/File:Annual_Business_Meeting_(5062577233).jpg",
-        "via": "Wikimedia Commons"
-      }
-    },
-    {
-      "audiences": {
-        "builders": "The scale of compute commitments signals high demand for data‑center capacity, which could affect availability and pricing for AI developers.",
-        "business": "Anthropic’s reliance on massive compute highlights the capital‑intensive nature of AI model deployment and potential financial risk.",
-        "investors": "The $895.4 billion in commitments and a $104 billion net loss underscore significant liabilities and cash burn for investors to consider."
-      },
-      "id": "1b0209f81f9f",
-      "headline": "Anthropic reports $895.4 billion in compute‑related purchase commitments and leases",
-      "summary": "Anthropic’s amended S‑1 filing disclosed $895.4 billion in purchase commitments and lease agreements, almost all for compute and infrastructure. The filing also showed $33.24 billion revenue for the nine months ended Sept. 30, up about 1,200% year‑over‑year, and a $104 billion net loss.",
-      "why_it_matters": "It shows the massive scale of Anthropic’s spending on compute, highlighting the capital intensity of large AI model development.",
-      "category": "industry",
-      "lab": "Anthropic",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "substantially all of which is related to compute and infrastructure",
-          "speaker": "Anthropic",
-          "speaker_role": "",
-          "source_url": "https://techmeme.com/261102/p29"
-        }
-      ],
-      "score": 7,
-      "url": "https://techmeme.com/261102/p29",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://image.cnbcfm.com/api/v1/image/108369526-1790698647709-gettyimages-2297195052-AFP_C9PK8G7.jpeg?v=1790698665&w=1920&h=1080",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261102/p29",
-          "publisher": "techmeme.com",
-          "title": "Amended S-1: Anthropic says it has purchase commitments and lease agreements of $895.4B, \"substantially all of which is related to compute and infrastructure\" (Ashley Capoot/CNBC)"
-        },
-        {
-          "url": "https://cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html",
-          "publisher": "cnbc.com",
-          "title": "Anthropic reports $17B in Q3 revenue, commitments of $895B in revised S-1"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-11-02T16:35:00+00:00",
-      "created_at": "2026-11-02T19:11:41+00:00",
-      "thread": "t-a50b07bc6191",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 3
-      },
-      "cover": "$895.4 billion",
-      "explainer": null,
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "42AI’s behavioral world model attempts to infer a person’s underlying psychological tendencies and output the probability of specific actions in new situations. It converts interaction data—such as calls, support chats, and trading activity—into trait representations fed into a transformer model. The model then generates explanations for its predictions using a separate language model.",
-        "terms": [
-          {
-            "term": "behavioral world model",
-            "meaning": "A model that represents each individual as a world and predicts decision probabilities based on inferred traits."
-          },
-          {
-            "term": "transformer‑based",
-            "meaning": "A neural‑network architecture that uses attention mechanisms to process data, commonly used for language tasks."
-          },
-          {
-            "term": "probabilistic",
-            "meaning": "Describing outcomes in terms of likelihoods rather than certainties."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "The system offers developers a new way to model individual decision probabilities using transformer‑based architectures.",
-        "business": "Financial firms can use the model to anticipate trader reactions to market volatility, potentially improving risk management.",
-        "investors": "The $62.5 million seed round signals strong investor interest in AI that targets human behavior prediction."
-      },
-      "id": "133799eedc2b",
-      "headline": "42AI emerges from stealth with $62.5 million seed to build behavioral world model",
-      "summary": "Israeli startup 42AI raised $62.5 million in seed funding and is deploying a “behavioral world model” that predicts individual trader decisions at a few financial brokerages. The model converts interaction data into trait representations and outputs decision probabilities.",
-      "why_it_matters": "It shows how AI is being applied to anticipate human actions in real‑time financial settings, a step beyond pattern‑based forecasting.",
-      "category": "industry",
-      "lab": "42AI",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "behavior prediction",
-        "finance",
-        "AI"
-      ],
-      "quotes": [
-        {
-          "text": "Behavior is not deterministic; it’s constantly probabilistic,",
-          "speaker": "Amit Gal-Or",
-          "speaker_role": "CEO and co‑founder",
-          "source_url": "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior"
-        },
-        {
-          "text": "When the person is talking to support or sales in the initial process […] we’re looking at the sentiment, we’re looking at the voice, we’re looking at a lot of interactions that they’re doing, how many times do they call, and so forth,",
-          "speaker": "Ehud Ezra",
-          "speaker_role": "CTO and co‑founder",
-          "source_url": "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior"
-        }
-      ],
-      "score": 6,
-      "url": "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior",
-      "source_id": "techcrunch-ai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/11/IMG_3572.jpeg?resize=1200,895",
-      "sources": [
-        {
-          "url": "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior",
-          "publisher": "TechCrunch AI",
-          "title": "42AI comes out of stealth with $62.5M and a world model that can ‘predict human behavior’"
-        },
-        {
-          "url": "https://techmeme.com/261102/p30",
-          "publisher": "techmeme.com",
-          "title": "Israeli startup 42AI, which is developing a \"behavioral world model\" that tries to predict human behavior, emerges from stealth with a $62.5M seed (Ram Iyer/TechCrunch)"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-11-02T16:30:00+00:00",
-      "created_at": "2026-11-02T19:11:41+00:00",
-      "sectors": [
-        "finance"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": {
-        "type": "funding",
-        "company": "42AI",
-        "amount": "$62.5 million",
-        "usd": 62500000.0
-      },
-      "relevance": {
-        "builders": 2,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": "$62.5 million",
-      "trackers": [
-        "ai-money"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Users will reach their usage caps faster, meaning less access to Grok Bot before the monthly reset. The statement highlights that operating advanced AI models can generate high compute costs that may outpace revenue.",
-        "terms": [
-          {
-            "term": "usage limits",
-            "meaning": "The maximum amount of AI service a user can consume within a set period."
-          },
-          {
-            "term": "unsustainably high",
-            "meaning": "Costs that exceed the revenue generated, making the service financially impractical."
-          },
-          {
-            "term": "one-time costs",
-            "meaning": "Single, non-recurring expenses such as acquisition fees that affect profitability."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers must account for the high compute costs of running large AI models, which can lead to usage throttling.",
-        "business": "SpaceX's AI revenue growth faces pressure from cost overruns, signaling challenges in scaling AI services profitably.",
-        "investors": "The throttling coincided with a 5% rise in SpaceX shares, indicating market sensitivity to AI cost issues."
-      },
-      "id": "272a05aa5da7",
-      "headline": "Elon Musk throttles Grok Bot usage limits citing unsustainably high costs",
-      "summary": "SpaceX users saw their Grok Bot usage limits max out after Elon Musk announced the service's cost was unsustainably high relative to revenue. The AI division, which reported $431 million profit but $1.2 billion in one‑time acquisition costs, will adjust limits.",
-      "why_it_matters": "It shows that even popular AI products can become financially untenable, affecting user access and company profitability.",
-      "category": "industry",
-      "lab": "SpaceX",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "The cost of serving Grok Bot was unsustainably high relative to revenue",
-          "speaker": "Elon Musk",
-          "speaker_role": "CEO of SpaceX",
-          "source_url": "https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs"
-        },
-        {
-          "text": "Two weeks ago Grok Bot was an incredible success story powering SpaceXai's revenue growth. Now it's unsustainable and loses money (???)",
-          "speaker": "Benjamin De Kraker",
-          "speaker_role": "former xAI worker",
-          "source_url": "https://finance.yahoo.com/technology/article/musk-is-throttling-grok-because-its-cost-is-unsustainably-high-162959909.html"
-        }
-      ],
-      "score": 7,
-      "url": "https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs",
-      "source_id": "techcrunch-ai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/03/grok-getty.jpg?resize=1200,800",
-      "sources": [
-        {
-          "url": "https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs",
-          "publisher": "TechCrunch AI",
-          "title": "Elon Musk throttles Grok Bot limits due to ‘unsustainably high’ costs"
-        },
-        {
-          "url": "https://finance.yahoo.com/technology/article/musk-is-throttling-grok-because-its-cost-is-unsustainably-high-162959909.html",
-          "publisher": "Yahoo Finance",
-          "title": "Musk is throttling Grok because its cost is 'unsustainably high'"
-        },
-        {
-          "url": "https://msn.com/en-us/technology/tech-companies/musk-says-grok-bot-s-costs-were-unsustainably-high-weeks-after-touting-rapid-growth/ar-AA2gADW1",
-          "publisher": "Forbes on MSN",
-          "title": "Musk says Grok bot’s costs were ‘unsustainably high’ weeks after touting rapid growth"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-02T16:23:21+00:00",
-      "created_at": "2026-11-02T19:11:41+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "$1.2 billion",
-      "trackers": [
-        "ai-money"
-      ],
-      "photo_local": true,
-      "thread": "t-06beb73dfeb8"
     }
   ],
   "voices": [
@@ -5502,40 +5452,40 @@
       "published_at": "2026-11-05T15:56:59+00:00"
     },
     {
-      "text": "We want to make Codex the place where developers and agents take on their most ambitious projects,",
-      "speaker": "OpenAI",
-      "speaker_role": "company",
-      "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/openai-to-acquire-developer-tools-firm-pierre-to-expand-codex-capabilities/articleshow/135556193.cms",
-      "story_id": "9d97a76f08fd",
-      "headline": "OpenAI to acquire Pierre Computer, adding developer tools to Codex",
-      "published_at": "2026-11-05T02:27:35+00:00"
+      "text": "Tigris brings together a product already running in production, an experienced team, and established relationships with AI developers,",
+      "speaker": "Eric Webster",
+      "speaker_role": "chief business officer",
+      "source_url": "https://news.crunchbase.com/ma/dbx-ai-infrastructure-deal-tigris-acquisition",
+      "story_id": "57e2aa22209e",
+      "headline": "Dropbox to acquire AI storage startup Tigris Data for $350 million",
+      "published_at": "2026-11-05T15:40:02+00:00"
     },
     {
-      "text": "National security matters,” Smith said, referring to a common argument from data center supporters that the infrastructure is essential for the U.S. to stay ahead in war and in its rivalry with China.",
-      "speaker": "Nadine Smith",
-      "speaker_role": "president and CEO of Color of Change",
-      "source_url": "https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming",
-      "story_id": "d93ef6b85a78",
-      "headline": "Midterm results boost opposition to AI data centers, prompting new restrictions",
-      "published_at": "2026-11-05T01:02:14+00:00"
+      "text": "That combination would accelerate our entry into infrastructure for AI applications through DBX Agent Cloud.",
+      "speaker": "Eric Webster",
+      "speaker_role": "chief business officer",
+      "source_url": "https://news.crunchbase.com/ma/dbx-ai-infrastructure-deal-tigris-acquisition",
+      "story_id": "57e2aa22209e",
+      "headline": "Dropbox to acquire AI storage startup Tigris Data for $350 million",
+      "published_at": "2026-11-05T15:40:02+00:00"
     },
     {
-      "text": "It is clear that money does not buy outcomes,” said Anshi Bhatt, a tech and policy researcher.",
-      "speaker": "Anshi Bhatt",
-      "speaker_role": "",
-      "source_url": "https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming",
-      "story_id": "d93ef6b85a78",
-      "headline": "Midterm results boost opposition to AI data centers, prompting new restrictions",
-      "published_at": "2026-11-05T01:02:14+00:00"
+      "text": "Tigris brings together a product already running in production, an experienced team, and established relationships with AI developers,",
+      "speaker": "Eric Webster",
+      "speaker_role": "Chief Business Officer",
+      "source_url": "https://news.crunchbase.com/ma/dbx-ai-infrastructure-deal-tigris-acquisition",
+      "story_id": "aecc9a23fd3c",
+      "headline": "Dropbox to acquire Tigris Data for $350 million to expand AI infrastructure",
+      "published_at": "2026-11-05T15:19:05+00:00"
     },
     {
-      "text": "They don’t want their money to become an issue in thes",
-      "speaker": "Charlie Blaettler",
-      "speaker_role": "political director, Guardrails Alliance",
-      "source_url": "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared",
-      "story_id": "a331696f9782",
-      "headline": "AI‑focused PACs spent $72 million on 2026 midterms, many backed candidates lost",
-      "published_at": "2026-11-04T22:45:09+00:00"
+      "text": "This dramatically boosts both the relevance of our search technology for agents,” Box CEO Aaron Levie said.",
+      "speaker": "Aaron Levie",
+      "speaker_role": "Box CEO",
+      "source_url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system",
+      "story_id": "5ea6f104b1e8",
+      "headline": "Box adds Nvidia Nemotron embeddings to boost enterprise AI agent queries",
+      "published_at": "2026-11-05T14:00:00+00:00"
     }
   ],
   "videos": [
@@ -5752,16 +5702,16 @@
     "from_stories": 12
   },
   "plan": {
-    "focus": "Chasing fallout from post‑midterm data‑center restrictions while filling gaps in model metrics and safety research.",
-    "updated_at": "2026-11-05T13:28:47+00:00",
+    "focus": "Chasing the fallout from AI safety setbacks while covering the surge in enterprise AI deals and open‑model tooling.",
+    "updated_at": "2026-11-05T16:19:07+00:00",
     "thin_areas": [
       "model releases",
-      "commentary"
+      "research"
     ],
     "searches": [
-      "AI data center regulations",
-      "LLM evaluation benchmark release",
-      "AI founder interview 2026"
+      "SpaceX AI compute financing investors",
+      "AI data center restrictions states",
+      "open source LLM benchmarks 2024"
     ]
   },
   "builders": {
@@ -5932,6 +5882,55 @@
       ]
     },
     {
+      "id": "t-5ae7f5cc4417",
+      "title": "Nvidia nemotron adoption expands to box",
+      "updated_at": "2026-11-05T14:00:00+00:00",
+      "stories": [
+        {
+          "id": "5ea6f104b1e8",
+          "headline": "Box adds Nvidia Nemotron embeddings to boost enterprise AI agent queries",
+          "url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system",
+          "published_at": "2026-11-05T14:00:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "45d48a94f572",
+          "headline": "Nvidia releases Nemotron 3.5 Transcribe and Granary v2 speech dataset",
+          "url": "https://techmeme.com/261028/p33",
+          "published_at": "2026-10-28T15:20:02+00:00",
+          "category": "models"
+        },
+        {
+          "id": "e12302cd4e2c",
+          "headline": "European banks and fintechs adopt NVIDIA open‑weight models for proprietary AI",
+          "url": "https://blogs.nvidia.com/blog/european-financial-services-organizations-open-models-proprietary-intelligence",
+          "published_at": "2026-10-22T05:00:56+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "8ed037559253",
+          "headline": "European retailers cut inference costs up to 90% using NVIDIA open models",
+          "url": "https://blogs.nvidia.com/blog/european-retail-open-models-robotics",
+          "published_at": "2026-10-22T05:00:23+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "5346e68360b4",
+          "headline": "NVIDIA open models adopted in European public sector projects",
+          "url": "https://blogs.nvidia.com/blog/european-public-sector-open-models",
+          "published_at": "2026-10-22T05:00:02+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "140f65345f1e",
+          "headline": "NVIDIA launches open Nemotron 3.5 and Kumo models for European industries",
+          "url": "https://blogs.nvidia.com/blog/open-models-europe-industry",
+          "published_at": "2026-10-21T10:00:07+00:00",
+          "category": "models"
+        }
+      ]
+    },
+    {
       "id": "t-35330f6a257c",
       "title": "SpaceX AI compute financing secondary market",
       "updated_at": "2026-11-05T01:10:04+00:00",
@@ -5976,34 +5975,6 @@
           "headline": "OpenAI to launch post‑midterm policy push, propose AI speed limits and rename data centers",
           "url": "https://techmeme.com/261101/p16",
           "published_at": "2026-11-01T21:30:01+00:00",
-          "category": "policy"
-        }
-      ]
-    },
-    {
-      "id": "t-5a5f5c902747",
-      "title": "Banks warned of AI cyber threats",
-      "updated_at": "2026-11-04T18:59:46+00:00",
-      "stories": [
-        {
-          "id": "a0bfb68fc6a8",
-          "headline": "I4C warns Indian banks and fintechs of AI‑led cyberattacks",
-          "url": "https://inc42.com/buzz/cybersecurity-agency-i4c-warns-banks-fintechs-against-ai-led-cyberattacks",
-          "published_at": "2026-11-04T18:59:46+00:00",
-          "category": "safety"
-        },
-        {
-          "id": "b607b0928983",
-          "headline": "India's cyber agency warns banks and fintechs of AI-driven fraud attacks",
-          "url": "https://livemint.com/technology/central-cyber-security-agency-warns-banks-fintech-firms-of-frauds-through-ai-agents-11793805354383.html",
-          "published_at": "2026-11-04T15:15:53+00:00",
-          "category": "safety"
-        },
-        {
-          "id": "d6229369cc4d",
-          "headline": "Major US banks block third‑party AI agents from customer accounts",
-          "url": "https://timesofindia.indiatimes.com/world/us/why-us-banks-including-jpmorgan-and-morgan-stanley-are-blocking-ai-agents-from-customer-accounts/articleshow/135131817.cms",
-          "published_at": "2026-10-23T04:00:00+00:00",
           "category": "policy"
         }
       ]
@@ -6160,7 +6131,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 86,
+    "stories_this_month": 90,
     "model_releases_this_month": 5,
     "labs_tracked": 19
   }
