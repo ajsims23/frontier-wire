@@ -1,140 +1,62 @@
 {
-  "started_at": "2026-11-05T10:18:58+00:00",
+  "started_at": "2026-11-05T11:37:06+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
     "groq"
   ],
   "sources": {
-    "openai": "ok (1359)",
+    "openai": "ok (1360)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
-    "huggingface": "ok (897)",
+    "huggingface": "ok (898)",
     "nvidia": "ok (18)",
     "anthropic": "ok (6)",
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)",
-    "hf-models": "ok (57)",
-    "arxiv": "ok (40)",
-    "hf-papers": "ok (13)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (17)",
-    "techcrunch-ai": "ok (20)",
-    "verge-ai": "ok (10)",
-    "mit-tr-ai": "ok (10)",
-    "ars-ai": "ok (20)",
-    "aim": "ok (50)",
-    "inc42": "ok (24)",
-    "medianama": "ok (10)",
-    "mint-tech": "ok (35)",
-    "et-tech": "ok (50)",
-    "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
-    "crunchbase-news": "ok (10)",
-    "import-ai": "ok (10)",
-    "simon-willison": "ok (30)",
-    "sam-altman": "ok (30)",
-    "bluesky": "ok (27)",
-    "auto-techmeme.com": "ok (15)"
+    "mistral": "ok (6)"
   },
-  "dropped": [],
-  "written": [],
-  "notes": [
-    "judging skipped: every configured provider failed: groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-v1-english (update settings.yaml when convenient) | groq/qwen/qwen3.8-27b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input | groq/openai/gpt-oss-20b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok | groq/canopylabs/orpheus-v1-english: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-v1-english` requires terms acceptance. Please have the org admin accept the terms at https://consol"
+  "dropped": [
+    {
+      "title": "A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.",
+      "reason": "score 5: Hugging Face blog post about Phonon TTS model is an incremental release from a platform, not a frontier lab, and does not constitute major news."
+    }
   ],
-  "mode": "full",
+  "written": [
+    {
+      "id": "f93567576105",
+      "headline": "OpenAI launches National Community Compact and Compute Campus Policy Blueprint",
+      "category": "policy",
+      "summary": "OpenAI released a National Community Compact and Compute Campus Policy Blueprint aimed at protecting local resources, creating jobs, and guiding responsible AI infrastructure development.",
+      "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
+  "notes": [],
+  "mode": "breaking",
   "timings": {
-    "gather": 80.2,
-    "audit": 0.0,
-    "plan": 2.1,
-    "judge": 24.7,
-    "verify and write": -0.0,
-    "videos": 5.3,
-    "tagging": -0.0,
-    "explainers": -0.0,
-    "trackers": -0.0,
-    "claims": -0.0,
-    "model tracker": 0.1,
-    "weekly": -0.0,
-    "builders": -0.0,
-    "top voices": -0.0,
-    "briefing": 1.5,
-    "self-review": -0.0,
-    "photos": -0.0,
-    "stock photos": -0.0,
-    "daily email": -0.0,
-    "alerts": 2.9
+    "gather": 10.4,
+    "judge": 0.6,
+    "verify and write": 0.8,
+    "tagging": 0.5,
+    "trackers": 1.5,
+    "photos": 0.1,
+    "stock photos": 11.4,
+    "alerts": 2.2
   },
-  "fetched": 2926,
-  "fresh": 93,
-  "plan": {
-    "focus": "Tracking post‑midterm policy limits on AI data centers while covering rising safety alerts in Indian finance and new OpenAI revenue signals.",
-    "priorities": [
-      "OpenAI President Greg Brockman says H1 2026 was \"pretty rough\", but ag (OpenAI exec comments hint at revenue shift; relevant to investors and industry trends.)",
-      "NVIDIA publishes MetricTrail on Hugging Face (NVIDIA MetricTrail release offers new model performance metrics for builders.)",
-      "A Framework for Context Enrichment and Selective Robustness in LLM Soc (Paper on robust LLM social agents ties to safety and policy concerns.)",
-      "Before You Continue: Evaluating Time-Sensitive Safety Awareness in Con (Evaluates time‑sensitive safety in assistants, useful for safety desk.)",
-      "India flags Chinese-linked AI tools in hacking campaign against financ (India flags Chinese AI tools targeting finance, fits safety/India coverage.)"
-    ],
-    "thin_areas": [
-      "models",
-      "research"
-    ],
-    "searches": [
-      "AI data center policy restrictions: 6 new",
-      "SpaceX AI compute financing investors: 1 new",
-      "AI cyber threats Indian banks: 6 new"
-    ],
-    "dig_deeper": [
-      "OpenAI President Greg Brockman says H1 2026 was \"pretty rough\", but ag",
-      "NVIDIA publishes MetricTrail on Hugging Face"
-    ]
-  },
-  "videos": {
-    "OpenAI": "ok (10 in feed, 0 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 3 new)",
-    "Google for Developers": "ok (9 in feed, 0 new)",
-    "AI at Meta": "ok (7 in feed, 0 new)",
-    "Microsoft Research": "ok (8 in feed, 0 new)",
-    "NVIDIA": "ok (9 in feed, 0 new)",
-    "Hugging Face": "ok (13 in feed, 0 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 3 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (15 in feed, 0 new)",
-    "Training Data (Sequoia)": "ok (3 in feed, 0 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 0 new)",
-    "Hard Fork": "ok (1 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (2 in feed, 0 new)",
-    "20VC": "ok (4 in feed, 0 new)"
-  },
-  "videos_kept": "6 kept from 6 new",
-  "trackers": "filed 0 stories; no tracker changed",
-  "claims": "97 tracked, 92 open",
-  "model_tracker": "82 models, 17 changes today",
-  "india_briefing": "2 themes from 3 stories",
+  "fetched": 2430,
+  "fresh": 2,
+  "judged": 2,
+  "kept": 1,
+  "tagged": 1,
+  "trackers": "filed 1 stories; updated ai-infrastructure",
   "photos": "0 saved, 0 unavailable",
-  "alerts": "22 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":2}",
-  "ai_requests_run": 4,
-  "ai_tokens_run": 28639,
-  "ai_requests_today": 91,
-  "provider_log": [
-    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
-    "cerebras: 429 after retry; moving to next provider for this run",
-    "groq/openai/gpt-oss-120b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on to",
-    "groq/llama-3.3-70b-versatile: model unavailable (404); trying next model",
-    "groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-v1-english (update settings.yaml when convenient)",
-    "groq/qwen/qwen3.8-27b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input",
-    "groq/openai/gpt-oss-20b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok",
-    "groq/canopylabs/orpheus-v1-english: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-v1-english` requires terms acceptance. Please have the org admin accept the terms at https://consol"
-  ]
+  "stock photos": "1 added",
+  "alerts": "23 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":10}",
+  "ai_requests_run": 6,
+  "ai_tokens_run": 17089,
+  "ai_requests_today": 97,
+  "provider_log": []
 }
