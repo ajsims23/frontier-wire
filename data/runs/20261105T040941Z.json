@@ -1,0 +1,469 @@
+{
+  "started_at": "2026-11-05T04:09:41+00:00",
+  "review_mode": false,
+  "providers": [
+    "cerebras",
+    "groq"
+  ],
+  "sources": {
+    "openai": "ok (1359)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (897)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (12)",
+    "gdelt": "failed: ReadTimeout: The read operation timed out",
+    "hn": "ok (24)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (0)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "FPTR: Feasibility-Preserving Transactional Refinement for Deadline-Constrained Joint Beam and Resource Allocation",
+      "reason": "not AI: The paper on wireless beam‑resource allocation is unrelated to AI and therefore not relevant for Frontier Wire."
+    },
+    {
+      "title": "Risk-Sensitive Non-Parametric and Kernel Bandits",
+      "reason": "score 3: A methodological bandits paper, while AI‑related, is incremental and does not rise to news level."
+    },
+    {
+      "title": "Model Merging Does Not Require Uniform LoRA Ranks",
+      "reason": "score 4: Model‑merging technique is a niche research contribution without broad impact."
+    },
+    {
+      "title": "What Does Multi-Turn Reinforcement Learning Really Improve in LLM Agents?",
+      "reason": "score 5: Study of multi‑turn RL for LLM agents is incremental research, not a major breakthrough."
+    },
+    {
+      "title": "ArcRAG: Agentic Compositional Retrieval over Knowledge Graphs",
+      "reason": "score 5: ArcRAG proposes a retrieval method but does not constitute a frontier AI advance."
+    },
+    {
+      "title": "The Alignment Tax Is Graded: Task-Selective Capability Loss Under Length-Normalized DPO with SFT Retention",
+      "reason": "score 5: The alignment‑tax study is a niche empirical analysis, not a headline‑worthy result."
+    },
+    {
+      "title": "How many sorted projections determine n points in k dimensions?",
+      "reason": "not AI: Purely mathematical analysis unrelated to AI."
+    },
+    {
+      "title": "Microdroplet Generator Surrogate Enhancement and Inverse Design Through an Uncertainty-Guided Framework",
+      "reason": "not AI: Microdroplet surrogate work is not AI‑focused."
+    },
+    {
+      "title": "Within-Family EfficientNet Scaling under Fixed-Resolution Transfer Learning for Spectral-Domain Optical Coherence Tomography Retinal Disease Classification",
+      "reason": "score 3: Medical imaging model scaling is peripheral to AI core news."
+    },
+    {
+      "title": "AmbiHTMLBench: A Benchmark for HTML-based Visually Rich Document parsing",
+      "reason": "not AI: Benchmark for HTML parsing is not AI‑centric."
+    },
+    {
+      "title": "SUMONE: A Simple and Efficient Summarizer for Plug-and-Play Agent Memory",
+      "reason": "score 4: Summarizer for agent memory is a modest contribution without broad impact."
+    },
+    {
+      "title": "EvoGuard: Mitigating Degradation in Online Skill Evolution",
+      "reason": "score 4: EvoGuard addresses skill degradation but is an incremental research paper."
+    },
+    {
+      "title": "Graph Foundation Models Can Become Effective Multivariate Time Series Anomaly Detectors",
+      "reason": "score 4: Graph foundation models for anomaly detection are a niche application."
+    },
+    {
+      "title": "Understanding the Out-of-Distribution Generalization of Chain-of-Thought Reasoning in LLMs",
+      "reason": "score 4: Study of OOD generalization of Chain‑of‑Thought is interesting but not a major breakthrough."
+    },
+    {
+      "title": "Hardwired Distributed Processing Units for Inference: Neural Decisions at the Sensor that Free the Host",
+      "reason": "score 4: Hardware FPGA implementation for zebra‑crossing detection is peripheral to AI core."
+    },
+    {
+      "title": "EviSeek: An Evidence-Centric Agentic Framework for Embodied Active Information Seeking",
+      "reason": "score 4: EviSeek framework is a modest agentic research contribution."
+    },
+    {
+      "title": "PARGAR: Pilot-Aware Graph Attention for Sparse-Pilot Neural OFDM Receivers",
+      "reason": "not AI: Pilot‑aware graph attention for OFDM receivers is a communications paper, not AI."
+    },
+    {
+      "title": "Partially Interpretable Decision Trees",
+      "reason": "not AI: Decision‑tree interpretability work is not AI‑focused."
+    },
+    {
+      "title": "Mind Control of LLMs via Closed-Loop Stimulation: Out-of-Distribution Robustness",
+      "reason": "score 4: Closed‑loop stimulation for LLMs is a niche study without broad impact."
+    },
+    {
+      "title": "Twists and Turns: A Graph-Based Benchmark and Framework for Long-Term Memory in Exploration Tasks",
+      "reason": "score 4: Benchmark for long‑term memory in exploration tasks is incremental."
+    },
+    {
+      "title": "A Bag of Tricks for Defending Deep Learning-based Face Recognition Pipelines against Backdoor Attacks",
+      "reason": "score 4: Backdoor defense tricks for face recognition are security‑focused but not core AI news."
+    },
+    {
+      "title": "Zero-Shot Coordination among LLM Agents",
+      "reason": "score 4: Zero‑shot coordination among LLM agents is an incremental research result."
+    },
+    {
+      "title": "Ruby-OPD: Enhancing Pronunciation Controllability and Accuracy for Flow-Matching Text-to-Speech via On-Policy Distillation",
+      "reason": "not AI: Japanese TTS paper is not AI‑centric."
+    },
+    {
+      "title": "Interpretable Text Embeddings Based on Hierarchical Questions",
+      "reason": "score 3: Hierarchical question embeddings are a niche technique."
+    },
+    {
+      "title": "Where Should a KV-Cache Repair Budget Go? Distractor Structure and Contextual Compatibility in Non-Prefix Reuse",
+      "reason": "score 4: KV‑cache repair budget study is a technical detail without broad relevance."
+    },
+    {
+      "title": "GIST: Gibbs-Targeted Hierarchical Data Selection for Offline RLVR",
+      "reason": "score 4: GIST paper on offline RLVR is incremental."
+    },
+    {
+      "title": "KolTa: A Physics-Informed Active Learning Framework for Formulation Discovery with Limited Data",
+      "reason": "score 3: Physics‑informed active learning framework is peripheral to AI core."
+    },
+    {
+      "title": "MA-Mesh: Resilient Multi-Agent Collaboration via Role-based Self-Healing",
+      "reason": "score 4: Resilient multi‑agent collaboration paper is incremental."
+    },
+    {
+      "title": "Presentation Sensitivity in Typed Decision Models for Subjective Text Evaluation",
+      "reason": "not AI: Presentation sensitivity study is not AI‑focused."
+    },
+    {
+      "title": "From hydrological laws to catchment models: A process-based model matches deep-learning accuracy on three continents",
+      "reason": "not AI: Hydrology model comparison is unrelated to AI."
+    },
+    {
+      "title": "LegalEvolver: Agentic Legal Judgment Prediction via Rubric-Guided Self-Evolution",
+      "reason": "score 4: LegalEvolver applies LLM agents to legal judgment prediction, a niche application."
+    },
+    {
+      "title": "Does Context Compression Preserve Refusal Alignment?",
+      "reason": "score 4: Context compression study is incremental."
+    },
+    {
+      "title": "Corralling AI Risks with Grassroots Contracts",
+      "reason": "score 4: Paper on AI risk contracts is a policy discussion but not breaking news."
+    },
+    {
+      "title": "Give Up to Get More: Priors, Not Policies, Govern Test-Time Compute Allocation",
+      "reason": "score 4: Study on test‑time compute allocation is incremental."
+    },
+    {
+      "title": "Training-Free Character-Length Control in Summarization with Diffusion Language Models",
+      "reason": "score 4: Training‑free length control for summarization is a modest contribution."
+    },
+    {
+      "title": "EEGDash Corpus: A Training-Ready Public Corpus for EEG Foundation Models",
+      "reason": "not AI: EEGDash corpus is a dataset for EEG, not core AI."
+    },
+    {
+      "title": "Traffic-VL: Reinforced Vision-Language Models for Generalizable End-to-End Traffic Signal Control",
+      "reason": "score 4: Vision‑language model for traffic signal control is an application but not a major AI advance."
+    },
+    {
+      "title": "Flexible Intensities Matter: A Comprehensive Re-evaluation of Hawkes Processes and Neural Temporal Point Processes",
+      "reason": "not AI: Re‑evaluation of Hawkes processes is not AI‑centric."
+    },
+    {
+      "title": "Today's Work, Tomorrow's Workforce: Incentivizing Learning in AI-Assisted Work",
+      "reason": "score 4: Study on incentivizing learning in AI‑assisted work is interesting but not headline news."
+    },
+    {
+      "title": "Apple is reportedly cutting budgets for its internal AI usage",
+      "reason": "score 5: Apple’s internal AI budget cuts are a cost‑control measure but not a major development for builders or investors."
+    },
+    {
+      "title": "PhysicsWallah’s Q2 Profit Surge, Elo Elo Bags $80 Mn & More",
+      "reason": "not AI: PhysicsWallah profit story is unrelated to AI."
+    },
+    {
+      "title": "Arm beats second-quarter revenue estimates on AI and data-center demand",
+      "reason": "score 5: Arm’s revenue beat is driven by AI demand but is a routine earnings update, not a major AI story."
+    },
+    {
+      "title": "Qualcomm's smartphone chip sales miss estimates, shares fall",
+      "reason": "score 4: Qualcomm’s smartphone‑chip miss is a broader hardware issue; AI relevance is indirect."
+    },
+    {
+      "title": "Apple cuts employee AI budgets in cost-control push",
+      "reason": "score 5: Apple’s internal AI budget cuts are a modest cost‑control measure, not a headline‑worthy development."
+    },
+    {
+      "title": "Goldman, Apollo seek buyers for $40 billion SpaceX AI chip deal",
+      "reason": "duplicate of 5261cac702f7"
+    },
+    {
+      "title": "PhysicsWallah, Lenskart, Nykaa post stellar profits",
+      "reason": "not AI: Profit announcements for non‑AI companies; no AI angle."
+    },
+    {
+      "title": "How Bariflo uses AI to help factories treat wastewater",
+      "reason": "score 4: Bariflo’s AI‑enabled wastewater solution is a small‑scale application, not a frontier AI development."
+    },
+    {
+      "title": "Ethan Mollick: Whatever role AI played as an issue in this election, I suspect it will play a larger role in every election to come, at least for the…",
+      "reason": "score 3: Short commentary on AI in elections lacks depth for a news story."
+    },
+    {
+      "title": "AppLovin reports Q3 revenue up 55% YoY to $2.18B, above $2.07B est., and forecasts Q4 revenue above estimates; APP surges 20%+ after hours (William Gavin/MarketWatch)",
+      "reason": "not AI: AppLovin earnings are a standard financial report with no AI focus."
+    },
+    {
+      "title": "Goldman, Apollo in Talks to Sell SpaceX’s $40 Billion AI Deal",
+      "reason": "duplicate of 5261cac702f7"
+    },
+    {
+      "title": "Goldman Sachs and Apollo shop a $40 billion SpaceX AI chip financing deal",
+      "reason": "duplicate of 5261cac702f7"
+    },
+    {
+      "title": "Goldman, Apollo seek buyers for $40 billion SpaceX AI chip deal, Bloomberg News reports",
+      "reason": "duplicate of 5261cac702f7"
+    },
+    {
+      "title": "How Much Is SpaceX's AI Business Really Worth? Here's the Math.",
+      "reason": "duplicate of 5261cac702f7"
+    },
+    {
+      "title": "SpaceX: Super Intelligence Segment Turns It Into An AI Infrastructure Heavyweight",
+      "reason": "duplicate of 5261cac702f7"
+    },
+    {
+      "title": "Goldman, Apollo in talks to sell SpaceX's $40B AI deal - Bloomberg",
+      "reason": "duplicate of 5261cac702f7"
+    },
+    {
+      "title": "TeraWulf gets credit backstop from Google for Anthropic data-center project",
+      "reason": "duplicate of a4c0d644033a"
+    },
+    {
+      "title": "AI News Morning Edition | November 5, 2026 (Thu) Google provides credit support for Anthropic's $19 billion facility deal! OpenAI to acquire Pierre—AI competition shifts ...",
+      "reason": "duplicate of a4c0d644033a"
+    },
+    {
+      "title": "Google to support financing for TeraWulf data center for Anthropic — Channel NewsAsia",
+      "reason": "duplicate of a4c0d644033a"
+    },
+    {
+      "title": "TeraWulf Secures Google's Financial Support for Anthropic AI Infrastructure",
+      "reason": "duplicate of a4c0d644033a"
+    },
+    {
+      "title": "TeraWulf Secures Google Credit Backstop for Project Financing in Support of $19 Billion Anthropic Lease; Executes Definitive Fluor EPC Agreement",
+      "reason": "duplicate of a4c0d644033a"
+    },
+    {
+      "title": "Google backs TeraWulf’s $19 billion Anthropic lease with credit support",
+      "reason": "duplicate of a4c0d644033a"
+    },
+    {
+      "title": "OpenAI, ready to IPO in 2027, now counts majority of sales from enterprises, Greg Brockman says",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Berlin-based Pliant raised an $80M Series C led by Seaya Nova and Speedinvest, as it opens its B2B payments infrastructure to AI agents (Cristian Dina/The Next Web)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "OpenAI details a pipeline that used an upcoming cyber model to validate and patch 948 local privilege escalation vulnerabilities in Linux for $1.2M in API costs (OpenAI)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Sources: Google DeepMind spinout Isomorphic Labs is in talks to raise ~$5B at a ~$50B valuation; the AI drug discovery startup last raised $2.1B in May (Bloomberg)",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "7312e394347c",
+      "headline": "Palo Alto Networks in talks to buy AI security startup Clutch Security for $500 million",
+      "category": "industry",
+      "summary": "Palo Alto Networks is negotiating to acquire Israeli startup Clutch Security, which builds software to track passwords used by AI agents, for roughly $500 million. The deal would bring AI‑focused security tools into Palo Alto’s portfolio.",
+      "url": "https://techmeme.com/261104/p64",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "9237dfef9309",
+      "headline": "Qualcomm aims for $5 billion in AI data‑center revenue in fiscal 2027",
+      "category": "industry",
+      "summary": "Qualcomm reported $650 million in data‑center revenue for Q4 2026 and said it targets $5 billion in fiscal 2027, rising to $15 billion by 2029, as smartphone chip sales fall.",
+      "url": "https://theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers",
+      "sources": 2,
+      "quotes": 1
+    },
+    {
+      "id": "9d97a76f08fd",
+      "headline": "OpenAI to acquire Pierre Computer, adding developer tools to Codex",
+      "category": "industry",
+      "summary": "OpenAI announced it will acquire Pierre Computer Company, the maker of open‑source tools such as Trees and Diffs, to expand its Codex platform’s code‑navigation and review capabilities. The deal is subject to customary closing conditions, including regulatory approvals.",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/openai-to-acquire-developer-tools-firm-pierre-to-expand-codex-capabilities/articleshow/135556193.cms",
+      "sources": 2,
+      "quotes": 1
+    },
+    {
+      "id": "434be2e7a9b5",
+      "headline": "D3D method boosts speculative decoding speed up to 7.5× on Qwen3 models",
+      "category": "research",
+      "summary": "Researchers introduced D3D, a diffusion drafter that removes inter‑round dependencies, achieving up to 7.48× speedup on GSM8K with Qwen3‑32B and averaging 5.00×–5.71× across seven benchmarks.",
+      "url": "https://arxiv.org/abs/2611.06425",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "d93ef6b85a78",
+      "headline": "Midterm results boost opposition to AI data centers, prompting new restrictions",
+      "category": "policy",
+      "summary": "Democrats gained control of Congress in the November 2026 midterms, while exit polls showed 76‑80% of voters opposed AI data centers in their neighborhoods. The vote led to dozens of local ballot measures restricting or banning large data centers, and analysts expect new construction moratoriums and stricter community cost rules.",
+      "url": "https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming",
+      "sources": 2,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "not India desk: 'OpenAI, ready to IPO in 2027, now counts majority '",
+    "not India desk: 'OpenAI to acquire developer tools firm Pierre to e'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "dropped unverifiable benchmark: D3D with Qwen3-8B target decoding speedup across seven benchmarks 5.00×",
+    "dropped unverifiable benchmark: D3D with Qwen3-32B target decoding speedup across seven benchmarks 5.71×",
+    "dropped unverifiable benchmark: D3D with Qwen3-32B target GSM8K 7.48×",
+    "10 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 107.2,
+    "audit": -0.0,
+    "plan": 60.1,
+    "judge": 5.7,
+    "verify and write": 504.3,
+    "videos": 23.7,
+    "tagging": 1.2,
+    "explainers": 0.0,
+    "trackers": 127.4,
+    "claims": 21.0,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 20.8,
+    "self-review": 0.0,
+    "photos": 0.7,
+    "stock photos": 0.3,
+    "daily email": 0.0,
+    "alerts": 9.8
+  },
+  "fetched": 2932,
+  "fresh": 62,
+  "plan": {
+    "focus": "Tracking SpaceX chip financing deals while covering AI safety patches and OpenAI’s IPO push for enterprise customers.",
+    "priorities": [
+      "Goldman, Apollo seek buyers for $40 billion SpaceX AI chip deal (Direct update on the SpaceX AI chip financing secondary market, core to our SpaceX storyline.)",
+      "OpenAI details a pipeline that used an upcoming cyber model to validat (Shows AI-driven security work, relevant to safety and enterprise risk management.)",
+      "OpenAI, ready to IPO in 2027, now counts majority of sales from enterp (OpenAI IPO plans affect the broader AI business landscape and our financing coverage.)",
+      "Berlin-based Pliant raised an $80M Series C led by Seaya Nova and Spee (Highlights AI agents entering B2B payments, expanding industry coverage of AI-enabled services.)",
+      "Sources: Palo Alto Networks is in talks to acquire Israeli startup Clu (Palo Alto Networks acquisition ties AI agents to security, important for safety and industry angles.)"
+    ],
+    "thin_areas": [
+      "research",
+      "voices"
+    ],
+    "searches": [
+      "SpaceX AI chip financing investors: 6 new",
+      "Anthropic data center credit terms: 6 new",
+      "Google AI tools schools policy response: 3 new"
+    ],
+    "dig_deeper": [
+      "OpenAI details a pipeline that used an upcoming cyber model to validat",
+      "Sources: Palo Alto Networks is in talks to acquire Israeli startup Clu"
+    ]
+  },
+  "judged": 77,
+  "kept": 16,
+  "research": {
+    "investigated": 5,
+    "confirmed": 3,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "OpenAI, ready to IPO in 2027, now counts majority of sales from enterp: unconfirmed (searched “Greg Brockman majority of revenue enterprise sales 2027 IPO”; read msn.com; searched “OpenAI ready to IPO in 2027 majority enterprise sales Reuters”)",
+    "Sources: Palo Alto Networks is in talks to acquire Israeli startup Clu: confirmed (searched “Palo Alto Networks talks to acquire Clutch Security $500 million”; read yahoo.com; searched “\"Clutch Security\" Palo Alto Networks”)",
+    "Qualcomm is betting big on data centers as smartphone sales sink: confirmed (searched “Qualcomm Q4 2026 earnings data center partnership Amazon Meta smartphone sales 20% decline”; read cnbc.com; read msn.com)",
+    "OpenAI to acquire developer tools firm Pierre to expand Codex capabili: confirmed (searched “OpenAI acquire Pierre developer tools firm”; read openai.com; read siliconangle.com)",
+    "Berlin-based Pliant raised an $80M Series C led by Seaya Nova and Spee: unconfirmed (searched “Pliant $80M Series C”; read thenextweb.com; searched “Pliant Series C 80 million”)"
+  ],
+  "threads": [
+    "Post‑midterm policy sparks data center clash: Midterm results boost opposition to AI data centers, prompti"
+  ],
+  "videos": {
+    "OpenAI": "ok (10 in feed, 2 new)",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "videos_kept": "2 kept from 2 new",
+  "tagged": 5,
+  "trackers": "filed 4 stories; updated frontier-race, ai-regulation, agent-safety, ai-infrastructure",
+  "claims": "97 tracked, 92 open, 0 updated this run",
+  "model_tracker": "82 models, 9 changes today",
+  "briefing": "3 themes from 16 stories",
+  "photos": "4 saved, 0 unavailable",
+  "stock photos": "0 added",
+  "alerts": "19 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":42}",
+  "ai_requests_run": 41,
+  "ai_tokens_run": 124309,
+  "ai_requests_today": 83,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
+}
