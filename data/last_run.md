@@ -1,17 +1,18 @@
-## Frontier Wire breaking-news check — 2026-11-05T14:56:50+00:00
+## Frontier Wire breaking-news check — 2026-11-05T15:56:59+00:00
 
-Fetched 2430 items · fresh 1 · judged 1 · kept 0 · **written 0**
-AI: 1 requests, 5,436 tokens this run · 102 requests today · providers: cerebras, groq
-Photos: 0 saved, 0 unavailable
-Alerts: 23 events sent: {"subscribers":8,"sent":0,"queued":0}
-Trackers: filed 0 stories; no tracker changed
-Time: gather 11s, alerts 2s
+Fetched 2430 items · fresh 1 · judged 1 · kept 1 · **written 1**
+AI: 8 requests, 29,832 tokens this run · 110 requests today · providers: cerebras, groq
+Threads updated: Mistral le chonk model product rollout: Mistral launches Studio Le Chonk platform for enterprise AI 
+Photos: 1 saved, 0 unavailable
+Alerts: 24 events sent: {"subscribers":8,"sent":0,"queued":13}
+Trackers: filed 2 stories; updated frontier-race, ai-infrastructure
+Tagged 1 stories by sector, region and deal
+Time: gather 9s, judge 2s, verify and write 3s, trackers 44s, alerts 2s
 
 ### New stories
-- none
+- **industry** — [Mistral launches Studio Le Chonk platform for enterprise AI deployment](https://mistral.ai/news/build-with-studio)  
+  Mistral AI announced that its Studio platform now supports the Le Chonk multimodal model, enabling enterprises to build and deploy agents, workflows and apps on cloud, VPC or on‑premises while retaining full control over data and infrastructure.  
+  _1 source(s), 2 verified quote(s)_
 
-<details><summary>Dropped</summary>
-
-- ‘Hogwarts Legacy’ Gets a Magical NVIDIA DLSS 5 Upgrade on GeForce NOW — score 4: The post is a marketing announcement about a game receiving a DLSS 5 upgrade, which uses AI‑based upscaling but is not a core AI model, policy, or infrastructure story. It is peripheral to AI and scores low for Frontier Wire’s audience.
-
-</details>
+### Notes
+- cerebras/gpt-oss-120b: answer cut off; retrying with more room
