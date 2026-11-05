@@ -1,12 +1,12 @@
 {
-  "started_at": "2026-11-04T22:29:53+00:00",
+  "started_at": "2026-11-05T01:24:44+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
     "groq"
   ],
   "sources": {
-    "openai": "ok (1358)",
+    "openai": "ok (1359)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
     "huggingface": "ok (897)",
@@ -15,36 +15,268 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (15)",
+    "gdelt": "ok (18)",
+    "hn": "ok (25)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (0)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
   },
   "dropped": [
     {
-      "title": "How Windows 11 is making smarter use of memory on 8 GB PCs",
-      "reason": "not AI: The story is about Windows 11 memory management improvements for low‑RAM PCs and contains no AI focus. It is not a model release, AI policy, infrastructure or research item, so it scores low and is not relevant to Frontier Wire’s AI‑centric audience."
+      "title": "A thousand fewer paths to root",
+      "reason": "score 5: The autonomous vulnerability‑patch pipeline is a security tool; while AI‑driven, it is an incremental research output rather than a major news event."
+    },
+    {
+      "title": "DevRev delivers autonomous self-service with GPT-6.1 Sol",
+      "reason": "score 5: A use‑case announcement of GPT‑6.1 Sol for DevRev is an incremental partnership story without broader market impact."
+    },
+    {
+      "title": "Everything is an AI scam now",
+      "reason": "not AI: Opinion piece titled “Everything is an AI scam now” lacks concrete AI news."
+    },
+    {
+      "title": "Show HN: After a decade of reversing, I got co-op working in DOS Wing Commander",
+      "reason": "not AI: Show HN post about DOS Wing Commander reverse‑engineering is unrelated to AI."
+    },
+    {
+      "title": "Nothing CEO says company’s mysterious AI-first device is dropping next month",
+      "reason": "score 3: Speculative comment about Nothing’s upcoming AI‑first device lacks concrete details and broader significance."
+    },
+    {
+      "title": "OpenAI is already trying to shape the 2028 election",
+      "reason": "score 5: OpenAI’s political positioning for the 2028 election is a policy‑related commentary but does not constitute a concrete policy change."
+    },
+    {
+      "title": "Cleantech Startup altM Raises $10.3 Mn To Scale Manufacturing",
+      "reason": "not AI: Cleantech startup altM funding is unrelated to AI."
+    },
+    {
+      "title": "altM raises $10.3M in Series A funding led by Rainmatter, Mela Ventures",
+      "reason": "not AI: Duplicate of the non‑AI cleantech funding story."
+    },
+    {
+      "title": "Cat Wu, who left Anthropic last week, says she is joining OpenAI to lead product manangement for core products; Wu was the product lead for Claude Code (Stephen Council/Business Insider)",
+      "reason": "score 5: Personnel move of Cat Wu from Anthropic to OpenAI is noteworthy but not a high‑impact event for the audience."
+    },
+    {
+      "title": "OpenAI launches Images 2.6 in ChatGPT, Codex, and the API, saying it generates images 50% faster, and adds animated GIF creation from prompts or photos (Emma Roth/The Verge)",
+      "reason": "score 6: Duplicate coverage of the Images 2.6 launch; primary story already kept."
+    },
+    {
+      "title": "Figma reports Q3 revenue up 43% YoY to $391.4M, above est., gross margin of 80%, below 81% est., and lifts its 2026 revenue outlook; FIG drops 6%+ after hours (Deborah Mary Sophia/Reuters)",
+      "reason": "score 5: Figma’s revenue growth tied to AI features is a modest corporate earnings note, not a major AI story."
+    },
+    {
+      "title": "Meta raised €9B from its debut euro bond sale that drew a record €53B of orders, paying ~1.4x the risk premium Alphabet offered for similar bonds this week (Bloomberg)",
+      "reason": "score 5: Meta’s €9B bond raise is a financing event but not specifically tied to AI spending; thus only adjacent relevance."
+    },
+    {
+      "title": "Google Is Telling Schools to Take Its AI or Lose Its Search Engine",
+      "reason": "score 7: Duplicate coverage of Google’s school AI policy; primary story already kept."
+    },
+    {
+      "title": "Apple Intelligence enters developer beta in China with Qwen integration",
+      "reason": "score 5: Apple Intelligence beta in China with Qwen integration is a regional product rollout, not a major model release."
+    },
+    {
+      "title": "iOS 27.3 Beta Brings Apple Intelligence to China With Alibaba’s Qwen AI",
+      "reason": "score 5: Duplicate of the Apple Intelligence beta story."
+    },
+    {
+      "title": "Qualcomm is betting big on data centers as smartphone sales sink",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Filing: AMD will pay ~$2.9B in cash and stock for AI chip startup Taalas, with $1.4B dependent on unspecified conditions; the deal was announced in August (Murad Hemmadi/Globe and Mail)",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Texas was the new epicenter of the AI data center buildout. That might be kaput.",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Sources: Google DeepMind spinout Isomorphic Labs is in talks to raise ~$5B at a ~$50B valuation; the AI drug discovery startup last raised $2.1B in May (Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "AI sales startup Nooks secures $500 million in funding for expansion",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
-  "written": [],
-  "notes": [],
-  "mode": "breaking",
+  "written": [
+    {
+      "id": "5261cac702f7",
+      "headline": "Goldman Sachs and Apollo seek investors for up to $500 M slices of SpaceX’s $40 B chip financing",
+      "category": "industry",
+      "summary": "Goldman Sachs and Apollo are approaching Wall Street investors to sell portions of SpaceX’s roughly $40 billion GPU debt financing, with some investors asked to buy up to $500 million before the syndication process begins. The financing, structured to stay off SpaceX’s balance sheet, is the largest GPU debt arrangement on record.",
+      "url": "https://techmeme.com/261104/p59",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "a331696f9782",
+      "headline": "AI‑focused PACs spent $72 million on 2026 midterms, many backed candidates lost",
+      "category": "policy",
+      "summary": "AI‑aligned political action committees spent roughly $72 million on the 2026 U.S. midterm elections, with several high‑profile candidates they supported, such as South Carolina Senate hopeful Darline Graham, losing their races. The spending produced mixed outcomes, and a large share of the money went to losing candidates or efforts to defeat winners.",
+      "url": "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared",
+      "sources": 3,
+      "quotes": 2
+    },
+    {
+      "id": "50809c07f522",
+      "headline": "Google will cut search access for schools that reject its AI tools",
+      "category": "policy",
+      "summary": "Google announced that K‑12 accounts will lose Google Search unless administrators enable its Gemini AI suite, effectively forcing schools to adopt AI to retain search. The policy, set to take effect next year, has drawn criticism from educators and officials.",
+      "url": "https://wired.com/story/google-is-forcing-ai-overviews-in-classrooms-schools-are-searching-for-a-way-out",
+      "sources": 10,
+      "quotes": 2
+    },
+    {
+      "id": "0a437d67f2ef",
+      "headline": "OpenAI launches Images 2.6 with faster generation and GIF creation",
+      "category": "models",
+      "summary": "OpenAI announced Images 2.6, which adds faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex and the API.",
+      "url": "https://openai.com/index/introducing-images-2-6",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "ignored made-up duplicate id bd83b53146f6 for 'altM raises $10.3M in Series A funding led by Rain'",
+    "ignored made-up duplicate id 0a437d67f2ef for 'OpenAI launches Images 2.6 in ChatGPT, Codex, and '",
+    "ignored made-up duplicate id 50809c07f522 for 'Google Is Telling Schools to Take Its AI or Lose I'",
+    "ignored made-up duplicate id ff219d3c1372 for 'iOS 27.3 Beta Brings Apple Intelligence to China W'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "7 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
   "timings": {
-    "gather": 12.1,
-    "judge": 0.6,
-    "verify and write": -0.0,
-    "tagging": -0.0,
-    "trackers": -0.0,
-    "photos": 0.0,
-    "stock photos": 0.0,
-    "alerts": 1.7
+    "gather": 47.8,
+    "audit": 6.2,
+    "plan": 58.9,
+    "judge": 3.1,
+    "verify and write": 482.6,
+    "videos": 4.0,
+    "tagging": 21.2,
+    "explainers": 0.0,
+    "trackers": 85.5,
+    "claims": 20.8,
+    "model tracker": 0.0,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 20.8,
+    "self-review": 20.8,
+    "photos": 0.3,
+    "stock photos": 4.3,
+    "daily email": -0.0,
+    "alerts": 8.2
   },
-  "fetched": 2427,
-  "fresh": 1,
-  "judged": 1,
-  "kept": 0,
-  "trackers": "filed 0 stories; no tracker changed",
-  "photos": "0 saved, 0 unavailable",
-  "alerts": "29 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":0}",
-  "ai_requests_run": 1,
-  "ai_tokens_run": 5705,
-  "ai_requests_today": 296,
-  "provider_log": []
+  "fetched": 2954,
+  "fresh": 22,
+  "audit": "coverage 11% of 9 significant stories; 8 missed, 2 added to this run; 3 lesson(s) for the editor",
+  "plan": {
+    "focus": "Chasing the fallout from massive AI chip financing deals while filling a thin model and research coverage desk.",
+    "priorities": [
+      "AI sales startup Nooks secures $500 million in funding for expansion ($500M funding for AI sales startup Nooks signals large market expansion interest for investors.)",
+      "Sources: Goldman Sachs and Apollo are in talks with investors to sell  (Goldman Sachs and Apollo talks on selling SpaceX chip financing reveal high‑stakes AI infrastructure funding.)",
+      "Filing: AMD will pay ~$2.9B in cash and stock for AI chip startup Taal (AMD's $2.9B cash deal for Taalas adds concrete cost impact to earlier non‑cash charge story.)",
+      "AI PACs spent millions trying to shape Congress — here’s how they fare (AI PAC spending on Congress shapes policy landscape, a gap in our coverage.)",
+      "Qualcomm is betting big on data centers as smartphone sales sink (Qualcomm's bet on data centers ties hardware strategy to slowing smartphone sales, relevant for industry investors.)"
+    ],
+    "thin_areas": [
+      "models",
+      "research"
+    ],
+    "searches": [
+      "Anthropic financing round 2026: 0 new",
+      "Google school AI policy update: 2 new",
+      "Qwen model release 2026: 2 new"
+    ],
+    "dig_deeper": [
+      "AI sales startup Nooks secures $500 million in funding for expansion",
+      "Sources: Goldman Sachs and Apollo are in talks with investors to sell "
+    ]
+  },
+  "judged": 28,
+  "kept": 13,
+  "research": {
+    "investigated": 5,
+    "confirmed": 2,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "Sources: Goldman Sachs and Apollo are in talks with investors to sell : confirmed (searched “Goldman Sachs Apollo talks investors sell portions SpaceX chip financing up to $500 million Bloomberg”; read msn.com; read yahoo.com)",
+    "AI PACs spent millions trying to shape Congress — here’s how they fare: confirmed (searched “AI PACs spent millions trying to shape Congress”; read gizmodo.com; read time.com)",
+    "Qualcomm is betting big on data centers as smartphone sales sink: unconfirmed (searched “Qualcomm Q4 2026 earnings data center Amazon Meta partnership”; read cnbc.com; read msn.com)",
+    "Filing: AMD will pay ~$2.9B in cash and stock for AI chip startup Taal: unconfirmed (searched “AMD to acquire Taalas $2.9 billion August”; searched “Taalas AMD acquisition”; read theglobeandmail.com)",
+    "Texas was the new epicenter of the AI data center buildout. That might: unconfirmed (searched “Texas AI data center buildout political changes James Talarico Ken Paxton”; read techmeme.com; read msn.com)"
+  ],
+  "threads": [
+    "SpaceX AI compute financing secondary market: Goldman Sachs and Apollo seek investors for up to $500 M sli",
+    "Google school AI tool rollout controversy: Google will cut search access for schools that reject its AI"
+  ],
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "tagged": 4,
+  "trackers": "filed 3 stories; updated frontier-race, ai-infrastructure, ai-money",
+  "claims": "96 tracked, 91 open, 0 updated this run",
+  "model_tracker": "82 models, 7 changes today",
+  "briefing": "4 themes from 13 stories",
+  "self_review": "19 lines written to data/self_review.md",
+  "photos": "3 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "14 events sent: {\"subscribers\":8,\"sent\":0,\"queued\":34}",
+  "ai_requests_run": 42,
+  "ai_tokens_run": 111976,
+  "ai_requests_today": 42,
+  "provider_log": [
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
+    "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
+  ]
 }

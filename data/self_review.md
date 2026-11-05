@@ -1,39 +1,39 @@
-## Newsroom self-review, 2026-11-04
+## Newsroom self-review, 2026-11-05
 
-Looked at 33 runs over the last 3 days (65 stories written).
+Looked at 36 runs over the last 3 days (70 stories written).
 Tick the suggestions you want applied; nothing changes until a person approves it.
 
-- [ ] **remove source** · `gdelt`: Remove gdelt source  
-  _Why:_ Fails 16/33 runs with 429 rate‑limit errors, causing many missed stories.
-- [ ] **remove source** · `gdelt-india`: Remove gdelt‑india source  
-  _Why:_ Fails 19/33 runs due to GDELT pausing, heavily impacting coverage.
-- [ ] **add source** · `meta-lab-news`: Add a dedicated source for Meta AI lab announcements  
-  _Why:_ Meta lab has no stories this week despite being tracked.
-- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower threshold to 5  
-  _Why:_ Large numbers of drops at scores 5 and 4 (93 + 64), reducing missed potentially valuable stories.
-- [ ] **tune** · `cerebras/gpt-oss-120b`: Reduce max output tokens or add a fallback model to avoid cut‑off answers  
-  _Why:_ Provider notes show repeated answer cut‑offs, leading to unusable content.
+- [ ] **remove source** · `gdelt`: Remove gdelt from sources list  
+  _Why:_ Failed in 17 of 36 runs due to SSL timeout, causing unreliable data ingestion
+- [ ] **remove source** · `gdelt-india`: Remove gdelt-india from sources list  
+  _Why:_ Failed in 18 of 36 runs with the same SSL timeout, wasting run time
+- [ ] **add source** · `meta-ai-blog`: Add a dedicated Meta AI news source  
+  _Why:_ Meta lab had no stories this week despite being tracked, indicating coverage gap
+- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower threshold from 6 to 5  
+  _Why:_ Large numbers of stories are dropped at score 5 (186) and 4 (125); lowering may capture more relevant content without sacrificing quality
+- [ ] **tune** · `cerebras/gpt-oss-120b`: Increase max token limit or shorten prompts for this model  
+  _Why:_ Repeated 'answer cut off' notes indicate token limit is being hit, reducing output quality
 
 <details><summary>Statistics the agent reviewed</summary>
 
 ```json
 {
- "runs": 33,
- "stories_written": 65,
+ "runs": 36,
+ "stories_written": 70,
  "source_failures": {
-  "gdelt-india": "19/33 runs; last error: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
-  "gdelt": "16/33 runs; last error: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20"
+  "gdelt": "17/36 runs; last error: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+  "gdelt-india": "18/36 runs; last error: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out"
  },
  "sources_returning_nothing": {},
  "drop_reasons": {
-  "not AI": 179,
-  "score 5": 93,
-  "could not verify yet": 75,
-  "score 4": 64,
-  "could not verify yet after a second try": 35,
+  "not AI": 217,
+  "score 5": 186,
+  "score 4": 125,
+  "could not verify yet": 105,
+  "could not verify yet after a second try": 42,
+  "score 3": 21,
   "score 0": 18,
-  "score 3": 17,
-  "duplicate of c10fef6ec816": 14
+  "duplicate of e420e884477a": 18
  },
  "tracked_labs_without_stories_this_week": [
   "Meta"
@@ -46,7 +46,7 @@ Tick the suggestions you want applied; nothing changes until a person approves i
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
   "cerebras/gpt-oss-120b: answer cut off; retrying with more room",
-  "cerebras/gpt-oss-120b: unusable answer"
+  "cerebras/gpt-oss-120b: answer cut off; retrying with more room"
  ],
  "current_settings": {
   "min_score_to_publish_1_to_10": 6,
