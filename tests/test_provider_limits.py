@@ -212,3 +212,25 @@ def test_410_gone_counts_as_retired_and_triggers_discovery(tmp_path):
     llm = make(providers, handler, tmp_path)
     assert ask(llm) == {"ok": True}
     assert asked == ["openai/gpt-oss-120b", "nvidia/nemotron-3-super-120b-a12b"]
+
+
+def test_brief_503_does_not_bench_the_provider_for_the_whole_run(tmp_path):
+    seen, fail = [], {"n": 1}
+
+    def handler(req):
+        model = json.loads(req.content)["model"]
+        seen.append(model)
+        if model == "lite" and fail["n"] > 0:
+            fail["n"] -= 1
+            return httpx.Response(503, json={"error": {"message": "The model is overloaded"}})
+        return httpx.Response(200, json=completion("submit", {"ok": True}))
+
+    providers = [{"name": "gemini", "base_url": "https://gemini.example/v1", "key_env": "GM", "models": ["lite", "flash"]},
+                 {"name": "groq", "base_url": "https://groq.example/v1", "key_env": "G", "models": ["big"]}]
+    llm = make(providers, handler, tmp_path)
+    fail["n"] = 2  # first attempt and its retry both 503
+    assert ask(llm) == {"ok": True}
+    assert seen == ["lite", "lite", "flash"]  # stayed on Gemini
+    seen.clear()
+    assert ask(llm) == {"ok": True}
+    assert seen == ["lite"]  # and Gemini is still first next call

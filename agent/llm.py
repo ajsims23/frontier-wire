@@ -137,6 +137,7 @@ class LLM:
         self._dead_providers: set[str] = set()
         self._dead_models: set[tuple[str, str]] = set()
         self._too_large = False
+        self._server_errors: dict[str, int] = {}
         self.log: list[str] = []
 
     @property
@@ -244,6 +245,13 @@ class LLM:
             # per-minute limits are per model: another model on the same account has its own allowance
             self.log.append(f"{p['name']}/{model}: per-minute limit hit; trying next model")
             return "next", None
+        if code >= 500:
+            # a busy/overloaded server is usually brief: try the provider's next model, and only give up on
+            # the provider for this run after a few of these
+            self._server_errors[p["name"]] = self._server_errors.get(p["name"], 0) + 1
+            if self._server_errors[p["name"]] < 3:
+                self.log.append(f"{p['name']}/{model}: {code} (server busy); trying next model")
+                return "next", None
         if code == 429 or code >= 500:
             self.log.append(f"{p['name']}: {code} after retry; moving to next provider for this run")
             self._dead_providers.add(p["name"])
