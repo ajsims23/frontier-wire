@@ -109,3 +109,27 @@ def test_discovery_skips_speech_and_arabic_models(tmp_path):
     llm = make(providers, handler, tmp_path)
     assert ask(llm) == {"ok": True}
     assert asked == ["retired", "qwen/qwen3.8-27b"]
+
+
+def test_gemini_per_minute_429_waits_for_retry_delay_then_moves_on(tmp_path):
+    waits, seen = [], []
+    body = {"error": {"code": 429, "message": "Quota exceeded for metric: generate_content_free_tier_requests",
+                      "details": [{"violations": [{"quotaId": "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"}]},
+                                  {"@type": "type.googleapis.com/google.rpc.RetryInfo", "retryDelay": "23s"}]}}
+
+    def handler(req):
+        model = json.loads(req.content)["model"]
+        seen.append((req.url.host, model))
+        if req.url.host == "gemini.example":
+            return httpx.Response(429, json=body)
+        return httpx.Response(200, json=completion("submit", {"ok": True}))
+
+    providers = [{"name": "gemini", "base_url": "https://gemini.example/v1", "key_env": "GM", "models": ["lite", "flash"]},
+                 {"name": "groq", "base_url": "https://groq.example/v1", "key_env": "G", "models": ["big"]}]
+    lim = Limits({"max_requests_per_run": 50, "max_requests_per_day": 50, "max_tokens_per_day": 10**7}, tmp_path / "u.json")
+    llm = LLM(providers, lim, http=httpx.Client(transport=httpx.MockTransport(handler)), env={"GM": "k", "G": "k"},
+              sleep=waits.append)
+    assert ask(llm) == {"ok": True}
+    assert waits[0] == 23.0
+    assert seen == [("gemini.example", "lite"), ("gemini.example", "lite"),
+                    ("gemini.example", "flash"), ("gemini.example", "flash"), ("groq.example", "big")]

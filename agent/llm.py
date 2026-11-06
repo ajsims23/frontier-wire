@@ -32,7 +32,7 @@ class RequestTooLarge(AllProvidersFailed):
 
 # Groq-style size/limit messages: "... on tokens per minute (TPM): Limit 8000, Requested 15712 ..."
 _LIMIT_RE = re.compile(r"Limit\s+(\d+),\s*Requested\s+(\d+)", re.I)
-_PER_MINUTE = re.compile(r"per minute|\b[RT]PM\b", re.I)
+_PER_MINUTE = re.compile(r"per.?minute|\b[RT]PM\b", re.I)  # Groq: "tokens per minute"; Gemini: "...PerMinute..."
 
 
 class Limits:
@@ -128,6 +128,9 @@ class LLM:
                     wait = float(resp.headers.get("retry-after", "5") or 5)
                 except ValueError:
                     wait = 5.0
+                m = re.search(r'"retryDelay"\s*:\s*"(\d+(?:\.\d+)?)s"', resp.text)  # Gemini puts the wait in the body
+                if m and "retry-after" not in resp.headers:
+                    wait = float(m.group(1))
                 # a per-minute limit clears within a minute, so it's worth waiting for; anything longer isn't
                 wait = min(wait, 60.0 if resp.status_code == 429 and _PER_MINUTE.search(resp.text) else 20.0)
                 self.sleep(wait)

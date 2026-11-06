@@ -6,25 +6,25 @@
 # name has been retired, it tries the next model in the list.
 # Free-tier limits change; run `python -m agent check-models` to see what works.
 providers:
-  - name: cerebras            # free: ~1M tokens/day, 30 requests/min
-    base_url: https://api.cerebras.ai/v1
-    key_env: CEREBRAS_API_KEY
-    models: [gpt-oss-120b]   # if this is retired, the agent asks Cerebras for its current models
+  - name: gemini              # primary. free tier: 250k tokens/min, ~10 requests/min, ~500 requests/day (Flash-Lite); Google may use prompts to improve its products
+    base_url: https://generativelanguage.googleapis.com/v1beta/openai
+    key_env: GEMINI_API_KEY
+    models: [gemini-flash-lite-latest, gemini-flash-latest]
 
   - name: groq                # free: ~8k tokens/minute and ~200k tokens/day *per model*, so several models = more room
     base_url: https://api.groq.com/openai/v1
     key_env: GROQ_API_KEY
     models: [openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b]   # llama-3.3-70b-versatile retired Nov 2026
 
-  - name: gemini              # free tier: big per-minute allowance, ~1,000 requests/day; Google may use prompts to improve its products
-    base_url: https://generativelanguage.googleapis.com/v1beta/openai
-    key_env: GEMINI_API_KEY
-    models: [gemini-flash-lite-latest, gemini-flash-latest]
-
   - name: openrouter          # free models: ~50 requests/day without credit — last resort
     base_url: https://openrouter.ai/api/v1
     key_env: OPENROUTER_API_KEY
     models: ["meta-llama/llama-3.3-70b-instruct:free"]
+
+  - name: cerebras            # no longer free (free tier ended Jul 2026; 402 until billing is added) — last resort
+    base_url: https://api.cerebras.ai/v1
+    key_env: CEREBRAS_API_KEY
+    models: [gpt-oss-120b]   # if this is retired, the agent asks Cerebras for its current models
 
   # Optional paid fallback — uncomment to use Claude (needs ANTHROPIC_API_KEY).
   # - name: anthropic
