@@ -60,15 +60,16 @@ jobs:
           KEY: ${{ secrets.NVIDIA_API_KEY }}
         run: |
           [ -n "$KEY" ] || { echo "NVIDIA_API_KEY not set (optional fallback)"; exit 0; }
-          models=$(curl -s -H "Authorization: Bearer $KEY" https://integrate.api.nvidia.com/v1/models \
+          models=$(curl -s -m 30 -H "Authorization: Bearer $KEY" https://integrate.api.nvidia.com/v1/models \
             | grep -oE '"id": ?"[^"]*"' | sed -E 's/"id": ?"//; s/"$//' \
             | grep -iE 'gpt-oss|nemotron|kimi|deepseek|glm|qwen|llama-3|mistral|gemma' \
-            | grep -viE 'embed|guard|safety|reward|parse|vl-|omni|coder|vision|bolt|nano|mini|1b|3b|8b' | sort -u | head -20)
+            | grep -viE 'embed|guard|safety|reward|parse|vl-|omni|coder|vision|bolt|nano|mini|1b|3b|8b' | sort -u | head -20) || true
           ok=0
           for m in $models; do
+            : > out.json
             code=$(curl -s -m 60 -o out.json -w "%{http_code}" -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
               -d "{\"model\":\"$m\",\"messages\":[{\"role\":\"user\",\"content\":\"Call submit with ok=true.\"}],\"max_tokens\":1500,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"submit\",\"parameters\":{\"type\":\"object\",\"properties\":{\"ok\":{\"type\":\"boolean\"}},\"required\":[\"ok\"]}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit\"}}}" \
-              https://integrate.api.nvidia.com/v1/chat/completions)
+              https://integrate.api.nvidia.com/v1/chat/completions) || code="timeout"
             tool=$(grep -c '"tool_calls"' out.json 2>/dev/null || true)
             if [ "$code" = "200" ] && [ "$tool" != "0" ]; then echo "WORKS  $m"; ok=1
             else echo "no     $m  (HTTP $code: $(head -c 120 out.json 2>/dev/null | tr '\n' ' '))"; fi
