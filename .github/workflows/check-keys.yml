@@ -53,6 +53,23 @@ jobs:
             -d '{"model":"gemini-flash-lite-latest","messages":[{"role":"user","content":"Reply with the word ok."}],"max_tokens":50}' \
             https://generativelanguage.googleapis.com/v1beta/openai/chat/completions)
           echo "Gemini chat HTTP $code"; [ "$code" = "200" ]
+      - name: NVIDIA key (optional)
+        if: always()
+        env:
+          KEY: ${{ secrets.NVIDIA_API_KEY }}
+        run: |
+          [ -n "$KEY" ] || { echo "NVIDIA_API_KEY not set (optional fallback)"; exit 0; }
+          curl -s -H "Authorization: Bearer $KEY" https://integrate.api.nvidia.com/v1/models \
+            | grep -oE '"id": ?"[^"]*(gpt-oss|llama-3.3|nemotron|qwen3|deepseek|glm|kimi)[^"]*"' | sed 's/"id": *//' | sort | head -40 || true
+          for m in openai/gpt-oss-120b meta/llama-3.3-70b-instruct; do
+            code=$(curl -s -o out.json -w "%{http_code}" -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+              -d "{\"model\":\"$m\",\"messages\":[{\"role\":\"user\",\"content\":\"Call submit with ok=true.\"}],\"max_tokens\":400,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"submit\",\"parameters\":{\"type\":\"object\",\"properties\":{\"ok\":{\"type\":\"boolean\"}},\"required\":[\"ok\"]}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit\"}}}" \
+              https://integrate.api.nvidia.com/v1/chat/completions)
+            tool=$(grep -c '"tool_calls"' out.json || true)
+            echo "NVIDIA $m: HTTP $code, tool call returned: $([ "$tool" != 0 ] && echo yes || echo no)"
+            [ "$code" = "200" ] || head -c 300 out.json; echo
+          done
+          [ "$code" = "200" ]
       - name: Mistral key (optional)
         if: always()
         env:

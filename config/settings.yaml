@@ -11,15 +11,20 @@ providers:
     key_env: GEMINI_API_KEY
     models: [gemini-flash-lite-latest, gemini-flash-latest]
 
-  - name: mistral             # free "Experiment" plan: ~1 request/second, ~1B tokens/month; needs phone verification, prompts may be used for training
-    base_url: https://api.mistral.ai/v1
-    key_env: MISTRAL_API_KEY
-    models: [mistral-medium-latest, mistral-small-latest]
-
   - name: groq                # free: ~8k tokens/minute and ~200k tokens/day *per model*, so several models = more room
     base_url: https://api.groq.com/openai/v1
     key_env: GROQ_API_KEY
     models: [openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b]   # llama-3.3-70b-versatile retired Nov 2026
+
+  - name: nvidia              # NVIDIA NIM (build.nvidia.com): free for NVIDIA Developer Program members, ~40 requests/min, no card
+    base_url: https://integrate.api.nvidia.com/v1
+    key_env: NVIDIA_API_KEY
+    models: [openai/gpt-oss-120b, meta/llama-3.3-70b-instruct]   # if these go, the agent asks NVIDIA for its current models
+
+  - name: mistral             # optional (unused without a key; signup asks for a card). Free "Experiment" plan: ~1 request/second, ~1B tokens/month; needs phone verification, prompts may be used for training
+    base_url: https://api.mistral.ai/v1
+    key_env: MISTRAL_API_KEY
+    models: [mistral-medium-latest, mistral-small-latest]
 
   - name: openrouter          # free models: ~50 requests/day without credit — last resort
     base_url: https://openrouter.ai/api/v1

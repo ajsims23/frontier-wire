@@ -9,7 +9,7 @@
 //   POST /api/recap/image  (bearer secret) {prompt} -> an AI illustration (Workers AI, FLUX schnell) as base64 JPEG
 //   cron                   08:50 IST daily digests; every 10 minutes, continues sending an approved recap
 //
-// Secrets: CEREBRAS_API_KEY (and optional GROQ_API_KEY, GEMINI_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY), BREVO_API_KEY, DISPATCH_SECRET. Binding: AI (Workers AI).
+// Secrets: CEREBRAS_API_KEY (and optional GROQ_API_KEY, GEMINI_API_KEY, NVIDIA_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY), BREVO_API_KEY, DISPATCH_SECRET. Binding: AI (Workers AI).
 // Vars: SITE_URL, SENDER_EMAIL, SENDER_NAME. Binding: DB (D1).
 import { buildIndex, rank } from "../../site/search.js";
 import { digestSubject, recapSubject, renderEmail, renderRecap } from "./email.js";
@@ -74,10 +74,11 @@ async function llm(env, messages) {
   const groq = "https://api.groq.com/openai/v1/chat/completions";
   const providers = [
     env.GEMINI_API_KEY && { url: "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", key: env.GEMINI_API_KEY, model: "gemini-flash-lite-latest" },
-    env.MISTRAL_API_KEY && { url: "https://api.mistral.ai/v1/chat/completions", key: env.MISTRAL_API_KEY, model: "mistral-medium-latest" },
     // Groq's free tier limits each model separately (~8k tokens/min, counting the answer space), so try two models with a smaller answer budget
     env.GROQ_API_KEY && { url: groq, key: env.GROQ_API_KEY, model: env.GROQ_MODEL || "openai/gpt-oss-120b", max: 2000 },
     env.GROQ_API_KEY && { url: groq, key: env.GROQ_API_KEY, model: "openai/gpt-oss-20b", max: 2000 },
+    env.NVIDIA_API_KEY && { url: "https://integrate.api.nvidia.com/v1/chat/completions", key: env.NVIDIA_API_KEY, model: "openai/gpt-oss-120b" },
+    env.MISTRAL_API_KEY && { url: "https://api.mistral.ai/v1/chat/completions", key: env.MISTRAL_API_KEY, model: "mistral-medium-latest" },
     env.OPENROUTER_API_KEY && { url: "https://openrouter.ai/api/v1/chat/completions", key: env.OPENROUTER_API_KEY, model: "meta-llama/llama-3.3-70b-instruct:free" },
     // no longer free (402 without billing): last resort
     env.CEREBRAS_API_KEY && { url: "https://api.cerebras.ai/v1/chat/completions", key: env.CEREBRAS_API_KEY, model: env.CEREBRAS_MODEL || "gpt-oss-120b" },
