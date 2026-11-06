@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-06T14:51:37+00:00",
+  "started_at": "2026-11-06T14:54:35+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -15,38 +15,496 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (18)",
+    "gdelt": "ok (30)",
+    "hn": "ok (16)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
   },
   "dropped": [
     {
-      "title": "ToyBlocks: A controlled world for robot learning and evaluation",
-      "reason": "score 5: A Hugging Face blog announcing a new simulated environment for robot learning. Useful but an incremental tool rather than a frontier model, major result, or policy change; scores below the threshold for publication."
+      "title": "Merge builds product and business tools with OpenAI technology",
+      "reason": "score 4: A customer case study of a mid-size company using GPT-6 Astra, ChatGPT and Codex for code review and marketing. Routine adoption/marketing content, not a frontier development; the editor flag does not make it genuinely news."
+    },
+    {
+      "title": "Ai2 publishes Molmo2-4B-tb on Hugging Face",
+      "reason": "score 5: A 4B robotics model upload from Ai2 (allenai/Molmo2-4B-tb) with only 2 likes. Small open-weight release from a non-frontier lab, not a major model launch; below the bar for our readers."
+    },
+    {
+      "title": "Ai2 publishes maniflow-tb on Hugging Face",
+      "reason": "score 3: Minor robotics model upload from Ai2 (maniflow-tb) with 2 likes. Not a genuinely new frontier model; drop."
+    },
+    {
+      "title": "User Embeddings are Superpositions of Interpretable Behavioral Modes",
+      "reason": "score 4: Interpretability paper on user embeddings in recommendation/personalization systems. Solid but incremental and niche; not a breakthrough for model engineers."
+    },
+    {
+      "title": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
+      "reason": "score 5: Agent-swarm evolutionary optimization paper. Interesting but an incremental methodological contribution, not a landmark result; most arXiv items should be dropped."
+    },
+    {
+      "title": "Scientist World: Grow a Research World for AI-Scientists",
+      "reason": "score 5: A benchmark/environment for AI-scientist agents. Interesting but a research tooling contribution, not a landmark result; below the keep bar."
+    },
+    {
+      "title": "XStack: A Benchmark for ML Repo Migration",
+      "reason": "score 4: Benchmark for migrating ML repos between PyTorch/NVIDIA and JAX/TPU. Useful but incremental tooling; not a breakthrough."
+    },
+    {
+      "title": "Same Behavior, Different Mechanism: What Finite Experiments Can Certify About Integrated Information",
+      "reason": "score 3: Highly theoretical paper on integrated information and what finite experiments can certify. Niche and not a practical advance for our readers."
+    },
+    {
+      "title": "Towards interpreting any residual stream direction by scaling activation inversion",
+      "reason": "score 5: Interpretability method (MAEMs) is incremental research without clear frontier impact; score below keep threshold."
+    },
+    {
+      "title": "Adversarial Training with Large Step Sizes: Implicit Bias, Optimization, and Sharpness",
+      "reason": "score 5: Theoretical analysis of adversarial training step sizes is solid but not a major breakthrough for practitioners."
+    },
+    {
+      "title": "Unpacking the Compute Efficiency of Strong-to-Weak OPD against GRPO",
+      "reason": "score 4: Niche compute‑efficiency study of on‑policy distillation; limited relevance to frontier audience."
+    },
+    {
+      "title": "ReproBridge: Building Reproducibility into ML Research Artifacts",
+      "reason": "score 4: Tool for reproducibility is useful but not a news‑worthy advance for Frontier Wire readers."
+    },
+    {
+      "title": "A Hidden Markov Preference Model for Online Prediction of Adversary Actions",
+      "reason": "score 4: Hidden‑Markov model for adversary prediction is a security‑adjacent study, not a major AI development."
+    },
+    {
+      "title": "Label-Wording Augmentation in a Typed-Decision Encoder: Gains on Unfamiliar Words, Not on Abbreviations or Codes",
+      "reason": "score 3: Label‑wording augmentation for a specific multilingual encoder is a narrow incremental improvement."
+    },
+    {
+      "title": "Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety",
+      "reason": "score 5: Survey of mechanistic interpretability is informative but not a new result; falls below keep threshold."
+    },
+    {
+      "title": "MedGraph: Maintaining Patient State with Graph Memory for Long-Term Medical Dialogue",
+      "reason": "score 5: Medical‑dialogue graph memory architecture is an application‑focused paper, not a frontier breakthrough."
+    },
+    {
+      "title": "Data-driven discovery of intrinsic Lie point symmetries of differential equation systems",
+      "reason": "score 4: A technical paper on discovering Lie symmetries from data; interesting for scientific ML but an incremental methodological contribution without clear frontier impact."
+    },
+    {
+      "title": "On the limitations of molecular representations",
+      "reason": "score 4: Analyzes limits of molecular representations; relevant to cheminformatics but does not constitute a breakthrough or major news for the Frontier Wire audience."
+    },
+    {
+      "title": "Benchmarks as Software: Terminal-Bench and the Case for Continuous Benchmarks",
+      "reason": "score 5: Proposes a continuous benchmarking framework for coding agents; useful for evaluation but still an incremental tool rather than a headline‑worthy advance."
+    },
+    {
+      "title": "Spectral and Subspace Dynamics of LoRA in Supervised Fine-Tuning and Reinforcement Learning",
+      "reason": "score 4: Studies LoRA dynamics in fine‑tuning and RL; a detailed analysis that is unlikely to attract broad interest beyond specialists."
+    },
+    {
+      "title": "The Gold Rush in AI4Math, II: What are signatures of AI-assisted Proofs?",
+      "reason": "score 5: Explores signatures of AI‑assisted proofs in mathematics; conceptually interesting but still an early‑stage investigation without concrete breakthrough."
+    },
+    {
+      "title": "Conformal Prediction for Time-Dependent PDEs",
+      "reason": "score 4: Applies conformal prediction to time‑dependent PDEs; a niche methodological contribution for scientific ML."
+    },
+    {
+      "title": "Social Humanoid: Socially Responsive Human-Humanoid Interaction",
+      "reason": "score 5: Introduces a socially responsive humanoid robot system; robotics‑focused work that is not a frontier AI model or policy development."
+    },
+    {
+      "title": "StepBack: Step-Level Error-Localized Resampling for Efficient Test-Time Reasoning",
+      "reason": "score 5: Presents a test‑time reasoning efficiency technique; useful for LLM deployment but an incremental improvement rather than a major news item."
+    },
+    {
+      "title": "Synthesis of Ovarian Cancer Multi-Omics Datasets: A Biology-Informed Evaluation Framework",
+      "reason": "score 4: Offers a framework for evaluating synthetic multi‑omics data; specialized to bio‑informatics and not a headline AI development."
+    },
+    {
+      "title": "Learning a patient world model for health system simulation in intensive care",
+      "reason": "score 5: Describes learning a patient world model for ICU simulation; an application‑oriented study without a breakthrough that would merit a news story."
+    },
+    {
+      "title": "Hybrid Machine Learning for Imbalanced Landing-Phase Safety Event Prediction from Flight Data",
+      "reason": "score 5: Paper applies ML to predict rare landing‑phase safety events; interesting but an incremental application rather than a frontier breakthrough, so it does not meet the significance threshold."
+    },
+    {
+      "title": "Module-Aware Optimization for Graph Neural Networks",
+      "reason": "score 5: Optimization technique for GNNs is a modest incremental improvement without broader ecosystem impact."
+    },
+    {
+      "title": "Muir: Linear Attention with Sensitivity-Allocated Gating and Matched-Filter Readout",
+      "reason": "score 5: New linear‑attention architecture adds to a crowded space but does not represent a landmark advance."
+    },
+    {
+      "title": "MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation",
+      "reason": "score 5: Robotics manipulation augmentation paper is a niche contribution; not a major frontier development."
+    },
+    {
+      "title": "VisionSIM: Beyond Idealized Sensors - A Multi-Modal Simulator for Robot Perception",
+      "reason": "score 5: VisionSIM simulator is a useful robotics tool but represents an incremental research contribution."
+    },
+    {
+      "title": "SHORE: Stability-Hybrid On-Policy Reinforcement Learning for Online Bin Packing",
+      "reason": "score 5: RL method for online bin packing is a modest algorithmic tweak without broader impact."
+    },
+    {
+      "title": "SpecCTMC: Exact Speculative Simulation of Diffusion Language Model Continuous-Time Markov Chains",
+      "reason": "score 5: Exact speculative simulation for diffusion LMs is a technical refinement that does not rise to a news‑worthy level."
+    },
+    {
+      "title": "Unifying Central Flow, Rod Flow, and the Edge Coupling",
+      "reason": "score 4: Theoretical paper on gradient flow dynamics; incremental and not a frontier AI breakthrough."
+    },
+    {
+      "title": "USB Gym: A Gymnasium Testbed for Closed-Loop Ultrasound View Matching",
+      "reason": "score 4: Introduces a testbed for ultrasound guidance; AI angle is peripheral and not newsworthy for Frontier Wire."
+    },
+    {
+      "title": "4D Point Splatting for mmWave Radar Micro-Doppler Differentiable Rendering",
+      "reason": "score 4: Radar micro‑Doppler rendering paper; interesting for sensing but not a major AI development."
+    },
+    {
+      "title": "Ethics Week Lecture centers on AI use for mental health support",
+      "reason": "score 3: Announcement of an ethics lecture; not a significant AI development."
+    },
+    {
+      "title": "S . African media leader expects World Media Summit to foster cooperation on AI challenges",
+      "reason": "score 3: Media leader’s expectation for a summit; lacks concrete AI news."
+    },
+    {
+      "title": "Tech stocks battered as AI panic roils global markets",
+      "reason": "score 5: Market commentary on AI‑related stock panic; not a core AI story."
+    },
+    {
+      "title": "What an AI - Assisted 3D Portfolio Should Show Beyond the Final Render",
+      "reason": "not AI: A design/creative portfolio piece about AI-assisted 3D work; not news for a frontier-AI audience."
+    },
+    {
+      "title": "SA and Mauritius lead Africa in AI Youth Readiness Index",
+      "reason": "score 3: A regional youth-readiness index ranking; minor and not a substantive AI development for this audience."
+    },
+    {
+      "title": "My psychophysics as a bilateral cochlear implant user",
+      "reason": "not AI: A personal essay on cochlear-implant psychophysics that went viral on HN. No AI angle in the source; off-topic for Frontier Wire."
+    },
+    {
+      "title": "Stockal’s US Trading Row: Missing Consent, A Chinese Microcap, And Unanswered Questions",
+      "reason": "not AI: A dispute over an Indian stock-trading app's US brokerage operations; no AI angle, so off-topic for Frontier Wire."
+    },
+    {
+      "title": "MobiKwik To Begin NBFC Operations Within 6 Months Post RBI Clearance",
+      "reason": "not AI: MobiKwik's NBFC registration is a fintech/regulatory matter with no AI angle."
+    },
+    {
+      "title": "Brokers In October: Angel One Climbs To The Second Spot With 2.4 Lakh New User Additions",
+      "reason": "not AI: Article about stockbroker user numbers has no AI angle; ai_relevance=none."
+    },
+    {
+      "title": "MakeMyTrip Acquires Majority Stake In Quick Ride To Enter Ride Pooling",
+      "reason": "not AI: MakeMyTrip's acquisition of Quick Ride is a travel‑tech move with no AI focus; ai_relevance=none."
+    },
+    {
+      "title": "Delhi HC Upholds BharatPe’s Veto Rights In Unity SFB Shareholding Dispute",
+      "reason": "not AI: Court ruling on BharatPe's veto rights is a financial‑legal story with no AI component."
+    },
+    {
+      "title": "RBI meets bankers amidst rising AI cyber-attacks, mandates security audits",
+      "reason": "duplicate of b607b0928983"
+    },
+    {
+      "title": "TRAI recommends India-based network control, traffic monitoring for satellite providers",
+      "reason": "not AI: TRAI's satellite network-control recommendation is telecom regulation, not AI; off-topic for the India AI desk."
+    },
+    {
+      "title": "Shiprocket swings to profit in Q2, revenue rises 35% to Rs 674 cr",
+      "reason": "not AI: Shiprocket's Q2 earnings; logistics business news with no AI relevance."
+    },
+    {
+      "title": "COD Mobile turns 7: What is new as Verdansk returns with Battle Royale upgrades, Mythic Drops and Ford Racing rewards",
+      "reason": "not AI: Call of Duty Mobile game update; no AI relevance."
+    },
+    {
+      "title": "‘Your voice matters’: Sarvam AI CEO Pratyush Kumar offers lifetime access to 70-year-old speech-impaired cancer survivor",
+      "reason": "score 5: Sarvam AI offers free access to its speech‑to‑text models for a cancer survivor – a modest, socially‑focused AI application in India, but not a major product or market development."
+    },
+    {
+      "title": "India focused on becoming AI application capital of the world: Ashwini Vaishnaw",
+      "reason": "score 5: Minister Ashwini Vaishnaw's statement that India aims to be the AI‑application capital is a high‑level policy comment but lacks concrete action; not enough for a news story."
+    },
+    {
+      "title": "Motorola Signature 27 launched with 7,000mAh battery, 200MP camera and Snapdragon 8 Elite Extreme Gen 6: Price, features",
+      "reason": "not AI: Motorola phone launch focuses on hardware specs; no AI relevance."
+    },
+    {
+      "title": "Vaishnaw puts onus on social media platforms to curb online harm, stops short of safe-harbour clarity",
+      "reason": "not AI: Social-media platform liability and safe-harbour policy; not about AI, so dropped for the India desk."
+    },
+    {
+      "title": "Want only serious players, no place for frivolous applicants in Semicon 2.0: Vaishnaw to industry",
+      "reason": "score 4: Semicon 2.0 is a semiconductor programme; AI is at most a secondary angle, so it scores low on its AI relevance."
+    },
+    {
+      "title": "Meta pauses planned terms updates, keeps existing rules in place",
+      "reason": "score 4: Meta pausing commercial/ad terms updates; the only AI touch is a clause name, so the AI angle is thin and the story is routine platform policy."
+    },
+    {
+      "title": "Alphabet discloses $548 million worth of Qualcomm stake",
+      "reason": "score 4: A routine 13F-style stake disclosure by Alphabet; the AI data-centre context is secondary and the item is minor."
+    },
+    {
+      "title": "Apple's predictive text restrictions include 'Dictator Trump' and 'Sleepy Joe,' researcher finds",
+      "reason": "not AI: A consumer-keyboard curation story; no meaningful AI angle for our readers."
+    },
+    {
+      "title": "Mamaearth parent Honasa's Q2 net profit rises 87%",
+      "reason": "not AI: Consumer-goods company earnings; no AI angle."
+    },
+    {
+      "title": "Govt clears 12 more proposals worth over Rs 7,500 Cr under electronics components scheme",
+      "reason": "not AI: Government clearance of electronics component proposals is a hardware policy item; AI is not mentioned, so ai_relevance=none."
+    },
+    {
+      "title": "How a Rs 500 Cr bet put Bihar Museum ahead of the Met and Louvre",
+      "reason": "not AI: Story about museum funding and exhibition has no AI content; ai_relevance=none."
+    },
+    {
+      "title": "Delhi HC upholds interim protection for BharatPe’s shareholder rights, dismisses Unity Bank’s appeal",
+      "reason": "not AI: A corporate shareholder-rights court ruling at BharatPe; not about AI, so dropped for the India desk."
+    },
+    {
+      "title": "(Weekly funding roundup Oct 31-Nov 6) Sharp rise in capital inflow",
+      "reason": "score 3: A general weekly Indian startup funding roundup with no specific AI focus; routine and not a distinct AI development."
+    },
+    {
+      "title": "Quoting Paul Ford",
+      "reason": "not AI: Quote about browsers; no AI content."
+    },
+    {
+      "title": "Ethan Mollick: One ongoing frustration is the lack of effort I see being put towards near-term, achievable crash projects to do good with AI at a…",
+      "reason": "score 4: Ethan Mollick's Bluesky post is a general opinion about AI 'crash projects' for good, not substantive commentary on a specific AI development. Routine commentary."
+    },
+    {
+      "title": "Ethan Mollick: As I have written many times in the past years, any potential financial downturn in AI stocks will not greatly change the AI trajectory AI…",
+      "reason": "score 3: Opinion piece on AI stocks; lacks concrete news value."
+    },
+    {
+      "title": "FedReason: Large Language Models as Weight-Space Meta-Aggregators for Heterogeneous Federated Learning",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "NPCBench: A Clinical Apprenticeship Benchmark for Multimodal Care-Pathway Reasoning in Nasopharyngeal Carcinoma",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "StrataFlux: Memory-Hierarchy-Native Low-Bit LLM Inference",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "Enhancing Local and Global Structure in Compressed AI Agent Memory",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "Discovering Learning Rules that Shape Others",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "NVIDIA Jensen Huang Summoned By U . S . Congress For A Closed Door Briefing To Address His Interactions With An Executive That In The Federal Spy Probe Crosshairs",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Nvidia H200 chips await China approval in Hong Kong , Reuters reports",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "AvenuesAI Q2 Net Profit Rises 6% YoY To ₹72 Cr, Revenue Up 47%",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
-  "written": [],
-  "notes": [],
-  "mode": "breaking",
+  "written": [
+    {
+      "id": "99a2f4c99621",
+      "headline": "Researchers propose meta‑access framework to extend LLM chat interfaces",
+      "category": "research",
+      "summary": "Julian Kunkel and Ali Doosthosseini submitted a paper describing meta access, a structured, permissioned view of a software interface that lets LLM chat agents read and modify UI state. The approach is demonstrated in a prototype called Meta Chat.",
+      "url": "https://arxiv.org/abs/2611.08428",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "926641e2e19c",
+      "headline": "VLA‑Tug probe improves early failure detection in vision‑language‑action models",
+      "category": "safety",
+      "summary": "Researchers introduced VLA‑Tug, a lightweight latent probe that raises early failure detection by up to 30% and keeps missed‑detection and false‑alarm bounds valid in up to 86% of runs on unseen tasks.",
+      "url": "https://arxiv.org/abs/2611.08425",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "2e8b2dae8868",
+      "headline": "Three indicted for using AI to impersonate executives and lawyers in $129M fraud",
+      "category": "safety",
+      "summary": "Three people were indicted in a U.S. District Court in New York on charges of wire fraud and aggravated identity theft for allegedly using AI to impersonate corporate executives and attorneys and steal about $129 million. The defendants, Jacob Soall, Sharon Hazan and Guy Sheetrit, targeted thousands of companies over more than a year and a half.",
+      "url": "https://cbsnews.com/news/3-ai-steal-129-million-companies-impersonating-executives-lawyers",
+      "sources": 6,
+      "quotes": 1
+    },
+    {
+      "id": "8ec5fec0e77e",
+      "headline": "Activists breach Microsoft data centre site in Amsterdam as protests spread across Europe",
+      "category": "policy",
+      "summary": "More than 100 activists broke into the construction site of a Microsoft AI data centre in Amsterdam on Friday, the start of two days of protests in 15-16 European countries calling for a pause on large-scale data centre construction. The site, owned by Pure Data Centres with over $1 billion in planned investment, is proceeding despite Amsterdam's ban on new data centres until 2030.",
+      "url": "https://economictimes.indiatimes.com/tech/technology/activists-breach-microsoft-data-centre-construction-site-as-protests-spread-in-europe/articleshow/135608593.cms",
+      "sources": 3,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "not India desk: 'Activists breach Microsoft data centre constructio'",
+    "3 kept item(s) carried over to the next run",
+    "top voices skipped: every configured provider failed: groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model | groq/qwen/qwen3.8-27b: request over its 7,000-token limit; retrying with a 1,502-token answer | groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model | groq/openai/gpt-oss-20b: model unavailable (400); trying next model"
+  ],
+  "mode": "full",
   "timings": {
-    "gather": 11.2,
-    "judge": 1.5,
-    "verify and write": -0.0,
-    "tagging": -0.0,
-    "trackers": -0.0,
-    "photos": -0.0,
-    "stock photos": -0.0,
-    "alerts": 2.7
+    "gather": 137.1,
+    "audit": 0.0,
+    "plan": 4.5,
+    "judge": 233.4,
+    "verify and write": 279.9,
+    "videos": 33.2,
+    "tagging": 12.6,
+    "explainers": -0.0,
+    "trackers": 60.6,
+    "claims": 2.4,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "briefing": 101.2,
+    "self-review": -0.0,
+    "photos": 0.7,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 9.0
   },
-  "fetched": 2437,
-  "fresh": 1,
-  "judged": 1,
-  "kept": 0,
-  "trackers": "filed 0 stories; no tracker changed",
-  "photos": "0 saved, 0 unavailable",
-  "alerts": "29 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":0}",
-  "ai_requests_run": 1,
-  "ai_tokens_run": 5084,
-  "ai_requests_today": 17,
+  "fetched": 2969,
+  "fresh": 221,
+  "plan": {
+    "focus": "Tracking post‑midterm AI data‑center policy fallout while bolstering research and voice coverage.",
+    "priorities": [
+      "Merge builds product and business tools with OpenAI technology (OpenAI‑powered product and business tools are directly relevant to builders and investors.)",
+      "Ai2 publishes Molmo2-4B-tb on Hugging Face (New Molmo2‑4B model on Hugging Face offers a usable open‑weight release for developers.)",
+      "User Embeddings are Superpositions of Interpretable Behavioral Modes (Paper on user embeddings provides fresh interpretability insights for model engineers.)",
+      "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimi (SwarmEvolve introduces novel agent‑swarm methods, appealing to AI‑research‑focused readers.)",
+      "Ethan Mollick: One ongoing frustration is the lack of effort I see bei (Ethan Mollick’s voice adds investor‑level perspective, filling our empty voices area.)"
+    ],
+    "thin_areas": [
+      "research",
+      "voices"
+    ],
+    "searches": [
+      "AI data center regulations 2026: 2 new",
+      "latest AI reproducibility benchmarks: 0 new",
+      "Ethan Mollick AI investment outlook: 0 new"
+    ],
+    "dig_deeper": [
+      "Merge builds product and business tools with OpenAI technology",
+      "Ethan Mollick: One ongoing frustration is the lack of effort I see bei"
+    ]
+  },
+  "judged": 80,
+  "kept": 12,
+  "research": {
+    "investigated": 5,
+    "confirmed": 2,
+    "tool_calls": 17
+  },
+  "research_log": [
+    "NVIDIA Jensen Huang Summoned By U . S . Congress For A Closed Door Bri: unconfirmed (searched “Jensen Huang summoned by US Congress closed door briefing executive federal spy probe”; read msn.com; searched “Reuters Jensen Huang closed door briefing Congress Chinese spy”; read reuters.com)",
+    "Nvidia H200 chips await China approval in Hong Kong , Reuters reports: unconfirmed (searched “Nvidia H200 chips China approval Hong Kong Reuters”; read msn.com; read streetinsider.com; read cryptobriefing.com)",
+    "3 allegedly used AI to steal some $129 million from companies by imper: confirmed (searched “AI steal $129 million impersonating executives lawyers”; read livemint.com; read scmp.com)",
+    "Activists breach Microsoft data centre construction site as protests s: confirmed (searched “\"Stop Dirty Data Centres\" activists Microsoft data centre protest Europe”; read theverge.com; read theguardian.com)",
+    "AvenuesAI Q2 Net Profit Rises 6% YoY To ₹72 Cr, Revenue Up 47%: unconfirmed (searched “AvenuesAI Q2 net profit rises 6% YoY to ₹72 Cr revenue up 47%”; searched “AvenuesAI Infibeam Avenues Q2 results net profit 71.7 Cr”; searched “AvenuesAI Q2 results revenue 47% profit”)"
+  ],
+  "videos": {
+    "OpenAI": "ok (10 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 4 new)",
+    "Google for Developers": "ok (9 in feed, 2 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 2 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "8 kept from 8 new",
+  "tagged": 4,
+  "trackers": "filed 1 stories; updated ai-infrastructure",
+  "claims": "102 tracked, 97 open, 0 updated this run",
+  "model_tracker": "82 models, 32 changes today",
+  "top_voices_sources": {
+    "tv-mollick": "ok (0)",
+    "tv-lambert": "ok (2)",
+    "tv-swyx": "ok (8)",
+    "tv-dwarkesh": "ok (2)",
+    "tv-raschka": "ok (0)",
+    "tv-karpathy": "ok (1)",
+    "tv-evans": "ok (0)",
+    "x-coverage": "ok (0 of 5 articles, bing)",
+    "hn": "ok (2)"
+  },
+  "briefing": "4 themes from 11 stories",
+  "india_briefing": "1 themes from 2 stories",
+  "photos": "4 saved, 0 unavailable",
+  "alerts": "37 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":26}",
+  "ai_requests_run": 40,
+  "ai_tokens_run": 112044,
+  "ai_requests_today": 57,
   "provider_log": [
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require"
+    "cerebras: payment required (402) — free quota used up or billing needed; skipping provider",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: model unavailable (400); trying next model",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: request over its 7,000-token limit; retrying with a 1,502-token answer",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-20b: model unavailable (400); trying next model"
   ]
 }
