@@ -61,9 +61,9 @@ jobs:
           [ -n "$KEY" ] || { echo "NVIDIA_API_KEY not set (optional fallback)"; exit 0; }
           curl -s -H "Authorization: Bearer $KEY" https://integrate.api.nvidia.com/v1/models \
             | grep -oE '"id": ?"[^"]*(gpt-oss|llama-3.3|nemotron|qwen3|deepseek|glm|kimi)[^"]*"' | sed 's/"id": *//' | sort | head -40 || true
-          for m in openai/gpt-oss-120b meta/llama-3.3-70b-instruct; do
+          for m in nvidia/nemotron-3-super-120b-a12b moonshotai/kimi-k2.6 deepseek-ai/deepseek-v4.1-flash; do
             code=$(curl -s -o out.json -w "%{http_code}" -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
-              -d "{\"model\":\"$m\",\"messages\":[{\"role\":\"user\",\"content\":\"Call submit with ok=true.\"}],\"max_tokens\":400,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"submit\",\"parameters\":{\"type\":\"object\",\"properties\":{\"ok\":{\"type\":\"boolean\"}},\"required\":[\"ok\"]}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit\"}}}" \
+              -d "{\"model\":\"$m\",\"messages\":[{\"role\":\"user\",\"content\":\"Call submit with ok=true.\"}],\"max_tokens\":1500,\"tools\":[{\"type\":\"function\",\"function\":{\"name\":\"submit\",\"parameters\":{\"type\":\"object\",\"properties\":{\"ok\":{\"type\":\"boolean\"}},\"required\":[\"ok\"]}}}],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"submit\"}}}" \
               https://integrate.api.nvidia.com/v1/chat/completions)
             tool=$(grep -c '"tool_calls"' out.json || true)
             echo "NVIDIA $m: HTTP $code, tool call returned: $([ "$tool" != 0 ] && echo yes || echo no)"

@@ -193,3 +193,22 @@ def test_mistral_gets_any_for_a_forced_single_tool_and_9_char_ids(tmp_path):
     assert m[2]["tool_call_id"] == a and m[3]["tool_call_id"] == b
     assert all("extra_content" not in c for c in m[1]["tool_calls"])
     assert history[1]["tool_calls"][0]["id"] == "function-call-1234567890"  # caller's history untouched
+
+
+def test_410_gone_counts_as_retired_and_triggers_discovery(tmp_path):
+    asked = []
+
+    def handler(req):
+        if req.method == "GET":
+            ids = ["nvidia/nemotron-3.5-embed-1b", "nvidia/nemotron-4-340b-reward", "nvidia/nemotron-3-super-120b-a12b"]
+            return httpx.Response(200, json={"data": [{"id": i} for i in ids]})
+        model = json.loads(req.content)["model"]
+        asked.append(model)
+        if model == "openai/gpt-oss-120b":
+            return httpx.Response(410, json={"title": "Gone", "detail": "The model has reached its end of life"})
+        return httpx.Response(200, json=completion("submit", {"ok": True}))
+
+    providers = [{"name": "nvidia", "base_url": "https://nim.example/v1", "key_env": "N", "models": ["openai/gpt-oss-120b"]}]
+    llm = make(providers, handler, tmp_path)
+    assert ask(llm) == {"ok": True}
+    assert asked == ["openai/gpt-oss-120b", "nvidia/nemotron-3-super-120b-a12b"]

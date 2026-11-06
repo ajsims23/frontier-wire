@@ -173,11 +173,11 @@ class LLM:
             break
         return resp
 
-    _PREFERRED = [r"gpt-oss-120b", r"qwen.*(235b|480b|coder)", r"llama.*(3\.3|4).*(70b|maverick|scout)", r"glm", r"qwen", r"llama", r"gpt-oss"]
+    _PREFERRED = [r"gpt-oss-120b", r"nemotron-3.*super", r"kimi-k2", r"deepseek-v\d", r"qwen.*(235b|480b|coder)", r"llama.*(3\.3|4).*(70b|maverick|scout)", r"glm", r"qwen", r"llama", r"gpt-oss"]
     # Not general chat models: embeddings, speech (Orpheus/PlayAI are text-to-speech), safety classifiers,
     # and narrow-language models such as ALLaM (Arabic) that can't do our structured English tasks.
     _NOT_CHAT = re.compile(r"embed|whisper|tts|guard|rerank|moderation|vision-preview|audio|image|"
-                           r"orpheus|playai|allam|safeguard|distil|speech|transcri", re.I)
+                           r"orpheus|playai|allam|safeguard|distil|speech|transcri|reward|parse|safety|coder-6", re.I)
 
     def _discover(self, p: dict[str, Any], tried: set[str]) -> list[str]:
         """List the provider's current models and pick likely chat models we haven't tried."""
@@ -236,7 +236,7 @@ class LLM:
             self.log.append(f"{p['name']}/{model}: needs terms accepted in the provider console; skipping model")
             self._dead_models.add((p["name"], model))
             return "next", None
-        if code in (400, 404) and re.search(r"model.{0,40}(not|unavailable|deprecat)|decommission|not found|does not exist", resp.text, re.I):
+        if code == 410 or (code in (400, 404) and re.search(r"model.{0,40}(not|unavailable|deprecat)|decommission|not found|does not exist|end of life", resp.text, re.I)):
             self.log.append(f"{p['name']}/{model}: model unavailable ({code}); trying next model")
             self._dead_models.add((p["name"], model))
             return "next", None
