@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-06T13:24:08+00:00",
+  "started_at": "2026-11-06T14:51:37+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -15,139 +15,38 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)",
-    "hf-models": "ok (57)",
-    "arxiv": "ok (40)",
-    "hf-papers": "ok (18)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (15)",
-    "techcrunch-ai": "ok (20)",
-    "verge-ai": "ok (10)",
-    "mit-tr-ai": "ok (10)",
-    "ars-ai": "ok (20)",
-    "aim": "ok (50)",
-    "inc42": "ok (24)",
-    "medianama": "ok (10)",
-    "mint-tech": "ok (35)",
-    "et-tech": "ok (50)",
-    "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
-    "crunchbase-news": "ok (10)",
-    "import-ai": "ok (10)",
-    "simon-willison": "ok (30)",
-    "sam-altman": "ok (30)",
-    "bluesky": "ok (27)",
-    "auto-techmeme.com": "ok (15)"
+    "mistral": "ok (6)"
   },
-  "dropped": [],
-  "written": [],
-  "notes": [
-    "judging skipped: every configured provider failed: groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-v1-english (update settings.yaml when convenient) | groq/qwen/qwen3.8-27b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input | groq/openai/gpt-oss-20b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok | groq/canopylabs/orpheus-v1-english: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-v1-english` requires terms acceptance. Please have the org admin accept the terms at https://consol",
-    "top voices skipped: every configured provider failed: groq/canopylabs/orpheus-v1-english: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-v1-english` requires terms acceptance. Please have the org admin accept the terms at https://consol | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq: 429 after retry; moving to next provider for this run"
+  "dropped": [
+    {
+      "title": "ToyBlocks: A controlled world for robot learning and evaluation",
+      "reason": "score 5: A Hugging Face blog announcing a new simulated environment for robot learning. Useful but an incremental tool rather than a frontier model, major result, or policy change; scores below the threshold for publication."
+    }
   ],
-  "mode": "full",
+  "written": [],
+  "notes": [],
+  "mode": "breaking",
   "timings": {
-    "gather": 80.0,
-    "audit": 0.0,
-    "plan": 5.3,
-    "judge": 3.8,
+    "gather": 11.2,
+    "judge": 1.5,
     "verify and write": -0.0,
-    "videos": 12.8,
     "tagging": -0.0,
-    "explainers": -0.0,
     "trackers": -0.0,
-    "claims": -0.0,
-    "model tracker": 0.1,
-    "weekly": 0.0,
-    "builders": 0.0,
-    "briefing": 27.5,
-    "self-review": 0.0,
-    "photos": 0.0,
-    "stock photos": 0.0,
-    "daily email": 0.0,
-    "alerts": 2.3
+    "photos": -0.0,
+    "stock photos": -0.0,
+    "alerts": 2.7
   },
-  "fetched": 2938,
-  "fresh": 186,
-  "plan": {
-    "focus": "Tracking post‑midterm AI data‑center policy shifts while covering new AI‑chip tracking rules and OpenAI‑powered business tools.",
-    "priorities": [
-      "Merge builds product and business tools with OpenAI technology (Shows OpenAI expanding into enterprise product and business tooling, key for builders and investors.)",
-      "Physicl raises $10M to make the digital world real enough for robots (Physicl's $10M raise highlights robotics startup funding and hardware‑software integration trends.)",
-      "How To Challenge A Monopoly In The AI Age (Analysis of AI‑age monopoly challenges informs antitrust strategy and policy outlook for investors.)",
-      "Sources: Nvidia is requiring Southeast Asian customers seeking Nvidia  (Nvidia's new chip‑location tracking program impacts deployment strategy and ties to the Nemotron adoption thread.)",
-      "Experts say the new Democratic congressional majority will likely seek (Democratic majority's AI security agenda signals major regulatory shifts post‑midterms.)"
-    ],
-    "thin_areas": [
-      "research",
-      "voices"
-    ],
-    "searches": [
-      "Box Nemotron pricing: 5 new",
-      "AI data center restriction bill: 4 new",
-      "SpaceX AI chip financing investors: 3 new"
-    ],
-    "dig_deeper": [
-      "How To Challenge A Monopoly In The AI Age",
-      "Sources: Nvidia is requiring Southeast Asian customers seeking Nvidia "
-    ]
-  },
-  "videos": {
-    "OpenAI": "ok (10 in feed, 0 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 4 new)",
-    "Google for Developers": "ok (9 in feed, 1 new)",
-    "AI at Meta": "ok (7 in feed, 0 new)",
-    "Microsoft Research": "ok (8 in feed, 0 new)",
-    "NVIDIA": "ok (9 in feed, 0 new)",
-    "Hugging Face": "ok (12 in feed, 1 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 3 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (15 in feed, 0 new)",
-    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 0 new)",
-    "Hard Fork": "ok (1 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (2 in feed, 0 new)",
-    "20VC": "ok (3 in feed, 1 new)"
-  },
-  "videos_kept": "9 kept from 10 new",
+  "fetched": 2437,
+  "fresh": 1,
+  "judged": 1,
+  "kept": 0,
   "trackers": "filed 0 stories; no tracker changed",
-  "claims": "102 tracked, 97 open",
-  "model_tracker": "82 models, 29 changes today",
-  "top_voices_sources": {
-    "tv-mollick": "ok (0)",
-    "tv-lambert": "ok (2)",
-    "tv-swyx": "ok (8)",
-    "tv-dwarkesh": "ok (2)",
-    "tv-raschka": "ok (0)",
-    "tv-karpathy": "ok (1)",
-    "tv-evans": "ok (0)",
-    "x-coverage": "ok (0 of 5 articles, bing)",
-    "hn": "ok (2)"
-  },
   "photos": "0 saved, 0 unavailable",
   "alerts": "29 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":0}",
-  "ai_requests_run": 2,
-  "ai_tokens_run": 11585,
-  "ai_requests_today": 16,
+  "ai_requests_run": 1,
+  "ai_tokens_run": 5084,
+  "ai_requests_today": 17,
   "provider_log": [
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "groq/openai/gpt-oss-120b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on to",
-    "groq/llama-3.3-70b-versatile: model unavailable (404); trying next model",
-    "groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-v1-english (update settings.yaml when convenient)",
-    "groq/qwen/qwen3.8-27b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input",
-    "groq/openai/gpt-oss-20b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok",
-    "groq/canopylabs/orpheus-v1-english: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-v1-english` requires terms acceptance. Please have the org admin accept the terms at https://consol",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "groq: 429 after retry; moving to next provider for this run"
+    "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require"
   ]
 }
