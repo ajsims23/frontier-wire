@@ -90,6 +90,31 @@ def _extract_json(text: str) -> dict[str, Any] | None:
     return val if isinstance(val, dict) else None
 
 
+_SKIP_SIGNATURE = "skip_thought_signature_validator"  # Google's documented stand-in for calls Gemini didn't make
+
+
+def _for_provider(name: str, messages: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Gemini needs the thought signature it sent with each tool call echoed back (or Google's stand-in for
+    calls another provider made, when a conversation falls back mid-way); other providers may reject the field."""
+    if not any(m.get("tool_calls") for m in messages):
+        return messages
+    out = []
+    for m in messages:
+        if not m.get("tool_calls"):
+            out.append(m)
+            continue
+        calls = []
+        for i, c in enumerate(m["tool_calls"]):
+            c = {k: v for k, v in c.items() if k != "extra_content"}
+            if name == "gemini":
+                sig = ((m["tool_calls"][i].get("extra_content") or {}).get("google") or {}).get("thought_signature")
+                if sig or i == 0:  # only the first call of a turn needs one
+                    c["extra_content"] = {"google": {"thought_signature": sig or _SKIP_SIGNATURE}}
+            calls.append(c)
+        out.append(dict(m, tool_calls=calls))
+    return out
+
+
 class LLM:
     def __init__(self, providers: list[dict[str, Any]], limits: Limits, *,
                  http: httpx.Client | None = None, env: dict[str, str] | None = None,
@@ -164,7 +189,7 @@ class LLM:
                  tool_choice: Any, max_tokens: int, parse: Callable[[dict[str, Any]], Any]) -> tuple[str, Any]:
         """One request. Returns ("ok", result) | ("retry", None) | ("next", None) | ("dead", None)."""
         self.limits.check()
-        body = {"model": model, "messages": messages, "max_tokens": max_tokens, "temperature": 0.2}
+        body = {"model": model, "messages": _for_provider(p["name"], messages), "max_tokens": max_tokens, "temperature": 0.2}
         if tools:
             body["tools"] = tools
             body["tool_choice"] = tool_choice
@@ -323,7 +348,10 @@ class LLM:
                 args = fn.get("arguments")
                 parsed = args if isinstance(args, dict) else (_extract_json(args or "") if args else {})
                 if fn.get("name"):
-                    calls.append({"id": c.get("id") or f"call_{len(calls)}", "name": fn["name"], "args": parsed or {}})
+                    call = {"id": c.get("id") or f"call_{len(calls)}", "name": fn["name"], "args": parsed or {}}
+                    if c.get("extra_content"):  # Gemini's thought signature: must be sent back with this call
+                        call["extra_content"] = c["extra_content"]
+                    calls.append(call)
             text = msg.get("content") or ""
             if not calls and not text.strip():
                 return None

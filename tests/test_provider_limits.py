@@ -133,3 +133,35 @@ def test_gemini_per_minute_429_waits_for_retry_delay_then_moves_on(tmp_path):
     assert waits[0] == 23.0
     assert seen == [("gemini.example", "lite"), ("gemini.example", "lite"),
                     ("gemini.example", "flash"), ("gemini.example", "flash"), ("groq.example", "big")]
+
+
+def test_gemini_thought_signature_round_trip_and_stripped_for_others(tmp_path):
+    sent = []
+
+    def handler(req):
+        body = json.loads(req.content)
+        sent.append((req.url.host, body["messages"]))
+        return httpx.Response(200, json={"choices": [{"message": {"content": "", "tool_calls": [
+            {"id": "c1", "type": "function", "function": {"name": "search_news", "arguments": "{\"query\": \"x\"}"},
+             "extra_content": {"google": {"thought_signature": "SIG123"}}}]}}], "usage": {"total_tokens": 10}})
+
+    gem = [{"name": "gemini", "base_url": "https://gemini.example/v1", "key_env": "GM", "models": ["lite"]}]
+    llm = make(gem, handler, tmp_path)
+    tools = [{"type": "function", "function": {"name": "search_news", "parameters": {"type": "object"}}}]
+    msg = llm.step([{"role": "user", "content": "go"}], tools)
+    assert msg["calls"][0]["extra_content"]["google"]["thought_signature"] == "SIG123"
+
+    from agent.llm import _for_provider
+    history = [{"role": "user", "content": "go"},
+               {"role": "assistant", "content": None, "tool_calls": [
+                   {"id": "c1", "type": "function", "function": {"name": "search_news", "arguments": "{}"},
+                    "extra_content": {"google": {"thought_signature": "SIG123"}}},
+                   {"id": "c2", "type": "function", "function": {"name": "read_page", "arguments": "{}"}}]},
+               {"role": "assistant", "content": None, "tool_calls": [  # made by Groq before a fallback to Gemini
+                   {"id": "c3", "type": "function", "function": {"name": "finish", "arguments": "{}"}}]}]
+    g = _for_provider("gemini", history)
+    assert g[1]["tool_calls"][0]["extra_content"]["google"]["thought_signature"] == "SIG123"
+    assert "extra_content" not in g[1]["tool_calls"][1]
+    assert g[2]["tool_calls"][0]["extra_content"]["google"]["thought_signature"] == "skip_thought_signature_validator"
+    q = _for_provider("groq", history)
+    assert all("extra_content" not in c for m in q[1:] for c in m["tool_calls"])

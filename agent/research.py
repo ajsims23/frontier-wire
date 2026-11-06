@@ -174,7 +174,8 @@ class Researcher:
                 messages.append({"role": "user", "content": "Use a tool now: search_news, read_page, or finish."})
                 continue
             messages.append({"role": "assistant", "content": msg["text"] or None, "tool_calls": [
-                {"id": c["id"], "type": "function", "function": {"name": c["name"], "arguments": json.dumps(c["args"])}}
+                {"id": c["id"], "type": "function", "function": {"name": c["name"], "arguments": json.dumps(c["args"])},
+                 **({"extra_content": c["extra_content"]} if c.get("extra_content") else {})}
                 for c in calls]})
             for c in calls:
                 name, args = c["name"], c["args"]
