@@ -1,17 +1,15 @@
-## Frontier Wire breaking-news check — 2026-11-06T16:34:04+00:00
+## Frontier Wire breaking-news check — 2026-11-06T18:31:49+00:00
 
-Fetched 2437 items · fresh 1 · judged 1 · kept 0 · **written 0**
-AI: 1 requests, 3,461 tokens this run · 177 requests today · providers: gemini, groq, nvidia, cerebras
+Fetched 2438 items · fresh 1 · judged 1 · kept 1 · **written 1**
+AI: 5 requests, 7,538 tokens this run · 182 requests today · providers: gemini, groq, nvidia, cerebras
+Threads updated: OpenAI security patch and bounty program: OpenAI partners with Hacktron to find vulnerabilities
 Photos: 0 saved, 0 unavailable
-Alerts: 40 events sent: {"subscribers":7,"sent":0,"queued":0}
+Alerts: 41 events sent: {"subscribers":7,"sent":0,"queued":6}
 Trackers: filed 0 stories; no tracker changed
-Time: gather 11s, judge 1s, alerts 2s
+Tagged 1 stories by sector, region and deal
+Time: gather 10s, judge 1s, verify and write 4s, stock photos 8s, alerts 6s
 
 ### New stories
-- none
-
-<details><summary>Dropped</summary>
-
-- How NVIDIA Open Source Tools Are Helping Researchers Build Next-Generation 6G Networks — score 5: Routine blog post looking back at open source wireless software for 6G research, lacking a specific new model release or major breakthrough.
-
-</details>
+- **safety** — [OpenAI partners with Hacktron to find vulnerabilities](https://openai.com/index/partnering-with-hacktron)  
+  OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.  
+  _1 source(s), 0 verified quote(s)_
