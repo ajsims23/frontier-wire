@@ -165,3 +165,31 @@ def test_gemini_thought_signature_round_trip_and_stripped_for_others(tmp_path):
     assert g[2]["tool_calls"][0]["extra_content"]["google"]["thought_signature"] == "skip_thought_signature_validator"
     q = _for_provider("groq", history)
     assert all("extra_content" not in c for m in q[1:] for c in m["tool_calls"])
+
+
+def test_mistral_gets_any_for_a_forced_single_tool_and_9_char_ids(tmp_path):
+    bodies = []
+
+    def handler(req):
+        bodies.append(json.loads(req.content))
+        return httpx.Response(200, json=completion("submit", {"ok": True}))
+
+    mis = [{"name": "mistral", "base_url": "https://mistral.example/v1", "key_env": "M", "models": ["mistral-medium-latest"]}]
+    llm = make(mis, handler, tmp_path)
+    assert ask(llm) == {"ok": True}
+    assert bodies[0]["tool_choice"] == "any"
+
+    from agent.llm import _for_provider
+    history = [{"role": "user", "content": "go"},
+               {"role": "assistant", "content": None, "tool_calls": [
+                   {"id": "function-call-1234567890", "type": "function", "function": {"name": "search_news", "arguments": "{}"},
+                    "extra_content": {"google": {"thought_signature": "SIG"}}},
+                   {"id": "abcDEF123", "type": "function", "function": {"name": "read_page", "arguments": "{}"}}]},
+               {"role": "tool", "tool_call_id": "function-call-1234567890", "content": "r1"},
+               {"role": "tool", "tool_call_id": "abcDEF123", "content": "r2"}]
+    m = _for_provider("mistral", history)
+    a, b = m[1]["tool_calls"][0]["id"], m[1]["tool_calls"][1]["id"]
+    assert len(a) == 9 and a.isalnum() and b == "abcDEF123"
+    assert m[2]["tool_call_id"] == a and m[3]["tool_call_id"] == b
+    assert all("extra_content" not in c for c in m[1]["tool_calls"])
+    assert history[1]["tool_calls"][0]["id"] == "function-call-1234567890"  # caller's history untouched

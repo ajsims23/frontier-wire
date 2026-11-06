@@ -53,6 +53,17 @@ jobs:
             -d '{"model":"gemini-flash-lite-latest","messages":[{"role":"user","content":"Reply with the word ok."}],"max_tokens":50}' \
             https://generativelanguage.googleapis.com/v1beta/openai/chat/completions)
           echo "Gemini chat HTTP $code"; [ "$code" = "200" ]
+      - name: Mistral key (optional)
+        if: always()
+        env:
+          KEY: ${{ secrets.MISTRAL_API_KEY }}
+        run: |
+          [ -n "$KEY" ] || { echo "MISTRAL_API_KEY not set (optional fallback)"; exit 0; }
+          code=$(curl -s -o out.json -w "%{http_code}" -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+            -d '{"model":"mistral-small-latest","messages":[{"role":"user","content":"Reply with the word ok."}],"max_tokens":20}' \
+            https://api.mistral.ai/v1/chat/completions)
+          echo "Mistral chat HTTP $code"; [ "$code" = "200" ] || head -c 300 out.json
+          [ "$code" = "200" ]
       - name: OpenRouter key (optional)
         if: always()
         env:

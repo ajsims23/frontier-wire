@@ -32,7 +32,7 @@ class RequestTooLarge(AllProvidersFailed):
 
 # Groq-style size/limit messages: "... on tokens per minute (TPM): Limit 8000, Requested 15712 ..."
 _LIMIT_RE = re.compile(r"Limit\s+(\d+),\s*Requested\s+(\d+)", re.I)
-_PER_MINUTE = re.compile(r"per.?minute|\b[RT]PM\b", re.I)  # Groq: "tokens per minute"; Gemini: "...PerMinute..."
+_PER_MINUTE = re.compile(r"per.?minute|\b[RT]PM\b|requests rate limit exceeded", re.I)  # Groq: "tokens per minute"; Gemini: "...PerMinute..."
 
 
 class Limits:
@@ -98,6 +98,16 @@ def _for_provider(name: str, messages: list[dict[str, Any]]) -> list[dict[str, A
     calls another provider made, when a conversation falls back mid-way); other providers may reject the field."""
     if not any(m.get("tool_calls") for m in messages):
         return messages
+    if name == "mistral":  # Mistral only accepts 9-character alphanumeric tool-call ids
+        ids: dict[str, str] = {}
+
+        def short(i: str) -> str:
+            if not re.fullmatch(r"[A-Za-z0-9]{9}", i or ""):
+                return ids.setdefault(i, f"c{len(ids):08d}")
+            return i
+        messages = [dict(m, tool_calls=[dict(c, id=short(c.get("id", ""))) for c in m["tool_calls"]]) if m.get("tool_calls")
+                    else dict(m, tool_call_id=short(m["tool_call_id"])) if m.get("role") == "tool" and "tool_call_id" in m
+                    else m for m in messages]
     out = []
     for m in messages:
         if not m.get("tool_calls"):
@@ -192,7 +202,8 @@ class LLM:
         body = {"model": model, "messages": _for_provider(p["name"], messages), "max_tokens": max_tokens, "temperature": 0.2}
         if tools:
             body["tools"] = tools
-            body["tool_choice"] = tool_choice
+            # Mistral takes "any" (must call a tool) rather than naming one; with a single tool that's the same thing
+            body["tool_choice"] = "any" if p["name"] == "mistral" and isinstance(tool_choice, dict) and len(tools) == 1 else tool_choice
         try:
             resp = self._post(p, body)
         except httpx.HTTPError as exc:
