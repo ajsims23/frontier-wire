@@ -11,20 +11,20 @@ providers:
     key_env: CEREBRAS_API_KEY
     models: [gpt-oss-120b]   # if this is retired, the agent asks Cerebras for its current models
 
-  - name: groq                # free: ~1,000 requests/day on 70B models
+  - name: groq                # free: ~8k tokens/minute and ~200k tokens/day *per model*, so several models = more room
     base_url: https://api.groq.com/openai/v1
     key_env: GROQ_API_KEY
-    models: [openai/gpt-oss-120b, llama-3.3-70b-versatile]
+    models: [openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b]   # llama-3.3-70b-versatile retired Nov 2026
 
-  - name: openrouter          # free models: ~50 requests/day without credit
-    base_url: https://openrouter.ai/api/v1
-    key_env: OPENROUTER_API_KEY
-    models: ["meta-llama/llama-3.3-70b-instruct:free"]
-
-  - name: gemini              # free tier: low daily limits; Google may use prompts to improve its products
+  - name: gemini              # free tier: big per-minute allowance, ~1,000 requests/day; Google may use prompts to improve its products
     base_url: https://generativelanguage.googleapis.com/v1beta/openai
     key_env: GEMINI_API_KEY
     models: [gemini-flash-lite-latest, gemini-flash-latest]
+
+  - name: openrouter          # free models: ~50 requests/day without credit — last resort
+    base_url: https://openrouter.ai/api/v1
+    key_env: OPENROUTER_API_KEY
+    models: ["meta-llama/llama-3.3-70b-instruct:free"]
 
   # Optional paid fallback — uncomment to use Claude (needs ANTHROPIC_API_KEY).
   # - name: anthropic
@@ -36,7 +36,8 @@ run:
   lookback_hours: 36          # ignore items older than this
   max_story_age_hours: 72     # never write up an article older than this, whatever path it came in by
   max_candidates_to_judge: 80 # items sent to the editor per run (in batches)
-  judge_batch: 45            # items per editor request
+  judge_batch: 10            # items per editor request (small enough for Groq's free per-request limit; split further if needed)
+  duplicate_check_days: 3   # recent headlines the editor checks candidates against for duplicates
   desk_judge_quota: 25       # editor slots reserved for desk sources (e.g. India)
   desk_write_slots: 3        # writing slots reserved for desk stories
   write_time_budget_min: 14  # stop starting new stories after this; the rest carry over

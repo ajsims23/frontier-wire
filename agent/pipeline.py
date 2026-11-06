@@ -7,7 +7,7 @@ from typing import Any
 
 from . import prompts as P
 from .config import Config
-from .llm import LLM, AllProvidersFailed, LimitReached
+from .llm import LLM, AllProvidersFailed, LimitReached, RequestTooLarge
 from . import alerts, audit, builders, chief, claims, top_voices, editorial, photos, models_tracker, newsletter, stock, tagging, trackers, videos, weekly
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather, is_adjacent, slate_key
@@ -151,25 +151,65 @@ class Newsroom:
             if cid not in judged_ids:
                 clusters.pop(cid)
 
-        recent = self.store.recent_headlines(self.now)
-        recent_ids = {r["id"] for r in recent}
+        # Duplicates almost always come from the last few days; a shorter list keeps each request inside
+        # free-tier per-request limits. Ids from the full week stay valid for the made-up-id check below.
+        recent_ids = {r["id"] for r in self.store.recent_headlines(self.now)}
+        recent = self.store.recent_headlines(self.now, days=int(self.cfg.run.get("duplicate_check_days", 3)))
         decisions: dict[str, dict] = {}
-        batch = int(self.cfg.run.get("judge_batch", 45))
-        for i in range(0, len(ordered), batch):
-            chunk = ordered[i:i + batch]
-            prompt = ("Already published (for duplicate checks):\n"
-                      + ("\n".join(f'- [{r["id"]}] {r["headline"]}' for r in recent) or "- none")
+        batch = int(self.cfg.run.get("judge_batch", 10))
+        system = P.JUDGE_SYSTEM + audit.lessons_text(self.store.audit)
+        published = "\n".join(f'- [{r["id"]}] {r["headline"]}' for r in recent) or "- none"
+
+        titles = {cid: m[0].title for cid, m in ordered}
+
+        def judge(chunk: list) -> None:
+            # Candidates kept from earlier batches this run, so same_event_as still works across batches.
+            earlier = [(cid, titles[cid]) for cid, d in decisions.items() if d.get("keep") and cid in titles][-25:]
+            prompt = ("Already published (for duplicate checks):\n" + published
+                      + ("\n\nEarlier candidates kept this run (use their id in same_event_as if a candidate covers the same event):\n"
+                         + "\n".join(f"- [{cid}] {t}" for cid, t in earlier) if earlier else "")
                       + "\n\nCandidates:\n" + "\n".join(_item_xml(m[0], self._why(m) if cid in pri else None) for cid, m in chunk)
                       + "\n\nReturn one decision per candidate id.")
-            answer = self.llm.ask(system=P.JUDGE_SYSTEM + audit.lessons_text(self.store.audit), prompt=prompt, schema_name="submit_decisions",
-                                  schema=P.JUDGE_SCHEMA, max_tokens=6000)
+            try:
+                # room for ~90 tokens per decision plus a reasoning model's thinking
+                answer = self.llm.ask(system=system, prompt=prompt, schema_name="submit_decisions",
+                                      schema=P.JUDGE_SCHEMA, max_tokens=min(6000, 1500 + 110 * len(chunk)))
+            except RequestTooLarge:
+                if len(chunk) <= 3:
+                    raise
+                half = len(chunk) // 2
+                self.report["notes"].append(f"judging batch of {len(chunk)} too large for the available model; splitting")
+                judge(chunk[:half])
+                judge(chunk[half:])
+                return
             decisions.update({d["id"]: d for d in answer.get("decisions", []) if isinstance(d, dict) and "id" in d})
+
+        for i in range(0, len(ordered), batch):
+            try:
+                judge(ordered[i:i + batch])
+            except (LimitReached, AllProvidersFailed) as e:
+                if not decisions:
+                    raise
+                # keep what was judged; the rest stay unseen so the next run picks them up
+                self.report["notes"].append(f"judging stopped after {len(decisions)} decisions: {e}")
+                for cid, _ in ordered[i:]:
+                    if cid not in decisions:
+                        clusters.pop(cid, None)
+                break
+
+        def _score(x: dict | None) -> int:
+            try:
+                return int((x or {}).get("score", 0))
+            except (TypeError, ValueError):
+                return 0
 
         for cid, d in list(decisions.items()):
             other = d.get("same_event_as") or ""
-            if other and other != cid and other in clusters and cid in clusters:
-                clusters[other].extend(clusters.pop(cid))
-                decisions.pop(cid)
+            if other and other != cid and other in clusters and cid in clusters and cid in decisions:
+                # the version the editor rated higher leads (links can point either way across judging batches)
+                lead, follow = (cid, other) if _score(d) > _score(decisions.get(other)) else (other, cid)
+                clusters[lead].extend(clusters.pop(follow))
+                decisions.pop(follow, None)
 
         kept = []
         for cid, members in clusters.items():

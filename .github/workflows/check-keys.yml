@@ -34,3 +34,30 @@ jobs:
         run: |
           code=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $KEY" https://api.cerebras.ai/v1/models)
           echo "Cerebras answered HTTP $code"; [ "$code" = "200" ]
+      - name: Cerebras answers a question (catches quota / billing problems)
+        if: always()
+        env:
+          KEY: ${{ secrets.CEREBRAS_API_KEY }}
+        run: |
+          code=$(curl -s -o out.json -w "%{http_code}" -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+            -d '{"model":"gpt-oss-120b","messages":[{"role":"user","content":"Reply with the word ok."}],"max_tokens":200}' \
+            https://api.cerebras.ai/v1/chat/completions)
+          echo "Cerebras chat HTTP $code"; [ "$code" = "402" ] && echo "402 = free quota used up or billing needed (cloud.cerebras.ai → Billing)"; [ "$code" = "200" ]
+      - name: Gemini key (optional)
+        if: always()
+        env:
+          KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          [ -n "$KEY" ] || { echo "GEMINI_API_KEY not set (optional fallback)"; exit 0; }
+          code=$(curl -s -o out.json -w "%{http_code}" -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+            -d '{"model":"gemini-flash-lite-latest","messages":[{"role":"user","content":"Reply with the word ok."}],"max_tokens":50}' \
+            https://generativelanguage.googleapis.com/v1beta/openai/chat/completions)
+          echo "Gemini chat HTTP $code"; [ "$code" = "200" ]
+      - name: OpenRouter key (optional)
+        if: always()
+        env:
+          KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          [ -n "$KEY" ] || { echo "OPENROUTER_API_KEY not set (optional fallback)"; exit 0; }
+          code=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: Bearer $KEY" https://openrouter.ai/api/v1/key)
+          echo "OpenRouter answered HTTP $code"; [ "$code" = "200" ]

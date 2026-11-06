@@ -185,8 +185,11 @@ def completion(name: str, data: dict, tokens: int = 1500) -> dict:
 def judge(prompt: str) -> dict:
     import re
     cands = re.findall(r'<item id="([^"]+)"[^>]*><title>([^<]+)</title>', prompt)
-    nova_lab = next((i for i, t in cands if t.startswith("Introducing Nova 2")), "")
-    indic = next((i for i, t in cands if "IndicAI raises" in t), "")
+    earlier = re.findall(r"^- \[([0-9a-f]+)\] (.+)$", prompt.split("Candidates:")[0].split("Earlier candidates")[-1], re.M) \
+        if "Earlier candidates" in prompt else []
+    known = earlier + cands  # like the real editor, link to an earlier batch's candidate when it's the same event
+    nova_lab = next((i for i, t in known if t.startswith("Introducing Nova 2")), "")
+    indic = next((i for i, t in known if "IndicAI raises" in t), "")
     rules = [
         ("Introducing Nova 2", dict(keep=True, score=9, category="models")),
         ("launches Nova 2", dict(keep=True, score=8, category="models", same_event_as=nova_lab)),
@@ -204,11 +207,14 @@ def judge(prompt: str) -> dict:
         ("Indic language model startup", dict(keep=True, score=6, category="industry", same_event_as=indic)),
         ("Regulator", dict(keep=True, score=7, category="policy")),
     ]
+    # the follow-up pieces' leads, when the follow-up was kept in an earlier batch of this run
+    back = {"Introducing Nova 2": next((i for i, t in earlier if "launches Nova 2" in t), ""),
+            "IndicAI raises": next((i for i, t in earlier if "Indic language model startup" in t), "")}
     out = []
     for cid, title in cands:
         for key, d in rules:
             if key in title:
-                out.append({"id": cid, "reason": "test", "duplicate_of_story": "", "same_event_as": "", **d})
+                out.append({"id": cid, "reason": "test", "duplicate_of_story": "", "same_event_as": back.get(key, ""), **d})
                 break
     return {"decisions": out}
 

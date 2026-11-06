@@ -26,6 +26,15 @@ class AllProvidersFailed(RuntimeError):
     pass
 
 
+class RequestTooLarge(AllProvidersFailed):
+    """Every provider that answered said the request was too big for it: send less per request."""
+
+
+# Groq-style size/limit messages: "... on tokens per minute (TPM): Limit 8000, Requested 15712 ..."
+_LIMIT_RE = re.compile(r"Limit\s+(\d+),\s*Requested\s+(\d+)", re.I)
+_PER_MINUTE = re.compile(r"per minute|\b[RT]PM\b", re.I)
+
+
 class Limits:
     """Request/token caps per run and per day, persisted in data/usage.json."""
 
@@ -92,6 +101,7 @@ class LLM:
         self.sleep = sleep
         self._dead_providers: set[str] = set()
         self._dead_models: set[tuple[str, str]] = set()
+        self._too_large = False
         self.log: list[str] = []
 
     @property
@@ -114,14 +124,22 @@ class LLM:
                 self.sleep(3)
                 continue
             if resp.status_code in (429, 500, 502, 503, 504) and attempt == 0:
-                wait = min(float(resp.headers.get("retry-after", "5") or 5), 20.0)
+                try:
+                    wait = float(resp.headers.get("retry-after", "5") or 5)
+                except ValueError:
+                    wait = 5.0
+                # a per-minute limit clears within a minute, so it's worth waiting for; anything longer isn't
+                wait = min(wait, 60.0 if resp.status_code == 429 and _PER_MINUTE.search(resp.text) else 20.0)
                 self.sleep(wait)
                 continue
             break
         return resp
 
     _PREFERRED = [r"gpt-oss-120b", r"qwen.*(235b|480b|coder)", r"llama.*(3\.3|4).*(70b|maverick|scout)", r"glm", r"qwen", r"llama", r"gpt-oss"]
-    _NOT_CHAT = re.compile(r"embed|whisper|tts|guard|rerank|moderation|vision-preview|audio|image", re.I)
+    # Not general chat models: embeddings, speech (Orpheus/PlayAI are text-to-speech), safety classifiers,
+    # and narrow-language models such as ALLaM (Arabic) that can't do our structured English tasks.
+    _NOT_CHAT = re.compile(r"embed|whisper|tts|guard|rerank|moderation|vision-preview|audio|image|"
+                           r"orpheus|playai|allam|safeguard|distil|speech|transcri", re.I)
 
     def _discover(self, p: dict[str, Any], tried: set[str]) -> list[str]:
         """List the provider's current models and pick likely chat models we haven't tried."""
@@ -158,9 +176,34 @@ class LLM:
             self.log.append(f"{p['name']}: key rejected ({code}); skipping provider")
             self._dead_providers.add(p["name"])
             return "dead", None
+        if code == 402:
+            # out of free quota / billing needed: no model on this account will answer, so stop asking this run
+            self.log.append(f"{p['name']}: payment required (402) — free quota used up or billing needed; skipping provider")
+            self._dead_providers.add(p["name"])
+            return "dead", None
+        if code == 413 or (code == 400 and re.search(r"too large|context.{0,20}(length|window)|maximum context", resp.text, re.I)):
+            m = _LIMIT_RE.search(resp.text)
+            if m:
+                limit, requested = int(m.group(1)), int(m.group(2))
+                # the provider counts the reserved answer space too, so a smaller reservation may make it fit
+                room = limit - (requested - max_tokens) - 300
+                if 1000 <= room < max_tokens:
+                    self.log.append(f"{p['name']}/{model}: request over its {limit:,}-token limit; retrying with a {room:,}-token answer")
+                    return "shrink", room
+            self.log.append(f"{p['name']}/{model}: request too large for this model; trying next model")
+            self._too_large = True
+            return "next", None
+        if code == 400 and re.search(r"terms acceptance|accept the terms", resp.text, re.I):
+            self.log.append(f"{p['name']}/{model}: needs terms accepted in the provider console; skipping model")
+            self._dead_models.add((p["name"], model))
+            return "next", None
         if code in (400, 404) and re.search(r"model.{0,40}(not|unavailable|deprecat)|decommission|not found|does not exist", resp.text, re.I):
             self.log.append(f"{p['name']}/{model}: model unavailable ({code}); trying next model")
             self._dead_models.add((p["name"], model))
+            return "next", None
+        if code == 429 and _PER_MINUTE.search(resp.text):
+            # per-minute limits are per model: another model on the same account has its own allowance
+            self.log.append(f"{p['name']}/{model}: per-minute limit hit; trying next model")
             return "next", None
         if code == 429 or code >= 500:
             self.log.append(f"{p['name']}: {code} after retry; moving to next provider for this run")
@@ -191,6 +234,7 @@ class LLM:
         """Send one request with provider/model fallback, retrying an unusable answer once."""
         if not self.providers:
             raise AllProvidersFailed("no AI provider key is set (e.g. CEREBRAS_API_KEY or GROQ_API_KEY)")
+        self._too_large = False
         for p in self.providers:
             if p["name"] in self._dead_providers:
                 continue
@@ -213,11 +257,14 @@ class LLM:
                     continue
                 tried.add(model)
                 outcome, result = "retry", None
-                budget, choice, bad = max_tokens, tool_choice, 0
-                for _ in range(4):
+                budget, choice, bad, cap = max_tokens, tool_choice, 0, 12000
+                for _ in range(5):
                     outcome, result = self._attempt(p, model, messages, tools, choice, budget, parse)
-                    if outcome == "longer" and budget < 12000:
-                        budget = min(budget * 2, 12000)
+                    if outcome == "shrink":
+                        budget = cap = int(result)  # the model's size limit: never grow past it again
+                        continue
+                    if outcome == "longer" and budget < cap:
+                        budget = min(budget * 2, cap)
                         continue
                     if outcome == "unforced":
                         choice = "auto"  # the parser also accepts JSON written in the reply text
@@ -232,6 +279,8 @@ class LLM:
                     return result
                 if outcome == "dead":
                     break
+        if self._too_large:
+            raise RequestTooLarge("request too large for every available model: " + " | ".join(self.log[-4:]))
         raise AllProvidersFailed("every configured provider failed: " + " | ".join(self.log[-4:]))
 
     def ask(self, *, system: str, prompt: str, schema_name: str, schema: dict[str, Any],
