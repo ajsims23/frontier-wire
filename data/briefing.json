@@ -1,10 +1,62 @@
 {
-  "written_at": "2026-11-06T14:54:35+00:00",
-  "one_line": "Nvidia and Dropbox push AI infrastructure, while Gemini Omni 1.2 Flash and Cosmos 3 Nano checkpoints arrive.",
+  "written_at": "2026-11-06T15:20:10+00:00",
+  "one_line": "Tech stocks plunge amid data center concerns as Microsoft offers buyouts, OpenAI changes policies, and new models launch.",
   "themes": [
     {
-      "title": "Nvidia and Dropbox expand AI infrastructure",
-      "text": "Nvidia says its full-stack codesign of GPUs, CPUs, networking, storage and software raises useful work per byte of memory, with HBM capacity per GPU up about 3% and agentic throughput per dollar up to 30x on SemiAnalysis AgentX. Its Vera CPU is reported to run AI agents 1.5-2.2x faster than leading x86 CPUs with up to 1.6x more agents per watt, while Dropbox announced it will buy Tigris Data for $350 million to support its DBX Agent Cloud platform for AI model and agent developers.",
+      "title": "Market and infrastructure pressures grow",
+      "text": "Asian tech stocks plummeted amid concerns that US Democrats may delay data centers, while OpenAI changed its NDA policies and Microsoft offered voluntary buyouts to 60,000 employees as AI spending increases. Meanwhile, activists breached a Microsoft data center construction site in Amsterdam as European protests against large-scale data center projects began.",
+      "stories": [
+        {
+          "id": "acdb0c16a39e",
+          "headline": "Asian tech stocks plunge amid fears US Democrats may delay data centers",
+          "url": "https://techmeme.com/261106/p2"
+        },
+        {
+          "id": "b53db0f7184a",
+          "headline": "OpenAI steps back from NDAs and promises full power costs for data centers",
+          "url": "https://theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda"
+        },
+        {
+          "id": "8ec5fec0e77e",
+          "headline": "Activists breach Microsoft data centre site in Amsterdam as protests spread across Europe",
+          "url": "https://economictimes.indiatimes.com/tech/technology/activists-breach-microsoft-data-centre-construction-site-as-protests-spread-in-europe/articleshow/135608593.cms"
+        },
+        {
+          "id": "1b6cc2dfb9fa",
+          "headline": "Microsoft offers voluntary buyouts to 60,000 employees as AI spending grows",
+          "url": "https://techmeme.com/261106/p12"
+        }
+      ]
+    },
+    {
+      "title": "New models and enterprise tools launch",
+      "text": "Google DeepMind released the Gemini Omni 1.2 Flash video model, and Mistral AI launched its Studio Le Chonk enterprise platform. Nvidia released four open-weight Cosmos 3 Nano checkpoints for simulation, and Dropbox announced a $350 million acquisition of Tigris Data.",
+      "stories": [
+        {
+          "id": "003a6dd08e36",
+          "headline": "Google DeepMind launches Gemini Omni 1.2 Flash video model with 15-second clips",
+          "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips"
+        },
+        {
+          "id": "1184d3a025fd",
+          "headline": "Mistral launches Studio Le Chonk platform for enterprise AI deployment",
+          "url": "https://mistral.ai/news/build-with-studio"
+        },
+        {
+          "id": "e8690f74b67f",
+          "headline": "Nvidia adds four open-weight Cosmos 3 Nano checkpoints for interactive simulation",
+          "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation"
+        },
+        {
+          "id": "57e2aa22209e",
+          "headline": "Dropbox to acquire AI storage startup Tigris Data for $350 million",
+          "url": "https://techmeme.com/261105/p31"
+        }
+      ]
+    },
+    {
+      "title": "Hardware efficiency and research advances",
+      "text": "Nvidia detailed how full-stack codesign and its Vera CPU increase agentic throughput and power efficiency. Researchers also introduced the VLA-Tug probe for vision-language-action failure detection and a meta-access framework for LLM chat interfaces.",
       "stories": [
         {
           "id": "3df4d68063a5",
@@ -17,41 +69,9 @@
           "url": "https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents"
         },
         {
-          "id": "aecc9a23fd3c",
-          "headline": "Dropbox to acquire Tigris Data for $350 million to expand AI infrastructure",
-          "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure"
-        },
-        {
-          "id": "57e2aa22209e",
-          "headline": "Dropbox to acquire AI storage startup Tigris Data for $350 million",
-          "url": "https://techmeme.com/261105/p31"
-        }
-      ]
-    },
-    {
-      "title": "New video and simulation models released",
-      "text": "Google DeepMind released Gemini Omni 1.2 Flash, a generative video model that creates native 15-second clips with multi-turn conversational editing at $0.07 per second for 720p, a 30% cost reduction from the prior version. Nvidia also released four open-weight Cosmos 3 Nano checkpoints built on a 16-billion-parameter model, each generating interactive world simulations and multi-sensor driving scenes.",
-      "stories": [
-        {
-          "id": "003a6dd08e36",
-          "headline": "Google DeepMind launches Gemini Omni 1.2 Flash video model with 15-second clips",
-          "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips"
-        },
-        {
-          "id": "e8690f74b67f",
-          "headline": "Nvidia adds four open-weight Cosmos 3 Nano checkpoints for interactive simulation",
-          "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation"
-        }
-      ]
-    },
-    {
-      "title": "Enterprise and interface agent tooling",
-      "text": "Mistral AI said its Studio platform now supports the Le Chonk multimodal model, letting enterprises build and deploy agents, workflows and apps on cloud, VPC or on-premises while retaining control over data and infrastructure. Separately, researchers proposed meta access, a structured, permissioned view of a software interface that lets LLM chat agents read and modify UI state, demonstrated in a prototype called Meta Chat.",
-      "stories": [
-        {
-          "id": "1184d3a025fd",
-          "headline": "Mistral launches Studio Le Chonk platform for enterprise AI deployment",
-          "url": "https://mistral.ai/news/build-with-studio"
+          "id": "926641e2e19c",
+          "headline": "VLA‑Tug probe improves early failure detection in vision‑language‑action models",
+          "url": "https://arxiv.org/abs/2611.08425"
         },
         {
           "id": "99a2f4c99621",
@@ -59,28 +79,7 @@
           "url": "https://arxiv.org/abs/2611.08428"
         }
       ]
-    },
-    {
-      "title": "AI fraud, protests and safety probes",
-      "text": "Three people were indicted in New York for allegedly using AI to impersonate corporate executives and attorneys in a $129 million fraud scheme over more than a year and a half. More than 100 activists broke into the construction site of a Microsoft AI data centre in Amsterdam, the start of two days of protests in 15-16 European countries calling for a pause on large-scale data centre construction. Researchers also introduced VLA-Tug, a lightweight latent probe that raises early failure detection in vision-language-action models by up to 30%.",
-      "stories": [
-        {
-          "id": "2e8b2dae8868",
-          "headline": "Three indicted for using AI to impersonate executives and lawyers in $129M fraud",
-          "url": "https://cbsnews.com/news/3-ai-steal-129-million-companies-impersonating-executives-lawyers"
-        },
-        {
-          "id": "8ec5fec0e77e",
-          "headline": "Activists breach Microsoft data centre site in Amsterdam as protests spread across Europe",
-          "url": "https://economictimes.indiatimes.com/tech/technology/activists-breach-microsoft-data-centre-construction-site-as-protests-spread-in-europe/articleshow/135608593.cms"
-        },
-        {
-          "id": "926641e2e19c",
-          "headline": "VLA‑Tug probe improves early failure detection in vision‑language‑action models",
-          "url": "https://arxiv.org/abs/2611.08425"
-        }
-      ]
     }
   ],
-  "from_stories": 11
+  "from_stories": 13
 }

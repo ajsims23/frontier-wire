@@ -1,9 +1,10 @@
 {
-  "started_at": "2026-11-06T14:54:35+00:00",
+  "started_at": "2026-11-06T15:20:10+00:00",
   "review_mode": false,
   "providers": [
-    "cerebras",
-    "groq"
+    "gemini",
+    "groq",
+    "cerebras"
   ],
   "sources": {
     "openai": "ok (1366)",
@@ -18,9 +19,9 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (18)",
-    "gdelt": "ok (30)",
-    "hn": "ok (16)",
+    "hf-papers": "ok (17)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "hn": "ok (17)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -29,9 +30,9 @@
     "inc42": "ok (24)",
     "medianama": "ok (10)",
     "mint-tech": "ok (35)",
-    "et-tech": "ok (50)",
+    "et-tech": "ok (48)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -41,409 +42,371 @@
   },
   "dropped": [
     {
-      "title": "Merge builds product and business tools with OpenAI technology",
-      "reason": "score 4: A customer case study of a mid-size company using GPT-6 Astra, ChatGPT and Codex for code review and marketing. Routine adoption/marketing content, not a frontier development; the editor flag does not make it genuinely news."
+      "title": "I struggle to believe that AI R&D is ingenious",
+      "reason": "not AI: Opinion piece on AI R&D without concrete news or announcements."
     },
     {
-      "title": "Ai2 publishes Molmo2-4B-tb on Hugging Face",
-      "reason": "score 5: A 4B robotics model upload from Ai2 (allenai/Molmo2-4B-tb) with only 2 likes. Small open-weight release from a non-frontier lab, not a major model launch; below the bar for our readers."
+      "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
+      "reason": "score 4: General commentary and allegations regarding deepfake scam ads on social media platforms, lacking specific new AI policy announcements."
     },
     {
-      "title": "Ai2 publishes maniflow-tb on Hugging Face",
-      "reason": "score 3: Minor robotics model upload from Ai2 (maniflow-tb) with 2 likes. Not a genuinely new frontier model; drop."
+      "title": "The Hackintosh Reborn",
+      "reason": "not AI: Hackintosh hardware article with no AI relevance."
     },
     {
-      "title": "User Embeddings are Superpositions of Interpretable Behavioral Modes",
-      "reason": "score 4: Interpretability paper on user embeddings in recommendation/personalization systems. Solid but incremental and niche; not a breakthrough for model engineers."
+      "title": "Launch HN: Rivet (YC W23) – Scale and Orchestrate Agents on S3",
+      "reason": "score 5: Launch HN for an agent orchestration tool; incremental dev tooling, score 5."
     },
     {
-      "title": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
-      "reason": "score 5: Agent-swarm evolutionary optimization paper. Interesting but an incremental methodological contribution, not a landmark result; most arXiv items should be dropped."
+      "title": "Dutch 'idealist' bank ASN blocks non-Google Android, including GrapheneOS",
+      "reason": "not AI: Not AI-related (banking and Android privacy/app compatibility)."
     },
     {
-      "title": "Scientist World: Grow a Research World for AI-Scientists",
-      "reason": "score 5: A benchmark/environment for AI-scientist agents. Interesting but a research tooling contribution, not a landmark result; below the keep bar."
+      "title": "Blender's UI and Runtime: Much Faster Than GPUI",
+      "reason": "not AI: Not AI-related (Blender UI performance)."
     },
     {
-      "title": "XStack: A Benchmark for ML Repo Migration",
-      "reason": "score 4: Benchmark for migrating ML repos between PyTorch/NVIDIA and JAX/TPU. Useful but incremental tooling; not a breakthrough."
+      "title": "Window Sweaters",
+      "reason": "not AI: Not AI-related."
     },
     {
-      "title": "Same Behavior, Different Mechanism: What Finite Experiments Can Certify About Integrated Information",
-      "reason": "score 3: Highly theoretical paper on integrated information and what finite experiments can certify. Niche and not a practical advance for our readers."
+      "title": "Show HN: Firenook – Firebase emulators in Rust: 40× faster writes, 10× less RAM",
+      "reason": "not AI: Not AI-related (Firebase emulators in Rust)."
     },
     {
-      "title": "Towards interpreting any residual stream direction by scaling activation inversion",
-      "reason": "score 5: Interpretability method (MAEMs) is incremental research without clear frontier impact; score below keep threshold."
+      "title": "After blocking Muse, Amazon now lets users text Alexa to help them shop",
+      "reason": "score 5: Amazon rolling out text-to-shop feature via Alexa; minor product feature rollout, score 5."
     },
     {
-      "title": "Adversarial Training with Large Step Sizes: Implicit Bias, Optimization, and Sharpness",
-      "reason": "score 5: Theoretical analysis of adversarial training step sizes is solid but not a major breakthrough for practitioners."
+      "title": "Underdog shows off a 32MB speech model in new demo",
+      "reason": "score 5: Underdog's small 32MB speech and music model demo; minor research/demo announcement, score 5."
     },
     {
-      "title": "Unpacking the Compute Efficiency of Strong-to-Weak OPD against GRPO",
-      "reason": "score 4: Niche compute‑efficiency study of on‑policy distillation; limited relevance to frontier audience."
+      "title": "Palo Alto Networks in talks to buy AI agent security startup Clutch for $500M",
+      "reason": "duplicate of 7312e394347c"
     },
     {
-      "title": "ReproBridge: Building Reproducibility into ML Research Artifacts",
-      "reason": "score 4: Tool for reproducibility is useful but not a news‑worthy advance for Frontier Wire readers."
+      "title": "Meta warns that election backlash against data centers could make AI expansion harder",
+      "reason": "duplicate of d93ef6b85a78"
     },
     {
-      "title": "A Hidden Markov Preference Model for Online Prediction of Adversary Actions",
-      "reason": "score 4: Hidden‑Markov model for adversary prediction is a security‑adjacent study, not a major AI development."
+      "title": "OpenAI released a new cybersecurity model. Is that enough?",
+      "reason": "duplicate of 53c56afbaf05"
     },
     {
-      "title": "Label-Wording Augmentation in a Typed-Decision Encoder: Gains on Unfamiliar Words, Not on Abbreviations or Codes",
-      "reason": "score 3: Label‑wording augmentation for a specific multilingual encoder is a narrow incremental improvement."
+      "title": "Amazon will let you text Alexa your shopping list",
+      "reason": "score 5: Minor feature addition for Alexa shopping lists; incremental consumer assistant update."
     },
     {
-      "title": "Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety",
-      "reason": "score 5: Survey of mechanistic interpretability is informative but not a new result; falls below keep threshold."
+      "title": "Protesters break into Microsoft data center site in Amsterdam",
+      "reason": "duplicate of 8ec5fec0e77e"
     },
     {
-      "title": "MedGraph: Maintaining Patient State with Graph Memory for Long-Term Medical Dialogue",
-      "reason": "score 5: Medical‑dialogue graph memory architecture is an application‑focused paper, not a frontier breakthrough."
+      "title": "Airbnb is working on an AI travel agent",
+      "reason": "score 4: Duplicate of Airbnb planning an AI travel agent in 2027."
     },
     {
-      "title": "Data-driven discovery of intrinsic Lie point symmetries of differential equation systems",
-      "reason": "score 4: A technical paper on discovering Lie symmetries from data; interesting for scientific ML but an incremental methodological contribution without clear frontier impact."
+      "title": "Perplexity launches its own take on AI agents for work",
+      "reason": "score 4: Duplicate of Perplexity's Teammates agent launch."
     },
     {
-      "title": "On the limitations of molecular representations",
-      "reason": "score 4: Analyzes limits of molecular representations; relevant to cheminformatics but does not constitute a breakthrough or major news for the Frontier Wire audience."
+      "title": "Muse has a voice mode now",
+      "reason": "score 4: Duplicate of Meta Muse AI voice mode launch."
     },
     {
-      "title": "Benchmarks as Software: Terminal-Bench and the Case for Continuous Benchmarks",
-      "reason": "score 5: Proposes a continuous benchmarking framework for coding agents; useful for evaluation but still an incremental tool rather than a headline‑worthy advance."
+      "title": "Claude AI can plug directly into your bank account",
+      "reason": "score 4: Duplicate of Claude Personal Finance tool feature."
     },
     {
-      "title": "Spectral and Subspace Dynamics of LoRA in Supervised Fine-Tuning and Reinforcement Learning",
-      "reason": "score 4: Studies LoRA dynamics in fine‑tuning and RL; a detailed analysis that is unlikely to attract broad interest beyond specialists."
+      "title": "‘Total repudiation’: The blue wave is about to hit AI",
+      "reason": "duplicate of d93ef6b85a78"
     },
     {
-      "title": "The Gold Rush in AI4Math, II: What are signatures of AI-assisted Proofs?",
-      "reason": "score 5: Explores signatures of AI‑assisted proofs in mathematics; conceptually interesting but still an early‑stage investigation without concrete breakthrough."
+      "title": "OpenAI says its new cybersecurity model is better at not hacking other companies",
+      "reason": "duplicate of 53c56afbaf05"
     },
     {
-      "title": "Conformal Prediction for Time-Dependent PDEs",
-      "reason": "score 4: Applies conformal prediction to time‑dependent PDEs; a niche methodological contribution for scientific ML."
+      "title": "I watched a humanoid robot clean my apartment. It felt like a taste of the future.",
+      "reason": "score 5: Review and hands-on piece of a humanoid robot cleaning service, leaning into personal review style."
     },
     {
-      "title": "Social Humanoid: Socially Responsive Human-Humanoid Interaction",
-      "reason": "score 5: Introduces a socially responsive humanoid robot system; robotics‑focused work that is not a frontier AI model or policy development."
+      "title": "Google: Schools can keep search while skipping Gemini, but AI search is non-negotiable",
+      "reason": "duplicate of f3cef08b4a75"
     },
     {
-      "title": "StepBack: Step-Level Error-Localized Resampling for Efficient Test-Time Reasoning",
-      "reason": "score 5: Presents a test‑time reasoning efficiency technique; useful for LLM deployment but an incremental improvement rather than a major news item."
+      "title": "Lawsuit: Man introduced his wife to ChatGPT. She used it to plan his murder.",
+      "reason": "score 3: Crime/legal story involving consumer use of a chatbot; not industry or research news for AI builders."
     },
     {
-      "title": "Synthesis of Ovarian Cancer Multi-Omics Datasets: A Biology-Informed Evaluation Framework",
-      "reason": "score 4: Offers a framework for evaluating synthetic multi‑omics data; specialized to bio‑informatics and not a headline AI development."
-    },
-    {
-      "title": "Learning a patient world model for health system simulation in intensive care",
-      "reason": "score 5: Describes learning a patient world model for ICU simulation; an application‑oriented study without a breakthrough that would merit a news story."
-    },
-    {
-      "title": "Hybrid Machine Learning for Imbalanced Landing-Phase Safety Event Prediction from Flight Data",
-      "reason": "score 5: Paper applies ML to predict rare landing‑phase safety events; interesting but an incremental application rather than a frontier breakthrough, so it does not meet the significance threshold."
-    },
-    {
-      "title": "Module-Aware Optimization for Graph Neural Networks",
-      "reason": "score 5: Optimization technique for GNNs is a modest incremental improvement without broader ecosystem impact."
-    },
-    {
-      "title": "Muir: Linear Attention with Sensitivity-Allocated Gating and Matched-Filter Readout",
-      "reason": "score 5: New linear‑attention architecture adds to a crowded space but does not represent a landmark advance."
-    },
-    {
-      "title": "MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation",
-      "reason": "score 5: Robotics manipulation augmentation paper is a niche contribution; not a major frontier development."
-    },
-    {
-      "title": "VisionSIM: Beyond Idealized Sensors - A Multi-Modal Simulator for Robot Perception",
-      "reason": "score 5: VisionSIM simulator is a useful robotics tool but represents an incremental research contribution."
-    },
-    {
-      "title": "SHORE: Stability-Hybrid On-Policy Reinforcement Learning for Online Bin Packing",
-      "reason": "score 5: RL method for online bin packing is a modest algorithmic tweak without broader impact."
-    },
-    {
-      "title": "SpecCTMC: Exact Speculative Simulation of Diffusion Language Model Continuous-Time Markov Chains",
-      "reason": "score 5: Exact speculative simulation for diffusion LMs is a technical refinement that does not rise to a news‑worthy level."
-    },
-    {
-      "title": "Unifying Central Flow, Rod Flow, and the Edge Coupling",
-      "reason": "score 4: Theoretical paper on gradient flow dynamics; incremental and not a frontier AI breakthrough."
-    },
-    {
-      "title": "USB Gym: A Gymnasium Testbed for Closed-Loop Ultrasound View Matching",
-      "reason": "score 4: Introduces a testbed for ultrasound guidance; AI angle is peripheral and not newsworthy for Frontier Wire."
-    },
-    {
-      "title": "4D Point Splatting for mmWave Radar Micro-Doppler Differentiable Rendering",
-      "reason": "score 4: Radar micro‑Doppler rendering paper; interesting for sensing but not a major AI development."
-    },
-    {
-      "title": "Ethics Week Lecture centers on AI use for mental health support",
-      "reason": "score 3: Announcement of an ethics lecture; not a significant AI development."
-    },
-    {
-      "title": "S . African media leader expects World Media Summit to foster cooperation on AI challenges",
-      "reason": "score 3: Media leader’s expectation for a summit; lacks concrete AI news."
-    },
-    {
-      "title": "Tech stocks battered as AI panic roils global markets",
-      "reason": "score 5: Market commentary on AI‑related stock panic; not a core AI story."
-    },
-    {
-      "title": "What an AI - Assisted 3D Portfolio Should Show Beyond the Final Render",
-      "reason": "not AI: A design/creative portfolio piece about AI-assisted 3D work; not news for a frontier-AI audience."
-    },
-    {
-      "title": "SA and Mauritius lead Africa in AI Youth Readiness Index",
-      "reason": "score 3: A regional youth-readiness index ranking; minor and not a substantive AI development for this audience."
-    },
-    {
-      "title": "My psychophysics as a bilateral cochlear implant user",
-      "reason": "not AI: A personal essay on cochlear-implant psychophysics that went viral on HN. No AI angle in the source; off-topic for Frontier Wire."
-    },
-    {
-      "title": "Stockal’s US Trading Row: Missing Consent, A Chinese Microcap, And Unanswered Questions",
-      "reason": "not AI: A dispute over an Indian stock-trading app's US brokerage operations; no AI angle, so off-topic for Frontier Wire."
-    },
-    {
-      "title": "MobiKwik To Begin NBFC Operations Within 6 Months Post RBI Clearance",
-      "reason": "not AI: MobiKwik's NBFC registration is a fintech/regulatory matter with no AI angle."
-    },
-    {
-      "title": "Brokers In October: Angel One Climbs To The Second Spot With 2.4 Lakh New User Additions",
-      "reason": "not AI: Article about stockbroker user numbers has no AI angle; ai_relevance=none."
-    },
-    {
-      "title": "MakeMyTrip Acquires Majority Stake In Quick Ride To Enter Ride Pooling",
-      "reason": "not AI: MakeMyTrip's acquisition of Quick Ride is a travel‑tech move with no AI focus; ai_relevance=none."
-    },
-    {
-      "title": "Delhi HC Upholds BharatPe’s Veto Rights In Unity SFB Shareholding Dispute",
-      "reason": "not AI: Court ruling on BharatPe's veto rights is a financial‑legal story with no AI component."
-    },
-    {
-      "title": "RBI meets bankers amidst rising AI cyber-attacks, mandates security audits",
-      "reason": "duplicate of b607b0928983"
-    },
-    {
-      "title": "TRAI recommends India-based network control, traffic monitoring for satellite providers",
-      "reason": "not AI: TRAI's satellite network-control recommendation is telecom regulation, not AI; off-topic for the India AI desk."
-    },
-    {
-      "title": "Shiprocket swings to profit in Q2, revenue rises 35% to Rs 674 cr",
-      "reason": "not AI: Shiprocket's Q2 earnings; logistics business news with no AI relevance."
-    },
-    {
-      "title": "COD Mobile turns 7: What is new as Verdansk returns with Battle Royale upgrades, Mythic Drops and Ford Racing rewards",
-      "reason": "not AI: Call of Duty Mobile game update; no AI relevance."
-    },
-    {
-      "title": "‘Your voice matters’: Sarvam AI CEO Pratyush Kumar offers lifetime access to 70-year-old speech-impaired cancer survivor",
-      "reason": "score 5: Sarvam AI offers free access to its speech‑to‑text models for a cancer survivor – a modest, socially‑focused AI application in India, but not a major product or market development."
-    },
-    {
-      "title": "India focused on becoming AI application capital of the world: Ashwini Vaishnaw",
-      "reason": "score 5: Minister Ashwini Vaishnaw's statement that India aims to be the AI‑application capital is a high‑level policy comment but lacks concrete action; not enough for a news story."
-    },
-    {
-      "title": "Motorola Signature 27 launched with 7,000mAh battery, 200MP camera and Snapdragon 8 Elite Extreme Gen 6: Price, features",
-      "reason": "not AI: Motorola phone launch focuses on hardware specs; no AI relevance."
-    },
-    {
-      "title": "Vaishnaw puts onus on social media platforms to curb online harm, stops short of safe-harbour clarity",
-      "reason": "not AI: Social-media platform liability and safe-harbour policy; not about AI, so dropped for the India desk."
-    },
-    {
-      "title": "Want only serious players, no place for frivolous applicants in Semicon 2.0: Vaishnaw to industry",
-      "reason": "score 4: Semicon 2.0 is a semiconductor programme; AI is at most a secondary angle, so it scores low on its AI relevance."
-    },
-    {
-      "title": "Meta pauses planned terms updates, keeps existing rules in place",
-      "reason": "score 4: Meta pausing commercial/ad terms updates; the only AI touch is a clause name, so the AI angle is thin and the story is routine platform policy."
-    },
-    {
-      "title": "Alphabet discloses $548 million worth of Qualcomm stake",
-      "reason": "score 4: A routine 13F-style stake disclosure by Alphabet; the AI data-centre context is secondary and the item is minor."
-    },
-    {
-      "title": "Apple's predictive text restrictions include 'Dictator Trump' and 'Sleepy Joe,' researcher finds",
-      "reason": "not AI: A consumer-keyboard curation story; no meaningful AI angle for our readers."
-    },
-    {
-      "title": "Mamaearth parent Honasa's Q2 net profit rises 87%",
-      "reason": "not AI: Consumer-goods company earnings; no AI angle."
-    },
-    {
-      "title": "Govt clears 12 more proposals worth over Rs 7,500 Cr under electronics components scheme",
-      "reason": "not AI: Government clearance of electronics component proposals is a hardware policy item; AI is not mentioned, so ai_relevance=none."
-    },
-    {
-      "title": "How a Rs 500 Cr bet put Bihar Museum ahead of the Met and Louvre",
-      "reason": "not AI: Story about museum funding and exhibition has no AI content; ai_relevance=none."
-    },
-    {
-      "title": "Delhi HC upholds interim protection for BharatPe’s shareholder rights, dismisses Unity Bank’s appeal",
-      "reason": "not AI: A corporate shareholder-rights court ruling at BharatPe; not about AI, so dropped for the India desk."
-    },
-    {
-      "title": "(Weekly funding roundup Oct 31-Nov 6) Sharp rise in capital inflow",
-      "reason": "score 3: A general weekly Indian startup funding roundup with no specific AI focus; routine and not a distinct AI development."
-    },
-    {
-      "title": "Quoting Paul Ford",
-      "reason": "not AI: Quote about browsers; no AI content."
-    },
-    {
-      "title": "Ethan Mollick: One ongoing frustration is the lack of effort I see being put towards near-term, achievable crash projects to do good with AI at a…",
-      "reason": "score 4: Ethan Mollick's Bluesky post is a general opinion about AI 'crash projects' for good, not substantive commentary on a specific AI development. Routine commentary."
-    },
-    {
-      "title": "Ethan Mollick: As I have written many times in the past years, any potential financial downturn in AI stocks will not greatly change the AI trajectory AI…",
-      "reason": "score 3: Opinion piece on AI stocks; lacks concrete news value."
-    },
-    {
-      "title": "FedReason: Large Language Models as Weight-Space Meta-Aggregators for Heterogeneous Federated Learning",
-      "reason": "variety: already 2 stories from arxiv.org this run"
-    },
-    {
-      "title": "NPCBench: A Clinical Apprenticeship Benchmark for Multimodal Care-Pathway Reasoning in Nasopharyngeal Carcinoma",
-      "reason": "variety: already 2 stories from arxiv.org this run"
-    },
-    {
-      "title": "StrataFlux: Memory-Hierarchy-Native Low-Bit LLM Inference",
-      "reason": "variety: already 2 stories from arxiv.org this run"
-    },
-    {
-      "title": "Enhancing Local and Global Structure in Compressed AI Agent Memory",
-      "reason": "variety: already 2 stories from arxiv.org this run"
-    },
-    {
-      "title": "Discovering Learning Rules that Shape Others",
-      "reason": "variety: already 2 stories from arxiv.org this run"
-    },
-    {
-      "title": "NVIDIA Jensen Huang Summoned By U . S . Congress For A Closed Door Briefing To Address His Interactions With An Executive That In The Federal Spy Probe Crosshairs",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Nvidia H200 chips await China approval in Hong Kong , Reuters reports",
-      "reason": "could not verify yet; will retry next run"
+      "title": "Smaller Language Models Could Reshape How Enterprises Deploy AI",
+      "reason": "score 4: General commentary on smaller language models for enterprises, lacks specific groundbreaking news."
     },
     {
       "title": "AvenuesAI Q2 Net Profit Rises 6% YoY To ₹72 Cr, Revenue Up 47%",
+      "reason": "score 4: AvenuesAI (Infibeam) quarterly earnings report; routine financial results."
+    },
+    {
+      "title": "MDR And AI: Inside The Two Acronyms That Could Shape Razorpay’s ₹6,000 Cr IPO",
+      "reason": "score 4: Pre-IPO preview article mentioning AI incidentally alongside MDR for a payment gateway."
+    },
+    {
+      "title": "Mamaearth Parent Honasa’s Q2 Profit Jumps 87% YoY To ₹73 Cr",
+      "reason": "not AI: Quarterly earnings report for a consumer goods company."
+    },
+    {
+      "title": "X Says Delhi Police Takedown Notices Against IFF, SFLC Were Fake",
+      "reason": "not AI: Legal dispute over social media takedown notices with no AI relevance."
+    },
+    {
+      "title": "TRAI Backs Direct-To-Device Satellite Connectivity, Proposes New Authorisation Framework",
+      "reason": "not AI: TRAI recommendations on direct-to-device satellite connectivity."
+    },
+    {
+      "title": "CEO Harsh Jain Teases A Revamped Dream11 By 2026-End",
+      "reason": "not AI: Gaming executive teaser; no direct AI focus mentioned."
+    },
+    {
+      "title": "This Is Not About Money: Deepinder Goyal Defends Temple Amid Credibility Row",
+      "reason": "not AI: Founder response about a wearable device; not AI news."
+    },
+    {
+      "title": "Go Digit Q2 Profit Falls 31% To ₹142 Cr",
+      "reason": "not AI: Quarterly financial earnings report for an insurtech firm; no AI angle."
+    },
+    {
+      "title": "Daksham Capital Launches ₹300 Cr Consumer Fund, Marks First Close At ₹125 Cr",
+      "reason": "not AI: Consumer-focused venture fund launch with no specific AI focus."
+    },
+    {
+      "title": "CERT-In Flags AI-Driven Cyberattacks On Indian BFSI",
+      "reason": "duplicate of b607b0928983"
+    },
+    {
+      "title": "Shiprocket Turns Profitable In Q2, Revenue Jumps 35% YoY To ₹674 Cr",
+      "reason": "not AI: Ecommerce financial results with no direct AI angle."
+    },
+    {
+      "title": "Tonbo Imaging Turns Profitable In Q2 With ₹23.5 Cr PAT",
+      "reason": "score 4: Defence technology earnings report, routine financial news."
+    },
+    {
+      "title": "Lenskart Q2 profit rises 2x to Rs 232 cr, revenue up 36%",
+      "reason": "not AI: Retail eyewear earnings report, no AI angle."
+    },
+    {
+      "title": "Exclusive: Gujarat Police flagged one URL every six minutes through Sahyog Portal, RTI reveals",
+      "reason": "not AI: Routine RTI disclosure about URL flagging by Gujarat Police; no direct AI angle."
+    },
+    {
+      "title": "Posting a photo publicly is not consent for its misuse, Karnataka HC says in WhatsApp video case",
+      "reason": "not AI: General court ruling on privacy and photographs without an AI angle."
+    },
+    {
+      "title": "Impostor sent fake Delhi Police takedown notices against IFF, SFLC.in, X tells Delhi HC",
+      "reason": "not AI: General cybercrime and court case about fake takedown notices against civil society groups; no AI angle mentioned."
+    },
+    {
+      "title": "NPCI tells Supreme Court merchants cannot pass new UPI charges on to customers",
+      "reason": "not AI: NPCI statement on UPI merchant charges; unrelated to AI."
+    },
+    {
+      "title": "Meta, Google and TikTok sue California over new law restricting social media features for teens under 16",
+      "reason": "not AI: Social media firms sue California over minor feed restrictions; duplicate of 0ac5edca0946, not AI-focused."
+    },
+    {
+      "title": "3 charged in scheme to use AI to impersonate CEOs and attorneys to steal $129 million",
+      "reason": "duplicate of 2e8b2dae8868"
+    },
+    {
+      "title": "If it works in India, it can work anywhere: TDK Ventures’ Nicolas Sauvage on building deeptech for the world",
+      "reason": "score 4: General deeptech commentary from TechSparks 2026; too broad and not specific to an AI development."
+    },
+    {
+      "title": "Startup news and updates: Daily roundup (November 6, 2026)",
+      "reason": "not AI: General startup daily roundup."
+    },
+    {
+      "title": "Deepinder Goyal hits back at doctors, defends wearable device Temple",
+      "reason": "not AI: Zomato founder defending a wearable health device (Temple); not AI news."
+    },
+    {
+      "title": "Northern Arc's diversified debt fund hits first close at over Rs 400 Cr",
+      "reason": "not AI: Standard private credit fund milestone with no specific AI focus."
+    },
+    {
+      "title": "OpenAI president Greg Brockman says company could be IPO ready in 2027",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "Claude can now analyze your spending with its new Personal Finance tool",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "A YC startup is putting $1M behind 5 unsolved materials science problems for AI",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "Google sued over suicide-related AI chats on school computer",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "Meta says US users can now video chat with their Muse AI avatar",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "Venomics AI Raises $2.7 Mn To Turn Venom Into Medicine",
+      "reason": "variety: already 2 stories from inc42.com this run"
+    },
+    {
+      "title": "AI’s ability to find cyber flaws outpacing firms’ capacity to fix them: Palo Alto Networks' Nikesh Arora",
+      "reason": "variety: already 2 stories from yourstory.com this run"
+    },
+    {
+      "title": "Agility is the first pure humanoid robot company on the stock market. Are you buying?",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "Sources: TSMC is considering expanding into manufacturing 3D DRAM at the request of Nvidia, its biggest customer, amid memory chip shortages (Qianer Liu/The Information)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Perplexity rolls out Teammates, an always-on AI agent system that integrates with Computer to handle multiple roles and execute large-scale tasks simultaneously (Emma Roth/The Verge)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Claude Code sends your email address to websites",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Physicl raises $10M to make the digital world real enough for robots",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "The Anthropic-Indian IT Partnership Is a Two-Way Bet",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Cashfree Launches ‘Checkout For Agents’ To Enable AI-Led Payments",
       "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "99a2f4c99621",
-      "headline": "Researchers propose meta‑access framework to extend LLM chat interfaces",
-      "category": "research",
-      "summary": "Julian Kunkel and Ali Doosthosseini submitted a paper describing meta access, a structured, permissioned view of a software interface that lets LLM chat agents read and modify UI state. The approach is demonstrated in a prototype called Meta Chat.",
-      "url": "https://arxiv.org/abs/2611.08428",
-      "sources": 1,
+      "id": "1b6cc2dfb9fa",
+      "headline": "Microsoft offers voluntary buyouts to 60,000 employees as AI spending grows",
+      "category": "industry",
+      "summary": "Microsoft offered voluntary buyouts to about 60,000 employees, or roughly 27% of its global workforce, as the company increases spending on artificial intelligence. The voluntary exit offer was made available to eligible staff in Canada, India, the United Kingdom, and the United States.",
+      "url": "https://techmeme.com/261106/p12",
+      "sources": 4,
+      "quotes": 2
+    },
+    {
+      "id": "acdb0c16a39e",
+      "headline": "Asian tech stocks plunge amid fears US Democrats may delay data centers",
+      "category": "industry",
+      "summary": "Asian stock markets tied to the artificial intelligence boom plummeted on Friday morning following a tech sell-off amid fears that US Democrats may delay data centers. Taiwan's Taiex saw a record intraday point drop, the Kospi fell 8.7%, and the Nikkei fell 6.7%.",
+      "url": "https://techmeme.com/261106/p2",
+      "sources": 2,
       "quotes": 0
     },
     {
-      "id": "926641e2e19c",
-      "headline": "VLA‑Tug probe improves early failure detection in vision‑language‑action models",
-      "category": "safety",
-      "summary": "Researchers introduced VLA‑Tug, a lightweight latent probe that raises early failure detection by up to 30% and keeps missed‑detection and false‑alarm bounds valid in up to 86% of runs on unseen tasks.",
-      "url": "https://arxiv.org/abs/2611.08425",
-      "sources": 1,
-      "quotes": 0
-    },
-    {
-      "id": "2e8b2dae8868",
-      "headline": "Three indicted for using AI to impersonate executives and lawyers in $129M fraud",
-      "category": "safety",
-      "summary": "Three people were indicted in a U.S. District Court in New York on charges of wire fraud and aggravated identity theft for allegedly using AI to impersonate corporate executives and attorneys and steal about $129 million. The defendants, Jacob Soall, Sharon Hazan and Guy Sheetrit, targeted thousands of companies over more than a year and a half.",
-      "url": "https://cbsnews.com/news/3-ai-steal-129-million-companies-impersonating-executives-lawyers",
-      "sources": 6,
+      "id": "b53db0f7184a",
+      "headline": "OpenAI steps back from NDAs and promises full power costs for data centers",
+      "category": "policy",
+      "summary": "OpenAI announced it will no longer use non-disclosure agreements with public officials for data center projects and will pay the full cost of electricity and infrastructure. The policy shift follows voter opposition to data center expansion in the U.S. midterm elections.",
+      "url": "https://theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda",
+      "sources": 2,
       "quotes": 1
     },
     {
-      "id": "8ec5fec0e77e",
-      "headline": "Activists breach Microsoft data centre site in Amsterdam as protests spread across Europe",
-      "category": "policy",
-      "summary": "More than 100 activists broke into the construction site of a Microsoft AI data centre in Amsterdam on Friday, the start of two days of protests in 15-16 European countries calling for a pause on large-scale data centre construction. The site, owned by Pure Data Centres with over $1 billion in planned investment, is proceeding despite Amsterdam's ban on new data centres until 2030.",
-      "url": "https://economictimes.indiatimes.com/tech/technology/activists-breach-microsoft-data-centre-construction-site-as-protests-spread-in-europe/articleshow/135608593.cms",
-      "sources": 3,
+      "id": "3e50b2261d70",
+      "headline": "Sarvam launches Prism open-weight decision model built on Sarvam 105B",
+      "category": "models",
+      "summary": "Sarvam AI has launched Prism, an open-weight decision model built on its Sarvam 105B foundation model for enterprise workflows. The model achieves an average score of 71.8 across three evaluation indices with a median response time of 44 milliseconds on an Nvidia B200 GPU.",
+      "url": "https://inc42.com/features/sarvams-prism-enters-indias-growing-ai-decision-model-race",
+      "sources": 2,
       "quotes": 2
     }
   ],
   "notes": [
-    "not India desk: 'Activists breach Microsoft data centre constructio'",
-    "3 kept item(s) carried over to the next run",
-    "top voices skipped: every configured provider failed: groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model | groq/qwen/qwen3.8-27b: request over its 7,000-token limit; retrying with a 1,502-token answer | groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model | groq/openai/gpt-oss-20b: model unavailable (400); trying next model"
+    "ignored made-up duplicate id 1eac7fe42e87 for 'Airbnb is working on an AI travel agent'",
+    "ignored made-up duplicate id 89b3975fb8c7 for 'Perplexity launches its own take on AI agents for '",
+    "ignored made-up duplicate id 3c0e84566a0e for 'Muse has a voice mode now'",
+    "ignored made-up duplicate id 7b187a5bdc28 for 'Claude AI can plug directly into your bank account'",
+    "ignored made-up duplicate id 0ac5edca0946 for 'Meta, Google and TikTok sue California over new la'",
+    "not India desk: 'ING puts $500 million of data center loans up for '",
+    "not India desk: 'SoftBank credit risk jumps to 4-year high as AI fe'",
+    "not India desk: 'Google sued over suicide-related AI chats on schoo'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "17 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 137.1,
+    "gather": 66.0,
     "audit": 0.0,
-    "plan": 4.5,
-    "judge": 233.4,
-    "verify and write": 279.9,
-    "videos": 33.2,
-    "tagging": 12.6,
-    "explainers": -0.0,
-    "trackers": 60.6,
-    "claims": 2.4,
-    "model tracker": 0.1,
-    "weekly": -0.0,
-    "builders": -0.0,
-    "briefing": 101.2,
+    "plan": 119.0,
+    "judge": 28.3,
+    "verify and write": 162.3,
+    "videos": 5.8,
+    "tagging": 1.9,
+    "explainers": 0.0,
+    "trackers": 4.1,
+    "claims": 2.5,
+    "model tracker": 0.0,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 13.0,
+    "briefing": 2.8,
     "self-review": -0.0,
-    "photos": 0.7,
-    "stock photos": 0.0,
+    "photos": 0.3,
+    "stock photos": 22.3,
     "daily email": 0.0,
-    "alerts": 9.0
+    "alerts": 9.9
   },
-  "fetched": 2969,
-  "fresh": 221,
+  "fetched": 2937,
+  "fresh": 120,
   "plan": {
-    "focus": "Tracking post‑midterm AI data‑center policy fallout while bolstering research and voice coverage.",
+    "focus": "Chasing the fallout from U.S. political shifts on AI infrastructure and data centers while tracking key industry product launches.",
     "priorities": [
-      "Merge builds product and business tools with OpenAI technology (OpenAI‑powered product and business tools are directly relevant to builders and investors.)",
-      "Ai2 publishes Molmo2-4B-tb on Hugging Face (New Molmo2‑4B model on Hugging Face offers a usable open‑weight release for developers.)",
-      "User Embeddings are Superpositions of Interpretable Behavioral Modes (Paper on user embeddings provides fresh interpretability insights for model engineers.)",
-      "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimi (SwarmEvolve introduces novel agent‑swarm methods, appealing to AI‑research‑focused readers.)",
-      "Ethan Mollick: One ongoing frustration is the lack of effort I see bei (Ethan Mollick’s voice adds investor‑level perspective, filling our empty voices area.)"
+      "Sources: TSMC is considering expanding into manufacturing 3D DRAM at t (TSMC considering 3D DRAM manufacturing for Nvidia highlights crucial hardware supply chain adjustments amid memory shortages.)",
+      "Asian tech stocks plunge amid fears US Democrats may delay data center (Asian tech stocks plunge following Democratic majorities and data center headwinds show immediate macroeconomic impact.)",
+      "Perplexity rolls out Teammates, an always-on AI agent system that inte (Perplexity rolls out Teammates, expanding agentic workflows into always-on organizational roles.)",
+      "Sources: Democrats are eyeing Apple, Meta, and Elon Musk-led companies (Incoming congressional majority targeting major tech firms signals a major regulatory and antitrust turning point.)",
+      "Employees at Microsoft, long known for its stability in the industry,  (Microsoft offering buyouts to 60,000 employees highlights workforce restructuring driven by heavy AI infrastructure spending.)"
     ],
     "thin_areas": [
-      "research",
-      "voices"
+      "policy",
+      "india"
     ],
     "searches": [
-      "AI data center regulations 2026: 2 new",
-      "latest AI reproducibility benchmarks: 0 new",
-      "Ethan Mollick AI investment outlook: 0 new"
+      "US data center restrictions opposition governors: 2 new",
+      "Nvidia 3D DRAM TSMC memory shortages: 1 new",
+      "Perplexity Teammates AI agents work: 6 new"
     ],
     "dig_deeper": [
-      "Merge builds product and business tools with OpenAI technology",
-      "Ethan Mollick: One ongoing frustration is the lack of effort I see bei"
+      "Sources: TSMC is considering expanding into manufacturing 3D DRAM at t",
+      "Sources: Democrats are eyeing Apple, Meta, and Elon Musk-led companies"
     ]
   },
   "judged": 80,
-  "kept": 12,
+  "kept": 29,
   "research": {
     "investigated": 5,
-    "confirmed": 2,
-    "tool_calls": 17
+    "confirmed": 1,
+    "tool_calls": 18
   },
   "research_log": [
-    "NVIDIA Jensen Huang Summoned By U . S . Congress For A Closed Door Bri: unconfirmed (searched “Jensen Huang summoned by US Congress closed door briefing executive federal spy probe”; read msn.com; searched “Reuters Jensen Huang closed door briefing Congress Chinese spy”; read reuters.com)",
-    "Nvidia H200 chips await China approval in Hong Kong , Reuters reports: unconfirmed (searched “Nvidia H200 chips China approval Hong Kong Reuters”; read msn.com; read streetinsider.com; read cryptobriefing.com)",
-    "3 allegedly used AI to steal some $129 million from companies by imper: confirmed (searched “AI steal $129 million impersonating executives lawyers”; read livemint.com; read scmp.com)",
-    "Activists breach Microsoft data centre construction site as protests s: confirmed (searched “\"Stop Dirty Data Centres\" activists Microsoft data centre protest Europe”; read theverge.com; read theguardian.com)",
-    "AvenuesAI Q2 Net Profit Rises 6% YoY To ₹72 Cr, Revenue Up 47%: unconfirmed (searched “AvenuesAI Q2 net profit rises 6% YoY to ₹72 Cr revenue up 47%”; searched “AvenuesAI Infibeam Avenues Q2 results net profit 71.7 Cr”; searched “AvenuesAI Q2 results revenue 47% profit”)"
+    "Sources: TSMC is considering expanding into manufacturing 3D DRAM at t: unconfirmed (searched “TSMC considering 3D DRAM Nvidia Qianer Liu The Information”; read kucoin.com; searched “TSMC advanced memory chip 3D DRAM Nvidia source The Information”; searched “TSMC 3D DRAM Nvidia request memory chip shortage Reuters November 2026”)",
+    "Employees at Microsoft, long known for its stability in the industry, : confirmed (searched “Microsoft buyouts 60000 Emmy Martin New York Times”; read nbcnewyork.com; read nytimes.com)",
+    "Asian tech stocks plunge amid fears US Democrats may delay data center: unconfirmed (searched “Asian tech stocks plunge US Democrats delay data centers Taiex Kospi Nikkei”; read msn.com; read unite.ai; searched “\"Kospi\" 8.7% \"Nikkei\" 6.7% data center”)",
+    "Perplexity rolls out Teammates, an always-on AI agent system that inte: unconfirmed (searched “Perplexity Teammates Emma Roth The Verge”; read msn.com; read theverge.com; read techrepublic.com)",
+    "Claude Code sends your email address to websites: unconfirmed (searched “Claude Code sends your email address to websites”; searched “\"Claude Code\" email address sent to websites”; searched “Claude Code email privacy issue”)"
+  ],
+  "threads": [
+    "Microsoft buyout offers amid AI spending shift: Microsoft offers voluntary buyouts to 60,000 employees as AI",
+    "Post midterm policy sparks data center clash: Asian tech stocks plunge amid fears US Democrats may delay d",
+    "Post midterm policy sparks data center clash: OpenAI steps back from NDAs and promises full power costs fo",
+    "Sarvam AI expands defence partnership: Sarvam launches Prism open-weight decision model built on Sa"
   ],
   "videos": {
     "OpenAI": "ok (10 in feed, 0 new)",
@@ -461,7 +424,7 @@
     "Lex Fridman": "ok (14 in feed, 0 new)",
     "Dwarkesh Patel": "ok (15 in feed, 0 new)",
     "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (15 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 1 new)",
     "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
     "a16z": "ok (15 in feed, 0 new)",
     "Big Technology Podcast": "ok (12 in feed, 0 new)",
@@ -470,11 +433,11 @@
     "Lenny's Podcast": "ok (2 in feed, 0 new)",
     "20VC": "ok (3 in feed, 0 new)"
   },
-  "videos_kept": "8 kept from 8 new",
+  "videos_kept": "9 kept from 9 new",
   "tagged": 4,
-  "trackers": "filed 1 stories; updated ai-infrastructure",
+  "trackers": "filed 4 stories; updated india-ai, ai-infrastructure",
   "claims": "102 tracked, 97 open, 0 updated this run",
-  "model_tracker": "82 models, 32 changes today",
+  "model_tracker": "82 models, 33 changes today",
   "top_voices_sources": {
     "tv-mollick": "ok (0)",
     "tv-lambert": "ok (2)",
@@ -486,25 +449,35 @@
     "x-coverage": "ok (0 of 5 articles, bing)",
     "hn": "ok (2)"
   },
-  "briefing": "4 themes from 11 stories",
-  "india_briefing": "1 themes from 2 stories",
-  "photos": "4 saved, 0 unavailable",
-  "alerts": "37 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":26}",
-  "ai_requests_run": 40,
-  "ai_tokens_run": 112044,
-  "ai_requests_today": 57,
+  "top_voices": "2 debates from 50 posts by 9 people; 3 portraits, 3 pictures",
+  "briefing": "3 themes from 13 stories",
+  "india_briefing": "2 themes from 2 stories",
+  "photos": "2 saved, 0 unavailable",
+  "stock photos": "2 added",
+  "alerts": "39 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":30}",
+  "ai_requests_run": 46,
+  "ai_tokens_run": 122879,
+  "ai_requests_today": 103,
   "provider_log": [
-    "cerebras: payment required (402) — free quota used up or billing needed; skipping provider",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "gemini/gemini-flash-lite-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
+    "gemini/gemini-flash-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
+    "gemini/gemini-flash-lite-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
+    "gemini/gemini-flash-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
     "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "gemini/gemini-flash-lite-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
+    "gemini/gemini-flash-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
+    "gemini/gemini-flash-lite-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
+    "gemini/gemini-flash-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
+    "gemini/gemini-flash-lite-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
+    "gemini/gemini-flash-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
     "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
-    "groq/openai/gpt-oss-120b: model unavailable (400); trying next model",
-    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
-    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
-    "groq/qwen/qwen3.8-27b: request over its 7,000-token limit; retrying with a 1,502-token answer",
-    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
-    "groq/openai/gpt-oss-20b: model unavailable (400); trying next model"
+    "gemini/gemini-flash-lite-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
+    "gemini/gemini-flash-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
+    "gemini/gemini-flash-lite-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
+    "gemini/gemini-flash-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
+    "gemini/gemini-flash-lite-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
+    "gemini/gemini-flash-latest: HTTP 400: [{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Function call is missing a thought_signature in functionCall parts. This is required for tools to wor",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model"
   ]
 }

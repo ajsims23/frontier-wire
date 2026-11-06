@@ -1,14 +1,5 @@
 {
   "posts": {
-    "d7c3ad99dcd9": {
-      "id": "d7c3ad99dcd9",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mz42rhvdbc2z",
-      "person": "Ethan Mollick",
-      "text": "I was interviewed in Vox about my new book, and a question on the meaning of work let me discuss something I have been thinking a lot about, comparing the logic of industrialization to the logic of craft: \"You’re a hand-weaver in a world of power looms.\" www.vox.com/technology/5...",
-      "published": "2026-10-30T15:09:30.657Z",
-      "via": "Bluesky",
-      "kind": "post"
-    },
     "4e2c9c66b20a": {
       "id": "4e2c9c66b20a",
       "url": "https://simonwillison.net/2026/Oct/30/nesformer",
@@ -490,33 +481,49 @@
       "published": "2026-11-06T14:48:24+00:00",
       "via": "Latent Space",
       "kind": "post"
+    },
+    "b18e8924e9aa": {
+      "id": "b18e8924e9aa",
+      "url": "https://latent.space/p/controlling-biology-fabian-theis-helmholtz-munich",
+      "person": "swyx",
+      "text": "Controlling Biology - Fabian Theis, Helmholtz Munich. Fabian Theis has been one of the key players in the various iterations of the Virtual Cell concept and initiatives. It is not hyperbole at all to say that his lab has been pushing the frontier of algorithms to understand multi-scale, multi-modal (”multiomics”), time-varying biological data. Indeed, he has shaped the large scale vision and data collection through his leadership at Helmholtz, various startups and probably at Biohub itself. Watch the full episode on YouTube… Much of the recent attention in AI x Bio has been on protein and molecular design. AlphaFold, ESM and BioHub , Chai , Leash , Isomporphic, Boltz , Genesis , Octant,…",
+      "published": "2026-11-06T15:10:53+00:00",
+      "via": "Latent Space",
+      "kind": "post"
     }
   },
   "digest": {
-    "written_at": "2026-11-04T19:14:51+00:00",
-    "range": "28 Oct – 4 Nov 2026",
-    "headline": "AI breakthroughs clash with market woes as weight‑space programming, open‑model metrics, and trust in code spark debate",
+    "written_at": "2026-11-06T15:20:10+00:00",
+    "range": "30 Oct – 6 Nov 2026",
+    "headline": "AI leaders are debating direct weight manipulation capabilities while navigating market turbulence and new technical workflows.",
     "debates": [
       {
-        "title": "Weight‑space programming: breakthrough or hype?",
-        "summary": "New papers claim LLMs can read and edit neural network weights, promising performance gains, but critics warn the results may be overstated and raise safety concerns. The discussion intensifies as multiple teams replicate the technique on different models.",
+        "title": "Can LLMs natively edit their own weights?",
+        "summary": "A major new research paper demonstrates that frontier language models can natively read and write raw neural network weights, sparking discussions about bypassing traditional training loops. Researchers and developers are exploring the implications of directly editing model weights to fix reasoning loops and enhance capabilities without gradients.",
         "positions": [
           {
-            "person": "swyx",
-            "stance": "Calls the paper’s claims overly favorable yet treats the finding as a significant wake‑up moment that should not be retracted.",
+            "person": "Simon Willison",
+            "stance": "Demonstrates that smaller, open models like Qwen running locally can also perform weight-space programming and interpret raw model weights.",
             "posts": [
               {
-                "id": "e9efb1446d7a",
-                "url": "https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai",
-                "via": "Latent Space",
+                "id": "9b0f1b3870f8",
+                "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights",
+                "via": "Simon Willison",
                 "kind": "post",
-                "date": "2026-11-04"
+                "date": "2026-11-03"
+              },
+              {
+                "id": "58b2621d532f",
+                "url": "https://bsky.app/profile/simonwillison.net/post/3mzgb77cpis2w",
+                "via": "Bluesky",
+                "kind": "post",
+                "date": "2026-11-03"
               }
             ]
           },
           {
             "person": "Ethan Mollick",
-            "stance": "Reports that editing a tiny fraction of weights in Qwen3.5 dramatically improves math and instruction following, viewing it as a major breakthrough.",
+            "stance": "Points to experiments where editing model weights directly improved math and reasoning without traditional training or gradients.",
             "posts": [
               {
                 "id": "1818a08f7975",
@@ -528,120 +535,98 @@
             ]
           },
           {
-            "person": "Simon Willison",
-            "stance": "Shows that Qwen 3.8 can interpret model weights and shares his excitement about the capability.",
+            "person": "swyx",
+            "stance": "Contextualizes weight-space programming as a development that cuts autoresearch out of the recursive self-improvement loop.",
             "posts": [
               {
-                "id": "9b0f1b3870f8",
-                "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights",
-                "via": "Simon Willison",
+                "id": "360a3a5d8e13",
+                "url": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of",
+                "via": "Latent Space",
                 "kind": "post",
                 "date": "2026-11-03"
               }
             ]
           }
         ],
-        "image": "img/voices/e9efb1446d7a.jpg",
+        "image": "img/voices/360a3a5d8e13.jpg",
         "image_credit": "Latent Space",
-        "video": "QmDLDy3ZSNE"
+        "video": "2YWfVGpVtvc"
       },
       {
-        "title": "Open‑model economy: measuring adoption amid security fears",
-        "summary": "Nathan Lambert’s dashboard highlights the difficulty of accurately tracking open‑model usage, while recent vulnerability disclosures raise alarm about the cyber risks of openly available models. The community debates how to gauge growth without ignoring emerging threats.",
+        "title": "Is an AI bear market impacting adoption?",
+        "summary": "The tech community is weighing the tension between financial turbulence in the AI sector and the continued rapid adoption of AI technology by companies. While some observe signs of an AI bear market and drops in search revenue, others emphasize that commercial adoption and development remain entirely unaffected.",
         "positions": [
           {
-            "person": "Nathan Lambert",
-            "stance": "Notes that current metrics for open‑model adoption are noisy and imprecise, urging careful analysis.",
+            "person": "Ethan Mollick",
+            "stance": "Argues that any financial downturn in AI stocks will not slow down corporate adoption, development, or the overall trajectory of AI.",
             "posts": [
               {
-                "id": "93ee83f44d29",
-                "url": "https://interconnects.ai/p/how-well-can-we-measure-open-model",
-                "via": "Interconnects",
+                "id": "1467977a5a54",
+                "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzm3zygknk24",
+                "via": "Bluesky",
                 "kind": "post",
-                "date": "2026-11-04"
-              }
-            ]
-          }
-        ],
-        "image": "img/voices/93ee83f44d29.jpg",
-        "image_credit": "Interconnects",
-        "video": "zsO5RktNB7k"
-      },
-      {
-        "title": "LLMs eroding trust in software documentation",
-        "summary": "Quotes from Kyle Kingsbury, shared by Simon Willison, argue that generative AI makes documentation and code harder to verify, prompting a call for new maintainer practices. Engineers discuss how to preserve reliability in an AI‑augmented workflow.",
-        "positions": [
-          {
-            "person": "Simon Willison",
-            "stance": "Highlights Kyle Kingsbury’s claim that LLMs undermine confidence in documentation and urges maintainers to devise ways to prove quality.",
-            "posts": [
-              {
-                "id": "7a06514023fd",
-                "url": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury",
-                "via": "Simon Willison",
-                "kind": "post",
-                "date": "2026-11-01"
+                "date": "2026-11-06"
               }
             ]
           },
           {
-            "person": "Ethan Mollick",
-            "stance": "Points out that the Labs’ approach treats software as a short‑term fundraising tool, which fuels skepticism about long‑term reliability.",
+            "person": "swyx",
+            "stance": "Highlights financial turbulence including lowered bond ratings, startup funding headlines, and Google's search revenue drop amid an AI bear market.",
             "posts": [
               {
-                "id": "a38a31fd70bd",
-                "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzdotrufck2l",
-                "via": "Bluesky",
+                "id": "4505f5f4bd09",
+                "url": "https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c",
+                "via": "Latent Space",
                 "kind": "post",
-                "date": "2026-11-02"
+                "date": "2026-10-31"
+              },
+              {
+                "id": "360a3a5d8e13",
+                "url": "https://latent.space/p/ainews-llms-can-read-write-neural-network-weights-weight-space-programming-cuts-autoresearch-out-of",
+                "via": "Latent Space",
+                "kind": "post",
+                "date": "2026-11-03"
               }
             ]
           }
-        ]
+        ],
+        "video": "35ZWesLrv5A"
       }
     ],
     "standouts": [
       {
-        "id": "1818a08f7975",
-        "person": "Ethan Mollick",
-        "why": "Claims a 6× math improvement from editing just 0.016% of model weights, a striking performance boost.",
-        "url": "https://bsky.app/profile/emollick.bsky.social/post/3mze7rbg2fc2l",
-        "via": "Bluesky",
+        "id": "cd8de1315312",
+        "person": "Dwarkesh Patel",
+        "why": "A fascinating look at using social deception games like Blood on the Clocktower to evaluate complex AI reasoning and bluffing capabilities.",
+        "url": "https://dwarkesh.com/p/clocktower",
+        "via": "Dwarkesh Podcast",
         "kind": "post",
-        "title": "If this holds up, it is big: \"We asked GPT-6 Astra to edit Qwen3.5-0.8B weights to improve math. It directly changed…"
+        "title": "The benchmark where AIs have to lie to win. I’m a big fan of this social deception game called Blood on the Clocktower…",
+        "image": "img/voices/cd8de1315312.jpg",
+        "video": "1NQwfImTseU"
       },
       {
-        "id": "93ee83f44d29",
-        "person": "Nathan Lambert",
-        "why": "Provides the most comprehensive dashboard for tracking open‑model adoption across the ecosystem.",
-        "url": "https://interconnects.ai/p/how-well-can-we-measure-open-model",
-        "via": "Interconnects",
+        "id": "a7e11bfba6b1",
+        "person": "Andrej Karpathy",
+        "why": "Karpathy details how he used Opus 5.5 in a single night to build HackerTube as an antidote to algorithmic slop.",
+        "url": "https://karpathy.bearblog.dev/hacker-tube",
+        "via": "Karpathy's blog",
         "kind": "post",
-        "title": "How big is the open model economy today?. My longest running agent testbed has been building the Interconnects…",
-        "video": "zsO5RktNB7k"
-      },
-      {
-        "id": "7a06514023fd",
-        "person": "Simon Willison",
-        "why": "Raises fundamental concerns about how AI‑generated code and docs threaten trust in software engineering.",
-        "url": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury",
-        "via": "Simon Willison",
-        "kind": "post",
-        "title": "Quoting Kyle Kingsbury. More broadly, the use of LLMs erodes trust in documentation, in software, and in the…"
+        "title": "HackerTube. It was Friday night at 11pm, I was tired, I went to YouTube to watch something and realized that I was…",
+        "image": "img/voices/a7e11bfba6b1.jpg"
       }
     ],
     "people": [
       "Ethan Mollick",
-      "Nathan Lambert",
       "Simon Willison",
       "swyx"
     ],
     "from_posts": 50,
-    "reported": 0,
+    "reported": 1,
     "portraits": {
       "Simon Willison": "img/people/simon-willison.jpg",
-      "Ethan Mollick": "img/people/ethan-mollick.jpg",
-      "swyx": "img/people/swyx.jpg"
+      "swyx": "img/people/swyx.jpg",
+      "Ethan Mollick": "img/people/ethan-mollick.jpg"
     },
     "portrait_credits": [
       "Bluesky"
@@ -687,6 +672,11 @@
       "file": "",
       "credit": "",
       "checked": "2026-11-01T07:17:09+00:00"
+    },
+    "Dwarkesh Patel": {
+      "file": "",
+      "credit": "",
+      "checked": "2026-11-06T15:20:10+00:00"
     }
   }
 }
