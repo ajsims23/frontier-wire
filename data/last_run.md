@@ -1,21 +1,37 @@
-## Frontier Wire breaking-news check — 2026-11-06T02:23:01+00:00
+## Frontier Wire newsroom run — 2026-11-06T04:08:48+00:00
 
-Fetched 2436 items · fresh 2 · judged 2 · kept 0 · **written 0**
-AI: 1 requests, 5,714 tokens this run · 9 requests today · providers: cerebras, groq
+Fetched 2935 items · fresh 150 · judged 0 · kept 0 · **written 0**
+AI: 1 requests, 6,401 tokens this run · 10 requests today · providers: cerebras, groq
+Editor-in-chief: Tracking post‑midterm data‑center policy backlash while covering big AI financing moves and enterprise tool rollouts.
+  Priorities: Anthropic may need to cut IPO ambitions as investors balk: report (Anthropic IPO risk signals financing challenges for leading AI startups, crucial for investors.); Sources: Thinking Machines Lab is raising $5B led by Accel at a $40B p (Thinking Machines Lab $5B raise shows scale of AI compute funding, relevant to strategy readers.); Merge builds product and business tools with OpenAI technology (Merge's OpenAI‑powered product suite illustrates new business tools emerging from foundation models.); Franklin Templeton uses OpenAI to support investment research (Franklin Templeton's use of OpenAI for investment research highlights AI penetration in finance.); Perplexity rolls out Teammates, an always-on AI agent system that inte (Perplexity Teammates AI agent system shows enterprise‑grade multi‑role agents, key for builders.)
+  Thin areas: research, voices
+  Searches: AI data center policy 2026: 6 new; SpaceX AI chip financing: 5 new; AI interpretability benchmarks: 0 new
+  Dig deeper: Anthropic may need to cut IPO ambitions as investors balk: report; Sources: Thinking Machines Lab is raising $5B led by Accel at a $40B p
+Videos: no new videos · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
 Photos: 0 saved, 0 unavailable
-Alerts: 7 events sent: {"subscribers":8,"sent":0,"queued":0}
+Alerts: 11 events sent: {"subscribers":7,"sent":0,"queued":2}
+Claims: 102 tracked, 97 open
 Trackers: filed 0 stories; no tracker changed
-Time: gather 14s, judge 2s
+Model tracker: 82 models, 11 changes today
+Time: gather 80s, plan 4s, judge 3s, videos 1s, briefing 28s
 
 ### New stories
 - none
 
-<details><summary>Dropped</summary>
-
-- Australian universities are creating AI-native graduates — score 3: The piece reports on Australian universities expanding ChatGPT access and AI curricula. While AI is central, the story is a routine education initiative without a frontier model release, policy change, or major funding. It scores low on significance for Frontier Wire’s audience.
-- Cult.fit builds operational muscle with Codex — score 4: Cult.fit’s internal use of Codex is a standard corporate adoption story. It lacks a notable product launch, large‑scale financing, or broader industry impact, making it a low‑significance item for the target readership.
-
-</details>
+### Sources with problems
+- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
 
 ### Notes
+- judging skipped: every configured provider failed: groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-arabic-saudi (update settings.yaml when convenient) | groq/qwen/qwen3.8-27b: HTTP 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input | groq/openai/gpt-oss-20b: HTTP 413: {"error":{"message":"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok | groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {"error":{"message":"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons
+- top voices skipped: every configured provider failed: groq/openai/gpt-oss-20b: HTTP 413: {"error":{"message":"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok | groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {"error":{"message":"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons | cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require | groq/openai/gpt-oss-120b: HTTP 413: {"error":{"message":"Request too large for model `openai/gpt-oss-120b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on to
 - cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
+- cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
+- groq/openai/gpt-oss-120b: HTTP 413: {"error":{"message":"Request too large for model `openai/gpt-oss-120b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on to
+- groq/llama-3.3-70b-versatile: model unavailable (404); trying next model
+- groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-arabic-saudi (update settings.yaml when convenient)
+- groq/qwen/qwen3.8-27b: HTTP 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input
+- groq/openai/gpt-oss-20b: HTTP 413: {"error":{"message":"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok
+- groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {"error":{"message":"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons
+- cerebras/gpt-oss-120b: HTTP 402: {"message":"Payment required to access this resource. Visit your billing tab.","type":"payment_required_error","param":"quota","code":"payment_require
+- groq/openai/gpt-oss-120b: HTTP 413: {"error":{"message":"Request too large for model `openai/gpt-oss-120b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on to
