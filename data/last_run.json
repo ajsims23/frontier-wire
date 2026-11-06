@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-06T04:08:48+00:00",
+  "started_at": "2026-11-06T07:31:50+00:00",
   "review_mode": false,
   "providers": [
     "cerebras",
@@ -18,9 +18,9 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (13)",
+    "hf-papers": "ok (15)",
     "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (18)",
+    "hn": "ok (14)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -42,54 +42,54 @@
   "dropped": [],
   "written": [],
   "notes": [
-    "judging skipped: every configured provider failed: groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-arabic-saudi (update settings.yaml when convenient) | groq/qwen/qwen3.8-27b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input | groq/openai/gpt-oss-20b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok | groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons",
-    "top voices skipped: every configured provider failed: groq/openai/gpt-oss-20b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok | groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq/openai/gpt-oss-120b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on to"
+    "judging skipped: every configured provider failed: groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-v1-english (update settings.yaml when convenient) | groq/qwen/qwen3.8-27b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input | groq/openai/gpt-oss-20b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok | groq/canopylabs/orpheus-v1-english: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-v1-english` requires terms acceptance. Please have the org admin accept the terms at https://consol",
+    "top voices skipped: every configured provider failed: groq/openai/gpt-oss-20b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok | groq/canopylabs/orpheus-v1-english: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-v1-english` requires terms acceptance. Please have the org admin accept the terms at https://consol | cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require | groq: 429 after retry; moving to next provider for this run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 80.5,
+    "gather": 82.8,
     "audit": 0.0,
-    "plan": 4.2,
-    "judge": 3.2,
-    "verify and write": -0.0,
-    "videos": 1.3,
-    "tagging": -0.0,
-    "explainers": -0.0,
-    "trackers": -0.0,
-    "claims": -0.0,
-    "model tracker": 0.0,
-    "weekly": 0.0,
-    "builders": 0.0,
-    "briefing": 27.8,
-    "self-review": 0.0,
+    "plan": 4.5,
+    "judge": 2.8,
+    "verify and write": 0.0,
+    "videos": 1.7,
+    "tagging": 0.0,
+    "explainers": 0.0,
+    "trackers": 0.0,
+    "claims": 0.0,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "briefing": 27.1,
+    "self-review": -0.0,
     "photos": 0.0,
     "stock photos": 0.0,
     "daily email": 0.0,
-    "alerts": 0.6
+    "alerts": 1.0
   },
-  "fetched": 2935,
-  "fresh": 150,
+  "fetched": 2933,
+  "fresh": 152,
   "plan": {
-    "focus": "Tracking post‑midterm data‑center policy backlash while covering big AI financing moves and enterprise tool rollouts.",
+    "focus": "Tracking post‑midterm data‑center policy backlash and its impact on AI financing and enterprise deployments.",
     "priorities": [
-      "Anthropic may need to cut IPO ambitions as investors balk: report (Anthropic IPO risk signals financing challenges for leading AI startups, crucial for investors.)",
-      "Sources: Thinking Machines Lab is raising $5B led by Accel at a $40B p (Thinking Machines Lab $5B raise shows scale of AI compute funding, relevant to strategy readers.)",
-      "Merge builds product and business tools with OpenAI technology (Merge's OpenAI‑powered product suite illustrates new business tools emerging from foundation models.)",
-      "Franklin Templeton uses OpenAI to support investment research (Franklin Templeton's use of OpenAI for investment research highlights AI penetration in finance.)",
-      "Perplexity rolls out Teammates, an always-on AI agent system that inte (Perplexity Teammates AI agent system shows enterprise‑grade multi‑role agents, key for builders.)"
+      "Palo Alto Networks in talks to buy AI agent security startup Clutch fo (Major AI security M&A; signals market consolidation and security focus for builders and investors.)",
+      "NY-based Kalepa, whose AI platform supports insurance underwriting, pr (Series B for AI underwriting platform; illustrates AI finance use cases and funding trends.)",
+      "OpenAI launches GPT-6 Cyber with 'Critical' cybersecurity rating (OpenAI's GPT‑6 Cyber launch ties model safety to policy fallout, crucial for risk‑aware readers.)",
+      "User Embeddings are Superpositions of Interpretable Behavioral Modes (Research paper on user embeddings fills thin research area and offers actionable insights for product teams.)",
+      "Ethan Mollick: One ongoing frustration is the lack of effort I see bei (Ethan Mollick voice adds perspective to under‑covered voices area and sparks discussion on AI impact.)"
     ],
     "thin_areas": [
       "research",
       "voices"
     ],
     "searches": [
-      "AI data center policy 2026: 6 new",
-      "SpaceX AI chip financing: 5 new",
-      "AI interpretability benchmarks: 0 new"
+      "AI data center policy midterm fallout: 4 new",
+      "Box Nemotron embedding rollout: 2 new",
+      "new mechanistic interpretability benchmarks: 0 new"
     ],
     "dig_deeper": [
-      "Anthropic may need to cut IPO ambitions as investors balk: report",
-      "Sources: Thinking Machines Lab is raising $5B led by Accel at a $40B p"
+      "Palo Alto Networks in talks to buy AI agent security startup Clutch fo",
+      "OpenAI launches GPT-6 Cyber with 'Critical' cybersecurity rating"
     ]
   },
   "videos": {
@@ -105,12 +105,12 @@
     "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Lex Fridman": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
     "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
@@ -119,7 +119,7 @@
   },
   "trackers": "filed 0 stories; no tracker changed",
   "claims": "102 tracked, 97 open",
-  "model_tracker": "82 models, 11 changes today",
+  "model_tracker": "82 models, 21 changes today",
   "top_voices_sources": {
     "tv-mollick": "ok (0)",
     "tv-lambert": "ok (2)",
@@ -128,24 +128,24 @@
     "tv-raschka": "ok (0)",
     "tv-karpathy": "ok (1)",
     "tv-evans": "ok (0)",
-    "x-coverage": "ok (0 of 4 articles, bing)",
+    "x-coverage": "ok (1 of 5 articles, bing)",
     "hn": "ok (2)"
   },
   "photos": "0 saved, 0 unavailable",
-  "alerts": "11 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":2}",
+  "alerts": "21 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":8}",
   "ai_requests_run": 1,
-  "ai_tokens_run": 6401,
-  "ai_requests_today": 10,
+  "ai_tokens_run": 6574,
+  "ai_requests_today": 11,
   "provider_log": [
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
     "groq/openai/gpt-oss-120b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on to",
     "groq/llama-3.3-70b-versatile: model unavailable (404); trying next model",
-    "groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-arabic-saudi (update settings.yaml when convenient)",
+    "groq: listed models retired; trying qwen/qwen3.8-27b, openai/gpt-oss-20b, canopylabs/orpheus-v1-english (update settings.yaml when convenient)",
     "groq/qwen/qwen3.8-27b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on input",
     "groq/openai/gpt-oss-20b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on tok",
-    "groq/canopylabs/orpheus-arabic-saudi: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-arabic-saudi` requires terms acceptance. Please have the org admin accept the terms at https://cons",
+    "groq/canopylabs/orpheus-v1-english: HTTP 400: {\"error\":{\"message\":\"The model `canopylabs/orpheus-v1-english` requires terms acceptance. Please have the org admin accept the terms at https://consol",
     "cerebras/gpt-oss-120b: HTTP 402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_require",
-    "groq/openai/gpt-oss-120b: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01m5f76hpme70svswvfnz1wxpn` service tier `on_demand` on to"
+    "groq: 429 after retry; moving to next provider for this run"
   ]
 }
