@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-06T18:31:49+00:00",
+  "started_at": "2026-11-06T19:09:06+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -17,46 +17,242 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (15)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (20)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
   },
-  "dropped": [],
+  "dropped": [
+    {
+      "title": "University libraries are being swarmed by AI bots, putting public access at risk",
+      "reason": "score 3: University libraries being swarmed by automated web bots and scrapers is a general web scraping and access issue rather than core AI model or infrastructure news."
+    },
+    {
+      "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
+      "reason": "not AI: FAA phasing out floppy disks from air traffic control has no AI relevance."
+    },
+    {
+      "title": "We've built an open-source feature flag server for 11 years",
+      "reason": "not AI: An open-source feature flag server announcement is standard software tooling news with no AI relevance."
+    },
+    {
+      "title": "AI is the new dating dealbreaker",
+      "reason": "score 3: Cultural commentary on AI and dating apps, not core frontier AI news."
+    },
+    {
+      "title": "How Akai and Moog are embracing vibe-coded mods",
+      "reason": "not AI: Music hardware modding discussion with no significant AI angle."
+    },
+    {
+      "title": "Could potential AI clones of GTA VI force a quicker official port?",
+      "reason": "not AI: Speculation about GTA VI and AI clones, not a concrete AI news release."
+    },
+    {
+      "title": "Motorola Signature 27 launched: 200MP camera, Gemini AI, 7,000mAh battery and GrapheneOS support — what’s new?",
+      "reason": "score 4: Consumer smartphone launch with routine Gemini AI inclusion; minor consumer tech news."
+    },
+    {
+      "title": "Rising memory costs may push mobile prices up 30%, could trigger second-hand device market: Jefferies",
+      "reason": "score 5: General market report on rising memory costs driven by AI demand affecting smartphone prices; too broad and macro."
+    },
+    {
+      "title": "Quoting Nilay Patel",
+      "reason": "score 4: Short quote and commentary on AI product value and costs, duplicating Simon Willison's post."
+    },
+    {
+      "title": "Simon Willison: Loved this riff about AI products by @reckless.bsky.social on the latest episode of the Vergecast - \"The products aren't good enough to…",
+      "reason": "score 4: Social media commentary on a podcast discussion regarding AI product viability and costs; routine commentary without novel primary reporting."
+    },
+    {
+      "title": "Elon Musk says US government contracts will account for under 10% of SpaceX's revenue this quarter, down from 16.6% last quarter and around 20% in 2025 (Bloomberg)",
+      "reason": "score 4: Elon Musk discussing SpaceX revenue diversification away from government contracts has only indirect links to AI chip financing and infrastructure."
+    },
+    {
+      "title": "The US DOJ indicts three foreign nationals for allegedly using AI to impersonate CEOs and attorneys at major international law firms in a $129M+ fraud scheme (Rebecca Cohen/NBC News)",
+      "reason": "duplicate of 2e8b2dae8868"
+    },
+    {
+      "title": "Researcher: *sshole, a decade-old OpenSSH flaw, lets attackers use a password of 256+ characters to log into passwordless accounts on some musl Linux systems (Lawrence Abrams/BleepingComputer)",
+      "reason": "not AI: General cybersecurity OpenSSH flaw with no AI relevance."
+    },
+    {
+      "title": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    }
+  ],
   "written": [
     {
-      "id": "bc8f9eac1966",
-      "headline": "OpenAI partners with Hacktron to find vulnerabilities",
-      "category": "safety",
-      "summary": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.",
-      "url": "https://openai.com/index/partnering-with-hacktron",
-      "sources": 1,
+      "id": "fc8f30aee8f3",
+      "headline": "U.S. midterm elections bring voter backlash and new restrictions for AI data centers",
+      "category": "policy",
+      "summary": "Democratic victories in the 2026 U.S. midterms coincided with voters passing 40 out of 41 ballot measures to restrict data center development. Newly elected Democratic governors and members of Congress are also expected to push for increased regulation of Big Tech and AI.",
+      "url": "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry",
+      "sources": 7,
+      "quotes": 1
+    },
+    {
+      "id": "7c70b636a2cf",
+      "headline": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+      "category": "industry",
+      "summary": "A new report from Ramp shows AI spending flatlined over late summer even as token volumes rose, driven by price competition and savvier customers. Token spend grew only 1.5% across August and September, compared to a 42% increase in July.",
+      "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo",
+      "sources": 2,
+      "quotes": 1
+    },
+    {
+      "id": "233e6bc4476f",
+      "headline": "Microsoft ends Oracle AI cloud rental as older Nvidia GPUs become obsolete",
+      "category": "industry",
+      "summary": "Microsoft has stopped renewing its 2023 agreement to rent AI computing capacity from Oracle, turning off the rented capacity in recent months. The move is attributed to Oracle’s use of older‑generation Nvidia GPUs that no longer meet Microsoft’s AI workload needs.",
+      "url": "https://techmeme.com/261106/p18",
+      "sources": 6,
       "quotes": 0
+    },
+    {
+      "id": "9d00431e265d",
+      "headline": "Meta pauses commercial terms update that would have allowed AI training on linked sites",
+      "category": "policy",
+      "summary": "Meta has indefinitely delayed planned updates to its commercial terms that would have required business account users to allow AI training on external websites linked on Facebook. The changes, originally set to take effect October 30 and later pushed to November 20, 2026, were paused after court injunctions in Brazil and Norway and a UK CMA investigation.",
+      "url": "https://arstechnica.com/tech-policy/2026/11/does-meta-think-we-cant-read-meta-abandons-sketchy-commercial-terms-update",
+      "sources": 3,
+      "quotes": 2
     }
   ],
   "notes": [],
-  "mode": "breaking",
+  "mode": "full",
   "timings": {
-    "gather": 9.5,
-    "judge": 1.1,
-    "verify and write": 4.0,
-    "tagging": 0.9,
-    "trackers": 0.6,
-    "photos": 0.0,
-    "stock photos": 8.2,
-    "alerts": 6.5
+    "gather": 78.7,
+    "audit": 0.0,
+    "plan": 2.2,
+    "judge": 7.8,
+    "verify and write": 207.3,
+    "videos": 55.7,
+    "tagging": 4.5,
+    "explainers": 2.6,
+    "trackers": 55.3,
+    "claims": 2.8,
+    "model tracker": 0.2,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 7.6,
+    "self-review": 0.0,
+    "photos": 0.6,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 6.2
   },
-  "fetched": 2438,
-  "fresh": 1,
-  "judged": 1,
-  "kept": 1,
-  "threads": [
-    "OpenAI security patch and bounty program: OpenAI partners with Hacktron to find vulnerabilities"
+  "fetched": 2941,
+  "fresh": 22,
+  "plan": {
+    "focus": "Chasing the fallout from the US midterms on AI infrastructure while tracking enterprise spending adjustments and cloud shifts.",
+    "priorities": [
+      "Sources: Microsoft has been turning off rented computing capacity from (Microsoft cutting rented Oracle capacity highlights changing infrastructure demands and hardware priorities.)",
+      "Ramp data shows AI spending stalling just as Anthropic nears its IPO (Ramp spending data showing AI stall coincides with Anthropic's IPO approach.)",
+      "How a Blue Wave midterm might reshape the AI industry (Analysis on how the midterm blue wave reshapes federal oversight and industry policy.)",
+      "Meta introduces Spaces, a new way to collaborate with your Muse agent (Meta's launch of Spaces and custom Muse agent collaboration features.)",
+      "Elon Musk says US government contracts will account for under 10% of S (SpaceX revenue diversification away from US government contracts.)"
+    ],
+    "thin_areas": [
+      "voices",
+      "india"
+    ],
+    "searches": [
+      "Microsoft Oracle cloud hardware older chips: 5 new",
+      "Meta Muse Spaces AI agent features: 1 new"
+    ],
+    "dig_deeper": [
+      "Sources: Microsoft has been turning off rented computing capacity from",
+      "Ramp data shows AI spending stalling just as Anthropic nears its IPO"
+    ]
+  },
+  "judged": 28,
+  "kept": 6,
+  "research": {
+    "investigated": 4,
+    "confirmed": 3,
+    "tool_calls": 13
+  },
+  "research_log": [
+    "How a Blue Wave midterm might reshape the AI industry: confirmed (searched “Blue Wave midterm AI industry data center ballot measures TechCrunch”; read venturebeat.com; read apnews.com)",
+    "Ramp data shows AI spending stalling just as Anthropic nears its IPO: confirmed (searched “Ramp data AI spending stalling Anthropic IPO”; searched “\"Ramp\" AI spending stalling Anthropic”; read newsbytesapp.com)",
+    "Sources: Microsoft has been turning off rented computing capacity from: unconfirmed (searched “Microsoft turning off Oracle AI cloud capacity Bloomberg”; read thehindubusinessline.com; read indiatimes.com; searched “Bloomberg Microsoft winding down Oracle AI computing capacity”)",
+    "“Does Meta think we can’t read?” Meta abandons sketchy commercial term: confirmed (searched “Meta abandons commercial terms update AI training page owners not forced”; read indiatimes.com; read msn.com)"
   ],
-  "tagged": 1,
-  "trackers": "filed 0 stories; no tracker changed",
-  "photos": "0 saved, 0 unavailable",
-  "stock photos": "0 added",
-  "alerts": "41 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":6}",
-  "ai_requests_run": 5,
-  "ai_tokens_run": 7538,
-  "ai_requests_today": 182,
-  "provider_log": []
+  "threads": [
+    "Anthropic IPO valuation and spending trends: Ramp data shows AI spending stalling just as Anthropic nears",
+    "UK CMA probe and Meta commercial terms: Meta pauses commercial terms update that would have allowed "
+  ],
+  "videos": {
+    "OpenAI": "ok (10 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 4 new)",
+    "Google for Developers": "ok (9 in feed, 2 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 0 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 2 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 1 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "8 kept from 9 new",
+  "tagged": 4,
+  "explainers": "1 added to earlier stories",
+  "trackers": "filed 4 stories; updated ai-regulation, ai-infrastructure, ai-money",
+  "claims": "106 tracked, 101 open, 0 updated this run",
+  "model_tracker": "82 models, 39 changes today",
+  "briefing": "4 themes from 16 stories",
+  "photos": "4 saved, 0 unavailable",
+  "alerts": "48 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":29}",
+  "ai_requests_run": 34,
+  "ai_tokens_run": 89346,
+  "ai_requests_today": 216,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model",
+    "gemini: unreachable (ReadTimeout); skipping provider",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model"
+  ]
 }
