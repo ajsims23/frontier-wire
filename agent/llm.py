@@ -173,7 +173,7 @@ class LLM:
             break
         return resp
 
-    _PREFERRED = [r"gpt-oss-120b", r"nemotron-3.*super", r"kimi-k2", r"deepseek-v\d", r"qwen.*(235b|480b|coder)", r"llama.*(3\.3|4).*(70b|maverick|scout)", r"glm", r"qwen", r"llama", r"gpt-oss"]
+    _PREFERRED = [r"gpt-oss-120b", r"nemotron-3.*(ultra|super)", r"mistral-large", r"kimi-k2", r"deepseek-v\d", r"qwen.*(235b|480b|coder)", r"llama.*(3\.3|4).*(70b|maverick|scout)", r"glm", r"qwen", r"llama", r"gpt-oss"]
     # Not general chat models: embeddings, speech (Orpheus/PlayAI are text-to-speech), safety classifiers,
     # and narrow-language models such as ALLaM (Arabic) that can't do our structured English tasks.
     _NOT_CHAT = re.compile(r"embed|whisper|tts|guard|rerank|moderation|vision-preview|audio|image|"

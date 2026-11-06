@@ -77,7 +77,7 @@ async function llm(env, messages) {
     // Groq's free tier limits each model separately (~8k tokens/min, counting the answer space), so try two models with a smaller answer budget
     env.GROQ_API_KEY && { url: groq, key: env.GROQ_API_KEY, model: env.GROQ_MODEL || "openai/gpt-oss-120b", max: 2000 },
     env.GROQ_API_KEY && { url: groq, key: env.GROQ_API_KEY, model: "openai/gpt-oss-20b", max: 2000 },
-    env.NVIDIA_API_KEY && { url: "https://integrate.api.nvidia.com/v1/chat/completions", key: env.NVIDIA_API_KEY, model: "nvidia/nemotron-3-super-120b-a12b" },
+    env.NVIDIA_API_KEY && { url: "https://integrate.api.nvidia.com/v1/chat/completions", key: env.NVIDIA_API_KEY, model: "nvidia/nemotron-3-ultra-550b-a55b" },
     env.MISTRAL_API_KEY && { url: "https://api.mistral.ai/v1/chat/completions", key: env.MISTRAL_API_KEY, model: "mistral-medium-latest" },
     env.OPENROUTER_API_KEY && { url: "https://openrouter.ai/api/v1/chat/completions", key: env.OPENROUTER_API_KEY, model: "meta-llama/llama-3.3-70b-instruct:free" },
     // no longer free (402 without billing): last resort
