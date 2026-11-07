@@ -1,45 +1,40 @@
-## Frontier Wire newsroom run — 2026-11-07T09:58:57+00:00
+## Frontier Wire newsroom run — 2026-11-07T13:08:20+00:00
 
-Fetched 2941 items · fresh 9 · judged 9 · kept 6 · **written 4**
-AI: 35 requests, 70,563 tokens this run · 138 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking India's AI enterprise expansion alongside global cybersecurity risks and funding moves.
-  Priorities: India on right track in AI; firms moving from pilots to production: Or (Provides direct industry intelligence on Indian firms moving from AI pilots to full production.); VibeCode30 2026: The 30 AI-built products to watch from India (Highlights notable real-world AI products built in India during VibeCode30 2026.); Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI (Exposes critical security vulnerabilities regarding the ARTEX AI penetration testing tool.); Data centre bosses cash in on India's AI and cloud expansion with hand (Covers executive compensation trends amid India's rapid data center and cloud expansion.); Axon invests $1.2B in Skydio, whose autonomous drones are used by publ (Major defense and public safety AI investment deal involving Skydio and Axon.)
-  Thin areas: india, safety
-  Dig deeper: India on right track in AI; firms moving from pilots to production: Or; VibeCode30 2026: The 30 AI-built products to watch from India
-Research agent: investigated 5 stories with 14 tool calls, confirmed 4
+Fetched 2938 items · fresh 7 · judged 7 · kept 3 · **written 2**
+AI: 26 requests, 53,014 tokens this run · 164 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Tracking major cloud shifts and hiring trends in India amid broader market corrections.
+  Priorities: Microsoft is winding down Oracle deal to rent AI cloud capacity (Signals a significant shift in enterprise AI cloud infrastructure strategy between Microsoft and Oracle.); Why a new report on Anthropic automating AI development is alarming re (Critical research report on automated AI development with major implications for builders and researchers.); Nasscom President Rajesh Nambiar warns AI could make it harder for fre (Important industry and workforce warning from Nasscom regarding Indian engineering graduates and curriculum updates.); Nothing to launch its first AI-native hardware product next month: Her (Notable hardware launch from Nothing signaling movement into AI-native devices without new screens.); Every Mac comes with an (undocumented) family member classifier (Interesting undocumented local AI feature on Apple Macs relevant to builders and privacy.)
+  Thin areas: india, research
+  Dig deeper: Why a new report on Anthropic automating AI development is alarming re; Microsoft is winding down Oracle deal to rent AI cloud capacity
+Research agent: investigated 3 stories with 9 tool calls, confirmed 2
 Daily briefing: 4 themes from 20 stories
-Threads updated: Chinese hackers using AI tools and ARTEX: Censys discovers 800+ publicly exposed copies of ARTEX AI ha
-Videos: 12 kept from 13 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 4 new), Google for Developers ok (9 in feed, 3 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (10 in feed, 1 new), Hugging Face ok (12 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 2 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 1 new), No Priors ok (4 in feed, 0 new), Latent Space ok (15 in feed, 1 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 1 new), Hard Fork ok (1 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (3 in feed, 0 new)
-Photos: 4 saved, 0 unavailable
-Alerts: 22 events sent: {"subscribers":7,"sent":0,"queued":34}
-Claims: 111 tracked, 106 open, 0 updated this run
-Trackers: filed 4 stories; updated india-ai, agent-safety, ai-money
-Model tracker: 82 models, 11 changes today
-Tagged 4 stories by sector, region and deal
-India briefing: 3 themes from 4 stories
-Time: gather 60s, plan 1s, judge 2s, verify and write 78s, videos 3s, tagging 2s, trackers 5s, claims 2s, briefing 31s, alerts 4s
+Videos: 9 kept from 10 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 4 new), Google for Developers ok (9 in feed, 4 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (10 in feed, 0 new), Hugging Face ok (12 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 2 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (15 in feed, 0 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (1 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (3 in feed, 0 new)
+Top Voices: 2 debates from 50 posts by 8 people; 3 portraits, 3 pictures
+Photos: 1 saved, 0 unavailable
+Alerts: 23 events sent: {"subscribers":7,"sent":0,"queued":18}
+Claims: 112 tracked, 107 open, 0 updated this run
+Trackers: filed 1 stories; updated india-ai
+Model tracker: 82 models, 14 changes today
+Explainers: 1 added to earlier stories
+Tagged 2 stories by sector, region and deal
+India briefing: 2 themes from 3 stories
+Time: gather 75s, plan 1s, judge 2s, verify and write 82s, videos 6s, tagging 3s, explainers 2s, trackers 3s, claims 3s, top voices 14s, briefing 3s, stock photos 4s, alerts 6s
 
 ### New stories
-- **industry** — [Axon invests $1.2B in drone manufacturer Skydio at $5.2B valuation](https://techmeme.com/261107/p2)  
-  Axon invested $1.2 billion in drone manufacturer Skydio at a $5.2 billion pre-money valuation, acquiring a minority stake. The agreement also makes Axon the exclusive public safety distributor for Skydio in the U.S. and Canada.  
-  _4 source(s), 1 verified quote(s)_
-- **safety** — [Censys discovers 800+ publicly exposed copies of ARTEX AI hacking tool](https://techmeme.com/261107/p5)  
-  Censys discovered more than 800 publicly exposed copies of ARTEX, a Chinese-made, open-source, AI-powered penetration testing tool linked to cyberattacks since July. The tool's original GitHub repository was taken down in October due to widespread threat actor abuse.  
-  _3 source(s), 0 verified quote(s)_
-- **industry** — [Sand.ai raises $200M Series A+ and achieves unicorn status](https://techmeme.com/261107/p1)  
-  Beijing-based video-generation startup Sand.ai raised a $200 million Series A+ round, bringing its total funding over 10 months to $300 million and giving it a valuation over $1 billion. The investment was jointly led by CoStone Capital and Wangsu Science & Technology.  
-  _3 source(s), 0 verified quote(s)_
-- **industry** — [Oracle India says firms are moving from AI pilots to full-scale production](https://livemint.com/technology/india-on-right-track-in-ai-firms-moving-from-pilots-to-production-oracles-kumar-11794038633340.html)  
-  Indian businesses have shifted from AI pilot tests to full-scale enterprise production over the past year and a half. Oracle India head Shailender Kumar reported that firms are realizing tangible benefits despite challenges involving cost, infrastructure, and skills.  
-  _3 source(s), 2 verified quote(s)_
+- **policy** — [Nasscom President Rajesh Nambiar warns AI may impact tech jobs for graduates](https://techmeme.com/261107/p8)  
+  Nasscom President Rajesh Nambiar warned that AI automation of entry-level coding could make it harder for recent Indian engineering graduates to find technology jobs, urging an immediate computer science curriculum overhaul.  
+  _2 source(s), 1 verified quote(s)_
+- **models** — [Nothing to launch first screen-free AI hardware product in December](https://livemint.com/technology/nothing-to-launch-its-first-ai-native-hardware-product-next-month-here-s-what-to-expect-as-ceo-reveals-no-new-screen-11794052846223.html)  
+  Nothing CEO Carl Pei announced that the company will ship its first screen-free AI-native productivity device in December 2026. The standalone tool cannot be replicated as a mobile app, though specific pricing, design, and features remain undisclosed.  
+  _5 source(s), 1 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Memorilla: Latent Semantic Memory for LLMs — score 4: Routine arXiv paper on latent semantic memory for LLMs without standout benchmark breakthroughs.
-- How differences in economics, public policy, and cultural patterns could explain greater pessimism about AI in the West than in Asia and emerging economies (Gillian Tett/Financial Times) — score 5: Commentary and analysis on regional public policy and AI pessimism rather than hard frontier news.
-- Global tablet shipments fell 23% YoY to 32M units in Q3 2026, their lowest level in nearly three years; Apple's iPad shipments fell 27.5% YoY to ~11.58M (Omdia) — not AI: General consumer tablet market shipment statistics, not AI news.
-- Data centre bosses cash in on India's AI and cloud expansion with handsome pay packages — could not verify yet after a second try; dropped
-- VibeCode30 2026: The 30 AI-built products to watch from India — could not verify yet after a second try; dropped
+- Microsoft is winding down Oracle deal to rent AI cloud capacity — score 6: Duplicate of 233e6bc4476f (Microsoft ends Oracle AI cloud rental as older Nvidia GPUs become obsolete).
+- Why a new report on Anthropic automating AI development is alarming researchers — score 6: Duplicate of 5235c4ab8feb (Anthropic developing AI systems twice as fast as a year ago, report says).
+- Italys Meloni blames pro-Russian hackers for leak of foreign ministers data on the dark web — not AI: News about Italian political hacking incident with no AI angle.
+- Vast, varied, vivid: How this art festival celebrates pan-India creativity — not AI: Art festival photo essay with no AI relevance.
+- Every Mac comes with an (undocumented) family member classifier — could not verify yet; will retry next run
 
 </details>
 
@@ -49,14 +44,11 @@ Time: gather 60s, plan 1s, judge 2s, verify and write 78s, videos 3s, tagging 2s
 
 <details><summary>Research agent's work</summary>
 
-- Axon invests $1.2B in Skydio, whose autonomous drones are used by publ: confirmed (searched “Axon Skydio 1.2B investment valuation”; read yahoo.com)
-- Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI: confirmed (searched “Censys ARTEX open source penetration testing tool TechCrunch”; read infosecurity-magazine.com; read infosecurity-magazine.com)
-- Beijing-based Sand.ai, an AI startup specializing in video generation,: confirmed (searched “Sand.ai video generation 200M Series A+ Eudora Wang DealStreetAsia”; searched “Sand.ai AI startup video generation 200M”; searched “Sand.ai Series A+ 200 million video generation”)
-- India on right track in AI; firms moving from pilots to production: Or: confirmed (searched “India on right track in AI firms moving from pilots to production Oracles Kumar”; read msn.com; searched “Oracle Kumar India right track AI pilots to production PTI”)
-- Data centre bosses cash in on India's AI and cloud expansion with hand: unconfirmed (searched “Data centre executives pay surge AI cloud expansion livemint”; searched “Data centre bosses cash in on India's AI and cloud expansion with handsome pay packages”; searched “data centre executives pay surge AI cloud expansion India”)
+- Nasscom President Rajesh Nambiar warns AI could make it harder for fre: confirmed (searched “Nasscom President Rajesh Nambiar AI engineering graduates Nikkei Asia”; searched “Rajesh Nambiar Nasscom AI engineering graduates Nikkei Asia Sayan Chakraborty”; searched “"Rajesh Nambiar" "Nikkei Asia" AI engineering graduates”)
+- Nothing to launch its first AI-native hardware product next month: Her: confirmed (searched “Nothing AI native hardware product Carl Pei screen free”; read androidauthority.com; read fortuneindia.com)
+- Every Mac comes with an (undocumented) family member classifier: unconfirmed (searched “Mac undocumented family member classifier Apple Intelligence personal knowledge graph”; searched “Apple Intelligence family member classifier Mac”; searched “family member classifier Mac undocumented”)
 
 </details>
 
 ### Notes
-- dropped unverifiable quote (Adam Bry): Axon has been an incredible partner in bringing our drones t…
-- GDELT unavailable: GDELT paused for this run after repeated rate-limiting
+- 1 kept item(s) carried over to the next run
