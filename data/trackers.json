@@ -1,12 +1,17 @@
 {
   "us-china": {
-    "status": "U.S. export controls and proposed investment curbs face scrutiny following revelations that the Commerce Department approved Chinese entities with ties to sanctioned firms to handle Nvidia H200 chips. Meanwhile, China's draft rules adding 23 AI technologies to its export-control list await year-end adoption, and Apple prepares for the December public release of iOS 27.3 in China.",
-    "changed": "The U.S. Commerce Department approved dozens of Chinese companies, including some with empty offices and ties to sanctioned entities, to handle Nvidia H200 chips.",
+    "status": "U.S. export controls and investment curbs face intense scrutiny amid reports of loopholes, chip-smuggling workarounds, and alleged espionage targeting Nvidia's leadership. Meanwhile, China is preparing year-end export controls on 23 AI technologies, and major tech firms navigate shifting restrictions and model-distillation debates.",
+    "changed": "U.S. intelligence memos claim a Megaspeed executive was recruited to spy on Nvidia's CEO, while investigations highlight vulnerabilities in chip export vetting and ongoing model distillation practices by Chinese labs.",
     "timeline": [
       {
         "story_id": "cc583a7d57d3",
         "date": "2026-11-07",
         "text": "U.S. Commerce approved Chinese firms with ties to sanctioned entities to handle Nvidia H200 chips."
+      },
+      {
+        "story_id": "2c93e9013ac1",
+        "date": "2026-11-07",
+        "text": "U.S. memo claims Megaspeed exec was recruited to spy on Nvidia CEO Jensen Huang."
       },
       {
         "story_id": "ff3497657328",
@@ -76,9 +81,14 @@
     ],
     "next": [
       {
-        "text": "Final Treasury approval of expanded investment curbs on Chinese AI firms",
-        "when": "After Dec 7 2026 comment deadline",
+        "text": "Public comment period on Treasury's proposed expanded investment curbs ends",
+        "when": "December 7, 2026",
         "story_id": "4974921f6a1a"
+      },
+      {
+        "text": "China's adoption of proposed export controls on 23 AI technologies",
+        "when": "end of the year",
+        "story_id": "a871dcc1ab00"
       },
       {
         "text": "Full public release of iOS 27.3 in China",
@@ -100,10 +110,11 @@
       "5a6391ab7400",
       "ff3497657328",
       "ca6993776178",
-      "cc583a7d57d3"
+      "cc583a7d57d3",
+      "2c93e9013ac1"
     ],
-    "updated_at": "2026-11-07T15:51:39+00:00",
-    "tried_at": "2026-11-07T15:51:39+00:00",
+    "updated_at": "2026-11-07T21:50:27+00:00",
+    "tried_at": "2026-11-07T21:50:27+00:00",
     "title": "US–China AI restrictions"
   },
   "frontier-race": {
@@ -789,8 +800,8 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "AI agents and models continue to drive high-stakes security incidents and supply-chain risks, ranging from backdoored developer extensions and malware using LLMs to an AI agent performing a brain injection on a mouse and lawsuits over ChatGPT's role in a planned poisoning. In response, security vendors are making major acquisitions—such as CrowdStrike buying Fiddler AI and Dreadnode, and Palo Alto Networks negotiating to buy Clutch Security—while researchers and providers introduce new safety frameworks like PEARL, ShallowDefend, and FlashProve. Meanwhile, authorities are raising alarms over AI-driven financial fraud and the proliferation of offensive AI tooling like the ARTEX framework.",
-    "changed": "Widely exposed copies of the open-source ARTEX AI hacking tool were discovered by Censys, underscoring ongoing risks from accessible offensive AI frameworks.",
+    "status": "AI agents and models continue to drive significant safety incidents, supply-chain risks, and legal actions, ranging from rogue agent breakouts, supply-chain attacks on developer extensions, and malware using LLMs to lawsuits over ChatGPT's role in a planned poisoning and xAI's Grok generating deepfakes. In response, security vendors are making major acquisitions—such as CrowdStrike buying Fiddler AI and Dreadnode, and Palo Alto Networks negotiating to buy Clutch Security—while researchers and developers introduce new safety frameworks, monitoring tools, and restrictions. Meanwhile, authorities continue to raise alarms over AI-driven financial fraud, exposed offensive AI tooling like ARTEX, a",
+    "changed": "A Wyoming woman joined a federal lawsuit against xAI over Grok generating explicit deepfakes from childhood photos.",
     "timeline": [
       {
         "story_id": "f19cee3d1350",
@@ -801,6 +812,11 @@
         "story_id": "a8fc84dcded8",
         "date": "2026-11-07",
         "text": "Censys discovered over 800 publicly exposed copies of the open-source ARTEX AI hacking tool."
+      },
+      {
+        "story_id": "4d49d16156f1",
+        "date": "2026-11-07",
+        "text": "Wyoming woman joins federal lawsuit against xAI over Grok deepfakes"
       },
       {
         "story_id": "cfd4354afa14",
@@ -986,11 +1002,6 @@
         "story_id": "48e2274fdf2b",
         "date": "2026-10-23",
         "text": "OpenAI adds offline environments and high‑compute red‑team testing to frontier model training"
-      },
-      {
-        "story_id": "67972bfe4904",
-        "date": "2026-10-23",
-        "text": "OpenAI resumes offline training of frontier models with monitoring checks"
       }
     ],
     "title": "AI agents and safety incidents",
@@ -1055,10 +1066,11 @@
       "7312e394347c",
       "cfd4354afa14",
       "f19cee3d1350",
-      "a8fc84dcded8"
+      "a8fc84dcded8",
+      "4d49d16156f1"
     ],
-    "updated_at": "2026-11-07T09:58:57+00:00",
-    "tried_at": "2026-11-07T09:58:57+00:00"
+    "updated_at": "2026-11-07T21:50:27+00:00",
+    "tried_at": "2026-11-07T21:50:27+00:00"
   },
   "ai-money": {
     "status": "Anthropic continues to target its pre-Thanksgiving IPO amid questions over slower revenue growth, high compute costs, and a broader market sell-off, while OpenAI has formally closed an $11 billion financing round at a $1.25 trillion valuation. Massive AI infrastructure investments, debt raises, and acquisitions persist across the sector—including recent rounds by Ocient and Sand.ai alongside major financing efforts by SpaceX and Meta—even as analysts warn that the global AI investment cycle may have peaked.",
@@ -1363,13 +1375,18 @@
     "tried_at": "2026-11-07T15:51:39+00:00"
   },
   "copyright": {
-    "status": "Anthropic faces a fair-use hearing over song lyrics and a $41 million lawsuit from the Elvis Presley estate. Meta's new commercial terms permitting news scraping took effect and are under UK regulatory investigation, while Google faces publisher traffic declines, small pilot payouts, and an EU court warning regarding Gemini. Meanwhile, major newspapers sued Brave Software for allegedly scraping 30 billion pages and selling access to AI developers.",
-    "changed": "Newspapers sued Brave Software over alleged illegal scraping, paywall bypassing, and selling access to web content to AI companies.",
+    "status": "AI companies face a growing wave of legal challenges over training data, copyright infringement, and voice cloning, including a new lawsuit against Suno by the Elvis Presley estate. Meanwhile, publishers are grappling with traffic declines from Google's AI search features, antitrust scrutiny over Meta's new commercial terms, and fresh lawsuits against Brave Software for scraping billions of pages.",
+    "changed": "The Elvis Presley estate filed a new lawsuit against AI music company Suno over voice cloning and copyright infringement.",
     "timeline": [
       {
         "story_id": "987d248a5128",
         "date": "2026-11-07",
         "text": "New York Times and other newspaper publishers filed federal lawsuits against Brave Software over AI training data and search index sales."
+      },
+      {
+        "story_id": "1b9672b85e10",
+        "date": "2026-11-07",
+        "text": "Elvis Presley estate sued Suno over voice cloning and copyright infringement under Tennessee's ELVIS Act."
       },
       {
         "story_id": "5bf107852b8f",
@@ -1420,9 +1437,9 @@
         "story_id": "c07fce9420b1"
       },
       {
-        "text": "Potential injunctions on Brave’s data-selling practices",
-        "when": "",
-        "story_id": "9abae69701c4"
+        "text": "Meta's updated commercial terms take effect",
+        "when": "October 30, 2026",
+        "story_id": "c744e4ea5afb"
       }
     ],
     "story_ids": [
@@ -1433,10 +1450,11 @@
       "194d268cc5ac",
       "9abae69701c4",
       "5bf107852b8f",
-      "987d248a5128"
+      "987d248a5128",
+      "1b9672b85e10"
     ],
-    "updated_at": "2026-11-07T04:04:15+00:00",
-    "tried_at": "2026-11-07T04:04:15+00:00"
+    "updated_at": "2026-11-07T21:50:27+00:00",
+    "tried_at": "2026-11-07T21:50:27+00:00"
   },
   "ai-infrastructure": {
     "status": "AI infrastructure financing and investments remain massive, with multi-billion-dollar bond sales, debt syndications like SpaceX's $40 billion GPU financing, and significant data center projects by Google, Microsoft, and Meta. However, market anxiety is growing as analysts warn the investment cycle may have peaked, while political tensions, local voter pushback, and European protests continue to challenge large-scale data center build-outs. In response to community resistance, companies like OpenAI have dropped project NDAs and promised full electricity cost coverage.",
