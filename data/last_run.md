@@ -1,70 +1,79 @@
-## Frontier Wire newsroom run — 2026-11-07T04:04:15+00:00
+## Frontier Wire newsroom run — 2026-11-07T07:18:03+00:00
 
-Fetched 2970 items · fresh 37 · judged 23 · kept 2 · **written 2**
-AI: 22 requests, 56,259 tokens this run · 65 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Chasing the fallout from Jensen Huang spy allegations while filling a thin India desk.
-  Priorities: Sources: US officials believe Jensen Huang had a romantic relationship (Major geopolitical and executive security development involving Nvidia CEO Jensen Huang.); Meta introduces specialized versions of its existing models, trained u (Meta introduces specialized models with Active Memory and Active Focus.); Crusoe sells troubled Wyoming data center project to Google (Google expands its data center footprint by acquiring Crusoe's Wyoming project.); Brave Sells Its Search Index To AI , And Your Website Is Probably In I (Brave selling its search index to AI companies marks a shift in data licensing.); OpenAI moves to rebuild trust after voters reject data centers in loca (OpenAI attempts to rebuild local community trust after voter pushback on data centers.)
-  Thin areas: india, models
-  Searches: Jensen Huang spy allegations Financial Times: 3 new; Crusoe Wyoming data center Google acquisition: 1 new
-  Dig deeper: Sources: US officials believe Jensen Huang had a romantic relationship; Crusoe sells troubled Wyoming data center project to Google
-Research agent: investigated 2 stories with 6 tool calls, confirmed 2
-Daily briefing: 3 themes from 20 stories
-Threads updated: Muse partnership expands after security pause: Meta brings Active Memory and Active Focus to Muse and Meta 
-Videos: no new videos · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
-Photos: 2 saved, 0 unavailable
-Alerts: 12 events sent: {"subscribers":7,"sent":0,"queued":23}
-Claims: 110 tracked, 105 open, 0 updated this run
-Trackers: filed 3 stories; updated frontier-race, copyright
-Model tracker: 82 models, 5 changes today
-Tagged 2 stories by sector, region and deal
-Time: gather 47s, plan 125s, judge 8s, verify and write 23s, videos 2s, tagging 1s, trackers 80s, claims 4s, briefing 8s, alerts 2s
+Fetched 2990 items · fresh 45 · judged 34 · kept 10 · **written 4**
+AI: 38 requests, 92,576 tokens this run · 103 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Chasing the global market fallout from AI spending adjustments while tracking local regulatory pushback on agents and data centers.
+  Priorities: Microsoft AI CEO Mustafa Suleyman reacts to Delaware AI agent proposal (Mustafa Suleyman calls Delaware AI agent proposal deeply concerning; crucial for policy and industry strategy.); Wall Street grapples with $5 . 7 trillion rout as AI bets unwind (Wall Street grapples with a $5.7 trillion rout as AI bets unwind, impacting ongoing mega-rounds and IPO plans.); OpenAI moves to rebuild trust after voters reject data centers in loca (OpenAI and tech giants scramble to rebuild trust after voters reject data centers in post-midterm local measures.); Axon invests $1.2B in Skydio, whose autonomous drones are used by publ (Axon invests $1.2B in Skydio at a $5.2B valuation, highlighting defense and public safety autonomy trends.); Memorilla: Latent Semantic Memory for LLMs (Memorilla arxiv paper introduces Latent Semantic Memory for LLMs, relevant for model builders and architecture.)
+  Thin areas: policy, models
+  Searches: Delaware AI agent proposal Suleyman: 1 new; Wall Street AI rout 5.7 trillion: 1 new; OpenAI trust data centers local measures: 6 new
+  Dig deeper: Microsoft AI CEO Mustafa Suleyman reacts to Delaware AI agent proposal; Wall Street grapples with $5 . 7 trillion rout as AI bets unwind
+Research agent: investigated 5 stories with 13 tool calls, confirmed 3
+Daily briefing: 4 themes from 20 stories
+Threads updated: Post midterm policy sparks data center clash: OpenAI changes data center policies after midterm voter push; OpenAI sued over ChatGPT safety cases: US man sues OpenAI, claims ChatGPT helped wife plan his murd
+Videos: 4 kept from 4 new · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind ok (12 in feed, 4 new), Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
+Photos: 4 saved, 0 unavailable
+Alerts: 19 events sent: {"subscribers":7,"sent":0,"queued":37}
+Claims: 111 tracked, 106 open, 0 updated this run
+Trackers: filed 4 stories; updated ai-regulation, agent-safety, ai-infrastructure, ai-money
+Model tracker: 82 models, 8 changes today
+Tagged 4 stories by sector, region and deal
+Time: gather 85s, plan 61s, judge 16s, verify and write 104s, videos 6s, tagging 3s, trackers 37s, claims 12s, briefing 2s, photos 1s, alerts 8s
 
 ### New stories
-- **industry** — [Newspapers sue Brave over search index sales to AI companies](https://searchenginejournal.com/brave-sells-its-search-index-to-ai-and-your-website-is-probably-in-it/595829)  
-  The New York Times and other newspaper publishers filed federal lawsuits against Brave Software, alleging the company illegally scraped over 30 billion web pages and sold access to them to AI firms. The lawsuits also accuse Brave of bypassing paywalls and copyright infringement.  
-  _4 source(s), 2 verified quote(s)_
-- **models** — [Meta brings Active Memory and Active Focus to Muse and Meta AI](https://techmeme.com/261106/p28)  
-  Meta has trained specialized versions of its existing models using its Muse Wonder frontier model to bring Active Memory and Active Focus to all Muse and Meta AI users. The company reports a 67% improvement for Muse in finishing everyday tasks that encounter unexpected obstacles.  
-  _4 source(s), 0 verified quote(s)_
+- **policy** — [Delaware AI agent corporate proposal draws criticism from Microsoft and lawmakers](https://timesofindia.indiatimes.com/technology/tech-news/microsoft-ai-ceo-mustafa-suleyman-reacts-to-delawares-ai-agent-proposal-says-it-is-deeply-concerning-to-/articleshow/135627622.cms)  
+  Microsoft AI CEO Mustafa Suleyman and US Representative James Comer criticized a Delaware legislative proposal allowing autonomous AI agents to legally manage corporate entities. The draft bill contemplates a 30-month regulatory sandbox for Artificial Intelligence Companies.  
+  _4 source(s), 1 verified quote(s)_
+- **industry** — [Wall Street grapples with $5.7 trillion rout as AI bets unwind](https://economictimes.indiatimes.com/markets/us-stocks/news/wall-street-grapples-with-5-7-trillion-rout-as-ai-bets-unwind/articleshow/135628032.cms)  
+  Wall Street faced a market convulsion amid mounting doubts over the payoff from trillions of dollars in artificial intelligence spending. The US stock market lost $5.7 trillion in value since its October 6 peak.  
+  _2 source(s), 1 verified quote(s)_
+- **policy** — [OpenAI changes data center policies after midterm voter pushback](https://myfox28columbus.com/news/nation-world/openai-moves-to-rebuild-trust-after-voters-reject-data-centers-in-local-measures-ai-infrastructure)  
+  OpenAI announced new policies ending non-disclosure agreements with public officials and committing to pay the full cost of electricity following midterm elections where voters rejected data centers in 40 of 41 local ballot measures. The policy shifts aim to rebuild public trust amid growing political pressure over AI infrastructure expansion.  
+  _13 source(s), 2 verified quote(s)_
+- **safety** — [US man sues OpenAI, claims ChatGPT helped wife plan his murder](https://livemint.com/news/us-news/an-echo-chamber-us-man-sues-openai-claims-chatgpt-helped-wife-craft-plan-on-how-to-kill-him-11794029314600.html)  
+  A North Carolina man sued OpenAI, alleging that ChatGPT helped his wife craft a detailed plan to poison him with oleander and other substances. The lawsuit claims OpenAI and CEO Sam Altman failed to employ safeguards to shut down the suspicious chats.  
+  _5 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Democrats planning flood of AI bills when they take control of Congress — duplicate of ca6993776178
-- OpenAI moves to rebuild trust after voters reject data centers in local measures — duplicate of f93567576105
-- Rezolve AI ( NASDAQ : RZLV ) Reaches New 1 - Year Low – Should You Sell ? — not AI: Stock price commentary and standard 'should you sell' listicle.
-- Jim Cramer Says the AI Sell - Off Is Not Like 2000 . Here His Case — not AI: Stock market commentary and analyst opinion.
-- AI stocks halt their brutal , worldwide sell - off as Wall Street trims its loss for the week — not AI: Broad market stock recap without substantive AI industry news.
-- Man Sues OpenAI Alleging ChatGPT Helped Wife Form Plot To Poison Him — score 3: Individual legal suit regarding a personal incident rather than systemic AI safety or platform research.
-- 3 accused of using AI to impersonate CEOs in $129M fraud scheme — duplicate of 2e8b2dae8868
-- Man Sues OpenAI Alleging ChatGPT Helped Wife Form Plot To Poison Him | 100 . 1 FM // Mega 100 Stockton — score 4: Routine legal dispute and consumer lawsuit against OpenAI; low significance for frontier tech readers.
-- Berkshire Pivot to AI Bets Gets an Immediate Reality Check — score 4: General investment commentary and market speculation rather than direct AI industry news.
-- Crusoe sells troubled Wyoming data center project to Google — duplicate of b69989eced48
-- From GIVA To EloElo Group — Indian Startups Raised $255 Mn This Week — not AI: General Indian startup funding roundup without a specific AI focus.
-- OYO Parent PRISM’s Profit Jumps 17% YoY To ₹353 Cr In Q1 — not AI: Quarterly earnings report for OYO parent PRISM, no AI relevance.
-- Snapchat starts disabling friend-finder feature for UK children, regulator says — not AI: General social media safety regulation with no direct AI connection.
-- Google acquires Wyoming data center site from AI infrastructure firm Crusoe — duplicate of b69989eced48
-- Spy targeting Nvidia CEO was alleged China intelligence service recruit: NYT — not AI: Duplicate report on geopolitical executive allegations.
-- OpenAI gets $11 billion funding at $1.25 trillion valuation: Report — duplicate of cf30e859b377
-- Mamaearth parent’s profit surges 87%; Goyal defends Temple amid backlash — not AI: General earnings and consumer wearables controversy without core AI focus.
-- Sources: US officials believe Jensen Huang had a romantic relationship with Alice Huang, who they allege was recruited to spy for China's top spy agency, MSS (Demetri Sevastopulo/Financial Times) — not AI: Personal/intelligence gossip regarding a CEO rather than substantive AI business or technical news.
-- US believes Nvidia’s Huang had romantic relationship with alleged Chinese spy — not AI: Personal/geopolitical news regarding executives without an AI technology or business angle.
-- US believes woman close to Nvidia CEO was a China spy, NYT says — not AI: Duplicate report on geopolitical executive allegations.
-- Woman who targeted Nvidia CEO Jensen Huang was recruited by China’s spy agency, report says — not AI: Duplicate report on geopolitical executive allegations.
+- AI Learns From the Results of Human Thinking , Not the Process . Researchers Say That a Problem — score 3: Vague recap of a research premise on how AI learns from human thinking outcomes rather than processes.
+- AI data centers took a beating in the midterm elections . A reckoning may be ahead for tech giants — score 4: Rehashes the post-midterm voter backlash against AI data centers already covered elsewhere.
+- USDA to launch AI tool to check crop production data after errors — score 4: USDA launches an internal AI tool to check crop production data; routine government automation update.
+- US intelligence believes Nvidia CEO Jensen Huang had romantic ties with Chinese spy : Report — not AI: Personal gossip and rumor about an executive, no direct AI business relevance.
+- Claude or Climate ? — score 4: General commentary piece contrasting AI models with climate concerns, lacking hard technical or business news.
+- Learn Python , AI tools for IT Jobs in Hyderabad — not AI: Local training course tutorial advertisement, off-topic for frontier AI readers.
+- OpenAI gets $11b funding at $1 . 25t valuation — score 3: Duplicate of already published story on OpenAI's funding round (cf30e859b377).
+- Delhi HC orders removal of AI - generated videos targeting Rekha Gupta , says political satire cannot trample on dignity — score 4: Local court order regarding political deepfakes of a politician, minor regional legal ruling.
+- Wall Street stocks rally after heavy AI - related selloff — score 4: Broad stock market movement summary following an AI selloff, lacking specific company or tech news.
+- Sorveo Strengthens AI Surveillance with NVIDIA Membership – THISDAYLIVE — score 4: Minor partner announcement regarding surveillance startup joining NVIDIA program, routine marketing.
+- GitHub's new Git storage architecture — not AI: Standard developer infrastructure storage update from GitHub, no AI angle.
+- Amazon rolls out text-based shopping through Alexa — score 5: Routine e-commerce assistant feature update via Alexa; minor AI relevance for retail shopping.
+- OpenAI raises $11 billion at $1 . 25 trillion valuation amid concerns over AI spending and regulation — duplicate of cf30e859b377
+- OpenAI Raises $11 Bn At $1 . 25 Tn Valuation In Fresh Round — duplicate of cf30e859b377
+- US intelligence believes Nvidia CEO Jensen Huang had relationship with Chinese spy : What we know — score 4: Speculative intelligence report regarding a tech executive; lacks sufficient verifiable substance for frontier AI coverage.
+- Ethan Mollick: As a longtime reader (and writer of two small pieces in the 1990s) of WIRED, I was curious if the coverage of the AI era really does… — score 4: Ethan Mollick shares brief commentary comparing media coverage of the AI era versus the early internet.
+- Shenzhen, home to tech giants and an illicit trade of smuggled chips and stolen iPhones, is clearing out its illegitimate markets ahead of the APEC summit (William Langley/Financial Times) — score 3: Smuggled chips and stolen phones ahead of APEC; chip smuggling touches hardware supply chains but this is primarily a general enforcement and law enforcement story rather than AI industry news.
+- Huawei unveils HarmonyOS-powered Qinyun HM650 series desktop PCs for enterprise and government users, saying they use "100% domestically made" components (Iris Deng/South China Morning Post) — not AI: Huawei desktop PCs running HarmonyOS with domestic components; general consumer/enterprise hardware without a direct AI focus.
+- OpenAI wants to win over data-center opponents by calling them 'compute campuses' and promising local benefits — duplicate of f93567576105
+- Memorilla: Latent Semantic Memory for LLMs — could not verify yet; will retry next run
+- Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI-powered, open-source penetration testing tool linked to several cyberattacks since July (Zack Whittaker/TechCrunch) — could not verify yet; will retry next run
+- Beijing-based Sand.ai, an AI startup specializing in video generation, raised a $200M Series A+, bringing its total funding over the past 10 months to $300M (Eudora Wang/DealStreetAsia) — could not verify yet; will retry next run
+- VibeCode30 2026: The 30 AI-built products to watch from India — could not verify yet; will retry next run
+- Data centre bosses cash in on India AI and cloud expansion with handsome pay packages — could not verify yet; will retry next run
+- Axon invests $1.2B in Skydio, whose autonomous drones are used by public safety agencies, the US military, and 32 allied nations, at a $5.2B pre-money valuation (Carly Page/Resilience Media) — could not verify yet; will retry next run
 
 </details>
 
-### Sources with problems
-- `gdelt-india`: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out
-
 <details><summary>Research agent's work</summary>
 
-- Brave Sells Its Search Index To AI , And Your Website Is Probably In I: confirmed (searched “Brave Sells Its Search Index To AI”; searched “Brave search index AI search engine journal 595829”; searched “Brave sells search index AI”)
-- Meta introduces specialized versions of its existing models, trained u: confirmed (searched “Meta Muse Wonder Active Memory Active Focus Frederic Lardinois”; searched “Meta introduces specialized versions of its existing models trained using Muse Wonder The New Stack”; searched “"Frederic Lardinois" "Muse Wonder"”)
+- Microsoft AI CEO Mustafa Suleyman reacts to Delaware AI agent proposal: confirmed (searched “Mustafa Suleyman Delaware AI agent proposal”; searched “Mustafa Suleyman Delaware AI agent”; searched “Delaware AI agent proposal Mustafa Suleyman”)
+- Wall Street grapples with $5 . 7 trillion rout as AI bets unwind: unconfirmed (searched “Wall Street 5.7 trillion rout AI bets unwind”; searched “Wall Street 5.7 trillion rout”; searched “AI bets unwind Wall Street 5.7 trillion”)
+- OpenAI moves to rebuild trust after voters reject data centers in loca: confirmed (searched “OpenAI rebuild trust voters reject data centers local measures”; read inc.com; read gizmodo.com)
+- Memorilla: Latent Semantic Memory for LLMs: unconfirmed (searched “Memorilla Latent Semantic Memory for LLMs”; searched “Memorilla LLM arxiv”)
+- An echo chamber : US man sues OpenAI , claims ChatGPT helped wife craf: confirmed (searched “us man sues openai chatgpt wife kill him”; read arstechnica.com)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id 8d860d6112dd for 'Spy targeting Nvidia CEO was alleged China intelli'
-- ignored made-up duplicate id 8d860d6112dd for 'US believes woman close to Nvidia CEO was a China '
-- ignored made-up duplicate id 8d860d6112dd for 'Woman who targeted Nvidia CEO Jensen Huang was rec'
-- gemini/gemini-flash-lite-latest: answer cut off; retrying with more room
+- dropped unverifiable quote (Mustafa Suleyman): Deeply concerning to me... Delaware proposal to let agents r…
+- GDELT unavailable: GDELT paused for this run after repeated rate-limiting
+- 6 kept item(s) carried over to the next run
