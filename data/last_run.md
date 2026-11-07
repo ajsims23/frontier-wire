@@ -1,68 +1,64 @@
-## Frontier Wire newsroom run — 2026-11-07T15:51:39+00:00
+## Frontier Wire newsroom run — 2026-11-07T18:59:35+00:00
 
-Fetched 2964 items · fresh 27 · judged 21 · kept 5 · **written 5**
-AI: 33 requests, 78,747 tokens this run · 197 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking market corrections in AI investments, chip export loopholes, and data center pushback across global regions.
-  Priorities: Investigation: some Chinese companies approved by the US Commerce Depa (Exposes shell companies handling Nvidia H200 chips under US Commerce Department approval.); Chicago-based data analytics company Ocient raised a $100M Series C co (Agentic AI analytics funding highlights enterprise software shift toward automated workflows.); Qualcomm Confirms AI - Native 6G Plans With 2029 Launch Target (Qualcomm's AI-native 6G plans with 2029 target signal long-term telecommunications roadmap.); AI data centers took a beating in the midterms (Follows up on midterm electoral fallout affecting data center expansion policies.); AI investment cycle may have peaked , Jefferies warns ; raises India a (Jefferies warning on peak AI investment cycle and capital rotation to India.)
-  Thin areas: india, business
-  Dig deeper: Investigation: some Chinese companies approved by the US Commerce Depa; Chicago-based data analytics company Ocient raised a $100M Series C co
-Research agent: investigated 4 stories with 11 tool calls, confirmed 4
-Daily briefing: 4 themes from 20 stories
-Videos: 10 kept from 10 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 4 new), Google for Developers ok (9 in feed, 4 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (10 in feed, 0 new), Hugging Face ok (12 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 2 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (15 in feed, 0 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (0 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (3 in feed, 0 new)
-Photos: 4 saved, 0 unavailable
-Alerts: 30 events sent: {"subscribers":7,"sent":0,"queued":36}
+Fetched 2911 items · fresh 12 · judged 12 · kept 3 · **written 3**
+AI: 25 requests, 61,351 tokens this run · 222 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Tracking the intersection of research breakthroughs, infrastructure shifts, and policy scrutiny in the AI sector.
+  Priorities: Exponential Time Hypothesis co-proposer Russell Impagliazzo calls Open (Major complexity theory news involving OpenAI and cryptographic implications.); Google has acquired Crusoe's data center site in southeast Wyoming (Google acquiring Crusoe data center site highlights ongoing infrastructure consolidation.); The Components of Agent Memory (Anthropic publishing technical insights on agent memory structures.); The US let Nvidia sell chips to an empty office in China (Follow-up on the policy/trade angle regarding US chip sales to empty Chinese offices.); Democratic wins could slow AI investment and safeguard the US economy  (Financial and macroeconomic outlook on AI investment slowing post-midterms.)
+  Thin areas: research, india
+  Dig deeper: Exponential Time Hypothesis co-proposer Russell Impagliazzo calls Open; Google has acquired Crusoe's data center site in southeast Wyoming
+Research agent: investigated 3 stories with 8 tool calls, confirmed 3
+Daily briefing: 3 themes from 20 stories
+Threads updated: OpenAI disproves Exponential Time Hypothesis on math challen: OpenAI and Anthropic AI models disprove Exponential Time Hyp
+Videos: 11 kept from 13 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 4 new), Google for Developers ok (9 in feed, 4 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (10 in feed, 0 new), Hugging Face ok (12 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 1 new), No Priors ok (4 in feed, 0 new), Latent Space ok (15 in feed, 0 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (1 in feed, 1 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (2 in feed, 0 new)
+Builders desk: picked 5 from 60 candidates; 5 with pictures, 0 with videos
+Photos: 3 saved, 0 unavailable
+Alerts: 33 events sent: {"subscribers":7,"sent":0,"queued":24}
 Claims: 115 tracked, 110 open, 0 updated this run
-Trackers: filed 4 stories; updated us-china, ai-infrastructure, ai-money
-Model tracker: 82 models, 17 changes today
-Tagged 5 stories by sector, region and deal
-Time: gather 124s, plan 1s, judge 6s, verify and write 80s, videos 3s, tagging 2s, trackers 5s, claims 2s, briefing 2s, stock photos 3s, alerts 5s
+Trackers: filed 2 stories; updated frontier-race
+Model tracker: 82 models, 22 changes today
+Tagged 3 stories by sector, region and deal
+Time: gather 101s, plan 1s, judge 3s, verify and write 121s, videos 4s, tagging 2s, trackers 2s, claims 2s, builders 11s, briefing 1s, alerts 5s
 
 ### New stories
-- **policy** — [US approved Chinese firms with empty offices to handle Nvidia chips](https://techmeme.com/261107/p9)  
-  The US Commerce Department approved dozens of Chinese companies to handle Nvidia's H200 chips, including some with empty offices and ties to firms under sanctions. An investigation revealed a pattern of companies connected to entities with national-security-related trade restrictions being approved.  
-  _3 source(s), 0 verified quote(s)_
-- **industry** — [AI investment cycle may have peaked, Jefferies warns](https://hongkongherald.com/news/279418346/ai-investment-cycle-may-have-peaked-jefferies-warns-raises-india-allocation-to-14)  
-  A report by Jefferies warns that the global artificial intelligence investment cycle may have peaked or entered a mid-cycle correction due to rising financing costs and profitability concerns. The four major hyperscalers increased combined capital expenditure by 108 per cent year-on-year to USD 202 billion in the third quarter of 2026.  
-  _7 source(s), 1 verified quote(s)_
-- **industry** — [Qualcomm targets AI-native 6G commercial rollout in 2029–2030](https://gizchina.com/qualcomm/qualcomm-confirms-ai-native-6g-plans-with-2029-launch-target)  
-  Qualcomm announced plans for an AI-native 6G commercial rollout targeting 2029–2030 and teamed up with SpaceX to help build Starlink's new national cellular network. The company's 6G approach integrates artificial intelligence directly into the network architecture to manage connections, resources, and radio-spectrum allocation.  
-  _3 source(s), 2 verified quote(s)_
-- **industry** — [Ocient raises $100m Series C to expand agentic AI analytics platform](https://techmeme.com/261107/p10)  
-  Chicago-based data analytics company Ocient raised a $100 million Series C funding round co-led by Boka Capital and OCA Ventures, bringing its total funding to $260 million. The capital will expand delivery of its agentic AI analytics platform for petabyte-scale data environments.  
+- **research** — [OpenAI and Anthropic AI models disprove Exponential Time Hypothesis](https://techmeme.com/261107/p12)  
+  OpenAI and Anthropic stated that their AI models disproved the 27-year-old Exponential Time Hypothesis, upending research based on the premise that certain problems require exponential time to solve. Both firms published their proofs on GitHub in natural language and the machine-checkable Lean format.  
   _4 source(s), 1 verified quote(s)_
-- **voices** — [Ethan Mollick says LLMs can accelerate investigative reporting](https://bsky.app/profile/emollick.bsky.social/post/3mzq6762vuc25)  
-  Ethan Mollick stated on Bluesky that large language models can accelerate investigative research into companies and governments. He noted that analyzing filings and public data previously required a team of journalists a long time.  
-  _1 source(s), 1 verified quote(s)_
+- **research** — [Anthropic details agent memory architecture and dreaming capability](https://anthropic.com/research/components-of-agent-memory)  
+  Anthropic published research on agent memory systems inspired by human cognition, introducing a 'dreaming' process that allows Claude models to reorganize memory using session transcripts during idle time. The feature runs asynchronously to process between one and 100 session transcripts without altering model weights.  
+  _3 source(s), 0 verified quote(s)_
+- **safety** — [AI-boosted attacks are disrupting the cybersecurity industry](https://theverge.com/podcast/1029038/ai-cybersecurity-hackers-data-breach-dark-age-alex-stamos)  
+  Artificial intelligence is driving a wave of cyberattacks and data breaches as private and state actors use AI to detect and exploit system vulnerabilities. Alex Stamos, chief security officer at Cognition, discussed the disruption on The Verge's Decoder podcast.  
+  _2 source(s), 1 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Microsoft $1 billion Amsterdam data centre project faces protests over AI infrastructure costs - details inside — duplicate of 8ec5fec0e77e
-- Interview : Human judgment must guide AI use in journalism , says AFP chairman — score 4: Routine commentary on AI in journalism by AFP chairman.
-- cybersecurity : Companies need to overhaul cybersecurity as AI accelerates vulnerability attacks : Report — score 4: Generic report on cybersecurity and AI-driven vulnerability attacks without specific new data.
-- iShares Robotics and Artificial Intelligence Multisector ETF ( NYSEARCA : IRBO ) Share Price Cross Below 200 - Day Moving Average – Here What Happened — not AI: ETF stock price movement commentary, off-topic for core AI news.
-- Ghana AI strategy left out the power sector – It should not stay that way – Ghanamma . com — score 3: Opinion piece on Ghana's AI strategy lacking power sector integration, too minor and local for global readers.
-- AI data centers took a beating in the midterms — duplicate of d93ef6b85a78
-- US AI primacy strategy faces oversight gap as reliance on tech firms grows — score 4: General commentary on US AI strategy oversight gap.
-- AI - tied sell - off slows as markets end week mixed | The Arkansas Democrat - Gazette — duplicate of c50baedde24c
-- Oracle India Head On AI Adoption , Challenges , And Growth — duplicate of f4316ce69839
-- European stocks fall amid growing concerns over artificial intelligence — duplicate of c50baedde24c
-- Democrats expected to scrutinize Nvidia | The Arkansas Democrat - Gazette — duplicate of ca6993776178
-- Pastors increasingly use AI in ministry , survey says | The Arkansas Democrat - Gazette — score 3: Survey about pastors using AI in ministry, lifestyle/trend piece rather than core AI news.
-- US midterms could accelerate stock market rotation ; healthcare next leg of the AI trade : Goldman Sachs — score 5: Goldman Sachs commentary on US midterms and AI trade rotation, routine market analysis.
-- Hong Kong police to enable AI facial recognition on CCTV network this month — score 5: Hong Kong police enabling AI facial recognition on CCTV network, standard government surveillance rollout.
-- Keisean Nixon the real Packers cornerback , not an artificial intelligence - generated version questionable for matchup with Patriots — not AI: Sports joke article about an NFL cornerback, not actual AI news.
-- Every Mac comes with an (undocumented) family member classifier — score 4: Hacker News discussion about an undocumented local model feature on macOS is interesting trivia but not major frontier news or research.
+- Google has acquired Crusoe's data center site in southeast Wyoming — duplicate of b69989eced48
+- AI for scientific discovery: How researchers use Claude — duplicate of 650b1e3e65d2
+- NYT Cooking’s AI assistant saved my weeknight chicken, but almost ruined my cake — score 3: Product review of a recipe assistant; minor consumer AI feature usage.
+- The US let Nvidia sell chips to an empty office in China — duplicate of cc583a7d57d3
+- New-Age Tech Stocks Extend Rally, CarTrade Leads With 23.3% Gain — not AI: General stock market rally report for technology companies without a specific focus on AI.
+- Apple charges iPhone 18 Pro users up to 3 times its cost for storage upgrades: What buyers pay — not AI: Standard consumer hardware pricing and storage margin analysis with no AI angle.
+- Ethan Mollick: I think there is too much concern expressed about verification of AI output in everyday work due to a risk of factual errors (there might… — score 4: Routine commentary on AI output verification by Ethan Mollick; doesn't meet the high bar for substantive commentary.
+- Binance says CFO Kaiser Ng is leaving to "pursue a new venture" days after a $6.3B hack, citing a six-month transition plan, and names Justin Yek as CFO (Bloomberg) — not AI: Crypto exchange CFO departure; no AI angle.
+- Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees "shaky" projects killed (Cecile Daurat/Bloomberg) — duplicate of d93ef6b85a78
 
 </details>
 
 ### Sources with problems
-- `gdelt-india`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+- `gdelt`: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out
+- `gdelt-india`: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out
+- `sam-altman`: failed: ReadTimeout: The read operation timed out
+- `r-sideproject`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'
+F
 
 <details><summary>Research agent's work</summary>
 
-- Investigation: some Chinese companies approved by the US Commerce Depa: confirmed (searched “New York Times Commerce Department Nvidia H200 empty offices sanctions”; read nytimes.com; searched “U.S. Cleared Nvidia Chips to Chinese Firms With Empty Offices and Troubling Ties”)
-- AI investment cycle may have peaked , Jefferies warns ; raises India a: confirmed (searched “Jefferies AI investment cycle peaked India allocation”; read thehindubusinessline.com)
-- Qualcomm Confirms AI - Native 6G Plans With 2029 Launch Target: confirmed (searched “Qualcomm AI Native 6G 2029 launch target”; searched “Qualcomm AI Native 6G 2029”; read gsmdome.com)
-- Chicago-based data analytics company Ocient raised a $100M Series C co: confirmed (searched “Ocient 100M Series C Boka Capital OCA Ventures”; searched “Ocient 100M Series C SiliconANGLE Paul Gillin”; read yahoo.com)
+- Exponential Time Hypothesis co-proposer Russell Impagliazzo calls Open: confirmed (searched “Russell Impagliazzo OpenAI disproof Exponential Time Hypothesis Cade Metz New York Times”; read nytimes.com; searched “How AI Just Blew Up a Key Tenet of Computer Science New York Times”)
+- The Components of Agent Memory: confirmed (searched “The Components of Agent Memory Anthropic”; read blockchain.news)
+- AI broke the cybersecurity world. What’s next?: confirmed (searched “Alex Stamos Cognition chief security officer cybersecurity”; searched “AI broke the cybersecurity world What's next Alex Stamos The Verge”; read msn.com)
 
 </details>
+
+### Notes
+- dropped unverifiable quote (Peter Jonsson): dead…
+- dropped unverifiable benchmark: Claude Opus 5 and Opus 5.5 Continual Learning Bench (CL-Bench) 1.0 outperformed earlier iterations such as Sonnet 4.6 and Opus 4.7
