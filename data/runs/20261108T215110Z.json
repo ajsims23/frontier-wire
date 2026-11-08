@@ -1,0 +1,233 @@
+{
+  "started_at": "2026-11-08T21:51:10+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1368)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (899)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (19)",
+    "gdelt": "ok (5)",
+    "hn": "ok (13)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "failed: HTTPStatusError: Server error '503 Service Unavailable' for url 'https://analyticsindiamag.com/feed'\nFor more information check: https://",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (48)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Albanese government warned as US voters reject AI hubs | Stock Journal",
+      "reason": "duplicate of fc8f30aee8f3"
+    },
+    {
+      "title": "AI tech suppliers unfazed by US vote",
+      "reason": "score 3: Brief headline noting AI suppliers are unfazed by US elections without substantial new reporting."
+    },
+    {
+      "title": "By 2027 we could witness a Chernobyl of artificial intelligence : the warning of Nobel Prize winner Geoffrey Hinton",
+      "reason": "score 3: Recycles routine warning from Geoffrey Hinton regarding AI existential risk."
+    },
+    {
+      "title": "AI cyber resilience and the trust gap",
+      "reason": "score 4: Generic thought-leadership commentary on cyber resilience and the trust gap rather than breaking news."
+    },
+    {
+      "title": "Gita Gopinath warns of correction in AI boom",
+      "reason": "score 4: General macro commentary warning of an AI boom correction, lacking concrete news or data."
+    },
+    {
+      "title": "Why I will not be using LLMs in my coding",
+      "reason": "not AI: Opinion piece on coding without LLMs, not significant news."
+    },
+    {
+      "title": "Apple is racing to make Siri more agentic",
+      "reason": "duplicate of d5418a8635ce"
+    },
+    {
+      "title": "US professional services added 70K jobs in October, the most since July 2022, as AI-exposed consulting, legal, and accounting all grew despite AI job-loss fears (Ian Hodgson/Wall Street Journal)",
+      "reason": "score 5: Macroeconomic employment data for professional services is too broad and adjacent to be core AI news, despite touching AI-exposed sectors."
+    }
+  ],
+  "written": [
+    {
+      "id": "b9e9a9b1a38a",
+      "headline": "Nvidia board launches investigation after CEO Jensen Huang admits affair",
+      "category": "industry",
+      "summary": "Nvidia's board launched an independent investigation after CEO Jensen Huang admitted to an affair with a suspected Chinese spy. Huang took full responsibility in a message to staff, stating he fell short of his duties.",
+      "url": "https://techmeme.com/261108/p14",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "68ff5ed661ee",
+      "headline": "Goldman Sachs restricts AI coding tools to engineers and strats",
+      "category": "industry",
+      "summary": "Goldman Sachs updated its internal guidance in October to restrict Anthropic's Claude Code and Microsoft's GitHub to its engineering staff and hybrid 'strats', cutting off most traders and bankers. The change follows a review of productivity and risk concerns regarding non-technical employees running code-writing software.",
+      "url": "https://thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+      "sources": 5,
+      "quotes": 1
+    },
+    {
+      "id": "76dbab81d73b",
+      "headline": "DeepSeek says Harness agent app reached 1.54M daily active users",
+      "category": "models",
+      "summary": "DeepSeek reported that its open-source agent application Harness reached 1.54 million daily active users by November 4. The application uses roughly 92 trillion tokens a day, or about 60 million per user.",
+      "url": "https://techmeme.com/261108/p12",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "9b35f1480431",
+      "headline": "AI companies sell $300B+ in stock in 2026 amid market absorption questions",
+      "category": "industry",
+      "summary": "AI companies sold or priced over $300 billion of stock in 2026, with about $100 billion more planned, excluding Anthropic's IPO. This surge follows a sharp tech sell-off that caused Nasdaq composite companies to lose $2.5 trillion in market value on Thursday.",
+      "url": "https://techmeme.com/261108/p10",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "4756aa2fa657",
+      "headline": "Nvidia board launches probe into CEO Jensen Huang over alleged spy plot",
+      "category": "industry",
+      "summary": "Nvidia's board of directors launched an independent investigation into whether CEO Jensen Huang was targeted by a foreign spy operation involving former Megaspeed executive Alice Huang. The board stated it has no reason to believe national security or company secrets were compromised.",
+      "url": "https://techmeme.com/261108/p13",
+      "sources": 11,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "dropped unverifiable quote (Jensen Huang): I owe my family and all of you an apology. I was unfaithful …",
+    "dropped unverifiable quote (DeepSeek): DeepSeek said its open-source AI agent application, Harness,…",
+    "dropped unverifiable quote (Jensen Huang): I owe my family and all of you an apology. I was unfaithful …"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 88.7,
+    "audit": 0.0,
+    "plan": 1.9,
+    "judge": 4.9,
+    "verify and write": 87.7,
+    "videos": 3.8,
+    "tagging": 2.3,
+    "explainers": -0.0,
+    "trackers": 40.7,
+    "claims": 2.3,
+    "model tracker": 0.0,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 1.5,
+    "self-review": -0.0,
+    "photos": 0.3,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 10.9
+  },
+  "fetched": 2892,
+  "fresh": 15,
+  "plan": {
+    "focus": "Tracking Nvidia's leadership probe and Goldman Sachs pulling Claude Code amid AI infrastructure and agent expansion.",
+    "priorities": [
+      "Email to staff: Jensen Huang admits an affair, takes \"full responsibil (Jensen Huang admits affair amid Nvidia foreign spy probe.)",
+      "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders (Goldman Sachs pulls Claude Code from bankers and traders due to security or compliance concerns.)",
+      "Excluding Anthropic's IPO, AI companies sold or priced $300B+ of stock ($300B+ in AI stock sales raises market absorption questions ahead of Anthropic IPO.)",
+      "DeepSeek says its open-source agent app Harness hit 1.54M DAUs on Nove (DeepSeek's open-source agent app Harness hits 1.54M DAUs, highlighting massive token usage.)",
+      "US professional services added 70K jobs in October, the most since Jul (Professional services add 70K jobs in October defying AI job-loss fears.)"
+    ],
+    "thin_areas": [
+      "research"
+    ],
+    "searches": [
+      "Nvidia Jensen Huang spy probe board: 6 new",
+      "Goldman Sachs Claude Code removal security: 0 new"
+    ],
+    "dig_deeper": [
+      "Nvidia will investigate CEO Jensen Huang’s relationship with possible ",
+      "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders"
+    ]
+  },
+  "judged": 20,
+  "kept": 5,
+  "research": {
+    "investigated": 5,
+    "confirmed": 5,
+    "tool_calls": 14
+  },
+  "research_log": [
+    "Email to staff: Jensen Huang admits an affair, takes \"full responsibil: confirmed (searched “Jensen Huang affair Axios Madison Mills Nvidia”; searched “Madison Mills Axios Jensen Huang email to staff affair”; read techcrunch.com)",
+    "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders: confirmed (searched “Goldman Sachs Claude Code”; read yahoo.com)",
+    "DeepSeek says its open-source agent app Harness hit 1.54M DAUs on Nove: confirmed (searched “DeepSeek agent app Harness 1.54M DAUs November 4 Saritha Rai Bloomberg”; searched “DeepSeek Harness 1.54M DAUs Bloomberg”; searched “DeepSeek Harness DAU tokens Bloomberg”)",
+    "Excluding Anthropic's IPO, AI companies sold or priced $300B+ of stock: confirmed (searched “Excluding Anthropic IPO AI companies sold or priced $300B of stock in 2026”; searched “The Information AI stock can market absorb Alex Eichenstein”; read theinformation.com)",
+    "Nvidia's board launches a probe into whether Jensen Huang was targeted: confirmed (searched “Nvidia board probe Jensen Huang spy plot Ian King Bloomberg”; read nytimes.com; read afr.com)"
+  ],
+  "threads": [
+    "Anthropic Claude Code security and enterprise fallout: Goldman Sachs restricts AI coding tools to engineers and str",
+    "DeepSeek open-source Super-Agent growth and usage: DeepSeek says Harness agent app reached 1.54M daily active u",
+    "Anthropic IPO valuation and compute spending commitments: AI companies sell $300B+ in stock in 2026 amid market absorp",
+    "Megaspeed spy plot targeting Nvidia CEO Jensen Huang: Nvidia board launches probe into CEO Jensen Huang over alleg"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 4 new)",
+    "Google for Developers": "ok (9 in feed, 4 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (10 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 1 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 2 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 1 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (2 in feed, 0 new)"
+  },
+  "videos_kept": "11 kept from 12 new",
+  "tagged": 5,
+  "trackers": "filed 2 stories; updated frontier-race, ai-money",
+  "claims": "117 tracked, 112 open, 0 updated this run",
+  "model_tracker": "82 models, 20 changes today",
+  "briefing": "3 themes from 16 stories",
+  "photos": "5 saved, 0 unavailable",
+  "alerts": "32 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":36}",
+  "ai_requests_run": 35,
+  "ai_tokens_run": 77671,
+  "ai_requests_today": 173,
+  "provider_log": []
+}
