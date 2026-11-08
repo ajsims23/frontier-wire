@@ -1,0 +1,152 @@
+{
+  "started_at": "2026-11-08T13:08:18+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1368)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (899)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (18)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (9)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "failed: HTTPStatusError: Server error '503 Service Unavailable' for url 'https://analyticsindiamag.com/feed'\nFor more information check: https://",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "GitHub Down Again?",
+      "reason": "not AI: General platform outage discussion with no AI relevance."
+    },
+    {
+      "title": "JioHome Diwali offer: Get 5 months of free Wi-Fi with a 10-month recharge of ₹6,660; check details",
+      "reason": "not AI: Consumer telecom promotional offer with no AI relevance."
+    },
+    {
+      "title": "Envision’s Galaxy datacenter shows how fast China is building AI infrastructure",
+      "reason": "score 4: Duplicate coverage of the Inner Mongolia data center report."
+    },
+    {
+      "title": "Inside Inner Mongolia, China's fastest-growing AI data center region, where construction is accelerating with low building cost and no public backlash (SemiAnalysis)",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [],
+  "notes": [
+    "ignored made-up duplicate id 03263f595a44 for 'Envision’s Galaxy datacenter shows how fast China '",
+    "1 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 71.2,
+    "audit": 0.0,
+    "plan": 1.3,
+    "judge": 1.7,
+    "verify and write": 10.8,
+    "videos": 3.1,
+    "tagging": 0.0,
+    "explainers": 0.0,
+    "trackers": 0.0,
+    "claims": 0.0,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": -0.0,
+    "self-review": -0.0,
+    "photos": -0.0,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 1.4
+  },
+  "fetched": 2884,
+  "fresh": 3,
+  "plan": {
+    "focus": "Tracking China's surging Inner Mongolia AI data center hub amid global infrastructure pressures.",
+    "priorities": [
+      "Inside Inner Mongolia, China's fastest-growing AI data center region,  (SemiAnalysis report on Inner Mongolia's AI data center boom offers crucial global infrastructure context.)"
+    ],
+    "thin_areas": [
+      "india"
+    ],
+    "searches": [
+      "Inner Mongolia AI data center SemiAnalysis: 1 new"
+    ],
+    "dig_deeper": [
+      "Inside Inner Mongolia, China's fastest-growing AI data center region, "
+    ]
+  },
+  "judged": 4,
+  "kept": 1,
+  "research": {
+    "investigated": 1,
+    "confirmed": 0,
+    "tool_calls": 3
+  },
+  "research_log": [
+    "Inside Inner Mongolia, China's fastest-growing AI data center region, : unconfirmed (searched “SemiAnalysis Inside Inner Mongolia China fastest growing AI data center region”; searched “SemiAnalysis Inner Mongolia data center”; searched “site:semianalysis.com Inner Mongolia”)"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 4 new)",
+    "Google for Developers": "ok (9 in feed, 4 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (10 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 1 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 2 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "20VC": "ok (2 in feed, 0 new)"
+  },
+  "videos_kept": "11 kept from 11 new",
+  "trackers": "filed 0 stories; no tracker changed",
+  "claims": "116 tracked, 111 open",
+  "model_tracker": "82 models, 17 changes today",
+  "photos": "0 saved, 0 unavailable",
+  "alerts": "22 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":3}",
+  "ai_requests_run": 8,
+  "ai_tokens_run": 17312,
+  "ai_requests_today": 89,
+  "provider_log": []
+}
