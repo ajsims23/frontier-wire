@@ -1,0 +1,204 @@
+{
+  "started_at": "2026-11-08T18:59:30+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1368)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (899)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (19)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "hn": "ok (12)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "failed: HTTPStatusError: Server error '503 Service Unavailable' for url 'https://analyticsindiamag.com/feed'\nFor more information check: https://",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Consumer brain wave headsets threaten privacy",
+      "reason": "not AI: Consumer brain wave headsets privacy story with no direct AI connection."
+    },
+    {
+      "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+      "reason": "score 4: Hacker News link about running a large model on CPU RAM; neat hardware hack but essentially a small-scale community experiment rather than frontier lab news."
+    },
+    {
+      "title": "OpenAI raises $11B at a $1.25T valuation",
+      "reason": "score 3: Duplicate of story cf30e859b377 covering OpenAI raising $11 billion at a $1.25 trillion valuation."
+    },
+    {
+      "title": "ISponsorBlockTV: SponsorBlock client for all YouTube TV clients",
+      "reason": "not AI: SponsorBlock client for YouTube TV has no AI angle."
+    },
+    {
+      "title": "THORChain, which handled ~$1B of stolen Bybit funds in 2025 for $12M+ in fees, began moving the Binance loot despite FBI pleas, saying it can't stop transfers (Wall Street Journal)",
+      "reason": "not AI: Crypto laundering and THORChain story with no AI relevance."
+    },
+    {
+      "title": "OpenAI Reportedly Raises $11 Billion At $1.25 Trillion Valuation As Funding Round Targets $20 Billion",
+      "reason": "score 3: Duplicate of story cf30e859b377 covering OpenAI's $11 billion funding round at a $1.25 trillion valuation."
+    },
+    {
+      "title": "Excluding Anthropic's IPO, AI companies sold or priced $300B+ of stock in 2026, with ~$100B more on tap, raising questions about how much the market can absorb (Alex Eichenstein/The Information)",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "16495ea32bd4",
+      "headline": "Elvis and Eminem rights holders file lawsuits against AI music platform Suno",
+      "category": "policy",
+      "summary": "Elvis Presley Enterprises and Eminem publisher Eight Mile Style filed lawsuits against AI music generator Suno. The complaints allege copyright infringement and unauthorized voice cloning.",
+      "url": "https://theverge.com/ai-artificial-intelligence/1029533/elvis-eminem-suno-ai-music-clone-lawsuit",
+      "sources": 4,
+      "quotes": 1
+    },
+    {
+      "id": "d5418a8635ce",
+      "headline": "Apple CEO John Ternus pushes for accelerated AI strategy and agentic Siri",
+      "category": "industry",
+      "summary": "Apple CEO John Ternus reportedly told software chief Craig Federighi that improving Siri is no longer enough, pressing for an accelerated AI strategy. Ternus held a closed-door meeting to push for a more ambitious AI roadmap, aiming to move beyond incremental updates toward autonomous AI agents.",
+      "url": "https://techmeme.com/261108/p9",
+      "sources": 7,
+      "quotes": 0
+    },
+    {
+      "id": "2d0e78ba0844",
+      "headline": "Ethan Mollick highlights impact of small benchmark changes on model performance",
+      "category": "voices",
+      "summary": "Ethan Mollick highlighted on Bluesky that small alterations to questions on the DeepSWE coding benchmark can change model performance and make similar models look different.",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzsyjxxrsk2l",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "1 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 116.5,
+    "audit": -0.0,
+    "plan": 13.8,
+    "judge": 2.3,
+    "verify and write": 227.3,
+    "videos": 5.0,
+    "tagging": 2.4,
+    "explainers": 0.0,
+    "trackers": 1.7,
+    "claims": 0.8,
+    "model tracker": 0.2,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 1.3,
+    "self-review": 0.0,
+    "photos": 1.1,
+    "stock photos": 8.9,
+    "daily email": 0.0,
+    "alerts": 3.7
+  },
+  "fetched": 2888,
+  "fresh": 9,
+  "plan": {
+    "focus": "Tracking massive capital raises, market absorption questions, and big tech restructuring as AI financial scale hits new records.",
+    "priorities": [
+      "Excluding Anthropic's IPO, AI companies sold or priced $300B+ of stock (Examines the $300B+ stock sales in 2026 and market absorption limits, directly tying into venture and public market dynamics.)",
+      "Sources: John Ternus wants more urgency in Apple's AI efforts, pushing (Apple internal friction between John Ternus and Craig Federighi over agentic AI push.)",
+      "Elvis and Eminem rights holders are suing Suno (Elvis and Eminem rights holders suing Suno escalates legal battles over generative AI copyright.)",
+      "Ethan Mollick: What happens to model performance on the popular DeepSW (Ethan Mollick highlighting benchmark fragility on DeepSWE coding tests.)"
+    ],
+    "thin_areas": [
+      "business",
+      "voices"
+    ],
+    "searches": [
+      "OpenAI valuation 1.25T 11B funding: 1 new"
+    ],
+    "dig_deeper": [
+      "Excluding Anthropic's IPO, AI companies sold or priced $300B+ of stock"
+    ]
+  },
+  "judged": 10,
+  "kept": 4,
+  "research": {
+    "investigated": 3,
+    "confirmed": 2,
+    "tool_calls": 9
+  },
+  "research_log": [
+    "Elvis and Eminem rights holders are suing Suno: confirmed (searched “Elvis Eminem rights holders suing Suno AI music lawsuit”; read billboard.com; searched “\"Eminem\" publisher Suno lawsuit music copyright”)",
+    "Excluding Anthropic's IPO, AI companies sold or priced $300B+ of stock: unconfirmed (searched “AI companies sold priced 300B stock 2026 Eichenstein The Information”; searched “Alex Eichenstein The Information AI companies sold or priced stock”; searched “The Information AI companies $300B stock”)",
+    "Sources: John Ternus wants more urgency in Apple's AI efforts, pushing: confirmed (searched “John Ternus Craig Federighi Apple AI Mark Gurman Bloomberg”; read gizmodo.com; read iphoneincanada.ca)"
+  ],
+  "threads": [
+    "Elvis Presley estate and others sue Suno over copyright: Elvis and Eminem rights holders file lawsuits against AI mus",
+    "Apple Siri AI and advanced capabilities push: Apple CEO John Ternus pushes for accelerated AI strategy and"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 4 new)",
+    "Google for Developers": "ok (9 in feed, 4 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (10 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 1 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 2 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 1 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (2 in feed, 0 new)"
+  },
+  "videos_kept": "11 kept from 12 new",
+  "tagged": 5,
+  "trackers": "filed 1 stories; updated copyright",
+  "claims": "117 tracked, 112 open, 0 updated this run",
+  "model_tracker": "82 models, 20 changes today",
+  "briefing": "4 themes from 14 stories",
+  "photos": "2 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "29 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":19}",
+  "ai_requests_run": 24,
+  "ai_tokens_run": 45945,
+  "ai_requests_today": 138,
+  "provider_log": []
+}
