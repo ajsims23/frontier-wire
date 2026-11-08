@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-08T13:08:18+00:00",
+  "started_at": "2026-11-08T15:51:27+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -20,9 +20,9 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (18)",
+    "hf-papers": "ok (19)",
     "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (9)",
+    "hn": "ok (10)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -31,7 +31,7 @@
     "inc42": "ok (24)",
     "medianama": "ok (10)",
     "mint-tech": "ok (35)",
-    "et-tech": "ok (50)",
+    "et-tech": "ok (48)",
     "yourstory": "ok (20)",
     "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
@@ -43,76 +43,100 @@
   },
   "dropped": [
     {
-      "title": "GitHub Down Again?",
-      "reason": "not AI: General platform outage discussion with no AI relevance."
+      "title": "OnePlus ColorOS 17 update schedule: When will OnePlus 12, OnePlus Open, OnePlus Nord 6 and more receive new software?",
+      "reason": "not AI: Routine smartphone OS software update schedule with no AI relevance."
     },
     {
-      "title": "JioHome Diwali offer: Get 5 months of free Wi-Fi with a 10-month recharge of ₹6,660; check details",
-      "reason": "not AI: Consumer telecom promotional offer with no AI relevance."
+      "title": "Angel One becomes India's second-largest broker by active clients",
+      "reason": "not AI: Financial brokerage client numbers are not AI-related news."
     },
     {
-      "title": "Envision’s Galaxy datacenter shows how fast China is building AI infrastructure",
-      "reason": "score 4: Duplicate coverage of the Inner Mongolia data center report."
-    },
-    {
-      "title": "Inside Inner Mongolia, China's fastest-growing AI data center region, where construction is accelerating with low building cost and no public backlash (SemiAnalysis)",
+      "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
       "reason": "could not verify yet; will retry next run"
     }
   ],
-  "written": [],
+  "written": [
+    {
+      "id": "afa4cae37227",
+      "headline": "Anthropic buys 1.7GW of gas-fired generators in $3.4B deal",
+      "category": "industry",
+      "summary": "Anthropic purchased commitments for 1.7GW of gas-fired generators from equipment supplier OnePWR for $3.4 billion. This is the largest known purchase of gas-fired generators by an AI lab as demand for energy surges.",
+      "url": "https://techmeme.com/261108/p8",
+      "sources": 8,
+      "quotes": 0
+    },
+    {
+      "id": "03263f595a44",
+      "headline": "Envision Group opens gigawatt-scale Galaxy AI datacenter in Inner Mongolia",
+      "category": "industry",
+      "summary": "Research firm SemiAnalysis toured Envision Group's Galaxy AI datacenter in Ulanqab, Inner Mongolia, highlighting fast construction, low costs, and absence of public backlash. The gigawatt-scale campus started commercial operations in August 2026 with a long-term target of 3 GW by the end of 2028.",
+      "url": "https://techmeme.com/261108/p7",
+      "sources": 2,
+      "quotes": 0
+    }
+  ],
   "notes": [
-    "ignored made-up duplicate id 03263f595a44 for 'Envision’s Galaxy datacenter shows how fast China '",
     "1 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 71.2,
+    "gather": 78.1,
     "audit": 0.0,
-    "plan": 1.3,
-    "judge": 1.7,
-    "verify and write": 10.8,
-    "videos": 3.1,
-    "tagging": 0.0,
+    "plan": 2.0,
+    "judge": 10.0,
+    "verify and write": 16.8,
+    "videos": 47.0,
+    "tagging": 1.4,
     "explainers": 0.0,
-    "trackers": 0.0,
-    "claims": 0.0,
+    "trackers": 2.5,
+    "claims": 9.0,
     "model tracker": 0.1,
-    "weekly": -0.0,
-    "builders": -0.0,
+    "weekly": 0.0,
+    "builders": 12.0,
     "top voices": -0.0,
-    "briefing": -0.0,
-    "self-review": -0.0,
-    "photos": -0.0,
-    "stock photos": -0.0,
+    "briefing": 2.2,
+    "self-review": 0.0,
+    "photos": 0.2,
+    "stock photos": 9.2,
     "daily email": -0.0,
-    "alerts": 1.4
+    "alerts": 2.1
   },
   "fetched": 2884,
-  "fresh": 3,
+  "fresh": 5,
   "plan": {
-    "focus": "Tracking China's surging Inner Mongolia AI data center hub amid global infrastructure pressures.",
+    "focus": "Tracking Anthropic's massive energy infrastructure commitments and the rapid expansion of AI data centers in China.",
     "priorities": [
-      "Inside Inner Mongolia, China's fastest-growing AI data center region,  (SemiAnalysis report on Inner Mongolia's AI data center boom offers crucial global infrastructure context.)"
+      "Sources: Anthropic bought commitments for 1.7GW of gas-fired generator (Anthropic's $3.4B commitment for 1.7GW of gas-fired generators is a massive infrastructure play for an AI lab.)",
+      "Inside Inner Mongolia, China's fastest-growing AI data center region,  (SemiAnalysis report on Inner Mongolia data center growth highlights scale and lack of public backlash.)",
+      "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU (Llama-modchip technical feat running large models on constrained hardware without GPUs.)"
     ],
     "thin_areas": [
       "india"
     ],
     "searches": [
-      "Inner Mongolia AI data center SemiAnalysis: 1 new"
+      "Anthropic OnePWR gas generators: 6 new",
+      "Inner Mongolia AI data center SemiAnalysis: 0 new"
     ],
     "dig_deeper": [
+      "Sources: Anthropic bought commitments for 1.7GW of gas-fired generator",
       "Inside Inner Mongolia, China's fastest-growing AI data center region, "
     ]
   },
-  "judged": 4,
-  "kept": 1,
+  "judged": 11,
+  "kept": 3,
   "research": {
-    "investigated": 1,
-    "confirmed": 0,
-    "tool_calls": 3
+    "investigated": 3,
+    "confirmed": 2,
+    "tool_calls": 8
   },
   "research_log": [
-    "Inside Inner Mongolia, China's fastest-growing AI data center region, : unconfirmed (searched “SemiAnalysis Inside Inner Mongolia China fastest growing AI data center region”; searched “SemiAnalysis Inner Mongolia data center”; searched “site:semianalysis.com Inner Mongolia”)"
+    "Sources: Anthropic bought commitments for 1.7GW of gas-fired generator: confirmed (searched “Anthropic OnePWR 1.7GW gas generators 3.4 billion”; read analyticsinsight.net)",
+    "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU: unconfirmed (searched “llama modchip deepseek 64gb ram”; searched “synchopate llama modchip”; searched “llama-modchip”)",
+    "Inside Inner Mongolia, China's fastest-growing AI data center region, : confirmed (searched “SemiAnalysis Inner Mongolia AI data center”; searched “\"Envision\" \"Inner Mongolia\" \"SemiAnalysis\"”; read cryptobriefing.com)"
+  ],
+  "threads": [
+    "Anthropic IPO valuation and compute spending commitments: Anthropic buys 1.7GW of gas-fired generators in $3.4B deal",
+    "Post midterm policy sparks data center clash: Envision Group opens gigawatt-scale Galaxy AI datacenter in "
   ],
   "videos": {
     "OpenAI": "ok (11 in feed, 0 new)",
@@ -136,17 +160,30 @@
     "Big Technology Podcast": "ok (13 in feed, 0 new)",
     "Hard Fork": "ok (1 in feed, 0 new)",
     "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 1 new)",
     "20VC": "ok (2 in feed, 0 new)"
   },
-  "videos_kept": "11 kept from 11 new",
-  "trackers": "filed 0 stories; no tracker changed",
-  "claims": "116 tracked, 111 open",
-  "model_tracker": "82 models, 17 changes today",
-  "photos": "0 saved, 0 unavailable",
-  "alerts": "22 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":3}",
-  "ai_requests_run": 8,
-  "ai_tokens_run": 17312,
-  "ai_requests_today": 89,
+  "videos_kept": "12 kept from 12 new",
+  "tagged": 0,
+  "trackers": "filed 2 stories; updated ai-infrastructure",
+  "claims": "117 tracked, 112 open, 0 updated this run",
+  "model_tracker": "82 models, 20 changes today",
+  "builders_sources": {
+    "show-hn": "ok (5)",
+    "github-new": "ok (44)",
+    "hf-spaces": "ok (20)",
+    "product-hunt": "ok (3)",
+    "r-localllama": "ok (25)",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
+  },
+  "builders": "picked 5 from 60 candidates; 5 with pictures, 0 with videos",
+  "briefing": "4 themes from 14 stories",
+  "india_briefing": "2 themes from 3 stories",
+  "photos": "1 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "27 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":17}",
+  "ai_requests_run": 25,
+  "ai_tokens_run": 55264,
+  "ai_requests_today": 114,
   "provider_log": []
 }
