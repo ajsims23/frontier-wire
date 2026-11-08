@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-08T01:24:25+00:00",
+  "started_at": "2026-11-08T04:07:15+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -19,10 +19,10 @@
     "microsoft-ai": "ok (10)",
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
-    "arxiv": "ok (40)",
+    "arxiv": "failed: HTTPStatusError: Client error '429 Unknown Error' for url 'https://export.arxiv.org/api/query?search_query=cat%3Acs.AI+OR+cat%3Acs.CL+OR+",
     "hf-papers": "ok (16)",
-    "gdelt": "ok (15)",
-    "hn": "ok (17)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (15)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -33,7 +33,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (49)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -43,139 +43,94 @@
   },
   "dropped": [
     {
-      "title": "Editorial : Buck plan for AI guardrails sets right tone – Marin Independent Journal",
-      "reason": "score 4: Local editorial commentary on AI guardrails lacking major news substance."
+      "title": "Workflow, AI, health: test your business creativity with Edition 257 of our weekly quiz!",
+      "reason": "not AI: Weekly general business and creativity quiz, not substantive AI news."
     },
     {
-      "title": "An AI reckoning ? Investors brace for potential fallout",
-      "reason": "score 4: Too vague and general about potential investment corrections without specific new data or events."
+      "title": "Artist Bhagya Ajaikumar explains how good curation balances individual expression and collective vision",
+      "reason": "score 4: Art exhibition photo essay and curator profile touching briefly on generation trends; too peripheral for frontier AI news."
     },
     {
-      "title": "Xinhua Headlines : 7th World Media Summit opens in Beijing , highlighting media transformation in AI age",
-      "reason": "score 3: Generic headline about media transformation at a summit rather than substantive AI news."
+      "title": "Simon Willison: Was watching Elsbeth and recognised the outside of their police precinct building... it's the General Society of Mechanics and Tradesmen…",
+      "reason": "not AI: Personal observation about a TV show building, not AI related."
     },
     {
-      "title": "Openai President Greg Brockman Death Will Become Optional Thanks to AI",
-      "reason": "score 2: Speculative and hyperbolic commentary rather than substantive news."
-    },
-    {
-      "title": "German startups are teaching AI to do office work - GIS user technology news",
-      "reason": "score 3: Very brief mention of startups teaching AI office work without specific details or news value."
-    },
-    {
-      "title": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages",
-      "reason": "not AI: Routine software development update with no AI relevance."
-    },
-    {
-      "title": "US Treasury moves to cut crypto exchange MEXC off from the US financial system, alleging $16B+ in illicit flows, including Russian and Iranian sanctions evasion (Francisco Rodrigues/CoinDesk)",
-      "reason": "not AI: Crypto exchange sanctions enforcement is not related to artificial intelligence."
-    },
-    {
-      "title": "Claude Code's “Don't Ask Again” File Exposes Passwords and Keys in 1,122 Public Copies on GitHub",
-      "reason": "score 8: Duplicate of already-published story about Claude Code exposing credentials on GitHub."
-    },
-    {
-      "title": "Report: SEA makes up ~50% of APAC data center capacity being built, led by Malaysia and Thailand, which paused 49 and delayed approvals of 117 projects in Sept. (Arundhati Hazra/The Guardian)",
-      "reason": "could not verify yet after a second try; dropped"
+      "title": "Top AI adopters in customer service gain over 50% KPI improvements, but value realization remains uneven: EY report",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "5186d80b7eef",
-      "headline": "Claude Code approval files expose company secrets on GitHub",
-      "category": "safety",
-      "summary": "Apiiro researchers found that Claude Code's \"Don't Ask Again\" feature can store database passwords and other credentials in local settings files that end up committed to public GitHub repositories. The researchers identified 1,122 public files containing secrets out of 104,185 examined public copies.",
-      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
-      "sources": 3,
-      "quotes": 1
-    },
-    {
-      "id": "d44fec61ccb7",
-      "headline": "After the midterms, things are looking rocky for Elon Musk and data centers",
+      "id": "5abd2b102f01",
+      "headline": "Pro-AI super PAC network Leading the Future falls short in midterms",
       "category": "policy",
-      "summary": "Democrats won a historic victory in the midterm elections, leading to voter rejection of data centers in local ballot measures and the election of politicians like Texas governor-elect Gina Hinojosa who campaigned on restricting data centers. Tech commentator Sean O'Kane noted that Elon Musk received little return after donating half a billion dollars to Republicans while keeping his businesses headquartered in a state that turned heavily Democratic.",
-      "url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers",
+      "summary": "The pro-AI super PAC network Leading the Future ended the midterm elections with over $20 million in the bank after most of the competitive candidates it backed lost. Launched with a war chest of around $100 million in August 2025, the network spent millions of dollars trying to shape election outcomes and oppose policies it viewed as stifling innovation.",
+      "url": "https://techmeme.com/261107/p18",
       "sources": 4,
-      "quotes": 2
-    },
-    {
-      "id": "8c01667ff5d8",
-      "headline": "Anthropic-backed PAC Public First spent $63M+ in 2026 midterms",
-      "category": "policy",
-      "summary": "The Anthropic-backed AI safety super PAC Public First spent over $63 million during the 2026 midterm elections. Ten of the 17 congressional candidates supported by the PAC won their races.",
-      "url": "https://techmeme.com/261107/p17",
-      "sources": 2,
-      "quotes": 0
+      "quotes": 1
     }
   ],
   "notes": [
-    "ignored made-up duplicate id 5186d80b7eef for 'Claude Code's “Don't Ask Again” File Exposes Passw'"
+    "1 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 86.3,
-    "audit": 2.8,
-    "plan": 2.0,
-    "judge": 2.8,
-    "verify and write": 65.9,
-    "videos": 1.6,
-    "tagging": 1.6,
-    "explainers": 0.9,
-    "trackers": 5.1,
-    "claims": 2.2,
-    "model tracker": 0.2,
-    "weekly": 3.5,
-    "builders": -0.0,
-    "top voices": -0.0,
-    "briefing": 2.3,
-    "self-review": 1.2,
-    "photos": 0.4,
-    "stock photos": 5.6,
-    "daily email": 0.0,
-    "alerts": 2.3
+    "gather": 77.8,
+    "audit": -0.0,
+    "plan": 1.6,
+    "judge": 1.4,
+    "verify and write": 13.7,
+    "videos": 2.1,
+    "tagging": 0.8,
+    "explainers": 0.0,
+    "trackers": 2.1,
+    "claims": 80.5,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 1.8,
+    "self-review": -0.0,
+    "photos": 0.2,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 2.7
   },
-  "fetched": 2954,
-  "fresh": 11,
-  "audit": "coverage 100% of 7 significant stories; 0 missed, 0 added to this run",
+  "fetched": 2897,
+  "fresh": 5,
   "plan": {
-    "focus": "Tracking political spending by AI super PACs and critical security exposures in developer coding tools.",
+    "focus": "Tracking midterm AI PAC fallout and enterprise AI adoption metrics in India.",
     "priorities": [
-      "Anthropic-backed AI safety super PAC Public First spent $63M+ in the 2 (Major disclosure on Anthropic-backed Public First spending $63M+ in the 2026 midterms.)",
-      "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitH (Crucial security warning about Claude Code exposing sensitive credentials in public GitHub files.)",
-      "After the midterms, things are looking rocky for Elon Musk and data ce (Follows our existing thread on post-midterm policy and data center friction for xAI/Elon Musk.)",
-      "Report: SEA makes up ~50% of APAC data center capacity being built, le (Important regional data center infrastructure shifts in Southeast Asia.)",
-      "An AI reckoning ? Investors brace for potential fallout (Connects to industry anxiety around AI investment cycles and market corrections.)"
+      "How a small, wealthy AI-safety network that organized in Signal chats  (Provides deep political reporting on how Signal-organized AI-safety coalitions defeated major super PACs in the midterms.)",
+      "Top AI adopters in customer service gain over 50% KPI improvements, bu (Delivers hard EY data on customer service KPI improvements from AI adoption in India.)",
+      "Simon Willison: Was watching Elsbeth and recognised the outside of the (Quick social commentary from Simon Willison, popular among our builder readership.)",
+      "Workflow, AI, health: test your business creativity with Edition 257 o (Engaging weekly quiz covering workflow and AI trends for Indian builders.)",
+      "Artist Bhagya Ajaikumar explains how good curation balances individual (Insightful creator perspective on curation in the age of AI art generation.)"
     ],
     "thin_areas": [
-      "policy",
-      "safety"
+      "india"
     ],
     "searches": [
-      "Public First Super PAC 2026 midterms: 0 new",
-      "Claude Code security vulnerability GitHub credentials: 1 new"
+      "Leading the Future super PAC midterms: 0 new"
     ],
     "dig_deeper": [
-      "Anthropic-backed AI safety super PAC Public First spent $63M+ in the 2",
-      "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitH"
+      "How a small, wealthy AI-safety network that organized in Signal chats ",
+      "Top AI adopters in customer service gain over 50% KPI improvements, bu"
     ]
   },
-  "judged": 12,
-  "kept": 4,
+  "judged": 5,
+  "kept": 2,
   "research": {
-    "investigated": 4,
-    "confirmed": 3,
-    "tool_calls": 12
+    "investigated": 2,
+    "confirmed": 1,
+    "tool_calls": 6
   },
   "research_log": [
-    "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitH: confirmed (searched “Claude Code Dont Ask Again passwords GitHub apiiro”; read thehackernews.com; searched “Claude Codes Dont Ask Again File Exposes Passwords and Keys in 1122 Public Copies on GitHub”)",
-    "After the midterms, things are looking rocky for Elon Musk and data ce: confirmed (searched “TechCrunch Equity midterms Elon Musk data centers”; read yahoo.com; searched “\"Gina Hinojosa\" Texas governor election data center freeze”)",
-    "Anthropic-backed AI safety super PAC Public First spent $63M+ in the 2: confirmed (searched “Anthropic backed AI safety super PAC Public First 63M 2026 midterms Emily Birnbaum Bloomberg”; searched “Public First super PAC 63 million midterms Anthropic”; searched “\"Public First\" super PAC Anthropic midterms Emily Birnbaum”)",
-    "Report: SEA makes up ~50% of APAC data center capacity being built, le: unconfirmed (searched “SEA data center capacity Malaysia Thailand Arundhati Hazra The Guardian”; searched “\"Arundhati Hazra\" data center Thailand Malaysia”; searched “\"Southeast Asia\" data center Malaysia Thailand paused delayed projects”)"
+    "How a small, wealthy AI-safety network that organized in Signal chats : confirmed (searched “AI safety network Signal chats Leading the Future midterms Politico”; searched “Politico AI safety network Signal chats Leading the Future”; searched “Leading the Future super PAC midterms AI”)",
+    "Top AI adopters in customer service gain over 50% KPI improvements, bu: unconfirmed (searched “EY India report AI customer service KPI 50 percent improvements”; searched “EY customer service AI report KPI 50 percent livemint”; searched “Top AI adopters in customer service gain over 50% KPI improvements EY”)"
   ],
   "threads": [
-    "Anthropic Claude Code backdoor product departure and securit: Claude Code approval files expose company secrets on GitHub",
-    "Post midterm policy sparks data center clash: After the midterms, things are looking rocky for Elon Musk a",
-    "AI-focused PACs spending in 2026 midterms: Anthropic-backed PAC Public First spent $63M+ in 2026 midter"
+    "AI-focused PACs spending in 2026 midterms: Pro-AI super PAC network Leading the Future falls short in m"
   ],
   "videos": {
     "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
@@ -185,37 +140,34 @@
     "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Hugging Face": "ok (12 in feed, 0 new)",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "No Priors": "ok (4 in feed, 0 new)",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Training Data (Sequoia)": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
-    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
     "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "The Cognitive Revolution": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
-    "Lenny's Podcast": "ok (2 in feed, 0 new)",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
     "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
   },
-  "tagged": 3,
-  "explainers": "0 added to earlier stories",
-  "trackers": "filed 2 stories; updated agent-safety, ai-infrastructure",
+  "tagged": 1,
+  "trackers": "filed 2 stories; updated ai-regulation",
   "claims": "116 tracked, 111 open, 0 updated this run",
-  "model_tracker": "82 models, 6 changes today",
-  "weekly": "wrote 2026-W45 with 5 shifts",
-  "briefing": "3 themes from 20 stories",
-  "india_briefing": "2 themes from 3 stories",
-  "self_review": "17 lines written to data/self_review.md",
-  "photos": "2 saved, 0 unavailable",
-  "stock photos": "1 added",
-  "alerts": "11 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":23}",
-  "ai_requests_run": 34,
-  "ai_tokens_run": 76488,
-  "ai_requests_today": 34,
-  "provider_log": []
+  "model_tracker": "82 models, 10 changes today",
+  "briefing": "4 themes from 20 stories",
+  "photos": "1 saved, 0 unavailable",
+  "alerts": "14 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":11}",
+  "ai_requests_run": 17,
+  "ai_tokens_run": 31048,
+  "ai_requests_today": 51,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model"
+  ]
 }

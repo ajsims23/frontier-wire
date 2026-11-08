@@ -1,0 +1,173 @@
+{
+  "started_at": "2026-11-08T04:07:15+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1368)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (899)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "failed: HTTPStatusError: Client error '429 Unknown Error' for url 'https://export.arxiv.org/api/query?search_query=cat%3Acs.AI+OR+cat%3Acs.CL+OR+",
+    "hf-papers": "ok (16)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (15)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (49)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Workflow, AI, health: test your business creativity with Edition 257 of our weekly quiz!",
+      "reason": "not AI: Weekly general business and creativity quiz, not substantive AI news."
+    },
+    {
+      "title": "Artist Bhagya Ajaikumar explains how good curation balances individual expression and collective vision",
+      "reason": "score 4: Art exhibition photo essay and curator profile touching briefly on generation trends; too peripheral for frontier AI news."
+    },
+    {
+      "title": "Simon Willison: Was watching Elsbeth and recognised the outside of their police precinct building... it's the General Society of Mechanics and Tradesmen…",
+      "reason": "not AI: Personal observation about a TV show building, not AI related."
+    },
+    {
+      "title": "Top AI adopters in customer service gain over 50% KPI improvements, but value realization remains uneven: EY report",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "5abd2b102f01",
+      "headline": "Pro-AI super PAC network Leading the Future falls short in midterms",
+      "category": "policy",
+      "summary": "The pro-AI super PAC network Leading the Future ended the midterm elections with over $20 million in the bank after most of the competitive candidates it backed lost. Launched with a war chest of around $100 million in August 2025, the network spent millions of dollars trying to shape election outcomes and oppose policies it viewed as stifling innovation.",
+      "url": "https://techmeme.com/261107/p18",
+      "sources": 4,
+      "quotes": 1
+    }
+  ],
+  "notes": [
+    "1 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 77.8,
+    "audit": -0.0,
+    "plan": 1.6,
+    "judge": 1.4,
+    "verify and write": 13.7,
+    "videos": 2.1,
+    "tagging": 0.8,
+    "explainers": 0.0,
+    "trackers": 2.1,
+    "claims": 80.5,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 1.8,
+    "self-review": -0.0,
+    "photos": 0.2,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 2.7
+  },
+  "fetched": 2897,
+  "fresh": 5,
+  "plan": {
+    "focus": "Tracking midterm AI PAC fallout and enterprise AI adoption metrics in India.",
+    "priorities": [
+      "How a small, wealthy AI-safety network that organized in Signal chats  (Provides deep political reporting on how Signal-organized AI-safety coalitions defeated major super PACs in the midterms.)",
+      "Top AI adopters in customer service gain over 50% KPI improvements, bu (Delivers hard EY data on customer service KPI improvements from AI adoption in India.)",
+      "Simon Willison: Was watching Elsbeth and recognised the outside of the (Quick social commentary from Simon Willison, popular among our builder readership.)",
+      "Workflow, AI, health: test your business creativity with Edition 257 o (Engaging weekly quiz covering workflow and AI trends for Indian builders.)",
+      "Artist Bhagya Ajaikumar explains how good curation balances individual (Insightful creator perspective on curation in the age of AI art generation.)"
+    ],
+    "thin_areas": [
+      "india"
+    ],
+    "searches": [
+      "Leading the Future super PAC midterms: 0 new"
+    ],
+    "dig_deeper": [
+      "How a small, wealthy AI-safety network that organized in Signal chats ",
+      "Top AI adopters in customer service gain over 50% KPI improvements, bu"
+    ]
+  },
+  "judged": 5,
+  "kept": 2,
+  "research": {
+    "investigated": 2,
+    "confirmed": 1,
+    "tool_calls": 6
+  },
+  "research_log": [
+    "How a small, wealthy AI-safety network that organized in Signal chats : confirmed (searched “AI safety network Signal chats Leading the Future midterms Politico”; searched “Politico AI safety network Signal chats Leading the Future”; searched “Leading the Future super PAC midterms AI”)",
+    "Top AI adopters in customer service gain over 50% KPI improvements, bu: unconfirmed (searched “EY India report AI customer service KPI 50 percent improvements”; searched “EY customer service AI report KPI 50 percent livemint”; searched “Top AI adopters in customer service gain over 50% KPI improvements EY”)"
+  ],
+  "threads": [
+    "AI-focused PACs spending in 2026 midterms: Pro-AI super PAC network Leading the Future falls short in m"
+  ],
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "tagged": 1,
+  "trackers": "filed 2 stories; updated ai-regulation",
+  "claims": "116 tracked, 111 open, 0 updated this run",
+  "model_tracker": "82 models, 10 changes today",
+  "briefing": "4 themes from 20 stories",
+  "photos": "1 saved, 0 unavailable",
+  "alerts": "14 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":11}",
+  "ai_requests_run": 17,
+  "ai_tokens_run": 31048,
+  "ai_requests_today": 51,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model"
+  ]
+}
