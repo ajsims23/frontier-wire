@@ -1,23 +1,5 @@
 {
   "posts": {
-    "dd35d009aad6": {
-      "id": "dd35d009aad6",
-      "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts",
-      "person": "Simon Willison",
-      "text": "How We Took Over ChatGPT Accounts. How We Took Over ChatGPT Accounts Parameter Labs describe an exploit they found against ChatGPT's implementation of the artifacts pattern (OpenAI used to call this \"Canvas\" but it looks like the latest revision is called HTML previews ), where interactive custom HTML apps are displayed in a sandboxed iframe. It's important that HTML in these stays tightly sandboxed to avoid untrusted code interacting with OpenAI APIs and accessing private data. Parameter found quite a complex attack chain. OpenAI use the MathLive JavaScript library as part of their graph support, and that library includes its",
-      "published": "2026-10-31T23:15:22+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
-    "4c77a0dfd633": {
-      "id": "4c77a0dfd633",
-      "url": "https://simonwillison.net/2026/Oct/31/datasette-llm",
-      "person": "Simon Willison",
-      "text": "datasette-llm 0.1a9. Release: datasette-llm 0.1a9 I have some big upgrades to Datasette Agent in the pipeline, but in the meantime here's a tiny user experience improvement to the underlying datasette-llm plugin. It now picks up the default model used by LLM , which means you can start using Datasette Agent without needing to explicitly configure a default model: uvx --with datasette-agent datasette content.db --internal internal.db Previously you would also need to specify a model with -s plugins.datasette-agent.default_model gpt-6-astra . Tags: datasette , llm , datasette-agent",
-      "published": "2026-10-31T22:10:01+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
     "5e638af84ceb": {
       "id": "5e638af84ceb",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3mz7swluwac2w",
@@ -451,6 +433,15 @@
       "text": "I think there is too much concern expressed about verification of AI output in everyday work due to a risk of factual errors (there might be things to verify beyond errors, though) It used to be true, but data on more recent models suggest they beat human experts in finding facts & checking claims.",
       "published": "2026-11-07T18:52:55.793Z",
       "via": "Bluesky",
+      "kind": "post"
+    },
+    "f5913b377964": {
+      "id": "f5913b377964",
+      "url": "https://simonwillison.net/2026/Nov/7/link-rel-next",
+      "person": "Simon Willison",
+      "text": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages. datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages I was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an HTTP prefetch to the next page of rows in that table. This was happening because Datasette pages serve an HTTP link header like this: link: <https://latest.datasette.io/fixtures/compound_three_primary_keys?_next=a%2Cd%2Cv>; rel=\"next\" This is bad. A tiny fraction of the visitors to one of those pages will click the \"next\" link, which means their browser is fetching unnecessary data and the D",
+      "published": "2026-11-07T23:57:46+00:00",
+      "via": "Simon Willison",
       "kind": "post"
     }
   },

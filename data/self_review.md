@@ -1,48 +1,46 @@
-## Newsroom self-review, 2026-11-07
+## Newsroom self-review, 2026-11-08
 
-Looked at 45 runs over the last 3 days (65 stories written).
+Looked at 41 runs over the last 3 days (76 stories written).
 Tick the suggestions you want applied; nothing changes until a person approves it.
 
-- [ ] **fix source** · `gdelt`: Check network/timeout configuration for the GDELT source.  
-  _Why:_ GDELT is experiencing frequent connection timeouts (19/45 runs failing).
-- [ ] **fix source** · `gdelt-india`: Increase request intervals or reduce polling frequency for gdelt-india to avoid rate limits.  
-  _Why:_ GDELT-India is frequently hitting rate-limiting errors (20/45 runs failing).
-- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower min_score_to_publish_1_to_10 from 6 to 5 to capture these borderline stories given free resource constraints.  
-  _Why:_ A large volume of stories (187 scored 5, 169 scored 4) are being dropped just below the current publish threshold of 6.
-- [ ] **tune** · `ai_providers_configured`: Stagger requests or add a small delay between calls to free AI providers to prevent rate-limit hits.  
-  _Why:_ Frequent per-minute rate limits are hitting Groq and Gemini models, causing fallbacks and retries.
+- [ ] **fix source** · `gdelt-india`: Add a request delay or backoff strategy for gdelt-india, or reduce its polling frequency to prevent rate limit errors. https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20  
+  _Why:_ gdelt-india is failing with 429 Too Many Requests in nearly half of the runs due to rate limits.
+- [ ] **fix source** · `gdelt`: Increase connection timeout thresholds or implement a retry wrapper with exponential backoff for the GDELT source.  
+  _Why:_ gdelt is experiencing frequent timeout connection errors during SSL handshakes in nearly 40% of runs.
+- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower the minimum publishing score from 6 to 5 to capture valuable borderline stories and increase output.  
+  _Why:_ A high volume of stories (129) are being dropped with a score of 4, just below the publishing threshold of 6.
 
 <details><summary>Statistics the agent reviewed</summary>
 
 ```json
 {
- "runs": 45,
- "stories_written": 65,
+ "runs": 41,
+ "stories_written": 76,
  "source_failures": {
-  "gdelt": "19/45 runs; last error: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
-  "gdelt-india": "20/45 runs; last error: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting"
+  "gdelt": "16/41 runs; last error: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+  "gdelt-india": "20/41 runs; last error: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20"
  },
  "sources_returning_nothing": {},
  "drop_reasons": {
-  "score 5": 187,
-  "score 4": 169,
-  "not AI": 167,
-  "could not verify yet": 68,
-  "score 3": 36,
-  "could not verify yet after a second try": 26,
-  "variety": 24,
-  "duplicate of e420e884477a": 18
+  "score 4": 129,
+  "not AI": 126,
+  "score 5": 100,
+  "score 3": 46,
+  "could not verify yet": 33,
+  "variety": 22,
+  "could not verify yet after a second try": 12,
+  "duplicate of acdb0c16a39e": 8
  },
  "tracked_labs_without_stories_this_week": [],
  "provider_notes": [
-  "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
   "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model",
   "gemini: network error ReadTimeout, retrying",
   "gemini: unreachable (ReadTimeout); skipping provider",
   "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
   "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
   "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-  "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model"
+  "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+  "gemini/gemini-flash-lite-latest: answer cut off; retrying with more room"
  ],
  "current_settings": {
   "min_score_to_publish_1_to_10": 6,

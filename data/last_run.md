@@ -1,83 +1,65 @@
-## Frontier Wire newsroom run — 2026-11-07T21:50:27+00:00
+## Frontier Wire newsroom run — 2026-11-08T01:24:25+00:00
 
-Fetched 2983 items · fresh 26 · judged 32 · kept 5 · **written 4**
-AI: 36 requests, 82,247 tokens this run · 258 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking the global fallout from the AI stock rout, supply chain constraints, and emerging security frontiers.
-  Priorities: Megaspeed exec was recruited to spy on Nvidia CEO, according to US int (Nvidia CEO espionage report highlights major geopolitical and corporate security risks.); OpenAI introduces GPT - 6 Cyber with restricted security access (OpenAI releasing GPT-6 Cyber marks a major new milestone in frontier security models.); Report: SEA makes up ~50% of APAC data center capacity being built, le (Southeast Asia data center pauses and delays reveal severe infrastructure headwinds.); The end of Microsoft Research's AI Frontiers group (Microsoft Research's AI Frontiers group closure signals shifting corporate research priorities.); Elvis Presley Estate Warns The Next Elvis Wont Pick up a Guitar in New (Elvis Presley Estate lawsuit against Suno adds heavy legal pressure on AI music generation.)
-  Thin areas: research, india
-  Searches: OpenAI GPT 6 Cyber security: 1 new; Nvidia CEO espionage Megaspeed: 6 new
-  Dig deeper: Megaspeed exec was recruited to spy on Nvidia CEO, according to US int; OpenAI introduces GPT - 6 Cyber with restricted security access
-Research agent: investigated 5 stories with 13 tool calls, confirmed 4
-Daily briefing: 4 themes from 20 stories
-Threads updated: Elvis Presley estate sues Anthropic over 274 songs: Elvis Presley estate sues Suno over voice cloning and copyri
-Videos: 10 kept from 10 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 4 new), Google for Developers ok (9 in feed, 4 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (8 in feed, 0 new), NVIDIA ok (10 in feed, 0 new), Hugging Face ok (12 in feed, 0 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 2 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (15 in feed, 0 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (1 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (2 in feed, 0 new), 20VC ok (2 in feed, 0 new)
-Photos: 3 saved, 0 unavailable
-Alerts: 38 events sent: {"subscribers":7,"sent":0,"queued":40}
+Fetched 2954 items · fresh 11 · judged 12 · kept 4 · **written 3**
+AI: 34 requests, 76,488 tokens this run · 34 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Tracking political spending by AI super PACs and critical security exposures in developer coding tools.
+  Priorities: Anthropic-backed AI safety super PAC Public First spent $63M+ in the 2 (Major disclosure on Anthropic-backed Public First spending $63M+ in the 2026 midterms.); Claude Code's "Don't Ask Again" exposes passwords in 1,122 public GitH (Crucial security warning about Claude Code exposing sensitive credentials in public GitHub files.); After the midterms, things are looking rocky for Elon Musk and data ce (Follows our existing thread on post-midterm policy and data center friction for xAI/Elon Musk.); Report: SEA makes up ~50% of APAC data center capacity being built, le (Important regional data center infrastructure shifts in Southeast Asia.); An AI reckoning ? Investors brace for potential fallout (Connects to industry anxiety around AI investment cycles and market corrections.)
+  Thin areas: policy, safety
+  Searches: Public First Super PAC 2026 midterms: 0 new; Claude Code security vulnerability GitHub credentials: 1 new
+  Dig deeper: Anthropic-backed AI safety super PAC Public First spent $63M+ in the 2; Claude Code's "Don't Ask Again" exposes passwords in 1,122 public GitH
+Research agent: investigated 4 stories with 12 tool calls, confirmed 3
+Daily briefing: 3 themes from 20 stories
+Threads updated: Anthropic Claude Code backdoor product departure and securit: Claude Code approval files expose company secrets on GitHub; Post midterm policy sparks data center clash: After the midterms, things are looking rocky for Elon Musk a; AI-focused PACs spending in 2026 midterms: Anthropic-backed PAC Public First spent $63M+ in 2026 midter
+Videos: no new videos · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face ok (12 in feed, 0 new), Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors ok (4 in feed, 0 new), Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Lenny's Podcast ok (2 in feed, 0 new), 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
+Daily self-check: coverage 100% of 7 significant stories; 0 missed, 0 added to this run
+Photos: 2 saved, 0 unavailable
+Alerts: 11 events sent: {"subscribers":7,"sent":0,"queued":23}
 Claims: 116 tracked, 111 open, 0 updated this run
-Trackers: filed 3 stories; updated us-china, copyright, agent-safety
-Model tracker: 82 models, 26 changes today
-Tagged 4 stories by sector, region and deal
-Time: gather 73s, plan 63s, judge 8s, verify and write 86s, videos 6s, tagging 2s, trackers 5s, claims 31s, briefing 2s, stock photos 1s, alerts 10s
+Trackers: filed 2 stories; updated agent-safety, ai-infrastructure
+Weekly deep dive: wrote 2026-W45 with 5 shifts
+Model tracker: 82 models, 6 changes today
+Explainers: 0 added to earlier stories
+Tagged 3 stories by sector, region and deal
+India briefing: 2 themes from 3 stories
+Self-review written (see the newsroom issue)
+Time: gather 86s, audit 3s, plan 2s, judge 3s, verify and write 66s, videos 2s, tagging 2s, trackers 5s, claims 2s, weekly 4s, briefing 2s, self-review 1s, stock photos 6s, alerts 2s
 
 ### New stories
-- **voices** — [Elvis Presley estate sues Suno over voice cloning and copyright infringement](https://vice.com/en/article/elvis-presley-estate-warns-the-next-elvis-wont-pick-up-a-guitar-in-new-lawsuit-against-ai-music-company-suno)  
-  Elvis Presley Enterprises filed a lawsuit against AI music company Suno, alleging copyright infringement and unauthorized voice cloning under Tennessee's ELVIS Act. The case follows a previous lawsuit filed by the estate against Anthropic over song training data.  
-  _3 source(s), 2 verified quote(s)_
-- **industry** — [Megaspeed exec recruited to spy on Nvidia CEO, US memo claims](https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo)  
-  A U.S. intelligence memo circulated to top policymakers claims that Megaspeed executive Alice Huang was recruited by China's Ministry of State Security to spy on Nvidia CEO Jensen Huang. The memo alleges the effort was intended to gather intelligence on American artificial intelligence chips.  
-  _4 source(s), 0 verified quote(s)_
-- **research** — [Microsoft Research AI Frontiers group reorganized into Microsoft AI](https://hunch.net/?p=13764006)  
-  Microsoft's AI Frontiers sub-organization was reorganized into Microsoft AI in early September following philosophical clashes over scaling versus research. The ~50-person group had worked on agent frameworks like Autogen and Fara, as well as fundamental capabilities like the Next Latent objective.  
-  _2 source(s), 1 verified quote(s)_
-- **safety** — [Wyoming woman joins federal lawsuit against xAI over Grok deepfakes](https://inquisitr.com/wyoming-woman-stepdad-deepfakes)  
-  A Wyoming woman identified as Jane Doe 4 joined a federal lawsuit against Elon Musk's xAI, alleging her stepfather used the Grok chatbot to generate over 7,000 explicit images of her childhood self. The class-action complaint accuses the company of failing to build basic safeguards and mishandling abuse reports to authorities.  
+- **safety** — [Claude Code approval files expose company secrets on GitHub](https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again)  
+  Apiiro researchers found that Claude Code's "Don't Ask Again" feature can store database passwords and other credentials in local settings files that end up committed to public GitHub repositories. The researchers identified 1,122 public files containing secrets out of 104,185 examined public copies.  
   _3 source(s), 1 verified quote(s)_
+- **policy** — [After the midterms, things are looking rocky for Elon Musk and data centers](https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers)  
+  Democrats won a historic victory in the midterm elections, leading to voter rejection of data centers in local ballot measures and the election of politicians like Texas governor-elect Gina Hinojosa who campaigned on restricting data centers. Tech commentator Sean O'Kane noted that Elon Musk received little return after donating half a billion dollars to Republicans while keeping his businesses headquartered in a state that turned heavily Democratic.  
+  _4 source(s), 2 verified quote(s)_
+- **policy** — [Anthropic-backed PAC Public First spent $63M+ in 2026 midterms](https://techmeme.com/261107/p17)  
+  The Anthropic-backed AI safety super PAC Public First spent over $63 million during the 2026 midterm elections. Ten of the 17 congressional candidates supported by the PAC won their races.  
+  _2 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- AI Stocks Are Falling ; Bitcoin Is Holding Ground . Here What Could Come Next . — not AI: Stock market commentary without specific AI developments.
-- The Artificial Intelligence ( AI ) Boom Is Far From Over . Here Are 4 Potential Long - Term Winners — not AI: General stock picking listicle.
-- AI sell - off wipes out Wall Street post - election rally ; major Asian markets also plunge up to 8 % — score 5: General market sell-off coverage already captured across tech stock stories.
-- Xinhua Headlines : 7th World Media Summit opens in Beijing , highlighting media transformation in AI age — score 3: General summit coverage mentioning media transformation.
-- Jesse Eisenberg tests AI to make sure it bad and hopes for Now You See Me 4 — score 3: Celebrity commentary on AI.
-- AI authority can be delegated , but responsibility cannot : Turkish technology minister — score 4: Routine ministerial commentary on AI responsibility.
-- Microsoft patent proposes AI tool to rewrite speech in live broadcasts — score 5: Patent application for a minor broadcasting AI tool.
-- Fireworks says youre wasting money on AI unless youre using all the models — score 4: Vendor marketing commentary on multi-model usage.
-- AI industry faces new political reality after Democratic gains in midterms — duplicate of d93ef6b85a78
-- From high - flying AI stocks to tariff - hit alcohol companies , the midterms shook up Wall Street — duplicate of c50baedde24c
-- AI can learn a lesson from Hume and Kant — score 3: Philosophical commentary on AI ethics referencing historical philosophers.
-- Dr . Dre Says AI Is the Future of Creativity — score 4: Celebrity opinion on AI in music and creativity.
-- Uganda AI opportunity raises question about benefits for youth — score 4: General discussion on youth benefits from AI adoption in Uganda.
-- Machine Learning to Target Procalcitonin Testing — score 4: Niche clinical machine learning application.
-- Dow Jones , S & P 500 , Nasdaq : Last week AI stocks crash is not your garden variety correction — duplicate of c50baedde24c
-- MaxxBench – "Nice DeepSWE score. But is it true?" — score 3: Hacker News discussion about a benchmark score without substantial new research content.
-- Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller — not AI: Show HN project about honeypots, not AI.
-- Public records appear to show SpaceX building a "Starbase supercomputer" in TX, but Gina Hinojosa's election as governor may delay some of the data center plans (Ann Davis Vaughan/The Information) — duplicate of acdb0c16a39e
-- OpenAI says its new GPT-6 Cyber has already uncovered 'thousands' of exploits — duplicate of 53c56afbaf05
-- Nvidia's Jensen Huang officially called to Congress due to reports of a Chinese spy plot — score 5: Duplicate report on congressional calls following the Nvidia espionage reports.
-- Nvidia's Jensen Huang officially called to Congress due to reports of a Chinese spy plot — officials mention growing concerns over national security — score 5: Duplicate report on Nvidia CEO and congressional scrutiny over espionage allegations.
-- Singapore confirms a probe into Megaspeed but denies investigating Alice Huang over spy claims; how is Nvidia CEO Jensen Huang linked to the controversy? — score 5: Duplicate report on Singapore's probe into Megaspeed and the Nvidia CEO link.
-- Secret US intelligence memo alleges Nvidia CEO had affair with suspected Chinese spy — score 5: Duplicate report detailing the secret intelligence memo involving the Nvidia CEO and suspected Chinese spy.
-- US intelligence believes Nvidia CEO Jensen Huang had relationship with Chinese spy: What we know — score 4: Duplicate of already kept story 2c93e9013ac1 about the US intelligence memo regarding the Nvidia CEO espionage allegations.
-- US believes woman close to Nvidia CEO a China spy — report — score 4: Duplicate of already kept story 3acc01e8bba5 covering the same report about a Chinese spy close to the Nvidia CEO.
-- Report: SEA makes up ~50% of APAC data center capacity being built, led by Malaysia and Thailand, which paused 49 and delayed approvals of 117 projects in Sept. (Arundhati Hazra/The Guardian) — could not verify yet; will retry next run
+- Editorial : Buck plan for AI guardrails sets right tone – Marin Independent Journal — score 4: Local editorial commentary on AI guardrails lacking major news substance.
+- An AI reckoning ? Investors brace for potential fallout — score 4: Too vague and general about potential investment corrections without specific new data or events.
+- Xinhua Headlines : 7th World Media Summit opens in Beijing , highlighting media transformation in AI age — score 3: Generic headline about media transformation at a summit rather than substantive AI news.
+- Openai President Greg Brockman Death Will Become Optional Thanks to AI — score 2: Speculative and hyperbolic commentary rather than substantive news.
+- German startups are teaching AI to do office work - GIS user technology news — score 3: Very brief mention of startups teaching AI office work without specific details or news value.
+- datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages — not AI: Routine software development update with no AI relevance.
+- US Treasury moves to cut crypto exchange MEXC off from the US financial system, alleging $16B+ in illicit flows, including Russian and Iranian sanctions evasion (Francisco Rodrigues/CoinDesk) — not AI: Crypto exchange sanctions enforcement is not related to artificial intelligence.
+- Claude Code's “Don't Ask Again” File Exposes Passwords and Keys in 1,122 Public Copies on GitHub — score 8: Duplicate of already-published story about Claude Code exposing credentials on GitHub.
+- Report: SEA makes up ~50% of APAC data center capacity being built, led by Malaysia and Thailand, which paused 49 and delayed approvals of 117 projects in Sept. (Arundhati Hazra/The Guardian) — could not verify yet after a second try; dropped
 
 </details>
 
+### Sources with problems
+- `gdelt-india`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+
 <details><summary>Research agent's work</summary>
 
-- Elvis Presley Estate Warns The Next Elvis Wont Pick up a Guitar in New: confirmed (searched “Elvis Presley Estate lawsuit Suno AI”; read billboard.com)
-- Megaspeed exec was recruited to spy on Nvidia CEO, according to US int: confirmed (searched “Megaspeed exec spy Nvidia CEO intelligence memo”; read indiatimes.com)
-- Report: SEA makes up ~50% of APAC data center capacity being built, le: unconfirmed (searched “SEA data center APAC Malaysia Thailand paused 49 Arundhati Hazra The Guardian”; searched “"Arundhati Hazra" data center”; searched “"Malaysia and Thailand" "data center" paused delayed approvals”)
-- The end of Microsoft Research's AI Frontiers group: confirmed (searched “Microsoft Research AI Frontiers group”; searched “John Langford Microsoft AI Frontiers”; read msn.com)
-- Wyoming Woman Joins Federal Lawsuit Against Musk xAI Over Thousands of: confirmed (searched “Wyoming woman federal lawsuit Musk xAI childhood AI deepfakes”; searched “xAI lawsuit deepfakes Wyoming woman stepdad”; searched “Wyoming woman xAI lawsuit Grok deepfakes”)
+- Claude Code's "Don't Ask Again" exposes passwords in 1,122 public GitH: confirmed (searched “Claude Code Dont Ask Again passwords GitHub apiiro”; read thehackernews.com; searched “Claude Codes Dont Ask Again File Exposes Passwords and Keys in 1122 Public Copies on GitHub”)
+- After the midterms, things are looking rocky for Elon Musk and data ce: confirmed (searched “TechCrunch Equity midterms Elon Musk data centers”; read yahoo.com; searched “"Gina Hinojosa" Texas governor election data center freeze”)
+- Anthropic-backed AI safety super PAC Public First spent $63M+ in the 2: confirmed (searched “Anthropic backed AI safety super PAC Public First 63M 2026 midterms Emily Birnbaum Bloomberg”; searched “Public First super PAC 63 million midterms Anthropic”; searched “"Public First" super PAC Anthropic midterms Emily Birnbaum”)
+- Report: SEA makes up ~50% of APAC data center capacity being built, le: unconfirmed (searched “SEA data center capacity Malaysia Thailand Arundhati Hazra The Guardian”; searched “"Arundhati Hazra" data center Thailand Malaysia”; searched “"Southeast Asia" data center Malaysia Thailand paused delayed projects”)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id 3acc01e8bba5 for 'Nvidia's Jensen Huang officially called to Congres'
-- ignored made-up duplicate id 3acc01e8bba5 for 'Nvidia's Jensen Huang officially called to Congres'
-- ignored made-up duplicate id 3acc01e8bba5 for 'Singapore confirms a probe into Megaspeed but deni'
-- ignored made-up duplicate id 3acc01e8bba5 for 'Secret US intelligence memo alleges Nvidia CEO had'
-- dropped unverifiable quote (Nvidia spokesperson): not unusual…
-- 1 kept item(s) carried over to the next run
+- ignored made-up duplicate id 5186d80b7eef for 'Claude Code's “Don't Ask Again” File Exposes Passw'

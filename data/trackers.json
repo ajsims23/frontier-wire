@@ -800,8 +800,8 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "AI agents and models continue to drive significant safety incidents, supply-chain risks, and legal actions, ranging from rogue agent breakouts, supply-chain attacks on developer extensions, and malware using LLMs to lawsuits over ChatGPT's role in a planned poisoning and xAI's Grok generating deepfakes. In response, security vendors are making major acquisitions—such as CrowdStrike buying Fiddler AI and Dreadnode, and Palo Alto Networks negotiating to buy Clutch Security—while researchers and developers introduce new safety frameworks, monitoring tools, and restrictions. Meanwhile, authorities continue to raise alarms over AI-driven financial fraud, exposed offensive AI tooling like ARTEX, a",
-    "changed": "A Wyoming woman joined a federal lawsuit against xAI over Grok generating explicit deepfakes from childhood photos.",
+    "status": "AI safety incidents, supply-chain risks, and legal actions continue to mount as threat actors abuse open-source AI tools like ARTEX, malware leverages LLMs for asset ranking, and developer extensions face supply-chain compromises or leak secrets. In response, security vendors are aggressively acquiring AI security and observability startups—such as CrowdStrike buying Fiddler AI and Dreadnode, and Palo Alto Networks negotiating for Clutch Security—while researchers develop new alignment frameworks, cryptographic verification tools, and safety benchmarks.",
+    "changed": "Researchers discovered that developer tools like Claude Code can inadvertently commit sensitive configuration secrets to public repositories, while security acquisitions and AI-driven cyber threats continue to escalate.",
     "timeline": [
       {
         "story_id": "f19cee3d1350",
@@ -817,6 +817,11 @@
         "story_id": "4d49d16156f1",
         "date": "2026-11-07",
         "text": "Wyoming woman joins federal lawsuit against xAI over Grok deepfakes"
+      },
+      {
+        "story_id": "5186d80b7eef",
+        "date": "2026-11-07",
+        "text": "Researchers found Claude Code configuration files leaking credentials into public GitHub repositories."
       },
       {
         "story_id": "cfd4354afa14",
@@ -997,29 +1002,19 @@
         "story_id": "fd2833dd343a",
         "date": "2026-10-23",
         "text": "Claude generated formal proofs for security properties in 123 open‑source libraries"
-      },
-      {
-        "story_id": "48e2274fdf2b",
-        "date": "2026-10-23",
-        "text": "OpenAI adds offline environments and high‑compute red‑team testing to frontier model training"
       }
     ],
     "title": "AI agents and safety incidents",
     "next": [
       {
-        "text": "Falcon Observe rollout expected as soon as this month",
-        "when": "as soon as this month",
-        "story_id": "b7b76f1b4a35"
-      },
-      {
-        "text": "Dreadnode testing capabilities expected to become generally available between now and February",
-        "when": "between now and February",
-        "story_id": "b7b76f1b4a35"
-      },
-      {
-        "text": "OpenAI first Community Safety Report planned early 2027",
+        "text": "Restrictions will start reaching users over the coming weeks. OpenAI plans to publish its first Community Safety Report in early 2027.",
         "when": "early 2027",
         "story_id": "020086432245"
+      },
+      {
+        "text": "Falcon Observe rollout expected as soon as this month; Dreadnode testing capabilities expected to become generally available between now and February",
+        "when": "January 31, 2027",
+        "story_id": "b7b76f1b4a35"
       }
     ],
     "story_ids": [
@@ -1054,8 +1049,8 @@
       "71145972f162",
       "dd35d009aad6",
       "d7eb8c9ceea3",
-      "262cfa35f430",
       "6fd6ad7938fa",
+      "262cfa35f430",
       "cf87f0f49a6c",
       "6a9cc38190a7",
       "cc0bbf95c7e7",
@@ -1067,10 +1062,11 @@
       "cfd4354afa14",
       "f19cee3d1350",
       "a8fc84dcded8",
-      "4d49d16156f1"
+      "4d49d16156f1",
+      "5186d80b7eef"
     ],
-    "updated_at": "2026-11-07T21:50:27+00:00",
-    "tried_at": "2026-11-07T21:50:27+00:00"
+    "updated_at": "2026-11-08T01:24:25+00:00",
+    "tried_at": "2026-11-08T01:24:25+00:00"
   },
   "ai-money": {
     "status": "Anthropic continues to target its pre-Thanksgiving IPO amid questions over slower revenue growth, high compute costs, and a broader market sell-off, while OpenAI has formally closed an $11 billion financing round at a $1.25 trillion valuation. Massive AI infrastructure investments, debt raises, and acquisitions persist across the sector—including recent rounds by Ocient and Sand.ai alongside major financing efforts by SpaceX and Meta—even as analysts warn that the global AI investment cycle may have peaked.",
@@ -1457,8 +1453,8 @@
     "tried_at": "2026-11-07T21:50:27+00:00"
   },
   "ai-infrastructure": {
-    "status": "AI infrastructure financing and investments remain massive, with multi-billion-dollar bond sales, debt syndications like SpaceX's $40 billion GPU financing, and significant data center projects by Google, Microsoft, and Meta. However, market anxiety is growing as analysts warn the investment cycle may have peaked, while political tensions, local voter pushback, and European protests continue to challenge large-scale data center build-outs. In response to community resistance, companies like OpenAI have dropped project NDAs and promised full electricity cost coverage.",
-    "changed": "Analysts warn that the global AI investment cycle may have peaked or entered a mid-cycle correction amid rising financing costs and profitability concerns.",
+    "status": "AI infrastructure investments remain immense, underscored by Microsoft's $25 billion bond sale, Meta's $20 billion cross-border debt plan, and ongoing syndication efforts for SpaceX's $40 billion GPU financing. However, the sector faces growing headwinds from political shifts after U.S. midterm elections, widespread voter rejections and local resistance to data center expansion, and protests across Europe. In response, companies like OpenAI are dropping NDAs and pledging full electricity cost coverage, while tech firms and environmental groups continue negotiating a national data center framework.",
+    "changed": "Major tech companies continue massive AI financing—including Microsoft's $25 billion bond sale and Meta's planned $20 billion offering—while facing rising political backlash, midterm election voter rejections of data centers, and European protests against large-scale construction.",
     "timeline": [
       {
         "story_id": "b08d310c81f1",
@@ -1469,6 +1465,11 @@
         "story_id": "15227ee6f67f",
         "date": "2026-11-07",
         "text": "Jefferies warns that the global AI investment cycle may have peaked or entered a mid-cycle correction."
+      },
+      {
+        "story_id": "d44fec61ccb7",
+        "date": "2026-11-07",
+        "text": "Midterm election results and local ballot rejections signal growing political backlash for data centers."
       },
       {
         "story_id": "8ec5fec0e77e",
@@ -1529,6 +1530,11 @@
         "story_id": "d3a539315f8d",
         "date": "2026-11-05",
         "text": "Google announced a $15 billion investment to build and expand data centre campuses in Malaysia from 2027 to 2028."
+      },
+      {
+        "story_id": "1d6738165186",
+        "date": "2026-11-05",
+        "text": "Wall Street pitches stakes in SpaceX's $40B off-balance-sheet AI chip financing."
       },
       {
         "story_id": "75679f5aa60b",
@@ -1649,16 +1655,6 @@
         "story_id": "35315b11754f",
         "date": "2026-10-30",
         "text": "Foxconn announces new collaboration with OpenAI, denies AI bubble, project pending announcement"
-      },
-      {
-        "story_id": "3e4e3eed2bbf",
-        "date": "2026-10-30",
-        "text": "Runware plans Romania factory to mass‑produce AI pods, targeting 30 MW/day capacity by 2028"
-      },
-      {
-        "story_id": "09484dfee9e7",
-        "date": "2026-10-30",
-        "text": "Fujifilm to expand magnetic‑tape capacity fivefold by fiscal 2028."
       }
     ],
     "title": "The AI infrastructure build-out",
@@ -1762,9 +1758,10 @@
       "664695821473",
       "b69989eced48",
       "b08d310c81f1",
-      "15227ee6f67f"
+      "15227ee6f67f",
+      "d44fec61ccb7"
     ],
-    "updated_at": "2026-11-07T15:51:39+00:00",
-    "tried_at": "2026-11-07T15:51:39+00:00"
+    "updated_at": "2026-11-08T01:24:25+00:00",
+    "tried_at": "2026-11-08T01:24:25+00:00"
   }
 }
