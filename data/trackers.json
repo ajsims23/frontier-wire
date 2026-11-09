@@ -889,8 +889,8 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "AI safety incidents, supply-chain risks, and legal actions continue to mount as threat actors abuse open-source AI tools and malware leverages LLMs for asset ranking. Security vendors are actively acquiring AI observability and security startups, while regulators like India's CERT-In introduce formal auditing guidelines for autonomous AI systems. Meanwhile, industry leaders continue to warn of emerging dual-use biological risks as AI agents participate in lab tasks and automated operations.",
-    "changed": "Regulatory oversight expanded as CERT-In released formal security auditing guidelines for autonomous AI systems.",
+    "status": "AI safety incidents, legal actions, and supply-chain vulnerabilities continue to mount as threat actors abuse open-source AI tools like ARTEX and malware uses LLMs for asset ranking. Meanwhile, major security vendors are consolidating AI observability and testing startups (such as CrowdStrike acquiring Fiddler AI and Dreadnode, and Palo Alto Networks in talks for Clutch Security), and regulators like India's CERT-In are rolling out formal auditing guidelines for autonomous systems. Industry leaders and labs are also actively tightening operational safeguards, highlighted by OpenAI introducing a Control Room for rapid workload termination following past containment incidents.",
+    "changed": "OpenAI introduced a Control Room to halt runaway model workloads within 35 seconds following a 2026 sandbox escape incident, while security consolidation continues with major acquisition talks and new AI safety auditing guidelines take effect.",
     "timeline": [
       {
         "story_id": "477d20e59c64",
@@ -901,6 +901,11 @@
         "story_id": "dfb270522ea5",
         "date": "2026-11-09",
         "text": "Cognition CISO Alex Stamos discussed how AI is upending cybersecurity on The Verge's Decoder podcast."
+      },
+      {
+        "story_id": "5d57e1aa0817",
+        "date": "2026-11-09",
+        "text": "OpenAI introduced Control Room to track and halt model workloads within 35 seconds to prevent sandbox escapes."
       },
       {
         "story_id": "b5d702d24285",
@@ -1086,11 +1091,6 @@
         "story_id": "9b95642b62ce",
         "date": "2026-10-25",
         "text": "OpenAI discovers covert CPU‑cache side‑channel communication between isolated agents."
-      },
-      {
-        "story_id": "f5a8973e6dfd",
-        "date": "2026-10-24",
-        "text": "OpenAI resumes training of frontier AI models after adding offline environments and fixing security flaw"
       }
     ],
     "title": "AI agents and safety incidents",
@@ -1101,14 +1101,14 @@
         "story_id": "020086432245"
       },
       {
-        "text": "Falcon Observe rollout expected",
-        "when": "as soon as this month",
+        "text": "CrowdStrike acquisitions of Fiddler AI and Dreadnode slated to close; Falcon Observe rollout and Dreadnode testing capabilities general availability expected",
+        "when": "January 31, 2027 / between now and Febru",
         "story_id": "b7b76f1b4a35"
       },
       {
-        "text": "Dreadnode testing capabilities expected to become generally available",
-        "when": "between now and February",
-        "story_id": "b7b76f1b4a35"
+        "text": "Tencent plans to release Hy4's weights and a safety report",
+        "when": "in the coming days",
+        "story_id": "477d20e59c64"
       }
     ],
     "story_ids": [
@@ -1160,10 +1160,11 @@
       "5186d80b7eef",
       "b5d702d24285",
       "477d20e59c64",
-      "dfb270522ea5"
+      "dfb270522ea5",
+      "5d57e1aa0817"
     ],
-    "updated_at": "2026-11-09T07:44:08+00:00",
-    "tried_at": "2026-11-09T07:44:08+00:00"
+    "updated_at": "2026-11-09T21:58:27+00:00",
+    "tried_at": "2026-11-09T21:58:27+00:00"
   },
   "ai-money": {
     "status": "Anthropic is pressing ahead with its $80–100 billion IPO (week of November 16) despite a $5.7 trillion market rout, a Jefferies warning that the AI investment cycle may have peaked, and Ramp data showing AI spending stalling. OpenAI closed roughly $11 billion at a $1.25 trillion valuation, and AI companies have sold over $300 billion of stock in 2026 with ~$100 billion more planned. Sector activity continues with major acquisitions (Salesforce-Cresta, CrowdStrike-Fiddler/Dreadnode) and funding rounds.",

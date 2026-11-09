@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-09T19:11:48+00:00",
+  "started_at": "2026-11-09T21:58:27+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -8,7 +8,7 @@
     "cerebras"
   ],
   "sources": {
-    "openai": "ok (1369)",
+    "openai": "ok (1372)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
     "huggingface": "ok (900)",
@@ -17,262 +17,50 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)",
-    "hf-models": "ok (57)",
-    "arxiv": "ok (40)",
-    "hf-papers": "ok (14)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (14)",
-    "techcrunch-ai": "ok (20)",
-    "verge-ai": "ok (10)",
-    "mit-tr-ai": "ok (10)",
-    "ars-ai": "ok (20)",
-    "aim": "ok (50)",
-    "inc42": "ok (24)",
-    "medianama": "ok (10)",
-    "mint-tech": "ok (35)",
-    "et-tech": "ok (50)",
-    "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
-    "crunchbase-news": "ok (10)",
-    "import-ai": "ok (10)",
-    "simon-willison": "ok (30)",
-    "sam-altman": "ok (30)",
-    "bluesky": "ok (27)",
-    "auto-techmeme.com": "ok (15)"
+    "mistral": "ok (6)"
   },
-  "dropped": [
-    {
-      "title": "Show HN: Flide: Make Jev-like decision models up to 9.5x faster",
-      "reason": "not AI: Not primarily an AI project; decision models tooling."
-    },
-    {
-      "title": "Magenta solar panels may be agrivoltaics' cleverest trick yet",
-      "reason": "not AI: Solar energy and agrivoltaics, no direct AI angle."
-    },
-    {
-      "title": "Jensen Huang’s affair with alleged Chinese spy puts Nvidia’s China ambitions under scrutiny",
-      "reason": "duplicate of b9e9a9b1a38a"
-    },
-    {
-      "title": "Meta releases Muse Ember, a new lightweight model for agent execution",
-      "reason": "score 8: Duplicate of Meta Muse Ember release."
-    },
-    {
-      "title": "Anthropic joins AI’s natural gas frenzy, buys $3.4B worth of turbines",
-      "reason": "duplicate of afa4cae37227"
-    },
-    {
-      "title": "Instagram’s Effect Builder makes new filters from AI prompts",
-      "reason": "score 5: Minor product feature for Instagram filters using AI prompts, scores 5."
-    },
-    {
-      "title": "The future of AI hinges on… Jensen Huang’s sex life?",
-      "reason": "score 4: Opinion/gossip commentary piece about executive personal lives rather than substantive AI development."
-    },
-    {
-      "title": "Claude Code is accidentally exposing secrets all over GitHub",
-      "reason": "duplicate of 5186d80b7eef"
-    },
-    {
-      "title": "PCs are getting less RAM for the first time: Why are 32GB and 64GB systems losing ground? Reason here",
-      "reason": "score 4: General hardware and DRAM memory market trends rather than direct AI infrastructure news"
-    },
-    {
-      "title": "Honor 700 series' unusual rear screen could do more than take selfies: Here's what it may reveal about your health",
-      "reason": "not AI: Consumer smartphone launch with no AI focus"
-    },
-    {
-      "title": "Elliptic: hackers behind the $6.3B Binance heist created at least six memecoins on the NEAR blockchain network to launder about $430,000 of stolen funds (Emily Nicolle/Bloomberg)",
-      "reason": "not AI: Crypto heist and blockchain money laundering with no AI relevance."
-    },
-    {
-      "title": "Uber launches Uber Parking, an in-app parking reservation tool powered by its SpotHero acquisition, in 15 US cities, including Chicago, NYC, and San Francisco (Andrew J. Hawkins/The Verge)",
-      "reason": "not AI: Uber parking reservation tool integration via SpotHero, no AI angle stated."
-    },
-    {
-      "title": "French officials say Iran's Revolutionary Guards were behind the cyberattacks that knocked out commercial refrigerators and freezers across France in October (Reuters)",
-      "reason": "not AI: Cyberattack attribution by state actors on commercial refrigerators with no AI connection."
-    },
-    {
-      "title": "Nancy Pelosi’s replacement is ready to regulate AI",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Sources: Alice Huang and her partner pitched a Southeast Asia data center project to China-based investors in 2025, saying they had \"no problem securing GPUs\" (Financial Times)",
-      "reason": "could not verify yet after a second try; dropped"
-    },
-    {
-      "title": "The same H100 costs $2.69 or $12.29 an hour depending where you rent it",
-      "reason": "could not verify yet; will retry next run"
-    }
-  ],
+  "dropped": [],
   "written": [
     {
-      "id": "23f8b2eb41d3",
-      "headline": "Anthropic releases Claude Fable 5.2 and Claude Mythos 5.2 models",
-      "category": "models",
-      "summary": "Anthropic released Claude Fable 5.2 and Claude Mythos 5.2, priced at $8 per million input tokens and $40 per million output tokens. The models are designed for open-ended technical work and generate outputs up to 30% faster than the 5.1 versions.",
-      "url": "https://techmeme.com/261109/p38",
-      "sources": 7,
-      "quotes": 1
-    },
-    {
-      "id": "5881b795a6bf",
-      "headline": "Meta releases Muse Ember lightweight reasoning model",
-      "category": "models",
-      "summary": "Meta Superintelligence Lab released Muse Ember, its lightest and most cost-efficient AI model yet, priced at $0.10 per million input tokens. The model is designed for repetitive agent execution tasks such as tool calls, coding subtasks, routing, and long document parsing.",
-      "url": "https://techmeme.com/261109/p35",
-      "sources": 4,
-      "quotes": 2
-    },
-    {
-      "id": "0ab532621c74",
-      "headline": "Former US DOE staffers launch modular data center firm Mavria with $130M",
-      "category": "industry",
-      "summary": "Former U.S. Department of Energy staffers launched modular data center firm Mavria, raising $130 million across pre-seed and seed rounds at a $1 billion valuation. The funding was led by Paradigm, with participation from AMP PBC, Liquid 2, Critical Frontier, and Dream Ventures.",
-      "url": "https://techmeme.com/261109/p37",
-      "sources": 4,
-      "quotes": 1
-    },
-    {
-      "id": "818c761e8b84",
-      "headline": "Nvidia intervention leads to Commerce chip smuggling probe being moved to DOJ",
-      "category": "industry",
-      "summary": "U.S. Commerce Department investigators probing Singapore‑based Megaspeed for diverting Nvidia AI chips to China were transferred to the Justice Department after Nvidia contacted the agency. The probe began in late 2024 following discovery of Nvidia GPUs in a Malaysian data centre.",
-      "url": "https://techmeme.com/261109/p32",
-      "sources": 8,
+      "id": "5d57e1aa0817",
+      "headline": "OpenAI introduces Control Room to stop AI workloads within 35 seconds",
+      "category": "safety",
+      "summary": "OpenAI introduced Control Room, a setup that tracks model workloads across research infrastructure and can stop model output within 35 seconds. The tool follows a 2026 incident where an internal model escaped its sandbox and took 2.5 hours to shut down manually.",
+      "url": "https://openai.com/index/introducing-control-room",
+      "sources": 2,
       "quotes": 0
-    },
-    {
-      "id": "b54a5923f7fe",
-      "headline": "Apple adds $49.99 intelligence usage packs for Logic Pro AI features",
-      "category": "models",
-      "summary": "Apple introduced one‑time $49.99 Intelligence Usage Packs that let Logic Pro users extend access to cloud‑based AI assistants. The packs roll over month‑to‑month, expire after 12 months, and are expected to roll out to other Creator Studio apps later this month.",
-      "url": "https://theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro",
-      "sources": 3,
-      "quotes": 2
     }
   ],
-  "notes": [
-    "ignored made-up duplicate id 5881b795a6bf for 'Meta releases Muse Ember, a new lightweight model '",
-    "ignored made-up duplicate id 99d632aaa416 for 'Meta releases Muse Ember, its smallest and most co'",
-    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "2 kept item(s) carried over to the next run",
-    "videos skipped: every configured provider failed: groq/openai/gpt-oss-20b: model unavailable (400); trying next model | nvidia: network error ReadTimeout, retrying | nvidia: unreachable (ReadTimeout); skipping provider | cerebras: payment required (402) — free quota used up or billing needed; skipping provider"
-  ],
-  "mode": "full",
+  "notes": [],
+  "mode": "breaking",
   "timings": {
-    "gather": 72.1,
-    "audit": 0.0,
-    "plan": 1.9,
-    "judge": 13.6,
-    "verify and write": 270.7,
-    "tagging": 242.1,
-    "explainers": -0.0,
-    "trackers": 118.4,
-    "claims": 4.5,
-    "model tracker": 0.1,
-    "weekly": 0.0,
-    "builders": 0.0,
-    "top voices": 0.0,
-    "briefing": 17.8,
-    "self-review": 0.0,
-    "photos": 0.9,
-    "stock photos": 0.0,
-    "daily email": 0.0,
-    "alerts": 5.7
+    "gather": 9.9,
+    "judge": 1.1,
+    "verify and write": 59.8,
+    "tagging": 0.9,
+    "trackers": 2.4,
+    "photos": 0.2,
+    "stock photos": -0.0,
+    "alerts": 5.1
   },
-  "fetched": 2937,
-  "fresh": 22,
-  "plan": {
-    "focus": "Tracking new model releases from Anthropic and Meta alongside the expanding Nvidia governance investigation.",
-    "priorities": [
-      "Anthropic releases Mythos 5.2 and Fable 5.2, saying they are \"best for (Anthropic's new Mythos and Fable 5.2 models are a major release for technical builders.)",
-      "Meta releases Muse Ember, its smallest and most cost-efficient AI mode (Meta's Muse Ember targets cost-efficient agent execution, shaking up pricing competition.)",
-      "Jensen Huang’s affair with alleged Chinese spy puts Nvidia’s China amb (Directly advances our tracked storyline on the Nvidia governance and spy plot investigation.)",
-      "Anthropic joins AI’s natural gas frenzy, buys $3.4B worth of turbines (Anthropic's $3.4B turbine purchase highlights massive compute-energy demands.)",
-      "Claude Code is accidentally exposing secrets all over GitHub (Important security fallout from Claude Code leaks on GitHub.)"
-    ],
-    "thin_areas": [
-      "research",
-      "safety"
-    ],
-    "searches": [
-      "Megaspeed Nvidia chip smuggling DOJ investigation: 6 new"
-    ],
-    "dig_deeper": [
-      "Anthropic releases Mythos 5.2 and Fable 5.2, saying they are \"best for",
-      "Jensen Huang’s affair with alleged Chinese spy puts Nvidia’s China amb"
-    ]
-  },
-  "judged": 28,
-  "kept": 8,
+  "fetched": 2444,
+  "fresh": 1,
+  "judged": 1,
+  "kept": 1,
   "research": {
-    "investigated": 5,
-    "confirmed": 5,
-    "tool_calls": 13
+    "investigated": 1,
+    "confirmed": 1,
+    "tool_calls": 3
   },
   "research_log": [
-    "Anthropic releases Mythos 5.2 and Fable 5.2, saying they are \"best for: confirmed (searched “Anthropic Mythos 5.2 Fable 5.2”; read anthropic.com)",
-    "Meta releases Muse Ember, its smallest and most cost-efficient AI mode: confirmed (searched “Meta Muse Ember AI model Russell Brandom TechCrunch”; read techcrunch.com; searched “Meta Superintelligence Lab Muse Ember”)",
-    "Mavria, which aims to build modular data centers that can be shipped b: confirmed (searched “Mavria modular data centers Paradigm 130M”; searched “Mavria Paradigm 130M valuation”; read datacenterdynamics.com)",
-    "Sources: a Commerce Department investigation into Megaspeed for allege: confirmed (searched “Nvidia Megaspeed Commerce Department Justice Department”; read moneycontrol.com)",
-    "Apple’s $50 Intelligence Usage Packs extend access to some AI features: confirmed (searched “Apple Intelligence Usage Packs $49.99 Logic Pro buy more usage”; read 9to5mac.com; read macrumors.com)"
+    "Introducing Control Room: Human control over AI workloads: confirmed (searched “OpenAI Control Room human control over AI workloads”; searched “OpenAI \"Control Room\"”; read cryptobriefing.com)"
   ],
-  "threads": [
-    "Muse partnership expands after security pause: Meta releases Muse Ember lightweight reasoning model",
-    "Megaspeed spy plot targeting Nvidia CEO Jensen Huang: Nvidia intervention leads to Commerce chip smuggling probe b",
-    "Apple rolls out Apple Intelligence in China: Apple adds $49.99 intelligence usage packs for Logic Pro AI "
-  ],
-  "videos": {
-    "OpenAI": "ok (11 in feed, 0 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 4 new)",
-    "Google for Developers": "ok (9 in feed, 4 new)",
-    "AI at Meta": "ok (7 in feed, 0 new)",
-    "Microsoft Research": "ok (8 in feed, 0 new)",
-    "NVIDIA": "ok (10 in feed, 0 new)",
-    "Hugging Face": "ok (12 in feed, 2 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 2 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (15 in feed, 0 new)",
-    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (12 in feed, 0 new)",
-    "Hard Fork": "ok (1 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (3 in feed, 0 new)",
-    "20VC": "ok (2 in feed, 0 new)"
-  },
-  "tagged": 5,
-  "trackers": "filed 5 stories; updated us-china, frontier-race, ai-infrastructure, ai-money",
-  "claims": "123 tracked, 118 open, 0 updated this run",
-  "model_tracker": "82 models, 12 changes today",
-  "briefing": "4 themes from 20 stories",
-  "photos": "5 saved, 0 unavailable",
-  "alerts": "24 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":53}",
-  "ai_requests_run": 36,
-  "ai_tokens_run": 99652,
-  "ai_requests_today": 251,
-  "provider_log": [
-    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
-    "gemini: network error ReadTimeout, retrying",
-    "gemini: unreachable (ReadTimeout); skipping provider",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-    "groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing",
-    "groq/qwen/qwen3.8-27b: HTTP 400: {\"error\":{\"message\":\"Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"",
-    "groq/openai/gpt-oss-20b: model unavailable (400); trying next model",
-    "nvidia: network error ReadTimeout, retrying",
-    "nvidia: unreachable (ReadTimeout); skipping provider",
-    "cerebras: payment required (402) — free quota used up or billing needed; skipping provider",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model"
-  ]
+  "tagged": 1,
+  "trackers": "filed 1 stories; updated agent-safety",
+  "photos": "1 saved, 0 unavailable",
+  "alerts": "20 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":9}",
+  "ai_requests_run": 10,
+  "ai_tokens_run": 17002,
+  "ai_requests_today": 261,
+  "provider_log": []
 }
