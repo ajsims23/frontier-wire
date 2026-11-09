@@ -1,0 +1,209 @@
+{
+  "started_at": "2026-11-09T01:27:08+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1368)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (899)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (19)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (15)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "failed: HTTPStatusError: Server error '503 Service Unavailable' for url 'https://analyticsindiamag.com/feed'\nFor more information check: https://",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (49)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "How I Fight AI Brain Fry",
+      "reason": "not AI: Personal blog post on managing digital habits/brain fog; not frontier AI news."
+    },
+    {
+      "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
+      "reason": "not AI: Open-source SketchUp alternative built with Rust and WebGPU; general software, not AI."
+    },
+    {
+      "title": "Here’s the full text of Jensen Huang’s memo to Nvidia",
+      "reason": "duplicate of b9e9a9b1a38a"
+    },
+    {
+      "title": "Profits Are Just Half The Story This Earnings Season",
+      "reason": "not AI: General tech earnings round-up covering festive season performance without a specific AI focus."
+    },
+    {
+      "title": "parse_number() as a SQLite extension: C vs Rust",
+      "reason": "not AI: Technical programming post on SQLite extension in C vs Rust; no AI angle."
+    },
+    {
+      "title": "How Sequoia's Alfred Lin and Pat Grady erased Roelof Botha's legacy, halving GPs and unwinding his fund; sources say he joined SpaceX's board behind their backs (Financial Times)",
+      "reason": "not AI: Venture capital leadership and firm structure changes at Sequoia; not primarily about AI."
+    },
+    {
+      "title": "Sources: Marco Rubio oversaw the drafting of a classified memo this spring warning Trump admin that Jensen Huang was in a close relationship with a Chinese spy (New York Times)",
+      "reason": "duplicate of 4756aa2fa657"
+    },
+    {
+      "title": "Here's what smart people are saying about Nvidia's investigation of CEO Jensen Huang",
+      "reason": "duplicate of b9e9a9b1a38a"
+    },
+    {
+      "title": "Nvidia opens investigation after reports CEO Jensen Huang was targeted by Chinese intelligence",
+      "reason": "duplicate of b9e9a9b1a38a"
+    },
+    {
+      "title": "Nvidia CEO faces probe over affair with alleged Chinese spy — as Rubio memo warned about her months ago",
+      "reason": "duplicate of 4756aa2fa657"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang's image tarnished by board investigation and affair, analysts say",
+      "reason": "duplicate of b9e9a9b1a38a"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang admits to affair; board orders investigation",
+      "reason": "duplicate of b9e9a9b1a38a"
+    },
+    {
+      "title": "Nvidia Opens Investigation Into Jensen Huang’s Relationship With Chinese Spy",
+      "reason": "duplicate of 4756aa2fa657"
+    }
+  ],
+  "written": [
+    {
+      "id": "b4a9b3c50a05",
+      "headline": "US AI safety center officials asked to informally report to White House",
+      "category": "policy",
+      "summary": "Officials at the Commerce Department's AI safety center CAISSI were asked to informally report to a White House office, raising independence concerns. The division evaluates AI safety and standards with a $10 million annual budget.",
+      "url": "https://techmeme.com/261108/p16",
+      "sources": 3,
+      "quotes": 1
+    }
+  ],
+  "notes": [],
+  "mode": "full",
+  "timings": {
+    "gather": 72.6,
+    "audit": 4.6,
+    "plan": 1.8,
+    "judge": 4.0,
+    "verify and write": 4.8,
+    "videos": 3.5,
+    "tagging": 0.9,
+    "explainers": -0.0,
+    "trackers": 3.1,
+    "claims": 11.6,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 1.3,
+    "self-review": 121.9,
+    "photos": 0.1,
+    "stock photos": 4.7,
+    "daily email": -0.0,
+    "alerts": 2.3
+  },
+  "fetched": 2890,
+  "fresh": 8,
+  "audit": "coverage 80% of 15 significant stories; 3 missed, 0 added to this run; 1 lesson(s) for the editor",
+  "plan": {
+    "focus": "Tracking Nvidia fallout, corporate governance upheaval, and safety policy shifts amid regulatory scrutiny.",
+    "priorities": [
+      "Sources: Marco Rubio oversaw the drafting of a classified memo this sp (Major geopolitical and executive risk development regarding Nvidia CEO Jensen Huang.)",
+      "Here’s the full text of Jensen Huang’s memo to Nvidia (Primary source response from Jensen Huang to ongoing Nvidia board and media investigations.)",
+      "Sources: officials at the Commerce Department's AI safety center CAISS (Important federal AI safety governance story regarding CAISSI and White House independence.)",
+      "How Sequoia's Alfred Lin and Pat Grady erased Roelof Botha's legacy, h (Major venture capital leadership shift at Sequoia impacting top AI investors.)",
+      "Profits Are Just Half The Story This Earnings Season (Addresses thin AI in India coverage with earnings and market dynamics.)"
+    ],
+    "thin_areas": [
+      "india",
+      "safety"
+    ],
+    "searches": [
+      "Nvidia Jensen Huang investigation memo: 6 new"
+    ],
+    "dig_deeper": [
+      "Sources: Marco Rubio oversaw the drafting of a classified memo this sp",
+      "Here’s the full text of Jensen Huang’s memo to Nvidia"
+    ]
+  },
+  "judged": 14,
+  "kept": 1,
+  "research": {
+    "investigated": 1,
+    "confirmed": 1,
+    "tool_calls": 2
+  },
+  "research_log": [
+    "Sources: officials at the Commerce Department's AI safety center CAISS: confirmed (searched “Commerce Department AI safety center CAISSI White House office Garance Burke Associated Press”; read unite.ai)"
+  ],
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "NVIDIA": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "20VC": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/"
+  },
+  "tagged": 1,
+  "trackers": "filed 2 stories; updated frontier-race, ai-regulation",
+  "claims": "117 tracked, 112 open, 0 updated this run",
+  "model_tracker": "82 models, 2 changes today",
+  "briefing": "3 themes from 15 stories",
+  "self_review": "19 lines written to data/self_review.md",
+  "photos": "0 saved, 1 unavailable",
+  "stock photos": "1 added",
+  "alerts": "5 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":9}",
+  "ai_requests_run": 16,
+  "ai_tokens_run": 37691,
+  "ai_requests_today": 16,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model",
+    "gemini: network error ReadTimeout, retrying",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model"
+  ]
+}

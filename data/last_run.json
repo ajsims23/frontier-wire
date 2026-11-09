@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-08T21:51:10+00:00",
+  "started_at": "2026-11-09T01:27:08+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -21,8 +21,8 @@
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
     "hf-papers": "ok (19)",
-    "gdelt": "ok (5)",
-    "hn": "ok (13)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (15)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -31,9 +31,9 @@
     "inc42": "ok (24)",
     "medianama": "ok (10)",
     "mint-tech": "ok (35)",
-    "et-tech": "ok (48)",
+    "et-tech": "ok (49)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -43,191 +43,167 @@
   },
   "dropped": [
     {
-      "title": "Albanese government warned as US voters reject AI hubs | Stock Journal",
-      "reason": "duplicate of fc8f30aee8f3"
+      "title": "How I Fight AI Brain Fry",
+      "reason": "not AI: Personal blog post on managing digital habits/brain fog; not frontier AI news."
     },
     {
-      "title": "AI tech suppliers unfazed by US vote",
-      "reason": "score 3: Brief headline noting AI suppliers are unfazed by US elections without substantial new reporting."
+      "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
+      "reason": "not AI: Open-source SketchUp alternative built with Rust and WebGPU; general software, not AI."
     },
     {
-      "title": "By 2027 we could witness a Chernobyl of artificial intelligence : the warning of Nobel Prize winner Geoffrey Hinton",
-      "reason": "score 3: Recycles routine warning from Geoffrey Hinton regarding AI existential risk."
+      "title": "Here’s the full text of Jensen Huang’s memo to Nvidia",
+      "reason": "duplicate of b9e9a9b1a38a"
     },
     {
-      "title": "AI cyber resilience and the trust gap",
-      "reason": "score 4: Generic thought-leadership commentary on cyber resilience and the trust gap rather than breaking news."
+      "title": "Profits Are Just Half The Story This Earnings Season",
+      "reason": "not AI: General tech earnings round-up covering festive season performance without a specific AI focus."
     },
     {
-      "title": "Gita Gopinath warns of correction in AI boom",
-      "reason": "score 4: General macro commentary warning of an AI boom correction, lacking concrete news or data."
+      "title": "parse_number() as a SQLite extension: C vs Rust",
+      "reason": "not AI: Technical programming post on SQLite extension in C vs Rust; no AI angle."
     },
     {
-      "title": "Why I will not be using LLMs in my coding",
-      "reason": "not AI: Opinion piece on coding without LLMs, not significant news."
+      "title": "How Sequoia's Alfred Lin and Pat Grady erased Roelof Botha's legacy, halving GPs and unwinding his fund; sources say he joined SpaceX's board behind their backs (Financial Times)",
+      "reason": "not AI: Venture capital leadership and firm structure changes at Sequoia; not primarily about AI."
     },
     {
-      "title": "Apple is racing to make Siri more agentic",
-      "reason": "duplicate of d5418a8635ce"
+      "title": "Sources: Marco Rubio oversaw the drafting of a classified memo this spring warning Trump admin that Jensen Huang was in a close relationship with a Chinese spy (New York Times)",
+      "reason": "duplicate of 4756aa2fa657"
     },
     {
-      "title": "US professional services added 70K jobs in October, the most since July 2022, as AI-exposed consulting, legal, and accounting all grew despite AI job-loss fears (Ian Hodgson/Wall Street Journal)",
-      "reason": "score 5: Macroeconomic employment data for professional services is too broad and adjacent to be core AI news, despite touching AI-exposed sectors."
+      "title": "Here's what smart people are saying about Nvidia's investigation of CEO Jensen Huang",
+      "reason": "duplicate of b9e9a9b1a38a"
+    },
+    {
+      "title": "Nvidia opens investigation after reports CEO Jensen Huang was targeted by Chinese intelligence",
+      "reason": "duplicate of b9e9a9b1a38a"
+    },
+    {
+      "title": "Nvidia CEO faces probe over affair with alleged Chinese spy — as Rubio memo warned about her months ago",
+      "reason": "duplicate of 4756aa2fa657"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang's image tarnished by board investigation and affair, analysts say",
+      "reason": "duplicate of b9e9a9b1a38a"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang admits to affair; board orders investigation",
+      "reason": "duplicate of b9e9a9b1a38a"
+    },
+    {
+      "title": "Nvidia Opens Investigation Into Jensen Huang’s Relationship With Chinese Spy",
+      "reason": "duplicate of 4756aa2fa657"
     }
   ],
   "written": [
     {
-      "id": "b9e9a9b1a38a",
-      "headline": "Nvidia board launches investigation after CEO Jensen Huang admits affair",
-      "category": "industry",
-      "summary": "Nvidia's board launched an independent investigation after CEO Jensen Huang admitted to an affair with a suspected Chinese spy. Huang took full responsibility in a message to staff, stating he fell short of his duties.",
-      "url": "https://techmeme.com/261108/p14",
+      "id": "b4a9b3c50a05",
+      "headline": "US AI safety center officials asked to informally report to White House",
+      "category": "policy",
+      "summary": "Officials at the Commerce Department's AI safety center CAISSI were asked to informally report to a White House office, raising independence concerns. The division evaluates AI safety and standards with a $10 million annual budget.",
+      "url": "https://techmeme.com/261108/p16",
       "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "68ff5ed661ee",
-      "headline": "Goldman Sachs restricts AI coding tools to engineers and strats",
-      "category": "industry",
-      "summary": "Goldman Sachs updated its internal guidance in October to restrict Anthropic's Claude Code and Microsoft's GitHub to its engineering staff and hybrid 'strats', cutting off most traders and bankers. The change follows a review of productivity and risk concerns regarding non-technical employees running code-writing software.",
-      "url": "https://thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
-      "sources": 5,
       "quotes": 1
-    },
-    {
-      "id": "76dbab81d73b",
-      "headline": "DeepSeek says Harness agent app reached 1.54M daily active users",
-      "category": "models",
-      "summary": "DeepSeek reported that its open-source agent application Harness reached 1.54 million daily active users by November 4. The application uses roughly 92 trillion tokens a day, or about 60 million per user.",
-      "url": "https://techmeme.com/261108/p12",
-      "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "9b35f1480431",
-      "headline": "AI companies sell $300B+ in stock in 2026 amid market absorption questions",
-      "category": "industry",
-      "summary": "AI companies sold or priced over $300 billion of stock in 2026, with about $100 billion more planned, excluding Anthropic's IPO. This surge follows a sharp tech sell-off that caused Nasdaq composite companies to lose $2.5 trillion in market value on Thursday.",
-      "url": "https://techmeme.com/261108/p10",
-      "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "4756aa2fa657",
-      "headline": "Nvidia board launches probe into CEO Jensen Huang over alleged spy plot",
-      "category": "industry",
-      "summary": "Nvidia's board of directors launched an independent investigation into whether CEO Jensen Huang was targeted by a foreign spy operation involving former Megaspeed executive Alice Huang. The board stated it has no reason to believe national security or company secrets were compromised.",
-      "url": "https://techmeme.com/261108/p13",
-      "sources": 11,
-      "quotes": 0
     }
   ],
-  "notes": [
-    "dropped unverifiable quote (Jensen Huang): I owe my family and all of you an apology. I was unfaithful …",
-    "dropped unverifiable quote (DeepSeek): DeepSeek said its open-source AI agent application, Harness,…",
-    "dropped unverifiable quote (Jensen Huang): I owe my family and all of you an apology. I was unfaithful …"
-  ],
+  "notes": [],
   "mode": "full",
   "timings": {
-    "gather": 88.7,
-    "audit": 0.0,
-    "plan": 1.9,
-    "judge": 4.9,
-    "verify and write": 87.7,
-    "videos": 3.8,
-    "tagging": 2.3,
+    "gather": 72.6,
+    "audit": 4.6,
+    "plan": 1.8,
+    "judge": 4.0,
+    "verify and write": 4.8,
+    "videos": 3.5,
+    "tagging": 0.9,
     "explainers": -0.0,
-    "trackers": 40.7,
-    "claims": 2.3,
-    "model tracker": 0.0,
+    "trackers": 3.1,
+    "claims": 11.6,
+    "model tracker": 0.1,
     "weekly": 0.0,
     "builders": 0.0,
     "top voices": 0.0,
-    "briefing": 1.5,
-    "self-review": -0.0,
-    "photos": 0.3,
-    "stock photos": 0.0,
-    "daily email": 0.0,
-    "alerts": 10.9
+    "briefing": 1.3,
+    "self-review": 121.9,
+    "photos": 0.1,
+    "stock photos": 4.7,
+    "daily email": -0.0,
+    "alerts": 2.3
   },
-  "fetched": 2892,
-  "fresh": 15,
+  "fetched": 2890,
+  "fresh": 8,
+  "audit": "coverage 80% of 15 significant stories; 3 missed, 0 added to this run; 1 lesson(s) for the editor",
   "plan": {
-    "focus": "Tracking Nvidia's leadership probe and Goldman Sachs pulling Claude Code amid AI infrastructure and agent expansion.",
+    "focus": "Tracking Nvidia fallout, corporate governance upheaval, and safety policy shifts amid regulatory scrutiny.",
     "priorities": [
-      "Email to staff: Jensen Huang admits an affair, takes \"full responsibil (Jensen Huang admits affair amid Nvidia foreign spy probe.)",
-      "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders (Goldman Sachs pulls Claude Code from bankers and traders due to security or compliance concerns.)",
-      "Excluding Anthropic's IPO, AI companies sold or priced $300B+ of stock ($300B+ in AI stock sales raises market absorption questions ahead of Anthropic IPO.)",
-      "DeepSeek says its open-source agent app Harness hit 1.54M DAUs on Nove (DeepSeek's open-source agent app Harness hits 1.54M DAUs, highlighting massive token usage.)",
-      "US professional services added 70K jobs in October, the most since Jul (Professional services add 70K jobs in October defying AI job-loss fears.)"
+      "Sources: Marco Rubio oversaw the drafting of a classified memo this sp (Major geopolitical and executive risk development regarding Nvidia CEO Jensen Huang.)",
+      "Here’s the full text of Jensen Huang’s memo to Nvidia (Primary source response from Jensen Huang to ongoing Nvidia board and media investigations.)",
+      "Sources: officials at the Commerce Department's AI safety center CAISS (Important federal AI safety governance story regarding CAISSI and White House independence.)",
+      "How Sequoia's Alfred Lin and Pat Grady erased Roelof Botha's legacy, h (Major venture capital leadership shift at Sequoia impacting top AI investors.)",
+      "Profits Are Just Half The Story This Earnings Season (Addresses thin AI in India coverage with earnings and market dynamics.)"
     ],
     "thin_areas": [
-      "research"
+      "india",
+      "safety"
     ],
     "searches": [
-      "Nvidia Jensen Huang spy probe board: 6 new",
-      "Goldman Sachs Claude Code removal security: 0 new"
+      "Nvidia Jensen Huang investigation memo: 6 new"
     ],
     "dig_deeper": [
-      "Nvidia will investigate CEO Jensen Huang’s relationship with possible ",
-      "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders"
+      "Sources: Marco Rubio oversaw the drafting of a classified memo this sp",
+      "Here’s the full text of Jensen Huang’s memo to Nvidia"
     ]
   },
-  "judged": 20,
-  "kept": 5,
+  "judged": 14,
+  "kept": 1,
   "research": {
-    "investigated": 5,
-    "confirmed": 5,
-    "tool_calls": 14
+    "investigated": 1,
+    "confirmed": 1,
+    "tool_calls": 2
   },
   "research_log": [
-    "Email to staff: Jensen Huang admits an affair, takes \"full responsibil: confirmed (searched “Jensen Huang affair Axios Madison Mills Nvidia”; searched “Madison Mills Axios Jensen Huang email to staff affair”; read techcrunch.com)",
-    "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders: confirmed (searched “Goldman Sachs Claude Code”; read yahoo.com)",
-    "DeepSeek says its open-source agent app Harness hit 1.54M DAUs on Nove: confirmed (searched “DeepSeek agent app Harness 1.54M DAUs November 4 Saritha Rai Bloomberg”; searched “DeepSeek Harness 1.54M DAUs Bloomberg”; searched “DeepSeek Harness DAU tokens Bloomberg”)",
-    "Excluding Anthropic's IPO, AI companies sold or priced $300B+ of stock: confirmed (searched “Excluding Anthropic IPO AI companies sold or priced $300B of stock in 2026”; searched “The Information AI stock can market absorb Alex Eichenstein”; read theinformation.com)",
-    "Nvidia's board launches a probe into whether Jensen Huang was targeted: confirmed (searched “Nvidia board probe Jensen Huang spy plot Ian King Bloomberg”; read nytimes.com; read afr.com)"
-  ],
-  "threads": [
-    "Anthropic Claude Code security and enterprise fallout: Goldman Sachs restricts AI coding tools to engineers and str",
-    "DeepSeek open-source Super-Agent growth and usage: DeepSeek says Harness agent app reached 1.54M daily active u",
-    "Anthropic IPO valuation and compute spending commitments: AI companies sell $300B+ in stock in 2026 amid market absorp",
-    "Megaspeed spy plot targeting Nvidia CEO Jensen Huang: Nvidia board launches probe into CEO Jensen Huang over alleg"
+    "Sources: officials at the Commerce Department's AI safety center CAISS: confirmed (searched “Commerce Department AI safety center CAISSI White House office Garance Burke Associated Press”; read unite.ai)"
   ],
   "videos": {
-    "OpenAI": "ok (11 in feed, 0 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 4 new)",
-    "Google for Developers": "ok (9 in feed, 4 new)",
-    "AI at Meta": "ok (7 in feed, 0 new)",
-    "Microsoft Research": "ok (8 in feed, 0 new)",
-    "NVIDIA": "ok (10 in feed, 0 new)",
-    "Hugging Face": "ok (12 in feed, 1 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 2 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (15 in feed, 1 new)",
-    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (13 in feed, 0 new)",
-    "Hard Fork": "ok (1 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (3 in feed, 0 new)",
-    "20VC": "ok (2 in feed, 0 new)"
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "NVIDIA": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "20VC": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/"
   },
-  "videos_kept": "11 kept from 12 new",
-  "tagged": 5,
-  "trackers": "filed 2 stories; updated frontier-race, ai-money",
+  "tagged": 1,
+  "trackers": "filed 2 stories; updated frontier-race, ai-regulation",
   "claims": "117 tracked, 112 open, 0 updated this run",
-  "model_tracker": "82 models, 20 changes today",
-  "briefing": "3 themes from 16 stories",
-  "photos": "5 saved, 0 unavailable",
-  "alerts": "32 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":36}",
-  "ai_requests_run": 35,
-  "ai_tokens_run": 77671,
-  "ai_requests_today": 173,
-  "provider_log": []
+  "model_tracker": "82 models, 2 changes today",
+  "briefing": "3 themes from 15 stories",
+  "self_review": "19 lines written to data/self_review.md",
+  "photos": "0 saved, 1 unavailable",
+  "stock photos": "1 added",
+  "alerts": "5 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":9}",
+  "ai_requests_run": 16,
+  "ai_tokens_run": 37691,
+  "ai_requests_today": 16,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model",
+    "gemini: network error ReadTimeout, retrying",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model"
+  ]
 }

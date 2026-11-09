@@ -1,14 +1,5 @@
 {
   "posts": {
-    "7d7291538279": {
-      "id": "7d7291538279",
-      "url": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first",
-      "person": "Simon Willison",
-      "text": "If in doubt, delete the uv.lock file. I've been getting the occasional confusing Python dependency error since switching over to Python 3.15 and the rule I'm having to remember is: If in doubt, delete the uv.lock file Most of my projects are libraries which don't include a uv.lock file, since it's rude for a library dependency to lock versions for anything else that uses it. Running uv run pytest etc tends to leave uv.lock files lying around, which are listed in .gitignore and so do not get committed to my repositories. But... sometimes that uv.lock pins a version of a dependency that doesn't yet have a Python 3.15 wheel. An examp",
-      "published": "2026-11-01T23:24:22+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
     "e5f6124c6872": {
       "id": "e5f6124c6872",
       "url": "https://jack-clark.net/2026/11/02/import-ai-479-spacewar-low-latency-tasks-versus-llms-genie-4",
@@ -462,6 +453,15 @@
       "text": "What happens to model performance on the popular DeepSWE coding benchmark if you make small alterations to the questions, like changing a file name to lowercase? Models that once looked very similar to each other no longer look so similar. maxxbench.unlap.ai/research/why...",
       "published": "2026-11-08T18:00:45.577Z",
       "via": "Bluesky",
+      "kind": "post"
+    },
+    "3e62264ffb8e": {
+      "id": "3e62264ffb8e",
+      "url": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust",
+      "person": "Simon Willison",
+      "text": "parse_number() as a SQLite extension: C vs Rust. Research: parse_number() as a SQLite extension: C vs Rust I was out walking the dog when I got curious about how easy/difficult it would be to write a SQLite C extension that adds a parse_number() function for turning strings like -$1,234.56 or '12.5%' into numeric values that could be summed and sorted. I fired up regular Claude chat (Opus 5.5) and prompted : I'm thinking about a SQLite custom function 'parse_number(value)' that strips ',', '$', '£' and '%', handles a leading '-', and returns 'NULL' for anything it can’t parse Explore the difference between building this as a SQLite extension",
+      "published": "2026-11-08T22:26:00+00:00",
+      "via": "Simon Willison",
       "kind": "post"
     }
   },
