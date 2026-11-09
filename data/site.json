@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T13:29:54+00:00",
+  "updated_at": "2026-11-09T14:55:17+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Nvidia's board of directors is conducting an independent investigation after CEO Jensen Huang admitted to having an affair with a woman identified in reports as a former executive at a chip company. Nvidia stated that the board has no reason to believe national security or company secrets were compromised, and the board expressed confidence in Huang's leadership.",
@@ -83,6 +83,92 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Researchers are using simulation to teach robots delicate manipulation tasks like aligning gears and connecting cables. NVIDIA introduced open robotics technologies at the Conference on Robot Learning, including the GR00T 2 world action model and simulation tools.",
+        "terms": [
+          {
+            "term": "World action model",
+            "meaning": "A model that helps a robot perceive its surroundings and anticipate how its actions will change the environment."
+          },
+          {
+            "term": "Visuomotor context",
+            "meaning": "Visual and motor data combined to control a robot's physical actions."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "GR00T 2",
+          "benchmark": "50 tasks (out-of-the-box performance)",
+          "score": "Completed 40 of 50 evaluated tasks at least once without tas"
+        },
+        {
+          "model": "GR00T 2",
+          "benchmark": "50 tasks (one demonstration per task)",
+          "score": "71% average success"
+        },
+        {
+          "model": "GR00T 2",
+          "benchmark": "50 tasks (five demonstrations per task)",
+          "score": "95%"
+        }
+      ],
+      "audiences": {
+        "builders": "NVIDIA is introducing new open robotics technologies including world action models, simulation tools, benchmarks, and agentic workflows, along with GR00T 2's application programming interface.",
+        "business": "NVIDIA is working with partners such as Ambi Robotics, Bosch Research, and Siemens to bring robotics simulation and world action model advancements to the broader community.",
+        "investors": "NVIDIA presented research at the Conference on Robot Learning, with two papers among six finalists for Best Paper Awards."
+      },
+      "id": "7cd5e1029071",
+      "headline": "Nvidia introduces robot simulation tools and GR00T 2 at CoRL",
+      "summary": "NVIDIA introduced open robotics technologies at the Conference on Robot Learning in Austin, Texas, including the GR00T 2 world action model and simulation tools. Two NVIDIA papers were named finalists for the Best Paper Awards out of thousands of submissions.",
+      "why_it_matters": "These advancements help researchers train robots on complex manipulation tasks and evaluate performance across changing conditions.",
+      "category": "research",
+      "lab": "NVIDIA",
+      "model_name": "GR00T 2",
+      "model_type": "Language",
+      "tags": [
+        "robotics",
+        "simulation",
+        "CoRL",
+        "Nvidia",
+        "GR00T 2"
+      ],
+      "quotes": [],
+      "score": 7,
+      "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl",
+      "source_id": "nvidia",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/corl-corp-blog-promo-pack-1920x1080-1-1680x945.png",
+      "sources": [
+        {
+          "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl",
+          "publisher": "NVIDIA blog",
+          "title": "Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-09T14:00:01+00:00",
+      "created_at": "2026-11-09T14:55:17+00:00",
+      "breaking": true,
+      "sectors": [
+        "manufacturing"
+      ],
+      "regions": [
+        "us"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "GR00T 2",
+      "trackers": [],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "Google has added two new systems to its eighth-generation Tensor Processing Unit family: the TPU 8tx, which pairs TPU 8t silicon with custom AMD CPUs for secure confidential computing, and the TPU 8i Max, which combines two TPU 8i chips to handle memory-intensive tasks like massive context windows. Google also released software tools including native PyTorch support, an open-source XLA Serving Engine, and a preview TPU agent suite.",
@@ -5691,112 +5777,6 @@
         "frontier-race"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Newspaper publishers have filed federal lawsuits against Brave Software over its search index and data sharing practices. The lawsuits allege that Brave scraped billions of web pages without identification and sold access to that content to artificial intelligence companies via its search API.",
-        "terms": [
-          {
-            "term": "Search index",
-            "meaning": "A database containing billions of web pages collected by a search engine to power search results."
-          },
-          {
-            "term": "Crawler",
-            "meaning": "A software tool that automatically browses the web to collect content for a search index."
-          },
-          {
-            "term": "Search API",
-            "meaning": "An interface that allows external software applications to access data and services from another system."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers and engineers using the Brave Search API to provide real-time web data or build AI tools.",
-        "business": "Newspaper publishers and media executives affected by data scraping and paywall circumvention.",
-        "investors": "Investors tracking AI infrastructure, search index providers, and the legal liabilities of web scraping."
-      },
-      "id": "987d248a5128",
-      "headline": "Newspapers sue Brave over search index sales to AI companies",
-      "summary": "The New York Times and other newspaper publishers filed federal lawsuits against Brave Software, alleging the company illegally scraped over 30 billion web pages and sold access to them to AI firms. The lawsuits also accuse Brave of bypassing paywalls and copyright infringement.",
-      "why_it_matters": "This legal action highlights growing conflict between media publishers and AI developers over the uncompensated use of web content for training and real-time queries.",
-      "category": "industry",
-      "lab": "Brave",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "Brave",
-        "The New York Times",
-        "lawsuit",
-        "copyright",
-        "search index"
-      ],
-      "quotes": [
-        {
-          "text": "Brave is the supplier, dealer, and distributor of stolen copyrighted content for its own users and many of the most prominent GenAI companies, including Anthropic, Perplexity, Mistral, xAI, and Cohere,",
-          "speaker": "The New York Times",
-          "speaker_role": "Plaintiff in lawsuit",
-          "source_url": "https://arstechnica.com/tech-policy/2026/11/nyt-demands-brave-shut-down-its-paywall-blocker-and-end-deals-with-ai-firms"
-        },
-        {
-          "text": "AI giants are now desperate to avoid getting caught red-handed stealing news from publishers, so Brave Software is selling them a back door to the journalism they know they have no right to.",
-          "speaker": "Steven Lieberman",
-          "speaker_role": "Attorney for MediaNews Group and Tribune Publishing",
-          "source_url": "https://thenextweb.com/news/nyt-newspapers-sue-brave-ai-scraping"
-        }
-      ],
-      "score": 8,
-      "url": "https://searchenginejournal.com/brave-sells-its-search-index-to-ai-and-your-website-is-probably-in-it/595829",
-      "source_id": "gdelt",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://cdn.searchenginejournal.com/wp-content/uploads/2026/11/brave-search-123.png",
-      "sources": [
-        {
-          "url": "https://searchenginejournal.com/brave-sells-its-search-index-to-ai-and-your-website-is-probably-in-it/595829",
-          "publisher": "searchenginejournal.com",
-          "title": "Brave Sells Its Search Index To AI , And Your Website Is Probably In It"
-        },
-        {
-          "url": "https://arstechnica.com/tech-policy/2026/11/nyt-demands-brave-shut-down-its-paywall-blocker-and-end-deals-with-ai-firms",
-          "publisher": "Ars Technica",
-          "title": "NYT demands Brave shut down its paywall blocker and end deals with AI firms"
-        },
-        {
-          "url": "https://thenextweb.com/news/nyt-newspapers-sue-brave-ai-scraping",
-          "publisher": "The Next Web",
-          "title": "New York Times and three other US papers sue Brave over AI scraping"
-        },
-        {
-          "url": "https://betanews.com/article/brave-search-paywall-lawsuit-nyt",
-          "publisher": "BetaNews",
-          "title": "Brave sued by New York Times and three papers over AI search and paywalls"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 0,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-07T01:00:00+00:00",
-      "created_at": "2026-11-07T04:04:15+00:00",
-      "sectors": [
-        "media"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 1,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": "30 billion",
-      "trackers": [
-        "copyright"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -6505,7 +6485,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 184,
+    "stories_this_month": 185,
     "model_releases_this_month": 18,
     "labs_tracked": 24
   }

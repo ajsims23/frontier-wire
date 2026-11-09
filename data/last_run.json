@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-09T13:29:54+00:00",
+  "started_at": "2026-11-09T14:55:17+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -17,277 +17,42 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)",
-    "hf-models": "ok (57)",
-    "arxiv": "ok (40)",
-    "hf-papers": "ok (14)",
-    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
-    "hn": "ok (14)",
-    "techcrunch-ai": "ok (20)",
-    "verge-ai": "ok (10)",
-    "mit-tr-ai": "ok (10)",
-    "ars-ai": "ok (20)",
-    "aim": "ok (50)",
-    "inc42": "ok (24)",
-    "medianama": "ok (10)",
-    "mint-tech": "ok (35)",
-    "et-tech": "ok (50)",
-    "yourstory": "ok (20)",
-    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
-    "crunchbase-news": "ok (10)",
-    "import-ai": "ok (10)",
-    "simon-willison": "ok (30)",
-    "sam-altman": "ok (30)",
-    "bluesky": "ok (27)",
-    "auto-techmeme.com": "ok (15)"
+    "mistral": "ok (6)"
   },
-  "dropped": [
-    {
-      "title": "Fold Epic Paper Airplanes",
-      "reason": "not AI: Not AI news (paper airplanes)."
-    },
-    {
-      "title": "Innovating with AI in the special chemicals industry",
-      "reason": "score 4: General feature on specialty chemicals manufacturing and digital tools; too broad and minor for core AI coverage."
-    },
-    {
-      "title": "NSE Launches Stock Discovery Platform, Adds AI Features",
-      "reason": "score 4: Incremental feature addition of NLP search and summaries to an exchange platform; peripheral AI use case."
-    },
-    {
-      "title": "Decoding BlackBuck’s Core Trucking Model And Its New Engines",
-      "reason": "score 4: Logistics and trucking tech profile, minor supply-chain automation angle at best."
-    },
-    {
-      "title": "RBI’s September card data shows a divide between credit card spending and debit card cash withdrawals",
-      "reason": "not AI: RBI card data and spending report has no AI angle."
-    },
-    {
-      "title": "Enterprise data intelligence platform SplashBI opens GCC in Hyderabad, to invest over $100 million",
-      "reason": "not AI: Duplicate of YourStory item on SplashBI's GCC opening in Hyderabad."
-    },
-    {
-      "title": "Explained: Why Nvidia shares dropped 4% in overnight trade and what analysts warn can trigger a bloodbath?",
-      "reason": "score 5: Duplicate of earlier coverage about the Nvidia CEO investigation."
-    },
-    {
-      "title": "SplashBI opens GCC in Hyderabad, to invest over $100M",
-      "reason": "not AI: SplashBI opening a GCC in Hyderabad is general IT/business expansion rather than specific AI news."
-    },
-    {
-      "title": "Series A In 2026: Capital Is Flowing Faster, But Fewer Startups Are Making The Cut",
-      "reason": "score 4: Broad venture capital market trends report for Series A funding across all sectors, not specifically an AI story."
-    },
-    {
-      "title": "Paper Unicorns Are Cheap. Building A $1B Revenue AI Company Takes A Multimarket Cap Table",
-      "reason": "score 4: Opinion piece offering general commentary on AI startup valuations and metrics; lacks specific news value."
-    },
-    {
-      "title": "Nominal, which builds software to make hardware manufacturing more efficient, raised $240M at a $3B valuation, up from $1B after raising $80M in March (Paayal Zaveri/Bloomberg)",
-      "reason": "score 5: Software for hardware manufacturing efficiency has only a tangential AI angle; not a direct AI story."
-    },
-    {
-      "title": "Jensen Huang's affair raises questions about Alice Huang's access to his devices and Trump conversations, and represents \"another successful op\" for China's MSS (Bill Bishop/@niubi)",
-      "reason": "duplicate of 4756aa2fa657"
-    },
-    {
-      "title": "Alphabet's Wing plans to invest up to $125M over two years to build a 15,000-square-foot facility in Fort Worth, Texas, to produce tens of thousands of drones (Mark R. Long/Wall Street Journal)",
-      "reason": "score 4: Alphabet's Wing expanding drone manufacturing facility; adjacent robotics/hardware news but lacks a direct AI core."
-    },
-    {
-      "title": "Meta says it is globally expanding Instagram's AI age estimation tech to apply Teen Account protections to teens aged 13 to 17 who misrepresented their age (Jess Weatherbed/The Verge)",
-      "reason": "score 5: Minor feature update on Instagram age estimation, scoring 5."
-    },
-    {
-      "title": "A profile of Alice Huang, a suspected Chinese spy who founded Megaspeed in 2023 and spent years in Jensen Huang's orbit; Megaspeed's Nvidia imports top $4.6B (Mark Anderson/Bloomberg)",
-      "reason": "duplicate of 4756aa2fa657"
-    },
-    {
-      "title": "US voters in Harwood, North Dakota rejected a ballot measure that opposed Applied Digital's $3B data center, set to open in 2027, bucking a nationwide backlash (Miriam Waldvogel/Washington Post)",
-      "reason": "duplicate of fc8f30aee8f3"
-    },
-    {
-      "title": "The US OCC grants Coinbase full approval for a trust bank charter; sources say it could expand Coinbase's stablecoin business and let it issue stablecoins (Olga Kharif/Bloomberg)",
-      "reason": "not AI: Crypto exchange trust bank charter approval, not AI news."
-    },
-    {
-      "title": "Amsterdam police arrested between 150 and 200 protesters for trespassing and violence at a Microsoft data center construction site owned by Pure Data Centers (Jowi Morales/Tom's Hardware)",
-      "reason": "score 5: Protests at a data center construction site are adjacent infrastructure news, but minor compared to the broader election/backlash coverage."
-    },
-    {
-      "title": "Internal EU assessment: Russia's \"Operation Overload\" opportunistically exploited recent French riots by spreading fabricated videos impersonating Western media (Reuters)",
-      "reason": "score 5: Covering covert influence networks using deepfakes/fabricated videos, but lacks sufficient direct AI focus for a core score."
-    },
-    {
-      "title": "Jensen Huang maintains deep control over Nvidia, managing 60+ direct reports and owning a 3.56% stake, presenting a challenge for Nvidia's 10-person board (New York Times)",
-      "reason": "duplicate of b10abbc74a23"
-    },
-    {
-      "title": "Nvidia Senior Director Madison Huang, daughter of Jensen, cancels a high-profile Seoul appearance citing a \"family matter\", throwing the event into disarray (Yoolim Lee/Bloomberg)",
-      "reason": "duplicate of b10abbc74a23"
-    },
-    {
-      "title": "Nvidia drops ~5% pre-market after its board opens a probe into Jensen Huang; Nvidia previously dismissed the interactions as \"nothing unusual or unexpected\" (Demetri Sevastopulo/Financial Times)",
-      "reason": "duplicate of 4756aa2fa657"
-    },
-    {
-      "title": "Coforge Joins SpaceX Network to Develop Industry-Specific Grok Applications",
-      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
-    },
-    {
-      "title": "EXL Acquires Aimpoint Digital, Adds 250 AI and Data Experts",
-      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
-    }
-  ],
+  "dropped": [],
   "written": [
     {
-      "id": "9c262d9ec406",
-      "headline": "Google expands TPU family with TPU 8tx and TPU 8i Max systems",
-      "category": "models",
-      "summary": "Google announced two eighth-generation Tensor Processing Unit systems: the TPU 8tx for secure confidential inference paired with AMD CPUs, and the TPU 8i Max dual-chip package for long-context window tasks, scheduled to launch in 2027. The hardware additions are paired with new developer software including native PyTorch support and an open-source XLA Serving Engine.",
-      "url": "https://techmeme.com/261109/p22",
-      "sources": 7,
+      "id": "7cd5e1029071",
+      "headline": "Nvidia introduces robot simulation tools and GR00T 2 at CoRL",
+      "category": "research",
+      "summary": "NVIDIA introduced open robotics technologies at the Conference on Robot Learning in Austin, Texas, including the GR00T 2 world action model and simulation tools. Two NVIDIA papers were named finalists for the Best Paper Awards out of thousands of submissions.",
+      "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl",
+      "sources": 1,
       "quotes": 0
-    },
-    {
-      "id": "5956c5aef77c",
-      "headline": "Apple Intelligence registers with Chinese regulator for tablets and laptops",
-      "category": "models",
-      "summary": "Apple's generative AI service, Apple Intelligence, has been registered for use on tablets and laptops with China's cyberspace regulator in Shanghai. China requires large language models and generative AI services to be registered with regulators before public release.",
-      "url": "https://economictimes.indiatimes.com/tech/technology/apple-intelligence-ai-service-registers-with-chinese-regulator-for-use-on-tablets-laptops/articleshow/135682143.cms",
-      "sources": 2,
-      "quotes": 0
-    },
-    {
-      "id": "9d8e98a0c0ce",
-      "headline": "Adobe integrates CX Enterprise Coworker into ChatGPT, Claude, and Gemini",
-      "category": "models",
-      "summary": "Adobe embedded its CX Enterprise Coworker agent into platforms including ChatGPT, Claude, Databricks Genie, Gemini for business, and Microsoft Copilot. The AI agent helps marketing teams orchestrate customer experiences using open standards like MCP and A2A.",
-      "url": "https://analyticsindiamag.com/ai-news/adobes-cx-enterprise-coworker-gets-embedded-within-leading-ai-platforms",
-      "sources": 3,
-      "quotes": 2
-    },
-    {
-      "id": "fd2bdf0a7e83",
-      "headline": "Sarvam AI appoints ex-Google Cloud India MD Sashikumar Sreedharan as President and CBO",
-      "category": "voices",
-      "summary": "Indian AI startup Sarvam AI appointed former Google Cloud India Managing Director Sashikumar Sreedharan as President and Chief Business Officer. Sreedharan brings over three decades of technology industry experience to his new roles on the executive team and board of directors.",
-      "url": "https://analyticsindiamag.com/ai-news/sarvam-ai-appoints-ex-google-cloud-india-md-sashikumar-sreedharan-as-president-and-cbo",
-      "sources": 5,
-      "quotes": 1
     }
   ],
-  "notes": [
-    "not India desk: 'Apple Intelligence AI service registers with Chine'",
-    "not India desk: 'Google unveils two specialized TPUs, the TPU 8tx, '"
-  ],
-  "mode": "full",
+  "notes": [],
+  "mode": "breaking",
   "timings": {
-    "gather": 62.4,
-    "audit": 0.0,
-    "plan": 14.1,
-    "judge": 13.8,
-    "verify and write": 153.0,
-    "videos": 11.2,
-    "tagging": 2.2,
-    "explainers": 0.0,
-    "trackers": 5.1,
-    "claims": 2.3,
-    "model tracker": 0.1,
-    "weekly": -0.0,
-    "builders": 23.6,
-    "top voices": 0.0,
-    "briefing": 8.9,
-    "self-review": -0.0,
-    "photos": 0.8,
-    "stock photos": -0.0,
-    "daily email": -0.0,
-    "alerts": 3.6
+    "gather": 10.8,
+    "judge": 1.0,
+    "verify and write": 2.7,
+    "tagging": 7.0,
+    "trackers": 1.3,
+    "photos": 0.2,
+    "stock photos": 0.0,
+    "alerts": 1.5
   },
-  "fetched": 2936,
-  "fresh": 38,
-  "plan": {
-    "focus": "Tracking the fallout from the Nvidia board probe into Jensen Huang alongside new TPU hardware announcements from Google.",
-    "priorities": [
-      "A profile of Alice Huang, a suspected Chinese spy who founded Megaspee (Deep-dive profile on Alice Huang and Megaspeed's Nvidia ties amid the ongoing CEO investigation storyline.)",
-      "Nvidia drops ~5% pre-market after its board opens a probe into Jensen  (Immediate market reaction and board probe developments concerning Nvidia CEO Jensen Huang.)",
-      "Google unveils two specialized TPUs, the TPU 8tx, to be paired with AM (Google's new specialized TPU chips (TPU 8tx and TPU 8i Max) signal major hardware strategy shifts for 2027.)",
-      "Nominal, which builds software to make hardware manufacturing more eff (Nominal's massive $240M raise at a $3B valuation highlights strong venture momentum in hardware manufacturing software.)"
-    ],
-    "thin_areas": [
-      "india"
-    ],
-    "searches": [
-      "Google TPU 8tx AMD CPUs: 4 new"
-    ],
-    "dig_deeper": [
-      "A profile of Alice Huang, a suspected Chinese spy who founded Megaspee",
-      "Nvidia drops ~5% pre-market after its board opens a probe into Jensen "
-    ]
-  },
-  "judged": 42,
-  "kept": 6,
-  "research": {
-    "investigated": 4,
-    "confirmed": 4,
-    "tool_calls": 10
-  },
-  "research_log": [
-    "Google unveils two specialized TPUs, the TPU 8tx, to be paired with AM: confirmed (searched “Google TPU 8tx TPU 8i Max Dina Bass Bloomberg”; read datacenterdynamics.com)",
-    "Apple Intelligence AI service registers with Chinese regulator for use: confirmed (searched “Apple Intelligence registered Chinese regulator Shanghai tablets laptops”; searched “Apple Intelligence registers with Chinese regulator Shanghai tablets laptops”; read msn.com)",
-    "Adobe’s CX Enterprise Coworker Gets Embedded Within Leading AI Platfor: confirmed (searched “Adobe CX Enterprise Coworker ChatGPT Claude Databricks Gemini Microsoft”; read thenextweb.com; read pymnts.com)",
-    "Sarvam AI Appoints Ex-Google Cloud India MD Sashikumar Sreedharan as P: confirmed (searched “Sarvam AI Sashikumar Sreedharan President CBO”; read indiatimes.com)"
-  ],
-  "threads": [
-    "OpenAI to purchase Google AI chips: Google expands TPU family with TPU 8tx and TPU 8i Max system",
-    "Apple rolls out Apple Intelligence in China: Apple Intelligence registers with Chinese regulator for tabl",
-    "Sarvam AI expands defence partnership: Sarvam AI appoints ex-Google Cloud India MD Sashikumar Sreed"
-  ],
-  "videos": {
-    "OpenAI": "ok (11 in feed, 0 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 4 new)",
-    "Google for Developers": "ok (9 in feed, 4 new)",
-    "AI at Meta": "ok (7 in feed, 0 new)",
-    "Microsoft Research": "ok (8 in feed, 0 new)",
-    "NVIDIA": "ok (10 in feed, 0 new)",
-    "Hugging Face": "ok (12 in feed, 2 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 2 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (4 in feed, 0 new)",
-    "Latent Space": "ok (15 in feed, 0 new)",
-    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
-    "a16z": "ok (15 in feed, 0 new)",
-    "Big Technology Podcast": "ok (13 in feed, 0 new)",
-    "Hard Fork": "ok (1 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (3 in feed, 0 new)",
-    "20VC": "ok (2 in feed, 0 new)"
-  },
-  "videos_kept": "12 kept from 12 new",
-  "tagged": 4,
-  "trackers": "filed 3 stories; updated us-china, india-ai, ai-infrastructure",
-  "claims": "118 tracked, 113 open, 0 updated this run",
-  "model_tracker": "82 models, 6 changes today",
-  "builders_sources": {
-    "show-hn": "ok (5)",
-    "github-new": "ok (47)",
-    "hf-spaces": "ok (20)",
-    "product-hunt": "ok (4)",
-    "r-localllama": "ok (25)",
-    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
-  },
-  "builders": "picked 5 from 60 candidates; 4 with pictures, 0 with videos",
-  "briefing": "3 themes from 20 stories",
-  "india_briefing": "2 themes from 3 stories",
-  "photos": "4 saved, 0 unavailable",
-  "alerts": "17 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":35}",
-  "ai_requests_run": 35,
-  "ai_tokens_run": 97954,
-  "ai_requests_today": 166,
+  "fetched": 2440,
+  "fresh": 1,
+  "judged": 1,
+  "kept": 1,
+  "tagged": 1,
+  "trackers": "filed 0 stories; no tracker changed",
+  "photos": "1 saved, 0 unavailable",
+  "alerts": "14 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":7}",
+  "ai_requests_run": 5,
+  "ai_tokens_run": 8911,
+  "ai_requests_today": 171,
   "provider_log": []
 }

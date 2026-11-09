@@ -1,6 +1,92 @@
 [
   {
     "explainer": {
+      "what_it_means": "Researchers are using simulation to teach robots delicate manipulation tasks like aligning gears and connecting cables. NVIDIA introduced open robotics technologies at the Conference on Robot Learning, including the GR00T 2 world action model and simulation tools.",
+      "terms": [
+        {
+          "term": "World action model",
+          "meaning": "A model that helps a robot perceive its surroundings and anticipate how its actions will change the environment."
+        },
+        {
+          "term": "Visuomotor context",
+          "meaning": "Visual and motor data combined to control a robot's physical actions."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "GR00T 2",
+        "benchmark": "50 tasks (out-of-the-box performance)",
+        "score": "Completed 40 of 50 evaluated tasks at least once without tas"
+      },
+      {
+        "model": "GR00T 2",
+        "benchmark": "50 tasks (one demonstration per task)",
+        "score": "71% average success"
+      },
+      {
+        "model": "GR00T 2",
+        "benchmark": "50 tasks (five demonstrations per task)",
+        "score": "95%"
+      }
+    ],
+    "audiences": {
+      "builders": "NVIDIA is introducing new open robotics technologies including world action models, simulation tools, benchmarks, and agentic workflows, along with GR00T 2's application programming interface.",
+      "business": "NVIDIA is working with partners such as Ambi Robotics, Bosch Research, and Siemens to bring robotics simulation and world action model advancements to the broader community.",
+      "investors": "NVIDIA presented research at the Conference on Robot Learning, with two papers among six finalists for Best Paper Awards."
+    },
+    "id": "7cd5e1029071",
+    "headline": "Nvidia introduces robot simulation tools and GR00T 2 at CoRL",
+    "summary": "NVIDIA introduced open robotics technologies at the Conference on Robot Learning in Austin, Texas, including the GR00T 2 world action model and simulation tools. Two NVIDIA papers were named finalists for the Best Paper Awards out of thousands of submissions.",
+    "why_it_matters": "These advancements help researchers train robots on complex manipulation tasks and evaluate performance across changing conditions.",
+    "category": "research",
+    "lab": "NVIDIA",
+    "model_name": "GR00T 2",
+    "model_type": "Language",
+    "tags": [
+      "robotics",
+      "simulation",
+      "CoRL",
+      "Nvidia",
+      "GR00T 2"
+    ],
+    "quotes": [],
+    "score": 7,
+    "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl",
+    "source_id": "nvidia",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/corl-corp-blog-promo-pack-1920x1080-1-1680x945.png",
+    "sources": [
+      {
+        "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl",
+        "publisher": "NVIDIA blog",
+        "title": "Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-09T14:00:01+00:00",
+    "created_at": "2026-11-09T14:55:17+00:00",
+    "breaking": true,
+    "sectors": [
+      "manufacturing"
+    ],
+    "regions": [
+      "us"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "GR00T 2",
+    "trackers": [],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Google has added two new systems to its eighth-generation Tensor Processing Unit family: the TPU 8tx, which pairs TPU 8t silicon with custom AMD CPUs for secure confidential computing, and the TPU 8i Max, which combines two TPU 8i chips to handle memory-intensive tasks like massive context windows. Google also released software tools including native PyTorch support, an open-source XLA Serving Engine, and a preview TPU agent suite.",
       "terms": [
         {
