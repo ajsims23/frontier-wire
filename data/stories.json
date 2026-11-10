@@ -1,6 +1,483 @@
 [
   {
     "explainer": {
+      "what_it_means": "Google is making its newest AI model, Gemini 4 Carbon, available to the public after a two-week limited release to cybersecurity teams. The model is priced at $2 per million input tokens and $10 per million output tokens during an introductory period, and Google is previewing a 'swarm' feature that turns one prompt into a team of cooperating AI agents.",
+      "terms": [
+        {
+          "term": "Agent swarm",
+          "meaning": "A group of AI agents that work together on a task, coordinated from a single user prompt."
+        },
+        {
+          "term": "Long-horizon task",
+          "meaning": "A task that requires many steps over a long period, such as debugging a large codebase."
+        },
+        {
+          "term": "Token",
+          "meaning": "A unit of text that AI services count when billing for usage."
+        }
+      ],
+      "watch_next": [
+        "Google plans to expand Carbon access to developers, businesses and consumers after collecting feedback and refining guardrails, with no date set.",
+        "Introductory pricing of $2 per million input tokens and $10 per million output tokens ends at the end of November, when prices double."
+      ]
+    },
+    "benchmarks": [
+      {
+        "model": "Gemini 4 Carbon",
+        "benchmark": "Artificial Analysis Intelligence Index v5.0",
+        "score": "59"
+      },
+      {
+        "model": "Gemini 4 Carbon",
+        "benchmark": "WebDev Arena",
+        "score": "1768"
+      },
+      {
+        "model": "Gemini 4 Carbon",
+        "benchmark": "SEC-bench Pro",
+        "score": "88.2%"
+      },
+      {
+        "model": "Gemini 4 Carbon",
+        "benchmark": "ExploitGym",
+        "score": "54.8%"
+      },
+      {
+        "model": "Gemini 4 Carbon",
+        "benchmark": "CWE-bench",
+        "score": "71.0%"
+      },
+      {
+        "model": "Gemini 4 Carbon",
+        "benchmark": "Coding Agent Index",
+        "score": "59"
+      }
+    ],
+    "audiences": {
+      "builders": "Gemini 4 Carbon is available via the Gemini API in Google AI Studio at $2 per million input tokens and $10 per million output tokens, with a 95% discount on cached input.",
+      "business": "Google is taking part in a voluntary U.S. government pre-release testing process and rolling the model out in stages through its Fairwind Program before wider availability.",
+      "investors": "Carbon's introductory pricing is about a fifth the cost of OpenAI's GPT-6 Astra and a quarter the cost of Anthropic's Fable 5.2, with prices doubling after the introductory period."
+    },
+    "id": "28b27e2d175e",
+    "headline": "Google rolls out Gemini 4 Carbon to the public with agent swarm feature",
+    "summary": "Google is rolling out Gemini 4 Carbon to the general public via the Gemini API, the Gemini app and Antigravity, after a two-week limited release to cybersecurity defenders. The model is priced at $2 per million input tokens and $10 per million output tokens during an introductory period, and Google is previewing a \"swarm\" feature that turns a single prompt into a coordinated team of agents.",
+    "why_it_matters": "Google's public release of Carbon, priced well below rival frontier models, intensifies competition among the top AI labs and brings long-horizon agentic capabilities to a wider developer base.",
+    "category": "models",
+    "lab": "Google",
+    "model_name": "Gemini 4 Carbon",
+    "model_type": "Language",
+    "tags": [
+      "google",
+      "gemini",
+      "ai-model",
+      "agents",
+      "cybersecurity"
+    ],
+    "quotes": [],
+    "score": 9,
+    "url": "https://theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout",
+    "source_id": "verge-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/Gemini-4-Carbon-Key-Art.jpg?quality=90&strip=all&crop=0%2C3.4613147178592%2C100%2C93.077370564282&w=1200",
+    "sources": [
+      {
+        "url": "https://theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout",
+        "publisher": "The Verge AI",
+        "title": "Google releases Gemini 4 Carbon with agent ‘swarm’ feature"
+      },
+      {
+        "url": "https://unite.ai/staged-rollout-sends-googles-gemini-4-carbon-to-cyber-defenders-first",
+        "publisher": "Unite.AI",
+        "title": "Staged Rollout Sends Google’s Gemini 4 Carbon To Cyber Defenders First"
+      },
+      {
+        "url": "https://geeky-gadgets.com/google-gemini-4-carbon-announced",
+        "publisher": "Geeky Gadgets",
+        "title": "Google Gemini 4 Carbon Beats Claude Opus 5.5 in 16 of 18 Tests"
+      },
+      {
+        "url": "https://betanews.com/article/gemini-4-carbon-cyber-defenders",
+        "publisher": "BetaNews",
+        "title": "Google gives Gemini 4 Carbon to cyber defenders before anyone else"
+      },
+      {
+        "url": "https://techrepublic.com/article/news-google-gemini-4-carbon-access",
+        "publisher": "TechRepublic",
+        "title": "Google Unveils Gemini 4 Carbon With Advanced Cybersecurity Skills — Who Gets Access First?"
+      },
+      {
+        "url": "https://thenextweb.com/news/gemini-4-carbon-google-cybersecurity-model",
+        "publisher": "The Next Web",
+        "title": "Google’s Gemini 4 Carbon tops AI rankings, but only cyber defenders get it"
+      }
+    ],
+    "research": {
+      "steps": 5,
+      "read": 3,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-10T16:00:00+00:00",
+    "created_at": "2026-11-10T16:02:37+00:00",
+    "thread": "t-9e3e3ddacb24",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {},
+    "cover": "Gemini 4 Carbon",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Google now sells two new versions of its in-house AI chips: one that keeps sensitive data protected while models run, and one with double the memory for large workloads. The chips are aimed at companies and governments that need to run AI on private data without moving that data between systems.",
+      "terms": [
+        {
+          "term": "Tensor Processing Unit (TPU)",
+          "meaning": "A chip Google designs in-house to run AI workloads, as an alternative to Nvidia's graphics processors."
+        },
+        {
+          "term": "Inference",
+          "meaning": "Running an AI model to produce answers, as opposed to training it on data."
+        },
+        {
+          "term": "Confidential computing",
+          "meaning": "A hardware approach that keeps data and model weights protected even while they are being processed, not just when stored or sent."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "TPU 8tx and 8i Max add confidential inference and higher memory bandwidth options, and TorchTPU lets PyTorch and Hugging Face models run natively on TPUs without code rewrites.",
+      "business": "Google is offering hardware aimed at regulated industries and government agencies that need to run AI on sensitive data without moving it between systems.",
+      "investors": "Alphabet shares rose more than 2% in premarket trading after the announcement, though the stock had fallen 9% so far this year through the last close."
+    },
+    "id": "196c0edf93f9",
+    "headline": "Google unveils TPU 8tx and TPU 8i Max for confidential and large-scale AI workloads",
+    "summary": "Google on Monday unveiled two new variants of its eighth-generation tensor processing units, TPU 8tx and TPU 8i Max, targeting confidential inference and larger memory capacity for AI workloads. The 8tx, designed with AMD, is built for secure workloads, while the 8i Max combines two TPU 8i chips to double memory, processing power and bandwidth.",
+    "why_it_matters": "Google's expanded TPU lineup gives enterprises and governments an in-house alternative to Nvidia for running AI on sensitive data and large workloads, adding to the push by hyperscalers to reduce reliance on external chipmakers.",
+    "category": "models",
+    "lab": "Google",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "Google",
+      "TPU",
+      "AI chips",
+      "hardware",
+      "confidential computing"
+    ],
+    "quotes": [
+      {
+        "text": "The TPU 8tx and 8i Max variants are not new chips, but reconfigured versions designed to handle workloads customers have been asking for.",
+        "speaker": "Amin Vahdat",
+        "speaker_role": "Google's chief technologist for AI infrastructure",
+        "source_url": "https://economictimes.indiatimes.com/tech/technology/google-to-introduce-two-variants-of-in-house-chips-bloomberg-news/articleshow/135682947.cms"
+      },
+      {
+        "text": "With computing moving from human to agent scale, businesses are asking for accelerators that can reason across AI models’ massive context windows.",
+        "speaker": "Google",
+        "speaker_role": "company blog post",
+        "source_url": "https://analyticsindiamag.com/ai-news/google-launches-two-new-tpus-for-enterprise-agentic-ai-workloads"
+      }
+    ],
+    "score": 8,
+    "url": "https://techcrunch.com/2026/11/10/google-broadens-its-ai-hardware-portfolio-with-two-new-specialized-chips",
+    "source_id": "techcrunch-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://techcrunch.com/wp-content/uploads/2024/09/GettyImages-1484622878.jpeg?resize=1200,800",
+    "sources": [
+      {
+        "url": "https://techcrunch.com/2026/11/10/google-broadens-its-ai-hardware-portfolio-with-two-new-specialized-chips",
+        "publisher": "TechCrunch AI",
+        "title": "Google broadens its AI hardware portfolio with two new specialized chips"
+      },
+      {
+        "url": "https://economictimes.indiatimes.com/tech/technology/google-to-introduce-two-variants-of-in-house-chips-bloomberg-news/articleshow/135682947.cms",
+        "publisher": "ET Tech",
+        "title": "Google to introduce two variants of in-house chips: Bloomberg News"
+      },
+      {
+        "url": "https://analyticsindiamag.com/ai-news/google-launches-two-new-tpus-for-enterprise-agentic-ai-workloads",
+        "publisher": "Analytics India Magazine",
+        "title": "Google Launches Two New TPUs for Enterprise Agentic AI Workloads"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-10T15:54:08+00:00",
+    "created_at": "2026-11-10T16:02:37+00:00",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {},
+    "cover": "TPU 8tx",
+    "trackers": [
+      "ai-infrastructure"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "TSMC is buying equity in two leading AI companies, Anthropic and OpenAI, to secure a stake in the AI ecosystem and potentially benefit from future growth.",
+      "terms": [
+        {
+          "term": "IPO",
+          "meaning": "Initial Public Offering, the first sale of a company's shares to the public."
+        },
+        {
+          "term": "preferred stock",
+          "meaning": "A type of stock that gives holders priority over common stock in dividends and liquidation."
+        },
+        {
+          "term": "chipmaker",
+          "meaning": "A company that designs and manufactures integrated circuits or chips."
+        }
+      ],
+      "watch_next": [
+        "TSMC's $265B investment in Arizona manufacturing facilities",
+        "TSMC's evaluation of potential projects in Texas"
+      ]
+    },
+    "audiences": {
+      "builders": "TSMC's investment may affect the availability and cost of AI chips for developers.",
+      "business": "TSMC's stake signals confidence in AI growth and could impact market dynamics.",
+      "investors": "TSMC's equity in Anthropic and OpenAI could offer returns and influence valuations."
+    },
+    "id": "e9e2b3561c9a",
+    "headline": "TSMC to invest up to $1B in Anthropic and OpenAI at IPO price",
+    "summary": "TSMC has approved up to $500 million to buy shares in Anthropic at its IPO price and up to $500 million for preferred stock in OpenAI. The move follows Anthropic's IPO pricing of $70 to $78 per share and reflects TSMC's confidence in AI demand.",
+    "why_it_matters": "It shows a major chipmaker backing key AI developers, potentially influencing AI supply chains and investment flows.",
+    "category": "industry",
+    "lab": "TSMC",
+    "model_name": "",
+    "model_type": "",
+    "tags": [],
+    "quotes": [],
+    "score": 10,
+    "url": "https://techmeme.com/261110/p24",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-146177,resizemode-75,msid-135713178/tech/artificial-intelligence/tsmc-to-invest-up-to-1-billion-in-anthropic-openai.jpg",
+    "sources": [
+      {
+        "url": "https://techmeme.com/261110/p24",
+        "publisher": "techmeme.com",
+        "title": "TSMC plans to invest up to $500M in Anthropic at its IPO price and up to $500M in OpenAI to acquire preferred stock (Reuters)"
+      },
+      {
+        "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/tsmc-to-invest-up-to-1-billion-in-anthropic-openai/articleshow/135713178.cms",
+        "publisher": "ET Tech",
+        "title": "TSMC to invest up to $1 billion in Anthropic, OpenAI"
+      },
+      {
+        "url": "https://msn.com/en-ca/money/general/tsmc-to-invest-up-to-1-billion-in-anthropic-openai/ar-AA2h9bI9",
+        "publisher": "Reuters on MSN",
+        "title": "TSMC to invest up to $1 billion in Anthropic, OpenAI"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-10T14:46:04+00:00",
+    "created_at": "2026-11-10T16:02:37+00:00",
+    "thread": "t-a50b07bc6191",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": {
+      "type": "investment",
+      "company": "",
+      "amount": "",
+      "usd": null
+    },
+    "relevance": {},
+    "cover": "$1B",
+    "trackers": [
+      "ai-money"
+    ],
+    "photo_local": true
+  },
+  {
+    "benchmarks": [
+      {
+        "model": "Fable 5.2",
+        "benchmark": "Remote Labor Index",
+        "score": "41.3%"
+      }
+    ],
+    "audiences": {
+      "builders": "Fable 5.2's 41.3% RLI score and gains in 3D, audio, and architecture show where agent-based tools now clear a professional-quality bar.",
+      "business": "The RLI measures how often AI output is acceptable to paying clients, a direct signal of AI's readiness for real freelance work.",
+      "investors": "Scale Labs and CAIS's RLI is a recurring benchmark tracking AI agents' share of real freelance work, useful for gauging adoption."
+    },
+    "id": "b621aa11e7e8",
+    "headline": "Fable 5.2 tops Remote Labor Index at 41.3% of freelance jobs",
+    "summary": "On the Remote Labor Index from Scale Labs and the Center for AI Safety, Anthropic's Fable 5.2 completes 41.3% of real freelance projects at professional quality, ahead of Opus 5.5 (21.25%) and GPT 6 Astra (20.83%). The score is up from 2.5% for the top system a year ago.",
+    "why_it_matters": "The RLI measures how often AI output is acceptable to paying clients, making it a direct gauge of how close AI agents are to doing real freelance work.",
+    "category": "research",
+    "lab": "Scale Labs",
+    "model_name": "Fable 5.2",
+    "model_type": "Language",
+    "tags": [
+      "benchmarks",
+      "ai-agents",
+      "freelance-work",
+      "anthropic",
+      "scale-labs"
+    ],
+    "quotes": [],
+    "score": 9,
+    "url": "https://techmeme.com/261110/p23",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://the-decoder.com/wp-content/uploads/2026/07/Remote-labor-index-bench-title.png",
+    "sources": [
+      {
+        "url": "https://techmeme.com/261110/p23",
+        "publisher": "techmeme.com",
+        "title": "Scale Labs and CAIS' Remote Labor Index: Fable 5.2 completes 41.3% of freelance projects at professional quality, above Opus 5.5's 21.3% and GPT-6 Astra's 20.8% (Maximilian Schreiner/The Decoder)"
+      },
+      {
+        "url": "https://the-decoder.com/anthropics-fable-5-2-completes-41-percent-of-real-freelance-jobs-up-from-2-5-percent-a-year-ago",
+        "publisher": "THE DECODER",
+        "title": "Anthropic's Fable 5.2 completes 41 percent of real freelance jobs, up from 2.5 percent a year ago"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-10T14:40:01+00:00",
+    "created_at": "2026-11-10T16:02:37+00:00",
+    "thread": "t-a4d26b025e34",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {},
+    "cover": "41.3%",
+    "explainer": null,
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Anthropic, the maker of the Claude AI assistant, is preparing to sell shares to the public for the first time. The company expects to raise between $57.75 billion and $64.35 billion from the sale, with total net proceeds potentially reaching $93.7 billion. Its valuation of up to $1.4 trillion would make it one of the most valuable publicly traded companies in the world.",
+      "terms": [
+        {
+          "term": "IPO",
+          "meaning": "The first time a private company sells shares to the public on a stock exchange."
+        },
+        {
+          "term": "Fully diluted valuation",
+          "meaning": "The total value of a company calculated by multiplying its share price by all shares, including those not yet issued."
+        },
+        {
+          "term": "Public benefit corporation",
+          "meaning": "A company structure that legally commits to serving a public benefit alongside shareholder profit, giving founders greater control."
+        }
+      ],
+      "watch_next": [
+        "Anthropic is expected to start trading on the Nasdaq close to November 19, 2026, under the ticker symbol ANT."
+      ]
+    },
+    "audiences": {
+      "builders": "Anthropic's Claude models will remain available as the company transitions to public ownership, with no stated changes to developer access.",
+      "business": "Anthropic's $1.4 trillion valuation and $84.6–93.7 billion in expected proceeds signal continued heavy capital deployment in AI infrastructure, while its public benefit structure limits shareholder influence.",
+      "investors": "Anthropic's IPO at $70–78 per share values it at up to $1.404 trillion, below the $2 trillion previously targeted, with $26 billion in private sales to chipmakers and tech firms at the IPO price."
+    },
+    "id": "06c34be0a2ca",
+    "headline": "Anthropic sets IPO price at $70–$78 per share, targeting $1.4 trillion valuation",
+    "summary": "Anthropic filed an updated IPO prospectus on November 10, 2026, offering 825 million Class A shares at $70–$78 per share, implying a valuation of up to $1.404 trillion. The company expects to raise $57.75–$64.35 billion from the public offering, with total net proceeds of $84.6–$93.7 billion including a $26 billion private sale to AMD, Broadcom, Google, Micron, Microsoft, Nvidia and TSMC.",
+    "why_it_matters": "Anthropic's IPO at a valuation below its earlier $2 trillion target reflects a broader pullback in AI investing and sets a new benchmark for how public markets value frontier AI companies.",
+    "category": "industry",
+    "lab": "Anthropic",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "Anthropic",
+      "IPO",
+      "Nasdaq",
+      "AI funding",
+      "Claude"
+    ],
+    "quotes": [],
+    "score": 10,
+    "url": "https://theverge.com/ai-artificial-intelligence/1030703/anthropic-ipo-1-4-trillion",
+    "source_id": "verge-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/STK269_ANTHROPIC_2_D.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+    "sources": [
+      {
+        "url": "https://theverge.com/ai-artificial-intelligence/1030703/anthropic-ipo-1-4-trillion",
+        "publisher": "The Verge AI",
+        "title": "Anthropic targets $1.4 trillion IPO"
+      },
+      {
+        "url": "https://techcrunch.com/2026/11/10/anthropic-sets-ipo-price-range-of-70-to-78-per-share-to-reach-an-implied-valuation-of-1-404-trillion",
+        "publisher": "TechCrunch AI",
+        "title": "Anthropic sets IPO price range of $70 to $78 per share to reach an implied valuation of $1.404 trillion"
+      },
+      {
+        "url": "https://msn.com/en-us/money/economy/anthropic-sets-ipo-price-range-of-70-to-78-per-share-to-reach-an-implied-valuation-of-1-404-trillion/ar-AA2h92cc",
+        "publisher": "TechCrunch on MSN",
+        "title": "Anthropic sets IPO price range of $70 to $78 per share to reach an implied valuation of $1.404 trillion"
+      }
+    ],
+    "research": {
+      "steps": 5,
+      "read": 3,
+      "decision": "unconfirmed"
+    },
+    "published_at": "2026-11-10T14:06:54+00:00",
+    "created_at": "2026-11-10T16:02:37+00:00",
+    "thread": "t-a50b07bc6191",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": {
+      "type": "ipo",
+      "company": "",
+      "amount": "",
+      "usd": null
+    },
+    "relevance": {},
+    "cover": "$1.4 trillion",
+    "trackers": [
+      "ai-money"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "IBM and Microsoft announced Imagine Enterprise, a platform that combines more than 6,000 prebuilt AI agents and industry expertise from IBM Consulting with Microsoft's AI, cloud, and security technologies. The platform is designed to help organizations in regulated industries build, run, and govern AI agents connected to their existing data and daily business processes.",
       "terms": [
         {
@@ -432,6 +909,96 @@
   },
   {
     "explainer": {
+      "what_it_means": "Froncort.AI is building a mobile app that tells health workers where to go and whom to screen for diseases like TB, using AI, satellite imagery and government health data. The company says this lets teams find the same number of TB cases while screening far fewer people. The app is designed to work offline and in local languages, and government health data stays stored and processed in India.",
+      "terms": [
+        {
+          "term": "Disease surveillance",
+          "meaning": "A system that tracks where infectious diseases are spreading so health workers can act early."
+        },
+        {
+          "term": "mAI-NETRA",
+          "meaning": "A version of the AI-NETRA platform built for phones, designed to work offline and in local languages."
+        },
+        {
+          "term": "Frontline health worker",
+          "meaning": "A person who delivers basic health services, such as screening, in local communities."
+        }
+      ],
+      "watch_next": [
+        "Deployment of mAI-NETRA across up to eight high-burden districts in three Indian states, covering two to three million people",
+        "Release of mAI-NETRA as an open-source blueprint for governments"
+      ]
+    },
+    "audiences": {
+      "builders": "Froncort.AI plans to release mAI-NETRA as an open-source blueprint, and the app is designed to work offline and in local languages.",
+      "business": "The deployment targets up to eight high-burden districts in three Indian states, covering two to three million people, with government health data stored and processed locally in India.",
+      "investors": "Froncort.AI raised $2.3 million from Google.org, plus $200K in Google Cloud credits and pro bono technical expertise, as part of Google.org's Impact Challenge: AI for Government Innovation."
+    },
+    "id": "3fce288f56e1",
+    "headline": "Froncort.AI raises $2.3M from Google.org to expand AI disease surveillance",
+    "summary": "Pune-based healthcare AI startup Froncort.AI has raised $2.3 million from Google.org, plus $200K in Google Cloud credits and pro bono technical expertise, to develop mAI-NETRA, a mobile version of its AI disease surveillance platform. The funding will extend the platform to six infectious diseases across up to eight high-burden districts in three Indian states, covering two to three million people.",
+    "why_it_matters": "The funding shows AI being applied to a practical public-health problem—directing limited screening resources to high-risk areas—rather than to consumer products.",
+    "category": "industry",
+    "lab": "Froncort.AI",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "healthcare",
+      "public health",
+      "disease surveillance",
+      "India",
+      "Google.org"
+    ],
+    "quotes": [
+      {
+        "text": "The world does not lack experts. It lacks their reach. AI-NETRA puts that expertise in the health worker's hands at the door: where to go, whom to screen, and when",
+        "speaker": "Dr Ujjwal Rao",
+        "speaker_role": "founder and CEO of Froncort.AI",
+        "source_url": "https://analyticsindiamag.com/ai-news/froncortai-gets-23m-from-googleorg-to-expand-ai-based-disease-screening-in-india"
+      }
+    ],
+    "score": 7,
+    "url": "https://inc42.com/buzz/froncort-ai-raises-2-3-mn-from-google-org-to-expand-ai-based-disease-surveillance",
+    "source_id": "inc42",
+    "desk": "india",
+    "ai_relevance": "core",
+    "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/10/stakcbox-funding-featured-1-1-1-1.jpg",
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/froncort-ai-raises-2-3-mn-from-google-org-to-expand-ai-based-disease-surveillance",
+        "publisher": "Inc42",
+        "title": "Froncort.AI Raises $2.3 Mn From Google.org To Expand AI-Based Disease Surveillance"
+      },
+      {
+        "url": "https://analyticsindiamag.com/ai-news/froncortai-gets-23m-from-googleorg-to-expand-ai-based-disease-screening-in-india",
+        "publisher": "Analytics India Magazine",
+        "title": "Froncort.AI Gets $2.3M From Google.org to Expand AI-Based Disease Screening in India"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-10T12:52:54+00:00",
+    "created_at": "2026-11-10T16:02:37+00:00",
+    "sectors": [
+      "healthcare"
+    ],
+    "regions": [
+      "india"
+    ],
+    "deal": {
+      "type": "funding",
+      "company": "",
+      "amount": "",
+      "usd": null
+    },
+    "relevance": {},
+    "cover": "$2.3M",
+    "trackers": [
+      "india-ai"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "AlphaProof Code uses AI to examine software code more deeply than typical testing, checking that the program behaves as intended across many scenarios. This can catch hidden errors before deployment, saving time and increasing safety. Developers can integrate it into their development workflow to get automated assurance of code correctness.",
       "terms": [
         {
@@ -788,6 +1355,105 @@
       "page": "https://commons.wikimedia.org/w/index.php?curid=59031104",
       "via": "Wikimedia"
     }
+  },
+  {
+    "explainer": {
+      "what_it_means": "Anthropic is preparing to go public with a valuation that would place it among the world's largest companies. The share price range implies a market capitalization between $1.3tn and $1.4tn. The company also unveiled two new AI models, Claude Fable 5.2 and Claude Mythos 5.2, which it says are 30% faster and cheaper to run than previous versions.",
+      "terms": [
+        {
+          "term": "IPO",
+          "meaning": "Initial Public Offering — the first sale of a company's shares to the public on a stock exchange."
+        },
+        {
+          "term": "Market capitalization",
+          "meaning": "The total value of a company's outstanding shares, calculated as share price multiplied by number of shares."
+        },
+        {
+          "term": "Valuation",
+          "meaning": "An estimate of what a company is worth, often based on what investors are willing to pay for its shares."
+        }
+      ],
+      "watch_next": [
+        "IPO pricing on November 18, 2026",
+        "CEO Dario Amodei discussion with JPMorgan Chase CEO Jamie Dimon via livestream"
+      ]
+    },
+    "audiences": {
+      "builders": "New Claude Fable 5.2 and Mythos 5.2 models claim 30% speed improvement and lower running costs, which could affect API pricing and performance for developers building on Anthropic's platform.",
+      "business": "The $1.3tn target valuation signals continued investor confidence in AI infrastructure despite political uncertainty from the Democratic congressional sweep and growing consumer skepticism about AI's economic impact.",
+      "investors": "The IPO aims to raise up to $64.35bn at the top of the $70-$78 price range, but analysts like Motley Fool's David Jagielski warn the valuation could fall significantly given risks and challenges Anthropic faces."
+    },
+    "id": "6e60d9db5bba",
+    "headline": "Anthropic targets $1.3tn valuation in IPO pricing 825 million shares at $70-$78",
+    "summary": "Anthropic announced plans for an IPO valuing the company at up to $1.3tn, offering 825 million shares priced between $70 and $78 each. The offering could raise up to $64.35bn, with pricing set for November 18 and trading beginning November 19.",
+    "why_it_matters": "The IPO would make the five-year-old AI company one of the world's ten most valuable firms, testing investor appetite for AI infrastructure plays amid political and consumer headwinds.",
+    "category": "industry",
+    "lab": "Anthropic",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "ipo",
+      "valuation",
+      "funding"
+    ],
+    "quotes": [
+      {
+        "text": "Even at US$1tn in market cap, I wouldn't be tempted to invest, as Anthropic's valuation could easily fall far lower given the risks and challenges it faces.",
+        "speaker": "David Jagielski",
+        "speaker_role": "analyst at The Motley Fool",
+        "source_url": "https://businesschief.com/news/anthropic-targets-us-1-3tn-valuation-for-much-hyped-ipo"
+      }
+    ],
+    "score": 8,
+    "url": "https://businesschief.com/news/anthropic-targets-us-1-3tn-valuation-for-much-hyped-ipo",
+    "source_id": "chief",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://assets.bizclikmedia.net/1200/2261f57f7f4e52628587499c78d9825a:d0bf5890e9cc54b44a4f2db913420c1d/gettyimages-2235057466.jpg.jpg",
+    "sources": [
+      {
+        "url": "https://businesschief.com/news/anthropic-targets-us-1-3tn-valuation-for-much-hyped-ipo",
+        "publisher": "Business Chief",
+        "title": "Anthropic Targets US$1.3tn Valuation for Much-Hyped IPO"
+      },
+      {
+        "url": "https://msn.com/en-us/news/other/anthropic-targets-14-trillion-valuation-in-highly-anticipated-ipo/ar-AA2h9g6l",
+        "publisher": "Forbes on MSN",
+        "title": "Anthropic targets $1.4 trillion valuation in highly anticipated IPO"
+      },
+      {
+        "url": "https://msn.com/en-us/news/other/anthropic-officially-sets-the-stage-for-an-ipo-valuing-the-company-north-of-1-trillion/ar-AA2h8SHR",
+        "publisher": "MarketWatch on MSN",
+        "title": "Anthropic officially sets the stage for an IPO valuing the company north of $1 trillion"
+      },
+      {
+        "url": "https://decrypt.co/382939/anthropic-sets-ipo-price-range-at-70-to-78-valuing-company-at-up-to-1-4-trillion",
+        "publisher": "Decrypt",
+        "title": "Anthropic Sets IPO Price Range at $70 to $78, Valuing Company at Up to $1.4 Trillion"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-10T07:54:00+00:00",
+    "created_at": "2026-11-10T16:02:37+00:00",
+    "thread": "t-a50b07bc6191",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": {
+      "type": "ipo",
+      "company": "",
+      "amount": "",
+      "usd": null
+    },
+    "relevance": {},
+    "cover": "$1.3tn",
+    "trackers": [
+      "ai-money"
+    ],
+    "photo_local": true
   },
   {
     "explainer": {
@@ -2169,6 +2835,132 @@
   },
   {
     "explainer": {
+      "what_it_means": "Google DeepMind released Gemini Robotics 2.5, an AI system that helps robots perform physical tasks like sorting parts and tying bows. In a Mercedes-Benz factory test, the robot completed pick-and-pack work with a 96% success rate. The company also released an open-source benchmark to test whether robots can be tricked into unsafe actions.",
+      "terms": [
+        {
+          "term": "Vision-language-action (VLA) model",
+          "meaning": "A type of AI model that takes in visual and language input and outputs physical robot movements."
+        },
+        {
+          "term": "Deformable objects",
+          "meaning": "Objects like ribbon or fabric that change shape when handled, making them hard for robots to grip and manipulate."
+        },
+        {
+          "term": "Jailbreak benchmark",
+          "meaning": "A test that checks whether a robot can be tricked into performing unsafe actions through disguised commands."
+        }
+      ],
+      "watch_next": [
+        "DeepMind is preparing for a day when robots operate alongside humans, using the open-source ASIMOV-Jailbreak safety benchmark."
+      ]
+    },
+    "benchmarks": [
+      {
+        "model": "Gemini Robotics 2.5",
+        "benchmark": "Pick-and-pack success rate (Mercedes-Benz trial)",
+        "score": "96%"
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "benchmark": "Jailbreak resistance (ASIMOV-Jailbreak)",
+        "score": "99.5%"
+      },
+      {
+        "model": "Gemini Robotics 2.5",
+        "benchmark": "Success rate improvement vs previous version",
+        "score": "30% to 100% higher"
+      },
+      {
+        "model": "Gemini Robotics 2.5",
+        "benchmark": "Task completion speed vs previous version",
+        "score": "20% to 30% faster"
+      }
+    ],
+    "audiences": {
+      "builders": "Gemini Robotics 2.5 is a VLA model compatible with platforms like Apptronik's Apollo 2 and Franka Duo, with an open-source ASIMOV-Jailbreak benchmark for testing robot safety.",
+      "business": "A 96% success rate on pick-and-pack in Mercedes-Benz factories shows progress, but DeepMind says closing the gap to human-level reliability will be a 'steep road.'",
+      "investors": "Google DeepMind is partnering with Apptronik, Mercedes-Benz and Agile Robots to deploy its robotics AI in automotive production lines in Hungary and Germany."
+    },
+    "id": "7da1b2b4758f",
+    "headline": "Google DeepMind releases Gemini Robotics 2.5 with 96% factory success rate",
+    "summary": "Google DeepMind released Gemini Robotics 2.5, a vision-language-action model that achieved a 96% success rate on pick-and-pack tasks in Mercedes-Benz factories in Hungary and Germany. The release also includes ASIMOV-Jailbreak, an open-source benchmark for testing robot safety against adversarial prompts.",
+    "why_it_matters": "Gemini Robotics 2.5 marks a step toward general-purpose robots that can handle diverse physical tasks in unstructured environments, with a 96% factory success rate and a new open-source safety benchmark.",
+    "category": "models",
+    "lab": "Google DeepMind",
+    "model_name": "Gemini Robotics 2.5",
+    "model_type": "Other",
+    "tags": [
+      "robotics",
+      "VLA",
+      "safety",
+      "Mercedes-Benz",
+      "Apptronik"
+    ],
+    "quotes": [
+      {
+        "text": "We can be very good at a particular application at the cost of generalization.",
+        "speaker": "Carolina Parada",
+        "speaker_role": "DeepMind Robotics head",
+        "source_url": "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak"
+      },
+      {
+        "text": "closing that last 4 percent gap will be a “steep road.",
+        "speaker": "Kanishka Rao",
+        "speaker_role": "DeepMind director",
+        "source_url": "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak"
+      }
+    ],
+    "score": 10,
+    "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence",
+    "source_id": "deepmind",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://lh3.googleusercontent.com/F1CrVEYRb8lJOyyxGgcyow-Td1de-nkp7K8MZrhjrKPANJUc0EYB754Ninn-Yrppjdb54nolOWo6Rk8iDaRNuixWwLaEKc0K9ImGooxen9fj9IOh=w1200-h630-n-nu-rw",
+    "sources": [
+      {
+        "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence",
+        "publisher": "Google DeepMind",
+        "title": "Gemini Robotics 2.5 accelerates real-world general dexterity"
+      },
+      {
+        "url": "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak",
+        "publisher": "Ars Technica AI",
+        "title": "DeepMind reveals Gemini Robotics 2.5 and open safety benchmark \"ASIMOV-jailbreak\""
+      },
+      {
+        "url": "https://cryptobriefing.com/google-deepmind-gemini-robotics-2-5-asimov",
+        "publisher": "Crypto Briefing",
+        "title": "Google DeepMind unveils Gemini Robotics 2.5 with ASIMOV-Jailbreak safety benchmark"
+      },
+      {
+        "url": "https://blockchain.news/news/gemini-robotics-2-5-enhances-dexterity-safety",
+        "publisher": "Blockchain News",
+        "title": "Gemini Robotics 2.5 Enhances Dexterity and Safety in Real-World Tasks"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-09T19:51:47+00:00",
+    "created_at": "2026-11-10T16:02:37+00:00",
+    "sectors": [
+      "manufacturing"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {},
+    "cover": "96%",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Anthropic launched two new advanced AI models, Claude Fable 5.2 and Claude Mythos 5.2, featuring faster output generation and lower pricing for the Fable model. Fable 5.2 is available broadly for technical work, while Mythos 5.2 access is restricted to vetted organizations in verification programs amid discussions surrounding recursive self-improvement and covert capabilities.",
       "terms": [
         {
@@ -2669,6 +3461,100 @@
     "cover": "$130M",
     "trackers": [
       "ai-infrastructure",
+      "ai-money"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "TSMC, which makes chips for companies like Nvidia, is now buying shares in the AI companies that use those chips. This means the chipmaker stands to profit from the success of Anthropic and OpenAI, not just from selling them hardware. The move comes as TSMC reports record profits and says demand for AI chips still exceeds its ability to produce them.",
+      "terms": [
+        {
+          "term": "Contract chipmaker",
+          "meaning": "A company that manufactures chips for other firms rather than selling its own branded products."
+        },
+        {
+          "term": "Initial public offering (IPO)",
+          "meaning": "The first sale of a company's shares to the public on a stock exchange."
+        },
+        {
+          "term": "Preferred stock",
+          "meaning": "Shares that give holders certain rights, such as priority in payouts, ahead of common stock."
+        }
+      ],
+      "watch_next": [
+        "TSMC is evaluating potential manufacturing projects in Texas",
+        "Anthropic's IPO is expected to be one of the largest stock market debuts on record"
+      ]
+    },
+    "audiences": {
+      "builders": "TSMC, a key supplier of AI chips, is taking equity stakes in Anthropic and OpenAI, which may affect its relationship with developers building on those models.",
+      "business": "The world's largest contract chipmaker is moving from pure supplier to investor in AI developers, signaling confidence in sustained AI demand even as spending concerns grow.",
+      "investors": "TSMC is committing up to $1 billion to Anthropic and OpenAI stakes while projecting 44% revenue growth in 2026 and expanding capacity in Arizona and Texas."
+    },
+    "id": "69011908bacb",
+    "headline": "TSMC board approves up to $1bn investment in Anthropic and OpenAI",
+    "summary": "TSMC's board approved investments of up to $500 million in Anthropic at its IPO price and up to $500 million in OpenAI preferred stock. The world's largest contract chipmaker is seeking a valuation of up to $1.4 trillion for Anthropic, which priced its IPO at $70–78 per share.",
+    "why_it_matters": "The world's largest chipmaker is taking equity stakes in two leading AI developers, deepening the financial ties between AI infrastructure and the companies building on it.",
+    "category": "industry",
+    "lab": "TSMC",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "TSMC",
+      "Anthropic",
+      "OpenAI",
+      "AI chips",
+      "IPO"
+    ],
+    "quotes": [],
+    "score": 8,
+    "url": "https://ua.news/en/dovkolo-svitu/rada-direktoriv-tsmc-skhvalila-investitsiyi-do-1-mlrd-v-anthropic-i-openai-channel-newsasia",
+    "source_id": "chief",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://cdn-cabinet.ua.news/uploads/images/tsmc_to_invest_up_to_1_billion_in_anthro_1794321791357.webp",
+    "sources": [
+      {
+        "url": "https://ua.news/en/dovkolo-svitu/rada-direktoriv-tsmc-skhvalila-investitsiyi-do-1-mlrd-v-anthropic-i-openai-channel-newsasia",
+        "publisher": "UA.NEWS",
+        "title": "TSMC board approves up to $1bn investment in Anthropic and OpenAI — Channel NewsAsia"
+      },
+      {
+        "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/tsmc-to-invest-up-to-1-billion-in-anthropic-openai/articleshow/135713178.cms",
+        "publisher": "ET Tech",
+        "title": "TSMC to invest up to $1 billion in Anthropic, OpenAI"
+      },
+      {
+        "url": "https://techmeme.com/261110/p24",
+        "publisher": "techmeme.com",
+        "title": "TSMC plans to invest up to $500M in Anthropic at its IPO price and up to $500M in OpenAI to acquire preferred stock (Reuters)"
+      },
+      {
+        "url": "https://msn.com/en-ca/money/general/tsmc-to-invest-up-to-1-billion-in-anthropic-openai/ar-AA2h9bI9",
+        "publisher": "Reuters on MSN",
+        "title": "TSMC to invest up to $1 billion in Anthropic, OpenAI"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-09T18:43:00+00:00",
+    "created_at": "2026-11-10T16:02:37+00:00",
+    "thread": "t-a50b07bc6191",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": {
+      "type": "investment",
+      "company": "",
+      "amount": "",
+      "usd": null
+    },
+    "relevance": {},
+    "cover": "$1bn",
+    "trackers": [
       "ai-money"
     ],
     "photo_local": true
@@ -26380,7 +27266,8 @@
     "trackers": [
       "frontier-race"
     ],
-    "photo_local": true
+    "photo_local": true,
+    "thread": "t-9e3e3ddacb24"
   },
   {
     "explainer": {

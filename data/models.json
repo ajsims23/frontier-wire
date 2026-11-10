@@ -1,6 +1,22 @@
 {
   "models": [
     {
+      "id": "google/gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "lab": "Google",
+      "released": "2026-11-10",
+      "context": 1048576,
+      "price_in": 2.0,
+      "price_out": 10.0,
+      "inputs": [
+        "audio",
+        "file",
+        "image",
+        "text",
+        "video"
+      ]
+    },
+    {
       "id": "anthropic/claude-fable-5.2",
       "name": "Claude Fable 5.2",
       "lab": "Anthropic",
@@ -340,8 +356,8 @@
       "lab": "DeepSeek",
       "released": "2026-09-10",
       "context": 1048576,
-      "price_in": 0.006,
-      "price_out": 0.5,
+      "price_in": 0.3,
+      "price_out": 1.2,
       "inputs": [
         "text",
         "image"
@@ -411,8 +427,8 @@
       "lab": "Zhipu AI",
       "released": "2026-08-26",
       "context": 1048576,
-      "price_in": 0.15,
-      "price_out": 0.5,
+      "price_in": 0.0399,
+      "price_out": 0.0784,
       "inputs": [
         "text",
         "image",
@@ -551,22 +567,6 @@
       ]
     },
     {
-      "id": "google/gemini-3.6-flash",
-      "name": "Gemini 3.6 Flash",
-      "lab": "Google",
-      "released": "2026-07-21",
-      "context": 1048576,
-      "price_in": 0.75,
-      "price_out": 3.75,
-      "inputs": [
-        "text",
-        "image",
-        "video",
-        "file",
-        "audio"
-      ]
-    },
-    {
       "id": "moonshotai/kimi-k3",
       "name": "Kimi K3",
       "lab": "Moonshot AI",
@@ -600,7 +600,7 @@
       "lab": "Zhipu AI",
       "released": "2026-06-16",
       "context": 1048576,
-      "price_in": 0.01,
+      "price_in": 0.007,
       "price_out": 6.8,
       "inputs": [
         "text"
@@ -1097,48 +1097,6 @@
       "model": "DeepSeek V4 Flash 0731",
       "lab": "DeepSeek",
       "kind": "price_cut",
-      "text": "DeepSeek V4 Flash 0731 input price cut: $0.054 → $0.05 per 1M tokens"
-    },
-    {
-      "date": "2026-11-07",
-      "model": "DeepSeek V4 Pro 0423",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4 Pro 0423 input price cut: $0.8295 → $0.7788 per 1M tokens"
-    },
-    {
-      "date": "2026-11-07",
-      "model": "DeepSeek V4 Pro 0423",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4 Pro 0423 output price cut: $1.6589 → $1.5576 per 1M tokens"
-    },
-    {
-      "date": "2026-11-07",
-      "model": "DeepSeek V4 Flash 0731",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4 Flash 0731 input price cut: $0.05 → $0.0474 per 1M tokens"
-    },
-    {
-      "date": "2026-11-07",
-      "model": "DeepSeek V4 Pro 0423",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4 Pro 0423 input price cut: $0.7788 → $0.7078 per 1M tokens"
-    },
-    {
-      "date": "2026-11-07",
-      "model": "DeepSeek V4 Pro 0423",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4 Pro 0423 output price cut: $1.5576 → $1.4157 per 1M tokens"
-    },
-    {
-      "date": "2026-11-07",
-      "model": "DeepSeek V4 Flash 0731",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
       "text": "DeepSeek V4 Flash 0731 input price cut: $0.0474 → $0.0448 per 1M tokens"
     },
     {
@@ -1511,7 +1469,49 @@
       "lab": "Zhipu AI",
       "kind": "price_rise",
       "text": "GLM 5.2 input price raised: $0.006 → $0.01 per 1M tokens"
+    },
+    {
+      "date": "2026-11-10",
+      "model": "Gemini 4 Carbon",
+      "lab": "Google",
+      "kind": "new",
+      "text": "Now available: Gemini 4 Carbon ($2 in / $10 out per 1M tokens)"
+    },
+    {
+      "date": "2026-11-10",
+      "model": "DeepSeek V4.1 Flash",
+      "lab": "DeepSeek",
+      "kind": "price_rise",
+      "text": "DeepSeek V4.1 Flash input price raised: $0.006 → $0.3 per 1M tokens"
+    },
+    {
+      "date": "2026-11-10",
+      "model": "DeepSeek V4.1 Flash",
+      "lab": "DeepSeek",
+      "kind": "price_rise",
+      "text": "DeepSeek V4.1 Flash output price raised: $0.5 → $1.2 per 1M tokens"
+    },
+    {
+      "date": "2026-11-10",
+      "model": "GLM 5.3 Flash",
+      "lab": "Zhipu AI",
+      "kind": "price_cut",
+      "text": "GLM 5.3 Flash input price cut: $0.15 → $0.0399 per 1M tokens"
+    },
+    {
+      "date": "2026-11-10",
+      "model": "GLM 5.3 Flash",
+      "lab": "Zhipu AI",
+      "kind": "price_cut",
+      "text": "GLM 5.3 Flash output price cut: $0.5 → $0.0784 per 1M tokens"
+    },
+    {
+      "date": "2026-11-10",
+      "model": "GLM 5.2",
+      "lab": "Zhipu AI",
+      "kind": "price_cut",
+      "text": "GLM 5.2 input price cut: $0.01 → $0.007 per 1M tokens"
     }
   ],
-  "updated_at": "2026-11-10T13:21:49+00:00"
+  "updated_at": "2026-11-10T16:02:37+00:00"
 }
