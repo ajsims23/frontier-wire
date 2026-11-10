@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-10T04:05:19+00:00",
+  "started_at": "2026-11-10T07:27:55+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -20,9 +20,9 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (15)",
-    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
-    "hn": "ok (21)",
+    "hf-papers": "ok (16)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (22)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -33,7 +33,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "ok (14)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -43,208 +43,405 @@
   },
   "dropped": [
     {
-      "title": "Fun things to do with your VM/370 CE machine – Fun with big computers",
-      "reason": "not AI: Retrocomputing hobbyist post with no AI relevance."
+      "title": "Guiding Data Allocation for Robust Subpopulation Generalization",
+      "reason": "not AI: Standard machine learning paper on subpopulation generalization without an extraordinary frontier advance."
     },
     {
-      "title": "David Ellison says AI could be the ‘biggest creative unlock in modern history’",
-      "reason": "score 5: General executive commentary on AI's impact on entertainment from a studio CEO; routine corporate statements."
+      "title": "Kolmogorov-Chapman Maps: Trajectory-Free Learning for Simulating Molecular Dynamics",
+      "reason": "not AI: Routine molecular dynamics simulation paper using stochastic differential equations."
     },
     {
-      "title": "Mphasis Raises FY27 Growth Outlook After 9.2% Dollar Revenue Growth in Q2",
-      "reason": "score 5: Quarterly financial results and revenue growth for an IT services firm with mention of AI deal share, but not a dedicated AI news development."
+      "title": "Adaptive Quantization Preserves Fast Rates for TD Learning over Rate-Limited Channels",
+      "reason": "not AI: Academic reinforcement learning paper on quantization and rate-limited channels."
+    },
+    {
+      "title": "HiVe-Mem: Interleaving Horizontal Memory Expansion and Vertical Evidence Composition for Multimodal Agents",
+      "reason": "not AI: Academic paper on memory expansion for multimodal agents."
+    },
+    {
+      "title": "Vendi Anomaly Scores for Efficient and Accurate Anomaly Detection",
+      "reason": "not AI: Routine academic paper on anomaly detection methods."
+    },
+    {
+      "title": "Where Does Alignment Emerge and What Does It Mean? A Closer Look at the Platonic Representation Hypothesis",
+      "reason": "not AI: Academic paper exploring the Platonic Representation Hypothesis."
+    },
+    {
+      "title": "Shortcuts and Boundaries: Verifiable RL Misalignment and Contextual Safety Learning",
+      "reason": "not AI: Academic paper studying reinforcement learning misalignment and reward hacking."
+    },
+    {
+      "title": "Is Persona Generalization Predictable?",
+      "reason": "not AI: Academic study on persona generalization and emergent misalignment in language models."
+    },
+    {
+      "title": "WorkflowArena: Benchmarking Executable Workflow Orchestration in LLM-Based Multi-Agent Systems",
+      "reason": "score 4: Incremental workflow orchestration benchmark for multi-agent systems; standard arXiv paper."
+    },
+    {
+      "title": "What kills $v$-prediction? A Patch-wise PCA Perspective on Pixel-Space Flow Matching",
+      "reason": "score 4: Specialized technical paper on pixel-space flow matching."
+    },
+    {
+      "title": "Mitigating Agentic Deception via Evaluation-Side Partially Observable Games",
+      "reason": "score 5: Paper on mitigating agentic deception; interesting safety topic but standard academic paper format."
+    },
+    {
+      "title": "Programming Prescience: Issues in Human Construction of Forecasting Bots",
+      "reason": "score 4: Academic paper on AI forecasting bots."
+    },
+    {
+      "title": "What the Loss Curve Misses: FP4 Pretraining Slows the Acquisition of Rare Facts",
+      "reason": "score 7: Notable paper examining the impact of FP4 low-precision pretraining on rare fact acquisition, matching our focus on low-precision and hardware-level performance implications."
+    },
+    {
+      "title": "MaxIM: Maximally Informative Incremental Summarization via Reinforcement Learning",
+      "reason": "score 4: Incremental summarization and memory retention paper."
+    },
+    {
+      "title": "How Well Does AI Peer Review Work? A Benchmark Built from 100 Planted Errors",
+      "reason": "score 5: Interesting benchmark paper testing AI on peer review errors, but ultimately academic."
+    },
+    {
+      "title": "LUCQUE: A lung cancer screening dataset from Québec for reliable AI evaluation",
+      "reason": "score 3: Specialized medical imaging dataset paper."
+    },
+    {
+      "title": "Automated Knowledge Acquisition Pipeline for Disassembly Instructions: A Comparison of NLP and Generative AI Frameworks",
+      "reason": "score 2: Niche paper on disassembly instructions."
+    },
+    {
+      "title": "Inversion-Free High-Dimensional Counterfactual Inference",
+      "reason": "score 3: Theoretical counterfactual inference paper."
+    },
+    {
+      "title": "Curbside Chatbots: Auditing the Mental Health Interventions Large Language Models Recommend to Clinicians, Caregivers, and Patients",
+      "reason": "not AI: Routine arXiv paper on mental health chatbot prompts without a breakthrough result."
+    },
+    {
+      "title": "2D Gum-Net: Unsupervised Dense Elastic Image Registration via Symmetric Correlation and Spectral Pooling",
+      "reason": "not AI: Medical imaging image registration paper, no significant AI breakthrough."
+    },
+    {
+      "title": "Agentic-OPD: Recovering Forgotten Agent Capabilities via On-Policy Distillation for Agentic Tasks",
+      "reason": "score 4: arXiv paper on on-policy distillation for LLM agents, incremental research."
+    },
+    {
+      "title": "Smartphone-Enabled Depth-Aware Transillumination Imaging for Detection of Chicken Breast Fillet Myopathies in Chicken Fillets",
+      "reason": "not AI: Agriculture/biology paper using smartphone imaging, not core AI."
+    },
+    {
+      "title": "Large Language Models as a Universal Searcher for Open-World Automated Machine Learning",
+      "reason": "score 4: arXiv paper proposing LLMs as universal searchers for AutoML, incremental research."
+    },
+    {
+      "title": "Anchor Behavior, Not Parameters: Rehearsal-Free Continual Learning with a Single Shared Prompt",
+      "reason": "score 4: arXiv paper on prompt-based continual learning, standard incremental paper."
+    },
+    {
+      "title": "LogCDM: Interpretable Log Anomaly Detection via Behavioral Graph Drift and Adaptive Signal Fusion",
+      "reason": "score 3: arXiv paper on log anomaly detection, niche application."
+    },
+    {
+      "title": "Learning Rate Decay Can Exponentially Accelerate SGD for Global Optimization of Nonconvex Functions",
+      "reason": "score 4: Theoretical machine learning paper on SGD learning rate decay, academic."
+    },
+    {
+      "title": "PORT: Preference Optimization via Robust Token-Level Reweighting",
+      "reason": "score 4: arXiv paper on preference optimization alignment, standard research."
+    },
+    {
+      "title": "Sage-Taiyi: A Metacognitive Architecture for Scientific Discovery",
+      "reason": "score 4: arXiv paper presenting a metacognitive architecture for scientific discovery, academic."
+    },
+    {
+      "title": "DeepChronos: Temporal Neuro-Symbolic Reasoning for Multi-Step Attack Detection",
+      "reason": "score 4: Incremental academic paper on multi-step cyber attack detection using neuro-symbolic reasoning."
+    },
+    {
+      "title": "From Granger causality to causal structure in dynamical systems",
+      "reason": "score 3: Standard theoretical causal inference paper without direct frontier AI application."
+    },
+    {
+      "title": "The Narrative Gap: Can LLMs Help Us Navigate Diverse Narratives Across Languages?",
+      "reason": "score 4: Academic paper exploring cross-lingual narratives in LLMs; incremental research."
+    },
+    {
+      "title": "Clique Constraints for Exact Causal Structure Learning",
+      "reason": "score 3: Theoretical causal structure learning paper, too niche for general frontier AI coverage."
+    },
+    {
+      "title": "Inference Validation for Regulated AI: Building a Decision Pipeline on NVIDIA AIPerf",
+      "reason": "score 6: Practical validation harness for regulated AI inference using NVIDIA AIPerf, offering solid engineering insights for production systems."
+    },
+    {
+      "title": "$Σ$-LeWM: Learning World Models via S-Information for Robot Control",
+      "reason": "score 4: Robotics world model learning paper, incremental contribution."
+    },
+    {
+      "title": "KiteNorm: Variance Regularisation for Stable and Scalable Post-LN Transformers",
+      "reason": "score 6: Transformer architecture paper proposing variance regularisation for Post-LN scaling; solid technical contribution for training stability."
+    },
+    {
+      "title": "Safe Reinforcement Learning for Multi-Turn Clinical Agents: When Dense Rewards Beat Outcome Rewards",
+      "reason": "score 4: Academic paper on safe reinforcement learning for multi-turn clinical agents; incremental."
+    },
+    {
+      "title": "OptiCover: A Scalable and Multi-Surface Framework for Cold-Start Visual Optimization under Semantic Constraints",
+      "reason": "score 3: Applied e-commerce visual optimization paper, application-specific rather than core AI model research."
+    },
+    {
+      "title": "Scaling Taxonomy-Free Image Labeling with Generative AI: A Multimodal",
+      "reason": "score 4: Incremental paper on taxonomy-free image labeling with generative AI."
+    },
+    {
+      "title": "Hidden Tails: Certifying Tail-Risk Claims under Selective Labels",
+      "reason": "score 4: Academic paper on certifying tail-risk under selective labels; too niche for Frontier Wire."
+    },
+    {
+      "title": "A local language model layered with rule-based and neural detectors for clinical text de-identification: an open-source toolkit and evaluation",
+      "reason": "score 4: Open-source toolkit for clinical text de-identification using a local LLM; niche medical NLP paper."
+    },
+    {
+      "title": "Exact – a new cross platform UI framework",
+      "reason": "not AI: General cross-platform UI framework (Exact) with no AI angle."
+    },
+    {
+      "title": "Meta to Introduce Muse AI Agent in India Starting With ₹1,799 Plan: Report",
+      "reason": "score 6: Meta introducing its Muse AI agent subscription pricing in India. Notable regional product rollout by a major lab."
+    },
+    {
+      "title": "Trump Defends Jensen Huang Amid NVIDIA Probe",
+      "reason": "score 4: Duplicate of earlier stories covering political defense of the Nvidia CEO amid investigations."
+    },
+    {
+      "title": "Google Launches Two New TPUs for Enterprise Agentic AI Workloads",
+      "reason": "score 5: Duplicate of earlier Google TPU expansion story."
+    },
+    {
+      "title": "InMobi Secures Naming Rights For Bengaluru’s Ibbaluru Metro Station For ₹65 Cr",
+      "reason": "not AI: Metro station naming rights purchase for marketing with no AI connection."
+    },
+    {
+      "title": "OpenAI Deploys Control Room With 35-Second Kill Switch Amid Security Concerns",
+      "reason": "score 4: Duplicate of earlier story about OpenAI introducing Control Room."
+    },
+    {
+      "title": "SEBI Clears MakeMyTrip’s India IPO",
+      "reason": "not AI: IPO clearance for a travel platform with no AI relevance."
+    },
+    {
+      "title": "Beauty Brands Go Quick Commerce-First",
+      "reason": "not AI: E-commerce and quick commerce trends, no AI relevance."
+    },
+    {
+      "title": "MakeMyTrip acquires majority stake in Quick Ride",
+      "reason": "not AI: Acquisition of a ride-pooling company with no AI angle."
+    },
+    {
+      "title": "Indian streaming platforms report 848 grievances in September; Prime Video’s figures show discrepancy",
+      "reason": "not AI: Report on streaming platform grievance disclosures under IT rules with no AI focus."
+    },
+    {
+      "title": "Reading list: Technical Issues with SIM Binding, online, Friday, November 13, 2026 #NAMA",
+      "reason": "not AI: Telecom and SIM binding event reading list, no AI relevance."
+    },
+    {
+      "title": "AI could eliminate up to 70% of manual risk tasks in banks, free capacity for strategic roles: McKinsey",
+      "reason": "score 5: McKinsey report on AI automation in banking risk functions, standard analyst report."
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang reportedly hired scandal-management PR firm before affair controversy surfaced",
+      "reason": "score 4: Duplicate of Nvidia CEO scandal coverage."
+    },
+    {
+      "title": "Alice Huang, Chinese businesswoman tied to Nvidia CEO, went from finance to chips",
+      "reason": "score 4: Duplicate or closely overlaps with ongoing Nvidia CEO scandal coverage."
+    },
+    {
+      "title": "What we know - and what we don't - as Nvidia investigates an alleged spy plot involving its CEO",
+      "reason": "score 5: Duplicate of existing Nvidia board investigation and spy plot coverage."
+    },
+    {
+      "title": "Quantum could solve AI energy drain, says tech founder",
+      "reason": "score 5: General speculation on quantum computing solving AI energy needs, speculative commentary."
+    },
+    {
+      "title": "Neha Nagar wants to help people take control of their financial future through her debut book",
+      "reason": "not AI: Book launch on personal finance with no AI angle."
+    },
+    {
+      "title": "5 tech and startup leaders whose personal scandals shook their careers",
+      "reason": "not AI: Listicle on tech scandals covering non-AI executives and general personal controversies."
+    },
+    {
+      "title": "Arka Fincap raises Rs 525 Cr from The Rise Funds of TPG",
+      "reason": "score 4: Fintech funding round with minor AI mention, not core AI news."
+    },
+    {
+      "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+      "reason": "duplicate of 5881b795a6bf"
+    },
+    {
+      "title": "Quoting Prompting Claude Fable 5.2",
+      "reason": "score 6: Developer commentary and prompt testing on Claude Fable 5.2 code ownership behavior by Simon Willison."
+    },
+    {
+      "title": "Yonkers Rises",
+      "reason": "duplicate of 94ff1d7f5e18"
+    },
+    {
+      "title": "SoftBank reports Q2 net loss of $7B vs. a ~$15.8B profit a year ago, on ~$14B revenue vs. ~$12.8B est. as tech selloff weighs on results; shares close up 13.9% (Jenny Lee/CNBC)",
+      "reason": "not AI: General tech market selloff and investment conglomerate earnings report without a direct AI focus."
+    },
+    {
+      "title": "The White House picks Palantir CISO Michael LoSapio to lead the DHS' Cybersecurity and Infrastructure Security Agency, replacing Acting Director Nick Andersen (Reuters)",
+      "reason": "score 5: White House appoints Palantir CISO to lead CISA; general cybersecurity appointment rather than core AI policy."
+    },
+    {
+      "title": "Analysis: Nvidia's 2025 figures to the US government undercounted chips sold to Megaspeed via partners by 50K; Nvidia did not give Bloomberg an exact figure (Mackenzie Hawkins/Bloomberg)",
+      "reason": "duplicate of 818c761e8b84"
+    },
+    {
+      "title": "The US DOJ sues Lyft for allegedly discriminating against riders with disabilities, seeking $53M in compensation; Lyft disputes the allegations (Kanishka Singh/Reuters)",
+      "reason": "not AI: No AI angle; lawsuit against Lyft for disability discrimination."
+    },
+    {
+      "title": "Anthropic Retracts Reported $70–$80 IPO Price Range, Says Pricing Update Is Coming; Listing Expected Next Week",
+      "reason": "duplicate of 9798aa740a48"
+    },
+    {
+      "title": "Anthropic targets Nasdaq debut on Nov. 19 or 20 with valuation up to $1.75 trillion",
+      "reason": "duplicate of 9798aa740a48"
+    },
+    {
+      "title": "Nvidia, Jensen Huang sued by shareholders; $190 bn wiped out amid alleged Chinese spy links",
+      "reason": "score 4: Duplicate of existing story about shareholder lawsuits against Nvidia and Jensen Huang following the alleged spy investigation."
+    },
+    {
+      "title": "Lawyers Are Flying in Circles Above Nvidia’s Head After Jensen Huang’s Affair With Alleged Spy",
+      "reason": "duplicate of 88cba1275d52"
     },
     {
       "title": "Australia to mandate AI breach reporting, create regulator after OpenAI breach",
-      "reason": "score 8: Covered by already published story dd32b92b727a."
+      "reason": "score 5: Duplicate of earlier candidate 4d1a6aa40c8e covering Australia's new AI safety regulator and breach reporting legislation."
     },
     {
-      "title": "AI demand unlikely to be derailed by Nvidia CEO controversy: Taiwan supply chain executives",
-      "reason": "score 4: Rehashes earlier coverage about Taiwan supply chain views on the Nvidia executive controversy."
+      "title": "Australia to launch AI safety regulator after OpenAI's breach of a government portal",
+      "reason": "score 5: Duplicate of earlier candidate 4d1a6aa40c8e covering Australia's AI safety regulator legislation."
     },
     {
-      "title": "Australia to adopt 'mandatory' AI safeguards",
-      "reason": "score 7: Covered by already published story dd32b92b727a."
+      "title": "Prime Minister Anthony Albanese announces AI guardrails to be policed by new regulator",
+      "reason": "score 5: Duplicate of earlier candidate 4d1a6aa40c8e on Australia's AI guardrails and regulator announcement."
     },
     {
-      "title": "US sues Lyft, alleges discrimination against disabled riders",
-      "reason": "not AI: General DOJ lawsuit against Lyft for disability discrimination, no AI relevance."
+      "title": "Filings: Moonshot signed a deal in August to rent 32 China-based Super Micro servers with Nvidia B300, the most powerful AI chip, possibly in breach of US rules (Andy Lin/Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "Anthropic unveils new Fable, Mythos models as competition heats up ahead of IPO",
-      "reason": "score 6: Covers Anthropic's new Fable and Mythos 5.2 model releases in relation to its IPO plans, but already covered by earlier model release and IPO items."
+      "title": "Australia is drafting legislation for an AI safety regulator empowered to impose \"significant penalties\" after an OpenAI model hacked a government site in Sept. (James Mayger/Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "Nvidia probes whether foreign intelligence targeted Jensen Huang",
-      "reason": "score 8: Duplicate of earlier story covering the Nvidia CEO investigation (e.g., id=88cba1275d52)."
+      "title": "CoreWeave bond yield tops 16% as AI credit stress rises",
+      "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "How Indian enterprises are building smarter AI - powered business operations",
-      "reason": "score 3: Generic enterprise adoption listicle without specific news or significant reporting."
-    },
-    {
-      "title": "Trump : FBI Probes Nvidia CEO Jensen Huang Affair with Chinese Spy",
-      "reason": "score 4: Rehash of the Nvidia CEO affair investigation story."
-    },
-    {
-      "title": "Meet James Bigg , 16 - year - old Australian who enters Guinness World Records as world youngest male software engineer , develops life - saving AI technology",
-      "reason": "score 3: Human-interest profile of a young software engineer developing AI tech, lacking substantive technical or industry news value."
-    },
-    {
-      "title": "Nvidia , CEO Jensen Huang sued over disclosures related to suspected Chinese spy",
-      "reason": "score 6: Class-action lawsuit filed against Nvidia and its CEO regarding disclosures of the suspected spy incident, adding a legal angle to an existing story."
-    },
-    {
-      "title": "California voters reject Proposition 40, which would have imposed a one-time 5% tax on residents with a net worth above $1B to mostly help fund health care (Associated Press)",
-      "reason": "not AI: General ballot proposition about billionaire wealth taxes, not specifically AI policy or funding."
-    },
-    {
-      "title": "Trump Media Q3: $409.7M profit fueled by gains on digital assets, vs. a Q3 2025 $54.8M loss, and sales of $3M, $1.8M from subscriptions like Truth API, Truth+ (Elias Schisgall/Wall Street Journal)",
-      "reason": "score 4: Trump Media earnings report, with minor mention of Truth API and subscriptions; primarily general corporate and digital asset news."
-    },
-    {
-      "title": "NVIDIA's Jensen Huang and China: Timeline as CEO faces scrutiny over affair",
-      "reason": "not AI: Duplicate or rehash of the Jensen Huang investigation story already published (e.g. 88cba1275d52)."
-    },
-    {
-      "title": "Nvidia Board Investigates Jensen Huang After Report He Was Target of Chinese Spy Effort",
-      "reason": "not AI: Duplicate of the Jensen Huang investigation story already published (e.g. 88cba1275d52)."
-    },
-    {
-      "title": "Trump says FBI is investigating Nvidia CEO Jensen Huang’s relationship with alleged Chinese spy",
-      "reason": "not AI: Duplicate of the Jensen Huang investigation story already published (e.g. 88cba1275d52)."
-    },
-    {
-      "title": "Nvidia is investigating Jensen Huang. But its board may have no interest in challenging its leader",
-      "reason": "duplicate of 88cba1275d52"
-    },
-    {
-      "title": "Huang’s Actions Prompt Nvidia Board to Launch Investigation. Here’s What Investors Need to Know.",
-      "reason": "duplicate of 88cba1275d52"
-    },
-    {
-      "title": "Nvidia's stock slides as questions swirl around Jensen Huang's future as CEO",
-      "reason": "duplicate of 88cba1275d52"
-    },
-    {
-      "title": "Anthropic IPO shock: why did the AI giant suddenly retract its pricing details?",
-      "reason": "score 4: Duplicate of Anthropic IPO pricing retraction story already published"
-    },
-    {
-      "title": "Anthropic retracts details of $69 billion IPO filing sent to bankers. Why analysts are raising worries over valuations",
-      "reason": "score 4: Duplicate of Anthropic IPO pricing retraction story already published"
-    },
-    {
-      "title": "Exclusive - Anthropic sends out, then retracts details of IPO filing, emails show",
-      "reason": "score 5: Duplicate of Anthropic IPO filing email retraction story already published"
-    },
-    {
-      "title": "Anthropic IPO Price Range Retracted Hours After $69.3B Report",
-      "reason": "score 4: Duplicate of Anthropic IPO price range retraction story already published"
-    },
-    {
-      "title": "Anthropic to Proceed with Up to 16 Trillion Yen IPO, Investor Roadshow Starts on the 10th, Reports Say",
-      "reason": "score 4: Duplicate of Anthropic IPO proceeding story already published"
-    },
-    {
-      "title": "Anthropic’s Outside Counsel Sent Banks Wrong Documents Before Launching IPO",
-      "reason": "score 5: Duplicate of Anthropic outside counsel sending wrong IPO documents story already published"
-    },
-    {
-      "title": "Anthropic reportedly plans to move forward with IPO plans",
-      "reason": "already covered (story f31245a34fce)"
+      "title": "Meta expands AI age estimation globally to move suspected teens into Instagram Teen Accounts",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "9798aa740a48",
-      "headline": "Anthropic sends and retracts IPO filing pricing details to bankers",
+      "id": "ea51f7bea31a",
+      "headline": "Anthropic to host live‑stream IPO event with CEO Dario Amodei and JPMorgan’s Jamie Dimon",
       "category": "industry",
-      "summary": "Anthropic sent bankers a copy of its IPO filing showing plans to raise up to ~$69B, then followed up stating the pricing details were inaccurate. The details were retracted according to emails seen by Reuters.",
-      "url": "https://techmeme.com/261109/p48",
-      "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "16b90ffd8ed9",
-      "headline": "Anthropic releases Claude Fable and Mythos 5.2 models",
-      "category": "voices",
-      "summary": "Anthropic released Claude Fable 5.2 and Claude Mythos 5.2, upgrading models designed for complex technical challenges with improvements in coding, reasoning, and vision. Fable 5.2 is available immediately to all users, while Mythos 5.2 is restricted to vetted organizations.",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzwjwceb622e",
+      "summary": "Anthropic plans to market its upcoming IPO with a live‑streamed conversation between co‑founder and CEO Dario Amodei and JPMorgan Chase CEO Jamie Dimon. Marketing is set to begin early Tuesday, with JPMorgan leading domestic retail allocation of 15‑20% of shares ahead of a Nasdaq debut before Thanksgiving.",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-plans-ipo-live-stream-with-dario-amodei-jpmorgan-ceo-jamie-dimon/articleshow/135699429.cms",
       "sources": 4,
       "quotes": 1
+    },
+    {
+      "id": "f0be036ed676",
+      "headline": "GeniosAI raises $19.1 million to launch traceable AI analysis for finance",
+      "category": "industry",
+      "summary": "Financial‑intelligence startup geniosAI announced $19.1 million in combined seed and Series A funding, led by FactSet with participation from Zoom and General Catalyst. The San Jose company says its platform lets finance teams preserve sources, calculations and review decisions for every analysis.",
+      "url": "https://techmeme.com/261110/p3",
+      "sources": 5,
+      "quotes": 2
     }
   ],
   "notes": [
-    "ignored made-up duplicate id 9798aa740a48 for 'Anthropic IPO shock: why did the AI giant suddenly'",
-    "ignored made-up duplicate id 9798aa740a48 for 'Anthropic retracts details of $69 billion IPO fili'",
-    "ignored made-up duplicate id 9798aa740a48 for 'Exclusive - Anthropic sends out, then retracts det'",
-    "ignored made-up duplicate id 9798aa740a48 for 'Anthropic IPO Price Range Retracted Hours After $6'",
-    "ignored made-up duplicate id 6289435bdbbd for 'Anthropic to Proceed with Up to 16 Trillion Yen IP'",
-    "ignored made-up duplicate id 9798aa740a48 for 'Anthropic’s Outside Counsel Sent Banks Wrong Docum'"
+    "not India desk: 'Anthropic plans IPO live stream with Dario Amodei,'",
+    "ignored made-up duplicate id 4d1a6aa40c8e for 'Australia to mandate AI breach reporting, create r'",
+    "ignored made-up duplicate id 4d1a6aa40c8e for 'Australia to launch AI safety regulator after Open'",
+    "ignored made-up duplicate id 4d1a6aa40c8e for 'Prime Minister Anthony Albanese announces AI guard'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "4 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 66.0,
+    "gather": 74.1,
     "audit": 0.0,
-    "plan": 60.6,
-    "judge": 8.5,
-    "verify and write": 13.1,
-    "videos": 2.0,
-    "tagging": 1.1,
-    "explainers": -0.0,
-    "trackers": 71.9,
-    "claims": 0.9,
-    "model tracker": 0.3,
+    "plan": 24.8,
+    "judge": 52.1,
+    "verify and write": 290.0,
+    "videos": 5.4,
+    "tagging": 21.2,
+    "explainers": 0.0,
+    "trackers": 45.0,
+    "claims": 30.2,
+    "model tracker": 0.1,
     "weekly": -0.0,
     "builders": -0.0,
-    "top voices": 11.1,
-    "briefing": 2.9,
+    "top voices": -0.0,
+    "briefing": 27.6,
     "self-review": -0.0,
-    "photos": 0.0,
-    "stock photos": 6.7,
-    "daily email": -0.0,
-    "alerts": 2.3
+    "photos": 0.5,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 3.6
   },
-  "fetched": 2962,
-  "fresh": 19,
+  "fetched": 2950,
+  "fresh": 73,
   "plan": {
-    "focus": "Tracking the fallout from the Jensen Huang spy controversy and Anthropic's looming IPO alongside global AI regulation updates.",
+    "focus": "Tracking Anthropic's IPO turbulence and Nvidia CEO scandal while bolstering research coverage on AI safety and alignment.",
     "priorities": [
-      "Nvidia probes whether foreign intelligence targeted Jensen Huang (Major developing news regarding the Nvidia CEO investigation and potential foreign intelligence targeting.)",
-      "Emails: Anthropic sent bankers a copy of its IPO filing showing plans  (Critical financial and IPO details emerging from Anthropic's bankers and filing leaks.)",
-      "Anthropic unveils new Fable, Mythos models as competition heats up ahe (Connects Anthropic's new Fable and Mythos model launches directly to its competitive IPO positioning.)",
-      "Australia to mandate AI breach reporting, create regulator after OpenA (Important international policy update on mandatory AI breach reporting and regulation in Australia.)",
-      "Ethan Mollick: Looks like Fable 5.2 is above the already steep trendli (Ethan Mollick's insightful expert take on Claude Fable 5.2 benchmarks.)"
+      "SoftBank reports Q2 net loss of $7B vs. a ~$15.8B profit a year ago, o (SoftBank's massive loss signals broader tech market stress, crucial for investors.)",
+      "Anthropic plans IPO live stream with Dario Amodei, JPMorgan CEO Jamie  (Anthropic IPO live stream details directly affect valuation and investor sentiment.)",
+      "What we know - and what we don't - as Nvidia investigates an alleged s (Nvidia CEO spy plot escalates corporate governance risk for a key AI hardware player.)",
+      "OpenAI Deploys Control Room With 35-Second Kill Switch Amid Security C (OpenAI's control‑room kill switch raises important safety and operational governance questions.)",
+      "Filings: Moonshot signed a deal in August to rent 32 China-based Super (Moonshot's China server lease may breach export rules, highlighting policy and compliance risks.)"
     ],
     "thin_areas": [
-      "research",
-      "policy"
+      "research"
     ],
     "searches": [
-      "Jensen Huang Nvidia board investigation DOJ: 6 new",
-      "Anthropic IPO valuation pricing details Reuters: 6 new",
-      "Australia mandatory AI safeguards breach reporting: 6 new"
+      "Anthropic IPO valuation: 2 new",
+      "Jensen Huang spy investigation: 2 new",
+      "Australia AI safety regulator draft legislation: 5 new"
     ],
     "dig_deeper": [
-      "Emails: Anthropic sent bankers a copy of its IPO filing showing plans ",
-      "Nvidia probes whether foreign intelligence targeted Jensen Huang"
+      "OpenAI Deploys Control Room With 35-Second Kill Switch Amid Security C",
+      "Filings: Moonshot signed a deal in August to rent 32 China-based Super"
     ]
   },
-  "judged": 34,
-  "kept": 3,
+  "judged": 80,
+  "kept": 6,
   "research": {
-    "investigated": 2,
+    "investigated": 5,
     "confirmed": 2,
-    "tool_calls": 6
+    "tool_calls": 19
   },
   "research_log": [
-    "Emails: Anthropic sent bankers a copy of its IPO filing showing plans : confirmed (searched “Anthropic IPO filing bankers Echo Wang Reuters”; read msn.com; read techcrunch.com)",
-    "Ethan Mollick: Looks like Fable 5.2 is above the already steep trendli: confirmed (searched “Ethan Mollick Fable 5.2”; read anthropic.com; read theverge.com)"
+    "Anthropic plans IPO live stream with Dario Amodei, JPMorgan CEO Jamie : confirmed (searched “Anthropic IPO live stream Dario Amodei Jamie Dimon”; read moneycontrol.com; read msn.com)",
+    "Filings: Moonshot signed a deal in August to rent 32 China-based Super: unconfirmed (searched “Moonshot AI rent 32 Super Micro servers Nvidia B300 China August deal breach US rules”; read bloomberg.com; searched “Moonshot AI B300 servers August rent 32 Super Micro China Bloomberg Andy Lin”; searched “Moonshot AI rent 32 Supermicro servers China B300 Bloomberg filing”)",
+    "Australia is drafting legislation for an AI safety regulator empowered: unconfirmed (searched “Australia drafting legislation AI safety regulator OpenAI model hacked government site September”; read livemint.com; read msn.com; read bloomberg.com; read livemint.com)",
+    "CoreWeave bond yield tops 16% as AI credit stress rises: unconfirmed (searched “CoreWeave bond yield 16% AI credit stress”; read 247wallst.com; read seekingalpha.com; read msn.com)",
+    "GeniosAI, which develops AI software for financial analysis and modeli: confirmed (searched “GeniosAI $19.1M FactSet Series A funding”; read unite.ai; read yahoo.com)"
   ],
   "threads": [
-    "Anthropic IPO valuation and compute spending commitments: Anthropic sends and retracts IPO filing pricing details to b",
-    "Anthropic releases Claude Fable 5.2 model: Anthropic releases Claude Fable and Mythos 5.2 models"
+    "Anthropic IPO plans continue with live stream: Anthropic to host live‑stream IPO event with CEO Dario Amode"
   ],
   "videos": {
     "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
@@ -260,7 +457,7 @@
     "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Dwarkesh Patel": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
@@ -272,28 +469,28 @@
     "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
   },
   "tagged": 2,
-  "trackers": "filed 2 stories; updated frontier-race, ai-money",
-  "claims": "123 tracked, 118 open, 2 updated this run",
+  "trackers": "filed 2 stories; updated ai-money",
+  "claims": "123 tracked, 118 open, 1 updated this run",
   "model_tracker": "82 models, 5 changes today",
-  "top_voices_sources": {
-    "tv-mollick": "ok (1)",
-    "tv-lambert": "ok (1)",
-    "tv-swyx": "ok (8)",
-    "tv-dwarkesh": "ok (1)",
-    "tv-raschka": "ok (0)",
-    "tv-karpathy": "ok (0)",
-    "tv-evans": "ok (0)",
-    "x-coverage": "ok (2 of 2 articles, bing)",
-    "hn": "ok (1)"
-  },
-  "top_voices": "3 debates from 50 posts by 6 people; 3 portraits, 3 pictures",
   "briefing": "4 themes from 20 stories",
-  "india_briefing": "3 themes from 5 stories",
-  "photos": "1 saved, 0 unavailable",
-  "stock photos": "1 added",
-  "alerts": "9 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":18}",
-  "ai_requests_run": 24,
-  "ai_tokens_run": 72905,
-  "ai_requests_today": 56,
-  "provider_log": []
+  "photos": "2 saved, 0 unavailable",
+  "alerts": "9 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":14}",
+  "ai_requests_run": 37,
+  "ai_tokens_run": 112010,
+  "ai_requests_today": 93,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model",
+    "gemini: 503 after retry; moving to next provider for this run",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: HTTP 400: {\"error\":{\"message\":\"Failed to parse tool call arguments as JSON\",\"type\":\"invalid_request_error\",\"code\":\"tool_use_failed\",\"failed_generation\":\"{\\\"name"
+  ]
 }
