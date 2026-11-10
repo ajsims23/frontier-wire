@@ -1,32 +1,5 @@
 {
   "posts": {
-    "db8b36c17fea": {
-      "id": "db8b36c17fea",
-      "url": "https://simonwillison.net/2026/Nov/2/llm",
-      "person": "Simon Willison",
-      "text": "llm 0.37. Release: llm 0.37 There's a lot of stuff in this new release of my LLM CLI tool and Python library, representing around two months of accumulated features and fixes. I added gpt-6.1-sol and gpt-6.1-terra , plus a new llm openai endpoint add command to make it easier to configure additional models that use OpenAI-compatible endpoints. I switched the default model (if you have not set your own default) to gpt-6-luna - half the price of the previous default, gpt-5.6-luna . LLM's support for embeddings now accepts that different binary content may have different content-type - necessary for models",
-      "published": "2026-11-02T23:49:30+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
-    "69a46671059b": {
-      "id": "69a46671059b",
-      "url": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora",
-      "person": "swyx",
-      "text": "Building AI for Lawyers - Jacob Lauritzen, CTO of Legora. In this episode, we chat with Jacob Lauritzen, CTO of Legora, following the announcement of their $550M Series E at an $8.8B valuation a couple weeks ago. We talk about what it takes to build AI agents for lawyers and what other people building agents can learn from that work. Legora started in a Stockholm basement with a simple product: ChatGPT, Swedish law, and a search tool. Jacob had already been through YC with his own startup when he helped Max Junestrand with the application for Leya (now Legora). He later joined as head of engineering and is now CTO. Today the agent drafts and edits Word documents, reviews thousands of…",
-      "published": "2026-11-02T23:01:02+00:00",
-      "via": "Latent Space",
-      "kind": "post"
-    },
-    "e33216d0e243": {
-      "id": "e33216d0e243",
-      "url": "https://latent.space/p/building_legal_agents_when_you_can_t_see_the_data_-_jacob_lauritzen_cto_of_legora",
-      "person": "swyx",
-      "text": "Building Legal Agents When You Can't See the Data - Jacob Lauritzen, CTO of Legora. Legora can’t read a single trace of what its agent does for a lawyer. The data belongs to the law firm’s clients. How do you build and test an agent when you can’t see its work? Jacob Lauritzen is the CTO of Legora, one of the fastest-growing companies in legal tech history. The team started in a Stockholm basement with ChatGPT, Swedish law, and a search tool. Today, a lawyer can use Legora to draft and edit Word documents, review 10,000 contracts in a single table, or run due diligence. The agent also coordinates work between lawyers, clients, and other agents. When Legora made its own acquisitions, the…",
-      "published": "2026-11-02T22:54:03+00:00",
-      "via": "Latent Space",
-      "kind": "post"
-    },
     "6ebda8375fd1": {
       "id": "6ebda8375fd1",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzesndbbxs2l",
@@ -497,6 +470,33 @@
       "person": "Ethan Mollick",
       "text": "I had early access to Fable 5.2 for a bit & I think it crosses the line into being a sort of Jagged AGI. Here, I have it launch a business, do academic research, hack hardware, build 3D models & more. I think it is a good illustration of limits & powers: www.oneusefulthing.org/p/fable-52-a...",
       "published": "2026-11-09T19:13:24.698Z",
+      "via": "Bluesky",
+      "kind": "post"
+    },
+    "ac841c16ab1a": {
+      "id": "ac841c16ab1a",
+      "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic",
+      "person": "Simon Willison",
+      "text": "llm-anthropic 0.31. Release: llm-anthropic 0.31 Anthropic released Fable 5.2 and Mythos 5.2 today. I've added them to llm-anthropic , so you can now run prompts through Fable 5.2 like this: uv tool install llm llm install llm-anthropic llm keys set anthropic # paste key here llm -m claude-fable-5.2 \"Generate an SVG of a pelican riding a bicycle\" I ran pelicans at all five reasoning levels - low , medium , high , xhigh , and max . You can see them all here - here's the best result I got, from xhigh : max failed to return an image at all, running out of tokens after spending 128,000 thinking about them . That's the",
+      "published": "2026-11-09T23:58:46+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "baaf713b11e3": {
+      "id": "baaf713b11e3",
+      "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps",
+      "person": "Simon Willison",
+      "text": "Locating the source of a mysterious beep with Claude. Our house has a box room, full of boxes that we still haven't unpacked from our last move. A couple of weeks ago something in that room started intermittently beeping . The beeps were far enough apart that standing in the room and trying to determine the source of the noise was frustrating, and I really didn't want to dig through every one of those boxes. So I had Claude Code build Beep Locator , a software system for triangulating the source of a mysterious beep using multiple devices scattered around the room. Here's what Beep Locator looks like after it has been running for a while: You run",
+      "published": "2026-11-09T23:57:21+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "94ff1d7f5e18": {
+      "id": "94ff1d7f5e18",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzvxvkdmd22e",
+      "person": "Ethan Mollick",
+      "text": "In one of my favorite experiments, I told Fable 5.2 to build an endless, hands-off journey through 3D worlds linked by portals. 25,000 agents created over 450 worlds inspired by books, art, places, all in code. Play (its neat): portals-endless-worlds.netlify.app Github: github.com/emollick/ai-...",
+      "published": "2026-11-09T22:27:19.413Z",
       "via": "Bluesky",
       "kind": "post"
     }
