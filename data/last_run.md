@@ -1,82 +1,64 @@
-## Frontier Wire newsroom run — 2026-11-10T19:12:40+00:00
+## Frontier Wire newsroom run — 2026-11-10T21:55:00+00:00
 
-Fetched 2953 items · fresh 43 · judged 55 · kept 19 · **written 3**
-AI: 41 requests, 131,197 tokens this run · 282 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Chasing the latest Anthropic IPO details and OpenAI business agent rollouts while keeping a close eye on India's AI developments.
-  Priorities: Updated S-1: Anthropic's seven co-founders will sell $1.75B of stock i (Updated S-1 details on Anthropic's co-founder stock sales ahead of the public debut.); OpenAI launches Businesses in ChatGPT in beta, including Business Agen (OpenAI launches Businesses in ChatGPT in beta with business agents and profiles.); Anthropic unveils office tools, including a video call assistant, a da (Anthropic expands into office tools (Claude Sheets, Meetings) to compete with Microsoft.); Nvidia scandal rocks tech world Web Summit (Nvidia scandal impact on India's neocloud boom and tech summit fallout.); New York Governor Kathy Hochul launches the US' first effort to indepe (New York launches first US center to independently test AI systems and train safety experts.)
-  Thin areas: policy, india
-  Searches: Anthropic IPO S-1 filing price range: 6 new; Nvidia scandal Jensen Huang Web Summit: 6 new
-  Dig deeper: Updated S-1: Anthropic's seven co-founders will sell $1.75B of stock i; OpenAI launches Businesses in ChatGPT in beta, including Business Agen
-Research agent: investigated 5 stories with 18 tool calls, confirmed 2
-Daily briefing: 3 themes from 20 stories
-Threads updated: Anthropic IPO plans continue with live stream: Anthropic co-founders to sell $1.75 billion in shares ahead 
-Videos: 1 kept from 18 new · OpenAI ok (12 in feed, 3 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 4 new), Google for Developers ok (9 in feed, 4 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (9 in feed, 0 new), NVIDIA ok (9 in feed, 1 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 2 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (15 in feed, 0 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (2 in feed, 1 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (3 in feed, 0 new), 20VC ok (2 in feed, 1 new)
-Photos: 3 saved, 0 unavailable
-Alerts: 24 events sent: {"subscribers":7,"sent":0,"queued":21}
-Claims: 133 tracked, 128 open, 0 updated this run
-Trackers: filed 3 stories; updated frontier-race, ai-money
-Model tracker: 82 models, 14 changes today
-Tagged 3 stories by sector, region and deal
-India briefing: 3 themes from 5 stories (1 removed by checks)
-Time: gather 85s, plan 9s, judge 57s, verify and write 253s, videos 96s, tagging 14s, trackers 227s, claims 4s, briefing 44s, alerts 8s
+Fetched 2955 items · fresh 35 · judged 42 · kept 21 · **written 5**
+AI: 31 requests, 82,722 tokens this run · 313 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Chasing the fallout from the Anthropic IPO and new AI safety oversight rules while filling policy and business desks.
+  Priorities: S-1: Nvidia plans to invest about $10B in Anthropic after its IPO, or  (Nvidia's planned $10B investment post-IPO is a massive development for the Anthropic public debut storyline.); OpenAI, Anthropic face new oversight as New York’s AI safety law takes (New York's new AI safety law taking effect brings concrete oversight for OpenAI and Anthropic.); Source: OpenAI told investors on Tuesday that its revenue jumped 50% t (OpenAI's Q3 revenue jump to ~$10B gives hard financial figures on current hyper-growth.); CoreWeave reports Q3 revenue up 168% YoY to $3.66B, vs. $3.55B est., a (CoreWeave's Q3 numbers ($3.66B revenue, huge backlog) offer vital infrastructure market data.); Nvidia hires former acting US attorney Joon H. Kim and his law firm Wa (Nvidia hiring Wachtell Lipton for the probe into the Jensen Huang affair escalates the Megaspeed/spy storyline.)
+  Thin areas: policy, business
+  Searches: Anthropic IPO valuation pricing November 2026: 1 new; Nvidia Megaspeed Commerce Department delay investigation: 6 new
+  Dig deeper: S-1: Nvidia plans to invest about $10B in Anthropic after its IPO, or ; OpenAI, Anthropic face new oversight as New York’s AI safety law takes
+Research agent: investigated 5 stories with 14 tool calls, confirmed 5
+Threads updated: New York law bans unsafe AI chatbot features: New York launches portal for AI safety law requiring develop; Anthropic IPO plans continue with live stream: Nvidia plans $10B investment in Anthropic alongside its IPO
+Videos: no new videos · OpenAI ok (12 in feed, 3 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 4 new), Google for Developers ok (9 in feed, 4 new), AI at Meta ok (7 in feed, 0 new), Microsoft Research ok (10 in feed, 1 new), NVIDIA ok (9 in feed, 1 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 2 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (15 in feed, 1 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (12 in feed, 0 new), Hard Fork ok (2 in feed, 1 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (3 in feed, 0 new), 20VC ok (2 in feed, 1 new)
+Photos: 5 saved, 0 unavailable
+Alerts: 28 events sent: {"subscribers":7,"sent":0,"queued":27}
+Model tracker: 82 models, 16 changes today
+Time: gather 85s, plan 6s, judge 17s, verify and write 107s, explainers 3s, alerts 10s
 
 ### New stories
-- **industry** — [OpenAI launches Business Hub and verified Business Agents in ChatGPT beta](https://openai.com/index/introducing-businesses-chatgpt)  
-  OpenAI announced a beta Business Hub that lets companies create verified business profiles and launch custom Business Agents in ChatGPT. The features provide limited insights such as profile views and allow users to ask product questions.  
-  _5 source(s), 3 verified quote(s)_
-- **industry** — [Anthropic co-founders to sell $1.75 billion in shares ahead of $1.4 trillion IPO](https://techmeme.com/261110/p32)  
-  Anthropic's seven co-founders will each sell about $250 million worth of stock, totaling $1.75 billion, as the company files an IPO offering 825 million Class A shares at $70‑$78 each. The offering could value the company at up to $1.404 trillion.  
-  _3 source(s), 0 verified quote(s)_
-- **industry** — [Mercor raises $750 million Series D, valuation jumps to $20 billion](https://techmeme.com/261110/p29)  
-  AI training startup Mercor announced a $750 million Series D funding round that values the company at $20 billion, double its October 2025 valuation. Investors include Benchmark, General Catalyst, Nvidia and others.  
+- **policy** — [New York launches portal for AI safety law requiring developer registration](https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect)  
+  New York opened a registration portal for large frontier artificial intelligence developers as part of the RAISE Act. Companies with over $500 million in annual revenue must register by January 1, 2027, publish safety frameworks, and report critical safety incidents within 72 hours.  
   _2 source(s), 1 verified quote(s)_
+- **industry** — [Anthropic sets IPO price range aiming for up to $1.4 trillion valuation](https://news.crunchbase.com/ai/anthropic-record-ipo-ant-public-market-debut-spcx)  
+  Anthropic submitted an updated S-1 filing for an IPO and concurrent private placement aiming to raise up to $88.5 billion. The offering sets a share price range of $70 to $78, implying a fully diluted valuation of up to $1.4 trillion.  
+  _4 source(s), 0 verified quote(s)_
+- **industry** — [CoreWeave reports Q3 revenue up 168% YoY to $3.66B and $132.5B backlog](https://techmeme.com/261110/p53)  
+  CoreWeave reported third-quarter revenue of $3.66 billion, beating analyst estimates of $3.55 billion and marking a 168% year-over-year increase. The company also posted a net loss of $709 million and grew its revenue backlog to $132.5 billion.  
+  _3 source(s), 1 verified quote(s)_
+- **industry** — [OpenAI reports $10 billion in Q3 revenue as enterprise demand grows](https://techmeme.com/261110/p51)  
+  OpenAI told investors its revenue jumped 50% to around $10 billion in the third quarter of 2026, up from 17% growth in the second quarter. More than half of the revenue came from enterprise clients, driven by demand for APIs and newer models like GPT-5.6 and Astra.  
+  _2 source(s), 0 verified quote(s)_
+- **industry** — [Nvidia plans $10B investment in Anthropic alongside its IPO](https://techmeme.com/261110/p50)  
+  Nvidia plans to invest $10 billion in Anthropic alongside its initial public offering. The commitment is part of a larger funding effort that includes public share sales and private deals with multiple technology giants.  
+  _4 source(s), 1 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Gemini Intelligence: New features, on more devices — score 4: General Google AI blog marketing post about Gemini features on more devices.
-- Pay for Hugging Face Hub with your Google Cloud Account — score 4: Minor billing integration update for Hugging Face Hub using Google Cloud accounts.
-- Gemini 4 Carbon is now available — duplicate of 28b27e2d175e
-- Fireworks AI security breach impacts Notion and their customers — duplicate of 7c216e897ed3
-- OpenAI rolls out new business profiles, making ChatGPT just a little bit more like Google — score 5: Duplicate of OpenAI business profiles and Business Agents launch in ChatGPT.
-- Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks — score 5: Duplicate of Anthropic office tools launch including Claude Meetings.
-- Nvidia CEO Jensen Huang’s affair with alleged Chinese spy: a timeline — duplicate of 88cba1275d52
-- The US is winning the AI race. Jensen Huang could have blown it — duplicate of 88cba1275d52
-- ChatGPT is getting verified AI ‘Business Agents’ — score 5: Duplicate of OpenAI Business Agents launch in ChatGPT.
-- Anthropic has its own AI-powered office suite now — score 4: Duplicate of Anthropic's office suite announcement (c30beb782851).
-- Adobe is going all in on agentic AI — score 4: Duplicate of Adobe's Max announcements for agentic AI and creative tools (f9ddc69f8317).
-- Photoshop, Lightroom, and Premiere are making it easier to remove things — score 4: Duplicate coverage of Adobe Max Creative Cloud and Firefly AI updates.
-- NVIDIA Scandal & AI Selloff In the US: India’s Neocloud Boom Faces Twin Tests — score 4: General market commentary and speculation linking US chip scandals to Indian neocloud providers without fresh local news.
-- Banks seek to rein in soaring AI agent costs, McKinsey says — score 4: Very brief wire stub reporting McKinsey findings on banks reining in AI agent costs.
-- Simon Willison: Me: any more aggressive options for getting me to 5 pull-ups? Fitness Coach Claude (Fable 5.2): "Drop a few pounds. Going from about 168… — score 3: Lighthearted social post about Claude Fable 5.2 fitness coaching by Simon Willison.
-- Ethan Mollick: Had early access to Gemini 4 Carbon, it is a very good model that improves on Argon. It is useful to have an AI that thinks differently… — score 5: Early access commentary on Gemini 4 Carbon by Ethan Mollick on Bluesky.
-- Sources: Citigroup, Goldman Sachs, and others in a 21-bank consortium committed around $270M to fund five years of a stablecoin venture announced in September (Bloomberg) — not AI: Stablecoin banking consortium funding news, no AI angle.
-- Alta, which is building blockchain infrastructure for banks and payment companies, raised a $47.5M Series A, bringing its total funding to $80M (Kyle Baird/The Block) — not AI: Blockchain infrastructure Series A, no AI angle.
-- How Alice Huang built her career with romantic partner and Hexi Capital founder Kang Wei, who faced stock market probes; sources believe she is back in China (Financial Times) — duplicate of b10abbc74a23
-- Dreeze, launched by Zerto founders to help companies recover from cyberattacks by restoring entire cloud applications, emerges from stealth with a $33M seed (CTech) — score 4: Cybersecurity and cloud recovery startup seed round; minor AI relevance at best.
-- Google rolls out Gemini 4 Carbon to paid API and AI Ultra users two weeks after releasing it to cyber defenders, and previews a swarm feature in Antigravity (Koray Kavukcuoglu/Google) — duplicate of 28b27e2d175e
-- IBM ends H-1B and green card sponsorships for most of the sponsored roles in IBM Consulting; source: workers can still work with IBM outside the US or leave IBM (Brody Ford/Bloomberg) — not AI: General immigration policy change at IBM Consulting, not specifically an AI story.
-- Anthropic sets IPO price range targeting $1.4 trillion valuation — duplicate of 06c34be0a2ca
-- Anthropic Sets IPO Price Range at $70 to $78, Valuing Company at Up to $1.4 Trillion — duplicate of 06c34be0a2ca
-- Anthropic Sets $70-$78 IPO Price Range in New Filing — duplicate of 06c34be0a2ca
-- Anthropic Just Took a Big Step Toward Its Public Debut. Here's What You Need to Know. — duplicate of 06c34be0a2ca
-- Anthropic targets $1.4 trillion market value in blockbuster IPO — down from earlier reported $2 trillion — duplicate of 06c34be0a2ca
-- Anthropic (ANTHROPIC) Pre-IPO Price Prediction: Oversold tape meets heavy selling after the amended S-1 reset — score 4: Pure price‑prediction commentary, not a news event; low relevance for Frontier Wire.
-- Nvidia CEO Jensen Huang’s Alleged Chinese Spy Affair: A Timeline Of How the Scandal Unfolded — duplicate of 88cba1275d52
-- I Spy With My Little AI: A Guide to the Jensen Huang–Nvidia Scandal — duplicate of 88cba1275d52
-- Nvidia shaken by scandal amid wider political new order for big tech — duplicate of 88cba1275d52
-- All roads lead to Jensen Huang. That's Nvidia's problem. — duplicate of 88cba1275d52
-- Alleged Spy Plot Targeting CEO Jensen Huang Raises Questions About Nvidia's Future — duplicate of 88cba1275d52
-- Can Nvidia’s Jensen Huang Rebuild Trust? — score 5: Opinion piece on trust rebuilding; not a breaking news item.
-- Oura agrees to acquire AI and on-demand doctor service Counsel Health for $625M, says Q4 revenue grew 153% YoY to $533M and FY 2026 revenue grew 92% to $1.75B (Mark Gurman/Bloomberg) — variety: already 2 stories from bloomberg this run
-- Israeli AI security startup Bay raises $50 million — variety: already 2 stories from indiatimes.com this run
-- Ring, known for its doorbell cameras, launches a home security drone and an enterprise security robot — variety: already 2 stories from techcrunch.com this run
-- Anthropic Seeks Record $88.5B Tied To Public Market Debut — could not verify yet; will retry next run
-- Anthropic unveils office tools, including a video call assistant, a data dashboard, and spreadsheet service Claude Sheets, in a bid to compete with Microsoft (Shirin Ghaffary/Bloomberg) — could not verify yet; will retry next run
-- New York Governor Kathy Hochul launches the US' first effort to independently test AI systems and train a new generation of AI safety experts via a new center (Calder McHugh/Politico) — could not verify yet; will retry next run
-- PSI is trying to make a business out of AI-driven scientific discovery — could not verify yet; will retry next run
-- SoftBank wrote off $3.7B in non-refundable data center equipment advances after reviewing its plans in Q2; the company had committed $9.5B in advance payments (Martin Peers/The Information) — could not verify yet; will retry next run
-- Sources: Goldman Sachs expects Anthropic to hit ~$52B revenue in 2026 and $600B+ by 2030, an operating profit in 2029, and be free cash flow positive from 2030 (Financial Times) — could not verify yet; will retry next run
-- Nvidia scandal rocks tech world Web Summit — could not verify yet; will retry next run
+- Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives — not AI: General software development and web development tool discussion, not core AI news.
+- Taking another shot at the cheap IP camera, part 2 — not AI: DIY IP camera project with no AI relevance.
+- All 7 Anthropic founders will each cash out about $250M in IPO — duplicate of f2e3e14e12ac
+- SoftBank Q2: Lenskart & Meesho Drive Valuation Gains, Ola Electric Books Losses — not AI: General venture capital earnings report covering e-commerce and ride-hailing investments with no AI focus.
+- OpenAI lets businesses claim ChatGPT profiles, adds AI agents for US ecommerce firms — duplicate of 5ca4dc7b6d88
+- Nvidia scandal rocks tech world Web Summit — duplicate of 88cba1275d52
+- Simon Willison: Gemini 4 Carbon is good at pelican SVGs, but that's nothing new for Gemini "Make a three js animation where yonkers stands up as a big… — score 4: Social post showing a quick demo / prompt output, routine usage example rather than major news.
+- Ethan Mollick: Another weird AI game project: I asked Claude Fable 5.2 for a fantasy transport sim with Discworld meets Lord of the Rings vibes. Then I… — duplicate of 94ff1d7f5e18
+- Sources: the US Commerce Dept. delayed new Entity List additions for two months, leaving off Megaspeed despite four other US agencies pushing for its inclusion (Financial Times) — score 4: US Commerce Dept Entity List delay involving a company connected to Nvidia chief Jensen Huang's affair is geopolitically adjacent but lacks a direct core AI mechanism.
+- SpaceX announces Starlink Mini 2 with a swappable battery that it says can operate for over four hours without an external power source, reportedly for $999 (Andrew Liszewski/The Verge) — not AI: SpaceX announces Starlink Mini 2 with a swappable battery; no AI angle.
+- São Paulo-based Clara, which sells corporate spend management tools in Latin America, raised $105M, as a $65M Series C and $40M in renewed growth financing (Maria Clara Cobo/Bloomberg) — not AI: Clara raises $105M for corporate spend management tools in Latin America; standard software/fintech funding.
+- Sources: despite Trump's denial, he was told at least twice in seven months about Huang's affair with an alleged spy, including by Rubio en route to China (New York Times) — not AI: Reports on political awareness of Nvidia CEO Jensen Huang's personal affair; governance/political gossip rather than AI tech news.
+- Google Fi debuts a "super network" feature for automatic carrier switching and Wi-Fi Auto-Connect+ to improve indoor connectivity in malls, airports, and more (Sam Rutherford/Engadget) — not AI: Google Fi introduces a super network feature for automatic carrier switching; consumer telecom update without a core AI focus.
+- Nvidia hires former acting US attorney Joon H. Kim and his law firm Wachtell Lipton to conduct a probe into Jensen Huang's affair with an alleged Chinese spy (New York Times) — duplicate of b4a9b3c50a05
+- Anthropic IPO Targets $1.3 Trillion Valuation, $90.4 Billion Raise — score 3: Duplicate of Anthropic IPO valuation coverage already published.
+- Trump's Howard Lutnick refuses to blacklist company of Nvidia Jensen Huang’s mistress — duplicate of 818c761e8b84
+- Trump’s Commerce Dept. Halted a Chip Probe “After Nvidia Intervention.” That’s Nvidia’s Bigger Problem — duplicate of 818c761e8b84
+- Commerce halted Megaspeed chip probe after Nvidia outreach, NYT reports — duplicate of 818c761e8b84
+- Commerce Department chip inquiry was halted after Nvidia intervention — duplicate of 818c761e8b84
+- Nvidia Pulled Strings to Shut Down a US Government Investigation Into Chip Smuggling — duplicate of 818c761e8b84
+- Nvidia CEO Jensen Huang’s ‘spy’ affair could spark Congress crackdown on AI export controls: ‘Massive earthquake’ — duplicate of 818c761e8b84
+- PSI is trying to make a business out of AI-driven scientific discovery — variety: already 2 stories from techcrunch.com this run
+- Adobe brings AI agents and new creative tools to Photoshop, Premiere, and Firefly — variety: already 2 stories from techcrunch.com this run
+- What happens to mathematics when AI becomes an oracle? — variety: already 2 stories from arstechnica.com this run
+- Oura to acquire AI-native primary care startup Counsel Health for $625M — variety: already 2 stories from techcrunch.com this run
 
 </details>
 
@@ -86,45 +68,24 @@ Time: gather 85s, plan 9s, judge 57s, verify and write 253s, videos 96s, tagging
 
 <details><summary>Research agent's work</summary>
 
-- Introducing Businesses in ChatGPT: confirmed (searched “Businesses in ChatGPT OpenAI”; read techcrunch.com)
-- Anthropic Seeks Record $88.5B Tied To Public Market Debut: unconfirmed (searched “Anthropic $88.5 billion IPO updated S-1 filing record fundraise public market debut”; read techbooky.com; searched “"$88.5" Anthropic IPO”; searched “"88.5" Anthropic IPO”)
-- Anthropic unveils office tools, including a video call assistant, a da: unconfirmed (searched “Anthropic office tools video call assistant Claude Sheets data dashboard announcement”; read theverge.com; read techcrunch.com; read businessinsider.com)
-- New York Governor Kathy Hochul launches the US' first effort to indepe: unconfirmed (searched “Kathy Hochul New York AI safety center independent testing”; read newsday.com; read suny.edu; read unite.ai)
-- Updated S-1: Anthropic's seven co-founders will sell $1.75B of stock i: confirmed (searched “Anthropic co-founders sell $1.75 billion stock IPO updated S-1 Bloomberg”; searched “Anthropic seven co-founders sell $1.75 billion shares IPO prospectus”; read techcrunch.com; read theverge.com)
+- OpenAI, Anthropic face new oversight as New York’s AI safety law takes: confirmed (searched “New York AI safety law OpenAI Anthropic”; searched “"New York" "AI safety law" OpenAI Anthropic”; read msn.com)
+- Anthropic Seeks Record $88.5B Tied To Public Market Debut: confirmed (searched “Anthropic IPO S-1 filing 88.5 billion”; read techcrunch.com)
+- CoreWeave reports Q3 revenue up 168% YoY to $3.66B, vs. $3.55B est., a: confirmed (searched “CoreWeave Q3 revenue 3.66B net loss 709M backlog 132.5B”; searched “CoreWeave Q3 revenue 3.66B Jordan Novet CNBC”; read cnbc.com)
+- Source: OpenAI told investors on Tuesday that its revenue jumped 50% t: confirmed (searched “OpenAI revenue Q3 $10 billion The Information”; searched “OpenAI revenue 10 billion Q3 50 percent The Information”; read cryptobriefing.com)
+- S-1: Nvidia plans to invest about $10B in Anthropic after its IPO, or : confirmed (searched “Nvidia Anthropic 10B IPO Cory Weinberg New York Times”; read nytimes.com; searched “"With Its Giant I.P.O., Anthropic Ties Itself Closer to Nvidia" New York Times”)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id cb772493ecf4 for 'OpenAI rolls out new business profiles, making Cha'
-- ignored made-up duplicate id c30beb782851 for 'Anthropic launches Claude Meetings to turn workpla'
-- ignored made-up duplicate id cb772493ecf4 for 'ChatGPT is getting verified AI ‘Business Agents’'
-- ignored made-up duplicate id c30beb782851 for 'Anthropic has its own AI-powered office suite now'
-- ignored made-up duplicate id f9ddc69f8317 for 'Adobe is going all in on agentic AI'
-- ignored made-up duplicate id f9ddc69f8317 for 'Photoshop, Lightroom, and Premiere are making it e'
+- not India desk: 'Anthropic brings Claude to Google Meet to tackle t'
 - not India desk: 'Google agrees to addition privacy protections in S'
-- not India desk: 'Israeli AI security startup Bay raises $50 million'
-- ignored made-up duplicate id 7283860a9cf0 for 'Anthropic Seeks Record $88.5B Tied To Public Marke'
-- not India desk: 'AI training startup Mercor raised a $750M Series D'
-- dropped unverifiable quote (Dylan Sloan): Updated S-1: Anthropic's seven co-founders will sell $1.75 b…
+- ignored made-up duplicate id 7283860a9cf0 for 'Anthropic IPO Targets $1.3 Trillion Valuation, $90'
+- dropped unverifiable quote (Kathy Hochul): Tech moguls tell us that their vision for AI is inevitable..…
 - GDELT unavailable: GDELT paused for this run after repeated rate-limiting
-- 13 kept item(s) carried over to the next run
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-120b: HTTP 400: {"error":{"message":"Failed to parse tool call arguments as JSON","type":"invalid_request_error","code":"tool_use_failed","failed_generation":"{\"name
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-20b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-20b: HTTP 400: {"error":{"message":"Failed to parse tool call arguments as JSON","type":"invalid_request_error","code":"tool_use_failed","failed_generation":"{\"name
-- nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room
-- nvidia: network error ReadTimeout, retrying
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model
+- stopped writing: daily cap of 900,000 tokens reached
+- 12 kept item(s) carried over to the next run
+- videos skipped: daily cap of 900,000 tokens reached
+- tagging skipped: daily cap of 900,000 tokens reached
+- trackers skipped: daily cap of 900,000 tokens reached
+- claims skipped: daily cap of 900,000 tokens reached
+- briefing skipped: daily cap of 900,000 tokens reached
