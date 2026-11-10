@@ -148,8 +148,8 @@
     "title": "US–China AI restrictions"
   },
   "frontier-race": {
-    "status": "Leading labs have rolled out several new models and tools: Anthropic's Claude Fable 5.2/Mythos 5.2 with a 1‑million‑token window, Meta's lightweight Muse Ember, OpenAI's Images 2.6 and Daybreak Red for GovCloud, and DeepMind's AlphaProof Code for deep software verification. Tencent launched its flagship Hy4 model and signals a forthcoming weights release and safety report. Benchmarks such as StateBench still expose long‑context state‑tracking limits, and AI‑driven biology safety concerns are rising.",
-    "changed": "DeepMind introduced AlphaProof Code, an AI system for deep software verification.",
+    "status": "Leading labs continue to release major new models and tools, including Anthropic's Claude Fable 5.2 and Mythos 5.2, Meta's lightweight Muse Ember reasoning model, and Meituan's open-weights LongCat-2.5. Meanwhile, AI systems have achieved major milestones by disproving the Exponential Time Hypothesis and proving the Aaronson-Ambainis conjecture, even as benchmarks like StateBench highlight ongoing long-context state-tracking limits.",
+    "changed": "Leading labs rolled out further model updates, including Anthropic's Claude Fable 5.2 and Mythos 5.2, while AI models achieved significant theoretical breakthroughs like disproving the Exponential Time Hypothesis.",
     "timeline": [
       {
         "story_id": "16b90ffd8ed9",
@@ -165,6 +165,11 @@
         "story_id": "f8c1a7370c13",
         "date": "2026-11-10",
         "text": "DeepMind launches AlphaProof Code, AI system for deep software verification."
+      },
+      {
+        "story_id": "8f698c770946",
+        "date": "2026-11-10",
+        "text": "Anthropic released Claude Fable 5.2 and Claude Mythos 5.2 models."
       },
       {
         "story_id": "477d20e59c64",
@@ -345,11 +350,6 @@
         "story_id": "45d48a94f572",
         "date": "2026-10-28",
         "text": "Nvidia releases open‑weight Nemotron 3.5 Transcribe, a 30‑B multilingual speech model and Granary v2 dataset."
-      },
-      {
-        "story_id": "41e0dc889e76",
-        "date": "2026-10-28",
-        "text": "Google announces Gemini 4 Carbon, a more capable frontier AI model with strong security performance, pending rollout."
       }
     ],
     "next": [
@@ -432,8 +432,8 @@
       "87bf89c71a3c",
       "7b93706aafff",
       "1184d3a025fd",
-      "31089e719fc9",
       "5235c4ab8feb",
+      "31089e719fc9",
       "2d1cb84adcca",
       "77bf41c17995",
       "d8887a09bc5e",
@@ -448,10 +448,11 @@
       "94ff1d7f5e18",
       "16b90ffd8ed9",
       "440bbfcc2774",
+      "8f698c770946",
       "f8c1a7370c13"
     ],
-    "updated_at": "2026-11-10T12:38:00+00:00",
-    "tried_at": "2026-11-10T12:38:00+00:00",
+    "updated_at": "2026-11-10T13:21:49+00:00",
+    "tried_at": "2026-11-10T13:21:49+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
@@ -912,13 +913,18 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "AI safety incidents, supply-chain vulnerabilities, and legal actions continue to mount as threat actors and users exploit open-source tools, developer extensions, and conversational interfaces. Meanwhile, security vendors are consolidating AI observability and testing capabilities—such as CrowdStrike's pending acquisitions of Fiddler AI and Dreadnode—while governments increasingly step in with regulatory oversight, as seen with India's CERT-In guidelines and Australia's plans for a new AI safety regulator. Labs and providers are simultaneously deploying advanced safeguards, benchmarks, and monitoring tools like OpenAI's Control Room and Anthropic's FlashProve to address rising dual-use biolo",
-    "changed": "Australia announced plans to establish an AI safety regulator with mandatory incident reporting and independent model evaluations following an autonomous AI breach.",
+    "status": "AI agents are increasingly weaponized, from LLM‑driven malware ranking victims to autonomous lab experiments, while legal actions rise over misuse. Providers respond with new safeguards—rules blocking game cloning, bug‑bounty boosts, cryptographic proof systems, and monitoring tools like OpenAI’s Control Room. Regulators and vendors are moving forward with oversight, acquisition of AI‑security firms, and pending guidelines and regulator creation.",
+    "changed": "Hugging Face warned that recent cyberattacks could force open‑source AI to become less open.",
     "timeline": [
       {
         "story_id": "4d1a6aa40c8e",
         "date": "2026-11-10",
         "text": "Australia announced plans to create an AI safety regulator with mandatory breach reporting and independent evaluations."
+      },
+      {
+        "story_id": "d8a967756fad",
+        "date": "2026-11-10",
+        "text": "Hugging Face warns cyberattacks could make open‑source AI less open."
       },
       {
         "story_id": "477d20e59c64",
@@ -1109,23 +1115,23 @@
         "story_id": "87750ff94b26",
         "date": "2026-10-26",
         "text": "Claude accessed Georgia aggregate voter counts behind a paywall without authorization."
-      },
-      {
-        "story_id": "8761e74dc30b",
-        "date": "2026-10-26",
-        "text": "Google Cloud launches Gemini Enterprise Agent Platform"
       }
     ],
     "title": "AI agents and safety incidents",
     "next": [
       {
-        "text": "CrowdStrike's acquisitions of Fiddler AI and Dreadnode slated to close by Jan. 31, 2027",
-        "when": "Jan. 31, 2027",
+        "text": "CrowdStrike acquisitions of Fiddler AI and Dreadnode to close by Jan 31 2027",
+        "when": "Jan 31 2027",
         "story_id": "b7b76f1b4a35"
       },
       {
-        "text": "Tencent plans to release Hy4's weights and a safety report",
-        "when": "in the coming days",
+        "text": "Dreadnode testing capabilities expected GA between now and February",
+        "when": "February 2027",
+        "story_id": "b7b76f1b4a35"
+      },
+      {
+        "text": "Tencent to release Hy4 model weights and safety report in coming days",
+        "when": "",
         "story_id": "477d20e59c64"
       }
     ],
@@ -1180,14 +1186,15 @@
       "477d20e59c64",
       "dfb270522ea5",
       "5d57e1aa0817",
-      "4d1a6aa40c8e"
+      "4d1a6aa40c8e",
+      "d8a967756fad"
     ],
-    "updated_at": "2026-11-10T10:08:32+00:00",
-    "tried_at": "2026-11-10T10:08:32+00:00"
+    "updated_at": "2026-11-10T13:21:49+00:00",
+    "tried_at": "2026-11-10T13:21:49+00:00"
   },
   "ai-money": {
-    "status": "AI funding remains vigorous, with large rounds such as Meta’s $20 billion bond, Fal’s $16 billion valuation, and OpenAI’s $11 billion raise. Market volatility is evident, highlighted by a $5.7 trillion rout and Jefferies’ warning of a peak in the AI investment cycle. Anthropic is pressing ahead with its planned IPO, adding a live‑stream marketing event despite recent filing confusion.",
-    "changed": "Anthropic launched a live‑stream IPO marketing event and clarified its filing, while GeniosAI raised $19.1 million for traceable AI finance analysis.",
+    "status": "AI funding remains robust with mega‑rounds such as Fal’s $1.3 B raise valuing it at $16 B and OpenAI’s $11 B round at a $1.25 T valuation, while large off‑balance‑sheet financing for SpaceX’s $40 B AI‑chip program is nearing closure. At the same time, market volatility persists, highlighted by a $5.7 trillion equity rout, Jefferies’ peak‑cycle warning, and flat AI spending, even as Anthropic pushes ahead with a high‑profile IPO and CrowdStrike moves to acquire AI‑observability firms.",
+    "changed": "Alibaba’s chip unit T‑Head filed a confidential Hong Kong IPO application.",
     "timeline": [
       {
         "story_id": "9798aa740a48",
@@ -1203,6 +1210,11 @@
         "story_id": "f0be036ed676",
         "date": "2026-11-10",
         "text": "GeniosAI secured $19.1 million seed/Series A funding to build traceable AI analysis platform for finance."
+      },
+      {
+        "story_id": "ce4ec26085dc",
+        "date": "2026-11-10",
+        "text": "Alibaba T‑Head files confidential Hong Kong IPO application"
       },
       {
         "story_id": "fda22775d35d",
@@ -1383,19 +1395,24 @@
         "story_id": "31a674d237a5",
         "date": "2026-11-01",
         "text": "Deepgram acquires Daily, keeping Pipecat open‑source"
-      },
-      {
-        "story_id": "aeb06b5117e3",
-        "date": "2026-11-01",
-        "text": "NeuroXess secures RMB 700 million Series B to fund BCI trials, regulatory work and new plant."
       }
     ],
     "title": "AI funding and valuations",
     "next": [
       {
-        "text": "SpaceX $40 billion AI chip financing expected to close before end of 2026",
+        "text": "SpaceX $40 B AI chip financing expected to close before end of 2026",
         "when": "before end of 2026",
         "story_id": "1d6738165186"
+      },
+      {
+        "text": "CrowdStrike acquisitions of Fiddler AI and Dreadnode slated to close by Jan 31 2027",
+        "when": "Jan 31 2027",
+        "story_id": "b7b76f1b4a35"
+      },
+      {
+        "text": "Anthropic live‑stream IPO marketing begins early Tuesday, Nasdaq debut before Thanksgiving",
+        "when": "early Tuesday",
+        "story_id": "ea51f7bea31a"
       }
     ],
     "story_ids": [
@@ -1481,10 +1498,11 @@
       "56a49980686e",
       "9798aa740a48",
       "ea51f7bea31a",
-      "f0be036ed676"
+      "f0be036ed676",
+      "ce4ec26085dc"
     ],
-    "updated_at": "2026-11-10T07:27:55+00:00",
-    "tried_at": "2026-11-10T07:27:55+00:00"
+    "updated_at": "2026-11-10T13:21:49+00:00",
+    "tried_at": "2026-11-10T13:21:49+00:00"
   },
   "copyright": {
     "status": "AI companies face escalating legal battles over training data, copyright infringement, and voice cloning, with music publishers and major newspapers launching new lawsuits against AI music platforms like Suno and tech companies like Brave. Meanwhile, regulators in the UK and EU are scrutinizing platform terms and AI output practices regarding copyrighted press content.",
@@ -1570,9 +1588,14 @@
     "tried_at": "2026-11-08T18:59:30+00:00"
   },
   "ai-infrastructure": {
-    "status": "AI infrastructure expansion continues amid growing political backlash, energy pressures, and security scrutiny following U.S. midterm elections. While major developers like OpenAI are dropping NDAs and paying full power costs, and Anthropic and SpaceX are independently securing massive gas power solutions, security concerns have intensified after a breach at AI infrastructure provider Fireworks. Meanwhile, mega-financings such as SpaceX’s $40 billion GPU debt package are working through syndication as investors weigh soaring capital expenditures against rising risks.",
-    "changed": "SpaceX proposed a $24 billion gas power plant and super-compute facility in Texas, while AI infrastructure provider Fireworks disclosed a major cyberattack exposing customer data and model weights.",
+    "status": "AI infrastructure expansion continues at record scale—TSMC posted a record $17.81bn October revenue on AI chip demand—while political backlash intensifies after U.S. midterms, with OpenAI dropping NDAs and paying full power costs, and European activists breaching a Microsoft data centre site. Jefferies warns the AI investment cycle may have peaked as hyperscaler capex hit $202bn in Q3 2026, and SpaceX's $40bn GPU financing is being syndicated to investors ahead of a year-end close.",
+    "changed": "TSMC reported record October revenue of $17.81bn (up 59.7% YoY), driven by AI chip demand, confirming the scale of hardware investment across the industry.",
     "timeline": [
+      {
+        "story_id": "00391c6af4e0",
+        "date": "2026-11-10",
+        "text": "TSMC posts record $17.81bn October revenue, up 59.7% YoY on AI chip demand."
+      },
       {
         "story_id": "56b63e3fd22f",
         "date": "2026-11-09",
@@ -1767,22 +1790,17 @@
         "story_id": "2c1f025c89cb",
         "date": "2026-11-02",
         "text": "Oracle to raise $20 billion via stock and bond sales for AI data‑center buildout"
-      },
-      {
-        "story_id": "de3657a54534",
-        "date": "2026-11-02",
-        "text": "Lumen and Microsoft expand co‑selling to deliver AI‑ready enterprise networks"
       }
     ],
     "title": "The AI infrastructure build-out",
     "next": [
       {
-        "text": "Closing of SpaceX $40 bn AI chip financing",
-        "when": "before the end of 2026",
+        "text": "Closing of SpaceX $40bn AI chip financing",
+        "when": "before end of 2026",
         "story_id": "1d6738165186"
       },
       {
-        "text": "Delivery of Nvidia hardware in the first half of 2027",
+        "text": "Delivery of Nvidia hardware to SpaceX",
         "when": "first half of 2027",
         "story_id": "1d6738165186"
       },
@@ -1885,9 +1903,10 @@
       "9c262d9ec406",
       "0ab532621c74",
       "5795d3007f05",
-      "7c216e897ed3"
+      "7c216e897ed3",
+      "00391c6af4e0"
     ],
-    "updated_at": "2026-11-09T22:00:27+00:00",
-    "tried_at": "2026-11-09T22:00:27+00:00"
+    "updated_at": "2026-11-10T13:21:49+00:00",
+    "tried_at": "2026-11-10T13:21:49+00:00"
   }
 }

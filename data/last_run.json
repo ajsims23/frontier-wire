@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-10T12:38:00+00:00",
+  "started_at": "2026-11-10T13:21:49+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -17,59 +17,387 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (16)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (21)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
   },
   "dropped": [
     {
-      "title": "Helping caregivers use AI in everyday life",
-      "reason": "score 4: OpenAI Academy workshops for caregivers; routine community outreach rather than significant AI news."
+      "title": "Anthropic launches roadshow for proposed initial public offering",
+      "reason": "duplicate of ea51f7bea31a"
+    },
+    {
+      "title": "AI usage generates a fragile codebase",
+      "reason": "score 4: Hacker News discussion thread on fragile AI-generated codebases, not core news."
+    },
+    {
+      "title": "Is AI-Powered Reverse Engineering the Death of Proprietary Software?",
+      "reason": "score 4: General commentary piece on AI-powered reverse engineering."
+    },
+    {
+      "title": "Gartner Introduces Framework for CIOs to Determine AI Outcomes",
+      "reason": "score 4: Gartner framework for CIOs to determine AI outcomes. Routine advisory content."
+    },
+    {
+      "title": "Qantas AI Jobs are Coming to India as Outsourcing Deal Affects 850 Roles",
+      "reason": "score 5: Outsourcing deal moves 850 Qantas corporate roles to Accenture teams in India with AI automation. It is a business/outsourcing announcement rather than a frontier AI development, so it scores as incremental and does not meet the 6‑point threshold."
+    },
+    {
+      "title": "Why Gramiyaa Had To Think Like A Supermarket To Win On Quick Commerce",
+      "reason": "not AI: Quick commerce startup profile with no AI relevance."
+    },
+    {
+      "title": "Explained: Everything you need to know about Deepinder Goyal’s Temple controversy",
+      "reason": "not AI: Controversy over a health/wellness device by a food delivery founder; no AI angle."
+    },
+    {
+      "title": "India’s digital laws need to look beyond platform content to platform design",
+      "reason": "score 3: Commentary on digital platform design laws rather than AI specifically."
+    },
+    {
+      "title": "Explained: Australia weighs criminal offence for AI companies that fail to prevent harm from their models",
+      "reason": "duplicate of 4d1a6aa40c8e"
+    },
+    {
+      "title": "Entered a fake birthday on Instagram? Meta's AI can now identify users posing as adults",
+      "reason": "score 5: Meta expanding AI age-detection to identify fake birthdays on Instagram. Minor feature/safety update."
+    },
+    {
+      "title": "GTA 6 release date confirmed for November 19: Pre-load, New Zealand early access, PC update and £1 million car",
+      "reason": "not AI: Video game release date news, not AI."
+    },
+    {
+      "title": "Anthropic targets valuation of about $1 trillion in IPO",
+      "reason": "score 5: Duplicate of Anthropic IPO valuation and private placement details."
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang's affair with alleged spy aided $7.5 billion in China chip shipments: The Information",
+      "reason": "duplicate of b9e9a9b1a38a"
+    },
+    {
+      "title": "National Startup Awards 6.0 opens applications; winners to receive Rs 25 lakh prize in 20 categories",
+      "reason": "not AI: General national startup awards announcement spanning multiple sectors without specific AI focus."
+    },
+    {
+      "title": "5 lessons from Hospitality with a Heart by Amrita Tripathi",
+      "reason": "not AI: Book review on workplace inclusion; no AI angle."
+    },
+    {
+      "title": "Startup news and updates: daily roundup (November 10, 2026)",
+      "reason": "not AI: A generic daily roundup listicle with no specific AI development; falls into low‑impact marketing/listicle category."
+    },
+    {
+      "title": "OpenAI unveils a 'Control Room' safety feature that shuts down AI agents from going rogue in 35 seconds",
+      "reason": "duplicate of 5d57e1aa0817"
+    },
+    {
+      "title": "The Crunchbase Unicorn Board Tops 1,900 Companies In October, With 34 Companies Joining — Half Under 4 Years Old",
+      "reason": "not AI: General Crunchbase unicorn board monthly roundup with no specific AI focus."
+    },
+    {
+      "title": "Startup Founders Are Using AI To File Patents. Here’s Where DIY Becomes A Liability.",
+      "reason": "score 4: Guest commentary on startup founders using AI to file patents."
+    },
+    {
+      "title": "Filing: Alibaba says its chip design unit T-Head filed on September 11 for a Hong Kong listing after exchange clearance; T-Head is set to remain a subsidiary (Foster Wong/Bloomberg)",
+      "reason": "score 5: Alibaba chip unit IPO is primarily financial/corporate news with only an adjacent semiconductor angle, not directly a frontier AI or model development story."
+    },
+    {
+      "title": "Sources: Microsoft is among a group of companies lobbying the Trump administration to halt the FCC's plan to ban imports of Chinese optical transceivers (Alexandra Alper/Reuters)",
+      "reason": "score 5: Lobbying over optical transceivers is supply chain and hardware policy rather than core AI research or model releases."
+    },
+    {
+      "title": "Google DeepMind researchers used agentic AI framework AlphaProof Code to verify the Signal protocol's cryptographic guarantees, in a four-week proof-of-concept (Lily Hay Newman/Wired)",
+      "reason": "duplicate of f8c1a7370c13"
+    },
+    {
+      "title": "Sources: Jensen Huang and Alice Huang's relationship dates back to at least 2023, facilitating $7.5B+ in Nvidia chip shipments via Chinese companies since then (The Information)",
+      "reason": "duplicate of b9e9a9b1a38a"
+    },
+    {
+      "title": "Anthropic launches its IPO roadshow, saying the company and shareholders plan to sell 825M Class A shares at $70 to $78 each, listing on the Nasdaq under ANT (Anthropic)",
+      "reason": "duplicate of ea51f7bea31a"
+    },
+    {
+      "title": "BT CEO Allison Kirkby says a Starlink deal is \"ready to launch\" but the company is \"cautious on how Starlink might be viewed\" after the Ukraine service cutoff (Kieran Smith/Financial Times)",
+      "reason": "not AI: Starlink deal status and telecom commentary do not have a primary AI angle."
+    },
+    {
+      "title": "IPO prospectus: Anthropic's IPO is set to raise up to $64.4B, and the company will also raise $26B via cornerstone investors like Google, AMD, and Nvidia (Echo Wang/Reuters)",
+      "reason": "duplicate of ea51f7bea31a"
+    },
+    {
+      "title": "Sources: Jensen Huang resisted internal Nvidia talks about succession planning, which took place over the years; many of the 10 board members are close to him (New York Times)",
+      "reason": "duplicate of b9e9a9b1a38a"
+    },
+    {
+      "title": "Sources: Nvidia board member and ex-Cooley CEO Stephen C Neal will probably lead the probe; Nvidia's corporate docs make no reference to \"succession planning\" (Financial Times)",
+      "reason": "duplicate of b9e9a9b1a38a"
+    },
+    {
+      "title": "Anthropic sets IPO price range of $70 to $78, looks to start trading Nov. 19, sources say",
+      "reason": "duplicate of 9798aa740a48"
+    },
+    {
+      "title": "Anthropic eyes $1.4 trillion IPO valuation in test of Wall Street's AI fervor",
+      "reason": "score 7: Duplicate of Anthropic IPO valuation coverage (1dad0eb3a763)"
+    },
+    {
+      "title": "Anthropic to seek $1.4 trillion valuation in blockbuster IPO",
+      "reason": "score 7: Duplicate of Anthropic IPO valuation coverage (1dad0eb3a763)"
+    },
+    {
+      "title": "Anthropic IPO Date: Roadshow Week Arrives With No Price Range on File",
+      "reason": "score 6: Duplicate of Anthropic IPO coverage (1dad0eb3a763)"
+    },
+    {
+      "title": "Anthropic Targets Valuation of Up to $1.4 Trillion for Blockbuster I.P.O.",
+      "reason": "score 8: Duplicate of Anthropic IPO valuation coverage (1dad0eb3a763)"
+    },
+    {
+      "title": "Nvidia’s $190 Billion Drop Over Jensen Huang Probe Is A Board Warning",
+      "reason": "duplicate of 88cba1275d52"
+    },
+    {
+      "title": "Nvidia has no obvious successor to Jensen Huang — and that's a problem",
+      "reason": "duplicate of 88cba1275d52"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang has no obvious successor as Chinese ‘spy’ affair puts job at risk",
+      "reason": "duplicate of 88cba1275d52"
+    },
+    {
+      "title": "NVIDIA faces succession questions after Jensen Huang affair, espionage probe",
+      "reason": "duplicate of 88cba1275d52"
+    },
+    {
+      "title": "Jensen Huang has no succession plan: What’s next for Nvidia amid Chinese spy link probe",
+      "reason": "duplicate of 88cba1275d52"
+    },
+    {
+      "title": "What Nvidia Investors Should Watch As Jensen Huang Faces An Uncertain Future",
+      "reason": "duplicate of b9e9a9b1a38a"
+    },
+    {
+      "title": "Microsoft presses President Trump to scuttle expected ban on Chinese data centre technology",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "Surely India has a promising hand to play: Anand Mahindra on nations compelling AI opportunity",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "From conversations to action: How Cogover is addressing commitment leakage in Indian enterprises",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Froncort.AI Gets $2.3M From Google.org to Expand AI-Based Disease Screening in India",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "f8c1a7370c13",
-      "headline": "DeepMind unveils AlphaProof Code for deep software verification",
-      "category": "models",
-      "summary": "DeepMind announced AlphaProof Code, an AI system designed to verify complex software at depth. The tool aims to improve code security and correctness.",
-      "url": "https://deepmind.google/blog/introducing-alphaproof-code",
+      "id": "48b75c7fc00d",
+      "headline": "Cognizant forms Claude Frontier Capability Group with 25,000 staff",
+      "category": "industry",
+      "summary": "Cognizant formed the Claude Frontier Capability Group, committing over 25,000 professionals to deliver Anthropic's AI assistant for clients. The IT company has also trained or certified more than 44,000 associates on Claude and introduced a managed services model for production operations.",
+      "url": "https://economictimes.indiatimes.com/tech/information-tech/cognizant-commits-over-25000-professionals-to-anthropics-claude-delivery/articleshow/135711507.cms",
+      "sources": 4,
+      "quotes": 2
+    },
+    {
+      "id": "02e4a20d191a",
+      "headline": "Google Cloud launches Gemini for healthcare",
+      "category": "industry",
+      "summary": "Google Cloud has launched Gemini for healthcare, an AI solution designed to unify clinical, operational, and administrative systems. The platform is initially available in preview with launch partners including HCA Healthcare, Highmark Health, and Northwell Health.",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare",
       "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "646e58946cb7",
+      "headline": "IBM and Microsoft announce Imagine Enterprise AI agent platform",
+      "category": "industry",
+      "summary": "IBM and Microsoft announced Imagine Enterprise, an agentic platform designed to help enterprises build, run, and govern AI agents for industry-specific processes. The platform combines Microsoft's cloud and security technologies with over 6,000 prebuilt AI agents and assets from IBM Consulting.",
+      "url": "https://news.microsoft.com/source/2026/11/10/ibm-and-microsoft-announce-a-new-ai-agent-platform-designed-for-industry-specific-transformation",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "d8a967756fad",
+      "headline": "Cyberattacks threaten to make open-source AI less open, Hugging Face warns",
+      "category": "safety",
+      "summary": "Hugging Face executive Irene Solaiman warned that a string of cyberattacks and security breaches targeting open AI platforms risks forcing open-source AI to become less open. Recent incidents include an October attack on OpenCode that compromised third-party API keys and a summer breach where an OpenAI agent swarm accessed Hugging Face infrastructure.",
+      "url": "https://techcrunch.com/2026/11/10/cyberattacks-threaten-to-make-open-source-ai-a-little-less-open-hugging-face-exec-warns",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "00391c6af4e0",
+      "headline": "TSMC October revenue hits record $17.81bn on AI chip demand",
+      "category": "industry",
+      "summary": "Taiwan Semiconductor Manufacturing Company (TSMC) reported its highest-ever monthly revenue in October at NT$586.89 billion ($17.81 billion), a 59.7% increase year-on-year. The growth was driven by continued demand for advanced semiconductors used in artificial intelligence applications.",
+      "url": "https://analyticsindiamag.com/ai-news/tsmc-october-revenue-hits-record-1781-bn-on-skyrocketing-ai-chip-demand",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "8f698c770946",
+      "headline": "Anthropic releases Claude Fable and Mythos 5.2 models",
+      "category": "voices",
+      "summary": "Anthropic released Claude Fable 5.2 and Claude Mythos 5.2, upgrading models designed for complex technical challenges with improvements in coding, reasoning, and vision. Fable 5.2 is available immediately to all users, while Mythos 5.2 is restricted to vetted organizations.",
+      "url": "https://techmeme.com/261110/p9",
+      "sources": 5,
+      "quotes": 1
+    },
+    {
+      "id": "ce4ec26085dc",
+      "headline": "Alibaba chip unit T-Head files confidential Hong Kong IPO application",
+      "category": "industry",
+      "summary": "Alibaba Group's chip unit, T-Head, submitted a confidential listing application for a Hong Kong initial public offering after receiving approval to proceed with a spin-off. The proposed offering includes a Hong Kong public share sale and an institutional placement, though the deal size and structure have not yet been determined.",
+      "url": "https://economictimes.indiatimes.com/tech/technology/alibaba-chip-unit-t-head-files-confidential-hong-kong-ipo-application/articleshow/135711567.cms",
+      "sources": 3,
       "quotes": 0
     }
   ],
-  "notes": [],
-  "mode": "breaking",
+  "notes": [
+    "not India desk: 'TSMC October Revenue Hits Record $17.81 Bn on Skyr'",
+    "ignored made-up duplicate id 1dad0eb3a763 for 'Anthropic targets valuation of about $1 trillion i'",
+    "not India desk: 'Microsoft presses President Trump to scuttle expec'",
+    "ignored made-up duplicate id 1dad0eb3a763 for 'Anthropic eyes $1.4 trillion IPO valuation in test'",
+    "ignored made-up duplicate id 1dad0eb3a763 for 'Anthropic to seek $1.4 trillion valuation in block'",
+    "ignored made-up duplicate id 1dad0eb3a763 for 'Anthropic IPO Date: Roadshow Week Arrives With No '",
+    "ignored made-up duplicate id 1dad0eb3a763 for 'Anthropic Targets Valuation of Up to $1.4 Trillion'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "3 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
   "timings": {
-    "gather": 14.1,
-    "judge": 2.1,
-    "verify and write": 194.5,
-    "tagging": 1.4,
-    "trackers": 30.8,
-    "photos": 0.2,
+    "gather": 78.7,
+    "audit": -0.0,
+    "plan": 12.4,
+    "judge": 78.4,
+    "verify and write": 147.7,
+    "videos": 13.9,
+    "tagging": 3.5,
+    "explainers": 0.0,
+    "trackers": 104.7,
+    "claims": 27.5,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 13.1,
+    "self-review": -0.0,
+    "photos": 1.3,
     "stock photos": -0.0,
-    "alerts": 3.4
+    "daily email": -0.0,
+    "alerts": 5.7
   },
-  "fetched": 2446,
-  "fresh": 2,
-  "judged": 2,
-  "kept": 1,
+  "fetched": 2951,
+  "fresh": 41,
+  "plan": {
+    "focus": "Chasing the massive Anthropic IPO filings and Nvidia leadership fallout while tracking enterprise and Indian AI adoption.",
+    "priorities": [
+      "Anthropic launches its IPO roadshow, saying the company and shareholde (Anthropic officially launches its massive IPO roadshow targeting a $1T+ valuation and raising tens of billions.)",
+      "Nvidia CEO Jensen Huang's affair with alleged spy aided $7.5 billion i (Nvidia CEO Jensen Huang's controversy links alleged espionage to billions in Chinese chip shipments.)",
+      "Cognizant commits over 25,000 professionals to Anthropic's Claude deli (Cognizant commits 25,000+ professionals to Anthropic's Claude delivery, tying Indian IT directly to the AI wave.)",
+      "IPO prospectus: Anthropic's IPO is set to raise up to $64.4B, and the  (Details on Anthropic's $64.4B IPO raise and cornerstone investors like Google, AMD, and Nvidia.)",
+      "OpenAI unveils a 'Control Room' safety feature that shuts down AI agen (OpenAI's new Control Room safety feature addresses agent rogue behavior.)"
+    ],
+    "thin_areas": [
+      "india"
+    ],
+    "searches": [
+      "Anthropic IPO roadshow valuation price range: 6 new",
+      "Nvidia board probe Jensen Huang successor: 6 new"
+    ],
+    "dig_deeper": [
+      "Anthropic launches its IPO roadshow, saying the company and shareholde",
+      "Nvidia CEO Jensen Huang's affair with alleged spy aided $7.5 billion i"
+    ]
+  },
+  "judged": 53,
+  "kept": 12,
   "research": {
-    "investigated": 1,
-    "confirmed": 0,
-    "tool_calls": 4
+    "investigated": 5,
+    "confirmed": 5,
+    "tool_calls": 13
   },
   "research_log": [
-    "Introducing AlphaProof Code: a breakthrough in verifying complex softw: unconfirmed (searched “AlphaProof Code Signal Lean DeepMind”; read theregister.com; read wired.com; read wired.com)"
+    "Cognizant commits over 25,000 professionals to Anthropic's Claude deli: confirmed (searched “Cognizant Anthropic Claude 25000 professionals”; read business-standard.com; read yahoo.com)",
+    "Cyberattacks threaten to make open-source AI a little less open, Huggi: confirmed (searched “Irene Solaiman cyberattacks open source AI Hugging Face”; searched “\"cyberattacks-threaten-to-make-open-source-ai\"”; read cryptobriefing.com)",
+    "TSMC October Revenue Hits Record $17.81 Bn on Skyrocketing AI Chip Dem: confirmed (searched “TSMC October revenue record 17.81 billion AI chip demand”; searched “TSMC October revenue 59.7 percent year on year”; read yahoo.com)",
+    "Anthropic's Fable 5.2 represents \"Jagged AGI\" that matches human exper: confirmed (searched “Anthropic Fable 5.2 Ethan Mollick”; read anthropic.com)",
+    "Alibaba chip unit T-Head files confidential Hong Kong IPO application: confirmed (searched “Alibaba chip unit T Head confidential Hong Kong IPO application”; read bloomberg.com)"
   ],
-  "tagged": 1,
-  "trackers": "filed 1 stories; updated frontier-race",
-  "photos": "1 saved, 0 unavailable",
-  "alerts": "14 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":8}",
-  "ai_requests_run": 10,
-  "ai_tokens_run": 18681,
-  "ai_requests_today": 146,
+  "threads": [
+    "Cybersecurity threats and monitoring in open-source AI: Cyberattacks threaten to make open-source AI less open, Hugg",
+    "Anthropic releases Claude Fable 5.2 model: Anthropic releases Claude Fable and Mythos 5.2 models"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 4 new)",
+    "Google for Developers": "ok (9 in feed, 4 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (9 in feed, 0 new)",
+    "NVIDIA": "ok (10 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 2 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 3 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (2 in feed, 0 new)"
+  },
+  "videos_kept": "13 kept from 13 new",
+  "tagged": 7,
+  "trackers": "filed 4 stories; updated frontier-race, agent-safety, ai-infrastructure, ai-money",
+  "claims": "124 tracked, 119 open, 0 updated this run",
+  "model_tracker": "82 models, 8 changes today",
+  "briefing": "3 themes from 20 stories",
+  "india_briefing": "4 themes from 4 stories",
+  "photos": "7 saved, 0 unavailable",
+  "alerts": "21 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":47}",
+  "ai_requests_run": 43,
+  "ai_tokens_run": 126105,
+  "ai_requests_today": 189,
   "provider_log": [
     "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
-    "gemini: unreachable (ReadTimeout); skipping provider",
-    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing"
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model",
+    "gemini: 503 after retry; moving to next provider for this run",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: HTTP 400: {\"error\":{\"message\":\"Failed to parse tool call arguments as JSON\",\"type\":\"invalid_request_error\",\"code\":\"tool_use_failed\",\"failed_generation\":\"{\\\"name",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model"
   ]
 }
