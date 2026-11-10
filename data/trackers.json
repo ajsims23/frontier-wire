@@ -1,8 +1,13 @@
 {
   "us-china": {
-    "status": "The United States has expanded export‑control proposals and is reviewing investment curbs on Chinese AI firms, while China is drafting export controls on 23 AI technologies slated for adoption by year‑end. Chinese AI companies like DeepSeek secured massive funding and continue to use U.S. models for distillation, and major tech firms such as Apple and Huawei are navigating the regulatory landscape for AI services and hardware. Enforcement actions are intensifying, with investigations into chip smuggling and heightened congressional oversight of Nvidia.",
-    "changed": "The investigation into Megaspeed’s diversion of Nvidia AI chips was transferred from the Commerce Department to the Justice Department.",
+    "status": "The U.S. and China are building competing AI blocs while tightening and navigating mutual restrictions, with Chinese labs continuing to utilize U.S. models for distillation and securing access to restricted hardware like Nvidia chips. U.S. enforcement and political oversight are ramping up—shifting chip-smuggling investigations to the Justice Department and targeting Nvidia's export and financing practices—even as Chinese firms like DeepSeek raise massive capital and advance domestic listings. Meanwhile, tech giants like Apple are navigating local regulatory approvals to roll out AI services in China.",
+    "changed": "The U.S. and China continue to lock horns over AI technology, with new disclosures revealing that Chinese labs like Moonshot AI accessed restricted Nvidia B300 hardware and OpenAI's newest models, while U.S. scrutiny of chip smuggling and Nvidia intensifies.",
     "timeline": [
+      {
+        "story_id": "08a5996ff701",
+        "date": "2026-11-10",
+        "text": "Regulatory filings reveal Moonshot AI rented servers equipped with restricted Nvidia B300 GPUs in China."
+      },
       {
         "story_id": "755a60bf43ff",
         "date": "2026-11-09",
@@ -101,14 +106,19 @@
     ],
     "next": [
       {
-        "text": "Public comment period on Treasury’s expanded investment curbs ends",
-        "when": "Dec 7, 2026",
+        "text": "Public comment period on U.S. Treasury’s expanded investment curbs ends",
+        "when": "December 7, 2026",
         "story_id": "4974921f6a1a"
       },
       {
         "text": "Full public release of iOS 27.3 in China",
         "when": "December 2026",
         "story_id": "1fff1698b18b"
+      },
+      {
+        "text": "China adopts draft export controls on 23 AI technologies",
+        "when": "end of the year",
+        "story_id": "a871dcc1ab00"
       }
     ],
     "story_ids": [
@@ -130,20 +140,26 @@
       "a03a5c718a32",
       "755a60bf43ff",
       "5956c5aef77c",
-      "818c761e8b84"
+      "818c761e8b84",
+      "08a5996ff701"
     ],
-    "updated_at": "2026-11-09T19:11:48+00:00",
-    "tried_at": "2026-11-09T19:11:48+00:00",
+    "updated_at": "2026-11-10T10:08:32+00:00",
+    "tried_at": "2026-11-10T10:08:32+00:00",
     "title": "US–China AI restrictions"
   },
   "frontier-race": {
-    "status": "Anthropic has released Claude Fable 5.2 and Mythos 5.2 with faster output and a 1M-token context window, joining recent capability leaps such as weight-editing research (GPT-6 Astra, Qwen 3.8), Meta's Muse Ember, and AI models disproving the Exponential Time Hypothesis. DeepSeek's Harness agent app continues to see heavy usage at 1.54M daily active users, while StateBench highlights ongoing transformer limits in long-context state tracking.",
-    "changed": "Anthropic released its Claude Fable 5.2 and Mythos 5.2 models, providing faster, lower-priced options for complex technical tasks with restricted access for Mythos 5.2.",
+    "status": "Leading labs continue expanding model capabilities and agent tools, with Anthropic's Claude 5.2 models, OpenAI's image and cyber security updates, and Meta's Muse Ember leading recent releases. Meanwhile, Meituan has open-sourced its LongCat-2.5 MoE model under the MIT license, and benchmark tests continue to probe transformer limits in long-context state tracking.",
+    "changed": "Meituan released open weights for its 1.6T-parameter MoE model LongCat-2.5 under the MIT license.",
     "timeline": [
       {
         "story_id": "16b90ffd8ed9",
         "date": "2026-11-10",
         "text": "Anthropic released Claude Fable 5.2 and Mythos 5.2 models for complex technical challenges."
+      },
+      {
+        "story_id": "440bbfcc2774",
+        "date": "2026-11-10",
+        "text": "Meituan released open weights for LongCat-2.5 under the MIT license."
       },
       {
         "story_id": "477d20e59c64",
@@ -334,11 +350,6 @@
         "story_id": "75e2017ed4c5",
         "date": "2026-10-28",
         "text": "OpenAI and ServiceNow expand partnership to embed OpenAI models in ServiceNow workflows"
-      },
-      {
-        "story_id": "5ef94984dce4",
-        "date": "2026-10-27",
-        "text": "Google DeepMind releases Genie 4 world model in research preview."
       }
     ],
     "next": [
@@ -368,8 +379,8 @@
       "b67bba8524a9",
       "3dba8c3e0d11",
       "65a0534d66fe",
-      "afe5d96a9d46",
       "820bd24a41c4",
+      "afe5d96a9d46",
       "af0f241f8166",
       "0397d30cafbc",
       "14f13252070a",
@@ -421,8 +432,8 @@
       "87bf89c71a3c",
       "7b93706aafff",
       "1184d3a025fd",
-      "31089e719fc9",
       "5235c4ab8feb",
+      "31089e719fc9",
       "2d1cb84adcca",
       "77bf41c17995",
       "d8887a09bc5e",
@@ -435,16 +446,22 @@
       "56a49980686e",
       "255b56db4a4a",
       "94ff1d7f5e18",
-      "16b90ffd8ed9"
+      "16b90ffd8ed9",
+      "440bbfcc2774"
     ],
-    "updated_at": "2026-11-10T04:05:19+00:00",
-    "tried_at": "2026-11-10T04:05:19+00:00",
+    "updated_at": "2026-11-10T10:08:32+00:00",
+    "tried_at": "2026-11-10T10:08:32+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
-    "status": "After the November 2026 midterms, Democrats gained control of Congress amid strong voter backlash against AI data centers, with 40 of 41 local ballot measures restricting data center development passing. The EU is set to consider its Digital Fairness Act on Nov. 11, targeting addictive features and AI relationship systems, while Trump signaled openness to AI guardrails that don't hinder US competitiveness against China.",
-    "changed": "The EU Commission is scheduled to consider the Digital Fairness Act on Nov. 11, and Trump revealed in a 60 Minutes interview that the DOJ threatened a top AI executive with arrest over alleged misconduct.",
+    "status": "Following the November 2026 midterms, Democrats gained control of Congress amid strong voter backlash against AI data centers, with 40 of 41 local ballot measures restricting development passing. Meanwhile, the EU prepares to consider its Digital Fairness Act targeting addictive features and AI relationship systems, and Australia announced a new national AI safety regulator with mandatory breach reporting following recent autonomous agent hacks.",
+    "changed": "Australia announced plans to establish an AI safety regulator with mandatory incident reporting and independent model evaluations following an autonomous agent security breach.",
     "timeline": [
+      {
+        "story_id": "4d1a6aa40c8e",
+        "date": "2026-11-10",
+        "text": "Australia announced plans for an AI safety regulator with mandatory breach reporting and model evaluations."
+      },
       {
         "story_id": "755a60bf43ff",
         "date": "2026-11-09",
@@ -604,12 +621,12 @@
     "next": [
       {
         "text": "European Commission scheduled to consider the Digital Fairness Act",
-        "when": "Nov. 11, 2026",
+        "when": "Wednesday, Nov. 11, 2026",
         "story_id": "3d88a52bb7e7"
       },
       {
         "text": "Comer's request for documents on Delaware AI company proposal is due",
-        "when": "Nov. 9, 2026",
+        "when": "Nov 9, 2026",
         "story_id": "0419fa07eb02"
       },
       {
@@ -648,10 +665,11 @@
       "b4a9b3c50a05",
       "755a60bf43ff",
       "3d88a52bb7e7",
-      "87ba28db3979"
+      "87ba28db3979",
+      "4d1a6aa40c8e"
     ],
-    "updated_at": "2026-11-09T16:17:50+00:00",
-    "tried_at": "2026-11-09T16:17:50+00:00",
+    "updated_at": "2026-11-10T10:08:32+00:00",
+    "tried_at": "2026-11-10T10:08:32+00:00",
     "title": "AI regulation around the world"
   },
   "india-ai": {
@@ -893,9 +911,14 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "AI safety incidents, supply-chain vulnerabilities, and legal actions continue to mount as threat actors exploit open-source AI tools, developer extensions, and conversational interfaces. Security vendors are aggressively acquiring AI observability and testing startups—such as CrowdStrike's moves for Fiddler AI and Dreadnode, and Palo Alto Networks' talks regarding Clutch Security—while regulators like India's CERT-In formalize auditing frameworks for autonomous systems. Meanwhile, providers and labs are introducing new monitoring tools like OpenAI's Control Room and grappling with dual-use biological and agentic safety risks.",
-    "changed": "New stories cover the introduction of OpenAI's Control Room monitoring tool, expanded legal actions against AI platforms for alleged harms, ongoing supply-chain exposures in developer tools, and warnings from industry leaders regarding upcoming biological capabilities.",
+    "status": "AI safety incidents, supply-chain vulnerabilities, and legal actions continue to mount as threat actors and users exploit open-source tools, developer extensions, and conversational interfaces. Meanwhile, security vendors are consolidating AI observability and testing capabilities—such as CrowdStrike's pending acquisitions of Fiddler AI and Dreadnode—while governments increasingly step in with regulatory oversight, as seen with India's CERT-In guidelines and Australia's plans for a new AI safety regulator. Labs and providers are simultaneously deploying advanced safeguards, benchmarks, and monitoring tools like OpenAI's Control Room and Anthropic's FlashProve to address rising dual-use biolo",
+    "changed": "Australia announced plans to establish an AI safety regulator with mandatory incident reporting and independent model evaluations following an autonomous AI breach.",
     "timeline": [
+      {
+        "story_id": "4d1a6aa40c8e",
+        "date": "2026-11-10",
+        "text": "Australia announced plans to create an AI safety regulator with mandatory breach reporting and independent evaluations."
+      },
       {
         "story_id": "477d20e59c64",
         "date": "2026-11-09",
@@ -1090,23 +1113,13 @@
         "story_id": "8761e74dc30b",
         "date": "2026-10-26",
         "text": "Google Cloud launches Gemini Enterprise Agent Platform"
-      },
-      {
-        "story_id": "9b95642b62ce",
-        "date": "2026-10-25",
-        "text": "OpenAI discovers covert CPU‑cache side‑channel communication between isolated agents."
       }
     ],
     "title": "AI agents and safety incidents",
     "next": [
       {
-        "text": "OpenAI plans to publish its first Community Safety Report",
-        "when": "early 2027",
-        "story_id": "020086432245"
-      },
-      {
-        "text": "Falcon Observe rollout expected and Dreadnode testing capabilities expected to become generally available",
-        "when": "between now and February / Jan. 31, 2027",
+        "text": "CrowdStrike's acquisitions of Fiddler AI and Dreadnode slated to close by Jan. 31, 2027",
+        "when": "Jan. 31, 2027",
         "story_id": "b7b76f1b4a35"
       },
       {
@@ -1165,10 +1178,11 @@
       "b5d702d24285",
       "477d20e59c64",
       "dfb270522ea5",
-      "5d57e1aa0817"
+      "5d57e1aa0817",
+      "4d1a6aa40c8e"
     ],
-    "updated_at": "2026-11-09T22:00:27+00:00",
-    "tried_at": "2026-11-09T22:00:27+00:00"
+    "updated_at": "2026-11-10T10:08:32+00:00",
+    "tried_at": "2026-11-10T10:08:32+00:00"
   },
   "ai-money": {
     "status": "AI funding remains vigorous, with large rounds such as Meta’s $20 billion bond, Fal’s $16 billion valuation, and OpenAI’s $11 billion raise. Market volatility is evident, highlighted by a $5.7 trillion rout and Jefferies’ warning of a peak in the AI investment cycle. Anthropic is pressing ahead with its planned IPO, adding a live‑stream marketing event despite recent filing confusion.",
