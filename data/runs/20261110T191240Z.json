@@ -1,0 +1,389 @@
+{
+  "started_at": "2026-11-10T19:12:40+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1376)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (902)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (12)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (23)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Gemini Intelligence: New features, on more devices",
+      "reason": "score 4: General Google AI blog marketing post about Gemini features on more devices."
+    },
+    {
+      "title": "Pay for Hugging Face Hub with your Google Cloud Account",
+      "reason": "score 4: Minor billing integration update for Hugging Face Hub using Google Cloud accounts."
+    },
+    {
+      "title": "Gemini 4 Carbon is now available",
+      "reason": "duplicate of 28b27e2d175e"
+    },
+    {
+      "title": "Fireworks AI security breach impacts Notion and their customers",
+      "reason": "duplicate of 7c216e897ed3"
+    },
+    {
+      "title": "OpenAI rolls out new business profiles, making ChatGPT just a little bit more like Google",
+      "reason": "score 5: Duplicate of OpenAI business profiles and Business Agents launch in ChatGPT."
+    },
+    {
+      "title": "Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks",
+      "reason": "score 5: Duplicate of Anthropic office tools launch including Claude Meetings."
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang’s affair with alleged Chinese spy: a timeline",
+      "reason": "duplicate of 88cba1275d52"
+    },
+    {
+      "title": "The US is winning the AI race. Jensen Huang could have blown it",
+      "reason": "duplicate of 88cba1275d52"
+    },
+    {
+      "title": "ChatGPT is getting verified AI ‘Business Agents’",
+      "reason": "score 5: Duplicate of OpenAI Business Agents launch in ChatGPT."
+    },
+    {
+      "title": "Anthropic has its own AI-powered office suite now",
+      "reason": "score 4: Duplicate of Anthropic's office suite announcement (c30beb782851)."
+    },
+    {
+      "title": "Adobe is going all in on agentic AI",
+      "reason": "score 4: Duplicate of Adobe's Max announcements for agentic AI and creative tools (f9ddc69f8317)."
+    },
+    {
+      "title": "Photoshop, Lightroom, and Premiere are making it easier to remove things",
+      "reason": "score 4: Duplicate coverage of Adobe Max Creative Cloud and Firefly AI updates."
+    },
+    {
+      "title": "NVIDIA Scandal & AI Selloff In the US: India’s Neocloud Boom Faces Twin Tests",
+      "reason": "score 4: General market commentary and speculation linking US chip scandals to Indian neocloud providers without fresh local news."
+    },
+    {
+      "title": "Banks seek to rein in soaring AI agent costs, McKinsey says",
+      "reason": "score 4: Very brief wire stub reporting McKinsey findings on banks reining in AI agent costs."
+    },
+    {
+      "title": "Simon Willison: Me: any more aggressive options for getting me to 5 pull-ups? Fitness Coach Claude (Fable 5.2): \"Drop a few pounds. Going from about 168…",
+      "reason": "score 3: Lighthearted social post about Claude Fable 5.2 fitness coaching by Simon Willison."
+    },
+    {
+      "title": "Ethan Mollick: Had early access to Gemini 4 Carbon, it is a very good model that improves on Argon. It is useful to have an AI that thinks differently…",
+      "reason": "score 5: Early access commentary on Gemini 4 Carbon by Ethan Mollick on Bluesky."
+    },
+    {
+      "title": "Sources: Citigroup, Goldman Sachs, and others in a 21-bank consortium committed around $270M to fund five years of a stablecoin venture announced in September (Bloomberg)",
+      "reason": "not AI: Stablecoin banking consortium funding news, no AI angle."
+    },
+    {
+      "title": "Alta, which is building blockchain infrastructure for banks and payment companies, raised a $47.5M Series A, bringing its total funding to $80M (Kyle Baird/The Block)",
+      "reason": "not AI: Blockchain infrastructure Series A, no AI angle."
+    },
+    {
+      "title": "How Alice Huang built her career with romantic partner and Hexi Capital founder Kang Wei, who faced stock market probes; sources believe she is back in China (Financial Times)",
+      "reason": "duplicate of b10abbc74a23"
+    },
+    {
+      "title": "Dreeze, launched by Zerto founders to help companies recover from cyberattacks by restoring entire cloud applications, emerges from stealth with a $33M seed (CTech)",
+      "reason": "score 4: Cybersecurity and cloud recovery startup seed round; minor AI relevance at best."
+    },
+    {
+      "title": "Google rolls out Gemini 4 Carbon to paid API and AI Ultra users two weeks after releasing it to cyber defenders, and previews a swarm feature in Antigravity (Koray Kavukcuoglu/Google)",
+      "reason": "duplicate of 28b27e2d175e"
+    },
+    {
+      "title": "IBM ends H-1B and green card sponsorships for most of the sponsored roles in IBM Consulting; source: workers can still work with IBM outside the US or leave IBM (Brody Ford/Bloomberg)",
+      "reason": "not AI: General immigration policy change at IBM Consulting, not specifically an AI story."
+    },
+    {
+      "title": "Anthropic sets IPO price range targeting $1.4 trillion valuation",
+      "reason": "duplicate of 06c34be0a2ca"
+    },
+    {
+      "title": "Anthropic Sets IPO Price Range at $70 to $78, Valuing Company at Up to $1.4 Trillion",
+      "reason": "duplicate of 06c34be0a2ca"
+    },
+    {
+      "title": "Anthropic Sets $70-$78 IPO Price Range in New Filing",
+      "reason": "duplicate of 06c34be0a2ca"
+    },
+    {
+      "title": "Anthropic Just Took a Big Step Toward Its Public Debut. Here's What You Need to Know.",
+      "reason": "duplicate of 06c34be0a2ca"
+    },
+    {
+      "title": "Anthropic targets $1.4 trillion market value in blockbuster IPO — down from earlier reported $2 trillion",
+      "reason": "duplicate of 06c34be0a2ca"
+    },
+    {
+      "title": "Anthropic (ANTHROPIC) Pre-IPO Price Prediction: Oversold tape meets heavy selling after the amended S-1 reset",
+      "reason": "score 4: Pure price‑prediction commentary, not a news event; low relevance for Frontier Wire."
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang’s Alleged Chinese Spy Affair: A Timeline Of How the Scandal Unfolded",
+      "reason": "duplicate of 88cba1275d52"
+    },
+    {
+      "title": "I Spy With My Little AI: A Guide to the Jensen Huang–Nvidia Scandal",
+      "reason": "duplicate of 88cba1275d52"
+    },
+    {
+      "title": "Nvidia shaken by scandal amid wider political new order for big tech",
+      "reason": "duplicate of 88cba1275d52"
+    },
+    {
+      "title": "All roads lead to Jensen Huang. That's Nvidia's problem.",
+      "reason": "duplicate of 88cba1275d52"
+    },
+    {
+      "title": "Alleged Spy Plot Targeting CEO Jensen Huang Raises Questions About Nvidia's Future",
+      "reason": "duplicate of 88cba1275d52"
+    },
+    {
+      "title": "Can Nvidia’s Jensen Huang Rebuild Trust?",
+      "reason": "score 5: Opinion piece on trust rebuilding; not a breaking news item."
+    },
+    {
+      "title": "Oura agrees to acquire AI and on-demand doctor service Counsel Health for $625M, says Q4 revenue grew 153% YoY to $533M and FY 2026 revenue grew 92% to $1.75B (Mark Gurman/Bloomberg)",
+      "reason": "variety: already 2 stories from bloomberg this run"
+    },
+    {
+      "title": "Israeli AI security startup Bay raises $50 million",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "Ring, known for its doorbell cameras, launches a home security drone and an enterprise security robot",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "Anthropic Seeks Record $88.5B Tied To Public Market Debut",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Anthropic unveils office tools, including a video call assistant, a data dashboard, and spreadsheet service Claude Sheets, in a bid to compete with Microsoft (Shirin Ghaffary/Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "New York Governor Kathy Hochul launches the US' first effort to independently test AI systems and train a new generation of AI safety experts via a new center (Calder McHugh/Politico)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "PSI is trying to make a business out of AI-driven scientific discovery",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "SoftBank wrote off $3.7B in non-refundable data center equipment advances after reviewing its plans in Q2; the company had committed $9.5B in advance payments (Martin Peers/The Information)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Sources: Goldman Sachs expects Anthropic to hit ~$52B revenue in 2026 and $600B+ by 2030, an operating profit in 2029, and be free cash flow positive from 2030 (Financial Times)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Nvidia scandal rocks tech world Web Summit",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "5ca4dc7b6d88",
+      "headline": "OpenAI launches Business Hub and verified Business Agents in ChatGPT beta",
+      "category": "industry",
+      "summary": "OpenAI announced a beta Business Hub that lets companies create verified business profiles and launch custom Business Agents in ChatGPT. The features provide limited insights such as profile views and allow users to ask product questions.",
+      "url": "https://openai.com/index/introducing-businesses-chatgpt",
+      "sources": 5,
+      "quotes": 3
+    },
+    {
+      "id": "f2e3e14e12ac",
+      "headline": "Anthropic co-founders to sell $1.75 billion in shares ahead of $1.4 trillion IPO",
+      "category": "industry",
+      "summary": "Anthropic's seven co-founders will each sell about $250 million worth of stock, totaling $1.75 billion, as the company files an IPO offering 825 million Class A shares at $70‑$78 each. The offering could value the company at up to $1.404 trillion.",
+      "url": "https://techmeme.com/261110/p32",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "ca0e8a6be6b9",
+      "headline": "Mercor raises $750 million Series D, valuation jumps to $20 billion",
+      "category": "industry",
+      "summary": "AI training startup Mercor announced a $750 million Series D funding round that values the company at $20 billion, double its October 2025 valuation. Investors include Benchmark, General Catalyst, Nvidia and others.",
+      "url": "https://techmeme.com/261110/p29",
+      "sources": 2,
+      "quotes": 1
+    }
+  ],
+  "notes": [
+    "ignored made-up duplicate id cb772493ecf4 for 'OpenAI rolls out new business profiles, making Cha'",
+    "ignored made-up duplicate id c30beb782851 for 'Anthropic launches Claude Meetings to turn workpla'",
+    "ignored made-up duplicate id cb772493ecf4 for 'ChatGPT is getting verified AI ‘Business Agents’'",
+    "ignored made-up duplicate id c30beb782851 for 'Anthropic has its own AI-powered office suite now'",
+    "ignored made-up duplicate id f9ddc69f8317 for 'Adobe is going all in on agentic AI'",
+    "ignored made-up duplicate id f9ddc69f8317 for 'Photoshop, Lightroom, and Premiere are making it e'",
+    "not India desk: 'Google agrees to addition privacy protections in S'",
+    "not India desk: 'Israeli AI security startup Bay raises $50 million'",
+    "ignored made-up duplicate id 7283860a9cf0 for 'Anthropic Seeks Record $88.5B Tied To Public Marke'",
+    "not India desk: 'AI training startup Mercor raised a $750M Series D'",
+    "dropped unverifiable quote (Dylan Sloan): Updated S-1: Anthropic's seven co-founders will sell $1.75 b…",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "13 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 85.4,
+    "audit": 0.0,
+    "plan": 9.1,
+    "judge": 57.2,
+    "verify and write": 253.4,
+    "videos": 95.6,
+    "tagging": 13.7,
+    "explainers": -0.0,
+    "trackers": 226.7,
+    "claims": 4.3,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 43.6,
+    "self-review": -0.0,
+    "photos": 0.4,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 8.3
+  },
+  "fetched": 2953,
+  "fresh": 43,
+  "plan": {
+    "focus": "Chasing the latest Anthropic IPO details and OpenAI business agent rollouts while keeping a close eye on India's AI developments.",
+    "priorities": [
+      "Updated S-1: Anthropic's seven co-founders will sell $1.75B of stock i (Updated S-1 details on Anthropic's co-founder stock sales ahead of the public debut.)",
+      "OpenAI launches Businesses in ChatGPT in beta, including Business Agen (OpenAI launches Businesses in ChatGPT in beta with business agents and profiles.)",
+      "Anthropic unveils office tools, including a video call assistant, a da (Anthropic expands into office tools (Claude Sheets, Meetings) to compete with Microsoft.)",
+      "Nvidia scandal rocks tech world Web Summit (Nvidia scandal impact on India's neocloud boom and tech summit fallout.)",
+      "New York Governor Kathy Hochul launches the US' first effort to indepe (New York launches first US center to independently test AI systems and train safety experts.)"
+    ],
+    "thin_areas": [
+      "policy",
+      "india"
+    ],
+    "searches": [
+      "Anthropic IPO S-1 filing price range: 6 new",
+      "Nvidia scandal Jensen Huang Web Summit: 6 new"
+    ],
+    "dig_deeper": [
+      "Updated S-1: Anthropic's seven co-founders will sell $1.75B of stock i",
+      "OpenAI launches Businesses in ChatGPT in beta, including Business Agen"
+    ]
+  },
+  "judged": 55,
+  "kept": 19,
+  "research": {
+    "investigated": 5,
+    "confirmed": 2,
+    "tool_calls": 18
+  },
+  "research_log": [
+    "Introducing Businesses in ChatGPT: confirmed (searched “Businesses in ChatGPT OpenAI”; read techcrunch.com)",
+    "Anthropic Seeks Record $88.5B Tied To Public Market Debut: unconfirmed (searched “Anthropic $88.5 billion IPO updated S-1 filing record fundraise public market debut”; read techbooky.com; searched “\"$88.5\" Anthropic IPO”; searched “\"88.5\" Anthropic IPO”)",
+    "Anthropic unveils office tools, including a video call assistant, a da: unconfirmed (searched “Anthropic office tools video call assistant Claude Sheets data dashboard announcement”; read theverge.com; read techcrunch.com; read businessinsider.com)",
+    "New York Governor Kathy Hochul launches the US' first effort to indepe: unconfirmed (searched “Kathy Hochul New York AI safety center independent testing”; read newsday.com; read suny.edu; read unite.ai)",
+    "Updated S-1: Anthropic's seven co-founders will sell $1.75B of stock i: confirmed (searched “Anthropic co-founders sell $1.75 billion stock IPO updated S-1 Bloomberg”; searched “Anthropic seven co-founders sell $1.75 billion shares IPO prospectus”; read techcrunch.com; read theverge.com)"
+  ],
+  "threads": [
+    "Anthropic IPO plans continue with live stream: Anthropic co-founders to sell $1.75 billion in shares ahead "
+  ],
+  "videos": {
+    "OpenAI": "ok (12 in feed, 3 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 4 new)",
+    "Google for Developers": "ok (9 in feed, 4 new)",
+    "AI at Meta": "ok (7 in feed, 0 new)",
+    "Microsoft Research": "ok (9 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 1 new)",
+    "Hugging Face": "ok (12 in feed, 2 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 2 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (12 in feed, 0 new)",
+    "Hard Fork": "ok (2 in feed, 1 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (2 in feed, 1 new)"
+  },
+  "videos_kept": "1 kept from 18 new",
+  "tagged": 3,
+  "trackers": "filed 3 stories; updated frontier-race, ai-money",
+  "claims": "133 tracked, 128 open, 0 updated this run",
+  "model_tracker": "82 models, 14 changes today",
+  "briefing": "3 themes from 20 stories",
+  "india_briefing": "3 themes from 5 stories (1 removed by checks)",
+  "photos": "3 saved, 0 unavailable",
+  "alerts": "24 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":21}",
+  "ai_requests_run": 41,
+  "ai_tokens_run": 131197,
+  "ai_requests_today": 282,
+  "provider_log": [
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: HTTP 400: {\"error\":{\"message\":\"Failed to parse tool call arguments as JSON\",\"type\":\"invalid_request_error\",\"code\":\"tool_use_failed\",\"failed_generation\":\"{\\\"name",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-20b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-20b: HTTP 400: {\"error\":{\"message\":\"Failed to parse tool call arguments as JSON\",\"type\":\"invalid_request_error\",\"code\":\"tool_use_failed\",\"failed_generation\":\"{\\\"name",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+    "nvidia: network error ReadTimeout, retrying",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model"
+  ]
+}
