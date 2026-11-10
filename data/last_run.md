@@ -1,80 +1,81 @@
-## Frontier Wire newsroom run — 2026-11-10T01:20:10+00:00
+## Frontier Wire newsroom run — 2026-11-10T04:05:19+00:00
 
-Fetched 2948 items · fresh 21 · judged 27 · kept 5 · **written 1**
-AI: 32 requests, 63,044 tokens this run · 32 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Chasing the ongoing Nvidia executive spy scandal while tracking new model capabilities like Claude Fable 5.2.
-  Priorities: Everything we know so far about the Nvidia spy scandal targeting CEO J (Comprehensive update on the Nvidia CEO spy scandal dominating the industry.); Trump says the FBI is "looking into" Jensen Huang's affair, and the Nv (Trump and FBI involvement adds major regulatory and political weight to the Nvidia story.); Ethan Mollick: In one of my favorite experiments, I told Fable 5.2 to  (First-hand expert testing and evaluation of Anthropic's new Fable 5.2 model.); Google Gemini routes personal Drive files and emails to human annotato (Serious privacy and safety concern regarding Google Gemini data handling.); The backlash about data centers might really just be about electricity (Important analysis connecting data center buildouts to broader grid and energy backlash.)
-  Thin areas: safety, research
-  Searches: Anthropic Claude Fable 5.2 benchmarks release: 6 new
-  Dig deeper: Everything we know so far about the Nvidia spy scandal targeting CEO J; Trump says the FBI is "looking into" Jensen Huang's affair, and the Nv
-Research agent: investigated 5 stories with 15 tool calls, confirmed 1
+Fetched 2962 items · fresh 19 · judged 34 · kept 3 · **written 2**
+AI: 24 requests, 72,905 tokens this run · 56 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Tracking the fallout from the Jensen Huang spy controversy and Anthropic's looming IPO alongside global AI regulation updates.
+  Priorities: Nvidia probes whether foreign intelligence targeted Jensen Huang (Major developing news regarding the Nvidia CEO investigation and potential foreign intelligence targeting.); Emails: Anthropic sent bankers a copy of its IPO filing showing plans  (Critical financial and IPO details emerging from Anthropic's bankers and filing leaks.); Anthropic unveils new Fable, Mythos models as competition heats up ahe (Connects Anthropic's new Fable and Mythos model launches directly to its competitive IPO positioning.); Australia to mandate AI breach reporting, create regulator after OpenA (Important international policy update on mandatory AI breach reporting and regulation in Australia.); Ethan Mollick: Looks like Fable 5.2 is above the already steep trendli (Ethan Mollick's insightful expert take on Claude Fable 5.2 benchmarks.)
+  Thin areas: research, policy
+  Searches: Jensen Huang Nvidia board investigation DOJ: 6 new; Anthropic IPO valuation pricing details Reuters: 6 new; Australia mandatory AI safeguards breach reporting: 6 new
+  Dig deeper: Emails: Anthropic sent bankers a copy of its IPO filing showing plans ; Nvidia probes whether foreign intelligence targeted Jensen Huang
+Research agent: investigated 2 stories with 6 tool calls, confirmed 2
 Daily briefing: 4 themes from 20 stories
-Threads updated: Anthropic releases Claude Fable 5.2 model: Ethan Mollick builds 3D worlds with Claude Fable 5.2
-Videos: no new videos · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
-Daily self-check: coverage 100% of 9 significant stories; 0 missed, 0 added to this run
+Threads updated: Anthropic IPO valuation and compute spending commitments: Anthropic sends and retracts IPO filing pricing details to b; Anthropic releases Claude Fable 5.2 model: Anthropic releases Claude Fable and Mythos 5.2 models
+Videos: no new videos · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
+Top Voices: 3 debates from 50 posts by 6 people; 3 portraits, 3 pictures
 Photos: 1 saved, 0 unavailable
-Alerts: 6 events sent: {"subscribers":7,"sent":0,"queued":14}
-Claims: 123 tracked, 118 open, 0 updated this run
-Trackers: filed 1 stories; updated frontier-race
-Model tracker: 82 models, 4 changes today
-Tagged 1 stories by sector, region and deal
-Self-review written (see the newsroom issue)
-Time: gather 115s, audit 4s, plan 58s, judge 7s, verify and write 293s, videos 4s, tagging 2s, trackers 31s, claims 3s, briefing 15s, self-review 2s, alerts 3s
+Alerts: 9 events sent: {"subscribers":7,"sent":0,"queued":18}
+Claims: 123 tracked, 118 open, 2 updated this run
+Trackers: filed 2 stories; updated frontier-race, ai-money
+Model tracker: 82 models, 5 changes today
+Tagged 2 stories by sector, region and deal
+India briefing: 3 themes from 5 stories
+Time: gather 66s, plan 61s, judge 8s, verify and write 13s, videos 2s, tagging 1s, trackers 72s, top voices 11s, briefing 3s, stock photos 7s, alerts 2s
 
 ### New stories
-- **voices** — [Ethan Mollick builds 3D worlds with Claude Fable 5.2](https://bsky.app/profile/emollick.bsky.social/post/3mzvxvkdmd22e)  
-  Researcher Ethan Mollick used Claude Fable 5.2 to direct 25,000 agents in building over 450 code-generated 3D worlds. The experiment followed Anthropic's release of Claude Fable 5.2 and Claude Mythos 5.2.  
-  _5 source(s), 2 verified quote(s)_
+- **industry** — [Anthropic sends and retracts IPO filing pricing details to bankers](https://techmeme.com/261109/p48)  
+  Anthropic sent bankers a copy of its IPO filing showing plans to raise up to ~$69B, then followed up stating the pricing details were inaccurate. The details were retracted according to emails seen by Reuters.  
+  _3 source(s), 0 verified quote(s)_
+- **voices** — [Anthropic releases Claude Fable and Mythos 5.2 models](https://bsky.app/profile/emollick.bsky.social/post/3mzwjwceb622e)  
+  Anthropic released Claude Fable 5.2 and Claude Mythos 5.2, upgrading models designed for complex technical challenges with improvements in coding, reasoning, and vision. Fable 5.2 is available immediately to all users, while Mythos 5.2 is restricted to vetted organizations.  
+  _4 source(s), 1 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- A year after the 100% AI mandate nobody understands our code — score 3: Anecdotally framed discussion on code maintainability under AI mandates, lacks substantive news value.
-- TPU 8tx and TPU 8i Max — duplicate of 9c262d9ec406
-- CUI – Native UI components for C — not AI: CUI native UI components for C has no AI angle.
-- Jensen Huang reportedly engaged a PR firm with a history of handling high-profile sex scandals a year ago — duplicate of 88cba1275d52
-- A short seller flagged Nvidia CEO’s ties to a suspected Chinese spy six months before the scandal — duplicate of 88cba1275d52
-- The race is on to sue Nvidia — duplicate of 88cba1275d52
-- What could China get from Jensen Huang? — duplicate of 88cba1275d52
-- Here’s what Trump said he knew about Jensen Huang — duplicate of 88cba1275d52
-- Everything we know so far about the Nvidia spy scandal targeting CEO Jensen Huang — duplicate of 88cba1275d52
-- llm-anthropic 0.31 — score 4: Minor tool update supporting newly released models rather than a distinct frontier development.
-- Locating the source of a mysterious beep with Claude — score 3: A personal anecdote and light usage of an AI model to find a household noise, routine commentary.
-- Take-Two reiterates FY 2027 outlook, says Q2 total net bookings fell 18% YoY to $1.6B, vs. $1.65B est., and NBA 2K27 missed sales forecast partly due to GTA VI (Jason Schreier/Bloomberg) — not AI: Take-Two earnings report and video game sales performance are not AI news.
-- A report by short seller Culper Research from May is resurfacing because it had flagged Jensen Huang's relationship with Alice Huang as "uncomfortably close" (Sarah Perez/TechCrunch) — duplicate of 88cba1275d52
-- Apple is now offering additional AI access via one-time $50 "intelligence usage packs" when monthly usage caps are met, starting in its Creator Studio apps (Ryan Christoffel/9to5Mac) — duplicate of b54a5923f7fe
-- Trump says the FBI is "looking into" Jensen Huang's affair, and the Nvidia CEO told him he "had absolutely no idea that the person in question was a spy" (Associated Press) — duplicate of 88cba1275d52
-- Anthropic Introduces New Fable 5.2 and Mythos 5.2 AI Models — duplicate of 56a49980686e
-- Anthropic releases Claude Fable 5.2 and Mythos 5.2, pairing new, record-high benchmarks with 20% API cost reduction — duplicate of 56a49980686e
-- Claude Fable 5.2 takes first place on Artificial Analysis’ AA-3D benchmark — duplicate of 56a49980686e
-- Claude Fable 5.2 and Mythos 5.2 are here to raise the bar for AI coding and scientific research — duplicate of 56a49980686e
-- Claude Fable 5.2 Released, API Unit Price Down 20%—Conditions for 'About Half the Cost per Task' Despite Being Twice the Price of Opus 5.5, and Trial Access Until November 16 — duplicate of 56a49980686e
-- Anthropic Launches Claude Fable 5.2 and Mythos 5.2 — duplicate of 56a49980686e
-- Google Gemini routes personal Drive files and emails to human annotators — could not verify yet after a second try; dropped
-- The backlash about data centers might really just be about electricity — could not verify yet after a second try; dropped
-- The same H100 costs $2.69 or $12.29 an hour depending where you rent it — could not verify yet after a second try; dropped
-- David Ellison says AI could be the ‘biggest creative unlock in modern history’ — could not verify yet; will retry next run
+- Fun things to do with your VM/370 CE machine – Fun with big computers — not AI: Retrocomputing hobbyist post with no AI relevance.
+- David Ellison says AI could be the ‘biggest creative unlock in modern history’ — score 5: General executive commentary on AI's impact on entertainment from a studio CEO; routine corporate statements.
+- Mphasis Raises FY27 Growth Outlook After 9.2% Dollar Revenue Growth in Q2 — score 5: Quarterly financial results and revenue growth for an IT services firm with mention of AI deal share, but not a dedicated AI news development.
+- Australia to mandate AI breach reporting, create regulator after OpenAI breach — score 8: Covered by already published story dd32b92b727a.
+- AI demand unlikely to be derailed by Nvidia CEO controversy: Taiwan supply chain executives — score 4: Rehashes earlier coverage about Taiwan supply chain views on the Nvidia executive controversy.
+- Australia to adopt 'mandatory' AI safeguards — score 7: Covered by already published story dd32b92b727a.
+- US sues Lyft, alleges discrimination against disabled riders — not AI: General DOJ lawsuit against Lyft for disability discrimination, no AI relevance.
+- Anthropic unveils new Fable, Mythos models as competition heats up ahead of IPO — score 6: Covers Anthropic's new Fable and Mythos 5.2 model releases in relation to its IPO plans, but already covered by earlier model release and IPO items.
+- Nvidia probes whether foreign intelligence targeted Jensen Huang — score 8: Duplicate of earlier story covering the Nvidia CEO investigation (e.g., id=88cba1275d52).
+- How Indian enterprises are building smarter AI - powered business operations — score 3: Generic enterprise adoption listicle without specific news or significant reporting.
+- Trump : FBI Probes Nvidia CEO Jensen Huang Affair with Chinese Spy — score 4: Rehash of the Nvidia CEO affair investigation story.
+- Meet James Bigg , 16 - year - old Australian who enters Guinness World Records as world youngest male software engineer , develops life - saving AI technology — score 3: Human-interest profile of a young software engineer developing AI tech, lacking substantive technical or industry news value.
+- Nvidia , CEO Jensen Huang sued over disclosures related to suspected Chinese spy — score 6: Class-action lawsuit filed against Nvidia and its CEO regarding disclosures of the suspected spy incident, adding a legal angle to an existing story.
+- California voters reject Proposition 40, which would have imposed a one-time 5% tax on residents with a net worth above $1B to mostly help fund health care (Associated Press) — not AI: General ballot proposition about billionaire wealth taxes, not specifically AI policy or funding.
+- Trump Media Q3: $409.7M profit fueled by gains on digital assets, vs. a Q3 2025 $54.8M loss, and sales of $3M, $1.8M from subscriptions like Truth API, Truth+ (Elias Schisgall/Wall Street Journal) — score 4: Trump Media earnings report, with minor mention of Truth API and subscriptions; primarily general corporate and digital asset news.
+- NVIDIA's Jensen Huang and China: Timeline as CEO faces scrutiny over affair — not AI: Duplicate or rehash of the Jensen Huang investigation story already published (e.g. 88cba1275d52).
+- Nvidia Board Investigates Jensen Huang After Report He Was Target of Chinese Spy Effort — not AI: Duplicate of the Jensen Huang investigation story already published (e.g. 88cba1275d52).
+- Trump says FBI is investigating Nvidia CEO Jensen Huang’s relationship with alleged Chinese spy — not AI: Duplicate of the Jensen Huang investigation story already published (e.g. 88cba1275d52).
+- Nvidia is investigating Jensen Huang. But its board may have no interest in challenging its leader — duplicate of 88cba1275d52
+- Huang’s Actions Prompt Nvidia Board to Launch Investigation. Here’s What Investors Need to Know. — duplicate of 88cba1275d52
+- Nvidia's stock slides as questions swirl around Jensen Huang's future as CEO — duplicate of 88cba1275d52
+- Anthropic IPO shock: why did the AI giant suddenly retract its pricing details? — score 4: Duplicate of Anthropic IPO pricing retraction story already published
+- Anthropic retracts details of $69 billion IPO filing sent to bankers. Why analysts are raising worries over valuations — score 4: Duplicate of Anthropic IPO pricing retraction story already published
+- Exclusive - Anthropic sends out, then retracts details of IPO filing, emails show — score 5: Duplicate of Anthropic IPO filing email retraction story already published
+- Anthropic IPO Price Range Retracted Hours After $69.3B Report — score 4: Duplicate of Anthropic IPO price range retraction story already published
+- Anthropic to Proceed with Up to 16 Trillion Yen IPO, Investor Roadshow Starts on the 10th, Reports Say — score 4: Duplicate of Anthropic IPO proceeding story already published
+- Anthropic’s Outside Counsel Sent Banks Wrong Documents Before Launching IPO — score 5: Duplicate of Anthropic outside counsel sending wrong IPO documents story already published
+- Anthropic reportedly plans to move forward with IPO plans — already covered (story f31245a34fce)
 
 </details>
 
 ### Sources with problems
 - `gdelt`: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out
-- `gdelt-india`: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out
 
 <details><summary>Research agent's work</summary>
 
-- Google Gemini routes personal Drive files and emails to human annotato: unconfirmed (searched “Google Gemini routes personal Drive files and emails to human annotators”; searched “Google Gemini human annotators Drive files emails”; searched “site:github.com/thisisme6598/gemini_files”)
-- Ethan Mollick: In one of my favorite experiments, I told Fable 5.2 to : confirmed (searched “Ethan Mollick Fable 5.2 endless 3D worlds portals”; searched “Anthropic Claude Fable 5.2”)
-- The backlash about data centers might really just be about electricity: unconfirmed (searched “MIT Technology Review The backlash about data centers might really just be about electricity”; searched “MIT Technology Review data centers electricity Ashburn Virginia”; searched “"The backlash about data centers might really just be about electricity"”)
-- The same H100 costs $2.69 or $12.29 an hour depending where you rent i: unconfirmed (searched “H100 costs $2.69 or $12.29 an hour”; searched “datareceipts gpu pricing H100”; searched “H100 GPU rental prices $2.69 $12.29”)
-- David Ellison says AI could be the ‘biggest creative unlock in modern : unconfirmed (searched “David Ellison AI Paramount Skydance earnings call”; read msn.com; searched “"biggest creative unlock" AI Ellison”; searched “"David Ellison" AI "creative unlock"”)
+- Emails: Anthropic sent bankers a copy of its IPO filing showing plans : confirmed (searched “Anthropic IPO filing bankers Echo Wang Reuters”; read msn.com; read techcrunch.com)
+- Ethan Mollick: Looks like Fable 5.2 is above the already steep trendli: confirmed (searched “Ethan Mollick Fable 5.2”; read anthropic.com; read theverge.com)
 
 </details>
 
 ### Notes
-- 1 kept item(s) carried over to the next run
-- gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model
-- gemini: network error ReadTimeout, retrying
-- gemini: unreachable (ReadTimeout); skipping provider
-- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- ignored made-up duplicate id 9798aa740a48 for 'Anthropic IPO shock: why did the AI giant suddenly'
+- ignored made-up duplicate id 9798aa740a48 for 'Anthropic retracts details of $69 billion IPO fili'
+- ignored made-up duplicate id 9798aa740a48 for 'Exclusive - Anthropic sends out, then retracts det'
+- ignored made-up duplicate id 9798aa740a48 for 'Anthropic IPO Price Range Retracted Hours After $6'
+- ignored made-up duplicate id 6289435bdbbd for 'Anthropic to Proceed with Up to 16 Trillion Yen IP'
+- ignored made-up duplicate id 9798aa740a48 for 'Anthropic’s Outside Counsel Sent Banks Wrong Docum'
