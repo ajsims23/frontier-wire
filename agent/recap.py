@@ -349,16 +349,62 @@ def _pixabay(http: Any, q: str, key: str) -> list[dict[str, Any]]:
     return out
 
 
+UA = "FrontierWire/1.0 (https://ajsims23.github.io/frontier-wire/; recap bot)"
+FREE_LICENSES = re.compile(r"^(cc0|public domain|pd|cc by \d(\.\d)?|cc-by-\d(\.\d)?)$", re.I)
+
+
+def _commons(http: Any, q: str, key: str = "") -> list[dict[str, Any]]:
+    """Candidate clips from Wikimedia Commons (no key). Only public domain, CC0 or CC BY (attribution, no share-alike),
+    and only the site's own 720p/1080p transcodes, so we never pull a huge original."""
+    r = http.get("https://commons.wikimedia.org/w/api.php", headers={"User-Agent": UA}, params={
+        "action": "query", "format": "json", "generator": "search", "gsrnamespace": 6, "gsrlimit": 20,
+        "gsrsearch": f"{q} filetype:video", "prop": "videoinfo",
+        "viprop": "url|size|mediatype|extmetadata|derivatives"})
+    r.raise_for_status()
+    out = []
+    for page in ((r.json().get("query") or {}).get("pages") or {}).values():
+        info = (page.get("videoinfo") or [{}])[0]
+        meta = info.get("extmetadata") or {}
+        lic = re.sub(r"\s+", " ", ((meta.get("LicenseShortName") or {}).get("value") or "")).strip()
+        if not FREE_LICENSES.match(lic):
+            continue
+        dur = info.get("duration")
+        if dur is not None and not 6 <= float(dur) <= 900:
+            continue
+        ders = [d for d in info.get("derivatives") or [] if 700 <= (d.get("height") or 0) <= 1080
+                and (d.get("width") or 0) >= 1200 and str(d.get("src", "")).startswith("https://upload.wikimedia.org/")]
+        if not ders:
+            continue
+        d = min(ders, key=lambda d: d.get("height") or 0)
+        artist = re.sub(r"<[^>]+>", "", (meta.get("Artist") or {}).get("value") or "").strip()
+        out.append({"id": f"wc{page.get('pageid')}", "link": d["src"], "name": (artist or "Wikimedia Commons")[:60],
+                    "url": info.get("descriptionurl") or "https://commons.wikimedia.org", "provider": f"Wikimedia Commons, {lic}",
+                    "ffmpeg": True})
+    return out
+
+
+def _download(http: Any, c: dict[str, Any], dest: Path) -> None:
+    if c.get("ffmpeg"):  # read only the first 15 seconds of the stream and re-encode to MP4
+        _run(["ffmpeg", "-v", "error", "-y", "-user_agent", UA, "-t", "15", "-i", c["link"], "-an", "-c:v", "libx264",
+              "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", str(dest)], timeout=180)
+        if _duration(dest) < 5:
+            raise RuntimeError("clip too short")
+        return
+    with http.stream("GET", c["link"]) as dl:
+        dl.raise_for_status()
+        with dest.open("wb") as fh:
+            for chunk in dl.iter_bytes():
+                fh.write(chunk)
+
+
 def fetch_footage(script: dict[str, Any], out: Path, pexels_key: str = "", pixabay_key: str = "") -> list[str]:
     """Run in GitHub Actions: one free stock clip per story, from Pexels and/or Pixabay (whichever keys exist), searched
     by the editor's `footage` query, else a query for the story's beat. Saves out/<i>.mp4 and out/credits.json.
     Failures are reported; that story falls back to the AI illustration."""
     import httpx
     out.mkdir(parents=True, exist_ok=True)
-    sources = [(fn, k) for fn, k in ((_pexels, pexels_key), (_pixabay, pixabay_key)) if k]
-    if not sources:
-        (out / "credits.json").write_text("[]")
-        return ["no PEXELS_API_KEY or PIXABAY_API_KEY: no stock footage today"]
+    # Pexels / Pixabay when their keys exist; Wikimedia Commons (no key) always, as the last resort
+    sources = [(fn, k) for fn, k in ((_pexels, pexels_key), (_pixabay, pixabay_key)) if k] + [(_commons, "")]
     notes, used, credits = [], set(), []
     with httpx.Client(timeout=60, follow_redirects=True) as http:
         for i, st in enumerate(script["stories"], 1):
@@ -366,22 +412,26 @@ def fetch_footage(script: dict[str, Any], out: Path, pexels_key: str = "", pixab
             try:
                 cands, errs = [], []
                 for fn, k in sources:
+                    if cands and fn is _commons:
+                        break  # a stock library had something; Commons is only the fallback
                     try:
                         cands += [c for c in fn(http, q, k) if c["id"] not in used][:4]
                     except Exception as exc:  # noqa: BLE001
                         errs.append(f"{fn.__name__[1:]}: {str(exc)[:80]}")
                 if not cands:
                     raise RuntimeError(f"no usable clip for {q!r}" + (f" ({'; '.join(errs)})" if errs else ""))
-                c = random.Random(st["id"]).choice(cands)
+                random.Random(st["id"]).shuffle(cands)
                 dest = out / f"{i}.mp4"
-                with http.stream("GET", c["link"]) as dl:
-                    dl.raise_for_status()
-                    with dest.open("wb") as fh:
-                        for chunk in dl.iter_bytes():
-                            fh.write(chunk)
-                if not usable_clip(dest):
+                for c in cands[:3]:  # try a few before giving up on this story
+                    try:
+                        _download(http, c, dest)
+                        if usable_clip(dest):
+                            break
+                    except Exception as exc:  # noqa: BLE001
+                        errs.append(f"{c['id']}: {str(exc)[:80]}")
                     dest.unlink(missing_ok=True)
-                    raise RuntimeError("downloaded clip does not decode")
+                else:
+                    raise RuntimeError("no clip downloaded (" + "; ".join(errs[-3:]) + ")")
                 used.add(c["id"])
                 credits.append({"story": i, "name": c["name"] or f"{c['provider']} contributor", "url": c["url"], "provider": c["provider"]})
             except Exception as exc:  # noqa: BLE001
@@ -1110,7 +1160,7 @@ def site_view(recaps: list[dict[str, Any]], now: datetime, base: str, repo: str,
             "entries": [{**s, "href": f"story/{s['id']}/" if s["id"] in story_ids else "",
                          "video": videos.get(s["id"]) if VIDEO_ID.match((videos.get(s["id"]) or {}).get("id") or "") else None}
                         for s in r["stories"]],
-            "footage": [c for c in r.get("footage_credits") or [] if str(c.get("url", "")).startswith(("https://www.pexels.com/", "https://pixabay.com/"))],
+            "footage": [c for c in r.get("footage_credits") or [] if str(c.get("url", "")).startswith(("https://www.pexels.com/", "https://pixabay.com/", "https://commons.wikimedia.org/"))],
         })
     return rows
 

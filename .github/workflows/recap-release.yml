@@ -49,7 +49,7 @@ jobs:
           RECAP_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
         run: RECAP_API="$(cat config/api_url.txt)" python -m agent recap images --date "$DATE" --out "_recap/$DATE"
 
-      - name: Stock footage (free Pixabay / Pexels clips; skipped until PIXABAY_API_KEY or PEXELS_API_KEY exists)
+      - name: Stock footage (Pixabay / Pexels when their keys exist, else free-licence Wikimedia Commons clips)
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}

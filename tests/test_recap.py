@@ -154,3 +154,24 @@ def test_site_view_attaches_lab_videos_and_footage_credits():
     assert rows[0]["entries"][0]["video"]["id"] == "abcdefghijk"
     assert rows[0]["entries"][1]["video"] is None
     assert [c["name"] for c in rows[0]["footage"]] == ["A Person"]
+
+
+def test_commons_keeps_only_free_licences_and_transcodes():
+    class R:
+        def __init__(self, d): self.d = d
+        def raise_for_status(self): pass
+        def json(self): return self.d
+
+    def page(pid, lic, h=720):
+        return {"pageid": pid, "videoinfo": [{"duration": 30, "descriptionurl": f"https://commons.wikimedia.org/wiki/File:{pid}.webm",
+                "extmetadata": {"LicenseShortName": {"value": lic}, "Artist": {"value": "<a href='x'>Jo Bloggs</a>"}},
+                "derivatives": [{"src": f"https://upload.wikimedia.org/t/{pid}.{h}p.webm", "width": 1280, "height": h}]}]}
+
+    class H:
+        def get(self, *a, **k):
+            return R({"query": {"pages": {"1": page(1, "CC BY 4.0"), "2": page(2, "CC BY-SA 4.0"), "3": page(3, "Public domain"),
+                                          "4": page(4, "CC0", h=360)}}})
+
+    got = recap._commons(H(), "data center")
+    assert [c["id"] for c in got] == ["wc1", "wc3"]
+    assert got[0]["name"] == "Jo Bloggs" and got[0]["provider"] == "Wikimedia Commons, CC BY 4.0"
