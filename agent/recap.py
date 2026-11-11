@@ -379,7 +379,12 @@ def _commons(http: Any, q: str, key: str = "") -> list[dict[str, Any]]:
         "viprop": "url|size|mediatype|extmetadata|derivatives"})
     r.raise_for_status()
     out = []
+    words = [w[:5] for w in re.findall(r"[a-z]+", q.lower()) if len(w) > 2]
+    need = min(2, len(words))
     for page in ((r.json().get("query") or {}).get("pages") or {}).values():
+        title = (page.get("title") or "").lower()
+        if sum(w in title for w in words) < need:  # Commons search also matches descriptions; insist on the title
+            continue
         info = (page.get("videoinfo") or [{}])[0]
         meta = info.get("extmetadata") or {}
         lic = re.sub(r"\s+", " ", ((meta.get("LicenseShortName") or {}).get("value") or "")).strip()
@@ -432,10 +437,7 @@ def fetch_footage(script: dict[str, Any], out: Path, pexels_key: str = "", pixab
                     if cands and fn is _commons:
                         break  # a stock library had something; Commons is only the fallback
                     try:
-                        for qq in dict.fromkeys([q, " ".join(q.split()[:2])]):  # a shorter query if the full one finds nothing
-                            cands += [c for c in fn(http, qq, k) if c["id"] not in used][:4]
-                            if cands:
-                                break
+                        cands += [c for c in fn(http, q, k) if c["id"] not in used][:4]
                     except Exception as exc:  # noqa: BLE001
                         errs.append(f"{fn.__name__[1:]}: {str(exc)[:80]}")
                 if not cands:

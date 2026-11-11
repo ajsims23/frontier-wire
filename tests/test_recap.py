@@ -164,7 +164,7 @@ def test_commons_keeps_only_free_licences_and_transcodes():
         def json(self): return self.d
 
     def page(pid, lic, h=720):
-        return {"pageid": pid, "videoinfo": [{"duration": 30, "descriptionurl": f"https://commons.wikimedia.org/wiki/File:{pid}.webm",
+        return {"pageid": pid, "title": f"File:Data center tour {pid}.webm", "videoinfo": [{"duration": 30, "descriptionurl": f"https://commons.wikimedia.org/wiki/File:{pid}.webm",
                 "extmetadata": {"LicenseShortName": {"value": lic}, "Artist": {"value": "<a href='x'>Jo Bloggs</a>"}},
                 "derivatives": [{"src": f"https://upload.wikimedia.org/t/{pid}.{h}p.webm", "width": 1280, "height": h}]}]}
 
@@ -175,4 +175,5 @@ def test_commons_keeps_only_free_licences_and_transcodes():
 
     got = recap._commons(H(), "data center")
     assert [c["id"] for c in got] == ["wc1", "wc3"]
+    assert recap._commons(H(), "stock market screens") == []  # titles don't match: no clip rather than a wrong one
     assert got[0]["name"] == "Jo Bloggs" and got[0]["provider"] == "Wikimedia Commons, CC BY 4.0"
