@@ -40,7 +40,12 @@ HOOK_S, STORY_S, OUTRO_S = 5.0, 10.0, 4.0   # 5s open, 10s per story, 4s close: 
 MIN_S, MAX_S = 55, 70
 SOFT = (179, 207, 203)
 PANEL = (10, 31, 34)
-LIMITS = {"hook": 64, "line": 72, "detail": 120, "summary": 150, "say": 110, "footage": 80}
+LIMITS = {"hook": 64, "line": 72, "detail": 120, "summary": 150, "say": 110, "footage": 80,
+          "open": 90, "anchor": 160, "close": 70}
+# The anchor's read: ~13 spoken characters a second for Aura-2 at a newsreader's pace, so the whole bulletin
+# (open + five stories + close) must stay under this many characters to land at about a minute.
+SPOKEN_BUDGET = 740
+CPS = 12.5
 VOICE_LEAD = {"hook": 0.35, "story": 0.3, "outro": 0.2}   # seconds into a scene before the voice starts
 VOICE_TAIL = {"hook": 0.35, "story": 0.45, "outro": 0.3}  # quiet after it, before the scene changes
 OUTRO_SAY = "That's the day in AI. Full stories at Frontier Wire."
@@ -150,18 +155,35 @@ def validate(script: dict[str, Any]) -> list[str]:
                 errs.append(f"story {i}: {key} must be 1-{LIMITS[key]} characters (has {len(v)})")
         if not (s.get("source") or "").strip():
             errs.append(f"story {i}: no source")
-        for key in ("say", "footage"):
+        anchor = (s.get("anchor") or "").strip()
+        if anchor:
+            if len(anchor) < 70:
+                errs.append(f"story {i}: anchor copy is too thin (at least 70 characters: what happened, context, why it matters)")
+            if _similar(anchor, s.get("line", "")) >= 0.6 or _similar(anchor, (s.get("line", "") + " " + s.get("detail", ""))) >= 0.75:
+                errs.append(f"story {i}: anchor copy just repeats the on-screen text; tell the story in your own words with context")
+        for key in ("say", "footage", "anchor"):
             if len((s.get(key) or "").strip()) > LIMITS[key]:
                 errs.append(f"story {i}: {key} must be at most {LIMITS[key]} characters")
         if len(s.get("image_prompt") or "") > 300:
             errs.append(f"story {i}: image_prompt must be at most 300 characters")
         originals = [s.get("headline", "")] + list(s.get("source_titles") or [])
-        for key in ("line", "detail", "say"):
+        for key in ("line", "detail", "say", "anchor"):
             v = s.get(key) or ""
             for o in originals if v else []:
                 if o and (_similar(v, o) >= 0.72 or _copied_run(v, o)):
                     errs.append(f"story {i}: {key} is too close to a published headline; paraphrase it")
                     break
+    for key in ("open", "close"):
+        if len((script.get(key) or "").strip()) > LIMITS[key]:
+            errs.append(f"{key} must be at most {LIMITS[key]} characters")
+    anchors = [(st.get("anchor") or "").strip() for st in script.get("stories") or []]
+    if any(anchors) and not all(anchors):
+        errs.append("write anchor copy for every story, or for none")
+    if all(anchors) and anchors:
+        total = sum(len(t) for k, t in narration(script))
+        if total > SPOKEN_BUDGET:
+            errs.append(f"the spoken bulletin is {total} characters (about {total / CPS:.0f}s); cut it to {SPOKEN_BUDGET} "
+                        f"(about {SPOKEN_BUDGET / CPS:.0f}s) so it stays within a minute")
     return errs
 
 
@@ -172,6 +194,8 @@ _UNITS = {"B": "billion", "M": "million", "K": "thousand", "T": "trillion"}
 def spoken(text: str) -> str:
     """On-screen shorthand read the way a newsreader would say it."""
     t = text.strip()
+    if not t:
+        return ""
     t = re.sub(r"\$(\d+(?:\.\d+)?)\s?([BMKT])\b", lambda m: f"{m.group(1)} {_UNITS[m.group(2)]} dollars", t)
     t = re.sub(r"(\d+(?:\.\d+)?)\s?([BMKT])\b", lambda m: f"{m.group(1)} {_UNITS[m.group(2)]}", t)
     t = re.sub(r"\$(\d+(?:\.\d+)?)", r"\1 dollars", t)
@@ -183,8 +207,17 @@ def spoken(text: str) -> str:
 def narration(script: dict[str, Any]) -> list[tuple[str, str]]:
     """What the voice reads: (file name, text). Each story is two files, the line (story<i>) and the detail
     (story<i>d); the render reads both when they fit in the minute, else the lines alone."""
+    stories = script.get("stories") or []
+    if all((st.get("anchor") or "").strip() for st in stories) and stories:
+        # the anchor's bulletin: an opening, each story told in the anchor's own words, a sign-off
+        out = [("hook", spoken((script.get("open") or "").strip() or "Good evening. This is Frontier Wire."))]
+        for i, st in enumerate(stories, 1):
+            out.append((f"story{i}", spoken(st["anchor"])))
+            out.append((f"story{i}d", ""))
+        out.append(("outro", spoken((script.get("close") or "").strip() or OUTRO_SAY)))
+        return out
     out = [("hook", spoken("This is Frontier Wire. " + script["hook"]))]
-    for i, st in enumerate(script["stories"], 1):
+    for i, st in enumerate(stories, 1):
         out.append((f"story{i}", spoken((st.get("say") or "").strip() or st["line"])))
         out.append((f"story{i}d", spoken(st["detail"])))
     out.append(("outro", OUTRO_SAY))
@@ -195,7 +228,7 @@ def compose_voice(vc: dict[str, tuple[Path, float]], n: int, with_detail: bool, 
     """One clip per scene (hook, story1..n, outro): each story's line, then (with_detail) a short pause and its detail."""
     out = {"hook": vc["hook"], "outro": vc["outro"]}
     for i in range(1, n + 1):
-        if not with_detail:
+        if not with_detail or f"story{i}d" not in vc:
             out[f"story{i}"] = vc[f"story{i}"]
             continue
         f = work / f"story{i}.full.wav"
@@ -217,7 +250,9 @@ def voice_clips(script: dict[str, Any], voice_dir: Path | None) -> dict[str, tup
     if not voice_dir or not voice_dir.exists():
         return {}
     out = {}
-    for key, _ in narration(script):
+    for key, text in narration(script):
+        if not text:
+            continue
         f = voice_dir / f"{key}.mp3"
         try:
             out[key] = (f, _duration(f))
@@ -469,6 +504,8 @@ def fetch_voice(script: dict[str, Any], out: Path, api: str, secret: str) -> lis
     out.mkdir(parents=True, exist_ok=True)
     notes = []
     for key, text in narration(script):
+        if not text:
+            continue
         try:
             r = httpx.post(f"{api.rstrip('/')}/api/recap/voice", json={"text": text}, timeout=90,
                            headers={"Authorization": f"Bearer {secret}"})

@@ -73,6 +73,7 @@ motion-graphics video: `python -m agent recap draft | render | upload` (see `age
 - Each story plays over a free **Pexels** stock clip (search query from the script's `footage` field, else the story's beat),
   falling back to an AI illustration, then a drawn one. Needs the repo secret `PEXELS_API_KEY` (free key from
   pexels.com/api, no card); without it the recap uses illustrations. Clips are credited on screen and on the recap page.
+- The script has an anchor bulletin (`open`, a 20-25 word `anchor` per story with context and why it matters, `close`), capped at about a minute; the voice reads that, not the on-screen text.
 - An **AI voice** (Deepgram Aura-2 on Workers AI, via `/api/recap/voice` on the worker; MeloTTS as fallback) reads the hook and
   each story's line (or its optional `say` field). Scenes stretch to fit the voice and stay within 55-70 seconds (the details are dropped from the voice if they would run longer); if the
   narration can't fit or the worker is unreachable, the video publishes silent.

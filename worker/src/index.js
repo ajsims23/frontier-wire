@@ -33,8 +33,8 @@ export function imagePrompt(p) {
 // Recap narration: Deepgram Aura-2 on Workers AI (about 2,700 neurons per 1,000 characters; a recap is ~450
 // characters, so ~1,200 of the free 10,000 a day), MeloTTS as the fallback.
 const VOICES_PER_DAY = 40;
-const VOICE = "orion";   // a calm male newsreader voice
-const VOICES = ["orion", "thalia", "apollo", "athena", "arcas", "luna", "zeus", "helena", "odysseus", "hermes"];
+const VOICE = "draco";   // British male, warm baritone: closest to a BBC newsreader
+const VOICES = ["draco", "pandora", "orion", "thalia", "apollo", "athena", "arcas", "luna", "zeus", "helena", "odysseus", "hermes"];
 
 export function voiceText(t) {
   return String(t || "").replace(/[\u0000-\u001f<>]/g, " ").replace(/\s+/g, " ").trim().slice(0, 400);

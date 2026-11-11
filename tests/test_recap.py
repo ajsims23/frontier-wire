@@ -177,3 +177,34 @@ def test_commons_keeps_only_free_licences_and_transcodes():
     assert [c["id"] for c in got] == ["wc1", "wc3"]
     assert recap._commons(H(), "stock market screens") == []  # titles don't match: no clip rather than a wrong one
     assert got[0]["name"] == "Jo Bloggs" and got[0]["provider"] == "Wikimedia Commons, CC BY 4.0"
+
+
+def _anchored():
+    script = _published()
+    script["open"] = "Good evening, this is Frontier Wire."
+    script["close"] = "That's the day in AI."
+    for i, st in enumerate(script["stories"]):
+        st["anchor"] = f"In story {i}, regulators and investors are watching closely, because the change reaches well beyond one company."
+    return script
+
+
+def test_anchor_bulletin_is_what_the_voice_reads():
+    script = _anchored()
+    assert recap.validate(script) == []
+    said = dict(recap.narration(script))
+    assert said["hook"] == "Good evening, this is Frontier Wire."
+    assert said["story1"].startswith("In story 0") and said["story1d"] == ""
+    assert said["outro"] == "That's the day in AI."
+
+
+def test_anchor_copy_must_fit_the_minute_and_add_something():
+    script = _anchored()
+    script["stories"][0]["anchor"] = script["stories"][0]["line"]
+    assert any("repeats the on-screen text" in e or "too thin" in e for e in recap.validate(script))
+    script = _anchored()
+    for st in script["stories"]:
+        st["anchor"] = "x " * 79
+    assert any("within a minute" in e for e in recap.validate(script))
+    script = _anchored()
+    script["stories"][1]["anchor"] = ""
+    assert "write anchor copy for every story, or for none" in recap.validate(script)
