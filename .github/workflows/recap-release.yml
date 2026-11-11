@@ -41,8 +41,17 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Install ffmpeg
-        run: command -v ffprobe || { sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null; }
+      - name: Install ffmpeg (static build from GitHub; apt as the fallback)
+        timeout-minutes: 6
+        run: |
+          command -v ffprobe && exit 0
+          url=https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz
+          if curl -fsSL --retry 3 --max-time 180 "$url" -o /tmp/ff.tar.xz && tar -xJf /tmp/ff.tar.xz -C /tmp; then
+            sudo cp /tmp/ffmpeg-master-latest-linux64-gpl/bin/ffmpeg /tmp/ffmpeg-master-latest-linux64-gpl/bin/ffprobe /usr/local/bin/
+          else
+            sudo timeout 240 apt-get update -qq && sudo timeout 240 apt-get install -y -qq ffmpeg >/dev/null
+          fi
+          ffmpeg -version | head -1
 
       - name: AI illustrations (Workers AI; a story without one gets the drawn illustration)
         env:
