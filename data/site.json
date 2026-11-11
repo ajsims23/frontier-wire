@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T15:17:52+00:00",
+  "updated_at": "2026-11-11T16:06:18+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Networks operating in Singapore and China have helped Chinese tech companies access advanced U.S. artificial intelligence chips and bypass export restrictions. Megaspeed, a Singapore-based AI infrastructure company, purchased $4.8 billion in Nvidia chips over two years, while its executive Alice Huang and her family built a network of companies to acquire chips.",
@@ -100,6 +100,110 @@
   "stories": [
     {
       "explainer": {
+        "what_it_means": "Anthropic says it runs its Claude models on four different chip families rather than one, which it argues lowers costs and builds a hard-to-copy advantage. It also says its internal tool called Mythos ported Claude to AMD GPUs in three days. These claims appear in a video released as part of its IPO marketing.",
+        "terms": [
+          {
+            "term": "Compute multiplier",
+            "meaning": "A factor that lets a model be trained or run using less physical compute than it would otherwise need."
+          },
+          {
+            "term": "Kernels",
+            "meaning": "The small software programs that run the heavy math of a model on a specific chip."
+          },
+          {
+            "term": "Inference",
+            "meaning": "The process of running a trained model to answer users, as opposed to training it."
+          }
+        ],
+        "watch_next": [
+          "Anthropic's Nasdaq debut before Thanksgiving"
+        ]
+      },
+      "audiences": {
+        "builders": "Anthropic says it now trains and serves Claude across AWS Trainium, Google TPUs, NVIDIA GPUs and AMD GPUs, and that its Mythos tool ported Claude to AMD in three days.",
+        "business": "Anthropic is marketing its IPO with a roadshow video that details its multi-chip compute strategy and claims of compounding compute multipliers.",
+        "investors": "The roadshow video, released as Anthropic's IPO marketing begins, lays out the compute strategy and efficiency claims underpinning its business case."
+      },
+      "id": "6734a79295b9",
+      "headline": "Anthropic's IPO roadshow video details multi-chip strategy and compute multipliers",
+      "summary": "Simon Willison published a transcript of Anthropic's IPO roadshow video, which includes a section with co-founder Tom Brown on how Anthropic trains and serves Claude across AWS Trainium, Google TPUs, NVIDIA GPUs and AMD GPUs. The video also describes \"compute multipliers\" and says an internal tool called Mythos ported Claude to AMD GPUs in three days.",
+      "why_it_matters": "The roadshow video gives a rare look at how Anthropic structures its compute across four chip families and how it frames efficiency gains as a competitive moat ahead of its Nasdaq debut.",
+      "category": "voices",
+      "lab": "Anthropic",
+      "model_name": "Claude",
+      "model_type": "Language",
+      "tags": [
+        "Anthropic",
+        "IPO",
+        "compute",
+        "multi-chip",
+        "roadshow"
+      ],
+      "quotes": [
+        {
+          "text": "We train and serve Claude now across all four major chip families.",
+          "speaker": "Tom Brown",
+          "speaker_role": "Anthropic co-founder",
+          "source_url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow"
+        },
+        {
+          "text": "It got Claude running on AMD in just three days, with basically no human intervention.",
+          "speaker": "Tom Brown",
+          "speaker_role": "Anthropic co-founder",
+          "source_url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow"
+        }
+      ],
+      "score": 7,
+      "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
+      "source_id": "simon-willison",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
+          "publisher": "Simon Willison",
+          "title": "Anthropic's IPO roadshow video"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-11T15:11:59+00:00",
+      "created_at": "2026-11-11T16:06:18+00:00",
+      "thread": "t-a50b07bc6191",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "us"
+      ],
+      "deal": {
+        "type": "ipo",
+        "company": "Anthropic",
+        "amount": "",
+        "usd": null
+      },
+      "relevance": {
+        "builders": 1,
+        "business": 2,
+        "investors": 3
+      },
+      "cover": "Mythos ported",
+      "trackers": [
+        "ai-infrastructure"
+      ],
+      "stock_tried": "2026-11-11T16:06:18+00:00",
+      "photo_local": true,
+      "image_kind": "stock",
+      "photo_credit": {
+        "key": "wc:130716095",
+        "by": "Mister rf",
+        "license": "CC BY-SA 4.0",
+        "page": "https://commons.wikimedia.org/wiki/File:HP_1813-0091_top_case_removed.jpg",
+        "via": "Wikimedia Commons"
+      }
+    },
+    {
+      "explainer": {
         "what_it_means": "AlphaGenome 2 is an AI model that predicts how DNA variations affect specific human cell types and cell states. Trained on more than 100 million individual cell profiles across 68 tissues, it helps researchers identify genetic variants that alter gene expression in individual cells.",
         "terms": [
           {
@@ -181,6 +285,107 @@
       "cover": "AlphaGenome 2",
       "trackers": [
         "frontier-race"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Formal verification uses mathematics to prove that software behaves exactly as specified. DeepMind’s AI framework generated and checked those proofs for parts of Signal’s encryption, confirming they work as intended. This reduces the manual effort normally required for such security audits.",
+        "terms": [
+          {
+            "term": "formal verification",
+            "meaning": "A method that uses mathematical proofs to ensure software follows its specification without critical bugs."
+          },
+          {
+            "term": "cryptographic guarantees",
+            "meaning": "The security properties (like confidentiality and integrity) that an encryption protocol promises to provide."
+          },
+          {
+            "term": "agentic AI",
+            "meaning": "An AI system that can act autonomously to perform tasks such as generating and checking proofs."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "The approach demonstrates how AI can automate parts of formal verification, potentially cutting development time for secure software.",
+        "business": "It gives companies that rely on Signal’s encryption an independent, mathematically backed assurance of its security.",
+        "investors": "The success highlights DeepMind’s capability to create AI tools for software assurance, a market with commercial potential."
+      },
+      "id": "4878c495cef5",
+      "headline": "Google DeepMind uses AI to formally verify key parts of Signal encryption",
+      "summary": "DeepMind researchers employed the AlphaProof Code framework and Gemini Carbon agents to mathematically prove several cryptographic guarantees of the Signal protocol in a four‑week proof‑of‑concept. The analysis found no new vulnerabilities and correctly flagged known, fixed bugs in older versions.",
+      "why_it_matters": "It shows AI can speed up formal verification, offering stronger assurance for the encryption that protects billions of messages.",
+      "category": "safety",
+      "lab": "Google DeepMind",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "formal verification",
+        "encryption",
+        "Signal",
+        "AI security",
+        "AlphaProof Code"
+      ],
+      "quotes": [
+        {
+          "text": "We are very excited by this result, but there is a long distance to go before we are able to scale this to all the software of the world, and we want to do that.",
+          "speaker": "Swarat Chaudhuri",
+          "speaker_role": "DeepMind research scientist",
+          "source_url": "https://wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol"
+        },
+        {
+          "text": "While prior formal verification focused on smaller portions of the code, Google DeepMind’s approach enables significant expansion.",
+          "speaker": "Ehren Kret",
+          "speaker_role": "Signal chief technology officer",
+          "source_url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup"
+        }
+      ],
+      "score": 7,
+      "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup",
+      "source_id": "ars-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://www.zdnet.com/wp-content/uploads/sites/3/GettyImages-2206371598.jpg",
+      "sources": [
+        {
+          "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup",
+          "publisher": "Ars Technica AI",
+          "title": "Google DeepMind just mathematically verified key parts of Signal"
+        },
+        {
+          "url": "https://zdnet.com/tech/google-deepmind-researchers-prove-signal-whatsapp-encryption-works",
+          "publisher": "ZDNET",
+          "title": "Google’s new AI tool just proved Signal encryption really works – here’s how"
+        },
+        {
+          "url": "https://wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol",
+          "publisher": "Wired",
+          "title": "A New AI Tool From Google DeepMind Proved the Signal Protocol Is Secure"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-11T14:08:57+00:00",
+      "created_at": "2026-11-11T16:06:18+00:00",
+      "sectors": [
+        "cybersecurity"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "AlphaProof Code",
+      "trackers": [
+        "agent-safety"
       ],
       "photo_local": true
     },
@@ -5543,164 +5748,45 @@
         "ai-infrastructure"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Anthropic sent bankers a copy of its IPO filing showing plans to raise up to ~$69 billion, and subsequently followed up to state that the pricing details were inaccurate.",
-        "terms": [],
-        "watch_next": []
-      },
-      "audiences": {
-        "business": "Anthropic sent bankers a copy of its IPO filing showing plans to raise up to ~$69B, then stated pricing details were inaccurate.",
-        "investors": "Anthropic sent bankers an IPO filing with pricing details before retracting them."
-      },
-      "id": "9798aa740a48",
-      "headline": "Anthropic sends and retracts IPO filing pricing details to bankers",
-      "summary": "Anthropic sent bankers a copy of its IPO filing showing plans to raise up to ~$69B, then followed up stating the pricing details were inaccurate. The details were retracted according to emails seen by Reuters.",
-      "why_it_matters": "It provides visibility into Anthropic's public listing process and financial disclosures.",
-      "category": "industry",
-      "lab": "Anthropic",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "Anthropic",
-        "IPO",
-        "Reuters"
-      ],
-      "quotes": [],
-      "score": 10,
-      "url": "https://techmeme.com/261109/p48",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": null,
-      "sources": [
-        {
-          "url": "https://techmeme.com/261109/p48",
-          "publisher": "techmeme.com",
-          "title": "Emails: Anthropic sent bankers a copy of its IPO filing showing plans to raise up to ~$69B, then followed up saying the pricing details were inaccurate (Echo Wang/Reuters)"
-        },
-        {
-          "url": "https://msn.com/en-us/money/investment/exclusive-anthropic-sends-out-then-retracts-details-of-ipo-filing-emails-show/ar-AA2h6B81",
-          "publisher": "Reuters on MSN",
-          "title": "Exclusive - Anthropic sends out, then retracts details of IPO filing, emails show"
-        },
-        {
-          "url": "https://shiftdelete.net/en/anthropic-ipo-price-range",
-          "publisher": "ShiftDelete.Net",
-          "title": "Anthropic IPO Price Range Retracted Hours After $69.3B Report"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-10T01:41:39+00:00",
-      "created_at": "2026-11-10T04:05:19+00:00",
-      "thread": "t-a50b07bc6191",
-      "sectors": [],
-      "regions": [
-        "global"
-      ],
-      "deal": {
-        "type": "ipo",
-        "company": "Anthropic",
-        "amount": "",
-        "usd": null
-      },
-      "relevance": {
-        "builders": 0,
-        "business": 3,
-        "investors": 3
-      },
-      "cover": "~$69B",
-      "trackers": [
-        "ai-money"
-      ],
-      "stock_tried": "2026-11-10T04:05:19+00:00",
-      "photo_local": true,
-      "image_kind": "stock",
-      "photo_credit": {
-        "key": "ov:773c3038-8876-4d8f-975d-9a4a967e04e6",
-        "by": "S.aderogba",
-        "license": "CC BY-SA 4.0",
-        "page": "https://commons.wikimedia.org/w/index.php?curid=82528018",
-        "via": "Wikimedia"
-      }
-    },
-    {
-      "explainer": {
-        "what_it_means": "Cogent and OpenAI are building cyber defense factories for enterprises by combining OpenAI models with enterprise context to automatically remediate vulnerabilities using agents.",
-        "terms": [],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Cogent combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents.",
-        "business": "Cogent and OpenAI build cyber defense factories for enterprises.",
-        "investors": "Cogent and OpenAI build cyber defense factories for enterprises using OpenAI models."
-      },
-      "id": "1ff74ee2cb10",
-      "headline": "Cogent and OpenAI build cyber defense factories for enterprises",
-      "summary": "Cogent and OpenAI are building cyber defense factories for enterprises. The system combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents.",
-      "why_it_matters": "This development shows how OpenAI models are being applied in enterprise security to automatically remediate vulnerabilities using agents.",
-      "category": "models",
-      "lab": "OpenAI",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "cyber defense",
-        "security",
-        "enterprise"
-      ],
-      "quotes": [],
-      "score": 9,
-      "url": "https://openai.com/index/cogent-security",
-      "source_id": "openai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": null,
-      "sources": [
-        {
-          "url": "https://openai.com/index/cogent-security",
-          "publisher": "OpenAI",
-          "title": "Cogent and OpenAI build cyber defense factories for enterprises"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 0,
-        "decision": "unconfirmed"
-      },
-      "published_at": "2026-11-10T00:00:00+00:00",
-      "created_at": "2026-11-11T07:31:43+00:00",
-      "thread": "t-639017e0393b",
-      "sectors": [
-        "cybersecurity",
-        "software"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": {
-        "type": "partnership",
-        "company": "OpenAI",
-        "amount": "",
-        "usd": null
-      },
-      "relevance": {
-        "builders": 3,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": "Cogent",
-      "trackers": [
-        "agent-safety"
-      ],
-      "stock_tried": "2026-11-11T07:31:43+00:00"
     }
   ],
   "voices": [
+    {
+      "text": "We train and serve Claude now across all four major chip families.",
+      "speaker": "Tom Brown",
+      "speaker_role": "Anthropic co-founder",
+      "source_url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
+      "story_id": "6734a79295b9",
+      "headline": "Anthropic's IPO roadshow video details multi-chip strategy and compute multipliers",
+      "published_at": "2026-11-11T15:11:59+00:00"
+    },
+    {
+      "text": "It got Claude running on AMD in just three days, with basically no human intervention.",
+      "speaker": "Tom Brown",
+      "speaker_role": "Anthropic co-founder",
+      "source_url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
+      "story_id": "6734a79295b9",
+      "headline": "Anthropic's IPO roadshow video details multi-chip strategy and compute multipliers",
+      "published_at": "2026-11-11T15:11:59+00:00"
+    },
+    {
+      "text": "We are very excited by this result, but there is a long distance to go before we are able to scale this to all the software of the world, and we want to do that.",
+      "speaker": "Swarat Chaudhuri",
+      "speaker_role": "DeepMind research scientist",
+      "source_url": "https://wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol",
+      "story_id": "4878c495cef5",
+      "headline": "Google DeepMind uses AI to formally verify key parts of Signal encryption",
+      "published_at": "2026-11-11T14:08:57+00:00"
+    },
+    {
+      "text": "While prior formal verification focused on smaller portions of the code, Google DeepMind’s approach enables significant expansion.",
+      "speaker": "Ehren Kret",
+      "speaker_role": "Signal chief technology officer",
+      "source_url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup",
+      "story_id": "4878c495cef5",
+      "headline": "Google DeepMind uses AI to formally verify key parts of Signal encryption",
+      "published_at": "2026-11-11T14:08:57+00:00"
+    },
     {
       "text": "Our second quarter performance reflects our conscious decision to build transaction scale through competitive pricing. Payments TPV grew 19% sequentially, while our net take rate moderated by approximately 4%. We see this as an investment in stronger merchant relationships and our long-term market position. We are working to unlock the value of Rediff, expand CCAvenue internationally and build AI-led transaction intelligence through TISco. Together, these priorities support our ambition to build a more valuable financial technology ecosystem.",
       "speaker": "Vishwas Patel",
@@ -5718,42 +5804,6 @@
       "story_id": "19332df0511e",
       "headline": "NHA selects EkaCare for AI Voice Scribe in public health facilities",
       "published_at": "2026-11-11T08:43:45+00:00"
-    },
-    {
-      "text": "AI-generated and plagiarised works also would fall within this ambit.",
-      "speaker": "Justices G.R. Swaminathan and M.D. Sumathi",
-      "speaker_role": "Madras High Court Judges",
-      "source_url": "https://medianama.com/2026/11/223-madras-high-court-ai-generated-books-fir",
-      "story_id": "f4468c04ed75",
-      "headline": "Madras High Court rules AI-generated books violate library rules, orders FIR",
-      "published_at": "2026-11-11T07:48:12+00:00"
-    },
-    {
-      "text": "I have not spoken to him about it. I just know he’s a fine person, but you never know what’s going on,",
-      "speaker": "Donald Trump",
-      "speaker_role": "President",
-      "source_url": "https://techcrunch.com/2026/11/10/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline",
-      "story_id": "d4f68e24f561",
-      "headline": "Nvidia spy scandal exposes Singapore chip networks evading US export controls",
-      "published_at": "2026-11-11T07:10:01+00:00"
-    },
-    {
-      "text": "build a constructive relationship on the basis of balance and reciprocity.",
-      "speaker": "Scott Bessent",
-      "speaker_role": "US Treasury Secretary",
-      "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/us-and-china-should-stay-clear-eyed-on-ai-cooperation-and-competition-scott-bessent-says/articleshow/135723633.cms",
-      "story_id": "f0321029a09b",
-      "headline": "US and China should stay clear-eyed on AI cooperation and competition, says Bessent",
-      "published_at": "2026-11-11T06:30:00+00:00"
-    },
-    {
-      "text": "We also expect to exchange best practices for evaluating and testing advanced models before their release, and for keeping human judgment firmly in command of this technology",
-      "speaker": "Scott Bessent",
-      "speaker_role": "US Treasury Secretary",
-      "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/us-and-china-should-stay-clear-eyed-on-ai-cooperation-and-competition-scott-bessent-says/articleshow/135723633.cms",
-      "story_id": "f0321029a09b",
-      "headline": "US and China should stay clear-eyed on AI cooperation and competition, says Bessent",
-      "published_at": "2026-11-11T06:30:00+00:00"
     }
   ],
   "videos": [
@@ -5890,70 +5940,38 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-11-11T13:27:39+00:00",
-    "one_line": "Anthropic's IPO fuels multibillion funding as AI tools, hardware, and regulation intensify.",
+    "written_at": "2026-11-11T16:06:18+00:00",
+    "one_line": "Anthropic IPO advances, export controls tighten, AI firms post strong earnings, safety measures grow.",
     "themes": [
       {
-        "title": "Anthropic IPO attracts multibillion funding",
-        "text": "Anthropic set an IPO price of $70‑$78 per share, valuing the company up to $1.404 trillion and aiming to raise up to $64 billion from the public offering. Nvidia pledged $10 billion and TSMC approved up to $500 million in shares, while co‑founders will sell $1.75 billion of stock.",
+        "title": "Anthropic readies trillion-dollar IPO",
+        "text": "Anthropic filed an updated S-1 setting a $70-$78 price range that could value the company at up to $1.4 trillion, opened a retail IPO in Australia, and secured a $10 billion investment from Nvidia while its founders plan to sell $1.75 billion of shares.",
         "stories": [
-          {
-            "id": "06c34be0a2ca",
-            "headline": "Anthropic sets IPO price at $70–$78 per share, targeting $1.4 trillion valuation",
-            "url": "https://theverge.com/ai-artificial-intelligence/1030703/anthropic-ipo-1-4-trillion"
-          },
           {
             "id": "f2e3e14e12ac",
             "headline": "Anthropic co-founders to sell $1.75 billion in shares ahead of $1.4 trillion IPO",
             "url": "https://techmeme.com/261110/p32"
           },
           {
+            "id": "7283860a9cf0",
+            "headline": "Anthropic sets IPO price range aiming for up to $1.4 trillion valuation",
+            "url": "https://news.crunchbase.com/ai/anthropic-record-ipo-ant-public-market-debut-spcx"
+          },
+          {
+            "id": "61c97162f2b8",
+            "headline": "Anthropic opens Australian retail IPO ahead of Nasdaq listing",
+            "url": "https://techmeme.com/261110/p63"
+          },
+          {
             "id": "103c6c1b606c",
             "headline": "Nvidia plans $10B investment in Anthropic alongside its IPO",
             "url": "https://techmeme.com/261110/p50"
-          },
-          {
-            "id": "e9e2b3561c9a",
-            "headline": "TSMC to invest up to $1B in Anthropic and OpenAI at IPO price",
-            "url": "https://techmeme.com/261110/p24"
           }
         ]
       },
       {
-        "title": "Anthropic expands tools and performance",
-        "text": "Anthropic launched Claude Whiteboards, Sheets, and Data for collaborative use, and its Fable 5.2 model achieved 41.3% of freelance jobs on the Remote Labor Index, far ahead of competitors.",
-        "stories": [
-          {
-            "id": "7737e173e31a",
-            "headline": "Anthropic launches Claude Whiteboards, Sheets, and Data",
-            "url": "https://claude.com/resources/articles/sheets-whiteboards-data"
-          },
-          {
-            "id": "b621aa11e7e8",
-            "headline": "Fable 5.2 tops Remote Labor Index at 41.3% of freelance jobs",
-            "url": "https://techmeme.com/261110/p23"
-          }
-        ]
-      },
-      {
-        "title": "Google rolls out new AI hardware",
-        "text": "Google made Gemini 4 Carbon publicly available with a swarm‑agent feature and introduced TPU 8tx and TPU 8i Max chips designed for confidential and large‑scale AI workloads.",
-        "stories": [
-          {
-            "id": "28b27e2d175e",
-            "headline": "Google rolls out Gemini 4 Carbon to the public with agent swarm feature",
-            "url": "https://theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout"
-          },
-          {
-            "id": "196c0edf93f9",
-            "headline": "Google unveils TPU 8tx and TPU 8i Max for confidential and large-scale AI workloads",
-            "url": "https://techcrunch.com/2026/11/10/google-broadens-its-ai-hardware-portfolio-with-two-new-specialized-chips"
-          }
-        ]
-      },
-      {
-        "title": "Regulators tighten AI chip oversight",
-        "text": "New York opened a registration portal for large AI developers under the RAISE Act, while a Singapore‑based network was linked to evading U.S. export controls on Nvidia chips and a reported affair involving Jensen Huang has raised the likelihood of U.S. chip export limits in the NDAA.",
+        "title": "Export controls face new evasion",
+        "text": "Investigations revealed Singapore networks helping Chinese firms obtain Nvidia chips, a Chinese university acquired H200 GPUs despite a blacklist, and a report that Jensen Huang’s affair has increased congressional interest in tighter chip export limits.",
         "stories": [
           {
             "id": "d4f68e24f561",
@@ -5961,9 +5979,9 @@
             "url": "https://techmeme.com/261111/p7"
           },
           {
-            "id": "c012fc7ecd62",
-            "headline": "New York launches portal for AI safety law requiring developer registration",
-            "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect"
+            "id": "41f04ecb2082",
+            "headline": "PLA-linked Chinese university obtained Nvidia H200 chips despite US blacklist",
+            "url": "https://techmeme.com/261111/p4"
           },
           {
             "id": "26a96166f51f",
@@ -5971,20 +5989,61 @@
             "url": "https://techmeme.com/261111/p1"
           }
         ]
+      },
+      {
+        "title": "AI firms post record earnings",
+        "text": "OpenAI reported Q3 revenue of about $10 billion with an improved operating margin, CoreWeave’s revenue jumped 168% to $3.66 billion, Mercor raised $750 million valuing it at $20 billion, and AMD launched 256‑core Zen 6 EPYC processors.",
+        "stories": [
+          {
+            "id": "2b4eaac89da1",
+            "headline": "OpenAI reports $10 billion in Q3 revenue as enterprise demand grows",
+            "url": "https://techmeme.com/261110/p51"
+          },
+          {
+            "id": "8d8f69ff1cae",
+            "headline": "CoreWeave reports Q3 revenue up 168% YoY to $3.66B and $132.5B backlog",
+            "url": "https://techmeme.com/261110/p53"
+          },
+          {
+            "id": "ca0e8a6be6b9",
+            "headline": "Mercor raises $750 million Series D, valuation jumps to $20 billion",
+            "url": "https://techmeme.com/261110/p29"
+          },
+          {
+            "id": "043c69530f98",
+            "headline": "AMD launches Zen 6 EPYC Venice processors with up to 256 cores",
+            "url": "https://techmeme.com/261110/p59"
+          }
+        ]
+      },
+      {
+        "title": "Safety rules and data leak",
+        "text": "New York opened a registration portal for large AI developers under the RAISE Act, while researchers found that SpaceXSI’s Grok Build coding agent exposed thousands of apps without authentication, leaking confidential data.",
+        "stories": [
+          {
+            "id": "c012fc7ecd62",
+            "headline": "New York launches portal for AI safety law requiring developer registration",
+            "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect"
+          },
+          {
+            "id": "c3e82675d569",
+            "headline": "Grok Build coding agent leaks confidential data from thousands of user apps",
+            "url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi"
+          }
+        ]
       }
     ],
     "from_stories": 20
   },
   "plan": {
-    "focus": "Chasing the fallout from Anthropic's massive IPO trajectory and massive AI hardware and data center investments while highlighting key Indian AI developments.",
-    "updated_at": "2026-11-11T13:27:39+00:00",
+    "focus": "Following the funding surge in AI infrastructure and chips alongside massive corporate milestones like Anthropic's IPO.",
+    "updated_at": "2026-11-11T16:06:18+00:00",
     "thin_areas": [
-      "AI in India",
-      "model releases"
+      "safety"
     ],
     "searches": [
-      "Anthropic IPO valuation Nasdaq",
-      "Fractile AI chip startup funding"
+      "Fractile chip funding valuation",
+      "Anthropic IPO livestream Dimon Amodei"
     ]
   },
   "builders": {
@@ -6117,6 +6176,160 @@
   },
   "threads": [
     {
+      "id": "t-a50b07bc6191",
+      "title": "Anthropic IPO roadshow video released",
+      "updated_at": "2026-11-11T15:11:59+00:00",
+      "stories": [
+        {
+          "id": "6734a79295b9",
+          "headline": "Anthropic's IPO roadshow video details multi-chip strategy and compute multipliers",
+          "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
+          "published_at": "2026-11-11T15:11:59+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "61c97162f2b8",
+          "headline": "Anthropic opens Australian retail IPO ahead of Nasdaq listing",
+          "url": "https://techmeme.com/261110/p63",
+          "published_at": "2026-11-11T02:30:01+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "103c6c1b606c",
+          "headline": "Nvidia plans $10B investment in Anthropic alongside its IPO",
+          "url": "https://techmeme.com/261110/p50",
+          "published_at": "2026-11-10T20:55:05+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "f2e3e14e12ac",
+          "headline": "Anthropic co-founders to sell $1.75 billion in shares ahead of $1.4 trillion IPO",
+          "url": "https://techmeme.com/261110/p32",
+          "published_at": "2026-11-10T17:02:35+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "e9e2b3561c9a",
+          "headline": "TSMC to invest up to $1B in Anthropic and OpenAI at IPO price",
+          "url": "https://techmeme.com/261110/p24",
+          "published_at": "2026-11-10T14:46:04+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "06c34be0a2ca",
+          "headline": "Anthropic sets IPO price at $70–$78 per share, targeting $1.4 trillion valuation",
+          "url": "https://theverge.com/ai-artificial-intelligence/1030703/anthropic-ipo-1-4-trillion",
+          "published_at": "2026-11-10T14:06:54+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "6e60d9db5bba",
+          "headline": "Anthropic targets $1.3tn valuation in IPO pricing 825 million shares at $70-$78",
+          "url": "https://businesschief.com/news/anthropic-targets-us-1-3tn-valuation-for-much-hyped-ipo",
+          "published_at": "2026-11-10T07:54:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "ea51f7bea31a",
+          "headline": "Anthropic to host live‑stream IPO event with CEO Dario Amodei and JPMorgan’s Jamie Dimon",
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-plans-ipo-live-stream-with-dario-amodei-jpmorgan-ceo-jamie-dimon/articleshow/135699429.cms",
+          "published_at": "2026-11-10T04:38:39+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "9798aa740a48",
+          "headline": "Anthropic sends and retracts IPO filing pricing details to bankers",
+          "url": "https://techmeme.com/261109/p48",
+          "published_at": "2026-11-10T01:41:39+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "69011908bacb",
+          "headline": "TSMC board approves up to $1bn investment in Anthropic and OpenAI",
+          "url": "https://ua.news/en/dovkolo-svitu/rada-direktoriv-tsmc-skhvalila-investitsiyi-do-1-mlrd-v-anthropic-i-openai-channel-newsasia",
+          "published_at": "2026-11-09T18:43:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "9b35f1480431",
+          "headline": "AI companies sell $300B+ in stock in 2026 amid market absorption questions",
+          "url": "https://techmeme.com/261108/p10",
+          "published_at": "2026-11-08T17:45:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "afa4cae37227",
+          "headline": "Anthropic buys 1.7GW of gas-fired generators in $3.4B deal",
+          "url": "https://techmeme.com/261108/p8",
+          "published_at": "2026-11-08T15:05:01+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "f31245a34fce",
+          "headline": "Anthropic presses on with November IPO plans despite global AI stock sell-off",
+          "url": "https://techmeme.com/261106/p21",
+          "published_at": "2026-11-06T21:12:51+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "7c70b636a2cf",
+          "headline": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+          "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo",
+          "published_at": "2026-11-06T15:54:47+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "1b0209f81f9f",
+          "headline": "Anthropic reports $895.4 billion in compute‑related purchase commitments and leases",
+          "url": "https://techmeme.com/261102/p29",
+          "published_at": "2026-11-02T16:35:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "038e188345e4",
+          "headline": "Anthropic to raise up to ¥552.9 bn ($3.5 bn) from Japanese investors in US IPO",
+          "url": "https://bloomberg.com/news/articles/2026-11-02/anthropic-seeks-up-to-3-5-billion-in-japan-for-its-mega-us-ipo",
+          "published_at": "2026-11-01T22:23:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "b329cc4aaa4c",
+          "headline": "Blackstone says Anthropic likely to receive junk rating after IPO",
+          "url": "https://ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
+          "published_at": "2026-10-30T17:27:25+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "007a2afe4a6c",
+          "headline": "Anthropic’s IPO faces valuation drop as growth slows and AI prices plunge",
+          "url": "https://economictimes.indiatimes.com/tech/technology/anthropics-record-ipo-faces-some-big-questions/articleshow/135249836.cms",
+          "published_at": "2026-10-28T02:42:31+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "e4d1fbe9aac7",
+          "headline": "Anthropic files S‑1 for Nasdaq IPO, reporting $16.3 billion H1 revenue",
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/articleshow/135222913.cms",
+          "published_at": "2026-10-27T02:33:06+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "09134649a0da",
+          "headline": "Anthropic files S‑1 showing $16.3 billion H1 revenue and $131.7 billion cash",
+          "url": "https://msn.com/en-us/news/other/the-anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/ar-AA2g76lV",
+          "published_at": "2026-10-26T16:53:17+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "8a77e646571b",
+          "headline": "Anthropic files S‑1 for IPO, plans Nasdaq listing under ticker ANT",
+          "url": "https://anthropic.com/news/s1-sec",
+          "published_at": "2026-10-26T00:00:00+00:00",
+          "category": "industry"
+        }
+      ]
+    },
+    {
       "id": "t-ca90fbd192a9",
       "title": "Courts address legal and public issues involving AI hallucin",
       "updated_at": "2026-11-11T07:48:12+00:00",
@@ -6204,34 +6417,6 @@
           "url": "https://techmeme.com/261107/p9",
           "published_at": "2026-11-07T14:30:04+00:00",
           "category": "policy"
-        }
-      ]
-    },
-    {
-      "id": "t-9e3e3ddacb24",
-      "title": "Gemini 4 Carbon launch and rollout",
-      "updated_at": "2026-11-11T03:35:36.254000+00:00",
-      "stories": [
-        {
-          "id": "a468d4c7b355",
-          "headline": "Ethan Mollick tests Fable 5.2 and Gemini Carbon on the Fermi Paradox",
-          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzyzlpr6lk2r",
-          "published_at": "2026-11-11T03:35:36.254000+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "28b27e2d175e",
-          "headline": "Google rolls out Gemini 4 Carbon to the public with agent swarm feature",
-          "url": "https://theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout",
-          "published_at": "2026-11-10T16:00:00+00:00",
-          "category": "models"
-        },
-        {
-          "id": "41e0dc889e76",
-          "headline": "Google announces Gemini 4 Carbon, a more capable frontier AI model not yet released",
-          "url": "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use",
-          "published_at": "2026-10-28T18:47:27+00:00",
-          "category": "models"
         }
       ]
     }
@@ -6435,7 +6620,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 268,
+    "stories_this_month": 270,
     "model_releases_this_month": 33,
     "labs_tracked": 25
   }

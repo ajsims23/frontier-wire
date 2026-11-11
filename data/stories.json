@@ -1,6 +1,110 @@
 [
   {
     "explainer": {
+      "what_it_means": "Anthropic says it runs its Claude models on four different chip families rather than one, which it argues lowers costs and builds a hard-to-copy advantage. It also says its internal tool called Mythos ported Claude to AMD GPUs in three days. These claims appear in a video released as part of its IPO marketing.",
+      "terms": [
+        {
+          "term": "Compute multiplier",
+          "meaning": "A factor that lets a model be trained or run using less physical compute than it would otherwise need."
+        },
+        {
+          "term": "Kernels",
+          "meaning": "The small software programs that run the heavy math of a model on a specific chip."
+        },
+        {
+          "term": "Inference",
+          "meaning": "The process of running a trained model to answer users, as opposed to training it."
+        }
+      ],
+      "watch_next": [
+        "Anthropic's Nasdaq debut before Thanksgiving"
+      ]
+    },
+    "audiences": {
+      "builders": "Anthropic says it now trains and serves Claude across AWS Trainium, Google TPUs, NVIDIA GPUs and AMD GPUs, and that its Mythos tool ported Claude to AMD in three days.",
+      "business": "Anthropic is marketing its IPO with a roadshow video that details its multi-chip compute strategy and claims of compounding compute multipliers.",
+      "investors": "The roadshow video, released as Anthropic's IPO marketing begins, lays out the compute strategy and efficiency claims underpinning its business case."
+    },
+    "id": "6734a79295b9",
+    "headline": "Anthropic's IPO roadshow video details multi-chip strategy and compute multipliers",
+    "summary": "Simon Willison published a transcript of Anthropic's IPO roadshow video, which includes a section with co-founder Tom Brown on how Anthropic trains and serves Claude across AWS Trainium, Google TPUs, NVIDIA GPUs and AMD GPUs. The video also describes \"compute multipliers\" and says an internal tool called Mythos ported Claude to AMD GPUs in three days.",
+    "why_it_matters": "The roadshow video gives a rare look at how Anthropic structures its compute across four chip families and how it frames efficiency gains as a competitive moat ahead of its Nasdaq debut.",
+    "category": "voices",
+    "lab": "Anthropic",
+    "model_name": "Claude",
+    "model_type": "Language",
+    "tags": [
+      "Anthropic",
+      "IPO",
+      "compute",
+      "multi-chip",
+      "roadshow"
+    ],
+    "quotes": [
+      {
+        "text": "We train and serve Claude now across all four major chip families.",
+        "speaker": "Tom Brown",
+        "speaker_role": "Anthropic co-founder",
+        "source_url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow"
+      },
+      {
+        "text": "It got Claude running on AMD in just three days, with basically no human intervention.",
+        "speaker": "Tom Brown",
+        "speaker_role": "Anthropic co-founder",
+        "source_url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow"
+      }
+    ],
+    "score": 7,
+    "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
+    "source_id": "simon-willison",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": null,
+    "sources": [
+      {
+        "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
+        "publisher": "Simon Willison",
+        "title": "Anthropic's IPO roadshow video"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-11T15:11:59+00:00",
+    "created_at": "2026-11-11T16:06:18+00:00",
+    "thread": "t-a50b07bc6191",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "us"
+    ],
+    "deal": {
+      "type": "ipo",
+      "company": "Anthropic",
+      "amount": "",
+      "usd": null
+    },
+    "relevance": {
+      "builders": 1,
+      "business": 2,
+      "investors": 3
+    },
+    "cover": "Mythos ported",
+    "trackers": [
+      "ai-infrastructure"
+    ],
+    "stock_tried": "2026-11-11T16:06:18+00:00",
+    "photo_local": true,
+    "image_kind": "stock",
+    "photo_credit": {
+      "key": "wc:130716095",
+      "by": "Mister rf",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:HP_1813-0091_top_case_removed.jpg",
+      "via": "Wikimedia Commons"
+    }
+  },
+  {
+    "explainer": {
       "what_it_means": "AlphaGenome 2 is an AI model that predicts how DNA variations affect specific human cell types and cell states. Trained on more than 100 million individual cell profiles across 68 tissues, it helps researchers identify genetic variants that alter gene expression in individual cells.",
       "terms": [
         {
@@ -82,6 +186,107 @@
     "cover": "AlphaGenome 2",
     "trackers": [
       "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Formal verification uses mathematics to prove that software behaves exactly as specified. DeepMind’s AI framework generated and checked those proofs for parts of Signal’s encryption, confirming they work as intended. This reduces the manual effort normally required for such security audits.",
+      "terms": [
+        {
+          "term": "formal verification",
+          "meaning": "A method that uses mathematical proofs to ensure software follows its specification without critical bugs."
+        },
+        {
+          "term": "cryptographic guarantees",
+          "meaning": "The security properties (like confidentiality and integrity) that an encryption protocol promises to provide."
+        },
+        {
+          "term": "agentic AI",
+          "meaning": "An AI system that can act autonomously to perform tasks such as generating and checking proofs."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "The approach demonstrates how AI can automate parts of formal verification, potentially cutting development time for secure software.",
+      "business": "It gives companies that rely on Signal’s encryption an independent, mathematically backed assurance of its security.",
+      "investors": "The success highlights DeepMind’s capability to create AI tools for software assurance, a market with commercial potential."
+    },
+    "id": "4878c495cef5",
+    "headline": "Google DeepMind uses AI to formally verify key parts of Signal encryption",
+    "summary": "DeepMind researchers employed the AlphaProof Code framework and Gemini Carbon agents to mathematically prove several cryptographic guarantees of the Signal protocol in a four‑week proof‑of‑concept. The analysis found no new vulnerabilities and correctly flagged known, fixed bugs in older versions.",
+    "why_it_matters": "It shows AI can speed up formal verification, offering stronger assurance for the encryption that protects billions of messages.",
+    "category": "safety",
+    "lab": "Google DeepMind",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "formal verification",
+      "encryption",
+      "Signal",
+      "AI security",
+      "AlphaProof Code"
+    ],
+    "quotes": [
+      {
+        "text": "We are very excited by this result, but there is a long distance to go before we are able to scale this to all the software of the world, and we want to do that.",
+        "speaker": "Swarat Chaudhuri",
+        "speaker_role": "DeepMind research scientist",
+        "source_url": "https://wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol"
+      },
+      {
+        "text": "While prior formal verification focused on smaller portions of the code, Google DeepMind’s approach enables significant expansion.",
+        "speaker": "Ehren Kret",
+        "speaker_role": "Signal chief technology officer",
+        "source_url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup"
+      }
+    ],
+    "score": 7,
+    "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup",
+    "source_id": "ars-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://www.zdnet.com/wp-content/uploads/sites/3/GettyImages-2206371598.jpg",
+    "sources": [
+      {
+        "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup",
+        "publisher": "Ars Technica AI",
+        "title": "Google DeepMind just mathematically verified key parts of Signal"
+      },
+      {
+        "url": "https://zdnet.com/tech/google-deepmind-researchers-prove-signal-whatsapp-encryption-works",
+        "publisher": "ZDNET",
+        "title": "Google’s new AI tool just proved Signal encryption really works – here’s how"
+      },
+      {
+        "url": "https://wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol",
+        "publisher": "Wired",
+        "title": "A New AI Tool From Google DeepMind Proved the Signal Protocol Is Secure"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-11T14:08:57+00:00",
+    "created_at": "2026-11-11T16:06:18+00:00",
+    "sectors": [
+      "cybersecurity"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "AlphaProof Code",
+    "trackers": [
+      "agent-safety"
     ],
     "photo_local": true
   },
