@@ -1310,8 +1310,8 @@ def with_music(voice_wav: Path, total: float, starts: list[float], out_dir: Path
     theme = music.theme(total, starts, out_dir / "theme.wav")
     out = out_dir / "audio.wav"
     _run(["ffmpeg", "-v", "error", "-y", "-i", str(voice_wav), "-i", str(theme), "-filter_complex",
-          "[0:a]aresample=44100,asplit=2[v1][v2];[1:a]aresample=44100,volume=0.45[m];"
-          "[m][v1]sidechaincompress=threshold=0.02:ratio=12:attack=15:release=450:makeup=1[duck];"
+          "[0:a]aresample=44100,asplit=2[v1][v2];[1:a]aresample=44100,volume=0.9[m];"
+          "[m][v1]sidechaincompress=threshold=0.03:ratio=6:attack=15:release=400:makeup=1[duck];"
           f"[duck][v2]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-16:TP=-1.5:LRA=11,atrim=0:{total:.3f}[o]",
           "-map", "[o]", "-ar", "44100", "-c:a", "pcm_s16le", str(out)])
     return out
