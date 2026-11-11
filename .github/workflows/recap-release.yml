@@ -107,6 +107,7 @@ jobs:
         run: |
           TAG="recap-$DATE"
           FILES="_recap/$DATE/recap.mp4 _recap/$DATE/poster.jpg _recap/$DATE/teaser.gif"
+          [ -f "_recap/$DATE/recap-vertical.mp4" ] && FILES="$FILES _recap/$DATE/recap-vertical.mp4"
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release upload "$TAG" $FILES --clobber
           else

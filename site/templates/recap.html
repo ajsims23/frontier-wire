@@ -18,6 +18,7 @@
     </a>
     {% endif %}
   </div>
+  {% if r.vertical %}<p class="recap-dl meta"><a href="{{ r.vertical }}" rel="noopener">Download the vertical version</a> for Shorts, Reels and LinkedIn (9:16).</p>{% endif %}
   <ul class="recap-summary">{% for line in r.summary %}<li>{{ line }}</li>{% endfor %}</ul>
   <ol class="recap-list">
     {% for s in r.entries %}

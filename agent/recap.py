@@ -1046,6 +1046,212 @@ def _recolor(layer: Image.Image, color: tuple[int, int, int]) -> Image.Image:
     return out
 
 
+VW, VH = 1080, 1920   # the vertical cut, for Shorts, Reels and LinkedIn
+VPIC_H = 1300         # pictures fill the top of the frame down to here
+
+
+class VerticalRenderer(Renderer):
+    """The same bulletin laid out 9:16: picture on top, a big headline card under it, the ticker at the bottom."""
+
+    def __init__(self, script: dict[str, Any], site_label: str, images: Path | None = None,
+                 durations: list[float] | None = None, clips: Path | None = None):
+        super().__init__(script, site_label, None, durations, None)
+        self.images, self.clips, self.credits, self.provider = {}, {}, {}, {}
+        if clips and clips.exists():
+            try:
+                meta = {c["story"]: c for c in json.loads((clips / "credits.json").read_text())}
+            except Exception:  # noqa: BLE001
+                meta = {}
+            for i in range(self.n):
+                f = clips / f"{i + 1}.mp4"
+                if f.exists() and usable_clip(f):
+                    self.clips[i] = Clip(f, VW, VPIC_H)
+                    self.credits[i] = (meta.get(i + 1) or {}).get("name", "")
+                    self.provider[i] = (meta.get(i + 1) or {}).get("provider", "Pexels")
+        if images:
+            for i in range(self.n):
+                f = images / f"{i + 1}.jpg"
+                if f.exists():
+                    try:
+                        self.images[i] = _cover(Image.open(f).convert("RGB"), int(VW * 1.1), int(VPIC_H * 1.1))
+                    except Exception:  # noqa: BLE001
+                        pass
+        small = _font(24, 600)
+        self.clip_labels = {i: _plate(_text_layer([f"Footage: {self.credits[i]} / {self.provider[i]}" if self.credits[i] else f"Footage: {self.provider[i]}"], small, (215, 226, 224)))
+                            for i in self.clips}
+        self.bg = _cover(_background(), VW, VH)
+        self.shade = self._vshade()
+        self._scenes = [self._vlayers(st, i) for i, st in enumerate(script["stories"])]
+        f, lines = _fit(script["hook"], 960, (92, 84, 76, 68), 3, 820)
+        self.hook = _text_layer(lines, f, TEXT, 1.06)
+        self.count = _text_layer([f"Top {self.n} stories in " + ("one minute" if 50 <= self.total <= 70 else f"{int(round(self.total))} seconds")], _font(36, 500), SOFT)
+        self.out1 = _text_layer(["That's the day", "in AI."], _font(96, 820), TEXT, 1.04)
+        f2, l2 = _fit(site_label, 960, (50, 44, 40, 36), 1, 700, 110)
+        self.out2 = _text_layer(l2, f2, TOPIC["research"])
+        self.out3 = _text_layer(["Every story, with its sources.", "Updated every three hours."], _font(36, 500), MUTED, 1.3)
+
+    def _vshade(self) -> Image.Image:
+        g = Image.new("L", (1, VPIC_H))
+        for y in range(VPIC_H):
+            v = 0.15 + 0.85 * max(0.0, (y - VPIC_H * 0.55) / (VPIC_H * 0.45)) ** 1.6 + 0.35 * max(0.0, 1 - y / (VPIC_H * 0.16))
+            g.putpixel((0, y), int(255 * min(1.0, v)))
+        layer = Image.new("RGBA", (VW, VPIC_H), INK + (0,))
+        layer.putalpha(g.resize((VW, VPIC_H)))
+        return layer
+
+    def _vlayers(self, st: dict[str, Any], i: int) -> dict[str, Any]:
+        L = self._story_layers(st, i)
+        f, lines = _fit(st["line"], 940, (68, 62, 56, 50), 3, 820)
+        L["head"] = _text_layer(lines, f, INK, 1.08)
+        fd, dl = _fit(st["detail"], 940, (40, 36, 32), 3, 520)
+        L["detail"] = _text_layer(dl, fd, TEXT, 1.18)
+        if L["figure"] is not None:
+            fig = key_figure(st)
+            tmp = ImageDraw.Draw(Image.new("L", (1, 1)))
+            for size in range(130, 50, -6):
+                ffig = _font(size, 820, 100 if len(fig) > 8 else 105)
+                if tmp.textlength(fig, font=ffig) <= 440:
+                    break
+            L["figure"] = _text_layer([fig], ffig, TEXT, 1.0)
+        return L
+
+    def _picture(self, idx: int, lt: float, dur: float) -> tuple[Image.Image | None, str]:
+        if idx in self.clips:
+            pic = self.clips[idx].frame(int(lt * FPS))
+            if lt + 1 / FPS >= dur:
+                self.clips[idx].close()
+            if pic is not None:
+                return pic, "clip"
+        if idx in self.images:
+            big = self.images[idx]
+            z = 0.1 * (lt / dur)
+            cw, ch = int(big.width * (1 - z * 0.9)), int(big.height * (1 - z * 0.9))
+            ox, oy = (big.width - cw) // 2, int((big.height - ch) * 0.4)
+            return big.crop((ox, oy, ox + cw, oy + ch)).resize((VW, VPIC_H), Image.BILINEAR), "image"
+        return None, ""
+
+    def _ticker(self, img: Image.Image, t: float) -> None:
+        d = ImageDraw.Draw(img)
+        y0 = VH - 96
+        d.rectangle((0, y0, VW, VH), fill=(6, 18, 20))
+        d.rectangle((0, y0, VW, y0 + 3), fill=TOPIC["research"])
+        lw = self.tick_label.width + 40
+        tw = self.ticker.width
+        x = int(lw + 30 - (t * 150) % tw)
+        while x < VW:
+            img.alpha_composite(self.ticker, (x, y0 + 30))
+            x += tw
+        d.rectangle((0, y0 + 3, lw, VH), fill=TOPIC["research"])
+        img.alpha_composite(self.tick_label, (20, y0 + 32))
+
+    def _top(self, img: Image.Image, idx: int | None) -> None:
+        d = ImageDraw.Draw(img)
+        _brand(d, 56, 70, scale=1.15)
+        bx = 56
+        d.rectangle((bx, 128, bx + self.bug.width + 28, 168), fill=RED)
+        img.alpha_composite(_recolor(self.bug, PAPER), (bx + 14, 133))
+        img.alpha_composite(self.date_l, (bx + self.bug.width + 48, 135))
+        if idx is not None:
+            n = self._scenes[idx]["num"]
+            d.rectangle((VW - 56 - n.width - 28, 66, VW - 56, 106), fill=(6, 18, 20))
+            img.alpha_composite(n, (VW - 56 - n.width - 14, 72))
+
+    def _open(self, t: float, dur: float) -> Image.Image:
+        img = self.bg.copy().convert("RGBA")
+        d = ImageDraw.Draw(img)
+        _signal(d, "frontier-wire-hook", TOPIC["research"], (60, 260, 1020, 560), t)
+        out_k = 1 - _ease((t - (dur - 0.4)) / 0.4)
+        bars = [(170, TOPIC["models"]), (260, TOPIC["research"]), (130, TOPIC["policy"]), (210, TOPIC["industry"])]
+        for i, (h, c) in enumerate(bars):
+            hh = h * _ease((t - i * 0.1) / 0.7) * out_k
+            if hh > 2:
+                d.rounded_rectangle((60 + i * 70, 860 - hh, 60 + i * 70 + 42, 860), radius=21, fill=c)
+        k = _ease((t - 0.35) / 0.5) * out_k
+        if k > 0:
+            bw = self.eyebrow.width + 56
+            bar = Image.new("RGBA", (bw, 70), RED + (255,))
+            bar.alpha_composite(_recolor(self.eyebrow, PAPER), (28, 10))
+            img.alpha_composite(self._wipe(bar, k), (60, 920))
+            img.alpha_composite(_fade(self.open_date, k), (60, 1012))
+        k2 = _ease((t - 0.7) / 0.6) * out_k
+        if k2 > 0:
+            img.alpha_composite(_fade(self.hook, k2), (60, 1090 + int((1 - k2) * 30)))
+        k3 = _ease((t - 1.1) / 0.6) * out_k
+        if k3 > 0:
+            img.alpha_composite(_fade(self.count, k3), (60, 1120 + self.hook.height))
+        self._ticker(img, t)
+        return img.convert("RGB")
+
+    def _story(self, t: float, idx: int) -> Image.Image:
+        dur = self.durs[idx + 1]
+        lt = t - self.starts[idx + 1]
+        L = self._scenes[idx]
+        out_k = 1 - _ease((lt - (dur - 0.35)) / 0.35)
+        img = self.bg.copy().convert("RGBA")
+        pic, kind = self._picture(idx, lt, dur)
+        if pic is not None:
+            top = pic.convert("RGBA")
+            top.alpha_composite(self.shade)
+            img.alpha_composite(top, (0, 0))
+        else:
+            panel = Image.new("RGBA", (VW, VH), (0, 0, 0, 0))
+            _illustration(ImageDraw.Draw(panel), L["cat"], (160, 300, 920, 760), L["color"], t)
+            img.alpha_composite(_fade(panel, _ease(lt / 0.6) * out_k))
+        fade_in = _ease(lt / 0.35)
+        if fade_in < 1:
+            img.alpha_composite(Image.new("RGBA", (VW, VH), INK + (int(255 * (1 - fade_in)),)))
+        self._top(img, idx)
+        if L["figure"] is not None:
+            k = _ease((lt - 0.9) / 0.5) * out_k
+            if k > 0:
+                fw, fh = L["figure"].width + 64, L["figure"].height + 40
+                card = Image.new("RGBA", (fw, fh), (0, 0, 0, 0))
+                cd = ImageDraw.Draw(card)
+                cd.rectangle((0, 0, fw - 1, fh - 1), fill=(6, 18, 20, 215))
+                cd.rectangle((0, 0, 8, fh - 1), fill=L["color"] + (255,))
+                card.alpha_composite(L["figure"], (36, 12))
+                img.alpha_composite(_fade(card, k), (VW - 56 - fw, 220 + int((1 - k) * 24)))
+        if kind:
+            lab = self.clip_labels.get(idx) if kind == "clip" else self.ai_label
+            if lab is not None:
+                img.alpha_composite(_fade(lab, 0.85 * out_k), (VW - 56 - lab.width, VPIC_H - 150))
+        y_tab = VPIC_H - 110
+        k = _ease((lt - 0.25) / 0.45) * out_k
+        if k > 0:
+            tab = Image.new("RGBA", (L["chip"].width + 40, 50), L["color"] + (255,))
+            tab.alpha_composite(L["chip"], (20, 8))
+            img.alpha_composite(self._wipe(tab, k), (40, y_tab))
+        k = _ease((lt - 0.4) / 0.55) * out_k
+        y_head = y_tab + 50
+        if k > 0:
+            hw, hh = VW - 80, L["head"].height + 40
+            bar = Image.new("RGBA", (hw, hh), PAPER + (255,))
+            ImageDraw.Draw(bar).rectangle((0, 0, 10, hh), fill=L["color"] + (255,))
+            bar.alpha_composite(L["head"], (34, 16))
+            img.alpha_composite(self._wipe(bar, k), (40, y_head))
+        k = _ease((lt - 1.2) / 0.5) * out_k
+        if k > 0:
+            y = y_head + L["head"].height + 40
+            pw, ph = VW - 80, L["detail"].height + L["source"].height + 60
+            plate = Image.new("RGBA", (pw, ph), (6, 18, 20, 235))
+            plate.alpha_composite(L["detail"], (34, 20))
+            plate.alpha_composite(L["source"], (34, 36 + L["detail"].height))
+            img.alpha_composite(_fade(plate, k), (40, y + int((1 - k) * 16)))
+        self._ticker(img, t)
+        return img.convert("RGB")
+
+    def _close(self, t: float, lt: float) -> Image.Image:
+        img = self.bg.copy().convert("RGBA")
+        d = ImageDraw.Draw(img)
+        _signal(d, "frontier-wire-outro", TOPIC["research"], (60, 260, 1020, 560), t)
+        _brand(d, 60, 700, scale=2.4, grow=_ease(lt / 0.8))
+        self._place(img, self.out1, 60, 820, lt, 0.2, 1)
+        self._place(img, self.out2, 60, 1060, lt, 0.45, 1)
+        self._place(img, self.out3, 60, 1150, lt, 0.7, 1)
+        self._ticker(img, t)
+        return img.convert("RGB")
+
+
 def gap_total(n: int, gap: int = 14) -> int:
     return gap * (n - 1)
 
@@ -1080,22 +1286,13 @@ def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.gi
     mp4, poster, gif = out_dir / "recap.mp4", out_dir / "poster.jpg", out_dir / "teaser.gif"
     frames = int(round(r.total * FPS))
     audio = ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono"]  # silent track, so every recap has one
-    if vc:
-        audio = ["-i", str(mix_voice(vc, durs, tempo, out_dir / "narration.wav"))]
-    enc = subprocess.Popen(
-        ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-         *audio, "-map", "0:v", "-map", "1:a", "-c:a", "aac", "-b:a", "128k", "-t", f"{frames / FPS:.3f}",
-         "-c:v", "libx264", "-preset", "veryfast", "-tune", "animation", "-crf", "20", "-maxrate", "1400k", "-bufsize", "2800k",
-         "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-metadata", f"title=Frontier Wire recap {script['date']}", str(mp4)],
-        stdin=subprocess.PIPE)
-    assert enc.stdin
-    for i in range(frames):
-        enc.stdin.write(r.frame(i / FPS).tobytes())
-    enc.stdin.close()
-    if enc.wait() != 0:
-        raise RuntimeError("ffmpeg failed while encoding")
-    for c in r.clips.values():
-        c.close()
+    if vc:  # the voice, with the news theme ducked underneath it
+        voice_wav = mix_voice(vc, durs, tempo, out_dir / "narration.wav")
+        audio = ["-i", str(with_music(voice_wav, r.total, r.starts, out_dir))]
+    _encode(r, W, H, audio, frames, mp4, f"Frontier Wire recap {script['date']}")
+    # the vertical cut for Shorts, Reels and LinkedIn: same bulletin, same audio
+    rv = VerticalRenderer(script, site_label, images if images and images.exists() else None, durs, clips)
+    _encode(rv, VW, VH, audio, frames, out_dir / "recap-vertical.mp4", f"Frontier Wire recap {script['date']} (vertical)")
     (out_dir / "render.json").write_text(json.dumps({"narrated": bool(vc), "voice": read, "tempo": round(tempo, 3),
                                                      "footage": sorted(i + 1 for i in r.clips), "scenes": [round(d, 2) for d in durs]}))
     r.poster().save(poster, quality=86, optimize=True, progressive=True)
@@ -1104,6 +1301,39 @@ def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.gi
           "fps=10,scale=600:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=64:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4",
           "-loop", "0", str(gif)])
     return check(out_dir)
+
+
+def with_music(voice_wav: Path, total: float, starts: list[float], out_dir: Path) -> Path:
+    """The narration over the news theme: the music dips under the voice (sidechain) and the whole track is
+    levelled to broadcast loudness."""
+    from . import music
+    theme = music.theme(total, starts, out_dir / "theme.wav")
+    out = out_dir / "audio.wav"
+    _run(["ffmpeg", "-v", "error", "-y", "-i", str(voice_wav), "-i", str(theme), "-filter_complex",
+          "[0:a]aresample=44100,asplit=2[v1][v2];[1:a]aresample=44100,volume=0.45[m];"
+          "[m][v1]sidechaincompress=threshold=0.02:ratio=12:attack=15:release=450:makeup=1[duck];"
+          f"[duck][v2]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-16:TP=-1.5:LRA=11,atrim=0:{total:.3f}[o]",
+          "-map", "[o]", "-ar", "44100", "-c:a", "pcm_s16le", str(out)])
+    return out
+
+
+def _encode(r: Renderer, w: int, h: int, audio: list[str], frames: int, mp4: Path, title: str) -> None:
+    enc = subprocess.Popen(
+        ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{w}x{h}", "-r", str(FPS), "-i", "-",
+         *audio, "-map", "0:v", "-map", "1:a", "-c:a", "aac", "-b:a", "128k", "-t", f"{frames / FPS:.3f}",
+         "-c:v", "libx264", "-preset", "veryfast", "-tune", "animation", "-crf", "20", "-maxrate", "1400k", "-bufsize", "2800k",
+         "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-metadata", f"title={title}", str(mp4)],
+        stdin=subprocess.PIPE)
+    assert enc.stdin
+    try:
+        for i in range(frames):
+            enc.stdin.write(r.frame(i / FPS).tobytes())
+    finally:
+        enc.stdin.close()
+        for c in r.clips.values():
+            c.close()
+    if enc.wait() != 0:
+        raise RuntimeError(f"ffmpeg failed while encoding {mp4.name}")
 
 
 def check(out_dir: Path) -> dict[str, Any]:
@@ -1124,6 +1354,15 @@ def check(out_dir: Path) -> dict[str, Any]:
         problems.append(f"expected h264 1920x1080, got {v['codec_name']} {v['width']}x{v['height']}")
     if decode.returncode != 0 or decode.stderr.strip():
         problems.append("video does not decode cleanly: " + decode.stderr.strip()[:200])
+    vert = out_dir / "recap-vertical.mp4"
+    if vert.exists():  # optional: re-published older videos have no vertical cut
+        vp = json.loads(_run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=codec_name,width,height",
+                              "-of", "json", str(vert)], text=True).stdout)["streams"][0]
+        info["vertical_bytes"] = vert.stat().st_size
+        if (vp["codec_name"], vp["width"], vp["height"]) != ("h264", VW, VH):
+            problems.append(f"vertical cut: expected h264 {VW}x{VH}, got {vp['codec_name']} {vp['width']}x{vp['height']}")
+        if info["vertical_bytes"] >= MAX_BYTES:
+            problems.append(f"vertical cut is {info['vertical_bytes'] / 1e6:.1f} MB (limit 15 MB)")
     info["ok"] = not problems
     info["problems"] = problems
     return info
@@ -1206,7 +1445,7 @@ def stamp(script: dict[str, Any], out_dir: Path, now: datetime) -> dict[str, Any
     info = check(out_dir)
     if errs or not info["ok"]:
         raise RuntimeError("; ".join(errs + info["problems"]))
-    script["video"] = {k: info[k] for k in ("duration", "bytes", "poster_bytes", "gif_bytes")}
+    script["video"] = {k: info[k] for k in ("duration", "bytes", "poster_bytes", "gif_bytes", "vertical_bytes") if k in info}
     try:
         made = json.loads((out_dir / "render.json").read_text())
     except Exception:  # noqa: BLE001
@@ -1256,6 +1495,7 @@ def site_view(recaps: list[dict[str, Any]], now: datetime, base: str, repo: str,
             "poster_url": base + f"{page}poster.jpg" if images else asset_url(repo, r["date"], "poster.jpg"),
             "gif_url": base + f"{page}teaser.gif" if images else asset_url(repo, r["date"], "teaser.gif"),
             "release": f"https://github.com/{repo}/releases/tag/{tag(r['date'])}",
+            "vertical": asset_url(repo, r["date"], "recap-vertical.mp4") if r["video"].get("vertical_bytes") else "",
             "entries": [{**s, "href": f"story/{s['id']}/" if s["id"] in story_ids else "",
                          "video": videos.get(s["id"]) if VIDEO_ID.match((videos.get(s["id"]) or {}).get("id") or "") else None}
                         for s in r["stories"]],

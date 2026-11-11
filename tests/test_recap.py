@@ -208,3 +208,17 @@ def test_anchor_copy_must_fit_the_minute_and_add_something():
     script = _anchored()
     script["stories"][1]["anchor"] = ""
     assert "write anchor copy for every story, or for none" in recap.validate(script)
+
+
+def test_vertical_frames_render_at_9_by_16():
+    r = recap.VerticalRenderer(_published(), "example.org")
+    for t in (1.0, 6.0, 20.0, r.total - 1):
+        assert r.frame(t).size == (1080, 1920)
+
+
+def test_theme_is_the_length_of_the_recap(tmp_path):
+    import wave
+    from agent import music
+    f = music.theme(12.0, [0, 3, 6, 9, 10.5], tmp_path / "t.wav")
+    with wave.open(str(f)) as w:
+        assert abs(w.getnframes() / w.getframerate() - 12.0) < 0.01
