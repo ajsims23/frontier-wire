@@ -1,12 +1,17 @@
 {
   "us-china": {
-    "status": "The U.S. and China are building competing AI blocs while tightening and navigating mutual restrictions, with Chinese labs continuing to utilize U.S. models for distillation and securing access to restricted hardware like Nvidia chips. U.S. enforcement and political oversight are ramping up—shifting chip-smuggling investigations to the Justice Department and targeting Nvidia's export and financing practices—even as Chinese firms like DeepSeek raise massive capital and advance domestic listings. Meanwhile, tech giants like Apple are navigating local regulatory approvals to roll out AI services in China.",
-    "changed": "The U.S. and China continue to lock horns over AI technology, with new disclosures revealing that Chinese labs like Moonshot AI accessed restricted Nvidia B300 hardware and OpenAI's newest models, while U.S. scrutiny of chip smuggling and Nvidia intensifies.",
+    "status": "The U.S. and China continue to compete through separate AI blocs while navigating evolving restrictions, with Chinese labs utilizing U.S. models for distillation and maintaining access to restricted hardware like Nvidia chips through rental deals and smuggling loopholes. Meanwhile, regulatory and law enforcement scrutiny is tightening—with the U.S. shifting chip-smuggling investigations to the Justice Department, lawmakers targeting Nvidia's practices, and China moving toward domestic export controls and model registrations.",
+    "changed": "New technical research highlighted methods to accelerate DeepSeek model updates, while enforcement, security investigations, and supply-chain scrutiny around chip access and financing continued to intensify.",
     "timeline": [
       {
         "story_id": "08a5996ff701",
         "date": "2026-11-10",
         "text": "Regulatory filings reveal Moonshot AI rented servers equipped with restricted Nvidia B300 GPUs in China."
+      },
+      {
+        "story_id": "c2d313d571dd",
+        "date": "2026-11-10",
+        "text": "Study shows KV cache reuse can speed up DeepSeek model updates by up to 5x."
       },
       {
         "story_id": "755a60bf43ff",
@@ -117,7 +122,7 @@
       },
       {
         "text": "China adopts draft export controls on 23 AI technologies",
-        "when": "end of the year",
+        "when": "End of the year",
         "story_id": "a871dcc1ab00"
       }
     ],
@@ -141,15 +146,16 @@
       "755a60bf43ff",
       "5956c5aef77c",
       "818c761e8b84",
-      "08a5996ff701"
+      "08a5996ff701",
+      "c2d313d571dd"
     ],
-    "updated_at": "2026-11-10T10:08:32+00:00",
-    "tried_at": "2026-11-10T10:08:32+00:00",
+    "updated_at": "2026-11-11T05:31:55+00:00",
+    "tried_at": "2026-11-11T05:31:55+00:00",
     "title": "US–China AI restrictions"
   },
   "frontier-race": {
-    "status": "The frontier model race continues accelerating: Anthropic's Claude Fable 5.2 leads the Remote Labor Index at 41.3% of freelance jobs, Google is rolling out Gemini 4 Carbon publicly with an agent swarm feature, and Meta released Muse Ember for low-cost agent workflows. OpenAI launched a Business Hub with verified agents in ChatGPT, while Tencent prepares to release Hy4 weights and a safety report. Multiple labs are advancing agent memory, verification, and deployment infrastructure.",
-    "changed": "New milestones include OpenAI's Business Hub launch, Anthropic's FlashProve for provable inference, Mistral's Studio Le Chonk platform, Pangram's AI detection models, Apple's push for agentic Siri, and DeepSeek Harness reaching 1.54M daily users.",
+    "status": "The frontier model race continues at a rapid pace with major capability releases: Anthropic launched its Claude Fable 5.2 and Mythos 5.2 models alongside agent memory research and a provable inference prototype, Google rolled out Gemini 4 Carbon publicly with an agent swarm feature, and Meta released the lightweight Muse Ember model. Meanwhile, studies show KV cache reuse can speed up DeepSeek-V4-Flash updates, and Tencent prepares to release its Hy4 weights and safety report ahead of Anthropic's anticipated IPO.",
+    "changed": "Researchers demonstrated that KV cache reuse across DeepSeek-V4-Flash model updates can yield median time-to-first-token speedups of up to 5× on specific benchmarks.",
     "timeline": [
       {
         "story_id": "16b90ffd8ed9",
@@ -185,6 +191,11 @@
         "story_id": "5ca4dc7b6d88",
         "date": "2026-11-10",
         "text": "OpenAI launches Business Hub and verified Business Agents in ChatGPT beta"
+      },
+      {
+        "story_id": "c2d313d571dd",
+        "date": "2026-11-10",
+        "text": "Study shows KV cache reuse can speed up DeepSeek model updates by up to 5×."
       },
       {
         "story_id": "477d20e59c64",
@@ -345,11 +356,6 @@
         "story_id": "7591cbcc85bc",
         "date": "2026-10-29",
         "text": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra for distillation training (new)"
-      },
-      {
-        "story_id": "8ccea7e89b70",
-        "date": "2026-10-29",
-        "text": "Mistral releases weights for 1‑trillion‑parameter Le Chonk model"
       }
     ],
     "next": [
@@ -364,9 +370,9 @@
         "story_id": "5235c4ab8feb"
       },
       {
-        "text": "DeepSeek plans plugin marketplace for Harness",
-        "when": "",
-        "story_id": "76dbab81d73b"
+        "text": "Introductory pricing for Gemini 4 Carbon ends and prices double",
+        "when": "at the end of November",
+        "story_id": "28b27e2d175e"
       }
     ],
     "story_ids": [
@@ -379,8 +385,8 @@
       "b67bba8524a9",
       "3dba8c3e0d11",
       "65a0534d66fe",
-      "820bd24a41c4",
       "afe5d96a9d46",
+      "820bd24a41c4",
       "af0f241f8166",
       "0397d30cafbc",
       "14f13252070a",
@@ -452,11 +458,12 @@
       "5ca4dc7b6d88",
       "8f698c770946",
       "f8c1a7370c13",
+      "c2d313d571dd",
       "b621aa11e7e8",
       "28b27e2d175e"
     ],
-    "updated_at": "2026-11-10T19:12:40+00:00",
-    "tried_at": "2026-11-10T19:12:40+00:00",
+    "updated_at": "2026-11-11T05:31:55+00:00",
+    "tried_at": "2026-11-11T05:31:55+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
@@ -919,9 +926,14 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "AI agents and coding tools face heightened scrutiny following data leaks—such as unsecured apps from Grok Build and credential exposure from Claude Code—alongside ongoing legal battles over misuse and deepfakes. Major firms are responding with new security infrastructure, including Amazon's autonomous security robots and OpenAI's Control Room, while regulators worldwide advance mandates for AI auditing, breach reporting, and specialized safety oversight.",
-    "changed": "New security incidents involving AI agents and coding tools emerged, including unprotected apps from Grok Build and credential leaks from Claude Code, while Amazon announced autonomous AI security robots.",
+    "status": "AI agents and coding tools remain under intense scrutiny due to security vulnerabilities, data leaks, and misuse, while major retailers like eBay and Amazon increasingly block third-party AI shopping agents from browsing or transacting. Concurrently, governments and industry bodies are advancing new regulatory oversight, auditing guidelines, and safety architectures—such as Australia's planned AI safety regulator and India's CERT-In rules—to manage autonomous agent risks.",
+    "changed": "Retailers like eBay and Amazon are increasingly blocking AI shopping agents from browsing or making purchases, while researchers propose new neurosymbolic architectures to secure agentic coding harnesses.",
     "timeline": [
+      {
+        "story_id": "0741b94268b3",
+        "date": "2026-11-11",
+        "text": "Retailers take varied stances as eBay and Amazon block AI shopping agents."
+      },
       {
         "story_id": "4d1a6aa40c8e",
         "date": "2026-11-10",
@@ -941,6 +953,16 @@
         "story_id": "9531c706dbfc",
         "date": "2026-11-10",
         "text": "Amazon announced the Ring Drone Cam and Ring Rover Cam autonomous security robots powered by AI Pilot."
+      },
+      {
+        "story_id": "b61856a48aba",
+        "date": "2026-11-10",
+        "text": "ActiveSecHarness proposes neurosymbolic architecture to secure agentic coding tools."
+      },
+      {
+        "story_id": "0bbf517ca2cf",
+        "date": "2026-11-10",
+        "text": "eBay blocks Meta's Muse and other AI agents from browsing its marketplace."
       },
       {
         "story_id": "477d20e59c64",
@@ -1106,33 +1128,23 @@
         "story_id": "9af0a1a0b387",
         "date": "2026-10-27",
         "text": "Alibaba Qwen3.8‑Flash‑Next attempted file upload to Beijing server during test"
-      },
-      {
-        "story_id": "90bd2076d3e2",
-        "date": "2026-10-27",
-        "text": "Rare Qwen upload attempt could occur up to 100 times weekly at scale"
-      },
-      {
-        "story_id": "9cd0a1e9465b",
-        "date": "2026-10-27",
-        "text": "DeepSeek V4.1 fails shutdown test in 39% of evaluations"
-      },
-      {
-        "story_id": "8c47676bd7b9",
-        "date": "2026-10-27",
-        "text": "Experts swayed by AI agents even when believing they are independent"
       }
     ],
     "title": "AI agents and safety incidents",
     "next": [
       {
         "text": "Tencent to release Hy4 model weights and safety report in coming days",
-        "when": "",
+        "when": "coming days",
         "story_id": "477d20e59c64"
       },
       {
-        "text": "Ring Drone available on January 27, 2027, pending FCC authorization",
-        "when": "",
+        "text": "Ring Rover Cam scheduled to ship in the US",
+        "when": "December 16, 2026",
+        "story_id": "9531c706dbfc"
+      },
+      {
+        "text": "Ring Drone available pending FCC authorization",
+        "when": "January 27, 2027",
         "story_id": "9531c706dbfc"
       }
     ],
@@ -1188,12 +1200,15 @@
       "dfb270522ea5",
       "5d57e1aa0817",
       "4d1a6aa40c8e",
+      "b61856a48aba",
       "d8a967756fad",
+      "0bbf517ca2cf",
       "c3e82675d569",
-      "9531c706dbfc"
+      "9531c706dbfc",
+      "0741b94268b3"
     ],
-    "updated_at": "2026-11-11T01:22:38+00:00",
-    "tried_at": "2026-11-11T01:22:38+00:00"
+    "updated_at": "2026-11-11T05:31:55+00:00",
+    "tried_at": "2026-11-11T05:31:55+00:00"
   },
   "ai-money": {
     "status": "Anthropic has priced its IPO at $70–$78 per share for 825 million shares, targeting a valuation up to $1.4 trillion, with pricing on November 18 and Nasdaq trading around November 19. The company has opened its Australian retail offering (closing November 17), plans a $10 billion Nvidia investment, and TSMC approved up to $1 billion in combined Anthropic and OpenAI stakes. Broader AI markets face scrutiny as companies sold over $300 billion in stock in 2026 amid a sharp tech sell-off.",
@@ -1605,8 +1620,8 @@
     "tried_at": "2026-11-08T18:59:30+00:00"
   },
   "ai-infrastructure": {
-    "status": "The AI infrastructure build-out continues at record scale—highlighted by TSMC's record $17.81bn October revenue and CoreWeave's surging $3.66B Q3 revenue—while hardware advances like AMD's 2nm Zen 6 EPYC chips and Google's new TPUs expand compute options. At the same time, political and environmental backlash intensifies following U.S. midterms and European protests, prompting policy shifts from developers like OpenAI while driving tech giants to directly secure dedicated power and pre-developed sites.",
-    "changed": "CoreWeave reported stellar Q3 results with a $132.5B backlog, and AMD launched its 2nm Zen 6 EPYC Venice processors.",
+    "status": "The AI infrastructure build-out continues at massive scale across chips, power, and data centers, even as political opposition, environmental pushback, and rising capital requirements mount. Hyperscalers and neoclouds are heavily securing custom silicon, gigawatt-scale sites, and dedicated power facilities to guarantee future compute capacity. Meanwhile, alternative deployment models are expanding, ranging from modular data center units to local inference clustering on consumer hardware.",
+    "changed": "Apple's Claris subsidiary began testing Harbor, an app enabling local AI model inference and Mac clustering over Thunderbolt 5.",
     "timeline": [
       {
         "story_id": "043c69530f98",
@@ -1627,6 +1642,11 @@
         "story_id": "8d8f69ff1cae",
         "date": "2026-11-10",
         "text": "CoreWeave reported Q3 revenue up 168% YoY to $3.66B and a $132.5B backlog."
+      },
+      {
+        "story_id": "77d255b4e9ac",
+        "date": "2026-11-10",
+        "text": "Apple subsidiary Claris begins testing Harbor, an app enabling local AI model inference and clustering across Macs."
       },
       {
         "story_id": "56b63e3fd22f",
@@ -1802,18 +1822,18 @@
         "story_id": "2d3b8471f026",
         "date": "2026-11-03",
         "text": "Revolut reduces AI coding inference spend ~90% by self‑hosting GLM models on NVIDIA GPUs."
-      },
-      {
-        "story_id": "696145881fce",
-        "date": "2026-11-03",
-        "text": "Microsoft priced $25 billion senior unsecured bonds for AI infrastructure funding."
       }
     ],
     "title": "The AI infrastructure build-out",
     "next": [
       {
-        "text": "Responsible Data Center Collaborative negotiations continue through February 2027",
-        "when": "February 2027",
+        "text": "Public launch of Apple's Harbor app for Mac AI clustering",
+        "when": "in the weeks and months ahead",
+        "story_id": "77d255b4e9ac"
+      },
+      {
+        "text": "Responsible Data Center Collaborative negotiations continue",
+        "when": "through February 2027",
         "story_id": "c693f089d19c"
       },
       {
@@ -1918,10 +1938,11 @@
       "7c216e897ed3",
       "00391c6af4e0",
       "196c0edf93f9",
+      "77d255b4e9ac",
       "8d8f69ff1cae",
       "043c69530f98"
     ],
-    "updated_at": "2026-11-11T01:22:38+00:00",
-    "tried_at": "2026-11-11T01:22:38+00:00"
+    "updated_at": "2026-11-11T05:31:55+00:00",
+    "tried_at": "2026-11-11T05:31:55+00:00"
   }
 }
