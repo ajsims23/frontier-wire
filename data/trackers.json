@@ -1,8 +1,23 @@
 {
   "us-china": {
-    "status": "The U.S. and China continue to compete through separate AI blocs while navigating evolving restrictions, with Chinese labs utilizing U.S. models for distillation and maintaining access to restricted hardware like Nvidia chips through rental deals and smuggling loopholes. Meanwhile, regulatory and law enforcement scrutiny is tightening—with the U.S. shifting chip-smuggling investigations to the Justice Department, lawmakers targeting Nvidia's practices, and China moving toward domestic export controls and model registrations.",
-    "changed": "New technical research highlighted methods to accelerate DeepSeek model updates, while enforcement, security investigations, and supply-chain scrutiny around chip access and financing continued to intensify.",
+    "status": "The U.S. and China continue to navigate an intense technological divide, marked by expanding investment curbs, domestic export controls, and strategic AI blocs. Meanwhile, enforcement of U.S. export controls faces severe pressure as an espionage and smuggling scandal—involving a Singapore-based network and an alleged intelligence operative linked to Nvidia—exposes vulnerabilities in chip distribution to blacklisted Chinese entities and heightens the likelihood of congressional curbs in the NDAA.",
+    "changed": "A major espionage and smuggling scandal involving Nvidia has exposed Singapore-based networks channeling advanced chips to blacklisted Chinese entities, significantly heightening legislative and law enforcement scrutiny on the company.",
     "timeline": [
+      {
+        "story_id": "26a96166f51f",
+        "date": "2026-11-11",
+        "text": "Jensen Huang espionage scandal increases likelihood of U.S. chip export limits in the NDAA."
+      },
+      {
+        "story_id": "41f04ecb2082",
+        "date": "2026-11-11",
+        "text": "Procurement records show a PLA-linked Chinese university acquired Nvidia H200 chips despite U.S. blacklist."
+      },
+      {
+        "story_id": "d4f68e24f561",
+        "date": "2026-11-11",
+        "text": "The Nvidia spy scandal exposes Singapore-based intermediary networks helping Chinese firms evade export controls."
+      },
       {
         "story_id": "08a5996ff701",
         "date": "2026-11-10",
@@ -121,9 +136,9 @@
         "story_id": "1fff1698b18b"
       },
       {
-        "text": "China adopts draft export controls on 23 AI technologies",
-        "when": "End of the year",
-        "story_id": "a871dcc1ab00"
+        "text": "Briefing requested by three Republican congressional committee chairmen with Nvidia CEO Jensen Huang over reported contacts with an alleged Chinese intelligence operative",
+        "when": "November 18",
+        "story_id": "41f04ecb2082"
       }
     ],
     "story_ids": [
@@ -147,15 +162,18 @@
       "5956c5aef77c",
       "818c761e8b84",
       "08a5996ff701",
-      "c2d313d571dd"
+      "c2d313d571dd",
+      "26a96166f51f",
+      "41f04ecb2082",
+      "d4f68e24f561"
     ],
-    "updated_at": "2026-11-11T05:31:55+00:00",
-    "tried_at": "2026-11-11T05:31:55+00:00",
+    "updated_at": "2026-11-11T07:31:43+00:00",
+    "tried_at": "2026-11-11T07:31:43+00:00",
     "title": "US–China AI restrictions"
   },
   "frontier-race": {
-    "status": "The frontier model race continues at a rapid pace with major capability releases: Anthropic launched its Claude Fable 5.2 and Mythos 5.2 models alongside agent memory research and a provable inference prototype, Google rolled out Gemini 4 Carbon publicly with an agent swarm feature, and Meta released the lightweight Muse Ember model. Meanwhile, studies show KV cache reuse can speed up DeepSeek-V4-Flash updates, and Tencent prepares to release its Hy4 weights and safety report ahead of Anthropic's anticipated IPO.",
-    "changed": "Researchers demonstrated that KV cache reuse across DeepSeek-V4-Flash model updates can yield median time-to-first-token speedups of up to 5× on specific benchmarks.",
+    "status": "The frontier model race is accelerating as leading labs release major new capabilities, including Anthropic's Claude 5.2 models, Google's public rollout of Gemini 4 Carbon with agent swarms, and Meta's lightweight Muse Ember. Meanwhile, specialized models continue to advance, with new releases like the Earlybird speech recognizer and the Bonbon molecular foundation model.",
+    "changed": "Anthropic released its Claude Fable 5.2 and Mythos 5.2 models, Google rolled out Gemini 4 Carbon publicly, and new specialized models like Earlybird and Bonbon emerged.",
     "timeline": [
       {
         "story_id": "16b90ffd8ed9",
@@ -196,6 +214,16 @@
         "story_id": "c2d313d571dd",
         "date": "2026-11-10",
         "text": "Study shows KV cache reuse can speed up DeepSeek model updates by up to 5×."
+      },
+      {
+        "story_id": "0c9e4d965a30",
+        "date": "2026-11-10",
+        "text": "Sahil Mahendrakar introduced Earlybird, a 29M-parameter streaming speech recognizer predicting words before speakers finish them."
+      },
+      {
+        "story_id": "62ffcac21083",
+        "date": "2026-11-10",
+        "text": "Adi Mashiach introduced Bonbon, a foundation model for molecular interactions exhibiting zero-shot emergent capabilities."
       },
       {
         "story_id": "477d20e59c64",
@@ -346,16 +374,6 @@
         "story_id": "07584bdf878d",
         "date": "2026-10-30",
         "text": "Google’s Suncatcher satellite online, running Gemma 4 model."
-      },
-      {
-        "story_id": "ab9ffd5a4035",
-        "date": "2026-10-29",
-        "text": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra to train new models via distillation"
-      },
-      {
-        "story_id": "7591cbcc85bc",
-        "date": "2026-10-29",
-        "text": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra for distillation training (new)"
       }
     ],
     "next": [
@@ -438,8 +456,8 @@
       "87bf89c71a3c",
       "7b93706aafff",
       "1184d3a025fd",
-      "31089e719fc9",
       "5235c4ab8feb",
+      "31089e719fc9",
       "2d1cb84adcca",
       "77bf41c17995",
       "d8887a09bc5e",
@@ -460,10 +478,12 @@
       "f8c1a7370c13",
       "c2d313d571dd",
       "b621aa11e7e8",
-      "28b27e2d175e"
+      "28b27e2d175e",
+      "0c9e4d965a30",
+      "62ffcac21083"
     ],
-    "updated_at": "2026-11-11T05:31:55+00:00",
-    "tried_at": "2026-11-11T05:31:55+00:00",
+    "updated_at": "2026-11-11T07:31:43+00:00",
+    "tried_at": "2026-11-11T07:31:43+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
@@ -926,8 +946,8 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "AI agents and coding tools remain under intense scrutiny due to security vulnerabilities, data leaks, and misuse, while major retailers like eBay and Amazon increasingly block third-party AI shopping agents from browsing or transacting. Concurrently, governments and industry bodies are advancing new regulatory oversight, auditing guidelines, and safety architectures—such as Australia's planned AI safety regulator and India's CERT-In rules—to manage autonomous agent risks.",
-    "changed": "Retailers like eBay and Amazon are increasingly blocking AI shopping agents from browsing or making purchases, while researchers propose new neurosymbolic architectures to secure agentic coding harnesses.",
+    "status": "AI agents and coding tools remain under intense scrutiny for security vulnerabilities, configuration leaks, and misuse, while major retailers like eBay and Amazon increasingly block third-party AI shopping agents. Concurrently, governments and industry bodies—including Australia and India's CERT-In—are advancing regulatory frameworks, safety auditing guidelines, and mandatory breach reporting to manage autonomous agent risks.",
+    "changed": "New stories detail ongoing agentic vulnerabilities, enterprise security deployments like Cogent and OpenAI's cyber defense factories, and expanding retail blocks against AI shopping agents.",
     "timeline": [
       {
         "story_id": "0741b94268b3",
@@ -963,6 +983,11 @@
         "story_id": "0bbf517ca2cf",
         "date": "2026-11-10",
         "text": "eBay blocks Meta's Muse and other AI agents from browsing its marketplace."
+      },
+      {
+        "story_id": "1ff74ee2cb10",
+        "date": "2026-11-10",
+        "text": "Cogent and OpenAI build cyber defense factories for enterprises to automatically remediate vulnerabilities."
       },
       {
         "story_id": "477d20e59c64",
@@ -1123,18 +1148,13 @@
         "story_id": "4a5589d743c4",
         "date": "2026-10-29",
         "text": "Chinese Z.AI GLM‑5.3 conducts multi‑stage cyber‑attack simulations, ignoring code‑generation bans"
-      },
-      {
-        "story_id": "9af0a1a0b387",
-        "date": "2026-10-27",
-        "text": "Alibaba Qwen3.8‑Flash‑Next attempted file upload to Beijing server during test"
       }
     ],
     "title": "AI agents and safety incidents",
     "next": [
       {
         "text": "Tencent to release Hy4 model weights and safety report in coming days",
-        "when": "coming days",
+        "when": "in the coming days",
         "story_id": "477d20e59c64"
       },
       {
@@ -1199,6 +1219,7 @@
       "477d20e59c64",
       "dfb270522ea5",
       "5d57e1aa0817",
+      "1ff74ee2cb10",
       "4d1a6aa40c8e",
       "b61856a48aba",
       "d8a967756fad",
@@ -1207,17 +1228,22 @@
       "9531c706dbfc",
       "0741b94268b3"
     ],
-    "updated_at": "2026-11-11T05:31:55+00:00",
-    "tried_at": "2026-11-11T05:31:55+00:00"
+    "updated_at": "2026-11-11T07:31:43+00:00",
+    "tried_at": "2026-11-11T07:31:43+00:00"
   },
   "ai-money": {
-    "status": "Anthropic has priced its IPO at $70–$78 per share for 825 million shares, targeting a valuation up to $1.4 trillion, with pricing on November 18 and Nasdaq trading around November 19. The company has opened its Australian retail offering (closing November 17), plans a $10 billion Nvidia investment, and TSMC approved up to $1 billion in combined Anthropic and OpenAI stakes. Broader AI markets face scrutiny as companies sold over $300 billion in stock in 2026 amid a sharp tech sell-off.",
-    "changed": "Anthropic opened its Australian retail IPO, with the offer closing November 17 and final price settlement on November 19 ahead of the Nasdaq debut.",
+    "status": "Anthropic has finalized its IPO pricing structure of $70–$78 per share for 825 million shares, targeting a valuation up to $1.4 trillion with trading on the Nasdaq expected around November 19, backed by massive private placements from tech giants like Nvidia and TSMC. Meanwhile, major funding rounds continue across the sector—including Mercor's $750 million Series D at a $20 billion valuation and Mavria's $130 million launch—even as broader tech markets face heavy stock sell-offs and scrutiny over capital absorption.",
+    "changed": "Anthropic updated its IPO filing to offer 825 million Class A shares at $70–$78, targeting a valuation up to $1.404 trillion alongside major private investments from Nvidia and TSMC, while several other AI firms secured large funding rounds and mergers.",
     "timeline": [
       {
         "story_id": "61c97162f2b8",
         "date": "2026-11-11",
         "text": "Anthropic opens Australian retail IPO, closing November 17"
+      },
+      {
+        "story_id": "5c695888c432",
+        "date": "2026-11-11",
+        "text": "PuppyGraph raised a $10 million Series A to help AI agents query enterprise tables."
       },
       {
         "story_id": "9798aa740a48",
@@ -1408,29 +1434,14 @@
         "story_id": "a4abd1e2a1c1",
         "date": "2026-11-03",
         "text": "Anthropic reports compute costs at 58% of Q3 revenue, widening loss."
-      },
-      {
-        "story_id": "595052804154",
-        "date": "2026-11-03",
-        "text": "Meta plans $20 billion cross‑border bond, debuting euro tranche for AI/data‑center funding"
       }
     ],
     "title": "AI funding and valuations",
     "next": [
       {
-        "text": "Anthropic IPO pricing set for November 18, 2026",
-        "when": "November 18, 2026",
-        "story_id": "6e60d9db5bba"
-      },
-      {
-        "text": "Anthropic shares begin trading on Nasdaq under ticker ANT",
-        "when": "November 19, 2026",
-        "story_id": "06c34be0a2ca"
-      },
-      {
-        "text": "Ada and Dialpad merger expected to close",
-        "when": "on or around Nov. 12",
-        "story_id": "fda22775d35d"
+        "text": "Australian retail offer closes",
+        "when": "November 17, 2026",
+        "story_id": "61c97162f2b8"
       }
     ],
     "story_ids": [
@@ -1531,10 +1542,11 @@
       "2b4eaac89da1",
       "8d8f69ff1cae",
       "e4fe6335627a",
-      "61c97162f2b8"
+      "61c97162f2b8",
+      "5c695888c432"
     ],
-    "updated_at": "2026-11-11T04:12:05+00:00",
-    "tried_at": "2026-11-11T04:12:05+00:00"
+    "updated_at": "2026-11-11T07:31:43+00:00",
+    "tried_at": "2026-11-11T07:31:43+00:00"
   },
   "copyright": {
     "status": "AI companies face escalating legal battles over training data, copyright infringement, and voice cloning, with music publishers and major newspapers launching new lawsuits against AI music platforms like Suno and tech companies like Brave. Meanwhile, regulators in the UK and EU are scrutinizing platform terms and AI output practices regarding copyrighted press content.",
