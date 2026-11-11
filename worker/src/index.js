@@ -352,7 +352,7 @@ async function sendWelcome(env, email, p, utoken) {
     const recap = await getRecap(env);
     if (!recap) return false;
     const html = renderRecap({ site: env.SITE_URL, api: env.API_URL, recap, unsub: utoken,
-      intro: { title: "You're in.", text: "Every evening we'll send the day's top five AI stories in 30 seconds. Here's the latest recap." } });
+      intro: { title: "You're in.", text: "Every evening we'll send the day's top five AI stories in one minute. Here's the latest recap." } });
     return sendEmail(env, email, recapSubject(recap), html);
   }
   const { events, briefing } = await latestFor(env, p.follows, p.labels || {}, 5);

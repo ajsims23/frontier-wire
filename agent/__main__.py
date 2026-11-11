@@ -7,7 +7,7 @@
   python -m agent preview-desks plan a run and write the Builders and Top Voices desks now (set DATA_DIR to a copy of
                                 data/ to try changes without touching the live site)
   python -m agent recap draft   pick today's top five and write data/recaps/<date>.json for the editor to fill
-  python -m agent recap render --out DIR   check the filled script and render the 30s recap.mp4, poster.jpg, teaser.gif
+  python -m agent recap render --out DIR   check the filled script and render the one-minute recap.mp4, poster.jpg, teaser.gif
   python -m agent recap footage|voice --out DIR   (workflow) stock clips from Pexels / AI narration via the worker
   python -m agent recap check --out DIR    re-check a rendered video (length, size, codec, decodes cleanly)
   python -m agent recap upload --out DIR   push the files to recap-upload/<date>; the Recap release workflow publishes them
@@ -171,7 +171,7 @@ def _recap(args: argparse.Namespace) -> int:
     elif args.action in ("footage", "voice"):
         script = json.loads((out / "script.json").read_text())
         if args.action == "footage":
-            notes = recap.fetch_footage(script, out / "clips", os.environ.get("PEXELS_API_KEY", ""))
+            notes = recap.fetch_footage(script, out / "clips", os.environ.get("PEXELS_API_KEY", ""), os.environ.get("PIXABAY_API_KEY", ""))
             print(f"{len(script['stories']) - len(notes)} of {len(script['stories'])} stock clips")
         else:
             notes = recap.fetch_voice(script, out / "voice", os.environ.get("RECAP_API", ""), os.environ.get("RECAP_SECRET", ""))

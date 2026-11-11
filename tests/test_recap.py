@@ -110,7 +110,7 @@ def test_frames_with_and_without_ai_images(tmp_path):
     (tmp_path / "2.jpg").write_bytes(b"not an image")  # broken file: falls back to the drawn illustration
     r = recap.Renderer(script, "example.org", tmp_path)
     assert set(r.images) == {0}
-    for t in (1.0, 5.5, 10.5, 15.5, 20.5, 25.5, 29.0):
+    for t in (1.0, 5.5, 10.5, 15.5, 25.5, 40.5, 50.5, 57.0):
         assert r.frame(t).size == (1920, 1080)
 
 
@@ -125,23 +125,23 @@ def test_narration_uses_say_when_given():
     script["stories"][0]["say"] = "A spoken version"
     keys = [k for k, _ in recap.narration(script)]
     assert keys[0] == "hook" and keys[-1] == "outro" and len(keys) == len(script["stories"]) + 2
-    assert recap.narration(script)[1][1] == "A spoken version."
+    assert recap.narration(script)[1][1].startswith("A spoken version. ")
 
 
 def test_timing_silent_and_narrated_stay_in_bounds():
     durs, tempo = recap.timing(5, {})
-    assert durs == [3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 2.0] and tempo == 1.0
-    short = {k: (None, 2.0) for k in ["hook", "story1", "story2", "story3", "story4", "story5", "outro"]}
+    assert durs == [5.0, 10.0, 10.0, 10.0, 10.0, 10.0, 4.0] and tempo == 1.0
+    short = {k: (None, 3.0) for k in ["hook", "story1", "story2", "story3", "story4", "story5", "outro"]}
     durs, tempo = recap.timing(5, short)
-    assert [round(d, 3) for d in durs] == [3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 2.5] and tempo == 1.0
-    long = {k: (None, 2.6 if k in ("hook", "outro") else 4.8) for k in ["hook", "story1", "story2", "story3", "story4", "story5", "outro"]}
+    assert [round(d, 3) for d in durs] == [5.0, 10.0, 10.0, 10.0, 10.0, 10.0, 4.0] and tempo == 1.0
+    long = {k: (None, 5.0 if k in ("hook", "outro") else 10.0) for k in ["hook", "story1", "story2", "story3", "story4", "story5", "outro"]}
     durs, tempo = recap.timing(5, long)
     assert recap.MIN_S <= sum(durs) <= recap.MAX_S - 0.5 + 1e-6 and tempo == 1.0
-    faster = {k: (None, 2.6 if k in ("hook", "outro") else 5.4) for k in long}
+    faster = {k: (None, 5.0 if k in ("hook", "outro") else 11.5) for k in long}
     durs, tempo = recap.timing(5, faster)
     assert recap.MIN_S <= sum(durs) <= recap.MAX_S - 0.5 + 1e-6 and 1.0 < tempo <= 1.3
-    too_long = {k: (None, 7.0) for k in long}
-    assert recap.timing(5, too_long) == ([3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 2.0], 0.0)
+    too_long = {k: (None, 16.0) for k in long}
+    assert recap.timing(5, too_long) == ([5.0, 10.0, 10.0, 10.0, 10.0, 10.0, 4.0], 0.0)
 
 
 def test_site_view_attaches_lab_videos_and_footage_credits():

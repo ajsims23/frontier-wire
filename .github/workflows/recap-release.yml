@@ -19,7 +19,7 @@ concurrency:
 jobs:
   release:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
         with:
@@ -49,9 +49,10 @@ jobs:
           RECAP_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
         run: RECAP_API="$(cat config/api_url.txt)" python -m agent recap images --date "$DATE" --out "_recap/$DATE"
 
-      - name: Stock footage (free Pexels clips; skipped until the PEXELS_API_KEY secret exists)
+      - name: Stock footage (free Pixabay / Pexels clips; skipped until PIXABAY_API_KEY or PEXELS_API_KEY exists)
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: python -m agent recap footage --date "$DATE" --out "_recap/$DATE"
 
       - name: AI narration (Workers AI via our API worker; without it the video renders silent)

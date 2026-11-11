@@ -1,4 +1,4 @@
-"""Daily 30-second recap: pick the day's top five stories, check the on-screen script, render the narrated video.
+"""Daily one-minute recap, in a broadcast news style: pick the day's top five stories, check the on-screen script, render the narrated video.
 
 The script (hook, one line and one detail per story, a three-line summary) is written by the editor in a Claude
 session and saved to data/recaps/YYYY-MM-DD.json. This module drafts that file from the site's own data, checks
@@ -12,8 +12,8 @@ same script renders silent, with drawn illustrations, so the editor can still ch
     python -m agent recap render --out DIR # check the script, render recap.mp4, poster.jpg, teaser.gif
     python -m agent recap footage|voice --out DIR   # (Actions) stock clips into DIR/clips, narration into DIR/voice
 
-On screen: a 3s hook, 5s per story (the paraphrased line and its source), a 2s outro with the site address.
-Each story's detail line is not shown in the video; it goes on the video page, in the feed and in the email.
+On screen: a 5s opening title, about 10s per story (picture, lower third with the line, the detail and the source,
+a stat card), a 4s close, and a headline ticker throughout. Scenes stretch to fit the narration (55-65s in all).
 """
 from __future__ import annotations
 
@@ -36,14 +36,14 @@ from .cards import GROUND, LABEL, MUTED, TEXT, TOPIC, _font, _wrap
 
 IST = timezone(timedelta(hours=5, minutes=30))
 W, H, FPS = 1920, 1080, 30
-HOOK_S, STORY_S, OUTRO_S = 3.0, 5.0, 2.0   # 3s hook, 5s per story (headline + source), 2s outro
-MIN_S, MAX_S = 27, 33
+HOOK_S, STORY_S, OUTRO_S = 5.0, 10.0, 4.0   # 5s open, 10s per story, 4s close: about one minute
+MIN_S, MAX_S = 55, 65
 SOFT = (179, 207, 203)
 PANEL = (10, 31, 34)
 LIMITS = {"hook": 64, "line": 72, "detail": 120, "summary": 150, "say": 110, "footage": 80}
 VOICE_LEAD = {"hook": 0.35, "story": 0.3, "outro": 0.2}   # seconds into a scene before the voice starts
 VOICE_TAIL = {"hook": 0.35, "story": 0.45, "outro": 0.3}  # quiet after it, before the scene changes
-OUTRO_SAY = "Full stories at Frontier Wire."
+OUTRO_SAY = "That's the day in AI. Every story, with its sources, at Frontier Wire."
 MAX_BYTES = 15 * 1024 * 1024
 VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
 AGGREGATORS = {"techmeme.com", "news.ycombinator.com", "msn.com"}
@@ -182,9 +182,9 @@ def spoken(text: str) -> str:
 
 def narration(script: dict[str, Any]) -> list[tuple[str, str]]:
     """What the voice reads, scene by scene: (file name, text)."""
-    out = [("hook", spoken(script["hook"]))]  # "Today in AI" is already on screen
+    out = [("hook", spoken("This is Frontier Wire, the day in AI. " + script["hook"]))]
     for i, st in enumerate(script["stories"], 1):
-        out.append((f"story{i}", spoken((st.get("say") or "").strip() or st["line"])))
+        out.append((f"story{i}", spoken((st.get("say") or "").strip() or st["line"]) + " " + spoken(st["detail"])))
     out.append(("outro", OUTRO_SAY))
     return out
 
@@ -312,38 +312,69 @@ DEFAULT_FOOTAGE = {
 }
 
 
-def fetch_footage(script: dict[str, Any], out: Path, key: str) -> list[str]:
-    """Run in GitHub Actions: one free stock clip per story from Pexels (search by the editor's `footage` query, else a
-    query for the story's beat). Saves out/<i>.mp4 and out/credits.json. Failures are reported; that story falls back
-    to the AI illustration."""
+def _pexels(http: Any, q: str, key: str) -> list[dict[str, Any]]:
+    """Candidate clips from Pexels: [{id, link, name, url, provider}]."""
+    params = {"query": q, "orientation": "landscape", "size": "medium", "per_page": 15}
+    r = http.get("https://api.pexels.com/v1/videos/search", params=params, headers={"Authorization": key})
+    if r.status_code == 404:
+        r = http.get("https://api.pexels.com/videos/search", params=params, headers={"Authorization": key})
+    r.raise_for_status()
+    out = []
+    for v in r.json().get("videos") or []:
+        if not 6 <= (v.get("duration") or 0) <= 60:
+            continue
+        files = [f for f in v.get("video_files") or [] if f.get("file_type") == "video/mp4"
+                 and 1280 <= (f.get("width") or 0) <= 1920 and (f.get("height") or 0) >= 720]
+        if files:
+            f = min(files, key=lambda f: abs((f.get("width") or 0) - 1920))
+            out.append({"id": f"px{v['id']}", "link": f["link"], "name": ((v.get("user") or {}).get("name") or "")[:60],
+                        "url": v.get("url") or "https://www.pexels.com", "provider": "Pexels"})
+    return out
+
+
+def _pixabay(http: Any, q: str, key: str) -> list[dict[str, Any]]:
+    """Candidate clips from Pixabay (free key, Pixabay Content License, no attribution required; we credit anyway)."""
+    r = http.get("https://pixabay.com/api/videos/", params={"key": key, "q": q[:100], "video_type": "film",
+                                                            "safesearch": "true", "per_page": 15})
+    r.raise_for_status()
+    out = []
+    for v in r.json().get("hits") or []:
+        if not 6 <= (v.get("duration") or 0) <= 60:
+            continue
+        vids = v.get("videos") or {}
+        f = next((vids[k] for k in ("large", "medium") if (vids.get(k) or {}).get("url") and (vids[k].get("width") or 0) >= 1280), None)
+        if f:
+            out.append({"id": f"pb{v['id']}", "link": f["url"], "name": (v.get("user") or "")[:60],
+                        "url": v.get("pageURL") or "https://pixabay.com", "provider": "Pixabay"})
+    return out
+
+
+def fetch_footage(script: dict[str, Any], out: Path, pexels_key: str = "", pixabay_key: str = "") -> list[str]:
+    """Run in GitHub Actions: one free stock clip per story, from Pexels and/or Pixabay (whichever keys exist), searched
+    by the editor's `footage` query, else a query for the story's beat. Saves out/<i>.mp4 and out/credits.json.
+    Failures are reported; that story falls back to the AI illustration."""
     import httpx
     out.mkdir(parents=True, exist_ok=True)
-    if not key:
-        return ["no PEXELS_API_KEY: no stock footage today"]
+    sources = [(fn, k) for fn, k in ((_pexels, pexels_key), (_pixabay, pixabay_key)) if k]
+    if not sources:
+        (out / "credits.json").write_text("[]")
+        return ["no PEXELS_API_KEY or PIXABAY_API_KEY: no stock footage today"]
     notes, used, credits = [], set(), []
-    with httpx.Client(timeout=60, headers={"Authorization": key}, follow_redirects=True) as http:
+    with httpx.Client(timeout=60, follow_redirects=True) as http:
         for i, st in enumerate(script["stories"], 1):
             q = (st.get("footage") or "").strip() or DEFAULT_FOOTAGE.get(st["category"], DEFAULT_FOOTAGE["industry"])
             try:
-                r = http.get("https://api.pexels.com/v1/videos/search",
-                             params={"query": q, "orientation": "landscape", "size": "medium", "per_page": 15})
-                if r.status_code == 404:  # the older path, in case the new one isn't live for this key
-                    r = http.get("https://api.pexels.com/videos/search",
-                                 params={"query": q, "orientation": "landscape", "size": "medium", "per_page": 15})
-                r.raise_for_status()
-                cands = []
-                for v in r.json().get("videos") or []:
-                    if v.get("id") in used or not 6 <= (v.get("duration") or 0) <= 60:
-                        continue
-                    files = [f for f in v.get("video_files") or [] if f.get("file_type") == "video/mp4"
-                             and 1280 <= (f.get("width") or 0) <= 1920 and (f.get("height") or 0) >= 720]
-                    if files:
-                        cands.append((v, min(files, key=lambda f: abs((f.get("width") or 0) - 1920))))
+                cands, errs = [], []
+                for fn, k in sources:
+                    try:
+                        cands += [c for c in fn(http, q, k) if c["id"] not in used][:4]
+                    except Exception as exc:  # noqa: BLE001
+                        errs.append(f"{fn.__name__[1:]}: {str(exc)[:80]}")
                 if not cands:
-                    raise RuntimeError(f"no usable clip for {q!r}")
-                v, f = random.Random(st["id"]).choice(cands[:4])
+                    raise RuntimeError(f"no usable clip for {q!r}" + (f" ({'; '.join(errs)})" if errs else ""))
+                c = random.Random(st["id"]).choice(cands)
                 dest = out / f"{i}.mp4"
-                with http.stream("GET", f["link"]) as dl:
+                with http.stream("GET", c["link"]) as dl:
                     dl.raise_for_status()
                     with dest.open("wb") as fh:
                         for chunk in dl.iter_bytes():
@@ -351,11 +382,10 @@ def fetch_footage(script: dict[str, Any], out: Path, key: str) -> list[str]:
                 if not usable_clip(dest):
                     dest.unlink(missing_ok=True)
                     raise RuntimeError("downloaded clip does not decode")
-                used.add(v["id"])
-                user = v.get("user") or {}
-                credits.append({"story": i, "name": (user.get("name") or "Pexels contributor")[:60], "url": v.get("url") or "https://www.pexels.com"})
+                used.add(c["id"])
+                credits.append({"story": i, "name": c["name"] or f"{c['provider']} contributor", "url": c["url"], "provider": c["provider"]})
             except Exception as exc:  # noqa: BLE001
-                notes.append(f"story {i}: no stock clip ({str(exc)[:140]}); using the illustration")
+                notes.append(f"story {i}: no stock clip ({str(exc)[:160]}); using the illustration")
     (out / "credits.json").write_text(json.dumps(credits, indent=2))
     return notes
 
@@ -579,33 +609,42 @@ def _plate(layer: Image.Image, pad: int = 12) -> Image.Image:
     return out
 
 
+RED = (226, 54, 54)
+INK = (8, 14, 16)
+PAPER = (244, 246, 245)
+
+
 class Renderer:
+    """Broadcast-style recap: an opening title, one full-screen scene per story (picture behind, a lower third with
+    the headline, the detail and the source, a stat card for the key figure), a closing card, and a headline ticker
+    crawling along the bottom throughout."""
+
     def __init__(self, script: dict[str, Any], site_label: str, images: Path | None = None,
                  durations: list[float] | None = None, clips: Path | None = None):
         self.s = script
         self.images: dict[int, Image.Image] = {}
         self.clips: dict[int, Clip] = {}
         self.credits: dict[int, str] = {}
+        self.provider: dict[int, str] = {}
         if clips and clips.exists():
             try:
-                names = {c["story"]: c["name"] for c in json.loads((clips / "credits.json").read_text())}
+                meta = {c["story"]: c for c in json.loads((clips / "credits.json").read_text())}
             except Exception:  # noqa: BLE001
-                names = {}
+                meta = {}
             for i in range(len(script["stories"])):
                 f = clips / f"{i + 1}.mp4"
                 if f.exists() and usable_clip(f):
-                    self.clips[i] = Clip(f, IMG_W, H)
-                    self.credits[i] = names.get(i + 1, "")
+                    self.clips[i] = Clip(f, W, H)
+                    self.credits[i] = (meta.get(i + 1) or {}).get("name", "")
+                    self.provider[i] = (meta.get(i + 1) or {}).get("provider", "Pexels")
         if images:
             for i in range(len(script["stories"])):
                 f = images / f"{i + 1}.jpg"
                 if f.exists():
                     try:
-                        # a little larger than the area, so it can zoom slowly
-                        self.images[i] = _cover(Image.open(f).convert("RGB"), int(IMG_W * 1.08), int(H * 1.08))
+                        self.images[i] = _cover(Image.open(f).convert("RGB"), int(W * 1.1), int(H * 1.1))
                     except Exception:  # noqa: BLE001 - a broken image falls back to the drawn illustration
                         pass
-        self.mask = _fade_mask() if (self.images or self.clips) else None
         self.site = site_label
         self.n = len(script["stories"])
         self.durs = durations or [HOOK_S] + [STORY_S] * self.n + [OUTRO_S]
@@ -614,156 +653,258 @@ class Renderer:
         self.total = sum(self.durs)
         self.bg = _background()
         self.date_h = _human(script["date"])
+        self.shade = self._shade()
         self._scenes = [self._story_layers(st, i) for i, st in enumerate(script["stories"])]
-        self.ai_label = _text_layer(["AI-generated illustration"], _font(24, 600), (205, 220, 218))
-        self.clip_labels = {i: _plate(_text_layer([f"Stock footage: {n} / Pexels" if n else "Stock footage: Pexels"], _font(24, 600), (205, 220, 218)))
-                            for i, n in self.credits.items()}
-        f, lines = _fit(script["hook"], 1500, (104, 96, 88, 80), 2, 800)
-        self.hook = _text_layer(lines, f, TEXT, 1.08)
-        self.eyebrow = _text_layer([f"TODAY IN AI  ·  {self.date_h.upper()}"], _font(34, 700, 112), TOPIC["research"])
-        self.count = _text_layer([f"{self.n} stories. {int(round(self.total))} seconds."], _font(40, 500), SOFT)
-        self.out1 = _text_layer(["Every story, with its sources."], _font(78, 800), TEXT)
-        self.out2 = _text_layer([site_label], _font(58, 700, 110), TOPIC["research"])
-        self.out3 = _text_layer(["Updated every three hours. Written by our newsroom agent, checked against its sources."], _font(32, 500), MUTED)
+        small = _font(24, 600)
+        self.ai_label = _plate(_text_layer(["AI-generated illustration"], small, (215, 226, 224)))
+        self.clip_labels = {i: _plate(_text_layer([f"Footage: {self.credits[i]} / {self.provider[i]}" if self.credits[i] else f"Footage: {self.provider[i]}"], small, (215, 226, 224)))
+                            for i in self.clips}
+        # opening and closing
+        f, lines = _fit(script["hook"], 1600, (96, 88, 80, 72), 2, 820)
+        self.hook = _text_layer(lines, f, TEXT, 1.06)
+        self.eyebrow = _text_layer(["TODAY IN AI"], _font(44, 820, 112), INK)
+        self.open_date = _text_layer([self.date_h.upper()], _font(36, 700, 112), TEXT)
+        self.count = _text_layer([f"The day's top {self.n} stories in " + ("one minute" if 50 <= self.total <= 70 else f"{int(round(self.total))} seconds")], _font(36, 500), SOFT)
+        self.out1 = _text_layer(["That's the day in AI."], _font(92, 820), TEXT)
+        self.out2 = _text_layer([site_label], _font(54, 700, 110), TOPIC["research"])
+        self.out3 = _text_layer(["Every story, with its sources. Updated every three hours by our newsroom agent."], _font(32, 500), MUTED)
+        # the ticker
+        tk = _font(30, 650)
+        items = "      ·      ".join(st["line"].upper() for st in script["stories"])
+        self.ticker = _text_layer([items + "      ·      "], tk, TEXT)
+        self.tick_label = _text_layer(["HEADLINES"], _font(28, 820, 112), INK)
+        self.bug = _text_layer(["TODAY IN AI"], _font(26, 820, 112), INK)
+        self.date_l = _text_layer([self.date_h.upper()], _font(26, 700, 110), TEXT)
+
+    def _shade(self) -> Image.Image:
+        """Darkening over full-screen pictures: strong at the bottom (for the lower third) and a little at the top."""
+        g = Image.new("L", (1, H))
+        for y in range(H):
+            v = 0.25 + 0.65 * max(0.0, (y - H * 0.35) / (H * 0.65)) ** 1.3 + 0.25 * max(0.0, 1 - y / (H * 0.18))
+            g.putpixel((0, y), int(255 * min(0.95, v)))
+        alpha = g.resize((W, H))
+        layer = Image.new("RGBA", (W, H), INK + (0,))
+        layer.putalpha(alpha)
+        return layer
 
     def _story_layers(self, st: dict[str, Any], i: int) -> dict[str, Any]:
         color = TOPIC.get(st["category"], TOPIC["industry"])
-        label = LABEL.get(st["category"], "News").upper() + (f"  ·  {st['lab']}" if st.get("lab") else "")
-        f, lines = _fit(st["line"], 1000, (80, 72, 66, 60), 3, 800)
+        label = LABEL.get(st["category"], "News").upper() + (f"  ·  {st['lab'].upper()}" if st.get("lab") else "")
+        f, lines = _fit(st["line"], 1620, (64, 58, 54), 2, 820)
+        head = _text_layer(lines, f, INK, 1.08)
+        fd, dl = _fit(st["detail"], 1620, (38, 34, 32), 2, 520)
+        detail = _text_layer(dl, fd, TEXT, 1.15)
+        source = _text_layer([f"SOURCE: {st['source'].upper()}"], _font(26, 700, 110), MUTED)
+        chip = _text_layer([label], _font(30, 820, 112), INK)
         fig = key_figure(st)
-        ffig, figlines = None, []
-        if fig:  # largest size at which the figure fits the panel on one line
+        figl = None
+        if fig:
             tmp = ImageDraw.Draw(Image.new("L", (1, 1)))
             for size in range(150, 54, -6):
-                ffig = _font(size, 800, 100 if len(fig) > 8 else 105)
-                if tmp.textlength(fig, font=ffig) <= 470:
+                ffig = _font(size, 820, 100 if len(fig) > 8 else 105)
+                if tmp.textlength(fig, font=ffig) <= 520:
                     break
-            figlines = [fig]
-        return {
-            "color": color, "seed": st["id"], "cat": st["category"],
-            "figure": _text_layer(figlines, ffig, TEXT, 1.0) if fig else None,
-            "num": _text_layer([f"{i + 1:02d}"], _font(190, 800, 112), color),
-            "chip": _text_layer([label], _font(34, 700, 112), color),
-            "line": _text_layer(lines, f, TEXT, 1.06),
-            "source": _text_layer([f"Source: {st['source']}"], _font(34, 600), MUTED),
-        }
+            figl = _text_layer([fig], ffig, TEXT, 1.0)
+        return {"color": color, "seed": st["id"], "cat": st["category"], "head": head, "detail": detail,
+                "source": source, "chip": chip, "figure": figl, "num": _text_layer([f"{i + 1}/{self.n}"], _font(26, 700, 110), TEXT)}
 
-    # each scene draws onto a copy of the background
+    # ------------------------------------------------------------ pieces
+    def _picture(self, idx: int, lt: float, dur: float) -> tuple[Image.Image | None, str]:
+        if idx in self.clips:
+            pic = self.clips[idx].frame(int(lt * FPS))
+            if lt + 1 / FPS >= dur:
+                self.clips[idx].close()
+            if pic is not None:
+                return pic, "clip"
+        if idx in self.images:
+            big = self.images[idx]
+            z = 0.1 * (lt / dur)  # slow push-in across the scene
+            cw, ch = int(big.width * (1 - z * 0.9)), int(big.height * (1 - z * 0.9))
+            ox, oy = (big.width - cw) // 2, int((big.height - ch) * 0.4)
+            return big.crop((ox, oy, ox + cw, oy + ch)).resize((W, H), Image.BILINEAR), "image"
+        return None, ""
+
+    def _ticker(self, img: Image.Image, t: float) -> None:
+        d = ImageDraw.Draw(img)
+        y0 = H - 72
+        d.rectangle((0, y0, W, H), fill=(6, 18, 20))
+        d.rectangle((0, y0, W, y0 + 3), fill=TOPIC["research"])
+        lw = self.tick_label.width + 48
+        tw = self.ticker.width
+        x = int(lw + 40 - (t * 150) % tw)
+        while x < W:
+            img.alpha_composite(self.ticker, (x, y0 + 18))
+            x += tw
+        d.rectangle((0, y0 + 3, lw, H), fill=TOPIC["research"])
+        img.alpha_composite(self.tick_label, (24, y0 + 20))
+
+    def _top(self, img: Image.Image, idx: int | None) -> None:
+        d = ImageDraw.Draw(img)
+        _brand(d, 80, 52)
+        bx = 80 + 46 + int(d.textlength("Frontier Wire", font=_font(30, 800, 125))) + 28
+        d.rectangle((bx, 50, bx + self.bug.width + 28, 50 + 40), fill=RED)
+        img.alpha_composite(_recolor(self.bug, PAPER), (bx + 14, 55))
+        img.alpha_composite(self.date_l, (bx + self.bug.width + 48, 57))
+        if idx is not None:
+            n = self._scenes[idx]["num"]
+            d.rectangle((W - 80 - n.width - 28, 50, W - 80, 90), fill=(6, 18, 20))
+            img.alpha_composite(n, (W - 80 - n.width - 14, 56))
+
+    @staticmethod
+    def _wipe(layer: Image.Image, k: float) -> Image.Image:
+        """Reveal a layer left to right (a broadcast wipe)."""
+        if k >= 1:
+            return layer
+        out = Image.new("RGBA", layer.size, (0, 0, 0, 0))
+        w = int(layer.width * max(0.0, k))
+        if w > 0:
+            out.paste(layer.crop((0, 0, w, layer.height)), (0, 0))
+        return out
+
+    # ------------------------------------------------------------ scenes
+    def frame(self, t: float) -> Image.Image:
+        hook_s = self.durs[0]
+        if t < hook_s:
+            return self._open(t, hook_s)
+        idx = next((j for j in range(self.n) if t < self.starts[j + 2]), self.n)
+        if idx < self.n:
+            return self._story(t, idx)
+        return self._close(t, t - self.starts[-1])
+
+    def _open(self, t: float, dur: float) -> Image.Image:
+        img = self.bg.copy().convert("RGBA")
+        d = ImageDraw.Draw(img)
+        _signal(d, "frontier-wire-hook", TOPIC["research"], (1000, 130, 1840, 440), t)
+        out_k = 1 - _ease((t - (dur - 0.4)) / 0.4)
+        bars = [(150, TOPIC["models"]), (230, TOPIC["research"]), (115, TOPIC["policy"]), (185, TOPIC["industry"])]
+        for i, (h, c) in enumerate(bars):
+            hh = h * _ease((t - i * 0.1) / 0.7) * out_k
+            if hh > 2:
+                d.rounded_rectangle((120 + i * 64, 440 - hh, 120 + i * 64 + 38, 440), radius=19, fill=c)
+        k = _ease((t - 0.35) / 0.5) * out_k
+        if k > 0:  # the red title bar wipes in
+            bw = self.eyebrow.width + 56
+            bar = Image.new("RGBA", (bw, 70), RED + (255,))
+            bar.alpha_composite(_recolor(self.eyebrow, PAPER), (28, 10))
+            img.alpha_composite(self._wipe(bar, k), (120, 500))
+            img.alpha_composite(_fade(self.open_date, k), (120 + bw + 30, 516))
+        k2 = _ease((t - 0.7) / 0.6) * out_k
+        if k2 > 0:
+            img.alpha_composite(_fade(self.hook, k2), (120, 610 + int((1 - k2) * 30)))
+        k3 = _ease((t - 1.1) / 0.6) * out_k
+        if k3 > 0:
+            img.alpha_composite(_fade(self.count, k3), (120, 640 + self.hook.height))
+        self._ticker(img, t)
+        return img.convert("RGB")
+
+    def _story(self, t: float, idx: int) -> Image.Image:
+        dur = self.durs[idx + 1]
+        lt = t - self.starts[idx + 1]
+        L = self._scenes[idx]
+        out_k = 1 - _ease((lt - (dur - 0.35)) / 0.35)
+        pic, kind = self._picture(idx, lt, dur)
+        if pic is not None:
+            img = pic.convert("RGBA")
+            img.alpha_composite(self.shade)
+        else:
+            img = self.bg.copy().convert("RGBA")
+            panel = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+            pd = ImageDraw.Draw(panel)
+            _illustration(pd, L["cat"], (80, 150, 560, 420), L["color"], t)
+            img.alpha_composite(_fade(panel, _ease(lt / 0.6) * out_k))
+        fade_in = _ease(lt / 0.35)  # scenes cut in from a quick dip
+        if fade_in < 1:
+            img.alpha_composite(Image.new("RGBA", (W, H), INK + (int(255 * (1 - fade_in)),)))
+        d = ImageDraw.Draw(img)
+        self._top(img, idx)
+        # the key figure: a stat card, top right
+        if L["figure"] is not None:
+            k = _ease((lt - 0.9) / 0.5) * out_k
+            if k > 0:
+                fw, fh = L["figure"].width + 72, L["figure"].height + 48
+                card = Image.new("RGBA", (fw, fh), (0, 0, 0, 0))
+                cd = ImageDraw.Draw(card)
+                cd.rectangle((0, 0, fw - 1, fh - 1), fill=(6, 18, 20, 215))
+                cd.rectangle((0, 0, 8, fh - 1), fill=L["color"] + (255,))
+                card.alpha_composite(L["figure"], (40, 16))
+                img.alpha_composite(_fade(card, k), (W - 80 - fw, 150 + int((1 - k) * 24)))
+        if kind:
+            lab = self.clip_labels.get(idx) if kind == "clip" else self.ai_label
+            if lab is not None:
+                img.alpha_composite(_fade(lab, 0.85 * out_k), (W - 80 - lab.width, 112 if L["figure"] is None else 150 + L["figure"].height + 64))
+        # lower third: category tab, headline bar, detail and source
+        y_head = H - 72 - 34 - (L["detail"].height + L["source"].height + 52) - (L["head"].height + 36)
+        k = _ease((lt - 0.25) / 0.45) * out_k
+        if k > 0:
+            tab = Image.new("RGBA", (L["chip"].width + 40, 50), L["color"] + (255,))
+            tab.alpha_composite(L["chip"], (20, 8))
+            img.alpha_composite(self._wipe(tab, k), (80, y_head - 50))
+        k = _ease((lt - 0.4) / 0.55) * out_k
+        if k > 0:
+            hw, hh = W - 160, L["head"].height + 36
+            bar = Image.new("RGBA", (hw, hh), PAPER + (255,))
+            ImageDraw.Draw(bar).rectangle((0, 0, 10, hh), fill=L["color"] + (255,))
+            bar.alpha_composite(L["head"], (36, 14))
+            img.alpha_composite(self._wipe(bar, k), (80, y_head))
+        k = _ease((lt - 1.2) / 0.5) * out_k
+        if k > 0:
+            y = y_head + L["head"].height + 36
+            pw, ph = W - 160, L["detail"].height + L["source"].height + 52
+            plate = Image.new("RGBA", (pw, ph), (6, 18, 20, 225))
+            plate.alpha_composite(L["detail"], (36, 18))
+            plate.alpha_composite(L["source"], (36, 30 + L["detail"].height))
+            img.alpha_composite(_fade(plate, k), (80, y + int((1 - k) * 16)))
+        self._ticker(img, t)
+        return img.convert("RGB")
+
+    def _close(self, t: float, lt: float) -> Image.Image:
+        img = self.bg.copy().convert("RGBA")
+        d = ImageDraw.Draw(img)
+        _signal(d, "frontier-wire-outro", TOPIC["research"], (1000, 130, 1840, 440), t)
+        _brand(d, 120, 300, scale=2.4, grow=_ease(lt / 0.8))
+        self._place(img, self.out1, 120, 470, lt, 0.2, 1)
+        self._place(img, self.out2, 120, 600, lt, 0.45, 1)
+        self._place(img, self.out3, 120, 700, lt, 0.7, 1)
+        self._ticker(img, t)
+        return img.convert("RGB")
+
     def _place(self, frame: Image.Image, layer: Image.Image, x: int, y: int, t: float, start: float, out_k: float) -> None:
         k = _ease((t - start) / 0.55)
         if k <= 0:
             return
         frame.alpha_composite(_fade(layer, k * out_k), (x, int(y + (1 - k) * 36)))
 
-    def _chrome(self, d: ImageDraw.ImageDraw, idx: int, progress: float) -> None:
-        _brand(d, 140, 72)
-        date = self.date_h
-        f = _font(30, 600)
-        d.text((W - 140 - d.textlength(date, font=f), 74), date, font=f, fill=MUTED)
-        seg_w, gap, y = (W - 280 - gap_total(self.n)) / self.n, 14, 1000
-        for j in range(self.n):
-            x0 = 140 + j * (seg_w + gap)
-            d.rounded_rectangle((x0, y, x0 + seg_w, y + 8), radius=4, fill=(30, 58, 62))
-            fill = 1.0 if j < idx else (progress if j == idx else 0.0)
-            if fill > 0:
-                d.rounded_rectangle((x0, y, x0 + seg_w * fill, y + 8), radius=4, fill=TOPIC["research"])
-
-    def frame(self, t: float) -> Image.Image:
-        img = self.bg.copy().convert("RGBA")
-        d = ImageDraw.Draw(img)
-        hook_s = self.durs[0]
-        if t < hook_s:
-            out_k = 1 - _ease((t - (hook_s - 0.35)) / 0.35)
-            _brand(d, 140, 72)
-            _signal(d, "frontier-wire-hook", TOPIC["research"], (980, 160, 1800, 470), t)
-            # big bars mark
-            bars = [(130, TOPIC["models"]), (200, TOPIC["research"]), (100, TOPIC["policy"]), (160, TOPIC["industry"])]
-            for i, (h, c) in enumerate(bars):
-                hh = h * _ease((t - i * 0.12) / 0.8)
-                if hh > 2:
-                    d.rounded_rectangle((140 + i * 58, 470 - hh, 140 + i * 58 + 34, 470), radius=17, fill=c)
-            self._place(img, self.eyebrow, 140, 540, t, 0.3, out_k)
-            self._place(img, self.hook, 140, 610, t, 0.55, out_k)
-            self._place(img, self.count, 140, 640 + self.hook.height, t, 0.9, out_k)
-            return img.convert("RGB")
-        idx = next((j for j in range(self.n) if t < self.starts[j + 2]), self.n)
-        if idx < self.n:
-            story_s = self.durs[idx + 1]
-            lt = t - self.starts[idx + 1]
-            L = self._scenes[idx]
-            out_k = 1 - _ease((lt - (story_s - 0.35)) / 0.35)
-            # the visual: a stock clip, else an AI illustration of the story, else a drawn one; and the key figure
-            k = _ease(lt / 0.6) * out_k
-            pic = None
-            if k > 0 and idx in self.clips:
-                pic = self.clips[idx].frame(int(lt * FPS))
-                if pic is not None:
-                    pic = pic.convert("RGBA")
-                if lt + 1 / FPS >= story_s:
-                    self.clips[idx].close()
-            if pic is None and k > 0 and idx in self.images:
-                big = self.images[idx]
-                z = 1.0 + 0.06 * (lt / story_s)  # slow push-in over the story's scene
-                cw, ch = int(big.width / 1.08 * (1.08 - (z - 1))), int(big.height / 1.08 * (1.08 - (z - 1)))
-                ox, oy = (big.width - cw) // 2, (big.height - ch) // 2
-                pic = big.crop((ox, oy, ox + cw, oy + ch)).resize((IMG_W, H), Image.BILINEAR).convert("RGBA")
-            if pic is not None:
-                pic.putalpha(self.mask.point(lambda v: int(v * k)))
-                img.alpha_composite(pic, (IMG_X, 0))
-                if L["figure"] is not None:
-                    fw, fh = L["figure"].width + 64, L["figure"].height + 40
-                    plate = Image.new("RGBA", (fw, fh), (0, 0, 0, 0))
-                    ImageDraw.Draw(plate).rounded_rectangle((0, 0, fw - 1, fh - 1), radius=26, fill=(5, 20, 22, 205))
-                    plate.alpha_composite(L["figure"], (32, 14))
-                    img.alpha_composite(_fade(plate, k), (W - 120 - fw, 820 - fh + int((1 - k) * 30)))
-                lab = self.clip_labels.get(idx, self.ai_label) if idx in self.clips and self.clips[idx].last is not None else self.ai_label
-                img.alpha_composite(_fade(lab, k * 0.8), (W - 120 - lab.width, 846))
-            elif k > 0:
-                panel = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-                pd = ImageDraw.Draw(panel)
-                tint = tuple(int(c * 0.10 + g * 0.90) for c, g in zip(L["color"], GROUND))
-                pd.rounded_rectangle((1220, 150, 1780, 900), radius=36, fill=tint + (255,), outline=tuple(int(c * 0.35 + g * 0.65) for c, g in zip(L["color"], GROUND)) + (255,), width=2)
-                _illustration(pd, L["cat"], (1290, 210, 1710, 590), L["color"], t)
-                if L["figure"] is not None:
-                    fx = 1500 - L["figure"].width // 2
-                    panel.alpha_composite(L["figure"], (max(1240, fx), 640))
-                img.alpha_composite(_fade(panel, k), (0, int((1 - k) * 30)))
-            self._chrome(d, idx, lt / story_s)  # drawn over the picture so the date and progress stay visible
-            self._place(img, L["num"], 130, 150, lt, 0.0, out_k)
-            self._place(img, L["chip"], 140, 400, lt, 0.12, out_k)
-            self._place(img, L["line"], 140, 470, lt, 0.25, out_k)
-            self._place(img, L["source"], 140, 470 + L["line"].height + 48, lt, 0.45, out_k)
-            return img.convert("RGB")
-        lt = t - self.starts[-1]
-        _signal(d, "frontier-wire-outro", TOPIC["research"], (980, 160, 1800, 470), t)
-        _brand(d, 140, 300, scale=2.2, grow=_ease(lt / 0.8))
-        self._place(img, self.out1, 140, 470, lt, 0.2, 1)
-        self._place(img, self.out2, 140, 590, lt, 0.45, 1)
-        self._place(img, self.out3, 140, 700, lt, 0.7, 1)
-        return img.convert("RGB")
-
     def poster(self) -> Image.Image:
         img = self.bg.copy().convert("RGBA")
         d = ImageDraw.Draw(img)
-        _brand(d, 140, 72)
-        _signal(d, "frontier-wire-hook", TOPIC["research"], (1180, 40, 1800, 190), 1.0)
-        d.text((140, 200), f"TODAY'S {int(round(self.total))}-SECOND RECAP  ·  {self.date_h.upper()}", font=_font(34, 700, 112), fill=TOPIC["research"])
-        f, lines = _fit(self.s["hook"], 1500, (88, 80, 72), 2, 800)
-        img.alpha_composite(_text_layer(lines, f, TEXT, 1.06), (140, 260))
-        y = 290 + _text_layer(lines, f, TEXT, 1.06).height + 30
+        self._top(img, None)
+        mins = "ONE-MINUTE" if self.total >= 45 else f"{int(round(self.total))}-SECOND"
+        bar = Image.new("RGBA", (self.eyebrow.width + 56, 70), RED + (255,))
+        bar.alpha_composite(_recolor(self.eyebrow, PAPER), (28, 10))
+        img.alpha_composite(bar, (120, 170))
+        d.text((120 + bar.width + 30, 188), f"{mins} RECAP  ·  {self.date_h.upper()}", font=_font(34, 700, 112), fill=TEXT)
+        f, lines = _fit(self.s["hook"], 1500, (88, 80, 72), 2, 820)
+        hook = _text_layer(lines, f, TEXT, 1.06)
+        img.alpha_composite(hook, (120, 280))
+        y = 310 + hook.height + 20
         fl = _font(38, 600)
         for i, st in enumerate(self.s["stories"]):
             c = TOPIC.get(st["category"], TOPIC["industry"])
-            d.rounded_rectangle((140, y + 12, 152, y + 40), radius=6, fill=c)
+            d.rectangle((120, y + 12, 132, y + 40), fill=c)
             line = st["line"] if d.textlength(st["line"], font=fl) <= 1400 else _wrap(d, st["line"], fl, 1360)[0] + "…"
-            d.text((180, y), line, font=fl, fill=SOFT)
-            y += 64
-        # play button
-        cx, cy, r = W - 260, H - 240, 110
-        d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=TOPIC["research"])
-        d.polygon([(cx - 34, cy - 52), (cx - 34, cy + 52), (cx + 58, cy)], fill=GROUND)
-        d.text((140, H - 110), self.site, font=_font(34, 700, 110), fill=MUTED)
+            d.text((160, y), line, font=fl, fill=SOFT)
+            y += 62
+        cx, cy, r = W - 260, H - 260, 110
+        d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=RED)
+        d.polygon([(cx - 34, cy - 52), (cx - 34, cy + 52), (cx + 58, cy)], fill=PAPER)
+        d.text((120, H - 110), self.site, font=_font(34, 700, 110), fill=MUTED)
         return img.convert("RGB")
+
+
+def _recolor(layer: Image.Image, color: tuple[int, int, int]) -> Image.Image:
+    out = Image.new("RGBA", layer.size, color + (0,))
+    out.putalpha(layer.getchannel("A"))
+    return out
 
 
 def gap_total(n: int, gap: int = 14) -> int:
@@ -795,7 +936,7 @@ def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.gi
     enc = subprocess.Popen(
         ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
          *audio, "-map", "0:v", "-map", "1:a", "-c:a", "aac", "-b:a", "128k", "-t", f"{frames / FPS:.3f}",
-         "-c:v", "libx264", "-preset", "veryfast", "-tune", "animation", "-crf", "20", "-maxrate", "1600k", "-bufsize", "3200k",
+         "-c:v", "libx264", "-preset", "veryfast", "-tune", "animation", "-crf", "20", "-maxrate", "1400k", "-bufsize", "2800k",
          "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-metadata", f"title=Frontier Wire recap {script['date']}", str(mp4)],
         stdin=subprocess.PIPE)
     assert enc.stdin
@@ -969,7 +1110,7 @@ def site_view(recaps: list[dict[str, Any]], now: datetime, base: str, repo: str,
             "entries": [{**s, "href": f"story/{s['id']}/" if s["id"] in story_ids else "",
                          "video": videos.get(s["id"]) if VIDEO_ID.match((videos.get(s["id"]) or {}).get("id") or "") else None}
                         for s in r["stories"]],
-            "footage": [c for c in r.get("footage_credits") or [] if str(c.get("url", "")).startswith("https://www.pexels.com/")],
+            "footage": [c for c in r.get("footage_credits") or [] if str(c.get("url", "")).startswith(("https://www.pexels.com/", "https://pixabay.com/"))],
         })
     return rows
 
@@ -1001,7 +1142,7 @@ def feed(rows: list[dict[str, Any]], base: str) -> str:
             'xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
             f"<title>Frontier Wire: daily recap</title><link>{base}videos/</link>"
             f'<atom:link href="{base}videos/feed.xml" rel="self" type="application/rss+xml"/>'
-            "<description>The day in AI in 30 seconds: the top five stories, each checked against its sources.</description>"
+            "<description>The day in AI in one minute: the top five stories, each checked against its sources.</description>"
             f"<lastBuildDate>{format_datetime(datetime.fromisoformat(latest))}</lastBuildDate>"
             + "".join(item(r) for r in rows[:30]) + "</channel></rss>\n")
 
@@ -1038,8 +1179,8 @@ def build_site(out: Path, env: Any, common: dict[str, Any], base: str, repo: str
         urls.append(r["page_url"])
     (vdir / "assets.txt").write_text("\n".join(need) + ("\n" if need else ""))
     (vdir / "index.html").write_text(env.get_template("videos.html").render(
-        **common, rows=rows, root="../", api_url=api_url, title="Daily recaps: today in AI in 30 seconds | Frontier Wire",
-        description="Every evening, the day's top five AI stories in a 30-second video, each checked against its sources.",
+        **common, rows=rows, root="../", api_url=api_url, title="Daily recaps: today in AI in one minute | Frontier Wire",
+        description="Every evening, the day's top five AI stories in a one-minute video, each checked against its sources.",
         canonical=f"{base}videos/", og_image=rows[0]["poster_url"] if rows else f"{base}og/home.png"))
     urls.append(f"{base}videos/")
     top = rows[0] if rows and rows[0]["live"] else None

@@ -152,7 +152,7 @@ export function renderEmail({ site, api, events, briefing, unsub, kind, intro })
 </table></td></tr></table></body></html>`;
 }
 
-// ---------------------------------------------------------------- daily 30-second recap
+// ---------------------------------------------------------------- daily one-minute recap
 // recap: videos/latest.json from the site (date, human, hook, summary[3], page_url, gif_url, poster_url, seconds,
 // entries[{line, detail, source, url}]). approveUrl is set only on the preview sent to the editor.
 export function recapSubject(recap) {
