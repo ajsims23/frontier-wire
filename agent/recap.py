@@ -522,6 +522,36 @@ def fetch_voice(script: dict[str, Any], out: Path, api: str, secret: str) -> lis
     return notes
 
 
+KOKORO_VOICE, KOKORO_SPEED = "bm_george", 1.1   # British male newsreader; open-source Kokoro-82M
+
+
+def fetch_voice_backup(script: dict[str, Any], out: Path, model_dir: Path) -> list[str]:
+    """Run in GitHub Actions when the Workers AI voice fails: the same narration from Kokoro (open weights, runs on
+    the runner's CPU, no key, no quota). model_dir holds kokoro-v1.0.onnx and voices-v1.0.bin."""
+    import soundfile as sf
+    from kokoro_onnx import Kokoro
+    out.mkdir(parents=True, exist_ok=True)
+    k = Kokoro(str(model_dir / "kokoro-v1.0.onnx"), str(model_dir / "voices-v1.0.bin"))
+    notes = []
+    for key, text in narration(script):
+        if not text:
+            continue
+        try:
+            audio, sr = k.create(text, voice=KOKORO_VOICE, speed=KOKORO_SPEED, lang="en-gb")
+            wav = out / f"{key}.wav"
+            sf.write(wav, audio, sr)
+            _run(["ffmpeg", "-v", "error", "-y", "-i", str(wav), "-af",
+                  "silenceremove=start_periods=1:start_threshold=-45dB,areverse,silenceremove=start_periods=1:start_threshold=-45dB,areverse",
+                  "-c:a", "libmp3lame", "-q:a", "3", str(out / f"{key}.mp3")])
+            wav.unlink()
+        except Exception as exc:  # noqa: BLE001
+            notes.append(f"{key}: no backup narration ({str(exc)[:120]})")
+    if notes:
+        for f in out.glob("*.mp3"):
+            f.unlink()
+    return notes
+
+
 # ---------------------------------------------------------------- drawing
 def _ease(t: float) -> float:
     t = max(0.0, min(1.0, t))

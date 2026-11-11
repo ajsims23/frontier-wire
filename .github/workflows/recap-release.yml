@@ -74,6 +74,26 @@ jobs:
           RECAP_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
         run: RECAP_API="$(cat config/api_url.txt)" python -m agent recap voice --date "$DATE" --out "_recap/$DATE"
 
+      - name: Cache the backup voice model
+        if: env.PREBUILT != '1'
+        uses: actions/cache@v4
+        with:
+          path: ~/.kokoro
+          key: kokoro-onnx-v1.0
+
+      - name: Backup voice (open-source Kokoro) if the Workers AI voice failed
+        if: env.PREBUILT != '1'
+        run: |
+          if ls "_recap/$DATE/voice/"*.mp3 >/dev/null 2>&1; then echo "Workers AI narration is in place"; exit 0; fi
+          echo "::warning::Workers AI narration missing; using the Kokoro backup voice"
+          pip install -q kokoro-onnx soundfile
+          mkdir -p ~/.kokoro
+          base=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
+          for f in kokoro-v1.0.onnx voices-v1.0.bin; do
+            [ -s ~/.kokoro/$f ] || curl -fsSL --retry 3 --max-time 600 "$base/$f" -o ~/.kokoro/$f
+          done
+          python -m agent recap voice-backup --date "$DATE" --out "_recap/$DATE"
+
       - name: Render the video
         if: env.PREBUILT != '1'
         run: python -m agent recap render --date "$DATE" --out "_recap/$DATE"

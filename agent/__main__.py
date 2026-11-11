@@ -35,7 +35,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("check-models")
     sub.add_parser("preview-desks")
     rc = sub.add_parser("recap")
-    rc.add_argument("action", choices=["draft", "render", "check", "upload", "stamp", "images", "footage", "voice"])
+    rc.add_argument("action", choices=["draft", "render", "check", "upload", "stamp", "images", "footage", "voice", "voice-backup"])
     rc.add_argument("--date", default="", help="YYYY-MM-DD in IST (default: today)")
     rc.add_argument("--out", default="", help="folder for the rendered files")
     rc.add_argument("--force", action="store_true", help="draft: replace a script the editor already filled")
@@ -167,6 +167,13 @@ def _recap(args: argparse.Namespace) -> int:
         for n in notes:
             print(f"::warning::{n}")
         print(f"{len(script['stories']) - len(notes)} of {len(script['stories'])} AI illustrations")
+        return 0
+    elif args.action == "voice-backup":
+        script = json.loads((out / "script.json").read_text())
+        notes = recap.fetch_voice_backup(script, out / "voice", Path(os.environ.get("KOKORO_DIR", "~/.kokoro")).expanduser())
+        print("backup narration ready (Kokoro)" if not notes else "no backup narration; the video renders silent")
+        for n in notes:
+            print(f"::warning::{n}")
         return 0
     elif args.action in ("footage", "voice"):
         script = json.loads((out / "script.json").read_text())
