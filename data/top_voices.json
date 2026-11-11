@@ -1,23 +1,5 @@
 {
   "posts": {
-    "960bb9e491ed": {
-      "id": "960bb9e491ed",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mziqgazkbc2x",
-      "person": "Ethan Mollick",
-      "text": "AI semiotics: cool paper suggests that AIs are strongly impacted by visual symbols in ways they do not always recognize in their own chains-of-thought. The way they react to those symbols is very different than how a human might interpret them as well. arxiv.org/pdf/2610.364...",
-      "published": "2026-11-04T16:08:53.537Z",
-      "via": "Bluesky",
-      "kind": "post"
-    },
-    "93ee83f44d29": {
-      "id": "93ee83f44d29",
-      "url": "https://interconnects.ai/p/how-well-can-we-measure-open-model",
-      "person": "Nathan Lambert",
-      "text": "How big is the open model economy today?. My longest running agent testbed has been building the Interconnects Dashboard — an aggregator of all of the best data on open model adoption and performance from across the web. This dashboard is freely available and becoming quite useful. Still, all the measurements we have on open model adoption are incredibly imprecise. We have noisy platform metrics, marketing-related metrics from startups, and imperfect public evaluations. It takes an informed eye to figure out where things are going. These research notes are my current best approximations of where we stand. As with most things on Interconnects, our goal is to build well more value than we…",
-      "published": "2026-11-04T16:35:44+00:00",
-      "via": "Interconnects",
-      "kind": "post"
-    },
     "e9efb1446d7a": {
       "id": "e9efb1446d7a",
       "url": "https://latent.space/p/ainews-behind-latent-space-kill-my-saas-jev-ai-in-2026-aiei-shanghai",
@@ -554,6 +536,24 @@
       "person": "Simon Willison",
       "text": "Anthropic's IPO roadshow video. Anthropic's IPO roadshow video Anthropic kicked off their IPO roadshow yesterday, and their roadshow video has some previously unreleased information about how their business works. The section on \"Approach to compute\" with co-founder Tom Brown is particularly interesting, describing how Anthropic train and serve Claude across AWS Trainium, Google TPUs, NVIDIA GPUs, and AMD GPUs. I'm not sure why there's no official video transcript, but here's one that I extracted using MacWhisper. Highlights below: We train and serve Claude now across all four major chip families. That's only possible becaus",
       "published": "2026-11-11T15:11:59+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "c5d1a9eb3383": {
+      "id": "c5d1a9eb3383",
+      "url": "https://simonwillison.net/2026/Nov/11/tools-tags",
+      "person": "Simon Willison",
+      "text": "Browse tools.simonwillison.net by tag. Browse tools.simonwillison.net by tag I've been wanting a better way to browse my collection of vibe-coded tools (244 and counting) for a while. I had a few Fable 5.2 credits left over before my weekly reset so I set it to work using tree-sitter to analyze the code for JavaScript APIs, libraries, and web API hosts used by each tool. The homepage now features tag clouds for browsing by each of those categories of tag: Tags: javascript , tools , ai , generative-ai , llms , claude , vibe-coding",
+      "published": "2026-11-11T18:42:50+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "ac992cc25d49": {
+      "id": "ac992cc25d49",
+      "url": "https://simonwillison.net/2026/Nov/11/llm",
+      "person": "Simon Willison",
+      "text": "llm 0.37.2. Release: llm 0.37.2 Fixes a security issue reported by Daniel de Araujo in GHSA-v9h7-jj4g-f862 and GHSA-r639-rr7r-x72w . LLM has a mechanism called extra-openai-models.yaml - now managed by the new-in-0.37 llm openai endpoint add command - for using LLM with OpenAI-compatible API endpoints from other providers. Daniel reported two ways this could accidentally send your configured OpenAI API key to one of those providers: if the key named by api_key_name had never been stored, or if a responses: true model was run with -o chat_completions 1 . Tags: projects , security , llm , releases",
+      "published": "2026-11-11T17:19:52+00:00",
       "via": "Simon Willison",
       "kind": "post"
     }

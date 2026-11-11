@@ -1,0 +1,299 @@
+{
+  "started_at": "2026-11-11T19:16:18+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1381)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (904)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (11)",
+    "gdelt": "ok (45)",
+    "hn": "ok (20)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "JioStar’s chief architect on AI discovery at 500M-user scale",
+      "reason": "score 4: Company case study/blog post on scale deployment without significant hard news for global readers."
+    },
+    {
+      "title": "Combining AI with GIS to solve real - time farm problems - the Farmwise AI way",
+      "reason": "score 4: Lightweight article about GIS and farm problems without a substantial AI breakthrough or product launch."
+    },
+    {
+      "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+      "reason": "not AI: General infrastructure mishap (Jane Street datacenter) with no AI-specific angle."
+    },
+    {
+      "title": "Show HN: Black Ops II statically recompiled to native ARM64 macOS",
+      "reason": "not AI: Not AI related; decompiling a game for macOS."
+    },
+    {
+      "title": "AWS Finally Built Its Own AWS Emulator",
+      "reason": "not AI: Not AI related; AWS emulator release."
+    },
+    {
+      "title": "Pharo in the Browser with WebAssembly",
+      "reason": "not AI: Not AI related; Pharo running in WebAssembly."
+    },
+    {
+      "title": "Hyper-Realistic Sand with WebGL2",
+      "reason": "not AI: Not AI related; WebGL graphics demo."
+    },
+    {
+      "title": "Is Jensen Huang’s bad behavior more commonplace than it seems?",
+      "reason": "score 4: Routine commentary and speculation on executive behavior without hard new developments."
+    },
+    {
+      "title": "OpenAI’s quarterly revenue reportedly crosses $10B for the first time",
+      "reason": "duplicate of 2b4eaac89da1"
+    },
+    {
+      "title": "Taiwan’s chipmaking giant TSMC to invest $1B in Anthropic, OpenAI",
+      "reason": "duplicate of e9e2b3561c9a"
+    },
+    {
+      "title": "Browse tools.simonwillison.net by tag",
+      "reason": "score 3: Personal blog post about browsing vibe-coded tools using Fable credits; minor personal workflow note."
+    },
+    {
+      "title": "llm 0.37.2",
+      "reason": "score 4: Routine minor software release (llm 0.37.2 bug fix)."
+    },
+    {
+      "title": "Google launches Gemini Decisions API, powered by its new Gemini Decision 1 model, to return predefined answers with confidence scores, at $0.10/1M input tokens (Google)",
+      "reason": "duplicate of cce714811b51"
+    },
+    {
+      "title": "Silicon Valley's herd mentality in cozying up to Trump backfired as Democrats may seek retribution, China closes the AI gap, and anti-Big Tech sentiment grows (Nick Clegg/The Atlantic)",
+      "reason": "score 4: Broad political commentary piece that rehashing Silicon Valley politics and tech trends rather than breaking AI news."
+    },
+    {
+      "title": "IBM announces the Quantum Nighthawk r3, its next-gen processor designed to execute 10,000 quantum operations across 520 qubits to tackle more complex problems (Kyt Dotson/SiliconANGLE)",
+      "reason": "score 4: Quantum computing announcement; adjacent to high-performance compute but not core AI architecture."
+    },
+    {
+      "title": "Memo: Meta's head of infrastructure and co-head of engineering Santosh Janardhan plans to leave in early 2027 and Dave Brown will become head of infrastructure (Riley Griffin/Bloomberg)",
+      "reason": "score 4: Executive leadership transition for Meta's infrastructure division, standard corporate personnel news."
+    },
+    {
+      "title": "Imprint, which helps companies offer co-branded credit cards and manage loyalty programs, raised $130M led by Khosla Ventures at a ~$1.9B valuation (Alex Konrad/Upstarts Media)",
+      "reason": "score 5: Credit card and loyalty program startup raising funding; AI is mentioned only as a future agentic commerce angle."
+    },
+    {
+      "title": "Anthropic IPO could draw record retail buyers, Vanda Research says",
+      "reason": "score 5: Rehash of Anthropic IPO interest and retail demand already covered extensively."
+    },
+    {
+      "title": "Anthropic's trillion-dollar IPO is coming, but retail investors could have owned AI stock much earlier",
+      "reason": "score 5: Commentary on Anthropic IPO and retail investors, rehash of ongoing IPO coverage."
+    },
+    {
+      "title": "Nvidia, Chinese Espionage, and the AI Race: Foreign Policy Issues to Watch",
+      "reason": "score 5: Council on Foreign Relations commentary piece on foreign policy issues regarding Nvidia and China, lacking fresh reporting."
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang’s Alleged Chinese Spy Affair: A Timeline Of How the Scandal Unfolded",
+      "reason": "score 4: Timeline rehash of the Nvidia CEO controversy already covered in multiple breaking news items."
+    },
+    {
+      "title": "Singapore, Nvidia and the China chip path",
+      "reason": "score 4: Rehash of Singapore and Nvidia chip routing issues already covered in previous news items."
+    },
+    {
+      "title": "Procurement Notices Detail Four Nvidia H200 Cards at Blacklisted NWPU",
+      "reason": "score 4: Rehash of procurement details regarding Nvidia H200 cards at a blacklisted Chinese university."
+    },
+    {
+      "title": "Google rolls out Gemini 4 Carbon to AI Ultra subscribers",
+      "reason": "duplicate of 28b27e2d175e"
+    },
+    {
+      "title": "Google expands Gemini 4 Carbon access to power users worldwide",
+      "reason": "duplicate of 28b27e2d175e"
+    },
+    {
+      "title": "Google Expands Gemini 4 Carbon Access Beyond Cybersecurity Defenders",
+      "reason": "duplicate of 28b27e2d175e"
+    },
+    {
+      "title": "Sources: self-driving simulation software maker Applied Intuition is in talks to raise at least $1.5B led by General Catalyst at a ~$30B pre-money valuation (Bloomberg)",
+      "reason": "variety: already 2 stories from bloomberg this run"
+    }
+  ],
+  "written": [
+    {
+      "id": "1deaf3a08d51",
+      "headline": "United Airlines bars unauthorized AI agents from booking travel",
+      "category": "policy",
+      "summary": "United Airlines barred unauthorized third-party AI agents from booking, purchasing, or servicing travel through its digital platforms. The airline cited data privacy risks, account security concerns, and potential violations of FAA and DOT regulations.",
+      "url": "https://techmeme.com/261111/p39",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "04441559207d",
+      "headline": "Anthropic IPO draws multiple times the orders for available shares",
+      "category": "industry",
+      "summary": "Anthropic's initial public offering has drawn multiple times the orders for available shares. The Claude maker is reportedly planning a livestreamed marketing event on Friday featuring CEO Dario Amodei and JPMorgan Chase CEO Jamie Dimon.",
+      "url": "https://techmeme.com/261111/p27",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "d494f2eb479c",
+      "headline": "Torus raises $500M to build modular container-sized AI data centers",
+      "category": "industry",
+      "summary": "Salt Lake City-based energy storage startup Torus raised a $500 million Series C round led by Magnetar to launch its new Foundry product, which packs power, storage, cooling, networking, and AI computing into shipping container-sized units. The modular units range in size from one to 20 megawatts and are designed to run AI inference tasks at existing business and factory sites.",
+      "url": "https://techmeme.com/261111/p26",
+      "sources": 3,
+      "quotes": 2
+    },
+    {
+      "id": "a961b6503dce",
+      "headline": "Edelbyte emerges from stealth with $70M for AI agent data platform",
+      "category": "industry",
+      "summary": "Edelbyte emerged from stealth with $70 million in funding led by Sequoia and Quiet Capital to build a data analytics platform optimized for AI agents. The startup offers a unified platform combining search, analytics, vector, graph, and geospatial capabilities.",
+      "url": "https://techmeme.com/261111/p33",
+      "sources": 3,
+      "quotes": 1
+    }
+  ],
+  "notes": [
+    "not India desk: 'Nvidia, Jensen Huang Sued by Shareholders Over Tie'",
+    "stopped writing: daily cap of 900,000 tokens reached",
+    "4 kept item(s) carried over to the next run",
+    "videos skipped: daily cap of 900,000 tokens reached",
+    "tagging skipped: daily cap of 900,000 tokens reached",
+    "trackers skipped: daily cap of 900,000 tokens reached",
+    "claims skipped: daily cap of 900,000 tokens reached",
+    "briefing skipped: daily cap of 900,000 tokens reached"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 99.4,
+    "audit": 0.0,
+    "plan": 113.5,
+    "judge": 20.3,
+    "verify and write": 82.6,
+    "explainers": 2.1,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "self-review": -0.0,
+    "photos": 0.5,
+    "stock photos": 18.3,
+    "daily email": -0.0,
+    "alerts": 3.8
+  },
+  "fetched": 3001,
+  "fresh": 25,
+  "plan": {
+    "focus": "Tracking big AI funding moves while new model services reshape builder economics and policy scrutiny tightens.",
+    "priorities": [
+      "OpenAI’s quarterly revenue reportedly crosses $10B for the first time (OpenAI's $10B quarterly revenue milestone signals market scale crucial for investors.)",
+      "Google launches Gemini Decisions API, powered by its new Gemini Decisi (Google Gemini Decisions API launch offers a new, low‑cost model service for builders.)",
+      "Sources: Anthropic's IPO draws multiple times the orders for the share (Anthropic IPO demand surge ties to our IPO storyline and investor interest.)",
+      "Taiwan’s chipmaking giant TSMC to invest $1B in Anthropic, OpenAI (TSMC's $1B investment in Anthropic and OpenAI reshapes chip supply and AI financing.)",
+      "United Airlines says it will prevent personal AI assistants from booki (United Airlines' AI assistant ban highlights emerging regulatory risks for AI product deployment.)"
+    ],
+    "thin_areas": [
+      "research",
+      "voices"
+    ],
+    "searches": [
+      "Anthropic IPO pricing: 2 new",
+      "Nvidia export control enforcement 2026: 5 new",
+      "Gemini 4 carbon rollout timeline: 3 new"
+    ],
+    "dig_deeper": [
+      "OpenAI’s quarterly revenue reportedly crosses $10B for the first time",
+      "Taiwan’s chipmaking giant TSMC to invest $1B in Anthropic, OpenAI"
+    ]
+  },
+  "judged": 35,
+  "kept": 8,
+  "research": {
+    "investigated": 5,
+    "confirmed": 5,
+    "tool_calls": 13
+  },
+  "research_log": [
+    "United Airlines says it will prevent personal AI assistants from booki: confirmed (searched “United Airlines personal AI assistants booking tickets Wall Street Journal Alison Sider”; read msn.com; read unite.ai)",
+    "Sources: Anthropic's IPO draws multiple times the orders for the share: confirmed (searched “Anthropic IPO Dario Amodei Jamie Dimon Bloomberg”; read seekingalpha.com)",
+    "Salt Lake City-based energy storage startup Torus raised a $500M Serie: confirmed (searched “Torus $500M Series C Magnetar Mark Chediak Bloomberg”; searched “Torus energy storage 500 million Magnetar Bloomberg”; read yahoo.com)",
+    "Tel Aviv- and SF-based Edelbyte, which is building a data analytics pl: confirmed (searched “Edelbyte 70M Series A seed AI agents”; read forbes.com; read unite.ai)",
+    "Rox, which develops AI agents to automate customer research and outrea: confirmed (searched “Rox AI 100M Series B General Catalyst March 1.3B valuation”; read cryptobriefing.com)"
+  ],
+  "threads": [
+    "Anthropic IPO roadshow video released: Anthropic IPO draws multiple times the orders for available "
+  ],
+  "videos": {
+    "OpenAI": "ok (14 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 5 new)",
+    "Google for Developers": "ok (9 in feed, 4 new)",
+    "AI at Meta": "ok (9 in feed, 2 new)",
+    "Microsoft Research": "ok (10 in feed, 1 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 3 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 2 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (3 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (3 in feed, 1 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (2 in feed, 0 new)"
+  },
+  "model_tracker": "82 models, 11 changes today",
+  "photos": "2 saved, 2 unavailable",
+  "stock photos": "2 added",
+  "alerts": "23 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":20}",
+  "ai_requests_run": 28,
+  "ai_tokens_run": 69317,
+  "ai_requests_today": 306,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+    "gemini: network error ReadTimeout, retrying",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model"
+  ]
+}
