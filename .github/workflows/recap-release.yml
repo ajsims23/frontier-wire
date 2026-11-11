@@ -1,7 +1,8 @@
 name: Recap release
 
 # The daily recap session pushes the day's script to recap-upload/<date> (main plus one commit).
-# This generates an AI illustration per story (Workers AI via our API worker), renders and checks the video,
+# This fetches a stock clip per story (Pexels), an AI illustration as the fallback and the AI narration (both
+# Workers AI via our API worker), renders and checks the video,
 # stores the files as the GitHub Release recap-<date>, marks the recap published on main (which redeploys
 # the site) and deletes the upload branch, so video files never land on main.
 on:
@@ -47,6 +48,16 @@ jobs:
         env:
           RECAP_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
         run: RECAP_API="$(cat config/api_url.txt)" python -m agent recap images --date "$DATE" --out "_recap/$DATE"
+
+      - name: Stock footage (free Pexels clips; skipped until the PEXELS_API_KEY secret exists)
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: python -m agent recap footage --date "$DATE" --out "_recap/$DATE"
+
+      - name: AI narration (Workers AI via our API worker; without it the video renders silent)
+        env:
+          RECAP_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
+        run: RECAP_API="$(cat config/api_url.txt)" python -m agent recap voice --date "$DATE" --out "_recap/$DATE"
 
       - name: Render the video
         run: python -m agent recap render --date "$DATE" --out "_recap/$DATE"

@@ -499,7 +499,8 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     # daily video recaps: /videos/, one page per day, /videos/feed.xml and the strip at the top of the home page
     from .recap import build_site as build_recaps
     repo = os.environ.get("GITHUB_REPOSITORY") or site.get("repo") or "ajsims23/frontier-wire"
-    recap_strip = build_recaps(out, env, common, base, repo, data, now, set(by_id), urls, site.get("api_url", ""))
+    recap_strip = build_recaps(out, env, common, base, repo, data, now, set(by_id), urls, site.get("api_url", ""),
+                               {k: v["video"] for k, v in by_id.items() if isinstance(v.get("video"), dict)})
     index = (out / "index.html").read_text()
     index = index.replace("<!--RECAP-->", recap_strip)
     index = index.replace("<!--META-->", meta)

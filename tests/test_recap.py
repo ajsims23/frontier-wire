@@ -112,3 +112,45 @@ def test_frames_with_and_without_ai_images(tmp_path):
     assert set(r.images) == {0}
     for t in (1.0, 5.5, 10.5, 15.5, 20.5, 25.5, 29.0):
         assert r.frame(t).size == (1920, 1080)
+
+
+def test_spoken_reads_shorthand_like_a_newsreader():
+    assert recap.spoken("Revolut spend falls ~90% after a $15B deal & more") == \
+        "Revolut spend falls about 90% after a 15 billion dollars deal and more."
+    assert recap.spoken("Proofs check at 110 tokens/s") == "Proofs check at 110 tokens per second."
+
+
+def test_narration_uses_say_when_given():
+    script = _published()
+    script["stories"][0]["say"] = "A spoken version"
+    keys = [k for k, _ in recap.narration(script)]
+    assert keys[0] == "hook" and keys[-1] == "outro" and len(keys) == len(script["stories"]) + 2
+    assert recap.narration(script)[1][1] == "A spoken version."
+
+
+def test_timing_silent_and_narrated_stay_in_bounds():
+    durs, tempo = recap.timing(5, {})
+    assert durs == [3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 2.0] and tempo == 1.0
+    short = {k: (None, 2.0) for k in ["hook", "story1", "story2", "story3", "story4", "story5", "outro"]}
+    durs, tempo = recap.timing(5, short)
+    assert [round(d, 3) for d in durs] == [3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 2.5] and tempo == 1.0
+    long = {k: (None, 2.6 if k in ("hook", "outro") else 4.8) for k in ["hook", "story1", "story2", "story3", "story4", "story5", "outro"]}
+    durs, tempo = recap.timing(5, long)
+    assert recap.MIN_S <= sum(durs) <= recap.MAX_S - 0.5 + 1e-6 and tempo == 1.0
+    faster = {k: (None, 2.6 if k in ("hook", "outro") else 5.4) for k in long}
+    durs, tempo = recap.timing(5, faster)
+    assert recap.MIN_S <= sum(durs) <= recap.MAX_S - 0.5 + 1e-6 and 1.0 < tempo <= 1.3
+    too_long = {k: (None, 7.0) for k in long}
+    assert recap.timing(5, too_long) == ([3.0, 5.0, 5.0, 5.0, 5.0, 5.0, 2.0], 0.0)
+
+
+def test_site_view_attaches_lab_videos_and_footage_credits():
+    r = _published()
+    r["footage_credits"] = [{"story": 1, "name": "A Person", "url": "https://www.pexels.com/video/x-1/"},
+                            {"story": 2, "name": "Bad", "url": "https://evil.example/"}]
+    sid = r["stories"][0]["id"]
+    rows = recap.site_view([r], datetime.fromisoformat(r["published_at"]), "https://x/", "o/r", {sid},
+                           {sid: {"id": "abcdefghijk", "title": "Launch", "channel": "Lab"}, "zz": {"id": "bad"}})
+    assert rows[0]["entries"][0]["video"]["id"] == "abcdefghijk"
+    assert rows[0]["entries"][1]["video"] is None
+    assert [c["name"] for c in rows[0]["footage"]] == ["A Person"]

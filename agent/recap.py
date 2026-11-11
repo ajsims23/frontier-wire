@@ -1,12 +1,16 @@
-"""Daily 30-second recap: pick the day's top five stories, check the on-screen script, render the video.
+"""Daily 30-second recap: pick the day's top five stories, check the on-screen script, render the narrated video.
 
 The script (hook, one line and one detail per story, a three-line summary) is written by the editor in a Claude
 session and saved to data/recaps/YYYY-MM-DD.json. This module drafts that file from the site's own data, checks
 it (lengths, headlines paraphrased rather than copied, every story credits its source) and renders original
-motion graphics with Pillow and ffmpeg: no photos, no logos, no third-party footage, on-screen text only.
+motion graphics with Pillow and ffmpeg. In GitHub Actions each story also gets a free stock clip from Pexels
+(licensed for reuse; credited on screen and on the page), else an AI illustration, else a drawn one, and an AI voice
+(Deepgram Aura-2 on Workers AI) reads the hook and each story's line. Without those files (a Claude session) the
+same script renders silent, with drawn illustrations, so the editor can still check the layout.
 
     python -m agent recap draft            # pick today's five, write the skeleton for the editor to fill
     python -m agent recap render --out DIR # check the script, render recap.mp4, poster.jpg, teaser.gif
+    python -m agent recap footage|voice --out DIR   # (Actions) stock clips into DIR/clips, narration into DIR/voice
 
 On screen: a 3s hook, 5s per story (the paraphrased line and its source), a 2s outro with the site address.
 Each story's detail line is not shown in the video; it goes on the video page, in the feed and in the email.
@@ -36,8 +40,12 @@ HOOK_S, STORY_S, OUTRO_S = 3.0, 5.0, 2.0   # 3s hook, 5s per story (headline + s
 MIN_S, MAX_S = 27, 33
 SOFT = (179, 207, 203)
 PANEL = (10, 31, 34)
-LIMITS = {"hook": 64, "line": 72, "detail": 120, "summary": 150}
+LIMITS = {"hook": 64, "line": 72, "detail": 120, "summary": 150, "say": 110, "footage": 80}
+VOICE_LEAD = {"hook": 0.35, "story": 0.3, "outro": 0.2}   # seconds into a scene before the voice starts
+VOICE_TAIL = {"hook": 0.35, "story": 0.45, "outro": 0.3}  # quiet after it, before the scene changes
+OUTRO_SAY = "Full stories at Frontier Wire."
 MAX_BYTES = 15 * 1024 * 1024
+VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
 AGGREGATORS = {"techmeme.com", "news.ycombinator.com", "msn.com"}
 
 
@@ -107,7 +115,7 @@ def draft(stories: list[dict[str, Any]], now: datetime) -> dict[str, Any]:
             "id": s["id"], "category": s["category"], "lab": s.get("lab", ""), "source": credit(s),
             "headline": s["headline"], "summary": s["summary"], "why_it_matters": s.get("why_it_matters", ""),
             "source_titles": [x.get("title", "") for x in s.get("sources") or []],
-            "line": "", "detail": "", "image_prompt": "",
+            "line": "", "detail": "", "say": "", "footage": "", "image_prompt": "",
         } for s in picks],
     }
 
@@ -142,16 +150,237 @@ def validate(script: dict[str, Any]) -> list[str]:
                 errs.append(f"story {i}: {key} must be 1-{LIMITS[key]} characters (has {len(v)})")
         if not (s.get("source") or "").strip():
             errs.append(f"story {i}: no source")
+        for key in ("say", "footage"):
+            if len((s.get(key) or "").strip()) > LIMITS[key]:
+                errs.append(f"story {i}: {key} must be at most {LIMITS[key]} characters")
         if len(s.get("image_prompt") or "") > 300:
             errs.append(f"story {i}: image_prompt must be at most 300 characters")
         originals = [s.get("headline", "")] + list(s.get("source_titles") or [])
-        for key in ("line", "detail"):
+        for key in ("line", "detail", "say"):
             v = s.get(key) or ""
-            for o in originals:
+            for o in originals if v else []:
                 if o and (_similar(v, o) >= 0.72 or _copied_run(v, o)):
                     errs.append(f"story {i}: {key} is too close to a published headline; paraphrase it")
                     break
     return errs
+
+
+# ---------------------------------------------------------------- narration and timing
+_UNITS = {"B": "billion", "M": "million", "K": "thousand", "T": "trillion"}
+
+
+def spoken(text: str) -> str:
+    """On-screen shorthand read the way a newsreader would say it."""
+    t = text.strip()
+    t = re.sub(r"\$(\d+(?:\.\d+)?)\s?([BMKT])\b", lambda m: f"{m.group(1)} {_UNITS[m.group(2)]} dollars", t)
+    t = re.sub(r"(\d+(?:\.\d+)?)\s?([BMKT])\b", lambda m: f"{m.group(1)} {_UNITS[m.group(2)]}", t)
+    t = re.sub(r"\$(\d+(?:\.\d+)?)", r"\1 dollars", t)
+    t = t.replace("~", "about ").replace("&", " and ").replace(" · ", ", ").replace("/s", " per second")
+    t = re.sub(r"\s+", " ", t).strip()
+    return t if t.endswith((".", "!", "?")) else t + "."
+
+
+def narration(script: dict[str, Any]) -> list[tuple[str, str]]:
+    """What the voice reads, scene by scene: (file name, text)."""
+    out = [("hook", spoken(script["hook"]))]  # "Today in AI" is already on screen
+    for i, st in enumerate(script["stories"], 1):
+        out.append((f"story{i}", spoken((st.get("say") or "").strip() or st["line"])))
+    out.append(("outro", OUTRO_SAY))
+    return out
+
+
+def _duration(path: Path) -> float:
+    r = _run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)], text=True)
+    return float(r.stdout.strip())
+
+
+def voice_clips(script: dict[str, Any], voice_dir: Path | None) -> dict[str, tuple[Path, float]]:
+    """The narration files present for this script, with their lengths. All or nothing: a half-read recap is worse
+    than a silent one."""
+    if not voice_dir or not voice_dir.exists():
+        return {}
+    out = {}
+    for key, _ in narration(script):
+        f = voice_dir / f"{key}.mp3"
+        try:
+            out[key] = (f, _duration(f))
+        except Exception:  # noqa: BLE001
+            return {}
+    return out
+
+
+def timing(n: int, clips: dict[str, tuple[Path, float]]) -> tuple[list[float], float]:
+    """Scene lengths [hook, story 1..n, outro] and the voice tempo. Silent: 3s, 5s each, 2s. Narrated: each scene
+    is long enough for its line (never shorter than the silent length). If that runs past 32.5s the quiet tails
+    shrink, then the voice is sped up (at most 1.3x). Tempo 0 means the lines can't fit: render silent."""
+    base = [HOOK_S] + [STORY_S] * n + [OUTRO_S]
+    if not clips:
+        return base, 1.0
+    kinds = ["hook"] + ["story"] * n + ["outro"]
+    keys = ["hook"] + [f"story{i}" for i in range(1, n + 1)] + ["outro"]
+    cap = MAX_S - 0.5
+
+    def lay(tempo: float, squeeze: float) -> list[float]:
+        return [max(b, VOICE_LEAD[k] + clips[key][1] / tempo + 0.1 + (VOICE_TAIL[k] - 0.1) * (1 - squeeze))
+                for b, k, key in zip(base, kinds, keys)]
+
+    for squeeze in (0.0, 0.5, 1.0):
+        if sum(lay(1.0, squeeze)) <= cap:
+            return lay(1.0, squeeze), 1.0
+    lo, hi = 1.0, 1.3
+    if sum(lay(hi, 1.0)) > cap:
+        return base, 0.0
+    for _ in range(30):  # the gentlest speed-up that fits
+        mid = (lo + hi) / 2
+        lo, hi = (lo, mid) if sum(lay(mid, 1.0)) <= cap else (mid, hi)
+    return lay(hi, 1.0), hi
+
+
+def mix_voice(clips: dict[str, tuple[Path, float]], durs: list[float], tempo: float, out: Path) -> Path:
+    """One narration track the length of the video: each line placed at the start of its scene."""
+    keys = ["hook"] + [f"story{i}" for i in range(1, len(durs) - 1)] + ["outro"]
+    kinds = ["hook"] + ["story"] * (len(durs) - 2) + ["outro"]
+    starts = [sum(durs[:i]) for i in range(len(durs))]
+    cmd = ["ffmpeg", "-y", "-loglevel", "error"]
+    parts = []
+    for j, key in enumerate(keys):
+        cmd += ["-i", str(clips[key][0])]
+        ms = int((starts[j] + VOICE_LEAD[kinds[j]]) * 1000)
+        speed = f"atempo={tempo:.3f}," if tempo > 1.001 else ""
+        parts.append(f"[{j}:a]aresample=44100,aformat=channel_layouts=mono,{speed}adelay={ms}:all=1[a{j}]")
+    total = sum(durs)
+    graph = ";".join(parts) + ";" + "".join(f"[a{j}]" for j in range(len(keys))) + \
+        f"amix=inputs={len(keys)}:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=11,apad,atrim=0:{total:.3f}[out]"
+    cmd += ["-filter_complex", graph, "-map", "[out]", "-ar", "44100", "-c:a", "pcm_s16le", str(out)]
+    _run(cmd)
+    return out
+
+
+# ---------------------------------------------------------------- stock footage
+class Clip:
+    """A stock clip decoded on the fly, cropped to the picture area, read frame by frame (loops if short)."""
+
+    def __init__(self, path: Path, w: int, h: int):
+        self.path, self.w, self.h = path, w, h
+        self.proc: subprocess.Popen | None = None
+        self.pos = -1
+        self.last: Image.Image | None = None
+
+    def _open(self) -> None:
+        vf = (f"fps={FPS},scale={self.w}:{self.h}:force_original_aspect_ratio=increase,crop={self.w}:{self.h},"
+              "eq=brightness=-0.05:saturation=0.85")
+        self.proc = subprocess.Popen(["ffmpeg", "-v", "error", "-stream_loop", "-1", "-i", str(self.path), "-an", "-vf", vf,
+                                      "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+        self.pos = -1
+
+    def frame(self, k: int) -> Image.Image | None:
+        if self.proc is None or k < self.pos:
+            self.close()
+            self._open()
+        size = self.w * self.h * 3
+        while self.pos < k:
+            assert self.proc and self.proc.stdout
+            buf = self.proc.stdout.read(size)
+            if len(buf) < size:
+                return self.last
+            self.pos += 1
+            if self.pos == k:
+                self.last = Image.frombytes("RGB", (self.w, self.h), buf)
+        return self.last
+
+    def close(self) -> None:
+        if self.proc:
+            self.proc.kill()
+            self.proc.wait()
+            self.proc = None
+
+
+def usable_clip(path: Path) -> bool:
+    try:
+        probe = json.loads(_run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
+                                 "-of", "json", str(path)], text=True).stdout)
+        st = probe["streams"][0]
+        return st["width"] >= 640 and st["height"] >= 360
+    except Exception:  # noqa: BLE001
+        return False
+
+
+DEFAULT_FOOTAGE = {
+    "models": "data center servers lights", "research": "scientist laboratory computer screen",
+    "policy": "government building", "safety": "cyber security code screen", "industry": "technology office city",
+    "voices": "conference stage speaker", "india": "india city technology", "business": "stock market trading screen",
+}
+
+
+def fetch_footage(script: dict[str, Any], out: Path, key: str) -> list[str]:
+    """Run in GitHub Actions: one free stock clip per story from Pexels (search by the editor's `footage` query, else a
+    query for the story's beat). Saves out/<i>.mp4 and out/credits.json. Failures are reported; that story falls back
+    to the AI illustration."""
+    import httpx
+    out.mkdir(parents=True, exist_ok=True)
+    if not key:
+        return ["no PEXELS_API_KEY: no stock footage today"]
+    notes, used, credits = [], set(), []
+    with httpx.Client(timeout=60, headers={"Authorization": key}, follow_redirects=True) as http:
+        for i, st in enumerate(script["stories"], 1):
+            q = (st.get("footage") or "").strip() or DEFAULT_FOOTAGE.get(st["category"], DEFAULT_FOOTAGE["industry"])
+            try:
+                r = http.get("https://api.pexels.com/v1/videos/search",
+                             params={"query": q, "orientation": "landscape", "size": "medium", "per_page": 15})
+                if r.status_code == 404:  # the older path, in case the new one isn't live for this key
+                    r = http.get("https://api.pexels.com/videos/search",
+                                 params={"query": q, "orientation": "landscape", "size": "medium", "per_page": 15})
+                r.raise_for_status()
+                cands = []
+                for v in r.json().get("videos") or []:
+                    if v.get("id") in used or not 6 <= (v.get("duration") or 0) <= 60:
+                        continue
+                    files = [f for f in v.get("video_files") or [] if f.get("file_type") == "video/mp4"
+                             and 1280 <= (f.get("width") or 0) <= 1920 and (f.get("height") or 0) >= 720]
+                    if files:
+                        cands.append((v, min(files, key=lambda f: abs((f.get("width") or 0) - 1920))))
+                if not cands:
+                    raise RuntimeError(f"no usable clip for {q!r}")
+                v, f = random.Random(st["id"]).choice(cands[:4])
+                dest = out / f"{i}.mp4"
+                with http.stream("GET", f["link"]) as dl:
+                    dl.raise_for_status()
+                    with dest.open("wb") as fh:
+                        for chunk in dl.iter_bytes():
+                            fh.write(chunk)
+                if not usable_clip(dest):
+                    dest.unlink(missing_ok=True)
+                    raise RuntimeError("downloaded clip does not decode")
+                used.add(v["id"])
+                user = v.get("user") or {}
+                credits.append({"story": i, "name": (user.get("name") or "Pexels contributor")[:60], "url": v.get("url") or "https://www.pexels.com"})
+            except Exception as exc:  # noqa: BLE001
+                notes.append(f"story {i}: no stock clip ({str(exc)[:140]}); using the illustration")
+    (out / "credits.json").write_text(json.dumps(credits, indent=2))
+    return notes
+
+
+def fetch_voice(script: dict[str, Any], out: Path, api: str, secret: str) -> list[str]:
+    """Run in GitHub Actions: the narration, one MP3 per scene, from the worker (Workers AI, Deepgram Aura-2)."""
+    import base64
+    import httpx
+    out.mkdir(parents=True, exist_ok=True)
+    notes = []
+    for key, text in narration(script):
+        try:
+            r = httpx.post(f"{api.rstrip('/')}/api/recap/voice", json={"text": text}, timeout=90,
+                           headers={"Authorization": f"Bearer {secret}"})
+            data = r.json() if r.headers.get("content-type", "").startswith("application/json") else {}
+            if r.status_code != 200 or not data.get("audio"):
+                raise RuntimeError(f"HTTP {r.status_code}: {str(data.get('error') or r.text)[:120]}")
+            (out / f"{key}.mp3").write_bytes(base64.b64decode(data["audio"]))
+            _duration(out / f"{key}.mp3")
+        except Exception as exc:  # noqa: BLE001
+            notes.append(f"{key}: no narration ({exc})")
+    if notes:  # all or nothing
+        for f in out.glob("*.mp3"):
+            f.unlink()
+    return notes
 
 
 # ---------------------------------------------------------------- drawing
@@ -342,10 +571,31 @@ def _fade_mask() -> Image.Image:
     return ImageChops.multiply(horiz, vert)
 
 
+def _plate(layer: Image.Image, pad: int = 12) -> Image.Image:
+    """A small dark rounded plate behind a label, so it reads over moving footage."""
+    out = Image.new("RGBA", (layer.width + 2 * pad, layer.height + pad), (0, 0, 0, 0))
+    ImageDraw.Draw(out).rounded_rectangle((0, 0, out.width - 1, out.height - 1), radius=10, fill=(5, 20, 22, 190))
+    out.alpha_composite(layer, (pad, pad // 2))
+    return out
+
+
 class Renderer:
-    def __init__(self, script: dict[str, Any], site_label: str, images: Path | None = None):
+    def __init__(self, script: dict[str, Any], site_label: str, images: Path | None = None,
+                 durations: list[float] | None = None, clips: Path | None = None):
         self.s = script
         self.images: dict[int, Image.Image] = {}
+        self.clips: dict[int, Clip] = {}
+        self.credits: dict[int, str] = {}
+        if clips and clips.exists():
+            try:
+                names = {c["story"]: c["name"] for c in json.loads((clips / "credits.json").read_text())}
+            except Exception:  # noqa: BLE001
+                names = {}
+            for i in range(len(script["stories"])):
+                f = clips / f"{i + 1}.mp4"
+                if f.exists() and usable_clip(f):
+                    self.clips[i] = Clip(f, IMG_W, H)
+                    self.credits[i] = names.get(i + 1, "")
         if images:
             for i in range(len(script["stories"])):
                 f = images / f"{i + 1}.jpg"
@@ -355,14 +605,19 @@ class Renderer:
                         self.images[i] = _cover(Image.open(f).convert("RGB"), int(IMG_W * 1.08), int(H * 1.08))
                     except Exception:  # noqa: BLE001 - a broken image falls back to the drawn illustration
                         pass
-        self.mask = _fade_mask() if self.images else None
+        self.mask = _fade_mask() if (self.images or self.clips) else None
         self.site = site_label
         self.n = len(script["stories"])
-        self.total = HOOK_S + STORY_S * self.n + OUTRO_S
+        self.durs = durations or [HOOK_S] + [STORY_S] * self.n + [OUTRO_S]
+        assert len(self.durs) == self.n + 2
+        self.starts = [sum(self.durs[:i]) for i in range(len(self.durs))]
+        self.total = sum(self.durs)
         self.bg = _background()
         self.date_h = _human(script["date"])
         self._scenes = [self._story_layers(st, i) for i, st in enumerate(script["stories"])]
         self.ai_label = _text_layer(["AI-generated illustration"], _font(24, 600), (205, 220, 218))
+        self.clip_labels = {i: _plate(_text_layer([f"Stock footage: {n} / Pexels" if n else "Stock footage: Pexels"], _font(24, 600), (205, 220, 218)))
+                            for i, n in self.credits.items()}
         f, lines = _fit(script["hook"], 1500, (104, 96, 88, 80), 2, 800)
         self.hook = _text_layer(lines, f, TEXT, 1.08)
         self.eyebrow = _text_layer([f"TODAY IN AI  ·  {self.date_h.upper()}"], _font(34, 700, 112), TOPIC["research"])
@@ -416,8 +671,9 @@ class Renderer:
     def frame(self, t: float) -> Image.Image:
         img = self.bg.copy().convert("RGBA")
         d = ImageDraw.Draw(img)
-        if t < HOOK_S:
-            out_k = 1 - _ease((t - (HOOK_S - 0.35)) / 0.35)
+        hook_s = self.durs[0]
+        if t < hook_s:
+            out_k = 1 - _ease((t - (hook_s - 0.35)) / 0.35)
             _brand(d, 140, 72)
             _signal(d, "frontier-wire-hook", TOPIC["research"], (980, 160, 1800, 470), t)
             # big bars mark
@@ -430,20 +686,28 @@ class Renderer:
             self._place(img, self.hook, 140, 610, t, 0.55, out_k)
             self._place(img, self.count, 140, 640 + self.hook.height, t, 0.9, out_k)
             return img.convert("RGB")
-        t2 = t - HOOK_S
-        idx = int(t2 // STORY_S)
+        idx = next((j for j in range(self.n) if t < self.starts[j + 2]), self.n)
         if idx < self.n:
-            lt = t2 - idx * STORY_S
+            story_s = self.durs[idx + 1]
+            lt = t - self.starts[idx + 1]
             L = self._scenes[idx]
-            out_k = 1 - _ease((lt - (STORY_S - 0.35)) / 0.35)
-            # the visual: an AI illustration of the story (else a drawn one) and the story's key figure
+            out_k = 1 - _ease((lt - (story_s - 0.35)) / 0.35)
+            # the visual: a stock clip, else an AI illustration of the story, else a drawn one; and the key figure
             k = _ease(lt / 0.6) * out_k
-            if k > 0 and idx in self.images:
+            pic = None
+            if k > 0 and idx in self.clips:
+                pic = self.clips[idx].frame(int(lt * FPS))
+                if pic is not None:
+                    pic = pic.convert("RGBA")
+                if lt + 1 / FPS >= story_s:
+                    self.clips[idx].close()
+            if pic is None and k > 0 and idx in self.images:
                 big = self.images[idx]
-                z = 1.0 + 0.06 * (lt / STORY_S)  # slow push-in over the story's five seconds
+                z = 1.0 + 0.06 * (lt / story_s)  # slow push-in over the story's scene
                 cw, ch = int(big.width / 1.08 * (1.08 - (z - 1))), int(big.height / 1.08 * (1.08 - (z - 1)))
                 ox, oy = (big.width - cw) // 2, (big.height - ch) // 2
                 pic = big.crop((ox, oy, ox + cw, oy + ch)).resize((IMG_W, H), Image.BILINEAR).convert("RGBA")
+            if pic is not None:
                 pic.putalpha(self.mask.point(lambda v: int(v * k)))
                 img.alpha_composite(pic, (IMG_X, 0))
                 if L["figure"] is not None:
@@ -452,7 +716,8 @@ class Renderer:
                     ImageDraw.Draw(plate).rounded_rectangle((0, 0, fw - 1, fh - 1), radius=26, fill=(5, 20, 22, 205))
                     plate.alpha_composite(L["figure"], (32, 14))
                     img.alpha_composite(_fade(plate, k), (W - 120 - fw, 820 - fh + int((1 - k) * 30)))
-                img.alpha_composite(_fade(self.ai_label, k * 0.8), (W - 120 - self.ai_label.width, 846))
+                lab = self.clip_labels.get(idx, self.ai_label) if idx in self.clips and self.clips[idx].last is not None else self.ai_label
+                img.alpha_composite(_fade(lab, k * 0.8), (W - 120 - lab.width, 846))
             elif k > 0:
                 panel = Image.new("RGBA", (W, H), (0, 0, 0, 0))
                 pd = ImageDraw.Draw(panel)
@@ -463,13 +728,13 @@ class Renderer:
                     fx = 1500 - L["figure"].width // 2
                     panel.alpha_composite(L["figure"], (max(1240, fx), 640))
                 img.alpha_composite(_fade(panel, k), (0, int((1 - k) * 30)))
-            self._chrome(d, idx, lt / STORY_S)  # drawn over the picture so the date and progress stay visible
+            self._chrome(d, idx, lt / story_s)  # drawn over the picture so the date and progress stay visible
             self._place(img, L["num"], 130, 150, lt, 0.0, out_k)
             self._place(img, L["chip"], 140, 400, lt, 0.12, out_k)
             self._place(img, L["line"], 140, 470, lt, 0.25, out_k)
             self._place(img, L["source"], 140, 470 + L["line"].height + 48, lt, 0.45, out_k)
             return img.convert("RGB")
-        lt = t2 - self.n * STORY_S
+        lt = t - self.starts[-1]
         _signal(d, "frontier-wire-outro", TOPIC["research"], (980, 160, 1800, 470), t)
         _brand(d, 140, 300, scale=2.2, grow=_ease(lt / 0.8))
         self._place(img, self.out1, 140, 470, lt, 0.2, 1)
@@ -511,16 +776,25 @@ def _run(cmd: list[str], **kw: Any) -> subprocess.CompletedProcess:
 
 
 def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.github.io/frontier-wire",
-           images: Path | None = None) -> dict[str, Any]:
+           images: Path | None = None, voice: Path | None = None, clips: Path | None = None) -> dict[str, Any]:
     errs = validate(script)
     if errs:
         raise ValueError("script problems:\n- " + "\n- ".join(errs))
     out_dir.mkdir(parents=True, exist_ok=True)
-    r = Renderer(script, site_label, images if images and images.exists() else None)
+    vc = voice_clips(script, voice)
+    durs, tempo = timing(len(script["stories"]), vc)
+    if not tempo:  # the narration can't fit in 33 seconds: publish the silent cut rather than nothing
+        print("::warning::narration too long for the recap; rendering silent", flush=True)
+        vc, tempo = {}, 1.0
+    r = Renderer(script, site_label, images if images and images.exists() else None, durs, clips)
     mp4, poster, gif = out_dir / "recap.mp4", out_dir / "poster.jpg", out_dir / "teaser.gif"
     frames = int(round(r.total * FPS))
+    audio = ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono"]  # silent track, so every recap has one
+    if vc:
+        audio = ["-i", str(mix_voice(vc, durs, tempo, out_dir / "narration.wav"))]
     enc = subprocess.Popen(
         ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
+         *audio, "-map", "0:v", "-map", "1:a", "-c:a", "aac", "-b:a", "128k", "-t", f"{frames / FPS:.3f}",
          "-c:v", "libx264", "-preset", "veryfast", "-tune", "animation", "-crf", "20", "-maxrate", "1600k", "-bufsize", "3200k",
          "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-metadata", f"title=Frontier Wire recap {script['date']}", str(mp4)],
         stdin=subprocess.PIPE)
@@ -530,6 +804,10 @@ def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.gi
     enc.stdin.close()
     if enc.wait() != 0:
         raise RuntimeError("ffmpeg failed while encoding")
+    for c in r.clips.values():
+        c.close()
+    (out_dir / "render.json").write_text(json.dumps({"narrated": bool(vc), "tempo": round(tempo, 3),
+                                                     "footage": sorted(i + 1 for i in r.clips), "scenes": [round(d, 2) for d in durs]}))
     r.poster().save(poster, quality=86, optimize=True, progressive=True)
     # teaser: the hook into the first story, small enough for an email
     _run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "0.8", "-t", "5", "-i", str(mp4), "-vf",
@@ -540,9 +818,9 @@ def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.gi
 
 def check(out_dir: Path) -> dict[str, Any]:
     mp4 = out_dir / "recap.mp4"
-    probe = json.loads(_run(["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_name,width,height",
+    probe = json.loads(_run(["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_type,codec_name,width,height",
                              "-of", "json", str(mp4)], text=True).stdout)
-    v = probe["streams"][0]
+    v = next(st for st in probe["streams"] if st.get("codec_type") == "video")
     dur = float(probe["format"]["duration"])
     decode = subprocess.run(["ffmpeg", "-v", "error", "-i", str(mp4), "-f", "null", "-"], capture_output=True, text=True)
     info = {"duration": round(dur, 2), "bytes": mp4.stat().st_size, "codec": v["codec_name"], "size": f"{v['width']}x{v['height']}",
@@ -639,6 +917,17 @@ def stamp(script: dict[str, Any], out_dir: Path, now: datetime) -> dict[str, Any
     if errs or not info["ok"]:
         raise RuntimeError("; ".join(errs + info["problems"]))
     script["video"] = {k: info[k] for k in ("duration", "bytes", "poster_bytes", "gif_bytes")}
+    try:
+        made = json.loads((out_dir / "render.json").read_text())
+    except Exception:  # noqa: BLE001
+        made = {}
+    script["video"]["narrated"] = bool(made.get("narrated"))
+    try:
+        credits = json.loads((out_dir / "clips" / "credits.json").read_text())
+    except Exception:  # noqa: BLE001
+        credits = []
+    used = set(made.get("footage") or [])
+    script["footage_credits"] = [c for c in credits if c.get("story") in used]
     script["published_at"] = script.get("published_at") or now.isoformat()
     return script
 
@@ -655,8 +944,11 @@ def load_published(data_dir: Path) -> list[dict[str, Any]]:
     return out
 
 
-def site_view(recaps: list[dict[str, Any]], now: datetime, base: str, repo: str, story_ids: set[str]) -> list[dict[str, Any]]:
-    """Everything the pages and the feed need about each recap: which files are on the site, URLs, labels."""
+def site_view(recaps: list[dict[str, Any]], now: datetime, base: str, repo: str, story_ids: set[str],
+              videos: dict[str, dict[str, Any]] | None = None) -> list[dict[str, Any]]:
+    """Everything the pages and the feed need about each recap: which files are on the site, URLs, labels.
+    `videos`: story id -> the lab's own YouTube video for that story (from the Watch desk), shown under the recap."""
+    videos = videos or {}
     day = now.astimezone(IST).date()
     rows = []
     for r in recaps:
@@ -674,7 +966,10 @@ def site_view(recaps: list[dict[str, Any]], now: datetime, base: str, repo: str,
             "poster_url": base + f"{page}poster.jpg" if images else asset_url(repo, r["date"], "poster.jpg"),
             "gif_url": base + f"{page}teaser.gif" if images else asset_url(repo, r["date"], "teaser.gif"),
             "release": f"https://github.com/{repo}/releases/tag/{tag(r['date'])}",
-            "entries": [{**s, "href": f"story/{s['id']}/" if s["id"] in story_ids else ""} for s in r["stories"]],
+            "entries": [{**s, "href": f"story/{s['id']}/" if s["id"] in story_ids else "",
+                         "video": videos.get(s["id"]) if VIDEO_ID.match((videos.get(s["id"]) or {}).get("id") or "") else None}
+                        for s in r["stories"]],
+            "footage": [c for c in r.get("footage_credits") or [] if str(c.get("url", "")).startswith("https://www.pexels.com/")],
         })
     return rows
 
@@ -720,10 +1015,10 @@ def latest_json(r: dict[str, Any], base: str) -> dict[str, Any]:
 
 
 def build_site(out: Path, env: Any, common: dict[str, Any], base: str, repo: str, data_dir: Path, now: datetime,
-               story_ids: set[str], urls: list[str], api_url: str = "") -> str:
+               story_ids: set[str], urls: list[str], api_url: str = "", videos: dict[str, dict[str, Any]] | None = None) -> str:
     """Write /videos/, one page per recap and /videos/feed.xml. Returns the home-page strip (empty if no live recap).
     Also writes videos/assets.txt: the Release files the deploy workflow downloads into the site."""
-    rows = site_view(load_published(data_dir), now, base, repo, story_ids)
+    rows = site_view(load_published(data_dir), now, base, repo, story_ids, videos)
     vdir = out / "videos"
     vdir.mkdir(parents=True, exist_ok=True)
     (vdir / "feed.xml").write_text(feed(rows, base))

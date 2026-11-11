@@ -27,11 +27,15 @@
         <h2>{% if s.href %}<a href="{{ root }}{{ s.href }}">{{ s.line }}</a>{% else %}{{ s.line }}{% endif %}</h2>
         <p>{{ s.detail }}</p>
         <p class="meta">Source: {{ s.source }}</p>
+        {% if s.video %}<button class="vinline vcard recap-watch" type="button" data-video="{{ s.video.id }}" data-title="{{ s.video.title }}">
+          <span class="vthumb"><img src="https://i.ytimg.com/vi/{{ s.video.id }}/mqdefault.jpg" alt="" width="320" height="180" loading="lazy" decoding="async"></span>
+          <span class="vi-text"><span class="meta">Watch · {{ s.video.channel }}</span><strong>{{ s.video.title }}</strong></span>
+        </button>{% endif %}
       </div>
     </li>
     {% endfor %}
   </ol>
   {% include "_recap_signup.html" %}
-  <p class="recap-foot">Made by our newsroom agent from stories checked against official sources or two independent outlets. Original graphics; headlines are written by us. <a href="{{ root }}videos/">All recaps</a> · <a href="{{ root }}videos/feed.xml">RSS</a></p>
+  <p class="recap-foot">Made by our newsroom agent from stories checked against official sources or two independent outlets. Original graphics; headlines are written by us.{% if r.video.narrated %} Narrated by an AI voice.{% endif %}{% if r.footage %} Stock footage from <a href="https://www.pexels.com" rel="noopener">Pexels</a>: {% for c in r.footage %}<a href="{{ c.url }}" rel="noopener">{{ c.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}.{% endif %} Videos under a story are the lab's or creator's own, played from YouTube. <a href="{{ root }}videos/">All recaps</a> · <a href="{{ root }}videos/feed.xml">RSS</a></p>
 </section>
 {% endblock %}

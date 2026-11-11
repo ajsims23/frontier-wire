@@ -70,6 +70,13 @@ Settings → Pages → *Custom domain*. GitHub provides HTTPS for free.
 Every evening a scheduled Claude session picks the day's top five stories (the home page's top-stories rule over
 the last 24 hours, at most two per category), writes paraphrased on-screen lines and renders an original
 motion-graphics video: `python -m agent recap draft | render | upload` (see `agent/recap.py`).
+- Each story plays over a free **Pexels** stock clip (search query from the script's `footage` field, else the story's beat),
+  falling back to an AI illustration, then a drawn one. Needs the repo secret `PEXELS_API_KEY` (free key from
+  pexels.com/api, no card); without it the recap uses illustrations. Clips are credited on screen and on the recap page.
+- An **AI voice** (Deepgram Aura-2 on Workers AI, via `/api/recap/voice` on the worker; MeloTTS as fallback) reads the hook and
+  each story's line (or its optional `say` field). Scenes stretch to fit the voice and stay within 27-33 seconds; if the
+  narration can't fit or the worker is unreachable, the video publishes silent.
+- Under each story on a recap page, the lab's own YouTube video for that story (from the Watch desk) plays in the pop-up player.
 - Videos, posters and teaser GIFs are stored as GitHub **Releases** (`recap-YYYY-MM-DD`), not in git, so the repo stays light.
   The session pushes them on a short-lived `recap-upload/<date>` branch; the **Recap release** workflow checks them,
   creates the Release, marks the recap published on main and deletes the branch.

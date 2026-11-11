@@ -84,3 +84,11 @@ test("illustration prompts always carry the no-logos, no-people style rules", ()
   assert.ok(!p.includes("<"));
   assert.equal(imagePrompt("   "), "");
 });
+
+import { voiceText } from "../src/index.js";
+
+test("narration text is cleaned and capped", () => {
+  assert.equal(voiceText("  Today in AI:\n <b>five</b> stories  "), "Today in AI: b five /b stories");
+  assert.equal(voiceText(""), "");
+  assert.equal(voiceText("x".repeat(900)).length, 400);
+});

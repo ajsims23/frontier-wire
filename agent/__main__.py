@@ -8,6 +8,7 @@
                                 data/ to try changes without touching the live site)
   python -m agent recap draft   pick today's top five and write data/recaps/<date>.json for the editor to fill
   python -m agent recap render --out DIR   check the filled script and render the 30s recap.mp4, poster.jpg, teaser.gif
+  python -m agent recap footage|voice --out DIR   (workflow) stock clips from Pexels / AI narration via the worker
   python -m agent recap check --out DIR    re-check a rendered video (length, size, codec, decodes cleanly)
   python -m agent recap upload --out DIR   push the files to recap-upload/<date>; the Recap release workflow publishes them
   python -m agent recap stamp --out DIR    (workflow) check the files and mark the recap published
@@ -34,7 +35,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("check-models")
     sub.add_parser("preview-desks")
     rc = sub.add_parser("recap")
-    rc.add_argument("action", choices=["draft", "render", "check", "upload", "stamp", "images"])
+    rc.add_argument("action", choices=["draft", "render", "check", "upload", "stamp", "images", "footage", "voice"])
     rc.add_argument("--date", default="", help="YYYY-MM-DD in IST (default: today)")
     rc.add_argument("--out", default="", help="folder for the rendered files")
     rc.add_argument("--force", action="store_true", help="draft: replace a script the editor already filled")
@@ -156,7 +157,7 @@ def _recap(args: argparse.Namespace) -> int:
     if args.action == "render":  # in Actions the uploaded script sits next to the output; locally it's in data/recaps
         script = json.loads(((out / "script.json") if (out / "script.json").exists() else path).read_text())
         try:
-            info = recap.render(script, out, images=out / "img")
+            info = recap.render(script, out, images=out / "img", voice=out / "voice", clips=out / "clips")
         except ValueError as exc:
             print(exc, file=sys.stderr)
             return 2
@@ -166,6 +167,17 @@ def _recap(args: argparse.Namespace) -> int:
         for n in notes:
             print(f"::warning::{n}")
         print(f"{len(script['stories']) - len(notes)} of {len(script['stories'])} AI illustrations")
+        return 0
+    elif args.action in ("footage", "voice"):
+        script = json.loads((out / "script.json").read_text())
+        if args.action == "footage":
+            notes = recap.fetch_footage(script, out / "clips", os.environ.get("PEXELS_API_KEY", ""))
+            print(f"{len(script['stories']) - len(notes)} of {len(script['stories'])} stock clips")
+        else:
+            notes = recap.fetch_voice(script, out / "voice", os.environ.get("RECAP_API", ""), os.environ.get("RECAP_SECRET", ""))
+            print("narration ready" if not notes else "no narration today; the video renders silent")
+        for n in notes:
+            print(f"::warning::{n}")
         return 0
     elif args.action == "upload":
         script = json.loads(path.read_text())

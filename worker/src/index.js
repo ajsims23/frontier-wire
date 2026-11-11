@@ -7,6 +7,7 @@
 //   POST /api/recap/preview (bearer secret) {date, to} emails the editor a preview of the daily recap email
 //   GET|POST /api/recap/approve?d=&s=  the editor's signed link: confirm, then send the recap to its subscribers
 //   POST /api/recap/image  (bearer secret) {prompt} -> an AI illustration (Workers AI, FLUX schnell) as base64 JPEG
+//   POST /api/recap/voice  (bearer secret) {text, speaker?} -> narration (Workers AI, Deepgram Aura-2; MeloTTS fallback) as base64 MP3
 //   cron                   08:50 IST daily digests; every 10 minutes, continues sending an approved recap
 //
 // Secrets: CEREBRAS_API_KEY (and optional GROQ_API_KEY, GEMINI_API_KEY, NVIDIA_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY), BREVO_API_KEY, DISPATCH_SECRET. Binding: AI (Workers AI).
@@ -27,6 +28,26 @@ export const IMAGE_STYLE = "Editorial illustration for a technology news video, 
 export function imagePrompt(p) {
   const clean = String(p || "").replace(/[\u0000-\u001f<>]/g, " ").replace(/\s+/g, " ").trim().slice(0, 400);
   return clean ? `${clean}. ${IMAGE_STYLE}` : "";
+}
+
+// Recap narration: Deepgram Aura-2 on Workers AI (about 2,700 neurons per 1,000 characters; a recap is ~450
+// characters, so ~1,200 of the free 10,000 a day), MeloTTS as the fallback.
+const VOICES_PER_DAY = 40;
+const VOICE = "orion";   // a calm male newsreader voice
+const VOICES = ["orion", "thalia", "apollo", "athena", "arcas", "luna", "zeus", "helena", "odysseus", "hermes"];
+
+export function voiceText(t) {
+  return String(t || "").replace(/[\u0000-\u001f<>]/g, " ").replace(/\s+/g, " ").trim().slice(0, 400);
+}
+
+async function audioBase64(out) {
+  if (!out) return "";
+  if (typeof out.audio === "string") return out.audio;            // MeloTTS: base64 MP3
+  const buf = new Uint8Array(await new Response(out.audio || out).arrayBuffer());  // Aura: a stream of MP3
+  if (buf.length < 200) return "";
+  let s = "";
+  for (let i = 0; i < buf.length; i += 0x8000) s += String.fromCharCode(...buf.subarray(i, i + 0x8000));
+  return btoa(s);
 }
 
 const json = (data, status, cors) => new Response(JSON.stringify(data), { status: status || 200, headers: { "content-type": "application/json", ...cors } });
@@ -570,6 +591,22 @@ export default {
         if (!(await bump(env, "image", "all", IMAGES_PER_DAY))) return json({ error: "daily image limit reached" }, 429);
         const out = await env.AI.run("@cf/black-forest-labs/flux-1-schnell", { prompt, steps: 6 });
         return out && out.image ? json({ image: out.image }) : json({ error: "no image returned" }, 502);
+      }
+      if (url.pathname === "/api/recap/voice" && req.method === "POST") {
+        if (!env.DISPATCH_SECRET || req.headers.get("authorization") !== `Bearer ${env.DISPATCH_SECRET}`) return json({ error: "forbidden" }, 403);
+        if (!env.AI) return json({ error: "Workers AI is not bound to this worker" }, 501);
+        const body = await req.json();
+        const text = voiceText(body.text);
+        if (!text) return json({ error: "text is required" }, 400);
+        if (!(await bump(env, "voice", "all", VOICES_PER_DAY))) return json({ error: "daily voice limit reached" }, 429);
+        const speaker = VOICES.includes(body.speaker) ? body.speaker : VOICE;
+        try {
+          const audio = await audioBase64(await env.AI.run("@cf/deepgram/aura-2-en", { text, speaker, encoding: "mp3" }));
+          if (audio) return json({ audio, model: "aura-2-en" });
+        } catch (e) { /* fall back to MeloTTS below */ }
+        const out = await env.AI.run("@cf/myshell-ai/melotts", { prompt: text, lang: "en" });
+        const audio = await audioBase64(out);
+        return audio ? json({ audio, model: "melotts" }) : json({ error: "no audio returned" }, 502);
       }
       if (url.pathname === "/api/health") return json({ ok: true }, 200, cors);
       return json({ error: "not found" }, 404, cors);
