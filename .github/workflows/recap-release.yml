@@ -32,6 +32,8 @@ jobs:
           echo "DATE=$DATE" >> "$GITHUB_ENV"
           mkdir -p "_recap/$DATE"
           cp recap-upload/script.json "_recap/$DATE/"
+          # a re-publish of a video that was already rendered (e.g. when Workers AI is out of quota for the day)
+          if [ -f recap-upload/prebuilt/recap.mp4 ]; then cp recap-upload/prebuilt/* "_recap/$DATE/"; echo "PREBUILT=1" >> "$GITHUB_ENV"; fi
           git checkout -q -B main origin/main
 
       - uses: actions/setup-python@v5
@@ -54,22 +56,26 @@ jobs:
           ffmpeg -version | head -1
 
       - name: AI illustrations (Workers AI; a story without one gets the drawn illustration)
+        if: env.PREBUILT != '1'
         env:
           RECAP_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
         run: RECAP_API="$(cat config/api_url.txt)" python -m agent recap images --date "$DATE" --out "_recap/$DATE"
 
       - name: Stock footage (Pixabay / Pexels when their keys exist, else free-licence Wikimedia Commons clips)
+        if: env.PREBUILT != '1'
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: python -m agent recap footage --date "$DATE" --out "_recap/$DATE"
 
       - name: AI narration (Workers AI via our API worker; without it the video renders silent)
+        if: env.PREBUILT != '1'
         env:
           RECAP_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
         run: RECAP_API="$(cat config/api_url.txt)" python -m agent recap voice --date "$DATE" --out "_recap/$DATE"
 
       - name: Render the video
+        if: env.PREBUILT != '1'
         run: python -m agent recap render --date "$DATE" --out "_recap/$DATE"
 
       - name: Check the video and script
