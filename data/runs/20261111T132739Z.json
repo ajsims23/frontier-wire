@@ -1,0 +1,354 @@
+{
+  "started_at": "2026-11-11T13:27:39+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1380)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (903)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (11)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (15)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "HCLTech, PTC Launch Pre-Configured PLM Solution for Semiconductor Firms",
+      "reason": "score 4: PLM solution for semiconductor firms is routine enterprise software rather than AI news."
+    },
+    {
+      "title": "IBM, Microsoft Launch Agentic AI Platform With Over 6,000 AI Agents",
+      "reason": "duplicate of 646e58946cb7"
+    },
+    {
+      "title": "[Update] Greenjoules Closes Series B Round At ₹150 Cr",
+      "reason": "not AI: Cleantech funding with no AI relevance."
+    },
+    {
+      "title": "Rentomojo Q2 Revenue Jumps 53% YoY To ₹142 Cr, Net Profit Slumps 63%",
+      "reason": "not AI: Financial results of a furniture‑rental firm with no AI component; not relevant to Frontier Wire audience."
+    },
+    {
+      "title": "IPO-Bound Cult.fit Faces Fresh Legal Challenge Over CULT Trademark",
+      "reason": "not AI: Legal trademark dispute for Cult.fit; unrelated to AI."
+    },
+    {
+      "title": "Australia plans mandatory safety rules, new regulator for frontier AI companies",
+      "reason": "duplicate of 4d1a6aa40c8e"
+    },
+    {
+      "title": "Instagram restricts Reporters’ Collective story on ECI vote-count twice, cites IT Rules",
+      "reason": "not AI: Social media content restriction story under IT Rules with no direct AI angle."
+    },
+    {
+      "title": "Japan advances registration route for 800MHz wireless stations",
+      "reason": "not AI: Regulatory change for 800 MHz wireless stations; no AI angle."
+    },
+    {
+      "title": "ED alleges CoinDCX routed Indian users’ trades abroad via a Costa Rican entity",
+      "reason": "not AI: Regulatory action against a crypto exchange; no AI component."
+    },
+    {
+      "title": "Analysis-Binance hack reveals cryptos uphill battle against hackers",
+      "reason": "not AI: Crypto exchange hack analysis with no AI relevance."
+    },
+    {
+      "title": "Beyond code generation: Five lessons on AI, reliability, and recovery",
+      "reason": "score 4: Discussion on maintaining AI-generated code is general commentary and routine industry panel takeaways."
+    },
+    {
+      "title": "5 lessons from the book Educated by Tara Westover that you read",
+      "reason": "not AI: Book review with no AI relevance."
+    },
+    {
+      "title": "5 lessons from the book Manifest: Dive Deeper, Roxie Nafousi",
+      "reason": "not AI: Book review with no AI relevance."
+    },
+    {
+      "title": "Govt invites fresh applications under PLI scheme for medical devices; extends tenure till 2035-36",
+      "reason": "not AI: Medical devices PLI scheme has no AI angle."
+    },
+    {
+      "title": "Blockbuster IPL trade: Hardik Pandya moves to Punjab for Rs 18 Cr, Arshdeep heads to MI",
+      "reason": "not AI: Cricket news, no AI relevance."
+    },
+    {
+      "title": "FinMin asks ministries to make EVs the default and preferred choice for staff car purchases",
+      "reason": "not AI: EV procurement policy, no AI relevance."
+    },
+    {
+      "title": "Meet 8 Tamil Nadu startups that showcased their innovations to PM Modi",
+      "reason": "not AI: General startup showcase without specific AI focus."
+    },
+    {
+      "title": "AirEarth Pitch Event 2026: Clean Air and Climate Innovators to Face Investors",
+      "reason": "not AI: Climate tech pitch event, no direct AI focus."
+    },
+    {
+      "title": "Indian Govt bans export of lithium-ion battery black mass",
+      "reason": "not AI: Government ban on lithium‑ion battery black‑mass exports; no AI relevance."
+    },
+    {
+      "title": "Exclusive: Nubank Alum Raises $14M For Colombia’s Palomma To Tackle Rent Payments, Landlord Financing",
+      "reason": "not AI: Fintech startup funding for rent payments and landlord financing in Colombia with no AI angle."
+    },
+    {
+      "title": "Ethan Mollick: In a little over a week we will see the release of The Last Human Game. There will never be another AAA game at the scale of GTA 6 with no…",
+      "reason": "score 4: Social media post offering commentary on upcoming game releases without significant AI research or business news."
+    },
+    {
+      "title": "Anthropic's IPO roadshow video: Dario Amodei says cancer, Alzheimer's, heart disease, and mental illness will be \"relics of the past\" in \"less than a decade\" (@firesidealpha)",
+      "reason": "score 5: Rehash of Anthropic IPO roadshow commentary about biomedical breakthroughs."
+    },
+    {
+      "title": "Filing: Alphabet agrees to additional privacy protections to salvage its $10M acquisition of bankrupt Spirit Airlines' data, resolving union objections (Alexander Gladstone/Wall Street Journal)",
+      "reason": "not AI: Acquisition of Spirit Airlines data by Alphabet, no primary AI angle."
+    },
+    {
+      "title": "The European Commission introduces the Digital Fairness Act, which aims to curb addictive design features and manipulative \"dark patterns\" or face large fines (Gian Volpicelli/Bloomberg)",
+      "reason": "duplicate of 3d88a52bb7e7"
+    },
+    {
+      "title": "Rather than being a spy, Alice Huang is likely a commercial fixer or \"white glove\" for businesses, leveraging a career in China's capital-market structures (Desmond Shum)",
+      "reason": "score 4: Commentary on the Alice Huang Nvidia chip scandal background; the chip smuggling story is covered elsewhere."
+    },
+    {
+      "title": "Sources: the UK's proposed under-16 social media ban is expanding to target recommender systems and user content, including YouTube Kids, Lego Play, and Spotify (Jessica Elgot/The Guardian)",
+      "reason": "not AI: UK social media ban expansion targeting recommender systems and apps; general social media policy rather than core AI news."
+    },
+    {
+      "title": "Analysis: AI-driven e-commerce adoption surged during China's month-long Singles Day festival, with event sales rising 2.4% between October 7 and October 31 (Reuters)",
+      "reason": "score 5: AI e-commerce adoption during Singles Day is a broad trend piece rather than specific news."
+    },
+    {
+      "title": "Anthropic sets modest $1 trillion IPO valuation target in a test of Wall Street’s AI fervor",
+      "reason": "duplicate of 6e60d9db5bba"
+    },
+    {
+      "title": "Anthropic’s lower-than-expected IPO valuation: smart strategy or sign of trouble?",
+      "reason": "duplicate of 6e60d9db5bba"
+    },
+    {
+      "title": "Anthropic targets valuation around $1T in blockbuster AI IPO, below initial expectation",
+      "reason": "duplicate of 6e60d9db5bba"
+    },
+    {
+      "title": "Anthropic Could Raise $14 Billion More Than SpaceX. The Hard Part Comes After the IPO",
+      "reason": "duplicate of 7283860a9cf0"
+    },
+    {
+      "title": "Anthropic IPO: Why $1.5 trillion valuation is raising questions despite strong demand",
+      "reason": "duplicate of 7283860a9cf0"
+    },
+    {
+      "title": "Anthropic to Seek $1.3 Trillion Valuation in IPO",
+      "reason": "duplicate of 6e60d9db5bba"
+    },
+    {
+      "title": "Kazakhstan-linked hackers used AI to steal Tajik government documents, researchers say",
+      "reason": "variety: already 2 stories from livemint.com this run"
+    },
+    {
+      "title": "Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyramid in 72h",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "London-based AI chip startup Fractile raised $720M from Thrive, Founders Fund, and others, sources say at a $7B post-money valuation, up from ~$1.1B in May (George Hammond/Financial Times)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "As Anthropic prepares to IPO, Amazon and Google collectively own 25%+; Amazon's $18B investment could reach $250B+ in value and Google's $33B could hit $140B (Karen Weise/New York Times)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "India ranked an AI Rising Contender by BCG, built on talent rather than compute",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "SoftBank Takes $7 Billion Hit on US AI Data Centre Investments",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Google November Pixel Drop brings Gemini AI to Pixel 10, custom widgets and Hindi message summaries",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Sources: ByteDance co-founder Zhang Yiming says the company plans to launch a Muse-like AI assistant in the coming weeks and reach the AI frontier by 2029-2030 (Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "‘Nobody Wants a Proprietary Platform,’ Says Coforge’s Anup Nair",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Beyond the model: Why context, not intelligence, is the moat for durable AI",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "401e0d69bb70",
+      "headline": "SoftBank writes off $3.7B from unused gas turbines for AI data centres",
+      "category": "industry",
+      "summary": "SoftBank reserved enough gas turbines to generate the power of six Hoover Dams (13GW+) for AI data centres and has written off $3.7 billion in losses from equipment it no longer needs. The company also recorded a separate ~$1.3 billion loss tied to warrants granted to OpenAI.",
+      "url": "https://techmeme.com/261111/p18",
+      "sources": 3,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "not India desk: 'SoftBank Takes $7 Billion Hit on US AI Data Centre'",
+    "not India desk: 'Kazakhstan-linked hackers used AI to steal Tajik g'",
+    "not India desk: 'Google November Pixel Drop brings Gemini AI to Pix'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "14 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 72.6,
+    "audit": 0.0,
+    "plan": 2.2,
+    "judge": 219.2,
+    "verify and write": 157.8,
+    "videos": 21.1,
+    "tagging": 1.5,
+    "explainers": 0.0,
+    "trackers": 34.7,
+    "claims": 2.7,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 13.0,
+    "self-review": -0.0,
+    "photos": 0.2,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 2.6
+  },
+  "fetched": 2949,
+  "fresh": 43,
+  "plan": {
+    "focus": "Chasing the fallout from Anthropic's massive IPO trajectory and massive AI hardware and data center investments while highlighting key Indian AI developments.",
+    "priorities": [
+      "As Anthropic prepares to IPO, Amazon and Google collectively own 25%+; (Massive stake valuations for Amazon and Google as Anthropic heads to IPO.)",
+      "London-based AI chip startup Fractile raised $720M from Thrive, Founde (Fractile's giant $720M funding round at a $7B valuation shows soaring chip startup demand.)",
+      "Sources: SoftBank reserved 13GW+ of turbines, equivalent to six Hoover (SoftBank's huge turbine reservations and $3.7B hit highlight massive power demands for AI data centers.)",
+      "Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyra (Fascinating agentic AI breakthrough discovering an unmapped Maya pyramid using NASA Lidar.)",
+      "India ranked an AI Rising Contender by BCG, built on talent rather tha (Key BCG ranking positioning India as an AI Rising Contender based on talent over compute.)"
+    ],
+    "thin_areas": [
+      "india",
+      "models"
+    ],
+    "searches": [
+      "Anthropic IPO valuation Nasdaq: 6 new",
+      "Fractile AI chip startup funding: 0 new"
+    ],
+    "dig_deeper": [
+      "As Anthropic prepares to IPO, Amazon and Google collectively own 25%+;",
+      "London-based AI chip startup Fractile raised $720M from Thrive, Founde"
+    ]
+  },
+  "judged": 49,
+  "kept": 16,
+  "research": {
+    "investigated": 5,
+    "confirmed": 1,
+    "tool_calls": 18
+  },
+  "research_log": [
+    "Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyra: unconfirmed (searched “Google AI agents NASA Lidar unmapped Maya pyramid 48 agents 72 hours”; read theverge.com; searched “Pietro Miotti Google 48 AI agents Maya site NASA Lidar”; searched “NASA Lidar Maya pyramid AI agents Google 48”)",
+    "London-based AI chip startup Fractile raised $720M from Thrive, Founde: unconfirmed (searched “Fractile $720 million funding round”; searched “Fractile AI chip startup funding Thrive Founders Fund”; searched “\"Fractile\" AI chip”)",
+    "As Anthropic prepares to IPO, Amazon and Google collectively own 25%+;: unconfirmed (searched “Anthropic IPO Amazon Google 25% stake New York Times Karen Weise”; searched “\"Amazon\" \"Google\" \"Anthropic\" 25%”; read tipranks.com; searched “\"$18B\" \"Anthropic\" Amazon”)",
+    "Sources: SoftBank reserved 13GW+ of turbines, equivalent to six Hoover: confirmed (searched “SoftBank 13GW turbines AI power six Hoover Dams earnings hit $3.7 billion”; read analyticsindiamag.com; searched “\"six Hoover Dams\" SoftBank turbines”)",
+    "India ranked an AI Rising Contender by BCG, built on talent rather tha: unconfirmed (searched “India AI Rising Contender BCG talent rather than compute”; read msn.com; read rediff.com; read indiatimes.com)"
+  ],
+  "videos": {
+    "OpenAI": "ok (14 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 4 new)",
+    "Google for Developers": "ok (9 in feed, 4 new)",
+    "AI at Meta": "ok (8 in feed, 0 new)",
+    "Microsoft Research": "ok (10 in feed, 1 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 3 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 2 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (4 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (2 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (2 in feed, 0 new)"
+  },
+  "videos_kept": "15 kept from 15 new",
+  "tagged": 1,
+  "trackers": "filed 3 stories; updated copyright, ai-infrastructure",
+  "claims": "141 tracked, 136 open, 0 updated this run",
+  "model_tracker": "82 models, 7 changes today",
+  "briefing": "4 themes from 20 stories",
+  "photos": "1 saved, 0 unavailable",
+  "alerts": "16 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":13}",
+  "ai_requests_run": 36,
+  "ai_tokens_run": 95640,
+  "ai_requests_today": 221,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+    "gemini: network error ReadTimeout, retrying",
+    "gemini: unreachable (ReadTimeout); skipping provider",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model"
+  ]
+}

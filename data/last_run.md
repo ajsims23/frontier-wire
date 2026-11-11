@@ -1,113 +1,112 @@
-## Frontier Wire newsroom run — 2026-11-11T10:14:13+00:00
+## Frontier Wire newsroom run — 2026-11-11T13:27:39+00:00
 
-Fetched 2998 items · fresh 61 · judged 55 · kept 7 · **written 5**
-AI: 41 requests, 132,940 tokens this run · 185 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Chasing the fallout from Jensen Huang's scandal and Nvidia export controls while tracking major AI corporate moves.
-  Priorities: Alleged spy plot targeting CEO Jensen Huang raises questions about Nvi (Covers the fallout of the Nvidia spy scandal and potential political impact on chip limits.); TSMC to invest up to $1 billion in Anthropic , OpenAI - The HinduBusin (TSMC investment plans in Anthropic and OpenAI signal major shifts in foundry backing.); Google Expands Gemini 4 Carbon AI Access For Developers , Businesses W (Google expands Gemini 4 Carbon access for developers with advanced coding and cybersecurity.); Anthropic Expands Claude AI With Spreadsheets , Data Dashboards & New  (Anthropic expands Claude's workspace tools to challenge enterprise incumbents.); Nothing’s AI-native device revealed: Two LEDs, one button, no screen — (Nothing's upcoming AI-native device reveal offers unique hardware design angles for builders.)
-  Thin areas: models, research
-  Searches: Anthropic Australian retail IPO Nasdaq listing: 6 new
-  Dig deeper: Alleged spy plot targeting CEO Jensen Huang raises questions about Nvi; TSMC to invest up to $1 billion in Anthropic , OpenAI - The HinduBusin
-Research agent: investigated 5 stories with 13 tool calls, confirmed 5
-Daily briefing: 3 themes from 20 stories
-Threads updated: Courts address legal and public issues involving AI hallucin: Madras High Court rules AI-generated books violate library r
-Videos: 20 kept from 26 new · OpenAI ok (14 in feed, 10 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 4 new), Google for Developers ok (9 in feed, 4 new), AI at Meta ok (8 in feed, 1 new), Microsoft Research ok (10 in feed, 1 new), NVIDIA ok (9 in feed, 1 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 2 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (15 in feed, 1 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 2 new), Hard Fork ok (2 in feed, 1 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (3 in feed, 0 new), 20VC ok (2 in feed, 1 new)
-Photos: 5 saved, 0 unavailable
-Alerts: 17 events sent: {"subscribers":7,"sent":0,"queued":41}
+Fetched 2949 items · fresh 43 · judged 49 · kept 16 · **written 1**
+AI: 36 requests, 95,640 tokens this run · 221 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Chasing the fallout from Anthropic's massive IPO trajectory and massive AI hardware and data center investments while highlighting key Indian AI developments.
+  Priorities: As Anthropic prepares to IPO, Amazon and Google collectively own 25%+; (Massive stake valuations for Amazon and Google as Anthropic heads to IPO.); London-based AI chip startup Fractile raised $720M from Thrive, Founde (Fractile's giant $720M funding round at a $7B valuation shows soaring chip startup demand.); Sources: SoftBank reserved 13GW+ of turbines, equivalent to six Hoover (SoftBank's huge turbine reservations and $3.7B hit highlight massive power demands for AI data centers.); Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyra (Fascinating agentic AI breakthrough discovering an unmapped Maya pyramid using NASA Lidar.); India ranked an AI Rising Contender by BCG, built on talent rather tha (Key BCG ranking positioning India as an AI Rising Contender based on talent over compute.)
+  Thin areas: india, models
+  Searches: Anthropic IPO valuation Nasdaq: 6 new; Fractile AI chip startup funding: 0 new
+  Dig deeper: As Anthropic prepares to IPO, Amazon and Google collectively own 25%+;; London-based AI chip startup Fractile raised $720M from Thrive, Founde
+Research agent: investigated 5 stories with 18 tool calls, confirmed 1
+Daily briefing: 4 themes from 20 stories
+Videos: 15 kept from 15 new · OpenAI ok (14 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 4 new), Google for Developers ok (9 in feed, 4 new), AI at Meta ok (8 in feed, 0 new), Microsoft Research ok (10 in feed, 1 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 2 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (4 in feed, 0 new), Latent Space ok (15 in feed, 0 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 1 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (3 in feed, 0 new), 20VC ok (2 in feed, 0 new)
+Photos: 1 saved, 0 unavailable
+Alerts: 16 events sent: {"subscribers":7,"sent":0,"queued":13}
 Claims: 141 tracked, 136 open, 0 updated this run
-Trackers: filed 2 stories; updated us-china, india-ai
-Model tracker: 82 models, 5 changes today
-Tagged 5 stories by sector, region and deal
-India briefing: 3 themes from 6 stories
-Time: gather 85s, plan 2s, judge 25s, verify and write 138s, videos 5s, tagging 113s, trackers 23s, claims 8s, briefing 10s, photos 3s, alerts 3s
+Trackers: filed 3 stories; updated copyright, ai-infrastructure
+Model tracker: 82 models, 7 changes today
+Tagged 1 stories by sector, region and deal
+Time: gather 73s, plan 2s, judge 219s, verify and write 158s, videos 21s, tagging 2s, trackers 35s, claims 3s, briefing 13s, alerts 3s
 
 ### New stories
-- **industry** — [Nothing teases screenless AI hardware device launching in December](https://livemint.com/technology/nothings-ai-native-device-revealed-two-leds-one-button-no-screen-details-here-11794375963841.html)  
-  Nothing CEO Carl Pei has teased the company's first AI-native hardware device ahead of a planned launch in December 2026. A teaser video shows a compact metallic gadget featuring two red and green LED lights, a physical button, and no display.  
-  _4 source(s), 2 verified quote(s)_
-- **policy** — [Madras High Court rules AI-generated books violate library rules, orders FIR](https://medianama.com/2026/11/223-madras-high-court-ai-generated-books-fir)  
-  The Madras High Court ruled that AI-generated and plagiarised books fall under 'doubtful taste' and cannot be procured by public libraries. The court ordered the Directorate of Vigilance and Anti-Corruption to immediately register an FIR regarding alleged fraudulent book purchases in Tamil Nadu.  
-  _5 source(s), 1 verified quote(s)_
-- **industry** — [NHA selects EkaCare for AI Voice Scribe in public health facilities](https://analyticsindiamag.com/ai-news/nha-selects-ekacare-for-ai-voice-scribe-in-public-health-facilities)  
-  The National Health Authority selected health AI startup EkaCare as a technology partner for its ambient AI Voice Scribe solution in public health facilities. The tool converts doctor-patient conversations into structured clinical notes in Fast Healthcare Interoperability Resources format across more than 15 Indian languages.  
-  _2 source(s), 1 verified quote(s)_
-- **industry** — [AvenuesAI reports Q2 net profit of Rs 72 cr and 47% revenue surge](https://medianama.com/2026/11/223-avenuesai-profit-revenue-surges)  
-  Digital payments company AvenuesAI reported a 6% increase in consolidated net profit to Rs 71.7 crore for the September quarter of FY27. Revenue from operations rose 47% year-on-year to Rs 2,879.2 crore.  
-  _4 source(s), 1 verified quote(s)_
-- **policy** — [US and China should stay clear-eyed on AI cooperation and competition, says Bessent](https://chinatechnews.com/2026/11/11/132538-us-china-ai-cooperation-and-competition-bessent)  
-  US Treasury Secretary Scott Bessent stated that the US and China must navigate AI cooperation to mitigate risks while competing for supremacy. The two nations plan to advance a bilateral dialogue on superintelligence and establish an AI alert system.  
-  _5 source(s), 2 verified quote(s)_
+- **industry** — [SoftBank writes off $3.7B from unused gas turbines for AI data centres](https://techmeme.com/261111/p18)  
+  SoftBank reserved enough gas turbines to generate the power of six Hoover Dams (13GW+) for AI data centres and has written off $3.7 billion in losses from equipment it no longer needs. The company also recorded a separate ~$1.3 billion loss tied to warrants granted to OpenAI.  
+  _3 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- WhatsApp To Go Beyond Messaging With AI Integration , Digital Payments And Enhanced Features — score 3: Routine consumer messaging app update with minor AI integrations.
-- U . S . stocks slide Tuesday as sell - off in Nvidia extends — not AI: Stock market report on Nvidia sell-off without substantial new AI developments.
-- Altimetrik Accelerates Enterprise AI Transformation with Google Cloud Gemini for Healthcare — duplicate of 02e4a20d191a
-- Which AI Collaborates Best with Humans ? New Skillprint Experiment Exposes Collaboration Gap — score 3: Skillprint experiment on human-AI collaboration gap is a minor study/listicle.
-- Alleged spy plot targeting CEO Jensen Huang raises questions about Nvidia future — duplicate of 4756aa2fa657
-- Google Expands Gemini 4 Carbon AI Access For Developers , Businesses With Advanced Coding , Cybersecurity And Research Capabilities — duplicate of 28b27e2d175e
-- Asian shares mostly rise on AI chip demand despite Wall Street retreat on inflation data — not AI: General stock market roundup mentioning AI chip demand as part of broader macroeconomic reporting.
-- Jensen Huang case : Nvidia CEO love affair scandal revives push for tougher US line on China — duplicate of 26a96166f51f
-- AI crackdown looms despite government expanding use — score 4: Vague general commentary on AI regulation without specific new policy actions or announcements.
-- AI is coming for Qantas jobs - ABC listen — score 3: Routine corporate automation story about airline job impacts.
-- Nvidia CEO affair could have major effects on US - China AI race — duplicate of 26a96166f51f
-- Anthropic Expands Claude AI With Spreadsheets , Data Dashboards & New Workplace Productivity Tools To Challenge Microsoft & Google — duplicate of 7737e173e31a
-- People Moves : Island Insurance Names Cheung VP ; Alliant Names Shenouda AI Transformation Officer ; Daley Becomes EverPeak CUO — score 2: Executive appointment brief mentioning an AI transformation role.
-- Nvidia CEO affair revives push for tougher US line on China — duplicate of 26a96166f51f
-- What we know - and what we dont - as Nvidia investigates an alleged spy plot involving its CEO — duplicate of 4756aa2fa657
-- TSMC to invest up to $1 billion in Anthropic , OpenAI - The HinduBusinessLine — duplicate of 69011908bacb
-- How Nvidia CEO Jensen Huang extramarital affair could cause collateral damage in Washington — duplicate of 26a96166f51f
-- Anthropic Adds Shared Team Tools as Claude Data Leaves Beta — duplicate of 7737e173e31a
-- WhatsApp to bring bill payments within chats , use AI to save time , says CEO Kunal Shah — score 4: Comments from an executive on general feature rollouts and chat payments are routine product updates rather than significant AI news.
-- AI stocks climb after trillions wiped from market values — score 4: Broad stock market roundup lacks specific new developments or insights for core AI readers.
-- Nvidia Hires Top US Law Firm To Investigate CEO Jensen Huang Alleged Link To Chinese Spy — duplicate of 4756aa2fa657
-- Fiji Airways may not replace some departing staff as AI improves efficiency Scurrah — score 3: Routine airline efficiency statement referencing AI with no significant new technical or business developments.
-- OpenAI To Retire ChatGPT Advanced And Standard Voice Modes From December 11 As Users Shift To New GPT - Live Experience — score 5: Retiring older voice modes in favour of newer live experiences is an incremental product lifecycle update.
-- Inside Anthropic blockbuster IPO : What we know about the AI giant plans — score 5: General roundup of Anthropic's IPO plans rehashes details already covered more directly in other breaking pieces.
-- Massive fortunes of 7 founders underscore sheer scale of Anthropic mega IPO — score 5: Focuses on founder fortunes rather than core technical or business milestones of the Anthropic IPO.
-- OpenAI lets businesses claim ChatGPT profiles , adds AI agents for US e - commerce firms — duplicate of 5ca4dc7b6d88
-- Anthropic Opens Australian Retail Offer for Planned Nasdaq IPO Amid AI Scrutiny — duplicate of 61c97162f2b8
-- Nvidia Spy Row : US tightens AI chip export curbs for China — duplicate of 26a96166f51f
-- China foreign trade growth picks up pace on stellar imports , booming AI demand -- Beijing Review — score 3: Broad trade report with a brief mention of AI demand, not specific enough for our readers.
-- Real Or AI ? Tide Productions & FOURTHE Child Safety Campaign Puts Aussies To The Test — not AI: Child safety marketing campaign using AI as a theme, not core AI news.
-- US stocks fall on hot inflation report as Nvidia tumbles again — not AI: General stock market report mentioning Nvidia falling amid macro inflation data.
-- Life on Claude Nine — score 2: Vague Hacker News link post with no substantive article or reporting.
-- Fintech SaaS Company Veefin Migrates To NSE, BSE Mainboard — not AI: Fintech SaaS migration to mainboard, no AI relevance.
-- ED Attaches ₹14 Cr Assets In HashPe Crypto Ponzi Fraud Case — not AI: Crypto ponzi fraud case with no AI relevance.
-- X ‘locked’ Times of India photojournalist’s account after Delhi smog posts: Report — not AI: Social media account suspension regarding Delhi smog posts, no AI relevance.
-- US-blacklisted Chinese university buys Nvidia H200 AI chips through domestic suppliers: Report — duplicate of 41f04ecb2082
-- Beyond backups: Six lessons on cloud resilience, recovery, and rising AI costs — score 4: General cloud resilience and cost advice with only minor mention of rising AI costs.
-- CERT-In flags critical security flaws, urges Chrome users in India to update browsers — not AI: Routine browser security vulnerability warning, no AI angle.
-- Tata Motors partners with Finzo EV Solutions to make electric commercial vehicles more accessible — not AI: EV partnership announcement, no AI angle.
-- Startup news and updates: daily roundup (November 11, 2026) — not AI: General startup roundup without a primary AI focus.
-- VR pioneer Jaron Lanier says Silicon Valley is sabotaging itself by poorly pitching AI and treating areas designated for data centers as sacrifice zones (Jaron Lanier/New York Times) — score 7: Jaron Lanier commentary in the New York Times on AI pitching and data center sacrifice zones. Notable thinker critique.
-- Nintendo sold 5.2M copies of its The Legend of Zelda: Ocarina of Time remake in just four days, giving the Switch 2 the blockbuster hit it had been waiting for (Vlad Savov/Bloomberg) — not AI: Video game sales figures (Nintendo Switch 2 / Zelda remake), completely off-topic.
-- Anthopic opens Australian retail IPO offering as AI scrutiny intensifies — duplicate of 61c97162f2b8
-- Anthropic opens Australian retail IPO as demand builds ahead of Nasdaq debut — duplicate of 61c97162f2b8
-- Anthropic Lodges Australian Prospectus, Opening IPO to Retail — duplicate of 61c97162f2b8
-- Anthropic lodges Australian prospectus, brokers start selling shares — duplicate of 61c97162f2b8
-- Anthropic launches Australia retail IPO seeking up to $64.4B — duplicate of 61c97162f2b8
-- Combining AI with GIS to solve real - time farm problems - the Farmwise AI way — could not verify yet; will retry next run
-- Can Indian Startups Win The AI Inference Race? — could not verify yet after a second try; dropped
+- HCLTech, PTC Launch Pre-Configured PLM Solution for Semiconductor Firms — score 4: PLM solution for semiconductor firms is routine enterprise software rather than AI news.
+- IBM, Microsoft Launch Agentic AI Platform With Over 6,000 AI Agents — duplicate of 646e58946cb7
+- [Update] Greenjoules Closes Series B Round At ₹150 Cr — not AI: Cleantech funding with no AI relevance.
+- Rentomojo Q2 Revenue Jumps 53% YoY To ₹142 Cr, Net Profit Slumps 63% — not AI: Financial results of a furniture‑rental firm with no AI component; not relevant to Frontier Wire audience.
+- IPO-Bound Cult.fit Faces Fresh Legal Challenge Over CULT Trademark — not AI: Legal trademark dispute for Cult.fit; unrelated to AI.
+- Australia plans mandatory safety rules, new regulator for frontier AI companies — duplicate of 4d1a6aa40c8e
+- Instagram restricts Reporters’ Collective story on ECI vote-count twice, cites IT Rules — not AI: Social media content restriction story under IT Rules with no direct AI angle.
+- Japan advances registration route for 800MHz wireless stations — not AI: Regulatory change for 800 MHz wireless stations; no AI angle.
+- ED alleges CoinDCX routed Indian users’ trades abroad via a Costa Rican entity — not AI: Regulatory action against a crypto exchange; no AI component.
+- Analysis-Binance hack reveals cryptos uphill battle against hackers — not AI: Crypto exchange hack analysis with no AI relevance.
+- Beyond code generation: Five lessons on AI, reliability, and recovery — score 4: Discussion on maintaining AI-generated code is general commentary and routine industry panel takeaways.
+- 5 lessons from the book Educated by Tara Westover that you read — not AI: Book review with no AI relevance.
+- 5 lessons from the book Manifest: Dive Deeper, Roxie Nafousi — not AI: Book review with no AI relevance.
+- Govt invites fresh applications under PLI scheme for medical devices; extends tenure till 2035-36 — not AI: Medical devices PLI scheme has no AI angle.
+- Blockbuster IPL trade: Hardik Pandya moves to Punjab for Rs 18 Cr, Arshdeep heads to MI — not AI: Cricket news, no AI relevance.
+- FinMin asks ministries to make EVs the default and preferred choice for staff car purchases — not AI: EV procurement policy, no AI relevance.
+- Meet 8 Tamil Nadu startups that showcased their innovations to PM Modi — not AI: General startup showcase without specific AI focus.
+- AirEarth Pitch Event 2026: Clean Air and Climate Innovators to Face Investors — not AI: Climate tech pitch event, no direct AI focus.
+- Indian Govt bans export of lithium-ion battery black mass — not AI: Government ban on lithium‑ion battery black‑mass exports; no AI relevance.
+- Exclusive: Nubank Alum Raises $14M For Colombia’s Palomma To Tackle Rent Payments, Landlord Financing — not AI: Fintech startup funding for rent payments and landlord financing in Colombia with no AI angle.
+- Ethan Mollick: In a little over a week we will see the release of The Last Human Game. There will never be another AAA game at the scale of GTA 6 with no… — score 4: Social media post offering commentary on upcoming game releases without significant AI research or business news.
+- Anthropic's IPO roadshow video: Dario Amodei says cancer, Alzheimer's, heart disease, and mental illness will be "relics of the past" in "less than a decade" (@firesidealpha) — score 5: Rehash of Anthropic IPO roadshow commentary about biomedical breakthroughs.
+- Filing: Alphabet agrees to additional privacy protections to salvage its $10M acquisition of bankrupt Spirit Airlines' data, resolving union objections (Alexander Gladstone/Wall Street Journal) — not AI: Acquisition of Spirit Airlines data by Alphabet, no primary AI angle.
+- The European Commission introduces the Digital Fairness Act, which aims to curb addictive design features and manipulative "dark patterns" or face large fines (Gian Volpicelli/Bloomberg) — duplicate of 3d88a52bb7e7
+- Rather than being a spy, Alice Huang is likely a commercial fixer or "white glove" for businesses, leveraging a career in China's capital-market structures (Desmond Shum) — score 4: Commentary on the Alice Huang Nvidia chip scandal background; the chip smuggling story is covered elsewhere.
+- Sources: the UK's proposed under-16 social media ban is expanding to target recommender systems and user content, including YouTube Kids, Lego Play, and Spotify (Jessica Elgot/The Guardian) — not AI: UK social media ban expansion targeting recommender systems and apps; general social media policy rather than core AI news.
+- Analysis: AI-driven e-commerce adoption surged during China's month-long Singles Day festival, with event sales rising 2.4% between October 7 and October 31 (Reuters) — score 5: AI e-commerce adoption during Singles Day is a broad trend piece rather than specific news.
+- Anthropic sets modest $1 trillion IPO valuation target in a test of Wall Street’s AI fervor — duplicate of 6e60d9db5bba
+- Anthropic’s lower-than-expected IPO valuation: smart strategy or sign of trouble? — duplicate of 6e60d9db5bba
+- Anthropic targets valuation around $1T in blockbuster AI IPO, below initial expectation — duplicate of 6e60d9db5bba
+- Anthropic Could Raise $14 Billion More Than SpaceX. The Hard Part Comes After the IPO — duplicate of 7283860a9cf0
+- Anthropic IPO: Why $1.5 trillion valuation is raising questions despite strong demand — duplicate of 7283860a9cf0
+- Anthropic to Seek $1.3 Trillion Valuation in IPO — duplicate of 6e60d9db5bba
+- Kazakhstan-linked hackers used AI to steal Tajik government documents, researchers say — variety: already 2 stories from livemint.com this run
+- Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyramid in 72h — could not verify yet; will retry next run
+- London-based AI chip startup Fractile raised $720M from Thrive, Founders Fund, and others, sources say at a $7B post-money valuation, up from ~$1.1B in May (George Hammond/Financial Times) — could not verify yet; will retry next run
+- As Anthropic prepares to IPO, Amazon and Google collectively own 25%+; Amazon's $18B investment could reach $250B+ in value and Google's $33B could hit $140B (Karen Weise/New York Times) — could not verify yet; will retry next run
+- India ranked an AI Rising Contender by BCG, built on talent rather than compute — could not verify yet; will retry next run
+- SoftBank Takes $7 Billion Hit on US AI Data Centre Investments — could not verify yet; will retry next run
+- Google November Pixel Drop brings Gemini AI to Pixel 10, custom widgets and Hindi message summaries — could not verify yet; will retry next run
+- Sources: ByteDance co-founder Zhang Yiming says the company plans to launch a Muse-like AI assistant in the coming weeks and reach the AI frontier by 2029-2030 (Bloomberg) — could not verify yet; will retry next run
+- ‘Nobody Wants a Proprietary Platform,’ Says Coforge’s Anup Nair — could not verify yet; will retry next run
+- Beyond the model: Why context, not intelligence, is the moat for durable AI — could not verify yet; will retry next run
 
 </details>
 
 ### Sources with problems
-- `gdelt-india`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
 
 <details><summary>Research agent's work</summary>
 
-- Nothing’s AI-native device revealed: Two LEDs, one button, no screen —: confirmed (searched “Nothing AI native device Carl Pei December 2026 two LEDs one button”; read androidauthority.com; read mashable.com)
-- Madras High Court flags fake, AI-generated books in public libraries, : confirmed (searched “Madras High Court AI generated books public libraries FIR”; read livelaw.in; read thehindu.com)
-- NHA Selects EkaCare for AI Voice Scribe in Public Health Facilities: confirmed (searched “NHA EkaCare AI Voice Scribe public health facilities”; read indiatimes.com; searched “"EkaCare" "NHA" "Voice Scribe"”)
-- AvenuesAI Q2: Profit rises 6% to Rs 72 cr, revenue surges 47%: confirmed (searched “AvenuesAI Q2 profit revenue FY27”; read thehindubusinessline.com)
-- US - China AI cooperation and competition : Bessent: confirmed (searched “Bessent US China AI cooperation competition”; read indiatimes.com)
+- Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyra: unconfirmed (searched “Google AI agents NASA Lidar unmapped Maya pyramid 48 agents 72 hours”; read theverge.com; searched “Pietro Miotti Google 48 AI agents Maya site NASA Lidar”; searched “NASA Lidar Maya pyramid AI agents Google 48”)
+- London-based AI chip startup Fractile raised $720M from Thrive, Founde: unconfirmed (searched “Fractile $720 million funding round”; searched “Fractile AI chip startup funding Thrive Founders Fund”; searched “"Fractile" AI chip”)
+- As Anthropic prepares to IPO, Amazon and Google collectively own 25%+;: unconfirmed (searched “Anthropic IPO Amazon Google 25% stake New York Times Karen Weise”; searched “"Amazon" "Google" "Anthropic" 25%”; read tipranks.com; searched “"$18B" "Anthropic" Amazon”)
+- Sources: SoftBank reserved 13GW+ of turbines, equivalent to six Hoover: confirmed (searched “SoftBank 13GW turbines AI power six Hoover Dams earnings hit $3.7 billion”; read analyticsindiamag.com; searched “"six Hoover Dams" SoftBank turbines”)
+- India ranked an AI Rising Contender by BCG, built on talent rather tha: unconfirmed (searched “India AI Rising Contender BCG talent rather than compute”; read msn.com; read rediff.com; read indiatimes.com)
 
 </details>
 
 ### Notes
+- not India desk: 'SoftBank Takes $7 Billion Hit on US AI Data Centre'
+- not India desk: 'Kazakhstan-linked hackers used AI to steal Tajik g'
+- not India desk: 'Google November Pixel Drop brings Gemini AI to Pix'
 - GDELT unavailable: GDELT paused for this run after repeated rate-limiting
-- 1 kept item(s) carried over to the next run
+- 14 kept item(s) carried over to the next run
 - gemini/gemini-flash-lite-latest: 503 (server busy); trying next model
-- gemini/gemini-flash-latest: answer cut off; retrying with more room
-- gemini/gemini-flash-lite-latest: 503 (server busy); trying next model
-- gemini/gemini-flash-latest: answer cut off; retrying with more room
+- gemini: network error ReadTimeout, retrying
+- gemini: unreachable (ReadTimeout); skipping provider
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model
