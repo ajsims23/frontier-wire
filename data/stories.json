@@ -1,6 +1,85 @@
 [
   {
     "explainer": {
+      "what_it_means": "Developers can send a single multimodal document and receive up to 1,000 yes/no or multiple‑choice answers with confidence scores in about two hundred milliseconds. Only input tokens are billed, making it cheaper than using a full‑text model for the same tasks. This is useful for automated policy enforcement, content grading, and routing decisions.",
+      "terms": [
+        {
+          "term": "Calibration",
+          "meaning": "A measure of how well a model’s confidence scores match its actual accuracy."
+        },
+        {
+          "term": "Multimodal input",
+          "meaning": "Data that can include text, images, audio, video, or PDFs combined in one request."
+        },
+        {
+          "term": "Bounded choice",
+          "meaning": "A question that has a limited set of possible answers, such as yes/no or multiple‑choice."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "The API provides fast, cheap multimodal decision scoring, letting developers offload micro‑decision logic from larger generative models.",
+      "business": "Enterprises can automate policy checks, content grading and routing at scale, reducing latency and cost.",
+      "investors": "Google’s decision endpoint expands its AI portfolio into a niche where rivals have just launched, potentially increasing its share of enterprise AI tooling."
+    },
+    "id": "cce714811b51",
+    "headline": "Google launches Gemini Decisions API for fast multimodal yes/no and choice scoring",
+    "summary": "Google introduced the Gemini Decisions API, powered by the Gemini Decision 1 model, allowing up to 1,000 bounded-choice questions per request across text, images, audio, video and PDFs. The service costs $0.10 per million input tokens and returns probabilities in 150‑250 ms.",
+    "why_it_matters": "It gives developers a low‑cost, low‑latency way to automate policy checks, routing and grading without using expensive generative models.",
+    "category": "models",
+    "lab": "Google DeepMind",
+    "model_name": "Gemini Decision 1",
+    "model_type": "Multimodal",
+    "tags": [],
+    "quotes": [],
+    "score": 8,
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api",
+    "source_id": "google-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini__decisions__blog-header_2784x1566.width-1300.png",
+    "sources": [
+      {
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api",
+        "publisher": "Google AI blog",
+        "title": "Gemini Decisions API: Fast, calibrated multimodal decisions"
+      },
+      {
+        "url": "https://cryptobriefing.com/google-gemini-decisions-api-launch",
+        "publisher": "Crypto Briefing",
+        "title": "Google launches Gemini Decisions API for fast multimodal choices"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-11T18:00:00+00:00",
+    "created_at": "2026-11-11T18:24:17+00:00",
+    "breaking": true,
+    "thread": "t-9e3e3ddacb24",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "1,000 bounded",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Anthropic says it runs its Claude models on four different chip families rather than one, which it argues lowers costs and builds a hard-to-copy advantage. It also says its internal tool called Mythos ported Claude to AMD GPUs in three days. These claims appear in a video released as part of its IPO marketing.",
       "terms": [
         {

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T16:06:18+00:00",
+  "updated_at": "2026-11-11T18:24:17+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Networks operating in Singapore and China have helped Chinese tech companies access advanced U.S. artificial intelligence chips and bypass export restrictions. Megaspeed, a Singapore-based AI infrastructure company, purchased $4.8 billion in Nvidia chips over two years, while its executive Alice Huang and her family built a network of companies to acquire chips.",
@@ -98,6 +98,85 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Developers can send a single multimodal document and receive up to 1,000 yes/no or multiple‑choice answers with confidence scores in about two hundred milliseconds. Only input tokens are billed, making it cheaper than using a full‑text model for the same tasks. This is useful for automated policy enforcement, content grading, and routing decisions.",
+        "terms": [
+          {
+            "term": "Calibration",
+            "meaning": "A measure of how well a model’s confidence scores match its actual accuracy."
+          },
+          {
+            "term": "Multimodal input",
+            "meaning": "Data that can include text, images, audio, video, or PDFs combined in one request."
+          },
+          {
+            "term": "Bounded choice",
+            "meaning": "A question that has a limited set of possible answers, such as yes/no or multiple‑choice."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "The API provides fast, cheap multimodal decision scoring, letting developers offload micro‑decision logic from larger generative models.",
+        "business": "Enterprises can automate policy checks, content grading and routing at scale, reducing latency and cost.",
+        "investors": "Google’s decision endpoint expands its AI portfolio into a niche where rivals have just launched, potentially increasing its share of enterprise AI tooling."
+      },
+      "id": "cce714811b51",
+      "headline": "Google launches Gemini Decisions API for fast multimodal yes/no and choice scoring",
+      "summary": "Google introduced the Gemini Decisions API, powered by the Gemini Decision 1 model, allowing up to 1,000 bounded-choice questions per request across text, images, audio, video and PDFs. The service costs $0.10 per million input tokens and returns probabilities in 150‑250 ms.",
+      "why_it_matters": "It gives developers a low‑cost, low‑latency way to automate policy checks, routing and grading without using expensive generative models.",
+      "category": "models",
+      "lab": "Google DeepMind",
+      "model_name": "Gemini Decision 1",
+      "model_type": "Multimodal",
+      "tags": [],
+      "quotes": [],
+      "score": 8,
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api",
+      "source_id": "google-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini__decisions__blog-header_2784x1566.width-1300.png",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api",
+          "publisher": "Google AI blog",
+          "title": "Gemini Decisions API: Fast, calibrated multimodal decisions"
+        },
+        {
+          "url": "https://cryptobriefing.com/google-gemini-decisions-api-launch",
+          "publisher": "Crypto Briefing",
+          "title": "Google launches Gemini Decisions API for fast multimodal choices"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-11T18:00:00+00:00",
+      "created_at": "2026-11-11T18:24:17+00:00",
+      "breaking": true,
+      "thread": "t-9e3e3ddacb24",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "1,000 bounded",
+      "trackers": [
+        "frontier-race"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "Anthropic says it runs its Claude models on four different chip families rather than one, which it argues lowers costs and builds a hard-to-copy advantage. It also says its internal tool called Mythos ported Claude to AMD GPUs in three days. These claims appear in a video released as part of its IPO marketing.",
@@ -5662,92 +5741,6 @@
         "frontier-race"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Debt markets are demanding higher returns to lend to AI data center builders and neocloud providers, reflecting lender concerns about refinancing and the cost of funding infrastructure. At the same time, the cost to insure against defaults has risen for AI-linked companies, pointing to mounting financial stress in the sector.",
-        "terms": [
-          {
-            "term": "Credit default swap",
-            "meaning": "A financial contract that pays the buyer if a borrower fails to pay its debts."
-          },
-          {
-            "term": "Coupon",
-            "meaning": "The interest rate a bond issuer promises to pay bondholders based on its face value."
-          },
-          {
-            "term": "Capex",
-            "meaning": "Capital expenditure; money spent by companies on physical assets like data centers and hardware."
-          }
-        ],
-        "watch_next": [
-          "CoreWeave's third-quarter results scheduled for November 10 after the close."
-        ]
-      },
-      "audiences": {
-        "builders": "Data center developers face potential permitting hurdles and moratoriums in key states under incoming political leadership, while higher financing costs test the AI infrastructure boom.",
-        "business": "Companies expanding AI infrastructure face rising debt costs and default protection prices as credit markets react to political hurdles and refinancing doubts for weaker borrowers like CoreWeave.",
-        "investors": "Bond yields for neocloud provider CoreWeave have topped 16% as default protection costs rise across AI-linked firms including Nvidia, Broadcom, and Amazon."
-      },
-      "id": "458bb1a34baf",
-      "headline": "CoreWeave bond yield tops 16% as AI credit stress rises",
-      "summary": "CoreWeave's 2032 bond yield climbed above 16% as lenders expressed doubt about the company's ability to refinance before its November 10 earnings. Default protection costs also rose across other AI-linked companies, including Nvidia, Broadcom, and Amazon.",
-      "why_it_matters": "Rising bond yields and default protection costs indicate that credit markets are beginning to price in significant financial friction for the capital-intensive AI infrastructure boom.",
-      "category": "industry",
-      "lab": "CoreWeave",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "CoreWeave",
-        "AI infrastructure",
-        "credit markets",
-        "bonds",
-        "debt stress"
-      ],
-      "quotes": [],
-      "score": 8,
-      "url": "https://cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html",
-      "source_id": "hn",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://image.cnbcfm.com/api/v1/image/108410034-1792003128025-gettyimages-2245498775-raa-coreweav251110_npfn0.jpeg?v=1792003201&w=1920&h=1080",
-      "sources": [
-        {
-          "url": "https://cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html",
-          "publisher": "cnbc.com",
-          "title": "CoreWeave bond yield tops 16% as AI credit stress rises"
-        },
-        {
-          "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-bonds-now-yield-more-153753330.html",
-          "publisher": "Yahoo Finance",
-          "title": "CoreWeave’s Bonds Now Yield More Than 16%, Days Before Earnings"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-10T03:20:06+00:00",
-      "created_at": "2026-11-10T10:08:32+00:00",
-      "sectors": [
-        "finance"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 0,
-        "business": 3,
-        "investors": 3
-      },
-      "cover": "16%",
-      "trackers": [
-        "ai-money",
-        "ai-infrastructure"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -6176,6 +6169,41 @@
   },
   "threads": [
     {
+      "id": "t-9e3e3ddacb24",
+      "title": "Gemini 4 Carbon launch and rollout",
+      "updated_at": "2026-11-11T18:00:00+00:00",
+      "stories": [
+        {
+          "id": "cce714811b51",
+          "headline": "Google launches Gemini Decisions API for fast multimodal yes/no and choice scoring",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api",
+          "published_at": "2026-11-11T18:00:00+00:00",
+          "category": "models"
+        },
+        {
+          "id": "a468d4c7b355",
+          "headline": "Ethan Mollick tests Fable 5.2 and Gemini Carbon on the Fermi Paradox",
+          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzyzlpr6lk2r",
+          "published_at": "2026-11-11T03:35:36.254000+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "28b27e2d175e",
+          "headline": "Google rolls out Gemini 4 Carbon to the public with agent swarm feature",
+          "url": "https://theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout",
+          "published_at": "2026-11-10T16:00:00+00:00",
+          "category": "models"
+        },
+        {
+          "id": "41e0dc889e76",
+          "headline": "Google announces Gemini 4 Carbon, a more capable frontier AI model not yet released",
+          "url": "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use",
+          "published_at": "2026-10-28T18:47:27+00:00",
+          "category": "models"
+        }
+      ]
+    },
+    {
       "id": "t-a50b07bc6191",
       "title": "Anthropic IPO roadshow video released",
       "updated_at": "2026-11-11T15:11:59+00:00",
@@ -6398,37 +6426,16 @@
           "category": "industry"
         }
       ]
-    },
-    {
-      "id": "t-f02621b12802",
-      "title": "US approved Chinese firms and chip access",
-      "updated_at": "2026-11-11T06:15:02+00:00",
-      "stories": [
-        {
-          "id": "41f04ecb2082",
-          "headline": "PLA-linked Chinese university obtained Nvidia H200 chips despite US blacklist",
-          "url": "https://techmeme.com/261111/p4",
-          "published_at": "2026-11-11T06:15:02+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "cc583a7d57d3",
-          "headline": "US approved Chinese firms with empty offices to handle Nvidia chips",
-          "url": "https://techmeme.com/261107/p9",
-          "published_at": "2026-11-07T14:30:04+00:00",
-          "category": "policy"
-        }
-      ]
     }
   ],
   "labs": [
     {
       "lab": "Google DeepMind",
-      "model": "AlphaGenome 2",
-      "type": "Language",
-      "date": "2026-11-11T15:00:15+00:00",
-      "story_id": "e879c6fc35d4",
-      "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease"
+      "model": "Gemini Decision 1",
+      "type": "Multimodal",
+      "date": "2026-11-11T18:00:00+00:00",
+      "story_id": "cce714811b51",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api"
     },
     {
       "lab": "Apple",
@@ -6620,8 +6627,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 270,
-    "model_releases_this_month": 33,
+    "stories_this_month": 271,
+    "model_releases_this_month": 34,
     "labs_tracked": 25
   }
 }
