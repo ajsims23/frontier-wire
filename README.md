@@ -74,7 +74,7 @@ motion-graphics video: `python -m agent recap draft | render | upload` (see `age
   falling back to an AI illustration, then a drawn one. Needs the repo secret `PEXELS_API_KEY` (free key from
   pexels.com/api, no card); without it the recap uses illustrations. Clips are credited on screen and on the recap page.
 - An **AI voice** (Deepgram Aura-2 on Workers AI, via `/api/recap/voice` on the worker; MeloTTS as fallback) reads the hook and
-  each story's line (or its optional `say` field). Scenes stretch to fit the voice and stay within 55-65 seconds; if the
+  each story's line (or its optional `say` field). Scenes stretch to fit the voice and stay within 55-70 seconds (the details are dropped from the voice if they would run longer); if the
   narration can't fit or the worker is unreachable, the video publishes silent.
 - Under each story on a recap page, the lab's own YouTube video for that story (from the Watch desk) plays in the pop-up player.
 - Videos, posters and teaser GIFs are stored as GitHub **Releases** (`recap-YYYY-MM-DD`), not in git, so the repo stays light.

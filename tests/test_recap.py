@@ -124,8 +124,9 @@ def test_narration_uses_say_when_given():
     script = _published()
     script["stories"][0]["say"] = "A spoken version"
     keys = [k for k, _ in recap.narration(script)]
-    assert keys[0] == "hook" and keys[-1] == "outro" and len(keys) == len(script["stories"]) + 2
-    assert recap.narration(script)[1][1].startswith("A spoken version. ")
+    assert keys[0] == "hook" and keys[-1] == "outro" and keys[1:3] == ["story1", "story1d"]
+    assert len(keys) == 2 * len(script["stories"]) + 2
+    assert recap.narration(script)[1][1] == "A spoken version."
 
 
 def test_timing_silent_and_narrated_stay_in_bounds():
@@ -140,7 +141,7 @@ def test_timing_silent_and_narrated_stay_in_bounds():
     faster = {k: (None, 5.0 if k in ("hook", "outro") else 11.5) for k in long}
     durs, tempo = recap.timing(5, faster)
     assert recap.MIN_S <= sum(durs) <= recap.MAX_S - 0.5 + 1e-6 and 1.0 < tempo <= 1.3
-    too_long = {k: (None, 16.0) for k in long}
+    too_long = {k: (None, 22.0) for k in long}
     assert recap.timing(5, too_long) == ([5.0, 10.0, 10.0, 10.0, 10.0, 10.0, 4.0], 0.0)
 
 

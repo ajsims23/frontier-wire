@@ -13,7 +13,7 @@ same script renders silent, with drawn illustrations, so the editor can still ch
     python -m agent recap footage|voice --out DIR   # (Actions) stock clips into DIR/clips, narration into DIR/voice
 
 On screen: a 5s opening title, about 10s per story (picture, lower third with the line, the detail and the source,
-a stat card), a 4s close, and a headline ticker throughout. Scenes stretch to fit the narration (55-65s in all).
+a stat card), a 4s close, and a headline ticker throughout. Scenes stretch to fit the narration (55-70s in all).
 """
 from __future__ import annotations
 
@@ -37,13 +37,13 @@ from .cards import GROUND, LABEL, MUTED, TEXT, TOPIC, _font, _wrap
 IST = timezone(timedelta(hours=5, minutes=30))
 W, H, FPS = 1920, 1080, 30
 HOOK_S, STORY_S, OUTRO_S = 5.0, 10.0, 4.0   # 5s open, 10s per story, 4s close: about one minute
-MIN_S, MAX_S = 55, 65
+MIN_S, MAX_S = 55, 70
 SOFT = (179, 207, 203)
 PANEL = (10, 31, 34)
 LIMITS = {"hook": 64, "line": 72, "detail": 120, "summary": 150, "say": 110, "footage": 80}
 VOICE_LEAD = {"hook": 0.35, "story": 0.3, "outro": 0.2}   # seconds into a scene before the voice starts
 VOICE_TAIL = {"hook": 0.35, "story": 0.45, "outro": 0.3}  # quiet after it, before the scene changes
-OUTRO_SAY = "That's the day in AI. Every story, with its sources, at Frontier Wire."
+OUTRO_SAY = "That's the day in AI. Full stories at Frontier Wire."
 MAX_BYTES = 15 * 1024 * 1024
 VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
 AGGREGATORS = {"techmeme.com", "news.ycombinator.com", "msn.com"}
@@ -181,11 +181,28 @@ def spoken(text: str) -> str:
 
 
 def narration(script: dict[str, Any]) -> list[tuple[str, str]]:
-    """What the voice reads, scene by scene: (file name, text)."""
-    out = [("hook", spoken("This is Frontier Wire, the day in AI. " + script["hook"]))]
+    """What the voice reads: (file name, text). Each story is two files, the line (story<i>) and the detail
+    (story<i>d); the render reads both when they fit in the minute, else the lines alone."""
+    out = [("hook", spoken("This is Frontier Wire. " + script["hook"]))]
     for i, st in enumerate(script["stories"], 1):
-        out.append((f"story{i}", spoken((st.get("say") or "").strip() or st["line"]) + " " + spoken(st["detail"])))
+        out.append((f"story{i}", spoken((st.get("say") or "").strip() or st["line"])))
+        out.append((f"story{i}d", spoken(st["detail"])))
     out.append(("outro", OUTRO_SAY))
+    return out
+
+
+def compose_voice(vc: dict[str, tuple[Path, float]], n: int, with_detail: bool, work: Path) -> dict[str, tuple[Path, float]]:
+    """One clip per scene (hook, story1..n, outro): each story's line, then (with_detail) a short pause and its detail."""
+    out = {"hook": vc["hook"], "outro": vc["outro"]}
+    for i in range(1, n + 1):
+        if not with_detail:
+            out[f"story{i}"] = vc[f"story{i}"]
+            continue
+        f = work / f"story{i}.full.wav"
+        _run(["ffmpeg", "-v", "error", "-y", "-i", str(vc[f"story{i}"][0]), "-i", str(vc[f"story{i}d"][0]), "-filter_complex",
+              "[0:a]aresample=44100,aformat=channel_layouts=mono,apad=pad_dur=0.3[a];[1:a]aresample=44100,aformat=channel_layouts=mono[b];[a][b]concat=n=2:v=0:a=1[o]",
+              "-map", "[o]", str(f)])
+        out[f"story{i}"] = (f, _duration(f))
     return out
 
 
@@ -415,7 +432,10 @@ def fetch_footage(script: dict[str, Any], out: Path, pexels_key: str = "", pixab
                     if cands and fn is _commons:
                         break  # a stock library had something; Commons is only the fallback
                     try:
-                        cands += [c for c in fn(http, q, k) if c["id"] not in used][:4]
+                        for qq in dict.fromkeys([q, " ".join(q.split()[:2])]):  # a shorter query if the full one finds nothing
+                            cands += [c for c in fn(http, qq, k) if c["id"] not in used][:4]
+                            if cands:
+                                break
                     except Exception as exc:  # noqa: BLE001
                         errs.append(f"{fn.__name__[1:]}: {str(exc)[:80]}")
                 if not cands:
@@ -972,11 +992,21 @@ def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.gi
     if errs:
         raise ValueError("script problems:\n- " + "\n- ".join(errs))
     out_dir.mkdir(parents=True, exist_ok=True)
-    vc = voice_clips(script, voice)
-    durs, tempo = timing(len(script["stories"]), vc)
-    if not tempo:  # the narration can't fit in 33 seconds: publish the silent cut rather than nothing
-        print("::warning::narration too long for the recap; rendering silent", flush=True)
-        vc, tempo = {}, 1.0
+    raw = voice_clips(script, voice)
+    n = len(script["stories"])
+    vc, durs, tempo, read = {}, *timing(n, {}), "none"
+    for with_detail in (True, False):  # line and detail if they fit; else the lines alone; else silent
+        if not raw:
+            break
+        cand = compose_voice(raw, n, with_detail, out_dir)
+        d, tp = timing(n, cand)
+        if tp:
+            vc, durs, tempo, read = cand, d, tp, ("line and detail" if with_detail else "lines only")
+            break
+    if raw and not vc:
+        print("::warning::narration too long for the recap even without the details; rendering silent", flush=True)
+    elif raw and read == "lines only":
+        print("::warning::narration with the details ran past the minute; the voice reads the headlines only", flush=True)
     r = Renderer(script, site_label, images if images and images.exists() else None, durs, clips)
     mp4, poster, gif = out_dir / "recap.mp4", out_dir / "poster.jpg", out_dir / "teaser.gif"
     frames = int(round(r.total * FPS))
@@ -997,7 +1027,7 @@ def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.gi
         raise RuntimeError("ffmpeg failed while encoding")
     for c in r.clips.values():
         c.close()
-    (out_dir / "render.json").write_text(json.dumps({"narrated": bool(vc), "tempo": round(tempo, 3),
+    (out_dir / "render.json").write_text(json.dumps({"narrated": bool(vc), "voice": read, "tempo": round(tempo, 3),
                                                      "footage": sorted(i + 1 for i in r.clips), "scenes": [round(d, 2) for d in durs]}))
     r.poster().save(poster, quality=86, optimize=True, progressive=True)
     # teaser: the hook into the first story, small enough for an email
