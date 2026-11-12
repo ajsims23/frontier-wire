@@ -46,6 +46,9 @@ LIMITS = {"hook": 64, "line": 72, "detail": 120, "summary": 150, "say": 110, "fo
 # (open + five stories + close) must stay under this many characters to land at about a minute.
 SPOKEN_BUDGET = 740
 CPS = 12.5
+VOICE_SPEAKER = "pandora"   # Aura-2 British female newsreader (the worker's allow-list has it)
+VOICE_SPEED = 1.2           # the read is played 1.2x faster than the TTS delivers it
+MAX_SPEED = 1.45            # and sped up a little more, to this at most, when the lines run long
 VOICE_LEAD = {"hook": 0.35, "story": 0.3, "outro": 0.2}   # seconds into a scene before the voice starts
 VOICE_TAIL = {"hook": 0.35, "story": 0.45, "outro": 0.3}  # quiet after it, before the scene changes
 OUTRO_SAY = "That's the day in AI. Full stories at Frontier Wire."
@@ -263,8 +266,9 @@ def voice_clips(script: dict[str, Any], voice_dir: Path | None) -> dict[str, tup
 
 def timing(n: int, clips: dict[str, tuple[Path, float]]) -> tuple[list[float], float]:
     """Scene lengths [hook, story 1..n, outro] and the voice tempo. Silent: 3s, 5s each, 2s. Narrated: each scene
-    is long enough for its line (never shorter than the silent length). If that runs past 32.5s the quiet tails
-    shrink, then the voice is sped up (at most 1.3x). Tempo 0 means the lines can't fit: render silent."""
+    is long enough for its line, read at VOICE_SPEED (never shorter than the silent length). If that runs long the
+    quiet tails shrink, then the voice is sped up further (at most MAX_SPEED). Tempo 0 means the lines can't fit:
+    render silent."""
     base = [HOOK_S] + [STORY_S] * n + [OUTRO_S]
     if not clips:
         return base, 1.0
@@ -277,9 +281,9 @@ def timing(n: int, clips: dict[str, tuple[Path, float]]) -> tuple[list[float], f
                 for b, k, key in zip(base, kinds, keys)]
 
     for squeeze in (0.0, 0.5, 1.0):
-        if sum(lay(1.0, squeeze)) <= cap:
-            return lay(1.0, squeeze), 1.0
-    lo, hi = 1.0, 1.3
+        if sum(lay(VOICE_SPEED, squeeze)) <= cap:
+            return lay(VOICE_SPEED, squeeze), VOICE_SPEED
+    lo, hi = VOICE_SPEED, MAX_SPEED
     if sum(lay(hi, 1.0)) > cap:
         return base, 0.0
     for _ in range(30):  # the gentlest speed-up that fits
@@ -507,7 +511,7 @@ def fetch_voice(script: dict[str, Any], out: Path, api: str, secret: str) -> lis
         if not text:
             continue
         try:
-            r = httpx.post(f"{api.rstrip('/')}/api/recap/voice", json={"text": text}, timeout=90,
+            r = httpx.post(f"{api.rstrip('/')}/api/recap/voice", json={"text": text, "speaker": VOICE_SPEAKER}, timeout=90,
                            headers={"Authorization": f"Bearer {secret}"})
             data = r.json() if r.headers.get("content-type", "").startswith("application/json") else {}
             if r.status_code != 200 or not data.get("audio"):
@@ -522,7 +526,7 @@ def fetch_voice(script: dict[str, Any], out: Path, api: str, secret: str) -> lis
     return notes
 
 
-KOKORO_VOICE, KOKORO_SPEED = "bm_george", 1.1   # British male newsreader; open-source Kokoro-82M
+KOKORO_VOICE, KOKORO_SPEED = "bf_emma", 1.1   # British female newsreader; open-source Kokoro-82M
 
 
 def fetch_voice_backup(script: dict[str, Any], out: Path, model_dir: Path) -> list[str]:

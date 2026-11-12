@@ -134,14 +134,14 @@ def test_timing_silent_and_narrated_stay_in_bounds():
     assert durs == [5.0, 10.0, 10.0, 10.0, 10.0, 10.0, 4.0] and tempo == 1.0
     short = {k: (None, 3.0) for k in ["hook", "story1", "story2", "story3", "story4", "story5", "outro"]}
     durs, tempo = recap.timing(5, short)
-    assert [round(d, 3) for d in durs] == [5.0, 10.0, 10.0, 10.0, 10.0, 10.0, 4.0] and tempo == 1.0
-    long = {k: (None, 5.0 if k in ("hook", "outro") else 10.0) for k in ["hook", "story1", "story2", "story3", "story4", "story5", "outro"]}
+    assert [round(d, 3) for d in durs] == [5.0, 10.0, 10.0, 10.0, 10.0, 10.0, 4.0] and tempo == recap.VOICE_SPEED
+    long = {k: (None, 6.0 if k in ("hook", "outro") else 12.0) for k in ["hook", "story1", "story2", "story3", "story4", "story5", "outro"]}
     durs, tempo = recap.timing(5, long)
-    assert recap.MIN_S <= sum(durs) <= recap.MAX_S - 0.5 + 1e-6 and tempo == 1.0
-    faster = {k: (None, 5.0 if k in ("hook", "outro") else 11.5) for k in long}
+    assert recap.MIN_S <= sum(durs) <= recap.MAX_S - 0.5 + 1e-6 and tempo == recap.VOICE_SPEED
+    faster = {k: (None, 6.0 if k in ("hook", "outro") else 13.8) for k in long}
     durs, tempo = recap.timing(5, faster)
-    assert recap.MIN_S <= sum(durs) <= recap.MAX_S - 0.5 + 1e-6 and 1.0 < tempo <= 1.3
-    too_long = {k: (None, 22.0) for k in long}
+    assert recap.MIN_S <= sum(durs) <= recap.MAX_S - 0.5 + 1e-6 and recap.VOICE_SPEED < tempo <= recap.MAX_SPEED
+    too_long = {k: (None, 26.0) for k in long}
     assert recap.timing(5, too_long) == ([5.0, 10.0, 10.0, 10.0, 10.0, 10.0, 4.0], 0.0)
 
 
