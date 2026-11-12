@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-12T01:30:07+00:00",
+  "started_at": "2026-11-12T04:10:36+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -20,9 +20,9 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (12)",
-    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
-    "hn": "ok (22)",
+    "hf-papers": "ok (14)",
+    "gdelt": "ok (39)",
+    "hn": "ok (21)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -33,7 +33,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -43,291 +43,334 @@
   },
   "dropped": [
     {
-      "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
-      "reason": "duplicate of 1deaf3a08d51"
+      "title": "Nvidia shares drop amid reports of meeting over CEO future – NBC 7 San Diego",
+      "reason": "duplicate of efdd0bfa6110"
     },
     {
-      "title": "Retirement Savings Are Fueling the AI Bubble",
-      "reason": "score 4: General opinion piece on retirement savings funding AI infrastructure; lacks fresh breaking news or company-level announcements."
+      "title": "The Nvidia investor guide to ( maybe ) losing your CEO",
+      "reason": "duplicate of efdd0bfa6110"
     },
     {
-      "title": "AI, activity, and outcomes in software engineering",
-      "reason": "score 4: Discussion post on Hacker News about software engineering metrics; too general and lacks specific news value."
+      "title": "Nvidia shares tumble over 8 % as board weighs Jensen Huang removal",
+      "reason": "duplicate of b91248042740"
     },
     {
-      "title": "Show HN: Yogurt – Free, private, open-source alternative to Granola",
-      "reason": "score 4: Show HN release of an open-source alternative to an AI transcription tool; minor utility release."
+      "title": "Nvidia prepares to oust CEO Huang after affair with suspected Chinese spy",
+      "reason": "duplicate of efdd0bfa6110"
     },
     {
-      "title": "Lock Your GitHub Actions",
-      "reason": "not AI: DevOps security post about GitHub Actions workflow hardening; no AI angle."
+      "title": "Nvidia CEO Jensen Huang faces ouster amid new affair allegation : WSJ",
+      "reason": "duplicate of efdd0bfa6110"
     },
     {
-      "title": "Jensen Huang accused of having another affair — with an Nvidia exec",
-      "reason": "score 5: Follow-up tabloid-style reporting on additional personal allegations against Jensen Huang; secondary to the core governance story."
+      "title": "Anthropic Now Makes Its Own Spreadsheet Software . Here What Id Do With Microsoft Stock .",
+      "reason": "not AI: Stock-picking listicle comparing Anthropic software to Microsoft stock."
     },
     {
-      "title": "Meta is losing its longtime head of infrastructure",
-      "reason": "score 6: Departure of Meta's longtime head of infrastructure amid heavy AI data center buildouts is notable personnel news."
+      "title": "Asian stocks fragile , Nvidia plummets as board to decide CEO fate",
+      "reason": "score 5: General financial market roundup on Nvidia board situation already covered by efdd0bfa6110 and b91248042740."
     },
     {
-      "title": "How backlash and red tape continue to slow data centers post-Blue Wave",
-      "reason": "score 5: Analysis piece on data center regulatory backlash and permitting delays; repetitive commentary."
+      "title": "Nvidia Board Preparing to Oust CEO Huang , Report Says",
+      "reason": "score 5: Duplicate report on Nvidia board preparing to oust CEO Huang."
     },
     {
-      "title": "With $720M round, Britain’s Fractile gets a leg up in the race for AI chips",
-      "reason": "score 7: Duplicate of Fractile's valuation/funding round story."
+      "title": "Nvidia reportedly preparing to oust CEO Jensen Huang",
+      "reason": "score 5: Duplicate report on Nvidia board preparing to oust CEO Huang."
     },
     {
-      "title": "Congress to call Jensen Huang in to answer for alleged Chinese spy affair",
-      "reason": "score 8: Duplicate of the ongoing Jensen Huang / Nvidia board investigation news."
+      "title": "Nvidia stock drops as the board reportedly prepares to remove CEO Jensen Huang",
+      "reason": "score 5: Duplicate report on Nvidia stock drop over Jensen Huang ouster reports."
     },
     {
-      "title": "Nvidia is reportedly preparing to fire Jensen Huang",
-      "reason": "score 8: Duplicate of the ongoing Jensen Huang ouster preparation story."
+      "title": "Nvidia : Watching Potential Succession Plan and Any Signs of Customer Impact",
+      "reason": "score 5: Analyst commentary on Nvidia succession planning."
     },
     {
-      "title": "United won’t let your AI agent book your flight",
-      "reason": "duplicate of 1deaf3a08d51"
+      "title": "Europe AI Spare Tyre Is Made In China - OpEd",
+      "reason": "score 4: Opinion piece on European tech strategy and China."
     },
     {
-      "title": "Big Walk used AI to fix a bug. Now the indie gaming world is having a reckoning.",
-      "reason": "score 4: Indie game festival judging controversy regarding AI bug fixing; minor cultural/adjacent piece."
+      "title": "UA faculty clash over postponed artificial intelligence guidelines",
+      "reason": "score 3: Local university faculty debate over campus AI guidelines."
     },
     {
-      "title": "Gemini Decisions API",
+      "title": "Nvidia board reportedly preparing to oust CEO Jensen Huang after reports of a second affair",
+      "reason": "score 5: Duplicate report on Nvidia board considering ousting Jensen Huang."
+    },
+    {
+      "title": "The Commute by Karin Anell : No Exit - style play has AI twist",
+      "reason": "score 2: Arts review of a play with an AI theme."
+    },
+    {
+      "title": "Nick Cave blasts AI music tool as soul - destroying",
+      "reason": "score 4: Routine commentary and artist reaction on generative AI music tools."
+    },
+    {
+      "title": "What could Chinese intelligence have learned from Nvidia CEO affair ? - Grenada Chronicle – Daily Grenada And Caribbean News",
+      "reason": "duplicate of 88cba1275d52"
+    },
+    {
+      "title": "TrueShares Technology , AI & Deep Learning ETF ( BATS : LRNZ ) Stock Price Break Above 200 Day Moving Average – What Next ?",
+      "reason": "not AI: Stock price commentary and technical analysis for an ETF."
+    },
+    {
+      "title": "Nvidia board prepares to oust CEO Jensen Huang amid affair allegations and China spy claims : Report",
+      "reason": "duplicate of efdd0bfa6110"
+    },
+    {
+      "title": "Nvidia prepares to oust CEO Jensen Huang after alleged spy affair scandal",
+      "reason": "duplicate of efdd0bfa6110"
+    },
+    {
+      "title": "Asian Equities Mixed as Markets Weigh Nvidia Leadership Crisis",
+      "reason": "score 5: General market roundup on Asian equities reacting to Nvidia leadership crisis."
+    },
+    {
+      "title": "Google enters decision model market with Gemini Decisions API",
       "reason": "duplicate of cce714811b51"
     },
     {
-      "title": "aws-emulator",
-      "reason": "score 7: Duplicate of c741975b7d0b covering the AWS Emulator built by agent swarms."
+      "title": "Worker Rights Legal Group Attorney Joshua Milon Examines AI Evidence Review in California Employment Litigation",
+      "reason": "score 3: Law firm commentary on AI evidence review in California employment litigation."
     },
     {
-      "title": "Roku says it will wind down sales of smart home hardware to focus on streaming, days after Fox closed its acquisition; it will keep supporting existing devices (Janko Roettgers/Lowpass)",
-      "reason": "not AI: Roku winding down smart home hardware sales; no AI angle."
+      "title": "What Next for the AI Trade After the Midterms ?",
+      "reason": "score 4: General market analysis on the AI trade after midterms, lacks specific new reporting."
     },
     {
-      "title": "Source: Nvidia's board is working with an outside firm to identify possible replacements for Jensen Huang and weighs naming a temporary CEO during the search (Bloomberg)",
-      "reason": "score 8: Duplicate of Nvidia board searching for Jensen Huang replacements."
+      "title": "Dialog Enterprise and Hayley Alumex partner to accelerate AI - powered manufacturing excellence",
+      "reason": "score 4: Local corporate partnership announcement for AI-powered manufacturing in Sri Lanka."
     },
     {
-      "title": "Sources: Nvidia's board is preparing to oust Jensen Huang and is meeting on Wednesday to determine his future; NVDA drops 7%+ after hours (Wall Street Journal)",
+      "title": "Nvidia moves to oust spy - tainted CEO Jensen Huang after word of affair with subordinate : report",
       "reason": "duplicate of 88cba1275d52"
     },
     {
-      "title": "Sources: Jensen Huang had an extramarital relationship with Nvidia's VP of healthcare, Kimberly Powell, who reports to him; it was discussed inside the company (New York Times)",
+      "title": "United wont let your AI chatbot book flights for you",
+      "reason": "duplicate of 1deaf3a08d51"
+    },
+    {
+      "title": "Guardrails lag in Kiwi workplaces amid widespread AI use",
+      "reason": "score 5: General commentary on workplace AI guardrails in New Zealand, lacking specific new news."
+    },
+    {
+      "title": "CoreWeave : AI investor secret barometer",
+      "reason": "score 5: Commentary and overview on CoreWeave as an AI finance barometer rather than new funding or earnings news."
+    },
+    {
+      "title": "AI costs are declining faster than those of previous transformative technologies .",
+      "reason": "score 4: General economic commentary on AI cost declines."
+    },
+    {
+      "title": "Who could replace Jensen Huang? A highly unscientific list of possible successors",
+      "reason": "score 4: Speculative opinion listicle on potential Nvidia CEO successors."
+    },
+    {
+      "title": "GoKwik’s ESOP Twist, New CEO At Unacademy & More",
+      "reason": "not AI: General startup and executive moves in India with no AI relevance."
+    },
+    {
+      "title": "GTA 6 pre-orders break records ahead of launch; Xbox One players can also play via cloud gaming",
+      "reason": "not AI: Gaming pre-order news with no AI angle."
+    },
+    {
+      "title": "Nvidia working with outside firm to identify CEO candidates",
       "reason": "duplicate of 88cba1275d52"
     },
     {
-      "title": "OKX and ICE's joint venture OKXICE plans to launch a US tokenized stock venue on November 23 and list 70+ assets; 56 of the 62 companies it targeted objected (Scott Patterson/Bloomberg)",
-      "reason": "not AI: Crypto and tokenized stock venue launch; no AI relevance."
+      "title": "South Korea's Lee says Samsung chip packaging expansion to spur $30 billion additional investment",
+      "reason": "not AI: Semiconductor packaging expansion without a direct AI focus or Indian market nexus; general electronics manufacturing news."
     },
     {
-      "title": "CoreWeave turns to customer prepayments, shorter contracts to fund AI growth",
-      "reason": "variety: already 2 stories from techcrunch.com this run"
+      "title": "Trump's ties to Nvidia CEO Jensen Huang in the spotlight",
+      "reason": "duplicate of b91248042740"
     },
     {
-      "title": "Sources: Scott Bessent confronted Howard Lutnick last week over the Commerce Dept. not adding Megaspeed to the Entity List; Commerce denies the confrontation (Axios)",
-      "reason": "could not verify yet; will retry next run"
+      "title": "Kunal Shah’s big plans for WhatsApp; Gaurav Munjal steps down as Unacademy CEO",
+      "reason": "not AI: General tech and startup executive shuffle in India with no AI relevance."
+    },
+    {
+      "title": "Sources: some Nvidia board members favor naming CFO Colette Kress interim CEO; an administration official says the board briefed the White House on its meeting (Semafor)",
+      "reason": "duplicate of efdd0bfa6110"
+    },
+    {
+      "title": "Sources: Scott Bessent confronted Howard Lutnick last week over the Commerce Department not adding Megaspeed to its entity list; the agency denies it occurred (Axios)",
+      "reason": "could not verify yet after a second try; dropped"
     }
   ],
   "written": [
     {
-      "id": "b91248042740",
-      "headline": "Nvidia stock drops as board reportedly prepares to oust CEO Jensen Huang",
-      "category": "industry",
-      "summary": "Nvidia's board is reportedly planning to oust co-founder and CEO Jensen Huang following reports of extramarital affairs. The company's stock fell about 8% in after-hours trading on Wednesday and is down about 11% over the past five days.",
-      "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang",
-      "sources": 10,
-      "quotes": 0
+      "id": "72ade767b5d7",
+      "headline": "House Republicans push for Nvidia's Jensen Huang to testify over spy allegations",
+      "category": "voices",
+      "summary": "House Republicans are unlikely to let Nvidia CEO Jensen Huang send his general counsel to answer questions about an alleged relationship with a Chinese spy. Lawmakers have threatened a congressional subpoena if Huang does not appear personally.",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/house-republicans-push-for-nvidias-jensen-huang-to-testify-float-subpoena-over-spy-allegations/articleshow/135753113.cms",
+      "sources": 5,
+      "quotes": 1
     },
     {
-      "id": "7d5e3218dd79",
-      "headline": "CoreWeave plans $4B+ investment-grade loan after raising revenue forecast",
-      "category": "industry",
-      "summary": "CoreWeave Inc. plans to raise at least $4 billion through an investment-grade loan facility led by Morgan Stanley and Mitsubishi UFJ Financial Group Inc. Early pricing discussions indicate an anticipated yield between 7% and 7.5%, following the company's upgraded full-year revenue forecast of $13 billion to $13.3 billion.",
-      "url": "https://techmeme.com/261111/p47",
+      "id": "b49868ed46c8",
+      "headline": "Commerce Department finalizes rule to block remote AI chip access for China",
+      "category": "policy",
+      "summary": "The U.S. Commerce Department is finalizing a semiconductor control update to prevent Chinese AI firms from remotely accessing advanced AI chips via data centers. The planned rule targets a loophole where cloud computing allows Chinese entities to use hardware outside China without physical shipments.",
+      "url": "https://techmeme.com/261111/p53",
       "sources": 3,
       "quotes": 0
     },
     {
-      "id": "c741975b7d0b",
-      "headline": "AWS releases AWS Emulator built entirely by AI agents",
-      "category": "models",
-      "summary": "AWS released AWS Emulator, a free tool that simulates over 200 AWS services locally. AWS stated that its engineers did not write or review a single line of code in the tool.",
-      "url": "https://techmeme.com/261111/p41",
+      "id": "6e669aaa015b",
+      "headline": "Senators ask Trump administration to preserve Nvidia-China records",
+      "category": "policy",
+      "summary": "U.S. Senators Elizabeth Warren and Chris Coons asked the Trump administration to preserve documents related to Nvidia's chip exports to China and CEO Jensen Huang's affair. The request comes as Nvidia's board meets to decide whether to oust the CEO.",
+      "url": "https://techmeme.com/261111/p51",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "3707d8597189",
+      "headline": "Megaspeed founder Alice Huang returns to Beijing",
+      "category": "industry",
+      "summary": "Megaspeed founder Alice Huang has returned to China and is living in Beijing. A source states she is currently residing there with the knowledge of security officials.",
+      "url": "https://techmeme.com/261111/p50",
+      "sources": 6,
+      "quotes": 0
+    },
+    {
+      "id": "1ff54fdc0513",
+      "headline": "Anthropic CEO predicts AI could address four major diseases in under a decade",
+      "category": "research",
+      "summary": "Anthropic CEO Dario Amodei stated during an IPO roadshow video that artificial intelligence could make cancer, Alzheimer's disease, heart disease, and mental illness \"relics of the past\" in less than 10 years. He conditioned this outlook on AI companies properly managing technical risks and retaining public trust.",
+      "url": "https://econotimes.com/Amodei-Says-AI-Could-Make-Four-Diseases-Less-Intractable-in-Less-Than-10-Years-1775626",
       "sources": 2,
       "quotes": 1
     },
     {
-      "id": "b44f80ab19cd",
-      "headline": "UK-backed AI chip startup Fractile hits $7 billion valuation",
-      "category": "industry",
-      "summary": "UK-backed AI chip startup Fractile has raised $720 million in a Series C funding round, valuing the four-year-old company at $7 billion. The chip designer has not yet released a commercial product, with its first chip planned for next year.",
-      "url": "https://msn.com/en-gb/money/general/uk-backed-ai-chip-startup-fractile-hits-7-billion-valuation-in-funding-round/ar-AA2heeXv",
-      "sources": 4,
-      "quotes": 1
-    },
-    {
-      "id": "efdd0bfa6110",
-      "headline": "Nvidia board prepares to oust CEO Jensen Huang amid scandal",
-      "category": "industry",
-      "summary": "Nvidia's board is reportedly preparing to oust CEO Jensen Huang following reports of an affair with an alleged Chinese spy and a second relationship with an internal company vice president. Nvidia and Huang are also facing a shareholder class-action lawsuit filed in a U.S. federal court in San Jose, California, while Nvidia's stock fell following the reports.",
-      "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline",
-      "sources": 3,
-      "quotes": 1
-    },
-    {
-      "id": "cd95740421d1",
-      "headline": "Howard Lutnick stalled curbs on Nvidia chip diversion to China",
+      "id": "7d9fafd0f2c2",
+      "headline": "Nvidia board weighs CEO Jensen Huang's future amid spy claims and affair disclosures",
       "category": "policy",
-      "summary": "Howard Lutnick stalled curbs on companies suspected of diverting Nvidia chips to China. President Trump authorized the crackdown for the third time this year on November 5.",
-      "url": "https://techmeme.com/261111/p46",
-      "sources": 5,
-      "quotes": 0
-    },
-    {
-      "id": "5c8c240e0492",
-      "headline": "Ethan Mollick discusses AI's transformation of software engineering",
-      "category": "voices",
-      "summary": "Ethan Mollick posted on Bluesky that artificial intelligence has substantially transformed the coding profession in less than a year. He stated that claims about companies retreating from AI use do not match reality.",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n22xdtz4kk2i",
-      "sources": 1,
-      "quotes": 1
+      "summary": "Nvidia's board prepared to meet to decide CEO Jensen Huang's future following disclosures that he had an affair with Alice Huang, a former executive at Megaspeed who was reportedly alleged by US intelligence to be an asset of China's Ministry of State Security. Jensen Huang acknowledged the relationship in a note to employees, while Nvidia's board launched an independent investigation.",
+      "url": "https://techmeme.com/261111/p54",
+      "sources": 10,
+      "quotes": 2
     }
   ],
   "notes": [
-    "not India desk: 'Nvidia’s stock drops as board reportedly preps to '",
-    "ignored made-up duplicate id b44f80ab19cd for 'With $720M round, Britain’s Fractile gets a leg up'",
-    "ignored made-up duplicate id b91248042740 for 'Congress to call Jensen Huang in to answer for all'",
-    "ignored made-up duplicate id b91248042740 for 'Nvidia is reportedly preparing to fire Jensen Huan'",
-    "ignored made-up duplicate id c741975b7d0b for 'aws-emulator'",
-    "ignored made-up duplicate id b91248042740 for 'Source: Nvidia's board is working with an outside '",
+    "ignored made-up duplicate id 1cdf59d6a508 for 'Asian Equities Mixed as Markets Weigh Nvidia Leade'",
+    "not India desk: 'House Republicans push for Nvidia's Jensen Huang t'",
+    "not India desk: 'Sources: Megaspeed founder Alice Huang has returne'",
+    "dropped unverifiable quote (Sens. Elizabeth Warren and Chris Coons): US Democratic Senators Elizabeth Warren and Chris Coons are …",
     "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "1 kept item(s) carried over to the next run"
+    "dropped unverifiable quote (Donald Trump): He [Jensen Huang] said he had absolutely no idea that the pe…"
   ],
   "mode": "full",
   "timings": {
-    "gather": 51.9,
-    "audit": 3.8,
-    "plan": 94.2,
-    "judge": 10.5,
-    "verify and write": 251.9,
-    "videos": 3.8,
-    "tagging": 2.5,
+    "gather": 94.7,
+    "audit": -0.0,
+    "plan": 1.6,
+    "judge": 50.9,
+    "verify and write": 135.3,
+    "videos": 2.6,
+    "tagging": 2.6,
     "explainers": -0.0,
-    "trackers": 13.6,
+    "trackers": 4.3,
     "claims": 2.5,
-    "model tracker": 0.1,
+    "model tracker": 0.2,
     "weekly": -0.0,
-    "builders": -0.0,
-    "top voices": 10.7,
-    "briefing": 3.0,
-    "self-review": 1.2,
-    "photos": 0.6,
-    "stock photos": 28.0,
-    "daily email": -0.0,
-    "alerts": 4.8
+    "builders": 11.8,
+    "top voices": -0.0,
+    "briefing": 8.2,
+    "self-review": -0.0,
+    "photos": 2.0,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 5.7
   },
-  "fetched": 2959,
-  "fresh": 30,
-  "audit": "coverage 83% of 6 significant stories; 1 missed, 1 added to this run; 2 lesson(s) for the editor",
+  "fetched": 2999,
+  "fresh": 54,
   "plan": {
-    "focus": "Chasing the stunning Nvidia leadership crisis while tracking chip funding and agent infrastructure.",
+    "focus": "Chasing the fallout from the Nvidia leadership crisis and China export control crackdown.",
     "priorities": [
-      "Sources: Nvidia's board is preparing to oust Jensen Huang and is meeti (Nvidia board preparing to oust Jensen Huang amid explosive scandal is the biggest industry earthquake in years.)",
-      "Sources: Jensen Huang had an extramarital relationship with Nvidia's V (NYT confirms details of the Jensen Huang investigation involving VP Kimberly Powell.)",
-      "UK-backed AI chip startup Fractile hits $7 billion valuation in fundin (UK-backed AI chip startup Fractile hits a massive $7 billion valuation.)",
-      "AWS releases AWS Emulator, a free tool that simulates 200+ of its serv (AWS releases AWS Emulator, written entirely by AI agents without human code review.)",
-      "Sources: CoreWeave plans to raise $4B+ via an investment-grade loan as (CoreWeave plans $4B+ investment-grade loan to fund infrastructure buildout.)"
+      "Sources: some Nvidia board members favor naming CFO Colette Kress inte (Semafor report on Nvidia board members favoring CFO Colette Kress as interim CEO and White House briefing.)",
+      "Sources: the Commerce Department is finalizing a semiconductor control (Commerce Department finalizing semiconductor control update targeting remote access and chip smuggling via data centers.)",
+      "Letter: Sens. Elizabeth Warren and Chris Coons ask the Trump administr (Senators Elizabeth Warren and Chris Coons request preservation of documents tied to Nvidia chip exports and Huang affair.)",
+      "House Republicans push for Nvidia's Jensen Huang to testify, float sub (House Republicans push for Jensen Huang testimony and float subpoena over spy allegations.)",
+      "Sources: Megaspeed founder Alice Huang has returned to China; a source (Megaspeed founder Alice Huang living in Beijing, raising international security stakes.)"
     ],
     "thin_areas": [
-      "safety",
-      "research"
+      "policy",
+      "india"
     ],
-    "searches": [
-      "Jensen Huang Nvidia board meeting replacement: 6 new",
-      "Fractile chip startup $7B valuation: 3 new"
-    ],
+    "searches": [],
     "dig_deeper": [
-      "Sources: Nvidia's board is preparing to oust Jensen Huang and is meeti",
-      "Sources: Jensen Huang had an extramarital relationship with Nvidia's V"
+      "Sources: some Nvidia board members favor naming CFO Colette Kress inte",
+      "Sources: the Commerce Department is finalizing a semiconductor control"
     ]
   },
-  "judged": 40,
-  "kept": 9,
+  "judged": 46,
+  "kept": 7,
   "research": {
     "investigated": 5,
     "confirmed": 5,
-    "tool_calls": 11
+    "tool_calls": 14
   },
   "research_log": [
-    "Nvidia’s stock drops as board reportedly preps to oust CEO Jensen Huan: confirmed (searched “Nvidia board oust CEO Jensen Huang”; read wsj.com; read msn.com)",
-    "Sources: CoreWeave plans to raise $4B+ via an investment-grade loan as: confirmed (searched “CoreWeave investment grade loan 4 billion Bloomberg Jeannine Amodeo”; read yahoo.com)",
-    "AWS releases AWS Emulator, a free tool that simulates 200+ of its serv: confirmed (searched “AWS Emulator AI agents Todd Bishop GeekWire”; read geekwire.com)",
-    "The unfolding Jensen Huang scandal: a timeline: confirmed (searched “Jensen Huang scandal affair Chinese spy Nvidia timeline”)",
-    "Sources: Howard Lutnick has stalled curbs on companies suspected of di: confirmed (searched “Howard Lutnick Nvidia chips China Axios”; read msn.com; read axios.com)"
+    "House Republicans push for Nvidia's Jensen Huang to testify, float sub: confirmed (searched “House Republicans Nvidia Jensen Huang testify subpoena spy allegations”; read msn.com; read moneycontrol.com)",
+    "Sources: the Commerce Department is finalizing a semiconductor control: confirmed (searched “Commerce Department semiconductor control update remote access data centers China Leo Schwartz”; searched “Commerce Department block China remote access chips data center The Information”; read cryptobriefing.com)",
+    "Letter: Sens. Elizabeth Warren and Chris Coons ask the Trump administr: confirmed (searched “Elizabeth Warren Chris Coons Nvidia Trump administration documents China Huang”; searched “Warren Coons Nvidia documents Trump administration Wall Street Journal”; read msn.com)",
+    "Sources: Megaspeed founder Alice Huang has returned to China; a source: confirmed (searched “Megaspeed founder Alice Huang Beijing Nvidia Jensen Huang Bloomberg”; read indiatimes.com)",
+    "Amodei Says AI Could Make Four Diseases Less Intractable in Less Than : confirmed (searched “Amodei AI four diseases less intractable”; searched “Dario Amodei four diseases less intractable”; searched “Amodei AI diseases 10 years”)"
   ],
   "threads": [
-    "Megaspeed spy plot and Nvidia export controls: Nvidia stock drops as board reportedly prepares to oust CEO ",
-    "CoreWeave credit stress and new debt financing: CoreWeave plans $4B+ investment-grade loan after raising rev",
-    "Megaspeed spy plot and Nvidia export controls: Nvidia board prepares to oust CEO Jensen Huang amid scandal",
-    "US approved Chinese firms and chip access: Howard Lutnick stalled curbs on Nvidia chip diversion to Chi"
+    "Megaspeed spy plot and Nvidia export controls: House Republicans push for Nvidia's Jensen Huang to testify ",
+    "Megaspeed spy plot and Nvidia export controls: Commerce Department finalizes rule to block remote AI chip a",
+    "Megaspeed spy plot and Nvidia export controls: Senators ask Trump administration to preserve Nvidia-China r",
+    "Megaspeed spy plot and Nvidia export controls: Megaspeed founder Alice Huang returns to Beijing",
+    "Megaspeed spy plot and Nvidia export controls: Nvidia board weighs CEO Jensen Huang's future amid spy claim"
   ],
   "videos": {
-    "OpenAI": "ok (14 in feed, 4 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 5 new)",
-    "Google for Developers": "ok (9 in feed, 4 new)",
-    "AI at Meta": "ok (10 in feed, 5 new)",
-    "Microsoft Research": "ok (10 in feed, 1 new)",
-    "NVIDIA": "ok (9 in feed, 0 new)",
-    "Hugging Face": "ok (12 in feed, 3 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 2 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (3 in feed, 0 new)",
-    "Latent Space": "ok (15 in feed, 0 new)",
-    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
-    "a16z": "ok (15 in feed, 1 new)",
-    "Big Technology Podcast": "ok (13 in feed, 0 new)",
-    "Hard Fork": "ok (3 in feed, 1 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (3 in feed, 0 new)",
-    "20VC": "ok (2 in feed, 0 new)"
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
   },
-  "videos_kept": "12 kept from 22 new",
-  "tagged": 7,
-  "trackers": "filed 4 stories; updated us-china, agent-safety, ai-infrastructure, ai-money",
-  "claims": "143 tracked, 138 open, 0 updated this run",
-  "model_tracker": "82 models, 6 changes today",
-  "top_voices_sources": {
-    "tv-mollick": "ok (1)",
-    "tv-lambert": "ok (0)",
-    "tv-swyx": "ok (8)",
-    "tv-dwarkesh": "ok (1)",
-    "tv-raschka": "ok (0)",
-    "tv-karpathy": "ok (0)",
-    "tv-evans": "ok (0)",
-    "x-coverage": "ok (3 of 5 articles, bing)",
-    "hn": "ok (2)"
+  "tagged": 6,
+  "trackers": "filed 3 stories; updated us-china, frontier-race",
+  "claims": "146 tracked, 141 open, 0 updated this run",
+  "model_tracker": "82 models, 8 changes today",
+  "builders_sources": {
+    "show-hn": "ok (11)",
+    "github-new": "ok (42)",
+    "hf-spaces": "ok (21)",
+    "product-hunt": "ok (13)",
+    "r-localllama": "ok (25)",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
   },
-  "top_voices": "2 debates from 50 posts by 4 people; 2 portraits, 1 pictures",
+  "builders": "picked 5 from 60 candidates; 5 with pictures, 0 with videos",
   "briefing": "3 themes from 20 stories",
-  "india_briefing": "3 themes from 4 stories",
-  "self_review": "18 lines written to data/self_review.md",
-  "photos": "5 saved, 0 unavailable",
-  "stock photos": "2 added",
-  "alerts": "18 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":58}",
-  "ai_requests_run": 44,
-  "ai_tokens_run": 126335,
-  "ai_requests_today": 51,
-  "provider_log": [
-    "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model",
-    "gemini: network error ReadTimeout, retrying",
-    "gemini/gemini-flash-latest: 503 (server busy); trying next model"
-  ]
+  "photos": "6 saved, 0 unavailable",
+  "alerts": "19 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":45}",
+  "ai_requests_run": 41,
+  "ai_tokens_run": 111629,
+  "ai_requests_today": 92,
+  "provider_log": []
 }
