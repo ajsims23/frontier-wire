@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-12T10:43:12+00:00",
+  "started_at": "2026-11-12T13:29:37+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -17,48 +17,465 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (13)",
+    "gdelt": "ok (34)",
+    "hn": "ok (18)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
   },
   "dropped": [
     {
-      "title": "Holiday Extras is rethinking what it can build with Codex",
-      "reason": "score 5: Customer case study/testimonial for Codex usage at Holiday Extras; routine enterprise marketing rather than a major frontier model release or product update."
+      "title": "Jet . AI ( JTAI ) Projected to Announce Quarterly Earnings on Friday",
+      "reason": "score 4: A routine earnings preview for a minor AI‑focused company; not a significant development for builders or investors."
+    },
+    {
+      "title": "Businesses urged to keep workers onside amid AI changes",
+      "reason": "score 3: Generic advice piece on workforce management amid AI; lacks news value."
+    },
+    {
+      "title": "Elon Musk Calls Hiring Nvidia CEO Jensen Huang An Honour Amid Leadership Controversy",
+      "reason": "score 3: Commentary on Elon Musk’s remark about hiring Jensen Huang; not a substantive AI development."
+    },
+    {
+      "title": "Perplexity CEO Aravind Srinivas showcases zombie shooter built using Anthropic Fable 5 . 2 AI model",
+      "reason": "score 5: Showcase of a zombie‑shooter demo built with Anthropic’s Fable 5.2 model; interesting but an incremental product demo rather than news."
+    },
+    {
+      "title": "5th Naftemporiki Economic Conference : The New Architecture of the Greek Economy – From Industry to AI",
+      "reason": "score 4: Announcement of an economic conference that includes AI as a topic; not a direct AI breakthrough or policy."
+    },
+    {
+      "title": "Half of AI startup Parallel Loop team had funding offers to launch own ventures , says founder",
+      "reason": "score 5: Report on funding offers to members of a small AI startup; notable but not a major financing event."
+    },
+    {
+      "title": "Elon Musk says it would be an honour to hire Nvidia CEO Huang",
+      "reason": "score 2: Another Musk quote praising Jensen Huang; purely commentary with no new AI‑related development."
+    },
+    {
+      "title": "Indian AI Startups Eye Global Expansion : Opportunities and Challenges in the US Market",
+      "reason": "score 4: Generic feature on Indian AI startups' US expansion with no specific company, deal or policy development; reads as a listicle/opinion piece rather than a concrete news event."
+    },
+    {
+      "title": "Micron vs . Sandisk : The AI Memory Supercycle Is Big Enough for Both , but Here the Better Buy .",
+      "reason": "not AI: Stock-pick 'better buy' comparison between two memory makers; stock-price commentary and buy recommendations stay at 5 or lower, and the AI angle is only a backdrop."
+    },
+    {
+      "title": "Adobe Unveils 10 New AI Tools at MAX Conference for Creatives",
+      "reason": "score 5: Adobe announcing 10 new creative AI tools at its MAX conference is a routine product-feature bundle, not a frontier model or major strategic move."
+    },
+    {
+      "title": "Ohio State academic report reveals spike in AI cheating : Experts speak on the effect it has on students",
+      "reason": "score 3: A single university's report on AI cheating in coursework is a minor, localized education story with no frontier-lab, policy or market significance for our readers."
+    },
+    {
+      "title": "AI | Udaipur Kiran",
+      "reason": "not AI: Bare section landing page with no actual article content; nothing to report."
+    },
+    {
+      "title": "Nvidia India employees reportedly lose $600 million in paper stock gains as shares tumble",
+      "reason": "not AI: Stock-price commentary on employee paper gains from the Nvidia selloff; the underlying board/CEO story is already covered, and this adds no new information."
+    },
+    {
+      "title": "Jensen Huang controversy sends Chinese AI firms scrambling for Nvidia computing power overseas",
+      "reason": "duplicate of 8fdd5c5c1216"
+    },
+    {
+      "title": "IIT Madras Pravartak offers free online courses in AI , electric vehicles and future skills for Classes 7 to 12",
+      "reason": "score 3: IIT Madras offering free online courses for school students is a minor education program, not a notable Indian AI development for our readers."
+    },
+    {
+      "title": "That would be an honor : Musk on hiring controversy - marred Nvidia CEO Jensen Huang",
+      "reason": "score 3: A throwaway Musk remark about the Nvidia hiring controversy; not substantive commentary on an AI development."
+    },
+    {
+      "title": "Anthropic Plans $64 Billion IPO , Potentially Largest Retail Investment",
+      "reason": "duplicate of 7283860a9cf0"
+    },
+    {
+      "title": "Debate Over AI Brain Models Sparks Researcher Division",
+      "reason": "score 5: A discussion about AI brain model research is interesting but not a major breakthrough or new release; it reads like a commentary piece rather than news."
+    },
+    {
+      "title": "OpenAI Launches Businesses in ChatGPT",
+      "reason": "duplicate of 5ca4dc7b6d88"
+    },
+    {
+      "title": "Nvidia board reportedly preparing to oust CEO Jensen Huang after alleged affairs One News Page",
+      "reason": "duplicate of efdd0bfa6110"
+    },
+    {
+      "title": "The AI era is redefining what mid - career leadership requires",
+      "reason": "score 4: Opinion piece on leadership in the AI era; adjacent relevance but not newsworthy for Frontier Wire."
+    },
+    {
+      "title": "Cyprus Business Now : foreign investment , banks , energy , tourism , Keve , AI",
+      "reason": "not AI: General business newsletter with a passing AI mention; no substantive AI news."
+    },
+    {
+      "title": "CFO Colette Kress to engineer Ian Buck - who could succeed Nvidia CEO Jensen Huang if he exits ?",
+      "reason": "score 5: Speculative article about possible Nvidia CEO successors; interesting but not a concrete development."
+    },
+    {
+      "title": "Why is Nvidia so powerful in the AI world , and what could Jensen Huang scandal really cost ?",
+      "reason": "score 5: Analytical piece on Nvidia's power and the scandal's impact; lacks new data or announcements."
+    },
+    {
+      "title": "Anthropic IPO Could Raise More Than $100 Billion at a $1 . 5 Trillion Valuation",
+      "reason": "duplicate of 04441559207d"
+    },
+    {
+      "title": "How Nvidia board can remove Jensen Huang , and what his exit could mean for AI chip race",
+      "reason": "duplicate of efdd0bfa6110"
+    },
+    {
+      "title": "Anthropic IPO",
+      "reason": "duplicate of 04441559207d"
+    },
+    {
+      "title": "Why Writing Correct Software Is Hard",
+      "reason": "not AI: The article discusses software engineering challenges without any AI focus, giving it no AI relevance for Frontier Wire."
+    },
+    {
+      "title": "Nine Korean startups vie for a spot in Disrupt 2027’s Startup Battlefield 200 competition",
+      "reason": "score 4: A generic startup competition listing that only mentions AI among many sectors; not a significant AI development."
+    },
+    {
+      "title": "LatentView Analytics Certified as Best Firm for AI Engineers",
+      "reason": "not AI: A 'Best Firm for AI Engineers' certification from a trade magazine is marketing/awards content, not news for our readers."
+    },
+    {
+      "title": "Space Tech Startup Astrome Bags ₹64 Cr RDI Fund for AI Satellite Network",
+      "reason": "score 5: A ₹64 Cr (~$7.7M) RDI grant for a satellite network is a modest, niche development; below the bar for our readers."
+    },
+    {
+      "title": "Siemens Wants to Continue NVIDIA Partnership Even If Jensen Huang is Ousted",
+      "reason": "score 4: A Siemens CEO comment that the Nvidia partnership will continue is routine reassurance amid the already-widely-covered Jensen Huang scandal; not a distinct new development."
+    },
+    {
+      "title": "India’s Accessibility Rules are Forcing Software and App Design Rethink",
+      "reason": "not AI: Accessibility rules for software and apps are general tech policy with no AI angle in the source."
+    },
+    {
+      "title": "Exponentia.ai Certified as Best Firm for Data Scientists",
+      "reason": "score 2: Award/ certification announcement is marketing‑style, low relevance to frontier AI readers."
+    },
+    {
+      "title": "Turtlemint Trims Q2 Loss By 67% YoY To ₹26 Cr, Revenue Surges 35%",
+      "reason": "not AI: Insurtech earnings update with no AI angle; general business news, not relevant to our AI-focused readers."
+    },
+    {
+      "title": "OpenAI Brings API Inference Residency To India To Deepen Enterprise AI Adoption",
+      "reason": "duplicate of e1842b672534"
+    },
+    {
+      "title": "Exclusive: Sofina To Lead PlatinumRx’s $32 Mn Funding At $200 Mn Valuation",
+      "reason": "not AI: Online-pharmacy funding round with no AI angle; general business news, not relevant to our AI-focused readers."
+    },
+    {
+      "title": "Ola Electric Q2 Loss Down 13% To ₹362 Cr, Revenue Dips 39%",
+      "reason": "not AI: Financial results of an EV maker; no AI angle."
+    },
+    {
+      "title": "CCPA fines Ola Rs 10 lakh, says advance tips turn a gratuity into a “pre-service toll”",
+      "reason": "not AI: Consumer-protection fine on Ola's tipping prompts; no AI angle, off-topic."
+    },
+    {
+      "title": "Xiaomi 18 Pro Series launch on November 17: Watch S5, Smart Band 11, Clip TWS and 4 smart home devices confirmed",
+      "reason": "score 3: Consumer device launch; AI features are peripheral and not a newsworthy AI development."
+    },
+    {
+      "title": "Vivo X500 series India launch on November 26; 200MP camera tipped: Expected price and key specifications",
+      "reason": "score 3: Smartphone launch; AI aspects are secondary and not a frontier AI story."
+    },
+    {
+      "title": "Most large firms plan higher open-weight AI use to cap bills, study shows",
+      "reason": "score 5: A study on Indian firms’ planned AI usage is incremental and does not constitute breaking news."
+    },
+    {
+      "title": "Beyond the first transaction: Building inclusive digital payments for Bharat",
+      "reason": "not AI: Discussion of digital payments; no AI focus."
+    },
+    {
+      "title": "From multi-lingual AI agents to the future of voice: Google Cloud’s Naren Kachroo at TechSparks 2026",
+      "reason": "score 5: Demo of Gemini 3.8 Live at an Indian conference is a product showcase rather than a major model release."
+    },
+    {
+      "title": "5 lessons to learn from The Secret by Rhonda Byrne",
+      "reason": "not AI: Self-help listicle about a book; completely off-topic for an AI news site."
+    },
+    {
+      "title": "5 lessons to learn from the book Kaizen by Sarah Harvey",
+      "reason": "not AI: Book review/self-help article (Kaizen by Sarah Harvey), no AI relevance."
+    },
+    {
+      "title": "Canonicus Capital raises Rs 192 Cr in its first close of Special Situations Fund",
+      "reason": "not AI: Indian special situations fund raises Rs 192 Cr (~$23M) first close; not AI-focused, general finance news."
+    },
+    {
+      "title": "Kia India to invest $2B in second plant in Andhra Pradesh",
+      "reason": "not AI: Automaker plant investment; no AI component."
+    },
+    {
+      "title": "Norwest closes $4B fund to back AI, healthcare and financial infra",
+      "reason": "score 5: Norwest (US VC) closes $4B fund for AI/healthcare/fintech; reported by Indian outlet but not India-specific. Routine large fund closure, not a frontier AI development."
+    },
+    {
+      "title": "How Founders Can Reduce Platform Risk Before It Threatens Growth",
+      "reason": "not AI: General founder advice with no AI focus; falls outside Frontier Wire’s core coverage."
+    },
+    {
+      "title": "VCs Are Still Chasing Protein, Even As Fake Meat Falls Out Of Favor",
+      "reason": "not AI: Discussion of protein trends in food industry; no AI relevance."
+    },
+    {
+      "title": "Australian quantum software startup Q-Ctrl, which builds sensors that help ships and aircraft navigate when GPS is unavailable, raised $290M at a $1B+ valuation (Jake Rudnitsky/Bloomberg)",
+      "reason": "score 3: Funding round for a quantum‑sensor startup; AI relevance is peripheral at best."
+    },
+    {
+      "title": "How CFTC Chairman Michael Selig reversed long-standing policy to authorize perpetual crypto and stock trades on Kalshi and others, despite SEC staff concerns (New York Times)",
+      "reason": "not AI: Regulatory change concerning crypto and stock trades; no AI component."
+    },
+    {
+      "title": "Volodymyr Zelenskyy says Starshield faced \"systematic speed restrictions\" for several days; Ukrainian officials believe it is to pressure Kyiv amid peace talks (Financial Times)",
+      "reason": "not AI: The story is about satellite communications speed restrictions and geopolitical pressure, with no AI component. AI relevance is none, so it does not fit Frontier Wire's focus."
+    },
+    {
+      "title": "Beijing says \"the US should stop fabricating the so-called Chinese spy narrative as a pretext for imposing technology restrictions\"; Trump and Xi meet next week (Bloomberg)",
+      "reason": "not AI: A diplomatic statement about US‑China tech narratives; no AI angle in the source, so it is not relevant for our audience."
+    },
+    {
+      "title": "A look at Russian ransomware-as-a-service group Qilin, which has become the world's most active gang, likely run by 36-year-old Aleksey Mikhailovich Yakovtsev (Brian Krebs/Krebs on Security)",
+      "reason": "not AI: The piece profiles a ransomware‑as‑a‑service gang; there is no AI focus in the source."
+    },
+    {
+      "title": "A look at Nvidia's 10-person board, many of whom have known Jensen Huang for decades, including attorney Stephen Neal, VC Tench Coxe, and academic John Dabiri (Bloomberg)",
+      "reason": "not AI: A look at Nvidia's board members is corporate governance without an AI angle; not news for Frontier Wire."
+    },
+    {
+      "title": "Sources: Alice Huang's business partner and husband Kang Wei spoke openly of her Jensen Huang relationship; Wei, who knew Jensen for a decade, introduced them (Lingling Wei/Wall Street Journal)",
+      "reason": "not AI: Personal relationship story about Jensen Huang; no AI relevance."
+    },
+    {
+      "title": "SMIC reports Q3 revenue up 34% YoY to ~$3.19B, net profit up 123% to ~$428.4M, above ~$396.8M est., and a gross margin of 29.9%, above its 26% to 28% guidance (Sherry Qin/Wall Street Journal)",
+      "reason": "score 5: SMIC earnings beat; while semiconductor performance is adjacent to AI compute, a routine earnings report does not rise above a 5‑point threshold."
+    },
+    {
+      "title": "London-based Uforce, which makes unmanned air, sea, and land vehicles, raised $700M co-led by the UK National Wealth Fund and Valor Equity at a $6B valuation (Yazhou Sun/Bloomberg)",
+      "reason": "score 4: Uforce's $700M raise for unmanned vehicles is a defense‑technology financing story with only peripheral AI relevance; score below the keep threshold."
+    },
+    {
+      "title": "Kutlerri.ai raises $4M to help US restaurants grow revenue and cut costs using AI agents",
+      "reason": "variety: already 2 stories from yourstory.com this run"
+    },
+    {
+      "title": "Lowdown: European Commission proposes Digital Fairness Act to protect online consumers",
+      "reason": "variety: already 2 stories from medianama.com this run"
+    },
+    {
+      "title": "Karnataka may subsidise GPU access for startups through AI hub",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Meet Netweb, the Only Indian Company Building NVIDIA-Certified GPU Servers",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Russian pranksters tricked three OpenAI natsec and policy executives into a video meeting by posing as Ukrainian officials; OpenAI says it \"acted internally\" (Sam Biddle/The Intercept)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Sources: Tencent founder Pony Ma says in his annual speech that he is willing to deploy half of the company's 100,000-strong workforce to AI-native businesses (Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "ByteDance prepares Muse - like agent in push to close AI gap",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Japan flags privacy risks in Google, Meta, TikTok and LINE Yahoo’s AI and advertising practices",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "LTM Integrates AI Tool to Fix Quantum Computing Errors on IBM",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "b06379671ede",
-      "headline": "OpenAI commits $2 million to research on AI and children's safety",
-      "category": "safety",
-      "summary": "OpenAI committed $2 million to research on artificial intelligence and children's safety. The funding supports shared tools to measure risks and opportunities for young people.",
-      "url": "https://openai.com/index/children-first-declaration",
-      "sources": 1,
+      "id": "cfa3026dfba3",
+      "headline": "Nvidia employees stunned as board weighs Jensen Huang’s future after affair disclosures",
+      "category": "industry",
+      "summary": "Nvidia employees expressed shock and anger after reports that CEO Jensen Huang had a second extramarital affair, prompting the board to consider his future. Shares fell sharply in pre‑market trading and the company has no clear successor.",
+      "url": "https://techmeme.com/261112/p20",
+      "sources": 5,
       "quotes": 0
+    },
+    {
+      "id": "8cc3e4a94ce5",
+      "headline": "Nvidia board weighs successors for Jensen Huang amid ouster reports",
+      "category": "industry",
+      "summary": "Nvidia's board is evaluating replacements for CEO Jensen Huang, considering internal candidates such as CFO Colette Kress and CUDA inventor Ian Buck, as well as external leaders like Arm CEO Rene Haas and Apple chief hardware officer Johny Srouji. The board has hired an outside firm to identify candidates and is meeting to decide on an interim chief.",
+      "url": "https://techmeme.com/261112/p14",
+      "sources": 6,
+      "quotes": 0
+    },
+    {
+      "id": "aabc93a2ba34",
+      "headline": "WhatsApp CEO Kunal Shah outlines plans for payments, eSIMs and AI in chats",
+      "category": "industry",
+      "summary": "WhatsApp global CEO Kunal Shah said the Meta-owned app will focus on richer communication features, in-chat financial services such as bill payments, loans and eSIM purchases, and AI to manage bookings and appointments. He said the company is working with financial services and telecom partners but did not name them or give a timeline.",
+      "url": "https://medianama.com/2026/11/223-ai-finance-services-kunal-shah-whatsapp",
+      "sources": 3,
+      "quotes": 2
     }
   ],
-  "notes": [],
-  "mode": "breaking",
+  "notes": [
+    "not India desk: 'AI, financial services and smarter chats: Kunal Sh'",
+    "not India desk: 'Japan flags privacy risks in Google, Meta, TikTok '",
+    "dropped non-quote (Donald Trump): “I think he’s an honorable guy,” Trump told reporters Monday…",
+    "dropped non-quote (Johny Srouji): anytime soon.…",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "9 kept item(s) carried over to the next run",
+    "tagging skipped: every configured provider failed: groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model | nvidia: network error ReadTimeout, retrying | nvidia: unreachable (ReadTimeout); skipping provider | cerebras: payment required (402) — free quota used up or billing needed; skipping provider",
+    "briefing skipped: every configured provider failed: nvidia: network error ReadTimeout, retrying | nvidia: unreachable (ReadTimeout); skipping provider | cerebras: payment required (402) — free quota used up or billing needed; skipping provider | groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model"
+  ],
+  "mode": "full",
   "timings": {
-    "gather": 9.7,
-    "judge": 5.0,
-    "verify and write": 2.4,
-    "tagging": 1.1,
-    "trackers": 1.2,
-    "photos": -0.0,
-    "stock photos": 7.2,
-    "alerts": 3.6
+    "gather": 64.0,
+    "audit": 0.0,
+    "plan": 46.8,
+    "judge": 594.7,
+    "verify and write": 369.1,
+    "videos": 59.2,
+    "explainers": 188.8,
+    "trackers": 0.4,
+    "claims": 3.0,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "self-review": 5.2,
+    "photos": 1.3,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 6.8
   },
-  "fetched": 2459,
-  "fresh": 2,
-  "judged": 2,
-  "kept": 1,
-  "tagged": 1,
+  "fetched": 2992,
+  "fresh": 83,
+  "plan": {
+    "focus": "Tracking the leadership fallout at Nvidia alongside surging AI adoption and enterprise infrastructure buildout in India.",
+    "priorities": [
+      "Sources: Nvidia employees, known for their fierce loyalty to Jensen Hu (Provides insider context on Nvidia employee reactions and fallout regarding Jensen Huang's controversies.)",
+      "A look at potential Nvidia CEO candidates, including CFO Colette Kress (Identifies potential successors and leadership options for Nvidia amid executive scrutiny.)",
+      "Karnataka may subsidise GPU access for startups through AI hub (Highlights local government policy support for GPU infrastructure and startup growth in India.)",
+      "OpenAI Brings API Inference Residency To India To Deepen Enterprise AI (Follows OpenAI's enterprise infrastructure expansion directly into the Indian market.)",
+      "Meet Netweb, the Only Indian Company Building NVIDIA-Certified GPU Ser (Spotlights local hardware capability and NVIDIA-certified GPU server manufacturing in India.)"
+    ],
+    "thin_areas": [
+      "india",
+      "industry"
+    ],
+    "searches": [
+      "Nvidia board Jensen Huang successor: 6 new",
+      "Karnataka GPU subsidy AI hub: 0 new"
+    ],
+    "dig_deeper": [
+      "Sources: Nvidia employees, known for their fierce loyalty to Jensen Hu",
+      "A look at potential Nvidia CEO candidates, including CFO Colette Kress"
+    ]
+  },
+  "judged": 80,
+  "kept": 15,
+  "research": {
+    "investigated": 5,
+    "confirmed": 1,
+    "tool_calls": 20
+  },
+  "research_log": [
+    "Karnataka may subsidise GPU access for startups through AI hub: unconfirmed (searched “Karnataka subsidise GPU access startups AI hub”; read msn.com; searched “Karnataka AI hub GPU access startup subsidy”; searched “Karnataka AI hub GPU subsidies startups”)",
+    "Sources: Nvidia employees, known for their fierce loyalty to Jensen Hu: unconfirmed (searched “Nvidia board ousting Jensen Huang affair”; read pymnts.com; read bbc.com; searched “Reuters Nvidia board oust Jensen Huang affair”)",
+    "Meet Netweb, the Only Indian Company Building NVIDIA-Certified GPU Ser: unconfirmed (searched “Netweb NVIDIA certified GPU servers Indian company”; searched “\"Netweb\" \"NVIDIA certified\"”; searched “Netweb Technologies NVIDIA certified GPU servers India”; read msn.com)",
+    "Russian pranksters tricked three OpenAI natsec and policy executives i: unconfirmed (searched “Russian pranksters tricked three OpenAI national security executives video meeting Ukrainian officials”; read theintercept.com; searched “OpenAI prank video call Ukrainian officials Vovan and Lexus”; searched “OpenAI security officials prank call Ukrainian intelligence chief Vovan Lexus Reuters”)",
+    "A look at potential Nvidia CEO candidates, including CFO Colette Kress: confirmed (searched “Bloomberg potential Nvidia CEO candidates Colette Kress Ian Buck Rene Haas Johny Srouji”; read indiatimes.com; read moneycontrol.com; read moneycontrol.com)"
+  ],
+  "threads": [
+    "Megaspeed spy plot and Nvidia export controls: Nvidia employees stunned as board weighs Jensen Huang’s futu",
+    "Megaspeed spy plot and Nvidia export controls: Nvidia board weighs successors for Jensen Huang amid ouster "
+  ],
+  "videos": {
+    "OpenAI": "ok (14 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 4 new)",
+    "Google for Developers": "ok (9 in feed, 5 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
+    "Microsoft Research": "ok (10 in feed, 1 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 4 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (3 in feed, 1 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 2 new)",
+    "Hard Fork": "ok (3 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (2 in feed, 0 new)"
+  },
+  "videos_kept": "1 kept from 19 new",
+  "explainers": "0 added to earlier stories",
   "trackers": "filed 0 stories; no tracker changed",
-  "photos": "0 saved, 0 unavailable",
-  "stock photos": "1 added",
-  "alerts": "22 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":6}",
-  "ai_requests_run": 5,
-  "ai_tokens_run": 9703,
-  "ai_requests_today": 176,
-  "provider_log": []
+  "claims": "147 tracked, 141 open, 0 updated this run",
+  "model_tracker": "82 models, 17 changes today",
+  "photos": "3 saved, 0 unavailable",
+  "alerts": "27 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":20}",
+  "ai_requests_run": 39,
+  "ai_tokens_run": 122180,
+  "ai_requests_today": 215,
+  "provider_log": [
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: request over its 8,000-token limit; retrying with a 2,208-token answer",
+    "groq/openai/gpt-oss-120b: request over its 8,000-token limit; retrying with a 1,860-token answer",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: model unavailable (400); trying next model",
+    "groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "nvidia: network error ReadTimeout, retrying",
+    "nvidia: unreachable (ReadTimeout); skipping provider",
+    "cerebras: payment required (402) — free quota used up or billing needed; skipping provider",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model"
+  ]
 }
