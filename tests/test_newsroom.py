@@ -74,7 +74,7 @@ def test_full_run(tmp_path):
 
     # Bluesky post: quote checked against the post text itself
     jane = next(s for h, s in stories.items() if h.startswith("Jane Doe:"))
-    assert jane["quotes"][0]["text"] == "evaluation needs to catch up fast"
+    assert jane["quotes"][0]["text"] == "Nova 2 shows how far multimodal reasoning has come, and evaluation needs to catch up fast"
 
     # filtering
     assert "score 2" in dropped["10 prompts to boost your productivity"]
@@ -1059,3 +1059,36 @@ def test_loosely_ai_stories_rank_last_and_never_fill_thin_areas():
     core, adj = k(6, "models", "https://a.example/1"), k(6, "policy", "https://b.example/1", "adjacent")
     assert sorted([adj, core], key=slate_key) == [core, adj]
     assert apply_thin_areas([core, adj], [core], ["policy"], set()) == [core]  # a loosely-AI story can't claim the slot
+
+
+def test_homepage_quotes_are_real_varied_and_about_ai():
+    from datetime import datetime, timezone
+    from agent.quotes import is_real_quote, pick_voices
+    now = datetime(2026, 11, 12, 9, tzinfo=timezone.utc)
+
+    def story(i, thread, quotes, score=8, when="2026-11-11T10:00:00+00:00"):
+        return {"id": f"s{i}", "headline": f"Story {i}", "published_at": when, "score": score, "thread": thread,
+                "category": "industry", "ai_relevance": "core", "quotes": quotes}
+
+    q = lambda text, who, role="CEO": {"text": text, "speaker": who, "speaker_role": role, "source_url": "https://x.example"}
+    # reporter paraphrase, company speaker and scraps are not quotes
+    assert not is_real_quote("Huang said on Sunday that he had been unfaithful to his wife.", "Jensen Huang")
+    assert not is_real_quote("Investing in our shares involves a high degree of risk", "Anthropic", "Company")
+    assert not is_real_quote("has got to go", "Kevin Cramer")
+    assert is_real_quote("I think it crosses the line into being a sort of Jagged AGI.", "Ethan Mollick")
+
+    stories = [
+        story(1, "t-huang", [q("I was unfaithful to my wife and I owe my family an apology.", "Jensen Huang"),
+                             q("I support the investigation and will cooperate fully.", "Jensen Huang")], score=10),
+        story(2, "t-huang", [q("In 35 years, I haven't seen a chip CEO with this much direct influence on policy", "Patrick Moorhead")]),
+        story(3, "t-huang", [q("The board will need to think hard about succession at this company now.", "Some Analyst")]),
+        story(4, "t-fable", [q("I think it crosses the line into being a sort of Jagged AGI.", "Ethan Mollick", "Author")]),
+        story(5, "t-other", [q("Models will reach a threshold where it is actually possible to do harm.", "Ethan Mollick", "Author")]),
+        story(6, "t-pr", [q("We are excited to announce this partnership with our clients worldwide today.", "Pat Release")]),
+    ]
+    picked = pick_voices(stories, now)
+    texts = " ".join(v["text"] for v in picked)
+    assert "unfaithful" not in texts and "investigation" not in texts  # personal life / scandal stays off the strip
+    assert sum(v["story_id"] in ("s2", "s3") for v in picked) == 1      # one quote per story thread
+    assert [v["speaker"] for v in picked].count("Ethan Mollick") == 1   # one quote per person
+    assert picked[-1]["speaker"] == "Pat Release"                       # press-release filler ranks last

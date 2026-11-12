@@ -6,6 +6,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Any
 
 from . import prompts as P
+from . import quotes as quotes_mod
 from .config import Config
 from .llm import LLM, AllProvidersFailed, LimitReached, RequestTooLarge
 from . import alerts, audit, builders, chief, claims, top_voices, editorial, photos, models_tracker, newsletter, stock, tagging, trackers, videos, weekly
@@ -418,7 +419,9 @@ class Newsroom:
             if not isinstance(q, dict) or not q.get("text"):
                 continue
             src_url = canonical_url(q.get("source_url", ""))
-            if not self.cfg.guardrails["require_verbatim_quotes"] or quote_in_text(q["text"], texts.get(src_url, "")):
+            if not quotes_mod.is_real_quote(q["text"], q.get("speaker", ""), q.get("speaker_role", "")):
+                self.report["notes"].append(f"dropped non-quote ({q.get('speaker')}): {q['text'][:60]}…")
+            elif not self.cfg.guardrails["require_verbatim_quotes"] or quote_in_text(q["text"], texts.get(src_url, "")):
                 quotes.append({"text": q["text"].strip().strip('"“”'), "speaker": q.get("speaker", ""),
                                "speaker_role": q.get("speaker_role", ""), "source_url": src_url})
             else:
@@ -518,8 +521,7 @@ class Newsroom:
         # the lead is always a core AI story when there is one
         lead = max(pool, key=lambda s: (s.get("ai_relevance") != "adjacent", s["score"], s["published_at"])) if pool else None
 
-        voices = [{**q, "story_id": s["id"], "headline": s["headline"], "published_at": s["published_at"]}
-                  for s in live for q in s.get("quotes", [])]
+        voices = quotes_mod.pick_voices(live, self.now)
         labs = sorted(({"lab": n, **i} for n, i in self.store.labs.items()), key=lambda l: l["date"], reverse=True)
         have = {l["lab"] for l in labs}
         labs += [{"lab": n, "model": None, "type": None, "date": None} for n in self.cfg.tracked_labs if n not in have]
@@ -528,7 +530,7 @@ class Newsroom:
             "updated_at": self.now.isoformat(),
             "lead": lead,
             "stories": live[:60],  # the site filters by category client-side
-            "voices": voices[:6],
+            "voices": voices,
             "videos": [{k: v.get(k) for k in ("id", "title", "channel", "lab", "published", "blurb", "story_id")}
                        for v in (self.store.videos.get("videos") or []) if v.get("kind") != "podcast"][:9],
             "podcasts": [{k: v.get(k) for k in ("id", "title", "channel", "published", "blurb", "guest")}

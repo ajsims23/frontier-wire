@@ -235,7 +235,7 @@ def story(prompt: str) -> dict:
     if item.startswith("Example Lab publishes Nova-2-Mini"):
         base.update(lab="Example Lab", model_name="Nova-2-Mini", model_type="Vision-language")
     if item.startswith("Jane Doe:"):
-        base["quotes"] = [{"text": "evaluation needs to catch up fast", "speaker": "Jane Doe", "speaker_role": "Researcher",
+        base["quotes"] = [{"text": "Nova 2 shows how far multimodal reasoning has come, and evaluation needs to catch up fast", "speaker": "Jane Doe", "speaker_role": "Researcher",
                            "source_url": "https://bsky.app/profile/jane.example.social/post/3abc"}]
     return base
 

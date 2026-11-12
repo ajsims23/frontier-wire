@@ -122,6 +122,11 @@ Rules:
   they appear in that source, character for character, and give that source's URL. For a person's
   own post, their words may be quoted with them as speaker. If nobody is quoted, return [].
   Never paraphrase inside a quote.
+  A quote must be the speaker's OWN words (the part inside quotation marks in the source, or their own post),
+  never the reporter's sentence about them ("Huang said that…" is not a quote). The speaker must be a named
+  person, not a company, a spokesperson, a report or "analysts". Prefer a full sentence that shows what they
+  think about AI: an argument, a prediction, a worry, a result. Skip press-release filler ("we are excited to…"),
+  personal-life remarks, and scraps of a few words.
 - lab: the organisation the story is mainly about, or "".
 - model_name / model_type: only for a model release; otherwise "".
 - explainer, for readers who are new to AI:
