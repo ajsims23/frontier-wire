@@ -1,6 +1,140 @@
 [
   {
     "explainer": {
+      "what_it_means": "Google is replacing its 'Flash' model with Gemini 4 Hydrogen as the fast, everyday model that powers Google Search and the Gemini app for all users. It is meant for routine coding and task work, while the pricier Carbon and Argon models handle harder reasoning. Users get it in the Gemini app, Search, AI Studio, and for paid subscribers in Antigravity.",
+      "terms": [
+        {
+          "term": "Agentic workflow",
+          "meaning": "A model that can carry out multi-step tasks on its own, such as writing code, running tests, and using tools, rather than just answering a single prompt."
+        },
+        {
+          "term": "Token context window",
+          "meaning": "The maximum number of words (roughly) a model can take in at once; one million tokens is a very large amount of text."
+        },
+        {
+          "term": "Thinking level",
+          "meaning": "A setting that lets the model spend more compute 'thinking' before answering, trading speed for higher accuracy."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "Gemini 4 Hydrogen",
+        "benchmark": "Artificial Analysis Intelligence Index (high thinking)",
+        "score": "51"
+      },
+      {
+        "model": "Gemini 4 Hydrogen",
+        "benchmark": "Artificial Analysis Intelligence Index (xhigh thinking)",
+        "score": "54"
+      },
+      {
+        "model": "Gemini 4 Hydrogen",
+        "benchmark": "Terminal-Bench 4.1",
+        "score": "57%"
+      },
+      {
+        "model": "Gemini 4 Hydrogen",
+        "benchmark": "HLE-Diamond",
+        "score": "58.8%"
+      },
+      {
+        "model": "Gemini 4 Hydrogen",
+        "benchmark": "Vals Tax Agent Bench",
+        "score": "52.3%"
+      },
+      {
+        "model": "Gemini 4 Hydrogen",
+        "benchmark": "Vals Legal Research Bench",
+        "score": "55.8%"
+      }
+    ],
+    "audiences": {
+      "builders": "Hydrogen is available in the Gemini API and AI Studio at $1.50 per million input tokens and $7.50 per million output tokens across a 1M-token context, with an Orchestrator in Antigravity that switches between Carbon and Hydrogen in-session.",
+      "business": "The model is rolling out to Google Search for all users globally and to paid AI Pro/Ultra subscribers, replacing Flash as Google's general-query model.",
+      "investors": "Google is positioning Hydrogen as a cost-efficient execution model that pairs with its frontier Carbon and Argon models, with partner tests showing up to 23% lower token usage versus 3.8 Flash."
+    },
+    "id": "a8d5fa7d24b3",
+    "headline": "Google launches Gemini 4 Hydrogen, a fast model for everyday coding and search",
+    "summary": "Google DeepMind launched Gemini 4 Hydrogen, a fast model for everyday coding and agentic workflows, priced at $1.50 per million input tokens and $7.50 per million output tokens across a 1 million-token context. It is rolling out to Google Search, the Gemini app, AI Studio, and paid Antigravity subscribers, replacing the Flash model.",
+    "why_it_matters": "Hydrogen gives developers and Google's consumer products a cheaper, faster execution model that can pair with the frontier Carbon and Argon models, lowering token costs for multi-model agentic work.",
+    "category": "models",
+    "lab": "Google DeepMind",
+    "model_name": "Gemini 4 Hydrogen",
+    "model_type": "Language",
+    "tags": [
+      "google",
+      "gemini",
+      "model-release",
+      "agentic",
+      "coding"
+    ],
+    "quotes": [
+      {
+        "text": "Hydrogen brings cutting-edge intelligence to everyone.",
+        "speaker": "Koray Kavukcuoglu",
+        "speaker_role": "SVP, Google DeepMind and Chief AI Architect, Google",
+        "source_url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen"
+      }
+    ],
+    "score": 9,
+    "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
+    "source_id": "deepmind",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-hydrogen__key-art__lockup__16-9.width-1300.jpg",
+    "sources": [
+      {
+        "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
+        "publisher": "Google DeepMind",
+        "title": "Introducing Gemini 4 Hydrogen"
+      },
+      {
+        "url": "https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch",
+        "publisher": "9to5Google",
+        "title": "Google announces Gemini 4 Hydrogen, rolling out to Gemini app"
+      },
+      {
+        "url": "https://digitaltrends.com/cool-tech/googles-next-gen-gemini-4-hydrogen-ai-model-is-here-touting-faster-intelligence-for-all",
+        "publisher": "Digital Trends",
+        "title": "Google’s next-gen Gemini 4 Hydrogen AI model is here, touting faster intelligence for all"
+      },
+      {
+        "url": "https://xda-developers.com/googles-gemini-4-hydrogen-replaces-flash-to-become-the-companys-best-search-engine-ai",
+        "publisher": "XDA Developers",
+        "title": "Google’s Gemini 4 Hydrogen replaces Flash to become the company’s best search engine AI"
+      }
+    ],
+    "research": {
+      "steps": 2,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-12T18:00:50+00:00",
+    "created_at": "2026-11-12T18:50:05+00:00",
+    "breaking": true,
+    "thread": "t-9e3e3ddacb24",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "Gemini 4 Hydrogen",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "The investment gives DeepSeek funding and a promise of cutting‑edge Nvidia processors. If delivered, those chips would let the lab train larger, faster AI models. This occurs despite U.S. rules that block such hardware from being sold to China.",
       "terms": [
         {

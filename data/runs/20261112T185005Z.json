@@ -1,0 +1,75 @@
+{
+  "started_at": "2026-11-12T18:50:05+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1383)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (905)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)"
+  },
+  "dropped": [],
+  "written": [
+    {
+      "id": "a8d5fa7d24b3",
+      "headline": "Google launches Gemini 4 Hydrogen, a fast model for everyday coding and search",
+      "category": "models",
+      "summary": "Google DeepMind launched Gemini 4 Hydrogen, a fast model for everyday coding and agentic workflows, priced at $1.50 per million input tokens and $7.50 per million output tokens across a 1 million-token context. It is rolling out to Google Search, the Gemini app, AI Studio, and paid Antigravity subscribers, replacing the Flash model.",
+      "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
+      "sources": 4,
+      "quotes": 1
+    }
+  ],
+  "notes": [],
+  "mode": "breaking",
+  "timings": {
+    "gather": 12.9,
+    "judge": 5.3,
+    "verify and write": 111.7,
+    "tagging": 24.8,
+    "trackers": 27.8,
+    "photos": 0.2,
+    "stock photos": 0.0,
+    "alerts": 2.4
+  },
+  "fetched": 2460,
+  "fresh": 2,
+  "judged": 2,
+  "kept": 1,
+  "research": {
+    "investigated": 1,
+    "confirmed": 1,
+    "tool_calls": 2
+  },
+  "research_log": [
+    "Introducing Gemini 4 Hydrogen: confirmed (searched “Gemini 4 Hydrogen Google DeepMind”; read 9to5google.com)"
+  ],
+  "threads": [
+    "Gemini 4 Carbon launch and rollout: Google launches Gemini 4 Hydrogen, a fast model for everyday"
+  ],
+  "tagged": 1,
+  "trackers": "filed 1 stories; updated frontier-race",
+  "photos": "1 saved, 0 unavailable",
+  "alerts": "27 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":8}",
+  "ai_requests_run": 9,
+  "ai_tokens_run": 22542,
+  "ai_requests_today": 269,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: HTTP 400: {\"error\":{\"message\":\"Failed to parse tool call arguments as JSON\",\"type\":\"invalid_request_error\",\"code\":\"tool_use_failed\",\"failed_generation\":\"{\\\"name",
+    "gemini: 503 after retry; moving to next provider for this run"
+  ]
+}
