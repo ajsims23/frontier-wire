@@ -1,0 +1,290 @@
+{
+  "started_at": "2026-11-12T10:19:10+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1381)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (904)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (13)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (17)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "failed: ConnectError: [Errno 101] Network is unreachable",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "A general purpose Apple Silicon layer for x86-64 PCs",
+      "reason": "not AI: General-purpose Apple Silicon compatibility layer, not primarily an AI development."
+    },
+    {
+      "title": "Huawei releases MACaQ, its internal quantizer for local inference",
+      "reason": "score 4: Huawei releases an internal quantizer for local inference; minor quantization tooling."
+    },
+    {
+      "title": "CCPA Fines Ola ₹10 Lakh For Advance Tipping Prompts",
+      "reason": "not AI: Consumer protection penalty against Ola for advance tipping prompts, off-topic."
+    },
+    {
+      "title": "129 betting websites blocked on fake court orders: Who verifies orders before the govt acts?",
+      "reason": "not AI: Report on blocked betting websites due to fake court orders, with no direct connection to artificial intelligence."
+    },
+    {
+      "title": "Nykaa clocks Rs 101 cr profit in Q2, revenue up 28%",
+      "reason": "not AI: Earnings report for an e-commerce/retail company with no AI angle."
+    },
+    {
+      "title": "India’s child rights commission to release draft social media guidelines, aims to finalise them in 2027: Report",
+      "reason": "not AI: Draft social media guidelines covering age verification and addictive design without a direct AI focus."
+    },
+    {
+      "title": "US humanoid robot production could hit 400,000 by 2030 as deployment ramps, J.P. Morgan says",
+      "reason": "score 5: J.P. Morgan forecast on US humanoid robot production by 2030 is a broad analyst projection rather than specific AI research or product news."
+    },
+    {
+      "title": "From early traction to global scale: How AI is rewriting the cross-border playbook for Indian startups",
+      "reason": "score 4: General startup and global expansion discussion with a passing mention of AI; lacks specific AI product or market news."
+    },
+    {
+      "title": "Global by default, local by design: What Indian founders learned about scaling across borders",
+      "reason": "score 4: General cross-border scaling and payments panel discussion without a distinct AI news focus."
+    },
+    {
+      "title": "ValueQuest commits Rs 775 Cr to advance India’s defence, manufacturing push",
+      "reason": "score 4: General manufacturing and defence investment fund commitment with only loose tech relevance."
+    },
+    {
+      "title": "Startup news and updates: daily roundup (November 12, 2026)",
+      "reason": "not AI: General daily startup roundup without significant AI-specific reporting."
+    },
+    {
+      "title": "OpenAI announces local AI processing in India with API inference residency",
+      "reason": "score 8: Duplicate of OpenAI's local API inference residency launch in India."
+    },
+    {
+      "title": "OpenAI brings AI processing to India to win enterprise clients",
+      "reason": "score 8: Duplicate of OpenAI's local API inference residency launch in India."
+    },
+    {
+      "title": "OpenAI brings local inference to India, starting with GPT-6 Luna",
+      "reason": "score 8: Duplicate of OpenAI's local API inference residency launch in India."
+    },
+    {
+      "title": "OpenAI now allows enterprises to process AI requests within India",
+      "reason": "score 8: Duplicate of OpenAI's local API inference residency launch in India."
+    },
+    {
+      "title": "OpenAI extends API inference residency to India for enterprise AI workloads",
+      "reason": "score 8: Duplicate of OpenAI's local API inference residency launch in India."
+    },
+    {
+      "title": "Lenovo Unveils New AI, HPC Servers With AMD’s 6th Gen EPYC Processors",
+      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
+    },
+    {
+      "title": "Only 35% Indian Enterprises are Prepared for AI Cyberattacks: Kyndryl Study",
+      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
+    },
+    {
+      "title": "Japan flags privacy risks in Google, Meta, TikTok and LINE Yahoo’s AI and advertising practices",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Most large firms plan higher open-weight AI use to cap bills, study shows",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "From multi-lingual AI agents to the future of voice: Google Cloud’s Naren Kachroo at TechSparks 2026",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "f42c66e7d0fc",
+      "headline": "Chariot launches multilingual TTS model with support for 11 Indian languages",
+      "category": "models",
+      "summary": "Indian AI research lab Chariot launched Chariot-1-TTS-Multilingual, a text-to-speech model supporting 11 Indian languages and English with over 50 voices. The model uses contextual reasoning for pronunciation and supports code-mixing and voice cloning.",
+      "url": "https://analyticsindiamag.com/ai-news/chariot-launches-multilingual-tts-model-with-support-for-11-indian-languages",
+      "sources": 2,
+      "quotes": 1
+    },
+    {
+      "id": "e1842b672534",
+      "headline": "OpenAI adds API inference residency for GPT-6 Luna in India",
+      "category": "industry",
+      "summary": "OpenAI launched an API inference residency in India that lets eligible businesses and developers run GPT‑6 Luna workloads on servers located in the country, with customer content stored locally. The offering addresses data‑localisation requirements, especially for regulated sectors such as financial services.",
+      "url": "https://analyticsindiamag.com/ai-news/openai-launches-api-inference-residency-in-india",
+      "sources": 6,
+      "quotes": 2
+    },
+    {
+      "id": "912ad5c2a7cd",
+      "headline": "India is now ChatGPT's largest market globally by weekly active users",
+      "category": "industry",
+      "summary": "India has become ChatGPT's largest market globally by weekly active users, with the user base doubling since January 2026. According to OpenAI India managing director Prabhjeet Singh, the growth is accompanied by a shift toward enterprise deployment and local infrastructure planning.",
+      "url": "https://economictimes.indiatimes.com/tech/technology/india-becomes-chatgpts-biggest-market-openais-india-chief-corner-office-conversation/videoshow/135764629.cms",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "52103fbea5b4",
+      "headline": "Lumbra raises $25M Series A for secure AI agent orchestration",
+      "category": "research",
+      "summary": "AI startup Lumbra raised a $25M Series A round co-led by Point72 Ventures and Ansa Capital to expand its secure AI agent platform. The company builds LumbraOS to orchestrate AI agents for the intelligence community and regulated commercial sectors.",
+      "url": "https://techmeme.com/261112/p8",
+      "sources": 4,
+      "quotes": 1
+    },
+    {
+      "id": "eb05eee3dd58",
+      "headline": "Radical Numerics unveils Omnii Defense edge AI model for pathogens",
+      "category": "models",
+      "summary": "Startup Radical Numerics announced Omnii Defense, an edge AI model designed to identify natural and AI-engineered pathogens using a laptop and a USB gene sequencer. The model can operate without an internet connection.",
+      "url": "https://techmeme.com/261112/p5",
+      "sources": 2,
+      "quotes": 1
+    }
+  ],
+  "notes": [
+    "not India desk: 'Japan flags privacy risks in Google, Meta, TikTok '",
+    "not India desk: 'Most large firms plan higher open-weight AI use to'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "3 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 83.9,
+    "audit": 0.0,
+    "plan": 2.3,
+    "judge": 12.2,
+    "verify and write": 132.1,
+    "videos": 4.6,
+    "tagging": 2.3,
+    "explainers": -0.0,
+    "trackers": 98.6,
+    "claims": 6.6,
+    "model tracker": 0.0,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.1,
+    "briefing": 2.7,
+    "self-review": 0.0,
+    "photos": 1.0,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 9.3
+  },
+  "fetched": 2925,
+  "fresh": 23,
+  "plan": {
+    "focus": "Tracking India's rise as ChatGPT's top market alongside new OpenAI developer programs and edge AI defense tools.",
+    "priorities": [
+      "India Becomes ChatGPT's Biggest Market | OpenAI's India Chief | Corner (India becoming ChatGPT's biggest market is a major milestone for OpenAI and regional AI adoption.)",
+      "OpenAI Launches API Inference Residency in India (OpenAI launching an API Inference Residency in India signals deeper developer ecosystem engagement.)",
+      "Radical Numerics unveils Omnii Defense, an edge AI model it says can i (Edge AI model for pathogen identification addresses critical biosecurity and defense needs.)",
+      "Chariot Launches Multilingual TTS Model with Support for 11 Indian Lan (Chariot's multilingual TTS model expands localized voice AI support across 11 Indian languages.)",
+      "Lumbra, which is developing tech to orchestrate AI agents in ultra-sec (Lumbra's Series A highlights growing defense and intelligence focus on ultra-secure AI agent orchestration.)"
+    ],
+    "thin_areas": [
+      "india",
+      "research"
+    ],
+    "searches": [
+      "OpenAI India market ChatGPT chief: 0 new",
+      "OpenAI API Inference Residency India: 6 new"
+    ],
+    "dig_deeper": [
+      "India Becomes ChatGPT's Biggest Market | OpenAI's India Chief | Corner",
+      "OpenAI Launches API Inference Residency in India"
+    ]
+  },
+  "judged": 27,
+  "kept": 10,
+  "research": {
+    "investigated": 5,
+    "confirmed": 5,
+    "tool_calls": 13
+  },
+  "research_log": [
+    "Chariot Launches Multilingual TTS Model with Support for 11 Indian Lan: confirmed (searched “Chariot 1 TTS Multilingual IndiaAI Mission”; searched “Chariot multilingual TTS Indian languages”; read cxotoday.com)",
+    "OpenAI Launches API Inference Residency in India: confirmed (searched “OpenAI API Inference Residency India”; read thehindubusinessline.com)",
+    "India Becomes ChatGPT's Biggest Market | OpenAI's India Chief | Corner: confirmed (searched “India becomes ChatGPT biggest market OpenAI India chief”; read forbes.com; read indiatimes.com)",
+    "Lumbra, which is developing tech to orchestrate AI agents in ultra-sec: confirmed (searched “Lumbra $25M Series A Mike Wheatley SiliconANGLE”; read siliconangle.com; searched “\"Lumbra\" \"Series A\" \"25M\"”)",
+    "Radical Numerics unveils Omnii Defense, an edge AI model it says can i: confirmed (searched “Radical Numerics Omnii Defense Emily Mullin Wired”; read wired.com)"
+  ],
+  "threads": [
+    "India becomes ChatGPT’s largest market: OpenAI adds API inference residency for GPT-6 Luna in India",
+    "India becomes ChatGPT’s largest market: India is now ChatGPT's largest market globally by weekly act"
+  ],
+  "videos": {
+    "OpenAI": "ok (14 in feed, 1 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 5 new)",
+    "Google for Developers": "ok (9 in feed, 5 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
+    "Microsoft Research": "ok (10 in feed, 1 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 3 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (3 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 2 new)",
+    "Hard Fork": "ok (3 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (2 in feed, 0 new)"
+  },
+  "videos_kept": "18 kept from 18 new",
+  "tagged": 5,
+  "trackers": "filed 5 stories; updated india-ai, agent-safety, ai-money",
+  "claims": "146 tracked, 141 open, 1 updated this run",
+  "model_tracker": "82 models, 14 changes today",
+  "briefing": "4 themes from 20 stories",
+  "india_briefing": "2 themes from 3 stories",
+  "photos": "5 saved, 0 unavailable",
+  "alerts": "26 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":40}",
+  "ai_requests_run": 39,
+  "ai_tokens_run": 96252,
+  "ai_requests_today": 171,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model",
+    "gemini: network error ReadTimeout, retrying"
+  ]
+}
