@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-11T23:21:23+00:00",
+  "started_at": "2026-11-12T00:19:56+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -19,28 +19,35 @@
     "microsoft-ai": "ok (10)",
     "mistral": "ok (6)"
   },
-  "dropped": [],
-  "written": [],
-  "notes": [
-    "judging skipped: daily cap of 900,000 tokens reached",
-    "tagging skipped: daily cap of 900,000 tokens reached",
-    "trackers skipped: daily cap of 900,000 tokens reached"
+  "dropped": [
+    {
+      "title": "What it takes to bring an AI research assistant to thousands of medical experts",
+      "reason": "score 4: Routine case-study post about deploying an AI medical assistant to experts, offering no significant new model, research breakthrough, or product launch metrics."
+    }
   ],
+  "written": [],
+  "notes": [],
   "mode": "breaking",
   "timings": {
-    "gather": 12.0,
-    "judge": 0.0,
-    "verify and write": 0.0,
-    "photos": 0.0,
-    "stock photos": 0.0,
-    "alerts": 1.1
+    "gather": 11.0,
+    "judge": 0.8,
+    "verify and write": -0.0,
+    "tagging": 1.9,
+    "trackers": 6.9,
+    "photos": -0.0,
+    "stock photos": -0.0,
+    "alerts": 1.9
   },
   "fetched": 2457,
   "fresh": 1,
+  "judged": 1,
+  "kept": 0,
+  "tagged": 4,
+  "trackers": "filed 6 stories; updated frontier-race, agent-safety, ai-infrastructure, ai-money",
   "photos": "0 saved, 0 unavailable",
-  "alerts": "21 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":0}",
-  "ai_requests_run": 0,
-  "ai_tokens_run": 0,
-  "ai_requests_today": 306,
+  "alerts": "4 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":10}",
+  "ai_requests_run": 7,
+  "ai_tokens_run": 25734,
+  "ai_requests_today": 7,
   "provider_log": []
 }
