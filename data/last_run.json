@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-13T14:14:48+00:00",
+  "started_at": "2026-11-13T16:02:01+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -8,7 +8,7 @@
     "cerebras"
   ],
   "sources": {
-    "openai": "ok (1385)",
+    "openai": "ok (1386)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
     "huggingface": "ok (907)",
@@ -19,34 +19,47 @@
     "microsoft-ai": "ok (10)",
     "mistral": "ok (6)"
   },
-  "dropped": [
+  "dropped": [],
+  "written": [
     {
-      "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
-      "reason": "score 3: Version update for llama.cpp (v1.0.0), a minor library update for local inference rather than a major frontier model release or research breakthrough."
+      "id": "5bf4951adbe9",
+      "headline": "OpenAI introduces ChatGPT Wallet for agents",
+      "category": "models",
+      "summary": "OpenAI introduced ChatGPT Wallet, a secure tool for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval. The feature utilizes existing card protections.",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet",
+      "sources": 1,
+      "quotes": 0
     }
   ],
-  "written": [],
   "notes": [],
   "mode": "breaking",
   "timings": {
-    "gather": 15.1,
-    "judge": 1.2,
-    "verify and write": -0.0,
-    "tagging": -0.0,
-    "trackers": 0.9,
-    "photos": 0.0,
-    "stock photos": 0.0,
+    "gather": 9.6,
+    "judge": 1.4,
+    "verify and write": 14.3,
+    "tagging": 152.7,
+    "trackers": 18.5,
+    "photos": -0.0,
+    "stock photos": 16.1,
     "alerts": 2.8
   },
-  "fetched": 2464,
+  "fetched": 2465,
   "fresh": 1,
   "judged": 1,
-  "kept": 0,
-  "trackers": "filed 0 stories; no tracker changed",
+  "kept": 1,
+  "tagged": 1,
+  "trackers": "filed 1 stories; updated agent-safety",
   "photos": "0 saved, 0 unavailable",
-  "alerts": "30 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":0}",
-  "ai_requests_run": 2,
-  "ai_tokens_run": 5648,
-  "ai_requests_today": 211,
-  "provider_log": []
+  "stock photos": "1 added",
+  "alerts": "31 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":9}",
+  "ai_requests_run": 6,
+  "ai_tokens_run": 13767,
+  "ai_requests_today": 217,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+    "gemini: unreachable (ReadTimeout); skipping provider",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing"
+  ]
 }
