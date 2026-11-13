@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-13T16:02:01+00:00",
+  "started_at": "2026-11-13T16:06:23+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -17,49 +17,324 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (15)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "hn": "ok (19)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
   },
   "dropped": [],
   "written": [
     {
-      "id": "5bf4951adbe9",
-      "headline": "OpenAI introduces ChatGPT Wallet for agents",
-      "category": "models",
-      "summary": "OpenAI introduced ChatGPT Wallet, a secure tool for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval. The feature utilizes existing card protections.",
-      "url": "https://openai.com/index/introducing-chatgpt-wallet",
-      "sources": 1,
-      "quotes": 0
+      "title": "Introducing ChatGPT Wallet",
+      "reason": "score 5: Company blog post introducing ChatGPT Wallet, duplicating the news coverage in item 4e379f6cb9d3."
+    },
+    {
+      "title": "Nearly 500 AI projects, over 200 customers: Lessons on making AI work for business",
+      "reason": "score 4: Microsoft enterprise AI case study and lessons, routine corporate marketing/thought leadership."
+    },
+    {
+      "title": "Revisit the games and moments that shaped your XBOX story with Playback",
+      "reason": "not AI: Xbox gaming retrospective feature with no AI relevance."
+    },
+    {
+      "title": "AI Is Destroying the Trust Between Writers and Readers",
+      "reason": "score 4: General commentary on trust between writers and readers in the age of AI, lacking hard news or deep analysis."
+    },
+    {
+      "title": "Reverse Engineering My Coway Air Purifier to Ditch the Cloud",
+      "reason": "not AI: IoT and hardware reverse engineering project for an air purifier with no AI angle."
+    },
+    {
+      "title": "The unfolding Jensen Huang scandal: a timeline",
+      "reason": "score 5: Timeline rehash of Nvidia CEO Jensen Huang's resignation and fallout, already extensively covered in previous stories."
+    },
+    {
+      "title": "ElevenLabs’ new app combines meeting note-taking and dictation for teams",
+      "reason": "score 5: Incremental product launch for enterprise meeting notetaking and dictation."
+    },
+    {
+      "title": "What&#8217;s really at stake in the Jensen Huang saga",
+      "reason": "duplicate of 72e1fb99c741"
+    },
+    {
+      "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
+      "reason": "score 5: Review of Claude's consumer agent feature, routine product coverage."
+    },
+    {
+      "title": "SoftBank's AI Empire Rests on a Single Asset—And It's Over-Leveraged",
+      "reason": "score 4: General commentary on SoftBank and Arm valuation risks rather than fresh AI news."
+    },
+    {
+      "title": "Microsoft’s Outlook Outage Drags On: Indian Enterprises Are Feeling The Heat",
+      "reason": "duplicate of 2d3e2ece6b31"
+    },
+    {
+      "title": "AI opens up new revenue streams for Info Edge’s Naukri",
+      "reason": "score 5: Minor quarterly financial update on recruitment platform's AI features."
+    },
+    {
+      "title": "Anthropic Claude AI down, Status update: Services including Claude API, Claude Code, connectors down",
+      "reason": "score 4: Routine service outage report."
+    },
+    {
+      "title": "Jensen Huang's biographer says there was a culture of omertà and deference towards Huang inside Nvidia that enabled him to \"be his worst self\" (Stephen Witt/New York Times)",
+      "reason": "duplicate of 72e1fb99c741"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang resigns in wake of affair with woman suspected of spying for China",
+      "reason": "duplicate of 72e1fb99c741"
+    },
+    {
+      "title": "‘Bring Back THE Boss’: Nvidia Employees Petition for Jensen Huang’s Return",
+      "reason": "duplicate of 72e1fb99c741"
+    },
+    {
+      "title": "Nvidia’s board is still investigating Jensen Huang despite his resignation, sources say",
+      "reason": "duplicate of 72e1fb99c741"
+    },
+    {
+      "title": "Nvidia's Jensen Huang reportedly had third affair with another employee",
+      "reason": "duplicate of a769a94b7f5c"
+    },
+    {
+      "title": "The latest: Nvidia CEO Jensen Huang resigns after his affair raises US security concerns",
+      "reason": "duplicate of a769a94b7f5c"
+    },
+    {
+      "title": "Nvidia Employees Push Board to Bring Back Jensen Huang: Report",
+      "reason": "duplicate of a769a94b7f5c"
+    },
+    {
+      "title": "OpenAI launches ChatGPT Wallet, letting AI agents pay for purchases",
+      "reason": "score 4: Duplicate of ChatGPT Wallet launch story."
+    },
+    {
+      "title": "OpenAI launches ChatGPT Wallet, allowing its 'dots' AI agents to make purchases for users",
+      "reason": "score 4: Duplicate of ChatGPT Wallet launch story."
+    },
+    {
+      "title": "OpenAI’s ChatGPT Wallet lets its AI agents shop without seeing your card",
+      "reason": "score 4: Duplicate of ChatGPT Wallet launch story."
+    },
+    {
+      "title": "OpenAI launches ChatGPT Wallet for purchases via AI agents — CNBC",
+      "reason": "score 4: Duplicate of ChatGPT Wallet launch story."
+    },
+    {
+      "title": "ChatGPT Wallet is here, and it wants your AI agent to go shopping on your behalf",
+      "reason": "score 4: Duplicate of ChatGPT Wallet launch story."
+    },
+    {
+      "title": "OpenAI launches ChatGPT Wallet, enabling ‘dot’ agents to make purchases",
+      "reason": "score 4: Duplicate of ChatGPT Wallet launch story."
+    },
+    {
+      "title": "Nscale’s debt hits $5.5bn as it leans harder on Nvidia ahead of its IPO",
+      "reason": "score 4: Duplicate of Nscale debt and financing details story."
+    },
+    {
+      "title": "Nvidia-backed Nscale warns it needs more financing amid $44.6B Anthropic contract ahead of US IPO as nine-month loss widens to $1.69 billion",
+      "reason": "duplicate of 6fe694c8134f"
+    },
+    {
+      "title": "Nscale IPO Filing Warns It Needs More Cash for Anthropic Build",
+      "reason": "duplicate of 6fe694c8134f"
+    },
+    {
+      "title": "A review of Chinese contracts, disclosures, and other documents identifies $3.2B+ in compute projects built or planned around Nvidia GPUs restricted by the US (Eduardo Baptista/Reuters)",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Shield AI Opens Bengaluru Engineering Office to Build Defence Autonomy Software",
+      "reason": "could not verify yet after a second try; dropped"
     }
   ],
-  "notes": [],
-  "mode": "breaking",
+  "written": [
+    {
+      "id": "4e379f6cb9d3",
+      "headline": "OpenAI launches ChatGPT Wallet for AI agent shopping",
+      "category": "models",
+      "summary": "OpenAI launched ChatGPT Wallet, a new payment feature that lets its \"dots\" AI agents make purchases on behalf of users. The feature is initially available to U.S. ChatGPT Pro subscribers ages 18 and older.",
+      "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you",
+      "sources": 5,
+      "quotes": 1
+    },
+    {
+      "id": "b9a430a49080",
+      "headline": "Nscale reports $5.5B in debt and $1.69B loss in amended IPO filing",
+      "category": "industry",
+      "summary": "AI cloud provider Nscale reported $5.5 billion in total debt for September and a nine-month net loss of $1.69 billion in an amended IPO prospectus. Nvidia committed $2 billion of over $3 billion in convertible financing to support Nscale amid its obligations for a $44.6 billion Anthropic contract.",
+      "url": "https://techmeme.com/261113/p11",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "ce8b7033600c",
+      "headline": "SpaceX lays off ~60 Grok Imagine staffers to prioritize AI coding tools",
+      "category": "industry",
+      "summary": "SpaceX laid off about 60 employees from its Grok Imagine video-generation team, leaving a handful of staffers to maintain the product. The cuts are part of an ongoing reorganization following xAI's merger into SpaceX in February 2026.",
+      "url": "https://techmeme.com/261113/p14",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "e1478bd447ba",
+      "headline": "Scott Bessent says Treasury and other departments pushed to blacklist Megaspeed",
+      "category": "policy",
+      "summary": "Treasury Secretary Scott Bessent stated that Treasury, Defense, State, and the U.S. Trade Representative favored placing Chinese AI company Megaspeed on the export control entity list for months. However, the Commerce Department did not act on the request.",
+      "url": "https://techmeme.com/261113/p13",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "bf75bdb27a38",
+      "headline": "DeepX tapes out DX-M2 edge AI chip for 100B‑parameter LLMs at under 5 W",
+      "category": "industry",
+      "summary": "South Korean startup DeepX has taped out its second‑generation AI accelerator DX‑M2, designed to run 20‑100 billion‑parameter language models on robots and drones using about 5 W. Mass production is planned for the fourth quarter of 2027.",
+      "url": "https://techmeme.com/261113/p8",
+      "sources": 4,
+      "quotes": 1
+    }
+  ],
+  "notes": [
+    "ignored made-up duplicate id 4e379f6cb9d3 for 'Introducing ChatGPT Wallet'",
+    "ignored made-up duplicate id 72f1fb99c741 for 'The unfolding Jensen Huang scandal: a timeline'",
+    "ignored made-up duplicate id 4e379f6cb9d3 for 'OpenAI launches ChatGPT Wallet, letting AI agents '",
+    "ignored made-up duplicate id 4e379f6cb9d3 for 'OpenAI launches ChatGPT Wallet, allowing its 'dots'",
+    "ignored made-up duplicate id 4e379f6cb9d3 for 'OpenAI’s ChatGPT Wallet lets its AI agents shop wi'",
+    "ignored made-up duplicate id 4e379f6cb9d3 for 'OpenAI launches ChatGPT Wallet for purchases via A'",
+    "ignored made-up duplicate id 4e379f6cb9d3 for 'ChatGPT Wallet is here, and it wants your AI agent'",
+    "ignored made-up duplicate id 4e379f6cb9d3 for 'OpenAI launches ChatGPT Wallet, enabling ‘dot’ age'",
+    "ignored made-up duplicate id b9a430a49080 for 'Nscale’s debt hits $5.5bn as it leans harder on Nv'",
+    "dropped unverifiable quote (Lokwon Kim): This is important because with 5 W power consumption we can …",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting"
+  ],
+  "mode": "full",
   "timings": {
-    "gather": 9.6,
-    "judge": 1.4,
-    "verify and write": 14.3,
-    "tagging": 152.7,
-    "trackers": 18.5,
-    "photos": -0.0,
-    "stock photos": 16.1,
-    "alerts": 2.8
+    "gather": 107.1,
+    "audit": 0.0,
+    "plan": 57.9,
+    "judge": 22.7,
+    "verify and write": 301.1,
+    "videos": 64.7,
+    "tagging": 8.7,
+    "explainers": 1.1,
+    "trackers": 24.7,
+    "claims": 2.4,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 2.1,
+    "self-review": 0.0,
+    "photos": 10.5,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 6.2
   },
-  "fetched": 2465,
-  "fresh": 1,
-  "judged": 1,
-  "kept": 1,
-  "tagged": 1,
-  "trackers": "filed 1 stories; updated agent-safety",
-  "photos": "0 saved, 0 unavailable",
-  "stock photos": "1 added",
-  "alerts": "31 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":9}",
-  "ai_requests_run": 6,
-  "ai_tokens_run": 13767,
-  "ai_requests_today": 217,
+  "fetched": 2967,
+  "fresh": 22,
+  "plan": {
+    "focus": "Tracking the fallout from Jensen Huang's resignation while monitoring OpenAI's new agentic wallet and Nscale's debt surge.",
+    "priorities": [
+      "ChatGPT’s new Wallet lets AI agents shop and check out for you (OpenAI entering agentic commerce with ChatGPT Wallet is a major milestone for AI workflows.)",
+      "Amended S-1: Nscale had $5.5B in debt in September, up from $137.4M in (Nscale's massive debt spike and Nvidia's convertible financing shed light on infrastructure bubble economics.)",
+      "The unfolding Jensen Huang scandal: a timeline (Continued fallout and timeline surrounding Nvidia CEO Jensen Huang's sudden resignation.)",
+      "Scott Bessent says the departments of Treasury, Defense, State were in (Treasury, Defense, and State Department pressures regarding the Megaspeed export control dispute.)",
+      "Sources: SpaceX laid off ~60 Grok Imagine staffers in the past week, l (SpaceX layoffs in Grok Imagine signal a sharp pivot toward enterprise coding and away from image generation.)"
+    ],
+    "thin_areas": [
+      "models",
+      "business"
+    ],
+    "searches": [
+      "Jensen Huang resignation Nvidia board: 6 new",
+      "ChatGPT Wallet OpenAI Pro US: 6 new",
+      "Nscale Anthropic chip order debt: 3 new"
+    ],
+    "dig_deeper": [
+      "Amended S-1: Nscale had $5.5B in debt in September, up from $137.4M in",
+      "ChatGPT’s new Wallet lets AI agents shop and check out for you"
+    ]
+  },
+  "judged": 37,
+  "kept": 7,
+  "research": {
+    "investigated": 5,
+    "confirmed": 5,
+    "tool_calls": 13
+  },
+  "research_log": [
+    "ChatGPT’s new Wallet lets AI agents shop and check out for you: confirmed (searched “ChatGPT Wallet AI agents shop check out TechCrunch”; read openai.com; read cnbc.com)",
+    "Amended S-1: Nscale had $5.5B in debt in September, up from $137.4M in: confirmed (searched “Nscale debt $5.5B Nvidia convertible financing S-1 Bloomberg”; read thenextweb.com)",
+    "Sources: SpaceX laid off ~60 Grok Imagine staffers in the past week, l: confirmed (searched “SpaceX laid off Grok Imagine The Information”; read cryptobriefing.com)",
+    "Scott Bessent says the departments of Treasury, Defense, State were in: confirmed (searched “Scott Bessent Megaspeed entity list Commerce Treasury Defense State”; read msn.com; read seekingalpha.com)",
+    "South Korea-based DeepX tapes out DX-M2, an edge AI chip to run infere: confirmed (searched “DeepX DX M2 EE Times Sally Ward Foxton”; searched “DeepX DX-M2 edge AI chip”; read eetimes.com)"
+  ],
+  "threads": [
+    "OpenAI launches Business Hub and AI shopping agents: OpenAI launches ChatGPT Wallet for AI agent shopping",
+    "Anthropic IPO roadshow and Nscale chip funding: Nscale reports $5.5B in debt and $1.69B loss in amended IPO ",
+    "Musk throttles Grok Bot and trims teams: SpaceX lays off ~60 Grok Imagine staffers to prioritize AI c",
+    "Megaspeed spy plot and Nvidia export controls: Scott Bessent says Treasury and other departments pushed to "
+  ],
+  "videos": {
+    "OpenAI": "ok (15 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (10 in feed, 3 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
+    "Microsoft Research": "ok (10 in feed, 1 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 2 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (3 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 1 new)",
+    "Hard Fork": "ok (4 in feed, 2 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "8 kept from 10 new",
+  "tagged": 5,
+  "explainers": "1 added to earlier stories",
+  "trackers": "filed 7 stories; updated us-china, frontier-race, agent-safety, ai-infrastructure",
+  "claims": "161 tracked, 155 open, 0 updated this run",
+  "model_tracker": "82 models, 26 changes today",
+  "briefing": "4 themes from 20 stories",
+  "photos": "5 saved, 0 unavailable",
+  "alerts": "37 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":41}",
+  "ai_requests_run": 41,
+  "ai_tokens_run": 106256,
+  "ai_requests_today": 252,
   "provider_log": [
     "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
-    "gemini: unreachable (ReadTimeout); skipping provider",
-    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-    "groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing"
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model"
   ]
 }
