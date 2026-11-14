@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-13T21:58:27+00:00",
+  "started_at": "2026-11-14T01:21:21+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -8,7 +8,7 @@
     "cerebras"
   ],
   "sources": {
-    "openai": "ok (1386)",
+    "openai": "ok (1387)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
     "huggingface": "ok (907)",
@@ -21,7 +21,7 @@
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
     "hf-papers": "ok (13)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "gdelt": "ok (23)",
     "hn": "ok (25)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
@@ -33,7 +33,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -43,246 +43,228 @@
   },
   "dropped": [
     {
-      "title": "No AI Slop: A Manifesto",
-      "reason": "score 4: General manifesto against AI-generated content, opinion/essay rather than news."
+      "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+      "reason": "score 5: Routine customer deployment case study rather than a major breakthrough or product release."
     },
     {
-      "title": "Why is Google cutting off Search from AI-free schools? Here are some theories",
-      "reason": "score 4: Exploration of Google cutting off Search from AI-free schools, speculative discussion piece."
+      "title": "Jensen Huang is out . An AI expert explains what his exit means for the AI boom",
+      "reason": "duplicate of 0a3a3741b20c"
     },
     {
-      "title": "Jonathan Blow – If AI Solved Coding, Why Is My Software Still the Same? [video]",
-      "reason": "score 4: Video commentary by Jonathan Blow questioning the impact of AI coding tools on software state, routine perspective."
+      "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
+      "reason": "not AI: General aviation news without a direct AI focus."
     },
     {
-      "title": "Why You Should Expect an AI Crash",
-      "reason": "score 4: General opinion piece on macroeconomic AI bubble concerns, lacking new facts or analysis."
+      "title": "All US airports are currently ground stopped",
+      "reason": "not AI: General aviation news without an AI angle."
     },
     {
-      "title": "OpenAI disbands its robotics team as its general models start running robots",
-      "reason": "duplicate of f45ec6ed003d"
+      "title": "OpenAI board member worries an AI \"takeover\" of society could be months away",
+      "reason": "duplicate of d7736a335388"
     },
     {
-      "title": "Lonewolf 0.3 – A standalone XMPP server written in Rust",
-      "reason": "not AI: Standalone XMPP server written in Rust; no AI relevance."
+      "title": "SoftBank Offloads Meesho Shares Worth ₹1,855 Cr",
+      "reason": "not AI: Ecommerce block deal by SoftBank, no AI angle."
     },
     {
-      "title": "AI agent startup LangChain hits $3B valuation",
-      "reason": "duplicate of 9ce2073d54cf"
+      "title": "Sachin Tendulkar Backs Waste Management Startup Recykal",
+      "reason": "not AI: Cleantech waste management startup funding; no AI angle mentioned."
     },
     {
-      "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
-      "reason": "duplicate of 4e379f6cb9d3"
+      "title": "datasette-cluster-map 0.19",
+      "reason": "not AI: Software package release without an AI focus."
     },
     {
-      "title": "Zelio E-Mobility’s Net Profit Zooms 2.6X YoY To ₹31 Cr In H1",
-      "reason": "not AI: General EV manufacturer financial results with no AI angle."
+      "title": "datasette-leaflet 0.3",
+      "reason": "not AI: Software package release without an AI focus."
     },
     {
-      "title": "Crunchbase Data: Nvidia’s Startup Funding Deals Hit A Record. What’s Next After Huang?",
-      "reason": "score 5: Broad retrospective on Nvidia startup investments after Jensen Huang's exit, lacking major new data."
+      "title": "Sources: the FAA outage occurred after an update to the private communications network that connects the ATC system caused the system to reboot and crash (CBS News)",
+      "reason": "not AI: General aviation tech outage news, no AI angle."
     },
     {
-      "title": "The Week’s 10 Biggest Funding Rounds: Agentic AI And Infrastructure Are Still On A Roll",
-      "reason": "score 4: Weekly round-up of funding rounds, rehashing already reported big raises like Mirendil."
+      "title": "ASI, developer of AI tool SMART, says the FAA outage \"is not based on or a result of the SMART system, any product of ASI, or our integration with FAA and ATC\" (Asi/@airspaceintel)",
+      "reason": "score 3: Statement clarifying that the FAA outage was not caused by the SMART AI system; tangential to AI."
     },
     {
-      "title": "Ethan Mollick: \"You see the model called hydrogen is equivalent to the models called sonnet and luna and spark, but the model called fable is like wonder…",
-      "reason": "score 4: Humorous commentary on chaotic AI model naming conventions across labs."
+      "title": "Source: the FBI is probing whether the FAA outage was caused by a software update, and doesn't believe it was due to a cyberattack or criminality (Myles Miller/Bloomberg)",
+      "reason": "not AI: General aviation outage investigation, no AI angle."
     },
     {
-      "title": "Ethan Mollick: Got to see student presentations today at the Generative AI Studio at Penn. It was a visceral way to feel how far creative people can now…",
-      "reason": "score 4: Anecdotal observation about student AI projects at Penn, routine commentary."
-    },
-    {
-      "title": "The FAA issues a nationwide ground stop for all US airports following \"communication issues impacting multiple Air Route Traffic Control Centers\" (Alex Fitzpatrick/Axios)",
-      "reason": "not AI: FAA nationwide ground stop due to air traffic control communication issues; no AI angle."
-    },
-    {
-      "title": "Microsoft apologizes for the outage, calling it a \"technical issue\" from a \"network capacity upgrade\", and says it was \"not related to cyber or AI/agents\" (@microsoft)",
-      "reason": "score 3: Microsoft outage explanation explicitly stating it was unrelated to AI or cyber incidents; low AI relevance."
-    },
-    {
-      "title": "Sources: Meta staffers are testing a prediction-market app called Takes, letting users wager on the outcome of questions or events using \"cred\", not real money (Meghan Bobrowsky/Wall Street Journal)",
-      "reason": "not AI: Prediction-market app test by Meta staffers has no AI angle."
-    },
-    {
-      "title": "Mega AI Anthropic IPO details: Share price band, valuation, listing date - All you need to know about the upcoming issue",
-      "reason": "duplicate of 3e673ebfce8a"
-    },
-    {
-      "title": "Anthropic IPO valuation talk slides towards $1.2 trillion as roadshow opens",
-      "reason": "duplicate of 3e673ebfce8a"
-    },
-    {
-      "title": "4 takeaways from Dario Amodei’s Anthropic IPO chat with Jamie Dimon",
-      "reason": "duplicate of 6734a79295b9"
-    },
-    {
-      "title": "Anthropic IPO draws orders six times available shares: Bloomberg",
-      "reason": "duplicate of 3e673ebfce8a"
-    },
-    {
-      "title": "Anthropic IPO: China, Hong Kong investors face restrictions on placing orders",
-      "reason": "score 5: Duplicate of existing story on Anthropic IPO investor restrictions for China/Hong Kong."
-    },
-    {
-      "title": "How Nvidia used a \"scorched earth, adversarial attitude\" targeting proponents of export controls in DC, invoking Trump's name to get license approvals expedited (Semafor)",
-      "reason": "could not verify yet; will retry next run"
+      "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+      "reason": "already covered (story 3fc687f52312)"
     }
   ],
   "written": [
     {
-      "id": "a1e895b935bb",
-      "headline": "AI unlocks Kurt Gödel's notebooks to reveal hundreds of proved theorems",
-      "category": "research",
-      "summary": "Researchers used the AI model Claude to analyze 1,009 pages of Kurt Gödel's 1940s notebooks written in obsolete German shorthand. The AI processed the material within days, revealing hundreds of proved theorems and mathematical discoveries.",
-      "url": "https://theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+      "id": "3681b329f0a9",
+      "headline": "Amazon plans World Product Graph to index global product data for AI agents",
+      "category": "industry",
+      "summary": "Amazon has drafted a plan called the World Product Graph to gather information on every product sold across the internet, including by crawling rival websites. The project aims to improve Amazon's AI search accuracy and ensure AI shopping agents rely on its data index.",
+      "url": "https://techmeme.com/261113/p37",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "cd2fdb36b7bd",
+      "headline": "Jensen Huang misled Nvidia leaders about relationship with Alice Huang",
+      "category": "industry",
+      "summary": "Former Nvidia CEO Jensen Huang misled Nvidia leaders, including general counsel Tim Teter, about his relationship with Alice Huang. Nvidia's stock fell 5.5% following reports detailing relationships with three women.",
+      "url": "https://techmeme.com/261113/p36",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "8cc1cc35134e",
+      "headline": "Congressional Democrats launch inquiry into Nvidia China chip sales and Trump deal",
+      "category": "policy",
+      "summary": "Congressional Democrats launched an inquiry into how the Trump administration handled Nvidia's chip sales to China and export licenses. The investigation follows Nvidia's ouster of CEO Jensen Huang and questions a revenue-sharing agreement and political donations.",
+      "url": "https://techmeme.com/261113/p29",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "4e5a504f8ed1",
+      "headline": "FAA expands SMART AI tool nationwide for air traffic congestion",
+      "category": "policy",
+      "summary": "The FAA expanded the use of the SMART AI tool to all 22 centers across the US to help manage air traffic congestion. The agency states that the $875 million system previously helped reroute 180 flights in Washington, DC, saving an average of 10 minutes and nearly 80 gallons of fuel per flight.",
+      "url": "https://techmeme.com/261113/p32",
       "sources": 2,
       "quotes": 0
     },
     {
-      "id": "d7736a335388",
-      "headline": "OpenAI board member warns AI accident is likely cause of death",
-      "category": "safety",
-      "summary": "OpenAI Foundation board member Paul Cristiano warned that an AI accident is the most likely cause of death for most people in his audience. He stated there is a meaningful risk of an AI takeover occurring within the next six to 12 months.",
-      "url": "https://arstechnica.com/features/2026/11/ai-is-the-most-likely-reason-youll-die-openai-board-member-warns",
-      "sources": 3,
-      "quotes": 1
-    },
-    {
-      "id": "c2a6bd7529de",
-      "headline": "Nvidia board says it is selecting a search firm for the CEO role",
+      "id": "d39ade055280",
+      "headline": "Moonshot AI restructures to pave way for an IPO",
       "category": "industry",
-      "summary": "Nvidia's board stated it is selecting a search firm for the chief executive officer role following the exit of former CEO Jensen Huang. The board noted that it has not yet formally engaged any potential candidates.",
-      "url": "https://techmeme.com/261113/p27",
-      "sources": 8,
-      "quotes": 0
-    },
-    {
-      "id": "42bab4051780",
-      "headline": "Dario Amodei calls computing capacity planning Anthropic's deepest business dilemma",
-      "category": "industry",
-      "summary": "Anthropic CEO Dario Amodei stated that determining how much computing power is needed years in advance is the company's deepest business dilemma due to unpredictable revenue. Anthropic disclosed $900.9 billion in long-term commitments stretching through 2045, with $70.7 billion due by September 30, 2027.",
-      "url": "https://techmeme.com/261113/p25",
-      "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "f60b62a12181",
-      "headline": "Anthropic IPO excludes mainland China and Hong Kong investors",
-      "category": "industry",
-      "summary": "Institutional investors based in mainland China and Hong Kong are excluded from placing orders in Anthropic's initial public offering. The restriction is partly due to US arms export rules, similar to restrictions applied to SpaceX.",
-      "url": "https://techmeme.com/261113/p18",
+      "summary": "Chinese artificial-intelligence startup Moonshot AI is restructuring its corporate setup by deactivating its Cayman holding company and moving investors' stakes to its primary operating entity in China. The move is designed to pave the way for an initial public offering.",
+      "url": "https://techmeme.com/261113/p31",
       "sources": 2,
       "quotes": 0
     }
   ],
-  "notes": [
-    "ignored made-up duplicate id f60b62a12181 for 'Anthropic IPO: China, Hong Kong investors face res'",
-    "dropped non-quote (Jan von Plato): I was flabbergasted…",
-    "dropped non-quote (Dario Amodei): genuine dilemma…",
-    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "stopped writing: daily cap of 900,000 tokens reached",
-    "2 kept item(s) carried over to the next run",
-    "videos skipped: daily cap of 900,000 tokens reached",
-    "tagging skipped: daily cap of 900,000 tokens reached",
-    "trackers skipped: daily cap of 900,000 tokens reached",
-    "claims skipped: daily cap of 900,000 tokens reached",
-    "briefing skipped: daily cap of 900,000 tokens reached"
-  ],
+  "notes": [],
   "mode": "full",
   "timings": {
-    "gather": 73.7,
-    "audit": -0.0,
-    "plan": 2.4,
-    "judge": 8.5,
-    "verify and write": 111.8,
-    "explainers": 2.1,
+    "gather": 95.5,
+    "audit": 2.4,
+    "plan": 1.8,
+    "judge": 6.0,
+    "verify and write": 57.7,
+    "videos": 4.2,
+    "tagging": 3.9,
+    "explainers": -0.0,
+    "trackers": 5.5,
+    "claims": 2.2,
     "model tracker": 0.1,
     "weekly": -0.0,
-    "builders": -0.0,
-    "top voices": -0.0,
-    "self-review": -0.0,
+    "builders": 10.5,
+    "top voices": 14.9,
+    "briefing": 1.5,
+    "self-review": 1.7,
     "photos": 0.5,
-    "stock photos": 17.1,
-    "daily email": 0.0,
-    "alerts": 10.4
+    "stock photos": 11.1,
+    "daily email": -0.0,
+    "alerts": 9.5
   },
-  "fetched": 2971,
-  "fresh": 23,
+  "fetched": 2995,
+  "fresh": 20,
+  "audit": "coverage 100% of 6 significant stories; 0 missed, 0 added to this run",
   "plan": {
-    "focus": "Tracking the fallout from Jensen Huang's exit at Nvidia, Anthropic's looming IPO, and agentic AI milestones while balancing our industry and policy coverage.",
+    "focus": "Chasing the fallout from Jensen Huang's exit and the FAA AI outage while keeping a close eye on retail AI strategies.",
     "priorities": [
-      "Nvidia board says it is \"in the process of selecting a search firm\" fo (Crucial update on Nvidia's search for a new CEO following Jensen Huang's resignation.)",
-      "Dario Amodei says figuring out how much computing is needed in a year  (Dario Amodei shares rare insight into Anthropic's core computing capacity dilemma ahead of the IPO.)",
-      "AI agent startup LangChain hits $3B valuation (LangChain reaching a $3B valuation underscores the red-hot market for agentic AI tooling.)",
-      "Sources: Anthropic's IPO, like SpaceX's, is closed to institutional in (New details on restrictions facing Anthropic's IPO regarding mainland China and Hong Kong.)",
-      "AI unlocks Gödel's notebooks, said to contain hundreds of proved theor (Fascinating research breakthrough applying AI to unlock Gödel's notebooks.)"
+      "Sources and messages: Jensen Huang misled several Nvidia leaders, incl (Reuters reporting on Jensen Huang misleading Nvidia leaders over Alice Huang adds crucial detail to the CEO transition story.)",
+      "How Nvidia used a \"scorched earth, adversarial attitude\" targeting pro (Semafor investigation reveals Nvidia's aggressive lobbying tactics and export control maneuvers in DC.)",
+      "Doc: Amazon, wary of AI agents favoring sites with better data, plans  (Amazon's plan to crawl rival sites to prepare for agentic shopping represents a major e-commerce and AI shift.)",
+      "The FAA announced on November 10 that it has expanded the use of SMART (The nationwide FAA ground stop and its intersection with the newly expanded SMART air traffic AI tool need careful tracking.)",
+      "Sources: Moonshot AI is deactivating its Cayman holding company and mo (Moonshot AI restructuring its holding company for an IPO signals ongoing shifts in Chinese AI capital markets.)"
     ],
     "thin_areas": [
-      "research",
-      "models"
+      "india",
+      "voices"
     ],
     "searches": [
-      "Jensen Huang Nvidia CEO succession update: 6 new",
-      "Anthropic IPO valuation roadshow Bloomberg: 5 new"
+      "Moonshot AI IPO Cayman holding company: 1 new"
     ],
     "dig_deeper": [
-      "Nvidia board says it is \"in the process of selecting a search firm\" fo",
-      "Dario Amodei says figuring out how much computing is needed in a year "
+      "Sources and messages: Jensen Huang misled several Nvidia leaders, incl",
+      "How Nvidia used a \"scorched earth, adversarial attitude\" targeting pro"
     ]
   },
-  "judged": 34,
-  "kept": 7,
+  "judged": 21,
+  "kept": 6,
   "research": {
-    "investigated": 5,
-    "confirmed": 4,
-    "tool_calls": 15
+    "investigated": 3,
+    "confirmed": 3,
+    "tool_calls": 8
   },
   "research_log": [
-    "AI unlocks Gödel's notebooks, said to contain hundreds of proved theor: confirmed (searched “Kurt Godel notebooks AI proved theorems”; searched “Kurt Godel notebooks AI guardian”; searched “Godel notebooks AI hundreds of proved theorems”)",
-    "OpenAI board member worries an AI \"takeover\" of society could be month: confirmed (searched “OpenAI board member AI takeover months away reward hacking extinction”; read gizmodo.com; searched “AI accident is most likely reason you will die OpenAI board member”)",
-    "How Nvidia used a \"scorched earth, adversarial attitude\" targeting pro: unconfirmed (searched “Nvidia scorched earth adversarial attitude Semafor export controls Trump”; searched “Nvidia scorched earth adversarial attitude Semafor”; searched “Nvidia general counsel scorched earth adversarial attitude Semafor”)",
-    "Nvidia board says it is \"in the process of selecting a search firm\" fo: confirmed (searched “Nvidia board selecting search firm CEO Jensen Huang CNBC”; read msn.com; searched “\"Nvidia hasn’t selected search firm for permanent Huang replacement\"”)",
-    "Dario Amodei says figuring out how much computing is needed in a year : confirmed (searched “Dario Amodei Anthropic deepest business dilemma computing Bloomberg”; read businessinsider.com; searched “CEO Dario Amodei says compute is the deepest business dilemma facing Anthropic”)"
+    "Doc: Amazon, wary of AI agents favoring sites with better data, plans : confirmed (searched “Amazon World Product Graph AI search Greg Bensinger Reuters”; read indiatimes.com)",
+    "Sources and messages: Jensen Huang misled several Nvidia leaders, incl: confirmed (searched “Jensen Huang Alice Huang Nvidia Reuters”; searched “Jensen Huang Alice Huang Reuters”; read reuters.com)",
+    "How Nvidia used a \"scorched earth, adversarial attitude\" targeting pro: confirmed (searched “Nvidia scorched earth adversarial attitude export controls Semafor”; searched “Nvidia export controls Trump Semafor”; searched “Nvidia scorched earth adversarial attitude Semafor”)"
   ],
   "threads": [
-    "Megaspeed spy plot and Nvidia export controls: Nvidia board says it is selecting a search firm for the CEO ",
-    "Anthropic financing risks IPO: data center credit: Dario Amodei calls computing capacity planning Anthropic's d",
-    "Anthropic IPO roadshow and Nscale chip funding: Anthropic IPO excludes mainland China and Hong Kong investor"
+    "Retailers respond differently to AI shopping agents: Amazon plans World Product Graph to index global product dat",
+    "Megaspeed spy plot and Nvidia export controls: Jensen Huang misled Nvidia leaders about relationship with A",
+    "Megaspeed spy plot and Nvidia export controls: Congressional Democrats launch inquiry into Nvidia China chi",
+    "Chinese labs accused of copying GPT-6 Astra: Moonshot AI restructures to pave way for an IPO"
   ],
   "videos": {
-    "OpenAI": "ok (13 in feed, 0 new)",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 0 new)",
-    "Google for Developers": "ok (10 in feed, 3 new)",
-    "AI at Meta": "ok (9 in feed, 1 new)",
-    "Microsoft Research": "ok (10 in feed, 1 new)",
-    "NVIDIA": "ok (9 in feed, 0 new)",
-    "Hugging Face": "ok (12 in feed, 3 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 0 new)",
-    "AI Explained": "ok (15 in feed, 0 new)",
-    "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (3 in feed, 0 new)",
-    "Latent Space": "ok (15 in feed, 0 new)",
-    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
-    "a16z": "ok (15 in feed, 1 new)",
-    "Big Technology Podcast": "ok (13 in feed, 1 new)",
-    "Hard Fork": "ok (4 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (3 in feed, 0 new)",
-    "20VC": "ok (3 in feed, 0 new)"
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
   },
-  "model_tracker": "82 models, 29 changes today",
-  "photos": "3 saved, 0 unavailable",
-  "stock photos": "2 added",
-  "alerts": "41 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":32}",
+  "tagged": 10,
+  "trackers": "filed 6 stories; updated us-china, ai-infrastructure, ai-money",
+  "claims": "166 tracked, 160 open, 0 updated this run",
+  "model_tracker": "82 models, 3 changes today",
+  "builders_sources": {
+    "show-hn": "ok (8)",
+    "github-new": "ok (40)",
+    "hf-spaces": "ok (23)",
+    "product-hunt": "ok (8)",
+    "r-localllama": "ok (25)",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
+  },
+  "builders": "picked 5 from 60 candidates; 4 with pictures, 0 with videos",
+  "top_voices_sources": {
+    "tv-mollick": "ok (1)",
+    "tv-lambert": "ok (0)",
+    "tv-swyx": "ok (8)",
+    "tv-dwarkesh": "ok (1)",
+    "tv-raschka": "ok (0)",
+    "tv-karpathy": "ok (0)",
+    "tv-evans": "ok (0)",
+    "x-coverage": "ok (2 of 4 articles, bing)",
+    "hn": "ok (3)"
+  },
+  "top_voices": "3 debates from 50 posts by 5 people; 3 portraits, 3 pictures",
+  "briefing": "3 themes from 20 stories",
+  "self_review": "17 lines written to data/self_review.md",
+  "photos": "4 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "11 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":40}",
   "ai_requests_run": 32,
-  "ai_tokens_run": 69710,
-  "ai_requests_today": 333,
+  "ai_tokens_run": 98933,
+  "ai_requests_today": 32,
   "provider_log": []
 }

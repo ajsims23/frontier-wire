@@ -1,14 +1,5 @@
 {
   "posts": {
-    "650b1e3e65d2": {
-      "id": "650b1e3e65d2",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzomjgktvd2h",
-      "person": "Ethan Mollick",
-      "text": "Some new data from Anthropic looking at the impact of AI on the sciences by field: \"With current capabilities, if adopted widely, AI could take on 27–52% of the researcher time needed to produce a new study, with a median of 38% across fields...\" Here: www.anthropic.com/research/how...",
-      "published": "2026-11-07T00:15:03.472Z",
-      "via": "Bluesky",
-      "kind": "post"
-    },
     "6073a2e305ad": {
       "id": "6073a2e305ad",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzp6wfzwgt2h",
@@ -536,21 +527,83 @@
       "published": "2026-11-13T19:44:19.916Z",
       "via": "Bluesky",
       "kind": "post"
+    },
+    "fde4e161df12": {
+      "id": "fde4e161df12",
+      "url": "https://simonwillison.net/2026/Nov/13/datasette-cluster-map",
+      "person": "Simon Willison",
+      "text": "datasette-cluster-map 0.19. Release: datasette-cluster-map 0.19 One of the oldest Datasette plugins, and still one of my favorites. It now works with Datasette 1.0a42, and depends on the new datasette-leaflet to ensure OpenStreetMap tiles are requested with a referrer header. Here's a map of power plants owned by California's PG&E , also demonstrating Datasette's recently redesigned facets : Tags: datasette , geospatial , openstreetmap",
+      "published": "2026-11-13T23:02:45+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "673d8bd62405": {
+      "id": "673d8bd62405",
+      "url": "https://simonwillison.net/2026/Nov/13/datasette-leaflet",
+      "person": "Simon Willison",
+      "text": "datasette-leaflet 0.3. Release: datasette-leaflet 0.3 OpenStreetMap have a very reasonable policy that hits to their hosted tile server should send a referrer header . Datasette table pages used the Referrer-Policy: no-referrer HTTP header, causing plugins that loaded tiles from OpenStreetMap to violate that policy. datasette-leaflet is the plugin that loads a bundled Leaflet so other Datasette plugins can depend on it. It now sets the referrer policy on the tile requests themselves to strict-origin-when-cross-origin , passing the host but not the full path to the page. Tags: leaflet , datasette , openstreetmap",
+      "published": "2026-11-13T22:30:54+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "12f357dd3921": {
+      "id": "12f357dd3921",
+      "url": "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia",
+      "person": "swyx",
+      "text": "[AINews] Jensen Huang resigns after 33 years leading NVIDIA. Congrats to Gemini 4 Hydrogen on their launch and it seems Anthropic’s IPO is well under way, but today’s headline was only ever going to be about one thing, the most earthshaking leadership change in AI (after Demis/Jeff/et al at Google DeepMind). Yesterday we covered reports that NVIDIA’s board was preparing to replace Jensen Huang following an NYT report of an affair with an accused Chinese spy . Following news of a second affair , today NVIDIA announced his resignation (correlation/causation is debatable here), presumably forced by the board: View post on X ↗ There is also some discussion of the extent that Chinese models can…",
+      "published": "2026-11-13T09:04:13+00:00",
+      "via": "Latent Space",
+      "kind": "post"
+    },
+    "0f77776f7c50": {
+      "id": "0f77776f7c50",
+      "url": "https://latent.space/p/artcraft",
+      "person": "swyx",
+      "text": "AI Ambition: ArtCraft Cloned Photoshop and Now Wants to \"Rebuild Everything\". The theme of day two of the AI Engineer Code Summit in San Francisco was increasing ambition using AI . And there have been few projects as ambitious as ArtCraft in the AI era. So far the fledgling company has released 17 open source versions of popular software tools , starting with a Photoshop alternative built from scratch in Rust called PhotoCraft . You could feel the excitement in the room this morning when ArtCraft founder and CEO Brandon Thomas presented a kind of manifesto for AI-based open source at AIE Code. When he mentioned that ArtCraft had cloned Adobe’s Acrobat, with a product called PdfCraft, it…",
+      "published": "2026-11-13T04:17:25+00:00",
+      "via": "Latent Space",
+      "kind": "post"
+    },
+    "5413c880f491": {
+      "id": "5413c880f491",
+      "url": "https://dwarkesh.com/p/rsi",
+      "person": "Dwarkesh Patel",
+      "text": "The avalanche that hit math is coming for AI development. Many thanks to Max Farrens , Gabe Fried , and Thomas Larsen for pairing with me through significant parts of writing and researching this essay. You can watch or listen to me narrate this essay on YouTube , Spotify , and Apple Podcasts. If you asked me earlier this year how far away we are from superintelligence, I’d probably have said at least the better part of a decade. But over the last three months, I’ve updated my views a ton. I’ve been debating people about this question, both on and off the podcast. And I’ve been watching the progress of AI on verifiable domains and thinking about what that implies for AI research itself.…",
+      "published": "2026-11-13T18:37:51+00:00",
+      "via": "Dwarkesh Podcast",
+      "kind": "post"
+    },
+    "6ef85aedd1db": {
+      "id": "6ef85aedd1db",
+      "url": "https://news.ycombinator.com/item?id=50483480",
+      "person": "Dario Amodei",
+      "text": "Eli Lilly CEO pushes back on Dario Amodei's medical claims (264 points, 364 comments)",
+      "published": "2026-11-13T13:51:27Z",
+      "via": "Hacker News",
+      "kind": "discussion",
+      "link": "https://garymarcus.substack.com/p/breaking-eli-lilly-ceo-becomes-latest"
     }
   },
   "digest": {
-    "written_at": "2026-11-13T04:10:45+00:00",
-    "range": "6 Nov – 13 Nov 2026",
-    "headline": "The AI community debates the capabilities of Claude Fable 5.2, Google's latest model rollouts, and shifting industry benchmarks.",
+    "written_at": "2026-11-14T01:21:21+00:00",
+    "range": "7 Nov – 14 Nov 2026",
+    "headline": "AI leaders debate whether new frontier models signal AGI while tracking major releases, infrastructure shifts, and decision models.",
     "debates": [
       {
-        "title": "Does Claude Fable 5.2 cross into AGI?",
-        "summary": "Anthropic's release of Claude Fable 5.2 has reignited discussions about whether frontier models are crossing into AGI territory. This release coincides with the start of Anthropic's IPO roadshow, drawing intense focus to their commercial trajectory and competitive standing.",
+        "title": "Is recent frontier model progress crossing into AGI?",
+        "summary": "As new frontier models like Fable 5.2 launch, tech commentators are debating whether recent capability leaps represent the arrival of general artificial intelligence. This question matters now as AI systems begin handling complex, multi-domain workflows far ahead of previous expectations.",
         "positions": [
           {
             "person": "Ethan Mollick",
-            "stance": "Argues that new models like Claude Fable 5.2 cross the boundary into functioning as a form of jagged AGI.",
+            "stance": "Argues that Anthropic's new Fable 5.2 model crosses the line into a jagged AGI due to its capabilities across business, research, hardware hacking, and 3D modeling.",
             "posts": [
+              {
+                "id": "5be94d0b907d",
+                "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzvn2smcwk2h",
+                "via": "Bluesky",
+                "kind": "post",
+                "date": "2026-11-09"
+              },
               {
                 "id": "906503fc546e",
                 "url": "https://oneusefulthing.org/p/fable-52-and-jagged-agi",
@@ -561,9 +614,51 @@
             ]
           },
           {
-            "person": "swyx",
-            "stance": "Points out that Claude Fable 5.2 has retaken the world number one spot from Gemini 4 Carbon as Anthropic's IPO roadshow begins.",
+            "person": "Dwarkesh Patel",
+            "stance": "Notes that observing AI progress on verifiable domains over the last three months has led to a massive upward update in their timeline for superintelligence.",
             "posts": [
+              {
+                "id": "5413c880f491",
+                "url": "https://dwarkesh.com/p/rsi",
+                "via": "Dwarkesh Podcast",
+                "kind": "post",
+                "date": "2026-11-13"
+              }
+            ]
+          }
+        ],
+        "image": "img/voices/5413c880f491.jpg",
+        "image_credit": "Dwarkesh Podcast",
+        "video": "1NHPDzpfR6Y"
+      },
+      {
+        "title": "Inside Anthropic's IPO roadshow and multi-chip infrastructure",
+        "summary": "Anthropic's public market debut has put its compute infrastructure and business strategy under the microscope. This discussion is central to understanding how frontier AI labs operate across diverse hardware stacks while scaling commercially.",
+        "positions": [
+          {
+            "person": "Simon Willison",
+            "stance": "Points out that Anthropic's IPO roadshow video reveals how they train and serve Claude across four major chip families: AWS Trainium, Google TPUs, NVIDIA GPUs, and AMD GPUs.",
+            "posts": [
+              {
+                "id": "6734a79295b9",
+                "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
+                "via": "Simon Willison",
+                "kind": "post",
+                "date": "2026-11-11"
+              }
+            ]
+          },
+          {
+            "person": "swyx",
+            "stance": "Reports on the launch of Anthropic's IPO roadshow alongside the release of Fable 5.2.",
+            "posts": [
+              {
+                "id": "12f357dd3921",
+                "url": "https://latent.space/p/ainews-jensen-huang-resigns-after-33-years-leading-nvidia",
+                "via": "Latent Space",
+                "kind": "post",
+                "date": "2026-11-13"
+              },
               {
                 "id": "62d6b023e1f9",
                 "url": "https://latent.space/p/ainews-fable-5-2-retakes-world-1-llm-spot-as-ant-ipo-roadshow-begins",
@@ -574,37 +669,30 @@
             ]
           }
         ],
-        "image": "img/voices/62d6b023e1f9.jpg",
+        "image": "img/voices/12f357dd3921.jpg",
         "image_credit": "Latent Space",
         "video": "35ZWesLrv5A"
       },
       {
-        "title": "Navigating Google's new Gemini pricing and models",
-        "summary": "Google's latest model releases have sparked discussions regarding complex pricing schedules and expansions into specialized decision-making APIs. These updates highlight how providers are diversifying their offerings across both traditional generation and structured system-one tasks.",
+        "title": "The rise of fast, structured decision models",
+        "summary": "The AI community is examining the rapid emergence of specialized decision models designed to return structured choices, scores, or probabilities rather than open-ended text. This shift highlights a growing industry focus on speed and cost efficiency for automated workflows.",
         "positions": [
           {
             "person": "Simon Willison",
-            "stance": "Finds the pricing structure for the Gemini 4 family confusing, noting that Carbon and Argon share identical token prices that are scheduled to double on December 1st while Hydrogen offers a modest discount.",
+            "stance": "Notes that Google's new Gemini Decision 1 API matches OpenAI and Jev in the decision model category, offering multimodal capabilities at competitive pricing.",
             "posts": [
               {
-                "id": "9f0b516152c1",
-                "url": "https://simonwillison.net/2026/Nov/12/llm-gemini",
+                "id": "624a305adfa4",
+                "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api",
                 "via": "Simon Willison",
                 "kind": "post",
-                "date": "2026-11-12"
-              },
-              {
-                "id": "096f075e1108",
-                "url": "https://simonwillison.net/2026/Nov/10/llm-gemini",
-                "via": "Simon Willison",
-                "kind": "post",
-                "date": "2026-11-10"
+                "date": "2026-11-11"
               }
             ]
           },
           {
             "person": "swyx",
-            "stance": "Highlights the surprise launch of Google's Gemini Decision 1, a production decision model entering the non-generative system-one model category alongside Jev and OpenAI.",
+            "stance": "Highlights the rise of non-generative system one models that return structured choices and scores much faster and cheaper than reasoning LLMs.",
             "posts": [
               {
                 "id": "e10b6b9196df",
@@ -612,46 +700,52 @@
                 "via": "Latent Space",
                 "kind": "post",
                 "date": "2026-11-12"
+              },
+              {
+                "id": "adb66fa1efb1",
+                "url": "https://latent.space/p/jev-revolution",
+                "via": "Latent Space",
+                "kind": "post",
+                "date": "2026-11-12"
               }
             ]
           }
         ],
-        "image": "img/voices/9f0b516152c1.jpg",
-        "image_credit": "Simon Willison",
-        "video": "dNbkThtNzS8"
+        "video": "ZZ19zhYnDKY"
       }
     ],
     "standouts": [
       {
-        "id": "906503fc546e",
+        "id": "5be94d0b907d",
         "person": "Ethan Mollick",
-        "why": "Offers a detailed examination of whether recent model advancements mark the arrival of a jagged AGI.",
-        "url": "https://oneusefulthing.org/p/fable-52-and-jagged-agi",
-        "via": "One Useful Thing",
+        "why": "Explores the boundary of what new AI models can do across business and research domains.",
+        "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzvn2smcwk2h",
+        "via": "Bluesky",
         "kind": "post",
-        "title": "Fable 5.2 and Jagged AGI. Before getting started, I wanted to thank my readers for making my new book, Co-Existence, a…"
-      },
-      {
-        "id": "624a305adfa4",
-        "person": "Simon Willison",
-        "why": "Provides a clear breakdown of how Google's Gemini Decision 1 fits into the emerging decision model category.",
-        "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api",
-        "via": "Simon Willison",
-        "kind": "post",
-        "title": "Gemini Decisions API. Gemini Decisions API Google join Jev and OpenAI in the decision model category with \"Gemini…"
+        "title": "I had early access to Fable 5.2 for a bit & I think it crosses the line into being a sort of Jagged AGI. Here, I have…"
       },
       {
         "id": "6ee1dee33e4b",
         "person": "Simon Willison",
-        "why": "Shares a practical developer workflow tip for handling comprehensive agent-generated PR descriptions using HTML tags.",
+        "why": "Offers a practical pattern for hiding exhaustive agent-written pull request descriptions.",
         "url": "https://simonwillison.net/2026/Nov/9/details-summary",
         "via": "Simon Willison",
         "kind": "post",
         "title": "Hide your slop PR descriptions behind <details><summary>. Most of the changes I make to my projects these days come in…",
         "image": "img/voices/6ee1dee33e4b.jpg"
+      },
+      {
+        "id": "624a305adfa4",
+        "person": "Simon Willison",
+        "why": "Breaks down the pricing and multimodal features of the newly released Gemini Decisions API.",
+        "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api",
+        "via": "Simon Willison",
+        "kind": "post",
+        "title": "Gemini Decisions API. Gemini Decisions API Google join Jev and OpenAI in the decision model category with \"Gemini…"
       }
     ],
     "people": [
+      "Dwarkesh Patel",
       "Ethan Mollick",
       "Simon Willison",
       "swyx"
@@ -659,9 +753,9 @@
     "from_posts": 50,
     "reported": 0,
     "portraits": {
+      "Simon Willison": "img/people/simon-willison.jpg",
       "swyx": "img/people/swyx.jpg",
-      "Ethan Mollick": "img/people/ethan-mollick.jpg",
-      "Simon Willison": "img/people/simon-willison.jpg"
+      "Ethan Mollick": "img/people/ethan-mollick.jpg"
     },
     "portrait_credits": [
       "Bluesky"
