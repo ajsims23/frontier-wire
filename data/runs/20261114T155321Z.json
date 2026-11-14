@@ -1,0 +1,228 @@
+{
+  "started_at": "2026-11-14T15:53:21+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1387)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (907)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (15)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (20)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Tech Companies Are Trying to Shift the Concept of Privacy (Again)",
+      "reason": "not AI: General privacy commentary from EFF without an AI angle."
+    },
+    {
+      "title": "The Claude Delusion",
+      "reason": "score 3: Blog commentary on Claude without major news or substantive analysis for industry professionals."
+    },
+    {
+      "title": "Anup Gupta To Exit Nexus Venture Partners After 16 Years",
+      "reason": "not AI: Venture capital partner departure; no direct AI angle."
+    },
+    {
+      "title": "Ajinkya Rahane Picks Up Stake In D2C Cookware Brand Ember",
+      "reason": "not AI: D2C cookware brand investment by a former cricketer; unrelated to AI."
+    },
+    {
+      "title": "Italy's data protection agency fines Meta €805M for allegedly accessing Android users' photos and videos without their consent or informing them (Reuters)",
+      "reason": "score 5: Regulatory enforcement against Meta for accessing Android user data without consent; AI is not the core focus of the penalty."
+    },
+    {
+      "title": "How Marco Rubio helped topple Jensen Huang; source: Rubio used a CIA report about Alice Huang to write his own, recasting CIA reporting in more assertive terms (Washington Post)",
+      "reason": "duplicate of ea64cad924f9"
+    },
+    {
+      "title": "Nvidia board reportedly approached Arm CEO Rene Haas during replacement search",
+      "reason": "duplicate of eb62d1b6c624"
+    },
+    {
+      "title": "Nvidia approached Arm CEO Haas to succeed Huang, FT reports",
+      "reason": "duplicate of eb62d1b6c624"
+    },
+    {
+      "title": "Could a Former Nvidia Executive Replace Jensen Huang? Arm’s Rene Haas Emerges as Candidate",
+      "reason": "duplicate of eb62d1b6c624"
+    },
+    {
+      "title": "Nvidia hasn’t selected search firm for permanent Huang replacement, board tells CNBC",
+      "reason": "duplicate of c2a6bd7529de"
+    },
+    {
+      "title": "Nvidia considers Arm CEO Rene Haas as potential successor to Jensen Huang: FT",
+      "reason": "duplicate of eb62d1b6c624"
+    },
+    {
+      "title": "The OpenAI board member who fired Sam Altman says we still can&#8217;t trust AI CEOs",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "01ec9257e016",
+      "headline": "Nvidia CEO Jensen Huang resigns as Colette Kress takes over as interim chief",
+      "category": "industry",
+      "summary": "NVIDIA co-founder and CEO Jensen Huang resigned following an admission regarding a personal relationship, with CFO Colette Kress appointed interim CEO. The leadership change has triggered market concerns and raised questions about the company's future strategy on open-source AI and international projects.",
+      "url": "https://inc42.com/features/jensen-huangs-exit-how-deep-does-nvidias-ai-ecosystem-run-in-india",
+      "sources": 5,
+      "quotes": 2
+    },
+    {
+      "id": "1bd2fae01273",
+      "headline": "Arm shares fall 6.5% as Nvidia board considers CEO Rene Haas",
+      "category": "industry",
+      "summary": "Arm Holdings shares fell 6.5% after reports that Nvidia's board approached Arm CEO Rene Haas as a potential successor to Jensen Huang. The search adds uncertainty to the semiconductor sector following Huang's departure from Nvidia.",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/arm-shares-slide-nvidia-succession-173756134.html",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "9045dcda80bd",
+      "headline": "MeitY opens DPDP Act consent manager registration portal",
+      "category": "policy",
+      "summary": "MeitY launched an online portal for companies to register as consent managers under the DPDP Act, 2023, requiring a minimum net worth of ₹2 crore. The framework came into effect on November 13, 2026.",
+      "url": "https://inc42.com/buzz/dpdp-act-implementation-meity-opens-consent-manager-registration-portal",
+      "sources": 4,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "1 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 75.5,
+    "audit": 0.0,
+    "plan": 2.2,
+    "judge": 12.1,
+    "verify and write": 78.3,
+    "videos": 5.0,
+    "tagging": 1.8,
+    "explainers": -0.0,
+    "trackers": 9.6,
+    "claims": 2.2,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 2.7,
+    "self-review": -0.0,
+    "photos": 0.4,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 5.3
+  },
+  "fetched": 2969,
+  "fresh": 9,
+  "plan": {
+    "focus": "Tracking the geopolitical fallout from Nvidia's leadership crisis and major European regulatory enforcement against Meta.",
+    "priorities": [
+      "How Marco Rubio helped topple Jensen Huang; source: Rubio used a CIA r (Reveals Marco Rubio's role in the Jensen Huang scandal, adding critical political reporting to our top storyline.)",
+      "Italy's data protection agency fines Meta €805M for allegedly accessin (Major €805M regulatory enforcement against Meta by Italian data protection authorities.)",
+      "Jensen Huang’s Exit: How Deep Does NVIDIA’s AI Ecosystem Run In India? (Connects the Nvidia executive crisis directly to the Indian AI ecosystem.)",
+      "Tech Companies Are Trying to Shift the Concept of Privacy (Again) (Important commentary on shifting privacy concepts by major tech companies.)",
+      "The OpenAI board member who fired Sam Altman says we still can&#8217;t (OpenAI board perspective on AI governance and trustworthy leadership.)"
+    ],
+    "thin_areas": [
+      "india",
+      "safety"
+    ],
+    "searches": [
+      "Nvidia successor board meeting Arm Haas: 6 new"
+    ],
+    "dig_deeper": [
+      "How Marco Rubio helped topple Jensen Huang; source: Rubio used a CIA r",
+      "Italy's data protection agency fines Meta €805M for allegedly accessin"
+    ]
+  },
+  "judged": 15,
+  "kept": 4,
+  "research": {
+    "investigated": 4,
+    "confirmed": 3,
+    "tool_calls": 9
+  },
+  "research_log": [
+    "The OpenAI board member who fired Sam Altman says we still can&#8217;t: unconfirmed (searched “Helen Toner OpenAI trust AI CEOs podcast The Verge”; searched “Helen Toner OpenAI board member trust AI CEOs”; searched “Helen Toner podcast The Verge AI CEOs”)",
+    "Jensen Huang’s Exit: How Deep Does NVIDIA’s AI Ecosystem Run In India?: confirmed (searched “Jensen Huang exit NVIDIA India”)",
+    "Arm shares slide as Nvidia succession search puts CEO Rene Haas in spo: confirmed (searched “Arm shares slide Nvidia succession Rene Haas”; read decrypt.co; read cryptobriefing.com)",
+    "DPDP Act Implementation: MeitY Opens Consent Manager Registration Port: confirmed (searched “MeitY consent manager registration portal DPDP Act”; read thehindubusinessline.com)"
+  ],
+  "threads": [
+    "Jensen Huang resignation and Nvidia ecosystem impact: Nvidia CEO Jensen Huang resigns as Colette Kress takes over ",
+    "Jensen Huang resignation and Nvidia leadership crisis: Arm shares fall 6.5% as Nvidia board considers CEO Rene Haas",
+    "AI safety and data protection portals launched: MeitY opens DPDP Act consent manager registration portal"
+  ],
+  "videos": {
+    "OpenAI": "ok (13 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (10 in feed, 2 new)",
+    "AI at Meta": "ok (9 in feed, 0 new)",
+    "Microsoft Research": "ok (10 in feed, 0 new)",
+    "NVIDIA": "ok (8 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 3 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (3 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 1 new)",
+    "Hard Fork": "ok (4 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "7 kept from 7 new",
+  "tagged": 3,
+  "trackers": "filed 0 stories; no tracker changed",
+  "claims": "169 tracked, 163 open, 0 updated this run",
+  "model_tracker": "82 models, 3 changes today",
+  "briefing": "2 themes from 20 stories",
+  "india_briefing": "3 themes from 4 stories",
+  "photos": "3 saved, 0 unavailable",
+  "alerts": "11 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":18}",
+  "ai_requests_run": 26,
+  "ai_tokens_run": 58270,
+  "ai_requests_today": 175,
+  "provider_log": []
+}

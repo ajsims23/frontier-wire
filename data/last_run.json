@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-14T13:09:31+00:00",
+  "started_at": "2026-11-14T15:53:21+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -21,8 +21,8 @@
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
     "hf-papers": "ok (15)",
-    "gdelt": "ok (15)",
-    "hn": "ok (18)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (20)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -33,7 +33,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -43,119 +43,149 @@
   },
   "dropped": [
     {
-      "title": "FirstCry Q2 Net Loss Narrows 75% YoY To ₹12.6 Cr, Revenue Up 14%",
-      "reason": "not AI: Quarterly financial results for an omnichannel children's retailer with no AI angle."
+      "title": "Tech Companies Are Trying to Shift the Concept of Privacy (Again)",
+      "reason": "not AI: General privacy commentary from EFF without an AI angle."
     },
     {
-      "title": "New-Age Tech Stocks Continue Rally; E2E Network, Turtlemint Lead Gains",
-      "reason": "score 4: General stock market roundup mentioning tech stocks with only a peripheral AI connection."
+      "title": "The Claude Delusion",
+      "reason": "score 3: Blog commentary on Claude without major news or substantive analysis for industry professionals."
     },
     {
-      "title": "How the Swiss city of Lugano is trying to reinvent itself as a crypto hub to boost its economy by launching its own token LVGA, partnering with Tether, and more (Financial Times)",
-      "reason": "not AI: Crypto and stablecoin story with no AI relevance."
+      "title": "Anup Gupta To Exit Nexus Venture Partners After 16 Years",
+      "reason": "not AI: Venture capital partner departure; no direct AI angle."
+    },
+    {
+      "title": "Ajinkya Rahane Picks Up Stake In D2C Cookware Brand Ember",
+      "reason": "not AI: D2C cookware brand investment by a former cricketer; unrelated to AI."
+    },
+    {
+      "title": "Italy's data protection agency fines Meta €805M for allegedly accessing Android users' photos and videos without their consent or informing them (Reuters)",
+      "reason": "score 5: Regulatory enforcement against Meta for accessing Android user data without consent; AI is not the core focus of the penalty."
+    },
+    {
+      "title": "How Marco Rubio helped topple Jensen Huang; source: Rubio used a CIA report about Alice Huang to write his own, recasting CIA reporting in more assertive terms (Washington Post)",
+      "reason": "duplicate of ea64cad924f9"
+    },
+    {
+      "title": "Nvidia board reportedly approached Arm CEO Rene Haas during replacement search",
+      "reason": "duplicate of eb62d1b6c624"
+    },
+    {
+      "title": "Nvidia approached Arm CEO Haas to succeed Huang, FT reports",
+      "reason": "duplicate of eb62d1b6c624"
+    },
+    {
+      "title": "Could a Former Nvidia Executive Replace Jensen Huang? Arm’s Rene Haas Emerges as Candidate",
+      "reason": "duplicate of eb62d1b6c624"
+    },
+    {
+      "title": "Nvidia hasn’t selected search firm for permanent Huang replacement, board tells CNBC",
+      "reason": "duplicate of c2a6bd7529de"
+    },
+    {
+      "title": "Nvidia considers Arm CEO Rene Haas as potential successor to Jensen Huang: FT",
+      "reason": "duplicate of eb62d1b6c624"
+    },
+    {
+      "title": "The OpenAI board member who fired Sam Altman says we still can&#8217;t trust AI CEOs",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "21ab7432dba4",
-      "headline": "Anthropic launches Claude Meetings to join video calls and take notes",
-      "category": "models",
-      "summary": "Anthropic announced Claude Meetings, a beta feature that allows Claude to join video calls as a visible participant, take notes, answer questions, and draft documents in real time. The tool is launching on Claude Team and Enterprise plans, initially supporting Google Meet with Microsoft Teams support also announced.",
-      "url": "https://claude.com/resources/articles/claude-meetings",
+      "id": "01ec9257e016",
+      "headline": "Nvidia CEO Jensen Huang resigns as Colette Kress takes over as interim chief",
+      "category": "industry",
+      "summary": "NVIDIA co-founder and CEO Jensen Huang resigned following an admission regarding a personal relationship, with CFO Colette Kress appointed interim CEO. The leadership change has triggered market concerns and raised questions about the company's future strategy on open-source AI and international projects.",
+      "url": "https://inc42.com/features/jensen-huangs-exit-how-deep-does-nvidias-ai-ecosystem-run-in-india",
       "sources": 5,
       "quotes": 2
     },
     {
-      "id": "6c8aa70af5f8",
-      "headline": "Jensen Huang struggled to access Beijing chip policymakers",
+      "id": "1bd2fae01273",
+      "headline": "Arm shares fall 6.5% as Nvidia board considers CEO Rene Haas",
       "category": "industry",
-      "summary": "Sources report that despite over 20 years of business in China, former Nvidia chief executive Jensen Huang struggled to gain access to policymakers driving Beijing's chip self-sufficiency campaign.",
-      "url": "https://techmeme.com/261114/p7",
+      "summary": "Arm Holdings shares fell 6.5% after reports that Nvidia's board approached Arm CEO Rene Haas as a potential successor to Jensen Huang. The search adds uncertainty to the semiconductor sector following Huang's departure from Nvidia.",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/arm-shares-slide-nvidia-succession-173756134.html",
       "sources": 3,
       "quotes": 0
     },
     {
-      "id": "c46863c30810",
-      "headline": "Nvidia CEO Jensen Huang resigns amid scandals, ending an era for Big Tech",
-      "category": "voices",
-      "summary": "Nvidia co-founder and CEO Jensen Huang resigned following admissions of extramarital affairs, including one with an alleged Chinese spy, and chip smuggling scandals. Around 60 employees reported directly to Huang, who had no designated successor.",
-      "url": "https://theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
-      "sources": 2,
-      "quotes": 2
-    },
-    {
-      "id": "1b43d5e72ff4",
-      "headline": "Nvidia faces leadership transition and market shifts after Jensen Huang's exit",
-      "category": "industry",
-      "summary": "Nvidia co-founder Jensen Huang resigned as CEO following revelations about personal relationships, with CFO Colette Kress named interim CEO. Nvidia shares fell 4.34% to $166.19 following the resignation, while competitor AMD shares rose 5.86%.",
-      "url": "https://analyticsindiamag.com/global-tech/jensen-huangs-exit-just-gave-amd-and-google-their-biggest-ai-opening",
-      "sources": 5,
-      "quotes": 1
+      "id": "9045dcda80bd",
+      "headline": "MeitY opens DPDP Act consent manager registration portal",
+      "category": "policy",
+      "summary": "MeitY launched an online portal for companies to register as consent managers under the DPDP Act, 2023, requiring a minimum net worth of ₹2 crore. The framework came into effect on November 13, 2026.",
+      "url": "https://inc42.com/buzz/dpdp-act-implementation-meity-opens-consent-manager-registration-portal",
+      "sources": 4,
+      "quotes": 0
     }
   ],
   "notes": [
-    "not India desk: 'Jensen Huang’s Exit Just Gave AMD and Google Their'"
+    "1 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 70.3,
+    "gather": 75.5,
     "audit": 0.0,
-    "plan": 2.0,
-    "judge": 2.0,
-    "verify and write": 144.0,
-    "videos": 9.6,
-    "tagging": 2.5,
-    "explainers": 1.4,
-    "trackers": 39.9,
-    "claims": 1.3,
+    "plan": 2.2,
+    "judge": 12.1,
+    "verify and write": 78.3,
+    "videos": 5.0,
+    "tagging": 1.8,
+    "explainers": -0.0,
+    "trackers": 9.6,
+    "claims": 2.2,
     "model tracker": 0.1,
     "weekly": -0.0,
     "builders": -0.0,
     "top voices": -0.0,
-    "briefing": 2.1,
+    "briefing": 2.7,
     "self-review": -0.0,
-    "photos": 1.0,
-    "stock photos": -0.0,
-    "daily email": -0.0,
-    "alerts": 7.2
+    "photos": 0.4,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 5.3
   },
-  "fetched": 2982,
-  "fresh": 7,
+  "fetched": 2969,
+  "fresh": 9,
   "plan": {
-    "focus": "Tracking the fallout from Jensen Huang's departure while maintaining balance across Indian tech and global industry developments.",
+    "focus": "Tracking the geopolitical fallout from Nvidia's leadership crisis and major European regulatory enforcement against Meta.",
     "priorities": [
-      "Jensen Huang’s Exit Just Gave AMD and Google Their Biggest AI Opening (Crucial analysis on how the Nvidia leadership vacuum opens doors for AMD and Google in India and beyond.)",
-      "Sources: despite Nvidia's 20+ years of business in China, Jensen Huang (Important reporting on Nvidia's historical struggles with Beijing policymakers during the chip self-sufficiency push.)",
-      "Jensen Huang and the decline of the visionary showman founder CEO (Valuable commentary on the shift away from the visionary showman founder CEO era in AI and hardware.)",
-      "Claude Meetings (New product release from Anthropic (Claude Meetings) relevant to the enterprise ecosystem.)",
-      "FirstCry Q2 Net Loss Narrows 75% YoY To ₹12.6 Cr, Revenue Up 14% (Strong quarterly financial update from a major Indian tech-enabled retailer.)"
+      "How Marco Rubio helped topple Jensen Huang; source: Rubio used a CIA r (Reveals Marco Rubio's role in the Jensen Huang scandal, adding critical political reporting to our top storyline.)",
+      "Italy's data protection agency fines Meta €805M for allegedly accessin (Major €805M regulatory enforcement against Meta by Italian data protection authorities.)",
+      "Jensen Huang’s Exit: How Deep Does NVIDIA’s AI Ecosystem Run In India? (Connects the Nvidia executive crisis directly to the Indian AI ecosystem.)",
+      "Tech Companies Are Trying to Shift the Concept of Privacy (Again) (Important commentary on shifting privacy concepts by major tech companies.)",
+      "The OpenAI board member who fired Sam Altman says we still can&#8217;t (OpenAI board perspective on AI governance and trustworthy leadership.)"
     ],
     "thin_areas": [
-      "india"
+      "india",
+      "safety"
     ],
-    "searches": [],
+    "searches": [
+      "Nvidia successor board meeting Arm Haas: 6 new"
+    ],
     "dig_deeper": [
-      "Jensen Huang’s Exit Just Gave AMD and Google Their Biggest AI Opening",
-      "Sources: despite Nvidia's 20+ years of business in China, Jensen Huang"
+      "How Marco Rubio helped topple Jensen Huang; source: Rubio used a CIA r",
+      "Italy's data protection agency fines Meta €805M for allegedly accessin"
     ]
   },
-  "judged": 7,
+  "judged": 15,
   "kept": 4,
   "research": {
     "investigated": 4,
-    "confirmed": 4,
-    "tool_calls": 11
+    "confirmed": 3,
+    "tool_calls": 9
   },
   "research_log": [
-    "Claude Meetings: confirmed (searched “Claude Meetings”; read techcrunch.com)",
-    "Sources: despite Nvidia's 20+ years of business in China, Jensen Huang: confirmed (searched “Jensen Huang struggled to gain access to policymakers Beijing chip self sufficiency Eleanor Olcott Financial Times”; searched “\"Eleanor Olcott\" Nvidia Jensen Huang Beijing chip self-sufficiency”; searched “\"despite Nvidia's 20+ years of business in China\"”)",
-    "Jensen Huang and the decline of the visionary showman founder CEO: confirmed (searched “Jensen Huang Nvidia CES 2025 January 6 arena black leather jacket”; searched “\"Jensen Huang and the decline of the visionary showman founder CEO\"”; searched “\"The Verge\" \"Jensen Huang\" \"decline of the visionary showman\"”)",
-    "Jensen Huang’s Exit Just Gave AMD and Google Their Biggest AI Opening: confirmed (searched “Jensen Huang resigns NVIDIA”; searched “Jensen Huang AMD Google AI opening Analytics India Magazine”; read analyticsindiamag.com)"
+    "The OpenAI board member who fired Sam Altman says we still can&#8217;t: unconfirmed (searched “Helen Toner OpenAI trust AI CEOs podcast The Verge”; searched “Helen Toner OpenAI board member trust AI CEOs”; searched “Helen Toner podcast The Verge AI CEOs”)",
+    "Jensen Huang’s Exit: How Deep Does NVIDIA’s AI Ecosystem Run In India?: confirmed (searched “Jensen Huang exit NVIDIA India”)",
+    "Arm shares slide as Nvidia succession search puts CEO Rene Haas in spo: confirmed (searched “Arm shares slide Nvidia succession Rene Haas”; read decrypt.co; read cryptobriefing.com)",
+    "DPDP Act Implementation: MeitY Opens Consent Manager Registration Port: confirmed (searched “MeitY consent manager registration portal DPDP Act”; read thehindubusinessline.com)"
   ],
   "threads": [
-    "Jensen Huang resignation and Nvidia leadership crisis: Jensen Huang struggled to access Beijing chip policymakers",
-    "Jensen Huang resignation and Nvidia leadership crisis: Nvidia CEO Jensen Huang resigns amid scandals, ending an era",
-    "Jensen Huang resignation and Nvidia leadership crisis: Nvidia faces leadership transition and market shifts after J"
+    "Jensen Huang resignation and Nvidia ecosystem impact: Nvidia CEO Jensen Huang resigns as Colette Kress takes over ",
+    "Jensen Huang resignation and Nvidia leadership crisis: Arm shares fall 6.5% as Nvidia board considers CEO Rene Haas",
+    "AI safety and data protection portals launched: MeitY opens DPDP Act consent manager registration portal"
   ],
   "videos": {
     "OpenAI": "ok (13 in feed, 0 new)",
@@ -183,16 +213,16 @@
     "20VC": "ok (3 in feed, 0 new)"
   },
   "videos_kept": "7 kept from 7 new",
-  "tagged": 4,
-  "explainers": "1 added to earlier stories",
-  "trackers": "filed 4 stories; updated frontier-race, ai-infrastructure",
-  "claims": "168 tracked, 162 open, 0 updated this run",
+  "tagged": 3,
+  "trackers": "filed 0 stories; no tracker changed",
+  "claims": "169 tracked, 163 open, 0 updated this run",
   "model_tracker": "82 models, 3 changes today",
-  "briefing": "3 themes from 20 stories",
-  "photos": "4 saved, 0 unavailable",
-  "alerts": "12 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":32}",
-  "ai_requests_run": 30,
-  "ai_tokens_run": 74812,
-  "ai_requests_today": 149,
+  "briefing": "2 themes from 20 stories",
+  "india_briefing": "3 themes from 4 stories",
+  "photos": "3 saved, 0 unavailable",
+  "alerts": "11 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":18}",
+  "ai_requests_run": 26,
+  "ai_tokens_run": 58270,
+  "ai_requests_today": 175,
   "provider_log": []
 }
