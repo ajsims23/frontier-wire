@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-14T09:58:44+00:00",
+  "started_at": "2026-11-14T13:09:31+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -21,8 +21,8 @@
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
     "hf-papers": "ok (15)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (20)",
+    "gdelt": "ok (15)",
+    "hn": "ok (18)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -33,7 +33,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -43,147 +43,132 @@
   },
   "dropped": [
     {
-      "title": "Unsloth Qwen3.8-27B Quantizations – Dynamic v3.1 Update",
-      "reason": "not AI: Routine model quantization update (Unsloth Qwen3.8-27B)."
+      "title": "FirstCry Q2 Net Loss Narrows 75% YoY To ₹12.6 Cr, Revenue Up 14%",
+      "reason": "not AI: Quarterly financial results for an omnichannel children's retailer with no AI angle."
     },
     {
-      "title": "How Not to Build a Music Player",
-      "reason": "not AI: Off-topic software engineering post about building a music player."
+      "title": "New-Age Tech Stocks Continue Rally; E2E Network, Turtlemint Lead Gains",
+      "reason": "score 4: General stock market roundup mentioning tech stocks with only a peripheral AI connection."
     },
     {
-      "title": "Live-migration support in FreeBSD and bhyve coming",
-      "reason": "not AI: FreeBSD and bhyve virtualization update, no AI relevance."
-    },
-    {
-      "title": "Mahadev Betting App: CBI Searches Multiple Locations, ED Arrests Saurabh Chandrakar",
-      "reason": "not AI: Betting app scam raids, no AI relevance."
-    },
-    {
-      "title": "Altimeter, Atreides urge Nvidia board to keep door open for Jensen Huang's return as CEO",
-      "reason": "duplicate of eb62d1b6c624"
-    },
-    {
-      "title": "MAGIC launches AIMM 2026, offers Rs 7 lakh in prizes for AI innovations",
-      "reason": "score 4: Local AI competition and incubation launch offering small prizes; minor regional event."
-    },
-    {
-      "title": "Stage III cancer to 200+ startups: How Tej Chingtham built the Northeast’s first incubator",
-      "reason": "not AI: Startup incubator profile in Northeast India, no specific AI focus."
-    },
-    {
-      "title": "Odisha startup BabyCue wins national challenge with its rapid diagnostic test for children",
-      "reason": "not AI: Diagnostic test startup win, no AI relevance."
-    },
-    {
-      "title": "5 Lessons from Yoshuku: The Japanese Art of Manifesting",
-      "reason": "not AI: General lifestyle and personal development article from YourStory, completely unrelated to AI."
-    },
-    {
-      "title": "28 Indian startups pitch air pollution solutions to VCs at AirEarth.org event",
-      "reason": "not AI: Clean-air startup pitches, no AI relevance."
-    },
-    {
-      "title": "Microsoft says all Microsoft 365 products are operational, ending an outage that disrupted governments, traders, hospitals, and businesses around the world (Bloomberg)",
-      "reason": "score 4: Microsoft 365 cloud outage is general IT infrastructure news with no significant AI angle in the source."
-    },
-    {
-      "title": "Huang, Lutnick Reportedly to Testify Before Congress Amid Nvidia Affair Probe",
-      "reason": "score 4: Duplicate of ongoing coverage regarding congressional testimony probes into Nvidia."
-    },
-    {
-      "title": "Howard Lutnick to Testify on Nvidia's AI Chip Sales to China",
-      "reason": "score 4: Duplicate of ongoing coverage regarding Howard Lutnick testifying on Nvidia chip sales."
-    },
-    {
-      "title": "Microsoft's outage is in its 2nd day, and it's affecting Claude. Here's everything we know.",
-      "reason": "score 4: Updates on the Microsoft cloud outage affecting enterprise services; AI relevance is minimal and secondary to the general IT disruption."
-    },
-    {
-      "title": "Sources: despite Nvidia's 20+ years of business in China, Jensen Huang struggled to gain access to policymakers driving Beijing's chip self-sufficiency campaign (Eleanor Olcott/Financial Times)",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Cambridge, UK-based Tendrils, which is designing a CPU architecture with thousands of cores operating in parallel, raised $30M led by Benchmark (John Reynolds/Tech.eu)",
-      "reason": "could not verify yet after a second try; dropped"
-    },
-    {
-      "title": "AI Chatbots and Children: Should India Regulate What Bots Say?",
-      "reason": "could not verify yet after a second try; dropped"
+      "title": "How the Swiss city of Lugano is trying to reinvent itself as a crypto hub to boost its economy by launching its own token LVGA, partnering with Tether, and more (Financial Times)",
+      "reason": "not AI: Crypto and stablecoin story with no AI relevance."
     }
   ],
-  "written": [],
+  "written": [
+    {
+      "id": "21ab7432dba4",
+      "headline": "Anthropic launches Claude Meetings to join video calls and take notes",
+      "category": "models",
+      "summary": "Anthropic announced Claude Meetings, a beta feature that allows Claude to join video calls as a visible participant, take notes, answer questions, and draft documents in real time. The tool is launching on Claude Team and Enterprise plans, initially supporting Google Meet with Microsoft Teams support also announced.",
+      "url": "https://claude.com/resources/articles/claude-meetings",
+      "sources": 5,
+      "quotes": 2
+    },
+    {
+      "id": "6c8aa70af5f8",
+      "headline": "Jensen Huang struggled to access Beijing chip policymakers",
+      "category": "industry",
+      "summary": "Sources report that despite over 20 years of business in China, former Nvidia chief executive Jensen Huang struggled to gain access to policymakers driving Beijing's chip self-sufficiency campaign.",
+      "url": "https://techmeme.com/261114/p7",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "c46863c30810",
+      "headline": "Nvidia CEO Jensen Huang resigns amid scandals, ending an era for Big Tech",
+      "category": "voices",
+      "summary": "Nvidia co-founder and CEO Jensen Huang resigned following admissions of extramarital affairs, including one with an alleged Chinese spy, and chip smuggling scandals. Around 60 employees reported directly to Huang, who had no designated successor.",
+      "url": "https://theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "1b43d5e72ff4",
+      "headline": "Nvidia faces leadership transition and market shifts after Jensen Huang's exit",
+      "category": "industry",
+      "summary": "Nvidia co-founder Jensen Huang resigned as CEO following revelations about personal relationships, with CFO Colette Kress named interim CEO. Nvidia shares fell 4.34% to $166.19 following the resignation, while competitor AMD shares rose 5.86%.",
+      "url": "https://analyticsindiamag.com/global-tech/jensen-huangs-exit-just-gave-amd-and-google-their-biggest-ai-opening",
+      "sources": 5,
+      "quotes": 1
+    }
+  ],
   "notes": [
-    "1 kept item(s) carried over to the next run"
+    "not India desk: 'Jensen Huang’s Exit Just Gave AMD and Google Their'"
   ],
   "mode": "full",
   "timings": {
-    "gather": 68.3,
+    "gather": 70.3,
     "audit": 0.0,
-    "plan": 29.6,
-    "judge": 24.2,
-    "verify and write": 89.7,
-    "videos": 27.1,
-    "tagging": 0.0,
-    "explainers": 0.0,
-    "trackers": 0.0,
-    "claims": 0.0,
+    "plan": 2.0,
+    "judge": 2.0,
+    "verify and write": 144.0,
+    "videos": 9.6,
+    "tagging": 2.5,
+    "explainers": 1.4,
+    "trackers": 39.9,
+    "claims": 1.3,
     "model tracker": 0.1,
-    "weekly": 0.0,
-    "builders": 0.0,
-    "top voices": 0.0,
-    "briefing": 0.0,
-    "self-review": 0.0,
-    "photos": 0.0,
-    "stock photos": 0.0,
-    "daily email": 0.0,
-    "alerts": 1.2
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 2.1,
+    "self-review": -0.0,
+    "photos": 1.0,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 7.2
   },
-  "fetched": 2969,
-  "fresh": 14,
+  "fetched": 2982,
+  "fresh": 7,
   "plan": {
-    "focus": "Chasing Nvidia‑China policy fallout and its impact on investors, while covering the Microsoft outage and fresh AI hardware funding.",
+    "focus": "Tracking the fallout from Jensen Huang's departure while maintaining balance across Indian tech and global industry developments.",
     "priorities": [
-      "Sources: despite Nvidia's 20+ years of business in China, Jensen Huang (Key policy story on Nvidia's China dealings, central to ongoing US‑China AI tension thread.)",
-      "Altimeter, Atreides urge Nvidia board to keep door open for Jensen Hua (Board pressure on Nvidia regarding Jensen Huang ties into governance and leadership uncertainty.)",
-      "Microsoft says all Microsoft 365 products are operational, ending an o (Microsoft 365 outage affects global enterprises; high relevance for business readers.)",
-      "Cambridge, UK-based Tendrils, which is designing a CPU architecture wi (Large $30M funding for a novel many‑core CPU architecture, important hardware trend for investors.)",
-      "AI Chatbots and Children: Should India Regulate What Bots Say? (Regulation debate on AI chatbots for children in India, adds policy angle for a growing market.)"
+      "Jensen Huang’s Exit Just Gave AMD and Google Their Biggest AI Opening (Crucial analysis on how the Nvidia leadership vacuum opens doors for AMD and Google in India and beyond.)",
+      "Sources: despite Nvidia's 20+ years of business in China, Jensen Huang (Important reporting on Nvidia's historical struggles with Beijing policymakers during the chip self-sufficiency push.)",
+      "Jensen Huang and the decline of the visionary showman founder CEO (Valuable commentary on the shift away from the visionary showman founder CEO era in AI and hardware.)",
+      "Claude Meetings (New product release from Anthropic (Claude Meetings) relevant to the enterprise ecosystem.)",
+      "FirstCry Q2 Net Loss Narrows 75% YoY To ₹12.6 Cr, Revenue Up 14% (Strong quarterly financial update from a major Indian tech-enabled retailer.)"
     ],
-    "thin_areas": [],
-    "searches": [
-      "Nvidia China chip sales probe: 2 new",
-      "Microsoft 365 outage timeline: 1 new",
-      "Tendrils multi-core CPU market: 0 new"
+    "thin_areas": [
+      "india"
     ],
+    "searches": [],
     "dig_deeper": [
-      "Sources: despite Nvidia's 20+ years of business in China, Jensen Huang",
-      "Cambridge, UK-based Tendrils, which is designing a CPU architecture wi"
+      "Jensen Huang’s Exit Just Gave AMD and Google Their Biggest AI Opening",
+      "Sources: despite Nvidia's 20+ years of business in China, Jensen Huang"
     ]
   },
-  "judged": 17,
-  "kept": 3,
+  "judged": 7,
+  "kept": 4,
   "research": {
-    "investigated": 3,
-    "confirmed": 0,
-    "tool_calls": 12
+    "investigated": 4,
+    "confirmed": 4,
+    "tool_calls": 11
   },
   "research_log": [
-    "Sources: despite Nvidia's 20+ years of business in China, Jensen Huang: unconfirmed (searched “Jensen Huang Beijing policymakers chip self sufficiency Financial Times Eleanor Olcott”; searched “Financial Times Eleanor Olcott Jensen Huang China policymakers”; searched “\"Eleanor Olcott\" Jensen Huang Nvidia”; searched “Reuters Jensen Huang China chip self-sufficiency policymakers”)",
-    "Cambridge, UK-based Tendrils, which is designing a CPU architecture wi: unconfirmed (searched “Tendrils CPU architecture $30 million funding Benchmark”; searched “Tendrils Compute raised $30M”; searched “Tendrils UK chip startup”; searched “\"Tendrils Compute\"”)",
-    "AI Chatbots and Children: Should India Regulate What Bots Say?: unconfirmed (searched “India regulate AI chatbots children emotional support legislation”; read msn.com; searched “\"AI chatbots\" children India regulation”; searched “regulate AI chatbots for children India law”)"
+    "Claude Meetings: confirmed (searched “Claude Meetings”; read techcrunch.com)",
+    "Sources: despite Nvidia's 20+ years of business in China, Jensen Huang: confirmed (searched “Jensen Huang struggled to gain access to policymakers Beijing chip self sufficiency Eleanor Olcott Financial Times”; searched “\"Eleanor Olcott\" Nvidia Jensen Huang Beijing chip self-sufficiency”; searched “\"despite Nvidia's 20+ years of business in China\"”)",
+    "Jensen Huang and the decline of the visionary showman founder CEO: confirmed (searched “Jensen Huang Nvidia CES 2025 January 6 arena black leather jacket”; searched “\"Jensen Huang and the decline of the visionary showman founder CEO\"”; searched “\"The Verge\" \"Jensen Huang\" \"decline of the visionary showman\"”)",
+    "Jensen Huang’s Exit Just Gave AMD and Google Their Biggest AI Opening: confirmed (searched “Jensen Huang resigns NVIDIA”; searched “Jensen Huang AMD Google AI opening Analytics India Magazine”; read analyticsindiamag.com)"
+  ],
+  "threads": [
+    "Jensen Huang resignation and Nvidia leadership crisis: Jensen Huang struggled to access Beijing chip policymakers",
+    "Jensen Huang resignation and Nvidia leadership crisis: Nvidia CEO Jensen Huang resigns amid scandals, ending an era",
+    "Jensen Huang resignation and Nvidia leadership crisis: Nvidia faces leadership transition and market shifts after J"
   ],
   "videos": {
     "OpenAI": "ok (13 in feed, 0 new)",
     "Anthropic": "ok (12 in feed, 0 new)",
     "Google DeepMind": "ok (12 in feed, 0 new)",
-    "Google for Developers": "ok (10 in feed, 3 new)",
-    "AI at Meta": "ok (9 in feed, 1 new)",
-    "Microsoft Research": "ok (10 in feed, 1 new)",
+    "Google for Developers": "ok (10 in feed, 2 new)",
+    "AI at Meta": "ok (9 in feed, 0 new)",
+    "Microsoft Research": "ok (10 in feed, 0 new)",
     "NVIDIA": "ok (8 in feed, 0 new)",
     "Hugging Face": "ok (12 in feed, 3 new)",
     "Mistral AI": "ok (0 in feed, 0 new)",
     "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
     "AI Explained": "ok (15 in feed, 0 new)",
     "Lex Fridman": "ok (14 in feed, 0 new)",
     "Dwarkesh Patel": "ok (15 in feed, 0 new)",
@@ -195,24 +180,19 @@
     "Hard Fork": "ok (4 in feed, 0 new)",
     "The Cognitive Revolution": "ok (9 in feed, 0 new)",
     "Lenny's Podcast": "ok (3 in feed, 0 new)",
-    "20VC": "ok (3 in feed, 1 new)"
+    "20VC": "ok (3 in feed, 0 new)"
   },
-  "videos_kept": "7 kept from 12 new",
-  "trackers": "filed 0 stories; no tracker changed",
-  "claims": "167 tracked, 161 open",
+  "videos_kept": "7 kept from 7 new",
+  "tagged": 4,
+  "explainers": "1 added to earlier stories",
+  "trackers": "filed 4 stories; updated frontier-race, ai-infrastructure",
+  "claims": "168 tracked, 162 open, 0 updated this run",
   "model_tracker": "82 models, 3 changes today",
-  "photos": "0 saved, 0 unavailable",
-  "alerts": "8 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":0}",
-  "ai_requests_run": 17,
-  "ai_tokens_run": 33093,
-  "ai_requests_today": 119,
-  "provider_log": [
-    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
-    "gemini/gemini-flash-latest: 503 (server busy); trying next model",
-    "gemini: 503 after retry; moving to next provider for this run",
-    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
-    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
-    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model"
-  ]
+  "briefing": "3 themes from 20 stories",
+  "photos": "4 saved, 0 unavailable",
+  "alerts": "12 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":32}",
+  "ai_requests_run": 30,
+  "ai_tokens_run": 74812,
+  "ai_requests_today": 149,
+  "provider_log": []
 }
