@@ -1,62 +1,63 @@
-## Frontier Wire newsroom run — 2026-11-14T07:21:03+00:00
+## Frontier Wire newsroom run — 2026-11-14T09:58:44+00:00
 
-Fetched 2991 items · fresh 13 · judged 14 · kept 5 · **written 3**
-AI: 35 requests, 73,288 tokens this run · 102 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking the fallout from Nvidia's executive leadership crisis and tracking venture funding across AI infrastructure and agent safety.
-  Priorities: Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its (Deepens the ongoing Nvidia corporate scandal and scrutiny around chip distribution and market dynamics.); Analysis: Sam Bankman-Fried's $500M Anthropic investment in 2021 would (Fascinating financial context on Anthropic's valuation trajectory and early investor exits leading into the IPO.); WhiteMatter, which builds "guardian" AI agents to oversee file access, (WhiteMatter's Series A highlights the emerging market for guardian AI agents overseeing other agents.); Cambridge, UK-based Tendrils, which is designing a CPU architecture wi (UK-based Tendrils designing high-core-count parallel CPUs highlights specialized hardware architecture funding.); AI Chatbots and Children: Should India Regulate What Bots Say? (Fills our AI in India desk by examining regulatory questions around AI chatbots and children.)
-  Thin areas: india, safety
-  Searches: Nvidia GPU scarcity funding startups: 1 new
-  Dig deeper: Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its; Analysis: Sam Bankman-Fried's $500M Anthropic investment in 2021 would
-Research agent: investigated 5 stories with 15 tool calls, confirmed 3
-Daily briefing: 3 themes from 20 stories
-Threads updated: Anthropic IPO valuation and Nscale chip funding: Sam Bankman-Fried misses out on Anthropic IPO windfall
-Videos: 3 kept from 3 new · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face ok (12 in feed, 3 new), Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
-Photos: 3 saved, 0 unavailable
-Alerts: 11 events sent: {"subscribers":7,"sent":0,"queued":28}
-Claims: 167 tracked, 161 open, 1 updated this run
-Trackers: filed 6 stories; updated agent-safety, ai-infrastructure, ai-money
+Fetched 2969 items · fresh 14 · judged 17 · kept 3 · **written 0**
+AI: 17 requests, 33,093 tokens this run · 119 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Chasing Nvidia‑China policy fallout and its impact on investors, while covering the Microsoft outage and fresh AI hardware funding.
+  Priorities: Sources: despite Nvidia's 20+ years of business in China, Jensen Huang (Key policy story on Nvidia's China dealings, central to ongoing US‑China AI tension thread.); Altimeter, Atreides urge Nvidia board to keep door open for Jensen Hua (Board pressure on Nvidia regarding Jensen Huang ties into governance and leadership uncertainty.); Microsoft says all Microsoft 365 products are operational, ending an o (Microsoft 365 outage affects global enterprises; high relevance for business readers.); Cambridge, UK-based Tendrils, which is designing a CPU architecture wi (Large $30M funding for a novel many‑core CPU architecture, important hardware trend for investors.); AI Chatbots and Children: Should India Regulate What Bots Say? (Regulation debate on AI chatbots for children in India, adds policy angle for a growing market.)
+  Searches: Nvidia China chip sales probe: 2 new; Microsoft 365 outage timeline: 1 new; Tendrils multi-core CPU market: 0 new
+  Dig deeper: Sources: despite Nvidia's 20+ years of business in China, Jensen Huang; Cambridge, UK-based Tendrils, which is designing a CPU architecture wi
+Research agent: investigated 3 stories with 12 tool calls, confirmed 0
+Videos: 7 kept from 12 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (10 in feed, 3 new), AI at Meta ok (9 in feed, 1 new), Microsoft Research ok (10 in feed, 1 new), NVIDIA ok (8 in feed, 0 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 1 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 0 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 1 new), Big Technology Podcast ok (13 in feed, 1 new), Hard Fork ok (4 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (3 in feed, 0 new), 20VC ok (3 in feed, 1 new)
+Photos: 0 saved, 0 unavailable
+Alerts: 8 events sent: {"subscribers":7,"sent":0,"queued":0}
+Claims: 167 tracked, 161 open
+Trackers: filed 0 stories; no tracker changed
 Model tracker: 82 models, 3 changes today
-Tagged 3 stories by sector, region and deal
-Time: gather 138s, plan 2s, judge 5s, verify and write 105s, videos 3s, tagging 2s, trackers 12s, briefing 2s, alerts 4s
+Time: gather 68s, plan 30s, judge 24s, verify and write 90s, videos 27s, alerts 1s
 
 ### New stories
-- **industry** — [Nvidia reportedly funded AI startups to absorb excess GPU supply](https://techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus)  
-  Former Nvidia CEO Jensen Huang reportedly financed AI startups and cloud providers to absorb excess semiconductor shipments. The financing strategy aimed to manage over-ordered TSMC silicon and maintain GPU pricing.  
-  _3 source(s), 0 verified quote(s)_
-- **research** — [WhiteMatter raises $20 million Series A for AI agent governance platform](https://techmeme.com/261114/p5)  
-  Cybersecurity startup WhiteMatter raised a $20 million Series A funding round led by Blumberg Capital, bringing its total funding to $24 million. The company builds platform governance and "guardian" agents to oversee AI agent file access, software use, and decision-making.  
-  _4 source(s), 1 verified quote(s)_
-- **industry** — [Sam Bankman-Fried misses out on Anthropic IPO windfall](https://techmeme.com/261113/p42)  
-  An analysis shows that Sam Bankman-Fried's 2021 investment of $500M in Anthropic would be worth approximately $37B if the company lists at a $1.5T valuation. However, the jailed cryptocurrency mogul relinquished his stake in 2024 for about $1.3B.  
-  _4 source(s), 0 verified quote(s)_
+- none
 
 <details><summary>Dropped</summary>
 
-- Ggml v1.0.0 — score 5: Standard open-source software library release (ggml v1.0.0); routine developer tooling update rather than major frontier news.
-- OpenAI Introduces ChatGPT Wallet for Agent-Led Payments — duplicate of 4e379f6cb9d3
-- From Greenjoules To mistEO — Indian Startups Raised Over $25 Mn This Week — score 4: Routine weekly venture funding roundup covering general Indian startups with minimal specific AI focus.
-- Operand, which offers AI-powered due diligence tools for PE firms, raised $31M across a seed and a Series A led by Khosla Ventures at a $220M valuation (Lucinda Shen/Axios) — score 5: Early-stage funding for an AI-powered due diligence tool for private equity is a niche vertical application.
-- Charta Health, which offers AI-powered tools to automate medical chart review, billing, and coding workflows, raised a $55M Series B led by Insight Partners (Jessica Hagen/MobiHealthNews) — score 5: Series B funding for medical chart review and billing automation is standard vertical AI application news.
-- Luminal, which provides an inference cloud and develops inference compiler software to test running AI models on different chips, raised a $25M Series A (Chris Metinko/Axios) — score 5: Luminal's $25M Series A for inference cloud and compiler software is a modest infrastructure funding round.
-- JD.com completes its takeover of German electronics retailer Ceconomy, after acquiring a ~60% stake for ~$1.5B, following the EU's approval of the deal (Tomoko Wakasugi/Nikkei Asia) — not AI: JD.com acquiring German electronics retailer Ceconomy is general e-commerce and retail M&A without an AI focus.
-- AI's impact on math is a preview of what AI will do to AI research, with AI matching top human researchers potentially just a couple of years away (Dwarkesh Patel/Dwarkesh Podcast) — score 5: Podcast commentary and speculation on AI's impact on math and research, lacking concrete news substance.
-- Cambridge, UK-based Tendrils, which is designing a CPU architecture with thousands of cores operating in parallel, raised $30M led by Benchmark (John Reynolds/Tech.eu) — could not verify yet; will retry next run
-- AI Chatbots and Children: Should India Regulate What Bots Say? — could not verify yet; will retry next run
+- Unsloth Qwen3.8-27B Quantizations – Dynamic v3.1 Update — not AI: Routine model quantization update (Unsloth Qwen3.8-27B).
+- How Not to Build a Music Player — not AI: Off-topic software engineering post about building a music player.
+- Live-migration support in FreeBSD and bhyve coming — not AI: FreeBSD and bhyve virtualization update, no AI relevance.
+- Mahadev Betting App: CBI Searches Multiple Locations, ED Arrests Saurabh Chandrakar — not AI: Betting app scam raids, no AI relevance.
+- Altimeter, Atreides urge Nvidia board to keep door open for Jensen Huang's return as CEO — duplicate of eb62d1b6c624
+- MAGIC launches AIMM 2026, offers Rs 7 lakh in prizes for AI innovations — score 4: Local AI competition and incubation launch offering small prizes; minor regional event.
+- Stage III cancer to 200+ startups: How Tej Chingtham built the Northeast’s first incubator — not AI: Startup incubator profile in Northeast India, no specific AI focus.
+- Odisha startup BabyCue wins national challenge with its rapid diagnostic test for children — not AI: Diagnostic test startup win, no AI relevance.
+- 5 Lessons from Yoshuku: The Japanese Art of Manifesting — not AI: General lifestyle and personal development article from YourStory, completely unrelated to AI.
+- 28 Indian startups pitch air pollution solutions to VCs at AirEarth.org event — not AI: Clean-air startup pitches, no AI relevance.
+- Microsoft says all Microsoft 365 products are operational, ending an outage that disrupted governments, traders, hospitals, and businesses around the world (Bloomberg) — score 4: Microsoft 365 cloud outage is general IT infrastructure news with no significant AI angle in the source.
+- Huang, Lutnick Reportedly to Testify Before Congress Amid Nvidia Affair Probe — score 4: Duplicate of ongoing coverage regarding congressional testimony probes into Nvidia.
+- Howard Lutnick to Testify on Nvidia's AI Chip Sales to China — score 4: Duplicate of ongoing coverage regarding Howard Lutnick testifying on Nvidia chip sales.
+- Microsoft's outage is in its 2nd day, and it's affecting Claude. Here's everything we know. — score 4: Updates on the Microsoft cloud outage affecting enterprise services; AI relevance is minimal and secondary to the general IT disruption.
+- Sources: despite Nvidia's 20+ years of business in China, Jensen Huang struggled to gain access to policymakers driving Beijing's chip self-sufficiency campaign (Eleanor Olcott/Financial Times) — could not verify yet; will retry next run
+- Cambridge, UK-based Tendrils, which is designing a CPU architecture with thousands of cores operating in parallel, raised $30M led by Benchmark (John Reynolds/Tech.eu) — could not verify yet after a second try; dropped
+- AI Chatbots and Children: Should India Regulate What Bots Say? — could not verify yet after a second try; dropped
 
 </details>
 
 ### Sources with problems
-- `gdelt-india`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
 
 <details><summary>Research agent's work</summary>
 
-- Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its: confirmed (searched “Nvidia engineered scarcity funding AI startups GPUs”; read yahoo.com; searched “Nvidia techpowerup 354814”)
-- WhiteMatter, which builds "guardian" AI agents to oversee file access,: confirmed (searched “WhiteMatter Series A 20M Alice Tecotzky Business Insider”; searched “WhiteMatter AI 20 million Series A guardian”; read businessinsider.com)
-- Cambridge, UK-based Tendrils, which is designing a CPU architecture wi: unconfirmed (searched “Tendrils Cambridge CPU Benchmark 30M”; searched “Tendrils Benchmark 30M”; searched “Tendrils CPU Benchmark Tech.eu”)
-- Analysis: Sam Bankman-Fried's $500M Anthropic investment in 2021 would: confirmed (searched “Sam Bankman Fried Anthropic investment George Hammond Financial Times”; read ft.com; searched “Sam Bankman Fried Anthropic IPO Financial Times”)
-- AI Chatbots and Children: Should India Regulate What Bots Say?: unconfirmed (searched “India regulation AI chatbots children emotional support”; searched “India regulate AI chatbots children legislation”; searched “"Analytics India Magazine" AI chatbots children regulate”)
+- Sources: despite Nvidia's 20+ years of business in China, Jensen Huang: unconfirmed (searched “Jensen Huang Beijing policymakers chip self sufficiency Financial Times Eleanor Olcott”; searched “Financial Times Eleanor Olcott Jensen Huang China policymakers”; searched “"Eleanor Olcott" Jensen Huang Nvidia”; searched “Reuters Jensen Huang China chip self-sufficiency policymakers”)
+- Cambridge, UK-based Tendrils, which is designing a CPU architecture wi: unconfirmed (searched “Tendrils CPU architecture $30 million funding Benchmark”; searched “Tendrils Compute raised $30M”; searched “Tendrils UK chip startup”; searched “"Tendrils Compute"”)
+- AI Chatbots and Children: Should India Regulate What Bots Say?: unconfirmed (searched “India regulate AI chatbots children emotional support legislation”; read msn.com; searched “"AI chatbots" children India regulation”; searched “regulate AI chatbots for children India law”)
 
 </details>
 
 ### Notes
-- 2 kept item(s) carried over to the next run
+- 1 kept item(s) carried over to the next run
+- gemini/gemini-flash-lite-latest: 503 (server busy); trying next model
+- gemini/gemini-flash-latest: 503 (server busy); trying next model
+- gemini: 503 after retry; moving to next provider for this run
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
