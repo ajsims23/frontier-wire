@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-14T04:06:43+00:00",
+  "started_at": "2026-11-14T07:21:03+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -19,10 +19,10 @@
     "microsoft-ai": "ok (10)",
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
-    "arxiv": "failed: ReadTimeout: The read operation timed out",
-    "hf-papers": "ok (13)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (23)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (15)",
+    "gdelt": "ok (23)",
+    "hn": "ok (19)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -33,7 +33,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -43,149 +43,140 @@
   },
   "dropped": [
     {
-      "title": "Perplexity Decider v1.3: Training, eval, and use cases",
-      "reason": "score 4: Minor model version release without sufficient distinct frontier significance."
+      "title": "Ggml v1.0.0",
+      "reason": "score 5: Standard open-source software library release (ggml v1.0.0); routine developer tooling update rather than major frontier news."
     },
     {
-      "title": "MediaNama This Week: Top 10 Stories (7 November – 13 November 2026)",
-      "reason": "not AI: Weekly roundup newsletter link containing no distinct AI news."
+      "title": "OpenAI Introduces ChatGPT Wallet for Agent-Led Payments",
+      "reason": "duplicate of 4e379f6cb9d3"
     },
     {
-      "title": "Microsoft outage shows the risks of relying on a single technology provider for essential services",
-      "reason": "duplicate of 2d3e2ece6b31"
+      "title": "From Greenjoules To mistEO — Indian Startups Raised Over $25 Mn This Week",
+      "reason": "score 4: Routine weekly venture funding roundup covering general Indian startups with minimal specific AI focus."
     },
     {
-      "title": "Softbank further trims India exposure, offloads Meesho shares worth Rs 1,885 crore",
-      "reason": "not AI: SoftBank selling Meesho shares is e-commerce and general financial news with no AI relevance."
+      "title": "Operand, which offers AI-powered due diligence tools for PE firms, raised $31M across a seed and a Series A led by Khosla Ventures at a $220M valuation (Lucinda Shen/Axios)",
+      "reason": "score 5: Early-stage funding for an AI-powered due diligence tool for private equity is a niche vertical application."
     },
     {
-      "title": "How art exhibitions provide unmatched experiences of aesthetics, scale and technique",
-      "reason": "not AI: Photo essay on an art exhibition; completely unrelated to AI."
+      "title": "Charta Health, which offers AI-powered tools to automate medical chart review, billing, and coding workflows, raised a $55M Series B led by Insight Partners (Jessica Hagen/MobiHealthNews)",
+      "reason": "score 5: Series B funding for medical chart review and billing automation is standard vertical AI application news."
     },
     {
-      "title": "Microsoft’s global outage; Vidya Balan’s call to put child safety first",
-      "reason": "not AI: General roundup covering a Microsoft outage and child safety commentary; lacks specific AI news focus."
+      "title": "Luminal, which provides an inference cloud and develops inference compiler software to test running AI models on different chips, raised a $25M Series A (Chris Metinko/Axios)",
+      "reason": "score 5: Luminal's $25M Series A for inference cloud and compiler software is a modest infrastructure funding round."
     },
     {
-      "title": "Free speech group FIRE says DOJ and DHS will end efforts to curb \"ICE Sightings - Chicagoland\" Facebook group and Eyes Up iOS app, which report on ICE activity (Kanishka Singh/Reuters)",
-      "reason": "not AI: Free speech settlement regarding ICE tracking groups and apps has no AI relevance."
-    },
-    {
-      "title": "Jensen Huang exit and US scrutiny imperil $3 billion in Chinese AI projects reliant on Nvidia",
-      "reason": "variety: already 2 stories from indiatimes.com this run"
+      "title": "JD.com completes its takeover of German electronics retailer Ceconomy, after acquiring a ~60% stake for ~$1.5B, following the EU's approval of the deal (Tomoko Wakasugi/Nikkei Asia)",
+      "reason": "not AI: JD.com acquiring German electronics retailer Ceconomy is general e-commerce and retail M&A without an AI focus."
     },
     {
       "title": "AI's impact on math is a preview of what AI will do to AI research, with AI matching top human researchers potentially just a couple of years away (Dwarkesh Patel/Dwarkesh Podcast)",
+      "reason": "score 5: Podcast commentary and speculation on AI's impact on math and research, lacking concrete news substance."
+    },
+    {
+      "title": "Cambridge, UK-based Tendrils, which is designing a CPU architecture with thousands of cores operating in parallel, raised $30M led by Benchmark (John Reynolds/Tech.eu)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "AI Chatbots and Children: Should India Regulate What Bots Say?",
       "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "eb62d1b6c624",
-      "headline": "Nvidia approaches Arm CEO Haas as employees seek Huang's return",
+      "id": "b26717d449a4",
+      "headline": "Nvidia reportedly funded AI startups to absorb excess GPU supply",
       "category": "industry",
-      "summary": "Nvidia's board has approached Arm Holdings CEO Rene Haas as a potential successor to Jensen Huang, who resigned as CEO. Meanwhile, a petition by Nvidia employees to reinstate Huang has received backing from SpaceX CEO Elon Musk.",
-      "url": "https://economictimes.indiatimes.com/tech/technology/nvidia-approaches-arm-holdings-ceo-haas-to-take-over-jensen-huangs-job-elon-musk-backs-huangs-reinstatement/articleshow/135821129.cms",
-      "sources": 2,
-      "quotes": 1
-    },
-    {
-      "id": "d2cec29fce27",
-      "headline": "Tesla invites select customers to order Cybercab for personal use",
-      "category": "models",
-      "summary": "Tesla is offering select customers the ability to order its driverless Cybercab for personal use at a price of $29,990. Operating the vehicle requires a mandatory $299 per month Autonomy Subscription and is limited to supported service areas in Texas and Florida.",
-      "url": "https://techmeme.com/261113/p39",
-      "sources": 5,
+      "summary": "Former Nvidia CEO Jensen Huang reportedly financed AI startups and cloud providers to absorb excess semiconductor shipments. The financing strategy aimed to manage over-ordered TSMC silicon and maintain GPU pricing.",
+      "url": "https://techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+      "sources": 3,
       "quotes": 0
     },
     {
-      "id": "792490ccf5f8",
-      "headline": "Nvidia scandal looms over US-China AI safety talks",
-      "category": "policy",
-      "summary": "US and Chinese leaders are preparing to discuss AI safety and a tech crisis hotline at the APEC meeting, while the Nvidia leadership scandal unfolds. Jensen Huang resigned as CEO following an affair with a suspected Chinese spy.",
-      "url": "https://economictimes.indiatimes.com/tech/technology/nvidia-scandal-looms-over-us-china-ai-talks/articleshow/135821307.cms",
-      "sources": 3,
+      "id": "7a3f1296623a",
+      "headline": "WhiteMatter raises $20 million Series A for AI agent governance platform",
+      "category": "research",
+      "summary": "Cybersecurity startup WhiteMatter raised a $20 million Series A funding round led by Blumberg Capital, bringing its total funding to $24 million. The company builds platform governance and \"guardian\" agents to oversee AI agent file access, software use, and decision-making.",
+      "url": "https://techmeme.com/261114/p5",
+      "sources": 4,
       "quotes": 1
     },
     {
-      "id": "a3f6c83f5ebf",
-      "headline": "Trump not expected to raise Jensen Huang allegations in meeting with Xi",
-      "category": "policy",
-      "summary": "US officials stated that President Donald Trump is not expected to raise allegations of a Chinese intelligence operation involving former Nvidia CEO Jensen Huang during his upcoming meeting with Chinese President Xi.",
-      "url": "https://techmeme.com/261113/p40",
-      "sources": 2,
+      "id": "2c9708b63937",
+      "headline": "Sam Bankman-Fried misses out on Anthropic IPO windfall",
+      "category": "industry",
+      "summary": "An analysis shows that Sam Bankman-Fried's 2021 investment of $500M in Anthropic would be worth approximately $37B if the company lists at a $1.5T valuation. However, the jailed cryptocurrency mogul relinquished his stake in 2024 for about $1.3B.",
+      "url": "https://techmeme.com/261113/p42",
+      "sources": 4,
       "quotes": 0
     }
   ],
   "notes": [
-    "not India desk: 'Jensen Huang exit and US scrutiny imperil $3 billi'",
-    "dropped non-quote (Dylan Loh): dominate the agenda…",
-    "1 kept item(s) carried over to the next run"
+    "2 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 91.5,
-    "audit": 0.0,
+    "gather": 137.9,
+    "audit": -0.0,
     "plan": 2.0,
-    "judge": 3.9,
-    "verify and write": 152.0,
-    "videos": 4.4,
-    "tagging": 2.0,
-    "explainers": -0.0,
-    "trackers": 61.9,
-    "claims": 8.0,
+    "judge": 4.7,
+    "verify and write": 105.2,
+    "videos": 3.2,
+    "tagging": 2.4,
+    "explainers": 0.0,
+    "trackers": 12.1,
+    "claims": 0.9,
     "model tracker": 0.1,
     "weekly": -0.0,
     "builders": -0.0,
     "top voices": -0.0,
-    "briefing": 3.4,
-    "self-review": -0.0,
-    "photos": 0.7,
-    "stock photos": 6.1,
+    "briefing": 1.9,
+    "self-review": 0.0,
+    "photos": 0.8,
+    "stock photos": -0.0,
     "daily email": -0.0,
-    "alerts": 8.4
+    "alerts": 4.5
   },
-  "fetched": 2930,
-  "fresh": 14,
+  "fetched": 2991,
+  "fresh": 13,
   "plan": {
-    "focus": "Tracking the fallout from Nvidia's executive upheaval while monitoring AI infrastructure and market developments.",
+    "focus": "Tracking the fallout from Nvidia's executive leadership crisis and tracking venture funding across AI infrastructure and agent safety.",
     "priorities": [
-      "Nvidia approaches Arm Holdings CEO Haas to take over Jensen Huang's jo (Major update on Nvidia CEO succession search involving Arm CEO Rene Haas and Elon Musk's backing.)",
-      "Tesla says \"select customers\" can now place orders for its Cybercab \"f (Tesla opens Cybercab orders to select customers with a mandatory monthly autonomy subscription.)",
-      "Nvidia scandal looms over US-China AI talks (Connects the Nvidia executive scandal directly to US-China AI diplomatic talks.)",
-      "AI's impact on math is a preview of what AI will do to AI research, wi (Important commentary on AI's acceleration in mathematical research and recursive self-improvement.)",
-      "Investors flock to Anthropic IPO but question durability of AI lead (Fresh market intelligence on investor sentiment surrounding the Anthropic IPO.)"
+      "Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its (Deepens the ongoing Nvidia corporate scandal and scrutiny around chip distribution and market dynamics.)",
+      "Analysis: Sam Bankman-Fried's $500M Anthropic investment in 2021 would (Fascinating financial context on Anthropic's valuation trajectory and early investor exits leading into the IPO.)",
+      "WhiteMatter, which builds \"guardian\" AI agents to oversee file access, (WhiteMatter's Series A highlights the emerging market for guardian AI agents overseeing other agents.)",
+      "Cambridge, UK-based Tendrils, which is designing a CPU architecture wi (UK-based Tendrils designing high-core-count parallel CPUs highlights specialized hardware architecture funding.)",
+      "AI Chatbots and Children: Should India Regulate What Bots Say? (Fills our AI in India desk by examining regulatory questions around AI chatbots and children.)"
     ],
     "thin_areas": [
       "india",
-      "research"
+      "safety"
     ],
     "searches": [
-      "Tesla Cybercab orders autonomy subscription: 0 new"
+      "Nvidia GPU scarcity funding startups: 1 new"
     ],
     "dig_deeper": [
-      "Nvidia approaches Arm Holdings CEO Haas to take over Jensen Huang's jo",
-      "Tesla says \"select customers\" can now place orders for its Cybercab \"f"
+      "Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its",
+      "Analysis: Sam Bankman-Fried's $500M Anthropic investment in 2021 would"
     ]
   },
   "judged": 14,
-  "kept": 6,
+  "kept": 5,
   "research": {
     "investigated": 5,
-    "confirmed": 4,
-    "tool_calls": 14
+    "confirmed": 3,
+    "tool_calls": 15
   },
   "research_log": [
-    "Nvidia approaches Arm Holdings CEO Haas to take over Jensen Huang's jo: confirmed (searched “Nvidia approaches Arm Holdings CEO Haas Jensen Huang Elon Musk”; searched “\"Nvidia approaches Arm CEO Haas\" Reuters”; read msn.com)",
-    "Tesla says \"select customers\" can now place orders for its Cybercab \"f: confirmed (searched “Tesla Cybercab select customers personal use 30K 299 month Autonomy Subscription Kara Carlson Bloomberg”; read bloomberg.com)",
-    "AI's impact on math is a preview of what AI will do to AI research, wi: unconfirmed (searched “Dwarkesh Patel AI math AI research”; searched “Dwarkesh Patel math AI research essay”; searched “\"AI's impact on math\"”)",
-    "Nvidia scandal looms over US-China AI talks: confirmed (searched “Nvidia scandal looms over US-China AI talks”; read barrons.com; read nbcnews.com)",
-    "US officials say Trump is not expected to raise allegations of a Chine: confirmed (searched “Trump Jensen Huang Chinese intelligence operation Xi Dan Mangan CNBC”; searched “\"Trump doesn't plan to raise Nvidia, spy issue during China trip\" CNBC”; read msn.com)"
+    "Nvidia Allegedly Engineered Scarcity by Funding AI Startups to Buy Its: confirmed (searched “Nvidia engineered scarcity funding AI startups GPUs”; read yahoo.com; searched “Nvidia techpowerup 354814”)",
+    "WhiteMatter, which builds \"guardian\" AI agents to oversee file access,: confirmed (searched “WhiteMatter Series A 20M Alice Tecotzky Business Insider”; searched “WhiteMatter AI 20 million Series A guardian”; read businessinsider.com)",
+    "Cambridge, UK-based Tendrils, which is designing a CPU architecture wi: unconfirmed (searched “Tendrils Cambridge CPU Benchmark 30M”; searched “Tendrils Benchmark 30M”; searched “Tendrils CPU Benchmark Tech.eu”)",
+    "Analysis: Sam Bankman-Fried's $500M Anthropic investment in 2021 would: confirmed (searched “Sam Bankman Fried Anthropic investment George Hammond Financial Times”; read ft.com; searched “Sam Bankman Fried Anthropic IPO Financial Times”)",
+    "AI Chatbots and Children: Should India Regulate What Bots Say?: unconfirmed (searched “India regulation AI chatbots children emotional support”; searched “India regulate AI chatbots children legislation”; searched “\"Analytics India Magazine\" AI chatbots children regulate”)"
   ],
   "threads": [
-    "Megaspeed spy plot and Nvidia export controls: Nvidia approaches Arm CEO Haas as employees seek Huang's ret",
-    "Megaspeed spy plot and Nvidia export controls: Nvidia scandal looms over US-China AI safety talks",
-    "Megaspeed spy plot and Nvidia export controls: Trump not expected to raise Jensen Huang allegations in meet"
+    "Anthropic IPO valuation and Nscale chip funding: Sam Bankman-Fried misses out on Anthropic IPO windfall"
   ],
   "videos": {
     "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
@@ -195,12 +186,12 @@
     "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "ok (12 in feed, 3 new)",
     "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
     "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
     "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
@@ -212,21 +203,16 @@
     "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
   },
-  "tagged": 4,
-  "trackers": "filed 4 stories; updated us-china, frontier-race, agent-safety",
-  "claims": "166 tracked, 160 open, 0 updated this run",
+  "videos_kept": "3 kept from 3 new",
+  "tagged": 3,
+  "trackers": "filed 6 stories; updated agent-safety, ai-infrastructure, ai-money",
+  "claims": "167 tracked, 161 open, 1 updated this run",
   "model_tracker": "82 models, 3 changes today",
-  "briefing": "4 themes from 20 stories",
-  "india_briefing": "3 themes from 3 stories",
+  "briefing": "3 themes from 20 stories",
   "photos": "3 saved, 0 unavailable",
-  "stock photos": "1 added",
-  "alerts": "12 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":36}",
+  "alerts": "11 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":28}",
   "ai_requests_run": 35,
-  "ai_tokens_run": 81042,
-  "ai_requests_today": 67,
-  "provider_log": [
-    "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model",
-    "gemini: network error ReadTimeout, retrying",
-    "gemini/gemini-flash-latest: 503 (server busy); trying next model"
-  ]
+  "ai_tokens_run": 73288,
+  "ai_requests_today": 102,
+  "provider_log": []
 }
