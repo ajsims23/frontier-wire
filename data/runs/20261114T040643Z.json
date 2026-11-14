@@ -1,0 +1,232 @@
+{
+  "started_at": "2026-11-14T04:06:43+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1387)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (907)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "failed: ReadTimeout: The read operation timed out",
+    "hf-papers": "ok (13)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (23)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Perplexity Decider v1.3: Training, eval, and use cases",
+      "reason": "score 4: Minor model version release without sufficient distinct frontier significance."
+    },
+    {
+      "title": "MediaNama This Week: Top 10 Stories (7 November – 13 November 2026)",
+      "reason": "not AI: Weekly roundup newsletter link containing no distinct AI news."
+    },
+    {
+      "title": "Microsoft outage shows the risks of relying on a single technology provider for essential services",
+      "reason": "duplicate of 2d3e2ece6b31"
+    },
+    {
+      "title": "Softbank further trims India exposure, offloads Meesho shares worth Rs 1,885 crore",
+      "reason": "not AI: SoftBank selling Meesho shares is e-commerce and general financial news with no AI relevance."
+    },
+    {
+      "title": "How art exhibitions provide unmatched experiences of aesthetics, scale and technique",
+      "reason": "not AI: Photo essay on an art exhibition; completely unrelated to AI."
+    },
+    {
+      "title": "Microsoft’s global outage; Vidya Balan’s call to put child safety first",
+      "reason": "not AI: General roundup covering a Microsoft outage and child safety commentary; lacks specific AI news focus."
+    },
+    {
+      "title": "Free speech group FIRE says DOJ and DHS will end efforts to curb \"ICE Sightings - Chicagoland\" Facebook group and Eyes Up iOS app, which report on ICE activity (Kanishka Singh/Reuters)",
+      "reason": "not AI: Free speech settlement regarding ICE tracking groups and apps has no AI relevance."
+    },
+    {
+      "title": "Jensen Huang exit and US scrutiny imperil $3 billion in Chinese AI projects reliant on Nvidia",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "AI's impact on math is a preview of what AI will do to AI research, with AI matching top human researchers potentially just a couple of years away (Dwarkesh Patel/Dwarkesh Podcast)",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "eb62d1b6c624",
+      "headline": "Nvidia approaches Arm CEO Haas as employees seek Huang's return",
+      "category": "industry",
+      "summary": "Nvidia's board has approached Arm Holdings CEO Rene Haas as a potential successor to Jensen Huang, who resigned as CEO. Meanwhile, a petition by Nvidia employees to reinstate Huang has received backing from SpaceX CEO Elon Musk.",
+      "url": "https://economictimes.indiatimes.com/tech/technology/nvidia-approaches-arm-holdings-ceo-haas-to-take-over-jensen-huangs-job-elon-musk-backs-huangs-reinstatement/articleshow/135821129.cms",
+      "sources": 2,
+      "quotes": 1
+    },
+    {
+      "id": "d2cec29fce27",
+      "headline": "Tesla invites select customers to order Cybercab for personal use",
+      "category": "models",
+      "summary": "Tesla is offering select customers the ability to order its driverless Cybercab for personal use at a price of $29,990. Operating the vehicle requires a mandatory $299 per month Autonomy Subscription and is limited to supported service areas in Texas and Florida.",
+      "url": "https://techmeme.com/261113/p39",
+      "sources": 5,
+      "quotes": 0
+    },
+    {
+      "id": "792490ccf5f8",
+      "headline": "Nvidia scandal looms over US-China AI safety talks",
+      "category": "policy",
+      "summary": "US and Chinese leaders are preparing to discuss AI safety and a tech crisis hotline at the APEC meeting, while the Nvidia leadership scandal unfolds. Jensen Huang resigned as CEO following an affair with a suspected Chinese spy.",
+      "url": "https://economictimes.indiatimes.com/tech/technology/nvidia-scandal-looms-over-us-china-ai-talks/articleshow/135821307.cms",
+      "sources": 3,
+      "quotes": 1
+    },
+    {
+      "id": "a3f6c83f5ebf",
+      "headline": "Trump not expected to raise Jensen Huang allegations in meeting with Xi",
+      "category": "policy",
+      "summary": "US officials stated that President Donald Trump is not expected to raise allegations of a Chinese intelligence operation involving former Nvidia CEO Jensen Huang during his upcoming meeting with Chinese President Xi.",
+      "url": "https://techmeme.com/261113/p40",
+      "sources": 2,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "not India desk: 'Jensen Huang exit and US scrutiny imperil $3 billi'",
+    "dropped non-quote (Dylan Loh): dominate the agenda…",
+    "1 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 91.5,
+    "audit": 0.0,
+    "plan": 2.0,
+    "judge": 3.9,
+    "verify and write": 152.0,
+    "videos": 4.4,
+    "tagging": 2.0,
+    "explainers": -0.0,
+    "trackers": 61.9,
+    "claims": 8.0,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 3.4,
+    "self-review": -0.0,
+    "photos": 0.7,
+    "stock photos": 6.1,
+    "daily email": -0.0,
+    "alerts": 8.4
+  },
+  "fetched": 2930,
+  "fresh": 14,
+  "plan": {
+    "focus": "Tracking the fallout from Nvidia's executive upheaval while monitoring AI infrastructure and market developments.",
+    "priorities": [
+      "Nvidia approaches Arm Holdings CEO Haas to take over Jensen Huang's jo (Major update on Nvidia CEO succession search involving Arm CEO Rene Haas and Elon Musk's backing.)",
+      "Tesla says \"select customers\" can now place orders for its Cybercab \"f (Tesla opens Cybercab orders to select customers with a mandatory monthly autonomy subscription.)",
+      "Nvidia scandal looms over US-China AI talks (Connects the Nvidia executive scandal directly to US-China AI diplomatic talks.)",
+      "AI's impact on math is a preview of what AI will do to AI research, wi (Important commentary on AI's acceleration in mathematical research and recursive self-improvement.)",
+      "Investors flock to Anthropic IPO but question durability of AI lead (Fresh market intelligence on investor sentiment surrounding the Anthropic IPO.)"
+    ],
+    "thin_areas": [
+      "india",
+      "research"
+    ],
+    "searches": [
+      "Tesla Cybercab orders autonomy subscription: 0 new"
+    ],
+    "dig_deeper": [
+      "Nvidia approaches Arm Holdings CEO Haas to take over Jensen Huang's jo",
+      "Tesla says \"select customers\" can now place orders for its Cybercab \"f"
+    ]
+  },
+  "judged": 14,
+  "kept": 6,
+  "research": {
+    "investigated": 5,
+    "confirmed": 4,
+    "tool_calls": 14
+  },
+  "research_log": [
+    "Nvidia approaches Arm Holdings CEO Haas to take over Jensen Huang's jo: confirmed (searched “Nvidia approaches Arm Holdings CEO Haas Jensen Huang Elon Musk”; searched “\"Nvidia approaches Arm CEO Haas\" Reuters”; read msn.com)",
+    "Tesla says \"select customers\" can now place orders for its Cybercab \"f: confirmed (searched “Tesla Cybercab select customers personal use 30K 299 month Autonomy Subscription Kara Carlson Bloomberg”; read bloomberg.com)",
+    "AI's impact on math is a preview of what AI will do to AI research, wi: unconfirmed (searched “Dwarkesh Patel AI math AI research”; searched “Dwarkesh Patel math AI research essay”; searched “\"AI's impact on math\"”)",
+    "Nvidia scandal looms over US-China AI talks: confirmed (searched “Nvidia scandal looms over US-China AI talks”; read barrons.com; read nbcnews.com)",
+    "US officials say Trump is not expected to raise allegations of a Chine: confirmed (searched “Trump Jensen Huang Chinese intelligence operation Xi Dan Mangan CNBC”; searched “\"Trump doesn't plan to raise Nvidia, spy issue during China trip\" CNBC”; read msn.com)"
+  ],
+  "threads": [
+    "Megaspeed spy plot and Nvidia export controls: Nvidia approaches Arm CEO Haas as employees seek Huang's ret",
+    "Megaspeed spy plot and Nvidia export controls: Nvidia scandal looms over US-China AI safety talks",
+    "Megaspeed spy plot and Nvidia export controls: Trump not expected to raise Jensen Huang allegations in meet"
+  ],
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "tagged": 4,
+  "trackers": "filed 4 stories; updated us-china, frontier-race, agent-safety",
+  "claims": "166 tracked, 160 open, 0 updated this run",
+  "model_tracker": "82 models, 3 changes today",
+  "briefing": "4 themes from 20 stories",
+  "india_briefing": "3 themes from 3 stories",
+  "photos": "3 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "12 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":36}",
+  "ai_requests_run": 35,
+  "ai_tokens_run": 81042,
+  "ai_requests_today": 67,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model",
+    "gemini: network error ReadTimeout, retrying",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model"
+  ]
+}
