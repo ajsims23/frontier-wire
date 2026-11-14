@@ -1,62 +1,81 @@
-## Frontier Wire newsroom run — 2026-11-14T18:59:53+00:00
+## Frontier Wire newsroom run — 2026-11-14T21:51:14+00:00
 
-Fetched 2945 items · fresh 11 · judged 13 · kept 3 · **written 3**
-AI: 26 requests, 64,259 tokens this run · 201 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking the ripple effects of Jensen Huang's exit across chip funding, open-source models, and market infrastructure.
-  Priorities: Jensen Huang's resignation is a setback for US open models, as his fun (Nathan Lambert's analysis on how Jensen Huang's resignation impacts open-source model funding.); Databento, which offers market data APIs and says it has contracts wit (Databento raising a $100M Series C at a $1.1B valuation highlights massive data infrastructure demand from frontier labs.); Ethan Mollick: The traffic from agent swarms doing research is going t (Ethan Mollick commentary on agent swarms driving heavy research traffic and model reconstruction.); Asian governments react to Nvidia CEO Jensen Huang’s exit (Asian governments reacting to Jensen Huang's exit and regional chip strategy shifts.); The OpenAI board member who fired Sam Altman says we still can&#8217;t (OpenAI board member weighing in on AI CEOs and governance trust.)
-  Thin areas: research
-  Searches: Jensen Huang resignation open source funding: 2 new; Databento Series C frontier labs: 0 new
-  Dig deeper: Databento, which offers market data APIs and says it has contracts wit; Jensen Huang's resignation is a setback for US open models, as his fun
-Research agent: investigated 3 stories with 9 tool calls, confirmed 2
-Daily briefing: 2 themes from 20 stories
-Threads updated: Anthropic releases Claude Fable 5.2 model: Ethan Mollick on agent swarm research traffic and Fable 5.2; Jensen Huang resignation and Nvidia leadership crisis: Nvidia open-source strategy questioned following Jensen Huan
-Videos: 7 kept from 7 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (10 in feed, 1 new), AI at Meta ok (9 in feed, 0 new), Microsoft Research ok (10 in feed, 0 new), NVIDIA ok (9 in feed, 1 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 0 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 1 new), Big Technology Podcast ok (13 in feed, 1 new), Hard Fork ok (4 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (3 in feed, 0 new), 20VC ok (3 in feed, 0 new)
-Photos: 2 saved, 0 unavailable
-Alerts: 11 events sent: {"subscribers":7,"sent":0,"queued":23}
-Claims: 169 tracked, 163 open, 0 updated this run
-Trackers: filed 2 stories; updated frontier-race, ai-money
+Fetched 2972 items · fresh 9 · judged 15 · kept 3 · **written 1**
+AI: 24 requests, 72,853 tokens this run · 225 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Tracking the escalating Nvidia leadership crisis as industry heavyweights rally for Jensen Huang's return.
+  Priorities: A petition to reinstate Jensen Huang as Nvidia CEO tops 100K signature (Major petition and industry response over Jensen Huang's Nvidia exit.); Letter: Altimeter's Brad Gerstner and Atreides's Gavin Baker urge Nvid (Altimeter and Atreides urge Nvidia board to consider Huang's return with billions on the line.); Show HN: DeepSeek V3 in ~200 lines of pure Jax (High-interest open-source developer release implementing DeepSeek V3 in pure Jax.); Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLL (Technical performance milestone serving GLM-5.3 on Nvidia infrastructure.); DroneAcharya Profits Tank 65% YoY To ₹67 Lakh In H1 (India AI and tech hardware sector financial earnings.)
+  Thin areas: india, models
+  Searches: Nvidia board Jensen Huang response petition: 6 new
+  Dig deeper: A petition to reinstate Jensen Huang as Nvidia CEO tops 100K signature; Letter: Altimeter's Brad Gerstner and Atreides's Gavin Baker urge Nvid
+Research agent: investigated 3 stories with 10 tool calls, confirmed 1
+Daily briefing: 3 themes from 20 stories
+Threads updated: Jensen Huang resignation and potential return: Nvidia investors urge board to keep Jensen Huang return opti
+Videos: 3 kept from 3 new · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face ok (12 in feed, 3 new), Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/
+Builders desk: picked 8 from 60 candidates; 4 with pictures, 0 with videos
+Top Voices: 3 debates from 50 posts by 6 people (2 removed by checks); 3 portraits, 3 pictures
+Photos: 1 saved, 0 unavailable
+Alerts: 9 events sent: {"subscribers":7,"sent":0,"queued":9}
+Claims: 169 tracked, 163 open, 2 updated this run
+Trackers: filed 1 stories; updated ai-money
 Model tracker: 82 models, 3 changes today
-Tagged 3 stories by sector, region and deal
-Time: gather 85s, plan 26s, judge 3s, verify and write 97s, videos 6s, tagging 2s, trackers 4s, claims 2s, briefing 1s, stock photos 12s, alerts 6s
+Tagged 1 stories by sector, region and deal
+Time: gather 75s, plan 2s, judge 115s, verify and write 120s, videos 6s, tagging 10s, trackers 58s, claims 3s, builders 100s, top voices 51s, briefing 3s, alerts 2s
 
 ### New stories
-- **industry** — [Databento raises $100M Series C at $1.1B valuation](https://techmeme.com/261114/p16)  
-  Market data platform Databento raised a $100 million Series C round at a $1.1 billion valuation, led by Fifth Down Capital. The company reports it has doubled its revenue since its Series B round and holds enterprise contracts with five of the six largest frontier AI labs.  
-  _4 source(s), 2 verified quote(s)_
-- **voices** — [Ethan Mollick on agent swarm research traffic and Fable 5.2](https://bsky.app/profile/emollick.bsky.social/post/3n2bwllyra222)  
-  Ethan Mollick reported that agent swarms conducting research generate large volumes of traffic and use repeated full-text searches to find information. He used Claude Fable 5.2 to reconstruct W.H. Auden's 1941 poetry class by having it read an obscure book from the Internet Archive line by line.  
-  _1 source(s), 1 verified quote(s)_
-- **voices** — [Nvidia open-source strategy questioned following Jensen Huang's resignation](https://techmeme.com/261114/p15)  
-  Nvidia CEO Jensen Huang resigned after admitting to an affair with an alleged Chinese spy, leaving Colette Kress to take over as interim chief. His departure raises questions about Nvidia's future support for open-source AI initiatives, open-weight models, and related startup investments.  
-  _2 source(s), 1 verified quote(s)_
+- **industry** — [Nvidia investors urge board to keep Jensen Huang return option open](https://techmeme.com/261114/p18)  
+  Altimeter Capital CEO Brad Gerstner and Atreides Management CIO Gavin Baker wrote to Nvidia's board urging a slow, measured succession process and to keep the door open for founder Jensen Huang to return as CEO. The investors, who hold $2.13 billion in Nvidia stock, expressed confidence in interim CEO Colette Kress.  
+  _4 source(s), 1 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- The AI graveyard: a running list of projects and startups that didn’t make it — score 3: General listicle of failed tech projects rather than breaking AI news.
-- Asian governments react to Nvidia CEO Jensen Huang’s exit — score 5: Vague roundup of Asian government reactions to Jensen Huang's exit without specific new data points.
-- The OpenAI board member who fired Sam Altman says we still can&#8217;t trust AI CEOs — score 5: Standard podcast interview looking backward rather than breaking news.
-- Apple may launch three new iPhones in early 2027: iPhone 18, 18e and Air 2; what to expect — not AI: General consumer electronics leak about upcoming iPhones; no AI angle.
-- Ethan Mollick: The end result of the reconstruction is very impressive, however. It made a version of the lost class, called the “hardest in the… — score 4: Follow-up Bluesky post about the Auden class reconstruction; covered adequately by the initial post.
-- Sean Duffy blames Friday's FAA outage on copper-to-fiber wiring work at a remote facility, saying contractor L3Harris may have installed a "faulty router" (Joseph Pisani/Wall Street Journal) — not AI: No AI angle; relates to FAA infrastructure and networking hardware.
-- Trump Media faces a Nov. 30 deadline to repay up to $1B in convertible bonds sold last May to fund a "bitcoin treasury," as its shares are down 60+% this year (Financial Times) — not AI: No AI angle; covers Trump Media's bitcoin treasury and convertible bonds.
-- Tesla's Cybercab Autonomy Subscription agreement states the vehicles will only work inside Tesla-enabled geofences, which the company can change at any time (Fred Lambert/Electrek) — score 4: Minor product term details for Tesla Cybercab geofencing.
-- Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say — score 6: Duplicate of published story about Jensen Huang's exit and its impact on AI startup funding.
-- Jensen Huang's exit from NVIDIA could disrupt start-up ecosystem — score 6: Duplicate of already published story on Jensen Huang's exit disrupting the startup ecosystem.
+- Show HN: A terminal-native idle factory game, written in Rust with ratatui — not AI: Terminal-native idle factory game written in Rust, no AI relevance.
+- US IRS free online tax filing open source repo (2025) — not AI: US IRS free online tax filing open source repository, no AI relevance.
+- Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang — score 8: Duplicate of the petition to reinstate Jensen Huang as Nvidia CEO.
+- DroneAcharya Profits Tank 65% YoY To ₹67 Lakh In H1 — not AI: Financial earnings of a drone‑tech SME without a clear AI angle; does not meet Frontier Wire's AI relevance criteria.
+- USD-pegged stablecoins are taking a growing share of Latin America's crypto activity, serving as a store of value and an efficient cross-border payment system (Maria Clara Cobo/Bloomberg) — not AI: Article about USD-pegged stablecoins in Latin America, no AI angle.
+- A petition to reinstate Jensen Huang as Nvidia CEO has over 100,000 signatures, including some big names — score 8: Duplicate coverage of the petition to reinstate Jensen Huang.
+- Petition for Jensen Huang’s return as Nvidia CEO hits 100,000 signatures — score 4: Petition to reinstate Jensen Huang is a minor social campaign with limited impact on AI development or market; not a major frontier event.
+- Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM — could not verify yet; will retry next run
+- Show HN: DeepSeek V3 in ~200 lines of pure Jax — could not verify yet; will retry next run
 
 </details>
 
 ### Sources with problems
-- `gdelt`: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out
-- `gdelt-india`: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out
+- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
+- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
+- `r-sideproject`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'
+F
 
 <details><summary>Research agent's work</summary>
 
-- Databento, which offers market data APIs and says it has contracts wit: confirmed (searched “Databento Series C 100M 1.1B valuation”; read pulse2.com; searched “Databento $100M Series C $1.1B valuation techmeme”)
-- Ethan Mollick: The traffic from agent swarms doing research is going t: unconfirmed (searched “Ethan Mollick Fable 5.2 WH Auden”; searched “"Ethan Mollick" "Fable 5.2" Auden”; searched “site:bsky.profile/emollick.bsky.social Auden”)
-- Jensen Huang's resignation is a setback for US open models, as his fun: confirmed (searched “Jensen Huang resignation Interconnects AI Nathan Lambert”; searched “Nathan Lambert Interconnects AI Jensen Huang resignation open models”; read techcrunch.com)
+- Letter: Altimeter's Brad Gerstner and Atreides's Gavin Baker urge Nvid: confirmed (searched “Brad Gerstner Gavin Baker Nvidia board consider potential return of Jensen Huang”; read indiatimes.com; read cnbctv18.com)
+- Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLL: unconfirmed (searched “GLM-5.3 vLLM two Nvidia DGX stations 607.8 tok/s”; read blockchain.news; searched “"Serving GLM-5.3"”; searched “GLM-5.3 vLLM DGX Station benchmark 607.8”)
+- Show HN: DeepSeek V3 in ~200 lines of pure Jax: unconfirmed (searched “DeepSeek V3 Jax”; searched “"DeepSeek V3" "Jax"”; searched “DeepSeek V3 Jax implementation”)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id eaeae4ef3f97 for 'Jensen Huang’s departure blasts big hole in AI sta'
-- ignored made-up duplicate id a27e7e2f9311 for 'Jensen Huang's exit from NVIDIA could disrupt star'
+- ignored made-up duplicate id 612a1f059709 for 'Elon Musk, other tech execs sign petition calling '
+- ignored made-up duplicate id 612a1f059709 for 'A petition to reinstate Jensen Huang as Nvidia CEO'
+- dropped non-quote (Brad Gerstner): the letter ... outlines the minimum acceptable standards the…
+- 2 kept item(s) carried over to the next run
+- gemini/gemini-flash-lite-latest: 503 (server busy); trying next model
+- gemini: unreachable (ReadTimeout); skipping provider
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: request over its 8,000-token limit; retrying with a 2,149-token answer
+- groq/openai/gpt-oss-120b: request too large for this model; trying next model
+- groq/qwen/qwen3.8-27b: request too large for this model; trying next model
+- groq/openai/gpt-oss-20b: request over its 8,000-token limit; retrying with a 2,056-token answer
+- groq/openai/gpt-oss-20b: request over its 8,000-token limit; retrying with a 1,056-token answer
+- groq/openai/gpt-oss-20b: request too large for this model; trying next model
