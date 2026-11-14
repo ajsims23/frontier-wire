@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-14T15:53:21+00:00",
+  "started_at": "2026-11-14T18:59:53+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -21,19 +21,19 @@
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
     "hf-papers": "ok (15)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
     "hn": "ok (20)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
     "ars-ai": "ok (20)",
     "aim": "ok (50)",
-    "inc42": "ok (24)",
+    "inc42": "ok (0)",
     "medianama": "ok (10)",
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -43,158 +43,149 @@
   },
   "dropped": [
     {
-      "title": "Tech Companies Are Trying to Shift the Concept of Privacy (Again)",
-      "reason": "not AI: General privacy commentary from EFF without an AI angle."
+      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+      "reason": "score 3: General listicle of failed tech projects rather than breaking AI news."
     },
     {
-      "title": "The Claude Delusion",
-      "reason": "score 3: Blog commentary on Claude without major news or substantive analysis for industry professionals."
-    },
-    {
-      "title": "Anup Gupta To Exit Nexus Venture Partners After 16 Years",
-      "reason": "not AI: Venture capital partner departure; no direct AI angle."
-    },
-    {
-      "title": "Ajinkya Rahane Picks Up Stake In D2C Cookware Brand Ember",
-      "reason": "not AI: D2C cookware brand investment by a former cricketer; unrelated to AI."
-    },
-    {
-      "title": "Italy's data protection agency fines Meta €805M for allegedly accessing Android users' photos and videos without their consent or informing them (Reuters)",
-      "reason": "score 5: Regulatory enforcement against Meta for accessing Android user data without consent; AI is not the core focus of the penalty."
-    },
-    {
-      "title": "How Marco Rubio helped topple Jensen Huang; source: Rubio used a CIA report about Alice Huang to write his own, recasting CIA reporting in more assertive terms (Washington Post)",
-      "reason": "duplicate of ea64cad924f9"
-    },
-    {
-      "title": "Nvidia board reportedly approached Arm CEO Rene Haas during replacement search",
-      "reason": "duplicate of eb62d1b6c624"
-    },
-    {
-      "title": "Nvidia approached Arm CEO Haas to succeed Huang, FT reports",
-      "reason": "duplicate of eb62d1b6c624"
-    },
-    {
-      "title": "Could a Former Nvidia Executive Replace Jensen Huang? Arm’s Rene Haas Emerges as Candidate",
-      "reason": "duplicate of eb62d1b6c624"
-    },
-    {
-      "title": "Nvidia hasn’t selected search firm for permanent Huang replacement, board tells CNBC",
-      "reason": "duplicate of c2a6bd7529de"
-    },
-    {
-      "title": "Nvidia considers Arm CEO Rene Haas as potential successor to Jensen Huang: FT",
-      "reason": "duplicate of eb62d1b6c624"
+      "title": "Asian governments react to Nvidia CEO Jensen Huang’s exit",
+      "reason": "score 5: Vague roundup of Asian government reactions to Jensen Huang's exit without specific new data points."
     },
     {
       "title": "The OpenAI board member who fired Sam Altman says we still can&#8217;t trust AI CEOs",
-      "reason": "could not verify yet; will retry next run"
+      "reason": "score 5: Standard podcast interview looking backward rather than breaking news."
+    },
+    {
+      "title": "Apple may launch three new iPhones in early 2027: iPhone 18, 18e and Air 2; what to expect",
+      "reason": "not AI: General consumer electronics leak about upcoming iPhones; no AI angle."
+    },
+    {
+      "title": "Ethan Mollick: The end result of the reconstruction is very impressive, however. It made a version of the lost class, called the “hardest in the…",
+      "reason": "score 4: Follow-up Bluesky post about the Auden class reconstruction; covered adequately by the initial post."
+    },
+    {
+      "title": "Sean Duffy blames Friday's FAA outage on copper-to-fiber wiring work at a remote facility, saying contractor L3Harris may have installed a \"faulty router\" (Joseph Pisani/Wall Street Journal)",
+      "reason": "not AI: No AI angle; relates to FAA infrastructure and networking hardware."
+    },
+    {
+      "title": "Trump Media faces a Nov. 30 deadline to repay up to $1B in convertible bonds sold last May to fund a \"bitcoin treasury,\" as its shares are down 60+% this year (Financial Times)",
+      "reason": "not AI: No AI angle; covers Trump Media's bitcoin treasury and convertible bonds."
+    },
+    {
+      "title": "Tesla's Cybercab Autonomy Subscription agreement states the vehicles will only work inside Tesla-enabled geofences, which the company can change at any time (Fred Lambert/Electrek)",
+      "reason": "score 4: Minor product term details for Tesla Cybercab geofencing."
+    },
+    {
+      "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+      "reason": "score 6: Duplicate of published story about Jensen Huang's exit and its impact on AI startup funding."
+    },
+    {
+      "title": "Jensen Huang's exit from NVIDIA could disrupt start-up ecosystem",
+      "reason": "score 6: Duplicate of already published story on Jensen Huang's exit disrupting the startup ecosystem."
     }
   ],
   "written": [
     {
-      "id": "01ec9257e016",
-      "headline": "Nvidia CEO Jensen Huang resigns as Colette Kress takes over as interim chief",
+      "id": "2db41133973d",
+      "headline": "Databento raises $100M Series C at $1.1B valuation",
       "category": "industry",
-      "summary": "NVIDIA co-founder and CEO Jensen Huang resigned following an admission regarding a personal relationship, with CFO Colette Kress appointed interim CEO. The leadership change has triggered market concerns and raised questions about the company's future strategy on open-source AI and international projects.",
-      "url": "https://inc42.com/features/jensen-huangs-exit-how-deep-does-nvidias-ai-ecosystem-run-in-india",
-      "sources": 5,
+      "summary": "Market data platform Databento raised a $100 million Series C round at a $1.1 billion valuation, led by Fifth Down Capital. The company reports it has doubled its revenue since its Series B round and holds enterprise contracts with five of the six largest frontier AI labs.",
+      "url": "https://techmeme.com/261114/p16",
+      "sources": 4,
       "quotes": 2
     },
     {
-      "id": "1bd2fae01273",
-      "headline": "Arm shares fall 6.5% as Nvidia board considers CEO Rene Haas",
-      "category": "industry",
-      "summary": "Arm Holdings shares fell 6.5% after reports that Nvidia's board approached Arm CEO Rene Haas as a potential successor to Jensen Huang. The search adds uncertainty to the semiconductor sector following Huang's departure from Nvidia.",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/arm-shares-slide-nvidia-succession-173756134.html",
-      "sources": 3,
-      "quotes": 0
+      "id": "fa0e89bac09a",
+      "headline": "Ethan Mollick on agent swarm research traffic and Fable 5.2",
+      "category": "voices",
+      "summary": "Ethan Mollick reported that agent swarms conducting research generate large volumes of traffic and use repeated full-text searches to find information. He used Claude Fable 5.2 to reconstruct W.H. Auden's 1941 poetry class by having it read an obscure book from the Internet Archive line by line.",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2bwllyra222",
+      "sources": 1,
+      "quotes": 1
     },
     {
-      "id": "9045dcda80bd",
-      "headline": "MeitY opens DPDP Act consent manager registration portal",
-      "category": "policy",
-      "summary": "MeitY launched an online portal for companies to register as consent managers under the DPDP Act, 2023, requiring a minimum net worth of ₹2 crore. The framework came into effect on November 13, 2026.",
-      "url": "https://inc42.com/buzz/dpdp-act-implementation-meity-opens-consent-manager-registration-portal",
-      "sources": 4,
-      "quotes": 0
+      "id": "eaeae4ef3f97",
+      "headline": "Nvidia open-source strategy questioned following Jensen Huang's resignation",
+      "category": "voices",
+      "summary": "Nvidia CEO Jensen Huang resigned after admitting to an affair with an alleged Chinese spy, leaving Colette Kress to take over as interim chief. His departure raises questions about Nvidia's future support for open-source AI initiatives, open-weight models, and related startup investments.",
+      "url": "https://techmeme.com/261114/p15",
+      "sources": 2,
+      "quotes": 1
     }
   ],
   "notes": [
-    "1 kept item(s) carried over to the next run"
+    "ignored made-up duplicate id eaeae4ef3f97 for 'Jensen Huang’s departure blasts big hole in AI sta'",
+    "ignored made-up duplicate id a27e7e2f9311 for 'Jensen Huang's exit from NVIDIA could disrupt star'"
   ],
   "mode": "full",
   "timings": {
-    "gather": 75.5,
+    "gather": 84.8,
     "audit": 0.0,
-    "plan": 2.2,
-    "judge": 12.1,
-    "verify and write": 78.3,
-    "videos": 5.0,
-    "tagging": 1.8,
-    "explainers": -0.0,
-    "trackers": 9.6,
+    "plan": 26.4,
+    "judge": 3.0,
+    "verify and write": 97.2,
+    "videos": 5.9,
+    "tagging": 1.6,
+    "explainers": 0.0,
+    "trackers": 3.8,
     "claims": 2.2,
     "model tracker": 0.1,
-    "weekly": -0.0,
-    "builders": -0.0,
-    "top voices": -0.0,
-    "briefing": 2.7,
-    "self-review": -0.0,
-    "photos": 0.4,
-    "stock photos": 0.0,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 1.4,
+    "self-review": 0.0,
+    "photos": 0.3,
+    "stock photos": 12.2,
     "daily email": 0.0,
-    "alerts": 5.3
+    "alerts": 5.9
   },
-  "fetched": 2969,
-  "fresh": 9,
+  "fetched": 2945,
+  "fresh": 11,
   "plan": {
-    "focus": "Tracking the geopolitical fallout from Nvidia's leadership crisis and major European regulatory enforcement against Meta.",
+    "focus": "Tracking the ripple effects of Jensen Huang's exit across chip funding, open-source models, and market infrastructure.",
     "priorities": [
-      "How Marco Rubio helped topple Jensen Huang; source: Rubio used a CIA r (Reveals Marco Rubio's role in the Jensen Huang scandal, adding critical political reporting to our top storyline.)",
-      "Italy's data protection agency fines Meta €805M for allegedly accessin (Major €805M regulatory enforcement against Meta by Italian data protection authorities.)",
-      "Jensen Huang’s Exit: How Deep Does NVIDIA’s AI Ecosystem Run In India? (Connects the Nvidia executive crisis directly to the Indian AI ecosystem.)",
-      "Tech Companies Are Trying to Shift the Concept of Privacy (Again) (Important commentary on shifting privacy concepts by major tech companies.)",
-      "The OpenAI board member who fired Sam Altman says we still can&#8217;t (OpenAI board perspective on AI governance and trustworthy leadership.)"
+      "Jensen Huang's resignation is a setback for US open models, as his fun (Nathan Lambert's analysis on how Jensen Huang's resignation impacts open-source model funding.)",
+      "Databento, which offers market data APIs and says it has contracts wit (Databento raising a $100M Series C at a $1.1B valuation highlights massive data infrastructure demand from frontier labs.)",
+      "Ethan Mollick: The traffic from agent swarms doing research is going t (Ethan Mollick commentary on agent swarms driving heavy research traffic and model reconstruction.)",
+      "Asian governments react to Nvidia CEO Jensen Huang’s exit (Asian governments reacting to Jensen Huang's exit and regional chip strategy shifts.)",
+      "The OpenAI board member who fired Sam Altman says we still can&#8217;t (OpenAI board member weighing in on AI CEOs and governance trust.)"
     ],
     "thin_areas": [
-      "india",
-      "safety"
+      "research"
     ],
     "searches": [
-      "Nvidia successor board meeting Arm Haas: 6 new"
+      "Jensen Huang resignation open source funding: 2 new",
+      "Databento Series C frontier labs: 0 new"
     ],
     "dig_deeper": [
-      "How Marco Rubio helped topple Jensen Huang; source: Rubio used a CIA r",
-      "Italy's data protection agency fines Meta €805M for allegedly accessin"
+      "Databento, which offers market data APIs and says it has contracts wit",
+      "Jensen Huang's resignation is a setback for US open models, as his fun"
     ]
   },
-  "judged": 15,
-  "kept": 4,
+  "judged": 13,
+  "kept": 3,
   "research": {
-    "investigated": 4,
-    "confirmed": 3,
+    "investigated": 3,
+    "confirmed": 2,
     "tool_calls": 9
   },
   "research_log": [
-    "The OpenAI board member who fired Sam Altman says we still can&#8217;t: unconfirmed (searched “Helen Toner OpenAI trust AI CEOs podcast The Verge”; searched “Helen Toner OpenAI board member trust AI CEOs”; searched “Helen Toner podcast The Verge AI CEOs”)",
-    "Jensen Huang’s Exit: How Deep Does NVIDIA’s AI Ecosystem Run In India?: confirmed (searched “Jensen Huang exit NVIDIA India”)",
-    "Arm shares slide as Nvidia succession search puts CEO Rene Haas in spo: confirmed (searched “Arm shares slide Nvidia succession Rene Haas”; read decrypt.co; read cryptobriefing.com)",
-    "DPDP Act Implementation: MeitY Opens Consent Manager Registration Port: confirmed (searched “MeitY consent manager registration portal DPDP Act”; read thehindubusinessline.com)"
+    "Databento, which offers market data APIs and says it has contracts wit: confirmed (searched “Databento Series C 100M 1.1B valuation”; read pulse2.com; searched “Databento $100M Series C $1.1B valuation techmeme”)",
+    "Ethan Mollick: The traffic from agent swarms doing research is going t: unconfirmed (searched “Ethan Mollick Fable 5.2 WH Auden”; searched “\"Ethan Mollick\" \"Fable 5.2\" Auden”; searched “site:bsky.profile/emollick.bsky.social Auden”)",
+    "Jensen Huang's resignation is a setback for US open models, as his fun: confirmed (searched “Jensen Huang resignation Interconnects AI Nathan Lambert”; searched “Nathan Lambert Interconnects AI Jensen Huang resignation open models”; read techcrunch.com)"
   ],
   "threads": [
-    "Jensen Huang resignation and Nvidia ecosystem impact: Nvidia CEO Jensen Huang resigns as Colette Kress takes over ",
-    "Jensen Huang resignation and Nvidia leadership crisis: Arm shares fall 6.5% as Nvidia board considers CEO Rene Haas",
-    "AI safety and data protection portals launched: MeitY opens DPDP Act consent manager registration portal"
+    "Anthropic releases Claude Fable 5.2 model: Ethan Mollick on agent swarm research traffic and Fable 5.2",
+    "Jensen Huang resignation and Nvidia leadership crisis: Nvidia open-source strategy questioned following Jensen Huan"
   ],
   "videos": {
     "OpenAI": "ok (13 in feed, 0 new)",
     "Anthropic": "ok (12 in feed, 0 new)",
     "Google DeepMind": "ok (12 in feed, 0 new)",
-    "Google for Developers": "ok (10 in feed, 2 new)",
+    "Google for Developers": "ok (10 in feed, 1 new)",
     "AI at Meta": "ok (9 in feed, 0 new)",
     "Microsoft Research": "ok (10 in feed, 0 new)",
-    "NVIDIA": "ok (8 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 1 new)",
     "Hugging Face": "ok (12 in feed, 3 new)",
     "Mistral AI": "ok (0 in feed, 0 new)",
     "xAI": "ok (1 in feed, 0 new)",
@@ -214,15 +205,15 @@
   },
   "videos_kept": "7 kept from 7 new",
   "tagged": 3,
-  "trackers": "filed 0 stories; no tracker changed",
+  "trackers": "filed 2 stories; updated frontier-race, ai-money",
   "claims": "169 tracked, 163 open, 0 updated this run",
   "model_tracker": "82 models, 3 changes today",
   "briefing": "2 themes from 20 stories",
-  "india_briefing": "3 themes from 4 stories",
-  "photos": "3 saved, 0 unavailable",
-  "alerts": "11 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":18}",
+  "photos": "2 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "11 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":23}",
   "ai_requests_run": 26,
-  "ai_tokens_run": 58270,
-  "ai_requests_today": 175,
+  "ai_tokens_run": 64259,
+  "ai_requests_today": 201,
   "provider_log": []
 }

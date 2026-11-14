@@ -1,0 +1,219 @@
+{
+  "started_at": "2026-11-14T18:59:53+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1387)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (907)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (15)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "hn": "ok (20)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (0)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+      "reason": "score 3: General listicle of failed tech projects rather than breaking AI news."
+    },
+    {
+      "title": "Asian governments react to Nvidia CEO Jensen Huang’s exit",
+      "reason": "score 5: Vague roundup of Asian government reactions to Jensen Huang's exit without specific new data points."
+    },
+    {
+      "title": "The OpenAI board member who fired Sam Altman says we still can&#8217;t trust AI CEOs",
+      "reason": "score 5: Standard podcast interview looking backward rather than breaking news."
+    },
+    {
+      "title": "Apple may launch three new iPhones in early 2027: iPhone 18, 18e and Air 2; what to expect",
+      "reason": "not AI: General consumer electronics leak about upcoming iPhones; no AI angle."
+    },
+    {
+      "title": "Ethan Mollick: The end result of the reconstruction is very impressive, however. It made a version of the lost class, called the “hardest in the…",
+      "reason": "score 4: Follow-up Bluesky post about the Auden class reconstruction; covered adequately by the initial post."
+    },
+    {
+      "title": "Sean Duffy blames Friday's FAA outage on copper-to-fiber wiring work at a remote facility, saying contractor L3Harris may have installed a \"faulty router\" (Joseph Pisani/Wall Street Journal)",
+      "reason": "not AI: No AI angle; relates to FAA infrastructure and networking hardware."
+    },
+    {
+      "title": "Trump Media faces a Nov. 30 deadline to repay up to $1B in convertible bonds sold last May to fund a \"bitcoin treasury,\" as its shares are down 60+% this year (Financial Times)",
+      "reason": "not AI: No AI angle; covers Trump Media's bitcoin treasury and convertible bonds."
+    },
+    {
+      "title": "Tesla's Cybercab Autonomy Subscription agreement states the vehicles will only work inside Tesla-enabled geofences, which the company can change at any time (Fred Lambert/Electrek)",
+      "reason": "score 4: Minor product term details for Tesla Cybercab geofencing."
+    },
+    {
+      "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+      "reason": "score 6: Duplicate of published story about Jensen Huang's exit and its impact on AI startup funding."
+    },
+    {
+      "title": "Jensen Huang's exit from NVIDIA could disrupt start-up ecosystem",
+      "reason": "score 6: Duplicate of already published story on Jensen Huang's exit disrupting the startup ecosystem."
+    }
+  ],
+  "written": [
+    {
+      "id": "2db41133973d",
+      "headline": "Databento raises $100M Series C at $1.1B valuation",
+      "category": "industry",
+      "summary": "Market data platform Databento raised a $100 million Series C round at a $1.1 billion valuation, led by Fifth Down Capital. The company reports it has doubled its revenue since its Series B round and holds enterprise contracts with five of the six largest frontier AI labs.",
+      "url": "https://techmeme.com/261114/p16",
+      "sources": 4,
+      "quotes": 2
+    },
+    {
+      "id": "fa0e89bac09a",
+      "headline": "Ethan Mollick on agent swarm research traffic and Fable 5.2",
+      "category": "voices",
+      "summary": "Ethan Mollick reported that agent swarms conducting research generate large volumes of traffic and use repeated full-text searches to find information. He used Claude Fable 5.2 to reconstruct W.H. Auden's 1941 poetry class by having it read an obscure book from the Internet Archive line by line.",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2bwllyra222",
+      "sources": 1,
+      "quotes": 1
+    },
+    {
+      "id": "eaeae4ef3f97",
+      "headline": "Nvidia open-source strategy questioned following Jensen Huang's resignation",
+      "category": "voices",
+      "summary": "Nvidia CEO Jensen Huang resigned after admitting to an affair with an alleged Chinese spy, leaving Colette Kress to take over as interim chief. His departure raises questions about Nvidia's future support for open-source AI initiatives, open-weight models, and related startup investments.",
+      "url": "https://techmeme.com/261114/p15",
+      "sources": 2,
+      "quotes": 1
+    }
+  ],
+  "notes": [
+    "ignored made-up duplicate id eaeae4ef3f97 for 'Jensen Huang’s departure blasts big hole in AI sta'",
+    "ignored made-up duplicate id a27e7e2f9311 for 'Jensen Huang's exit from NVIDIA could disrupt star'"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 84.8,
+    "audit": 0.0,
+    "plan": 26.4,
+    "judge": 3.0,
+    "verify and write": 97.2,
+    "videos": 5.9,
+    "tagging": 1.6,
+    "explainers": 0.0,
+    "trackers": 3.8,
+    "claims": 2.2,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 1.4,
+    "self-review": 0.0,
+    "photos": 0.3,
+    "stock photos": 12.2,
+    "daily email": 0.0,
+    "alerts": 5.9
+  },
+  "fetched": 2945,
+  "fresh": 11,
+  "plan": {
+    "focus": "Tracking the ripple effects of Jensen Huang's exit across chip funding, open-source models, and market infrastructure.",
+    "priorities": [
+      "Jensen Huang's resignation is a setback for US open models, as his fun (Nathan Lambert's analysis on how Jensen Huang's resignation impacts open-source model funding.)",
+      "Databento, which offers market data APIs and says it has contracts wit (Databento raising a $100M Series C at a $1.1B valuation highlights massive data infrastructure demand from frontier labs.)",
+      "Ethan Mollick: The traffic from agent swarms doing research is going t (Ethan Mollick commentary on agent swarms driving heavy research traffic and model reconstruction.)",
+      "Asian governments react to Nvidia CEO Jensen Huang’s exit (Asian governments reacting to Jensen Huang's exit and regional chip strategy shifts.)",
+      "The OpenAI board member who fired Sam Altman says we still can&#8217;t (OpenAI board member weighing in on AI CEOs and governance trust.)"
+    ],
+    "thin_areas": [
+      "research"
+    ],
+    "searches": [
+      "Jensen Huang resignation open source funding: 2 new",
+      "Databento Series C frontier labs: 0 new"
+    ],
+    "dig_deeper": [
+      "Databento, which offers market data APIs and says it has contracts wit",
+      "Jensen Huang's resignation is a setback for US open models, as his fun"
+    ]
+  },
+  "judged": 13,
+  "kept": 3,
+  "research": {
+    "investigated": 3,
+    "confirmed": 2,
+    "tool_calls": 9
+  },
+  "research_log": [
+    "Databento, which offers market data APIs and says it has contracts wit: confirmed (searched “Databento Series C 100M 1.1B valuation”; read pulse2.com; searched “Databento $100M Series C $1.1B valuation techmeme”)",
+    "Ethan Mollick: The traffic from agent swarms doing research is going t: unconfirmed (searched “Ethan Mollick Fable 5.2 WH Auden”; searched “\"Ethan Mollick\" \"Fable 5.2\" Auden”; searched “site:bsky.profile/emollick.bsky.social Auden”)",
+    "Jensen Huang's resignation is a setback for US open models, as his fun: confirmed (searched “Jensen Huang resignation Interconnects AI Nathan Lambert”; searched “Nathan Lambert Interconnects AI Jensen Huang resignation open models”; read techcrunch.com)"
+  ],
+  "threads": [
+    "Anthropic releases Claude Fable 5.2 model: Ethan Mollick on agent swarm research traffic and Fable 5.2",
+    "Jensen Huang resignation and Nvidia leadership crisis: Nvidia open-source strategy questioned following Jensen Huan"
+  ],
+  "videos": {
+    "OpenAI": "ok (13 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (10 in feed, 1 new)",
+    "AI at Meta": "ok (9 in feed, 0 new)",
+    "Microsoft Research": "ok (10 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 1 new)",
+    "Hugging Face": "ok (12 in feed, 3 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (3 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 1 new)",
+    "Hard Fork": "ok (4 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "7 kept from 7 new",
+  "tagged": 3,
+  "trackers": "filed 2 stories; updated frontier-race, ai-money",
+  "claims": "169 tracked, 163 open, 0 updated this run",
+  "model_tracker": "82 models, 3 changes today",
+  "briefing": "2 themes from 20 stories",
+  "photos": "2 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "11 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":23}",
+  "ai_requests_run": 26,
+  "ai_tokens_run": 64259,
+  "ai_requests_today": 201,
+  "provider_log": []
+}
