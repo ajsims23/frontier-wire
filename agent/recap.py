@@ -49,8 +49,8 @@ CPS = 12.5
 # Two original US cable-news anchors, alternating day by day. Aura-2 voices on the
 # worker's allow-list; Kokoro voices for the backup. Delivery, not a copy of any real presenter.
 ANCHORS = {
-    "female": {"aura": "thalia", "kokoro": "af_heart"},    # crisp, confident, quick: a White House beat reporter's read
-    "male": {"aura": "odysseus", "kokoro": "am_michael"},  # calm, low, measured: a prime-time anchor's read
+    "female": {"aura": "thalia", "kokoro": "af_heart", "speed": 1.2},     # crisp, confident, brisk
+    "male": {"aura": "odysseus", "kokoro": "am_michael", "speed": 1.12},  # calm, low, measured (a touch slower)
 }
 
 
@@ -64,6 +64,10 @@ def anchor_for(day: str) -> dict[str, str]:
 
 
 VOICE_SPEED = 1.2           # the read is played 1.2x faster than the TTS delivers it
+# A studio-mic broadcast chain on the voice: cut rumble, a little chest warmth and presence, gentle compression
+# so every word sits forward like a TV anchor's read.
+BROADCAST_CHAIN = ("highpass=f=80,equalizer=f=160:t=q:w=1:g=1.5,equalizer=f=3200:t=q:w=1.2:g=2.5,"
+                   "acompressor=threshold=-20dB:ratio=3:attack=5:release=90:makeup=2")
 MAX_SPEED = 1.45            # and sped up a little more, to this at most, when the lines run long
 VOICE_LEAD = {"hook": 0.35, "story": 0.3, "outro": 0.2}   # seconds into a scene before the voice starts
 VOICE_TAIL = {"hook": 0.35, "story": 0.45, "outro": 0.3}  # quiet after it, before the scene changes
@@ -280,7 +284,7 @@ def voice_clips(script: dict[str, Any], voice_dir: Path | None) -> dict[str, tup
     return out
 
 
-def timing(n: int, clips: dict[str, tuple[Path, float]]) -> tuple[list[float], float]:
+def timing(n: int, clips: dict[str, tuple[Path, float]], speed: float = VOICE_SPEED) -> tuple[list[float], float]:
     """Scene lengths [hook, story 1..n, outro] and the voice tempo. Silent: 3s, 5s each, 2s. Narrated: each scene
     is long enough for its line, read at VOICE_SPEED (never shorter than the silent length). If that runs long the
     quiet tails shrink, then the voice is sped up further (at most MAX_SPEED). Tempo 0 means the lines can't fit:
@@ -297,9 +301,9 @@ def timing(n: int, clips: dict[str, tuple[Path, float]]) -> tuple[list[float], f
                 for b, k, key in zip(base, kinds, keys)]
 
     for squeeze in (0.0, 0.5, 1.0):
-        if sum(lay(VOICE_SPEED, squeeze)) <= cap:
-            return lay(VOICE_SPEED, squeeze), VOICE_SPEED
-    lo, hi = VOICE_SPEED, MAX_SPEED
+        if sum(lay(speed, squeeze)) <= cap:
+            return lay(speed, squeeze), speed
+    lo, hi = speed, MAX_SPEED
     if sum(lay(hi, 1.0)) > cap:
         return base, 0.0
     for _ in range(30):  # the gentlest speed-up that fits
@@ -322,7 +326,7 @@ def mix_voice(clips: dict[str, tuple[Path, float]], durs: list[float], tempo: fl
         parts.append(f"[{j}:a]aresample=44100,aformat=channel_layouts=mono,{speed}adelay={ms}:all=1[a{j}]")
     total = sum(durs)
     graph = ";".join(parts) + ";" + "".join(f"[a{j}]" for j in range(len(keys))) + \
-        f"amix=inputs={len(keys)}:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=11,apad,atrim=0:{total:.3f}[out]"
+        f"amix=inputs={len(keys)}:normalize=0,{BROADCAST_CHAIN},loudnorm=I=-16:TP=-1.5:LRA=11,apad,atrim=0:{total:.3f}[out]"
     cmd += ["-filter_complex", graph, "-map", "[out]", "-ar", "44100", "-c:a", "pcm_s16le", str(out)]
     _run(cmd)
     return out
@@ -1295,7 +1299,7 @@ def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.gi
         if not raw:
             break
         cand = compose_voice(raw, n, with_detail, out_dir)
-        d, tp = timing(n, cand)
+        d, tp = timing(n, cand, anchor_for(script.get("date", "")).get("speed", VOICE_SPEED))
         if tp:
             vc, durs, tempo, read = cand, d, tp, ("line and detail" if with_detail else "lines only")
             break
