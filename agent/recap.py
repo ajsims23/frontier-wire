@@ -24,7 +24,7 @@ import re
 import shutil
 import subprocess
 import tempfile
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
@@ -46,7 +46,23 @@ LIMITS = {"hook": 64, "line": 72, "detail": 120, "summary": 150, "say": 110, "fo
 # (open + five stories + close) must stay under this many characters to land at about a minute.
 SPOKEN_BUDGET = 740
 CPS = 12.5
-VOICE_SPEAKER = "pandora"   # Aura-2 British female newsreader (the worker's allow-list has it)
+# Two original US cable-news anchors, alternating day by day. Aura-2 voices on the
+# worker's allow-list; Kokoro voices for the backup. Delivery, not a copy of any real presenter.
+ANCHORS = {
+    "female": {"aura": "thalia", "kokoro": "af_heart"},    # crisp, confident, quick: a White House beat reporter's read
+    "male": {"aura": "odysseus", "kokoro": "am_michael"},  # calm, low, measured: a prime-time anchor's read
+}
+
+
+def anchor_for(day: str) -> dict[str, str]:
+    """Which anchor reads the recap dated `day` (YYYY-MM-DD): alternating female and male day by day."""
+    try:
+        n = date.fromisoformat(str(day)[:10]).toordinal()
+    except ValueError:
+        n = 0
+    return ANCHORS["male" if n % 2 else "female"]
+
+
 VOICE_SPEED = 1.2           # the read is played 1.2x faster than the TTS delivers it
 MAX_SPEED = 1.45            # and sped up a little more, to this at most, when the lines run long
 VOICE_LEAD = {"hook": 0.35, "story": 0.3, "outro": 0.2}   # seconds into a scene before the voice starts
@@ -511,7 +527,7 @@ def fetch_voice(script: dict[str, Any], out: Path, api: str, secret: str) -> lis
         if not text:
             continue
         try:
-            r = httpx.post(f"{api.rstrip('/')}/api/recap/voice", json={"text": text, "speaker": VOICE_SPEAKER}, timeout=90,
+            r = httpx.post(f"{api.rstrip('/')}/api/recap/voice", json={"text": text, "speaker": anchor_for(script.get("date", ""))["aura"]}, timeout=90,
                            headers={"Authorization": f"Bearer {secret}"})
             data = r.json() if r.headers.get("content-type", "").startswith("application/json") else {}
             if r.status_code != 200 or not data.get("audio"):
@@ -526,7 +542,7 @@ def fetch_voice(script: dict[str, Any], out: Path, api: str, secret: str) -> lis
     return notes
 
 
-KOKORO_VOICE, KOKORO_SPEED = "bf_emma", 1.1   # British female newsreader; open-source Kokoro-82M
+KOKORO_SPEED = 1.1   # open-source Kokoro-82M; the voice follows the day's anchor (ANCHORS)
 
 
 def fetch_voice_backup(script: dict[str, Any], out: Path, model_dir: Path) -> list[str]:
@@ -536,12 +552,13 @@ def fetch_voice_backup(script: dict[str, Any], out: Path, model_dir: Path) -> li
     from kokoro_onnx import Kokoro
     out.mkdir(parents=True, exist_ok=True)
     k = Kokoro(str(model_dir / "kokoro-v1.0.onnx"), str(model_dir / "voices-v1.0.bin"))
+    voice = anchor_for(script.get("date", ""))["kokoro"]
     notes = []
     for key, text in narration(script):
         if not text:
             continue
         try:
-            audio, sr = k.create(text, voice=KOKORO_VOICE, speed=KOKORO_SPEED, lang="en-gb")
+            audio, sr = k.create(text, voice=voice, speed=KOKORO_SPEED, lang="en-us")
             wav = out / f"{key}.wav"
             sf.write(wav, audio, sr)
             _run(["ffmpeg", "-v", "error", "-y", "-i", str(wav), "-af",
