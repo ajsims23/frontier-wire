@@ -1,0 +1,177 @@
+{
+  "started_at": "2026-11-15T04:08:24+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1387)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (907)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (15)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (19)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (26)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Where was Nvidia’s security team?",
+      "reason": "score 6: Duplicate or closely related to the ongoing Jensen Huang resignation coverage already published."
+    },
+    {
+      "title": "How the art ecosystem opens up a wide range of opportunities beyond creation of artworks",
+      "reason": "not AI: Arts festival photo essay with no AI relevance."
+    },
+    {
+      "title": "Space, sustainability, AI: test your business creativity with Edition 258 of our weekly quiz!",
+      "reason": "score 2: Weekly general business and trivia quiz containing a passing mention of AI, not a news story."
+    },
+    {
+      "title": "23andMe's Anne Wojcicki, formerly married to Google co-founder Sergey Brin, says Jensen Huang's affair shows what happens when CEOs think they are \"untouchable\" (Bloomberg)",
+      "reason": "score 4: Commentary on Jensen Huang scandal by Anne Wojcicki is routine reaction/opinion, covered by existing entries."
+    },
+    {
+      "title": "The Week Jensen Huang Fell: How a Spy Scandal Toppled Nvidia’s CEO",
+      "reason": "duplicate of 72e1fb99c741"
+    },
+    {
+      "title": "NVIDIA CEO Jensen Huang resigns amid affair scandal, agrees to appear before US Congress",
+      "reason": "duplicate of ea64cad924f9"
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang resigns amid scandal, CFO Colette Kress steps in",
+      "reason": "duplicate of a769a94b7f5c"
+    },
+    {
+      "title": "What Jensen Huang told Nvidia staff in email surfaces amid scandal",
+      "reason": "duplicate of ee129214e4fa"
+    },
+    {
+      "title": "Source: Applied Digital has asked tenants like Oracle and Meta for billions in guarantees since at least last year to secure power before finalizing leases (Bloomberg)",
+      "reason": "could not verify yet after a second try; dropped"
+    }
+  ],
+  "written": [],
+  "notes": [
+    "ignored made-up duplicate id cdf34d438f12 for 'Where was Nvidia’s security team?'",
+    "ignored made-up duplicate id c457b2b5f42a for '23andMe's Anne Wojcicki, formerly married to Googl'",
+    "ignored made-up duplicate id c2fdd60287b0 for 'Source: Applied Digital has asked tenants like Ora'"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 90.8,
+    "audit": 0.0,
+    "plan": 1.6,
+    "judge": 2.5,
+    "verify and write": 5.1,
+    "videos": 1.8,
+    "tagging": 0.0,
+    "explainers": 0.0,
+    "trackers": 0.0,
+    "claims": 0.0,
+    "model tracker": 0.2,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 1.2,
+    "self-review": -0.0,
+    "photos": -0.0,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 0.8
+  },
+  "fetched": 2967,
+  "fresh": 5,
+  "plan": {
+    "focus": "Tracking the fallout from Jensen Huang's resignation and leadership changes at Nvidia across industry and policy.",
+    "priorities": [
+      "23andMe's Anne Wojcicki, formerly married to Google co-founder Sergey  (Reactions to Jensen Huang's scandal and resignation from prominent figures.)",
+      "Where was Nvidia’s security team? (Security implications following the Nvidia leadership crisis.)",
+      "Source: Applied Digital has asked tenants like Oracle and Meta for bil (Important infrastructure and power guarantee developments affecting major AI players.)"
+    ],
+    "thin_areas": [
+      "safety",
+      "india"
+    ],
+    "searches": [
+      "Nvidia security team Jensen Huang scandal: 4 new"
+    ],
+    "dig_deeper": [
+      "Where was Nvidia’s security team?",
+      "23andMe's Anne Wojcicki, formerly married to Google co-founder Sergey "
+    ]
+  },
+  "judged": 9,
+  "kept": 1,
+  "research": {
+    "investigated": 1,
+    "confirmed": 0,
+    "tool_calls": 3
+  },
+  "research_log": [
+    "Source: Applied Digital has asked tenants like Oracle and Meta for bil: unconfirmed (searched “Applied Digital Oracle Meta power guarantees Bloomberg”; searched “Applied Digital Oracle Meta power guarantees”; searched “Applied Digital Oracle Meta billions guarantees”)"
+  ],
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "trackers": "filed 0 stories; no tracker changed",
+  "claims": "169 tracked, 163 open",
+  "model_tracker": "82 models, 4 changes today",
+  "india_briefing": "3 themes from 4 stories",
+  "photos": "0 saved, 0 unavailable",
+  "alerts": "6 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":1}",
+  "ai_requests_run": 8,
+  "ai_tokens_run": 12144,
+  "ai_requests_today": 37,
+  "provider_log": []
+}
