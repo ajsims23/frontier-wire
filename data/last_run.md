@@ -1,68 +1,65 @@
-## Frontier Wire newsroom run — 2026-11-15T09:59:47+00:00
+## Frontier Wire newsroom run — 2026-11-15T13:11:12+00:00
 
-Fetched 2963 items · fresh 7 · judged 10 · kept 3 · **written 2**
-AI: 23 requests, 53,028 tokens this run · 93 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking the aftermath of the Nvidia leadership crisis alongside emerging AI regulatory and defense tech investments.
-  Priorities: Nidus, which is developing AI-powered tech for manufacturing robots us (Significant defense tech and manufacturing AI funding round ($30M for Nidus).); Sebi to issue AI usage guidelines for capital markets, focus on invest (SEBI issuing AI usage guidelines for capital markets impacts fintech and AI compliance in India.); Court denies motion to dismiss DRAM price fixing case (Legal development regarding DRAM price fixing directly affects hardware and AI server supply chains.); Measure AI by results, not number of agents deployed: Oracle senior ex (Industry perspective on measuring AI deployment efficacy in the Indian enterprise market.); EaseMyTrip Q2: Loss Narrows 98% YoY To ₹57 Lakh, Revenue Up 34% (Q2 financial results from an Indian tech-enabled travel platform incorporating AI/tech automation.)
-  Thin areas: india, policy
-  Searches: Sebi AI usage guidelines capital markets: 5 new; Nidus defense manufacturing AI robot funding: 0 new
-  Dig deeper: Nidus, which is developing AI-powered tech for manufacturing robots us; Sebi to issue AI usage guidelines for capital markets, focus on invest
-Research agent: investigated 3 stories with 7 tool calls, confirmed 2
-Daily briefing: 4 themes from 17 stories
-Videos: 5 kept from 6 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (10 in feed, 1 new), AI at Meta ok (9 in feed, 0 new), Microsoft Research ok (10 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (2 in feed, 0 new), Latent Space ok (15 in feed, 0 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 1 new), Big Technology Podcast ok (13 in feed, 1 new), Hard Fork ok (3 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (3 in feed, 0 new), 20VC ok (3 in feed, 0 new)
-Photos: 2 saved, 0 unavailable
-Alerts: 15 events sent: {"subscribers":6,"sent":0,"queued":23}
-Claims: 171 tracked, 165 open, 1 updated this run
-Trackers: filed 2 stories; updated ai-regulation, ai-money
-Model tracker: 82 models, 8 changes today
+Fetched 2977 items · fresh 19 · judged 21 · kept 2 · **written 1**
+AI: 19 requests, 44,836 tokens this run · 112 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Tracking the fallout from Jensen Huang's resignation while covering AI developments in markets, policy, and global tech governance.
+  Priorities: An overview of Jensen Huang’s messy days (Core update on Jensen Huang's ongoing Nvidia crisis.); Elon Musk and Silicon Valley tech bros rally behind ex - Nvidia CEO Je (Silicon Valley and Elon Musk's political/industry backing of Huang.); Nvidia earnings along with the baggage top next week markets (Upcoming Nvidia earnings report amid executive turmoil.); SEBI to issue AI norms for capital markets , safeguard investor intere (SEBI's new regulatory norms for AI in capital markets.); Global economy to grow 2 . 8 % in 2027 , buoyed by lower oil prices an (Goldman Sachs macroeconomic projection on AI investments for 2027.)
+  Thin areas: india, business
+  Searches: Jensen Huang resignation Nvidia earnings: 4 new; SEBI AI norms capital markets: 1 new
+  Dig deeper: An overview of Jensen Huang’s messy days; Elon Musk and Silicon Valley tech bros rally behind ex - Nvidia CEO Je
+Research agent: investigated 2 stories with 6 tool calls, confirmed 1
+Daily briefing: 3 themes from 16 stories
+Videos: 5 kept from 5 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (10 in feed, 1 new), AI at Meta ok (9 in feed, 0 new), Microsoft Research ok (10 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (2 in feed, 0 new), Latent Space ok (15 in feed, 0 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 1 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (3 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (3 in feed, 0 new), 20VC ok (3 in feed, 0 new)
+Photos: 1 saved, 0 unavailable
+Alerts: 18 events sent: {"subscribers":6,"sent":0,"queued":13}
+Claims: 171 tracked, 165 open, 0 updated this run
+Trackers: filed 1 stories; updated ai-infrastructure
+Model tracker: 82 models, 12 changes today
 Tagged 2 stories by sector, region and deal
-India briefing: 2 themes from 3 stories
-Time: gather 88s, plan 28s, judge 3s, verify and write 180s, videos 10s, tagging 10s, trackers 65s, claims 16s, briefing 24s, alerts 6s
+Time: gather 56s, plan 57s, judge 6s, verify and write 13s, videos 3s, tagging 2s, trackers 3s, claims 30s, briefing 58s, alerts 2s
 
 ### New stories
-- **industry** — [Nidus raises $30M to deploy AI robotics in US defense factories](https://techmeme.com/261115/p5)  
-  Nidus raised $30 million across pre-seed and seed rounds to deploy AI-powered technology for manufacturing robots in US defense factories. The startup reported over $1 million in early customer bookings or revenue within its first four months.  
-  _3 source(s), 2 verified quote(s)_
-- **policy** — [Sebi to issue AI usage guidelines for capital markets focusing on investor protection](https://yourstory.com/2026/11/sebi-issue-ai-usage-guidelines-investor-protection)  
-  SEBI chairman Tuhin Kanta Pandey announced that the regulator will soon release detailed guidelines governing AI use in securities markets, emphasizing disclosures, accountability and a human‑in‑the‑loop approach to protect investors.  
-  _5 source(s), 0 verified quote(s)_
+- **industry** — [Nvidia faces earnings scrutiny amid leadership change and stock decline](https://aol.com/articles/nvidia-earnings-along-baggage-top-023700000.html)  
+  Nvidia reports its third fiscal quarter earnings on November 17, 2026, with expected revenue of around $109 billion and earnings per share of $2.48. The upcoming earnings call will be run by interim CEO Colette Kress following the resignation of CEO Jensen Huang on November 12.  
+  _3 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- EaseMyTrip Q2: Loss Narrows 98% YoY To ₹57 Lakh, Revenue Up 34% — not AI: Q2 financial results for EaseMyTrip showing narrowing losses, containing no meaningful AI angle.
-- From Microsoft 365 to CrowdStrike - Biggest tech outages that almost brought the world to a standstill — score 3: General retrospective on major global tech outages rather than new AI news.
-- Measure AI by results, not number of agents deployed: Oracle senior executive — score 4: General executive commentary on enterprise AI deployment metrics, lacking specific news substance.
-- Zomato-parent Eternal reworking 2030 EV delivery target amid fleet expansion, EV adoption — not AI: Zomato parent revising EV delivery targets, lacking any AI relevance.
-- Sebi chief Tuhin Kanta Pandey says AI guidelines for capital markets coming soon — score 5: Routine regulatory announcement regarding upcoming capital markets AI guidelines, covered more fully by dedicated pieces.
-- AI guidelines: Sebi will issue safeguards for market participants; startups listing rules under review — score 4: Duplicate report on upcoming SEBI AI guidelines for market participants.
-- SEBI readies AI rules with human oversight for capital markets — score 4: Duplicate report on SEBI preparing AI rules with human oversight.
-- Court denies motion to dismiss DRAM price fixing case — could not verify yet; will retry next run
+- Global economy to grow 2 . 8 % in 2027 , buoyed by lower oil prices and AI investments : Goldman Sachs — score 4: Macroeconomic growth report mentioning AI investments as a side factor; too broad for core AI readers.
+- New awards show celebrates AI music and its creators — score 3: Local awards show for AI-generated music, too minor for frontier AI readership.
+- Data center diaspora : Democrat blue wave wins could send AI buildout out of US | News — score 4: Speculative opinion piece on political shifts affecting data center buildout locations.
+- South Korea probes top exam scorer after AI cheating confession — score 3: Student cheating scandal involving AI in South Korea exams; general consumer news.
+- AI errors spark calls to scrap Scotland school curriculum reforms — score 3: Local education curriculum dispute in Scotland touching on AI errors; minor regional news.
+- Elon Musk and Silicon Valley tech bros rally behind ex - Nvidia CEO Jensen Huang — score 5: Covers the tech industry and Silicon Valley figures rallying behind Jensen Huang, duplicating existing stories on the Jensen Huang fallout.
+- Anwar warns against tech giants dominating AI development , governance — score 4: Malaysian Prime Minister warning against tech giant dominance in AI development and governance; standard political rhetoric.
+- British trader to make $3 . 5bn from Anthropic float — duplicate of 3e673ebfce8a
+- SEBI to issue AI norms for capital markets , safeguard investor interests : Pandey — duplicate of 6373036a727f
+- Court denies motion to dismiss DRAM price fixing case — score 4: DRAM price fixing litigation is standard hardware/semiconductor legal news with only distant relevance to AI infrastructure.
+- An overview of Jensen Huang’s messy days — score 5: Newsletter teaser/summary overview of Jensen Huang's resignation and Nvidia crisis without new investigative reporting or primary details.
+- GTA 6: Why haven’t the game’s original creators been allowed to play it before launch? — not AI: General gaming news about GTA 6 with no AI angle whatsoever.
+- India, US have agree on preferential market access for Indian goods in America: Piyush Goyal — not AI: Bilateral trade agreement on general goods between India and the US with no mention of AI.
+- Inside the first AI Music Awards in Los Angeles, featuring AI announcers, lip-syncing, and human stand-ins, as the ceremony was mired in technical issues (Corbin Bolies/Variety) — score 4: Coverage of the first AI Music Awards is more cultural/entertainment event reporting than core AI research or industry news.
+- What’s Next for Nvidia After Jensen Huang’s Resignation? — duplicate of 1b43d5e72ff4
+- NVIDIA, One Week Since CEO Huang's Resignation | Stock Down 33% from Highs, Successor Race, and Key Points for the 11/17 Earnings Report — score 4: Recap of Nvidia's stock drop following Jensen Huang's resignation and upcoming earnings preview, duplicating existing coverage.
+- Elon Musk backs Jensen Huang comeback as petition to reinstate ex-NVIDIA CEO surpasses 135,000 signatures — duplicate of 0ef9a44499ba
+- Jensen Huang resigned in disgrace from Nvidia. Many in Silicon Valley are still showering him with support — score 4: Duplicate commentary piece on Silicon Valley reactions to Jensen Huang's resignation.
+- SEBI plans AI guardrails for capital markets, investor protection in focus — duplicate of 6373036a727f
+- Show HN: Agweb – a browser for agents that stays out of your way — could not verify yet; will retry next run
 
 </details>
 
 ### Sources with problems
-- `gdelt`: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out
-- `gdelt-india`: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out
+- `gdelt-india`: failed: ReadTimeout: The read operation timed out
 
 <details><summary>Research agent's work</summary>
 
-- Nidus, which is developing AI-powered tech for manufacturing robots us: confirmed (searched “Nidus AI manufacturing robots defense Kleiner Perkins Costanoa 30M”; read aol.com)
-- Sebi to issue AI usage guidelines for capital markets, focus on invest: confirmed (searched “Sebi AI usage guidelines capital markets investor protection Tuhin Kanta Pandey”; read thehindubusinessline.com)
-- Court denies motion to dismiss DRAM price fixing case: unconfirmed (searched “Garcia Aguirre Samsung SK Hynix Micron DRAM price fixing motion to dismiss”; searched “Garcia Aguirre Samsung SK Hynix Micron dismiss”; searched “Garcia Aguirre v. Samsung DRAM motion to dismiss”)
+- Nvidia earnings along with the baggage top next week markets: confirmed (searched “Nvidia earnings baggage top markets”; read msn.com; searched “Nvidia earnings along with the baggage top next weeks markets TheStreet”)
+- Show HN: Agweb – a browser for agents that stays out of your way: unconfirmed (searched “Agweb browser for agents paul nameless Hacker News”; searched “Agweb paul nameless github”; searched “Agweb browser for agents”)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id 3b02749743ce for 'From Microsoft 365 to CrowdStrike - Biggest tech o'
-- ignored made-up duplicate id 237afa3da8e3 for 'Sebi chief Tuhin Kanta Pandey says AI guidelines f'
-- ignored made-up duplicate id 237afa3da8e3 for 'AI guidelines: Sebi will issue safeguards for mark'
-- ignored made-up duplicate id 237afa3da8e3 for 'SEBI readies AI rules with human oversight for cap'
+- ignored made-up duplicate id 3a4806ba20dd for 'Elon Musk and Silicon Valley tech bros rally behin'
+- ignored made-up duplicate id aed0535c56d2 for 'NVIDIA, One Week Since CEO Huang's Resignation | S'
+- ignored made-up duplicate id 7a5620e05804 for 'Jensen Huang resigned in disgrace from Nvidia. Man'
 - 1 kept item(s) carried over to the next run
-- gemini/gemini-flash-lite-latest: 503 (server busy); trying next model
-- gemini/gemini-flash-latest: 503 (server busy); trying next model
-- gemini: 503 after retry; moving to next provider for this run
-- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-120b: HTTP 400: {"error":{"message":"Failed to parse tool call arguments as JSON","type":"invalid_request_error","code":"tool_use_failed","failed_generation":"{\"name
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
