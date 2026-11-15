@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-15T07:23:18+00:00",
+  "started_at": "2026-11-15T09:59:47+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -21,8 +21,8 @@
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
     "hf-papers": "ok (15)",
-    "gdelt": "ok (4)",
-    "hn": "ok (18)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "hn": "ok (15)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -33,7 +33,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "ok (1)",
+    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -43,211 +43,169 @@
   },
   "dropped": [
     {
-      "title": "They Honey Trap : When Personal Vulnerbilities Becomes A Weapon In The Global War of AI - The Zimbabwe Mail They Honey Trap : When Personal Vulnerbilities Becomes A Weapon In The Global War of AI |…",
-      "reason": "duplicate of 72e1fb99c741"
+      "title": "EaseMyTrip Q2: Loss Narrows 98% YoY To ₹57 Lakh, Revenue Up 34%",
+      "reason": "not AI: Q2 financial results for EaseMyTrip showing narrowing losses, containing no meaningful AI angle."
     },
     {
-      "title": "Data center diaspora : Democrat blue wave wins could send AI buildout out of U . S . | News",
-      "reason": "score 3: General political opinion piece touching lightly on data center diaspora."
+      "title": "From Microsoft 365 to CrowdStrike - Biggest tech outages that almost brought the world to a standstill",
+      "reason": "score 3: General retrospective on major global tech outages rather than new AI news."
     },
     {
-      "title": "NIFCA visual arts judge raises AI and copyright concerns",
-      "reason": "score 2: Local visual arts judge raising standard copyright concerns regarding AI art."
+      "title": "Measure AI by results, not number of agents deployed: Oracle senior executive",
+      "reason": "score 4: General executive commentary on enterprise AI deployment metrics, lacking specific news substance."
     },
     {
-      "title": "We're Asking an Appeals Court to Require a Warrant for ALPR Searches",
-      "reason": "not AI: Automated license plate reader search warrant case, unrelated to AI."
+      "title": "Zomato-parent Eternal reworking 2030 EV delivery target amid fleet expansion, EV adoption",
+      "reason": "not AI: Zomato parent revising EV delivery targets, lacking any AI relevance."
     },
     {
-      "title": "Not Just About Temple: India’s Wearable Impasse",
-      "reason": "not AI: General article on wearable manufacturing challenges in India with no AI connection."
+      "title": "Sebi chief Tuhin Kanta Pandey says AI guidelines for capital markets coming soon",
+      "reason": "score 5: Routine regulatory announcement regarding upcoming capital markets AI guidelines, covered more fully by dedicated pieces."
     },
     {
-      "title": "Wondering what to gift friends and family this Thanksgiving? Get a $100 Google Play gift card for $92 | Here’s how",
-      "reason": "not AI: General consumer gift card discount deal; no AI relevance."
+      "title": "AI guidelines: Sebi will issue safeguards for market participants; startups listing rules under review",
+      "reason": "score 4: Duplicate report on upcoming SEBI AI guidelines for market participants."
     },
     {
-      "title": "5 lessons from book Be Delusional by Harinder Singh Pelia",
-      "reason": "not AI: Book review and life lessons article with no AI angle."
+      "title": "SEBI readies AI rules with human oversight for capital markets",
+      "reason": "score 4: Duplicate report on SEBI preparing AI rules with human oversight."
     },
     {
-      "title": "Ethan Mollick: As a side note, a couple years ago, making this benchmark & analysis would’ve taken a considerable amount of time in STATA, likely several…",
-      "reason": "duplicate of fa0e89bac09a"
-    },
-    {
-      "title": "Nvidia insiders say Jensen Huang was prone to wild office tantrums, which a source says some employees were surprised hadn't leaked before his public downfall (Thomas Barrabi/New York Post)",
-      "reason": "duplicate of 72e1fb99c741"
-    },
-    {
-      "title": "Who is Collette Kress, NVIDIA's Interim CEO?",
-      "reason": "duplicate of 01ec9257e016"
-    },
-    {
-      "title": "Jay Ritter \"Mr. IPO\" flags Anthropic IPO valuation risks",
-      "reason": "duplicate of 3e673ebfce8a"
-    },
-    {
-      "title": "Anthropic IPO sees sixfold institutional demand in three days",
-      "reason": "duplicate of 3e673ebfce8a"
-    },
-    {
-      "title": "Nidus, which is developing AI-powered tech for manufacturing robots used by US defense industrial companies, raised $30M across a pre-seed and a seed (Alex Konrad/Upstarts Media)",
+      "title": "Court denies motion to dismiss DRAM price fixing case",
       "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "3e9aed84c994",
-      "headline": "Nvidia chips accessed by Chinese companies in SE Asia data centers",
+      "id": "0d8aced5bce9",
+      "headline": "Nidus raises $30M to deploy AI robotics in US defense factories",
       "category": "industry",
-      "summary": "Massive data centers in Southeast Asia exploited a gap in U.S. sanctions to provide computing power for Chinese companies using Nvidia AI chips. This backdoor route built a multibillion-dollar business that kept Beijing in the AI race.",
-      "url": "https://techmeme.com/261115/p1",
-      "sources": 2,
-      "quotes": 0
-    },
-    {
-      "id": "49d98b129891",
-      "headline": "Nvidia CEO Jensen Huang resigns following investigation into personal relationships",
-      "category": "industry",
-      "summary": "Nvidia CEO Jensen Huang resigned following an investigation into personal relationships, with CFO Colette Kress taking over as interim chief. The departure of the 33-year company veteran leaves the world's most valuable public chipmaker facing a leadership transition.",
-      "url": "https://techmeme.com/261115/p6",
-      "sources": 4,
+      "summary": "Nidus raised $30 million across pre-seed and seed rounds to deploy AI-powered technology for manufacturing robots in US defense factories. The startup reported over $1 million in early customer bookings or revenue within its first four months.",
+      "url": "https://techmeme.com/261115/p5",
+      "sources": 3,
       "quotes": 2
     },
     {
-      "id": "d47d52485b26",
-      "headline": "TSMC plans $500M fund to invest in chip startups and suppliers",
-      "category": "industry",
-      "summary": "TSMC plans to use a new $500 million venture fund to invest in chip startups, suppliers, and other upstream partners. Senior executive Kevin Zhang stated the company wants to support future chip titans during the AI boom.",
-      "url": "https://techmeme.com/261115/p4",
-      "sources": 2,
-      "quotes": 1
-    },
-    {
-      "id": "9108ffa54a00",
-      "headline": "Nebuly raises $21M Series A to measure business value of AI agents",
-      "category": "industry",
-      "summary": "Nebuly has raised a $21 million Series A funding round to expand its platform that measures the return on investment of enterprise AI agents. The Turin-based company connects to custom-built agents and assistants from providers such as Claude, ChatGPT, and Microsoft Copilot to analyze their impact on productivity and revenue.",
-      "url": "https://techmeme.com/261115/p3",
-      "sources": 5,
-      "quotes": 2
-    },
-    {
-      "id": "9d72f3c35aab",
-      "headline": "Democrats launch inquiry into Nvidia chip sales and Trump administration policies",
+      "id": "6373036a727f",
+      "headline": "Sebi to issue AI usage guidelines for capital markets focusing on investor protection",
       "category": "policy",
-      "summary": "Congressional Democrats launched an inquiry into the Trump administration's handling of Nvidia chip sales to China and export licenses. The investigation follows the ouster of Nvidia CEO Jensen Huang amid a scandal connecting company leadership, government officials, and foreign shipments.",
-      "url": "https://techmeme.com/261114/p23",
-      "sources": 4,
+      "summary": "SEBI chairman Tuhin Kanta Pandey announced that the regulator will soon release detailed guidelines governing AI use in securities markets, emphasizing disclosures, accountability and a human‑in‑the‑loop approach to protect investors.",
+      "url": "https://yourstory.com/2026/11/sebi-issue-ai-usage-guidelines-investor-protection",
+      "sources": 5,
       "quotes": 0
     }
   ],
   "notes": [
-    "dropped non-quote (Rep. Richard Neal and Sen. Ron Wyden): President Trump agreed to sales of Nvidia’s H200 chips to Ch…",
-    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "ignored made-up duplicate id 3b02749743ce for 'From Microsoft 365 to CrowdStrike - Biggest tech o'",
+    "ignored made-up duplicate id 237afa3da8e3 for 'Sebi chief Tuhin Kanta Pandey says AI guidelines f'",
+    "ignored made-up duplicate id 237afa3da8e3 for 'AI guidelines: Sebi will issue safeguards for mark'",
+    "ignored made-up duplicate id 237afa3da8e3 for 'SEBI readies AI rules with human oversight for cap'",
     "1 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 142.7,
+    "gather": 87.7,
     "audit": -0.0,
-    "plan": 57.7,
-    "judge": 4.5,
-    "verify and write": 100.7,
-    "videos": 1.6,
-    "tagging": 2.8,
-    "explainers": -0.0,
-    "trackers": 5.2,
-    "claims": 0.8,
+    "plan": 28.0,
+    "judge": 2.7,
+    "verify and write": 179.7,
+    "videos": 10.4,
+    "tagging": 10.5,
+    "explainers": 0.0,
+    "trackers": 64.6,
+    "claims": 16.0,
     "model tracker": 0.0,
     "weekly": 0.0,
     "builders": 0.0,
     "top voices": 0.0,
-    "briefing": 27.1,
+    "briefing": 24.1,
     "self-review": 0.0,
-    "photos": 0.5,
-    "stock photos": 2.9,
-    "daily email": 0.0,
-    "alerts": 3.1
+    "photos": 0.3,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 6.4
   },
-  "fetched": 2971,
-  "fresh": 15,
+  "fetched": 2963,
+  "fresh": 7,
   "plan": {
-    "focus": "Chasing the fallout from Nvidia's leadership crisis and semiconductor geopolitical fallout while maintaining balanced coverage.",
+    "focus": "Tracking the aftermath of the Nvidia leadership crisis alongside emerging AI regulatory and defense tech investments.",
     "priorities": [
-      "How Jensen Huang built a multibillion-dollar business to let Chinese c (Details WSJ investigation into how Jensen Huang routed chips to Chinese companies via Southeast Asian data centers.)",
-      "A post-Jensen Nvidia must reshuffle its leadership, reset its DC ties, (Financial Times analysis on what a post-Jensen Nvidia needs to do to restructure leadership and DC ties.)",
-      "TSMC plans to set up a new $500M fund to invest in chip startups, supp (TSMC's $500M fund to support future chip startups and upstream partners.)",
-      "Nebuly, whose tech helps enterprises measure the business value of AI  (Nebuly Series A funding highlights enterprise demand for measuring AI agent business value.)",
-      "The Nvidia scandal presents a political challenge for the White House  (Washington Post coverage of the Nvidia scandal's political fallout for the White House ahead of midterms.)"
+      "Nidus, which is developing AI-powered tech for manufacturing robots us (Significant defense tech and manufacturing AI funding round ($30M for Nidus).)",
+      "Sebi to issue AI usage guidelines for capital markets, focus on invest (SEBI issuing AI usage guidelines for capital markets impacts fintech and AI compliance in India.)",
+      "Court denies motion to dismiss DRAM price fixing case (Legal development regarding DRAM price fixing directly affects hardware and AI server supply chains.)",
+      "Measure AI by results, not number of agents deployed: Oracle senior ex (Industry perspective on measuring AI deployment efficacy in the Indian enterprise market.)",
+      "EaseMyTrip Q2: Loss Narrows 98% YoY To ₹57 Lakh, Revenue Up 34% (Q2 financial results from an Indian tech-enabled travel platform incorporating AI/tech automation.)"
     ],
     "thin_areas": [
       "india",
-      "safety"
+      "policy"
     ],
     "searches": [
-      "Nvidia interim CEO Colette Kress strategy: 1 new",
-      "Anthropic IPO valuation update: 2 new"
+      "Sebi AI usage guidelines capital markets: 5 new",
+      "Nidus defense manufacturing AI robot funding: 0 new"
     ],
     "dig_deeper": [
-      "How Jensen Huang built a multibillion-dollar business to let Chinese c",
-      "A post-Jensen Nvidia must reshuffle its leadership, reset its DC ties,"
+      "Nidus, which is developing AI-powered tech for manufacturing robots us",
+      "Sebi to issue AI usage guidelines for capital markets, focus on invest"
     ]
   },
-  "judged": 18,
-  "kept": 6,
+  "judged": 10,
+  "kept": 3,
   "research": {
-    "investigated": 5,
-    "confirmed": 5,
-    "tool_calls": 12
+    "investigated": 3,
+    "confirmed": 2,
+    "tool_calls": 7
   },
   "research_log": [
-    "How Jensen Huang built a multibillion-dollar business to let Chinese c: confirmed (searched “Jensen Huang Nvidia Southeast Asia data centers Chinese companies sanctions Wall Street Journal”; searched “Wall Street Journal Jensen Huang Southeast Asia data centers Nvidia chips Chinese companies sanctions”)",
-    "A post-Jensen Nvidia must reshuffle its leadership, reset its DC ties,: confirmed (searched “Chris Miller Financial Times Nvidia Jensen Huang exit”; searched “Chris Miller Financial Times Nvidia Jensen Huang”)",
-    "TSMC plans to set up a new $500M fund to invest in chip startups, supp: confirmed (searched “TSMC 500 million fund chip startups Nvidia Cheng Ting Fang”; read nikkei.com)",
-    "Nebuly, whose tech helps enterprises measure the business value of AI : confirmed (searched “Nebuly 21M Series A Tamara Djurickovic Tech.eu”; read tech.eu; searched “Nebuly Series A 21M Planven Exor Ventures”)",
-    "The Nvidia scandal presents a political challenge for the White House : confirmed (searched “Nvidia scandal Washington Post data centers China corruption midterms”; read msn.com; searched “\"Nvidia scandal hits Trump\" Washington Post”)"
-  ],
-  "threads": [
-    "Jensen Huang resignation and potential return: Nvidia chips accessed by Chinese companies in SE Asia data c",
-    "Jensen Huang resignation and potential return: Nvidia CEO Jensen Huang resigns following investigation into",
-    "Jensen Huang resignation and potential return: Democrats launch inquiry into Nvidia chip sales and Trump ad"
+    "Nidus, which is developing AI-powered tech for manufacturing robots us: confirmed (searched “Nidus AI manufacturing robots defense Kleiner Perkins Costanoa 30M”; read aol.com)",
+    "Sebi to issue AI usage guidelines for capital markets, focus on invest: confirmed (searched “Sebi AI usage guidelines capital markets investor protection Tuhin Kanta Pandey”; read thehindubusinessline.com)",
+    "Court denies motion to dismiss DRAM price fixing case: unconfirmed (searched “Garcia Aguirre Samsung SK Hynix Micron DRAM price fixing motion to dismiss”; searched “Garcia Aguirre Samsung SK Hynix Micron dismiss”; searched “Garcia Aguirre v. Samsung DRAM motion to dismiss”)"
   ],
   "videos": {
-    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+    "OpenAI": "ok (13 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (10 in feed, 1 new)",
+    "AI at Meta": "ok (9 in feed, 0 new)",
+    "Microsoft Research": "ok (10 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 3 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (2 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 1 new)",
+    "Hard Fork": "ok (3 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (3 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
   },
-  "tagged": 5,
-  "trackers": "filed 5 stories; updated us-china, ai-infrastructure, ai-money",
-  "claims": "170 tracked, 164 open, 0 updated this run",
-  "model_tracker": "82 models, 6 changes today",
-  "briefing": "3 themes from 16 stories",
-  "photos": "4 saved, 0 unavailable",
-  "stock photos": "1 added",
-  "alerts": "15 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":39}",
-  "ai_requests_run": 33,
-  "ai_tokens_run": 77376,
-  "ai_requests_today": 70,
-  "provider_log": []
+  "videos_kept": "5 kept from 6 new",
+  "tagged": 2,
+  "trackers": "filed 2 stories; updated ai-regulation, ai-money",
+  "claims": "171 tracked, 165 open, 1 updated this run",
+  "model_tracker": "82 models, 8 changes today",
+  "briefing": "4 themes from 17 stories",
+  "india_briefing": "2 themes from 3 stories",
+  "photos": "2 saved, 0 unavailable",
+  "alerts": "15 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":23}",
+  "ai_requests_run": 23,
+  "ai_tokens_run": 53028,
+  "ai_requests_today": 93,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model",
+    "gemini: 503 after retry; moving to next provider for this run",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: HTTP 400: {\"error\":{\"message\":\"Failed to parse tool call arguments as JSON\",\"type\":\"invalid_request_error\",\"code\":\"tool_use_failed\",\"failed_generation\":\"{\\\"name",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model"
+  ]
 }
