@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-15T04:08:24+00:00",
+  "started_at": "2026-11-15T07:23:18+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -21,8 +21,8 @@
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
     "hf-papers": "ok (15)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (19)",
+    "gdelt": "ok (4)",
+    "hn": "ok (18)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -33,7 +33,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "gdelt-india": "ok (1)",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -43,101 +43,175 @@
   },
   "dropped": [
     {
-      "title": "Where was Nvidia’s security team?",
-      "reason": "score 6: Duplicate or closely related to the ongoing Jensen Huang resignation coverage already published."
-    },
-    {
-      "title": "How the art ecosystem opens up a wide range of opportunities beyond creation of artworks",
-      "reason": "not AI: Arts festival photo essay with no AI relevance."
-    },
-    {
-      "title": "Space, sustainability, AI: test your business creativity with Edition 258 of our weekly quiz!",
-      "reason": "score 2: Weekly general business and trivia quiz containing a passing mention of AI, not a news story."
-    },
-    {
-      "title": "23andMe's Anne Wojcicki, formerly married to Google co-founder Sergey Brin, says Jensen Huang's affair shows what happens when CEOs think they are \"untouchable\" (Bloomberg)",
-      "reason": "score 4: Commentary on Jensen Huang scandal by Anne Wojcicki is routine reaction/opinion, covered by existing entries."
-    },
-    {
-      "title": "The Week Jensen Huang Fell: How a Spy Scandal Toppled Nvidia’s CEO",
+      "title": "They Honey Trap : When Personal Vulnerbilities Becomes A Weapon In The Global War of AI - The Zimbabwe Mail They Honey Trap : When Personal Vulnerbilities Becomes A Weapon In The Global War of AI |…",
       "reason": "duplicate of 72e1fb99c741"
     },
     {
-      "title": "NVIDIA CEO Jensen Huang resigns amid affair scandal, agrees to appear before US Congress",
-      "reason": "duplicate of ea64cad924f9"
+      "title": "Data center diaspora : Democrat blue wave wins could send AI buildout out of U . S . | News",
+      "reason": "score 3: General political opinion piece touching lightly on data center diaspora."
     },
     {
-      "title": "Nvidia CEO Jensen Huang resigns amid scandal, CFO Colette Kress steps in",
-      "reason": "duplicate of a769a94b7f5c"
+      "title": "NIFCA visual arts judge raises AI and copyright concerns",
+      "reason": "score 2: Local visual arts judge raising standard copyright concerns regarding AI art."
     },
     {
-      "title": "What Jensen Huang told Nvidia staff in email surfaces amid scandal",
-      "reason": "duplicate of ee129214e4fa"
+      "title": "We're Asking an Appeals Court to Require a Warrant for ALPR Searches",
+      "reason": "not AI: Automated license plate reader search warrant case, unrelated to AI."
     },
     {
-      "title": "Source: Applied Digital has asked tenants like Oracle and Meta for billions in guarantees since at least last year to secure power before finalizing leases (Bloomberg)",
-      "reason": "could not verify yet after a second try; dropped"
+      "title": "Not Just About Temple: India’s Wearable Impasse",
+      "reason": "not AI: General article on wearable manufacturing challenges in India with no AI connection."
+    },
+    {
+      "title": "Wondering what to gift friends and family this Thanksgiving? Get a $100 Google Play gift card for $92 | Here’s how",
+      "reason": "not AI: General consumer gift card discount deal; no AI relevance."
+    },
+    {
+      "title": "5 lessons from book Be Delusional by Harinder Singh Pelia",
+      "reason": "not AI: Book review and life lessons article with no AI angle."
+    },
+    {
+      "title": "Ethan Mollick: As a side note, a couple years ago, making this benchmark & analysis would’ve taken a considerable amount of time in STATA, likely several…",
+      "reason": "duplicate of fa0e89bac09a"
+    },
+    {
+      "title": "Nvidia insiders say Jensen Huang was prone to wild office tantrums, which a source says some employees were surprised hadn't leaked before his public downfall (Thomas Barrabi/New York Post)",
+      "reason": "duplicate of 72e1fb99c741"
+    },
+    {
+      "title": "Who is Collette Kress, NVIDIA's Interim CEO?",
+      "reason": "duplicate of 01ec9257e016"
+    },
+    {
+      "title": "Jay Ritter \"Mr. IPO\" flags Anthropic IPO valuation risks",
+      "reason": "duplicate of 3e673ebfce8a"
+    },
+    {
+      "title": "Anthropic IPO sees sixfold institutional demand in three days",
+      "reason": "duplicate of 3e673ebfce8a"
+    },
+    {
+      "title": "Nidus, which is developing AI-powered tech for manufacturing robots used by US defense industrial companies, raised $30M across a pre-seed and a seed (Alex Konrad/Upstarts Media)",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
-  "written": [],
+  "written": [
+    {
+      "id": "3e9aed84c994",
+      "headline": "Nvidia chips accessed by Chinese companies in SE Asia data centers",
+      "category": "industry",
+      "summary": "Massive data centers in Southeast Asia exploited a gap in U.S. sanctions to provide computing power for Chinese companies using Nvidia AI chips. This backdoor route built a multibillion-dollar business that kept Beijing in the AI race.",
+      "url": "https://techmeme.com/261115/p1",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "49d98b129891",
+      "headline": "Nvidia CEO Jensen Huang resigns following investigation into personal relationships",
+      "category": "industry",
+      "summary": "Nvidia CEO Jensen Huang resigned following an investigation into personal relationships, with CFO Colette Kress taking over as interim chief. The departure of the 33-year company veteran leaves the world's most valuable public chipmaker facing a leadership transition.",
+      "url": "https://techmeme.com/261115/p6",
+      "sources": 4,
+      "quotes": 2
+    },
+    {
+      "id": "d47d52485b26",
+      "headline": "TSMC plans $500M fund to invest in chip startups and suppliers",
+      "category": "industry",
+      "summary": "TSMC plans to use a new $500 million venture fund to invest in chip startups, suppliers, and other upstream partners. Senior executive Kevin Zhang stated the company wants to support future chip titans during the AI boom.",
+      "url": "https://techmeme.com/261115/p4",
+      "sources": 2,
+      "quotes": 1
+    },
+    {
+      "id": "9108ffa54a00",
+      "headline": "Nebuly raises $21M Series A to measure business value of AI agents",
+      "category": "industry",
+      "summary": "Nebuly has raised a $21 million Series A funding round to expand its platform that measures the return on investment of enterprise AI agents. The Turin-based company connects to custom-built agents and assistants from providers such as Claude, ChatGPT, and Microsoft Copilot to analyze their impact on productivity and revenue.",
+      "url": "https://techmeme.com/261115/p3",
+      "sources": 5,
+      "quotes": 2
+    },
+    {
+      "id": "9d72f3c35aab",
+      "headline": "Democrats launch inquiry into Nvidia chip sales and Trump administration policies",
+      "category": "policy",
+      "summary": "Congressional Democrats launched an inquiry into the Trump administration's handling of Nvidia chip sales to China and export licenses. The investigation follows the ouster of Nvidia CEO Jensen Huang amid a scandal connecting company leadership, government officials, and foreign shipments.",
+      "url": "https://techmeme.com/261114/p23",
+      "sources": 4,
+      "quotes": 0
+    }
+  ],
   "notes": [
-    "ignored made-up duplicate id cdf34d438f12 for 'Where was Nvidia’s security team?'",
-    "ignored made-up duplicate id c457b2b5f42a for '23andMe's Anne Wojcicki, formerly married to Googl'",
-    "ignored made-up duplicate id c2fdd60287b0 for 'Source: Applied Digital has asked tenants like Ora'"
+    "dropped non-quote (Rep. Richard Neal and Sen. Ron Wyden): President Trump agreed to sales of Nvidia’s H200 chips to Ch…",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "1 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 90.8,
-    "audit": 0.0,
-    "plan": 1.6,
-    "judge": 2.5,
-    "verify and write": 5.1,
-    "videos": 1.8,
-    "tagging": 0.0,
-    "explainers": 0.0,
-    "trackers": 0.0,
-    "claims": 0.0,
-    "model tracker": 0.2,
-    "weekly": -0.0,
-    "builders": -0.0,
-    "top voices": -0.0,
-    "briefing": 1.2,
-    "self-review": -0.0,
-    "photos": -0.0,
-    "stock photos": -0.0,
-    "daily email": -0.0,
-    "alerts": 0.8
+    "gather": 142.7,
+    "audit": -0.0,
+    "plan": 57.7,
+    "judge": 4.5,
+    "verify and write": 100.7,
+    "videos": 1.6,
+    "tagging": 2.8,
+    "explainers": -0.0,
+    "trackers": 5.2,
+    "claims": 0.8,
+    "model tracker": 0.0,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 27.1,
+    "self-review": 0.0,
+    "photos": 0.5,
+    "stock photos": 2.9,
+    "daily email": 0.0,
+    "alerts": 3.1
   },
-  "fetched": 2967,
-  "fresh": 5,
+  "fetched": 2971,
+  "fresh": 15,
   "plan": {
-    "focus": "Tracking the fallout from Jensen Huang's resignation and leadership changes at Nvidia across industry and policy.",
+    "focus": "Chasing the fallout from Nvidia's leadership crisis and semiconductor geopolitical fallout while maintaining balanced coverage.",
     "priorities": [
-      "23andMe's Anne Wojcicki, formerly married to Google co-founder Sergey  (Reactions to Jensen Huang's scandal and resignation from prominent figures.)",
-      "Where was Nvidia’s security team? (Security implications following the Nvidia leadership crisis.)",
-      "Source: Applied Digital has asked tenants like Oracle and Meta for bil (Important infrastructure and power guarantee developments affecting major AI players.)"
+      "How Jensen Huang built a multibillion-dollar business to let Chinese c (Details WSJ investigation into how Jensen Huang routed chips to Chinese companies via Southeast Asian data centers.)",
+      "A post-Jensen Nvidia must reshuffle its leadership, reset its DC ties, (Financial Times analysis on what a post-Jensen Nvidia needs to do to restructure leadership and DC ties.)",
+      "TSMC plans to set up a new $500M fund to invest in chip startups, supp (TSMC's $500M fund to support future chip startups and upstream partners.)",
+      "Nebuly, whose tech helps enterprises measure the business value of AI  (Nebuly Series A funding highlights enterprise demand for measuring AI agent business value.)",
+      "The Nvidia scandal presents a political challenge for the White House  (Washington Post coverage of the Nvidia scandal's political fallout for the White House ahead of midterms.)"
     ],
     "thin_areas": [
-      "safety",
-      "india"
+      "india",
+      "safety"
     ],
     "searches": [
-      "Nvidia security team Jensen Huang scandal: 4 new"
+      "Nvidia interim CEO Colette Kress strategy: 1 new",
+      "Anthropic IPO valuation update: 2 new"
     ],
     "dig_deeper": [
-      "Where was Nvidia’s security team?",
-      "23andMe's Anne Wojcicki, formerly married to Google co-founder Sergey "
+      "How Jensen Huang built a multibillion-dollar business to let Chinese c",
+      "A post-Jensen Nvidia must reshuffle its leadership, reset its DC ties,"
     ]
   },
-  "judged": 9,
-  "kept": 1,
+  "judged": 18,
+  "kept": 6,
   "research": {
-    "investigated": 1,
-    "confirmed": 0,
-    "tool_calls": 3
+    "investigated": 5,
+    "confirmed": 5,
+    "tool_calls": 12
   },
   "research_log": [
-    "Source: Applied Digital has asked tenants like Oracle and Meta for bil: unconfirmed (searched “Applied Digital Oracle Meta power guarantees Bloomberg”; searched “Applied Digital Oracle Meta power guarantees”; searched “Applied Digital Oracle Meta billions guarantees”)"
+    "How Jensen Huang built a multibillion-dollar business to let Chinese c: confirmed (searched “Jensen Huang Nvidia Southeast Asia data centers Chinese companies sanctions Wall Street Journal”; searched “Wall Street Journal Jensen Huang Southeast Asia data centers Nvidia chips Chinese companies sanctions”)",
+    "A post-Jensen Nvidia must reshuffle its leadership, reset its DC ties,: confirmed (searched “Chris Miller Financial Times Nvidia Jensen Huang exit”; searched “Chris Miller Financial Times Nvidia Jensen Huang”)",
+    "TSMC plans to set up a new $500M fund to invest in chip startups, supp: confirmed (searched “TSMC 500 million fund chip startups Nvidia Cheng Ting Fang”; read nikkei.com)",
+    "Nebuly, whose tech helps enterprises measure the business value of AI : confirmed (searched “Nebuly 21M Series A Tamara Djurickovic Tech.eu”; read tech.eu; searched “Nebuly Series A 21M Planven Exor Ventures”)",
+    "The Nvidia scandal presents a political challenge for the White House : confirmed (searched “Nvidia scandal Washington Post data centers China corruption midterms”; read msn.com; searched “\"Nvidia scandal hits Trump\" Washington Post”)"
+  ],
+  "threads": [
+    "Jensen Huang resignation and potential return: Nvidia chips accessed by Chinese companies in SE Asia data c",
+    "Jensen Huang resignation and potential return: Nvidia CEO Jensen Huang resigns following investigation into",
+    "Jensen Huang resignation and potential return: Democrats launch inquiry into Nvidia chip sales and Trump ad"
   ],
   "videos": {
     "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
@@ -164,14 +238,16 @@
     "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
   },
-  "trackers": "filed 0 stories; no tracker changed",
-  "claims": "169 tracked, 163 open",
-  "model_tracker": "82 models, 4 changes today",
-  "india_briefing": "3 themes from 4 stories",
-  "photos": "0 saved, 0 unavailable",
-  "alerts": "6 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":1}",
-  "ai_requests_run": 8,
-  "ai_tokens_run": 12144,
-  "ai_requests_today": 37,
+  "tagged": 5,
+  "trackers": "filed 5 stories; updated us-china, ai-infrastructure, ai-money",
+  "claims": "170 tracked, 164 open, 0 updated this run",
+  "model_tracker": "82 models, 6 changes today",
+  "briefing": "3 themes from 16 stories",
+  "photos": "4 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "15 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":39}",
+  "ai_requests_run": 33,
+  "ai_tokens_run": 77376,
+  "ai_requests_today": 70,
   "provider_log": []
 }
