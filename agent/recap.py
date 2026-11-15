@@ -30,7 +30,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 
 from .cards import GROUND, LABEL, MUTED, TEXT, TOPIC, _font, _wrap
 
@@ -778,6 +778,86 @@ INK = (8, 14, 16)
 PAPER = (244, 246, 245)
 
 
+# ---------------------------------------------------------------- the studio set (opening shot)
+WALL = (300, 110, 1620, 690)   # the video wall behind the desk, in frame coordinates
+
+
+def _vgrad(w: int, h: int, top: tuple[int, int, int], bottom: tuple[int, int, int]) -> Image.Image:
+    col = Image.new("RGB", (1, h))
+    for y in range(h):
+        k = y / max(1, h - 1)
+        col.putpixel((0, y), tuple(int(a + (b - a) * k) for a, b in zip(top, bottom)))
+    return col.resize((w, h))
+
+
+def _studio_set() -> Image.Image:
+    """An original, generated TV-news studio: a lit back wall, a big video wall, side screens, a glossy floor that
+    reflects the wall, and a curved anchor desk carrying the Frontier Wire wordmark. Drawn once, reused per frame."""
+    img = _vgrad(W, H, (10, 20, 40), (3, 8, 18)).convert("RGBA")
+    # back-wall light columns
+    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    gd = ImageDraw.Draw(glow)
+    for i, x in enumerate(range(60, W, 180)):
+        c = TOPIC["research"] if i % 2 else (70, 120, 220)
+        gd.rectangle((x, 40, x + 14, 760), fill=c + (150,))
+    img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(18)))
+    img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(3)))
+    d = ImageDraw.Draw(img)
+    # side screens, angled toward camera
+    for (x0, x1, near) in ((40, 250, 0), (1670, 1880, 1)):
+        top_in, bot_in = (180, 640)
+        pts = [(x0, 170 if near else 210), (x1, 210 if near else 170), (x1, 670 if near else 630), (x0, 630 if near else 670)]
+        d.polygon(pts, fill=(14, 30, 52))
+        d.line(pts + [pts[0]], fill=(40, 70, 100), width=4)
+        for j, c in enumerate((TOPIC["models"], TOPIC["research"], TOPIC["policy"], TOPIC["industry"])):
+            y = 260 + j * 90
+            d.rectangle((x0 + 40, y, x0 + 40 + 60 + 25 * ((j * 7 + near * 3) % 5), y + 34), fill=c)
+    # the video wall: bezel, panel seams
+    x0, y0, x1, y1 = WALL
+    shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(shadow).rectangle((x0 - 30, y0 - 20, x1 + 30, y1 + 40), fill=(0, 0, 0, 200))
+    img.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(24)))
+    d = ImageDraw.Draw(img)
+    d.rectangle((x0 - 14, y0 - 14, x1 + 14, y1 + 14), fill=(20, 26, 34))
+    img.paste(_vgrad(x1 - x0, y1 - y0, (16, 44, 76), (6, 16, 30)), (x0, y0))
+    d = ImageDraw.Draw(img)
+    for x in range(x0, x1, (x1 - x0) // 4):
+        d.line((x, y0, x, y1), fill=(4, 10, 18), width=2)
+    for y in range(y0, y1, (y1 - y0) // 3):
+        d.line((x0, y, x1, y), fill=(4, 10, 18), width=2)
+    # floor with perspective lines and a soft reflection of the wall
+    floor_y = 745
+    img.paste(_vgrad(W, H - floor_y, (12, 22, 38), (4, 8, 14)), (0, floor_y))
+    d = ImageDraw.Draw(img)
+    for k in range(-12, 13):
+        d.line((W / 2 + k * 40, floor_y, W / 2 + k * 260, H), fill=(22, 36, 56), width=2)
+    refl = img.crop((x0, y0, x1, y1)).transpose(Image.FLIP_TOP_BOTTOM).resize((x1 - x0, 140))
+    mask = _vgrad(x1 - x0, 140, (70, 70, 70), (0, 0, 0)).convert("L")
+    img.paste(refl, (x0, floor_y), mask)
+    # the anchor desk: glossy curved top, dark front, teal light strip, wordmark
+    d = ImageDraw.Draw(img)
+    cx = W / 2
+    d.polygon([(470, 792), (cx, 770), (W - 470, 792), (W - 390, 836), (cx, 814), (390, 836)], fill=(200, 212, 224))
+    d.polygon([(390, 836), (cx, 814), (W - 390, 836), (W - 390, 858), (cx, 836), (390, 858)], fill=(118, 134, 150))
+    d.polygon([(390, 858), (cx, 836), (W - 390, 858), (W - 430, 1010), (430, 1010)], fill=(12, 24, 40))
+    strip = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(strip).line([(400, 872), (cx, 850), (W - 400, 872)], fill=TOPIC["research"] + (255,), width=6)
+    img.alpha_composite(strip.filter(ImageFilter.GaussianBlur(6)))
+    img.alpha_composite(strip)
+    d = ImageDraw.Draw(img)
+    wm = _font(46, 820, 125)
+    tw = d.textlength("FRONTIER WIRE", font=wm)
+    x = int(cx - (tw + 70) / 2)
+    for i, (h, c) in enumerate([(26, TOPIC["models"]), (40, TOPIC["research"]), (20, TOPIC["policy"]), (32, TOPIC["industry"])]):
+        d.rounded_rectangle((x + i * 14, 948 - h, x + i * 14 + 8, 948), radius=3, fill=c)
+    d.text((x + 70, 902), "FRONTIER WIRE", font=wm, fill=TEXT)
+    # a desk microphone
+    d.line((1130, 790, 1150, 730), fill=(40, 44, 50), width=6)
+    d.ellipse((1136, 700, 1168, 738), fill=(30, 32, 38))
+    d.ellipse((1100, 784, 1160, 800), fill=(30, 32, 38))
+    return img
+
+
 class Renderer:
     """Broadcast-style recap: an opening title, one full-screen scene per story (picture behind, a lower third with
     the headline, the detail and the source, a stat card for the key figure), a closing card, and a headline ticker
@@ -829,6 +909,9 @@ class Renderer:
         self.eyebrow = _text_layer(["TODAY IN AI"], _font(44, 820, 112), INK)
         self.open_date = _text_layer([self.date_h.upper()], _font(36, 700, 112), TEXT)
         self.count = _text_layer([f"The day's top {self.n} stories in " + ("one minute" if 50 <= self.total <= 70 else f"{int(round(self.total))} seconds")], _font(36, 500), SOFT)
+        f, lines = _fit(script["hook"], WALL[2] - WALL[0] - 140, (74, 68, 62, 56), 2, 820)
+        self.wall_hook = _text_layer(lines, f, TEXT, 1.06)
+        self._studio: Image.Image | None = None
         self.out1 = _text_layer(["That's the day in AI."], _font(92, 820), TEXT)
         self.out2 = _text_layer([site_label], _font(54, 700, 110), TOPIC["research"])
         self.out3 = _text_layer(["Every story, with its sources. Updated every three hours by our newsroom agent."], _font(32, 500), MUTED)
@@ -936,28 +1019,38 @@ class Renderer:
         return self._close(t, t - self.starts[-1])
 
     def _open(self, t: float, dur: float) -> Image.Image:
-        img = self.bg.copy().convert("RGBA")
-        d = ImageDraw.Draw(img)
-        _signal(d, "frontier-wire-hook", TOPIC["research"], (1000, 130, 1840, 440), t)
+        """The studio shot: the camera pushes in slowly on the anchor desk while the day's headline builds on the
+        video wall behind it."""
+        if self._studio is None:
+            self._studio = _studio_set()
+        img = self._studio.copy()
+        x0, y0, x1, y1 = WALL
         out_k = 1 - _ease((t - (dur - 0.4)) / 0.4)
-        bars = [(150, TOPIC["models"]), (230, TOPIC["research"]), (115, TOPIC["policy"]), (185, TOPIC["industry"])]
-        for i, (h, c) in enumerate(bars):
-            hh = h * _ease((t - i * 0.1) / 0.7) * out_k
-            if hh > 2:
-                d.rounded_rectangle((120 + i * 64, 440 - hh, 120 + i * 64 + 38, 440), radius=19, fill=c)
-        k = _ease((t - 0.35) / 0.5) * out_k
-        if k > 0:  # the red title bar wipes in
+        wall = Image.new("RGBA", (x1 - x0, y1 - y0), (0, 0, 0, 0))
+        wd = ImageDraw.Draw(wall)
+        _signal(wd, "frontier-wire-hook", TOPIC["research"], (60, 40, x1 - x0 - 60, 200), t)
+        k = _ease((t - 0.35) / 0.5)
+        if k > 0:  # the red title bar wipes in on the wall
             bw = self.eyebrow.width + 56
             bar = Image.new("RGBA", (bw, 70), RED + (255,))
             bar.alpha_composite(_recolor(self.eyebrow, PAPER), (28, 10))
-            img.alpha_composite(self._wipe(bar, k), (120, 500))
-            img.alpha_composite(_fade(self.open_date, k), (120 + bw + 30, 516))
-        k2 = _ease((t - 0.7) / 0.6) * out_k
+            wall.alpha_composite(self._wipe(bar, k), (70, 220))
+            wall.alpha_composite(_fade(self.open_date, k), (70 + bw + 30, 236))
+        k2 = _ease((t - 0.7) / 0.6)
         if k2 > 0:
-            img.alpha_composite(_fade(self.hook, k2), (120, 610 + int((1 - k2) * 30)))
-        k3 = _ease((t - 1.1) / 0.6) * out_k
-        if k3 > 0:
-            img.alpha_composite(_fade(self.count, k3), (120, 640 + self.hook.height))
+            wall.alpha_composite(_fade(self.wall_hook, k2), (70, 320 + int((1 - k2) * 24)))
+        k3 = _ease((t - 1.1) / 0.6)
+        if k3 > 0 and 340 + self.wall_hook.height + self.count.height < y1 - y0:
+            wall.alpha_composite(_fade(self.count, k3), (70, 340 + self.wall_hook.height))
+        img.alpha_composite(wall, (x0, y0))
+        # slow camera push-in toward the desk
+        z = 1 + 0.07 * _ease(t / dur)
+        cw, ch = int(W / z), int(H / z)
+        ox, oy = (W - cw) // 2, int((H - ch) * 0.55)
+        img = img.crop((ox, oy, ox + cw, oy + ch)).resize((W, H), Image.BILINEAR)
+        if out_k < 1:  # dip to the first story
+            img.alpha_composite(Image.new("RGBA", (W, H), INK + (int(255 * (1 - out_k)),)))
+        _brand(ImageDraw.Draw(img), 80, 52)
         self._ticker(img, t)
         return img.convert("RGB")
 
