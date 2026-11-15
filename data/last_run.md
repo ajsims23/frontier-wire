@@ -1,69 +1,55 @@
-## Frontier Wire newsroom run — 2026-11-15T19:00:42+00:00
+## Frontier Wire newsroom run — 2026-11-15T21:53:00+00:00
 
-Fetched 2959 items · fresh 8 · judged 11 · kept 5 · **written 4**
-AI: 36 requests, 82,097 tokens this run · 167 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking the geopolitical fallout over Nvidia chip curbs and export policies alongside international AI security alignments.
-  Priorities: Investigation: Howard Lutnick pushed to narrow chip curbs affecting a  (Direct follow-up to the Nvidia/China chip curbs and political friction involving Howard Lutnick.); The US and Pax Silica allies, including Japan, the UK, and India, agre (Major policy update on Pax Silica allies creating a joint AI supply chain defense list.); Sources: Howard Lutnick is expected to join Trump on Air Force One to  (Deepens the administration conflict over Nvidia export controls ahead of the China trip.); Ethan Mollick: Another one of those things that would have been imposs (Practical insights on multi-agent workflows using Claude Fable and Opus.); Understanding Positional Embeddings in Modern LLMs (Technical deep-dive on positional embeddings for foundational LLM builders.)
-  Thin areas: research, india
-  Searches: Howard Lutnick Nvidia chip curbs China: 3 new
-  Dig deeper: Investigation: Howard Lutnick pushed to narrow chip curbs affecting a ; The US and Pax Silica allies, including Japan, the UK, and India, agre
-Research agent: investigated 5 stories with 14 tool calls, confirmed 4
-Daily briefing: 3 themes from 16 stories
-Threads updated: US approved Chinese firms and chip access: Howard Lutnick pushed to narrow chip curbs affecting a forme; Jensen Huang resignation and potential return: Howard Lutnick joins Trump on Air Force One to China amid Nv; Apple Siri AI and advanced capabilities push: Apple plans smart glasses launch in 2027 relying on Siri and
-Videos: 5 kept from 6 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (10 in feed, 1 new), AI at Meta ok (9 in feed, 0 new), Microsoft Research ok (10 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (2 in feed, 0 new), Latent Space ok (15 in feed, 0 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 1 new), Big Technology Podcast ok (13 in feed, 1 new), Hard Fork ok (3 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (3 in feed, 0 new)
-Builders desk: picked 6 from 60 candidates; 6 with pictures, 0 with videos
-Top Voices: 2 debates from 50 posts by 6 people; 3 portraits, 3 pictures
-Photos: 1 saved, 0 unavailable
+Fetched 2980 items · fresh 7 · judged 13 · kept 4 · **written 4**
+AI: 28 requests, 67,352 tokens this run · 195 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Tracking the escalating Nvidia leadership crisis, fallout from Jensen Huang resignation rumors, and tightening US export controls.
+  Priorities: Sources: Jensen Huang has discussed a comeback as Nvidia CEO with conf (Critical market and governance update on Jensen Huang discussing an Nvidia comeback and lobbying the White House.); Congress wants to tighten export rules on AI chips after Nvidia spy sc (Direct policy response from Congress tightening export rules on AI chips following the Nvidia scandal.); Megaspeed says Alice Huang left in August 2025 and has no current role (Important contextual details regarding Megaspeed, Alice Huang, and the unfolding supply chain probe.); Sources: Nvidia appealed to Taiwanese officials after its manager was  (Shed light on diplomatic and supply chain friction between Nvidia, Taiwan, and TSMC.); Understanding Positional Embeddings in Modern LLMs (Strong technical deep-dive on positional embeddings for our builder readership.)
+  Thin areas: research, safety
+  Searches: Jensen Huang Nvidia return White House: 6 new
+  Dig deeper: Sources: Jensen Huang has discussed a comeback as Nvidia CEO with conf; Congress wants to tighten export rules on AI chips after Nvidia spy sc
+Research agent: investigated 4 stories with 9 tool calls, confirmed 4
+Daily briefing: 3 themes from 18 stories
+Threads updated: Jensen Huang resignation and potential return: Congress moves to tighten export rules on AI chips after Nvi; Jensen Huang resignation and potential return: Jensen Huang discusses Nvidia CEO comeback as allies lobby f; Jensen Huang resignation and potential return: Megaspeed says Alice Huang left in 2025 amid US probe into N; Jensen Huang resignation and potential return: Nvidia sought Taipei's help after employee's chip smuggling 
+Videos: 5 kept from 5 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (10 in feed, 1 new), AI at Meta ok (9 in feed, 0 new), Microsoft Research ok (10 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (2 in feed, 0 new), Latent Space ok (15 in feed, 0 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 1 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (3 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (3 in feed, 0 new)
+Photos: 4 saved, 0 unavailable
 Alerts: 25 events sent: {"subscribers":6,"sent":0,"queued":27}
 Claims: 173 tracked, 167 open, 0 updated this run
 Trackers: filed 3 stories; updated us-china
 Model tracker: 82 models, 16 changes today
-Explainers: 0 added to earlier stories
 Tagged 4 stories by sector, region and deal
-India briefing: 3 themes from 3 stories
-Time: gather 70s, plan 14s, judge 4s, verify and write 119s, videos 4s, tagging 2s, trackers 2s, claims 2s, builders 12s, top voices 13s, briefing 3s, stock photos 3s, alerts 9s
+Time: gather 135s, plan 13s, judge 4s, verify and write 207s, videos 2s, tagging 2s, trackers 3s, claims 2s, briefing 2s, alerts 4s
 
 ### New stories
-- **policy** — [US and allies agree to create joint list to protect AI supply chains from China](https://techmeme.com/261115/p12)  
-  The US and allies including Japan, the UK, and India agreed to create a joint list of AI technologies and supply chains to protect from China. The accord comes ahead of Donald Trump's meeting with Xi Jinping at the Asia-Pacific Economic Cooperation forum in Shenzhen.  
+- **policy** — [Congress moves to tighten export rules on AI chips after Nvidia spy scandal](https://theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china)  
+  Following revelations regarding former Nvidia CEO Jensen Huang's relationship with a suspected Chinese spy, US lawmakers are pushing for stricter export controls on advanced AI chips. Both Democrats and Republicans are reviewing legislative measures and demanding public testimony from industry and government leaders.  
   _3 source(s), 0 verified quote(s)_
-- **policy** — [Howard Lutnick pushed to narrow chip curbs affecting a former firm's client](https://techmeme.com/261115/p9)  
-  Commerce Secretary Howard Lutnick pushed to narrow chip rules that would affect Southeast Asian data centers. Some of these data centers are clients of his former firm, Cantor Fitzgerald, and one may serve Tencent.  
+- **industry** — [Jensen Huang discusses Nvidia CEO comeback as allies lobby for return](https://techmeme.com/261115/p14)  
+  Former Nvidia CEO Jensen Huang has reportedly discussed returning to lead the chipmaker with confidants, as allies form a lobbying effort for his reinstatement. Huang resigned following an investigation into personal relationships that involved an executive at Megaspeed.  
+  _9 source(s), 2 verified quote(s)_
+- **industry** — [Megaspeed says Alice Huang left in 2025 amid US probe into Nvidia chip sales](https://techmeme.com/261115/p15)  
+  Singapore-based Megaspeed announced that former executive Alice Huang departed in August 2025 and holds no current role, defending its operations as lawful. The company purchased billions of dollars in Nvidia chips between 2024 and 2026, prompting a U.S. Commerce Department inquiry into potential export control violations.  
   _3 source(s), 0 verified quote(s)_
-- **policy** — [Howard Lutnick joins Trump on Air Force One to China amid Nvidia chip curbs dispute](https://techmeme.com/261115/p11)  
-  Commerce Secretary Howard Lutnick is expected to travel on Air Force One with the president to China this week. The trip follows clashes with Treasury Secretary Scott Bessent and others over Nvidia chip curbs.  
-  _3 source(s), 0 verified quote(s)_
-- **industry** — [Apple plans smart glasses launch in 2027 relying on Siri and iPhone apps](https://techmeme.com/261115/p10)  
-  Apple plans to unveil its first smart glasses at WWDC in June 2027 and ship them before the end of the year, according to a report by Bloomberg's Mark Gurman. The glasses will integrate third-party iPhone apps with Siri AI and feature cameras for Visual Intelligence.  
-  _4 source(s), 0 verified quote(s)_
+- **industry** — [Nvidia sought Taipei's help after employee's chip smuggling case](https://techmeme.com/261115/p13)  
+  Nvidia appealed to Taiwanese officials and sought advice from TSMC after an Nvidia manager was charged over helping smuggle AI chips into China. Prosecutors accused the manager of being the core figure in a network that smuggled 74 servers containing Nvidia chips to China.  
+  _2 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- iPhone 18 Pro vs iPhone 17 Pro vs iPhone 16 Pro vs iPhone 15 Pro Max: Which has the best camera for photography? — not AI: General consumer tech iPhone camera comparison with no AI relevance.
-- Zelenskyy says Starshield restrictions threaten Ukraine’s energy defenses ahead of winter — not AI: General geopolitical and defense news about SpaceX Starshield restrictions in Ukraine with no AI relevance.
-- Ethan Mollick: Another one of those things that would have been impossible a few months ago: "Fable & Opus, find video of the Starship catch. Render the… — score 4: Ethan Mollick testing multi-agent workflows is minor commentary and a repeat topic.
-- Lutnick faces scrutiny over Nvidia ties as chip export controls falter — score 4: Duplicate coverage of Howard Lutnick scrutiny over Nvidia chip export controls.
-- Nvidia row: Lutnick pushed to weaken chip rules linked to family business — score 4: Duplicate coverage of Howard Lutnick pushing to weaken chip rules.
-- Howard Lutnick in the hot seat as lawmakers demand answers on Nvidia sales to China — score 4: Duplicate coverage of lawmakers demanding answers on Howard Lutnick and Nvidia sales.
-- Understanding Positional Embeddings in Modern LLMs — could not verify yet; will retry next run
+- Understanding Positional Embeddings in Modern LLMs — score 5: Tutorial/technical deep dive on positional embeddings; useful for builders but does not meet the bar for major breaking research news.
+- SNL gathers all the tech tycoons for a lesson in dating and spycraft — not AI: Saturday Night Live skit about tech executives is cultural commentary/entertainment, not core AI industry news.
 
 </details>
 
-### Sources with problems
-- `gdelt`: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out
-- `gdelt-india`: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out
-- `r-sideproject`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'
-F
-
 <details><summary>Research agent's work</summary>
 
-- The US and Pax Silica allies, including Japan, the UK, and India, agre: confirmed (searched “Pax Silica US Japan UK India AI supply chain Financial Times”; searched “Financial Times Pax Silica AI tech supply chains China Japan UK India”; searched “"Pax Silica" Financial Times AI technologies supply chains China”)
-- Investigation: Howard Lutnick pushed to narrow chip curbs affecting a : confirmed (searched “Howard Lutnick Cantor Fitzgerald Malaysia data center Tencent New York Times”; read nytimes.com; read msn.com)
-- Understanding Positional Embeddings in Modern LLMs: unconfirmed (searched “Understanding Positional Embeddings in Modern LLMs Sebastian Raschka”; searched “Sebastian Raschka Understanding Positional Embeddings”; searched “Understanding Positional Embeddings in Modern LLMs”)
-- Sources: Howard Lutnick is expected to join Trump on Air Force One to : confirmed (searched “Howard Lutnick Air Force One China Nvidia chip curbs Scott Bessent”; searched “Howard Lutnick Air Force One China Semafor”; searched “"Howard Lutnick" Air Force One China”)
-- Sources: Apple plans to unveil smart glasses at WWDC and ship them by : confirmed (searched “Apple smart glasses WWDC 2027 Mark Gurman Bloomberg”; read macrumors.com)
+- Congress wants to tighten export rules on AI chips after Nvidia spy sc: confirmed (searched “Congress Nvidia export rules AI chips Jensen Huang spy”; read ft.com; read msn.com)
+- Sources: Jensen Huang has discussed a comeback as Nvidia CEO with conf: confirmed (searched “Jensen Huang comeback Nvidia CEO Financial Times”; read afr.com)
+- Megaspeed says Alice Huang left in August 2025 and has no current role: confirmed (searched “Megaspeed Alice Huang August 2025 Associated Press”; read nytimes.com)
+- Sources: Nvidia appealed to Taiwanese officials after its manager was : confirmed (searched “Nvidia Taiwanese officials chip smuggling TSMC Mackenzie Hawkins Bloomberg”; read bloomberg.com)
 
 </details>
 
 ### Notes
-- 1 kept item(s) carried over to the next run
+- dropped non-quote (James Tan): ready to cooperate fully with any other relevant U.S. govern…
+- gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model
+- gemini/gemini-flash-latest: answer cut off; retrying with more room
