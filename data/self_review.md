@@ -1,50 +1,54 @@
-## Newsroom self-review, 2026-11-14
+## Newsroom self-review, 2026-11-15
 
-Looked at 47 runs over the last 3 days (120 stories written).
+Looked at 38 runs over the last 3 days (104 stories written).
 Tick the suggestions you want applied; nothing changes until a person approves it.
 
-- [ ] **fix source** · `gdelt-india`: Add request rate limiting or backoff for GDELT API calls to avoid 429 Too Many Requests errors.  
-  _Why:_ GDELT API is returning 429 Too Many Requests errors frequently (23/47 runs for gdelt-india, 11/47 for gdelt). Request rate or query frequency should be reduced.
-- [ ] **coverage gap** · `Mistral AI`: Check source configurations or queries for Mistral AI and Alibaba (Qwen) to ensure their recent developments are being captured.  
-  _Why:_ Mistral AI and Alibaba (Qwen) have tracked labs with zero stories this week, indicating an under-coverage gap.
-- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower min_score_to_publish_1_to_10 from 6 to 5 to allow more borderline quality stories to be published.  
-  _Why:_ A high volume of stories (182) are being dropped with a score of 4, just below the publishing threshold of 6.
+- [ ] **remove source** · `gdelt-india`: Remove gdelt‑india from the source list.  
+  _Why:_ gdelt‑india fails in 23 of 38 runs (≈60% failure) and blocks story generation.
+- [ ] **fix source** · `gdelt`: Add exponential back‑off and increase the connection timeout for gdelt.  
+  _Why:_ gdelt times out in 13 of 38 runs; a simple retry/back‑off or longer timeout could recover many runs.
+- [ ] **coverage gap** · `Mistral AI, Alibaba (Qwen)`: Add dedicated RSS or blog sources for Mistral AI and Alibaba Qwen to capture their announcements.  
+  _Why:_ Mistral AI and Alibaba (Qwen) labs have no stories this week despite being tracked.
+- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower min_score_to_publish_1_to_10 from 6 to 5 to increase usable story yield.  
+  _Why:_ Large numbers of drops are due to scores 4, 5 and 3 (total 241) while the publish threshold is 6.
+- [ ] **remove source** · `sam-altman`: Remove sam‑altman from the source list.  
+  _Why:_ sam‑altman fails intermittently (2/38) and provides little value; removing reduces error handling overhead.
 
 <details><summary>Statistics the agent reviewed</summary>
 
 ```json
 {
- "runs": 47,
- "stories_written": 120,
+ "runs": 38,
+ "stories_written": 104,
  "source_failures": {
-  "gdelt-india": "23/47 runs; last error: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20",
-  "gdelt": "11/47 runs; last error: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20",
-  "sam-altman": "2/47 runs; last error: failed: ReadTimeout: The read operation timed out"
+  "gdelt": "13/38 runs; last error: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+  "gdelt-india": "23/38 runs; last error: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+  "sam-altman": "2/38 runs; last error: failed: ReadTimeout: The read operation timed out"
  },
  "sources_returning_nothing": {},
  "drop_reasons": {
-  "not AI": 210,
-  "score 4": 182,
-  "score 3": 95,
-  "score 5": 95,
-  "could not verify yet": 61,
-  "variety": 20,
-  "could not verify yet after a second try": 18,
-  "duplicate of efdd0bfa6110": 16
+  "not AI": 150,
+  "score 4": 113,
+  "score 5": 67,
+  "score 3": 61,
+  "could not verify yet": 50,
+  "duplicate of efdd0bfa6110": 16,
+  "duplicate of a769a94b7f5c": 16,
+  "variety": 14
  },
  "tracked_labs_without_stories_this_week": [
   "Mistral AI",
   "Alibaba (Qwen)"
  ],
  "provider_notes": [
-  "gemini/gemini-flash-latest: 503 (server busy); trying next model",
-  "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
-  "gemini: unreachable (ReadTimeout); skipping provider",
-  "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
   "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
   "groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing",
-  "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
-  "gemini/gemini-flash-latest: 503 (server busy); trying next model"
+  "groq/openai/gpt-oss-120b: request over its 8,000-token limit; retrying with a 2,149-token answer",
+  "groq/openai/gpt-oss-120b: request too large for this model; trying next model",
+  "groq/qwen/qwen3.8-27b: request too large for this model; trying next model",
+  "groq/openai/gpt-oss-20b: request over its 8,000-token limit; retrying with a 2,056-token answer",
+  "groq/openai/gpt-oss-20b: request over its 8,000-token limit; retrying with a 1,056-token answer",
+  "groq/openai/gpt-oss-20b: request too large for this model; trying next model"
  ],
  "current_settings": {
   "min_score_to_publish_1_to_10": 6,

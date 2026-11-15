@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-14T21:51:14+00:00",
+  "started_at": "2026-11-15T01:25:44+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -21,8 +21,8 @@
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
     "hf-papers": "ok (15)",
-    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
-    "hn": "ok (24)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "hn": "ok (22)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -33,7 +33,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "gdelt-india": "ok (1)",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -43,119 +43,120 @@
   },
   "dropped": [
     {
-      "title": "Show HN: A terminal-native idle factory game, written in Rust with ratatui",
-      "reason": "not AI: Terminal-native idle factory game written in Rust, no AI relevance."
-    },
-    {
-      "title": "US IRS free online tax filing open source repo (2025)",
-      "reason": "not AI: US IRS free online tax filing open source repository, no AI relevance."
-    },
-    {
-      "title": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
-      "reason": "score 8: Duplicate of the petition to reinstate Jensen Huang as Nvidia CEO."
-    },
-    {
-      "title": "DroneAcharya Profits Tank 65% YoY To ₹67 Lakh In H1",
-      "reason": "not AI: Financial earnings of a drone‑tech SME without a clear AI angle; does not meet Frontier Wire's AI relevance criteria."
-    },
-    {
-      "title": "USD-pegged stablecoins are taking a growing share of Latin America's crypto activity, serving as a store of value and an efficient cross-border payment system (Maria Clara Cobo/Bloomberg)",
-      "reason": "not AI: Article about USD-pegged stablecoins in Latin America, no AI angle."
-    },
-    {
-      "title": "A petition to reinstate Jensen Huang as Nvidia CEO has over 100,000 signatures, including some big names",
-      "reason": "score 8: Duplicate coverage of the petition to reinstate Jensen Huang."
-    },
-    {
-      "title": "Petition for Jensen Huang’s return as Nvidia CEO hits 100,000 signatures",
-      "reason": "score 4: Petition to reinstate Jensen Huang is a minor social campaign with limited impact on AI development or market; not a major frontier event."
-    },
-    {
       "title": "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM",
-      "reason": "could not verify yet; will retry next run"
+      "reason": "score 5: Technical post on serving GLM-5.3, routine benchmark/serving optimization."
+    },
+    {
+      "title": "Nvidia deliberately kept GPU prices high through circular financing deals",
+      "reason": "duplicate of b26717d449a4"
     },
     {
       "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
+      "reason": "score 5: Implementation of DeepSeek V3 in Jax is a developer/hobbyist project rather than a major research breakthrough."
+    },
+    {
+      "title": "datasette-llm 0.1a11",
+      "reason": "score 3: Minor release for a Datasette plugin supporting OpenAI-compatible endpoints."
+    },
+    {
+      "title": "datasette-vega 0.7",
+      "reason": "score 3: Routine plugin update for data visualization tool, minor AI relevance."
+    },
+    {
+      "title": "Unlike other larger-than-life tech founders, Jensen Huang lacked super-voting shares in Nvidia, making it easier for him to lose control of the company (Forbes)",
+      "reason": "score 5: Analysis of Nvidia governance structure and super-voting shares following Jensen Huang's exit."
+    },
+    {
+      "title": "Source: Applied Digital has asked tenants like Oracle and Meta for billions in guarantees since at least last year to secure power before finalizing leases (Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Where was Nvidia’s security team?",
       "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "fa0ba71cc1a1",
-      "headline": "Nvidia investors urge board to keep Jensen Huang return option open",
-      "category": "industry",
-      "summary": "Altimeter Capital CEO Brad Gerstner and Atreides Management CIO Gavin Baker wrote to Nvidia's board urging a slow, measured succession process and to keep the door open for founder Jensen Huang to return as CEO. The investors, who hold $2.13 billion in Nvidia stock, expressed confidence in interim CEO Colette Kress.",
-      "url": "https://techmeme.com/261114/p18",
-      "sources": 4,
+      "id": "f7a016ab59a8",
+      "headline": "Ethan Mollick creates SatBench to track AI benchmark saturation",
+      "category": "voices",
+      "summary": "Ethan Mollick created SatBench to measure how quickly major AI benchmarks become saturated by AI, finding that 63% of 173 benchmarks cited by labs since 2023 are now saturated.",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2cotuxdvk22",
+      "sources": 1,
       "quotes": 1
+    },
+    {
+      "id": "0ef9a44499ba",
+      "headline": "Nvidia risks losing supply chain deals without Jensen Huang, warns Elon Musk",
+      "category": "industry",
+      "summary": "Elon Musk warned that Nvidia could lose critical supply chain agreements following the departure of co-founder and CEO Jensen Huang. Nvidia appointed CFO Colette Kress as interim CEO while searching for a successor.",
+      "url": "https://tribuneindia.com/news/business/nvidia-risks-losing-critical-supply-chain-deals-without-jensen-huang-warns-elon-musk",
+      "sources": 4,
+      "quotes": 2
     }
   ],
   "notes": [
-    "ignored made-up duplicate id 612a1f059709 for 'Elon Musk, other tech execs sign petition calling '",
-    "ignored made-up duplicate id 612a1f059709 for 'A petition to reinstate Jensen Huang as Nvidia CEO'",
-    "dropped non-quote (Brad Gerstner): the letter ... outlines the minimum acceptable standards the…",
     "2 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 74.7,
-    "audit": -0.0,
-    "plan": 2.0,
-    "judge": 115.3,
-    "verify and write": 119.8,
-    "videos": 6.0,
-    "tagging": 9.7,
-    "explainers": 0.0,
-    "trackers": 57.6,
-    "claims": 3.4,
+    "gather": 89.3,
+    "audit": 2.3,
+    "plan": 27.6,
+    "judge": 2.5,
+    "verify and write": 265.0,
+    "videos": 5.2,
+    "tagging": 3.1,
+    "explainers": -0.0,
+    "trackers": 36.3,
+    "claims": 32.4,
     "model tracker": 0.0,
-    "weekly": 0.0,
-    "builders": 100.1,
-    "top voices": 50.9,
-    "briefing": 2.8,
-    "self-review": 0.0,
-    "photos": 0.6,
-    "stock photos": 0.0,
-    "daily email": 0.0,
-    "alerts": 1.7
+    "weekly": 50.9,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 3.8,
+    "self-review": 2.0,
+    "photos": 0.3,
+    "stock photos": 0.9,
+    "daily email": -0.0,
+    "alerts": 4.0
   },
-  "fetched": 2972,
-  "fresh": 9,
+  "fetched": 2971,
+  "fresh": 10,
+  "audit": "coverage 100% of 4 significant stories; 0 missed, 0 added to this run",
   "plan": {
-    "focus": "Tracking the escalating Nvidia leadership crisis as industry heavyweights rally for Jensen Huang's return.",
+    "focus": "Covering the ongoing fallout from Nvidia's leadership crisis and circular financing revelations.",
     "priorities": [
-      "A petition to reinstate Jensen Huang as Nvidia CEO tops 100K signature (Major petition and industry response over Jensen Huang's Nvidia exit.)",
-      "Letter: Altimeter's Brad Gerstner and Atreides's Gavin Baker urge Nvid (Altimeter and Atreides urge Nvidia board to consider Huang's return with billions on the line.)",
-      "Show HN: DeepSeek V3 in ~200 lines of pure Jax (High-interest open-source developer release implementing DeepSeek V3 in pure Jax.)",
-      "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLL (Technical performance milestone serving GLM-5.3 on Nvidia infrastructure.)",
-      "DroneAcharya Profits Tank 65% YoY To ₹67 Lakh In H1 (India AI and tech hardware sector financial earnings.)"
+      "Nvidia deliberately kept GPU prices high through circular financing de (Critical details on Nvidia's financing and GPU pricing strategies amid the ongoing crisis.)",
+      "Nvidia risks losing critical supply chain deals without Jensen Huang , (Elon Musk's warning regarding Nvidia's supply chain risks without Jensen Huang.)",
+      "Ethan Mollick: AI is getting better faster than our measurements are.  (Ethan Mollick on benchmark saturation and how AI capabilities outpace current measurement tools.)",
+      "Show HN: DeepSeek V3 in ~200 lines of pure Jax (DeepSeek V3 implementation highlights lean, efficient model architectures for builders.)",
+      "Source: Applied Digital has asked tenants like Oracle and Meta for bil (Infrastructure power guarantees reflect tightening compute and data center pressures.)"
     ],
     "thin_areas": [
-      "india",
-      "models"
+      "research",
+      "safety"
     ],
     "searches": [
-      "Nvidia board Jensen Huang response petition: 6 new"
+      "Jensen Huang Nvidia board resignation fallout: 0 new"
     ],
     "dig_deeper": [
-      "A petition to reinstate Jensen Huang as Nvidia CEO tops 100K signature",
-      "Letter: Altimeter's Brad Gerstner and Atreides's Gavin Baker urge Nvid"
+      "Nvidia deliberately kept GPU prices high through circular financing de",
+      "Nvidia risks losing critical supply chain deals without Jensen Huang ,"
     ]
   },
-  "judged": 15,
-  "kept": 3,
+  "judged": 10,
+  "kept": 4,
   "research": {
-    "investigated": 3,
+    "investigated": 4,
     "confirmed": 1,
-    "tool_calls": 10
+    "tool_calls": 13
   },
   "research_log": [
-    "Letter: Altimeter's Brad Gerstner and Atreides's Gavin Baker urge Nvid: confirmed (searched “Brad Gerstner Gavin Baker Nvidia board consider potential return of Jensen Huang”; read indiatimes.com; read cnbctv18.com)",
-    "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLL: unconfirmed (searched “GLM-5.3 vLLM two Nvidia DGX stations 607.8 tok/s”; read blockchain.news; searched “\"Serving GLM-5.3\"”; searched “GLM-5.3 vLLM DGX Station benchmark 607.8”)",
-    "Show HN: DeepSeek V3 in ~200 lines of pure Jax: unconfirmed (searched “DeepSeek V3 Jax”; searched “\"DeepSeek V3\" \"Jax\"”; searched “DeepSeek V3 Jax implementation”)"
-  ],
-  "threads": [
-    "Jensen Huang resignation and potential return: Nvidia investors urge board to keep Jensen Huang return opti"
+    "Ethan Mollick: AI is getting better faster than our measurements are. : unconfirmed (searched “Ethan Mollick SatBench AI benchmarks”; searched “SatBench Ethan Mollick”; searched “\"SatBench\" AI benchmarks”)",
+    "Source: Applied Digital has asked tenants like Oracle and Meta for bil: unconfirmed (searched “Applied Digital Oracle Meta billions guarantees power leases Bloomberg”; searched “Applied Digital Oracle Meta power guarantees”; searched “Applied Digital Oracle Meta power”)",
+    "Nvidia risks losing critical supply chain deals without Jensen Huang ,: confirmed (searched “Elon Musk Nvidia Jensen Huang supply chain deals”; read indiatimes.com)",
+    "Where was Nvidia’s security team?: unconfirmed (searched “Nvidia security chief Jensen Huang CEO”; searched “Where was Nvidia’s security team TechCrunch”; read techcrunch.com; read gizmodo.com; searched “\"Nvidia\" \"chief security officer\" August 2026”)"
   ],
   "videos": {
     "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
@@ -165,7 +166,7 @@
     "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Hugging Face": "ok (12 in feed, 3 new)",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
@@ -174,66 +175,34 @@
     "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Training Data (Sequoia)": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Big Technology Podcast": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "20VC": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/"
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
   },
-  "videos_kept": "3 kept from 3 new",
-  "tagged": 1,
-  "trackers": "filed 1 stories; updated ai-money",
-  "claims": "169 tracked, 163 open, 2 updated this run",
-  "model_tracker": "82 models, 3 changes today",
-  "builders_sources": {
-    "show-hn": "ok (8)",
-    "github-new": "ok (30)",
-    "hf-spaces": "ok (23)",
-    "product-hunt": "ok (4)",
-    "r-localllama": "ok (25)",
-    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
-  },
-  "builders": "picked 8 from 60 candidates; 4 with pictures, 0 with videos",
-  "top_voices_sources": {
-    "tv-mollick": "ok (1)",
-    "tv-lambert": "ok (1)",
-    "tv-swyx": "ok (8)",
-    "tv-dwarkesh": "ok (1)",
-    "tv-raschka": "ok (0)",
-    "tv-karpathy": "ok (0)",
-    "tv-evans": "ok (0)",
-    "x-coverage": "ok (1 of 6 articles, bing)",
-    "hn": "ok (2)"
-  },
-  "top_voices": "3 debates from 50 posts by 6 people (2 removed by checks); 3 portraits, 3 pictures",
-  "briefing": "3 themes from 20 stories",
+  "tagged": 2,
+  "trackers": "filed 2 stories; updated frontier-race, ai-infrastructure",
+  "claims": "169 tracked, 163 open, 1 updated this run",
+  "model_tracker": "82 models, 2 changes today",
+  "weekly": "wrote 2026-W46 with 4 shifts",
+  "briefing": "4 themes from 18 stories",
+  "self_review": "19 lines written to data/self_review.md",
   "photos": "1 saved, 0 unavailable",
-  "alerts": "9 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":9}",
-  "ai_requests_run": 24,
-  "ai_tokens_run": 72853,
-  "ai_requests_today": 225,
+  "stock photos": "1 added",
+  "alerts": "6 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":19}",
+  "ai_requests_run": 29,
+  "ai_tokens_run": 69398,
+  "ai_requests_today": 29,
   "provider_log": [
-    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+    "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model",
+    "gemini: network error ReadTimeout, retrying",
     "gemini: unreachable (ReadTimeout); skipping provider",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: HTTP 400: {\"error\":{\"message\":\"Failed to parse tool call arguments as JSON\",\"type\":\"invalid_request_error\",\"code\":\"tool_use_failed\",\"failed_generation\":\"{\\\"name",
     "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
     "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-    "groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing",
-    "groq/openai/gpt-oss-120b: request over its 8,000-token limit; retrying with a 2,149-token answer",
-    "groq/openai/gpt-oss-120b: request too large for this model; trying next model",
-    "groq/qwen/qwen3.8-27b: request too large for this model; trying next model",
-    "groq/openai/gpt-oss-20b: request over its 8,000-token limit; retrying with a 2,056-token answer",
-    "groq/openai/gpt-oss-20b: request over its 8,000-token limit; retrying with a 1,056-token answer",
-    "groq/openai/gpt-oss-20b: request too large for this model; trying next model"
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model"
   ]
 }

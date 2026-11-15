@@ -1,14 +1,5 @@
 {
   "posts": {
-    "f5913b377964": {
-      "id": "f5913b377964",
-      "url": "https://simonwillison.net/2026/Nov/7/link-rel-next",
-      "person": "Simon Willison",
-      "text": "datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages. datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages I was looking at the Firefox network panel today when I noticed that requests to a Datasette table page were triggering an HTTP prefetch to the next page of rows in that table. This was happening because Datasette pages serve an HTTP link header like this: link: <https://latest.datasette.io/fixtures/compound_three_primary_keys?_next=a%2Cd%2Cv>; rel=\"next\" This is bad. A tiny fraction of the visitors to one of those pages will click the \"next\" link, which means their browser is fetching unnecessary data and the D",
-      "published": "2026-11-07T23:57:46+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
     "d9d9e7e83ebf": {
       "id": "d9d9e7e83ebf",
       "url": "https://bsky.app/profile/simonwillison.net/post/3mzrfku36422q",
@@ -583,6 +574,33 @@
       "via": "SBS News",
       "kind": "reported",
       "headline": "Anthropic CEO Dario Amodei Predicts AI Will Cure Cancer and Alzheimer's Within 10 Years"
+    },
+    "f9a3c449e598": {
+      "id": "f9a3c449e598",
+      "url": "https://simonwillison.net/2026/Nov/14/datasette-llm",
+      "person": "Simon Willison",
+      "text": "datasette-llm 0.1a11. Release: datasette-llm 0.1a11 datasette-llm is the intermediate plugin for Datasette that supports configuring LLMs for use with other Datasette plugins. This release adds support for OpenAI-compatible endpoints, so you can configure Datasette to use an LLM hosted anywhere that talks the OpenAI pseudo-standard web protocol. This means that if you're running local models with LM Studio or Ollama or llama.cpp (which just hit v1.0.0 ) you can run Datasette via uvx like this: wget https://datasette.io/content.db uvx --with datasette-agent datasette \\ --root --secret 1 \\ -s plugins.datasette-llm.de",
+      "published": "2026-11-14T23:59:28+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "5acb9d3d7e18": {
+      "id": "5acb9d3d7e18",
+      "url": "https://simonwillison.net/2026/Nov/14/datasette-vega",
+      "person": "Simon Willison",
+      "text": "datasette-vega 0.7. Release: datasette-vega 0.7 A new release of Datasette's longest untouched plugin, for rendering charts (using Vega-Lite ) against data in a table or custom query. The last release was in July 2018! I finally bumped it for compatibility with the latest Datasette alphas, plus some cosmetic tweaks to make it work better with Datasette Lite . (Datasette Lite just gained the ability to run JavaScript plugins like this! I'll write more about that soon.) Since it works with Datasette Lite, the live demo in the README now links to this demo on Datasette Lite . Tags: datasette , visualisation , datase",
+      "published": "2026-11-14T17:09:09+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "f7a016ab59a8": {
+      "id": "f7a016ab59a8",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2cotuxdvk22",
+      "person": "Ethan Mollick",
+      "text": "AI is getting better faster than our measurements are. I threw together SatBench, which measures how quickly major AI benchmarks become saturated (effectively solved) by AI. Of 173 benchmarks cited by the Labs since 2023, 63% are now saturated. Saturation of new benchmarks is also happening faster.",
+      "published": "2026-11-14T23:49:56.358Z",
+      "via": "Bluesky",
+      "kind": "post"
     }
   },
   "digest": {

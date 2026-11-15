@@ -1,0 +1,208 @@
+{
+  "started_at": "2026-11-15T01:25:44+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1387)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (907)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (15)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "hn": "ok (22)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (1)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (26)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM",
+      "reason": "score 5: Technical post on serving GLM-5.3, routine benchmark/serving optimization."
+    },
+    {
+      "title": "Nvidia deliberately kept GPU prices high through circular financing deals",
+      "reason": "duplicate of b26717d449a4"
+    },
+    {
+      "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
+      "reason": "score 5: Implementation of DeepSeek V3 in Jax is a developer/hobbyist project rather than a major research breakthrough."
+    },
+    {
+      "title": "datasette-llm 0.1a11",
+      "reason": "score 3: Minor release for a Datasette plugin supporting OpenAI-compatible endpoints."
+    },
+    {
+      "title": "datasette-vega 0.7",
+      "reason": "score 3: Routine plugin update for data visualization tool, minor AI relevance."
+    },
+    {
+      "title": "Unlike other larger-than-life tech founders, Jensen Huang lacked super-voting shares in Nvidia, making it easier for him to lose control of the company (Forbes)",
+      "reason": "score 5: Analysis of Nvidia governance structure and super-voting shares following Jensen Huang's exit."
+    },
+    {
+      "title": "Source: Applied Digital has asked tenants like Oracle and Meta for billions in guarantees since at least last year to secure power before finalizing leases (Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Where was Nvidia’s security team?",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "f7a016ab59a8",
+      "headline": "Ethan Mollick creates SatBench to track AI benchmark saturation",
+      "category": "voices",
+      "summary": "Ethan Mollick created SatBench to measure how quickly major AI benchmarks become saturated by AI, finding that 63% of 173 benchmarks cited by labs since 2023 are now saturated.",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2cotuxdvk22",
+      "sources": 1,
+      "quotes": 1
+    },
+    {
+      "id": "0ef9a44499ba",
+      "headline": "Nvidia risks losing supply chain deals without Jensen Huang, warns Elon Musk",
+      "category": "industry",
+      "summary": "Elon Musk warned that Nvidia could lose critical supply chain agreements following the departure of co-founder and CEO Jensen Huang. Nvidia appointed CFO Colette Kress as interim CEO while searching for a successor.",
+      "url": "https://tribuneindia.com/news/business/nvidia-risks-losing-critical-supply-chain-deals-without-jensen-huang-warns-elon-musk",
+      "sources": 4,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "2 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 89.3,
+    "audit": 2.3,
+    "plan": 27.6,
+    "judge": 2.5,
+    "verify and write": 265.0,
+    "videos": 5.2,
+    "tagging": 3.1,
+    "explainers": -0.0,
+    "trackers": 36.3,
+    "claims": 32.4,
+    "model tracker": 0.0,
+    "weekly": 50.9,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 3.8,
+    "self-review": 2.0,
+    "photos": 0.3,
+    "stock photos": 0.9,
+    "daily email": -0.0,
+    "alerts": 4.0
+  },
+  "fetched": 2971,
+  "fresh": 10,
+  "audit": "coverage 100% of 4 significant stories; 0 missed, 0 added to this run",
+  "plan": {
+    "focus": "Covering the ongoing fallout from Nvidia's leadership crisis and circular financing revelations.",
+    "priorities": [
+      "Nvidia deliberately kept GPU prices high through circular financing de (Critical details on Nvidia's financing and GPU pricing strategies amid the ongoing crisis.)",
+      "Nvidia risks losing critical supply chain deals without Jensen Huang , (Elon Musk's warning regarding Nvidia's supply chain risks without Jensen Huang.)",
+      "Ethan Mollick: AI is getting better faster than our measurements are.  (Ethan Mollick on benchmark saturation and how AI capabilities outpace current measurement tools.)",
+      "Show HN: DeepSeek V3 in ~200 lines of pure Jax (DeepSeek V3 implementation highlights lean, efficient model architectures for builders.)",
+      "Source: Applied Digital has asked tenants like Oracle and Meta for bil (Infrastructure power guarantees reflect tightening compute and data center pressures.)"
+    ],
+    "thin_areas": [
+      "research",
+      "safety"
+    ],
+    "searches": [
+      "Jensen Huang Nvidia board resignation fallout: 0 new"
+    ],
+    "dig_deeper": [
+      "Nvidia deliberately kept GPU prices high through circular financing de",
+      "Nvidia risks losing critical supply chain deals without Jensen Huang ,"
+    ]
+  },
+  "judged": 10,
+  "kept": 4,
+  "research": {
+    "investigated": 4,
+    "confirmed": 1,
+    "tool_calls": 13
+  },
+  "research_log": [
+    "Ethan Mollick: AI is getting better faster than our measurements are. : unconfirmed (searched “Ethan Mollick SatBench AI benchmarks”; searched “SatBench Ethan Mollick”; searched “\"SatBench\" AI benchmarks”)",
+    "Source: Applied Digital has asked tenants like Oracle and Meta for bil: unconfirmed (searched “Applied Digital Oracle Meta billions guarantees power leases Bloomberg”; searched “Applied Digital Oracle Meta power guarantees”; searched “Applied Digital Oracle Meta power”)",
+    "Nvidia risks losing critical supply chain deals without Jensen Huang ,: confirmed (searched “Elon Musk Nvidia Jensen Huang supply chain deals”; read indiatimes.com)",
+    "Where was Nvidia’s security team?: unconfirmed (searched “Nvidia security chief Jensen Huang CEO”; searched “Where was Nvidia’s security team TechCrunch”; read techcrunch.com; read gizmodo.com; searched “\"Nvidia\" \"chief security officer\" August 2026”)"
+  ],
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "tagged": 2,
+  "trackers": "filed 2 stories; updated frontier-race, ai-infrastructure",
+  "claims": "169 tracked, 163 open, 1 updated this run",
+  "model_tracker": "82 models, 2 changes today",
+  "weekly": "wrote 2026-W46 with 4 shifts",
+  "briefing": "4 themes from 18 stories",
+  "self_review": "19 lines written to data/self_review.md",
+  "photos": "1 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "6 events sent: {\"subscribers\":7,\"sent\":0,\"queued\":19}",
+  "ai_requests_run": 29,
+  "ai_tokens_run": 69398,
+  "ai_requests_today": 29,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model",
+    "gemini: network error ReadTimeout, retrying",
+    "gemini: unreachable (ReadTimeout); skipping provider",
+    "groq/openai/gpt-oss-120b: HTTP 400: {\"error\":{\"message\":\"Failed to parse tool call arguments as JSON\",\"type\":\"invalid_request_error\",\"code\":\"tool_use_failed\",\"failed_generation\":\"{\\\"name",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model"
+  ]
+}
