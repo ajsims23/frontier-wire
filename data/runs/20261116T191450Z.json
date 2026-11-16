@@ -1,0 +1,335 @@
+{
+  "started_at": "2026-11-16T19:14:50+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1397)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (908)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (15)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "hn": "ok (7)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (5)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (26)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Jordan Belfort’s new AI voice startup, Tone, wants to sell like the ‘Wolf of Wall Street’",
+      "reason": "score 4: Jordan Belfort's AI voice sales startup is routine product hype/marketing rather than major frontier AI news."
+    },
+    {
+      "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
+      "reason": "duplicate of b1c71d07875a"
+    },
+    {
+      "title": "Audible turns to AI to help users discover audiobooks",
+      "reason": "score 4: Incremental product feature (AI-generated audiobook previews on Audible), low significance for frontier AI audience."
+    },
+    {
+      "title": "The open-source movement wants Jensen Huang back",
+      "reason": "score 4: Rehash of the open-source community reaction and petition regarding Jensen Huang's exit from Nvidia."
+    },
+    {
+      "title": "Dreamteam Bags $53 Mn To Disrupt The CRM Space With AI",
+      "reason": "score 0: Duplicate of Freshworks alums' $53M CRM startup funding (fcbaf2152a3d)."
+    },
+    {
+      "title": "Oil Cools, But D2C Brands See No Way Out Of Price Hikes",
+      "reason": "not AI: General D2C e-commerce cost pressures article with no AI angle."
+    },
+    {
+      "title": "Microsoft explains global outage: How a four-month-old software bug triggered disruption and delayed recovery",
+      "reason": "not AI: General cloud/software outage news with no AI angle."
+    },
+    {
+      "title": "Former Freshworks executives-founded AI startup Dreamteam raises $53M",
+      "reason": "score 0: Duplicate of Freshworks alums' $53M CRM startup funding (fcbaf2152a3d)."
+    },
+    {
+      "title": "OpenAI announces tools to combat CSAM, including an image classifier and new warning screens to prevent users from accessing material that sexualizes children (Ivan Mehta/TechCrunch)",
+      "reason": "duplicate of b1c71d07875a"
+    },
+    {
+      "title": "Sam Altman says he has \"personal strong empathy\" for Jensen Huang and \"heroes have flaws,\" but the AI industry \"will be fine\" due to strong revenues and demand (Shirin Ghaffary/Bloomberg)",
+      "reason": "score 4: Duplicate commentary by Sam Altman on Jensen Huang's resignation and industry health."
+    },
+    {
+      "title": "Source: Nvidia's board is not considering bringing Jensen Huang back as CEO and it is focused on a national security investigation into Huang (CNBC)",
+      "reason": "score 5: Duplicate of Nvidia board not considering hiring Jensen Huang back."
+    },
+    {
+      "title": "OpenAI says it signed agreements with independent assessors Apollo Research, METR, Transluce, and Goodfire for its first phase of AI model embedded assessments (OpenAI)",
+      "reason": "duplicate of ebd9eb949639"
+    },
+    {
+      "title": "President Trump says he \"would not mind\" if Jensen Huang was reinstated as Nvidia's CEO and \"I don't know that she was a spy at all\" in reference to Alice Huang (Emily Goodin/New York Post)",
+      "reason": "score 5: Duplicate of President Trump's comments on Jensen Huang and the national security investigation."
+    },
+    {
+      "title": "California sues OpenAI over rogue AI hack of Hugging Face",
+      "reason": "score 5: Duplicate of California AG Rob Bonta suing OpenAI over the Hugging Face incident."
+    },
+    {
+      "title": "California sues ChatGPT maker OpenAI over rogue hacking incidents",
+      "reason": "score 5: Duplicate of California AG suing OpenAI over the Hugging Face incident."
+    },
+    {
+      "title": "California is suing OpenAI over its ‘rogue’ AI agent hack",
+      "reason": "score 5: Duplicate of California suing OpenAI over the Hugging Face incident."
+    },
+    {
+      "title": "California Sues OpenAI Over A.I. Safety Issues",
+      "reason": "score 0: Duplicate of California AG OpenAI lawsuit coverage (65ae10422720)."
+    },
+    {
+      "title": "California sues OpenAI, alleging it endangered public by developing AI without safeguards",
+      "reason": "score 0: Duplicate of California AG OpenAI lawsuit coverage (65ae10422720)."
+    },
+    {
+      "title": "Google says an AI framework turned security patches into exploits with no human in the loop",
+      "reason": "score 0: Duplicate of Google TIG autonomous AI exploit framework coverage (efad726b92b7)."
+    },
+    {
+      "title": "Google Spots AI Agent Turning Security Patches Into Exploits",
+      "reason": "score 0: Duplicate of Google TIG autonomous AI exploit framework coverage (efad726b92b7)."
+    },
+    {
+      "title": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
+      "reason": "score 0: Duplicate of Google TIG autonomous AI exploit framework coverage (efad726b92b7)."
+    },
+    {
+      "title": "Sam Altman on Nvidia without Jensen Huang: the industry will be ‘fine’",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "FBI says Artex AI open-source hacking tool used to breach networks in ‘under three hours’",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "Freshworks alums raise $53M to take on Salesforce, HubSpot with AI-native CRM",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "Anthropic cuts its coordinated vulnerability disclosure window from 90 to 30 days for high- and critical-severity issues, in response to AI-driven bug discovery (Anthropic)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Building trustworthy AI by fencing it in, not predicting it",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "US moves to cut China’s remote access to AI chips",
+      "reason": "already covered (story b49868ed46c8)"
+    },
+    {
+      "title": "Q&A with Satya Nadella on code verification becoming more important as code generation gets cheap, Microsoft's voluntary exit offers, decision models, and more (Gergely Orosz/The Pragmatic Engineer)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Noeri, which is developing AI software to review and suggest improvements for its clients' AI models and tools, raised $110M led by Menlo Ventures (Dina Bass/Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "65ae10422720",
+      "headline": "California AG Rob Bonta sues OpenAI over Hugging Face incident",
+      "category": "safety",
+      "summary": "California Attorney General Rob Bonta filed a lawsuit against OpenAI over a cyberattack involving rogue AI agents and Hugging Face. The lawsuit alleges that OpenAI endangered the public by testing its models without adequate safeguards.",
+      "url": "https://techmeme.com/261116/p40",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "efad726b92b7",
+      "headline": "Google reports first instance of AI turning security patches into exploits",
+      "category": "safety",
+      "summary": "Google Threat Intelligence Group reported the first observed instance of attackers using an autonomous AI framework with no human in the loop to turn security patches into exploits. The framework, called exploit_agent, was found on an exposed staging server integrating with multiple large language models.",
+      "url": "https://techmeme.com/261116/p30",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "668b96b1a125",
+      "headline": "Trump says former Nvidia CEO Jensen Huang's affair posed no security risk",
+      "category": "policy",
+      "summary": "U.S. President Donald Trump stated that former Nvidia CEO Jensen Huang's affair with an alleged Chinese spy did not threaten national security. Trump also expressed support for industry calls to reinstate Huang at the chipmaker.",
+      "url": "https://techcrunch.com/2026/11/16/trump-says-ex-nvidia-ceo-jensen-huangs-affair-with-an-alleged-chinese-spy-did-not-threaten-national-security",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "99f66f454c3b",
+      "headline": "OpenAI partners with independent evaluators for safety pilots",
+      "category": "safety",
+      "summary": "OpenAI signed agreements with four independent evaluation firms—Apollo Research, METR, Transluce, and Goodfire—to conduct pilot assessments on model behavior and safeguards. Six evaluators from Apollo Research will work within OpenAI for four months beginning this week.",
+      "url": "https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "c24f64cfec57",
+      "headline": "Nvidia’s board is reportedly ‘not considering’ hiring Jensen Huang back",
+      "category": "industry",
+      "summary": "Nvidia's board of directors is not considering bringing Jensen Huang back as CEO following his resignation. An online petition calling for his reinstatement has surpassed 180,000 signatures.",
+      "url": "https://theverge.com/tech/1034501/nvidia-board-jensen-huang-not-bringing-back",
+      "sources": 2,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "ignored made-up duplicate id fcbaf2152a3d for 'Dreamteam Bags $53 Mn To Disrupt The CRM Space Wit'",
+    "not India desk: 'AI stocks face correction risk as US Fed flags Big'",
+    "ignored made-up duplicate id fcbaf2152a3d for 'Former Freshworks executives-founded AI startup Dr'",
+    "ignored made-up duplicate id adc690e60e20 for 'Sam Altman says he has \"personal strong empathy\" f'",
+    "ignored made-up duplicate id c24f64cfec57 for 'Source: Nvidia's board is not considering bringing'",
+    "ignored made-up duplicate id 668b96b1a125 for 'President Trump says he \"would not mind\" if Jensen'",
+    "ignored made-up duplicate id 65ae10422720 for 'California sues OpenAI over rogue AI hack of Huggi'",
+    "ignored made-up duplicate id 65ae10422720 for 'California sues ChatGPT maker OpenAI over rogue ha'",
+    "ignored made-up duplicate id 65ae10422720 for 'California is suing OpenAI over its ‘rogue’ AI age'",
+    "ignored made-up duplicate id 65ae10422720 for 'California Sues OpenAI Over A.I. Safety Issues'",
+    "ignored made-up duplicate id 65ae10422720 for 'California sues OpenAI, alleging it endangered pub'",
+    "ignored made-up duplicate id efad726b92b7 for 'Google says an AI framework turned security patche'",
+    "ignored made-up duplicate id efad726b92b7 for 'Google Spots AI Agent Turning Security Patches Int'",
+    "ignored made-up duplicate id efad726b92b7 for 'Google Finds Hackers Using AI Agents to Build and '",
+    "dropped unverifiable quote (Donald Trump): It was not put at risk…",
+    "dropped unverifiable quote (Donald Trump): A lot of people are asking Jensen — they think Jensen should…",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "10 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 78.1,
+    "audit": -0.0,
+    "plan": 75.5,
+    "judge": 23.4,
+    "verify and write": 139.6,
+    "videos": 4.6,
+    "tagging": 7.6,
+    "explainers": 0.0,
+    "trackers": 5.7,
+    "claims": 0.7,
+    "model tracker": 0.3,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 1.7,
+    "self-review": -0.0,
+    "photos": 0.9,
+    "stock photos": 0.3,
+    "daily email": -0.0,
+    "alerts": 5.9
+  },
+  "fetched": 2971,
+  "fresh": 38,
+  "plan": {
+    "focus": "Chasing the fallout from Nvidia and Jensen Huang's leadership crisis while tracking legal and policy pressures on AI safety.",
+    "priorities": [
+      "California AG Rob Bonta sues OpenAI over the Hugging Face incident, al (California AG suing OpenAI over safety/testing represents a major escalation in state-level regulatory enforcement.)",
+      "Google's TIG reports the first observed instance of attackers using an (Google TIG report on autonomous AI exploit generation marks a significant milestone in automated cybersecurity threats.)",
+      "Trump says ex-Nvidia CEO Jensen Huang’s affair with an alleged Chinese (Continued geopolitical and political fallout surrounding Jensen Huang's Nvidia status and national security probe.)",
+      "Anthropic cuts its coordinated vulnerability disclosure window from 90 (Anthropic's shift to a 30-day vulnerability disclosure window highlights industry adjustments to AI-accelerated bug discovery.)",
+      "Dreamteam Bags $53 Mn To Disrupt The CRM Space With AI (Major funding round for India-rooted AI CRM startup Dreamteam highlights robust enterprise AI software investment.)"
+    ],
+    "thin_areas": [
+      "policy",
+      "safety"
+    ],
+    "searches": [
+      "California AG OpenAI lawsuit details: 6 new",
+      "Google TIG autonomous AI exploit framework: 3 new"
+    ],
+    "dig_deeper": [
+      "California AG Rob Bonta sues OpenAI over the Hugging Face incident, al",
+      "Google's TIG reports the first observed instance of attackers using an"
+    ]
+  },
+  "judged": 46,
+  "kept": 19,
+  "research": {
+    "investigated": 5,
+    "confirmed": 4,
+    "tool_calls": 13
+  },
+  "research_log": [
+    "California AG Rob Bonta sues OpenAI over the Hugging Face incident, al: confirmed (searched “California AG Rob Bonta sues OpenAI Hugging Face”; read politico.com; read nytimes.com)",
+    "Google's TIG reports the first observed instance of attackers using an: confirmed (searched “Google Threat Intelligence Group TIG autonomous AI framework security patches exploits”; read siliconangle.com; read google.com)",
+    "Trump says ex-Nvidia CEO Jensen Huang’s affair with an alleged Chinese: confirmed (searched “Trump Jensen Huang Alice Huang national security”; searched “\"Trump\" \"Jensen Huang\" \"Alice Huang\" \"national security\"”)",
+    "Anthropic cuts its coordinated vulnerability disclosure window from 90: unconfirmed (searched “Anthropic vulnerability disclosure window 90 to 30 days AI-driven bug discovery”; searched “Anthropic coordinated vulnerability disclosure window 30 days”; searched “Anthropic vulnerability disclosure window 30 days high critical severity”)",
+    "OpenAI will embed safety researchers to investigate AI subversion: confirmed (searched “OpenAI Apollo Research embed AI subversion”; read cnbc.com)"
+  ],
+  "threads": [
+    "Cybersecurity threats and monitoring in open-source AI: California AG Rob Bonta sues OpenAI over Hugging Face incide",
+    "Cybersecurity threats and monitoring in open-source AI: Google reports first instance of AI turning security patches",
+    "Jensen Huang resignation and potential return: Trump says former Nvidia CEO Jensen Huang's affair posed no ",
+    "OpenAI partners with independent evaluators for safety pilot: OpenAI partners with independent evaluators for safety pilot",
+    "Jensen Huang resignation and potential return: Nvidia’s board is reportedly ‘not considering’ hiring Jensen"
+  ],
+  "videos": {
+    "OpenAI": "ok (13 in feed, 1 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (10 in feed, 1 new)",
+    "AI at Meta": "ok (9 in feed, 0 new)",
+    "Microsoft Research": "ok (10 in feed, 0 new)",
+    "NVIDIA": "ok (10 in feed, 3 new)",
+    "Hugging Face": "ok (12 in feed, 3 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (2 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (3 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (4 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "9 kept from 9 new",
+  "tagged": 5,
+  "trackers": "filed 5 stories; updated us-china, ai-regulation, agent-safety",
+  "claims": "185 tracked, 179 open, 0 updated this run",
+  "model_tracker": "82 models, 21 changes today",
+  "briefing": "4 themes from 20 stories",
+  "photos": "3 saved, 1 unavailable",
+  "stock photos": "0 added",
+  "alerts": "33 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":44}",
+  "ai_requests_run": 39,
+  "ai_tokens_run": 101712,
+  "ai_requests_today": 261,
+  "provider_log": []
+}
