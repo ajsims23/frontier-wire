@@ -1,14 +1,5 @@
 {
   "posts": {
-    "3e62264ffb8e": {
-      "id": "3e62264ffb8e",
-      "url": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust",
-      "person": "Simon Willison",
-      "text": "parse_number() as a SQLite extension: C vs Rust. Research: parse_number() as a SQLite extension: C vs Rust I was out walking the dog when I got curious about how easy/difficult it would be to write a SQLite C extension that adds a parse_number() function for turning strings like -$1,234.56 or '12.5%' into numeric values that could be summed and sorted. I fired up regular Claude chat (Opus 5.5) and prompted : I'm thinking about a SQLite custom function 'parse_number(value)' that strips ',', '$', '£' and '%', handles a leading '-', and returns 'NULL' for anything it can’t parse Explore the difference between building this as a SQLite extension",
-      "published": "2026-11-08T22:26:00+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
     "2382673acb37": {
       "id": "2382673acb37",
       "url": "https://simonwillison.net/2026/Nov/9/hn-50421091",
@@ -571,6 +562,51 @@
       "text": "Understanding Positional Embeddings in Modern LLMs. This article explains how LLMs encode and process token position information by covering classic and contemporary methods like RoPE. It’s essentially a comprehensive journey where we will work through the mechanisms with visual examples, a little math, and a small PyTorch implementation. And, of course, we will then also look at how modern architectures adapt or omit explicit positional encodings. Below, you can find a preview of which positional embedding choices are used in 2026 open-weight models. We will discuss these choices later after covering the underlying mechanisms. Figure 1: A preview of the gallery’s 2026 architectures,…",
       "published": "2026-11-15T12:10:37+00:00",
       "via": "Ahead of AI",
+      "kind": "post"
+    },
+    "4b4d48f19f03": {
+      "id": "4b4d48f19f03",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre",
+      "person": "Simon Willison",
+      "text": "datasette-maplibre 0.1a0. Release: datasette-maplibre 0.1a0 The first new Datasette geospatial plugin in quite a while! This one combines the excellent MapLibre GL library with OpenFreeMap , the free vector map server operated by Zsolt Ero (you should sponsor Zsolt on GitHub .) I built most of this with a single prompt to Claude Fable 5.2: Look at datasette-cluster-map and datasette-leaflet-geojson plugins, then look at ~/dev/tools/openfreemap-demo.html - then build a brand new Datasette plugin that uses maplibreGL and openfreemap and combines the features of those other two plugins - but be creative and think outside",
+      "published": "2026-11-15T23:58:36+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "3bc6cdb34c17": {
+      "id": "3bc6cdb34c17",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette",
+      "person": "Simon Willison",
+      "text": "datasette 1.0a43. Release: datasette 1.0a43 I've been leaning hard into Claude Fable 5.2 to help knock things off the 1.0 milestone , which is now 53% complete. The biggest 1.0 item in this release is streaming support for output renderers - the built-in TSV and CSV export mechanisms now use this as well, and plugins can register themselves as capable of streaming every row in a table in one go via the new Response.stream() method. There are a couple of security fixes, one of which I deemed deserving of a GitHub advisory : private stored queries could be exposed, granting access to the title and SQL of the quer",
+      "published": "2026-11-15T23:20:27+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "7c04761a4076": {
+      "id": "7c04761a4076",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette-2",
+      "person": "Simon Willison",
+      "text": "datasette 0.65.6. Release: datasette 0.65.6 I backported a minor security fix from 1.0a43: Fixed a security issue where a database registered using add_database(db, name=..., route=...) with a route that differs from its name could be downloaded from /<route>.db by actors who were denied access to it. [...] Tags: security , datasette",
+      "published": "2026-11-15T23:18:17+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "9ae934d441da": {
+      "id": "9ae934d441da",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette-apps",
+      "person": "Simon Willison",
+      "text": "datasette-apps 0.4a0. Release: datasette-apps 0.4a0 Datasette Apps are sandboxed HTML and JavaScript applications that live inside Datasette - think Claude Artifacts, but these ones can run SQL queries against your data. 0.4a0 adds support for linking: you can link to an app with #fragments in the URL and the app can see and use those, plus supported URL schemes are reported back to Datasette Agent so it can help write apps that link to each other. This means you can have e.g. an app that shows details about a specific record, and a completely separate app that searches those records and links to their representati",
+      "published": "2026-11-15T04:02:45+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "16b4b3a7aa40": {
+      "id": "16b4b3a7aa40",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette-agent",
+      "person": "Simon Willison",
+      "text": "datasette-agent 0.6a0. Release: datasette-agent 0.6a0 Accumulated small fixes for Datasette Agent, my agent plugin for Datasette that lets you ask questions about your data. Most notably, it now adds an agent prompt directly to the Datasette homepage, with support for hash-mentions of tables and queries: Tags: datasette-agent , llm , datasette , llms , ai , generative-ai",
+      "published": "2026-11-15T03:49:47+00:00",
+      "via": "Simon Willison",
       "kind": "post"
     }
   },

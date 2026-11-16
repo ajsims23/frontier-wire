@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-16T01:16:49+00:00",
+  "started_at": "2026-11-16T01:41:32+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -17,36 +17,252 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "failed: HTTPStatusError: Client error '429 Unknown Error' for url 'https://export.arxiv.org/api/query?search_query=cat%3Acs.AI+OR+cat%3Acs.CL+OR+",
+    "hf-papers": "ok (16)",
+    "gdelt": "ok (16)",
+    "hn": "ok (11)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (26)",
+    "auto-techmeme.com": "ok (15)"
   },
   "dropped": [
     {
-      "title": "AI Day Seoul Brings Together Korea’s Industry Leaders, Startups and Developer Communities",
-      "reason": "score 5: Routine vendor roadshow and conference recap post from Nvidia in South Korea, primarily marketing content rather than significant new model releases, research, or major corporate news."
+      "title": "Protomaps: Self-hosting map tiles has gotten cheap and easy",
+      "reason": "not AI: Off-topic web mapping tool release."
+    },
+    {
+      "title": "Yatra’s ‘MICE’ Problem",
+      "reason": "not AI: Quarterly financial earnings report for travel booking platform Yatra; no AI angle."
+    },
+    {
+      "title": "The driverless taxis, robots and tech companies in APEC host city Shenzhen show Chinas ambitions",
+      "reason": "score 4: General reporting on autonomous vehicles and tech in Shenzhen for APEC; lacks specific, notable AI news for our audience."
+    },
+    {
+      "title": "datasette-maplibre 0.1a0",
+      "reason": "not AI: Geospatial plugin release, minor software tool update without direct frontier AI significance."
+    },
+    {
+      "title": "datasette 1.0a43",
+      "reason": "score 4: Routine software release update for Datasette tool by Simon Willison."
+    },
+    {
+      "title": "datasette 0.65.6",
+      "reason": "not AI: Minor security patch release for an open-source tool."
+    },
+    {
+      "title": "datasette-apps 0.4a0",
+      "reason": "score 3: Plugin feature update for personal developer tool."
+    },
+    {
+      "title": "datasette-agent 0.6a0",
+      "reason": "score 3: Minor open-source plugin update for personal developer tool."
+    },
+    {
+      "title": "Amazon loses 40 Leo satellites after ULA's Vulcan rocket fails 10 minutes into flight, marking the first mission failure for the Boeing-Lockheed joint venture (Joey Roulette/Reuters)",
+      "reason": "not AI: Rocket launch failure for Amazon LEO satellites, no direct AI angle."
+    },
+    {
+      "title": "Anthropic IPO Dissection: Is the $1.4 Trillion Price Tag a Buy or a Pass?",
+      "reason": "score 4: Stock recommendation and analysis piece on the Anthropic IPO valuation, editorial policy excludes buy/pass stock guides."
+    },
+    {
+      "title": "Anthropic IPO 2026: Should You Buy the Stock When It Goes Public?",
+      "reason": "score 4: Retail investor stock purchase guide for the Anthropic IPO, editorial policy excludes 'should you buy' pieces."
+    },
+    {
+      "title": "Nvidia had no succession plan when Jensen Huang quit. Former Fortune 500 CEOs call it 'preposterous'",
+      "reason": "duplicate of 369f1ffcda11"
+    },
+    {
+      "title": "Nvidia’s Jensen Huang may be planning a comeback just days after stepping down",
+      "reason": "duplicate of 369f1ffcda11"
+    },
+    {
+      "title": "Bessent urges Nvidia to look outside the company for new CEO after Jensen Huang’s resignation: ‘Dramatic shakeup’",
+      "reason": "duplicate of 4d0aab350c5f"
+    },
+    {
+      "title": "Jensen Huang eyeing comeback as Nvidia CEO forming ‘war room’ with allies in wake of Chinese spy, employee affairs: report",
+      "reason": "duplicate of 369f1ffcda11"
+    },
+    {
+      "title": "Jensen Huang Discusses Comeback as Nvidia CEO With Allies Amid Board Probe and Washington Pushback",
+      "reason": "duplicate of 369f1ffcda11"
+    },
+    {
+      "title": "Jensen Huang comeback? Elon Musk backs campaign to bring former Nvidia CEO back",
+      "reason": "duplicate of 369f1ffcda11"
+    },
+    {
+      "title": "How Samsung aims to be a one-stop shop that builds, runs, and powers data centers; sources: its IT arm is in early talks to sign Anthropic and OpenAI as tenants (Financial Times)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Apple’s new study looks to improve the effectiveness of AI health tools",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
-  "written": [],
-  "notes": [],
-  "mode": "breaking",
+  "written": [
+    {
+      "id": "e9a9e657b9d8",
+      "headline": "Anthropic targets up to $90.4B in IPO and private placement",
+      "category": "industry",
+      "summary": "Anthropic's IPO is approximately 7x oversubscribed as the company and its backers seek to raise up to $90.4 billion via an IPO and private placement. The AI firm is targeting a fully diluted valuation of approximately $1.4 trillion.",
+      "url": "https://techmeme.com/261115/p18",
+      "sources": 5,
+      "quotes": 0
+    },
+    {
+      "id": "fc91828979fb",
+      "headline": "Indian chip startup Bharat Semi lands $24M seed round for AI sensors",
+      "category": "industry",
+      "summary": "Indian semiconductor startup Bharat Semi has raised $24 million in seed funding to develop AI-enabled image sensors and target commercial production in 2027. The pre-revenue company has secured design wins with General Atomics and Kaynes Semicon.",
+      "url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market",
+      "sources": 3,
+      "quotes": 1
+    },
+    {
+      "id": "2cb612de9116",
+      "headline": "Nvidia considers leadership options after Jensen Huang's departure",
+      "category": "voices",
+      "summary": "Nvidia's board approached Arm Holdings CEO Rene Haas as a potential successor following Jensen Huang's resignation. CFO Colette Kress is currently serving as interim CEO.",
+      "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry",
+      "sources": 4,
+      "quotes": 1
+    },
+    {
+      "id": "2b1c0fdb7a30",
+      "headline": "Huawei's Horinger AI data center has ~7% of Colossus 2 compute",
+      "category": "research",
+      "summary": "Epoch AI analysis shows Huawei's Horinger data center holds about 7% of the computing power of xAI's Colossus 2 campus. Horinger is estimated to have roughly 81,000 H100-equivalent units of compute compared to Colossus 2's 1,112,000 units.",
+      "url": "https://techmeme.com/261115/p16",
+      "sources": 2,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "2 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
   "timings": {
-    "gather": 11.3,
-    "judge": 0.9,
-    "verify and write": 0.0,
-    "tagging": 0.0,
-    "trackers": 0.0,
-    "photos": 0.1,
-    "stock photos": -0.0,
-    "alerts": -0.0
+    "gather": 130.0,
+    "audit": 3.0,
+    "plan": 1.8,
+    "judge": 7.5,
+    "verify and write": 85.9,
+    "videos": 4.5,
+    "tagging": 2.1,
+    "explainers": -0.0,
+    "trackers": 13.2,
+    "claims": 19.8,
+    "model tracker": 0.0,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 2.8,
+    "self-review": 8.0,
+    "photos": 1.2,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 9.8
   },
-  "fetched": 2468,
-  "fresh": 1,
-  "judged": 1,
-  "kept": 0,
-  "trackers": "filed 0 stories; no tracker changed",
-  "photos": "0 saved, 0 unavailable",
-  "alerts": "no events",
-  "ai_requests_run": 1,
-  "ai_tokens_run": 3891,
-  "ai_requests_today": 1,
+  "fetched": 2938,
+  "fresh": 15,
+  "audit": "coverage 62% of 16 significant stories; 6 missed, 0 added to this run",
+  "plan": {
+    "focus": "Tracking the fallout from Nvidia leadership turmoil and the massive Anthropic IPO demand while balancing our coverage.",
+    "priorities": [
+      "Sources: Anthropic's IPO is ~7x oversubscribed; Anthropic and some of  (Anthropic's IPO is reportedly ~7x oversubscribed, seeking up to $90.4B.)",
+      "How Samsung aims to be a one-stop shop that builds, runs, and powers d (Samsung IT arm in early talks to sign Anthropic and OpenAI as data center tenants.)",
+      "Indian chip startup Bharat Semi lands $24M seed round as it eyes globa (Indian chip startup Bharat Semi lands $24M seed round for AI sensors.)",
+      "Is bad news for Jensen Huang also bad news for the AI industry? (Critical industry commentary on what Jensen Huang's situation means for the broader AI sector.)",
+      "Analysis: Huawei's Horinger data center, among China's largest for AI, (Epoch AI analysis comparing Huawei's Horinger data center scale to SpaceX's Colossus 2.)"
+    ],
+    "thin_areas": [
+      "safety",
+      "models"
+    ],
+    "searches": [
+      "Anthropic IPO valuation pricing: 2 new",
+      "Nvidia Jensen Huang succession board: 6 new"
+    ],
+    "dig_deeper": [
+      "How Samsung aims to be a one-stop shop that builds, runs, and powers d",
+      "Sources: Anthropic's IPO is ~7x oversubscribed; Anthropic and some of "
+    ]
+  },
+  "judged": 23,
+  "kept": 6,
+  "research": {
+    "investigated": 5,
+    "confirmed": 4,
+    "tool_calls": 12
+  },
+  "research_log": [
+    "Sources: Anthropic's IPO is ~7x oversubscribed; Anthropic and some of : confirmed (searched “Anthropic IPO oversubscribed 90B Bloomberg”; read yahoo.com)",
+    "How Samsung aims to be a one-stop shop that builds, runs, and powers d: unconfirmed (searched “Samsung Anthropic OpenAI data center Financial Times”; searched “\"How Samsung aims to be a one-stop shop that builds, runs, and powers data centers\"”; searched “Samsung Anthropic OpenAI Financial Times data center”)",
+    "Indian chip startup Bharat Semi lands $24M seed round as it eyes globa: confirmed (searched “Bharat Semi 24M seed round General Atomics”; read cryptobriefing.com)",
+    "Is bad news for Jensen Huang also bad news for the AI industry?: confirmed (searched “TechCrunch Is bad news for Jensen Huang also bad news for the AI industry”; searched “Elon Musk Silicon Valley tech bros rally behind ex Nvidia CEO Jensen Huang afr.com”)",
+    "Analysis: Huawei's Horinger data center, among China's largest for AI,: confirmed (searched “Ben Cottier Epoch AI Huawei Horinger Colossus 2”; read cryptobriefing.com; searched “Epoch AI Huawei Horinger Colossus 2”)"
+  ],
+  "threads": [
+    "Anthropic IPO valuation and Nscale chip funding: Anthropic targets up to $90.4B in IPO and private placement",
+    "Jensen Huang resignation and potential return: Nvidia considers leadership options after Jensen Huang's dep"
+  ],
+  "videos": {
+    "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Microsoft Research": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hugging Face": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "No Priors": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Latent Space": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Hard Fork": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
+  },
+  "tagged": 4,
+  "trackers": "filed 5 stories; updated us-china, india-ai, ai-infrastructure, ai-money",
+  "claims": "177 tracked, 171 open, 0 updated this run",
+  "model_tracker": "82 models, 10 changes today",
+  "briefing": "3 themes from 20 stories",
+  "india_briefing": "3 themes from 3 stories",
+  "self_review": "18 lines written to data/self_review.md",
+  "photos": "4 saved, 0 unavailable",
+  "alerts": "18 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":44}",
+  "ai_requests_run": 37,
+  "ai_tokens_run": 91378,
+  "ai_requests_today": 38,
   "provider_log": []
 }
