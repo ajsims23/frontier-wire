@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-16T17:27:36+00:00",
+  "started_at": "2026-11-16T18:24:39+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -19,73 +19,48 @@
     "microsoft-ai": "ok (10)",
     "mistral": "ok (6)"
   },
-  "dropped": [
-    {
-      "title": "Broadening access to AI for scientists",
-      "reason": "score 5: Program expansion offering free access to frontier models is a useful product update but not a major release; falls into incremental industry news."
-    },
-    {
-      "title": "Science at the Frontier: How scientists use ChatGPT",
-      "reason": "score 5: A usage study/marketing piece about how scientists employ ChatGPT; primarily a voice/marketing story, not news‑worthy on its own."
-    }
-  ],
+  "dropped": [],
   "written": [
     {
-      "id": "6cab091c059a",
-      "headline": "Nvidia unveils Rubin HPC GPU with over 50,000 CUDA cores for scientific simulations",
-      "category": "industry",
-      "summary": "At SC26 Nvidia announced the Rubin HPC GPU, part of the Vera Rubin platform, featuring more than 50,000 CUDA cores, sparse data acceleration and seventh‑generation NVLink to speed up agent‑driven simulations for science, engineering and analytics.",
-      "url": "https://blogs.nvidia.com/blog/rubin-hpc",
-      "sources": 9,
-      "quotes": 2
-    },
-    {
-      "id": "b1c71d07875a",
-      "headline": "OpenAI announces new tools and guidance to combat online child sexual abuse",
+      "id": "ebd9eb949639",
+      "headline": "OpenAI partners with independent evaluators for safety pilots",
       "category": "safety",
-      "summary": "OpenAI said it will provide new tools, practical guidance and partnerships to help prevent, detect and respond to online child sexual exploitation and abuse.",
-      "url": "https://openai.com/index/strengthening-online-child-safety",
-      "sources": 1,
+      "summary": "OpenAI signed agreements with four independent evaluators—Apollo Research, METR, Transluce, and Goodfire—to conduct pilot assessments on model behavior and safeguards. The organizations will receive deep access to OpenAI's internal systems as part of the safety work.",
+      "url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+      "sources": 3,
       "quotes": 0
     }
   ],
   "notes": [],
   "mode": "breaking",
   "timings": {
-    "gather": 10.6,
-    "judge": 102.8,
-    "verify and write": 51.0,
-    "tagging": 3.3,
-    "trackers": 68.5,
+    "gather": 10.2,
+    "judge": 1.2,
+    "verify and write": 24.3,
+    "tagging": 0.9,
+    "trackers": 2.6,
     "photos": 0.2,
-    "stock photos": 1.6,
-    "alerts": 13.2
+    "stock photos": -0.0,
+    "alerts": 6.0
   },
   "fetched": 2477,
-  "fresh": 9,
-  "judged": 9,
-  "kept": 2,
+  "fresh": 1,
+  "judged": 1,
+  "kept": 1,
   "research": {
     "investigated": 1,
     "confirmed": 1,
     "tool_calls": 2
   },
   "research_log": [
-    "NVIDIA Announces Rubin HPC — A New GPU to Accelerate Agents for Scienc: confirmed (searched “NVIDIA Rubin HPC SC26”; read techpowerup.com)"
+    "Our first phase of embedded assessments: confirmed (searched “OpenAI embedded assessments Apollo Research METR Transluce Goodfire”; read techcrunch.com)"
   ],
-  "tagged": 2,
-  "trackers": "filed 1 stories; updated ai-infrastructure",
+  "tagged": 1,
+  "trackers": "filed 1 stories; updated agent-safety",
   "photos": "1 saved, 0 unavailable",
-  "stock photos": "0 added",
-  "alerts": "26 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":15}",
-  "ai_requests_run": 10,
-  "ai_tokens_run": 27170,
-  "ai_requests_today": 213,
-  "provider_log": [
-    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
-    "gemini/gemini-flash-latest: 503 (server busy); trying next model",
-    "gemini: 503 after retry; moving to next provider for this run",
-    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing"
-  ]
+  "alerts": "26 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":9}",
+  "ai_requests_run": 9,
+  "ai_tokens_run": 16327,
+  "ai_requests_today": 222,
+  "provider_log": []
 }
