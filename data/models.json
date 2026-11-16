@@ -1,6 +1,20 @@
 {
   "models": [
     {
+      "id": "qwen/qwen4-max",
+      "name": "Qwen4 Max",
+      "lab": "Alibaba (Qwen)",
+      "released": "2026-11-16",
+      "context": 1000000,
+      "price_in": 1.5,
+      "price_out": 4.5,
+      "inputs": [
+        "text",
+        "image",
+        "video"
+      ]
+    },
+    {
       "id": "google/gemini-4-hydrogen",
       "name": "Gemini 4 Hydrogen",
       "lab": "Google",
@@ -136,8 +150,8 @@
       "lab": "DeepSeek",
       "released": "2026-10-17",
       "context": 1048576,
-      "price_in": 0.3,
-      "price_out": 1.2,
+      "price_in": 0.15,
+      "price_out": 0.6,
       "inputs": [
         "text",
         "image"
@@ -488,18 +502,6 @@
         "text",
         "image",
         "video"
-      ]
-    },
-    {
-      "id": "qwen/qwen3.8-2.4t-a95b",
-      "name": "Qwen3.8 2.4T A95B",
-      "lab": "Alibaba (Qwen)",
-      "released": "2026-08-12",
-      "context": 1048576,
-      "price_in": 2.0,
-      "price_out": 6.0,
-      "inputs": [
-        "text"
       ]
     },
     {
@@ -1093,27 +1095,6 @@
   ],
   "changes": [
     {
-      "date": "2026-11-12",
-      "model": "Kimi K2.5",
-      "lab": "Moonshot AI",
-      "kind": "price_cut",
-      "text": "Kimi K2.5 input price cut: $0.532 → $0.5 per 1M tokens"
-    },
-    {
-      "date": "2026-11-12",
-      "model": "Kimi K2.5",
-      "lab": "Moonshot AI",
-      "kind": "price_cut",
-      "text": "Kimi K2.5 output price cut: $3.325 → $2.5 per 1M tokens"
-    },
-    {
-      "date": "2026-11-13",
-      "model": "Kimi K3.1 Pro",
-      "lab": "Moonshot AI",
-      "kind": "price_cut",
-      "text": "Kimi K3.1 Pro output price cut: $8.7856 → $8.4114 per 1M tokens"
-    },
-    {
       "date": "2026-11-13",
       "model": "DeepSeek V4.1 Flash 1017",
       "lab": "DeepSeek",
@@ -1511,7 +1492,28 @@
       "lab": "DeepSeek",
       "kind": "price_cut",
       "text": "DeepSeek V4 Flash 0731 output price cut: $0.3 → $0.18 per 1M tokens"
+    },
+    {
+      "date": "2026-11-16",
+      "model": "Qwen4 Max",
+      "lab": "Alibaba (Qwen)",
+      "kind": "new",
+      "text": "Now available: Qwen4 Max ($1.5 in / $4.5 out per 1M tokens)"
+    },
+    {
+      "date": "2026-11-16",
+      "model": "DeepSeek V4.1 Flash 1017",
+      "lab": "DeepSeek",
+      "kind": "price_cut",
+      "text": "DeepSeek V4.1 Flash 1017 input price cut: $0.3 → $0.15 per 1M tokens"
+    },
+    {
+      "date": "2026-11-16",
+      "model": "DeepSeek V4.1 Flash 1017",
+      "lab": "DeepSeek",
+      "kind": "price_cut",
+      "text": "DeepSeek V4.1 Flash 1017 output price cut: $1.2 → $0.6 per 1M tokens"
     }
   ],
-  "updated_at": "2026-11-16T01:41:32+00:00"
+  "updated_at": "2026-11-16T04:50:54+00:00"
 }

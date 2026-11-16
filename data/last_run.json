@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-16T01:41:32+00:00",
+  "started_at": "2026-11-16T04:50:54+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -20,9 +20,9 @@
     "mistral": "ok (6)",
     "hf-models": "ok (57)",
     "arxiv": "failed: HTTPStatusError: Client error '429 Unknown Error' for url 'https://export.arxiv.org/api/query?search_query=cat%3Acs.AI+OR+cat%3Acs.CL+OR+",
-    "hf-papers": "ok (16)",
-    "gdelt": "ok (16)",
-    "hn": "ok (11)",
+    "hf-papers": "ok (15)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (8)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -33,7 +33,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -43,202 +43,222 @@
   },
   "dropped": [
     {
-      "title": "Protomaps: Self-hosting map tiles has gotten cheap and easy",
-      "reason": "not AI: Off-topic web mapping tool release."
+      "title": "Qwen4-Max",
+      "reason": "score 4: Bare launch link for Qwen4-Max, already covered in detail by other items."
     },
     {
-      "title": "Yatra’s ‘MICE’ Problem",
-      "reason": "not AI: Quarterly financial earnings report for travel booking platform Yatra; no AI angle."
-    },
-    {
-      "title": "The driverless taxis, robots and tech companies in APEC host city Shenzhen show Chinas ambitions",
-      "reason": "score 4: General reporting on autonomous vehicles and tech in Shenzhen for APEC; lacks specific, notable AI news for our audience."
-    },
-    {
-      "title": "datasette-maplibre 0.1a0",
-      "reason": "not AI: Geospatial plugin release, minor software tool update without direct frontier AI significance."
-    },
-    {
-      "title": "datasette 1.0a43",
-      "reason": "score 4: Routine software release update for Datasette tool by Simon Willison."
-    },
-    {
-      "title": "datasette 0.65.6",
-      "reason": "not AI: Minor security patch release for an open-source tool."
-    },
-    {
-      "title": "datasette-apps 0.4a0",
-      "reason": "score 3: Plugin feature update for personal developer tool."
-    },
-    {
-      "title": "datasette-agent 0.6a0",
-      "reason": "score 3: Minor open-source plugin update for personal developer tool."
-    },
-    {
-      "title": "Amazon loses 40 Leo satellites after ULA's Vulcan rocket fails 10 minutes into flight, marking the first mission failure for the Boeing-Lockheed joint venture (Joey Roulette/Reuters)",
-      "reason": "not AI: Rocket launch failure for Amazon LEO satellites, no direct AI angle."
-    },
-    {
-      "title": "Anthropic IPO Dissection: Is the $1.4 Trillion Price Tag a Buy or a Pass?",
-      "reason": "score 4: Stock recommendation and analysis piece on the Anthropic IPO valuation, editorial policy excludes buy/pass stock guides."
-    },
-    {
-      "title": "Anthropic IPO 2026: Should You Buy the Stock When It Goes Public?",
-      "reason": "score 4: Retail investor stock purchase guide for the Anthropic IPO, editorial policy excludes 'should you buy' pieces."
-    },
-    {
-      "title": "Nvidia had no succession plan when Jensen Huang quit. Former Fortune 500 CEOs call it 'preposterous'",
-      "reason": "duplicate of 369f1ffcda11"
-    },
-    {
-      "title": "Nvidia’s Jensen Huang may be planning a comeback just days after stepping down",
-      "reason": "duplicate of 369f1ffcda11"
-    },
-    {
-      "title": "Bessent urges Nvidia to look outside the company for new CEO after Jensen Huang’s resignation: ‘Dramatic shakeup’",
-      "reason": "duplicate of 4d0aab350c5f"
-    },
-    {
-      "title": "Jensen Huang eyeing comeback as Nvidia CEO forming ‘war room’ with allies in wake of Chinese spy, employee affairs: report",
-      "reason": "duplicate of 369f1ffcda11"
-    },
-    {
-      "title": "Jensen Huang Discusses Comeback as Nvidia CEO With Allies Amid Board Probe and Washington Pushback",
-      "reason": "duplicate of 369f1ffcda11"
-    },
-    {
-      "title": "Jensen Huang comeback? Elon Musk backs campaign to bring former Nvidia CEO back",
-      "reason": "duplicate of 369f1ffcda11"
-    },
-    {
-      "title": "How Samsung aims to be a one-stop shop that builds, runs, and powers data centers; sources: its IT arm is in early talks to sign Anthropic and OpenAI as tenants (Financial Times)",
-      "reason": "could not verify yet; will retry next run"
+      "title": "Apple launches new app to study how people use AI for health",
+      "reason": "not AI: Consumer health study app from Apple with minor AI mention, not core AI news."
     },
     {
       "title": "Apple’s new study looks to improve the effectiveness of AI health tools",
+      "reason": "not AI: Apple consumer health study with conversational AI tools, not core AI news."
+    },
+    {
+      "title": "The NVIDIA Fallout, Weekly Funding Rundown & More",
+      "reason": "score 4: Weekly roundup article covering various global news items like NVIDIA fallout and general funding, not a standalone new development."
+    },
+    {
+      "title": "Apple plans Siri-powered smart glasses for 2027 with Uber, Amazon and Starbucks app integrations",
+      "reason": "duplicate of 37e82c1c5c8c"
+    },
+    {
+      "title": "Apple launches AI health study app in partnership with OpenEvidence: Who can participate and how it works",
+      "reason": "score 3: Duplicate of 3946f537c171 covering Apple's Health AI Usage Study with OpenEvidence."
+    },
+    {
+      "title": "AI could reshape banking economics as early adopters see nearly 3x returns: McKinsey",
+      "reason": "score 5: McKinsey report on AI banking economics and returns rehashes standard consulting projections."
+    },
+    {
+      "title": "How Tej Chingtham built Northeast’s first incubator; The pilot-turned-entrepreneur who is building a wellness brand",
+      "reason": "not AI: Profile of an incubator CEO in Northeast India without a direct AI focus."
+    },
+    {
+      "title": "Ethan Mollick: I think often about the fact that almost everyone working in the West has lived in a quite stable socio-technical period Only 1 job out of…",
+      "reason": "score 4: General macro commentary on technological change and socio-technical stability."
+    },
+    {
+      "title": "Alibaba says Qwen4-Max, which isn't open weight, beats Fable 5.1 and Kimi K3.1 Pro in coding benchmarks, and plans to release weights for smaller Qwen4 models (Luz Ding/Bloomberg)",
+      "reason": "score 5: Covers Alibaba's Qwen4-Max model launch, already reported under 48f1f10785df."
+    },
+    {
+      "title": "Qwen4-Max Launches with 25% Fewer Active Parameters and 62% Lower Task Costs",
+      "reason": "score 4: Duplicate coverage of Alibaba's Qwen4-Max launch."
+    },
+    {
+      "title": "Alibaba Unveils AI Model With Stronger Performance at Lower Cost",
+      "reason": "score 4: Duplicate coverage of Alibaba's Qwen4-Max model."
+    },
+    {
+      "title": "Alibaba says new flagship AI model cuts task costs by 60% while tightening cyber guardrails",
+      "reason": "score 4: Duplicate coverage of Alibaba's Qwen4-Max model."
+    },
+    {
+      "title": "Trump administration to name Nvidia, other AI firms as US national champions, WSJ reports",
+      "reason": "score 5: Duplicate coverage of the Trump administration's plan to name major AI firms as national champions."
+    },
+    {
+      "title": "Trump administration to name Nvidia among AI ‘national champions’",
+      "reason": "score 3: Duplicate of 9b6516bc1605 covering the Trump administration's AI national champions plan including Nvidia."
+    },
+    {
+      "title": "Qwen4-Max scores 43 on the Artificial Analysis Intelligence Index, beating Qwen3.8 Max at ~67% lower cost per task but trailing Kimi K3.1 Pro at ~11% lower cost (@artificialanlys)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "AI agent management platform Kindo raised $30M led by Crosspoint and Forgepoint, bringing total funding to $57.6M, and says its revenue grew ~800% YoY in 2026 (Abhinaya Prabhu/Tech Funding News)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Mount Thor, which is building cloud infrastructure for agentic AI on Apple silicon, raised $45M in a seed round and a Series A co-led by CRV and Conviction (Bradley C/9to5Mac)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Toronto-based Blue J, which provides AI-powered tax research software, raised a $176M Series E round led by JMI Equity at a $700M+ valuation (Alex Riehl/BetaKit)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Oister Global launches Rs 600 Cr deeptech fund",
       "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "e9a9e657b9d8",
-      "headline": "Anthropic targets up to $90.4B in IPO and private placement",
-      "category": "industry",
-      "summary": "Anthropic's IPO is approximately 7x oversubscribed as the company and its backers seek to raise up to $90.4 billion via an IPO and private placement. The AI firm is targeting a fully diluted valuation of approximately $1.4 trillion.",
-      "url": "https://techmeme.com/261115/p18",
-      "sources": 5,
+      "id": "48f1f10785df",
+      "headline": "Alibaba releases Qwen4-Max flagship model",
+      "category": "models",
+      "summary": "Alibaba released Qwen4-Max, a new flagship 2.4T-parameter Mixture of Experts model featuring a 1-million-token context window. The company states it beats Qwen3.8-Max using up to ~50% fewer tokens.",
+      "url": "https://techmeme.com/261115/p25",
+      "sources": 3,
       "quotes": 0
     },
     {
-      "id": "fc91828979fb",
-      "headline": "Indian chip startup Bharat Semi lands $24M seed round for AI sensors",
-      "category": "industry",
-      "summary": "Indian semiconductor startup Bharat Semi has raised $24 million in seed funding to develop AI-enabled image sensors and target commercial production in 2027. The pre-revenue company has secured design wins with General Atomics and Kaynes Semicon.",
-      "url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market",
-      "sources": 3,
-      "quotes": 1
+      "id": "9b6516bc1605",
+      "headline": "Trump administration plans to name AI \"national champions\"",
+      "category": "policy",
+      "summary": "The Trump administration plans to designate more than two dozen artificial intelligence companies, including Nvidia, Amazon, Microsoft, OpenAI, and Anthropic, as \"national champions.\" The program is designed to help U.S. firms expand overseas and compete with Chinese rivals.",
+      "url": "https://techmeme.com/261115/p29",
+      "sources": 4,
+      "quotes": 0
     },
     {
-      "id": "2cb612de9116",
-      "headline": "Nvidia considers leadership options after Jensen Huang's departure",
-      "category": "voices",
-      "summary": "Nvidia's board approached Arm Holdings CEO Rene Haas as a potential successor following Jensen Huang's resignation. CFO Colette Kress is currently serving as interim CEO.",
-      "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry",
+      "id": "4b57fcd6de68",
+      "headline": "Nvidia interim CEO Colette Kress expected to rein in deals",
+      "category": "industry",
+      "summary": "Interim CEO Colette Kress is expected to rein in deals and slow AI investing after a period where Nvidia aggressively financed computing deals and startup investments. Neoclouds and related segments account for nearly half of Nvidia's revenue.",
+      "url": "https://techmeme.com/261115/p24",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "9231c3778855",
+      "headline": "Samsung SDS seeks Anthropic and OpenAI as tenants for AI data centre services",
+      "category": "industry",
+      "summary": "Samsung’s IT arm, Samsung SDS, is in early talks to sign Anthropic and OpenAI as tenants for its AI data centre business, aiming to offer end‑to‑end building, operation and power services.",
+      "url": "https://techmeme.com/261115/p19",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "3946f537c171",
+      "headline": "Apple launches Health AI Usage Study app powered by OpenEvidence",
+      "category": "models",
+      "summary": "Apple launched the Health AI Usage Study app, developed with OpenEvidence, to examine how users interact with clinically grounded health answers. The study aims to enroll up to 200,000 U.S. participants for over 12 months.",
+      "url": "https://techmeme.com/261115/p27",
       "sources": 4,
       "quotes": 1
-    },
-    {
-      "id": "2b1c0fdb7a30",
-      "headline": "Huawei's Horinger AI data center has ~7% of Colossus 2 compute",
-      "category": "research",
-      "summary": "Epoch AI analysis shows Huawei's Horinger data center holds about 7% of the computing power of xAI's Colossus 2 campus. Horinger is estimated to have roughly 81,000 H100-equivalent units of compute compared to Colossus 2's 1,112,000 units.",
-      "url": "https://techmeme.com/261115/p16",
-      "sources": 2,
-      "quotes": 0
     }
   ],
   "notes": [
+    "ignored made-up duplicate id 3946f537c171 for 'Apple launches AI health study app in partnership '",
+    "ignored made-up duplicate id 48f1f10785df for 'Alibaba says Qwen4-Max, which isn't open weight, b'",
+    "ignored made-up duplicate id 48f1f10785df for 'Qwen4-Max Launches with 25% Fewer Active Parameter'",
+    "ignored made-up duplicate id 48f1f10785df for 'Alibaba Unveils AI Model With Stronger Performance'",
+    "ignored made-up duplicate id 48f1f10785df for 'Alibaba says new flagship AI model cuts task costs'",
+    "ignored made-up duplicate id 9b6516bc1605 for 'Trump administration to name Nvidia, other AI firm'",
+    "ignored made-up duplicate id 9b6516bc1605 for 'Trump administration to name Nvidia among AI ‘nati'",
     "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "2 kept item(s) carried over to the next run"
+    "7 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 130.0,
-    "audit": 3.0,
-    "plan": 1.8,
-    "judge": 7.5,
-    "verify and write": 85.9,
-    "videos": 4.5,
-    "tagging": 2.1,
+    "gather": 79.7,
+    "audit": -0.0,
+    "plan": 2.0,
+    "judge": 12.7,
+    "verify and write": 213.4,
+    "videos": 1.3,
+    "tagging": 2.2,
     "explainers": -0.0,
-    "trackers": 13.2,
-    "claims": 19.8,
+    "trackers": 7.5,
+    "claims": 9.3,
     "model tracker": 0.0,
     "weekly": 0.0,
     "builders": 0.0,
     "top voices": 0.0,
-    "briefing": 2.8,
-    "self-review": 8.0,
-    "photos": 1.2,
-    "stock photos": 0.0,
+    "briefing": 1.4,
+    "self-review": 0.0,
+    "photos": 0.2,
+    "stock photos": 2.0,
     "daily email": 0.0,
-    "alerts": 9.8
+    "alerts": 3.1
   },
-  "fetched": 2938,
-  "fresh": 15,
-  "audit": "coverage 62% of 16 significant stories; 6 missed, 0 added to this run",
+  "fetched": 2918,
+  "fresh": 22,
   "plan": {
-    "focus": "Tracking the fallout from Nvidia leadership turmoil and the massive Anthropic IPO demand while balancing our coverage.",
+    "focus": "Tracking the fallout from Nvidia leadership shifts, Alibaba's Qwen4-Max drop, and new national champion designations.",
     "priorities": [
-      "Sources: Anthropic's IPO is ~7x oversubscribed; Anthropic and some of  (Anthropic's IPO is reportedly ~7x oversubscribed, seeking up to $90.4B.)",
-      "How Samsung aims to be a one-stop shop that builds, runs, and powers d (Samsung IT arm in early talks to sign Anthropic and OpenAI as data center tenants.)",
-      "Indian chip startup Bharat Semi lands $24M seed round as it eyes globa (Indian chip startup Bharat Semi lands $24M seed round for AI sensors.)",
-      "Is bad news for Jensen Huang also bad news for the AI industry? (Critical industry commentary on what Jensen Huang's situation means for the broader AI sector.)",
-      "Analysis: Huawei's Horinger data center, among China's largest for AI, (Epoch AI analysis comparing Huawei's Horinger data center scale to SpaceX's Colossus 2.)"
+      "Alibaba releases Qwen4-Max, its new flagship 2.4T-parameter MoE model  (Major flagship model release from Alibaba (Qwen4-Max).)",
+      "Sources: the Trump admin plans to name Nvidia, Amazon, Microsoft, Open (Trump administration designating tech giants as national champions.)",
+      "Sources: Jensen Huang had planned to pull back Nvidia's aggressive fin (Continued fallout on Nvidia's financing and leadership decisions.)",
+      "Samsung aims to be a one-stop shop that builds, runs, and powers AI da (Samsung positioning to host Anthropic and OpenAI in data centers.)",
+      "Apple plans Siri-powered smart glasses for 2027 with Uber, Amazon and  (Apple's ongoing Siri-powered hardware and software push.)"
     ],
     "thin_areas": [
-      "safety",
-      "models"
+      "models",
+      "india"
     ],
     "searches": [
-      "Anthropic IPO valuation pricing: 2 new",
-      "Nvidia Jensen Huang succession board: 6 new"
+      "Qwen4 Max benchmark performance: 3 new",
+      "Nvidia national champions US policy: 3 new"
     ],
     "dig_deeper": [
-      "How Samsung aims to be a one-stop shop that builds, runs, and powers d",
-      "Sources: Anthropic's IPO is ~7x oversubscribed; Anthropic and some of "
+      "Alibaba releases Qwen4-Max, its new flagship 2.4T-parameter MoE model ",
+      "Sources: the Trump admin plans to name Nvidia, Amazon, Microsoft, Open"
     ]
   },
-  "judged": 23,
-  "kept": 6,
+  "judged": 27,
+  "kept": 12,
   "research": {
     "investigated": 5,
     "confirmed": 4,
-    "tool_calls": 12
+    "tool_calls": 14
   },
   "research_log": [
-    "Sources: Anthropic's IPO is ~7x oversubscribed; Anthropic and some of : confirmed (searched “Anthropic IPO oversubscribed 90B Bloomberg”; read yahoo.com)",
-    "How Samsung aims to be a one-stop shop that builds, runs, and powers d: unconfirmed (searched “Samsung Anthropic OpenAI data center Financial Times”; searched “\"How Samsung aims to be a one-stop shop that builds, runs, and powers data centers\"”; searched “Samsung Anthropic OpenAI Financial Times data center”)",
-    "Indian chip startup Bharat Semi lands $24M seed round as it eyes globa: confirmed (searched “Bharat Semi 24M seed round General Atomics”; read cryptobriefing.com)",
-    "Is bad news for Jensen Huang also bad news for the AI industry?: confirmed (searched “TechCrunch Is bad news for Jensen Huang also bad news for the AI industry”; searched “Elon Musk Silicon Valley tech bros rally behind ex Nvidia CEO Jensen Huang afr.com”)",
-    "Analysis: Huawei's Horinger data center, among China's largest for AI,: confirmed (searched “Ben Cottier Epoch AI Huawei Horinger Colossus 2”; read cryptobriefing.com; searched “Epoch AI Huawei Horinger Colossus 2”)"
+    "Alibaba releases Qwen4-Max, its new flagship 2.4T-parameter MoE model : confirmed (searched “Alibaba Qwen4 Max MoE 2.4T 1M token context”; searched “Qwen4 Max Alibaba”; read techmeme.com)",
+    "Sources: the Trump admin plans to name Nvidia, Amazon, Microsoft, Open: confirmed (searched “Trump admin AI national champions Nvidia Amazon Microsoft OpenAI Anthropic Wall Street Journal”; read msn.com; read msn.com)",
+    "Sources: Jensen Huang had planned to pull back Nvidia's aggressive fin: confirmed (searched “Jensen Huang Colette Kress Nvidia financing neoclouds Wall Street Journal”; searched “\"Jensen Huang had planned to pull back Nvidia's aggressive financing\"”; searched “\"Colette Kress\" neoclouds upfront customer payments Wall Street Journal”)",
+    "Samsung aims to be a one-stop shop that builds, runs, and powers AI da: confirmed (searched “Samsung Anthropic OpenAI data centers Financial Times”; read ft.com; searched “Samsung SDS Anthropic OpenAI data centers Financial Times”)",
+    "Qwen4-Max scores 43 on the Artificial Analysis Intelligence Index, bea: unconfirmed (searched “Qwen4 Max Artificial Analysis Intelligence Index”; searched “Qwen4-Max Artificial Analysis”)"
   ],
   "threads": [
-    "Anthropic IPO valuation and Nscale chip funding: Anthropic targets up to $90.4B in IPO and private placement",
-    "Jensen Huang resignation and potential return: Nvidia considers leadership options after Jensen Huang's dep"
+    "Jensen Huang resignation and potential return: Nvidia interim CEO Colette Kress expected to rein in deals",
+    "Anthropic IPO valuation and Nscale chip funding: Samsung SDS seeks Anthropic and OpenAI as tenants for AI dat",
+    "Apple Siri AI and advanced capabilities push: Apple launches Health AI Usage Study app powered by OpenEvid"
   ],
   "videos": {
     "OpenAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Anthropic": "ok (12 in feed, 0 new)",
-    "Google DeepMind": "ok (12 in feed, 0 new)",
-    "Google for Developers": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Anthropic": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google DeepMind": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
+    "Google for Developers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "AI at Meta": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Microsoft Research": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Microsoft Research": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "NVIDIA": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Hugging Face": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Hugging Face": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Mistral AI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "xAI": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "Two Minute Papers": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "AI Explained": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Lex Fridman": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Dwarkesh Patel": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
@@ -247,22 +267,25 @@
     "Training Data (Sequoia)": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "a16z": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Big Technology Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
-    "Hard Fork": "failed: HTTPStatusError: Server error '500 Internal Server Error' for url 'https://www.youtube.com/feeds/",
+    "Hard Fork": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "The Cognitive Revolution": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "Lenny's Podcast": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c",
     "20VC": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c"
   },
-  "tagged": 4,
-  "trackers": "filed 5 stories; updated us-china, india-ai, ai-infrastructure, ai-money",
+  "tagged": 5,
+  "trackers": "filed 5 stories; updated us-china, frontier-race, ai-infrastructure, ai-money",
   "claims": "177 tracked, 171 open, 0 updated this run",
-  "model_tracker": "82 models, 10 changes today",
+  "model_tracker": "82 models, 13 changes today",
   "briefing": "3 themes from 20 stories",
-  "india_briefing": "3 themes from 3 stories",
-  "self_review": "18 lines written to data/self_review.md",
-  "photos": "4 saved, 0 unavailable",
-  "alerts": "18 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":44}",
-  "ai_requests_run": 37,
-  "ai_tokens_run": 91378,
-  "ai_requests_today": 38,
-  "provider_log": []
+  "photos": "3 saved, 0 unavailable",
+  "stock photos": "2 added",
+  "alerts": "23 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":39}",
+  "ai_requests_run": 39,
+  "ai_tokens_run": 97050,
+  "ai_requests_today": 77,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+    "gemini: network error ReadTimeout, retrying",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model"
+  ]
 }
