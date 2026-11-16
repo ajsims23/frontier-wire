@@ -1,91 +1,108 @@
-## Frontier Wire newsroom run — 2026-11-16T04:50:54+00:00
+## Frontier Wire newsroom run — 2026-11-16T09:00:57+00:00
 
-Fetched 2918 items · fresh 22 · judged 27 · kept 12 · **written 5**
-AI: 39 requests, 97,050 tokens this run · 77 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking the fallout from Nvidia leadership shifts, Alibaba's Qwen4-Max drop, and new national champion designations.
-  Priorities: Alibaba releases Qwen4-Max, its new flagship 2.4T-parameter MoE model  (Major flagship model release from Alibaba (Qwen4-Max).); Sources: the Trump admin plans to name Nvidia, Amazon, Microsoft, Open (Trump administration designating tech giants as national champions.); Sources: Jensen Huang had planned to pull back Nvidia's aggressive fin (Continued fallout on Nvidia's financing and leadership decisions.); Samsung aims to be a one-stop shop that builds, runs, and powers AI da (Samsung positioning to host Anthropic and OpenAI in data centers.); Apple plans Siri-powered smart glasses for 2027 with Uber, Amazon and  (Apple's ongoing Siri-powered hardware and software push.)
-  Thin areas: models, india
-  Searches: Qwen4 Max benchmark performance: 3 new; Nvidia national champions US policy: 3 new
-  Dig deeper: Alibaba releases Qwen4-Max, its new flagship 2.4T-parameter MoE model ; Sources: the Trump admin plans to name Nvidia, Amazon, Microsoft, Open
-Research agent: investigated 5 stories with 14 tool calls, confirmed 4
+Fetched 2959 items · fresh 43 · judged 46 · kept 7 · **written 5**
+AI: 42 requests, 103,792 tokens this run · 119 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Tracking export control tightening and international supply chain probes amid shifting tech leadership dynamics.
+  Priorities: Tighter AI chip export rules are gaining bipartisan support in Congres (Covers bipartisan moves in Congress to tighten AI chip export rules and block overseas Chinese access.); Indonesian police raided Nvidia partner Megaspeed's local unit in earl (Follows the Megaspeed/Nvidia chip probe and US-led supply chain investigations internationally.); Alibaba says it filtered Qwen4-Max's training data to remove offensive (Provides key safety and filtering details on Alibaba's newly released Qwen4-Max flagship model.); Mount Thor, which is building cloud infrastructure for agentic AI on A (Highlights Mount Thor's $45M raise for cloud infrastructure built for agentic AI on Apple silicon.); SEBI will make market firms disclose AI use and keep humans in the loo (Details SEBI's mandate for market firms to disclose AI usage and maintain human oversight.)
+  Thin areas: safety, models
+  Searches: Nvidia chip probe Megaspeed US investigation: 4 new; Anthropic IPO valuation Nscale funding: 0 new
+  Dig deeper: Indonesian police raided Nvidia partner Megaspeed's local unit in earl; Tighter AI chip export rules are gaining bipartisan support in Congres
+Research agent: investigated 5 stories with 13 tool calls, confirmed 5
 Daily briefing: 3 themes from 20 stories
-Threads updated: Jensen Huang resignation and potential return: Nvidia interim CEO Colette Kress expected to rein in deals; Anthropic IPO valuation and Nscale chip funding: Samsung SDS seeks Anthropic and OpenAI as tenants for AI dat; Apple Siri AI and advanced capabilities push: Apple launches Health AI Usage Study app powered by OpenEvid
-Videos: no new videos · OpenAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Anthropic failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google DeepMind failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Google for Developers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI at Meta failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Microsoft Research failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, NVIDIA failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hugging Face failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Mistral AI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, xAI failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Two Minute Papers failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, AI Explained failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lex Fridman failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Dwarkesh Patel failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, No Priors failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Latent Space failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Training Data (Sequoia) failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, a16z failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Big Technology Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Hard Fork failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, The Cognitive Revolution failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, Lenny's Podcast failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c, 20VC failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?c
-Photos: 3 saved, 0 unavailable
-Alerts: 23 events sent: {"subscribers":6,"sent":0,"queued":39}
-Claims: 177 tracked, 171 open, 0 updated this run
-Trackers: filed 5 stories; updated us-china, frontier-race, ai-infrastructure, ai-money
-Model tracker: 82 models, 13 changes today
+Threads updated: Jensen Huang resignation and potential return: Indonesian police raided Nvidia partner Megaspeed local unit
+Videos: 4 kept from 5 new · OpenAI ok (13 in feed, 1 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (12 in feed, 0 new), Google for Developers ok (10 in feed, 1 new), AI at Meta ok (9 in feed, 0 new), Microsoft Research ok (10 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 0 new), AI Explained ok (15 in feed, 0 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (2 in feed, 0 new), Latent Space ok (15 in feed, 0 new), Training Data (Sequoia) ok (4 in feed, 0 new), a16z ok (15 in feed, 1 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (3 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (3 in feed, 0 new)
+Photos: 4 saved, 0 unavailable
+Alerts: 26 events sent: {"subscribers":6,"sent":0,"queued":43}
+Claims: 178 tracked, 172 open, 1 updated this run
+Trackers: filed 7 stories; updated us-china, ai-regulation, india-ai, ai-infrastructure
+Model tracker: 82 models, 15 changes today
+Explainers: 2 added to earlier stories
 Tagged 5 stories by sector, region and deal
-Time: gather 80s, plan 2s, judge 13s, verify and write 213s, videos 1s, tagging 2s, trackers 8s, claims 9s, briefing 1s, stock photos 2s, alerts 3s
+India briefing: 3 themes from 4 stories
+Time: gather 61s, plan 26s, judge 12s, verify and write 98s, videos 9s, tagging 2s, explainers 2s, trackers 151s, briefing 3s, photos 1s, stock photos 10s, alerts 6s
 
 ### New stories
-- **models** — [Alibaba releases Qwen4-Max flagship model](https://techmeme.com/261115/p25)  
-  Alibaba released Qwen4-Max, a new flagship 2.4T-parameter Mixture of Experts model featuring a 1-million-token context window. The company states it beats Qwen3.8-Max using up to ~50% fewer tokens.  
+- **policy** — [SEBI to issue guidelines for AI use and human oversight in capital markets](https://medianama.com/2026/11/223-sebi-ai-disclosure-human-oversight-rules)  
+  SEBI will soon issue guidelines requiring market firms to disclose AI usage and maintain human oversight over critical decisions, according to SEBI Chairman Tuhin Kanta Pandey. The upcoming framework aims to protect investors and maintain market integrity without compromising safety.  
+  _2 source(s), 0 verified quote(s)_
+- **industry** — [Indonesian police raided Nvidia partner Megaspeed local unit in early 2026](https://economictimes.indiatimes.com/tech/technology/indonesian-police-raided-nvidia-partner-megaspeeds-local-unit-in-early-2026-on-us-request-report/articleshow/135877651.cms)  
+  Indonesian police raided the office of Nvidia partner Megaspeed's local subsidiary in early 2026 at the request of U.S. authorities. Officers found unopened server racks but no graphics processing units during the FBI-requested inquiry.  
+  _2 source(s), 0 verified quote(s)_
+- **industry** — [Mount Thor raises $45 million to build cloud infrastructure on Apple silicon](https://techmeme.com/261115/p23)  
+  Mount Thor raised $45 million across seed and Series A rounds to build cloud infrastructure for agentic AI on Apple silicon. The startup provides Mac data-center compute instances for macOS workloads.  
   _3 source(s), 0 verified quote(s)_
-- **policy** — [Trump administration plans to name AI "national champions"](https://techmeme.com/261115/p29)  
-  The Trump administration plans to designate more than two dozen artificial intelligence companies, including Nvidia, Amazon, Microsoft, OpenAI, and Anthropic, as "national champions." The program is designed to help U.S. firms expand overseas and compete with Chinese rivals.  
+- **industry** — [Zus Health raises $33M Series B to build healthcare AI data platform](https://techmeme.com/261116/p5)  
+  Zus Health raised $33 million in Series B funding led by Drive Capital to build data infrastructure for AI-powered clinical workflows. The financing brings the company's total funding to more than $100 million.  
   _4 source(s), 0 verified quote(s)_
-- **industry** — [Nvidia interim CEO Colette Kress expected to rein in deals](https://techmeme.com/261115/p24)  
-  Interim CEO Colette Kress is expected to rein in deals and slow AI investing after a period where Nvidia aggressively financed computing deals and startup investments. Neoclouds and related segments account for nearly half of Nvidia's revenue.  
-  _2 source(s), 2 verified quote(s)_
-- **industry** — [Samsung SDS seeks Anthropic and OpenAI as tenants for AI data centre services](https://techmeme.com/261115/p19)  
-  Samsung’s IT arm, Samsung SDS, is in early talks to sign Anthropic and OpenAI as tenants for its AI data centre business, aiming to offer end‑to‑end building, operation and power services.  
-  _3 source(s), 0 verified quote(s)_
-- **models** — [Apple launches Health AI Usage Study app powered by OpenEvidence](https://techmeme.com/261115/p27)  
-  Apple launched the Health AI Usage Study app, developed with OpenEvidence, to examine how users interact with clinically grounded health answers. The study aims to enroll up to 200,000 U.S. participants for over 12 months.  
-  _4 source(s), 1 verified quote(s)_
+- **industry** — [Sumary raises $25M seed round to expand AI accounting software in Europe](https://techmeme.com/261116/p4)  
+  Copenhagen-based AI accounting software startup Sumary has raised $25M in a seed round led by Singular, bringing its total funding to $29.2M. The company plans to use the capital to expand across Europe and establish a commercial hub in London.  
+  _4 source(s), 2 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Qwen4-Max — score 4: Bare launch link for Qwen4-Max, already covered in detail by other items.
-- Apple launches new app to study how people use AI for health — not AI: Consumer health study app from Apple with minor AI mention, not core AI news.
-- Apple’s new study looks to improve the effectiveness of AI health tools — not AI: Apple consumer health study with conversational AI tools, not core AI news.
-- The NVIDIA Fallout, Weekly Funding Rundown & More — score 4: Weekly roundup article covering various global news items like NVIDIA fallout and general funding, not a standalone new development.
-- Apple plans Siri-powered smart glasses for 2027 with Uber, Amazon and Starbucks app integrations — duplicate of 37e82c1c5c8c
-- Apple launches AI health study app in partnership with OpenEvidence: Who can participate and how it works — score 3: Duplicate of 3946f537c171 covering Apple's Health AI Usage Study with OpenEvidence.
-- AI could reshape banking economics as early adopters see nearly 3x returns: McKinsey — score 5: McKinsey report on AI banking economics and returns rehashes standard consulting projections.
-- How Tej Chingtham built Northeast’s first incubator; The pilot-turned-entrepreneur who is building a wellness brand — not AI: Profile of an incubator CEO in Northeast India without a direct AI focus.
-- Ethan Mollick: I think often about the fact that almost everyone working in the West has lived in a quite stable socio-technical period Only 1 job out of… — score 4: General macro commentary on technological change and socio-technical stability.
-- Alibaba says Qwen4-Max, which isn't open weight, beats Fable 5.1 and Kimi K3.1 Pro in coding benchmarks, and plans to release weights for smaller Qwen4 models (Luz Ding/Bloomberg) — score 5: Covers Alibaba's Qwen4-Max model launch, already reported under 48f1f10785df.
-- Qwen4-Max Launches with 25% Fewer Active Parameters and 62% Lower Task Costs — score 4: Duplicate coverage of Alibaba's Qwen4-Max launch.
-- Alibaba Unveils AI Model With Stronger Performance at Lower Cost — score 4: Duplicate coverage of Alibaba's Qwen4-Max model.
-- Alibaba says new flagship AI model cuts task costs by 60% while tightening cyber guardrails — score 4: Duplicate coverage of Alibaba's Qwen4-Max model.
-- Trump administration to name Nvidia, other AI firms as US national champions, WSJ reports — score 5: Duplicate coverage of the Trump administration's plan to name major AI firms as national champions.
-- Trump administration to name Nvidia among AI ‘national champions’ — score 3: Duplicate of 9b6516bc1605 covering the Trump administration's AI national champions plan including Nvidia.
-- Qwen4-Max scores 43 on the Artificial Analysis Intelligence Index, beating Qwen3.8 Max at ~67% lower cost per task but trailing Kimi K3.1 Pro at ~11% lower cost (@artificialanlys) — could not verify yet; will retry next run
-- AI agent management platform Kindo raised $30M led by Crosspoint and Forgepoint, bringing total funding to $57.6M, and says its revenue grew ~800% YoY in 2026 (Abhinaya Prabhu/Tech Funding News) — could not verify yet; will retry next run
-- Mount Thor, which is building cloud infrastructure for agentic AI on Apple silicon, raised $45M in a seed round and a Series A co-led by CRV and Conviction (Bradley C/9to5Mac) — could not verify yet; will retry next run
-- Toronto-based Blue J, which provides AI-powered tax research software, raised a $176M Series E round led by JMI Equity at a $700M+ valuation (Alex Riehl/BetaKit) — could not verify yet; will retry next run
-- Oister Global launches Rs 600 Cr deeptech fund — could not verify yet; will retry next run
+- Tor Project Issues Rapid-Response DoS-Defense Fix Amid Sustained DDoS Attack — not AI: Tor Project DDoS defense fix, no AI angle.
+- How to make almost anything — not AI: General fabrication course/tutorial, no AI angle.
+- Building a GCC is Easy. Indian IT’s Real Test is Monetising Them — score 4: IT services commentary on GCC monetisation with passing mention of tech operations, too distant from core AI.
+- upGrad Enters Enterprise Advisory With Launch Of upGrad Next — not AI: Edtech upGrad launching an enterprise advisory practice; no AI angle.
+- Jio In Talks With ISRO, Skyroot For 1,600-Satellite Constellation: Report — not AI: Satellite constellation talks between Jio, ISRO and Skyroot, no AI angle.
+- AI Startups To Watch: 5 Startups That Caught Our Eye In November — score 4: Roundup of early-stage AI startups in India, mostly general listicle without breakthrough news.
+- [Update] Urban Company Shareholders Approve ₹2,500 Cr Fundraise — not AI: Urban Company fundraise approval for home services platform; no specific AI focus stated in snippet.
+- Bharat Semi Raises $24 Mn To Build Smart Sensors For Physical AI — duplicate of fc91828979fb
+- Exclusive: DoT clarifies ‘continuous’ SIM binding: Messaging apps must verify SIM cards every 24 hours — not AI: Telecom regulation on SIM binding, no AI relevance.
+- RBI fines MobiKwik Rs 9 lakh over non-compliance with wallet transfer limit, delayed fraud reporting — not AI: RBI penalty on MobiKwik for wallet transfer and fraud reporting issues, no AI angle.
+- EaseMyTrip Q2: Loss narrows to Rs 57 lakh as revenue surges 34% — not AI: EaseMyTrip quarterly financial results, no AI relevance.
+- Old Bitly links in Trump, Burger King and other prominent X accounts redirected to unrelated websites — not AI: Bitly link redirection issue affecting social accounts; unrelated to AI.
+- Italy fines Meta €805 million for accessing Facebook users’ phone photos without clear permission — score 4: Italy fines Meta over photo gallery access; data privacy enforcement with minimal AI connection.
+- Airtel leads Jio and Vodafone Idea in revenue per user as mobile data consumption rises — not AI: General telecom ARPU metrics, no specific AI focus.
+- UN-backed talks consider possible rules on lethal autonomous weapons — score 5: General UN talks on autonomous weapons; lacks specific AI industry or research milestone.
+- DPDP rules may boost demand for cybersecurity professionals and security services: Report — score 4: General cybersecurity and DPDP compliance report, only loosely adjacent to AI data governance.
+- Mphasis says clients boost cybersecurity spending as AI-driven threats rise — score 4: Mphasis cybersecurity spending increase mentions AI-driven threats as a factor, but this is a general IT services/cybersecurity story.
+- SK Hynix to spend $1 billion over five years to support chip suppliers — score 5: SK Hynix $1 billion supplier support fund is semiconductor infrastructure news, but not specifically AI-focused or hitting our threshold.
+- Jordan blocks Telegram app over national security concerns — not AI: General social media ban on Telegram in Jordan; no AI angle.
+- Intel sued by shareholders following 29% stock plunge — not AI: Intel shareholder lawsuit over PC sales slowdown; no AI focus.
+- Europe hunts for Palantir alternatives as militaries seek to limit US dependence — score 5: European militaries seeking Palantir alternatives and Helsing's AI military software; interesting defense AI context but secondary to existing coverage.
+- Alibaba unveils new flagship AI model with safety upgrades — duplicate of 48f1f10785df
+- The Indian crypto investor is changing. Is the industry keeping up? — not AI: General cryptocurrency investor trends in India; no AI angle.
+- How flexible workspaces are changing the way companies think about offices — not AI: General commercial real estate discussion with no AI angle.
+- 11,000 applied, 10 made the cut: Meet the UAE-India Start-up Series finalists — not AI: Startup pitch event, general tech/business.
+- Ola Electric hands the keys to dealers. What led to this shift in gears? — not AI: Ola Electric shifting to dealer-led model, no AI relevance.
+- Oister Global launches Rs 600 Cr deeptech fund — score 5: Oister Global launches Rs 600 Cr deeptech fund which may invest in AI, but the fund covers broad deeptech rather than being a pure AI raise.
+- upGrad broadens its business with new workforce advisory venture — score 4: upGrad launching workforce advisory business to help with AI-led transformation, tangential consulting news.
+- Bharat Semi raises $24M to develop AI-enabled sensors — duplicate of fc91828979fb
+- VC Firm Plural Closes On $1.1B To Invest In European Startups With Potential For ‘GDP-Level Impact’ — score 5: Plural closes $1.1B fund for European startups spanning energy, compute, defense, robotics, and AI, but it is a general European venture fund rather than a dedicated AI raise.
+- Russia is bringing young foreign influencers to occupied Ukraine, encouraging them to share their highly curated experiences, to legitimize its occupation (Linda Hourani/The Kyiv Independent) — not AI: No AI angle in the source; political reporting on influencers in occupied Ukraine.
+- Delhi-based Bharat Semi, which is developing programmable image sensors combining capture, processing, and AI capabilities on a single chip, raised a $24M seed (Jagmeet Singh/TechCrunch) — duplicate of fc91828979fb
+- Source: Musk will attend this week's APEC summit in Shenzhen, where Trump, Xi, and Putin will meet; many US business leaders may skip over scheduling conflicts (Nikkei Asia) — not AI: General geopolitical and summit news without a direct AI focus.
+- Tighter AI chip export rules are gaining bipartisan support in Congress, including a bill to block Chinese companies from accessing chips overseas (Financial Times) — duplicate of 024802442c5a
+- Alibaba says it filtered Qwen4-Max's training data to remove offensive cyber capabilities and mitigate chemical, biological, radiological, and nuclear risks (Ann Cao/South China Morning Post) — duplicate of 48f1f10785df
+- Megaspeed confirms departure of Alice Huang amid Nvidia chip probe — duplicate of 30eb34a90a59
+- Megaspeed Launches Internal Probe as Nvidia Scrutiny Grows: Claims “Not Supported by Verifiable Evidence” — duplicate of 30eb34a90a59
+- Megaspeed says Alice Huang left in 2025 as company conducts internal probe over Nvidia fallout — duplicate of 30eb34a90a59
+- Megaspeed Says Alice Huang Left In August 2025, Orders Outside-Led Probe As Nvidia Fallout Deepens — duplicate of 30eb34a90a59
+- Qwen4-Max scores 43 on the Artificial Analysis Intelligence Index, beating Qwen3.8 Max at ~67% lower cost per task but trailing Kimi K3.1 Pro at ~11% lower cost (Artificial Analysis) — could not verify yet after a second try; dropped
+- AI agent management platform Kindo raised $30M led by Crosspoint and Forgepoint, bringing total funding to $57.6M, and says its revenue grew ~800% YoY in 2026 (Abhinaya Prabhu/Tech Funding News) — could not verify yet after a second try; dropped
 
 </details>
 
 ### Sources with problems
-- `arxiv`: failed: HTTPStatusError: Client error '429 Unknown Error' for url 'https://export.arxiv.org/api/query?search_query=cat%3Acs.AI+OR+cat%3Acs.CL+OR+
-- `gdelt`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel
-- `gdelt-india`: failed: RuntimeError: GDELT paused for this run after repeated rate-limiting
+- `gdelt`: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out
+- `gdelt-india`: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out
 
 <details><summary>Research agent's work</summary>
 
-- Alibaba releases Qwen4-Max, its new flagship 2.4T-parameter MoE model : confirmed (searched “Alibaba Qwen4 Max MoE 2.4T 1M token context”; searched “Qwen4 Max Alibaba”; read techmeme.com)
-- Sources: the Trump admin plans to name Nvidia, Amazon, Microsoft, Open: confirmed (searched “Trump admin AI national champions Nvidia Amazon Microsoft OpenAI Anthropic Wall Street Journal”; read msn.com; read msn.com)
-- Sources: Jensen Huang had planned to pull back Nvidia's aggressive fin: confirmed (searched “Jensen Huang Colette Kress Nvidia financing neoclouds Wall Street Journal”; searched “"Jensen Huang had planned to pull back Nvidia's aggressive financing"”; searched “"Colette Kress" neoclouds upfront customer payments Wall Street Journal”)
-- Samsung aims to be a one-stop shop that builds, runs, and powers AI da: confirmed (searched “Samsung Anthropic OpenAI data centers Financial Times”; read ft.com; searched “Samsung SDS Anthropic OpenAI data centers Financial Times”)
-- Qwen4-Max scores 43 on the Artificial Analysis Intelligence Index, bea: unconfirmed (searched “Qwen4 Max Artificial Analysis Intelligence Index”; searched “Qwen4-Max Artificial Analysis”)
+- SEBI will make market firms disclose AI use and keep humans in the loo: confirmed (searched “SEBI AI disclosure human oversight rules chairman”; searched “SEBI AI use keep humans in the loop chairman”; read msn.com)
+- Indonesian police raided Nvidia partner Megaspeed's local unit in earl: confirmed (searched “Indonesian police raided Nvidia partner Megaspeed US request”; read msn.com; searched “Indonesian police raided Nvidia partner Megaspeed Straits Times”)
+- Mount Thor, which is building cloud infrastructure for agentic AI on A: confirmed (searched “Mount Thor $45M CRV Conviction Apple silicon”; read 9to5mac.com)
+- Zus Health, which is building an AI-native healthcare data platform, r: confirmed (searched “Zus Health 33M Series B Drive Capital Jonathan Bush”; read fiercehealthcare.com)
+- Copenhagen-based AI accounting software maker Sumary raised a $25M see: confirmed (searched “Sumary AI accounting Singular $25M seed”; read tech.eu; read thenextweb.com)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id 3946f537c171 for 'Apple launches AI health study app in partnership '
-- ignored made-up duplicate id 48f1f10785df for 'Alibaba says Qwen4-Max, which isn't open weight, b'
-- ignored made-up duplicate id 48f1f10785df for 'Qwen4-Max Launches with 25% Fewer Active Parameter'
-- ignored made-up duplicate id 48f1f10785df for 'Alibaba Unveils AI Model With Stronger Performance'
-- ignored made-up duplicate id 48f1f10785df for 'Alibaba says new flagship AI model cuts task costs'
-- ignored made-up duplicate id 9b6516bc1605 for 'Trump administration to name Nvidia, other AI firm'
-- ignored made-up duplicate id 9b6516bc1605 for 'Trump administration to name Nvidia among AI ‘nati'
+- not India desk: 'Indonesian police raided Nvidia partner Megaspeed''
+- dropped unverifiable quote (Jonathan Bush): The story of electronic medical records doesn’t end with the…
+- dropped unverifiable quote (Molly Bonakdarpour): We believe healthcare is entering a new era in which AI can …
 - GDELT unavailable: GDELT paused for this run after repeated rate-limiting
-- 7 kept item(s) carried over to the next run
 - gemini/gemini-flash-lite-latest: 503 (server busy); trying next model
 - gemini: network error ReadTimeout, retrying
 - gemini/gemini-flash-latest: 503 (server busy); trying next model

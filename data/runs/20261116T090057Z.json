@@ -1,0 +1,371 @@
+{
+  "started_at": "2026-11-16T09:00:57+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1389)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (907)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (15)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "hn": "ok (9)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (26)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Tor Project Issues Rapid-Response DoS-Defense Fix Amid Sustained DDoS Attack",
+      "reason": "not AI: Tor Project DDoS defense fix, no AI angle."
+    },
+    {
+      "title": "How to make almost anything",
+      "reason": "not AI: General fabrication course/tutorial, no AI angle."
+    },
+    {
+      "title": "Building a GCC is Easy. Indian IT’s Real Test is Monetising Them",
+      "reason": "score 4: IT services commentary on GCC monetisation with passing mention of tech operations, too distant from core AI."
+    },
+    {
+      "title": "upGrad Enters Enterprise Advisory With Launch Of upGrad Next",
+      "reason": "not AI: Edtech upGrad launching an enterprise advisory practice; no AI angle."
+    },
+    {
+      "title": "Jio In Talks With ISRO, Skyroot For 1,600-Satellite Constellation: Report",
+      "reason": "not AI: Satellite constellation talks between Jio, ISRO and Skyroot, no AI angle."
+    },
+    {
+      "title": "AI Startups To Watch: 5 Startups That Caught Our Eye In November",
+      "reason": "score 4: Roundup of early-stage AI startups in India, mostly general listicle without breakthrough news."
+    },
+    {
+      "title": "[Update] Urban Company Shareholders Approve ₹2,500 Cr Fundraise",
+      "reason": "not AI: Urban Company fundraise approval for home services platform; no specific AI focus stated in snippet."
+    },
+    {
+      "title": "Bharat Semi Raises $24 Mn To Build Smart Sensors For Physical AI",
+      "reason": "duplicate of fc91828979fb"
+    },
+    {
+      "title": "Exclusive: DoT clarifies ‘continuous’ SIM binding: Messaging apps must verify SIM cards every 24 hours",
+      "reason": "not AI: Telecom regulation on SIM binding, no AI relevance."
+    },
+    {
+      "title": "RBI fines MobiKwik Rs 9 lakh over non-compliance with wallet transfer limit, delayed fraud reporting",
+      "reason": "not AI: RBI penalty on MobiKwik for wallet transfer and fraud reporting issues, no AI angle."
+    },
+    {
+      "title": "EaseMyTrip Q2: Loss narrows to Rs 57 lakh as revenue surges 34%",
+      "reason": "not AI: EaseMyTrip quarterly financial results, no AI relevance."
+    },
+    {
+      "title": "Old Bitly links in Trump, Burger King and other prominent X accounts redirected to unrelated websites",
+      "reason": "not AI: Bitly link redirection issue affecting social accounts; unrelated to AI."
+    },
+    {
+      "title": "Italy fines Meta €805 million for accessing Facebook users’ phone photos without clear permission",
+      "reason": "score 4: Italy fines Meta over photo gallery access; data privacy enforcement with minimal AI connection."
+    },
+    {
+      "title": "Airtel leads Jio and Vodafone Idea in revenue per user as mobile data consumption rises",
+      "reason": "not AI: General telecom ARPU metrics, no specific AI focus."
+    },
+    {
+      "title": "UN-backed talks consider possible rules on lethal autonomous weapons",
+      "reason": "score 5: General UN talks on autonomous weapons; lacks specific AI industry or research milestone."
+    },
+    {
+      "title": "DPDP rules may boost demand for cybersecurity professionals and security services: Report",
+      "reason": "score 4: General cybersecurity and DPDP compliance report, only loosely adjacent to AI data governance."
+    },
+    {
+      "title": "Mphasis says clients boost cybersecurity spending as AI-driven threats rise",
+      "reason": "score 4: Mphasis cybersecurity spending increase mentions AI-driven threats as a factor, but this is a general IT services/cybersecurity story."
+    },
+    {
+      "title": "SK Hynix to spend $1 billion over five years to support chip suppliers",
+      "reason": "score 5: SK Hynix $1 billion supplier support fund is semiconductor infrastructure news, but not specifically AI-focused or hitting our threshold."
+    },
+    {
+      "title": "Jordan blocks Telegram app over national security concerns",
+      "reason": "not AI: General social media ban on Telegram in Jordan; no AI angle."
+    },
+    {
+      "title": "Intel sued by shareholders following 29% stock plunge",
+      "reason": "not AI: Intel shareholder lawsuit over PC sales slowdown; no AI focus."
+    },
+    {
+      "title": "Europe hunts for Palantir alternatives as militaries seek to limit US dependence",
+      "reason": "score 5: European militaries seeking Palantir alternatives and Helsing's AI military software; interesting defense AI context but secondary to existing coverage."
+    },
+    {
+      "title": "Alibaba unveils new flagship AI model with safety upgrades",
+      "reason": "duplicate of 48f1f10785df"
+    },
+    {
+      "title": "The Indian crypto investor is changing. Is the industry keeping up?",
+      "reason": "not AI: General cryptocurrency investor trends in India; no AI angle."
+    },
+    {
+      "title": "How flexible workspaces are changing the way companies think about offices",
+      "reason": "not AI: General commercial real estate discussion with no AI angle."
+    },
+    {
+      "title": "11,000 applied, 10 made the cut: Meet the UAE-India Start-up Series finalists",
+      "reason": "not AI: Startup pitch event, general tech/business."
+    },
+    {
+      "title": "Ola Electric hands the keys to dealers. What led to this shift in gears?",
+      "reason": "not AI: Ola Electric shifting to dealer-led model, no AI relevance."
+    },
+    {
+      "title": "Oister Global launches Rs 600 Cr deeptech fund",
+      "reason": "score 5: Oister Global launches Rs 600 Cr deeptech fund which may invest in AI, but the fund covers broad deeptech rather than being a pure AI raise."
+    },
+    {
+      "title": "upGrad broadens its business with new workforce advisory venture",
+      "reason": "score 4: upGrad launching workforce advisory business to help with AI-led transformation, tangential consulting news."
+    },
+    {
+      "title": "Bharat Semi raises $24M to develop AI-enabled sensors",
+      "reason": "duplicate of fc91828979fb"
+    },
+    {
+      "title": "VC Firm Plural Closes On $1.1B To Invest In European Startups With Potential For ‘GDP-Level Impact’",
+      "reason": "score 5: Plural closes $1.1B fund for European startups spanning energy, compute, defense, robotics, and AI, but it is a general European venture fund rather than a dedicated AI raise."
+    },
+    {
+      "title": "Russia is bringing young foreign influencers to occupied Ukraine, encouraging them to share their highly curated experiences, to legitimize its occupation (Linda Hourani/The Kyiv Independent)",
+      "reason": "not AI: No AI angle in the source; political reporting on influencers in occupied Ukraine."
+    },
+    {
+      "title": "Delhi-based Bharat Semi, which is developing programmable image sensors combining capture, processing, and AI capabilities on a single chip, raised a $24M seed (Jagmeet Singh/TechCrunch)",
+      "reason": "duplicate of fc91828979fb"
+    },
+    {
+      "title": "Source: Musk will attend this week's APEC summit in Shenzhen, where Trump, Xi, and Putin will meet; many US business leaders may skip over scheduling conflicts (Nikkei Asia)",
+      "reason": "not AI: General geopolitical and summit news without a direct AI focus."
+    },
+    {
+      "title": "Tighter AI chip export rules are gaining bipartisan support in Congress, including a bill to block Chinese companies from accessing chips overseas (Financial Times)",
+      "reason": "duplicate of 024802442c5a"
+    },
+    {
+      "title": "Alibaba says it filtered Qwen4-Max's training data to remove offensive cyber capabilities and mitigate chemical, biological, radiological, and nuclear risks (Ann Cao/South China Morning Post)",
+      "reason": "duplicate of 48f1f10785df"
+    },
+    {
+      "title": "Megaspeed confirms departure of Alice Huang amid Nvidia chip probe",
+      "reason": "duplicate of 30eb34a90a59"
+    },
+    {
+      "title": "Megaspeed Launches Internal Probe as Nvidia Scrutiny Grows: Claims “Not Supported by Verifiable Evidence”",
+      "reason": "duplicate of 30eb34a90a59"
+    },
+    {
+      "title": "Megaspeed says Alice Huang left in 2025 as company conducts internal probe over Nvidia fallout",
+      "reason": "duplicate of 30eb34a90a59"
+    },
+    {
+      "title": "Megaspeed Says Alice Huang Left In August 2025, Orders Outside-Led Probe As Nvidia Fallout Deepens",
+      "reason": "duplicate of 30eb34a90a59"
+    },
+    {
+      "title": "Qwen4-Max scores 43 on the Artificial Analysis Intelligence Index, beating Qwen3.8 Max at ~67% lower cost per task but trailing Kimi K3.1 Pro at ~11% lower cost (Artificial Analysis)",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "AI agent management platform Kindo raised $30M led by Crosspoint and Forgepoint, bringing total funding to $57.6M, and says its revenue grew ~800% YoY in 2026 (Abhinaya Prabhu/Tech Funding News)",
+      "reason": "could not verify yet after a second try; dropped"
+    }
+  ],
+  "written": [
+    {
+      "id": "a8d86fb81b42",
+      "headline": "SEBI to issue guidelines for AI use and human oversight in capital markets",
+      "category": "policy",
+      "summary": "SEBI will soon issue guidelines requiring market firms to disclose AI usage and maintain human oversight over critical decisions, according to SEBI Chairman Tuhin Kanta Pandey. The upcoming framework aims to protect investors and maintain market integrity without compromising safety.",
+      "url": "https://medianama.com/2026/11/223-sebi-ai-disclosure-human-oversight-rules",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "2c910f3a42c8",
+      "headline": "Indonesian police raided Nvidia partner Megaspeed local unit in early 2026",
+      "category": "industry",
+      "summary": "Indonesian police raided the office of Nvidia partner Megaspeed's local subsidiary in early 2026 at the request of U.S. authorities. Officers found unopened server racks but no graphics processing units during the FBI-requested inquiry.",
+      "url": "https://economictimes.indiatimes.com/tech/technology/indonesian-police-raided-nvidia-partner-megaspeeds-local-unit-in-early-2026-on-us-request-report/articleshow/135877651.cms",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "943c34aad67b",
+      "headline": "Mount Thor raises $45 million to build cloud infrastructure on Apple silicon",
+      "category": "industry",
+      "summary": "Mount Thor raised $45 million across seed and Series A rounds to build cloud infrastructure for agentic AI on Apple silicon. The startup provides Mac data-center compute instances for macOS workloads.",
+      "url": "https://techmeme.com/261115/p23",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "919db6db6a05",
+      "headline": "Zus Health raises $33M Series B to build healthcare AI data platform",
+      "category": "industry",
+      "summary": "Zus Health raised $33 million in Series B funding led by Drive Capital to build data infrastructure for AI-powered clinical workflows. The financing brings the company's total funding to more than $100 million.",
+      "url": "https://techmeme.com/261116/p5",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "0cc30e8680c4",
+      "headline": "Sumary raises $25M seed round to expand AI accounting software in Europe",
+      "category": "industry",
+      "summary": "Copenhagen-based AI accounting software startup Sumary has raised $25M in a seed round led by Singular, bringing its total funding to $29.2M. The company plans to use the capital to expand across Europe and establish a commercial hub in London.",
+      "url": "https://techmeme.com/261116/p4",
+      "sources": 4,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "not India desk: 'Indonesian police raided Nvidia partner Megaspeed''",
+    "dropped unverifiable quote (Jonathan Bush): The story of electronic medical records doesn’t end with the…",
+    "dropped unverifiable quote (Molly Bonakdarpour): We believe healthcare is entering a new era in which AI can …",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 61.0,
+    "audit": 0.0,
+    "plan": 26.4,
+    "judge": 12.0,
+    "verify and write": 98.1,
+    "videos": 8.7,
+    "tagging": 2.2,
+    "explainers": 2.4,
+    "trackers": 150.7,
+    "claims": 0.7,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 2.9,
+    "self-review": -0.0,
+    "photos": 1.2,
+    "stock photos": 9.8,
+    "daily email": -0.0,
+    "alerts": 6.4
+  },
+  "fetched": 2959,
+  "fresh": 43,
+  "plan": {
+    "focus": "Tracking export control tightening and international supply chain probes amid shifting tech leadership dynamics.",
+    "priorities": [
+      "Tighter AI chip export rules are gaining bipartisan support in Congres (Covers bipartisan moves in Congress to tighten AI chip export rules and block overseas Chinese access.)",
+      "Indonesian police raided Nvidia partner Megaspeed's local unit in earl (Follows the Megaspeed/Nvidia chip probe and US-led supply chain investigations internationally.)",
+      "Alibaba says it filtered Qwen4-Max's training data to remove offensive (Provides key safety and filtering details on Alibaba's newly released Qwen4-Max flagship model.)",
+      "Mount Thor, which is building cloud infrastructure for agentic AI on A (Highlights Mount Thor's $45M raise for cloud infrastructure built for agentic AI on Apple silicon.)",
+      "SEBI will make market firms disclose AI use and keep humans in the loo (Details SEBI's mandate for market firms to disclose AI usage and maintain human oversight.)"
+    ],
+    "thin_areas": [
+      "safety",
+      "models"
+    ],
+    "searches": [
+      "Nvidia chip probe Megaspeed US investigation: 4 new",
+      "Anthropic IPO valuation Nscale funding: 0 new"
+    ],
+    "dig_deeper": [
+      "Indonesian police raided Nvidia partner Megaspeed's local unit in earl",
+      "Tighter AI chip export rules are gaining bipartisan support in Congres"
+    ]
+  },
+  "judged": 46,
+  "kept": 7,
+  "research": {
+    "investigated": 5,
+    "confirmed": 5,
+    "tool_calls": 13
+  },
+  "research_log": [
+    "SEBI will make market firms disclose AI use and keep humans in the loo: confirmed (searched “SEBI AI disclosure human oversight rules chairman”; searched “SEBI AI use keep humans in the loop chairman”; read msn.com)",
+    "Indonesian police raided Nvidia partner Megaspeed's local unit in earl: confirmed (searched “Indonesian police raided Nvidia partner Megaspeed US request”; read msn.com; searched “Indonesian police raided Nvidia partner Megaspeed Straits Times”)",
+    "Mount Thor, which is building cloud infrastructure for agentic AI on A: confirmed (searched “Mount Thor $45M CRV Conviction Apple silicon”; read 9to5mac.com)",
+    "Zus Health, which is building an AI-native healthcare data platform, r: confirmed (searched “Zus Health 33M Series B Drive Capital Jonathan Bush”; read fiercehealthcare.com)",
+    "Copenhagen-based AI accounting software maker Sumary raised a $25M see: confirmed (searched “Sumary AI accounting Singular $25M seed”; read tech.eu; read thenextweb.com)"
+  ],
+  "threads": [
+    "Jensen Huang resignation and potential return: Indonesian police raided Nvidia partner Megaspeed local unit"
+  ],
+  "videos": {
+    "OpenAI": "ok (13 in feed, 1 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (10 in feed, 1 new)",
+    "AI at Meta": "ok (9 in feed, 0 new)",
+    "Microsoft Research": "ok (10 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 2 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (2 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (3 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (4 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "4 kept from 5 new",
+  "tagged": 5,
+  "explainers": "2 added to earlier stories",
+  "trackers": "filed 7 stories; updated us-china, ai-regulation, india-ai, ai-infrastructure",
+  "claims": "178 tracked, 172 open, 1 updated this run",
+  "model_tracker": "82 models, 15 changes today",
+  "briefing": "3 themes from 20 stories",
+  "india_briefing": "3 themes from 4 stories",
+  "photos": "4 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "26 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":43}",
+  "ai_requests_run": 42,
+  "ai_tokens_run": 103792,
+  "ai_requests_today": 119,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+    "gemini: network error ReadTimeout, retrying",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model"
+  ]
+}
