@@ -1,0 +1,185 @@
+{
+  "started_at": "2026-11-17T22:07:56+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1405)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (908)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (10)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (13)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (26)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "What drives the cost of AI at work",
+      "reason": "score 4: General thought leadership/blog post on workplace AI costs without specific frontier news or model updates."
+    },
+    {
+      "title": "Explore 25 years of XBOX games and memories in a new anniversary magazine",
+      "reason": "not AI: Anniversary magazine for Xbox games, off-topic for AI coverage."
+    },
+    {
+      "title": "Get all the latest news, photos and more from Microsoft Ignite",
+      "reason": "not AI: General roundup link for Microsoft Ignite conference news without a specific standalone announcement."
+    },
+    {
+      "title": "MAI Code 2 and Code 2 Flash",
+      "reason": "duplicate of 5d27befedfa3"
+    },
+    {
+      "title": "jQuery 4.1.0",
+      "reason": "not AI: jQuery release, off-topic for AI."
+    },
+    {
+      "title": "SEC reportedly investigating Nvidia amid Huang exit",
+      "reason": "score 3: Duplicate of WSJ SEC investigation story (35d35d2a7724)."
+    },
+    {
+      "title": "Google joins the tech outage trend by announcing it’s not having one",
+      "reason": "not AI: Satirical tech outage post, no real AI news."
+    },
+    {
+      "title": "Nvidia’s Q3 earnings hit the mark, without mentioning the whole Jensen Huang thing",
+      "reason": "score 4: Covers Nvidia's Q3 earnings call, which is already covered in c515216ed921."
+    },
+    {
+      "title": "Not even Sam Altman is safe from AI deepfakes on Instagram",
+      "reason": "score 4: General piece on Instagram deepfakes, mentioning Meta executives rather than a substantive new AI safety policy or release."
+    },
+    {
+      "title": "“Trump was in bed with Jensen”: Critics balk at Huang’s wish to return to Nvidia",
+      "reason": "score 4: Commentary on Jensen Huang and Nvidia controversy; already extensively covered in previous stories."
+    },
+    {
+      "title": "Sources: AppLovin is among companies in talks to acquire ad tech company Criteo, which has a ~$1B market cap after its stock fell 50%+ over the past five years (Milana Vinn/Reuters)",
+      "reason": "not AI: M&A rumor regarding AppLovin and Criteo, no direct AI angle stated."
+    },
+    {
+      "title": "Kalshi says the CFTC has ordered it to halt trading on \"mention markets\" tied to what President Trump will say during public events (Bobby Allyn/Bloomberg)",
+      "reason": "not AI: CFTC action against Kalshi regarding Trump prediction markets, no AI relevance."
+    }
+  ],
+  "written": [],
+  "notes": [
+    "judging stopped after 20 decisions: daily cap of 900,000 tokens reached",
+    "ignored made-up duplicate id 35d35d2a7724 for 'SEC reportedly investigating Nvidia amid Huang exi'",
+    "ignored made-up duplicate id c515216ed921 for 'Nvidia’s Q3 earnings hit the mark, without mention'",
+    "follow-up linking skipped: daily cap of 900,000 tokens reached",
+    "stopped writing: daily cap of 900,000 tokens reached",
+    "8 kept item(s) carried over to the next run",
+    "videos skipped: daily cap of 900,000 tokens reached"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 82.5,
+    "audit": 0.0,
+    "plan": 2.2,
+    "judge": 12.5,
+    "verify and write": -0.0,
+    "tagging": 1.6,
+    "explainers": 0.0,
+    "trackers": 0.0,
+    "claims": 0.0,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 0.0,
+    "self-review": 0.0,
+    "photos": 0.0,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 7.3
+  },
+  "fetched": 2975,
+  "fresh": 26,
+  "plan": {
+    "focus": "Chasing Nvidia's blockbuster earnings and SEC probe alongside GPT-6.2 Astra's rollout and benchmarks.",
+    "priorities": [
+      "Nvidia reports Q3 revenue up 103% YoY to $115.8B, above $109.1B est.,  (Nvidia reports Q3 revenue up 103% YoY to $115.8B with Data Center at $107.6B, smashing estimates.)",
+      "Sources: the US SEC is investigating Nvidia, including whether the com (SEC is investigating Nvidia over disclosures and Huang's exit/return plans.)",
+      "Artificial Analysis shows GPT-6.2 Astra trailing only Claude Fable 5.2 (Artificial Analysis and Epoch AI benchmark GPT-6.2 Astra right behind Claude Fable 5.2.)",
+      "GPT-6.2 Astra costs $8/1M input and $40/1M output tokens, down 20% fro (Provides specific token pricing and cost drops for OpenAI's new GPT-6.2 models.)",
+      "Suno launches Visuals, letting users generate 15-second clips that can (Suno launches Visuals with MiniMax-based video generation for music videos.)"
+    ],
+    "thin_areas": [
+      "india"
+    ],
+    "searches": [
+      "Nvidia SEC investigation Jensen Huang: 6 new",
+      "GPT 6 2 Astra benchmarks performance: 6 new"
+    ],
+    "dig_deeper": [
+      "Sources: the US SEC is investigating Nvidia, including whether the com",
+      "Nvidia reports Q3 revenue up 103% YoY to $115.8B, above $109.1B est., "
+    ]
+  },
+  "judged": 38,
+  "kept": 8,
+  "videos": {
+    "OpenAI": "ok (12 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (10 in feed, 3 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
+    "Microsoft Research": "ok (12 in feed, 0 new)",
+    "NVIDIA": "ok (10 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 3 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 1 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (2 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 1 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (2 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (4 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "trackers": "filed 0 stories; no tracker changed",
+  "claims": "198 tracked, 192 open",
+  "model_tracker": "82 models, 17 changes today",
+  "photos": "0 saved, 0 unavailable",
+  "alerts": "23 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":0}",
+  "ai_requests_run": 3,
+  "ai_tokens_run": 17094,
+  "ai_requests_today": 318,
+  "provider_log": []
+}
