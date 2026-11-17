@@ -1,0 +1,487 @@
+{
+  "started_at": "2026-11-17T10:22:00+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1400)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (908)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (16)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (9)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (26)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Latent Lattice Language Models",
+      "reason": "score 4: Standard arXiv paper on architecture variants without an immediate major empirical breakthrough or benchmark lead."
+    },
+    {
+      "title": "ViRA: Toward Ultra-High-Resolution Visual Agents via Cross-Input Relative Policy Optimization",
+      "reason": "score 4: Standard arXiv preprint on visual agents; incremental research contribution."
+    },
+    {
+      "title": "Quantifying the added value of human forecaster discussions for tropical cyclone intensity prediction",
+      "reason": "score 3: Meteorology and forecasting paper; AI angle is minor/adjacent and not a primary frontier model result."
+    },
+    {
+      "title": "How VLMs Plan What's Next",
+      "reason": "score 4: Academic paper on VLMs; incremental interpretability research."
+    },
+    {
+      "title": "Hyperlyve: Parallelized Enumeration and Exact Lyapunov Stability Certification for Deep ReLU Networks",
+      "reason": "score 4: Verification and stability paper for neural network controllers; niche research."
+    },
+    {
+      "title": "Mitigating Catastrophic Forgetting with Physics-Indexed Specialist Memory: the Evolutionary Neuroplastic Agent",
+      "reason": "score 4: Reinforcement learning memory research preprint; incremental."
+    },
+    {
+      "title": "Optimal Autoregressive Chain-of-Thought Learning via Bagging",
+      "reason": "score 4: Theoretical paper on chain-of-thought learning; academic focus."
+    },
+    {
+      "title": "SADL: On the Demand-Supply Geometry of Representation Collapse",
+      "reason": "score 4: The paper analyses representation collapse in joint‑embedding predictive architectures – a useful theoretical insight but an incremental contribution that does not constitute a frontier breakthrough for builders or investors."
+    },
+    {
+      "title": "Surrogate-Assisted Compact-Model Extraction for SKY130 CMOS at 77 K",
+      "reason": "score 3: Focuses on cryogenic CMOS modelling using a neural surrogate; the work is hardware‑centric and not directly about AI models or infrastructure that matters to Frontier Wire’s audience."
+    },
+    {
+      "title": "Beyond Job Titles: Interpreting Early-Career Job Advertisements with Sparse Autoencoders and Semantic Clustering",
+      "reason": "score 4: Applies sparse autoencoders to job‑ad clustering – an interesting application but not a significant AI research advance for the frontier audience."
+    },
+    {
+      "title": "ScenarioForge: Resource-Grounded Generation and Execution Validation of Cyber Exercises",
+      "reason": "score 5: Shows how LLMs can generate cyber‑range scenarios; useful for security exercises but not a breakthrough that changes the AI frontier landscape."
+    },
+    {
+      "title": "DynSurvX: Time-Resolved Explanations for Dynamic Survival Predictions",
+      "reason": "score 4: Presents an explainability framework for dynamic survival predictions; valuable for clinical use but not a frontier AI development of interest to the core readership."
+    },
+    {
+      "title": "When Do Histology Foundation Models Need Geometric Test-Time Augmentation?",
+      "reason": "score 4: Studies test‑time augmentation for histology foundation models – a niche methodological detail without broader impact on AI development or deployment."
+    },
+    {
+      "title": "Severe but Harmless: Stress-Testing Shift Severity for Frozen Time-Series Forecasters",
+      "reason": "score 4: Explores stress‑testing shift severity for frozen time‑series forecasters; interesting for robustness research but not a major advance for the frontier audience."
+    },
+    {
+      "title": "Benchmarking memory and nonlinear processing capacity of quantum recurrent neural networks for time series prediction",
+      "reason": "score 3: Niche quantum ML benchmark for time series; incremental and not a breakthrough for our audience."
+    },
+    {
+      "title": "ONAM: Fitting Orthogonal Neural Additive Models for Post-Hoc Interpretability of Black-Box Predictions",
+      "reason": "score 3: Interpretability R package (ONAM); incremental tooling, not a notable advance."
+    },
+    {
+      "title": "TRACE: Topological Representations for Anomaly detection through Contrastive Embeddings",
+      "reason": "score 3: Graph contrastive learning for intrusion detection; incremental, not a landmark result."
+    },
+    {
+      "title": "Right Reason, Wrong Advice: Evaluating Recourse in LLM Explanations of Denied Requests",
+      "reason": "score 4: Evaluation of recourse validity in LLM explanations; interesting but incremental, not a major advance."
+    },
+    {
+      "title": "The cost of enforcing long-run coverage: a phase transition in online conformal prediction",
+      "reason": "score 3: Theoretical conformal prediction result; narrow, not a headline advance."
+    },
+    {
+      "title": "SciResearch-Eval: Evaluating Scientific Judgment in Autonomous Experimental Agents",
+      "reason": "score 4: New benchmark for autonomous experimental agents; solid but incremental, not a landmark result."
+    },
+    {
+      "title": "Seen but Unsaid: Locating and Repairing Cross-Image Comparison in Vision-Language Models",
+      "reason": "score 3: VLM cross-image comparison failure analysis; incremental diagnostic work."
+    },
+    {
+      "title": "Optimistic Verifiers Get Hacked: Reward Hacking Under an Exact Process Oracle",
+      "reason": "score 4: Reward hacking under a process oracle; relevant to RL safety but incremental, not a landmark finding."
+    },
+    {
+      "title": "Evaluating Cultural Reasoning and Robustness in LLMs for Spanish Political Discourse",
+      "reason": "score 3: Cultural reasoning eval for Spanish political discourse; narrow and incremental."
+    },
+    {
+      "title": "Procedure without Judgment: What Small Language Models Learn under an Exact Verifier",
+      "reason": "score 3: Small-model behavior under an exact verifier; incremental, not a notable advance."
+    },
+    {
+      "title": "Algorithm Distillation for Safe In-Context Reinforcement Learning",
+      "reason": "score 4: Technical paper on safe in-context RL; incremental research without clear frontier impact."
+    },
+    {
+      "title": "Safe Resemblance, Silent Propagation: Limits of Text-Similarity Guardrails for AI Agent Safety",
+      "reason": "score 4: Study of text-similarity guardrails for AI agents; niche safety research, not a major breakthrough."
+    },
+    {
+      "title": "Embedding Cosine Measures Text Length Before It Measures Homogenization",
+      "reason": "score 3: Methodological analysis of embedding cosine similarity; limited relevance for frontier audience."
+    },
+    {
+      "title": "Lazy-MOSAIC: Accelerating Skill-Centric Manipulation Planning with Learned Skill-Effect World Models",
+      "reason": "score 4: Robotics manipulation planning paper; interesting but incremental and not a major frontier development."
+    },
+    {
+      "title": "Tensorized Automata: Algebraically Informed Representation Learning for Sequential Decision Making",
+      "reason": "score 4: New representation learning approach using automata; technical contribution without broad impact."
+    },
+    {
+      "title": "Almost Controlled: The FDR of Benjamini-Hochberg on Weighted Conformal p-Values",
+      "reason": "score 2: Statistical methodology paper; peripheral to AI development news."
+    },
+    {
+      "title": "Leverage-Enhanced Sampling Owen Method for Explainable Artificial Intelligence",
+      "reason": "score 4: Explainable AI sampling method; incremental research not a headline-worthy advance."
+    },
+    {
+      "title": "Learning from Duality in Neural Network Field Theories",
+      "reason": "score 3: Theoretical work linking neural nets to field theories; interesting but niche and not a frontier breakthrough."
+    },
+    {
+      "title": "The CYBER-BRIDGE project: An AI-Powered Platform for Cross-Border Cybersecurity, Compliance and Forensics in the EU",
+      "reason": "score 5: Project description for an EU AI-powered cybersecurity platform; notable but still a routine research/initiative announcement."
+    },
+    {
+      "title": "Detection-Efficient Watermarking for Vision--Language Agents via Risk-Constrained Strength Allocation",
+      "reason": "score 5: Paper on watermarking vision-language agents; relevant to safety but an incremental technical contribution."
+    },
+    {
+      "title": "Differentiable Exact Learning",
+      "reason": "score 3: Niche differentiable-learning framework paper; no evidence of a breakthrough or broad impact. Routine arXiv item."
+    },
+    {
+      "title": "RESILAGENT: A Three-Pillar Architecture for Cyber-Physical Resilience in Electrical Power and Energy Systems",
+      "reason": "score 3: Concept architecture for cyber-physical resilience in power systems; applied, incremental, not a frontier advance."
+    },
+    {
+      "title": "LynnReal-Hand: Unlocking World Interaction with Hand Control",
+      "reason": "score 4: Interactive video world-model hand-control paper; interesting but incremental and not a landmark result."
+    },
+    {
+      "title": "India's IT Spending to Reach ₹17 Lakh Cr in 2027: Gartner Forecast",
+      "reason": "score 4: Gartner IT-spending forecast with AI as a secondary driver; routine market forecast, not a notable development."
+    },
+    {
+      "title": "He Left Accenture to Build an Embedded SLM—Now It Ranks Among the World’s Best",
+      "reason": "score 5: Announcement of new startup KiteFishAI developing compact language models; no significant funding or product launch, routine industry news."
+    },
+    {
+      "title": "Instagram Tightens Recommendations For Sexually Suggestive, Violent Content In India",
+      "reason": "duplicate of 42bc629e96d4"
+    },
+    {
+      "title": "Ranveer Singh, Aman Gupta Launch Men’s Personal Care Brand H.I.M",
+      "reason": "not AI: Celebrity personal-care brand launch; off-topic, no AI angle."
+    },
+    {
+      "title": "MobiKwik eyes Rs 100 cr revenue boost from UPI MDR; gets RBI nod to launch NBFC operations",
+      "reason": "not AI: Fintech revenue strategy unrelated to AI."
+    },
+    {
+      "title": "Google’s Project Zero to reduce vulnerability disclosure to 60 days by 2027",
+      "reason": "not AI: Security vulnerability disclosure policy does not involve AI."
+    },
+    {
+      "title": "Mamaearth parent Honasa’s Q2 profit jumps 87% to Rs 73 cr, revenue up 36%",
+      "reason": "not AI: Consumer company earnings; no AI angle."
+    },
+    {
+      "title": "CCPA’s Rs 20 lakh penalty on ExportersIndia for online listing of explosives upheld by Consumer Disputes Redressal Commission",
+      "reason": "not AI: Consumer-protection penalty on an e-commerce listing; no AI angle."
+    },
+    {
+      "title": "Cyberattack hits 178 websites including CNN, BBC, Fox News and Zoom; iPhone users also targeted",
+      "reason": "not AI: The story is a general cyberattack affecting multiple websites; it contains no AI angle."
+    },
+    {
+      "title": "Singapore FinTech Fest: Profitable but cash-starved - why working capital needs new credit model, explains Sapphiro MD",
+      "reason": "not AI: FinTech Fest discussion about working‑capital models has no AI angle."
+    },
+    {
+      "title": "Samsung Electronics, TSMC shares fall after US announces curbs on China's chip access",
+      "reason": "score 4: Stock-price reaction to the chip curbs; the policy itself is covered elsewhere, and price commentary stays low."
+    },
+    {
+      "title": "Anthropic debuts to skeptics and dogged believers: Mike Dolan",
+      "reason": "duplicate of 0b980939d985"
+    },
+    {
+      "title": "Elastic{ON} Mumbai: Why context, not the model, is the real AI advantage",
+      "reason": "score 5: Conference talk about AI context at Elastic{ON} Mumbai; not a major release or policy change, routine marketing/industry event."
+    },
+    {
+      "title": "How friends from Coimbatore built GOAT Robotics into an Rs 8 crore business with global reach",
+      "reason": "not AI: Small robotics business profile (Rs 8 crore) with no AI angle; not significant for our readers."
+    },
+    {
+      "title": "Malware attack hits Zoom, Salesforce and IKEA-linked websites",
+      "reason": "not AI: Supply-chain malware on Zoom/Salesforce/IKEA sites; general security news with no AI angle."
+    },
+    {
+      "title": "Startup news and updates: daily roundup (November 17, 2026)",
+      "reason": "not AI: A generic daily startup roundup with no specific AI story."
+    },
+    {
+      "title": "Meta says it modified Instagram's recommendation systems in India to show less sexual and violent content, after New Delhi called for tighter content checks (Reuters)",
+      "reason": "duplicate of 42bc629e96d4"
+    },
+    {
+      "title": "Nvidia faces extraordinary push to restore Huang days after his exit",
+      "reason": "duplicate of c46863c30810"
+    },
+    {
+      "title": "NVIDIA Reports First Earnings After Jensen Huang’s Exit on Tuesday",
+      "reason": "duplicate of 51273f0e0cc7"
+    },
+    {
+      "title": "OpenAI's Pragya Misra moves to lead business development for India & South Asia",
+      "reason": "score 4: Routine executive personnel move (OpenAI India/South Asia BD lead); minor, not genuinely newsworthy for the global audience."
+    },
+    {
+      "title": "Sarvam opens AI token factory, India's answer to OpenRouter and Hugging Face",
+      "reason": "score 7: Same event as the editor-flagged Sarvam Token Factory item (518c47915c16); duplicate."
+    },
+    {
+      "title": "Reading or Remembering? Measuring Temporal Contamination in Language Models",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "Karnataka Unveils 6 Initiatives to Strengthen AI and Semiconductor Ecosystem",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Engineers must be retrained to review, certify AI-written code, not write it: Gopalakrishnan",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "A look at ~1,400 Urban Legend campaigns where right-wing influencers got paid to push crypto policy and Nvidia sales to China after the US approved H200 sales (ModelRepublic)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Accenture, Google Cloud to Expand AI Education Across 1,000 Indian Institutions",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "11e63e8d9cdb",
+      "headline": "Nvidia board creates National Security and Export Control Oversight Committee",
+      "category": "safety",
+      "summary": "Nvidia's board of directors established a new standing committee to oversee the company's national security policies, export control compliance and global trade risk management. The committee, chaired by director Suzanne Nora Johnson, will meet at least quarterly and retain independent outside experts.",
+      "url": "https://techmeme.com/261117/p8",
+      "sources": 3,
+      "quotes": 1
+    },
+    {
+      "id": "272333516a9d",
+      "headline": "OpenAI names Pragya Misra to lead business development in India and South Asia",
+      "category": "industry",
+      "summary": "Pragya Misra, OpenAI's head of strategy and global affairs in India, will take on a new role leading the company's business development for India and South Asia. She joined OpenAI in April 2024 as its first hire in India, and the company says India is its largest market with over 100 million weekly users.",
+      "url": "https://yourstory.com/2026/11/pragya-misra-lead-openais-business-development-india-and-south-asia",
+      "sources": 5,
+      "quotes": 1
+    },
+    {
+      "id": "a923fd9b70a1",
+      "headline": "US tightens AI chip export rules, targeting Southeast Asia data centres",
+      "category": "policy",
+      "summary": "The US Commerce Department announced new export controls on Nov 16 requiring licenses for AI chip shipments to data centres in Singapore, Malaysia, Indonesia, Thailand, and Brazil that may provide compute to Chinese firms. Shares of Southeast Asian data centre and chip supply chain companies fell sharply, with some Malaysian firms dropping nearly 20%.",
+      "url": "https://economictimes.indiatimes.com/tech/technology/us-ai-chip-curbs-threaten-southeast-asia-data-centre-boom-shares-slump/articleshow/135916332.cms",
+      "sources": 5,
+      "quotes": 1
+    },
+    {
+      "id": "29d70f03b836",
+      "headline": "Numa raises $45M Series C to expand AI operating system for car dealerships",
+      "category": "industry",
+      "summary": "Oakland‑based Numa secured $45 million in a Series C round led by Blue Cloud Ventures, bringing total funding to $96 million and a post‑money valuation of $500 million. The company now serves more than 1,500 dealerships in the U.S. and Canada.",
+      "url": "https://techmeme.com/261117/p7",
+      "sources": 5,
+      "quotes": 0
+    },
+    {
+      "id": "518c47915c16",
+      "headline": "Sarvam AI opens Token Factory to run global open-weight models on Indian servers",
+      "category": "industry",
+      "summary": "Sarvam AI launched Token Factory, an OpenAI-compatible API that serves its Sarvam 105B model and global open-weight models (DeepSeek, GLM, Kimi, Gemma) on GPU clusters in India, charging by usage. The company says it already serves more than 450 billion DeepSeek V4.1 Flash tokens a day.",
+      "url": "https://inc42.com/buzz/sarvam-ai-opens-token-factory-to-run-global-ai-models-on-indian-servers",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "4deebe750552",
+      "headline": "CertiSum makes MXFP4 training bitwise identical across GPUs and parallelism layouts",
+      "category": "research",
+      "summary": "Researchers at arXiv presented CertiSum, a method that makes 4-bit MXFP4 training bitwise identical across AMD MI350X and NVIDIA GB200 GPUs and across data, tensor, and context parallelism layouts. In 200-step Qwen3-8B-Base experiments it preserved training states bit for bit, adding 11.8–60.5% to training-step latency at the larger evaluated input shapes.",
+      "url": "https://arxiv.org/abs/2611.21584",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "not India desk: 'US AI chip curbs threaten Southeast Asia data cent'",
+    "dropped non-quote (Neil Shah): Chinese AI developers can no longer bypass physical hardware…",
+    "dropped non-quote (Tasso Roumeliotis): \"In two years, every general manager will have an AI COO,\" s…",
+    "dropped non-quote (Mir Arif): \"What is unique about Numa is that the company understands t…",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "6 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 82.6,
+    "audit": 0.0,
+    "plan": 8.3,
+    "judge": 318.4,
+    "verify and write": 348.8,
+    "videos": 48.2,
+    "tagging": 4.2,
+    "explainers": 52.2,
+    "trackers": 115.7,
+    "claims": 29.5,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 50.7,
+    "self-review": -0.0,
+    "photos": 1.5,
+    "stock photos": 1.8,
+    "daily email": 0.0,
+    "alerts": 11.2
+  },
+  "fetched": 2972,
+  "fresh": 68,
+  "plan": {
+    "focus": "Chasing the fallout from Jensen Huang's exit and US chip curbs while covering AI expansion in India.",
+    "priorities": [
+      "OpenAI Picks Pragya Misra to Head India and South Asia Business Expans (OpenAI appoints Pragya Misra to lead India and South Asia business expansion, a major strategic move for the region.)",
+      "Nvidia's board establishes a National Security and Export Control Over (Nvidia establishes a National Security and Export Control Oversight Committee amid ongoing export compliance and leadership turbulence.)",
+      "Sarvam AI Opens Token Factory To Run Global AI Models On Indian Server (Sarvam AI opens Token Factory to run global AI models on Indian servers, marking a key infrastructure milestone.)",
+      "Meta says it modified Instagram's recommendation systems in India to s (Meta modifies Instagram recommendation systems in India following regulatory pressure on content safety.)",
+      "Oakland-based Numa, which builds an AI platform to manage car dealersh (Numa raises a $45M Series C at a $500M valuation for its AI platform managing car dealership customer service.)"
+    ],
+    "thin_areas": [
+      "india",
+      "industry"
+    ],
+    "searches": [
+      "Jensen Huang Nvidia exit succession: 2 new",
+      "OpenAI India expansion Pragya Misra: 1 new",
+      "Sarvam AI Token Factory Indian servers: 1 new"
+    ],
+    "dig_deeper": [
+      "OpenAI Picks Pragya Misra to Head India and South Asia Business Expans",
+      "Nvidia's board establishes a National Security and Export Control Over"
+    ]
+  },
+  "judged": 72,
+  "kept": 13,
+  "research": {
+    "investigated": 5,
+    "confirmed": 5,
+    "tool_calls": 17
+  },
+  "research_log": [
+    "Nvidia's board establishes a National Security and Export Control Over: confirmed (searched “Nvidia board National Security Export Control Oversight Committee”; read yahoo.com; read 247wallst.com)",
+    "Pragya Misra to lead OpenAI's business development in India and South : confirmed (searched “Pragya Misra OpenAI India business development”; read analyticsindiamag.com; read exchange4media.com; read exchange4media.com)",
+    "US AI chip curbs threaten Southeast Asia data centre boom, shares slum: confirmed (searched “US AI chip export restrictions Southeast Asia Malaysia Singapore Thailand data centres”; read techcrunch.com; read straitstimes.com)",
+    "Oakland-based Numa, which builds an AI platform to manage car dealersh: confirmed (searched “Oakland-based Numa raised $45M Series C $500M post-money valuation”; searched “Numa AI car dealership customer service Series C”; read unite.ai; read prnewswire.com)",
+    "Sarvam AI Opens Token Factory To Run Global AI Models On Indian Server: confirmed (searched “Sarvam AI Token Factory Indian servers”; read unite.ai; read msn.com)"
+  ],
+  "threads": [
+    "Nvidia board governance and CEO search: Nvidia board creates National Security and Export Control Ov",
+    "OpenAI India expansion and market growth: OpenAI names Pragya Misra to lead business development in In",
+    "US chip curbs and SE Asia data centers: US tightens AI chip export rules, targeting Southeast Asia d",
+    "India AI infrastructure and OpenAI growth: Sarvam AI opens Token Factory to run global open-weight mode"
+  ],
+  "videos": {
+    "OpenAI": "ok (12 in feed, 5 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (10 in feed, 1 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
+    "Microsoft Research": "ok (10 in feed, 0 new)",
+    "NVIDIA": "ok (10 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 3 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (2 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (3 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (4 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "5 kept from 10 new",
+  "tagged": 6,
+  "explainers": "2 added to earlier stories",
+  "trackers": "filed 6 stories; updated us-china, india-ai, agent-safety, ai-money",
+  "claims": "194 tracked, 188 open, 0 updated this run",
+  "model_tracker": "82 models, 7 changes today",
+  "briefing": "3 themes from 20 stories",
+  "india_briefing": "3 themes from 4 stories",
+  "photos": "4 saved, 1 unavailable",
+  "stock photos": "2 added",
+  "alerts": "19 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":53}",
+  "ai_requests_run": 46,
+  "ai_tokens_run": 154630,
+  "ai_requests_today": 164,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+    "gemini: network error ReadTimeout, retrying",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model",
+    "gemini: 503 after retry; moving to next provider for this run",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: model unavailable (400); trying next model",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-20b: couldn't force a tool call; retrying without forcing",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model"
+  ]
+}
