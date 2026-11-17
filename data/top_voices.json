@@ -1,32 +1,5 @@
 {
   "posts": {
-    "ac841c16ab1a": {
-      "id": "ac841c16ab1a",
-      "url": "https://simonwillison.net/2026/Nov/9/llm-anthropic",
-      "person": "Simon Willison",
-      "text": "llm-anthropic 0.31. Release: llm-anthropic 0.31 Anthropic released Fable 5.2 and Mythos 5.2 today. I've added them to llm-anthropic , so you can now run prompts through Fable 5.2 like this: uv tool install llm llm install llm-anthropic llm keys set anthropic # paste key here llm -m claude-fable-5.2 \"Generate an SVG of a pelican riding a bicycle\" I ran pelicans at all five reasoning levels - low , medium , high , xhigh , and max . You can see them all here - here's the best result I got, from xhigh : max failed to return an image at all, running out of tokens after spending 128,000 thinking about them . That's the",
-      "published": "2026-11-09T23:58:46+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
-    "baaf713b11e3": {
-      "id": "baaf713b11e3",
-      "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps",
-      "person": "Simon Willison",
-      "text": "Locating the source of a mysterious beep with Claude. Our house has a box room, full of boxes that we still haven't unpacked from our last move. A couple of weeks ago something in that room started intermittently beeping . The beeps were far enough apart that standing in the room and trying to determine the source of the noise was frustrating, and I really didn't want to dig through every one of those boxes. So I had Claude Code build Beep Locator , a software system for triangulating the source of a mysterious beep using multiple devices scattered around the room. Here's what Beep Locator looks like after it has been running for a while: You run",
-      "published": "2026-11-09T23:57:21+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
-    "94ff1d7f5e18": {
-      "id": "94ff1d7f5e18",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzvxvkdmd22e",
-      "person": "Ethan Mollick",
-      "text": "In one of my favorite experiments, I told Fable 5.2 to build an endless, hands-off journey through 3D worlds linked by portals. 25,000 agents created over 450 worlds inspired by books, art, places, all in code. Play (its neat): portals-endless-worlds.netlify.app Github: github.com/emollick/ai-...",
-      "published": "2026-11-09T22:27:19.413Z",
-      "via": "Bluesky",
-      "kind": "post"
-    },
     "16b90ffd8ed9": {
       "id": "16b90ffd8ed9",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzwjwceb622e",
@@ -524,6 +497,24 @@
       "text": "Import AI 481: AI sub-contractors; a wet lab for AI; and subterfuge during development. Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. Subscribe now AI systems are getting good at sub-contracting to make themselves better:…AI can now productively spend money to improve itself…Researchers have developed FrontierML, a benchmark “that measures […]",
       "published": "2026-11-16T14:01:15+00:00",
       "via": "Import AI (Jack Clark)",
+      "kind": "post"
+    },
+    "764198fc49a3": {
+      "id": "764198fc49a3",
+      "url": "https://simonwillison.net/2026/Nov/16/llm",
+      "person": "Simon Willison",
+      "text": "llm 0.37.3. Release: llm 0.37.3 A bug fix release for LLM , mainly to cover a problem with the most recent Homebrew package of the software. Homebrew now ships the latest SQLite, 3.54.1 , which includes a fix that broke LLM's logging code . Short version: in SQLite 3.54.0 the following SQL: select json_object('a', (select json_array(1))) Returns this: {\"a\":[1]} But in 3.54.1 the same query returns this: {\"a\":\"[1]\"} According to D. Richard Hipp : That was a bug fix. Per the documentation, (SELECT json_array(...)) returns SQL text, not JSON. Hence the 3.54.1 behavior is correct and 3.54.0 was a bug. The wor",
+      "published": "2026-11-16T23:57:26+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "1e6985a78fe0": {
+      "id": "1e6985a78fe0",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2htyp4bhc2t",
+      "person": "Ethan Mollick",
+      "text": "A lot of folks don't realize how much of our computer infrastructure is an improvised system prone to cascading failures. You didn't need offensive AI cyberattacks to have big outages like Microsoft/FAA. Of course, now we DO have to deal with offensive AI (but also defensive AIs and patching)",
+      "published": "2026-11-17T01:05:25.401Z",
+      "via": "Bluesky",
       "kind": "post"
     }
   },

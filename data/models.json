@@ -535,7 +535,7 @@
       "name": "Nemotron 3.5 Lightning",
       "lab": "NVIDIA",
       "released": "2026-08-11",
-      "context": 262144,
+      "context": 1048576,
       "price_in": 0.07,
       "price_out": 0.2,
       "inputs": [
@@ -640,8 +640,8 @@
       "lab": "NVIDIA",
       "released": "2026-06-04",
       "context": 262144,
-      "price_in": 0.6,
-      "price_out": 2.4,
+      "price_in": 0.5,
+      "price_out": 2.2,
       "inputs": [
         "text"
       ]
@@ -1096,27 +1096,6 @@
   "changes": [
     {
       "date": "2026-11-13",
-      "model": "Kimi K3.1 Pro",
-      "lab": "Moonshot AI",
-      "kind": "price_rise",
-      "text": "Kimi K3.1 Pro input price raised: $0.2375 → $2 per 1M tokens"
-    },
-    {
-      "date": "2026-11-13",
-      "model": "Kimi K3.1 Pro",
-      "lab": "Moonshot AI",
-      "kind": "price_rise",
-      "text": "Kimi K3.1 Pro output price raised: $8.4114 → $10 per 1M tokens"
-    },
-    {
-      "date": "2026-11-13",
-      "model": "DeepSeek V4.1 Flash 1017",
-      "lab": "DeepSeek",
-      "kind": "price_rise",
-      "text": "DeepSeek V4.1 Flash 1017 input price raised: $0.15 → $0.3 per 1M tokens"
-    },
-    {
-      "date": "2026-11-13",
       "model": "DeepSeek V4.1 Flash 1017",
       "lab": "DeepSeek",
       "kind": "price_rise",
@@ -1513,7 +1492,28 @@
       "lab": "Zhipu AI",
       "kind": "price_cut",
       "text": "GLM 5.3 Prime output price cut: $8.8 → $5.28 per 1M tokens"
+    },
+    {
+      "date": "2026-11-17",
+      "model": "Nemotron 3.5 Lightning",
+      "lab": "NVIDIA",
+      "kind": "context",
+      "text": "Nemotron 3.5 Lightning context window: 262,144 → 1,048,576 tokens"
+    },
+    {
+      "date": "2026-11-17",
+      "model": "Nemotron 3 Ultra",
+      "lab": "NVIDIA",
+      "kind": "price_cut",
+      "text": "Nemotron 3 Ultra input price cut: $0.6 → $0.5 per 1M tokens"
+    },
+    {
+      "date": "2026-11-17",
+      "model": "Nemotron 3 Ultra",
+      "lab": "NVIDIA",
+      "kind": "price_cut",
+      "text": "Nemotron 3 Ultra output price cut: $2.4 → $2.2 per 1M tokens"
     }
   ],
-  "updated_at": "2026-11-16T22:01:54+00:00"
+  "updated_at": "2026-11-17T01:29:40+00:00"
 }

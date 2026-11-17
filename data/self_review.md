@@ -1,52 +1,51 @@
-## Newsroom self-review, 2026-11-16
+## Newsroom self-review, 2026-11-17
 
-Looked at 31 runs over the last 3 days (83 stories written).
+Looked at 29 runs over the last 3 days (81 stories written).
 Tick the suggestions you want applied; nothing changes until a person approves it.
 
-- [ ] **fix source** · `gdelt-india`: Add request rate limiting or backoff for gdelt-india source. https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20  
-  _Why:_ gdelt-india is failing with HTTP 429 Too Many Requests in 20/31 runs due to frequent rate limiting.
-- [ ] **fix source** · `gdelt`: Increase timeout settings for the gdelt source connection.  
-  _Why:_ gdelt is encountering SSL handshake timeouts in 12/31 runs.
-- [ ] **coverage gap** · `Mistral AI, Alibaba (Qwen)`: Add specific news feeds or query terms for Mistral AI and Alibaba (Qwen) to improve coverage.  
-  _Why:_ Mistral AI and Alibaba (Qwen) have tracked labs without any stories produced this week.
-- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower min_score_to_publish_1_to_10 from 6 to 5 to increase published output given strong interest in these scores.  
-  _Why:_ A large volume of stories (81 scored 4, 45 scored 3) are dropped just below the publication threshold of 6.
+- [ ] **tune** · `gdelt`: Consider temporarily disabling or removing gdelt and gdelt-india until their connectivity stabilizes, or check timeout settings if configurable.  
+  _Why:_ GDELT and GDELT-india are experiencing frequent connection timeouts (failing in roughly half of all runs), indicating network or stability issues.
+- [ ] **tune** · `arxiv`: Add a polite delay or reduce request frequency for the arxiv source to avoid rate-limit errors.  
+  _Why:_ Arxiv is encountering 429 Too Many Requests errors, which points to rate-limiting issues on the free endpoint.
+- [ ] **coverage gap** · `Mistral AI`: Check the configuration or RSS feed associated with Mistral AI to ensure it is actively fetching new content.  
+  _Why:_ Mistral AI produced no stories over the tracked period despite being in the source/lab list.
+- [ ] **tune** · `min_score_to_publish_1_to_10`: Consider lowering min_score_to_publish_1_to_10 from 6 to 5 to increase story volume, given the high drop count.  
+  _Why:_ A large number of candidate stories (67 scored 4 and 39 scored 5) are being dropped just below the minimum publication threshold of 6.
 
 <details><summary>Statistics the agent reviewed</summary>
 
 ```json
 {
- "runs": 31,
- "stories_written": 83,
+ "runs": 29,
+ "stories_written": 81,
  "source_failures": {
-  "gdelt-india": "20/31 runs; last error: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20",
-  "gdelt": "12/31 runs; last error: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
-  "arxiv": "2/31 runs; last error: failed: HTTPStatusError: Client error '429 Unknown Error' for url 'https://export.arxiv.org/api/query?search_query=cat%3Acs.AI+OR+cat%3Acs.C"
+  "arxiv": "3/29 runs; last error: failed: HTTPStatusError: Client error '429 Unknown Error' for url 'https://export.arxiv.org/api/query?search_query=cat%3Acs.AI+OR+cat%3Acs.C",
+  "gdelt": "14/29 runs; last error: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+  "gdelt-india": "16/29 runs; last error: failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out"
  },
  "sources_returning_nothing": {},
  "drop_reasons": {
-  "not AI": 99,
-  "score 4": 81,
-  "score 3": 45,
-  "score 5": 35,
-  "could not verify yet": 33,
-  "duplicate of a769a94b7f5c": 17,
-  "could not verify yet after a second try": 11,
-  "duplicate of 72e1fb99c741": 8
+  "not AI": 105,
+  "score 4": 67,
+  "score 5": 39,
+  "could not verify yet": 32,
+  "score 3": 16,
+  "could not verify yet after a second try": 9,
+  "variety": 8,
+  "duplicate of 369f1ffcda11": 8
  },
  "tracked_labs_without_stories_this_week": [
-  "Mistral AI",
-  "Alibaba (Qwen)"
+  "Mistral AI"
  ],
  "provider_notes": [
+  "groq/openai/gpt-oss-20b: request over its 8,000-token limit; retrying with a 1,310-token answer",
+  "groq/openai/gpt-oss-20b: request too large for this model; trying next model",
+  "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+  "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+  "gemini/gemini-flash-latest: 503 (server busy); trying next model",
   "gemini: 503 after retry; moving to next provider for this run",
-  "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
   "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-  "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
-  "groq/openai/gpt-oss-120b: HTTP 400: {\"error\":{\"message\":\"Failed to parse tool call arguments as JSON\",\"type\":\"invalid_request_error\",\"code\":\"tool_use_failed\",\"failed_generation\":\"{\\\"name",
-  "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-  "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model",
-  "gemini/gemini-flash-latest: answer cut off; retrying with more room"
+  "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing"
  ],
  "current_settings": {
   "min_score_to_publish_1_to_10": 6,

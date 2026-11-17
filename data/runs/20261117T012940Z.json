@@ -1,0 +1,300 @@
+{
+  "started_at": "2026-11-17T01:29:40+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1398)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (908)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (14)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "hn": "ok (10)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (26)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "United Airlines experiencing a widespread system outage, airline says",
+      "reason": "not AI: Airlines systems outage with no AI angle stated."
+    },
+    {
+      "title": "OpenCode Browse",
+      "reason": "not AI: General developer tooling/browse update with no direct AI focus mentioned."
+    },
+    {
+      "title": "CNN, Zoom, Fox News Served Visitors a Crypto-Stealing Skimmer – OPTIMJACK",
+      "reason": "not AI: Cybersecurity incident involving malware/crypto-stealing skimmer on media sites, not an AI news story."
+    },
+    {
+      "title": "Cybersecurity AI startup Corma reaches $1B valuation in about 3 months",
+      "reason": "duplicate of 1eeb8d10c7e1"
+    },
+    {
+      "title": "Tech leaders are convinced that Jensen Huang’s exit was a plot against him",
+      "reason": "score 5: Covers the Jensen Huang resignation fallout and conspiracy theories, which is already heavily covered in existing published stories (e.g., 49d98b129891, 0ef9a44499ba, c46863c30810)."
+    },
+    {
+      "title": "Robo-soldier startup backed by Eric Trump misses payroll, may collapse",
+      "reason": "score 4: Robotics startup financial distress is adjacent to automation, but this is primarily a general business and governance failure story rather than a core AI development."
+    },
+    {
+      "title": "From flipping its pages to sitting on it, the phone book infiltrated American life — then vanished",
+      "reason": "not AI: Nostalgia piece about phone books, no AI angle"
+    },
+    {
+      "title": "llm 0.37.3",
+      "reason": "score 3: Routine minor bug fix release for a developer utility tool (llm 0.37.3)."
+    },
+    {
+      "title": "Sources: the US DOJ will review DoorDash's ~$17B acquisition of Instacart; DoorDash has agreed to pay a $1.25B breakup fee if the deal fails antitrust review (Jody Godoy/Reuters)",
+      "reason": "not AI: General retail and grocery delivery M&A (DoorDash acquiring Instacart) with no AI relevance."
+    },
+    {
+      "title": "Sources: Kalshi bought FB Securities, a small New York-based broker, in July and plans to launch equity trading within the next two months (Vicky Ge Huang/Wall Street Journal)",
+      "reason": "not AI: Prediction markets platform acquiring a broker to launch equity trading has no relation to AI."
+    },
+    {
+      "title": "Researchers find Optimizely serving malicious JavaScript to sites of 178 orgs including Zoom, CNN, HSBC, Salesforce, GitLab, Ledger, BBC, Equifax, IKEA, more (Scott Helme/Report URI Blog)",
+      "reason": "not AI: Website software supply chain and JavaScript security incident, not an AI security or vulnerability story."
+    },
+    {
+      "title": "United Airlines says it has \"resolved a technology issue that delayed flight departures\", adding that the outage did not impact flights already in progress (Michele Luhn/CNBC)",
+      "reason": "not AI: A routine airline IT outage with no connection to AI infrastructure or software."
+    },
+    {
+      "title": "A US judge clears two brothers accused of stealing $25M in crypto in 12 seconds, saying prosecutors failed to prove they committed fraud by exploiting Ethereum (Nate Raymond/Reuters)",
+      "reason": "not AI: Crypto exploit legal case; off-topic for AI readers."
+    },
+    {
+      "title": "The Anthropic IPO Is Coming. I Wouldn't Buy on Day 1, I'd Do This Instead",
+      "reason": "score 4: Retail investor advice and commentary on the upcoming Anthropic IPO rather than breaking news or financial data."
+    },
+    {
+      "title": "Anthropic IPO guide: Everything you need to know",
+      "reason": "duplicate of e9a9e657b9d8"
+    },
+    {
+      "title": "In A Slightly Alternate Universe, Sam Bankman-Fried Would Be Minting $35 Billion Off Anthropic's IPO Thursday",
+      "reason": "duplicate of 2c9708b63937"
+    },
+    {
+      "title": "Could Jensen Huang return as Nvidia CEO? Here are the possible paths",
+      "reason": "duplicate of 369f1ffcda11"
+    },
+    {
+      "title": "How will Nvidia stock fare after Huang's exit? Data provides clues.",
+      "reason": "duplicate of aed0535c56d2"
+    },
+    {
+      "title": "Jensen Huang Reportedly Weighing Return as Nvidia CEO With Allies",
+      "reason": "duplicate of 369f1ffcda11"
+    },
+    {
+      "title": "Nvidia stock falls as Elon Musk, Silicon Valley executives push for Jensen Huang's return as CEO",
+      "reason": "duplicate of 369f1ffcda11"
+    },
+    {
+      "title": "Trump backs Jensen Huang's return as Nvidia CEO, board refuses to consider reinstatement",
+      "reason": "score 4: Rehash of Trump backing Jensen Huang and Nvidia board stance"
+    },
+    {
+      "title": "Nvidia can replace Jensen Huang, but not the handshakes behind its chips: Chart of the Day",
+      "reason": "score 4: Commentary on Nvidia leadership transition without new facts"
+    },
+    {
+      "title": "Study estimates magnitude of US data center pollution as climate talks unveil clean AI pledge",
+      "reason": "score 5: General data center pollution study, overlaps with existing energy coverage"
+    }
+  ],
+  "written": [
+    {
+      "id": "f819d90d809d",
+      "headline": "Harvard study estimates power use of 403 US hyperscale data centers",
+      "category": "industry",
+      "summary": "A new study published in Nature Sustainability reveals that 403 U.S. hyperscale data centers consumed around 82 terawatt-hours of electricity between May 2024 and April 2025. Researchers used satellite imagery to estimate facility-level power consumption, finding that these large centers are powered mostly by fossil fuels.",
+      "url": "https://theverge.com/ai-artificial-intelligence/1034668/data-centers-electricity-climate-pollution-study-harvard",
+      "sources": 5,
+      "quotes": 1
+    },
+    {
+      "id": "d9e4cfcad5cc",
+      "headline": "India and nine nations sign declaration to safeguard AI supply chains",
+      "category": "policy",
+      "summary": "India and nine other nations signed the San Francisco Declaration on the Secure Foundations of Enduring Prosperity to protect AI infrastructure and sensitive technologies. The agreement was signed on November 15 at the Pax Silica retreat.",
+      "url": "https://inc42.com/buzz/india-nine-other-nations-sign-declaration-to-secure-ai-supply-chains",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "51273f0e0cc7",
+      "headline": "Nvidia faces third-quarter earnings call under interim CEO Colette Kress",
+      "category": "industry",
+      "summary": "Nvidia reports its third-quarter results with CFO Colette Kress serving as interim CEO following the resignation of founder Jensen Huang. The company faces congressional inquiries and questions regarding chip sales to China and export restrictions.",
+      "url": "https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "0b980939d985",
+      "headline": "Anthropic prices its IPO on Wednesday with valuation up to $1.4 trillion",
+      "category": "industry",
+      "summary": "Anthropic's initial public offering price is expected Wednesday evening, valuing the company at up to $1.4 trillion. Buyers have requested an order volume nearly seven times the shares being offered, with trading set to start Thursday on the Nasdaq under the ticker ANT.",
+      "url": "https://thestreet.com/crypto/artificial-intelligence/traders-are-pricing-anthropic-40-higher-ahead-of-ipo",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "1e6985a78fe0",
+      "headline": "Ethan Mollick on computer infrastructure and offensive AI threats",
+      "category": "research",
+      "summary": "Ethan Mollick noted that computer infrastructure is an improvised system vulnerable to cascading failures and outlined the arrival of offensive AI threats alongside defensive AIs and patching.",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2htyp4bhc2t",
+      "sources": 1,
+      "quotes": 1
+    }
+  ],
+  "notes": [
+    "ignored made-up duplicate id c267813b00db for 'Tech leaders are convinced that Jensen Huang’s exi'",
+    "ignored made-up duplicate id 998937caa4d6 for 'Trump backs Jensen Huang's return as Nvidia CEO, b'",
+    "ignored made-up duplicate id 7146db98f487 for 'Nvidia can replace Jensen Huang, but not the hands'",
+    "ignored made-up duplicate id f819d90d809d for 'Study estimates magnitude of US data center pollut'"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 78.0,
+    "audit": 11.2,
+    "plan": 90.5,
+    "judge": 33.4,
+    "verify and write": 61.6,
+    "videos": 4.5,
+    "tagging": 2.7,
+    "explainers": 0.0,
+    "trackers": 25.8,
+    "claims": 0.8,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 9.1,
+    "self-review": 1.5,
+    "photos": 1.4,
+    "stock photos": 0.9,
+    "daily email": -0.0,
+    "alerts": 10.7
+  },
+  "fetched": 2969,
+  "fresh": 18,
+  "audit": "coverage 73% of 11 significant stories; 3 missed, 0 added to this run; 2 lesson(s) for the editor",
+  "plan": {
+    "focus": "Tracking AI‑driven data‑center power spikes and security breaches while the Nvidia leadership saga heats up.",
+    "priorities": [
+      "All the questions Nvidia should answer on Tuesday — but probably won’t (Nvidia upcoming earnings Q&A critical for investors and industry outlook.)",
+      "US data centers now burn more electricity than a midsized country (Data‑center electricity use now exceeds a midsized country, vital for builders and policy.)",
+      "Sources: the US DOJ will review DoorDash's ~$17B acquisition of Instac (DOJ review of DoorDash‑Instacart $17B deal shapes M&A and antitrust landscape.)",
+      "Cybersecurity AI startup Corma reaches $1B valuation in about 3 months (Corma hitting $1B valuation highlights rapid AI cybersecurity market growth.)",
+      "India & Nine Other Nations Sign Joint Declaration To Safeguard AI Supp (India and partners’ AI supply‑chain declaration signals emerging policy shifts.)"
+    ],
+    "thin_areas": [
+      "models",
+      "research"
+    ],
+    "searches": [
+      "Anthropic IPO valuation: 6 new",
+      "Nvidia CEO return plan: 6 new",
+      "US data center electricity policy: 1 new"
+    ],
+    "dig_deeper": [
+      "All the questions Nvidia should answer on Tuesday — but probably won’t",
+      "Sources: the US DOJ will review DoorDash's ~$17B acquisition of Instac"
+    ]
+  },
+  "judged": 31,
+  "kept": 5,
+  "research": {
+    "investigated": 3,
+    "confirmed": 3,
+    "tool_calls": 5
+  },
+  "research_log": [
+    "US data centers now burn more electricity than a midsized country: confirmed (searched “data centers burn more electricity than a midsized country Nature Sustainability Harvard”; read harvard.edu)",
+    "India & Nine Other Nations Sign Joint Declaration To Safeguard AI Supp: confirmed (searched “India ten nations joint declaration safeguard AI supply chains”; read analyticsindiamag.com)",
+    "All the questions Nvidia should answer on Tuesday — but probably won’t: confirmed (searched “Nvidia interim CEO Colette Kress third quarter results Tuesday”)"
+  ],
+  "threads": [
+    "Post midterm policy sparks data center clash: Harvard study estimates power use of 403 US hyperscale data ",
+    "Nations sign joint declaration for AI supply chains: India and nine nations sign declaration to safeguard AI supp",
+    "Anthropic IPO valuation and Nscale chip funding: Anthropic prices its IPO on Wednesday with valuation up to $"
+  ],
+  "videos": {
+    "OpenAI": "ok (12 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 0 new)",
+    "Google for Developers": "ok (10 in feed, 1 new)",
+    "AI at Meta": "ok (10 in feed, 3 new)",
+    "Microsoft Research": "ok (10 in feed, 0 new)",
+    "NVIDIA": "ok (10 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 4 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 0 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (2 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (3 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (4 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "6 kept from 9 new",
+  "tagged": 5,
+  "trackers": "filed 7 stories; updated us-china, india-ai, agent-safety, ai-infrastructure",
+  "claims": "189 tracked, 183 open, 1 updated this run",
+  "model_tracker": "82 models, 3 changes today",
+  "briefing": "4 themes from 20 stories",
+  "india_briefing": "3 themes from 3 stories",
+  "self_review": "18 lines written to data/self_review.md",
+  "photos": "4 saved, 0 unavailable",
+  "stock photos": "0 added",
+  "alerts": "12 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":58}",
+  "ai_requests_run": 32,
+  "ai_tokens_run": 86869,
+  "ai_requests_today": 38,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model"
+  ]
+}
