@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T16:11:56+00:00",
+  "updated_at": "2026-11-17T16:57:45+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Huang’s appearance signals heightened congressional scrutiny of how AI‑related chips are exported. Lawmakers may consider tighter export controls that could affect the supply of advanced GPUs used to train AI models. Companies will need to ensure compliance with any new rules.",
@@ -409,6 +409,117 @@
       "cover": "$500 million",
       "trackers": [
         "ai-money"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Nemotron for Science lets researchers run a large language model locally on their own hardware, such as a DGX Spark or a supercomputer, to analyze chemistry and biology data. The Rubin HPC GPU provides over 50,000 CUDA cores to run the simulations that AI agents generate, keeping the cores busy with a balanced design and sparse‑data acceleration. Together they let scientists use AI agents to plan experiments, run code, and evaluate results without sending data to the cloud.",
+        "terms": [
+          {
+            "term": "CUDA cores",
+            "meaning": "Individual processing units in an NVIDIA GPU that execute parallel computations."
+          },
+          {
+            "term": "Sparse data acceleration",
+            "meaning": "A hardware feature that speeds up operations on datasets that contain many zero values."
+          },
+          {
+            "term": "AI agent",
+            "meaning": "Software that can receive a natural‑language prompt, decide which tools or simulations to run, and act on the results automatically."
+          }
+        ],
+        "watch_next": [
+          "Rubin HPC GPU is scheduled to ship in 2028.",
+          "DKRZ’s HLRE‑5 supercomputer with Vera CPUs is expected in early 2028."
+        ]
+      },
+      "audiences": {
+        "builders": "Developers can integrate Nemotron for Science into their own HPC clusters and use Nvidia’s new AI‑agent toolkit to automate experiment planning.",
+        "business": "Executives see Nvidia positioning its hardware and open models to accelerate scientific R&D, potentially shortening product development cycles.",
+        "investors": "Investors note Nvidia’s expansion of the Vera platform and the high‑core Rubin GPU as a move to capture more of the high‑performance computing market."
+      },
+      "id": "dec08682255b",
+      "headline": "Nvidia unveils Nemotron for Science model and Rubin HPC GPU with 50,000+ CUDA cores at SC26",
+      "summary": "At the SC26 supercomputing conference, Nvidia announced the Nemotron for Science open model and the Rubin HPC GPU featuring more than 50,000 CUDA cores. The announcements also included new AI‑agent tools, an expanded Vera CPU platform and a collaboration with IBM on quantum computing.",
+      "why_it_matters": "The new model and high‑core GPU aim to accelerate AI‑driven scientific simulations, making large‑scale experiments faster and more accessible.",
+      "category": "models",
+      "lab": "NVIDIA",
+      "model_name": "Nemotron for Science",
+      "model_type": "Language",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "The frontier of computing and the new scientific stack is going to be simulation, as always, but combined with AI and the future of quantum,",
+          "speaker": "Ian Buck",
+          "speaker_role": "vice president of hyperscale and high-performance computing at Nvidia",
+          "source_url": "https://blogs.nvidia.com/blog/ian-buck-sc26"
+        },
+        {
+          "text": "For agents tackling science and engineering, faster simulation means faster discovery,",
+          "speaker": "Ian Buck",
+          "speaker_role": "vice president of hyperscale and high-performance computing at Nvidia",
+          "source_url": "https://siliconangle.com/2026/11/16/nvidia-debuts-new-rubin-hpc-chip-scientific-research-libraries"
+        }
+      ],
+      "score": 8,
+      "url": "https://blogs.nvidia.com/blog/ian-buck-sc26",
+      "source_id": "nvidia",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/Buck-Talk-SC26-scaled.jpeg",
+      "sources": [
+        {
+          "url": "https://blogs.nvidia.com/blog/ian-buck-sc26",
+          "publisher": "NVIDIA blog",
+          "title": "Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents"
+        },
+        {
+          "url": "https://techspot.com/news/114583-nvidia-reveals-rubin-hpc-gpu-50000-cuda-cores.html",
+          "publisher": "TechSpot",
+          "title": "Nvidia reveals Rubin HPC, a GPU with 50,000+ CUDA cores for scientific simulation"
+        },
+        {
+          "url": "https://siliconangle.com/2026/11/16/nvidia-debuts-new-rubin-hpc-chip-scientific-research-libraries",
+          "publisher": "SiliconANGLE",
+          "title": "At SC26, Nvidia debuts new Rubin HPC chip, scientific research libraries"
+        },
+        {
+          "url": "https://hothardware.com/news/nvidia-reveals-rubin-hpc-gpu-nvlink-7-over-50000-cuda-cores",
+          "publisher": "HotHardware",
+          "title": "NVIDIA Reveals Rubin HPC GPU With NVLink 7 And Over 50,000 CUDA Cores"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-17T14:00:10+00:00",
+      "created_at": "2026-11-17T16:57:45+00:00",
+      "breaking": true,
+      "sectors": [
+        "science",
+        "software",
+        "telecom"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": {
+        "type": "partnership",
+        "company": "NVIDIA",
+        "amount": "",
+        "usd": null
+      },
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "50,000+",
+      "trackers": [
+        "ai-infrastructure"
       ],
       "photo_local": true
     },
@@ -5625,87 +5736,6 @@
         "ai-money"
       ],
       "photo_local": true
-    },
-    {
-      "audiences": {
-        "builders": "Developers can access on-demand fleets of Macs via web portal, command-line tool, Kubernetes, or API for tasks like training computer-use models and running macOS sandboxes.",
-        "business": "Organizations building AI agents can use managed or customer-managed Apple silicon cloud infrastructure to run macOS workloads at data-center scale.",
-        "investors": "Mount Thor raised $45 million in seed and Series A funding rounds co-led by CRV and Conviction, with participation from several other firms and angel investors."
-      },
-      "id": "943c34aad67b",
-      "headline": "Mount Thor raises $45 million to build cloud infrastructure on Apple silicon",
-      "summary": "Mount Thor raised $45 million across seed and Series A rounds to build cloud infrastructure for agentic AI on Apple silicon. The startup provides Mac data-center compute instances for macOS workloads.",
-      "why_it_matters": "This funding supports the expansion of cloud infrastructure dedicated to running macOS and Apple silicon workloads at data-center scale for AI agents.",
-      "category": "industry",
-      "lab": "Mount Thor",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "Mount Thor",
-        "Apple Silicon",
-        "Cloud Infrastructure",
-        "Funding",
-        "AI Agents"
-      ],
-      "quotes": [],
-      "score": 8,
-      "url": "https://techmeme.com/261115/p23",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/11/AI-Apple-2.jpg?quality=82&strip=all&resize=1200,628",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261115/p23",
-          "publisher": "techmeme.com",
-          "title": "Mount Thor, which is building cloud infrastructure for agentic AI on Apple silicon, raised $45M in a seed round and a Series A co-led by CRV and Conviction (Bradley C/9to5Mac)"
-        },
-        {
-          "url": "https://9to5mac.com/2026/11/12/mount-thor-raises-45-million-to-build-mac-data-centers-for-ai-agents",
-          "publisher": "9to5Mac",
-          "title": "Mount Thor raises $45 million to build Mac data centers for AI agents"
-        },
-        {
-          "url": "https://ventureburn.com/mount-thor-raises-45-million-apple-silicon-ai-cloud",
-          "publisher": "Ventureburn",
-          "title": "Mount Thor Raises $45M to Expand Apple Silicon AI Cloud Infrastructure"
-        }
-      ],
-      "research": {
-        "steps": 2,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-16T03:20:01+00:00",
-      "created_at": "2026-11-16T09:00:57+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": {
-        "type": "funding",
-        "company": "Mount Thor",
-        "amount": "$45 million",
-        "usd": 45000000.0
-      },
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 3
-      },
-      "cover": "$45 million",
-      "explainer": {
-        "what_it_means": "Mount Thor has raised $45 million to build cloud data centers using Apple hardware, specifically designed to help businesses run AI agents that require the macOS operating system. Customers can rent Mac computers on-demand or use Mount Thor's facilities to host their own Mac hardware for AI tasks.",
-        "terms": [],
-        "watch_next": []
-      },
-      "trackers": [
-        "ai-money",
-        "ai-infrastructure"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -5717,6 +5747,15 @@
       "story_id": "c90d066df23f",
       "headline": "Genesis AI raises $500 million Series A at $3.5 billion valuation",
       "published_at": "2026-11-17T14:15:01+00:00"
+    },
+    {
+      "text": "The frontier of computing and the new scientific stack is going to be simulation, as always, but combined with AI and the future of quantum",
+      "speaker": "Ian Buck",
+      "speaker_role": "vice president of hyperscale and high-performance computing at Nvidia",
+      "source_url": "https://blogs.nvidia.com/blog/ian-buck-sc26",
+      "story_id": "dec08682255b",
+      "headline": "Nvidia unveils Nemotron for Science model and Rubin HPC GPU with 50,000+ CUDA cores at SC26",
+      "published_at": "2026-11-17T14:00:10+00:00"
     },
     {
       "text": "We're now at a point where companies will be secure only to the extent of the frontier model that they use to defend themselves and how well they utilize that",
@@ -5753,15 +5792,6 @@
       "story_id": "4b57fcd6de68",
       "headline": "Nvidia interim CEO Colette Kress expected to rein in deals",
       "published_at": "2026-11-16T03:30:00+00:00"
-    },
-    {
-      "text": "Anthropic is not just seeking regulatory capture. It has built a regulatory capture machine that cannot be turned off.",
-      "speaker": "Kevin Bass",
-      "speaker_role": "",
-      "source_url": "https://nitter.cf/kevinnbass/status/2099621874279817638",
-      "story_id": "8c5b4e01285e",
-      "headline": "Anthropic grants METR employee-level access to its AI models and safety tools",
-      "published_at": "2026-11-17T12:21:57+00:00"
     }
   ],
   "videos": [
@@ -6790,11 +6820,11 @@
   "labs": [
     {
       "lab": "NVIDIA",
-      "model": "GB10 Grace Blackwell Superchip",
-      "type": "Other",
-      "date": "2026-11-16T23:00:05+00:00",
-      "story_id": "8617ffe05c73",
-      "url": "https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26"
+      "model": "Nemotron for Science",
+      "type": "Language",
+      "date": "2026-11-17T14:00:10+00:00",
+      "story_id": "dec08682255b",
+      "url": "https://blogs.nvidia.com/blog/ian-buck-sc26"
     },
     {
       "lab": "OpenAI",
@@ -7012,8 +7042,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 465,
-    "model_releases_this_month": 50,
+    "stories_this_month": 466,
+    "model_releases_this_month": 51,
     "labs_tracked": 28
   }
 }
