@@ -1,6 +1,62 @@
 {
   "models": [
     {
+      "id": "openai/gpt-6.2-astra-pro",
+      "name": "GPT-6.2 Astra Pro",
+      "lab": "OpenAI",
+      "released": "2026-11-17",
+      "context": 1050000,
+      "price_in": 8.0,
+      "price_out": 40.0,
+      "inputs": [
+        "file",
+        "image",
+        "text"
+      ]
+    },
+    {
+      "id": "openai/gpt-6.2-astra",
+      "name": "GPT-6.2 Astra",
+      "lab": "OpenAI",
+      "released": "2026-11-17",
+      "context": 1050000,
+      "price_in": 8.0,
+      "price_out": 40.0,
+      "inputs": [
+        "file",
+        "image",
+        "text"
+      ]
+    },
+    {
+      "id": "openai/gpt-6.2-sol-pro",
+      "name": "GPT-6.2 Sol Pro",
+      "lab": "OpenAI",
+      "released": "2026-11-17",
+      "context": 1050000,
+      "price_in": 2.0,
+      "price_out": 10.0,
+      "inputs": [
+        "file",
+        "image",
+        "text"
+      ]
+    },
+    {
+      "id": "openai/gpt-6.2-sol",
+      "name": "GPT-6.2 Sol",
+      "lab": "OpenAI",
+      "released": "2026-11-17",
+      "context": 1050000,
+      "price_in": 2.0,
+      "price_out": 10.0,
+      "inputs": [
+        "file",
+        "image",
+        "text"
+      ]
+    },
+    {
       "id": "qwen/qwen4-max",
       "name": "Qwen4 Max",
       "lab": "Alibaba (Qwen)",
@@ -215,34 +271,6 @@
       ]
     },
     {
-      "id": "openai/gpt-6.1-sol-pro",
-      "name": "GPT-6.1 Sol Pro",
-      "lab": "OpenAI",
-      "released": "2026-09-29",
-      "context": 1050000,
-      "price_in": 2.0,
-      "price_out": 10.0,
-      "inputs": [
-        "file",
-        "image",
-        "text"
-      ]
-    },
-    {
-      "id": "openai/gpt-6.1-sol",
-      "name": "GPT-6.1 Sol",
-      "lab": "OpenAI",
-      "released": "2026-09-29",
-      "context": 1050000,
-      "price_in": 2.0,
-      "price_out": 10.0,
-      "inputs": [
-        "file",
-        "image",
-        "text"
-      ]
-    },
-    {
       "id": "anthropic/claude-sonnet-5.5",
       "name": "Claude Sonnet 5.5",
       "lab": "Anthropic",
@@ -307,34 +335,6 @@
       "inputs": [
         "text",
         "image"
-      ]
-    },
-    {
-      "id": "openai/gpt-6-luna-pro",
-      "name": "GPT-6 Luna Pro",
-      "lab": "OpenAI",
-      "released": "2026-09-22",
-      "context": 1050000,
-      "price_in": 0.1,
-      "price_out": 0.5,
-      "inputs": [
-        "file",
-        "image",
-        "text"
-      ]
-    },
-    {
-      "id": "openai/gpt-6-luna",
-      "name": "GPT-6 Luna",
-      "lab": "OpenAI",
-      "released": "2026-09-22",
-      "context": 1050000,
-      "price_in": 0.1,
-      "price_out": 0.5,
-      "inputs": [
-        "file",
-        "image",
-        "text"
       ]
     },
     {
@@ -1095,34 +1095,6 @@
   ],
   "changes": [
     {
-      "date": "2026-11-13",
-      "model": "Kimi K3",
-      "lab": "Moonshot AI",
-      "kind": "price_cut",
-      "text": "Kimi K3 input price cut: $0.2 → $0.192 per 1M tokens"
-    },
-    {
-      "date": "2026-11-13",
-      "model": "Llama 3.2 3B Instruct",
-      "lab": "Meta",
-      "kind": "price_rise",
-      "text": "Llama 3.2 3B Instruct input price raised: $0.05 → $0.0509 per 1M tokens"
-    },
-    {
-      "date": "2026-11-13",
-      "model": "Llama 3.2 3B Instruct",
-      "lab": "Meta",
-      "kind": "price_rise",
-      "text": "Llama 3.2 3B Instruct output price raised: $0.33 → $0.335 per 1M tokens"
-    },
-    {
-      "date": "2026-11-14",
-      "model": "DeepSeek V4.1 Flash",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4.1 Flash input price cut: $0.3 → $0.0507 per 1M tokens"
-    },
-    {
       "date": "2026-11-14",
       "model": "DeepSeek V4.1 Flash",
       "lab": "DeepSeek",
@@ -1513,7 +1485,35 @@
       "lab": "DeepSeek",
       "kind": "price_rise",
       "text": "DeepSeek V4.1 Flash output price raised: $0.2028 → $1.2 per 1M tokens"
+    },
+    {
+      "date": "2026-11-17",
+      "model": "GPT-6.2 Astra Pro",
+      "lab": "OpenAI",
+      "kind": "new",
+      "text": "Now available: GPT-6.2 Astra Pro ($8 in / $40 out per 1M tokens)"
+    },
+    {
+      "date": "2026-11-17",
+      "model": "GPT-6.2 Astra",
+      "lab": "OpenAI",
+      "kind": "new",
+      "text": "Now available: GPT-6.2 Astra ($8 in / $40 out per 1M tokens)"
+    },
+    {
+      "date": "2026-11-17",
+      "model": "GPT-6.2 Sol Pro",
+      "lab": "OpenAI",
+      "kind": "new",
+      "text": "Now available: GPT-6.2 Sol Pro ($2 in / $10 out per 1M tokens)"
+    },
+    {
+      "date": "2026-11-17",
+      "model": "GPT-6.2 Sol",
+      "lab": "OpenAI",
+      "kind": "new",
+      "text": "Now available: GPT-6.2 Sol ($2 in / $10 out per 1M tokens)"
     }
   ],
-  "updated_at": "2026-11-17T16:11:56+00:00"
+  "updated_at": "2026-11-17T19:18:58+00:00"
 }
