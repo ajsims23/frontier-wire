@@ -274,8 +274,8 @@
     "title": "US–China AI restrictions"
   },
   "frontier-race": {
-    "status": "Anthropic's Claude Fable 5.2 dominates the Remote Labor Index and its IPO is set to trade soon, while Google has opened Gemini 4 Carbon to the public with a swarm feature and introduced the cheaper Gemini 4 Hydrogen model. DeepMind unveiled AlphaProof Code and AlphaGenome 2, and Alibaba released the 2.4 T‑parameter Qwen4‑Max flagship. OpenAI expanded into healthcare with computer‑use agents and plugins, and continues to push AI‑assisted scientific work.",
-    "changed": "The latest story adds OpenAI’s computer‑use agents and healthcare plugins, extending frontier models into clinical software.",
+    "status": "Anthropic's Claude Fable 5.2 leads the Remote Labor Index at 41.3% and its IPO is heavily oversubscribed ahead of a Nasdaq debut before Thanksgiving. Google has publicly launched Gemini 4 Carbon with a swarm agent feature and introduced the cheaper Gemini 4 Hydrogen model, while also debuting Gemini-powered Warby Parker smartglasses. DeepMind released AlphaProof Code for software verification and AlphaGenome 2 for genetics, Alibaba open-sourced the 2.4T Qwen4-Max, and OpenAI expanded into healthcare with computer-use agents and a business hub.",
+    "changed": "New research shows GPT-6 Astra can directly program tabular foundation models by editing weights and KV caches, achieving near-pretrained performance without gradient-based optimization.",
     "timeline": [
       {
         "story_id": "48f1f10785df",
@@ -291,6 +291,11 @@
         "story_id": "87d7014c15ee",
         "date": "2026-11-15",
         "text": "OpenAI used GPT-6 Astra to help develop a detailed proof for a lattice definition of the Standard Model."
+      },
+      {
+        "story_id": "2848e728094b",
+        "date": "2026-11-15",
+        "text": "GPT-6 Astra programs tabular foundation models by editing weights and caches, reaching 0.849 mean ROC AUC."
       },
       {
         "story_id": "fa0e89bac09a",
@@ -471,28 +476,23 @@
         "story_id": "5235c4ab8feb",
         "date": "2026-11-06",
         "text": "Report finds Anthropic is developing AI systems twice as fast as a year ago ahead of an IPO."
-      },
-      {
-        "story_id": "31089e719fc9",
-        "date": "2026-11-06",
-        "text": "Coforge joined the SpaceX Super Intelligence Partner Network to deploy Grok AI tools for enterprise clients."
       }
     ],
     "next": [
       {
-        "text": "Anthropic shares expected to begin trading on Nasdaq before US Thanksgiving holiday",
+        "text": "Anthropic shares begin trading on Nasdaq",
         "when": "before US Thanksgiving holiday",
         "story_id": "04441559207d"
       },
       {
-        "text": "Introductory pricing for Gemini 4 Carbon ends, after which prices double",
+        "text": "Gemini 4 Carbon introductory pricing ends, prices double",
         "when": "end of November",
         "story_id": "28b27e2d175e"
       },
       {
-        "text": "Warby Parker smartglasses pre‑orders start Thursday",
-        "when": "Thursday",
-        "story_id": "f98f612fda85"
+        "text": "Claude Meetings adds support for other video conferencing platforms",
+        "when": "coming soon",
+        "story_id": "21ab7432dba4"
       }
     ],
     "story_ids": [
@@ -505,8 +505,8 @@
       "b67bba8524a9",
       "3dba8c3e0d11",
       "65a0534d66fe",
-      "afe5d96a9d46",
       "820bd24a41c4",
+      "afe5d96a9d46",
       "af0f241f8166",
       "0397d30cafbc",
       "14f13252070a",
@@ -595,12 +595,13 @@
       "21ab7432dba4",
       "fa0e89bac09a",
       "f7a016ab59a8",
+      "2848e728094b",
       "87d7014c15ee",
       "48f1f10785df",
       "b0ded74e06b0"
     ],
-    "updated_at": "2026-11-16T15:23:20+00:00",
-    "tried_at": "2026-11-16T15:23:20+00:00",
+    "updated_at": "2026-11-17T04:10:03+00:00",
+    "tried_at": "2026-11-17T04:10:03+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
@@ -1877,9 +1878,14 @@
     "tried_at": "2026-11-11T13:27:39+00:00"
   },
   "ai-infrastructure": {
-    "status": "Nvidia is navigating leadership changes under interim CEO Colette Kress following Jensen Huang's resignation, facing upcoming earnings scrutiny and government demands regarding customer screening and potential China chip sales. Meanwhile, AI infrastructure expansion continues with new hardware launches like the Rubin HPC GPU and DGX Spark developer kit, alongside growing focus on the massive power demands of U.S. hyperscale data centers and new international agreements to secure AI supply chains.",
-    "changed": "Nvidia faces intensified government scrutiny over export controls and potential China chip sales, while new studies highlight the massive fossil-fuel-reliant power consumption of U.S. hyperscale data centers and international pacts form to safeguard AI supply chains.",
+    "status": "Nvidia enters its third fiscal quarter earnings call on November 17 under interim CEO Colette Kress, facing congressional scrutiny over China chip sales and questions about its aggressive financing of neoclouds and startups. The AI infrastructure build-out continues with new hardware (Rubin HPC GPU, DGX Spark), international supply-chain agreements, and growing power and capital commitments, while Anthropic's rapid port of Claude Mythos to AMD GPUs challenges Nvidia's software moat.",
+    "changed": "Anthropic disclosed that its Claude Mythos Preview model was ported to AMD MI355X GPUs in about three days with minimal human effort, a task that previously took six to twelve months, potentially undermining Nvidia's long-standing software advantage.",
     "timeline": [
+      {
+        "story_id": "0ed1df8ad9da",
+        "date": "2026-11-17",
+        "text": "Anthropic ports Claude Mythos to AMD MI355X GPUs in ~3 days, writing most kernels itself."
+      },
       {
         "story_id": "9231c3778855",
         "date": "2026-11-16",
@@ -2074,24 +2080,24 @@
         "story_id": "d494f2eb479c",
         "date": "2026-11-11",
         "text": "Torus raised $500M in a Series C round led by Magnetar to launch container-sized modular AI data centers."
-      },
-      {
-        "story_id": "7d5e3218dd79",
-        "date": "2026-11-11",
-        "text": "CoreWeave planned a $4 billion-plus investment-grade loan facility after raising its full-year revenue forecast."
       }
     ],
     "title": "The AI infrastructure build-out",
     "next": [
       {
-        "text": "Nvidia's third fiscal quarter earnings report and analyst call scheduled for after the market close on November 17, 2026.",
-        "when": "",
+        "text": "Nvidia third fiscal quarter earnings report and analyst call",
+        "when": "November 17, 2026",
         "story_id": "aed0535c56d2"
       },
       {
-        "text": "Treasury Secretary Scott Bessent's 10-day deadline for Nvidia to answer regarding China chip sales",
-        "when": "",
+        "text": "Nvidia to answer Treasury on whether it pushed illicit chip sales to China",
+        "when": "within 10 days",
         "story_id": "4d0aab350c5f"
+      },
+      {
+        "text": "Samsung SDS to finalize tenancy agreements with Anthropic and OpenAI",
+        "when": "",
+        "story_id": "9231c3778855"
       }
     ],
     "story_ids": [
@@ -2233,9 +2239,10 @@
       "a7baa208561a",
       "d9e4cfcad5cc",
       "51273f0e0cc7",
-      "8617ffe05c73"
+      "8617ffe05c73",
+      "0ed1df8ad9da"
     ],
-    "updated_at": "2026-11-17T01:29:40+00:00",
-    "tried_at": "2026-11-17T01:29:40+00:00"
+    "updated_at": "2026-11-17T04:10:03+00:00",
+    "tried_at": "2026-11-17T04:10:03+00:00"
   }
 }

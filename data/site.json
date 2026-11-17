@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T01:29:40+00:00",
+  "updated_at": "2026-11-17T04:10:03+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Altimeter Capital is planning to invest $5 billion in Anthropic's upcoming public offering. This planned investment is five times larger than any previous IPO investment made by the firm.",
@@ -107,6 +107,96 @@
     }
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Anthropic’s AI wrote the low‑level code that connects a model to AMD’s GPUs, cutting the onboarding time from months to days. This reduces the need for large engineering teams to adapt models to new hardware. It makes switching between chip vendors faster and cheaper.",
+        "terms": [
+          {
+            "term": "kernel",
+            "meaning": "A small program that runs on a GPU to perform a specific computation for an AI model."
+          },
+          {
+            "term": "CUDA",
+            "meaning": "Nvidia’s long‑standing software platform for writing GPU code."
+          },
+          {
+            "term": "ROCm",
+            "meaning": "AMD’s open software platform for GPU programming, similar to CUDA."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "AI engineers can rely on models that generate most of the hardware‑specific code, lowering development effort.",
+        "business": "Enterprises may face lower costs and faster timelines when choosing between GPU vendors.",
+        "investors": "Anthropic demonstrates a technical edge that could reduce reliance on Nvidia and broaden its hardware partnerships."
+      },
+      "id": "0ed1df8ad9da",
+      "headline": "Anthropic says Claude Mythos ported to AMD GPUs in three days with almost no human work",
+      "summary": "Anthropic told investors its Claude Mythos Preview model was running on AMD MI355X GPUs in about three days, writing almost all the low‑level kernels itself, a task that previously took six to twelve months.",
+      "why_it_matters": "The speed of hardware onboarding could let AI providers switch chips without long engineering delays, challenging Nvidia’s long‑standing software advantage.",
+      "category": "industry",
+      "lab": "Anthropic",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "Claude is better than HIPify because it has web search built in.",
+          "speaker": "Anush Elangovan",
+          "speaker_role": "vice president of AI software, AMD",
+          "source_url": "https://tomshardware.com/tech-industry/artificial-intelligence/anthropic-says-claude-mythos-slashed-software-work-to-onboard-amd-gpus-from-up-to-12-months-to-around-three-days-writing-almost-100-percent-of-kernels-autonomously-chips-away-at-nvidias-cuda-moat"
+        }
+      ],
+      "score": 8,
+      "url": "https://techmeme.com/261116/p52",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://cdn.mos.cms.futurecdn.net/VF4egKqqkKq5CbHhYxQi6U-1200-80.jpg",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261116/p52",
+          "publisher": "techmeme.com",
+          "title": "Anthropic tells investors Claude Mythos Preview got its AI running on AMD GPUs in ~3 days with \"basically no human intervention\", vs. the usual 6-12 months (Shane Downing/Tom's Hardware)"
+        },
+        {
+          "url": "https://tomshardware.com/tech-industry/artificial-intelligence/anthropic-says-claude-mythos-slashed-software-work-to-onboard-amd-gpus-from-up-to-12-months-to-around-three-days-writing-almost-100-percent-of-kernels-autonomously-chips-away-at-nvidias-cuda-moat",
+          "publisher": "Tom's Hardware",
+          "title": "Anthropic says Claude Mythos slashed software work to onboard AMD GPUs from up to 12 months to around three days —writing almost 100% of kernels autonomously chips away at ..."
+        },
+        {
+          "url": "https://msn.com/en-us/news/other/anthropic-says-its-ai-model-cut-amd-chip-switch-to-three-days-why-it-could-be-a-challenge-to-nvidia/ar-AA2hjfos",
+          "publisher": "International Business Times on MSN",
+          "title": "Anthropic Says Its AI Model Cut AMD Chip Switch to Three Days. Why it Could be a Challenge to Nvidia"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-17T04:02:44+00:00",
+      "created_at": "2026-11-17T04:10:03+00:00",
+      "thread": "t-a4d26b025e34",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "",
+      "trackers": [
+        "ai-infrastructure"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "Computer infrastructure is often built as an improvised system that can suffer cascading failures. The emergence of offensive AI adds a new threat to this infrastructure, requiring defensive AIs and software patches.",
@@ -4229,6 +4319,82 @@
     },
     {
       "explainer": {
+        "what_it_means": "The SWE‑CoWork benchmark simulates a software team where an AI agent must gather distributed requirements, write code, and pass private executable tests. Results show agents can answer many initial questions and pass some tests, but they rarely finish whole projects without human oversight.",
+        "terms": [
+          {
+            "term": "coding agent",
+            "meaning": "An AI system that writes code autonomously, interacting with other simulated team members to gather requirements and deliver software."
+          },
+          {
+            "term": "fail-to-pass (F2P) test",
+            "meaning": "A hidden test used to evaluate whether the code produced by an agent meets the required functionality; failing indicates the implementation is incorrect."
+          },
+          {
+            "term": "requirement tracking",
+            "meaning": "The process of continuously identifying, clarifying, and confirming software requirements throughout development."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "The benchmark shows current coding agents still struggle to fully complete real-world development tasks, indicating limited readiness for autonomous coding.",
+        "business": "Companies should be cautious about relying on autonomous coding agents for end-to-end software delivery.",
+        "investors": "The performance gap suggests both market opportunity for better AI coding tools and risk for existing offerings."
+      },
+      "id": "5c3a37d25e00",
+      "headline": "SWE-CoWork benchmark reveals coding agents complete under 8% of real software tasks",
+      "summary": "A new benchmark of 101 development assignments across real repositories shows leading AI coding agents pass about 63% of fail-to-pass tests but fully complete fewer than 8% of tasks. The study places agents in a simulated engineering organization with 26 virtual colleagues.",
+      "why_it_matters": "It highlights how far autonomous coding agents are from reliably handling end‑to‑end software development in organizations.",
+      "category": "research",
+      "lab": "",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2611.20218",
+      "source_id": "arxiv",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2611.20218",
+          "publisher": "arXiv (cs.AI, cs.CL, cs.LG)",
+          "title": "SWE-CoWork: Benchmarking Coding Agents as Digital Employees in Organizations"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-15T19:39:01+00:00",
+      "created_at": "2026-11-17T04:10:03+00:00",
+      "figure_checked": true,
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "under 8%",
+      "trackers": [],
+      "stock_tried": "2026-11-17T04:10:03+00:00",
+      "photo_local": true,
+      "image_kind": "stock",
+      "photo_credit": {
+        "key": "ov:b31b13a8-dda4-48b4-ad3d-4592699c3529",
+        "by": "Christina Morillo",
+        "license": "CC0",
+        "page": "https://stocksnap.io/photo/developer-discuss-OEIJJX36TI",
+        "via": "Stocksnap"
+      }
+    },
+    {
+      "explainer": {
         "what_it_means": "Jensen Huang resigned as Nvidia CEO following an investigation into personal relationships. Allies and tech supporters are lobbying for his reinstatement, while analysts and governance experts debate whether a return is possible.",
         "terms": [],
         "watch_next": []
@@ -4576,6 +4742,100 @@
         "via": "Wikimedia"
       },
       "thread": "t-e7706d65dc7f"
+    },
+    {
+      "explainer": {
+        "what_it_means": "Researchers used an LLM to write code that directly sets the weights of a tabular AI model and edits its internal caches, instead of training it with the usual gradient-based optimization. The LLM was able to program a model from scratch, fix a specific failure in a pretrained model, and change its predictions on new data without touching its weights.",
+        "terms": [
+          {
+            "term": "Tabular foundation model",
+            "meaning": "A model trained on many datasets so it can make predictions on new, unseen tabular data without retraining."
+          },
+          {
+            "term": "KV cache",
+            "meaning": "A stored set of intermediate values a transformer model reuses to avoid recomputing earlier steps."
+          },
+          {
+            "term": "ROC AUC",
+            "meaning": "A standard measure of how well a classifier separates two outcomes; 1 is perfect, 0.5 is chance."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "nanoTabPFN programmed by GPT-6 Astra",
+          "benchmark": "TabArena (20 datasets)",
+          "score": "0.849"
+        },
+        {
+          "model": "pretrained baseline",
+          "benchmark": "TabArena (20 datasets)",
+          "score": "0.876"
+        }
+      ],
+      "audiences": {
+        "builders": "Shows LLMs can edit model weights and KV caches directly, a technique that could be applied to other foundation models without gradient-based training.",
+        "business": "Offers a potential new way to debug and steer tabular AI models, which are used for structured-data tasks in finance, healthcare and operations.",
+        "investors": "A research paper with no product, funding or market implications stated in the source."
+      },
+      "id": "2848e728094b",
+      "headline": "Researchers show LLMs can program tabular foundation models by editing weights and caches",
+      "summary": "A paper by Shi Bin Hoo and colleagues shows that GPT-6 Astra can directly program tabular foundation models by setting weights and editing KV caches, without gradient-based optimization. Astra programmed nanoTabPFN from zero-initialized weights to a mean ROC AUC of 0.849 across 20 TabArena datasets, versus 0.876 for a pretrained baseline.",
+      "why_it_matters": "It suggests LLMs can be used to build, debug and steer tabular foundation models by manipulating their internal computations directly, an alternative to standard gradient-based training.",
+      "category": "research",
+      "lab": "arXiv (cs.AI, cs.CL, cs.LG)",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "LLM",
+        "tabular data",
+        "weight-space programming",
+        "KV cache",
+        "foundation models"
+      ],
+      "quotes": [],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2611.20174",
+      "source_id": "arxiv",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2611.20174",
+          "publisher": "arXiv (cs.AI, cs.CL, cs.LG)",
+          "title": "Weights & Caches: LLMs Can Program Tabular Foundation Models"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-15T18:25:19+00:00",
+      "created_at": "2026-11-17T04:10:03+00:00",
+      "figure_checked": true,
+      "sectors": [],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 0,
+        "investors": 0
+      },
+      "cover": "GPT-6 Astra",
+      "trackers": [
+        "frontier-race"
+      ],
+      "stock_tried": "2026-11-17T04:10:03+00:00",
+      "photo_local": true,
+      "image_kind": "stock",
+      "photo_credit": {
+        "key": "ov:0b09c6fd-6f18-4001-bec1-afa8eea0d08d",
+        "by": "Coordenação-Geral de Observação da Terra/INPE",
+        "license": "CC BY-SA 2.0",
+        "page": "https://commons.wikimedia.org/w/index.php?curid=89006114",
+        "via": "Wikimedia"
+      }
     },
     {
       "explainer": {
@@ -5321,288 +5581,6 @@
         "ai-money"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "TSMC is creating a $500 million fund to invest in chip startups, suppliers, and upstream partners. The goal is to support promising young semiconductor companies and broaden the industry ecosystem during the current artificial intelligence boom.",
-        "terms": [
-          {
-            "term": "Contract chipmaker",
-            "meaning": "A company that manufactures semiconductor chips designed by other firms."
-          },
-          {
-            "term": "Upstream partners",
-            "meaning": "Companies and organizations that provide equipment, materials, and services needed to manufacture chips."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "TSMC is setting up a $500 million venture fund to invest in chip startups and suppliers, broadening the semiconductor ecosystem during the AI boom.",
-        "business": "As the world's largest contract chipmaker, TSMC aims to formalize investment activities and support future chip titans like Nvidia and Broadcom.",
-        "investors": "TSMC plans to deploy a $500 million fund to back upstream partners and startups amidst insatiable demand for AI chips."
-      },
-      "id": "d47d52485b26",
-      "headline": "TSMC plans $500M fund to invest in chip startups and suppliers",
-      "summary": "TSMC plans to use a new $500 million venture fund to invest in chip startups, suppliers, and other upstream partners. Senior executive Kevin Zhang stated the company wants to support future chip titans during the AI boom.",
-      "why_it_matters": "The investment fund highlights how major semiconductor manufacturers are positioning themselves to capture growth across the broader AI chip supply chain.",
-      "category": "industry",
-      "lab": "TSMC",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "TSMC",
-        "chips",
-        "startups",
-        "investments",
-        "AI"
-      ],
-      "quotes": [
-        {
-          "text": "We not only support today's Nvidia, but we also want to support the future's Nvidia",
-          "speaker": "Kevin Zhang",
-          "speaker_role": "senior vice president and deputy co-chief operating officer at Taiwan Semiconductor Manufacturing Co.",
-          "source_url": "https://asia.nikkei.com/editor-s-picks/interview/tsmc-seeks-to-back-next-chip-titan-with-new-investment-arm"
-        }
-      ],
-      "score": 9,
-      "url": "https://techmeme.com/261115/p4",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fcms-image-bucket-productionv3-ap-northeast-1-a7d2.s3.ap-northeast-1.amazonaws.com%2Fimages%2F7%2F0%2F0%2F7%2F13427007-1-eng-GB%2F7b8bd5694047-MYK_8315.jpg?fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms&format=jpg&width=1260&height=630",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261115/p4",
-          "publisher": "techmeme.com",
-          "title": "TSMC plans to set up a new $500M fund to invest in chip startups, suppliers, and other upstream partners, saying \"we also want to support the future's Nvidia\" (Cheng Ting-Fang/Nikkei Asia)"
-        },
-        {
-          "url": "https://asia.nikkei.com/editor-s-picks/interview/tsmc-seeks-to-back-next-chip-titan-with-new-investment-arm",
-          "publisher": "Nikkei Asia",
-          "title": "TSMC seeks to back next chip titan with new investment arm"
-        }
-      ],
-      "research": {
-        "steps": 2,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-15T06:45:46+00:00",
-      "created_at": "2026-11-15T07:23:18+00:00",
-      "sectors": [],
-      "regions": [
-        "global"
-      ],
-      "deal": {
-        "type": "investment",
-        "company": "TSMC",
-        "amount": "$500 million",
-        "usd": 500000000.0
-      },
-      "relevance": {
-        "builders": 1,
-        "business": 2,
-        "investors": 3
-      },
-      "cover": "$500M",
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Many companies struggle to determine whether their investments in artificial intelligence are generating genuine productivity or financial returns, often relying on simple metrics like prompt volume instead. Nebuly provides a platform that connects to AI tools from multiple providers to measure their actual impact on employee efficiency and customer-facing revenue.",
-        "terms": [
-          {
-            "term": "AI agents",
-            "meaning": "AI systems designed to act autonomously or semi-autonomously to perform specific tasks or workflows for users."
-          },
-          {
-            "term": "Tokenmaxxing",
-            "meaning": "Measuring AI success purely by the volume of users, prompts, or responses generated rather than its actual business impact."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Nebuly's platform connects to custom-built agents and assistants powered by Claude, ChatGPT and Microsoft Copilot, and can run on a company’s own infrastructure or private cloud.",
-        "business": "Enterprises struggling to measure the return on investment for AI agents can use Nebuly's platform to link AI activity across internal tools and customer-facing assistants to productivity and revenue.",
-        "investors": "Nebuly raised a $21 million Series A round led by Planven, with participation from Exor Ventures, Tenacity Capital, TGVG Capital, Fastweb+Vodafone, and CDP Venture Capital SGR."
-      },
-      "id": "9108ffa54a00",
-      "headline": "Nebuly raises $21M Series A to measure business value of AI agents",
-      "summary": "Nebuly has raised a $21 million Series A funding round to expand its platform that measures the return on investment of enterprise AI agents. The Turin-based company connects to custom-built agents and assistants from providers such as Claude, ChatGPT, and Microsoft Copilot to analyze their impact on productivity and revenue.",
-      "why_it_matters": "As enterprises face rising AI bills and pressure from boards to prove return on investment, tools that move beyond basic usage metrics like prompt counts to measure actual business value are gaining venture backing.",
-      "category": "industry",
-      "lab": "Nebuly",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "Nebuly",
-        "Series A",
-        "Enterprise AI",
-        "AI Agents",
-        "Funding"
-      ],
-      "quotes": [
-        {
-          "text": "Every enterprise is about to face the same question from its board: what is AI actually worth to us? Nebuly exists to answer it,",
-          "speaker": "Francesco Signorato",
-          "speaker_role": "co-founder and CEO",
-          "source_url": "https://thenextweb.com/news/nebuly-21m-series-a-enterprise-ai-roi"
-        },
-        {
-          "text": "None of that tells you whether an employee got an hour of work back or a customer got the answer they needed,",
-          "speaker": "Francesco Signorato",
-          "speaker_role": "Chief executive and co-founder",
-          "source_url": "https://unite.ai/nebuly-raises-21m-series-a-to-expand-enterprise-ai-measurement"
-        }
-      ],
-      "score": 8,
-      "url": "https://techmeme.com/261115/p3",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://cdn.tech.eu/uploads/2026/11/nebuly-featured-655.png",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261115/p3",
-          "publisher": "techmeme.com",
-          "title": "Nebuly, whose tech helps enterprises measure the business value of AI agents by analyzing their impact on productivity and revenue, raised a $21M Series A (Tamara Djurickovic/Tech.eu)"
-        },
-        {
-          "url": "https://tech.eu/2026/11/12/nebuly-raises-21m-series-a-to-turn-ai-investments-into-measurable-results",
-          "publisher": "Tech.eu",
-          "title": "Nebuly raises $21M Series A to turn AI investments into measurable results"
-        },
-        {
-          "url": "https://thenextweb.com/news/nebuly-21m-series-a-enterprise-ai-roi",
-          "publisher": "The Next Web",
-          "title": "Nebuly raises $21M Series A to measure the ROI of enterprise AI"
-        },
-        {
-          "url": "https://unite.ai/nebuly-raises-21m-series-a-to-expand-enterprise-ai-measurement",
-          "publisher": "Unite.AI",
-          "title": "Nebuly Raises $21M Series A to Expand Enterprise AI Measurement"
-        },
-        {
-          "url": "https://pulse2.com/nebuly-21-million-series-a-funding-led-by-planven-to-expand-enterprise-ai-return-on-investment-platform",
-          "publisher": "Pulse 2.0",
-          "title": "Nebuly: $21 Million Series A Funding Led By Planven To Expand Enterprise AI Return On Investment Platform"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-15T06:40:02+00:00",
-      "created_at": "2026-11-15T07:23:18+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "europe",
-        "global"
-      ],
-      "deal": {
-        "type": "funding",
-        "company": "Nebuly",
-        "amount": "$21 million",
-        "usd": 21000000.0
-      },
-      "relevance": {
-        "builders": 3,
-        "business": 3,
-        "investors": 3
-      },
-      "cover": "$21 million",
-      "trackers": [
-        "ai-money"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Data centers in Southeast Asia have been used to provide computing power and Nvidia AI chips to Chinese companies, exploiting a gap in U.S. sanctions. This network created a multibillion-dollar business that kept Beijing in the AI race despite export restrictions.",
-        "terms": [],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Southeast Asian data center infrastructure provides computing power and access to Nvidia chips for Chinese companies.",
-        "business": "Chinese companies use Southeast Asian data centers to access Nvidia AI chips, exploiting a gap in U.S. sanctions.",
-        "investors": "A multibillion-dollar business allows Chinese companies to access Nvidia AI chips in Southeast Asian data centers."
-      },
-      "id": "3e9aed84c994",
-      "headline": "Nvidia chips accessed by Chinese companies in SE Asia data centers",
-      "summary": "Massive data centers in Southeast Asia exploited a gap in U.S. sanctions to provide computing power for Chinese companies using Nvidia AI chips. This backdoor route built a multibillion-dollar business that kept Beijing in the AI race.",
-      "why_it_matters": "It shows how export controls can be bypassed through overseas data center networks, affecting regulatory strategies for AI hardware.",
-      "category": "industry",
-      "lab": "NVIDIA",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "Nvidia",
-        "China",
-        "sanctions",
-        "Southeast Asia",
-        "data centers"
-      ],
-      "quotes": [],
-      "score": 10,
-      "url": "https://techmeme.com/261115/p1",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": null,
-      "sources": [
-        {
-          "url": "https://techmeme.com/261115/p1",
-          "publisher": "techmeme.com",
-          "title": "How Jensen Huang built a multibillion-dollar business to let Chinese companies access Nvidia AI chips in SE Asian data centers, exploiting a gap in US sanctions (Wall Street Journal)"
-        },
-        {
-          "url": "https://msn.com/en-us/news/other/how-jensen-huang-built-the-backdoor-route-that-keeps-beijing-in-the-ai-race/ar-AA2hswwr",
-          "publisher": "The Wall Street Journal on MSN",
-          "title": "How Jensen Huang Built the Backdoor Route That Keeps Beijing in the AI Race"
-        }
-      ],
-      "research": {
-        "steps": 2,
-        "read": 0,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-15T05:55:03+00:00",
-      "created_at": "2026-11-15T07:23:18+00:00",
-      "thread": "t-1b80f30c0254",
-      "sectors": [],
-      "regions": [
-        "china",
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": "Southeast Asia",
-      "trackers": [
-        "us-china",
-        "ai-infrastructure"
-      ],
-      "stock_tried": "2026-11-15T07:23:18+00:00",
-      "photo_local": true,
-      "image_kind": "stock",
-      "photo_credit": {
-        "key": "ov:1753255e-a7c1-4183-9b41-87f6f7d3839e",
-        "by": "",
-        "license": "CC0",
-        "page": "https://www.rawpixel.com/image/5961486/free-public-domain-cc0-photo",
-        "via": "Rawpixel"
-      }
     }
   ],
   "voices": [
@@ -5795,12 +5773,12 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-11-17T01:29:40+00:00",
-    "one_line": "Alibaba released the Qwen4-Max model, Google reported autonomous AI exploits, and Anthropic's upcoming IPO faces financial and governance scrutiny.",
+    "written_at": "2026-11-17T04:10:03+00:00",
+    "one_line": "AI safety faces legal and technical pressure as Anthropic heads to IPO and governments move on AI policy.",
     "themes": [
       {
-        "title": "AI security incidents and shorter disclosure windows",
-        "text": "Google reported the first observed instance of autonomous AI turning security patches into exploits. Meanwhile, California AG Rob Bonta sued OpenAI over a cyberattack involving rogue AI agents, and Anthropic cut its vulnerability disclosure window to 30 days.",
+        "title": "AI safety under legal and technical strain",
+        "text": "Google reported the first case of an autonomous AI framework converting security patches into exploits, while California's AG sued OpenAI over a rogue-agent incident at Hugging Face. OpenAI separately signed agreements with four independent evaluators for safety pilots, and Anthropic cut its vulnerability disclosure window to 30 days for serious flaws.",
         "stories": [
           {
             "id": "efad726b92b7",
@@ -5813,6 +5791,11 @@
             "url": "https://techmeme.com/261116/p40"
           },
           {
+            "id": "ebd9eb949639",
+            "headline": "OpenAI partners with independent evaluators for safety pilots",
+            "url": "https://openai.com/index/our-first-phase-of-embedded-assessments"
+          },
+          {
             "id": "648e7457655f",
             "headline": "Anthropic cuts vulnerability disclosure window to 30 days for serious flaws",
             "url": "https://techmeme.com/261116/p36"
@@ -5820,8 +5803,8 @@
         ]
       },
       {
-        "title": "Anthropic prepares for massive IPO",
-        "text": "Altimeter Capital plans a $5 billion investment in Anthropic's upcoming initial public offering. The public offering will test the company's commitment to its public benefit corporation status.",
+        "title": "Anthropic IPO draws record investment",
+        "text": "Altimeter Capital aims to invest $5 billion in Anthropic's IPO, five times its previous largest IPO investment. Anthropic plans to go public this month while maintaining its public benefit corporation status, a structure experts say leaves wide leeway in measuring its societal commitment.",
         "stories": [
           {
             "id": "168c023a4a8e",
@@ -5836,14 +5819,30 @@
         ]
       },
       {
-        "title": "Leadership and dealmaking shifts at Nvidia",
-        "text": "Nvidia's interim CEO Colette Kress is expected to slow AI investments and rein in deals. At the same time, executives formed a war room to lobby for Jensen Huang's return as CEO after his recent resignation.",
+        "title": "Governments shape AI policy and oversight",
+        "text": "The Trump administration plans to designate over two dozen AI companies as national champions to help them compete with Chinese rivals, while India and nine other nations signed a declaration to safeguard AI supply chains. SEBI will issue guidelines requiring capital-market firms to disclose AI usage and maintain human oversight.",
         "stories": [
           {
-            "id": "4b57fcd6de68",
-            "headline": "Nvidia interim CEO Colette Kress expected to rein in deals",
-            "url": "https://techmeme.com/261115/p24"
+            "id": "9b6516bc1605",
+            "headline": "Trump administration plans to name AI \"national champions\"",
+            "url": "https://techmeme.com/261115/p29"
           },
+          {
+            "id": "d9e4cfcad5cc",
+            "headline": "India and nine nations sign declaration to safeguard AI supply chains",
+            "url": "https://inc42.com/buzz/india-nine-other-nations-sign-declaration-to-secure-ai-supply-chains"
+          },
+          {
+            "id": "a8d86fb81b42",
+            "headline": "SEBI to issue guidelines for AI use and human oversight in capital markets",
+            "url": "https://medianama.com/2026/11/223-sebi-ai-disclosure-human-oversight-rules"
+          }
+        ]
+      },
+      {
+        "title": "Nvidia leadership and hardware news",
+        "text": "A group of Silicon Valley executives is lobbying Nvidia's board to reinstate Jensen Huang as CEO, with a public letter gathering over 150,000 signatures; President Trump said his affair posed no security risk. Indonesian police raided an Nvidia partner's office at U.S. authorities' request, and Nvidia unveiled its Rubin HPC GPU with over 50,000 CUDA cores at SC26.",
+        "stories": [
           {
             "id": "ca1899ca1680",
             "headline": "Jensen Huang allies form \"war room\" to lobby for his return as Nvidia CEO",
@@ -5853,17 +5852,16 @@
             "id": "668b96b1a125",
             "headline": "Trump says former Nvidia CEO Jensen Huang's affair posed no security risk",
             "url": "https://techcrunch.com/2026/11/16/trump-says-ex-nvidia-ceo-jensen-huangs-affair-with-an-alleged-chinese-spy-did-not-threaten-national-security"
-          }
-        ]
-      },
-      {
-        "title": "Alibaba launches Qwen4-Max flagship model",
-        "text": "Alibaba released Qwen4-Max, a 2.4T-parameter Mixture of Experts model with a 1-million-token context window. The company reports it outperforms previous versions while using fewer tokens.",
-        "stories": [
+          },
           {
-            "id": "48f1f10785df",
-            "headline": "Alibaba releases Qwen4-Max flagship model",
-            "url": "https://techmeme.com/261115/p25"
+            "id": "2c910f3a42c8",
+            "headline": "Indonesian police raided Nvidia partner Megaspeed local unit in early 2026",
+            "url": "https://economictimes.indiatimes.com/tech/technology/indonesian-police-raided-nvidia-partner-megaspeeds-local-unit-in-early-2026-on-us-request-report/articleshow/135877651.cms"
+          },
+          {
+            "id": "6cab091c059a",
+            "headline": "Nvidia unveils Rubin HPC GPU with over 50,000 CUDA cores for scientific simulations",
+            "url": "https://blogs.nvidia.com/blog/rubin-hpc"
           }
         ]
       }
@@ -5871,16 +5869,14 @@
     "from_stories": 20
   },
   "plan": {
-    "focus": "Tracking AI‑driven data‑center power spikes and security breaches while the Nvidia leadership saga heats up.",
-    "updated_at": "2026-11-17T01:29:40+00:00",
+    "focus": "Chasing the fallout from Jensen Huang's exit and data center infrastructure push while tracking new hardware efficiency benchmarks.",
+    "updated_at": "2026-11-17T04:10:03+00:00",
     "thin_areas": [
-      "model releases",
       "research"
     ],
     "searches": [
-      "Anthropic IPO valuation",
-      "Nvidia CEO return plan",
-      "US data center electricity policy"
+      "Anthropic AMD GPU Mythos",
+      "Nvidia earnings interim CEO Colette Kress"
     ]
   },
   "builders": {
@@ -6037,6 +6033,62 @@
     "range": "8 Nov – 15 Nov 2026"
   },
   "threads": [
+    {
+      "id": "t-a4d26b025e34",
+      "title": "Claude Fable 5.2 release and rollout",
+      "updated_at": "2026-11-17T04:02:44+00:00",
+      "stories": [
+        {
+          "id": "0ed1df8ad9da",
+          "headline": "Anthropic says Claude Mythos ported to AMD GPUs in three days with almost no human work",
+          "url": "https://techmeme.com/261116/p52",
+          "published_at": "2026-11-17T04:02:44+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "fa0e89bac09a",
+          "headline": "Ethan Mollick on agent swarm research traffic and Fable 5.2",
+          "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2bwllyra222",
+          "published_at": "2026-11-14T16:35:48.726000+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "b621aa11e7e8",
+          "headline": "Fable 5.2 tops Remote Labor Index at 41.3% of freelance jobs",
+          "url": "https://techmeme.com/261110/p23",
+          "published_at": "2026-11-10T14:40:01+00:00",
+          "category": "research"
+        },
+        {
+          "id": "8f698c770946",
+          "headline": "Anthropic releases Claude Fable and Mythos 5.2 models",
+          "url": "https://techmeme.com/261110/p9",
+          "published_at": "2026-11-10T11:10:02+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "16b90ffd8ed9",
+          "headline": "Anthropic releases Claude Fable and Mythos 5.2 models",
+          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzwjwceb622e",
+          "published_at": "2026-11-10T03:49:51.952000+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "94ff1d7f5e18",
+          "headline": "Ethan Mollick builds 3D worlds with Claude Fable 5.2",
+          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzvxvkdmd22e",
+          "published_at": "2026-11-09T22:27:19.413000+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "255b56db4a4a",
+          "headline": "Anthropic releases Claude Fable 5.2 with 1M context window",
+          "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
+          "published_at": "2026-11-09T20:04:55+00:00",
+          "category": "models"
+        }
+      ]
+    },
     {
       "id": "t-e7706d65dc7f",
       "title": "Nations sign joint declaration for AI supply chains",
@@ -6351,461 +6403,6 @@
           "category": "policy"
         }
       ]
-    },
-    {
-      "id": "t-1b80f30c0254",
-      "title": "Jensen Huang resignation and potential return",
-      "updated_at": "2026-11-16T19:12:02+00:00",
-      "stories": [
-        {
-          "id": "668b96b1a125",
-          "headline": "Trump says former Nvidia CEO Jensen Huang's affair posed no security risk",
-          "url": "https://techcrunch.com/2026/11/16/trump-says-ex-nvidia-ceo-jensen-huangs-affair-with-an-alleged-chinese-spy-did-not-threaten-national-security",
-          "published_at": "2026-11-16T19:12:02+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "c24f64cfec57",
-          "headline": "Nvidia’s board is reportedly ‘not considering’ hiring Jensen Huang back",
-          "url": "https://theverge.com/tech/1034501/nvidia-board-jensen-huang-not-bringing-back",
-          "published_at": "2026-11-16T18:43:35+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "ca1899ca1680",
-          "headline": "Jensen Huang allies form \"war room\" to lobby for his return as Nvidia CEO",
-          "url": "https://arstechnica.com/ai/2026/11/jensen-huang-allies-build-a-war-room-to-get-him-back-at-nvidia",
-          "published_at": "2026-11-16T14:06:16+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "2c910f3a42c8",
-          "headline": "Indonesian police raided Nvidia partner Megaspeed local unit in early 2026",
-          "url": "https://economictimes.indiatimes.com/tech/technology/indonesian-police-raided-nvidia-partner-megaspeeds-local-unit-in-early-2026-on-us-request-report/articleshow/135877651.cms",
-          "published_at": "2026-11-16T07:56:26+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "4b57fcd6de68",
-          "headline": "Nvidia interim CEO Colette Kress expected to rein in deals",
-          "url": "https://techmeme.com/261115/p24",
-          "published_at": "2026-11-16T03:30:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "2cb612de9116",
-          "headline": "Nvidia considers leadership options after Jensen Huang's departure",
-          "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry",
-          "published_at": "2026-11-15T21:56:35+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "30eb34a90a59",
-          "headline": "Megaspeed says Alice Huang left in 2025 amid US probe into Nvidia chip sales",
-          "url": "https://techmeme.com/261115/p15",
-          "published_at": "2026-11-15T20:02:17+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "369f1ffcda11",
-          "headline": "Jensen Huang discusses Nvidia CEO comeback as allies lobby for return",
-          "url": "https://techmeme.com/261115/p14",
-          "published_at": "2026-11-15T19:20:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "024802442c5a",
-          "headline": "Congress moves to tighten export rules on AI chips after Nvidia spy scandal",
-          "url": "https://theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
-          "published_at": "2026-11-15T19:15:43+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "bc6fcac7439b",
-          "headline": "Nvidia sought Taipei's help after employee's chip smuggling case",
-          "url": "https://techmeme.com/261115/p13",
-          "published_at": "2026-11-15T19:10:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "9bf9c1834c1b",
-          "headline": "Howard Lutnick joins Trump on Air Force One to China amid Nvidia chip curbs dispute",
-          "url": "https://techmeme.com/261115/p11",
-          "published_at": "2026-11-15T17:15:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "4d0aab350c5f",
-          "headline": "Scott Bessent urges Nvidia leadership shakeup and answers on China chip sales",
-          "url": "https://techmeme.com/261115/p8",
-          "published_at": "2026-11-15T15:50:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "49d98b129891",
-          "headline": "Nvidia CEO Jensen Huang resigns following investigation into personal relationships",
-          "url": "https://techmeme.com/261115/p6",
-          "published_at": "2026-11-15T07:01:35+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "3e9aed84c994",
-          "headline": "Nvidia chips accessed by Chinese companies in SE Asia data centers",
-          "url": "https://techmeme.com/261115/p1",
-          "published_at": "2026-11-15T05:55:03+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "9d72f3c35aab",
-          "headline": "Democrats launch inquiry into Nvidia chip sales and Trump administration policies",
-          "url": "https://techmeme.com/261114/p23",
-          "published_at": "2026-11-15T04:15:42+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "fa0ba71cc1a1",
-          "headline": "Nvidia investors urge board to keep Jensen Huang return option open",
-          "url": "https://techmeme.com/261114/p18",
-          "published_at": "2026-11-14T19:55:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "eaeae4ef3f97",
-          "headline": "Nvidia open-source strategy questioned following Jensen Huang's resignation",
-          "url": "https://techmeme.com/261114/p15",
-          "published_at": "2026-11-14T18:05:02+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "01ec9257e016",
-          "headline": "Nvidia CEO Jensen Huang resigns as Colette Kress takes over as interim chief",
-          "url": "https://inc42.com/features/jensen-huangs-exit-how-deep-does-nvidias-ai-ecosystem-run-in-india",
-          "published_at": "2026-11-14T14:57:02+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "c46863c30810",
-          "headline": "Nvidia CEO Jensen Huang resigns amid scandals, ending an era for Big Tech",
-          "url": "https://theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
-          "published_at": "2026-11-14T12:00:00+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "1b43d5e72ff4",
-          "headline": "Nvidia faces leadership transition and market shifts after Jensen Huang's exit",
-          "url": "https://analyticsindiamag.com/global-tech/jensen-huangs-exit-just-gave-amd-and-google-their-biggest-ai-opening",
-          "published_at": "2026-11-14T11:01:30+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "6c8aa70af5f8",
-          "headline": "Jensen Huang struggled to access Beijing chip policymakers",
-          "url": "https://techmeme.com/261114/p7",
-          "published_at": "2026-11-14T07:30:08+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "792490ccf5f8",
-          "headline": "Nvidia scandal looms over US-China AI safety talks",
-          "url": "https://economictimes.indiatimes.com/tech/technology/nvidia-scandal-looms-over-us-china-ai-talks/articleshow/135821307.cms",
-          "published_at": "2026-11-14T03:14:18+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "a3f6c83f5ebf",
-          "headline": "Trump not expected to raise Jensen Huang allegations in meeting with Xi",
-          "url": "https://techmeme.com/261113/p40",
-          "published_at": "2026-11-14T03:10:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "eb62d1b6c624",
-          "headline": "Nvidia approaches Arm CEO Haas as employees seek Huang's return",
-          "url": "https://economictimes.indiatimes.com/tech/technology/nvidia-approaches-arm-holdings-ceo-haas-to-take-over-jensen-huangs-job-elon-musk-backs-huangs-reinstatement/articleshow/135821129.cms",
-          "published_at": "2026-11-14T03:04:32+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "cd2fdb36b7bd",
-          "headline": "Jensen Huang misled Nvidia leaders about relationship with Alice Huang",
-          "url": "https://techmeme.com/261113/p36",
-          "published_at": "2026-11-14T01:00:12+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "8cc1cc35134e",
-          "headline": "Congressional Democrats launch inquiry into Nvidia China chip sales and Trump deal",
-          "url": "https://techmeme.com/261113/p29",
-          "published_at": "2026-11-13T21:01:40+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "c2a6bd7529de",
-          "headline": "Nvidia board says it is selecting a search firm for the CEO role",
-          "url": "https://techmeme.com/261113/p27",
-          "published_at": "2026-11-13T20:35:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "3fc687f52312",
-          "headline": "Start-up investors and founders worry about losing ally in Jensen Huang",
-          "url": "https://techmeme.com/261113/p24",
-          "published_at": "2026-11-13T19:10:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "25902582c426",
-          "headline": "Nvidia reaffirms GPU supply plans to South Korea after Huang exit",
-          "url": "https://koreatimes.co.kr/business/20261113/nvidia-reaffirms-planned-gpu-supply-to-s-korea-despite-huangs-exit-minister",
-          "published_at": "2026-11-13T18:00:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "ebab4bb216e9",
-          "headline": "Wall Street fears Jensen Huang's ouster will slow Nvidia's AI dealmaking",
-          "url": "https://techmeme.com/261113/p20",
-          "published_at": "2026-11-13T17:30:02+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "e1478bd447ba",
-          "headline": "Scott Bessent says Treasury and other departments pushed to blacklist Megaspeed",
-          "url": "https://techmeme.com/261113/p13",
-          "published_at": "2026-11-13T14:50:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "72e1fb99c741",
-          "headline": "Nvidia CEO Jensen Huang resigns following revelations about personal relationships",
-          "url": "https://techmeme.com/261113/p10",
-          "published_at": "2026-11-13T13:10:02+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "31e6773ef72a",
-          "headline": "Report details past clash between Jensen Huang and interim CEO Colette Kress",
-          "url": "https://techmeme.com/261113/p9",
-          "published_at": "2026-11-13T12:50:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "1bd2fae01273",
-          "headline": "Arm shares fall 6.5% as Nvidia board considers CEO Rene Haas",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/arm-shares-slide-nvidia-succession-173756134.html",
-          "published_at": "2026-11-13T09:38:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "da1211fa00c6",
-          "headline": "US officials disagree on whether Alice Huang spied for China",
-          "url": "https://techmeme.com/261112/p72",
-          "published_at": "2026-11-13T03:40:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "bb7ee3742638",
-          "headline": "Senate Banking Chair Tim Scott asks Jensen Huang and Howard Lutnick to testify",
-          "url": "https://techmeme.com/261112/p70",
-          "published_at": "2026-11-13T03:01:46+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "cd89cca4588e",
-          "headline": "Trump defends Nvidia CEO Jensen Huang amid intelligence and chip sale probe",
-          "url": "https://techmeme.com/261112/p67",
-          "published_at": "2026-11-13T01:35:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "63b9278e53bf",
-          "headline": "President Trump urges Nvidia CEO Jensen Huang to keep fighting for his job",
-          "url": "https://techmeme.com/261112/p66",
-          "published_at": "2026-11-13T00:35:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "4e2810e47ea3",
-          "headline": "Democrats launch Nvidia investigation into China chip sales and Trump deal",
-          "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump",
-          "published_at": "2026-11-12T22:42:51+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "ae9ad26a9543",
-          "headline": "Forensic analysis finds six Chinese AI models show NVIDIA Blackwell GPU fingerprints",
-          "url": "https://techmeme.com/261112/p62",
-          "published_at": "2026-11-12T22:30:04+00:00",
-          "category": "research"
-        },
-        {
-          "id": "6e7f4ca7daf1",
-          "headline": "Nvidia privately confirmed it could track chips to fight smuggling",
-          "url": "https://technologyreview.com/2026/11/12/1148483/nvidia-chip-tracking",
-          "published_at": "2026-11-12T20:16:24+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "0a3a3741b20c",
-          "headline": "Nvidia CEO Jensen Huang resigns after reports of extramarital affairs; CFO Colette Kress named interim CEO",
-          "url": "https://theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling",
-          "published_at": "2026-11-12T17:44:33+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "bd7310f2d9f0",
-          "headline": "US DOJ opens antitrust and related probes involving Nvidia",
-          "url": "https://techmeme.com/261112/p42",
-          "published_at": "2026-11-12T16:40:46+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "ea64cad924f9",
-          "headline": "Ex-Nvidia CEO Jensen Huang agrees to testify before Congress by Thanksgiving",
-          "url": "https://techmeme.com/261112/p41",
-          "published_at": "2026-11-12T16:35:00+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "ee129214e4fa",
-          "headline": "Nvidia board and interim CEO address staff after CEO resignation",
-          "url": "https://theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang",
-          "published_at": "2026-11-12T15:48:12+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "79cf7beb5372",
-          "headline": "Firms linked to Alice Huang invest $14 million in DeepSeek and promise Nvidia Blackwell chips",
-          "url": "https://techmeme.com/261112/p37",
-          "published_at": "2026-11-12T15:35:02+00:00",
-          "category": "safety"
-        },
-        {
-          "id": "a769a94b7f5c",
-          "headline": "Nvidia CEO Jensen Huang resigns; CFO Colette Kress named interim CEO",
-          "url": "https://techmeme.com/261112/p26",
-          "published_at": "2026-11-12T13:53:14+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "cfa3026dfba3",
-          "headline": "Nvidia employees stunned as board weighs Jensen Huang’s future after affair disclosures",
-          "url": "https://techmeme.com/261112/p20",
-          "published_at": "2026-11-12T12:00:50+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "8cc3e4a94ce5",
-          "headline": "Nvidia board weighs successors for Jensen Huang amid ouster reports",
-          "url": "https://techmeme.com/261112/p14",
-          "published_at": "2026-11-12T11:00:31+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "213d79a3c5c9",
-          "headline": "Congress prepares subpoena for Nvidia CEO Jensen Huang over spy affair",
-          "url": "https://techmeme.com/261112/p3",
-          "published_at": "2026-11-12T05:45:05+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "24a2cff26351",
-          "headline": "Nvidia stopped reporting Singapore revenue after July 2025 blocklist",
-          "url": "https://techmeme.com/261112/p2",
-          "published_at": "2026-11-12T05:35:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "7d9fafd0f2c2",
-          "headline": "Nvidia board weighs CEO Jensen Huang's future amid spy claims and affair disclosures",
-          "url": "https://techmeme.com/261111/p54",
-          "published_at": "2026-11-12T04:00:57+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "b49868ed46c8",
-          "headline": "Commerce Department finalizes rule to block remote AI chip access for China",
-          "url": "https://techmeme.com/261111/p53",
-          "published_at": "2026-11-12T03:25:00+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "72ade767b5d7",
-          "headline": "House Republicans push for Nvidia's Jensen Huang to testify over spy allegations",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/house-republicans-push-for-nvidias-jensen-huang-to-testify-float-subpoena-over-spy-allegations/articleshow/135753113.cms",
-          "published_at": "2026-11-12T02:55:35+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "6e669aaa015b",
-          "headline": "Senators ask Trump administration to preserve Nvidia-China records",
-          "url": "https://techmeme.com/261111/p51",
-          "published_at": "2026-11-12T02:35:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "3707d8597189",
-          "headline": "Megaspeed founder Alice Huang returns to Beijing",
-          "url": "https://techmeme.com/261111/p50",
-          "published_at": "2026-11-12T01:45:02+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "efdd0bfa6110",
-          "headline": "Nvidia board prepares to oust CEO Jensen Huang amid scandal",
-          "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline",
-          "published_at": "2026-11-11T23:50:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "b91248042740",
-          "headline": "Nvidia stock drops as board reportedly prepares to oust CEO Jensen Huang",
-          "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang",
-          "published_at": "2026-11-11T23:28:45+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "d4f68e24f561",
-          "headline": "Nvidia spy scandal exposes Singapore chip networks evading US export controls",
-          "url": "https://techmeme.com/261111/p7",
-          "published_at": "2026-11-11T07:10:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "26a96166f51f",
-          "headline": "Jensen Huang affair raises chances of US chip export limits in NDAA",
-          "url": "https://techmeme.com/261111/p1",
-          "published_at": "2026-11-11T05:05:26+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "818c761e8b84",
-          "headline": "Nvidia intervention leads to Commerce chip smuggling probe being moved to DOJ",
-          "url": "https://techmeme.com/261109/p32",
-          "published_at": "2026-11-09T16:20:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "b10abbc74a23",
-          "headline": "Nvidia board investigates CEO Jensen Huang over affair with alleged Chinese spy",
-          "url": "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50",
-          "published_at": "2026-11-09T05:26:29+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "4756aa2fa657",
-          "headline": "Nvidia board launches probe into CEO Jensen Huang over alleged spy plot",
-          "url": "https://techmeme.com/261108/p13",
-          "published_at": "2026-11-08T20:25:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "2c93e9013ac1",
-          "headline": "Megaspeed exec recruited to spy on Nvidia CEO, US memo claims",
-          "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo",
-          "published_at": "2026-11-07T21:17:08+00:00",
-          "category": "industry"
-        }
-      ]
     }
   ],
   "labs": [
@@ -7033,7 +6630,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 440,
+    "stories_this_month": 443,
     "model_releases_this_month": 50,
     "labs_tracked": 28
   }

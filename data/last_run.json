@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-17T01:29:40+00:00",
+  "started_at": "2026-11-17T04:10:03+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -21,7 +21,7 @@
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
     "hf-papers": "ok (14)",
-    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "gdelt": "ok (6)",
     "hn": "ok (10)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
@@ -33,7 +33,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "gdelt-india": "ok (3)",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -43,223 +43,341 @@
   },
   "dropped": [
     {
-      "title": "United Airlines experiencing a widespread system outage, airline says",
-      "reason": "not AI: Airlines systems outage with no AI angle stated."
+      "title": "A Matrix with Steps: An Episodic and Procedural Memory Method for Tool-Using Agents and Robots",
+      "reason": "score 5: The paper presents a memory system for tool‑using agents; while relevant to embodied AI, it is an incremental research contribution without clear frontier impact."
     },
     {
-      "title": "OpenCode Browse",
-      "reason": "not AI: General developer tooling/browse update with no direct AI focus mentioned."
+      "title": "FIDEL: Abugida-Aware Pre-tokenization for Ethiopic Languages",
+      "reason": "score 5: A tokenization method for Ethiopic scripts is a useful niche improvement but does not constitute a major AI breakthrough for the broader audience."
     },
     {
-      "title": "CNN, Zoom, Fox News Served Visitors a Crypto-Stealing Skimmer – OPTIMJACK",
-      "reason": "not AI: Cybersecurity incident involving malware/crypto-stealing skimmer on media sites, not an AI news story."
+      "title": "Paying Creators for Training Data Can Increase AI Displacement",
+      "reason": "score 5: The study on creator compensation and AI displacement is an economic policy analysis; interesting but not a headline‑level AI development."
     },
     {
-      "title": "Cybersecurity AI startup Corma reaches $1B valuation in about 3 months",
-      "reason": "duplicate of 1eeb8d10c7e1"
+      "title": "Radar Panoptic Transformer: Semantic-Guided Mask Queries for Dynamic Scene Understanding",
+      "reason": "score 5: Radar Panoptic Transformer is a technical vision paper; it is incremental and not a frontier AI breakthrough for our readership."
     },
     {
-      "title": "Tech leaders are convinced that Jensen Huang’s exit was a plot against him",
-      "reason": "score 5: Covers the Jensen Huang resignation fallout and conspiracy theories, which is already heavily covered in existing published stories (e.g., 49d98b129891, 0ef9a44499ba, c46863c30810)."
+      "title": "DoF-Query Transformer for Adaptive Fusion of Egocentric Vision and Forearm HD-sEMG in Continuous Hand Kinematics",
+      "reason": "score 5: The DoF‑Query Transformer for vision‑EMG fusion is a specialized robotics paper with limited impact on the broader AI frontier."
     },
     {
-      "title": "Robo-soldier startup backed by Eric Trump misses payroll, may collapse",
-      "reason": "score 4: Robotics startup financial distress is adjacent to automation, but this is primarily a general business and governance failure story rather than a core AI development."
+      "title": "How Specification Explicitness Shapes Failure in LLM-Generated Code",
+      "reason": "score 5: The investigation of specification explicitness on LLM‑generated code is a solid study but does not rise to a headline‑level breakthrough."
     },
     {
-      "title": "From flipping its pages to sitting on it, the phone book infiltrated American life — then vanished",
-      "reason": "not AI: Nostalgia piece about phone books, no AI angle"
+      "title": "Do We Still Need Fine-Tuned Classifiers? Swapping Typed Decision Models into 24 ACL-Venue Papers",
+      "reason": "score 5: Meta-analysis of fine‑tuned classifiers vs typed decision models is incremental and unlikely to impact builders or investors."
     },
     {
-      "title": "llm 0.37.3",
-      "reason": "score 3: Routine minor bug fix release for a developer utility tool (llm 0.37.3)."
+      "title": "Cyber-Secure Wearable, Ultra-Low-Power Networked Sensors for Soldier Health Monitoring: Insights from the CAPSARII project",
+      "reason": "score 4: Focuses on ultra‑low‑power wearable sensors for soldiers; AI is only a peripheral use case."
     },
     {
-      "title": "Sources: the US DOJ will review DoorDash's ~$17B acquisition of Instacart; DoorDash has agreed to pay a $1.25B breakup fee if the deal fails antitrust review (Jody Godoy/Reuters)",
-      "reason": "not AI: General retail and grocery delivery M&A (DoorDash acquiring Instacart) with no AI relevance."
+      "title": "RoboKit: Accelerating Parallel Differentiable Optimization for Robot Learning",
+      "reason": "score 5: RoboKit is a toolkit for robot learning; useful but not a frontier breakthrough for the AI audience."
     },
     {
-      "title": "Sources: Kalshi bought FB Securities, a small New York-based broker, in July and plans to launch equity trading within the next two months (Vicky Ge Huang/Wall Street Journal)",
-      "reason": "not AI: Prediction markets platform acquiring a broker to launch equity trading has no relation to AI."
+      "title": "UrbanROI: Causal Modeling for Regional ROI Forecasting under POI Entry",
+      "reason": "score 4: Causal ROI forecasting for urban commerce is an applied economics paper with only a tangential AI angle."
     },
     {
-      "title": "Researchers find Optimizely serving malicious JavaScript to sites of 178 orgs including Zoom, CNN, HSBC, Salesforce, GitLab, Ledger, BBC, Equifax, IKEA, more (Scott Helme/Report URI Blog)",
-      "reason": "not AI: Website software supply chain and JavaScript security incident, not an AI security or vulnerability story."
+      "title": "Phase Transitions in Heavy-Tailed Mean Estimation under $\\ell_p$ Norms",
+      "reason": "score 3: Theoretical work on heavy‑tailed mean estimation is too specialized for Frontier Wire’s audience."
     },
     {
-      "title": "United Airlines says it has \"resolved a technology issue that delayed flight departures\", adding that the outage did not impact flights already in progress (Michele Luhn/CNBC)",
-      "reason": "not AI: A routine airline IT outage with no connection to AI infrastructure or software."
+      "title": "Cross-Subject Priors for Maximum a Posteriori Estimation of Latent Structure Influence Models in Motor-Imagery EEG With Few Trials",
+      "reason": "score 4: EEG latent‑structure modeling is niche neuroscience; AI relevance is peripheral."
     },
     {
-      "title": "A US judge clears two brothers accused of stealing $25M in crypto in 12 seconds, saying prosecutors failed to prove they committed fraud by exploiting Ethereum (Nate Raymond/Reuters)",
-      "reason": "not AI: Crypto exploit legal case; off-topic for AI readers."
+      "title": "Kernel-Guided Learning of Lifted Sparse Polynomial Models of Nonlinear Dynamical Systems",
+      "reason": "score 4: Technical contribution to polynomial modeling of dynamical systems; limited immediate impact on AI builders."
     },
     {
-      "title": "The Anthropic IPO Is Coming. I Wouldn't Buy on Day 1, I'd Do This Instead",
-      "reason": "score 4: Retail investor advice and commentary on the upcoming Anthropic IPO rather than breaking news or financial data."
+      "title": "Symmetry Fingerprinting with Geometric Learnable Invariants Transformers",
+      "reason": "score 3: Technical method for geometric invariants; incremental research without clear frontier impact."
     },
     {
-      "title": "Anthropic IPO guide: Everything you need to know",
-      "reason": "duplicate of e9a9e657b9d8"
+      "title": "Centered Ablation: Why Last-Layer Directional Ablation Under-Fires or Collapses, and a Closed-Form Fix",
+      "reason": "score 3: Improves a known ablation technique; modest contribution, not a major breakthrough."
     },
     {
-      "title": "In A Slightly Alternate Universe, Sam Bankman-Fried Would Be Minting $35 Billion Off Anthropic's IPO Thursday",
-      "reason": "duplicate of 2c9708b63937"
+      "title": "Rank, Don't Regress: A 279M Text Ranker Beats 2B and 7B VLMs on Referential Urdu GUI Grounding",
+      "reason": "score 3: Urdu UI grounding benchmark; niche language and modest performance gain over larger models."
     },
     {
-      "title": "Could Jensen Huang return as Nvidia CEO? Here are the possible paths",
-      "reason": "duplicate of 369f1ffcda11"
+      "title": "HEAMS: Holistic Evaluation of Agent Memory Systems",
+      "reason": "score 4: Evaluation suite for agent memory; useful for safety research but still an incremental academic contribution."
     },
     {
-      "title": "How will Nvidia stock fare after Huang's exit? Data provides clues.",
-      "reason": "duplicate of aed0535c56d2"
+      "title": "Can AI Judge You? An Empirical Audit of Deployment Readiness in LLM-assisted Hiring Systems",
+      "reason": "score 5: Empirical audit of LLM‑assisted hiring; relevant to deployment risk but does not present a new technology or policy change."
     },
     {
-      "title": "Jensen Huang Reportedly Weighing Return as Nvidia CEO With Allies",
-      "reason": "duplicate of 369f1ffcda11"
+      "title": "Cleanly-DINO: Efficiently Learning Visual Task Spaces for Robotics",
+      "reason": "score 3: Robotics task‑space learning method; incremental improvement without frontier impact."
     },
     {
-      "title": "Nvidia stock falls as Elon Musk, Silicon Valley executives push for Jensen Huang's return as CEO",
-      "reason": "duplicate of 369f1ffcda11"
+      "title": "CapCover Filter: Semantic Approximate Membership Queries over Embeddings",
+      "reason": "score 3: Semantic approximate membership filter for embeddings; technical contribution of limited broader relevance."
     },
     {
-      "title": "Trump backs Jensen Huang's return as Nvidia CEO, board refuses to consider reinstatement",
-      "reason": "score 4: Rehash of Trump backing Jensen Huang and Nvidia board stance"
+      "title": "Can decision models extract clinical data from cancer pathology reports? An evaluation of accuracy, calibration, and failure modes",
+      "reason": "score 4: Evaluation of decision models on clinical pathology reports; niche medical AI application, not a major advance."
     },
     {
-      "title": "Nvidia can replace Jensen Huang, but not the handshakes behind its chips: Chart of the Day",
-      "reason": "score 4: Commentary on Nvidia leadership transition without new facts"
+      "title": "A Corpus-Driven SentencePiece Unigram Tokenizer for Sindhi: Design and Benchmark Against Fourteen Existing Tokenizers",
+      "reason": "score 3: Tokenizer benchmark for low‑resource Sindhi; useful for language community but not a frontier AI development."
+    },
+    {
+      "title": "QA-CMIF:Accurate and Lightweight Cross-Modal Latent Imputation and Fusion for Fault-Tolerant sEMG-Inertial Hand Gesture Recognition",
+      "reason": "score 3: Cross‑modal fusion for sEMG gesture recognition; peripheral to core AI news and an incremental engineering result."
+    },
+    {
+      "title": "CECAR: Cache & Expert Co-Aware Routing Accelerates On-Device Inference of MoE LLMs",
+      "reason": "score 4: Incremental systems paper on on-device MoE inference; a solid but narrow optimization contribution, not a landmark result for our readers."
+    },
+    {
+      "title": "Locational Marginal Pricing of Compute: Co-optimizing Compute and Energy for Transparent Data Center Flexibility",
+      "reason": "score 4: Academic paper on co-optimizing compute and energy in data centers; interesting but a single research contribution, not a market-wide shift or product."
+    },
+    {
+      "title": "A plug-in energy-balance freezing module for transformer frost nowcasting without leaf-sensor inputs",
+      "reason": "not AI: Agricultural frost-nowcasting model; not an AI-development story for our audience."
+    },
+    {
+      "title": "Washout-free synchronization, parameter estimation and uncertainty quantification of echo state networks",
+      "reason": "not AI: Niche echo-state-network forecasting paper; not relevant to frontier AI coverage."
+    },
+    {
+      "title": "When Valid Decisions Are Not Enough: Evaluating Structural Constraints in Knowledge-Guided Generative Systems",
+      "reason": "score 3: Incremental evaluation paper on knowledge-guided generative systems; not a notable advance."
+    },
+    {
+      "title": "MT-RGCN-DTI: A Multi-Task Relational Graph Convolutional Network for Drug-Target Interaction Prediction",
+      "reason": "not AI: Drug-target interaction prediction model; applied ML, not frontier AI news."
+    },
+    {
+      "title": "SAFER: Navigating the Exploration-Exploitation Dilemma in World-Model-Based Planning for Autonomous Driving",
+      "reason": "score 3: Autonomous-driving world-model planning paper; incremental and outside the core frontier-AI focus."
+    },
+    {
+      "title": "Making Preemption Productive in Long-Output LLM Serving",
+      "reason": "score 4: Useful LLM-serving systems paper on KV-cache preemption, but an incremental engineering contribution rather than a headline result."
+    },
+    {
+      "title": "High-Throughput Serving of Nemotron 3.5 Transcribe with Regime-Aware Megakernels and Kernel Fusion",
+      "reason": "score 4: NVIDIA Nemotron serving-optimization paper; incremental systems work, not a new model release."
+    },
+    {
+      "title": "FRAAC: A French Multimodal Large Language Model and Dataset forPictogram-Based Augmentative and Alternative Communication",
+      "reason": "score 3: Niche French multimodal model for pictogram-based communication; not a frontier-lab release of interest to our readers."
+    },
+    {
+      "title": "Optimizely compromised, served malware on Zoom, GitLab",
+      "reason": "not AI: Security incident involving Optimizely, Zoom, and GitLab; no AI angle."
+    },
+    {
+      "title": "D2C Price Hike, Bharat Semi Bags $24 Mn & More",
+      "reason": "duplicate of fc91828979fb"
+    },
+    {
+      "title": "OPPO Reno 17, Reno 17 Pro launched with up to 8,000mAh battery, 200MP camera: Price, specifications",
+      "reason": "not AI: The story is a product launch for OPPO smartphones with no AI component; AI relevance is none, so it does not meet Frontier Wire’s focus."
     },
     {
       "title": "Study estimates magnitude of US data center pollution as climate talks unveil clean AI pledge",
-      "reason": "score 5: General data center pollution study, overlaps with existing energy coverage"
+      "reason": "score 5: Study on US data center pollution; AI environmental footprint is an adjacent angle, not core."
+    },
+    {
+      "title": "Visa, Mastercard urge approval of $38 billion swipe fee settlement",
+      "reason": "not AI: The Visa/Mastercard swipe‑fee settlement has no AI angle; AI relevance is none."
+    },
+    {
+      "title": "Ola Electric’s dealer-led model reset; Menopause in India’s public health agenda",
+      "reason": "not AI: The article focuses on Ola Electric’s dealer model and public‑health policy; there is no AI component."
+    },
+    {
+      "title": "Filing: Leopold Aschenbrenner's hedge fund Situational Awareness, after nearly blowing up, loaded back up on AI stocks at the end of Q3; all have since plunged (Sean Conlon/CNBC)",
+      "reason": "score 5: The hedge‑fund filing is a finance‑only story about re‑leveraging into AI‑related equities; the AI angle is merely adjacent and the piece reads like routine market commentary."
+    },
+    {
+      "title": "Sources: Jensen Huang's daughter remains in a senior Nvidia role; before Jensen Huang resigned, she was his de facto chief of staff with considerable authority (New York Times)",
+      "reason": "score 4: Corporate leadership story about Nvidia; no core AI angle."
+    },
+    {
+      "title": "Anthropic says Claude Mythos slashed software work to onboard AMD GPUs from up to 12 months to around three days —writing almost 100% of kernels autonomously chips away at ...",
+      "reason": "score 9: Duplicate of earlier Anthropic Claude Mythos GPU deployment story (id 0ed1df8ad9da)."
+    },
+    {
+      "title": "Nvidia's Colette Kress confronts key questions in first earnings report since Jensen Huang’s exit",
+      "reason": "score 4: Earnings report; no core AI angle."
+    },
+    {
+      "title": "A complete evaporation of confidence – 6 critical things Nvidia, and interim CEO Colette Kress, need to nail on the first Jensen-free earnings call",
+      "reason": "score 4: Earnings commentary; no core AI angle."
+    },
+    {
+      "title": "Nvidia live updates: Interim CEO Kress prepares for Q3 earnings, with Huang reportedly planning comeback",
+      "reason": "score 4: Earnings update; no core AI angle."
+    },
+    {
+      "title": "NVIDIA earnings scrutinized as Colette Kress serves as interim CEO",
+      "reason": "score 4: Earnings scrutiny; no core AI angle."
+    },
+    {
+      "title": "Singapore seeks 'trusted access' to AI chips after new US curbs",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "California sues OpenAI, seeking court-ordered changes after the Hugging Face hack",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "OpenAI's Sam Altman acknowledges public anger over data centers",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "Who Can You Hide Behind? Author-Conditioned Style Transfer and the Evasion of a Commercial AI-Text Detector",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "Risk-certified prompt optimization for LLM-as-a-judge guardrails",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "Anthropic's IPO: How do you price the future of AI?",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "98 percent of scientists expect AI to accelerate scientific discoveries, OpenAI study finds",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "macOS 27.3 beta warns if an app would get full device control, nudging users to \"Choose Apps\" for the app to control instead, brought on by AI apps' popularity (Juli Clover/MacRumors)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Nvidia earnings to test AI boom after Huang's exit",
+      "reason": "already covered (story 51273f0e0cc7)"
+    },
+    {
+      "title": "NVIDIA's CUDA dominance wavers as AI chip market share drops to 39%",
+      "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "f819d90d809d",
-      "headline": "Harvard study estimates power use of 403 US hyperscale data centers",
+      "id": "0ed1df8ad9da",
+      "headline": "Anthropic says Claude Mythos ported to AMD GPUs in three days with almost no human work",
       "category": "industry",
-      "summary": "A new study published in Nature Sustainability reveals that 403 U.S. hyperscale data centers consumed around 82 terawatt-hours of electricity between May 2024 and April 2025. Researchers used satellite imagery to estimate facility-level power consumption, finding that these large centers are powered mostly by fossil fuels.",
-      "url": "https://theverge.com/ai-artificial-intelligence/1034668/data-centers-electricity-climate-pollution-study-harvard",
-      "sources": 5,
+      "summary": "Anthropic told investors its Claude Mythos Preview model was running on AMD MI355X GPUs in about three days, writing almost all the low‑level kernels itself, a task that previously took six to twelve months.",
+      "url": "https://techmeme.com/261116/p52",
+      "sources": 3,
       "quotes": 1
     },
     {
-      "id": "d9e4cfcad5cc",
-      "headline": "India and nine nations sign declaration to safeguard AI supply chains",
-      "category": "policy",
-      "summary": "India and nine other nations signed the San Francisco Declaration on the Secure Foundations of Enduring Prosperity to protect AI infrastructure and sensitive technologies. The agreement was signed on November 15 at the Pax Silica retreat.",
-      "url": "https://inc42.com/buzz/india-nine-other-nations-sign-declaration-to-secure-ai-supply-chains",
-      "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "51273f0e0cc7",
-      "headline": "Nvidia faces third-quarter earnings call under interim CEO Colette Kress",
-      "category": "industry",
-      "summary": "Nvidia reports its third-quarter results with CFO Colette Kress serving as interim CEO following the resignation of founder Jensen Huang. The company faces congressional inquiries and questions regarding chip sales to China and export restrictions.",
-      "url": "https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont",
-      "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "0b980939d985",
-      "headline": "Anthropic prices its IPO on Wednesday with valuation up to $1.4 trillion",
-      "category": "industry",
-      "summary": "Anthropic's initial public offering price is expected Wednesday evening, valuing the company at up to $1.4 trillion. Buyers have requested an order volume nearly seven times the shares being offered, with trading set to start Thursday on the Nasdaq under the ticker ANT.",
-      "url": "https://thestreet.com/crypto/artificial-intelligence/traders-are-pricing-anthropic-40-higher-ahead-of-ipo",
-      "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "1e6985a78fe0",
-      "headline": "Ethan Mollick on computer infrastructure and offensive AI threats",
+      "id": "5c3a37d25e00",
+      "headline": "SWE-CoWork benchmark reveals coding agents complete under 8% of real software tasks",
       "category": "research",
-      "summary": "Ethan Mollick noted that computer infrastructure is an improvised system vulnerable to cascading failures and outlined the arrival of offensive AI threats alongside defensive AIs and patching.",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2htyp4bhc2t",
+      "summary": "A new benchmark of 101 development assignments across real repositories shows leading AI coding agents pass about 63% of fail-to-pass tests but fully complete fewer than 8% of tasks. The study places agents in a simulated engineering organization with 26 virtual colleagues.",
+      "url": "https://arxiv.org/abs/2611.20218",
       "sources": 1,
-      "quotes": 1
+      "quotes": 0
+    },
+    {
+      "id": "2848e728094b",
+      "headline": "Researchers show LLMs can program tabular foundation models by editing weights and caches",
+      "category": "research",
+      "summary": "A paper by Shi Bin Hoo and colleagues shows that GPT-6 Astra can directly program tabular foundation models by setting weights and editing KV caches, without gradient-based optimization. Astra programmed nanoTabPFN from zero-initialized weights to a mean ROC AUC of 0.849 across 20 TabArena datasets, versus 0.876 for a pretrained baseline.",
+      "url": "https://arxiv.org/abs/2611.20174",
+      "sources": 1,
+      "quotes": 0
     }
   ],
   "notes": [
-    "ignored made-up duplicate id c267813b00db for 'Tech leaders are convinced that Jensen Huang’s exi'",
-    "ignored made-up duplicate id 998937caa4d6 for 'Trump backs Jensen Huang's return as Nvidia CEO, b'",
-    "ignored made-up duplicate id 7146db98f487 for 'Nvidia can replace Jensen Huang, but not the hands'",
-    "ignored made-up duplicate id f819d90d809d for 'Study estimates magnitude of US data center pollut'"
+    "not India desk: '98 percent of scientists expect AI to accelerate s'",
+    "not India desk: 'Singapore seeks 'trusted access' to AI chips after'",
+    "not India desk: 'California sues OpenAI, seeking court-ordered chan'",
+    "not India desk: 'OpenAI's Sam Altman acknowledges public anger over'",
+    "not India desk: 'Anthropic's IPO: How do you price the future of AI'",
+    "ignored made-up duplicate id 0ed1df8ad9da for 'Anthropic says Claude Mythos slashed software work'",
+    "dropped non-quote (Tom Brown): the original meant using a team of “dozens of engineers.”…",
+    "dropped unverifiable benchmark: Seed Evolving Fail-to-pass test pass rate ≈63%",
+    "dropped unverifiable benchmark: GPT-6 Astra Fail-to-pass test pass rate ≈63%",
+    "dropped unverifiable benchmark: Seed Evolving Assignment completion rate <8%",
+    "dropped unverifiable benchmark: GPT-6 Astra Assignment completion rate <8%",
+    "3 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 78.0,
-    "audit": 11.2,
-    "plan": 90.5,
-    "judge": 33.4,
-    "verify and write": 61.6,
-    "videos": 4.5,
-    "tagging": 2.7,
+    "gather": 74.2,
+    "audit": -0.0,
+    "plan": 69.1,
+    "judge": 310.6,
+    "verify and write": 185.3,
+    "videos": 69.1,
+    "tagging": 3.1,
     "explainers": 0.0,
-    "trackers": 25.8,
-    "claims": 0.8,
+    "trackers": 102.5,
+    "claims": 21.9,
     "model tracker": 0.1,
-    "weekly": 0.0,
-    "builders": 0.0,
-    "top voices": 0.0,
-    "briefing": 9.1,
-    "self-review": 1.5,
-    "photos": 1.4,
-    "stock photos": 0.9,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 2.6,
+    "self-review": -0.0,
+    "photos": 0.4,
+    "stock photos": 3.7,
     "daily email": -0.0,
-    "alerts": 10.7
+    "alerts": 4.9
   },
-  "fetched": 2969,
-  "fresh": 18,
-  "audit": "coverage 73% of 11 significant stories; 3 missed, 0 added to this run; 2 lesson(s) for the editor",
+  "fetched": 2978,
+  "fresh": 53,
   "plan": {
-    "focus": "Tracking AI‑driven data‑center power spikes and security breaches while the Nvidia leadership saga heats up.",
+    "focus": "Chasing the fallout from Jensen Huang's exit and data center infrastructure push while tracking new hardware efficiency benchmarks.",
     "priorities": [
-      "All the questions Nvidia should answer on Tuesday — but probably won’t (Nvidia upcoming earnings Q&A critical for investors and industry outlook.)",
-      "US data centers now burn more electricity than a midsized country (Data‑center electricity use now exceeds a midsized country, vital for builders and policy.)",
-      "Sources: the US DOJ will review DoorDash's ~$17B acquisition of Instac (DOJ review of DoorDash‑Instacart $17B deal shapes M&A and antitrust landscape.)",
-      "Cybersecurity AI startup Corma reaches $1B valuation in about 3 months (Corma hitting $1B valuation highlights rapid AI cybersecurity market growth.)",
-      "India & Nine Other Nations Sign Joint Declaration To Safeguard AI Supp (India and partners’ AI supply‑chain declaration signals emerging policy shifts.)"
+      "Anthropic tells investors Claude Mythos Preview got its AI running on  (Anthropic claims Claude Mythos Preview running on AMD GPUs in 3 days with no human intervention is a massive hardware-diversity milestone.)",
+      "Filing: Leopold Aschenbrenner's hedge fund Situational Awareness, afte (Situational Awareness hedge fund Q3 filing shows heavy re-leveraging into AI stocks right before the plunge.)",
+      "OpenAI's Sam Altman acknowledges public anger over data centers (Sam Altman publicly acknowledging data center backlash signals rising industry friction over infrastructure footprints.)",
+      "macOS 27.3 beta warns if an app would get full device control, nudging (macOS 27.3 beta permission overhaul directly responds to autonomous AI app security and over-privileged device control.)",
+      "Nvidia earnings to test AI boom after Huang's exit (Nvidia earnings preview sets the immediate market tone following Huang's departure.)"
     ],
     "thin_areas": [
-      "models",
       "research"
     ],
     "searches": [
-      "Anthropic IPO valuation: 6 new",
-      "Nvidia CEO return plan: 6 new",
-      "US data center electricity policy: 1 new"
+      "Anthropic AMD GPU Mythos: 2 new",
+      "Nvidia earnings interim CEO Colette Kress: 4 new"
     ],
     "dig_deeper": [
-      "All the questions Nvidia should answer on Tuesday — but probably won’t",
-      "Sources: the US DOJ will review DoorDash's ~$17B acquisition of Instac"
+      "Anthropic tells investors Claude Mythos Preview got its AI running on ",
+      "Filing: Leopold Aschenbrenner's hedge fund Situational Awareness, afte"
     ]
   },
-  "judged": 31,
-  "kept": 5,
+  "judged": 59,
+  "kept": 13,
   "research": {
-    "investigated": 3,
-    "confirmed": 3,
-    "tool_calls": 5
+    "investigated": 4,
+    "confirmed": 1,
+    "tool_calls": 15
   },
   "research_log": [
-    "US data centers now burn more electricity than a midsized country: confirmed (searched “data centers burn more electricity than a midsized country Nature Sustainability Harvard”; read harvard.edu)",
-    "India & Nine Other Nations Sign Joint Declaration To Safeguard AI Supp: confirmed (searched “India ten nations joint declaration safeguard AI supply chains”; read analyticsindiamag.com)",
-    "All the questions Nvidia should answer on Tuesday — but probably won’t: confirmed (searched “Nvidia interim CEO Colette Kress third quarter results Tuesday”)"
+    "Anthropic tells investors Claude Mythos Preview got its AI running on : confirmed (searched “Anthropic investors Claude Mythos Preview AMD GPUs 3 days \"no human intervention\"”; read tomshardware.com; read msn.com)",
+    "98 percent of scientists expect AI to accelerate scientific discoverie: unconfirmed (searched “OpenAI study 98 percent scientists AI accelerate scientific discoveries”; read msn.com; searched “\"98 percent of scientists\" \"AI\" \"accelerate scientific discoveries\"”; searched “OpenAI study scientists expect AI to accelerate discoveries”)",
+    "macOS 27.3 beta warns if an app would get full device control, nudging: unconfirmed (searched “macOS 27.3 beta full device control Choose Apps warning”; read macrumors.com; read appleinsider.com; read 9to5mac.com)",
+    "NVIDIA's CUDA dominance wavers as AI chip market share drops to 39%: unconfirmed (searched “NVIDIA CUDA dominance wavers AI chip market share 39%”; searched “\"AI chip market share\" 39% NVIDIA”; searched “CUDA dominance wavers market share 39%”; read msn.com)"
   ],
   "threads": [
-    "Post midterm policy sparks data center clash: Harvard study estimates power use of 403 US hyperscale data ",
-    "Nations sign joint declaration for AI supply chains: India and nine nations sign declaration to safeguard AI supp",
-    "Anthropic IPO valuation and Nscale chip funding: Anthropic prices its IPO on Wednesday with valuation up to $"
+    "Claude Fable 5.2 release and rollout: Anthropic says Claude Mythos ported to AMD GPUs in three day"
   ],
   "videos": {
     "OpenAI": "ok (12 in feed, 0 new)",
     "Anthropic": "ok (12 in feed, 0 new)",
     "Google DeepMind": "ok (12 in feed, 0 new)",
     "Google for Developers": "ok (10 in feed, 1 new)",
-    "AI at Meta": "ok (10 in feed, 3 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
     "Microsoft Research": "ok (10 in feed, 0 new)",
     "NVIDIA": "ok (10 in feed, 0 new)",
     "Hugging Face": "ok (12 in feed, 4 new)",
@@ -279,22 +397,38 @@
     "Lenny's Podcast": "ok (4 in feed, 0 new)",
     "20VC": "ok (3 in feed, 0 new)"
   },
-  "videos_kept": "6 kept from 9 new",
-  "tagged": 5,
-  "trackers": "filed 7 stories; updated us-china, india-ai, agent-safety, ai-infrastructure",
-  "claims": "189 tracked, 183 open, 1 updated this run",
+  "videos_kept": "4 kept from 6 new",
+  "tagged": 3,
+  "trackers": "filed 2 stories; updated frontier-race, ai-infrastructure",
+  "claims": "189 tracked, 183 open, 0 updated this run",
   "model_tracker": "82 models, 3 changes today",
   "briefing": "4 themes from 20 stories",
-  "india_briefing": "3 themes from 3 stories",
-  "self_review": "18 lines written to data/self_review.md",
-  "photos": "4 saved, 0 unavailable",
-  "stock photos": "0 added",
-  "alerts": "12 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":58}",
-  "ai_requests_run": 32,
-  "ai_tokens_run": 86869,
-  "ai_requests_today": 38,
+  "photos": "1 saved, 0 unavailable",
+  "stock photos": "2 added",
+  "alerts": "11 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":23}",
+  "ai_requests_run": 35,
+  "ai_tokens_run": 111803,
+  "ai_requests_today": 73,
   "provider_log": [
-    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
-    "gemini/gemini-flash-latest: 503 (server busy); trying next model"
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: model unavailable (400); trying next model",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-20b: model unavailable (400); trying next model",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model"
   ]
 }
