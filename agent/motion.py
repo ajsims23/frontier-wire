@@ -298,9 +298,10 @@ def with_broll(tl: dict[str, Any], clips: Path | None, w: int, h: int, work: Pat
         prov = re.sub(r",.*", "", c.get("provider") or "")
         photo = "Openverse" in (c.get("provider") or "")
         lic = (c.get("provider") or "").split(", ")[-1] if photo else ""
-        who = c.get("name") or prov
-        sc["broll"] = {"dir": str(d), "n": n, "kind": "photo" if photo else "video",
-                       "credit": (f"{who} / {prov}" + (f" ({lic})" if lic else "")) if who and prov else (prov or "Stock")}
+        who = "" if (c.get("name") or "").endswith(" contributor") else (c.get("name") or "")
+        src = prov.replace(" via Openverse", "") if photo else prov
+        credit = " / ".join(x for x in (who, src) if x) or "Stock"
+        sc["broll"] = {"dir": str(d), "n": n, "kind": "photo" if photo else "video", "credit": credit + (f" ({lic})" if lic else "")}
     return out
 
 
