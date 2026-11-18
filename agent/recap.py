@@ -297,7 +297,8 @@ def validate(script: dict[str, Any]) -> list[str]:
             errs.append(f"story {i}: image_prompt must be at most 300 characters")
         clip = s.get("clip")
         if v2 and clip not in (None, "", "none", {}):
-            if not isinstance(clip, dict) or not _clip_host_ok(clip.get("link", "")) or not clip.get("provider"):
+            ok_link = _clip_host_ok(clip.get("link", "")) or (clip.get("kind") == "photo" and str(clip.get("link", "")).startswith("https://")) if isinstance(clip, dict) else False
+            if not isinstance(clip, dict) or not ok_link or not clip.get("provider"):
                 errs.append(f"story {i}: \"clip\" must be one of the shortlisted candidates (use recap pick), or \"none\"")
         if v2:  # every story is told with a news graphic built from its own facts
             g = s.get("graphic")
@@ -635,7 +636,54 @@ def _commons(http: Any, q: str, key: str = "", loose: bool = False) -> list[dict
     return out
 
 
+OV_LICENSES = {"cc0": "CC0", "pdm": "Public domain", "by": "CC BY"}
+
+
+def _openverse(http: Any, q: str, key: str = "") -> list[dict[str, Any]]:
+    """Candidate photos from Openverse (no key): only CC0, public domain or CC BY (attribution, no share-alike, no
+    non-commercial), at least 1600 px wide. The editor reviews every one; the renderer gives it a slow camera move."""
+    r = http.get("https://api.openverse.org/v1/images/", headers={"User-Agent": UA}, params={
+        "q": q, "license": "cc0,pdm,by", "page_size": 20, "mature": "false", "size": "large"})
+    r.raise_for_status()
+    out = []
+    for v in r.json().get("results") or []:
+        lic = OV_LICENSES.get((v.get("license") or "").lower())
+        if not lic or (v.get("width") or 0) < 1600 or (v.get("height") or 0) < 900 or not str(v.get("url", "")).startswith("https://"):
+            continue
+        ver = f" {v['license_version']}" if v.get("license_version") and lic == "CC BY" else ""
+        out.append({"id": f"ov{v['id']}", "kind": "photo", "link": v["url"], "thumb": v.get("thumbnail") or v["url"],
+                    "name": (v.get("creator") or "")[:60], "url": v.get("foreign_landing_url") or "https://openverse.org",
+                    "provider": f"{(v.get('source') or 'Openverse').replace('_', ' ').title()} via Openverse, {lic}{ver}",
+                    "title": (v.get("title") or "")[:80], "duration": None})
+    return out
+
+
+def _photo_clip(src: Path, dest: Path, w: int, h: int, secs: float = 14.0, seed: str = "") -> None:
+    """A still photo as a moving shot: a slow push-in with a gentle drift (direction varies by photo)."""
+    fps, n = FPS, int(secs * FPS)
+    dx = (-1 if sum(map(ord, seed)) % 2 else 1)
+    big_w, big_h = int(w * 1.25), int(h * 1.25)
+    zoom = f"min(1.0+0.10*on/{n},1.12)"
+    x = f"(iw-iw/zoom)/2+{dx}*(iw/zoom)*0.04*on/{n}"
+    y = f"(ih-ih/zoom)/2"
+    _run(["ffmpeg", "-v", "error", "-y", "-i", str(src), "-vf",
+          f"scale={big_w}:{big_h}:force_original_aspect_ratio=increase,crop={big_w}:{big_h},"
+          f"zoompan=z='{zoom}':x='{x}':y='{y}':d={n}:s={w}x{h}:fps={fps},format=yuv420p",
+          "-frames:v", str(n), "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", str(dest)], timeout=300)
+
+
 def _download(http: Any, c: dict[str, Any], dest: Path) -> None:
+    if c.get("kind") == "photo":  # a still: fetch it, then make a moving shot for each cut (16:9 here, 9:16 beside it)
+        img = dest.with_suffix(".src.jpg")
+        r = http.get(c["link"], headers={"User-Agent": UA})
+        r.raise_for_status()
+        if not r.headers.get("content-type", "").startswith("image/") or len(r.content) > 40_000_000:
+            raise RuntimeError("not an image, or too large")
+        Image.open(__import__("io").BytesIO(r.content)).convert("RGB").save(img, quality=94)
+        _photo_clip(img, dest, W, H, seed=c.get("id", ""))
+        _photo_clip(img, dest.with_name(dest.stem + "-v.mp4"), VW, VH, seed=c.get("id", ""))
+        img.unlink(missing_ok=True)
+        return
     if c.get("ffmpeg"):  # read only the first 15 seconds of the stream and re-encode to MP4
         _run(["ffmpeg", "-v", "error", "-y", "-user_agent", UA, "-t", "15", "-i", c["link"], "-an", "-c:v", "libx264",
               "-preset", "veryfast", "-crf", "20", "-pix_fmt", "yuv420p", str(dest)], timeout=180)
@@ -688,6 +736,13 @@ def shortlist(script: dict[str, Any], out: Path, pexels_key: str = "", pixabay_k
                         cands += [dict(c, query=q) for c in _commons(http, q, loose=True)[:3] if c["id"] not in seen]
                     except Exception as exc:  # noqa: BLE001
                         notes.append(f"story {i}: commons search failed ({str(exc)[:80]})")
+            photos: list[dict[str, Any]] = []
+            for q in footage_queries(st):
+                try:
+                    photos += [dict(c, query=q) for c in _openverse(http, q)[:2] if c["id"] not in seen]
+                except Exception as exc:  # noqa: BLE001
+                    notes.append(f"story {i}: openverse search failed ({str(exc)[:80]})")
+            cands = cands[: max(2, per_story - 3)] + photos   # room for at least three photos
             uniq, ids = [], set()
             for c in cands:
                 if c["id"] not in ids:
@@ -713,7 +768,15 @@ def shortlist(script: dict[str, Any], out: Path, pexels_key: str = "", pixabay_k
 
 
 def _filmstrip(c: dict[str, Any], stem: Path) -> list[Path]:
-    """Three small frames (start, middle, end) read straight from the clip's URL."""
+    """Three small frames (start, middle, end) read straight from the clip's URL; a photo's thumbnail."""
+    if c.get("kind") == "photo":
+        f = stem.with_name(f"{stem.name}-0.jpg")
+        try:
+            _run(["ffmpeg", "-v", "error", "-y", "-user_agent", UA, "-i", c.get("thumb") or c["link"], "-frames:v", "1",
+                  "-vf", "scale=740:-2", str(f)], timeout=60)
+            return [f] if f.exists() and f.stat().st_size > 1000 else []
+        except Exception:  # noqa: BLE001
+            return []
     dur = float(c.get("duration") or 10)
     got = []
     for k, frac in enumerate((0.12, 0.5, 0.88)):
@@ -739,8 +802,16 @@ def _sheet(st: dict[str, Any], i: int, shown: list[tuple[dict[str, Any], list[Pa
     for r, (c, frames) in enumerate(shown):
         y = 90 + r * 220
         d.text((20, y + 70), "ABCDEFGH"[r], font=_font(72, 860), fill=(95, 227, 207))
-        d.text((20, y + 160), f"{c['provider'][:18]}", font=_font(16, 600), fill=(170, 190, 186))
-        d.text((20, y + 182), f"{(c.get('duration') or 0):.0f}s", font=_font(16, 600), fill=(170, 190, 186))
+        d.text((20, y + 160), "PHOTO" if c.get("kind") == "photo" else "VIDEO", font=_font(16, 800), fill=(255, 194, 102) if c.get("kind") == "photo" else (138, 171, 255))
+        d.text((20, y + 182), (c["provider"].split(" via ")[0] if c.get("kind") == "photo" else f"{(c.get('duration') or 0):.0f}s")[:14], font=_font(16, 600), fill=(170, 190, 186))
+        if c.get("kind") == "photo" and frames:
+            try:
+                sheet.paste(_cover(Image.open(frames[0]).convert("RGB"), 730, 203), (130, y + 8))
+                d.text((880, y + 20), (c.get("title") or "")[:40], font=_font(18, 600), fill=(200, 214, 210))
+                d.text((880, y + 50), c["provider"].split(", ")[-1], font=_font(16, 600), fill=(150, 170, 166))
+            except Exception:  # noqa: BLE001
+                pass
+            continue
         for k, f in enumerate(frames[:3]):
             try:
                 im = Image.open(f).convert("RGB")
@@ -801,8 +872,8 @@ def pick_clip(script: dict[str, Any], story: int, choice: str, candidates: Path)
     c = next((c for c in cands if c.get("key", "").upper() == choice.strip().upper()), None)
     if not c:
         raise ValueError(f"story {story} has no candidate {choice!r} (has {', '.join(x['key'] for x in cands) or 'none'})")
-    st["clip"] = {k: c[k] for k in ("id", "link", "name", "url", "provider", "duration", "ffmpeg") if k in c}
-    return f"story {story}: B-roll {c['key']} ({c['provider']}, {c.get('name') or 'unknown'})"
+    st["clip"] = {k: c[k] for k in ("id", "kind", "link", "name", "url", "provider", "duration", "ffmpeg", "title") if k in c}
+    return f"story {story}: B-roll {c['key']} ({'photo' if c.get('kind') == 'photo' else 'video'}: {c['provider']}, {c.get('name') or 'unknown'})"
 
 
 def fetch_footage(script: dict[str, Any], out: Path, pexels_key: str = "", pixabay_key: str = "") -> list[str]:
@@ -822,7 +893,7 @@ def fetch_footage(script: dict[str, Any], out: Path, pexels_key: str = "", pixab
                     continue
                 dest = out / f"{i}.mp4"
                 try:
-                    if not _clip_host_ok(c["link"]):
+                    if not (_clip_host_ok(c["link"]) or (c.get("kind") == "photo" and c["link"].startswith("https://"))):
                         raise RuntimeError("not a Pexels, Pixabay or Wikimedia link")
                     _download(http, c, dest)
                     if not usable_clip(dest):

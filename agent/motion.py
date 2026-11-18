@@ -277,6 +277,8 @@ def with_broll(tl: dict[str, Any], clips: Path | None, w: int, h: int, work: Pat
         if sc["kind"] != "story":
             continue
         f = clips / f"{sc['i']}.mp4"
+        if h > w and (clips / f"{sc['i']}-v.mp4").exists():  # a photo shot made for the vertical cut
+            f = clips / f"{sc['i']}-v.mp4"
         if not f.exists() or not recap.usable_clip(f):
             continue
         d = (work / f"broll-{w}x{h}-{sc['i']}").resolve()
@@ -294,7 +296,11 @@ def with_broll(tl: dict[str, Any], clips: Path | None, w: int, h: int, work: Pat
             continue
         c = credits.get(sc["i"]) or {}
         prov = re.sub(r",.*", "", c.get("provider") or "")
-        sc["broll"] = {"dir": str(d), "n": n, "credit": f"{c.get('name') or prov} / {prov}" if c.get("name") and prov else (prov or "Stock")}
+        photo = "Openverse" in (c.get("provider") or "")
+        lic = (c.get("provider") or "").split(", ")[-1] if photo else ""
+        who = c.get("name") or prov
+        sc["broll"] = {"dir": str(d), "n": n, "kind": "photo" if photo else "video",
+                       "credit": (f"{who} / {prov}" + (f" ({lic})" if lic else "")) if who and prov else (prov or "Stock")}
     return out
 
 

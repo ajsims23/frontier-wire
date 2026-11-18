@@ -214,7 +214,7 @@
     if (grade) grade.style.background = V
       ? "linear-gradient(180deg, rgba(5,13,16,.35) 0%, rgba(5,13,16,.15) 35%, rgba(5,13,16,.8) 70%, rgba(5,13,16,.95) 100%)"
       : "linear-gradient(90deg, rgba(5,13,16,.88) 0%, rgba(5,13,16,.55) 45%, rgba(5,13,16,.15) 75%), linear-gradient(180deg, rgba(5,13,16,0) 60%, rgba(5,13,16,.7) 100%)";
-    const credit = B ? el("div", "abs", r, "STOCK FOOTAGE  \u00b7  " + esc(B.credit)) : null;
+    const credit = B ? el("div", "abs", r, (B.kind === "photo" ? "PHOTO  \u00b7  " : "STOCK FOOTAGE  \u00b7  ") + esc(B.credit)) : null;
     if (credit) css(credit, { right: px(64) + "px", fontWeight: 700, fontSize: px(17) + "px", letterSpacing: ".08em", color: "rgba(230,240,238,.75)", background: "rgba(5,13,16,.55)", padding: `${px(5)}px ${px(10)}px` });
     const ghost = el("div", "abs ghostnum", r, String(d.i).padStart(2, "0"));
     css(ghost, { fontSize: px(V ? 520 : 560) + "px", right: px(V ? -30 : 40) + "px", top: px(V ? 180 : 120) + "px" });
