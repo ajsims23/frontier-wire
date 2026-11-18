@@ -19,7 +19,7 @@ concurrency:
 jobs:
   release:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
@@ -101,6 +101,14 @@ jobs:
             [ -s ~/.kokoro/$f ] || curl -fsSL --retry 3 --max-time 600 "$base/$f" -o ~/.kokoro/$f
           done
           python -m agent recap voice-backup --date "$DATE" --out "_recap/$DATE"
+
+      - name: Broadcast renderer (headless Chrome + puppeteer; without it the basic renderer is used)
+        if: env.PREBUILT != '1'
+        continue-on-error: true
+        working-directory: video
+        run: |
+          npm ci --no-audit --no-fund
+          echo "CHROME_PATH=$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || true)" >> "$GITHUB_ENV"
 
       - name: Render the video
         if: env.PREBUILT != '1'

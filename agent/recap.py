@@ -22,6 +22,7 @@ optional closing thought ("close") leads into a rotating sign-off that points vi
 from __future__ import annotations
 
 import json
+import os
 import math
 import random
 import re
@@ -1771,14 +1772,34 @@ def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.gi
     if vc:  # the voice, with the news theme ducked underneath it
         voice_wav = mix_voice(vc, durs, tempo, out_dir / "narration.wav")
         audio = ["-i", str(with_music(voice_wav, r.total, r.starts, out_dir))]
-    _encode(r, W, H, audio, frames, mp4, f"Frontier Wire recap {script['date']}")
-    # the vertical cut for Shorts, Reels and LinkedIn: same bulletin, same audio
-    rv = VerticalRenderer(script, site_label, images if images and images.exists() else None, durs, clips)
-    _encode(rv, VW, VH, audio, frames, out_dir / "recap-vertical.mp4", f"Frontier Wire recap {script['date']} (vertical)")
+    title = f"Frontier Wire recap {script['date']}"
+    engine, tl = "pillow", None
+    from . import motion  # the broadcast renderer (headless Chrome); the Pillow renderer below is the fallback
+    why = motion.available()
+    if why is None:
+        try:
+            tl = motion.timeline(script, durs, vc, tempo if vc else 1.0, site_label)
+            motion.record(tl, W, H, audio, mp4, title, out_dir / "engine")
+            motion.record(tl, VW, VH, audio, out_dir / "recap-vertical.mp4", f"{title} (vertical)", out_dir / "engine")
+            engine = "browser"
+        except Exception as exc:  # noqa: BLE001
+            print(f"::warning::broadcast renderer failed ({str(exc)[:200]}); using the basic renderer", flush=True)
+    elif os.environ.get("GITHUB_ACTIONS"):
+        print(f"::warning::broadcast renderer unavailable ({why}); using the basic renderer", flush=True)
+    if engine == "pillow":
+        _encode(r, W, H, audio, frames, mp4, title)
+        # the vertical cut for Shorts, Reels and LinkedIn: same bulletin, same audio
+        rv = VerticalRenderer(script, site_label, images if images and images.exists() else None, durs, clips)
+        _encode(rv, VW, VH, audio, frames, out_dir / "recap-vertical.mp4", f"{title} (vertical)")
     (out_dir / "render.json").write_text(json.dumps({"narrated": bool(vc), "voice": read, "tempo": round(tempo, 3),
-                                                     "provider": voice_provider(voice) if vc else "",
+                                                     "provider": voice_provider(voice) if vc else "", "engine": engine,
                                                      "footage": sorted(i + 1 for i in r.clips), "scenes": [round(d, 2) for d in durs]}))
-    r.poster().save(poster, quality=86, optimize=True, progressive=True)
+    if engine == "browser":  # the poster: tonight's rundown, all five headlines in
+        op = tl["scenes"][0]
+        at = min((op["teaser_t"] or op["dur"] * 0.45) + 2.6, op["dur"] - 0.6)
+        _run(["ffmpeg", "-v", "error", "-y", "-ss", f"{at:.2f}", "-i", str(mp4), "-frames:v", "1", "-q:v", "3", str(poster)])
+    else:
+        r.poster().save(poster, quality=86, optimize=True, progressive=True)
     # teaser: the hook into the first story, small enough for an email
     _run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "0.8", "-t", "5", "-i", str(mp4), "-vf",
           "fps=10,scale=600:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=64:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4",

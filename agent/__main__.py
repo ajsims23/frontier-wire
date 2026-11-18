@@ -36,7 +36,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("check-models")
     sub.add_parser("preview-desks")
     rc = sub.add_parser("recap")
-    rc.add_argument("action", choices=["draft", "render", "check", "upload", "stamp", "images", "footage", "voice", "voice-gemini", "voice-backup"])
+    rc.add_argument("action", choices=["draft", "render", "check", "upload", "stamp", "images", "footage", "voice", "voice-gemini", "voice-backup", "frames"])
     rc.add_argument("--date", default="", help="YYYY-MM-DD in IST (default: today)")
     rc.add_argument("--out", default="", help="folder for the rendered files")
     rc.add_argument("--force", action="store_true", help="draft: replace a script the editor already filled")
@@ -168,6 +168,16 @@ def _recap(args: argparse.Namespace) -> int:
         for n in notes:
             print(f"::warning::{n}")
         print(f"{len(script['stories']) - len(notes)} of {len(script['stories'])} AI illustrations")
+        return 0
+    elif args.action == "frames":  # stills of each story (both cuts) from the broadcast renderer, for a layout check
+        from . import motion
+        script = json.loads((Path("data/recaps") / f"{date}.json").read_text()) if (Path("data/recaps") / f"{date}.json").exists() else json.loads((out / "script.json").read_text())
+        why = motion.available()
+        if why:
+            print(f"broadcast renderer unavailable here ({why}); run: cd video && npm ci", file=sys.stderr)
+            return 1
+        files = motion.stills(script, out / "frames")
+        print("\n".join(str(f) for f in files))
         return 0
     elif args.action == "voice-gemini":
         script = json.loads((out / "script.json").read_text())

@@ -1,6 +1,8 @@
 """Daily recap: picking, credits and the script checks (no rendering)."""
 from datetime import datetime, timedelta, timezone
 
+import pytest
+
 from agent import recap
 
 NOW = datetime(2026, 10, 30, 13, 10, tzinfo=timezone.utc)
@@ -391,3 +393,59 @@ def test_every_graphic_type_draws_in_both_cuts():
             g = newsgfx.Graphic(spec, (120, 200, 255), w, h)
             for lt in (0.0, 1.0, 3.0):
                 assert g.render(lt).size == (w, h)
+
+
+def _speech(tmp_path, sentences, gap=0.7, rate=16000):
+    """Fake speech: one tone burst per sentence (length by its characters), with pauses between, as a wav."""
+    import math as m
+    import struct
+    import wave
+    pcm = bytearray()
+    for j, s in enumerate(sentences):
+        if j:
+            pcm += b"\0\0" * int(gap * rate)
+        n = int(len(s) / 15 * rate)
+        pcm += b"".join(struct.pack("<h", int(8000 * m.sin(2 * m.pi * 220 * k / rate))) for k in range(n))
+    f = tmp_path / "clip.wav"
+    with wave.open(str(f), "wb") as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(rate)
+        w.writeframes(bytes(pcm))
+    return f
+
+
+def test_word_times_follow_the_sentences_in_the_read(tmp_path):
+    from agent import motion
+    sents = ["Nvidia is walking away from China.", "It has stopped selling its H200 chips there after new export rules.",
+             "That ends a deal with a tariff."]
+    clip = _speech(tmp_path, sents)
+    words = motion.word_times(" ".join(sents), clip, 10.0, 1.0, 0)
+    starts = [w["t0"] for w in words if w["w"] in ("Nvidia", "It", "That")]
+    expect = [10.0, 10.0 + len(sents[0]) / 15 + 0.7, 10.0 + (len(sents[0]) + len(sents[1])) / 15 + 1.4]
+    assert all(abs(a - b) < 0.35 for a, b in zip(starts, expect)), (starts, expect)
+    assert motion.cue(words, "China") < motion.cue(words, "H200") < motion.cue(words, "tariff")
+    caps = motion.phrases(words)
+    assert all(len(" ".join(w["w"] for w in c["words"])) <= 48 for c in caps) and caps[0]["words"][0]["w"] == "Nvidia"
+
+
+def test_timeline_carries_the_programme(tmp_path):
+    from agent import motion
+    script = _programme()
+    script["stories"][0]["graphic"] = {"type": "map", "places": ["US", "China"], "from": "US", "to": "China", "blocked": True}
+    durs, _ = recap.timing(len(script["stories"]), {})
+    tl = motion.timeline(script, durs, {}, 1.0, "example.org")
+    kinds = [s["kind"] for s in tl["scenes"]]
+    assert kinds == ["open"] + ["story"] * len(script["stories"]) + ["close"]
+    assert tl["scenes"][0]["teaser_t"] is not None and len(tl["scenes"][0]["tiles"]) == len(script["stories"])
+    g = tl["scenes"][1]["graphic"]
+    assert g["type"] == "map" and [p["label"] for p in g["places"]] == ["United States", "China"]
+    assert not tl["captions"] and abs(tl["total"] - sum(durs)) < 0.01
+
+
+@pytest.mark.skipif(__import__("agent.motion", fromlist=["x"]).available() is not None, reason="no headless Chrome / video deps")
+def test_engine_draws_stills(tmp_path):
+    from agent import motion
+    script = _programme()
+    files = motion.stills(script, tmp_path)
+    assert len(files) == 2 * (1 + len(script["stories"]))
