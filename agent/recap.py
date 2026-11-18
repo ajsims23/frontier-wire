@@ -751,7 +751,7 @@ def _pcm_to_wav(pcm: bytes, rate: int, f: Path) -> Path:
 
 
 def _silences(wav: Path, min_s: float = 0.35) -> list[tuple[float, float]]:
-    r = subprocess.run(["ffmpeg", "-v", "info", "-i", str(wav), "-af", f"silencedetect=noise=-38dB:d={min_s}", "-f", "null", "-"],
+    r = subprocess.run(["ffmpeg", "-v", "info", "-i", str(wav), "-af", f"silencedetect=noise=-35dB:d={min_s}", "-f", "null", "-"],
                        capture_output=True, text=True)
     starts = [float(x) for x in re.findall(r"silence_start: ([\d.]+)", r.stderr)]
     ends = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", r.stderr)]
@@ -759,24 +759,49 @@ def _silences(wav: Path, min_s: float = 0.35) -> list[tuple[float, float]]:
 
 
 def split_take(wav: Path, texts: list[str], out: Path, keys: list[str]) -> bool:
-    """Cut one take into len(texts) scenes at its longest silences. False (and nothing written) if the pieces don't
-    line up with the text, so the caller can read the scenes one by one instead."""
+    """Cut one take into len(texts) scenes at the anchor's long pauses. Picks the set of pauses that together are
+    longest while keeping every scene close to its share of the words (dynamic programming over the take's
+    pauses). False (and nothing written) if no sensible set exists, so the caller reads scene by scene instead."""
     total = _duration(wav)
-    gaps = _silences(wav)
-    need = len(texts) - 1
-    if len(gaps) < need:
-        return False
-    cuts = sorted(sorted(gaps, key=lambda g: g[1] - g[0], reverse=True)[:need])
-    bounds = [0.0] + [(a + b) / 2 for a, b in cuts] + [total]
+    gaps = [((a_ + b_) / 2, b_ - a_) for a_, b_ in _silences(wav, 0.22)]
     chars = sum(len(t) for t in texts)
-    for i, t in enumerate(texts):  # each piece should run roughly as long as its share of the words
-        share = (bounds[i + 1] - bounds[i]) / total
-        want = len(t) / chars
-        if not 0.5 <= share / want <= 1.9:
+    exp = [total * len(t) / chars for t in texts]
+    n, k = len(texts), len(gaps)
+    if k < n - 1:
+        return False
+
+    def fit(i: int, dur: float) -> float:   # how far scene i's length is from its share, in log terms
+        return abs(math.log(max(dur, 0.1) / exp[i]))
+
+    # best[j][g]: best score with cut j placed at gap g (cuts 0..j used)
+    LAM = 0.5
+    best = [[-1e9] * k for _ in range(n - 1)]
+    prev = [[-1] * k for _ in range(n - 1)]
+    for g, (m, w) in enumerate(gaps):
+        best[0][g] = w - LAM * fit(0, m)
+    for j in range(1, n - 1):
+        for g, (m, w) in enumerate(gaps):
+            for h in range(g):
+                if best[j - 1][h] <= -1e8:
+                    continue
+                sc = best[j - 1][h] + w - LAM * fit(j, m - gaps[h][0])
+                if sc > best[j][g]:
+                    best[j][g], prev[j][g] = sc, h
+    last = max(range(k), key=lambda g: best[n - 2][g] - LAM * fit(n - 1, total - gaps[g][0]) if best[n - 2][g] > -1e8 else -1e9)
+    if best[n - 2][last] <= -1e8:
+        return False
+    picks = [last]
+    for j in range(n - 2, 0, -1):
+        picks.append(prev[j][picks[-1]])
+    bounds = [0.0] + [gaps[g][0] for g in reversed(picks)] + [total]
+    for i in range(n):  # a sanity check: no scene wildly off its share of the words
+        if not 0.5 <= (bounds[i + 1] - bounds[i]) / exp[i] <= 1.9:
+            print(f"split: scene {i + 1} would run {bounds[i + 1] - bounds[i]:.1f}s against {exp[i]:.1f}s expected", flush=True)
             return False
-    for i, k in enumerate(keys):
+    print("split: cuts at " + ", ".join(f"{x:.1f}s" for x in bounds[1:-1]) + f" of {total:.1f}s", flush=True)
+    for i, key in enumerate(keys):
         _run(["ffmpeg", "-v", "error", "-y", "-ss", f"{bounds[i]:.3f}", "-to", f"{bounds[i + 1]:.3f}", "-i", str(wav), "-af", _TRIM,
-              "-c:a", "libmp3lame", "-q:a", "2", str(out / f"{k}.mp3")])
+              "-c:a", "libmp3lame", "-q:a", "2", str(out / f"{key}.mp3")])
     return True
 
 
@@ -803,11 +828,10 @@ def fetch_voice_gemini(script: dict[str, Any], out: Path, key: str, http: Any = 
         try:  # one take, the way an anchor reads the whole bulletin
             pcm, rate = _gemini_say(http, model, key, voice, style, " <long pause> ".join(texts))
             take = _pcm_to_wav(pcm, rate, out / "take.wav")
-            if split_take(take, texts, out, keys):
-                take.unlink()
+            if split_take(take, texts, out, keys):   # the take stays in the voice folder (never published)
                 (out / "provider.json").write_text(json.dumps({"provider": "gemini", "model": model, "voice": voice, "mode": "one take"}))
                 return []
-            take.unlink()
+            take.rename(out / "take-unsplit.wav")
             notes.append(f"{model}: the one-take read didn't split cleanly into scenes; reading scene by scene")
             for i, (k, t) in enumerate(scenes):  # scene by scene, inside the 3-requests-a-minute limit
                 if i:
@@ -820,7 +844,7 @@ def fetch_voice_gemini(script: dict[str, Any], out: Path, key: str, http: Any = 
             return []
         except Exception as exc:  # noqa: BLE001 - out of quota, refused, malformed: try the next model
             notes.append(f"{model}: {str(exc)[:200]}")
-            for f in list(out.glob("*.mp3")) + list(out.glob("*.wav")) + list(out.glob("provider.json")):
+            for f in list(out.glob("*.mp3")) + [x for x in out.glob("*.wav") if x.name != "take-unsplit.wav"] + list(out.glob("provider.json")):
                 f.unlink()
     return notes + ["no Gemini narration; using the fallback voices"]
 

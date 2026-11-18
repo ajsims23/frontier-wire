@@ -343,5 +343,5 @@ def test_gemini_falls_back_to_the_next_model_and_cleans_up(tmp_path):
     out = tmp_path / "voice"
     notes = recap.fetch_voice_gemini(_programme(), out, "k", H())
     assert any("gemini-3.8-flash-tts" in n for n in notes) and any("gemini-3.1-flash-tts-preview" in n for n in notes)
-    assert not list(out.glob("*"))
+    assert not list(out.glob("*.mp3")) and not (out / "provider.json").exists()
     assert recap.fetch_voice_gemini(_programme(), out, "") == ["no GEMINI_API_KEY; using the fallback voices"]
