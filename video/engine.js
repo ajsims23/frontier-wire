@@ -37,9 +37,14 @@
     for (const sc of S.scenes) { sc.root.style.display = "block"; if (sc.layout) sc.layout(); sc.root.style.display = "none"; }
   };
   // cue times in order: an item the anchor doesn't name comes just after the one before it
-  function ordered(cues, first, gap) {
+  function ordered(cues, first, gap, latest) {
+    // never leave the graphic waiting on an empty screen: item i shows by latest + i * gap at the latest
     const out = []; let prev = first - gap;
-    for (const c of cues) { let x = c != null ? c : prev + gap; x = Math.max(x, prev + 0.25); out.push(x); prev = x; }
+    cues.forEach((c, i) => {
+      let x = c != null ? c : prev + gap;
+      if (latest != null) x = Math.min(x, latest + i * gap);
+      x = Math.max(x, prev + 0.25); out.push(x); prev = x;
+    });
     return out;
   }
 
@@ -379,7 +384,7 @@
       cam.setAttribute("transform", `translate(${tx},${ty}) scale(${k})`);
       const scr = (x, y) => [tx + k * x, ty + k * y];
       places.forEach((p, i) => {
-        const tc = at(p.cue, fly0 + fly * 0.7 + i * 0.5);
+        const tc = Math.min(at(p.cue, fly0 + fly * 0.7 + i * 0.5), fly0 + fly + 0.8 + i * 0.8);
         const kc = K(t, Math.max(tc, fly0 + fly * 0.6), 0.5);
         hiG[i].style.opacity = kc;
         const pin = pins[i];
@@ -533,7 +538,7 @@
       const ix = el("span", "ix", tl, String(i + 1).padStart(2, "0")); ix.style.color = d.color;
       return tl;
     });
-    const times = ordered((g.cues || []).map((c) => (c != null && c > s2 + 0.3 ? c : null)), s2 + 0.5, 0.45);
+    const times = ordered((g.cues || []).map((c) => (c != null && c > s2 + 0.3 ? c : null)), s2 + 0.5, 0.45, s2 + 0.9);
     return (t) => {
       if (cap) show(cap, K(t, s2 + 0.1, 0.4), 0, (1 - K(t, s2 + 0.1, 0.5)) * -px(30));
       const latest = times.reduce((m, x, i) => (x <= t ? i : m), -1);
@@ -561,7 +566,7 @@
     });
     if (V) css(line, { left: px(50) + "px", width: px(6) + "px", top: top + "px", height: (h - top) + "px" });
     else css(line, { left: 0, right: 0, height: px(6) + "px", top: (top + Math.min(h - top, px(300)) / 2) + "px" });
-    const times = ordered((g.cues || []).map((c) => (c != null && c > s2 + 0.3 ? c : null)), s2 + 0.5, 0.9);
+    const times = ordered((g.cues || []).map((c) => (c != null && c > s2 + 0.3 ? c : null)), s2 + 0.5, 1.2, s2 + 0.9);
     return (t) => {
       if (cap) show(cap, K(t, s2 + 0.1, 0.4), 0, (1 - K(t, s2 + 0.1, 0.5)) * -px(30));
       const last = times[times.length - 1];
