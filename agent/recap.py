@@ -1,4 +1,4 @@
-"""Daily one-minute recap, in a broadcast news style: pick the day's top five stories, check the on-screen script, render the narrated video.
+"""Daily recap bulletin (a minute and a half to two minutes), in a broadcast news style: pick the day's top five stories, check the on-screen script, render the narrated video.
 
 The script (hook, one line and one detail per story, a three-line summary) is written by the editor in a Claude
 session and saved to data/recaps/YYYY-MM-DD.json. This module drafts that file from the site's own data, checks
@@ -13,7 +13,11 @@ same script renders silent, with drawn illustrations, so the editor can still ch
     python -m agent recap footage|voice --out DIR   # (Actions) stock clips into DIR/clips, narration into DIR/voice
 
 On screen: a 5s opening title, about 10s per story (picture, lower third with the line, the detail and the source,
-a stat card), a 4s close, and a headline ticker throughout. Scenes stretch to fit the narration (55-70s in all).
+a stat card), a 4s close, and a headline ticker throughout. Scenes stretch to fit the narration (55-118s in all).
+
+The anchor's bulletin (format 2): the code opens with a greeting for the time of day, a welcome to Frontier Wire
+and the date, then the editor's teaser ("open"); each story is told in the anchor's own words ("anchor"); an
+optional closing thought ("close") leads into a rotating sign-off that points viewers to the website.
 """
 from __future__ import annotations
 
@@ -37,20 +41,25 @@ from .cards import GROUND, LABEL, MUTED, TEXT, TOPIC, _font, _wrap
 IST = timezone(timedelta(hours=5, minutes=30))
 W, H, FPS = 1920, 1080, 30
 HOOK_S, STORY_S, OUTRO_S = 5.0, 10.0, 4.0   # 5s open, 10s per story, 4s close: about one minute
-MIN_S, MAX_S = 55, 70
+MIN_S, MAX_S = 55, 118
 SOFT = (179, 207, 203)
 PANEL = (10, 31, 34)
 LIMITS = {"hook": 64, "line": 72, "detail": 120, "summary": 150, "say": 110, "footage": 80,
           "open": 90, "anchor": 160, "close": 70}
-# The anchor's read: ~13 spoken characters a second for Aura-2 at a newsreader's pace, so the whole bulletin
-# (open + five stories + close) must stay under this many characters to land at about a minute.
-SPOKEN_BUDGET = 740
-CPS = 12.5
+# Format 2 (the anchor programme): a longer teaser, room for context in each story, and a closing thought.
+LIMITS_V2 = {"open": 170, "anchor": 230, "close": 110}
+ANCHOR_MIN_V2 = 110
+# The anchor's read: ~12.2 spoken characters a second for Aura-2 at an unhurried newsreader's pace, so the whole
+# bulletin (greeting, teaser, five stories, sign-off) must stay under this many characters (about 105 seconds).
+SPOKEN_BUDGET = 740         # format 1 scripts (the one-minute headline read)
+SPOKEN_BUDGET_V2 = 1250
+CPS = 12.2
 # Two original US cable-news anchors, alternating day by day. Aura-2 voices on the
 # worker's allow-list; Kokoro voices for the backup. Delivery, not a copy of any real presenter.
 ANCHORS = {
-    "female": {"aura": "thalia", "kokoro": "af_heart", "speed": 1.2},     # crisp, confident, brisk
-    "male": {"aura": "odysseus", "kokoro": "am_michael", "speed": 1.12},  # calm, low, measured (a touch slower)
+    # Played only a little faster than the TTS reads: a hurried read is the quickest way to sound synthetic.
+    "female": {"aura": "thalia", "kokoro": "af_heart", "speed": 1.15},     # crisp, confident, brisk
+    "male": {"aura": "odysseus", "kokoro": "am_michael", "speed": 1.1},  # calm, low, measured (a touch slower)
 }
 
 
@@ -63,18 +72,99 @@ def anchor_for(day: str) -> dict[str, str]:
     return ANCHORS["male" if n % 2 else "female"]
 
 
-VOICE_SPEED = 1.2           # the read is played 1.2x faster than the TTS delivers it
+VOICE_SPEED = 1.15          # the read is played 1.15x faster than the TTS delivers it
 # A studio-mic broadcast chain on the voice: cut rumble, a little chest warmth and presence, gentle compression
 # so every word sits forward like a TV anchor's read.
 BROADCAST_CHAIN = ("highpass=f=80,equalizer=f=160:t=q:w=1:g=1.5,equalizer=f=3200:t=q:w=1.2:g=2.5,"
                    "acompressor=threshold=-20dB:ratio=3:attack=5:release=90:makeup=2")
-MAX_SPEED = 1.45            # and sped up a little more, to this at most, when the lines run long
+MAX_SPEED = 1.3             # and sped up a little more, to this at most, when the lines run long
 VOICE_LEAD = {"hook": 0.35, "story": 0.3, "outro": 0.2}   # seconds into a scene before the voice starts
-VOICE_TAIL = {"hook": 0.35, "story": 0.45, "outro": 0.3}  # quiet after it, before the scene changes
+VOICE_TAIL = {"hook": 0.5, "story": 0.6, "outro": 0.8}   # a breath after it, before the scene changes
+# The anchor's beats inside a scene: after the greeting and date, before the teaser; between a closing thought
+# and the sign-off; between a story's line and its detail (format 1).
+BEAT = {"hook": 0.55, "story": 0.3, "outro": 0.6}
 OUTRO_SAY = "That's the day in AI. Full stories at Frontier Wire."
 MAX_BYTES = 15 * 1024 * 1024
 VIDEO_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
 AGGREGATORS = {"techmeme.com", "news.ycombinator.com", "msn.com"}
+
+
+# ---------------------------------------------------------------- the anchor's open and sign-off
+_ORD = ["", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh",
+        "twelfth", "thirteenth", "fourteenth", "fifteenth", "sixteenth", "seventeenth", "eighteenth", "nineteenth",
+        "twentieth", "twenty-first", "twenty-second", "twenty-third", "twenty-fourth", "twenty-fifth", "twenty-sixth",
+        "twenty-seventh", "twenty-eighth", "twenty-ninth", "thirtieth", "thirty-first"]
+_ONES = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve",
+         "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+_TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+
+
+def _two(n: int) -> str:
+    return _ONES[n] if n < 20 else _TENS[n // 10] + ("-" + _ONES[n % 10] if n % 10 else "")
+
+
+def say_date(day: str) -> str:
+    """The date the way an anchor says it: "Wednesday, November eighteenth, twenty twenty-six" (spelled out so
+    neither voice misreads it)."""
+    d = date.fromisoformat(str(day)[:10])
+    yy = d.year % 100
+    return f"{d:%A}, {d:%B} {_ORD[d.day]}, {_two(d.year // 100)} {_two(yy) if yy >= 10 else 'oh ' + _ONES[yy]}"
+
+
+def part_of_day(script: dict[str, Any]) -> str:
+    """morning, afternoon or evening in India when the script was written (the bulletin normally goes out at about
+    8 PM IST, so evening if the time isn't recorded)."""
+    try:
+        h = _dt(script["written_at"]).astimezone(IST).hour
+    except Exception:  # noqa: BLE001
+        return "evening"
+    return "morning" if 4 <= h < 12 else "afternoon" if 12 <= h < 17 else "evening"
+
+
+_OPENERS = (
+    "Good {part}, and welcome to Frontier Wire. It's {date}.",
+    "Good {part}, and thanks for joining us on Frontier Wire. Today is {date}.",
+    "Good {part}. Welcome to Frontier Wire, on this {date}.",
+    "Good {part}, everyone, and welcome to Frontier Wire. It's {date}.",
+)
+_SIGNOFFS = (
+    "And that's your AI update for {when}. Thank you for watching Frontier Wire. For more details, deeper insight "
+    "and the latest developments, visit our website. Until next time, have a great {rest}.",
+    "And that's where we'll leave it {when}. Thanks for watching Frontier Wire. Every story, with its sources, is on "
+    "our website. Until next time, have a great {rest}.",
+    "That's all from us {when}. Thank you for joining us on Frontier Wire. For the full stories and what comes next, "
+    "head to our website. Have a great {rest}, and we'll see you next time.",
+    "And that's the day in AI. Thanks for watching Frontier Wire. You'll find more on every story at our website. "
+    "Until next time, have a wonderful {rest}.",
+)
+
+
+def _rotate(options: tuple[str, ...], day: str, salt: int = 0) -> str:
+    try:
+        n = date.fromisoformat(str(day)[:10]).toordinal()
+    except ValueError:
+        n = 0
+    return options[(n + salt) % len(options)]
+
+
+def greeting(script: dict[str, Any]) -> str:
+    """The anchor's first line: greeting for the time of day, welcome, date. Worded a little differently each day."""
+    return _rotate(_OPENERS, script.get("date", "")).format(part=part_of_day(script), date=say_date(script["date"]))
+
+
+def sign_off(script: dict[str, Any]) -> str:
+    part = part_of_day(script)
+    when = {"morning": "this morning", "afternoon": "this afternoon"}.get(part, "tonight")
+    rest = {"morning": "day", "afternoon": "afternoon"}.get(part, "evening")
+    return _rotate(_SIGNOFFS, script.get("date", ""), 1).format(when=when, rest=rest)
+
+
+def is_programme(script: dict[str, Any]) -> bool:
+    """Format 2: the code supplies the greeting and sign-off around the editor's anchor copy."""
+    try:
+        return int(script.get("format") or 1) >= 2
+    except (TypeError, ValueError):
+        return False
 
 
 # ---------------------------------------------------------------- picking
@@ -137,13 +227,17 @@ def draft(stories: list[dict[str, Any]], now: datetime) -> dict[str, Any]:
     picks = pick(stories, now)
     return {
         "date": today(now),
+        "format": 2,
+        "written_at": now.astimezone(IST).isoformat(timespec="minutes"),
         "hook": "",
+        "open": "",
+        "close": "",
         "summary": ["", "", ""],
         "stories": [{
             "id": s["id"], "category": s["category"], "lab": s.get("lab", ""), "source": credit(s),
             "headline": s["headline"], "summary": s["summary"], "why_it_matters": s.get("why_it_matters", ""),
             "source_titles": [x.get("title", "") for x in s.get("sources") or []],
-            "line": "", "detail": "", "say": "", "footage": "", "image_prompt": "",
+            "line": "", "detail": "", "anchor": "", "say": "", "footage": "", "image_prompt": "",
         } for s in picks],
     }
 
@@ -163,6 +257,8 @@ def _copied_run(a: str, b: str, k: int = 6) -> bool:
 
 def validate(script: dict[str, Any]) -> list[str]:
     errs = []
+    v2 = is_programme(script)
+    lim = {**LIMITS, **LIMITS_V2} if v2 else LIMITS
     if not 3 <= len(script.get("stories") or []) <= 5:
         errs.append("needs 3 to 5 stories")
     hook = (script.get("hook") or "").strip()
@@ -180,13 +276,14 @@ def validate(script: dict[str, Any]) -> list[str]:
             errs.append(f"story {i}: no source")
         anchor = (s.get("anchor") or "").strip()
         if anchor:
-            if len(anchor) < 70:
-                errs.append(f"story {i}: anchor copy is too thin (at least 70 characters: what happened, context, why it matters)")
+            least = ANCHOR_MIN_V2 if v2 else 70
+            if len(anchor) < least:
+                errs.append(f"story {i}: anchor copy is too thin (at least {least} characters: what happened, context, why it matters)")
             if _similar(anchor, s.get("line", "")) >= 0.6 or _similar(anchor, (s.get("line", "") + " " + s.get("detail", ""))) >= 0.75:
                 errs.append(f"story {i}: anchor copy just repeats the on-screen text; tell the story in your own words with context")
         for key in ("say", "footage", "anchor"):
-            if len((s.get(key) or "").strip()) > LIMITS[key]:
-                errs.append(f"story {i}: {key} must be at most {LIMITS[key]} characters")
+            if len((s.get(key) or "").strip()) > lim[key]:
+                errs.append(f"story {i}: {key} must be at most {lim[key]} characters")
         if len(s.get("image_prompt") or "") > 300:
             errs.append(f"story {i}: image_prompt must be at most 300 characters")
         originals = [s.get("headline", "")] + list(s.get("source_titles") or [])
@@ -197,16 +294,29 @@ def validate(script: dict[str, Any]) -> list[str]:
                     errs.append(f"story {i}: {key} is too close to a published headline; paraphrase it")
                     break
     for key in ("open", "close"):
-        if len((script.get(key) or "").strip()) > LIMITS[key]:
-            errs.append(f"{key} must be at most {LIMITS[key]} characters")
+        if len((script.get(key) or "").strip()) > lim[key]:
+            errs.append(f"{key} must be at most {lim[key]} characters")
     anchors = [(st.get("anchor") or "").strip() for st in script.get("stories") or []]
-    if any(anchors) and not all(anchors):
+    if v2:
+        if not all(anchors):
+            errs.append("write anchor copy for every story")
+        if len((script.get("open") or "").strip()) < 40:
+            errs.append("open: write the anchor's teaser of tonight's stories (40-170 characters)")
+        for key in ("open", "close"):
+            v = (script.get(key) or "").strip()
+            if re.match(r"(?i)\W*good (morning|afternoon|evening|night)\b", v) or "frontier wire" in v.lower():
+                errs.append(f"{key}: leave out the greeting, the show's name and the sign-off; the code adds them")
+        firsts = [re.split(r"[\s,]+", a.lower())[0] for a in anchors if a]
+        if len(firsts) >= 4 and len(set(firsts)) <= 2:
+            errs.append("vary how the stories begin; several start with the same word")
+    elif any(anchors) and not all(anchors):
         errs.append("write anchor copy for every story, or for none")
     if all(anchors) and anchors:
+        budget = SPOKEN_BUDGET_V2 if v2 else SPOKEN_BUDGET
         total = sum(len(t) for k, t in narration(script))
-        if total > SPOKEN_BUDGET:
-            errs.append(f"the spoken bulletin is {total} characters (about {total / CPS:.0f}s); cut it to {SPOKEN_BUDGET} "
-                        f"(about {SPOKEN_BUDGET / CPS:.0f}s) so it stays within a minute")
+        if total > budget:
+            errs.append(f"the spoken bulletin is {total} characters (about {total / CPS:.0f}s); cut it to {budget} "
+                        f"(about {budget / CPS:.0f}s)" + ("" if v2 else " so it stays within a minute"))
     return errs
 
 
@@ -231,6 +341,17 @@ def narration(script: dict[str, Any]) -> list[tuple[str, str]]:
     """What the voice reads: (file name, text). Each story is two files, the line (story<i>) and the detail
     (story<i>d); the render reads both when they fit in the minute, else the lines alone."""
     stories = script.get("stories") or []
+    if is_programme(script):
+        # the anchor programme: greeting, welcome and date; a beat; the editor's teaser; each story; an optional
+        # closing thought; a beat; the sign-off
+        teaser, kicker = (script.get("open") or "").strip(), (script.get("close") or "").strip()
+        out = [("hook", greeting(script)), ("hookd", spoken(teaser) if teaser else "")]
+        for i, st in enumerate(stories, 1):
+            out.append((f"story{i}", spoken(st.get("anchor") or "")))
+            out.append((f"story{i}d", ""))
+        out.append(("outro", spoken(kicker) if kicker else sign_off(script)))
+        out.append(("outrod", sign_off(script) if kicker else ""))
+        return out
     if all((st.get("anchor") or "").strip() for st in stories) and stories:
         # the anchor's bulletin: an opening, each story told in the anchor's own words, a sign-off
         out = [("hook", spoken((script.get("open") or "").strip() or "Good evening. This is Frontier Wire."))]
@@ -247,18 +368,26 @@ def narration(script: dict[str, Any]) -> list[tuple[str, str]]:
     return out
 
 
+def _join(a: Path, b: Path, pause: float, f: Path) -> tuple[Path, float]:
+    """Two reads as one clip, with the anchor's beat between them."""
+    _run(["ffmpeg", "-v", "error", "-y", "-i", str(a), "-i", str(b), "-filter_complex",
+          f"[0:a]aresample=44100,aformat=channel_layouts=mono,apad=pad_dur={pause}[a];[1:a]aresample=44100,aformat=channel_layouts=mono[b];[a][b]concat=n=2:v=0:a=1[o]",
+          "-map", "[o]", str(f)])
+    return f, _duration(f)
+
+
 def compose_voice(vc: dict[str, tuple[Path, float]], n: int, with_detail: bool, work: Path) -> dict[str, tuple[Path, float]]:
-    """One clip per scene (hook, story1..n, outro): each story's line, then (with_detail) a short pause and its detail."""
-    out = {"hook": vc["hook"], "outro": vc["outro"]}
+    """One clip per scene (hook, story1..n, outro). The opening is the greeting, a beat, then the teaser; the close is
+    the closing thought, a beat, then the sign-off; each story is its line, then (with_detail) a short pause and its
+    detail."""
+    out = {}
+    for key in ("hook", "outro"):
+        out[key] = _join(vc[key][0], vc[key + "d"][0], BEAT[key], work / f"{key}.full.wav") if key + "d" in vc else vc[key]
     for i in range(1, n + 1):
         if not with_detail or f"story{i}d" not in vc:
             out[f"story{i}"] = vc[f"story{i}"]
             continue
-        f = work / f"story{i}.full.wav"
-        _run(["ffmpeg", "-v", "error", "-y", "-i", str(vc[f"story{i}"][0]), "-i", str(vc[f"story{i}d"][0]), "-filter_complex",
-              "[0:a]aresample=44100,aformat=channel_layouts=mono,apad=pad_dur=0.3[a];[1:a]aresample=44100,aformat=channel_layouts=mono[b];[a][b]concat=n=2:v=0:a=1[o]",
-              "-map", "[o]", str(f)])
-        out[f"story{i}"] = (f, _duration(f))
+        out[f"story{i}"] = _join(vc[f"story{i}"][0], vc[f"story{i}d"][0], BEAT["story"], work / f"story{i}.full.wav")
     return out
 
 
@@ -546,7 +675,8 @@ def fetch_voice(script: dict[str, Any], out: Path, api: str, secret: str) -> lis
     return notes
 
 
-KOKORO_SPEED = 1.1   # open-source Kokoro-82M; the voice follows the day's anchor (ANCHORS)
+KOKORO_SPEED = 0.9   # open-source Kokoro-82M reads faster than Aura-2; slowed so the backup keeps the same unhurried pace
+# (about 15 spoken characters a second once the anchor's tempo is applied). The voice follows the day's anchor (ANCHORS)
 
 
 def fetch_voice_backup(script: dict[str, Any], out: Path, model_dir: Path) -> list[str]:
@@ -908,7 +1038,7 @@ class Renderer:
         self.hook = _text_layer(lines, f, TEXT, 1.06)
         self.eyebrow = _text_layer(["TODAY IN AI"], _font(44, 820, 112), INK)
         self.open_date = _text_layer([self.date_h.upper()], _font(36, 700, 112), TEXT)
-        self.count = _text_layer([f"The day's top {self.n} stories in " + ("one minute" if 50 <= self.total <= 70 else f"{int(round(self.total))} seconds")], _font(36, 500), SOFT)
+        self.count = _text_layer([f"The day's top {self.n} stories in " + ("one minute" if 50 <= self.total <= 70 else "under two minutes")], _font(36, 500), SOFT)
         f, lines = _fit(script["hook"], WALL[2] - WALL[0] - 140, (74, 68, 62, 56), 2, 820)
         self.wall_hook = _text_layer(lines, f, TEXT, 1.06)
         self._studio: Image.Image | None = None
@@ -1135,7 +1265,7 @@ class Renderer:
         img = self.bg.copy().convert("RGBA")
         d = ImageDraw.Draw(img)
         self._top(img, None)
-        mins = "ONE-MINUTE" if self.total >= 45 else f"{int(round(self.total))}-SECOND"
+        mins = "ONE-MINUTE" if 45 <= self.total <= 70 else "DAILY" if self.total > 70 else f"{int(round(self.total))}-SECOND"
         bar = Image.new("RGBA", (self.eyebrow.width + 56, 70), RED + (255,))
         bar.alpha_composite(_recolor(self.eyebrow, PAPER), (28, 10))
         img.alpha_composite(bar, (120, 170))
@@ -1202,7 +1332,7 @@ class VerticalRenderer(Renderer):
         self._scenes = [self._vlayers(st, i) for i, st in enumerate(script["stories"])]
         f, lines = _fit(script["hook"], 960, (92, 84, 76, 68), 3, 820)
         self.hook = _text_layer(lines, f, TEXT, 1.06)
-        self.count = _text_layer([f"Top {self.n} stories in " + ("one minute" if 50 <= self.total <= 70 else f"{int(round(self.total))} seconds")], _font(36, 500), SOFT)
+        self.count = _text_layer([f"Top {self.n} stories in " + ("one minute" if 50 <= self.total <= 70 else "under two minutes")], _font(36, 500), SOFT)
         self.out1 = _text_layer(["That's the day", "in AI."], _font(96, 820), TEXT, 1.04)
         f2, l2 = _fit(site_label, 960, (50, 44, 40, 36), 1, 700, 110)
         self.out2 = _text_layer(l2, f2, TOPIC["research"])
@@ -1436,10 +1566,12 @@ def with_music(voice_wav: Path, total: float, starts: list[float], out_dir: Path
 
 
 def _encode(r: Renderer, w: int, h: int, audio: list[str], frames: int, mp4: Path, title: str) -> None:
+    # 1400 kb/s for a one-minute recap; a longer bulletin gets less per second so the file stays well under MAX_BYTES
+    rate = int(min(1400, MAX_BYTES * 0.8 * 8 / 1000 / max(frames / FPS, 1) - 128))
     enc = subprocess.Popen(
         ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{w}x{h}", "-r", str(FPS), "-i", "-",
          *audio, "-map", "0:v", "-map", "1:a", "-c:a", "aac", "-b:a", "128k", "-t", f"{frames / FPS:.3f}",
-         "-c:v", "libx264", "-preset", "veryfast", "-tune", "animation", "-crf", "20", "-maxrate", "1400k", "-bufsize", "2800k",
+         "-c:v", "libx264", "-preset", "veryfast", "-tune", "animation", "-crf", "20", "-maxrate", f"{rate}k", "-bufsize", f"{2 * rate}k",
          "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-metadata", f"title={title}", str(mp4)],
         stdin=subprocess.PIPE)
     assert enc.stdin
@@ -1649,7 +1781,7 @@ def feed(rows: list[dict[str, Any]], base: str) -> str:
             'xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
             f"<title>Frontier Wire: daily recap</title><link>{base}videos/</link>"
             f'<atom:link href="{base}videos/feed.xml" rel="self" type="application/rss+xml"/>'
-            "<description>The day in AI in one minute: the top five stories, each checked against its sources.</description>"
+            "<description>The day in AI in under two minutes: the top five stories, each checked against its sources.</description>"
             f"<lastBuildDate>{format_datetime(datetime.fromisoformat(latest))}</lastBuildDate>"
             + "".join(item(r) for r in rows[:30]) + "</channel></rss>\n")
 
@@ -1686,8 +1818,8 @@ def build_site(out: Path, env: Any, common: dict[str, Any], base: str, repo: str
         urls.append(r["page_url"])
     (vdir / "assets.txt").write_text("\n".join(need) + ("\n" if need else ""))
     (vdir / "index.html").write_text(env.get_template("videos.html").render(
-        **common, rows=rows, root="../", api_url=api_url, title="Daily recaps: today in AI in one minute | Frontier Wire",
-        description="Every evening, the day's top five AI stories in a one-minute video, each checked against its sources.",
+        **common, rows=rows, root="../", api_url=api_url, title="Daily recaps: today in AI in under two minutes | Frontier Wire",
+        description="Every evening, the day's top five AI stories in a short video bulletin, each checked against its sources.",
         canonical=f"{base}videos/", og_image=rows[0]["poster_url"] if rows else f"{base}og/home.png"))
     urls.append(f"{base}videos/")
     top = rows[0] if rows and rows[0]["live"] else None

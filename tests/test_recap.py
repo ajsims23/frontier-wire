@@ -138,7 +138,7 @@ def test_timing_silent_and_narrated_stay_in_bounds():
     long = {k: (None, 6.0 if k in ("hook", "outro") else 12.0) for k in ["hook", "story1", "story2", "story3", "story4", "story5", "outro"]}
     durs, tempo = recap.timing(5, long)
     assert recap.MIN_S <= sum(durs) <= recap.MAX_S - 0.5 + 1e-6 and tempo == recap.VOICE_SPEED
-    faster = {k: (None, 6.0 if k in ("hook", "outro") else 13.8) for k in long}
+    faster = {k: (None, 6.0 if k in ("hook", "outro") else 24.5) for k in long}
     durs, tempo = recap.timing(5, faster)
     assert recap.MIN_S <= sum(durs) <= recap.MAX_S - 0.5 + 1e-6 and recap.VOICE_SPEED < tempo <= recap.MAX_SPEED
     too_long = {k: (None, 26.0) for k in long}
@@ -222,3 +222,62 @@ def test_theme_is_the_length_of_the_recap(tmp_path):
     f = music.theme(12.0, [0, 3, 6, 9, 10.5], tmp_path / "t.wav")
     with wave.open(str(f)) as w:
         assert abs(w.getnframes() / w.getframerate() - 12.0) < 0.01
+
+
+def _programme():
+    script = _published()
+    script.update({"format": 2, "date": "2026-11-18", "written_at": "2026-11-18T19:55+05:30",
+                   "open": "Tonight: a chip giant walks away from China, a price war in models, and a warning about AI on the battlefield.",
+                   "close": "A big day for chips, and the price of intelligence keeps falling."})
+    leads = ["Regulators", "Investors", "Developers", "Turning", "And finally,"]
+    for i, st in enumerate(script["stories"]):
+        st["anchor"] = (f"{leads[i]} are watching story {i} closely. The change reaches well beyond one company, "
+                        "and it could reset how the industry prices things.")
+    return script
+
+
+def test_programme_opens_with_greeting_date_and_signs_off():
+    script = _programme()
+    assert recap.validate(script) == []
+    said = dict(recap.narration(script))
+    assert said["hook"].startswith("Good evening") and "Frontier Wire" in said["hook"]
+    assert "November eighteenth, twenty twenty-six" in said["hook"]
+    assert said["hookd"].startswith("Tonight: a chip giant")
+    assert said["outro"].startswith("A big day for chips")
+    assert "Frontier Wire" in said["outrod"] and "website" in said["outrod"] and "evening" in said["outrod"]
+    script["written_at"] = "2026-11-18T08:10+05:30"
+    said = dict(recap.narration(script))
+    assert said["hook"].startswith("Good morning") and "this morning" in said["outrod"] or "day" in said["outrod"]
+
+
+def test_programme_greeting_and_sign_off_vary_by_day():
+    days = ["2026-11-18", "2026-11-19", "2026-11-20", "2026-11-21"]
+    assert len({recap.greeting({"date": d}).split(".")[0] for d in days}) >= 3
+    assert len({recap.sign_off({"date": d}) for d in days}) == 4
+    assert recap.say_date("2026-03-01") == "Sunday, March first, twenty twenty-six"
+
+
+def test_programme_checks_the_editors_copy():
+    script = _programme()
+    script["open"] = "Good evening, this is Frontier Wire."
+    assert any("leave out the greeting" in e for e in recap.validate(script))
+    script = _programme()
+    script["stories"][2]["anchor"] = "Too short to carry any context at all."
+    assert any("too thin" in e for e in recap.validate(script))
+    script = _programme()
+    for st in script["stories"]:
+        st["anchor"] = "Meanwhile " + "word " * 44
+    errs = recap.validate(script)
+    assert any("vary how the stories begin" in e for e in errs) and any("cut it to 1250" in e for e in errs)
+
+
+def test_old_published_scripts_still_validate():
+    script = _anchored()   # format 1: no greeting added, the one-minute budget
+    said = dict(recap.narration(script))
+    assert said["hook"] == "Good evening, this is Frontier Wire." and "outrod" not in said
+
+
+def test_draft_starts_a_programme(tmp_path):
+    now = recap._dt("2026-11-18T14:20:00+00:00")
+    d = recap.draft([], now)
+    assert d["format"] == 2 and d["written_at"].startswith("2026-11-18T19:50") and recap.part_of_day(d) == "evening"

@@ -7,7 +7,7 @@
   python -m agent preview-desks plan a run and write the Builders and Top Voices desks now (set DATA_DIR to a copy of
                                 data/ to try changes without touching the live site)
   python -m agent recap draft   pick today's top five and write data/recaps/<date>.json for the editor to fill
-  python -m agent recap render --out DIR   check the filled script and render the one-minute recap.mp4, poster.jpg, teaser.gif
+  python -m agent recap render --out DIR   check the filled script and render the recap bulletin recap.mp4, poster.jpg, teaser.gif
   python -m agent recap footage|voice --out DIR   (workflow) stock clips from Pexels / AI narration via the worker
   python -m agent recap check --out DIR    re-check a rendered video (length, size, codec, decodes cleanly)
   python -m agent recap upload --out DIR   push the files to recap-upload/<date>; the Recap release workflow publishes them
