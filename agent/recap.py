@@ -600,7 +600,7 @@ UA = "FrontierWire/1.0 (https://ajsims23.github.io/frontier-wire/; recap bot)"
 FREE_LICENSES = re.compile(r"^(cc0|public domain|pd|cc by \d(\.\d)?|cc-by-\d(\.\d)?)$", re.I)
 
 
-def _commons(http: Any, q: str, key: str = "") -> list[dict[str, Any]]:
+def _commons(http: Any, q: str, key: str = "", loose: bool = False) -> list[dict[str, Any]]:
     """Candidate clips from Wikimedia Commons (no key). Only public domain, CC0 or CC BY (attribution, no share-alike),
     and only the site's own 720p/1080p transcodes, so we never pull a huge original."""
     r = http.get("https://commons.wikimedia.org/w/api.php", headers={"User-Agent": UA}, params={
@@ -610,7 +610,7 @@ def _commons(http: Any, q: str, key: str = "") -> list[dict[str, Any]]:
     r.raise_for_status()
     out = []
     words = [w[:5] for w in re.findall(r"[a-z]+", q.lower()) if len(w) > 2]
-    need = min(2, len(words))
+    need = min(1 if loose else 2, len(words))  # loose: the editor reviews the shortlist, so match more widely
     for page in ((r.json().get("query") or {}).get("pages") or {}).values():
         title = (page.get("title") or "").lower()
         if sum(w in title for w in words) < need:  # Commons search also matches descriptions; insist on the title
@@ -623,8 +623,8 @@ def _commons(http: Any, q: str, key: str = "") -> list[dict[str, Any]]:
         dur = info.get("duration")
         if dur is not None and not 6 <= float(dur) <= 900:
             continue
-        ders = [d for d in info.get("derivatives") or [] if 700 <= (d.get("height") or 0) <= 1080
-                and (d.get("width") or 0) >= 1200 and str(d.get("src", "")).startswith("https://upload.wikimedia.org/")]
+        ders = [d for d in info.get("derivatives") or [] if (480 if loose else 700) <= (d.get("height") or 0) <= 1080
+                and (d.get("width") or 0) >= (850 if loose else 1200) and str(d.get("src", "")).startswith("https://upload.wikimedia.org/")]
         if not ders:
             continue
         d = min(ders, key=lambda d: d.get("height") or 0)
@@ -683,9 +683,9 @@ def shortlist(script: dict[str, Any], out: Path, pexels_key: str = "", pixabay_k
                     except Exception as exc:  # noqa: BLE001
                         notes.append(f"story {i}: {fn.__name__[1:]} search failed ({str(exc)[:80]})")
             if len(cands) < 3:
-                for q in footage_queries(st)[:2]:
+                for q in footage_queries(st):
                     try:
-                        cands += [dict(c, query=q) for c in _commons(http, q)[:3] if c["id"] not in seen]
+                        cands += [dict(c, query=q) for c in _commons(http, q, loose=True)[:3] if c["id"] not in seen]
                     except Exception as exc:  # noqa: BLE001
                         notes.append(f"story {i}: commons search failed ({str(exc)[:80]})")
             uniq, ids = [], set()
