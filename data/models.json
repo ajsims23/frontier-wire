@@ -386,8 +386,8 @@
       "lab": "DeepSeek",
       "released": "2026-09-10",
       "context": 1048576,
-      "price_in": 0.3,
-      "price_out": 1.2,
+      "price_in": 0.051,
+      "price_out": 0.567,
       "inputs": [
         "text",
         "image"
@@ -496,8 +496,8 @@
       "lab": "Alibaba (Qwen)",
       "released": "2026-08-14",
       "context": 1024000,
-      "price_in": 0.15,
-      "price_out": 1.875,
+      "price_in": 0.06,
+      "price_out": 2.2,
       "inputs": [
         "text",
         "image",
@@ -1095,34 +1095,6 @@
   ],
   "changes": [
     {
-      "date": "2026-11-14",
-      "model": "DeepSeek V4.1 Flash",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4.1 Flash output price cut: $1.2 → $0.2028 per 1M tokens"
-    },
-    {
-      "date": "2026-11-14",
-      "model": "Qwen3.8 27B",
-      "lab": "Alibaba (Qwen)",
-      "kind": "context",
-      "text": "Qwen3.8 27B context window: 1,048,575 → 1,024,000 tokens"
-    },
-    {
-      "date": "2026-11-15",
-      "model": "DeepSeek V4 Flash 0731",
-      "lab": "DeepSeek",
-      "kind": "price_rise",
-      "text": "DeepSeek V4 Flash 0731 input price raised: $0.0434 → $0.06 per 1M tokens"
-    },
-    {
-      "date": "2026-11-15",
-      "model": "DeepSeek V4 Flash 0731",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4 Flash 0731 output price cut: $0.3 → $0.18 per 1M tokens"
-    },
-    {
       "date": "2026-11-15",
       "model": "Kimi K3.1 Pro",
       "lab": "Moonshot AI",
@@ -1513,7 +1485,35 @@
       "lab": "OpenAI",
       "kind": "new",
       "text": "Now available: GPT-6.2 Sol ($2 in / $10 out per 1M tokens)"
+    },
+    {
+      "date": "2026-11-18",
+      "model": "DeepSeek V4.1 Flash",
+      "lab": "DeepSeek",
+      "kind": "price_cut",
+      "text": "DeepSeek V4.1 Flash input price cut: $0.3 → $0.051 per 1M tokens"
+    },
+    {
+      "date": "2026-11-18",
+      "model": "DeepSeek V4.1 Flash",
+      "lab": "DeepSeek",
+      "kind": "price_cut",
+      "text": "DeepSeek V4.1 Flash output price cut: $1.2 → $0.567 per 1M tokens"
+    },
+    {
+      "date": "2026-11-18",
+      "model": "Qwen3.8 27B",
+      "lab": "Alibaba (Qwen)",
+      "kind": "price_cut",
+      "text": "Qwen3.8 27B input price cut: $0.15 → $0.06 per 1M tokens"
+    },
+    {
+      "date": "2026-11-18",
+      "model": "Qwen3.8 27B",
+      "lab": "Alibaba (Qwen)",
+      "kind": "price_rise",
+      "text": "Qwen3.8 27B output price raised: $1.875 → $2.2 per 1M tokens"
     }
   ],
-  "updated_at": "2026-11-17T22:07:56+00:00"
+  "updated_at": "2026-11-18T01:34:06+00:00"
 }
