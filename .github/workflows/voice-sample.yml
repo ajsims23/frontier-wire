@@ -70,6 +70,7 @@ jobs:
             --title "Recap voice sample" --notes "Test renders of the anchor voice. Not a published recap."
           gh release upload voice-sample "/tmp/$name" --clobber
           for f in take take-unsplit; do   # the raw read, for checking how it was cut
-            [ -f "$OUT/voice/$f.wav" ] && ffmpeg -v error -y -i "$OUT/voice/$f.wav" -c:a libmp3lame -q:a 3 "/tmp/${{ inputs.anchor }}-$f.mp3" \
+            [ -f "$OUT/voice/$f.wav" ] || continue
+            ffmpeg -v error -y -i "$OUT/voice/$f.wav" -c:a libmp3lame -q:a 3 "/tmp/${{ inputs.anchor }}-$f.mp3" \
               && gh release upload voice-sample "/tmp/${{ inputs.anchor }}-$f.mp3" --clobber
           done
