@@ -1,0 +1,56 @@
+name: Footage shortlist
+
+# The daily recap editor pushes the day's script to recap-footage/<date>. This searches free stock video for each
+# story (the editor's queries; Pexels and Pixabay with their keys, free-licence Wikimedia Commons as a fallback),
+# draws a filmstrip sheet per story with the candidates lettered A, B, C..., and attaches the sheets and
+# candidates.json to the "footage-shortlist" pre-release as <date>-story<i>.jpg / <date>-candidates.json.
+# The editor looks at the sheets and picks a clip per story (or none). Then the branch is deleted.
+on:
+  push:
+    branches: ["recap-footage/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: footage-shortlist
+  cancel-in-progress: false
+
+jobs:
+  shortlist:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Install ffmpeg
+        timeout-minutes: 6
+        run: |
+          command -v ffprobe && exit 0
+          sudo timeout 240 apt-get update -qq && sudo timeout 240 apt-get install -y -qq ffmpeg >/dev/null
+      - name: The script
+        run: |
+          DATE="${GITHUB_REF_NAME#recap-footage/}"
+          echo "DATE=$DATE" >> "$GITHUB_ENV"
+          mkdir -p "_short/$DATE" && cp recap-upload/script.json "_short/$DATE/script.json"
+      - name: Search and draw the sheets
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: python -m agent recap shortlist --date "$DATE" --out "_short/$DATE"
+      - name: Attach to the footage-shortlist pre-release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view footage-shortlist >/dev/null 2>&1 || gh release create footage-shortlist --prerelease --latest=false \
+            --title "Recap footage shortlist" --notes "Candidate stock clips for the recap editor to pick from. Not published."
+          cd "_short/$DATE/shortlist"
+          for f in story*.jpg; do cp "$f" "/tmp/$DATE-$f"; gh release upload footage-shortlist "/tmp/$DATE-$f" --clobber; done
+          cp candidates.json "/tmp/$DATE-candidates.json" && gh release upload footage-shortlist "/tmp/$DATE-candidates.json" --clobber
+      - name: Delete the branch
+        if: always()
+        run: git push origin --delete "$GITHUB_REF_NAME" || true

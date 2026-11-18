@@ -48,7 +48,15 @@
     return out;
   }
 
+  // B-roll is a folder of frames per story; an <img> shows the frame for the playhead, and seek() waits for the
+  // frames it changed to decode before the capture
+  const pending = [];
+  const frameSrc = (b, f) => "file://" + b.dir + "/" + String(clamp(f, 0, b.n - 1) + 1).padStart(4, "0") + ".jpg";
+  function setImg(img, src) { if (img._src !== src) { img._src = src; img.src = src; pending.push(img.decode().catch(() => {})); } }
+  function brollImg(parent) { const im = el("img", "abs", parent); css(im, { left: 0, top: 0, width: "100%", height: "100%", objectFit: "cover" }); return im; }
+
   window.seek = function (t) {
+    pending.length = 0;
     const scs = S.scenes;
     let cur = scs.findIndex((s) => t >= s.d.start && t < s.d.start + s.d.dur);
     if (cur < 0) cur = t < 0 ? 0 : scs.length - 1;
@@ -58,6 +66,7 @@
       if (on) scs[i].update(t, t - scs[i].d.start);
     }
     updateSet(t, scs[cur]); updateChrome(t, cur); updateCaptions(t); updateOverlays(t, cur);
+    return Promise.all(pending);
   };
 
   // ------------------------------------------------------------ the virtual set
@@ -129,6 +138,10 @@
 
   // the open: a title sting, then tonight's rundown as the anchor teases it
   function openScene(d, r) {
+    const reel = TL.scenes.filter((s) => s.kind === "story" && s.broll).map((s) => s.broll);
+    const mont = reel.length ? brollImg(r) : null;
+    const shade = reel.length ? el("div", "layer", r) : null;
+    if (shade) shade.style.background = "linear-gradient(180deg, rgba(5,13,16,.55), rgba(5,13,16,.82))";
     const wrap = el("div", "abs title", r); css(wrap, { left: 0, right: 0, transformOrigin: "50% 50%" });
     const lock = el("div", "", wrap); css(lock, { display: "flex", justifyContent: "center", alignItems: V ? "center" : "flex-end", gap: px(26) + "px", flexDirection: V ? "column" : "row" });
     const bars = markEl(lock, px(V ? 120 : 110), [TL.accent, "#8aabff", "#ffc266", TL.accent]);
@@ -159,6 +172,12 @@
         css(rund, { top: px(V ? 330 : 190) + "px" });
       },
       update(t, lt) {
+        if (mont) {  // cut through the day's clips, about one a second and a half
+          const k = Math.floor(lt / 1.5), b = reel[k % reel.length];
+          setImg(mont, frameSrc(b, Math.floor((lt - k * 1.5 + 1) * TL.fps)));
+          mont.style.opacity = 0.55 * K(lt, 0.2, 1.0);
+          mont.style.transform = `scale(${1.08 - 0.05 * ((lt % 1.5) / 1.5)})`;
+        }
         bars.forEach((b, i) => { b.style.transform = `scaleY(${back((lt - 0.1 - i * 0.07) / 0.5)})`; b.style.transformOrigin = "50% 100%"; });
         chars.forEach((c, i) => { const k = K(lt, 0.25 + i * 0.035, 0.5); c.style.opacity = k; c.style.transform = `translateY(${(1 - k) * px(60)}px)`; });
         show(sub, K(lt, 0.9, 0.5), (1 - K(lt, 0.9, 0.5)) * px(16));
@@ -189,6 +208,14 @@
 
   // a story: a headline slam, then the explainer graphic with the lower third
   function storyScene(d, r) {
+    const B = d.broll;
+    const vid = B ? brollImg(r) : null;
+    const grade = B ? el("div", "layer", r) : null;
+    if (grade) grade.style.background = V
+      ? "linear-gradient(180deg, rgba(5,13,16,.35) 0%, rgba(5,13,16,.15) 35%, rgba(5,13,16,.8) 70%, rgba(5,13,16,.95) 100%)"
+      : "linear-gradient(90deg, rgba(5,13,16,.88) 0%, rgba(5,13,16,.55) 45%, rgba(5,13,16,.15) 75%), linear-gradient(180deg, rgba(5,13,16,0) 60%, rgba(5,13,16,.7) 100%)";
+    const credit = B ? el("div", "abs", r, "STOCK FOOTAGE  \u00b7  " + esc(B.credit)) : null;
+    if (credit) css(credit, { right: px(64) + "px", fontWeight: 700, fontSize: px(17) + "px", letterSpacing: ".08em", color: "rgba(230,240,238,.75)", background: "rgba(5,13,16,.55)", padding: `${px(5)}px ${px(10)}px` });
     const ghost = el("div", "abs ghostnum", r, String(d.i).padStart(2, "0"));
     css(ghost, { fontSize: px(V ? 520 : 560) + "px", right: px(V ? -30 : 40) + "px", top: px(V ? 180 : 120) + "px" });
     const slam = el("div", "abs", r);
@@ -220,6 +247,19 @@
         g = d.graphic ? makeGraphic(d.graphic, gbox, box.w, box.h, d) : figureGraphic(d, gbox, box.w, box.h);
       },
       update(t, lt) {
+        // the footage: shot 1, and a closing shot on longer stories (s3)
+        let vk = 0;
+        if (B) {
+          const s3 = d.dur - d.shot2 >= 8.5 ? d.dur - 3.0 : null;
+          vk = Math.max(1 - K(lt, s2 - 0.05, 0.4), s3 != null ? K(lt, s3, 0.45) : 0);
+          if (vk > 0.001) {
+            setImg(vid, frameSrc(B, Math.floor(lt * TL.fps)));
+            css(vid, { opacity: vk, visibility: "visible", transform: `scale(${1.08 - 0.06 * clamp(lt / d.dur)})` });
+          } else vid.style.visibility = "hidden";
+          grade.style.opacity = vk;
+          css(credit, { top: (vk > 0 && lt > s2 ? (l3.offsetTop - px(44)) : H - px(62) - px(46)) + "px" });
+          show(credit, vk * K(lt, 0.4, 0.4));
+        }
         // shot 1: the headline slams in
         const out = K(lt, s2 - 0.1, 0.45, easeIO);
         show(ghost, K(lt, 0.1, 0.8) * (1 - out) , 0, (1 - K(lt, 0.1, 1.2)) * px(80), 1 + 0.04 * clamp(lt / 4));
@@ -232,7 +272,11 @@
         chip.style.clipPath = `inset(0 ${(1 - k1) * 100}% 0 0)`; chip.style.visibility = k1 > 0 ? "visible" : "hidden";
         bar.style.clipPath = `inset(0 ${(1 - k2) * 100}% 0 0)`; bar.style.visibility = k2 > 0 ? "visible" : "hidden";
         show(plate, k3, (1 - k3) * px(18));
-        if (g) { const kg = K(lt, s2 + 0.05, 0.5); gbox.style.opacity = kg; gbox.style.visibility = kg > 0 ? "visible" : "hidden"; g(t, lt); }
+        if (g) {
+          const s3 = B && d.dur - d.shot2 >= 8.5 ? d.dur - 3.0 : null;
+          const kg = K(lt, s2 + 0.05, 0.5) * (s3 != null ? 1 - K(lt, s3 - 0.1, 0.4) : 1);
+          gbox.style.opacity = kg; gbox.style.visibility = kg > 0 ? "visible" : "hidden"; g(t, lt);
+        }
       },
     };
     return sc;
@@ -245,6 +289,7 @@
     const stories = TL.scenes.filter((s) => s.kind === "story");
     const cards = stories.map((s, i) => {
       const c = el("div", "card", r); c.style.borderTopColor = s.color;
+      if (s.broll) { const im = el("img", "", c); im.src = frameSrc(s.broll, Math.min(s.broll.n - 1, TL.fps)); css(im, { display: "block", width: `calc(100% + ${px(44)}px)`, margin: `-${px(20)}px -${px(22)}px ${px(14)}px`, height: px(V ? 0 : 150) + "px", objectFit: "cover", opacity: 0.9 }); if (V) im.style.display = "none"; }
       const n = el("div", "cn", c, String(i + 1).padStart(2, "0")); n.style.color = s.color;
       const k = el("div", "ck", c, esc(s.label)); k.style.color = s.color;
       el("div", "ch2", c, esc(s.line));

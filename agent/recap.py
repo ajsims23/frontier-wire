@@ -295,6 +295,10 @@ def validate(script: dict[str, Any]) -> list[str]:
                 errs.append(f"story {i}: {key} must be at most {lim[key]} characters")
         if len(s.get("image_prompt") or "") > 300:
             errs.append(f"story {i}: image_prompt must be at most 300 characters")
+        clip = s.get("clip")
+        if v2 and clip not in (None, "", "none", {}):
+            if not isinstance(clip, dict) or not _clip_host_ok(clip.get("link", "")) or not clip.get("provider"):
+                errs.append(f"story {i}: \"clip\" must be one of the shortlisted candidates (use recap pick), or \"none\"")
         if v2:  # every story is told with a news graphic built from its own facts
             g = s.get("graphic")
             if not g:
@@ -571,7 +575,7 @@ def _pexels(http: Any, q: str, key: str) -> list[dict[str, Any]]:
         if files:
             f = min(files, key=lambda f: abs((f.get("width") or 0) - 1920))
             out.append({"id": f"px{v['id']}", "link": f["link"], "name": ((v.get("user") or {}).get("name") or "")[:60],
-                        "url": v.get("url") or "https://www.pexels.com", "provider": "Pexels"})
+                        "url": v.get("url") or "https://www.pexels.com", "provider": "Pexels", "duration": v.get("duration")})
     return out
 
 
@@ -588,7 +592,7 @@ def _pixabay(http: Any, q: str, key: str) -> list[dict[str, Any]]:
         f = next((vids[k] for k in ("large", "medium") if (vids.get(k) or {}).get("url") and (vids[k].get("width") or 0) >= 1280), None)
         if f:
             out.append({"id": f"pb{v['id']}", "link": f["url"], "name": (v.get("user") or "")[:60],
-                        "url": v.get("pageURL") or "https://pixabay.com", "provider": "Pixabay"})
+                        "url": v.get("pageURL") or "https://pixabay.com", "provider": "Pixabay", "duration": v.get("duration")})
     return out
 
 
@@ -627,7 +631,7 @@ def _commons(http: Any, q: str, key: str = "") -> list[dict[str, Any]]:
         artist = re.sub(r"<[^>]+>", "", (meta.get("Artist") or {}).get("value") or "").strip()
         out.append({"id": f"wc{page.get('pageid')}", "link": d["src"], "name": (artist or "Wikimedia Commons")[:60],
                     "url": info.get("descriptionurl") or "https://commons.wikimedia.org", "provider": f"Wikimedia Commons, {lic}",
-                    "ffmpeg": True})
+                    "ffmpeg": True, "duration": float(dur) if dur is not None else None})
     return out
 
 
@@ -645,6 +649,162 @@ def _download(http: Any, c: dict[str, Any], dest: Path) -> None:
                 fh.write(chunk)
 
 
+CLIP_HOSTS = ("videos.pexels.com", "player.vimeo.com", "cdn.pixabay.com", "upload.wikimedia.org")
+
+
+def _clip_host_ok(link: str) -> bool:
+    from urllib.parse import urlparse
+    host = urlparse(link or "").hostname or ""
+    return link.startswith("https://") and any(host == h or host.endswith("." + h) for h in CLIP_HOSTS)
+
+
+def footage_queries(st: dict[str, Any]) -> list[str]:
+    """The editor's searches for a story's B-roll: up to three, separated by "|"."""
+    qs = [q.strip() for q in (st.get("footage") or "").split("|") if q.strip()]
+    return qs[:3] or [DEFAULT_FOOTAGE.get(st.get("category", ""), DEFAULT_FOOTAGE["industry"])]
+
+
+def shortlist(script: dict[str, Any], out: Path, pexels_key: str = "", pixabay_key: str = "", per_story: int = 6) -> list[str]:
+    """Run in GitHub Actions: candidate clips for each story, for the editor to look at and pick from. Searches the
+    editor's queries on Pexels and Pixabay (when keys exist) and, only if those find too little, free-licence
+    Wikimedia Commons. Writes out/candidates.json and a filmstrip sheet per story (out/story<i>.jpg: each
+    candidate lettered A, B, C... with three frames from its start, middle and end)."""
+    import httpx
+    out.mkdir(parents=True, exist_ok=True)
+    notes, all_c, seen = [], {}, set()
+    sources = [(fn, k) for fn, k in ((_pexels, pexels_key), (_pixabay, pixabay_key)) if k]
+    with httpx.Client(timeout=60, follow_redirects=True) as http:
+        for i, st in enumerate(script["stories"], 1):
+            cands: list[dict[str, Any]] = []
+            for q in footage_queries(st):
+                for fn, k in sources:
+                    try:
+                        cands += [dict(c, query=q) for c in fn(http, q, k)[:3] if c["id"] not in seen]
+                    except Exception as exc:  # noqa: BLE001
+                        notes.append(f"story {i}: {fn.__name__[1:]} search failed ({str(exc)[:80]})")
+            if len(cands) < 3:
+                for q in footage_queries(st)[:2]:
+                    try:
+                        cands += [dict(c, query=q) for c in _commons(http, q)[:3] if c["id"] not in seen]
+                    except Exception as exc:  # noqa: BLE001
+                        notes.append(f"story {i}: commons search failed ({str(exc)[:80]})")
+            uniq, ids = [], set()
+            for c in cands:
+                if c["id"] not in ids:
+                    ids.add(c["id"])
+                    uniq.append(c)
+            shown = []
+            for c in uniq:
+                if len(shown) >= per_story:
+                    break
+                frames = _filmstrip(c, out / f"s{i}-{c['id']}")
+                if frames:
+                    c = {k: v for k, v in c.items() if k != "ffmpeg"} | ({"ffmpeg": True} if c.get("ffmpeg") else {})
+                    shown.append((c, frames))
+            for j, (c, _) in enumerate(shown):
+                c["key"] = "ABCDEFGH"[j]
+                seen.add(c["id"])
+            all_c[str(i)] = [c for c, _ in shown]
+            _sheet(st, i, shown, out / f"story{i}.jpg")
+            if not shown:
+                notes.append(f"story {i}: no candidate clips for {footage_queries(st)}")
+    (out / "candidates.json").write_text(json.dumps(all_c, indent=2))
+    return notes
+
+
+def _filmstrip(c: dict[str, Any], stem: Path) -> list[Path]:
+    """Three small frames (start, middle, end) read straight from the clip's URL."""
+    dur = float(c.get("duration") or 10)
+    got = []
+    for k, frac in enumerate((0.12, 0.5, 0.88)):
+        f = stem.with_name(f"{stem.name}-{k}.jpg")
+        try:
+            _run(["ffmpeg", "-v", "error", "-y", "-user_agent", UA, "-ss", f"{max(0.5, dur * frac):.1f}", "-i", c["link"],
+                  "-frames:v", "1", "-vf", "scale=360:-2", str(f)], timeout=60)
+            if f.exists() and f.stat().st_size > 1000:
+                got.append(f)
+        except Exception:  # noqa: BLE001
+            pass
+    return got if len(got) >= 2 else []
+
+
+def _sheet(st: dict[str, Any], i: int, shown: list[tuple[dict[str, Any], list[Path]]], dest: Path) -> None:
+    rows = max(1, len(shown))
+    sheet = Image.new("RGB", (1240, 90 + rows * 220), (12, 22, 26))
+    d = ImageDraw.Draw(sheet)
+    d.text((20, 16), f"Story {i}: {st.get('line') or st.get('headline', '')}"[:110], font=_font(28, 760), fill=(240, 244, 242))
+    d.text((20, 54), "Searched: " + " | ".join(footage_queries(st))[:120], font=_font(20, 500), fill=(160, 180, 176))
+    if not shown:
+        d.text((20, 120), "No candidates found.", font=_font(30, 700), fill=(255, 140, 120))
+    for r, (c, frames) in enumerate(shown):
+        y = 90 + r * 220
+        d.text((20, y + 70), "ABCDEFGH"[r], font=_font(72, 860), fill=(95, 227, 207))
+        d.text((20, y + 160), f"{c['provider'][:18]}", font=_font(16, 600), fill=(170, 190, 186))
+        d.text((20, y + 182), f"{(c.get('duration') or 0):.0f}s", font=_font(16, 600), fill=(170, 190, 186))
+        for k, f in enumerate(frames[:3]):
+            try:
+                im = Image.open(f).convert("RGB")
+                im = _cover(im, 360, 203)
+                sheet.paste(im, (130 + k * 370, y + 8))
+            except Exception:  # noqa: BLE001
+                pass
+    sheet.save(dest, quality=85)
+
+
+SHORTLIST_TAG = "footage-shortlist"
+
+
+def get_shortlist(date: str, out: Path, wait: int = 600) -> list[Path]:
+    """Editor side: wait (up to `wait` seconds) for the shortlist workflow's sheets for `date` on the
+    footage-shortlist pre-release, and download them to `out`. Uses the gh CLI (REST only)."""
+    import time
+    out.mkdir(parents=True, exist_ok=True)
+    repo = "ajsims23/frontier-wire"
+    deadline = time.time() + wait
+    while True:
+        r = subprocess.run(["gh", "api", f"repos/{repo}/releases/tags/{SHORTLIST_TAG}", "--jq",
+                            f'[.assets[] | select(.name | startswith("{date}-")) | {{id, name, updated_at}}]'], capture_output=True, text=True)
+        assets = json.loads(r.stdout) if r.returncode == 0 and r.stdout.strip() else []
+        if any(a["name"] == f"{date}-candidates.json" for a in assets) and _fresh(assets, date):
+            break
+        if time.time() > deadline:
+            return []
+        time.sleep(20)
+    files = []
+    for a in assets:
+        dest = out / a["name"][len(date) + 1:]
+        with dest.open("wb") as fh:
+            subprocess.run(["gh", "api", "-H", "Accept: application/octet-stream", f"repos/{repo}/releases/assets/{a['id']}"], stdout=fh, check=True)
+        files.append(dest)
+    return sorted(files)
+
+
+def _fresh(assets: list[dict[str, Any]], date: str) -> bool:
+    """The candidates are from the latest request (newer than the request marker written by shortlist-request)."""
+    marker = Path(tempfile.gettempdir()) / f"recap-footage-{date}.requested"
+    if not marker.exists():
+        return True
+    req = datetime.fromtimestamp(marker.stat().st_mtime, timezone.utc)
+    cand = next(a for a in assets if a["name"] == f"{date}-candidates.json")
+    return _dt(cand["updated_at"]) >= req
+
+
+def pick_clip(script: dict[str, Any], story: int, choice: str, candidates: Path) -> str:
+    """Copy shortlisted candidate `choice` (A, B, ...) into story `story` as its B-roll, or clear it ("none")."""
+    if not 1 <= story <= len(script["stories"]):
+        raise ValueError(f"story must be 1-{len(script['stories'])}")
+    st = script["stories"][story - 1]
+    if choice.strip().lower() == "none":
+        st["clip"] = "none"
+        return f"story {story}: no B-roll (graphics only)"
+    cands = json.loads(candidates.read_text()).get(str(story)) or []
+    c = next((c for c in cands if c.get("key", "").upper() == choice.strip().upper()), None)
+    if not c:
+        raise ValueError(f"story {story} has no candidate {choice!r} (has {', '.join(x['key'] for x in cands) or 'none'})")
+    st["clip"] = {k: c[k] for k in ("id", "link", "name", "url", "provider", "duration", "ffmpeg") if k in c}
+    return f"story {story}: B-roll {c['key']} ({c['provider']}, {c.get('name') or 'unknown'})"
+
+
 def fetch_footage(script: dict[str, Any], out: Path, pexels_key: str = "", pixabay_key: str = "") -> list[str]:
     """Run in GitHub Actions: one free stock clip per story, from Pexels and/or Pixabay (whichever keys exist), searched
     by the editor's `footage` query, else a query for the story's beat. Saves out/<i>.mp4 and out/credits.json.
@@ -656,8 +816,23 @@ def fetch_footage(script: dict[str, Any], out: Path, pexels_key: str = "", pixab
     notes, used, credits = [], set(), []
     with httpx.Client(timeout=60, follow_redirects=True) as http:
         for i, st in enumerate(script["stories"], 1):
-            if is_programme(script) and st.get("graphic"):
-                continue  # told with a news graphic: no stock clip (they too often show unrelated people)
+            if is_programme(script):  # the editor looked at a shortlist and picked this exact clip (or none)
+                c = st.get("clip")
+                if not isinstance(c, dict) or not c.get("link"):
+                    continue
+                dest = out / f"{i}.mp4"
+                try:
+                    if not _clip_host_ok(c["link"]):
+                        raise RuntimeError("not a Pexels, Pixabay or Wikimedia link")
+                    _download(http, c, dest)
+                    if not usable_clip(dest):
+                        raise RuntimeError("clip unreadable or below 640x360")
+                    credits.append({"story": i, "name": c.get("name") or f"{c.get('provider')} contributor", "url": c.get("url", ""),
+                                    "provider": c.get("provider", "")})
+                except Exception as exc:  # noqa: BLE001
+                    dest.unlink(missing_ok=True)
+                    notes.append(f"story {i}: picked clip {c.get('id')} not usable ({str(exc)[:120]}); graphics only")
+                continue
             q = (st.get("footage") or "").strip() or DEFAULT_FOOTAGE.get(st["category"], DEFAULT_FOOTAGE["industry"])
             try:
                 cands, errs = [], []
@@ -1779,8 +1954,11 @@ def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.gi
     if why is None:
         try:
             tl = motion.timeline(script, durs, vc, tempo if vc else 1.0, site_label)
-            motion.record(tl, W, H, audio, mp4, title, out_dir / "engine")
-            motion.record(tl, VW, VH, audio, out_dir / "recap-vertical.mp4", f"{title} (vertical)", out_dir / "engine")
+            for w_, h_, f_, ttl in ((W, H, mp4, title), (VW, VH, out_dir / "recap-vertical.mp4", f"{title} (vertical)")):
+                cut = motion.with_broll(tl, clips, w_, h_, out_dir / "engine")
+                motion.record(cut, w_, h_, audio, f_, ttl, out_dir / "engine")
+                shutil.rmtree(out_dir / "engine", ignore_errors=True)
+            tl = cut
             engine = "browser"
         except Exception as exc:  # noqa: BLE001
             print(f"::warning::broadcast renderer failed ({str(exc)[:200]}); using the basic renderer", flush=True)
@@ -1793,7 +1971,8 @@ def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.gi
         _encode(rv, VW, VH, audio, frames, out_dir / "recap-vertical.mp4", f"{title} (vertical)")
     (out_dir / "render.json").write_text(json.dumps({"narrated": bool(vc), "voice": read, "tempo": round(tempo, 3),
                                                      "provider": voice_provider(voice) if vc else "", "engine": engine,
-                                                     "footage": sorted(i + 1 for i in r.clips), "scenes": [round(d, 2) for d in durs]}))
+                                                     "footage": sorted(i + 1 for i in r.clips) if engine == "pillow" else
+                                                     [sc["i"] for sc in tl["scenes"] if sc.get("broll")], "scenes": [round(d, 2) for d in durs]}))
     if engine == "browser":  # the poster: tonight's rundown, all five headlines in
         op = tl["scenes"][0]
         at = min((op["teaser_t"] or op["dur"] * 0.45) + 2.6, op["dur"] - 0.6)
@@ -1888,15 +2067,15 @@ def asset_url(repo: str, date: str, name: str) -> str:
     return f"https://github.com/{repo}/releases/download/{tag(date)}/{name}"
 
 
-def upload(script: dict[str, Any], out_dir: Path, repo_dir: Path) -> str:
+def upload(script: dict[str, Any], out_dir: Path, repo_dir: Path, prefix: str = "recap-upload") -> str:
     """Hand the day's script to GitHub Actions on a short-lived branch `recap-upload/<date>` (main plus one commit).
     The "Recap release" workflow generates the AI illustrations, renders and checks the video, creates the Release,
     puts the recap on the site and deletes the branch. (Claude sessions can't reach the image model or create
     Releases themselves.) `out_dir` is unused; kept so the command line stays the same."""
-    errs = validate(script)
+    errs = validate(script) if prefix == "recap-upload" else []
     if errs:
         raise RuntimeError("not uploading: " + "; ".join(errs))
-    branch = f"recap-upload/{script['date']}"
+    branch = f"{prefix}/{script['date']}"
     git = lambda *a: _run(["git", "-C", str(repo_dir), *a], text=True).stdout  # noqa: E731
     git("fetch", "-q", "origin", "main")
     wt = Path(tempfile.mkdtemp(prefix="recap-upload-"))

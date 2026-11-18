@@ -10,6 +10,10 @@
   python -m agent recap render --out DIR   check the filled script and render the recap bulletin recap.mp4, poster.jpg, teaser.gif
   python -m agent recap footage|voice --out DIR   (workflow) stock clips from Pexels / AI narration via the worker
   python -m agent recap voice-gemini --out DIR   (workflow) the anchor's read from Gemini TTS (the main voice)
+  python -m agent recap shortlist-request         (editor) send today's footage searches to GitHub Actions
+  python -m agent recap shortlist --out DIR       (workflow) candidate clips + filmstrip sheets per story
+  python -m agent recap shortlist-get --out DIR   (editor) wait for and download the sheets and candidates
+  python -m agent recap pick --story N --choice B (editor) use candidate B as story N's B-roll ("none" for none)
   python -m agent recap check --out DIR    re-check a rendered video (length, size, codec, decodes cleanly)
   python -m agent recap upload --out DIR   push the files to recap-upload/<date>; the Recap release workflow publishes them
   python -m agent recap stamp --out DIR    (workflow) check the files and mark the recap published
@@ -36,7 +40,9 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("check-models")
     sub.add_parser("preview-desks")
     rc = sub.add_parser("recap")
-    rc.add_argument("action", choices=["draft", "render", "check", "upload", "stamp", "images", "footage", "voice", "voice-gemini", "voice-backup", "frames"])
+    rc.add_argument("action", choices=["draft", "render", "check", "upload", "stamp", "images", "footage", "voice", "voice-gemini", "voice-backup", "frames", "shortlist", "shortlist-request", "shortlist-get", "pick"])
+    rc.add_argument("--story", type=int, default=0, help="pick: the story number")
+    rc.add_argument("--choice", default="", help="pick: the candidate letter (A, B, ...) or none")
     rc.add_argument("--date", default="", help="YYYY-MM-DD in IST (default: today)")
     rc.add_argument("--out", default="", help="folder for the rendered files")
     rc.add_argument("--force", action="store_true", help="draft: replace a script the editor already filled")
@@ -155,6 +161,36 @@ def _recap(args: argparse.Namespace) -> int:
         print(f"wrote {path}", file=sys.stderr)
         return 0
     out = Path(args.out or f"_recap/{date}")
+    if args.action == "shortlist-request":
+        script = json.loads(path.read_text())
+        branch = recap.upload(script, out, Path(__file__).resolve().parent.parent, prefix="recap-footage")
+        import tempfile
+        (Path(tempfile.gettempdir()) / f"recap-footage-{date}.requested").touch()
+        print(f"pushed {branch}; the Footage shortlist workflow makes the sheets (about 3 minutes)")
+        return 0
+    if args.action == "shortlist":
+        script = json.loads((out / "script.json").read_text())
+        notes = recap.shortlist(script, out / "shortlist", os.environ.get("PEXELS_API_KEY", ""), os.environ.get("PIXABAY_API_KEY", ""))
+        for n in notes:
+            print(f"::warning::{n}")
+        return 0
+    if args.action == "shortlist-get":
+        files = recap.get_shortlist(date, out / "shortlist")
+        if not files:
+            print("no shortlist yet (the workflow may still be running, or it failed)", file=sys.stderr)
+            return 1
+        print("\n".join(str(f) for f in files))
+        return 0
+    if args.action == "pick":
+        script = json.loads(path.read_text())
+        try:
+            msg = recap.pick_clip(script, args.story, args.choice, out / "shortlist" / "candidates.json")
+        except Exception as exc:  # noqa: BLE001
+            print(f"pick failed: {exc}", file=sys.stderr)
+            return 1
+        path.write_text(json.dumps(script, indent=2, ensure_ascii=False) + "\n")
+        print(msg)
+        return 0
     if args.action == "render":  # in Actions the uploaded script sits next to the output; locally it's in data/recaps
         script = json.loads(((out / "script.json") if (out / "script.json").exists() else path).read_text())
         try:

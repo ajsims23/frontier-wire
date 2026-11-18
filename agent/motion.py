@@ -261,6 +261,43 @@ def timeline(script: dict[str, Any], durs: list[float], clips: dict[str, tuple[P
     }
 
 
+# ---------------------------------------------------------------- B-roll
+def with_broll(tl: dict[str, Any], clips: Path | None, w: int, h: int, work: Path) -> dict[str, Any]:
+    """A copy of the timeline with each story's picked clip as a folder of frames sized for a w x h cut (cropped
+    to fill it), as long as the story's scene (looped if the clip is shorter)."""
+    import copy
+    out = copy.deepcopy(tl)
+    if not clips or not clips.exists():
+        return out
+    try:
+        credits = {c["story"]: c for c in json.loads((clips / "credits.json").read_text())}
+    except Exception:  # noqa: BLE001
+        credits = {}
+    for sc in out["scenes"]:
+        if sc["kind"] != "story":
+            continue
+        f = clips / f"{sc['i']}.mp4"
+        if not f.exists() or not recap.usable_clip(f):
+            continue
+        d = (work / f"broll-{w}x{h}-{sc['i']}").resolve()
+        shutil.rmtree(d, ignore_errors=True)
+        d.mkdir(parents=True)
+        try:
+            recap._run(["ffmpeg", "-v", "error", "-y", "-stream_loop", "-1", "-i", str(f), "-t", f"{sc['dur'] + 0.5:.2f}", "-an",
+                        "-vf", f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},fps={tl['fps']},eq=saturation=0.92",
+                        "-q:v", "4", str(d / "%04d.jpg")], timeout=300)
+        except Exception as exc:  # noqa: BLE001
+            print(f"::warning::story {sc['i']}: B-roll frames failed ({str(exc)[:120]})", flush=True)
+            continue
+        n = len(list(d.glob("*.jpg")))
+        if n < tl["fps"]:
+            continue
+        c = credits.get(sc["i"]) or {}
+        prov = re.sub(r",.*", "", c.get("provider") or "")
+        sc["broll"] = {"dir": str(d), "n": n, "credit": f"{c.get('name') or prov} / {prov}" if c.get("name") and prov else (prov or "Stock")}
+    return out
+
+
 # ---------------------------------------------------------------- recording
 def available() -> str | None:
     """Why the browser renderer can't run here (None if it can)."""

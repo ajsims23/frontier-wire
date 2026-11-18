@@ -8,5 +8,5 @@ const b = await puppeteer.launch({ executablePath: process.env.CHROME_PATH || "/
 const p = await b.newPage(); p.on("pageerror", (e) => console.error("ERR", e.message)); p.on("console", (m) => console.error("console", m.text()));
 await p.setViewport({ width: +w, height: +h }); await p.goto("file://" + path.join(here, "engine.html"));
 await p.evaluate((t, wd) => window.init(t, wd), tl, world); await p.evaluate(() => document.fonts.ready); await p.evaluate(() => window.layout());
-for (const t of ts) { await p.evaluate((x) => window.seek(x), +t); await p.screenshot({ path: path.join(out, `f_${w}x${h}_${t}.png`) }); }
+for (const t of ts) { await p.evaluate(async (x) => { await window.seek(x); }, +t); await p.screenshot({ path: path.join(out, `f_${w}x${h}_${t}.png`) }); }
 await b.close();

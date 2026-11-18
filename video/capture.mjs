@@ -32,7 +32,7 @@ async function work(k) {
   await page.evaluate(() => window.layout());
   const cdp = await page.createCDPSession();
   for (let f = k; f < frames && !failed; f += workers) {  // interleaved, so every worker gets an even mix of scenes
-    await page.evaluate((t) => window.seek(t), f / tl.fps);
+    await page.evaluate(async (t) => { await window.seek(t); }, f / tl.fps);
     const { data } = await cdp.send("Page.captureScreenshot", { format: "jpeg", quality: 92, optimizeForSpeed: true });
     fs.writeFileSync(path.join(outDir, String(f).padStart(5, "0") + ".jpg"), Buffer.from(data, "base64"));
     if (++done % 500 === 0) console.error(`${w}x${h}: ${done}/${frames} frames (${((Date.now() - t0) / 1000).toFixed(0)}s)`);
