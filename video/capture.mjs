@@ -16,6 +16,7 @@ fs.mkdirSync(outDir, { recursive: true });
 const browser = await puppeteer.launch({
   executablePath: chromeArg || process.env.CHROME_PATH || "/usr/bin/google-chrome",
   headless: true,
+  protocolTimeout: 120000,
   args: ["--no-sandbox", "--disable-gpu", "--hide-scrollbars", "--allow-file-access-from-files", "--force-color-profile=srgb",
          "--font-render-hinting=none", "--disable-dev-shm-usage", "--mute-audio"],
 });

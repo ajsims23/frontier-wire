@@ -52,7 +52,12 @@
   // frames it changed to decode before the capture
   const pending = [];
   const frameSrc = (b, f) => "file://" + b.dir + "/" + String(clamp(f, 0, b.n - 1) + 1).padStart(4, "0") + ".jpg";
-  function setImg(img, src) { if (img._src !== src) { img._src = src; img.src = src; pending.push(img.decode().catch(() => {})); } }
+  function setImg(img, src) {
+    if (img._src === src) return;
+    img._src = src; img.src = src;
+    // wait for the frame to decode, but never more than 2.5 s (a decode can stall in headless Chrome)
+    pending.push(Promise.race([img.decode().catch(() => {}), new Promise((r) => setTimeout(r, 2500))]));
+  }
   function brollImg(parent) { const im = el("img", "abs", parent); css(im, { left: 0, top: 0, width: "100%", height: "100%", objectFit: "cover" }); return im; }
 
   window.seek = function (t) {
