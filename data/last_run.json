@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-18T17:00:40+00:00",
+  "started_at": "2026-11-18T19:13:17+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -8,10 +8,10 @@
     "cerebras"
   ],
   "sources": {
-    "openai": "ok (1407)",
+    "openai": "ok (1410)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
-    "huggingface": "ok (911)",
+    "huggingface": "ok (912)",
     "nvidia": "ok (18)",
     "anthropic": "ok (6)",
     "meta-ai": "ok (6)",
@@ -21,32 +21,68 @@
   },
   "dropped": [
     {
-      "title": "The Gemini app is now available on lower-memory Android devices.",
-      "reason": "score 4: Minor product availability update for mobile app on low-memory devices."
+      "title": "Why your fine-tuning job takes longer than the FLOPs say",
+      "reason": "score 4: Exploratory post on fine-tuning performance bottlenecks; doesn't constitute a major research breakthrough."
     }
   ],
-  "written": [],
+  "written": [
+    {
+      "id": "50e3ea47cbae",
+      "headline": "Google DeepMind releases Genie 4 world model with native audio",
+      "category": "models",
+      "summary": "Google DeepMind has released Genie 4, an interactive world model that generates photorealistic environments and native audio in real time. The model supports simulations up to two minutes long and allows users to modify scenes using text prompts.",
+      "url": "https://deepmind.google/blog/genie-4-is-now-available",
+      "sources": 3,
+      "quotes": 1
+    },
+    {
+      "id": "53f2a14376dd",
+      "headline": "OpenAI details Codex sandbox security and execution controls",
+      "category": "models",
+      "summary": "OpenAI published details on how Codex runs commands on user machines while enforcing user-controlled filesystem and network limits across macOS, Linux, and Windows.",
+      "url": "https://openai.com/index/inside-the-codex-sandbox",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
   "notes": [],
   "mode": "breaking",
   "timings": {
-    "gather": 11.1,
-    "judge": 8.1,
-    "verify and write": -0.0,
-    "tagging": -0.0,
-    "trackers": -0.0,
-    "photos": -0.0,
-    "stock photos": -0.0,
-    "alerts": 1.8
+    "gather": 15.1,
+    "judge": 12.1,
+    "verify and write": 91.1,
+    "tagging": 5.7,
+    "trackers": 122.5,
+    "photos": 0.1,
+    "stock photos": 1.1,
+    "alerts": 9.4
   },
-  "fetched": 2490,
-  "fresh": 1,
-  "judged": 1,
-  "kept": 0,
-  "trackers": "filed 0 stories; no tracker changed",
-  "photos": "0 saved, 0 unavailable",
-  "alerts": "17 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":0}",
-  "ai_requests_run": 1,
-  "ai_tokens_run": 5010,
-  "ai_requests_today": 268,
-  "provider_log": []
+  "fetched": 2494,
+  "fresh": 3,
+  "judged": 3,
+  "kept": 2,
+  "research": {
+    "investigated": 1,
+    "confirmed": 1,
+    "tool_calls": 2
+  },
+  "research_log": [
+    "Genie 4 is now available: confirmed (searched “Genie 4 is now available Google DeepMind”; read techrepublic.com)"
+  ],
+  "threads": [
+    "OpenAI GPT-6.2 Astra and Sol rollout: OpenAI details Codex sandbox security and execution controls"
+  ],
+  "tagged": 2,
+  "trackers": "filed 2 stories; updated frontier-race, agent-safety",
+  "photos": "1 saved, 0 unavailable",
+  "stock photos": "0 added",
+  "alerts": "19 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":17}",
+  "ai_requests_run": 11,
+  "ai_tokens_run": 27766,
+  "ai_requests_today": 279,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+    "gemini: network error ReadTimeout, retrying",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model"
+  ]
 }
