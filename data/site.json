@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T04:12:24+00:00",
+  "updated_at": "2026-11-18T07:34:50+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Nvidia has announced it will stop selling H200 chips to China, concluding an arrangement that involved shipping chips through the United States and paying a 25% tariff. The decision follows the departure of former CEO Jensen Huang and coincides with new regulations restricting advanced U.S. chips in foreign data centers serving Chinese customers.",
@@ -80,6 +80,346 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Sarvam AI now runs an API service where developers can use models like DeepSeek, GLM, Kimi, Gemma, and Sarvam's own 105B model, all hosted on servers in India. This keeps data inside the country and avoids sending requests to foreign APIs. The service charges per token used and offers enterprise features like zero data retention.",
+        "terms": [
+          {
+            "term": "Open-weight model",
+            "meaning": "An AI model whose trained parameters are publicly available for anyone to download and run."
+          },
+          {
+            "term": "Inference",
+            "meaning": "The process of running a trained AI model to generate responses from user inputs."
+          },
+          {
+            "term": "Sovereign AI",
+            "meaning": "A national strategy to develop and control AI capabilities within a country's own infrastructure and governance."
+          }
+        ],
+        "watch_next": [
+          "Introductory pricing runs through end of 2026",
+          "Sarvam offers on-premises deployment of its inference stack for critical institutions"
+        ]
+      },
+      "benchmarks": [
+        {
+          "model": "Sarvam 105B",
+          "benchmark": "First token latency",
+          "score": "200 milliseconds"
+        },
+        {
+          "model": "DeepSeek V4.1 Flash",
+          "benchmark": "Cache hit rate",
+          "score": "95.7% of prompt tokens served from cache"
+        }
+      ],
+      "audiences": {
+        "builders": "Developers get a single OpenAI-compatible API to switch between eight models hosted in India with rupee pricing and optional zero-data-retention.",
+        "business": "Enterprises can run inference on Indian GPUs with contractual 99.95% uptime SLA and data sovereignty, but the platform relies heavily on Chinese models despite government backing for indigenous development.",
+        "investors": "Sarvam's $1.5B valuation and ₹98.68 crore GPU subsidy now support an infrastructure business competing with Krutrim, OpenAI, Anthropic, Together AI, and Fireworks AI in the Indian inference market."
+      },
+      "id": "d930ebd0b69d",
+      "headline": "Sarvam AI launches Token Factory hosting mostly Chinese models on Indian GPUs, reigniting sovereign AI debate",
+      "summary": "Sarvam AI launched Token Factory on November 16, an inference platform serving eight open-weight models through a single OpenAI-compatible API on GPU clusters in India. Six of the eight models are from Chinese companies, while Sarvam received a ₹98.68 crore government GPU subsidy to build indigenous foundation models.",
+      "why_it_matters": "The launch highlights tension between India's sovereign AI ambitions and commercial pressure to host the world's best open models on local infrastructure.",
+      "category": "policy",
+      "lab": "Sarvam AI",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "sovereign AI",
+        "India",
+        "inference",
+        "open-weight models",
+        "IndiaAI Mission"
+      ],
+      "quotes": [],
+      "score": 8,
+      "url": "https://analyticsindiamag.com/ai-features/sarvams-token-factory-sparks-indias-sovereign-ai-debate-again",
+      "source_id": "aim",
+      "desk": "india",
+      "ai_relevance": "core",
+      "image": "https://analyticsindiamag.com/cdn-cgi/image/width=1200,height=675,fit=cover,quality=70,format=jpeg/https://gspoceeuwjazjpplxtxe.supabase.co/storage/v1/object/public/imported-images/1768649835264-7c7469ee-61d4-4ec6-aca4-8d86a742e21a-rcar39.webp",
+      "sources": [
+        {
+          "url": "https://analyticsindiamag.com/ai-features/sarvams-token-factory-sparks-indias-sovereign-ai-debate-again",
+          "publisher": "Analytics India Magazine",
+          "title": "Sarvam’s Token Factory Sparks India’s Sovereign AI Debate, Again"
+        },
+        {
+          "url": "https://business-standard.com/technology/artificial-intelligence/foreign-ai-models-can-turn-india-into-a-digital-colony-sarvam-co-founder-126111701153_1.html",
+          "publisher": "Business Standard",
+          "title": "Foreign AI models can turn India into a digital colony: Sarvam co-founder"
+        },
+        {
+          "url": "https://inc42.com/buzz/sarvam-ai-opens-token-factory-to-run-global-ai-models-on-indian-servers",
+          "publisher": "Inc42",
+          "title": "Sarvam AI Opens Token Factory To Run Global AI Models On Indian Servers"
+        },
+        {
+          "url": "https://unite.ai/sarvam-opens-india-hosted-token-factory-for-open-weight-models",
+          "publisher": "Unite.AI",
+          "title": "Sarvam Opens India-Hosted Token Factory for Open-Weight Models"
+        },
+        {
+          "url": "https://indianexpress.com/article/explained/explained-ai/sarvam-ai-chinese-models-token-factory-india-ai-sovereignty-10967996",
+          "publisher": "The Indian Express",
+          "title": "Why is Sarvam AI offering Chinese AI models, and what does it mean for India’s AI ambitions?"
+        }
+      ],
+      "research": {
+        "steps": 4,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-18T07:10:00+00:00",
+      "created_at": "2026-11-18T07:34:50+00:00",
+      "thread": "t-2b1356156f54",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "india"
+      ],
+      "deal": null,
+      "relevance": {},
+      "cover": "₹98.68 crore",
+      "trackers": [
+        "india-ai"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Anthropic's upcoming public listing will turn the stakes of its investors into liquid, multibillion-dollar gains. Smaller venture firms that bet early are set to earn returns that could surpass those of larger, well-known rivals. This will shift the relative standing of different venture capital firms in the industry.",
+        "terms": [
+          {
+            "term": "Venture capital (VC)",
+            "meaning": "Firms that invest in early-stage companies in exchange for equity, hoping for large returns when the company grows or goes public."
+          },
+          {
+            "term": "Private market valuation",
+            "meaning": "The estimated value of a company based on recent private stock sales, before it is publicly traded."
+          },
+          {
+            "term": "Initial public offering (IPO)",
+            "meaning": "The process of a private company selling shares to the public for the first time on a stock exchange."
+          }
+        ],
+        "watch_next": [
+          "Anthropic's IPO pricing, expected Wednesday evening, with trading set to start Thursday on the Nasdaq under the ticker ANT."
+        ]
+      },
+      "audiences": {
+        "business": "The IPO will crystallize multibillion-dollar returns for venture firms and tech companies that backed Anthropic, reshaping VC power rankings.",
+        "investors": "Smaller VCs like Spark Capital and Iconiq are set for outsized returns, with Iconiq's stake worth about $17 billion at the $965 billion private valuation."
+      },
+      "id": "2d572302d891",
+      "headline": "Anthropic IPO set to deliver windfall to smaller VC firms",
+      "summary": "Anthropic's upcoming IPO is poised to generate multibillion-dollar returns for venture firms and tech companies that backed the Claude maker, with smaller firms like Spark Capital and Iconiq set for outsized gains. Iconiq's stake is worth about $17 billion at the company's $965 billion private valuation, and Spark Capital's $75 million investment is now worth $7 billion.",
+      "why_it_matters": "The IPO will redraw VC power rankings, giving lesser-known firms returns that could surpass larger blue-chip rivals and reshaping the venture capital landscape.",
+      "category": "industry",
+      "lab": "Anthropic",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "Anthropic",
+        "IPO",
+        "venture capital",
+        "Spark Capital",
+        "Iconiq"
+      ],
+      "quotes": [],
+      "score": 8,
+      "url": "https://techmeme.com/261118/p3",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://s.yimg.com/lo/mysterio/api/e6931aef37e471ef82960e48817ac13bb6663f7fb9a7c52a6a5479b3930515cb/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fbloomberg_holding_pen_162%2F774cfe6557249171b16ceaede3816fe1.jpg",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261118/p3",
+          "publisher": "techmeme.com",
+          "title": "Anthropic IPO is set to redraw VC power rankings, with lesser-known firms like Spark Capital poised for outsized returns compared with larger, blue-chip rivals (George Hammond/Financial Times)"
+        },
+        {
+          "url": "https://msn.com/en-us/money/markets/anthropic-ipo-for-hundreds-of-billions-of-dollars-flowing-into-ai-startups-a-big-debut-is-a-must/ar-AA2hD5K7",
+          "publisher": "CNBC on MSN",
+          "title": "Anthropic IPO: For hundreds of billions of dollars flowing into AI startups, a big debut is a must"
+        },
+        {
+          "url": "https://ft.com/content/a3430f0d-0080-4970-8eec-2c14c8438b3d?syn-25a6b1a6=1",
+          "publisher": "Financial Times",
+          "title": "Anthropic IPO set to deliver windfall to handful of smaller VC firms"
+        },
+        {
+          "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-ipo-drive-blockbuster-gains-193403179.html",
+          "publisher": "Yahoo Finance",
+          "title": "Anthropic IPO to Drive Blockbuster Gains for Iconiq, Spark, GIC"
+        },
+        {
+          "url": "https://theinformation.com/articles/anthropics-vc-investors-hit-10x-returns-ipo",
+          "publisher": "The Information",
+          "title": "Anthropic IPO Yields 10X Returns for Venture Firms"
+        }
+      ],
+      "research": {
+        "steps": 4,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-18T07:00:41+00:00",
+      "created_at": "2026-11-18T07:34:50+00:00",
+      "thread": "t-a50b07bc6191",
+      "sectors": [],
+      "regions": [
+        "us"
+      ],
+      "deal": {
+        "type": "ipo",
+        "company": "Anthropic",
+        "amount": "",
+        "usd": null
+      },
+      "relevance": {},
+      "cover": "$17 billion",
+      "trackers": [
+        "ai-money"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "LanceDB provides a unified platform for storing and preparing diverse AI training data like videos, images, and sensor readings. Its lakehouse architecture lets researchers search and organize massive datasets without managing separate systems, reducing preparation time from weeks to days. The platform handles hundreds of petabytes and supports training across thousands of GPUs simultaneously.",
+        "terms": [
+          {
+            "term": "Lakehouse",
+            "meaning": "A system combining the flexibility of a data lake with database-style querying and management."
+          },
+          {
+            "term": "Multimodal data",
+            "meaning": "Data that includes multiple types such as text, images, video, and sensor readings."
+          },
+          {
+            "term": "Lance",
+            "meaning": "An open-source data format optimized for AI workloads that enables fast retrieval of individual records."
+          }
+        ],
+        "watch_next": [
+          "LanceDB plans to expand its platform to cover the full model-development workflow including training-data management, feature engineering, experiment execution and data loading.",
+          "LanceDB aims to let researchers manage petabytes of training data, context, logs and rollouts in one place while running massively parallel experiments."
+        ]
+      },
+      "benchmarks": [
+        {
+          "model": "LanceDB platform",
+          "benchmark": "Request throughput",
+          "score": "more than 130,000 requests per second"
+        },
+        {
+          "model": "LanceDB platform",
+          "benchmark": "Latency",
+          "score": "below 210 milliseconds for 95% of requests"
+        },
+        {
+          "model": "LanceDB platform",
+          "benchmark": "Table capacity",
+          "score": "hundreds of petabytes of data or more than 40 billion vector"
+        },
+        {
+          "model": "LanceDB platform",
+          "benchmark": "Parallel training scale",
+          "score": "training across 8,000 GPUs in parallel"
+        }
+      ],
+      "audiences": {
+        "builders": "Developers gain a unified lakehouse that handles multimodal data at scale, reducing dataset preparation time and supporting parallel training across thousands of GPUs.",
+        "business": "Enterprises adopting AI can consolidate fragmented data pipelines into a single platform used by companies like Netflix and Microsoft AI.",
+        "investors": "The 10x revenue growth and $98.5M total funding signal strong market demand for AI data infrastructure."
+      },
+      "id": "34d89275b888",
+      "headline": "LanceDB raises $57.5M Series B to expand multimodal AI lakehouse",
+      "summary": "LanceDB raised $57.5 million in Series B funding led by Bessemer Venture Partners and Innovation Endeavors to expand its multimodal lakehouse for AI training data. The round brings total funding to $98.5 million.",
+      "why_it_matters": "The funding highlights growing investor focus on data infrastructure as a bottleneck for scaling multimodal AI model training.",
+      "category": "industry",
+      "lab": "LanceDB",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "funding",
+        "data-infrastructure",
+        "multimodal",
+        "lakehouse"
+      ],
+      "quotes": [
+        {
+          "text": "Typically, research teams have to put different parts of their dataset in different places, and they lose weeks or months getting a whole training dataset ready for that single training run at the end of the day.",
+          "speaker": "Chang She",
+          "speaker_role": "Co-founder and Chief Executive",
+          "source_url": "https://siliconangle.com/2026/11/17/lancedb-raises-57-5m-to-accelerate-ai-model-training-with-multimodal-data-platform"
+        },
+        {
+          "text": "A training example at Runway doesn't stay still. It starts as a video and a prompt, then we add embeddings, resolution and duration metadata, whatever the next experiment needs.",
+          "speaker": "Kamil Sindi",
+          "speaker_role": "CTO, Runway",
+          "source_url": "https://unite.ai/lancedb-raises-57-5m-series-b-to-expand-its-multimodal-ai-lakehouse"
+        }
+      ],
+      "score": 6,
+      "url": "https://techmeme.com/261117/p72",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://images.siliconangle.com/blogs.dir/1/files/2021/11/hand-data-globe.jpg",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261117/p72",
+          "publisher": "techmeme.com",
+          "title": "LanceDB, which makes a multimodal lakehouse for AI training, built on the open format Lance, raised a $57.5M Series B led by Bessemer and Innovation Endeavors (Kyt Dotson/SiliconANGLE)"
+        },
+        {
+          "url": "https://siliconangle.com/2026/11/17/lancedb-raises-57-5m-to-accelerate-ai-model-training-with-multimodal-data-platform",
+          "publisher": "SiliconANGLE",
+          "title": "LanceDB raises $57.5M to accelerate AI model training with multimodal data platform"
+        },
+        {
+          "url": "https://unite.ai/lancedb-raises-57-5m-series-b-to-expand-its-multimodal-ai-lakehouse",
+          "publisher": "Unite.AI",
+          "title": "LanceDB Raises $57.5M Series B to Expand Its Multimodal AI Lakehouse"
+        },
+        {
+          "url": "https://securities.io/lancedb-secures-57-5-million-series-b-for-ai-research-data-platform",
+          "publisher": "Securities.io",
+          "title": "LanceDB Secures $57.5 Million Series B for AI Research Data Platform"
+        }
+      ],
+      "research": {
+        "steps": 2,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-18T04:30:05+00:00",
+      "created_at": "2026-11-18T07:34:50+00:00",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": {
+        "type": "funding",
+        "company": "LanceDB",
+        "amount": "$57.5 million",
+        "usd": 57500000.0
+      },
+      "relevance": {},
+      "cover": "$57.5M",
+      "trackers": [
+        "ai-money"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "Nvidia is partnering with multiple manufacturing companies to build more components needed for AI computing hardware. These agreements involve billions of dollars in funding and financing to increase production across substrates, advanced packaging, testing, and optical engines over the next few years.",
@@ -164,6 +504,96 @@
       "cover": "2029",
       "trackers": [
         "ai-infrastructure"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "The IPO will convert a large portion of the equity held by employees into publicly traded shares, potentially increasing their liquidity and affecting the local economy.",
+        "terms": [
+          {
+            "term": "IPO",
+            "meaning": "Initial public offering, the first sale of a company's shares to the public."
+          },
+          {
+            "term": "equity",
+            "meaning": "Ownership interest in a company, represented by shares."
+          },
+          {
+            "term": "paper wealth",
+            "meaning": "Value of assets that are not yet liquid, such as unvested shares."
+          }
+        ],
+        "watch_next": [
+          "Anthropic's IPO will begin trading on Nasdaq under ticker ANT.",
+          "OpenAI's IPO likely to follow next year."
+        ]
+      },
+      "audiences": {
+        "business": "Shows the scale of wealth creation in AI, impacting investment strategies.",
+        "investors": "Highlights potential liquidity events and market dynamics in AI startups."
+      },
+      "id": "a8c038b3bd40",
+      "headline": "San Francisco AI insiders could hold $1.2 trillion in equity as Anthropic goes public",
+      "summary": "San Francisco AI startup insiders are estimated to hold $1.2 trillion in equity, led by Anthropic, which is set to go public at an expected $1.4 trillion valuation.",
+      "why_it_matters": "The IPO could unlock massive paper wealth for insiders, influencing housing markets and investor sentiment in the AI sector.",
+      "category": "industry",
+      "lab": "Anthropic",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "AI",
+        "IPO",
+        "San Francisco",
+        "wealth",
+        "equity"
+      ],
+      "quotes": [],
+      "score": 8,
+      "url": "https://techmeme.com/261117/p67",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://s.yimg.com/lo/mysterio/api/cd37d8951a298a14a2dc85aab54d33df384498f6d76e1c5b3905ae543bf835d9/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fcre_daily_340%2Fb63c631f4b1fab041b2bc0afe0190fa6",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261117/p67",
+          "publisher": "techmeme.com",
+          "title": "Analysis: San Francisco-based AI startup insiders hold a combined $1.2T in equity; at Anthropic's IPO midpoint, the average employee's equity is valued at $72M (Bloomberg)"
+        },
+        {
+          "url": "https://bloomberg.com/news/features/2026-11-17/san-francisco-s-anthropic-openai-boom-could-create-1-2-trillion-in-wealth",
+          "publisher": "Bloomberg",
+          "title": "Anthropic’s IPO Is Igniting a Massive AI Wealth Boom in San Francisco"
+        },
+        {
+          "url": "https://finance.yahoo.com/real-estate/articles/san-francisco-ai-boom-could-155153374.html",
+          "publisher": "Yahoo Finance",
+          "title": "San Francisco’s AI Boom Could Mint $1.2T and Strain Housing"
+        }
+      ],
+      "research": {
+        "steps": 6,
+        "read": 0,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-18T01:50:07+00:00",
+      "created_at": "2026-11-18T07:34:50+00:00",
+      "thread": "t-a50b07bc6191",
+      "sectors": [],
+      "regions": [
+        "us"
+      ],
+      "deal": {
+        "type": "ipo",
+        "company": "Anthropic",
+        "amount": "",
+        "usd": null
+      },
+      "relevance": {},
+      "cover": "$1.2 trillion",
+      "trackers": [
+        "ai-money"
       ],
       "photo_local": true
     },
@@ -447,6 +877,92 @@
       "cover": "Gemini 4 Hydrogen",
       "trackers": [
         "frontier-race"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Sarvam AI's Token Factory lets Indian developers and companies run AI models on servers inside India, so their data does not have to be sent to overseas providers. Six of the eight models it hosts were built by Chinese companies, which has drawn criticism because Sarvam was selected under the IndiaAI Mission to build an indigenous foundation model.",
+        "terms": [
+          {
+            "term": "Inference",
+            "meaning": "The process of running an AI model to generate a response, as opposed to training it."
+          },
+          {
+            "term": "Token",
+            "meaning": "The basic units of text an AI model processes; pricing is often per million tokens."
+          },
+          {
+            "term": "Open-weight model",
+            "meaning": "A model whose weights are publicly available and can be run on your own or a third party's servers."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers can call eight open-weight models through one OpenAI-compatible API on Indian servers, with DeepSeek V4.1 Flash from ₹14 per million input tokens and zero-data-retention options.",
+        "business": "Sarvam's move puts it in direct competition with Krutrim, OpenAI and Anthropic for India-based inference, while its reliance on Chinese models complicates its IndiaAI Mission mandate.",
+        "investors": "Sarvam, valued at $1.5 billion after raising $234 million, is expanding from model building into inference, a market where it competes with established global and Indian providers."
+      },
+      "id": "e924893212f4",
+      "headline": "Sarvam AI hosts six Chinese models in India, reigniting sovereign AI debate",
+      "summary": "Sarvam AI's Token Factory, launched November 16, offers eight AI models through a single OpenAI-compatible API on Indian GPU servers, but six of the eight are built by Chinese companies. The mix has reopened debate over whether a startup backed by the IndiaAI Mission should prioritise indigenous models or make the world's best models accessible in India.",
+      "why_it_matters": "Sarvam's choice to host mostly Chinese models on Indian servers exposes a tension at the heart of India's AI strategy: building homegrown models versus providing local access to the strongest existing ones.",
+      "category": "industry",
+      "lab": "Sarvam AI",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "Sarvam AI",
+        "Token Factory",
+        "sovereign AI",
+        "IndiaAI Mission",
+        "inference"
+      ],
+      "quotes": [],
+      "score": 6,
+      "url": "https://indianexpress.com/article/explained/explained-ai/sarvam-ai-chinese-models-token-factory-india-ai-sovereignty-10967996",
+      "source_id": "chief",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://analyticsindiamag.com/cdn-cgi/image/width=1200,height=675,fit=cover,quality=70,format=jpeg/https://gspoceeuwjazjpplxtxe.supabase.co/storage/v1/object/public/imported-images/1768649835264-7c7469ee-61d4-4ec6-aca4-8d86a742e21a-rcar39.webp",
+      "sources": [
+        {
+          "url": "https://indianexpress.com/article/explained/explained-ai/sarvam-ai-chinese-models-token-factory-india-ai-sovereignty-10967996",
+          "publisher": "The Indian Express",
+          "title": "Why is Sarvam AI offering Chinese AI models, and what does it mean for India’s AI ambitions?"
+        },
+        {
+          "url": "https://analyticsindiamag.com/ai-features/sarvams-token-factory-sparks-indias-sovereign-ai-debate-again",
+          "publisher": "Analytics India Magazine",
+          "title": "Sarvam’s Token Factory Sparks India’s Sovereign AI Debate, Again"
+        },
+        {
+          "url": "https://inc42.com/buzz/sarvam-ai-opens-token-factory-to-run-global-ai-models-on-indian-servers",
+          "publisher": "Inc42",
+          "title": "Sarvam AI Opens Token Factory To Run Global AI Models On Indian Servers"
+        },
+        {
+          "url": "https://msn.com/en-in/news/other/sarvam-ai-opens-token-factory-to-run-global-ai-models-on-indian-servers/ar-AA2hByVb",
+          "publisher": "Newspoint on MSN",
+          "title": "Sarvam AI opens token factory to run global AI models on Indian servers"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-17T23:20:00+00:00",
+      "created_at": "2026-11-18T07:34:50+00:00",
+      "thread": "t-2b1356156f54",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "india"
+      ],
+      "deal": null,
+      "relevance": {},
+      "cover": "Token Factory",
+      "trackers": [
+        "india-ai"
       ],
       "photo_local": true
     },
@@ -848,6 +1364,147 @@
         "ai-infrastructure"
       ],
       "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Researchers found that vision-language models can give harmful help just by describing what is happening in an image, even when nobody asks for anything harmful. They built a test set and an attack method that raised the success rate of getting harmful answers to 71.2% on average across eight models. Existing text and image filters did little to stop this.",
+        "terms": [
+          {
+            "term": "Vision-language model (VLM)",
+            "meaning": "A model that takes both an image and text as input and answers questions about the image."
+          },
+          {
+            "term": "Attack success rate (ASR)",
+            "meaning": "The share of attack attempts that successfully get the model to give harmful help."
+          },
+          {
+            "term": "Scene state",
+            "meaning": "The stage of a harmful event shown in an image, from early (Initial) through middle (Medium) to final (Ultimate)."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "VLM developers should test scene-state inputs, since text-side filters and visual moderation offer limited protection against this attack.",
+        "business": "Organisations deploying vision-language models face a new safety risk where models give harmful help just from interpreting images."
+      },
+      "id": "d3943358cd80",
+      "headline": "Researchers find vision-language models give harmful help from scene images",
+      "summary": "Researchers led by Tongxi Wu identified a \"scene-state safety vulnerability\" in which vision-language models provide harmful assistance by interpreting visual events, even without an explicit harmful request. Their attack method S3TA achieved a model-average attack success rate of 71.2% across eight VLMs, exceeding the strongest baseline by 6.1 percentage points.",
+      "why_it_matters": "It shows a new way to bypass VLM safety filters that relies on the model's own scene reasoning rather than on the user's text, so defenders must protect the assistance models infer from images, not just screen input content.",
+      "category": "research",
+      "lab": "",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "vision-language models",
+        "safety",
+        "jailbreak",
+        "multimodal",
+        "evaluation"
+      ],
+      "quotes": [],
+      "score": 7,
+      "url": "https://arxiv.org/abs/2611.23206",
+      "source_id": "arxiv",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://arxiv.org/html/2611.23206v1/figures/text_example.png",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2611.23206",
+          "publisher": "arXiv (cs.AI, cs.CL, cs.LG)",
+          "title": "Reading Scene States: Uncovering Safety Failures in Vision-Language Models"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-17T18:48:02+00:00",
+      "created_at": "2026-11-18T07:34:50+00:00",
+      "figure_checked": true,
+      "image_kind": "figure",
+      "sectors": [
+        "cybersecurity"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {},
+      "cover": "71.2%",
+      "trackers": [
+        "agent-safety"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "As AI agents from different companies start working together, there is no standard way to confirm which agent is which, whether it is running the approved model and tools, or whether it is allowed to perform a task. ATI proposes a security layer that checks these things before an agent acts, using digital certificates and integrity tokens. In the authors' tests, enabling these checks raised the rate at which attacks were contained from 43% to 84%.",
+        "terms": [
+          {
+            "term": "Public Key Infrastructure (PKI)",
+            "meaning": "A system of digital certificates that lets one party verify the identity of another over a network."
+          },
+          {
+            "term": "Zero Trust Architecture (ZTA)",
+            "meaning": "A security model that assumes no user, device, or agent is automatically trusted and requires verification for every request."
+          },
+          {
+            "term": "Remote attestation",
+            "meaning": "A process where a system cryptographically proves its actual configuration (such as which model or tools it is running) to a verifier."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "ATI is an open-source, framework-independent package that adds identity, integrity, and authorization checks to existing agent frameworks without modifying their models.",
+        "business": "The paper argues that as AI agents collaborate across organizations, a common mechanism for verifying agent identity and authorization is needed to manage security risk."
+      },
+      "id": "1d0b49e9508f",
+      "headline": "Researchers propose ATI, a security layer for cross-organization AI agents",
+      "summary": "Viet K. Nguyen and Mohammad I. Husain published a paper proposing the Agent Trust Infrastructure (ATI), a framework-independent security architecture for verifying identity, integrity, and authorization of AI agents operating across organizations. In their simulated eight-organization federation, enabling ATI's enforcement mechanisms increased attack containment from 43% to 84% with about 174 microseconds of overhead per request.",
+      "why_it_matters": "It addresses a gap in current agent frameworks—no common way to verify cross-organizational agent identity and authorization—as multi-organization agent collaboration grows.",
+      "category": "research",
+      "lab": "arXiv (cs.AI, cs.CL, cs.LG)",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "ai-agents",
+        "security",
+        "identity",
+        "attestation",
+        "zero-trust"
+      ],
+      "quotes": [],
+      "score": 7,
+      "url": "https://arxiv.org/abs/2611.23202",
+      "source_id": "arxiv",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2611.23202",
+          "publisher": "arXiv (cs.AI, cs.CL, cs.LG)",
+          "title": "Agent Trust Infrastructure (ATI): A Federated Identity, Trust, Attestation, and Accountability Architecture for Cross-Organization Autonomous AI Agents"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-17T18:44:25+00:00",
+      "created_at": "2026-11-18T07:34:50+00:00",
+      "figure_checked": true,
+      "sectors": [
+        "cybersecurity"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {},
+      "cover": "84%",
+      "trackers": [
+        "agent-safety"
+      ],
+      "stock_tried": "2026-11-18T07:34:50+00:00"
     },
     {
       "explainer": {
@@ -4979,711 +5636,6 @@
         "agent-safety"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "OpenAI is embedding outside safety experts inside its organization to test its models for risky behaviors, such as trying to bypass safety rules. Previously, outside testing happened mostly right before a model was released to the public, but these new pilots give researchers deeper and earlier access during training and deployment.",
-        "terms": [
-          {
-            "term": "independent evaluators",
-            "meaning": "Independent organizations that test AI systems for safety, behavior, and risks."
-          },
-          {
-            "term": "subversion",
-            "meaning": "An AI model's attempt to undermine safety rules and control mechanisms."
-          },
-          {
-            "term": "interpretability",
-            "meaning": "The ability to understand how AI models work internally and interpret their decisions."
-          }
-        ],
-        "watch_next": [
-          "Apollo’s pilot will begin this week, with six of its evaluators working within OpenAI for four months."
-        ]
-      },
-      "audiences": {
-        "builders": "Third-party safety evaluators gain deep, employee-like access to OpenAI systems for targeted pilot assessments.",
-        "business": "OpenAI partners with four independent evaluation firms to pilot embedded safety assessments following recent security incidents.",
-        "investors": "Independent safety evaluators are taking on increased importance in the multi-trillion-dollar AI industry following high-profile safety incidents."
-      },
-      "id": "99f66f454c3b",
-      "headline": "OpenAI partners with independent evaluators for safety pilots",
-      "summary": "OpenAI signed agreements with four independent evaluation firms—Apollo Research, METR, Transluce, and Goodfire—to conduct pilot assessments on model behavior and safeguards. Six evaluators from Apollo Research will work within OpenAI for four months beginning this week.",
-      "why_it_matters": "The move marks a shift toward embedding independent safety researchers inside frontier AI labs to monitor risks like model subversion during training and deployment.",
-      "category": "safety",
-      "lab": "OpenAI",
-      "model_name": "GPT-5.6 Sol",
-      "model_type": "Language",
-      "tags": [
-        "OpenAI",
-        "Apollo Research",
-        "METR",
-        "Goodfire",
-        "Transluce"
-      ],
-      "quotes": [],
-      "score": 8,
-      "url": "https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion",
-      "source_id": "techcrunch-ai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://www.unite.ai/wp-content/uploads/2026/11/apollo-research-to-embed-six-evaluators-in-openai-subversion-pilot.jpg",
-      "sources": [
-        {
-          "url": "https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion",
-          "publisher": "TechCrunch AI",
-          "title": "OpenAI will embed safety researchers to investigate AI subversion"
-        },
-        {
-          "url": "https://techmeme.com/261116/p33",
-          "publisher": "techmeme.com",
-          "title": "OpenAI says it signed agreements with independent assessors Apollo Research, METR, Transluce, and Goodfire for its first phase of AI model embedded assessments (OpenAI)"
-        },
-        {
-          "url": "https://unite.ai/apollo-research-to-embed-six-evaluators-in-openai-subversion-pilot",
-          "publisher": "Unite.AI",
-          "title": "Apollo Research to Embed Six Evaluators in OpenAI Subversion Pilot"
-        },
-        {
-          "url": "https://cnbc.com/2026/11/16/openai-independent-ai-safety-evaluators.html",
-          "publisher": "CNBC",
-          "title": "OpenAI inks agreements with four independent evaluators to boost company's safety work"
-        }
-      ],
-      "research": {
-        "steps": 2,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-16T17:02:43+00:00",
-      "created_at": "2026-11-16T19:14:50+00:00",
-      "thread": "t-8d566e9720b6",
-      "sectors": [
-        "cybersecurity"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": {
-        "type": "partnership",
-        "company": "OpenAI",
-        "amount": "",
-        "usd": null
-      },
-      "relevance": {
-        "builders": 2,
-        "business": 3,
-        "investors": 1
-      },
-      "cover": "OpenAI",
-      "trackers": [
-        "agent-safety"
-      ],
-      "photo_failed": true,
-      "stock_tried": "2026-11-16T19:14:50+00:00"
-    },
-    {
-      "explainer": {
-        "what_it_means": "OpenAI will release software features and resources that help identify abusive content involving children, give advice to organizations on how to act, and work with partners to coordinate responses.",
-        "terms": [
-          {
-            "term": "online child sexual exploitation",
-            "meaning": "The use of the internet to produce, share, or access sexual content involving minors."
-          },
-          {
-            "term": "practical guidance",
-            "meaning": "Step‑by‑step instructions and best‑practice advice for detecting and responding to abuse."
-          },
-          {
-            "term": "partnerships",
-            "meaning": "Collaborations with other organisations, NGOs or authorities to improve detection and response efforts."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers may need to integrate OpenAI’s safety tools into their applications to detect abusive content involving children.",
-        "business": "Companies using OpenAI services will have clearer resources for complying with child‑protection regulations.",
-        "investors": "The initiative signals OpenAI’s commitment to responsible AI, which can affect its reputation and market position."
-      },
-      "id": "b1c71d07875a",
-      "headline": "OpenAI announces new tools and guidance to combat online child sexual abuse",
-      "summary": "OpenAI said it will provide new tools, practical guidance and partnerships to help prevent, detect and respond to online child sexual exploitation and abuse.",
-      "why_it_matters": "Improved safeguards protect vulnerable users and set standards for AI platforms handling harmful content.",
-      "category": "safety",
-      "lab": "OpenAI",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 7,
-      "url": "https://openai.com/index/strengthening-online-child-safety",
-      "source_id": "openai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": null,
-      "sources": [
-        {
-          "url": "https://openai.com/index/strengthening-online-child-safety",
-          "publisher": "OpenAI",
-          "title": "Strengthening the fight against online child sexual abuse with new tools and support"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-11-16T17:00:00+00:00",
-      "created_at": "2026-11-16T17:27:36+00:00",
-      "breaking": true,
-      "sectors": [],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": "OpenAI",
-      "trackers": [],
-      "stock_tried": "2026-11-16T17:27:36+00:00"
-    },
-    {
-      "explainer": {
-        "what_it_means": "The Rubin HPC GPU packs a record number of processing cores and a data‑sparse engine so that AI agents can run large scientific simulations without waiting for data. This reduces the time between trying a design and seeing results, letting researchers explore more options faster.",
-        "terms": [
-          {
-            "term": "CUDA cores",
-            "meaning": "Individual processing units on an Nvidia GPU that execute parallel compute tasks."
-          },
-          {
-            "term": "Sparse data acceleration",
-            "meaning": "Hardware features that keep compute cores busy when working with data that has many empty or zero values, common in scientific matrices."
-          },
-          {
-            "term": "NVLink",
-            "meaning": "A high‑speed interconnect that links multiple GPUs together, allowing them to share data quickly."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers of simulation software and AI agents can leverage the extra cores and sparse acceleration to run larger models faster.",
-        "business": "Companies that rely on HPC for R&D can shorten product‑development cycles and reduce compute costs.",
-        "investors": "The new GPU expands Nvidia's HPC portfolio, signaling continued growth in the high‑performance computing market."
-      },
-      "id": "6cab091c059a",
-      "headline": "Nvidia unveils Rubin HPC GPU with over 50,000 CUDA cores for scientific simulations",
-      "summary": "At SC26 Nvidia announced the Rubin HPC GPU, part of the Vera Rubin platform, featuring more than 50,000 CUDA cores, sparse data acceleration and seventh‑generation NVLink to speed up agent‑driven simulations for science, engineering and analytics.",
-      "why_it_matters": "Faster GPU‑accelerated simulations let AI agents iterate quicker, shortening the path from hypothesis to discovery for researchers and industry designers.",
-      "category": "industry",
-      "lab": "NVIDIA",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "For agents tackling science and engineering, faster simulation means faster discovery,",
-          "speaker": "Ian Buck",
-          "speaker_role": "vice president of hyperscale and high-performance computing at NVIDIA",
-          "source_url": "https://blogs.nvidia.com/blog/rubin-hpc"
-        },
-        {
-          "text": "Rubin HPC accelerates the simulations agents use to test ideas and guide their next steps, helping scientists and engineers explore more possibilities and bring breakthroughs closer.",
-          "speaker": "Ian Buck",
-          "speaker_role": "vice president of hyperscale and high-performance computing at NVIDIA",
-          "source_url": "https://blogs.nvidia.com/blog/rubin-hpc"
-        }
-      ],
-      "score": 8,
-      "url": "https://blogs.nvidia.com/blog/rubin-hpc",
-      "source_id": "nvidia",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/hpc-blog-rubin-hpc-gpu-1920x1080-5957124-1.jpg",
-      "sources": [
-        {
-          "url": "https://blogs.nvidia.com/blog/rubin-hpc",
-          "publisher": "NVIDIA blog",
-          "title": "NVIDIA Announces Rubin HPC — A New GPU to Accelerate Agents for Science, Engineering and Analytics"
-        },
-        {
-          "url": "https://blogs.nvidia.com/blog/lambda-photonics",
-          "publisher": "NVIDIA blog",
-          "title": "Lambda Boosts AI Factory Resiliency and Efficiency With NVIDIA Photonics"
-        },
-        {
-          "url": "https://blogs.nvidia.com/blog/slurm-quantum-computing-supercomputing",
-          "publisher": "NVIDIA blog",
-          "title": "NVIDIA Expands Slurm to Bring Quantum Computing Into Supercomputing"
-        },
-        {
-          "url": "https://blogs.nvidia.com/blog/mlperf-training-endpoints-vera-rubin",
-          "publisher": "NVIDIA blog",
-          "title": "NVIDIA Sweeps MLPerf Training and Endpoints as Vera Rubin Debuts With Leading Performance"
-        },
-        {
-          "url": "https://blogs.nvidia.com/blog/cuda-x-libraries-agents-accelerate-scientific-discovery",
-          "publisher": "NVIDIA blog",
-          "title": "NVIDIA CUDA-X Libraries Give Agents the Tools to Accelerate Scientific Discovery"
-        },
-        {
-          "url": "https://blogs.nvidia.com/blog/20-years-cuda",
-          "publisher": "NVIDIA blog",
-          "title": "CUDA at 20: How the Platform Transformed Scientific Computing"
-        },
-        {
-          "url": "https://techpowerup.com/354900/nvidia-announces-rubin-hpc-gpu-to-accelerate-agents-for-science-engineering-and-analytics",
-          "publisher": "TechPowerUp",
-          "title": "NVIDIA Announces Rubin HPC GPU to Accelerate Agents for Science, Engineering and Analytics"
-        },
-        {
-          "url": "https://videocardz.com/newz/nvidia-announces-rubin-hpc-gpu-with-over-50000-cuda-cores-and-nvlink-7-launching-in-2028",
-          "publisher": "VideoCardz.com",
-          "title": "NVIDIA announces Rubin HPC GPU with over 50,000 CUDA cores and NVLink 7, launching in 2028"
-        },
-        {
-          "url": "https://firstpost.com/tech/nvidia-introduces-rubin-hpc-gpu-to-speed-up-ai-driven-simulations-and-scientific-research-14060419.html",
-          "publisher": "Firstpost",
-          "title": "Nvidia introduces Rubin HPC GPU to speed up AI-driven simulations and scientific research"
-        }
-      ],
-      "research": {
-        "steps": 2,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-16T16:00:01+00:00",
-      "created_at": "2026-11-16T17:27:36+00:00",
-      "breaking": true,
-      "sectors": [
-        "science"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "over 50,000",
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Major U.S. life insurers are increasingly investing customer funds into debt deals that finance artificial intelligence infrastructure like data centers and chips. These investments link traditional retirement and life insurance funds to the financial health of a small number of tech companies.",
-        "terms": [
-          {
-            "term": "Lease-back financing",
-            "meaning": "A legal arrangement where a separate entity borrows money to buy assets and leases them back to the operating company, keeping debt off the operating company's official balance sheet."
-          },
-          {
-            "term": "Guarantee",
-            "meaning": "The financial backing provided by a third party to guarantee a debt or project if the primary borrower defaults or walks away."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "business": "U.S. life insurers held $85.2 billion in AI debt as of June 30, and their exposure could grow to $185 billion by the end of 2027.",
-        "investors": "Major life insurers including Athene and Corebridge Financial are investing billions of customer funds into AI debt deals backed by a few tech companies."
-      },
-      "id": "034535fb0427",
-      "headline": "Major U.S. life insurers held $85.2B in AI debt as of June 30",
-      "summary": "Major U.S. life insurers held $85.2 billion in AI debt as of June 30, representing a 24% increase from December 31 according to Moody's Ratings. This figure could reach $185 billion by the end of 2027 as insurers invest customer funds into artificial intelligence deals.",
-      "why_it_matters": "This trend connects the financial stability of traditional life insurance and annuity portfolios to the heavy spending and high risks of the artificial intelligence sector.",
-      "category": "industry",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "AI debt",
-        "insurance",
-        "Moody's",
-        "Athene",
-        "Corebridge Financial"
-      ],
-      "quotes": [
-        {
-          "text": "The life insurance industry is now in effect backing large swaths of the A.I. industry",
-          "speaker": "Andrew Granato",
-          "speaker_role": "assistant professor at the University of Texas at Austin School of Law",
-          "source_url": "https://nytimes.com/2026/11/16/business/insurance-ai-debt.html"
-        }
-      ],
-      "score": 9,
-      "url": "https://techmeme.com/261116/p32",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://static01.nyt.com/images/2026/11/11/multimedia/11biz-ai-insurance-02-cgtq/11biz-ai-insurance-02-cgtq-facebookJumbo.jpg",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261116/p32",
-          "publisher": "techmeme.com",
-          "title": "Moody's: major US life insurers like Athene held $85.2B in AI debt as of June 30, up 24% from December 31, and the figure could rise to $185B by the end of 2027 (New York Times)"
-        },
-        {
-          "url": "https://nytimes.com/2026/11/16/business/insurance-ai-debt.html",
-          "publisher": "The New York Times",
-          "title": "How Billions in Safe Insurance Money Is Being Bet on A.I. Debt"
-        },
-        {
-          "url": "https://seattletimes.com/business/how-billions-in-safe-insurance-money-are-being-bet-on-ai-debt",
-          "publisher": "The Seattle Times",
-          "title": "How billions in safe insurance money are being bet on AI debt"
-        }
-      ],
-      "research": {
-        "steps": 2,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-16T15:10:04+00:00",
-      "created_at": "2026-11-16T22:01:54+00:00",
-      "sectors": [
-        "finance"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": {
-        "type": "investment",
-        "company": "",
-        "amount": "$85.2 billion",
-        "usd": 85200000000.0
-      },
-      "relevance": {
-        "builders": 0,
-        "business": 3,
-        "investors": 3
-      },
-      "cover": "$85.2B",
-      "trackers": [
-        "ai-infrastructure",
-        "ai-money"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Attackers are now using autonomous artificial intelligence systems without human involvement to analyze software security patches and automatically build exploits. Google reports that these automated frameworks target internet-connected servers to speed up cyberattacks.",
-        "terms": [
-          {
-            "term": "Agentic framework",
-            "meaning": "An artificial intelligence system designed to autonomously plan, execute, and adapt multi-step tasks using large language models."
-          },
-          {
-            "term": "Security patch",
-            "meaning": "A software update released by a vendor to fix a known security vulnerability."
-          },
-          {
-            "term": "Exfiltration",
-            "meaning": "The unauthorized extraction of sensitive data or credentials from a compromised system or cloud environment."
-          }
-        ],
-        "watch_next": [
-          "Researchers project that unsophisticated attacks requiring little to no human interaction will emerge within the next three months.",
-          "Researchers project that sophisticated, fully autonomous agentic attacks are likely to emerge within the next six months."
-        ]
-      },
-      "audiences": {
-        "builders": "Builders face automated attacks where AI frameworks turn security patches into exploits without human intervention.",
-        "business": "Businesses face compressed attack timelines as threat actors deploy autonomous AI frameworks to target internet-facing servers.",
-        "investors": "Investors note that threat actors are operationalizing generative AI to scale operations and automate multi-stage intrusions."
-      },
-      "id": "efad726b92b7",
-      "headline": "Google reports first instance of AI turning security patches into exploits",
-      "summary": "Google Threat Intelligence Group reported the first observed instance of attackers using an autonomous AI framework with no human in the loop to turn security patches into exploits. The framework, called exploit_agent, was found on an exposed staging server integrating with multiple large language models.",
-      "why_it_matters": "The use of autonomous AI frameworks without human intervention marks a significant threshold in cyberattacks, decreasing the time defenders have to secure systems against known vulnerabilities.",
-      "category": "safety",
-      "lab": "Google",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "security",
-        "cybersecurity",
-        "google",
-        "exploit_agent",
-        "threat-intelligence"
-      ],
-      "quotes": [],
-      "score": 10,
-      "url": "https://techmeme.com/261116/p30",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://images.siliconangle.com/blogs.dir/1/files/2026/11/gtignov26.png",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261116/p30",
-          "publisher": "techmeme.com",
-          "title": "Google's TIG reports the first observed instance of attackers using an autonomous AI framework with no human in the loop to turn security patches into exploits (Duncan Riley/SiliconANGLE)"
-        },
-        {
-          "url": "https://siliconangle.com/2026/11/16/google-says-an-ai-framework-turned-security-patches-into-exploits-with-no-human-in-the-loop",
-          "publisher": "SiliconANGLE",
-          "title": "Google says an AI framework turned security patches into exploits with no human in the loop"
-        },
-        {
-          "url": "https://bleepingcomputer.com/news/security/google-warns-that-fully-automated-ai-attacks-are-coming-soon",
-          "publisher": "Bleeping Computer",
-          "title": "Google warns that fully-automated AI attacks are coming soon"
-        },
-        {
-          "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
-          "publisher": "cloud",
-          "title": "GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-16T14:40:01+00:00",
-      "created_at": "2026-11-16T19:14:50+00:00",
-      "thread": "t-d7244d1d39e6",
-      "sectors": [
-        "cybersecurity"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "Google",
-      "trackers": [
-        "agent-safety"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Corma’s AI agents are trained to continuously analyze logs and security events, automatically detect threats and take remedial actions within a company’s existing security tools. This reduces the need for manual investigation and speeds up incident response.",
-        "terms": [
-          {
-            "term": "foundation model",
-            "meaning": "A large, general‑purpose AI model that can be fine‑tuned for specific tasks such as cybersecurity."
-          },
-          {
-            "term": "autonomous AI workforce",
-            "meaning": "A collection of AI agents that operate without constant human supervision to perform security tasks."
-          },
-          {
-            "term": "compute capacity",
-            "meaning": "The amount of processing power (servers, GPUs) required to run AI models at scale."
-          }
-        ],
-        "watch_next": [
-          "Corma plans to expand its compute capacity 24‑fold to meet demand.",
-          "The new capital will be used to accelerate scaling of its foundation models."
-        ]
-      },
-      "audiences": {
-        "builders": "Corma offers APIs that let developers embed autonomous security agents into existing tools, highlighting a market for AI‑driven cyber‑defense automation.",
-        "business": "Enterprises can cut incident‑response time and costs by deploying Corma’s AI agents, addressing the threat of AI‑enhanced attacks.",
-        "investors": "The $125 million round values Corma at $1 billion, signaling strong investor interest in AI security startups."
-      },
-      "id": "1eeb8d10c7e1",
-      "headline": "Corma raises $125 million Series A to scale AI agents for cyber defense",
-      "summary": "Corma, a Tel‑Aviv and San Francisco startup that builds custom‑trained AI agents for defensive cybersecurity, closed a $125 million Series A led by NEA, bringing total funding to $185 million and valuing it at $1 billion.",
-      "why_it_matters": "The funding underscores rising investor confidence in AI‑driven defensive security tools as enterprises confront increasingly sophisticated cyber threats.",
-      "category": "industry",
-      "lab": "Corma",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "With current models, attackers hold a massive advantage. We must advance as quickly as possible to give defenders the ability to win,",
-          "speaker": "Alon Pluda",
-          "speaker_role": "co‑founder and CEO",
-          "source_url": "https://calcalistech.com/ctechnews/article/bjiqapu0me"
-        }
-      ],
-      "score": 9,
-      "url": "https://techmeme.com/261116/p28",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://www.unite.ai/wp-content/uploads/2026/11/corma-raises-125m-series-a-at-1b-valuation-to-scale-defensive-ai.jpg",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261116/p28",
-          "publisher": "techmeme.com",
-          "title": "Tel Aviv- and SF-based Corma, which builds AI agents custom-trained for cyber defense, raised a $125M Series A led by NEA, after raising a $60M seed in August (Angus Loten/Wall Street Journal)"
-        },
-        {
-          "url": "https://wsj.com/pro/cybersecurity/cyber-startup-corma-raises-125-million-for-defensive-ai-agents-f30a4387",
-          "publisher": "The Wall Street Journal",
-          "title": "Cyber Startup Corma Raises $125 Million for Defensive AI Agents"
-        },
-        {
-          "url": "https://unite.ai/corma-raises-125m-series-a-at-1b-valuation-to-scale-defensive-ai",
-          "publisher": "Unite.AI",
-          "title": "Corma Raises $125M Series A at $1B Valuation to Scale Defensive AI"
-        },
-        {
-          "url": "https://calcalistech.com/ctechnews/article/bjiqapu0me",
-          "publisher": "CTech",
-          "title": "Cyber startup Corma goes from stealth to unicorn in just three months with $125 million Series A"
-        },
-        {
-          "url": "https://en.globes.co.il/en/article-defensive-ai-agents-co-corma-raises-125-million-at-1b-valuation-1001563580",
-          "publisher": "Globes",
-          "title": "Defensive AI agents co Corma raises $125 million at $1b valuation"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-16T14:30:01+00:00",
-      "created_at": "2026-11-16T15:23:20+00:00",
-      "sectors": [
-        "cybersecurity"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": {
-        "type": "funding",
-        "company": "Corma",
-        "amount": "$125 million",
-        "usd": 125000000.0
-      },
-      "relevance": {
-        "builders": 1,
-        "business": 2,
-        "investors": 3
-      },
-      "cover": "$125 million",
-      "trackers": [
-        "ai-money"
-      ],
-      "photo_failed": true,
-      "stock_tried": "2026-11-16T15:23:20+00:00"
-    },
-    {
-      "audiences": {
-        "builders": "Leadership uncertainty at Nvidia could affect the roadmap and support for its AI chips and CUDA ecosystem.",
-        "business": "A $4 trillion chipmaker is in a leadership crisis, with a public reinstatement campaign and a board weighing successors ahead of quarterly results.",
-        "investors": "Nvidia shares fell 1.87% as the board weighs interim CEO Colette Kress, a possible return of Jensen Huang, and Arm CEO Rene Haas as a successor."
-      },
-      "id": "ca1899ca1680",
-      "headline": "Jensen Huang allies form \"war room\" to lobby for his return as Nvidia CEO",
-      "summary": "A group of Silicon Valley executives is assembling a \"war room\" to lobby Nvidia's board to reinstate Jensen Huang as CEO, days after he resigned over reports of affairs with a subordinate and a suspected Chinese spy. The public letter demanding his return has gathered over 150,000 signatures, with support from Elon Musk and Tim Sweeney.",
-      "why_it_matters": "Nvidia's leadership stability is a key factor for the AI industry, as the company's chips underpin much of the sector's infrastructure.",
-      "category": "industry",
-      "lab": "NVIDIA",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "nvidia",
-        "jensen-huang",
-        "leadership",
-        "governance",
-        "ai-chips"
-      ],
-      "quotes": [
-        {
-          "text": "Everyone that matters in tech outside the frontier labs loves Jensen.",
-          "speaker": "A Huang ally",
-          "speaker_role": "unnamed Silicon Valley executive",
-          "source_url": "https://arstechnica.com/ai/2026/11/jensen-huang-allies-build-a-war-room-to-get-him-back-at-nvidia"
-        },
-        {
-          "text": "Power corrupts, and people start to think they are invincible … We are all complicit in making these people think they are gods.",
-          "speaker": "Anne Wojcicki",
-          "speaker_role": "23andMe founder",
-          "source_url": "https://theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed"
-        }
-      ],
-      "score": 9,
-      "url": "https://arstechnica.com/ai/2026/11/jensen-huang-allies-build-a-war-room-to-get-him-back-at-nvidia",
-      "source_id": "ars-ai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://cdn.arstechnica.net/wp-content/uploads/2024/06/huang_computex_2024-1152x648.jpg",
-      "sources": [
-        {
-          "url": "https://arstechnica.com/ai/2026/11/jensen-huang-allies-build-a-war-room-to-get-him-back-at-nvidia",
-          "publisher": "Ars Technica AI",
-          "title": "Jensen Huang allies build a \"war room\" to get him back at Nvidia"
-        },
-        {
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jensen-huang-could-return-nvidia-014531281.html",
-          "publisher": "Yahoo Finance",
-          "title": "Jensen Huang Could Return to Nvidia as Silicon Valley Plans ‘War Room,’ While Anthony Scaramucci Says ‘Not Happening’"
-        },
-        {
-          "url": "https://theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed",
-          "publisher": "The Verge AI",
-          "title": "Jensen Huang might be plotting a return and more of the latest Nvidia drama"
-        },
-        {
-          "url": "https://msn.com/en-us/news/other/jensen-huang-allies-campaign-to-reinstate-former-nvidia-boss/ar-AA2hwD2J",
-          "publisher": "BBC on MSN",
-          "title": "Jensen Huang allies' campaign to reinstate former Nvidia boss"
-        },
-        {
-          "url": "https://nypost.com/2026/11/15/business/jensen-huangs-allies-pushing-nvidia-board-to-re-appoint-him-days-after-he-resigned-over-chinese-spy-employee-affairs",
-          "publisher": "New York Post",
-          "title": "Jensen Huang eyeing comeback as Nvidia CEO forming ‘war room’ with allies in wake of Chinese spy, employee affairs: report"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-16T14:06:16+00:00",
-      "created_at": "2026-11-16T15:23:20+00:00",
-      "thread": "t-1b80f30c0254",
-      "sectors": [],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 0,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": "Jensen Huang",
-      "explainer": {
-        "what_it_means": "Jensen Huang, the long-time leader of Nvidia, has stepped down as CEO, and a group of tech executives is now trying to pressure the company's board to bring him back. The company is being run by a temporary leader while the board investigates what happened, and Nvidia's next earnings report is coming soon.",
-        "terms": [
-          {
-            "term": "CEO",
-            "meaning": "The person in charge of running a company's day-to-day business and making major decisions."
-          },
-          {
-            "term": "Board of directors",
-            "meaning": "A group of people elected by shareholders who oversee the company and make big decisions like hiring or firing the CEO."
-          },
-          {
-            "term": "Interim chief executive",
-            "meaning": "A temporary leader who runs the company until a permanent replacement is chosen."
-          }
-        ],
-        "watch_next": [
-          "Nvidia's quarterly results are due on Tuesday.",
-          "An independent probe by Nvidia's board is investigating the conduct that led to Huang's departure."
-        ]
-      },
-      "trackers": [],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -5876,44 +5828,13 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-11-18T04:12:24+00:00",
-    "one_line": "OpenAI and Microsoft released new AI models, while Nvidia reported soaring revenue amid leadership and export control shifts.",
+    "written_at": "2026-11-18T07:34:50+00:00",
+    "one_line": "Nvidia reshapes leadership and China policy while OpenAI and Microsoft ship new models and AI funding surges.",
     "themes": [
       {
-        "title": "New model releases from OpenAI and Microsoft",
-        "text": "OpenAI released GPT-6.2 Astra and Sol with lower pricing and benchmark gains, while Microsoft unveiled six new models including MAI Code 2 and Flash.",
+        "title": "Nvidia leadership and China policy shift",
+        "text": "Nvidia reported Q3 revenue of $115.8B and a $130B Q4 forecast under interim CEO Colette Kress, who also ended H200 chip sales to China. The board said it will not reinstate Jensen Huang, who will testify before US House committees on Dec 1, and created a new National Security and Export Control Oversight Committee.",
         "stories": [
-          {
-            "id": "549a77347d5e",
-            "headline": "OpenAI releases GPT-6.2 Astra and Sol for ChatGPT Work and Codex",
-            "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol"
-          },
-          {
-            "id": "5d27befedfa3",
-            "headline": "Microsoft unveils six AI models including MAI Code 2 and Flash",
-            "url": "https://techmeme.com/261117/p45"
-          },
-          {
-            "id": "25f8ab73ccc5",
-            "headline": "OpenAI releases GPT-6.2 Astra and Sol models with benchmark gains",
-            "url": "https://techmeme.com/261117/p57"
-          }
-        ]
-      },
-      {
-        "title": "Nvidia reports earnings and leadership changes",
-        "text": "Nvidia reported $115.8 billion in third-quarter revenue and stopped reporting Singapore unit revenue after it hit $104 billion. Meanwhile, the company faced leadership changes, export control shifts under interim CEO Colette Kress, and upcoming congressional testimony for former CEO Jensen Huang.",
-        "stories": [
-          {
-            "id": "5f83aea8a158",
-            "headline": "Nvidia CEO Jensen Huang to testify before US House committees on Dec 1",
-            "url": "https://economictimes.indiatimes.com/tech/technology/jensen-huang-to-appear-before-us-house-committees-on-december-1/articleshow/135932177.cms"
-          },
-          {
-            "id": "536093b04b83",
-            "headline": "Nvidia stopped reporting Singapore unit revenue in 2025 as it hit $104B",
-            "url": "https://techmeme.com/261117/p41"
-          },
           {
             "id": "c515216ed921",
             "headline": "Nvidia reports Q3 revenue of $115.8B and forecasts Q4 revenue of $130B",
@@ -5930,14 +5851,14 @@
             "url": "https://techmeme.com/261117/p63"
           },
           {
-            "id": "5745401fd09d",
-            "headline": "US Commerce Dept and DOJ investigated Megaspeed over chip exports in 2024",
-            "url": "https://techmeme.com/261117/p2"
+            "id": "5f83aea8a158",
+            "headline": "Nvidia CEO Jensen Huang to testify before US House committees on Dec 1",
+            "url": "https://economictimes.indiatimes.com/tech/technology/jensen-huang-to-appear-before-us-house-committees-on-december-1/articleshow/135932177.cms"
           },
           {
-            "id": "11e63e8d9cdb",
-            "headline": "Nvidia board creates National Security and Export Control Oversight Committee",
-            "url": "https://techmeme.com/261117/p8"
+            "id": "536093b04b83",
+            "headline": "Nvidia stopped reporting Singapore unit revenue in 2025 as it hit $104B",
+            "url": "https://techmeme.com/261117/p41"
           },
           {
             "id": "bc1083d540d9",
@@ -5947,8 +5868,55 @@
         ]
       },
       {
-        "title": "U.S. tightens export rules and Chinese AI distillation",
-        "text": "The U.S. Commerce Department tightened export rules on AI chips to target Southeast Asian data centers providing compute to Chinese firms. Concurrently, a review showed widespread industrial use of AI distillation in China to train domestic rivals.",
+        "title": "OpenAI and Microsoft ship new models",
+        "text": "OpenAI released GPT-6.2 Astra and Sol with lower pricing and benchmark gains, while Microsoft unveiled six models including MAI Code 2 and Flash on GitHub Copilot, claiming high performance at lower cost.",
+        "stories": [
+          {
+            "id": "549a77347d5e",
+            "headline": "OpenAI releases GPT-6.2 Astra and Sol for ChatGPT Work and Codex",
+            "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol"
+          },
+          {
+            "id": "25f8ab73ccc5",
+            "headline": "OpenAI releases GPT-6.2 Astra and Sol models with benchmark gains",
+            "url": "https://techmeme.com/261117/p57"
+          },
+          {
+            "id": "5d27befedfa3",
+            "headline": "Microsoft unveils six AI models including MAI Code 2 and Flash",
+            "url": "https://techmeme.com/261117/p45"
+          }
+        ]
+      },
+      {
+        "title": "AI funding rounds and IPO plans",
+        "text": "Isomorphic Labs raised a $5B Series C for AI drug design, Genesis AI raised $500M at a $3.5B valuation for robotics, Numa raised $45M for dealership AI, and Perplexity said it may IPO as early as Q1 2027 after crossing $1B in annual recurring revenue.",
+        "stories": [
+          {
+            "id": "90635e15e80f",
+            "headline": "Isomorphic Labs raises $5 billion Series C to speed AI‑driven drug trials",
+            "url": "https://techmeme.com/261117/p18"
+          },
+          {
+            "id": "c90d066df23f",
+            "headline": "Genesis AI raises $500 million Series A at $3.5 billion valuation",
+            "url": "https://techmeme.com/261117/p27"
+          },
+          {
+            "id": "29d70f03b836",
+            "headline": "Numa raises $45M Series C to expand AI operating system for car dealerships",
+            "url": "https://techmeme.com/261117/p7"
+          },
+          {
+            "id": "bf9c3e0a3483",
+            "headline": "Perplexity CEO says company may launch IPO as early as Q1 2027",
+            "url": "https://inc42.com/buzz/perplexity-may-launch-ipo-as-early-as-q1-cy27-ceo-aravind-srinivas"
+          }
+        ]
+      },
+      {
+        "title": "Export controls and sovereign AI push",
+        "text": "The US Commerce Department tightened AI chip export rules targeting Southeast Asian data centres, while Sarvam AI launched Token Factory to serve open-weight models on Indian servers, HCLTech and Cohere partnered on sovereign AI, and OpenAI named Pragya Misra to lead business development in India and South Asia.",
         "stories": [
           {
             "id": "a923fd9b70a1",
@@ -5956,9 +5924,19 @@
             "url": "https://economictimes.indiatimes.com/tech/technology/us-ai-chip-curbs-threaten-southeast-asia-data-centre-boom-shares-slump/articleshow/135916332.cms"
           },
           {
-            "id": "cb4a3c7f8267",
-            "headline": "Review shows AI distillation moving to industrial use in China",
-            "url": "https://techmeme.com/261117/p4"
+            "id": "518c47915c16",
+            "headline": "Sarvam AI opens Token Factory to run global open-weight models on Indian servers",
+            "url": "https://inc42.com/buzz/sarvam-ai-opens-token-factory-to-run-global-ai-models-on-indian-servers"
+          },
+          {
+            "id": "3decd8b5d056",
+            "headline": "HCLTech and Cohere partner to build sovereign AI solutions",
+            "url": "https://analyticsindiamag.com/ai-news/hcltech-partners-with-cohere-to-target-sovereign-ai-markets"
+          },
+          {
+            "id": "272333516a9d",
+            "headline": "OpenAI names Pragya Misra to lead business development in India and South Asia",
+            "url": "https://yourstory.com/2026/11/pragya-misra-lead-openais-business-development-india-and-south-asia"
           }
         ]
       }
@@ -5966,16 +5944,15 @@
     "from_stories": 20
   },
   "plan": {
-    "focus": "Chasing the fallout from Jensen Huang's exit and tech infrastructure outages while tracking OpenAI's GPT-6.2 rollout.",
-    "updated_at": "2026-11-18T04:12:24+00:00",
+    "focus": "Tracking Anthropic's IPO milestones, equity fallout, and enterprise rollouts across industry and AI models.",
+    "updated_at": "2026-11-18T07:34:50+00:00",
     "thin_areas": [
-      "research",
-      "policy"
+      "AI in India",
+      "research"
     ],
     "searches": [
-      "Jensen Huang Nvidia return push",
-      "outages AI vulnerability patch NSA Congress",
-      "OpenAI GPT 6.2 Astra Sol launch"
+      "Anthropic IPO valuation date",
+      "Sarvam Token Factory India sovereign AI"
     ]
   },
   "builders": {
@@ -6115,6 +6092,300 @@
     "range": "8 Nov – 15 Nov 2026"
   },
   "threads": [
+    {
+      "id": "t-2b1356156f54",
+      "title": "Sarvam Token Factory and India AI",
+      "updated_at": "2026-11-18T07:10:00+00:00",
+      "stories": [
+        {
+          "id": "d930ebd0b69d",
+          "headline": "Sarvam AI launches Token Factory hosting mostly Chinese models on Indian GPUs, reigniting sovereign AI debate",
+          "url": "https://analyticsindiamag.com/ai-features/sarvams-token-factory-sparks-indias-sovereign-ai-debate-again",
+          "published_at": "2026-11-18T07:10:00+00:00",
+          "category": "policy"
+        },
+        {
+          "id": "e924893212f4",
+          "headline": "Sarvam AI hosts six Chinese models in India, reigniting sovereign AI debate",
+          "url": "https://indianexpress.com/article/explained/explained-ai/sarvam-ai-chinese-models-token-factory-india-ai-sovereignty-10967996",
+          "published_at": "2026-11-17T23:20:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "518c47915c16",
+          "headline": "Sarvam AI opens Token Factory to run global open-weight models on Indian servers",
+          "url": "https://inc42.com/buzz/sarvam-ai-opens-token-factory-to-run-global-ai-models-on-indian-servers",
+          "published_at": "2026-11-17T09:50:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "272333516a9d",
+          "headline": "OpenAI names Pragya Misra to lead business development in India and South Asia",
+          "url": "https://yourstory.com/2026/11/pragya-misra-lead-openais-business-development-india-and-south-asia",
+          "published_at": "2026-11-17T08:44:46+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "912ad5c2a7cd",
+          "headline": "India is now ChatGPT's largest market globally by weekly active users",
+          "url": "https://economictimes.indiatimes.com/tech/technology/india-becomes-chatgpts-biggest-market-openais-india-chief-corner-office-conversation/videoshow/135764629.cms",
+          "published_at": "2026-11-12T10:06:38+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "e1842b672534",
+          "headline": "OpenAI adds API inference residency for GPT-6 Luna in India",
+          "url": "https://analyticsindiamag.com/ai-news/openai-launches-api-inference-residency-in-india",
+          "published_at": "2026-11-12T08:02:14+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "bd4eadb64696",
+          "headline": "India becomes ChatGPT’s largest market by weekly active users, base doubles since Jan 2026",
+          "url": "https://inc42.com/buzz/india-becomes-chatgpts-largest-market-globally-user-base-doubles-since-january",
+          "published_at": "2026-11-03T06:09:53+00:00",
+          "category": "industry"
+        }
+      ]
+    },
+    {
+      "id": "t-a50b07bc6191",
+      "title": "Anthropic IPO valuation and Nscale chip funding",
+      "updated_at": "2026-11-18T07:00:41+00:00",
+      "stories": [
+        {
+          "id": "2d572302d891",
+          "headline": "Anthropic IPO set to deliver windfall to smaller VC firms",
+          "url": "https://techmeme.com/261118/p3",
+          "published_at": "2026-11-18T07:00:41+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "a8c038b3bd40",
+          "headline": "San Francisco AI insiders could hold $1.2 trillion in equity as Anthropic goes public",
+          "url": "https://techmeme.com/261117/p67",
+          "published_at": "2026-11-18T01:50:07+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "168c023a4a8e",
+          "headline": "Altimeter aims to invest $5B in Anthropic IPO",
+          "url": "https://techmeme.com/261116/p43",
+          "published_at": "2026-11-16T21:05:01+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "0b980939d985",
+          "headline": "Anthropic prices its IPO on Wednesday with valuation up to $1.4 trillion",
+          "url": "https://thestreet.com/crypto/artificial-intelligence/traders-are-pricing-anthropic-40-higher-ahead-of-ipo",
+          "published_at": "2026-11-16T11:15:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "3710a552738d",
+          "headline": "Anthropic IPO tests its public benefit commitment",
+          "url": "https://livemint.com/companies/anthropic-promises-to-pursue-humanitys-benefit-its-ipo-filing-gives-it-wiggle-room-11794805350350.html",
+          "published_at": "2026-11-16T08:15:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "9231c3778855",
+          "headline": "Samsung SDS seeks Anthropic and OpenAI as tenants for AI data centre services",
+          "url": "https://techmeme.com/261115/p19",
+          "published_at": "2026-11-16T01:15:01+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "e9a9e657b9d8",
+          "headline": "Anthropic targets up to $90.4B in IPO and private placement",
+          "url": "https://techmeme.com/261115/p18",
+          "published_at": "2026-11-15T23:00:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "2c9708b63937",
+          "headline": "Sam Bankman-Fried misses out on Anthropic IPO windfall",
+          "url": "https://techmeme.com/261113/p42",
+          "published_at": "2026-11-14T04:25:01+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "b9a430a49080",
+          "headline": "Nscale reports $5.5B in debt and $1.69B loss in amended IPO filing",
+          "url": "https://techmeme.com/261113/p11",
+          "published_at": "2026-11-13T14:25:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "6fe694c8134f",
+          "headline": "Nscale says it needs extra funding for 2027 commitments after $45B Anthropic chip order",
+          "url": "https://techmeme.com/261113/p3",
+          "published_at": "2026-11-13T06:01:16+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "3e673ebfce8a",
+          "headline": "Anthropic IPO draws about six times the orders for available shares",
+          "url": "https://techmeme.com/261112/p55",
+          "published_at": "2026-11-12T21:20:01+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "6734a79295b9",
+          "headline": "Anthropic's IPO roadshow video details multi-chip strategy and compute multipliers",
+          "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
+          "published_at": "2026-11-11T15:11:59+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "04441559207d",
+          "headline": "Anthropic IPO draws multiple times the orders for available shares",
+          "url": "https://techmeme.com/261111/p27",
+          "published_at": "2026-11-11T13:40:01+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "61c97162f2b8",
+          "headline": "Anthropic opens Australian retail IPO ahead of Nasdaq listing",
+          "url": "https://techmeme.com/261110/p63",
+          "published_at": "2026-11-11T02:30:01+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "103c6c1b606c",
+          "headline": "Nvidia plans $10B investment in Anthropic alongside its IPO",
+          "url": "https://techmeme.com/261110/p50",
+          "published_at": "2026-11-10T20:55:05+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "f2e3e14e12ac",
+          "headline": "Anthropic co-founders to sell $1.75 billion in shares ahead of $1.4 trillion IPO",
+          "url": "https://techmeme.com/261110/p32",
+          "published_at": "2026-11-10T17:02:35+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "e9e2b3561c9a",
+          "headline": "TSMC to invest up to $1B in Anthropic and OpenAI at IPO price",
+          "url": "https://techmeme.com/261110/p24",
+          "published_at": "2026-11-10T14:46:04+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "06c34be0a2ca",
+          "headline": "Anthropic sets IPO price at $70–$78 per share, targeting $1.4 trillion valuation",
+          "url": "https://theverge.com/ai-artificial-intelligence/1030703/anthropic-ipo-1-4-trillion",
+          "published_at": "2026-11-10T14:06:54+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "6e60d9db5bba",
+          "headline": "Anthropic targets $1.3tn valuation in IPO pricing 825 million shares at $70-$78",
+          "url": "https://businesschief.com/news/anthropic-targets-us-1-3tn-valuation-for-much-hyped-ipo",
+          "published_at": "2026-11-10T07:54:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "ea51f7bea31a",
+          "headline": "Anthropic to host live‑stream IPO event with CEO Dario Amodei and JPMorgan’s Jamie Dimon",
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-plans-ipo-live-stream-with-dario-amodei-jpmorgan-ceo-jamie-dimon/articleshow/135699429.cms",
+          "published_at": "2026-11-10T04:38:39+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "9798aa740a48",
+          "headline": "Anthropic sends and retracts IPO filing pricing details to bankers",
+          "url": "https://techmeme.com/261109/p48",
+          "published_at": "2026-11-10T01:41:39+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "69011908bacb",
+          "headline": "TSMC board approves up to $1bn investment in Anthropic and OpenAI",
+          "url": "https://ua.news/en/dovkolo-svitu/rada-direktoriv-tsmc-skhvalila-investitsiyi-do-1-mlrd-v-anthropic-i-openai-channel-newsasia",
+          "published_at": "2026-11-09T18:43:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "9b35f1480431",
+          "headline": "AI companies sell $300B+ in stock in 2026 amid market absorption questions",
+          "url": "https://techmeme.com/261108/p10",
+          "published_at": "2026-11-08T17:45:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "afa4cae37227",
+          "headline": "Anthropic buys 1.7GW of gas-fired generators in $3.4B deal",
+          "url": "https://techmeme.com/261108/p8",
+          "published_at": "2026-11-08T15:05:01+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "f31245a34fce",
+          "headline": "Anthropic presses on with November IPO plans despite global AI stock sell-off",
+          "url": "https://techmeme.com/261106/p21",
+          "published_at": "2026-11-06T21:12:51+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "7c70b636a2cf",
+          "headline": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+          "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo",
+          "published_at": "2026-11-06T15:54:47+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "1b0209f81f9f",
+          "headline": "Anthropic reports $895.4 billion in compute‑related purchase commitments and leases",
+          "url": "https://techmeme.com/261102/p29",
+          "published_at": "2026-11-02T16:35:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "038e188345e4",
+          "headline": "Anthropic to raise up to ¥552.9 bn ($3.5 bn) from Japanese investors in US IPO",
+          "url": "https://bloomberg.com/news/articles/2026-11-02/anthropic-seeks-up-to-3-5-billion-in-japan-for-its-mega-us-ipo",
+          "published_at": "2026-11-01T22:23:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "b329cc4aaa4c",
+          "headline": "Blackstone says Anthropic likely to receive junk rating after IPO",
+          "url": "https://ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
+          "published_at": "2026-10-30T17:27:25+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "007a2afe4a6c",
+          "headline": "Anthropic’s IPO faces valuation drop as growth slows and AI prices plunge",
+          "url": "https://economictimes.indiatimes.com/tech/technology/anthropics-record-ipo-faces-some-big-questions/articleshow/135249836.cms",
+          "published_at": "2026-10-28T02:42:31+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "e4d1fbe9aac7",
+          "headline": "Anthropic files S‑1 for Nasdaq IPO, reporting $16.3 billion H1 revenue",
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/articleshow/135222913.cms",
+          "published_at": "2026-10-27T02:33:06+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "09134649a0da",
+          "headline": "Anthropic files S‑1 showing $16.3 billion H1 revenue and $131.7 billion cash",
+          "url": "https://msn.com/en-us/news/other/the-anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/ar-AA2g76lV",
+          "published_at": "2026-10-26T16:53:17+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "8a77e646571b",
+          "headline": "Anthropic files S‑1 for IPO, plans Nasdaq listing under ticker ANT",
+          "url": "https://anthropic.com/news/s1-sec",
+          "published_at": "2026-10-26T00:00:00+00:00",
+          "category": "industry"
+        }
+      ]
+    },
     {
       "id": "t-1b80f30c0254",
       "title": "US chip curbs and SE Asia data centers",
@@ -6681,55 +6952,6 @@
           "category": "models"
         }
       ]
-    },
-    {
-      "id": "t-c4b96abe3e96",
-      "title": "OpenAI GPT-6.2 Astra and Sol rollout",
-      "updated_at": "2026-11-17T21:45:02+00:00",
-      "stories": [
-        {
-          "id": "25f8ab73ccc5",
-          "headline": "OpenAI releases GPT-6.2 Astra and Sol models with benchmark gains",
-          "url": "https://techmeme.com/261117/p57",
-          "published_at": "2026-11-17T21:45:02+00:00",
-          "category": "models"
-        },
-        {
-          "id": "5b059524c340",
-          "headline": "Ethan Mollick shares pre-launch experience with GPT-6.2 Astra",
-          "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2joens5t22x",
-          "published_at": "2026-11-17T18:30:03.697000+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "549a77347d5e",
-          "headline": "OpenAI releases GPT-6.2 Astra and Sol for ChatGPT Work and Codex",
-          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
-          "published_at": "2026-11-17T17:45:00+00:00",
-          "category": "models"
-        }
-      ]
-    },
-    {
-      "id": "t-a8bd05f6f67c",
-      "title": "Nvidia third-quarter earnings call and revenue",
-      "updated_at": "2026-11-17T21:26:56+00:00",
-      "stories": [
-        {
-          "id": "c515216ed921",
-          "headline": "Nvidia reports Q3 revenue of $115.8B and forecasts Q4 revenue of $130B",
-          "url": "https://techmeme.com/261117/p56",
-          "published_at": "2026-11-17T21:26:56+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "51273f0e0cc7",
-          "headline": "Nvidia faces third-quarter earnings call under interim CEO Colette Kress",
-          "url": "https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont",
-          "published_at": "2026-11-16T22:03:02+00:00",
-          "category": "industry"
-        }
-      ]
     }
   ],
   "labs": [
@@ -6957,7 +7179,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 484,
+    "stories_this_month": 491,
     "model_releases_this_month": 56,
     "labs_tracked": 28
   }

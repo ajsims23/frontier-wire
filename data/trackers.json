@@ -850,9 +850,14 @@
     "title": "AI regulation around the world"
   },
   "india-ai": {
-    "status": "India is now ChatGPT's largest market globally, with over 100 million weekly users, and enterprise AI has moved from pilots to full-scale production. Domestic AI infrastructure is expanding rapidly: Sarvam AI launched Token Factory to serve open-weight models on Indian servers, OpenAI added local API inference for GPT-6 Luna, and ReNew pledged ₹80,000 crore for a 1 GW green data centre in Andhra Pradesh. Regulators are tightening oversight, with CERT-In issuing AI security auditing guidelines and SEBI preparing rules on AI use in capital markets.",
-    "changed": "OpenAI named Pragya Misra to lead business development in India and South Asia, and Sarvam AI launched Token Factory, an OpenAI-compatible API serving open-weight models on Indian GPU clusters.",
+    "status": "India remains ChatGPT's largest market globally with over 100 million weekly users, and enterprise AI has moved from pilots to full-scale production. Sarvam AI's Token Factory now serves eight open-weight models (six Chinese) on Indian GPUs, reigniting debate over sovereign AI versus access to the best global models. Regulators are tightening oversight: CERT-In issued AI security auditing guidelines for autonomous systems, and SEBI is preparing rules on AI use in capital markets.",
+    "changed": "Sarvam AI's Token Factory launch (Nov 16) hosting six Chinese models on Indian GPUs has reignited the sovereign AI debate, with questions about whether an IndiaAI Mission-backed startup should prioritise indigenous models.",
     "timeline": [
+      {
+        "story_id": "d930ebd0b69d",
+        "date": "2026-11-18",
+        "text": "Token Factory launch details: ₹98.68 cr GPU subsidy, on-premises deployment option for critical institutions."
+      },
       {
         "story_id": "42bc629e96d4",
         "date": "2026-11-17",
@@ -867,6 +872,11 @@
         "story_id": "518c47915c16",
         "date": "2026-11-17",
         "text": "Sarvam AI launches Token Factory, an OpenAI-compatible API for open-weight models on Indian servers."
+      },
+      {
+        "story_id": "e924893212f4",
+        "date": "2026-11-17",
+        "text": "Sarvam Token Factory hosts six Chinese models on Indian GPUs, reigniting sovereign AI debate."
       },
       {
         "story_id": "a8d86fb81b42",
@@ -1042,24 +1052,9 @@
         "story_id": "adb4aa27ee66",
         "date": "2026-10-26",
         "text": "Tata Communications to invest $450 M in 10,000 km AI fibre network, starting Mumbai‑Pune‑Hyderabad‑Chennai route."
-      },
-      {
-        "story_id": "b0150cace2ad",
-        "date": "2026-10-26",
-        "text": "Tata Communications to spend $450 M on AI‑ready long‑haul fibre linking data‑centre corridors across India."
-      },
-      {
-        "story_id": "6c5c13d57468",
-        "date": "2026-10-26",
-        "text": "BioStack raises $9.5 million to build multimodal medical AI training datasets."
       }
     ],
     "next": [
-      {
-        "text": "Introductory pricing for Sarvam 105B via Token Factory runs through end of 2026.",
-        "when": "end of 2026",
-        "story_id": "518c47915c16"
-      },
       {
         "text": "SEBI to issue guidelines on AI use and human oversight in capital markets.",
         "when": "",
@@ -1103,8 +1098,8 @@
       "fe1a16683fff",
       "f4316ce69839",
       "d730ce2a7a31",
-      "b5d702d24285",
       "cfbf339cdfb5",
+      "b5d702d24285",
       "e67c5fa31434",
       "fd2bdf0a7e83",
       "3fce288f56e1",
@@ -1121,15 +1116,17 @@
       "d9e4cfcad5cc",
       "42bc629e96d4",
       "272333516a9d",
-      "518c47915c16"
+      "518c47915c16",
+      "e924893212f4",
+      "d930ebd0b69d"
     ],
-    "updated_at": "2026-11-17T10:22:00+00:00",
-    "tried_at": "2026-11-17T10:22:00+00:00",
+    "updated_at": "2026-11-18T07:34:50+00:00",
+    "tried_at": "2026-11-18T07:34:50+00:00",
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "AI agent security concerns have intensified amid rising agentic activity, commercial blocks by major retailers and airlines, and new findings showing AI memory features can silently omit decision-critical details. Meanwhile, security incidents continue to mount—including the first observed instance of autonomous AI turning security patches into exploits—prompting labs to deploy automated defense tools, partner with independent evaluators, and face ongoing regulatory and legal scrutiny.",
-    "changed": "Recent disclosures highlight new risks from AI memory systems silently filtering out critical details in decision-making and the first observed instance of autonomous AI turning patches into exploits without human intervention.",
+    "status": "AI agent security concerns are escalating with new research revealing vision-language models can provide harmful assistance from scene images without explicit requests, and a proposed cross-organizational trust framework (ATI) to verify agent identity. Major businesses like United Airlines are blocking unauthorized AI agents, while labs deploy automated defense tools (OpenAI Daybreak) and partner with independent evaluators (OpenAI, Anthropic). Regulatory pressure mounts via lawsuits (California AG) and policy shifts (Anthropic's 30-day disclosure window).",
+    "changed": "New research identifies a scene-state safety vulnerability in vision-language models (71.2% attack success) and proposes the Agent Trust Infrastructure (ATI) for cross-organizational agent verification, raising containment from 43% to 84%.",
     "timeline": [
       {
         "story_id": "1e6985a78fe0",
@@ -1160,6 +1157,16 @@
         "story_id": "efbc77fb5c6f",
         "date": "2026-11-17",
         "text": "Research reveals stored AI user preferences can silently remove decision-critical details."
+      },
+      {
+        "story_id": "1d0b49e9508f",
+        "date": "2026-11-17",
+        "text": "Researchers propose ATI security layer for cross-organization AI agents"
+      },
+      {
+        "story_id": "d3943358cd80",
+        "date": "2026-11-17",
+        "text": "Vision-language models found vulnerable to harmful scene interpretation"
       },
       {
         "story_id": "ebd9eb949639",
@@ -1320,34 +1327,19 @@
         "story_id": "5186d80b7eef",
         "date": "2026-11-07",
         "text": "Researchers found Claude Code configuration files leaking credentials into public GitHub repositories."
-      },
-      {
-        "story_id": "cfd4354afa14",
-        "date": "2026-11-06",
-        "text": "OpenAI releases BioBasicsBench, a 100‑task wet‑lab benchmark for AI agents."
-      },
-      {
-        "story_id": "7312e394347c",
-        "date": "2026-11-05",
-        "text": "Palo Alto Networks in talks to buy Clutch Security for $500 million"
       }
     ],
     "title": "AI agents and safety incidents",
     "next": [
       {
-        "text": "Amazon aims to make the Ring Drone available, pending FCC authorization",
-        "when": "January 27, 2027",
-        "story_id": "9531c706dbfc"
-      },
-      {
-        "text": "The Ring Rover Cam is scheduled to ship in the US",
-        "when": "December 16, 2026",
-        "story_id": "9531c706dbfc"
-      },
-      {
-        "text": "Anthropic's 30-day vulnerability disclosure window takes effect for vulnerabilities reported on or after this date",
+        "text": "Anthropic's 30-day vulnerability disclosure window takes effect for high/critical flaws",
         "when": "January 1, 2027",
         "story_id": "648e7457655f"
+      },
+      {
+        "text": "Amazon World Product Graph potential rollout per internal document",
+        "when": "October 1, 2027",
+        "story_id": "3681b329f0a9"
       }
     ],
     "story_ids": [
@@ -1431,19 +1423,31 @@
       "8c5b4e01285e",
       "efbc77fb5c6f",
       "b20533735bac",
+      "1d0b49e9508f",
+      "d3943358cd80",
       "c60558e98558"
     ],
-    "updated_at": "2026-11-18T04:12:24+00:00",
-    "tried_at": "2026-11-18T04:12:24+00:00"
+    "updated_at": "2026-11-18T07:34:50+00:00",
+    "tried_at": "2026-11-18T07:34:50+00:00"
   },
   "ai-money": {
-    "status": "Anthropic's massive IPO at a $1.4T valuation is heavily oversubscribed, drawing immense institutional backing as it prepares to list on Nasdaq. Meanwhile, Nvidia disclosed its private startup stakes have reached $65.5 billion, but venture capitalists expect a cooling of its aggressive dealmaking and startup funding under interim CEO Colette Kress amid ongoing congressional scrutiny. Across the industry, high-profile funding rounds and mega-deals continue—including a $5B Series C for Isomorphic Labs—even as executives warn of a widening gap between AI hype and returns.",
-    "changed": "Nvidia revealed its private startup stakes have surged to $65.5 billion as interim CEO Colette Kress signals a likely pullback in future startup funding and dealmaking.",
+    "status": "Anthropic's record IPO is imminent: the company is ~7x oversubscribed, targeting up to $90.4B raised at a ~$1.4T valuation, with trading set to begin Thursday on Nasdaq under ticker ANT. Altimeter alone aims to invest $5B, and the listing could unlock roughly $1.2T in equity for San Francisco AI insiders. Meanwhile, Nvidia's private startup stakes have reached $65.5B, but interim CEO Colette Kress is expected to rein in aggressive dealmaking ahead of Nov. 17 earnings, and Baidu and Xiaomi CEOs warn of a widening gap between AI hype and returns.",
+    "changed": "The newest stories confirm Anthropic's IPO pricing is set for Wednesday evening with trading starting Thursday under ticker ANT, and that the listing will deliver multibillion-dollar windfalls to smaller VC firms like Spark Capital and Iconiq.",
     "timeline": [
       {
         "story_id": "bc1083d540d9",
         "date": "2026-11-18",
         "text": "Nvidia revealed its startup stakes reached $65.5B as interim CEO Kress signals caution."
+      },
+      {
+        "story_id": "a8c038b3bd40",
+        "date": "2026-11-18",
+        "text": "SF AI insiders estimated to hold $1.2T in equity as Anthropic goes public."
+      },
+      {
+        "story_id": "2d572302d891",
+        "date": "2026-11-18",
+        "text": "Anthropic IPO pricing set for Wednesday; trading starts Thursday on Nasdaq as ANT."
       },
       {
         "story_id": "29d70f03b836",
@@ -1629,33 +1633,18 @@
         "story_id": "45f67b66fd8d",
         "date": "2026-11-12",
         "text": "Chinese AI server maker xFusion cleared a review for a planned $1.2 billion IPO."
-      },
-      {
-        "story_id": "61c97162f2b8",
-        "date": "2026-11-11",
-        "text": "Anthropic opens Australian retail IPO, closing November 17"
-      },
-      {
-        "story_id": "5c695888c432",
-        "date": "2026-11-11",
-        "text": "PuppyGraph raised a $10 million Series A to help AI agents query enterprise tables."
       }
     ],
     "title": "AI funding and valuations",
     "next": [
       {
-        "text": "Nvidia reports earnings",
+        "text": "Nvidia reports earnings.",
         "when": "Nov. 17, 2026",
         "story_id": "4b57fcd6de68"
       },
       {
-        "text": "Anthropic lists on the US Nasdaq Global Select Market",
-        "when": "Thursday",
-        "story_id": "bf9c3e0a3483"
-      },
-      {
-        "text": "Perplexity IPO",
-        "when": "as early as Q1 2027",
+        "text": "Perplexity may launch IPO.",
+        "when": "Q1 2027",
         "story_id": "bf9c3e0a3483"
       }
     ],
@@ -1800,10 +1789,13 @@
       "c90d066df23f",
       "246f1a63c5a1",
       "bf9c3e0a3483",
-      "bc1083d540d9"
+      "bc1083d540d9",
+      "a8c038b3bd40",
+      "34d89275b888",
+      "2d572302d891"
     ],
-    "updated_at": "2026-11-18T04:12:24+00:00",
-    "tried_at": "2026-11-18T04:12:24+00:00"
+    "updated_at": "2026-11-18T07:34:50+00:00",
+    "tried_at": "2026-11-18T07:34:50+00:00"
   },
   "copyright": {
     "status": "AI companies face a wave of copyright lawsuits: the Elvis Presley estate and Eminem's publisher sued Suno over voice cloning, the estate also sued Anthropic over 274 songs, and major newspapers sued Brave for scraping and selling data to AI firms. Regulators and courts are weighing in: the UK CMA is probing Meta's new scraping terms, an EU court adviser warned Gemini may infringe press copyright, and India's Madras High Court ruled AI-generated books violate library procurement rules.",
