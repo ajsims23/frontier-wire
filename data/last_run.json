@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-18T21:13:37+00:00",
+  "started_at": "2026-11-18T22:10:05+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -19,42 +19,50 @@
     "microsoft-ai": "ok (10)",
     "mistral": "ok (6)"
   },
-  "dropped": [
+  "dropped": [],
+  "written": [
     {
-      "title": "Why Microsoft is investing in recycling the rare earth metals behind modern tech",
-      "reason": "score 3: General sustainability and rare earth metals recycling article without a direct AI focus."
-    },
-    {
-      "title": "Microsoft unveils 7 AI models for coding, image editing, voice and more",
-      "reason": "duplicate of 5d27befedfa3"
-    },
-    {
-      "title": "Cyberattacks are getting faster. Here’s how Microsoft is fighting back",
-      "reason": "score 4: General cybersecurity post from Microsoft rather than specific AI research or security news."
+      "id": "b898a1b2127c",
+      "headline": "Google launches Gemini 4 Neon model for complex workflows",
+      "category": "models",
+      "summary": "Google DeepMind released Gemini 4 Neon, a new model positioned between Hydrogen and Carbon in the Gemini 4 lineup for software engineering, knowledge work, and science. The model features a 1 million-token context window and is priced at $3 per million input tokens and $15 per million output tokens.",
+      "url": "https://deepmind.google/blog/introducing-gemini-4-neon",
+      "sources": 4,
+      "quotes": 0
     }
   ],
-  "written": [],
-  "notes": [],
+  "notes": [
+    "tagging skipped: daily cap of 900,000 tokens reached",
+    "trackers skipped: daily cap of 900,000 tokens reached"
+  ],
   "mode": "breaking",
   "timings": {
-    "gather": 9.0,
-    "judge": 1.2,
-    "verify and write": 0.0,
-    "tagging": 0.0,
-    "trackers": 0.0,
-    "photos": 0.0,
+    "gather": 11.3,
+    "judge": 0.8,
+    "verify and write": 66.8,
+    "photos": 0.1,
     "stock photos": 0.0,
-    "alerts": 5.3
+    "alerts": 2.0
   },
   "fetched": 2496,
-  "fresh": 3,
-  "judged": 3,
-  "kept": 0,
-  "trackers": "filed 0 stories; no tracker changed",
-  "photos": "0 saved, 0 unavailable",
-  "alerts": "17 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":0}",
-  "ai_requests_run": 1,
-  "ai_tokens_run": 5225,
-  "ai_requests_today": 281,
+  "fresh": 1,
+  "judged": 1,
+  "kept": 1,
+  "research": {
+    "investigated": 1,
+    "confirmed": 1,
+    "tool_calls": 2
+  },
+  "research_log": [
+    "Introducing Gemini 4 Neon: confirmed (searched “Gemini 4 Neon Google DeepMind”; read 9to5google.com)"
+  ],
+  "threads": [
+    "Google Gemini 4 model rollouts: Google launches Gemini 4 Neon model for complex workflows"
+  ],
+  "photos": "1 saved, 0 unavailable",
+  "alerts": "18 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":5}",
+  "ai_requests_run": 6,
+  "ai_tokens_run": 13236,
+  "ai_requests_today": 287,
   "provider_log": []
 }

@@ -1,19 +1,24 @@
-## Frontier Wire breaking-news check — 2026-11-18T21:13:37+00:00
+## Frontier Wire breaking-news check — 2026-11-18T22:10:05+00:00
 
-Fetched 2496 items · fresh 3 · judged 3 · kept 0 · **written 0**
-AI: 1 requests, 5,225 tokens this run · 281 requests today · providers: gemini, groq, nvidia, cerebras
-Photos: 0 saved, 0 unavailable
-Alerts: 17 events sent: {"subscribers":6,"sent":0,"queued":0}
-Trackers: filed 0 stories; no tracker changed
-Time: gather 9s, judge 1s, alerts 5s
+Fetched 2496 items · fresh 1 · judged 1 · kept 1 · **written 1**
+AI: 6 requests, 13,236 tokens this run · 287 requests today · providers: gemini, groq, nvidia, cerebras
+Research agent: investigated 1 stories with 2 tool calls, confirmed 1
+Threads updated: Google Gemini 4 model rollouts: Google launches Gemini 4 Neon model for complex workflows
+Photos: 1 saved, 0 unavailable
+Alerts: 18 events sent: {"subscribers":6,"sent":0,"queued":5}
+Time: gather 11s, verify and write 67s, alerts 2s
 
 ### New stories
-- none
+- **models** — [Google launches Gemini 4 Neon model for complex workflows](https://deepmind.google/blog/introducing-gemini-4-neon)  
+  Google DeepMind released Gemini 4 Neon, a new model positioned between Hydrogen and Carbon in the Gemini 4 lineup for software engineering, knowledge work, and science. The model features a 1 million-token context window and is priced at $3 per million input tokens and $15 per million output tokens.  
+  _4 source(s), 0 verified quote(s)_
 
-<details><summary>Dropped</summary>
+<details><summary>Research agent's work</summary>
 
-- Why Microsoft is investing in recycling the rare earth metals behind modern tech — score 3: General sustainability and rare earth metals recycling article without a direct AI focus.
-- Microsoft unveils 7 AI models for coding, image editing, voice and more — duplicate of 5d27befedfa3
-- Cyberattacks are getting faster. Here’s how Microsoft is fighting back — score 4: General cybersecurity post from Microsoft rather than specific AI research or security news.
+- Introducing Gemini 4 Neon: confirmed (searched “Gemini 4 Neon Google DeepMind”; read 9to5google.com)
 
 </details>
+
+### Notes
+- tagging skipped: daily cap of 900,000 tokens reached
+- trackers skipped: daily cap of 900,000 tokens reached

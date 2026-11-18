@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T21:13:37+00:00",
+  "updated_at": "2026-11-18T22:10:05+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Nvidia has announced it will stop selling H200 chips to China, concluding an arrangement that involved shipping chips through the United States and paying a 25% tariff. The decision follows the departure of former CEO Jensen Huang and coincides with new regulations restricting advanced U.S. chips in foreign data centers serving Chinese customers.",
@@ -80,6 +80,116 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Google DeepMind has introduced Gemini 4 Neon, a new AI model designed for complex software engineering, knowledge work, and science tasks. It features a 1 million-token context window and is priced at $3 per million input tokens and $15 per million output tokens.",
+        "terms": [
+          {
+            "term": "Multimodal context window",
+            "meaning": "A model's ability to understand text, images, video, and audio simultaneously."
+          },
+          {
+            "term": "Thinking levels",
+            "meaning": "Adjustable settings that trade reasoning depth against speed and token consumption."
+          },
+          {
+            "term": "Steerability",
+            "meaning": "The ability of an AI model to adapt cleanly to user corrections made while a task is running."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "Gemini 4 Neon",
+          "benchmark": "Artificial Analysis Intelligence Index (xhigh)",
+          "score": "61"
+        },
+        {
+          "model": "Gemini 4 Neon",
+          "benchmark": "Vals Index",
+          "score": "70.9%"
+        },
+        {
+          "model": "Gemini 4 Neon",
+          "benchmark": "Chartography",
+          "score": "73.5%"
+        },
+        {
+          "model": "Gemini 4 Neon",
+          "benchmark": "Agents' Last Exam v1.1",
+          "score": "75.8%"
+        },
+        {
+          "model": "Gemini 4 Neon",
+          "benchmark": "Zapier’s AutomationBench",
+          "score": "56.3%"
+        },
+        {
+          "model": "Gemini 4 Neon",
+          "benchmark": "Andon Labs' Vending-Bench 2",
+          "score": "$16,843"
+        }
+      ],
+      "audiences": {
+        "builders": "Gemini 4 Neon is available in the Gemini API and Google AI Studio with a 1 million-token context window, priced at $3 per million input tokens and $15 per million output tokens.",
+        "business": "Google launched Gemini 4 Neon to handle complex software engineering, knowledge work, and science workflows at Flash speeds, sitting between Hydrogen and Carbon in the Gemini 4 family.",
+        "investors": "Google DeepMind expanded its Gemini 4 model family with the rollout of Neon, priced at $3 per million input tokens and $15 per million output tokens."
+      },
+      "id": "b898a1b2127c",
+      "headline": "Google launches Gemini 4 Neon model for complex workflows",
+      "summary": "Google DeepMind released Gemini 4 Neon, a new model positioned between Hydrogen and Carbon in the Gemini 4 lineup for software engineering, knowledge work, and science. The model features a 1 million-token context window and is priced at $3 per million input tokens and $15 per million output tokens.",
+      "why_it_matters": "The launch expands Google's Gemini 4 family with a mid-tier model that matches larger models' capabilities while operating at faster speeds.",
+      "category": "models",
+      "lab": "Google DeepMind",
+      "model_name": "Gemini 4 Neon",
+      "model_type": "Language",
+      "tags": [
+        "Google DeepMind",
+        "Gemini 4 Neon",
+        "AI models",
+        "Software Engineering"
+      ],
+      "quotes": [],
+      "score": 9,
+      "url": "https://deepmind.google/blog/introducing-gemini-4-neon",
+      "source_id": "deepmind",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/introducing-gemini-4-neon",
+          "publisher": "Google DeepMind",
+          "title": "Introducing Gemini 4 Neon"
+        },
+        {
+          "url": "https://9to5google.com/2026/11/18/gemini-4-neon-announcement",
+          "publisher": "9to5google.com",
+          "title": "Google launches Gemini 4 Neon with Carbon quality at Flash speeds, live for AI Pro"
+        },
+        {
+          "url": "https://unite.ai/google-launches-gemini-4-neon-for-coding-knowledge-work-and-science",
+          "publisher": "Unite.AI",
+          "title": "Google Launches Gemini 4 Neon for Coding, Knowledge Work and Science"
+        },
+        {
+          "url": "https://blockchain.news/ainews/google-deepmind-unveils-gemini-4-neon-for-faster-complex-tasks",
+          "publisher": "Blockchain News",
+          "title": "Google DeepMind unveils Gemini 4 Neon for faster complex tasks"
+        }
+      ],
+      "research": {
+        "steps": 2,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-18T21:35:43+00:00",
+      "created_at": "2026-11-18T22:10:05+00:00",
+      "breaking": true,
+      "thread": "t-9e3e3ddacb24",
+      "photo_local": true
+    },
     {
       "audiences": {
         "builders": "Developers and early partners can access Genie 4 through the Gemini API and Google AI Studio.",
@@ -5611,96 +5721,6 @@
         "india-ai"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Anthropic’s AI wrote the low‑level code that connects a model to AMD’s GPUs, cutting the onboarding time from months to days. This reduces the need for large engineering teams to adapt models to new hardware. It makes switching between chip vendors faster and cheaper.",
-        "terms": [
-          {
-            "term": "kernel",
-            "meaning": "A small program that runs on a GPU to perform a specific computation for an AI model."
-          },
-          {
-            "term": "CUDA",
-            "meaning": "Nvidia’s long‑standing software platform for writing GPU code."
-          },
-          {
-            "term": "ROCm",
-            "meaning": "AMD’s open software platform for GPU programming, similar to CUDA."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "AI engineers can rely on models that generate most of the hardware‑specific code, lowering development effort.",
-        "business": "Enterprises may face lower costs and faster timelines when choosing between GPU vendors.",
-        "investors": "Anthropic demonstrates a technical edge that could reduce reliance on Nvidia and broaden its hardware partnerships."
-      },
-      "id": "0ed1df8ad9da",
-      "headline": "Anthropic says Claude Mythos ported to AMD GPUs in three days with almost no human work",
-      "summary": "Anthropic told investors its Claude Mythos Preview model was running on AMD MI355X GPUs in about three days, writing almost all the low‑level kernels itself, a task that previously took six to twelve months.",
-      "why_it_matters": "The speed of hardware onboarding could let AI providers switch chips without long engineering delays, challenging Nvidia’s long‑standing software advantage.",
-      "category": "industry",
-      "lab": "Anthropic",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "Claude is better than HIPify because it has web search built in.",
-          "speaker": "Anush Elangovan",
-          "speaker_role": "vice president of AI software, AMD",
-          "source_url": "https://tomshardware.com/tech-industry/artificial-intelligence/anthropic-says-claude-mythos-slashed-software-work-to-onboard-amd-gpus-from-up-to-12-months-to-around-three-days-writing-almost-100-percent-of-kernels-autonomously-chips-away-at-nvidias-cuda-moat"
-        }
-      ],
-      "score": 8,
-      "url": "https://techmeme.com/261116/p52",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://cdn.mos.cms.futurecdn.net/VF4egKqqkKq5CbHhYxQi6U-1200-80.jpg",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261116/p52",
-          "publisher": "techmeme.com",
-          "title": "Anthropic tells investors Claude Mythos Preview got its AI running on AMD GPUs in ~3 days with \"basically no human intervention\", vs. the usual 6-12 months (Shane Downing/Tom's Hardware)"
-        },
-        {
-          "url": "https://tomshardware.com/tech-industry/artificial-intelligence/anthropic-says-claude-mythos-slashed-software-work-to-onboard-amd-gpus-from-up-to-12-months-to-around-three-days-writing-almost-100-percent-of-kernels-autonomously-chips-away-at-nvidias-cuda-moat",
-          "publisher": "Tom's Hardware",
-          "title": "Anthropic says Claude Mythos slashed software work to onboard AMD GPUs from up to 12 months to around three days —writing almost 100% of kernels autonomously chips away at ..."
-        },
-        {
-          "url": "https://msn.com/en-us/news/other/anthropic-says-its-ai-model-cut-amd-chip-switch-to-three-days-why-it-could-be-a-challenge-to-nvidia/ar-AA2hjfos",
-          "publisher": "International Business Times on MSN",
-          "title": "Anthropic Says Its AI Model Cut AMD Chip Switch to Three Days. Why it Could be a Challenge to Nvidia"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-17T04:02:44+00:00",
-      "created_at": "2026-11-17T04:10:03+00:00",
-      "thread": "t-a4d26b025e34",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "",
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -6150,6 +6170,69 @@
   },
   "threads": [
     {
+      "id": "t-9e3e3ddacb24",
+      "title": "Google Gemini 4 model rollouts",
+      "updated_at": "2026-11-18T21:35:43+00:00",
+      "stories": [
+        {
+          "id": "b898a1b2127c",
+          "headline": "Google launches Gemini 4 Neon model for complex workflows",
+          "url": "https://deepmind.google/blog/introducing-gemini-4-neon",
+          "published_at": "2026-11-18T21:35:43+00:00",
+          "category": "models"
+        },
+        {
+          "id": "a64bf86d357e",
+          "headline": "Google rolls out Gemini Tasks assistant for free in six markets",
+          "url": "https://inc42.com/buzz/google-begins-rolling-out-personal-ai-assistant-tasks-in-india",
+          "published_at": "2026-11-17T23:31:37+00:00",
+          "category": "models"
+        },
+        {
+          "id": "0508a8475458",
+          "headline": "Google DeepMind launches Gemini 4 Hydrogen, a fast low‑cost model for coding",
+          "url": "https://techmeme.com/261112/p60",
+          "published_at": "2026-11-12T22:15:00+00:00",
+          "category": "models"
+        },
+        {
+          "id": "a8d5fa7d24b3",
+          "headline": "Google launches Gemini 4 Hydrogen, a fast model for everyday coding and search",
+          "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
+          "published_at": "2026-11-12T18:00:50+00:00",
+          "category": "models"
+        },
+        {
+          "id": "cce714811b51",
+          "headline": "Google launches Gemini Decisions API for fast multimodal yes/no and choice scoring",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api",
+          "published_at": "2026-11-11T18:00:00+00:00",
+          "category": "models"
+        },
+        {
+          "id": "a468d4c7b355",
+          "headline": "Ethan Mollick tests Fable 5.2 and Gemini Carbon on the Fermi Paradox",
+          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzyzlpr6lk2r",
+          "published_at": "2026-11-11T03:35:36.254000+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "28b27e2d175e",
+          "headline": "Google rolls out Gemini 4 Carbon to the public with agent swarm feature",
+          "url": "https://theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout",
+          "published_at": "2026-11-10T16:00:00+00:00",
+          "category": "models"
+        },
+        {
+          "id": "41e0dc889e76",
+          "headline": "Google announces Gemini 4 Carbon, a more capable frontier AI model not yet released",
+          "url": "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use",
+          "published_at": "2026-10-28T18:47:27+00:00",
+          "category": "models"
+        }
+      ]
+    },
+    {
       "id": "t-f02621b12802",
       "title": "Lutnick Nvidia ties under scrutiny",
       "updated_at": "2026-11-18T14:55:01+00:00",
@@ -6281,254 +6364,16 @@
           "category": "industry"
         }
       ]
-    },
-    {
-      "id": "t-a50b07bc6191",
-      "title": "Anthropic IPO valuation and Nscale chip funding",
-      "updated_at": "2026-11-18T07:00:41+00:00",
-      "stories": [
-        {
-          "id": "2d572302d891",
-          "headline": "Anthropic IPO set to deliver windfall to smaller VC firms",
-          "url": "https://techmeme.com/261118/p3",
-          "published_at": "2026-11-18T07:00:41+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "a8c038b3bd40",
-          "headline": "San Francisco AI insiders could hold $1.2 trillion in equity as Anthropic goes public",
-          "url": "https://techmeme.com/261117/p67",
-          "published_at": "2026-11-18T01:50:07+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "168c023a4a8e",
-          "headline": "Altimeter aims to invest $5B in Anthropic IPO",
-          "url": "https://techmeme.com/261116/p43",
-          "published_at": "2026-11-16T21:05:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "0b980939d985",
-          "headline": "Anthropic prices its IPO on Wednesday with valuation up to $1.4 trillion",
-          "url": "https://thestreet.com/crypto/artificial-intelligence/traders-are-pricing-anthropic-40-higher-ahead-of-ipo",
-          "published_at": "2026-11-16T11:15:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "3710a552738d",
-          "headline": "Anthropic IPO tests its public benefit commitment",
-          "url": "https://livemint.com/companies/anthropic-promises-to-pursue-humanitys-benefit-its-ipo-filing-gives-it-wiggle-room-11794805350350.html",
-          "published_at": "2026-11-16T08:15:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "9231c3778855",
-          "headline": "Samsung SDS seeks Anthropic and OpenAI as tenants for AI data centre services",
-          "url": "https://techmeme.com/261115/p19",
-          "published_at": "2026-11-16T01:15:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "e9a9e657b9d8",
-          "headline": "Anthropic targets up to $90.4B in IPO and private placement",
-          "url": "https://techmeme.com/261115/p18",
-          "published_at": "2026-11-15T23:00:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "2c9708b63937",
-          "headline": "Sam Bankman-Fried misses out on Anthropic IPO windfall",
-          "url": "https://techmeme.com/261113/p42",
-          "published_at": "2026-11-14T04:25:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "b9a430a49080",
-          "headline": "Nscale reports $5.5B in debt and $1.69B loss in amended IPO filing",
-          "url": "https://techmeme.com/261113/p11",
-          "published_at": "2026-11-13T14:25:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "6fe694c8134f",
-          "headline": "Nscale says it needs extra funding for 2027 commitments after $45B Anthropic chip order",
-          "url": "https://techmeme.com/261113/p3",
-          "published_at": "2026-11-13T06:01:16+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "3e673ebfce8a",
-          "headline": "Anthropic IPO draws about six times the orders for available shares",
-          "url": "https://techmeme.com/261112/p55",
-          "published_at": "2026-11-12T21:20:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "6734a79295b9",
-          "headline": "Anthropic's IPO roadshow video details multi-chip strategy and compute multipliers",
-          "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
-          "published_at": "2026-11-11T15:11:59+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "04441559207d",
-          "headline": "Anthropic IPO draws multiple times the orders for available shares",
-          "url": "https://techmeme.com/261111/p27",
-          "published_at": "2026-11-11T13:40:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "61c97162f2b8",
-          "headline": "Anthropic opens Australian retail IPO ahead of Nasdaq listing",
-          "url": "https://techmeme.com/261110/p63",
-          "published_at": "2026-11-11T02:30:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "103c6c1b606c",
-          "headline": "Nvidia plans $10B investment in Anthropic alongside its IPO",
-          "url": "https://techmeme.com/261110/p50",
-          "published_at": "2026-11-10T20:55:05+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "f2e3e14e12ac",
-          "headline": "Anthropic co-founders to sell $1.75 billion in shares ahead of $1.4 trillion IPO",
-          "url": "https://techmeme.com/261110/p32",
-          "published_at": "2026-11-10T17:02:35+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "e9e2b3561c9a",
-          "headline": "TSMC to invest up to $1B in Anthropic and OpenAI at IPO price",
-          "url": "https://techmeme.com/261110/p24",
-          "published_at": "2026-11-10T14:46:04+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "06c34be0a2ca",
-          "headline": "Anthropic sets IPO price at $70–$78 per share, targeting $1.4 trillion valuation",
-          "url": "https://theverge.com/ai-artificial-intelligence/1030703/anthropic-ipo-1-4-trillion",
-          "published_at": "2026-11-10T14:06:54+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "6e60d9db5bba",
-          "headline": "Anthropic targets $1.3tn valuation in IPO pricing 825 million shares at $70-$78",
-          "url": "https://businesschief.com/news/anthropic-targets-us-1-3tn-valuation-for-much-hyped-ipo",
-          "published_at": "2026-11-10T07:54:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "ea51f7bea31a",
-          "headline": "Anthropic to host live‑stream IPO event with CEO Dario Amodei and JPMorgan’s Jamie Dimon",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-plans-ipo-live-stream-with-dario-amodei-jpmorgan-ceo-jamie-dimon/articleshow/135699429.cms",
-          "published_at": "2026-11-10T04:38:39+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "9798aa740a48",
-          "headline": "Anthropic sends and retracts IPO filing pricing details to bankers",
-          "url": "https://techmeme.com/261109/p48",
-          "published_at": "2026-11-10T01:41:39+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "69011908bacb",
-          "headline": "TSMC board approves up to $1bn investment in Anthropic and OpenAI",
-          "url": "https://ua.news/en/dovkolo-svitu/rada-direktoriv-tsmc-skhvalila-investitsiyi-do-1-mlrd-v-anthropic-i-openai-channel-newsasia",
-          "published_at": "2026-11-09T18:43:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "9b35f1480431",
-          "headline": "AI companies sell $300B+ in stock in 2026 amid market absorption questions",
-          "url": "https://techmeme.com/261108/p10",
-          "published_at": "2026-11-08T17:45:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "afa4cae37227",
-          "headline": "Anthropic buys 1.7GW of gas-fired generators in $3.4B deal",
-          "url": "https://techmeme.com/261108/p8",
-          "published_at": "2026-11-08T15:05:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "f31245a34fce",
-          "headline": "Anthropic presses on with November IPO plans despite global AI stock sell-off",
-          "url": "https://techmeme.com/261106/p21",
-          "published_at": "2026-11-06T21:12:51+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "7c70b636a2cf",
-          "headline": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
-          "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo",
-          "published_at": "2026-11-06T15:54:47+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "1b0209f81f9f",
-          "headline": "Anthropic reports $895.4 billion in compute‑related purchase commitments and leases",
-          "url": "https://techmeme.com/261102/p29",
-          "published_at": "2026-11-02T16:35:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "038e188345e4",
-          "headline": "Anthropic to raise up to ¥552.9 bn ($3.5 bn) from Japanese investors in US IPO",
-          "url": "https://bloomberg.com/news/articles/2026-11-02/anthropic-seeks-up-to-3-5-billion-in-japan-for-its-mega-us-ipo",
-          "published_at": "2026-11-01T22:23:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "b329cc4aaa4c",
-          "headline": "Blackstone says Anthropic likely to receive junk rating after IPO",
-          "url": "https://ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
-          "published_at": "2026-10-30T17:27:25+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "007a2afe4a6c",
-          "headline": "Anthropic’s IPO faces valuation drop as growth slows and AI prices plunge",
-          "url": "https://economictimes.indiatimes.com/tech/technology/anthropics-record-ipo-faces-some-big-questions/articleshow/135249836.cms",
-          "published_at": "2026-10-28T02:42:31+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "e4d1fbe9aac7",
-          "headline": "Anthropic files S‑1 for Nasdaq IPO, reporting $16.3 billion H1 revenue",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/articleshow/135222913.cms",
-          "published_at": "2026-10-27T02:33:06+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "09134649a0da",
-          "headline": "Anthropic files S‑1 showing $16.3 billion H1 revenue and $131.7 billion cash",
-          "url": "https://msn.com/en-us/news/other/the-anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/ar-AA2g76lV",
-          "published_at": "2026-10-26T16:53:17+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "8a77e646571b",
-          "headline": "Anthropic files S‑1 for IPO, plans Nasdaq listing under ticker ANT",
-          "url": "https://anthropic.com/news/s1-sec",
-          "published_at": "2026-10-26T00:00:00+00:00",
-          "category": "industry"
-        }
-      ]
     }
   ],
   "labs": [
     {
       "lab": "Google DeepMind",
-      "model": "Genie 4",
-      "type": "Multimodal",
-      "date": "2026-11-18T18:13:42+00:00",
-      "story_id": "50e3ea47cbae",
-      "url": "https://deepmind.google/blog/genie-4-is-now-available"
+      "model": "Gemini 4 Neon",
+      "type": "Language",
+      "date": "2026-11-18T21:35:43+00:00",
+      "story_id": "b898a1b2127c",
+      "url": "https://deepmind.google/blog/introducing-gemini-4-neon"
     },
     {
       "lab": "NVIDIA",
@@ -6754,8 +6599,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 506,
-    "model_releases_this_month": 60,
+    "stories_this_month": 507,
+    "model_releases_this_month": 61,
     "labs_tracked": 29
   }
 }
