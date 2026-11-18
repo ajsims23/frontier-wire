@@ -281,3 +281,67 @@ def test_draft_starts_a_programme(tmp_path):
     now = recap._dt("2026-11-18T14:20:00+00:00")
     d = recap.draft([], now)
     assert d["format"] == 2 and d["written_at"].startswith("2026-11-18T19:50") and recap.part_of_day(d) == "evening"
+
+
+def _tone_take(lengths, gap=1.2, rate=24000):
+    """Fake speech: a tone per scene (with short in-scene gaps), long silences between scenes, as 16-bit PCM."""
+    import math as m
+    import struct
+    pcm = bytearray()
+    for j, n in enumerate(lengths):
+        if j:
+            pcm += b"\0\0" * int(gap * rate)
+        for k in range(int(n * rate)):
+            t = k / rate
+            v = 0 if (t % 2.0) > 1.85 else int(9000 * m.sin(2 * m.pi * 220 * t))  # 0.15s breaths inside a scene
+            pcm += struct.pack("<h", v)
+    return bytes(pcm), rate
+
+
+def test_gemini_one_take_is_cut_into_scenes(tmp_path):
+    import base64
+    script = _programme()
+    texts = [t for _, t in recap.scene_texts(script)]
+    lengths = [len(t) / 14 for t in texts]
+    pcm, rate = _tone_take(lengths)
+    calls = []
+
+    class R:
+        status_code = 200
+        text = ""
+        def json(self):
+            return {"candidates": [{"content": {"parts": [{"inlineData": {"mimeType": "audio/L16;codec=pcm;rate=24000",
+                                                                          "data": base64.b64encode(pcm).decode()}}]}}]}
+
+    class H:
+        def post(self, url, json, headers, timeout):
+            calls.append((url, json))
+            return R()
+
+    out = tmp_path / "voice"
+    assert recap.fetch_voice_gemini(script, out, "k", H()) == []
+    assert len(calls) == 1 and "gemini-3.8-flash-tts" in calls[0][0]
+    sent = calls[0][1]["contents"][0]["parts"][0]
+    assert sent["text"].count("<long pause>") == 6 and "<short pause>" in sent["text"] and "anchor" in sent["speech_metadata"]["style"]
+    assert sorted(f.name for f in out.glob("*.mp3")) == sorted(["hook.mp3", "outro.mp3"] + [f"story{i}.mp3" for i in range(1, 6)])
+    clips = recap.voice_clips(script, out)
+    assert set(clips) == {"hook", "outro"} | {f"story{i}" for i in range(1, 6)}
+    for key, n in zip(["hook"] + [f"story{i}" for i in range(1, 6)] + ["outro"], lengths):
+        assert abs(clips[key][1] - n) < 0.6
+    assert recap.voice_provider(out) == "gemini"
+
+
+def test_gemini_falls_back_to_the_next_model_and_cleans_up(tmp_path):
+    class R:
+        status_code = 429
+        text = "RESOURCE_EXHAUSTED"
+
+    class H:
+        def post(self, url, json, headers, timeout):
+            return R()
+
+    out = tmp_path / "voice"
+    notes = recap.fetch_voice_gemini(_programme(), out, "k", H())
+    assert any("gemini-3.8-flash-tts" in n for n in notes) and any("gemini-3.1-flash-tts-preview" in n for n in notes)
+    assert not list(out.glob("*"))
+    assert recap.fetch_voice_gemini(_programme(), out, "") == ["no GEMINI_API_KEY; using the fallback voices"]

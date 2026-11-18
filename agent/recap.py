@@ -58,13 +58,18 @@ CPS = 12.2
 # worker's allow-list; Kokoro voices for the backup. Delivery, not a copy of any real presenter.
 ANCHORS = {
     # Played only a little faster than the TTS reads: a hurried read is the quickest way to sound synthetic.
-    "female": {"aura": "thalia", "kokoro": "af_heart", "speed": 1.15},     # crisp, confident, brisk
-    "male": {"aura": "odysseus", "kokoro": "am_michael", "speed": 1.1},  # calm, low, measured (a touch slower)
+    # gemini: the main voice (Gemini TTS, read at its natural pace); aura and kokoro: the fallbacks
+    "female": {"gemini": "Kore", "aura": "thalia", "kokoro": "af_heart", "speed": 1.15},     # firm, crisp, confident
+    "male": {"gemini": "Charon", "aura": "odysseus", "kokoro": "am_michael", "speed": 1.1},  # informative, calm, measured
 }
 
 
 def anchor_for(day: str) -> dict[str, str]:
-    """Which anchor reads the recap dated `day` (YYYY-MM-DD): alternating female and male day by day."""
+    """Which anchor reads the recap dated `day` (YYYY-MM-DD): alternating female and male day by day
+    (RECAP_ANCHOR=male|female overrides it, for voice samples)."""
+    import os
+    if os.environ.get("RECAP_ANCHOR") in ANCHORS:
+        return ANCHORS[os.environ["RECAP_ANCHOR"]]
     try:
         n = date.fromisoformat(str(day)[:10]).toordinal()
     except ValueError:
@@ -406,11 +411,20 @@ def voice_clips(script: dict[str, Any], voice_dir: Path | None) -> dict[str, tup
         if not text:
             continue
         f = voice_dir / f"{key}.mp3"
+        if not f.exists() and key.endswith("d") and (voice_dir / f"{key[:-1]}.mp3").exists():
+            continue  # a one-take voice (Gemini) reads a scene's second part in the same clip
         try:
             out[key] = (f, _duration(f))
         except Exception:  # noqa: BLE001
             return {}
     return out
+
+
+def voice_provider(voice_dir: Path | None) -> str:
+    try:
+        return json.loads((voice_dir / "provider.json").read_text()).get("provider", "")
+    except Exception:  # noqa: BLE001
+        return ""
 
 
 def timing(n: int, clips: dict[str, tuple[Path, float]], speed: float = VOICE_SPEED) -> tuple[list[float], float]:
@@ -673,6 +687,142 @@ def fetch_voice(script: dict[str, Any], out: Path, api: str, secret: str) -> lis
         for f in out.glob("*.mp3"):
             f.unlink()
     return notes
+
+
+# ---------------------------------------------------------------- the main voice: Gemini TTS
+# An acted read from Google's Gemini TTS (free tier: 10 requests a day per model). The whole bulletin is read in ONE
+# take, scenes separated by long pauses, so the anchor's tone carries from story to story; the take is then cut
+# into scenes at its longest silences. If the cut doesn't line up, each scene is read separately; if a model is out
+# of quota, the next one is tried. Aura-2 (Workers AI) and Kokoro stay as the fallbacks.
+GEMINI_MODELS = ("gemini-3.8-flash-tts", "gemini-3.1-flash-tts-preview")
+GEMINI_STYLE = {
+    "female": "Warm, confident American evening-news anchor. Clear, crisp and unhurried, with natural emphasis.",
+    "male": "Warm, authoritative American evening-news anchor. Calm, measured and unhurried, with natural emphasis.",
+}
+GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+
+
+def scene_texts(script: dict[str, Any]) -> list[tuple[str, str]]:
+    """The bulletin as scenes (hook, story1..n, outro), each one take's worth of text with its inner beat marked."""
+    said = dict(narration(script))
+    keys = ["hook"] + [f"story{i}" for i in range(1, len(script.get("stories") or []) + 1)] + ["outro"]
+    out = []
+    for k in keys:
+        a, b = said.get(k, ""), said.get(k + "d", "")
+        out.append((k, f"{a} <short pause> {b}" if a and b else a or b))
+    return out
+
+
+def _gemini_say(http: Any, model: str, key: str, voice: str, style: str, text: str) -> tuple[bytes, int]:
+    """One Gemini TTS request -> (16-bit mono PCM, sample rate). Raises with the API's own message on failure."""
+    import base64
+    if model.startswith("gemini-3.8"):
+        part = {"text": text, "speech_metadata": {"style": style}}
+    else:  # earlier models take the direction as a prompt line, and square-bracket pause tags
+        part = {"text": f"{style} Read this news bulletin:\n" + text.replace("<short pause>", "[short pause]").replace("<long pause>", "[long pause]")}
+    body = {"contents": [{"role": "user", "parts": [part]}],
+            "generationConfig": {"responseModalities": ["AUDIO"],
+                                 "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}}
+    r = http.post(GEMINI_URL.format(model=model), json=body, headers={"x-goog-api-key": key}, timeout=300)
+    if r.status_code == 400 and model.startswith("gemini-3.8"):  # the newer voice field, if the classic one is refused
+        body["generationConfig"]["speechConfig"] = {"voiceConfig": {"voice": voice}}
+        r = http.post(GEMINI_URL.format(model=model), json=body, headers={"x-goog-api-key": key}, timeout=300)
+    if r.status_code != 200:
+        raise RuntimeError(f"{model} HTTP {r.status_code}: {r.text[:200]}")
+    inline = r.json()["candidates"][0]["content"]["parts"][0]["inlineData"]
+    data = base64.b64decode(inline["data"])
+    if data[:4] == b"RIFF":  # a WAV file: find the PCM
+        import io
+        import wave
+        with wave.open(io.BytesIO(data)) as w:
+            return w.readframes(w.getnframes()), w.getframerate()
+    m = re.search(r"rate=(\d+)", inline.get("mimeType", ""))
+    return data, int(m.group(1)) if m else 24000
+
+
+def _pcm_to_wav(pcm: bytes, rate: int, f: Path) -> Path:
+    import wave
+    with wave.open(str(f), "wb") as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(rate)
+        w.writeframes(pcm)
+    return f
+
+
+def _silences(wav: Path, min_s: float = 0.35) -> list[tuple[float, float]]:
+    r = subprocess.run(["ffmpeg", "-v", "info", "-i", str(wav), "-af", f"silencedetect=noise=-38dB:d={min_s}", "-f", "null", "-"],
+                       capture_output=True, text=True)
+    starts = [float(x) for x in re.findall(r"silence_start: ([\d.]+)", r.stderr)]
+    ends = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", r.stderr)]
+    return list(zip(starts, ends))
+
+
+def split_take(wav: Path, texts: list[str], out: Path, keys: list[str]) -> bool:
+    """Cut one take into len(texts) scenes at its longest silences. False (and nothing written) if the pieces don't
+    line up with the text, so the caller can read the scenes one by one instead."""
+    total = _duration(wav)
+    gaps = _silences(wav)
+    need = len(texts) - 1
+    if len(gaps) < need:
+        return False
+    cuts = sorted(sorted(gaps, key=lambda g: g[1] - g[0], reverse=True)[:need])
+    bounds = [0.0] + [(a + b) / 2 for a, b in cuts] + [total]
+    chars = sum(len(t) for t in texts)
+    for i, t in enumerate(texts):  # each piece should run roughly as long as its share of the words
+        share = (bounds[i + 1] - bounds[i]) / total
+        want = len(t) / chars
+        if not 0.5 <= share / want <= 1.9:
+            return False
+    for i, k in enumerate(keys):
+        _run(["ffmpeg", "-v", "error", "-y", "-ss", f"{bounds[i]:.3f}", "-to", f"{bounds[i + 1]:.3f}", "-i", str(wav), "-af", _TRIM,
+              "-c:a", "libmp3lame", "-q:a", "2", str(out / f"{k}.mp3")])
+    return True
+
+
+_TRIM = ("silenceremove=start_periods=1:start_threshold=-45dB,areverse,"
+         "silenceremove=start_periods=1:start_threshold=-45dB,areverse")
+
+
+def fetch_voice_gemini(script: dict[str, Any], out: Path, key: str, http: Any = None) -> list[str]:
+    """Run in GitHub Actions: the anchor's read from Gemini TTS into out/<scene>.mp3 (and out/provider.json).
+    Returns notes; an empty list means the narration is in place. On failure nothing is left behind."""
+    import time
+    if not key:
+        return ["no GEMINI_API_KEY; using the fallback voices"]
+    if http is None:
+        import httpx
+        http = httpx.Client()
+    out.mkdir(parents=True, exist_ok=True)
+    who = "male" if anchor_for(script.get("date", ""))["aura"] == ANCHORS["male"]["aura"] else "female"
+    voice, style = ANCHORS[who]["gemini"], GEMINI_STYLE[who]
+    scenes = [(k, t) for k, t in scene_texts(script) if t]
+    keys, texts = [k for k, _ in scenes], [t for _, t in scenes]
+    notes: list[str] = []
+    for model in GEMINI_MODELS:
+        try:  # one take, the way an anchor reads the whole bulletin
+            pcm, rate = _gemini_say(http, model, key, voice, style, " <long pause> ".join(texts))
+            take = _pcm_to_wav(pcm, rate, out / "take.wav")
+            if split_take(take, texts, out, keys):
+                take.unlink()
+                (out / "provider.json").write_text(json.dumps({"provider": "gemini", "model": model, "voice": voice, "mode": "one take"}))
+                return []
+            take.unlink()
+            notes.append(f"{model}: the one-take read didn't split cleanly into scenes; reading scene by scene")
+            for i, (k, t) in enumerate(scenes):  # scene by scene, inside the 3-requests-a-minute limit
+                if i:
+                    time.sleep(21)
+                pcm, rate = _gemini_say(http, model, key, voice, style, t)
+                wav = _pcm_to_wav(pcm, rate, out / f"{k}.wav")
+                _run(["ffmpeg", "-v", "error", "-y", "-i", str(wav), "-af", _TRIM, "-c:a", "libmp3lame", "-q:a", "2", str(out / f"{k}.mp3")])
+                wav.unlink()
+            (out / "provider.json").write_text(json.dumps({"provider": "gemini", "model": model, "voice": voice, "mode": "scene by scene"}))
+            return []
+        except Exception as exc:  # noqa: BLE001 - out of quota, refused, malformed: try the next model
+            notes.append(f"{model}: {str(exc)[:200]}")
+            for f in list(out.glob("*.mp3")) + list(out.glob("*.wav")) + list(out.glob("provider.json")):
+                f.unlink()
+    return notes + ["no Gemini narration; using the fallback voices"]
 
 
 KOKORO_SPEED = 0.9   # open-source Kokoro-82M reads faster than Aura-2; slowed so the backup keeps the same unhurried pace
@@ -1522,7 +1672,8 @@ def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.gi
         if not raw:
             break
         cand = compose_voice(raw, n, with_detail, out_dir)
-        d, tp = timing(n, cand, anchor_for(script.get("date", "")).get("speed", VOICE_SPEED))
+        natural = voice_provider(voice) == "gemini"   # an acted read: never speed it up unless it can't fit
+        d, tp = timing(n, cand, 1.0 if natural else anchor_for(script.get("date", "")).get("speed", VOICE_SPEED))
         if tp:
             vc, durs, tempo, read = cand, d, tp, ("line and detail" if with_detail else "lines only")
             break
@@ -1542,6 +1693,7 @@ def render(script: dict[str, Any], out_dir: Path, site_label: str = "ajsims23.gi
     rv = VerticalRenderer(script, site_label, images if images and images.exists() else None, durs, clips)
     _encode(rv, VW, VH, audio, frames, out_dir / "recap-vertical.mp4", f"Frontier Wire recap {script['date']} (vertical)")
     (out_dir / "render.json").write_text(json.dumps({"narrated": bool(vc), "voice": read, "tempo": round(tempo, 3),
+                                                     "provider": voice_provider(voice) if vc else "",
                                                      "footage": sorted(i + 1 for i in r.clips), "scenes": [round(d, 2) for d in durs]}))
     r.poster().save(poster, quality=86, optimize=True, progressive=True)
     # teaser: the hook into the first story, small enough for an email

@@ -9,6 +9,7 @@
   python -m agent recap draft   pick today's top five and write data/recaps/<date>.json for the editor to fill
   python -m agent recap render --out DIR   check the filled script and render the recap bulletin recap.mp4, poster.jpg, teaser.gif
   python -m agent recap footage|voice --out DIR   (workflow) stock clips from Pexels / AI narration via the worker
+  python -m agent recap voice-gemini --out DIR   (workflow) the anchor's read from Gemini TTS (the main voice)
   python -m agent recap check --out DIR    re-check a rendered video (length, size, codec, decodes cleanly)
   python -m agent recap upload --out DIR   push the files to recap-upload/<date>; the Recap release workflow publishes them
   python -m agent recap stamp --out DIR    (workflow) check the files and mark the recap published
@@ -35,7 +36,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("check-models")
     sub.add_parser("preview-desks")
     rc = sub.add_parser("recap")
-    rc.add_argument("action", choices=["draft", "render", "check", "upload", "stamp", "images", "footage", "voice", "voice-backup"])
+    rc.add_argument("action", choices=["draft", "render", "check", "upload", "stamp", "images", "footage", "voice", "voice-gemini", "voice-backup"])
     rc.add_argument("--date", default="", help="YYYY-MM-DD in IST (default: today)")
     rc.add_argument("--out", default="", help="folder for the rendered files")
     rc.add_argument("--force", action="store_true", help="draft: replace a script the editor already filled")
@@ -167,6 +168,14 @@ def _recap(args: argparse.Namespace) -> int:
         for n in notes:
             print(f"::warning::{n}")
         print(f"{len(script['stories']) - len(notes)} of {len(script['stories'])} AI illustrations")
+        return 0
+    elif args.action == "voice-gemini":
+        script = json.loads((out / "script.json").read_text())
+        notes = recap.fetch_voice_gemini(script, out / "voice", os.environ.get("GEMINI_API_KEY", ""))
+        for n in notes:
+            print(f"::warning::{n}")
+        if not notes:
+            print("anchor narration ready (Gemini TTS): " + (out / "voice" / "provider.json").read_text())
         return 0
     elif args.action == "voice-backup":
         script = json.loads((out / "script.json").read_text())

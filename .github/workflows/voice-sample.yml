@@ -1,0 +1,71 @@
+name: Recap voice sample
+
+# Run by hand (Actions > Recap voice sample > Run workflow) to hear the anchor voice on a sample bulletin without
+# publishing anything: reads config/voice-sample.json with the main voice (Gemini TTS), renders the video with
+# stock footage and drawn graphics, and attaches it to the pre-release "voice-sample". Uses one Gemini request.
+on:
+  workflow_dispatch:
+    inputs:
+      anchor:
+        description: "Which anchor reads it"
+        type: choice
+        options: [female, male]
+        default: female
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voice-sample
+  cancel-in-progress: false
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OUT: _recap/sample
+      RECAP_ANCHOR: ${{ inputs.anchor }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Install ffmpeg
+        timeout-minutes: 6
+        run: |
+          command -v ffprobe && exit 0
+          url=https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz
+          if curl -fsSL --retry 3 --max-time 180 "$url" -o /tmp/ff.tar.xz && tar -xJf /tmp/ff.tar.xz -C /tmp; then
+            sudo cp /tmp/ffmpeg-master-latest-linux64-gpl/bin/ffmpeg /tmp/ffmpeg-master-latest-linux64-gpl/bin/ffprobe /usr/local/bin/
+          else
+            sudo timeout 240 apt-get update -qq && sudo timeout 240 apt-get install -y -qq ffmpeg >/dev/null
+          fi
+      - name: The sample script
+        run: |
+          mkdir -p "$OUT" && cp config/voice-sample.json "$OUT/script.json"
+          echo "DATE=$(jq -r .date "$OUT/script.json")" >> "$GITHUB_ENV"
+      - name: Stock footage
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: python -m agent recap footage --date "$DATE" --out "$OUT"
+      - name: Anchor voice (Gemini TTS)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python -m agent recap voice-gemini --date "$DATE" --out "$OUT"
+          ls "$OUT/voice/"*.mp3 >/dev/null 2>&1 || { echo "::error::no Gemini narration"; exit 1; }
+      - name: Render
+        run: python -m agent recap render --date "$DATE" --out "$OUT" && cat "$OUT/render.json"
+      - name: Attach to the voice-sample pre-release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          name="sample-${{ inputs.anchor }}.mp4"
+          cp "$OUT/recap.mp4" "/tmp/$name"
+          gh release view voice-sample >/dev/null 2>&1 || gh release create voice-sample --prerelease --latest=false \
+            --title "Recap voice sample" --notes "Test renders of the anchor voice. Not a published recap."
+          gh release upload voice-sample "/tmp/$name" --clobber

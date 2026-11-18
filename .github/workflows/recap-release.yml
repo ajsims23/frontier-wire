@@ -68,11 +68,19 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: python -m agent recap footage --date "$DATE" --out "_recap/$DATE"
 
-      - name: AI narration (Workers AI via our API worker; without it the video renders silent)
+      - name: Anchor voice (Gemini TTS, one take; the fallbacks below run only if it fails)
+        if: env.PREBUILT != '1'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m agent recap voice-gemini --date "$DATE" --out "_recap/$DATE"
+
+      - name: Fallback narration (Workers AI via our API worker) if the Gemini voice failed
         if: env.PREBUILT != '1'
         env:
           RECAP_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
-        run: RECAP_API="$(cat config/api_url.txt)" python -m agent recap voice --date "$DATE" --out "_recap/$DATE"
+        run: |
+          if ls "_recap/$DATE/voice/"*.mp3 >/dev/null 2>&1; then echo "Gemini narration is in place"; exit 0; fi
+          RECAP_API="$(cat config/api_url.txt)" python -m agent recap voice --date "$DATE" --out "_recap/$DATE"
 
       - name: Cache the backup voice model
         if: env.PREBUILT != '1'
@@ -81,11 +89,11 @@ jobs:
           path: ~/.kokoro
           key: kokoro-onnx-v1.0
 
-      - name: Backup voice (open-source Kokoro) if the Workers AI voice failed
+      - name: Backup voice (open-source Kokoro) if both voices above failed
         if: env.PREBUILT != '1'
         run: |
-          if ls "_recap/$DATE/voice/"*.mp3 >/dev/null 2>&1; then echo "Workers AI narration is in place"; exit 0; fi
-          echo "::warning::Workers AI narration missing; using the Kokoro backup voice"
+          if ls "_recap/$DATE/voice/"*.mp3 >/dev/null 2>&1; then echo "Narration is in place"; exit 0; fi
+          echo "::warning::Gemini and Workers AI narration missing; using the Kokoro backup voice"
           pip install -q kokoro-onnx soundfile
           mkdir -p ~/.kokoro
           base=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
