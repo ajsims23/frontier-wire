@@ -444,8 +444,10 @@ def test_timeline_carries_the_programme(tmp_path):
 
 
 @pytest.mark.skipif(__import__("agent.motion", fromlist=["x"]).available() is not None, reason="no headless Chrome / video deps")
-def test_engine_draws_stills(tmp_path):
+def test_engine_draws_stills(tmp_path, monkeypatch):
+    from pathlib import Path
     from agent import motion
     script = _programme()
-    files = motion.stills(script, tmp_path)
+    monkeypatch.chdir(tmp_path)   # a relative output folder, as in GitHub Actions
+    files = motion.stills(script, Path("rel"))
     assert len(files) == 2 * (1 + len(script["stories"]))

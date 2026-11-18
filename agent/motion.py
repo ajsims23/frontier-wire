@@ -285,6 +285,8 @@ def chrome() -> str | None:
 
 def record(tl: dict[str, Any], w: int, h: int, audio: list[str], mp4: Path, title: str, work: Path) -> None:
     """Render the timeline at w x h in headless Chrome and encode it, with the given ffmpeg audio input args."""
+    work = work.resolve()   # the recorder runs from video/, so every path it gets must be absolute
+    mp4 = mp4.resolve()
     work.mkdir(parents=True, exist_ok=True)
     tlf = work / f"timeline-{w}x{h}.json"
     tlf.write_text(json.dumps(tl))
@@ -311,6 +313,7 @@ def stills(script: dict[str, Any], out: Path) -> list[Path]:
     n = len(script["stories"])
     durs, _ = recap.timing(n, {})
     tl = timeline(script, durs, {}, 1.0, "ajsims23.github.io/frontier-wire")
+    out = out.resolve()
     out.mkdir(parents=True, exist_ok=True)
     tlf = out / "timeline.json"
     tlf.write_text(json.dumps(tl))
