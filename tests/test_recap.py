@@ -230,6 +230,8 @@ def _programme():
                    "open": "Tonight: a chip giant walks away from China, a price war in models, and a warning about AI on the battlefield.",
                    "close": "A big day for chips, and the price of intelligence keeps falling."})
     leads = ["Regulators", "Investors", "Developers", "Turning", "And finally,"]
+    for st in script["stories"]:
+        st["graphic"] = {"type": "list", "caption": "What changes", "items": ["Prices", "Access"]}
     for i, st in enumerate(script["stories"]):
         st["anchor"] = (f"{leads[i]} are watching story {i} closely. The change reaches well beyond one company, "
                         "and it could reset how the industry prices things.")
@@ -345,3 +347,47 @@ def test_gemini_falls_back_to_the_next_model_and_cleans_up(tmp_path):
     assert any("gemini-3.8-flash-tts" in n for n in notes) and any("gemini-3.1-flash-tts-preview" in n for n in notes)
     assert not list(out.glob("*.mp3")) and not (out / "provider.json").exists()
     assert recap.fetch_voice_gemini(_programme(), out, "") == ["no GEMINI_API_KEY; using the fallback voices"]
+
+
+def test_programme_stories_need_a_graphic_from_their_own_facts():
+    script = _programme()
+    script["stories"][0]["graphic"] = {}
+    assert any("add a \"graphic\"" in e for e in recap.validate(script))
+    st = script["stories"][1]
+    st["headline"], st["summary"] = "Acme raises $47 million", "Acme raised $26 million in equity and $21 million in debt."
+    st["graphic"] = {"type": "number", "value": "$47M", "caption": "Raised", "parts": [["Equity", "$26M"], ["Debt", "$21M"]]}
+    script["stories"][0]["graphic"] = {"type": "map", "places": ["US", "China"], "from": "US", "to": "China", "blocked": True}
+    assert recap.validate(script) == []
+    st["graphic"]["parts"][1][1] = "$31M"
+    assert any("numbers not in the story: 31" in e for e in recap.validate(script))
+
+
+def test_graphic_checks_places_and_quotes():
+    from agent import newsgfx
+    assert newsgfx.place("Bengaluru")["countries"] == ["India"] and newsgfx.place("EU")["label"] == "European Union"
+    assert newsgfx.place("United States")["label"] == "United States" and newsgfx.place("Atlantis") is None
+    assert any("can't draw the place" in e for e in newsgfx.check({"type": "map", "places": ["Atlantis"]}, ""))
+    quotes = [{"text": "Scale, diversity, and quality are important aspects, and they need to work in tandem.", "speaker": "Manish Agarwal"}]
+    ok = {"type": "quote", "text": "Scale, diversity, and quality are important aspects", "by": "Manish Agarwal"}
+    assert newsgfx.check(ok, "", quotes) == []
+    assert any("words the story itself quotes" in e for e in newsgfx.check({**ok, "text": "Robots will take every job on Earth"}, "", quotes))
+    assert any("that quote is by" in e for e in newsgfx.check({**ok, "by": "Someone Else"}, "", quotes))
+    assert any("change needs" in e for e in newsgfx.check({"type": "change", "change": "a lot", "before": "a", "after": "b"}, ""))
+
+
+def test_every_graphic_type_draws_in_both_cuts():
+    from agent import newsgfx
+    specs = [{"type": "map", "places": ["United States", "China"], "from": "United States", "to": "China", "blocked": True, "caption": "Halted"},
+             {"type": "map", "places": ["Bengaluru"], "caption": "Where"},
+             {"type": "number", "value": "$47M", "caption": "Raised", "parts": [["Equity", "$26M"], ["Debt", "$21M"]]},
+             {"type": "number", "value": "25%", "caption": "Tariff"},
+             {"type": "change", "change": "-20%", "before": "Before", "after": "After"},
+             {"type": "bars", "items": [["A", "$10M"], ["B", "$47M"]]},
+             {"type": "list", "caption": "Six models", "items": ["Coding", "Images", "Voice"]},
+             {"type": "steps", "items": ["One", "Two", "Three"]},
+             {"type": "quote", "text": "Scale, diversity, and quality matter.", "by": "Manish Agarwal", "role": "Co-founder"}]
+    for spec in specs:
+        for w, h in ((1760, 470), (980, 880)):
+            g = newsgfx.Graphic(spec, (120, 200, 255), w, h)
+            for lt in (0.0, 1.0, 3.0):
+                assert g.render(lt).size == (w, h)

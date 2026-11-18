@@ -36,6 +36,7 @@ from urllib.parse import urlparse
 
 from PIL import Image, ImageDraw, ImageFilter
 
+from . import newsgfx
 from .cards import GROUND, LABEL, MUTED, TEXT, TOPIC, _font, _wrap
 
 IST = timezone(timedelta(hours=5, minutes=30))
@@ -242,7 +243,9 @@ def draft(stories: list[dict[str, Any]], now: datetime) -> dict[str, Any]:
             "id": s["id"], "category": s["category"], "lab": s.get("lab", ""), "source": credit(s),
             "headline": s["headline"], "summary": s["summary"], "why_it_matters": s.get("why_it_matters", ""),
             "source_titles": [x.get("title", "") for x in s.get("sources") or []],
-            "line": "", "detail": "", "anchor": "", "say": "", "footage": "", "image_prompt": "",
+            "quotes": [{"text": q.get("text", ""), "speaker": q.get("speaker", ""), "role": q.get("speaker_role", "")}
+                       for q in (s.get("quotes") or [])[:3] if q.get("text") and q.get("speaker")],
+            "line": "", "detail": "", "anchor": "", "graphic": {}, "say": "", "footage": "", "image_prompt": "",
         } for s in picks],
     }
 
@@ -291,6 +294,12 @@ def validate(script: dict[str, Any]) -> list[str]:
                 errs.append(f"story {i}: {key} must be at most {lim[key]} characters")
         if len(s.get("image_prompt") or "") > 300:
             errs.append(f"story {i}: image_prompt must be at most 300 characters")
+        if v2:  # every story is told with a news graphic built from its own facts
+            g = s.get("graphic")
+            if not g:
+                errs.append(f"story {i}: add a \"graphic\" (map, number, change, bars, list, steps or quote) built from the story's facts")
+            else:
+                errs += [f"story {i}: {e}" for e in newsgfx.check(g, story_facts(s), s.get("quotes"))]
         originals = [s.get("headline", "")] + list(s.get("source_titles") or [])
         for key in ("line", "detail", "say", "anchor"):
             v = s.get(key) or ""
@@ -323,6 +332,20 @@ def validate(script: dict[str, Any]) -> list[str]:
             errs.append(f"the spoken bulletin is {total} characters (about {total / CPS:.0f}s); cut it to {budget} "
                         f"(about {budget / CPS:.0f}s)" + ("" if v2 else " so it stays within a minute"))
     return errs
+
+
+def story_facts(st: dict[str, Any]) -> str:
+    """What a story's graphic may draw on: its own reporting and the editor's lines about it."""
+    return " ".join(str(st.get(k) or "") for k in ("headline", "summary", "why_it_matters", "line", "detail", "anchor")) + " " + \
+        " ".join(st.get("source_titles") or [])
+
+
+def graphic_for(st: dict[str, Any]) -> dict[str, Any] | None:
+    """The story's graphic if it has a valid one, else its key figure as a number graphic, else None."""
+    g = st.get("graphic")
+    if g and not newsgfx.check(g, story_facts(st), st.get("quotes")):
+        return g
+    return newsgfx.auto(st, key_figure(st)) if not g else None
 
 
 # ---------------------------------------------------------------- narration and timing
@@ -632,6 +655,8 @@ def fetch_footage(script: dict[str, Any], out: Path, pexels_key: str = "", pixab
     notes, used, credits = [], set(), []
     with httpx.Client(timeout=60, follow_redirects=True) as http:
         for i, st in enumerate(script["stories"], 1):
+            if is_programme(script) and st.get("graphic"):
+                continue  # told with a news graphic: no stock clip (they too often show unrelated people)
             q = (st.get("footage") or "").strip() or DEFAULT_FOOTAGE.get(st["category"], DEFAULT_FOOTAGE["industry"])
             try:
                 cands, errs = [], []
@@ -1256,8 +1281,32 @@ class Renderer:
                 if tmp.textlength(fig, font=ffig) <= 520:
                     break
             figl = _text_layer([fig], ffig, TEXT, 1.0)
+        spec = graphic_for(st) if is_programme(self.s) or st.get("graphic") else None
         return {"color": color, "seed": st["id"], "cat": st["category"], "head": head, "detail": detail,
-                "source": source, "chip": chip, "figure": figl, "num": _text_layer([f"{i + 1}/{self.n}"], _font(26, 700, 110), TEXT)}
+                "source": source, "chip": chip, "figure": figl, "spec": spec, "gfx": None,
+                "num": _text_layer([f"{i + 1}/{self.n}"], _font(26, 700, 110), TEXT)}
+
+    def _graphic(self, L: dict[str, Any], w: int, h: int) -> "newsgfx.Graphic | None":
+        if L["spec"] and L["gfx"] is None:
+            try:
+                L["gfx"] = newsgfx.Graphic(L["spec"], L["color"], w, h)
+            except Exception as exc:  # noqa: BLE001 - a graphic that can't be drawn falls back to the picture
+                print(f"::warning::graphic for {L['seed']} not drawn ({str(exc)[:120]})", flush=True)
+                L["spec"] = None
+        return L["gfx"]
+
+    def _backdrop(self, w: int, h: int, color: tuple[int, int, int], t: float, seed: str) -> Image.Image:
+        """The graphics studio: the dark ground with a slow glow of the story's colour drifting behind."""
+        img = (self.bg if self.bg.size == (w, h) else _cover(self.bg, w, h)).copy().convert("RGBA")
+        g = Image.new("RGBA", (w // 8, h // 8), (0, 0, 0, 0))
+        gd = ImageDraw.Draw(g)
+        ph = (sum(map(ord, seed)) % 7) / 7 * math.tau
+        cx, cy = g.width * (0.7 + 0.12 * math.sin(t * 0.25 + ph)), g.height * (0.3 + 0.1 * math.cos(t * 0.2 + ph))
+        for r in range(int(g.width * 0.6), 0, -4):
+            a = int(46 * (1 - r / (g.width * 0.6)) ** 1.5)
+            gd.ellipse((cx - r, cy - r, cx + r, cy + r), fill=color + (a,))
+        img.alpha_composite(g.resize((w, h), Image.BILINEAR))
+        return img
 
     # ------------------------------------------------------------ pieces
     def _picture(self, idx: int, lt: float, dur: float) -> tuple[Image.Image | None, str]:
@@ -1363,8 +1412,13 @@ class Renderer:
         lt = t - self.starts[idx + 1]
         L = self._scenes[idx]
         out_k = 1 - _ease((lt - (dur - 0.35)) / 0.35)
-        pic, kind = self._picture(idx, lt, dur)
-        if pic is not None:
+        y_top = H - 72 - 34 - (L["detail"].height + L["source"].height + 52) - (L["head"].height + 36) - 50
+        gfx = self._graphic(L, W - 160, max(300, y_top - 40 - 140))
+        pic, kind = (None, "") if gfx else self._picture(idx, lt, dur)
+        if gfx:
+            img = self._backdrop(W, H, L["color"], t, L["seed"])
+            img.alpha_composite(_fade(gfx.render(lt), out_k), (80, 140))
+        elif pic is not None:
             img = pic.convert("RGBA")
             img.alpha_composite(self.shade)
         else:
@@ -1378,8 +1432,8 @@ class Renderer:
             img.alpha_composite(Image.new("RGBA", (W, H), INK + (int(255 * (1 - fade_in)),)))
         d = ImageDraw.Draw(img)
         self._top(img, idx)
-        # the key figure: a stat card, top right
-        if L["figure"] is not None:
+        # the key figure: a stat card, top right (a news graphic already carries it)
+        if L["figure"] is not None and not gfx:
             k = _ease((lt - 0.9) / 0.5) * out_k
             if k > 0:
                 fw, fh = L["figure"].width + 72, L["figure"].height + 48
@@ -1609,13 +1663,18 @@ class VerticalRenderer(Renderer):
         lt = t - self.starts[idx + 1]
         L = self._scenes[idx]
         out_k = 1 - _ease((lt - (dur - 0.35)) / 0.35)
-        img = self.bg.copy().convert("RGBA")
-        pic, kind = self._picture(idx, lt, dur)
-        if pic is not None:
+        gfx = self._graphic(L, VW - 100, VPIC_H - 150 - 250 - 20)
+        pic, kind = (None, "") if gfx else self._picture(idx, lt, dur)
+        if gfx:
+            img = self._backdrop(VW, VH, L["color"], t, L["seed"])
+            img.alpha_composite(_fade(gfx.render(lt), out_k), (50, 250))
+        elif pic is not None:
+            img = self.bg.copy().convert("RGBA")
             top = pic.convert("RGBA")
             top.alpha_composite(self.shade)
             img.alpha_composite(top, (0, 0))
         else:
+            img = self.bg.copy().convert("RGBA")
             panel = Image.new("RGBA", (VW, VH), (0, 0, 0, 0))
             _illustration(ImageDraw.Draw(panel), L["cat"], (160, 300, 920, 760), L["color"], t)
             img.alpha_composite(_fade(panel, _ease(lt / 0.6) * out_k))
@@ -1623,7 +1682,7 @@ class VerticalRenderer(Renderer):
         if fade_in < 1:
             img.alpha_composite(Image.new("RGBA", (VW, VH), INK + (int(255 * (1 - fade_in)),)))
         self._top(img, idx)
-        if L["figure"] is not None:
+        if L["figure"] is not None and not gfx:
             k = _ease((lt - 0.9) / 0.5) * out_k
             if k > 0:
                 fw, fh = L["figure"].width + 64, L["figure"].height + 40
@@ -1842,6 +1901,8 @@ def fetch_images(script: dict[str, Any], out: Path, api: str, secret: str) -> li
     out.mkdir(parents=True, exist_ok=True)
     notes = []
     for i, st in enumerate(script["stories"], 1):
+        if is_programme(script) and st.get("graphic"):
+            continue  # told with a news graphic
         prompt = (st.get("image_prompt") or "").strip() or DEFAULT_PROMPT.get(st["category"], DEFAULT_PROMPT["industry"])
         try:
             r = httpx.post(f"{api.rstrip('/')}/api/recap/image", json={"prompt": prompt}, timeout=120,
