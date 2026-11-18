@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T15:56:37+00:00",
+  "updated_at": "2026-11-18T16:16:49+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Nvidia has announced it will stop selling H200 chips to China, concluding an arrangement that involved shipping chips through the United States and paying a 25% tariff. The decision follows the departure of former CEO Jensen Huang and coincides with new regulations restricting advanced U.S. chips in foreign data centers serving Chinese customers.",
@@ -80,6 +80,201 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Azure will run servers that use Intel’s EMIB advanced packaging and new Xeon “Diamond Rapids” CPUs with CXL memory, giving AI workloads more compute power and faster data movement. The first virtual machines with Intel QuickAssist will back up SQL databases up to 2.5 times faster. Confidential VMs will encrypt memory and CPU state when moving between hosts, improving data security.",
+        "terms": [
+          {
+            "term": "EMIB",
+            "meaning": "Embedded Multi-die Interconnect Bridge, a packaging technology that links multiple chips in a single package for higher performance."
+          },
+          {
+            "term": "Compute Express Link (CXL)",
+            "meaning": "A high‑speed interface that lets CPUs share memory more efficiently with other components."
+          },
+          {
+            "term": "Intel QuickAssist Technology (QAT)",
+            "meaning": "Hardware acceleration for data‑processing tasks such as encryption and compression, used here to speed up SQL backups."
+          }
+        ],
+        "watch_next": [
+          "Rollout of Azure M-series v4 virtual machines with CXL memory and Intel Flat Memory Mode",
+          "Deployment of Intel QuickAssist Technology enabled virtual machines for faster SQL backups"
+        ]
+      },
+      "benchmarks": [
+        {
+          "model": "Intel QuickAssist enabled virtual machines",
+          "benchmark": "SQL backup speed on Azure",
+          "score": "up to 2.5x faster"
+        }
+      ],
+      "audiences": {
+        "builders": "Developers can use Azure VMs with higher compute and memory efficiency, reducing latency for AI model training and inference.",
+        "business": "Enterprises gain faster database backups and stronger data protection, improving operational efficiency and security.",
+        "investors": "The deeper Microsoft‑Intel tie‑up signals continued demand for AI‑focused cloud infrastructure, potentially boosting revenue for both companies."
+      },
+      "id": "43ef4d889aa2",
+      "headline": "Microsoft and Intel expand partnership to boost Azure AI infrastructure",
+      "summary": "Microsoft and Intel announced an expanded collaboration to enhance Azure infrastructure for cloud and AI workloads. The deal adds Intel Foundry’s EMIB packaging, next‑gen Xeon “Diamond Rapids” CPUs and CXL memory, promising up to 2.3× performance gains in M‑series v4 VMs and 2.5× faster SQL backups.",
+      "why_it_matters": "The partnership delivers faster, more efficient compute and memory for AI models running in Azure, lowering latency and cost for developers.",
+      "category": "industry",
+      "lab": "Microsoft",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "Our customers need infrastructure built around the workloads that matter to them.",
+          "speaker": "Saurabh Dighe",
+          "speaker_role": "CVP, Azure System & Architecture, Microsoft",
+          "source_url": "https://news.microsoft.com/source/2026/11/18/microsoft-and-intel-deepen-collaboration-to-deliver-differentiated-azure-infrastructure"
+        },
+        {
+          "text": "Microsoft and Intel share a clear view of where AI infrastructure is headed–increasingly complex systems designed through the co-optimization of silicon, packaging, compute memory and software.",
+          "speaker": "Naga Chandrasekaran",
+          "speaker_role": "EVP, Chief Technology and Operations Officer and General Manager of Intel Foundry",
+          "source_url": "https://news.microsoft.com/source/2026/11/18/microsoft-and-intel-deepen-collaboration-to-deliver-differentiated-azure-infrastructure"
+        }
+      ],
+      "score": 6,
+      "url": "https://news.microsoft.com/source/2026/11/18/microsoft-and-intel-deepen-collaboration-to-deliver-differentiated-azure-infrastructure",
+      "source_id": "microsoft-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://news.microsoft.com/source/2026/11/18/microsoft-and-intel-deepen-collaboration-to-deliver-differentiated-azure-infrastructure",
+          "publisher": "Microsoft Source",
+          "title": "Microsoft and Intel deepen collaboration to deliver differentiated Azure infrastructure"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-18T16:06:59+00:00",
+      "created_at": "2026-11-18T16:16:49+00:00",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": {
+        "type": "partnership",
+        "company": "Microsoft",
+        "amount": "",
+        "usd": null
+      },
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "2.3× performance",
+      "trackers": [
+        "ai-infrastructure"
+      ],
+      "stock_tried": "2026-11-18T16:16:49+00:00",
+      "photo_local": true,
+      "image_kind": "stock",
+      "photo_credit": {
+        "key": "ov:71799923-fe1a-4115-b7a8-ae2fae2f91ba",
+        "by": "Steve Jurvetson",
+        "license": "CC BY 2.0",
+        "page": "https://commons.wikimedia.org/w/index.php?curid=156548047",
+        "via": "Wikimedia"
+      }
+    },
+    {
+      "audiences": {
+        "builders": "The probe targets export-control enforcement on Nvidia's advanced AI chips, a policy area that shapes which chips and tools are available to developers.",
+        "business": "Cantor Fitzgerald faces congressional scrutiny over its Nvidia holdings, and the investigation adds to pressure on Nvidia amid its chip-diversion scandal.",
+        "investors": "Cantor Fitzgerald's Nvidia stake, reportedly around $1.2 billion at Lutnick's confirmation, fell nearly 50% between September 2025 and March 2026, and the probe adds regulatory risk to Nvidia."
+      },
+      "id": "133a9b1c10bd",
+      "headline": "House Democrats open probe into Lutnick's ties to Nvidia",
+      "summary": "House Judiciary and Foreign Affairs Committee Democrats are investigating whether Commerce Secretary Howard Lutnick's decisions on AI chip export controls were influenced by his sons' firm Cantor Fitzgerald, which held an Nvidia stake reportedly valued around $1.2 billion. The probe follows Nvidia co-founder Jensen Huang's ouster over his relationship with a suspected Chinese spy.",
+      "why_it_matters": "The investigation signals that AI chip export policy and the officials who shape it are now subject to congressional oversight, with potential consequences for how Nvidia's chips reach foreign markets.",
+      "category": "policy",
+      "lab": "NVIDIA",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "congress",
+        "export controls",
+        "nvidia",
+        "commerce department",
+        "investigation"
+      ],
+      "quotes": [
+        {
+          "text": "We seek to understand whether any actions or decisions by Secretary Lutnick concerning export controls, enforcement measures, or national security policies may have been improperly influenced by Cantor Fitzgerald's holdings or business interests.",
+          "speaker": "House Democrats",
+          "speaker_role": "Reps. Jamie Raskin, Gregory Meeks, and Sydney Kamlager-Dove",
+          "source_url": "https://cnbc.com/2026/11/18/nvidia-lutnick-china-ai-megaspeed-cantor-fitzgerald.html"
+        }
+      ],
+      "score": 8,
+      "url": "https://techmeme.com/261118/p25",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://image.cnbcfm.com/api/v1/image/108550371-1794947199426-108550371-1794507832499-108550371-1794507713087-gettyimages-2300685528-AFP_D3WN2XZ.jpeg?v=1794959597&w=1920&h=1080",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261118/p25",
+          "publisher": "techmeme.com",
+          "title": "US House Democrats launch an investigation into Commerce Secretary Howard Lutnick and his family's ties to Nvidia, laying the groundwork for oversight in 2027 (Chris Marquette/Politico)"
+        },
+        {
+          "url": "https://politico.com/news/2026/11/18/democrats-congress-lutnick-nvidia-01171921",
+          "publisher": "Politico",
+          "title": "Democrats on House Judiciary and Foreign Affairs probing Lutnick family’s role in Nvidia scandal"
+        },
+        {
+          "url": "https://msn.com/en-us/money/general/democrats-probe-whether-howard-lutnick-helped-cantor-avoid-nvidia-scandal/ar-AA2hGZa6",
+          "publisher": "Reuters on MSN",
+          "title": "Democrats probe whether Howard Lutnick helped Cantor avoid Nvidia scandal"
+        },
+        {
+          "url": "https://cnbc.com/2026/11/18/nvidia-lutnick-china-ai-megaspeed-cantor-fitzgerald.html",
+          "publisher": "CNBC",
+          "title": "Cantor Fitzgerald's Nvidia business interests targeted in Democrats' Lutnick probe"
+        },
+        {
+          "url": "https://ms.now/news/house-democrats-probe-lutnick-family-ties-nvidia",
+          "publisher": "ms",
+          "title": "House Democrats want to probe Lutnick’s family ties to Nvidia"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-18T14:55:01+00:00",
+      "created_at": "2026-11-18T16:16:49+00:00",
+      "thread": "t-f02621b12802",
+      "sectors": [
+        "government"
+      ],
+      "regions": [
+        "us"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 2,
+        "investors": 3
+      },
+      "cover": "$1.2 billion",
+      "explainer": null,
+      "trackers": [
+        "us-china",
+        "ai-regulation"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "NVIDIA RTX Spark compact desktops from ASUS, Dell, and MSI are now available for purchase, providing a dedicated Windows PC for local AI agents, image and video generation, and model fine-tuning. These systems feature a 20-core NVIDIA Grace CPU, a Blackwell RTX GPU with 6,144 CUDA cores, and up to 128GB of unified memory, delivering up to 1 petaflop of AI performance. Running models locally helps keep processed code and files on the PC while avoiding per-token cloud API charges.",
@@ -1621,6 +1816,78 @@
         "page": "https://commons.wikimedia.org/wiki/File:Belgrad_-_Museum_of_Science_and_Technology_-_dental_office.jpg",
         "via": "Wikimedia Commons"
       }
+    },
+    {
+      "explainer": {
+        "what_it_means": "Rumble-2-Flash is a small speech recognition model that turns spoken audio into text in more than 40 languages. It is released under the Apache 2.0 license, so anyone can use it for free. It runs in standard tools like Transformers and vLLM without custom code.",
+        "terms": [
+          {
+            "term": "Speech recognition model",
+            "meaning": "A speech recognition model that turns spoken audio into written text."
+          },
+          {
+            "term": "On-policy distillation",
+            "meaning": "A method where a smaller model learns by matching the token-by-token judgments of a larger 'teacher' model on its own outputs."
+          },
+          {
+            "term": "RTFx",
+            "meaning": "A measure of how fast a model processes audio relative to real time; 7,000 RTFx means it processes 7,000 seconds of audio in one second."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "A 0.5B speech model that runs natively in Transformers and vLLM with no custom code, transcribing an hour of audio in about half a second.",
+        "business": "An open Apache 2.0 speech model that matches a 30B model on a call-centre benchmark could lower the cost of multilingual transcription.",
+        "investors": "Reson8 open-sourced a small speech model that competes with models 3-60x its size, a sign of efficiency gains in speech AI."
+      },
+      "id": "679cee5ea146",
+      "headline": "Reson8 open-sources Rumble-2-Flash, a 0.5B speech model for 40+ languages",
+      "summary": "Reson8 open-sourced Rumble-2-Flash, a 0.5B-parameter speech recognition model for 40+ languages, under the Apache 2.0 license. The company says it competes with models 3-60x its size and transcribes an hour of audio in about half a second.",
+      "why_it_matters": "A small, open-licensed speech model that matches much larger models on real call-centre audio lowers the cost and complexity of multilingual transcription.",
+      "category": "models",
+      "lab": "Reson8",
+      "model_name": "Rumble-2-Flash",
+      "model_type": "Voice",
+      "tags": [
+        "speech",
+        "open-source",
+        "multilingual",
+        "distillation",
+        "asr"
+      ],
+      "quotes": [],
+      "score": 7,
+      "url": "https://huggingface.co/blog/rumble-2-flash",
+      "source_id": "huggingface",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://huggingface.co/blog/assets/rumble-2-flash/thumbnail.png",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/rumble-2-flash",
+          "publisher": "Hugging Face blog",
+          "title": "Rumble-2-Flash: an open 0.5B speech model for 40+ languages"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-18T00:00:00+00:00",
+      "created_at": "2026-11-18T16:16:49+00:00",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "0.5B speech",
+      "trackers": [],
+      "photo_local": true
     },
     {
       "explainer": {
@@ -5461,210 +5728,6 @@
         "agent-safety"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Computer infrastructure is often built as an improvised system that can suffer cascading failures. The emergence of offensive AI adds a new threat to this infrastructure, requiring defensive AIs and software patches.",
-        "terms": [],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "AI cyberattacks introduce new security risks for developers and engineers building on existing infrastructure.",
-        "business": "Organizations face vulnerabilities from both improvised infrastructure and offensive AI cyberattacks.",
-        "investors": "Investments in defensive AI and patching may rise as computer infrastructure faces new AI-driven threats."
-      },
-      "id": "1e6985a78fe0",
-      "headline": "Ethan Mollick on computer infrastructure and offensive AI threats",
-      "summary": "Ethan Mollick noted that computer infrastructure is an improvised system vulnerable to cascading failures and outlined the arrival of offensive AI threats alongside defensive AIs and patching.",
-      "why_it_matters": "It highlights the growing security concerns surrounding the intersection of fragile computer infrastructure and emerging offensive AI capabilities.",
-      "category": "research",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "computer infrastructure",
-        "cybersecurity",
-        "offensive AI",
-        "Ethan Mollick"
-      ],
-      "quotes": [
-        {
-          "text": "A lot of folks don't realize how much of our computer infrastructure is an improvised system prone to cascading failures. You didn't need offensive AI cyberattacks to have big outages like Microsoft/FAA. Of course, now we DO have to deal with offensive AI (but also defensive AIs and patching)",
-          "speaker": "Ethan Mollick",
-          "speaker_role": "Author",
-          "source_url": "https://bsky.app/profile/emollick.bsky.social/post/3n2htyp4bhc2t"
-        }
-      ],
-      "score": 6,
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2htyp4bhc2t",
-      "source_id": "bluesky",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": null,
-      "sources": [
-        {
-          "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2htyp4bhc2t",
-          "publisher": "Ethan Mollick on Bluesky",
-          "title": "Ethan Mollick: A lot of folks don't realize how much of our computer infrastructure is an improvised system prone to cascading failures. You didn't need…"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-11-17T01:05:25.401000+00:00",
-      "created_at": "2026-11-17T01:29:40+00:00",
-      "sectors": [
-        "cybersecurity"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "Ethan Mollick",
-      "trackers": [
-        "agent-safety"
-      ],
-      "stock_tried": "2026-11-17T01:29:40+00:00"
-    },
-    {
-      "explainer": {
-        "what_it_means": "OpenAI is working with NATO and allied cyber agencies to help defenders find vulnerabilities, test fixes, and protect essential systems using artificial intelligence.",
-        "terms": [],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers and engineers do not receive any specific tools, APIs, or pricing details in this story.",
-        "business": "Executives and strategy teams can see that OpenAI is engaging with NATO and allied cyber agencies to help trusted defenders find vulnerabilities and protect essential systems.",
-        "investors": "Investors can note OpenAI's expanding work with government and defense entities such as NATO and allied cyber agencies."
-      },
-      "id": "590cb0b9c5dd",
-      "headline": "OpenAI collaborates with NATO and allied cyber agencies on AI defense",
-      "summary": "OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes, and protect essential systems using AI.",
-      "why_it_matters": "The collaboration highlights the increasing use of artificial intelligence in national security and government cyber defense operations.",
-      "category": "safety",
-      "lab": "OpenAI",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "NATO",
-        "cyber security",
-        "defense"
-      ],
-      "quotes": [],
-      "score": 7,
-      "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
-      "source_id": "openai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": null,
-      "sources": [
-        {
-          "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
-          "publisher": "OpenAI",
-          "title": "Strengthening NATO and allied cyber defenses with AI"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-11-17T00:00:00+00:00",
-      "created_at": "2026-11-17T07:37:13+00:00",
-      "sectors": [
-        "defense",
-        "cybersecurity"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": {
-        "type": "partnership",
-        "company": "OpenAI",
-        "amount": "",
-        "usd": null
-      },
-      "relevance": {
-        "builders": 1,
-        "business": 3,
-        "investors": 1
-      },
-      "cover": "NATO",
-      "stock_tried": "2026-11-17T07:37:13+00:00",
-      "trackers": [
-        "agent-safety"
-      ]
-    },
-    {
-      "explainer": {
-        "what_it_means": "The NVIDIA DGX Spark HPC Developer Kit is a four-node cluster designed to fit on a desk, giving researchers direct access to multi-node computing power without needing a shared GPU cluster or network switch. It connects systems using NVIDIA ConnectX-7 networking to provide combined memory and storage for local AI and scientific workloads.",
-        "terms": [
-          {
-            "term": "cluster",
-            "meaning": "A collection of interconnected computing systems that work together to perform large tasks."
-          },
-          {
-            "term": "Superchip",
-            "meaning": "A type of advanced computer chip used to accelerate AI and high-performance computing workloads."
-          }
-        ],
-        "watch_next": [
-          "An NVIDIA HPC SDK installation playbook is coming soon."
-        ]
-      },
-      "audiences": {
-        "builders": "Builders can use the DGX Spark Developer Kit to develop and debug multi-node AI models and scientific workloads directly on their desks.",
-        "business": "Organizations can keep unpublished results and proprietary datasets on premises while saving server hours for production runs.",
-        "investors": "NVIDIA is introducing the DGX Spark HPC Developer Kit at SC26 to bring supercomputing capabilities to desktop environments."
-      },
-      "id": "8617ffe05c73",
-      "headline": "Nvidia introduces DGX Spark HPC developer kit for desks",
-      "summary": "Nvidia introduced the DGX Spark HPC Developer Kit at SC26, providing a four-node cluster that fits on a desk for researchers and developers. The kit features the GB10 Grace Blackwell Superchip and provides 512GB of combined memory and 20TB of NVMe storage.",
-      "why_it_matters": "This developer kit gives researchers direct desktop access to multi-node computing power for AI and scientific workloads, eliminating the need to wait for shared GPU cluster time.",
-      "category": "models",
-      "lab": "NVIDIA",
-      "model_name": "GB10 Grace Blackwell Superchip",
-      "model_type": "Other",
-      "tags": [
-        "Nvidia",
-        "HPC",
-        "Developer Kit",
-        "SC26"
-      ],
-      "quotes": [],
-      "score": 7,
-      "url": "https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26",
-      "source_id": "nvidia",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/SC-Local-AI-DGX-Spark-Clusters-Blog-Header.jpg",
-      "sources": [
-        {
-          "url": "https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26",
-          "publisher": "NVIDIA blog",
-          "title": "NVIDIA DGX Spark Developer Kit Turns a Desk Into a Supercomputing Lab"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-11-16T23:00:05+00:00",
-      "created_at": "2026-11-17T00:14:51+00:00",
-      "breaking": true,
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "DGX Spark",
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -5857,17 +5920,22 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-11-18T13:30:16+00:00",
-    "one_line": "Nvidia leadership shakeup, OpenAI and Microsoft model releases, and Anthropic's IPO dominate the day.",
+    "written_at": "2026-11-18T16:16:49+00:00",
+    "one_line": "Nvidia posts record $115.8B quarter under interim CEO as OpenAI and Microsoft ship new models.",
     "themes": [
       {
-        "title": "Nvidia leadership and China sales shift",
-        "text": "Nvidia's board says it will not reinstate Jensen Huang, who will testify before US House committees on Dec 1, while interim CEO Colette Kress ends H200 chip sales in China. The company reported Q3 revenue of $115.8 billion, up 103% year-over-year, and forecast Q4 revenue of $130 billion, with its Singapore unit accounting for nearly half of global revenue.",
+        "title": "Nvidia posts record quarter under new leadership",
+        "text": "Nvidia reported Q3 revenue of $115.8 billion, up 103% year-over-year, and forecast Q4 revenue of $130 billion under interim CEO Colette Kress. The company stopped reporting its Singapore unit's $104 billion revenue separately, ended H200 chip sales in China, and disclosed $65.5 billion in startup equity stakes, while House Democrats opened a probe into Commerce Secretary Lutnick's ties to Nvidia.",
         "stories": [
           {
-            "id": "5f83aea8a158",
-            "headline": "Nvidia CEO Jensen Huang to testify before US House committees on Dec 1",
-            "url": "https://economictimes.indiatimes.com/tech/technology/jensen-huang-to-appear-before-us-house-committees-on-december-1/articleshow/135932177.cms"
+            "id": "c515216ed921",
+            "headline": "Nvidia reports Q3 revenue of $115.8B and forecasts Q4 revenue of $130B",
+            "url": "https://techmeme.com/261117/p56"
+          },
+          {
+            "id": "536093b04b83",
+            "headline": "Nvidia stopped reporting Singapore unit revenue in 2025 as it hit $104B",
+            "url": "https://techmeme.com/261117/p41"
           },
           {
             "id": "01ad01e5cd41",
@@ -5880,30 +5948,20 @@
             "url": "https://techmeme.com/261117/p63"
           },
           {
-            "id": "c515216ed921",
-            "headline": "Nvidia reports Q3 revenue of $115.8B and forecasts Q4 revenue of $130B",
-            "url": "https://techmeme.com/261117/p56"
-          },
-          {
-            "id": "536093b04b83",
-            "headline": "Nvidia stopped reporting Singapore unit revenue in 2025 as it hit $104B",
-            "url": "https://techmeme.com/261117/p41"
-          },
-          {
             "id": "bc1083d540d9",
             "headline": "Nvidia's startup stakes reach $65.5B as interim CEO signals caution",
             "url": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt"
           },
           {
-            "id": "0fc7d9162585",
-            "headline": "Nvidia sales team introduced Alibaba to Alice Huang in 2022",
-            "url": "https://theinformation.com/articles/nvidia-introduced-alibaba-alice-huang-workaround-u-s-export-controls"
+            "id": "133a9b1c10bd",
+            "headline": "House Democrats open probe into Lutnick's ties to Nvidia",
+            "url": "https://techmeme.com/261118/p25"
           }
         ]
       },
       {
-        "title": "OpenAI and Microsoft ship new models",
-        "text": "OpenAI released GPT-6.2 Astra and Sol with lower pricing and benchmark gains, while Microsoft unveiled six AI models including MAI Code 2 and Flash on GitHub Copilot, claiming high performance at lower price points.",
+        "title": "OpenAI and Microsoft ship new model releases",
+        "text": "OpenAI released GPT-6.2 Astra and Sol across ChatGPT Work, Codex, and the API with 20% lower pricing and benchmark gains, while Microsoft unveiled six new models including MAI Code 2 and MAI Code 2 Flash on GitHub Copilot, claiming high performance at lower price points.",
         "stories": [
           {
             "id": "549a77347d5e",
@@ -5923,29 +5981,8 @@
         ]
       },
       {
-        "title": "AI companies move toward public markets",
-        "text": "Anthropic is set to go public at an expected $1.4 trillion valuation, with insiders holding an estimated $1.2 trillion in equity and smaller VCs like Spark Capital and Iconiq set for multibillion-dollar returns. Perplexity also accelerated its IPO timeline to as early as Q1 2027 after its annual recurring revenue crossed $1 billion.",
-        "stories": [
-          {
-            "id": "a8c038b3bd40",
-            "headline": "San Francisco AI insiders could hold $1.2 trillion in equity as Anthropic goes public",
-            "url": "https://techmeme.com/261117/p67"
-          },
-          {
-            "id": "2d572302d891",
-            "headline": "Anthropic IPO set to deliver windfall to smaller VC firms",
-            "url": "https://techmeme.com/261118/p3"
-          },
-          {
-            "id": "bf9c3e0a3483",
-            "headline": "Perplexity CEO says company may launch IPO as early as Q1 2027",
-            "url": "https://inc42.com/buzz/perplexity-may-launch-ipo-as-early-as-q1-cy27-ceo-aravind-srinivas"
-          }
-        ]
-      },
-      {
         "title": "AI safety and security incidents surface",
-        "text": "Independent research found leading AI models can be manipulated into targeting civilians in simulated military tests, while a ServiceNow survey found 92% of Indian organisations experienced an AI agent security incident in the past year. Separately, hackers used suspected AI to divert over Rs 65 crore from 12 NBFCs in Delhi-NCR.",
+        "text": "Independent research found leading AI models from Anthropic, OpenAI, and Google can be manipulated into identifying civilians as military targets in simulated scenarios. Separately, a ServiceNow survey found 92% of Indian organisations experienced an AI agent security incident in the past year, and hackers used suspected AI to divert over Rs 65 crore from 12 NBFCs in Delhi-NCR.",
         "stories": [
           {
             "id": "b20533735bac",
@@ -5963,19 +6000,47 @@
             "url": "https://medianama.com/2026/11/223-ai-hackers-approved-loans-nbfc"
           }
         ]
+      },
+      {
+        "title": "Anthropic IPO and AI capex reshape markets",
+        "text": "Anthropic is set to go public at an expected $1.4 trillion valuation, with smaller VC firms like Spark Capital and Iconiq poised for multibillion-dollar returns. Meanwhile, Tencent's Q3 profit growth stalled as AI capex surged 527% to about $12 billion, and India's Sarvam AI launched Token Factory hosting mostly Chinese models on Indian GPUs.",
+        "stories": [
+          {
+            "id": "a8c038b3bd40",
+            "headline": "San Francisco AI insiders could hold $1.2 trillion in equity as Anthropic goes public",
+            "url": "https://techmeme.com/261117/p67"
+          },
+          {
+            "id": "2d572302d891",
+            "headline": "Anthropic IPO set to deliver windfall to smaller VC firms",
+            "url": "https://techmeme.com/261118/p3"
+          },
+          {
+            "id": "ef05e9909b39",
+            "headline": "Tencent Q3 profit growth stalls as AI capex surges 5x to ~$12B",
+            "url": "https://techmeme.com/261118/p7"
+          },
+          {
+            "id": "d930ebd0b69d",
+            "headline": "Sarvam AI launches Token Factory hosting mostly Chinese models on Indian GPUs, reigniting sovereign AI debate",
+            "url": "https://analyticsindiamag.com/ai-features/sarvams-token-factory-sparks-indias-sovereign-ai-debate-again"
+          }
+        ]
       }
     ],
     "from_stories": 20
   },
   "plan": {
-    "focus": "Chasing the fallout from Sarvam's Chinese model hosting in India while tracking robotics funding and enterprise AI agent deployments.",
-    "updated_at": "2026-11-18T13:30:16+00:00",
+    "focus": "Tracking rising US policy scrutiny of AI firms alongside fresh model releases and major financing deals.",
+    "updated_at": "2026-11-18T16:16:49+00:00",
     "thin_areas": [
-      "AI in India",
+      "policy",
       "model releases"
     ],
     "searches": [
-      "Humyn Labs Bengaluru Accel robotics data"
+      "Ohio data center voter restrictions",
+      "Nvidia neocloud financing terms",
+      "open source speech model benchmarks"
     ]
   },
   "builders": {
@@ -6111,6 +6176,48 @@
     "range": "8 Nov – 15 Nov 2026"
   },
   "threads": [
+    {
+      "id": "t-f02621b12802",
+      "title": "Lutnick Nvidia ties under scrutiny",
+      "updated_at": "2026-11-18T14:55:01+00:00",
+      "stories": [
+        {
+          "id": "133a9b1c10bd",
+          "headline": "House Democrats open probe into Lutnick's ties to Nvidia",
+          "url": "https://techmeme.com/261118/p25",
+          "published_at": "2026-11-18T14:55:01+00:00",
+          "category": "policy"
+        },
+        {
+          "id": "020690f69ca0",
+          "headline": "Howard Lutnick pushed to narrow chip curbs affecting a former firm's client",
+          "url": "https://techmeme.com/261115/p9",
+          "published_at": "2026-11-15T16:10:01+00:00",
+          "category": "policy"
+        },
+        {
+          "id": "cd95740421d1",
+          "headline": "Howard Lutnick stalled curbs on Nvidia chip diversion to China",
+          "url": "https://techmeme.com/261111/p46",
+          "published_at": "2026-11-11T23:20:05+00:00",
+          "category": "policy"
+        },
+        {
+          "id": "41f04ecb2082",
+          "headline": "PLA-linked Chinese university obtained Nvidia H200 chips despite US blacklist",
+          "url": "https://techmeme.com/261111/p4",
+          "published_at": "2026-11-11T06:15:02+00:00",
+          "category": "policy"
+        },
+        {
+          "id": "cc583a7d57d3",
+          "headline": "US approved Chinese firms with empty offices to handle Nvidia chips",
+          "url": "https://techmeme.com/261107/p9",
+          "published_at": "2026-11-07T14:30:04+00:00",
+          "category": "policy"
+        }
+      ]
+    },
     {
       "id": "t-2b1356156f54",
       "title": "Sarvam Token Factory and India AI",
@@ -6922,62 +7029,6 @@
           "category": "industry"
         }
       ]
-    },
-    {
-      "id": "t-9e3e3ddacb24",
-      "title": "Gemini 4 Carbon launch and rollout",
-      "updated_at": "2026-11-17T23:31:37+00:00",
-      "stories": [
-        {
-          "id": "a64bf86d357e",
-          "headline": "Google rolls out Gemini Tasks assistant for free in six markets",
-          "url": "https://inc42.com/buzz/google-begins-rolling-out-personal-ai-assistant-tasks-in-india",
-          "published_at": "2026-11-17T23:31:37+00:00",
-          "category": "models"
-        },
-        {
-          "id": "0508a8475458",
-          "headline": "Google DeepMind launches Gemini 4 Hydrogen, a fast low‑cost model for coding",
-          "url": "https://techmeme.com/261112/p60",
-          "published_at": "2026-11-12T22:15:00+00:00",
-          "category": "models"
-        },
-        {
-          "id": "a8d5fa7d24b3",
-          "headline": "Google launches Gemini 4 Hydrogen, a fast model for everyday coding and search",
-          "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
-          "published_at": "2026-11-12T18:00:50+00:00",
-          "category": "models"
-        },
-        {
-          "id": "cce714811b51",
-          "headline": "Google launches Gemini Decisions API for fast multimodal yes/no and choice scoring",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api",
-          "published_at": "2026-11-11T18:00:00+00:00",
-          "category": "models"
-        },
-        {
-          "id": "a468d4c7b355",
-          "headline": "Ethan Mollick tests Fable 5.2 and Gemini Carbon on the Fermi Paradox",
-          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzyzlpr6lk2r",
-          "published_at": "2026-11-11T03:35:36.254000+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "28b27e2d175e",
-          "headline": "Google rolls out Gemini 4 Carbon to the public with agent swarm feature",
-          "url": "https://theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout",
-          "published_at": "2026-11-10T16:00:00+00:00",
-          "category": "models"
-        },
-        {
-          "id": "41e0dc889e76",
-          "headline": "Google announces Gemini 4 Carbon, a more capable frontier AI model not yet released",
-          "url": "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use",
-          "published_at": "2026-10-28T18:47:27+00:00",
-          "category": "models"
-        }
-      ]
     }
   ],
   "labs": [
@@ -6988,6 +7039,14 @@
       "date": "2026-11-18T14:00:31+00:00",
       "story_id": "1c3eaf246b72",
       "url": "https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now"
+    },
+    {
+      "lab": "Reson8",
+      "model": "Rumble-2-Flash",
+      "type": "Voice",
+      "date": "2026-11-18T00:00:00+00:00",
+      "story_id": "679cee5ea146",
+      "url": "https://huggingface.co/blog/rumble-2-flash"
     },
     {
       "lab": "Google",
@@ -7205,8 +7264,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 501,
-    "model_releases_this_month": 57,
-    "labs_tracked": 28
+    "stories_this_month": 504,
+    "model_releases_this_month": 58,
+    "labs_tracked": 29
   }
 }
