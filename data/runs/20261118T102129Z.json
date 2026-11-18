@@ -1,0 +1,266 @@
+{
+  "started_at": "2026-11-18T10:21:29+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1407)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (908)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (16)",
+    "gdelt": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://api.gdeltproject.org/api/v2/doc/doc?query=%28%22artificial%20intel",
+    "hn": "ok (17)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: RuntimeError: GDELT paused for this run after repeated rate-limiting",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (26)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "AI is killing All About Berlin",
+      "reason": "score 4: Blog post about local city guide impacted by AI search and content, minor commentary."
+    },
+    {
+      "title": "Human.md",
+      "reason": "score 3: Bare product landing page without sufficient details or news context."
+    },
+    {
+      "title": "Why is Gemini 4 Carbon taking so long?",
+      "reason": "score 4: Speculative discussion about unannounced model release timing, routine Hacker News discussion."
+    },
+    {
+      "title": "Deeptech Startup Enerzolve To Raise $20 Mn From Jungle Ventures, Others",
+      "reason": "score 4: Early-stage deeptech funding round talk without a clear core AI focus."
+    },
+    {
+      "title": "Recove Ventures Nets ₹56 Cr To Expand Recycling Business",
+      "reason": "not AI: Recycling business funding round, not AI news."
+    },
+    {
+      "title": "Rediff.com files updated draft papers with SEBI for Rs 600 cr IPO",
+      "reason": "not AI: Rediff.com IPO filing for general web products, not primarily an AI story."
+    },
+    {
+      "title": "Startup news and updates: daily roundup (November 18, 2026)",
+      "reason": "not AI: General daily startup news roundup, not specific AI news."
+    },
+    {
+      "title": "How HalfPe is building a marketplace for surplus inventory at 50% off",
+      "reason": "score 4: E-commerce marketplace profile with routine AI-led operational mentions."
+    },
+    {
+      "title": "Kotak MF, BlackRock among investors buying Rs 1,905-Cr stake in Groww",
+      "reason": "not AI: Fintech equity transaction (Groww stake purchase), not AI news."
+    },
+    {
+      "title": "London-based Payhawk, which offers enterprise expense and procurement management tools, raised a $280M Series C led by Goldman Sachs at a $2B valuation (Yazhou Sun/Bloomberg)",
+      "reason": "not AI: Fintech enterprise expense management funding round, not AI-related."
+    },
+    {
+      "title": "Suspected Chinese spy Alice Huang’s husband Kang Wei ran state-backed AI empire: report",
+      "reason": "duplicate of 63e247d2b73a"
+    },
+    {
+      "title": "As Alice Huang pursued Nvidia chips, her husband built a $9 billion China data-center empire",
+      "reason": "duplicate of 63e247d2b73a"
+    },
+    {
+      "title": "Alice Huang's Husband Built A $9 Billion Chinese Data Centre Empire While She Pursued Nvidia Chips",
+      "reason": "score 3: Duplicate of the ongoing reporting on Alice Huang, Nvidia, and Chinese data centre networks."
+    },
+    {
+      "title": "Neysa Deploys AMD GPU Cluster in Mumbai for AI Training and Inference",
+      "reason": "could not verify yet after a second try; dropped"
+    }
+  ],
+  "written": [
+    {
+      "id": "0fc7d9162585",
+      "headline": "Nvidia sales team introduced Alibaba to Alice Huang in 2022",
+      "category": "industry",
+      "summary": "Nvidia's sales team introduced Chinese tech giant Alibaba to Alice Huang on two occasions in 2022. The introductions helped Huang establish Alibaba as a customer for her chip-rental business, which later faced U.S. export control inquiries.",
+      "url": "https://theinformation.com/articles/nvidia-introduced-alibaba-alice-huang-workaround-u-s-export-controls",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "2ec1295ba2d5",
+      "headline": "AI-assisted hackers breach Delhi-NCR NBFCs and divert Rs 65 cr",
+      "category": "safety",
+      "summary": "Hackers diverted over Rs 65 crore in approved loans from 12 non-banking financial companies across Delhi-NCR over three months using malware and suspected AI. Senior Delhi Police officers stated that these cases form part of over 150 FIRs filed by NBFCs nationwide.",
+      "url": "https://medianama.com/2026/11/223-ai-hackers-approved-loans-nbfc",
+      "sources": 4,
+      "quotes": 1
+    },
+    {
+      "id": "1c0a3eaad1e2",
+      "headline": "92% of Indian organisations hit by AI agent security incidents, survey shows",
+      "category": "research",
+      "summary": "A survey by ServiceNow found that 92 percent of Indian organisations experienced an AI agent security incident in the past year, but only 36 percent contained the incident within 24 hours. The report highlights governance gaps, with only 19 percent having a single named individual accountable for agentic AI security.",
+      "url": "https://livemint.com/technology/majority-of-indian-firms-hit-by-ai-agent-incident-in-past-12-months-only-36-pc-contained-it-in-24-hrs-survey-11794995034484.html",
+      "sources": 3,
+      "quotes": 2
+    },
+    {
+      "id": "df2ac5661a9d",
+      "headline": "Botsync raises $11 million to expand industrial automation",
+      "category": "industry",
+      "summary": "Singapore-headquartered Botsync has raised $11 million in a funding round led by IvyCap Ventures to expand its industrial automation operations. The company builds autonomous mobile robots and software for factory and distribution-centre operations.",
+      "url": "https://yourstory.com/2026/11/botsync-raises-11m-to-expand-industrial-automation",
+      "sources": 2,
+      "quotes": 1
+    }
+  ],
+  "notes": [
+    "ignored made-up duplicate id 2edb5ca87f00 for 'Alice Huang's Husband Built A $9 Billion Chinese D'"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 78.3,
+    "audit": -0.0,
+    "plan": 2.4,
+    "judge": 7.2,
+    "verify and write": 92.8,
+    "videos": 4.2,
+    "tagging": 2.7,
+    "explainers": 0.0,
+    "trackers": 5.9,
+    "claims": 18.3,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": 12.3,
+    "top voices": 13.4,
+    "briefing": 23.2,
+    "self-review": -0.0,
+    "photos": 2.3,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 6.1
+  },
+  "fetched": 2987,
+  "fresh": 15,
+  "plan": {
+    "focus": "Chasing Nvidia's China fallout and India's AI infrastructure push as enterprise security incidents mount.",
+    "priorities": [
+      "Neysa Deploys AMD GPU Cluster in Mumbai for AI Training and Inference (Neysa deploying an AMD GPU cluster in Mumbai directly ties into India's evolving AI compute landscape alongside Sarvam.)",
+      "Sources: Nvidia made two separate introductions in 2022 connecting Ali (New reporting on Nvidia connections with Alibaba and Alice Huang deepens our industry coverage on China chip curbs.)",
+      "Majority of Indian firms hit by AI agent incident in past 12 months; o (Survey data on AI agent incidents across Indian firms provides crucial enterprise reality checks for our India desk.)",
+      "AI-assisted hackers breach NBFCs in Delhi-NCR; divert Rs 65 cr in appr (Major real-world security breach involving AI-assisted hackers targeting NBFCs in Delhi-NCR.)",
+      "London-based Payhawk, which offers enterprise expense and procurement  (Major late-stage enterprise fintech funding round ($280M Series C for Payhawk) relevant to business readers.)"
+    ],
+    "thin_areas": [
+      "india",
+      "business"
+    ],
+    "searches": [
+      "Nvidia Alibaba Alice Huang: 6 new",
+      "Neysa AMD GPU cluster Mumbai: 0 new"
+    ],
+    "dig_deeper": [
+      "Neysa Deploys AMD GPU Cluster in Mumbai for AI Training and Inference",
+      "Sources: Nvidia made two separate introductions in 2022 connecting Ali"
+    ]
+  },
+  "judged": 21,
+  "kept": 5,
+  "research": {
+    "investigated": 5,
+    "confirmed": 3,
+    "tool_calls": 14
+  },
+  "research_log": [
+    "Nvidia Introduced Alibaba to Alice Huang for Workaround on U.S. Export: unconfirmed (searched “Nvidia Alibaba Alice Huang workaround export controls”; searched “Nvidia Introduced Alibaba to Alice Huang”; read msn.com)",
+    "Neysa Deploys AMD GPU Cluster in Mumbai for AI Training and Inference: unconfirmed (searched “Neysa AMD GPU cluster Mumbai AI training inference”; searched “Neysa AMD Mumbai MI350X EPYC ROCm”; searched “Neysa AMD Mumbai GPU cluster”)",
+    "AI-assisted hackers breach NBFCs in Delhi-NCR; divert Rs 65 cr in appr: confirmed (searched “AI assisted hackers breach NBFCs Delhi NCR divert 65 cr approved loans”; searched “Delhi Police NBFC cyber fraud 65 crore AI”; read indianexpress.com)",
+    "Majority of Indian firms hit by AI agent incident in past 12 months; o: confirmed (searched “Majority of Indian firms hit by AI agent incident in past 12 months survey”; read marketscreener.com)",
+    "Botsync raises $11M to expand industrial automation: confirmed (searched “Botsync raises 11M IvyCap Ventures industrial automation”; searched “Botsync raises 11 million IvyCap Ventures”; read newsbytesapp.com)"
+  ],
+  "threads": [
+    "US chip curbs and SE Asia data centers: Nvidia sales team introduced Alibaba to Alice Huang in 2022"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (12 in feed, 1 new)",
+    "Google for Developers": "ok (10 in feed, 4 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
+    "Microsoft Research": "ok (12 in feed, 0 new)",
+    "NVIDIA": "ok (10 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 2 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 1 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (2 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 2 new)",
+    "Training Data (Sequoia)": "ok (4 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (2 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (4 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "12 kept from 12 new",
+  "tagged": 4,
+  "trackers": "filed 4 stories; updated us-china, india-ai, agent-safety",
+  "claims": "203 tracked, 197 open, 0 updated this run",
+  "model_tracker": "82 models, 6 changes today",
+  "builders_sources": {
+    "show-hn": "ok (8)",
+    "github-new": "ok (43)",
+    "hf-spaces": "ok (23)",
+    "product-hunt": "ok (18)",
+    "r-localllama": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day'\nFor more i",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
+  },
+  "builders": "picked 5 from 60 candidates; 4 with pictures, 0 with videos",
+  "top_voices_sources": {
+    "tv-mollick": "ok (0)",
+    "tv-lambert": "ok (1)",
+    "tv-swyx": "ok (8)",
+    "tv-dwarkesh": "ok (2)",
+    "tv-raschka": "ok (1)",
+    "tv-karpathy": "ok (0)",
+    "tv-evans": "ok (0)",
+    "x-coverage": "ok (1 of 6 articles, bing)",
+    "hn": "ok (1)"
+  },
+  "top_voices": "3 debates from 50 posts by 7 people; 3 portraits, 5 pictures",
+  "briefing": "4 themes from 20 stories",
+  "india_briefing": "4 themes from 8 stories",
+  "photos": "4 saved, 0 unavailable",
+  "alerts": "17 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":37}",
+  "ai_requests_run": 39,
+  "ai_tokens_run": 100287,
+  "ai_requests_today": 175,
+  "provider_log": []
+}
