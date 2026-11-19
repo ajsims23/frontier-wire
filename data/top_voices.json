@@ -1,50 +1,5 @@
 {
   "posts": {
-    "c5d1a9eb3383": {
-      "id": "c5d1a9eb3383",
-      "url": "https://simonwillison.net/2026/Nov/11/tools-tags",
-      "person": "Simon Willison",
-      "text": "Browse tools.simonwillison.net by tag. Browse tools.simonwillison.net by tag I've been wanting a better way to browse my collection of vibe-coded tools (244 and counting) for a while. I had a few Fable 5.2 credits left over before my weekly reset so I set it to work using tree-sitter to analyze the code for JavaScript APIs, libraries, and web API hosts used by each tool. The homepage now features tag clouds for browsing by each of those categories of tag: Tags: javascript , tools , ai , generative-ai , llms , claude , vibe-coding",
-      "published": "2026-11-11T18:42:50+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
-    "ac992cc25d49": {
-      "id": "ac992cc25d49",
-      "url": "https://simonwillison.net/2026/Nov/11/llm",
-      "person": "Simon Willison",
-      "text": "llm 0.37.2. Release: llm 0.37.2 Fixes a security issue reported by Daniel de Araujo in GHSA-v9h7-jj4g-f862 and GHSA-r639-rr7r-x72w . LLM has a mechanism called extra-openai-models.yaml - now managed by the new-in-0.37 llm openai endpoint add command - for using LLM with OpenAI-compatible API endpoints from other providers. Daniel reported two ways this could accidentally send your configured OpenAI API key to one of those providers: if the key named by api_key_name had never been stored, or if a responses: true model was run with -o chat_completions 1 . Tags: projects , security , llm , releases",
-      "published": "2026-11-11T17:19:52+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
-    "624a305adfa4": {
-      "id": "624a305adfa4",
-      "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api",
-      "person": "Simon Willison",
-      "text": "Gemini Decisions API. Gemini Decisions API Google join Jev and OpenAI in the decision model category with \"Gemini Decision 1\". This new model API is almost identical to Jev: it supports the same three types of questions (yes/no, choice, and rubric-scoring) and even reuses Jev's term \"Noul\" for a yes/no question. It's priced the same as the GPT-6 Luna decision model: 10 cents per million input tokens, and output is free. Jev remains the cheapest of the three, at 4.2 cents per million. Jev is text (and JSON) only. OpenAI can handle text and images. Gemini Decision 1 is fully multi-model: it covers text, images, audio",
-      "published": "2026-11-11T22:03:25+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
-    "53d5cdba12be": {
-      "id": "53d5cdba12be",
-      "url": "https://simonwillison.net/2026/Nov/11/aws-emulator",
-      "person": "Simon Willison",
-      "text": "aws-emulator. aws-emulator Finally, an official emulator from AWS to run tests against a local clone of their many different services without having to provision a paid API key to do so. It's written in Rust by a huge swarm of agents - 29,684 commits in the first three weeks of the project. Swaminathan (Swami) Sivasubramanian wrote about how it came to be in a guest post on Werner Vogels' blog. It currently requires Docker to run on macOS or Windows. I'm hoping they fix that in the future - it would be great if you could download a single binary and use that as part of a standard test suite in other languag",
-      "published": "2026-11-11T21:18:30+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
-    "5c8c240e0492": {
-      "id": "5c8c240e0492",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n22xdtz4kk2i",
-      "person": "Ethan Mollick",
-      "text": "People who have no contact with coders seem to have no idea how much an entire profession transformed in less than a year due to AI. It is so weird to still see comments here that AI hasn’t changed anything or that AI code is bad or that companies are retreating from AI use. Does not match reality.",
-      "published": "2026-11-11T22:00:44.261Z",
-      "via": "Bluesky",
-      "kind": "post"
-    },
     "e10b6b9196df": {
       "id": "e10b6b9196df",
       "url": "https://latent.space/p/ainews-d-day-decision-models-day",
@@ -198,16 +153,6 @@
       "published": "2026-11-14T08:31:02+00:00",
       "via": "Latent Space",
       "kind": "post"
-    },
-    "46fa6e9da031": {
-      "id": "46fa6e9da031",
-      "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008842620",
-      "person": "Dario Amodei",
-      "text": "In an August post on X, Amodei stated that the best way to convince AI skeptics is for AI companies to \"actually cure cancer.\" However, he added, \"Saying that AI is going to cure cancer feels less like being inspiring and more like a cliché, and most people think it sounds fraudulent.\" ※ Please note: This article was translated by AI and may contain errors.",
-      "published": "2026-11-12T02:52:00+00:00",
-      "via": "SBS News",
-      "kind": "reported",
-      "headline": "Anthropic CEO Dario Amodei Predicts AI Will Cure Cancer and Alzheimer's Within 10 Years"
     },
     "f9a3c449e598": {
       "id": "f9a3c449e598",
@@ -525,6 +470,24 @@
       "text": "The PSF end-of-year fundraiser. The PSF end-of-year fundraiser With my Python Software Foundation board director hat on: we've launched our end-of-year fundraiser for the non-profit that supports Python development and the Python community. If your company or your work benefits from Python, please consider donating this year! The PSF looks after the IP behind Python, operates PyPI, sponsors core developer sprints, supports community events (including running PyCon US every year), and employs a small and excellent staff team to keep everything running. We also operate the Developers in Residence program , which now includes t",
       "published": "2026-11-18T14:44:48+00:00",
       "via": "Simon Willison",
+      "kind": "post"
+    },
+    "630b41be4a2b": {
+      "id": "630b41be4a2b",
+      "url": "https://simonwillison.net/2026/Nov/18/datasette-arrows",
+      "person": "Simon Willison",
+      "text": "datasette-arrows 0.1a0. Release: datasette-arrows 0.1a0 Datasette 1.0a43 added the ability for plugins to implement streaming export formats. Datasette core supports streaming CSV and TSV - you can export millions of lines of data from a table without needing to load it all into memory, because those two file formats support streaming data in chunks. The register_output_renderer() plugin hook can now be used to implement the same pattern for other formats. I've learned never to release a new plugin feature without accompanying it with a plugin that uses it. Claude Fable 5.2 suggested the Apache Arrow streaming format",
+      "published": "2026-11-18T17:09:59+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "903196ce6ce4": {
+      "id": "903196ce6ce4",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2n3vjt7622m",
+      "person": "Ethan Mollick",
+      "text": "At its current shipping trend, halving the time between each model release, Google exhausts all the element names on November 24, with a final shipping cadence of 2.5 × 10⁻²⁹ seconds (25 quectoseconds) between Tennessine and their final model, Oganesson.",
+      "published": "2026-11-19T03:10:07.824Z",
+      "via": "Bluesky",
       "kind": "post"
     }
   },

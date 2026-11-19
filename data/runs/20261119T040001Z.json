@@ -1,0 +1,521 @@
+{
+  "started_at": "2026-11-19T04:00:01+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1413)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (913)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (11)",
+    "gdelt": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "hn": "ok (23)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "failed: ConnectTimeout: _ssl.c:994: The handshake operation timed out",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (26)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "The Silent Consensus",
+      "reason": "score 4: General commentary piece on societal impacts of capable AI without new empirical findings or concrete product announcements."
+    },
+    {
+      "title": "How Sumitomo Life’s leaders helped teams adopt ChatGPT Enterprise",
+      "reason": "score 5: Routine enterprise customer case study on ChatGPT Enterprise adoption at Sumitomo Life."
+    },
+    {
+      "title": "Managing frontier AI risk: From training to deployment",
+      "reason": "score 5: High-level overview of OpenAI's standard risk management practices from training to deployment without new breakthrough mechanisms."
+    },
+    {
+      "title": "180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers",
+      "reason": "score 4: Technical blog post on running MoE inference efficiently with Transformers library rather than a major frontier lab breakthrough."
+    },
+    {
+      "title": "Microsoft publishes Aion-1.0-Instruct-2.3B-ONNX-WebGPU on Hugging Face",
+      "reason": "duplicate of b898a1b2127c"
+    },
+    {
+      "title": "RSIBench-Infra: Can Agents Optimize Their Own Training and Inference Infrastructure at Production Scale?",
+      "reason": "score 4: Incremental paper on agent infrastructure optimization; not a landmark breakthrough."
+    },
+    {
+      "title": "Temporal Rank in Recurrent Neural Networks",
+      "reason": "score 3: Theoretical RNN research paper; not a frontier model breakthrough."
+    },
+    {
+      "title": "Enhancing Active Learning Performance with Initial Data Selection Based on Foundation Models",
+      "reason": "score 3: Incremental active learning research paper."
+    },
+    {
+      "title": "What Majority Labels Hide: Annotator Disagreement and Model Errors in Multi-Dialect Arabic Sexism Detection",
+      "reason": "score 3: Niche dataset and annotation study for Arabic sexism detection."
+    },
+    {
+      "title": "How to Turn an Attention Neural Network into an Interpretable Hard-Logic Predicate Circuit: Truth-Table Predicate Extraction and State-Machine Merging under Ship-of-Theseus Replacement",
+      "reason": "score 4: Academic paper on attention network interpretability and circuit extraction."
+    },
+    {
+      "title": "MoE-Context: Show the Model Only What It Needs",
+      "reason": "score 5: Interesting research on context management for LLMs (MoE-Context), but standard arXiv paper without immediate major release impact."
+    },
+    {
+      "title": "LLM-Assisted Multi-Fidelity Bayesian Optimization: Fusing Expert Knowledge with Numerical Data",
+      "reason": "score 3: Academic paper on multi-fidelity Bayesian optimization."
+    },
+    {
+      "title": "VAFL: A Vertical Analytic Federated Learning Mechanism for Efficient Crowdsourced Services via Closed-Form Solutions",
+      "reason": "score 4: Routine federated learning paper, incremental method."
+    },
+    {
+      "title": "Towards Pose-Robust Few-Shot Vision-Language-Action Models",
+      "reason": "score 4: Standard robotics fine-tuning research paper."
+    },
+    {
+      "title": "Semantic Context Handoff with On-Demand Evidence for Long-Horizon Agents",
+      "reason": "score 4: Incremental context management technique for long-horizon agents."
+    },
+    {
+      "title": "When Figures Disagree with Text: Evaluating Autonomous Visual Evidence Verification in Scientific Papers",
+      "reason": "score 4: Incremental benchmark paper on visual evidence verification."
+    },
+    {
+      "title": "OCTR2A: Real-Time RGB-to-BEV Trajectory Projection and Forecasting at Urban Intersections",
+      "reason": "score 3: Standard trajectory forecasting computer vision paper."
+    },
+    {
+      "title": "Tell Me How Sure You Are: Communicating Uncertainty in Auxiliary Evidence to Foundation Models",
+      "reason": "score 4: Academic paper on communicating uncertainty in auxiliary evidence, incremental."
+    },
+    {
+      "title": "automodel: A Skill for Agentic Model Discovery",
+      "reason": "score 5: Interesting skill/method for agentic model discovery, but incremental academic paper."
+    },
+    {
+      "title": "Exploring Daily Emotional Well-Being through Personalized Data Analysis",
+      "reason": "score 3: Niche applied AI paper on daily emotional well-being analysis."
+    },
+    {
+      "title": "Can Weight-Space Programming Alter Learned Ethical Priorities?",
+      "reason": "score 4: Paper on altering ethical priorities via weight edits; interesting mechanism study but below threshold."
+    },
+    {
+      "title": "Distribution-Free Uncertainty Quantification for Weather Forecasting: Conformal Prediction Under Spatiotemporal Dependence",
+      "reason": "not AI: Weather forecasting and conformal prediction; standard weather modeling paper."
+    },
+    {
+      "title": "Structure-Preserving Neural Approximation of Convex, Semiconvex, and Quasiconvex Functions",
+      "reason": "not AI: Mathematical neural approximation of convex functions; pure optimization theory."
+    },
+    {
+      "title": "Reducing Inference Cost of Coding Agents with Timeout Cascades",
+      "reason": "score 5: Paper on reducing inference cost of coding agents with timeout cascades; incremental efficiency work."
+    },
+    {
+      "title": "RespCCT and FreqCCT: Compact, Explainable and Cost-Aware Convolutional Transformers for Multi-Class Respiratory Disease Classification",
+      "reason": "not AI: Respiratory disease classification using convolutional transformers; domain application paper."
+    },
+    {
+      "title": "Benchmarking LLM abilities on postdoc-level natural science problems",
+      "reason": "score 4: Benchmarking LLM abilities on postdoc-level natural science problems; standard evaluation paper."
+    },
+    {
+      "title": "Fuse to Recognize the Unseen: Class-Relative Infrared-Visible Fusion for Open-Vocabulary Semantic Segmentation",
+      "reason": "not AI: Infrared-visible fusion for semantic segmentation; computer vision application paper."
+    },
+    {
+      "title": "Supervised Hebbian Class Networks: Learning Without Backpropagation",
+      "reason": "score 4: Supervised Hebbian learning without backpropagation; academic neural network training method."
+    },
+    {
+      "title": "AutoPI: Taxonomy-Guided Adaptive Red Teaming for Prompt Injection in LLM Agents",
+      "reason": "score 5: Taxonomy-guided adaptive red teaming for prompt injection in LLM agents; security evaluation paper."
+    },
+    {
+      "title": "OpenKAGE: Open-Ended Lifelong Learning in the Open World via Knowledge-Sharing Agent-Group Evolution",
+      "reason": "score 4: Open-ended lifelong learning for autonomous agents; standard agent research paper."
+    },
+    {
+      "title": "LoopCache: Accelerating Long-Context Self-Speculative Decoding for Looped Transformers",
+      "reason": "score 4: Incremental research paper on speculative decoding for looped transformers."
+    },
+    {
+      "title": "KnowledgeClaw: Towards Agentic Knowledge Engineering via Omnimodal Hypergraphs",
+      "reason": "score 3: Early-stage research paper on knowledge engineering with hypergraphs."
+    },
+    {
+      "title": "Beyond Corpus-Driven Imitation: Evolving Musical Mindsets in the Agentic Orchestra via Quantum Reinforcement Learning",
+      "reason": "score 2: Niche academic paper combining quantum reinforcement learning and music composition."
+    },
+    {
+      "title": "LipSpell: A Language-Independent Phonetic Scoring Framework for Spelling Correction Combining Distinctive-Feature Edit Distance, Keyboard Geometry, and Corpus Frequency",
+      "reason": "score 2: Specialized spelling correction research paper."
+    },
+    {
+      "title": "Element-Wise Femoral Stress Prediction: A Hybrid Graph Neural Network Surrogate for Finite Element Analysis",
+      "reason": "score 3: Biomedical engineering application using graph neural networks."
+    },
+    {
+      "title": "Stability-compatible kernels: beyond Gaussianity for impulse response estimation",
+      "reason": "not AI: Control systems and kernel regularization paper without direct AI focus."
+    },
+    {
+      "title": "TRESS: A Fixed-Size History Representation for Irregular Time Series Forecasting",
+      "reason": "score 3: Time series forecasting paper, routine academic contribution."
+    },
+    {
+      "title": "FedE2E: One-Shot Federated Learning for End-to-End Autonomous Driving with Closed-Loop Evaluation",
+      "reason": "score 4: Federated learning for autonomous driving research paper."
+    },
+    {
+      "title": "From Points to Trajectories: Rethinking Multimodal Alignment for Physical Events",
+      "reason": "score 4: Physical AI and multimodal alignment research paper."
+    },
+    {
+      "title": "ViLFlow: Parallel Vision-Language Generation with Continuous Latent Flows",
+      "reason": "score 4: Vision-language generation research paper proposing continuous latent flows."
+    },
+    {
+      "title": "From a finite subgroup of $SO(3)$:$C_2$ leads to a Holant dichotomy",
+      "reason": "not AI: Pure mathematics paper on counting complexity and Holant dichotomy, unrelated to AI."
+    },
+    {
+      "title": "Functional Principal Component Analysis: Minimax Optimality from Sparse to Dense Designs and Beyond",
+      "reason": "not AI: Pure statistics paper on functional principal component analysis, not AI research."
+    },
+    {
+      "title": "Gemini 4 Neon",
+      "reason": "duplicate of b898a1b2127c"
+    },
+    {
+      "title": "Genie 4 is now available",
+      "reason": "duplicate of 50e3ea47cbae"
+    },
+    {
+      "title": "AI agents ask better questions than KPMG accountants in audit trial",
+      "reason": "score 4: Duplicate or rehashing of previous KPMG AI audit pilot news (see 06d9e6c4596e)."
+    },
+    {
+      "title": "LLM assisted reverse engineering",
+      "reason": "score 4: General blog post / discussion on LLM-assisted reverse engineering without major new breakthroughs or data."
+    },
+    {
+      "title": "Gemini 4 Neon looks like an Opus 5.5 competitor",
+      "reason": "score 4: Hacker News discussion echoing Artificial Analysis benchmark results for Gemini 4 Neon (already covered in dd0ead71d47c)."
+    },
+    {
+      "title": "Humyn Labs’ $47 Mn Round, From Blinkit To Vice City & More",
+      "reason": "duplicate of 9247c7737332"
+    },
+    {
+      "title": "Mufin Green Finance To Acquire 23% Stake In BimaPay For ₹66 Cr",
+      "reason": "not AI: Insurtech NBFC stake acquisition, no AI angle."
+    },
+    {
+      "title": "PW To Set Up Digital University To Offer UG & PG Courses",
+      "reason": "not AI: Edtech digital university announcement without any AI focus."
+    },
+    {
+      "title": "Omnichannel Fashion Brand Style Union Bags ₹485 Cr To Expand Store Network",
+      "reason": "not AI: Fast fashion omnichannel brand funding round."
+    },
+    {
+      "title": "Boba Bhai Bags $18 Mn To Build A Multi-Brand QSR Chain",
+      "reason": "not AI: Duplicate of d9a5102df5a3, QSR chain funding."
+    },
+    {
+      "title": "Breach At External Vendor Exposes CoinDCX User Data",
+      "reason": "not AI: Crypto exchange messaging vendor data breach, not AI-related."
+    },
+    {
+      "title": "AI Is Supercharging Cyberattacks, But Are Indian Enterprises Ready?",
+      "reason": "score 4: General commentary on cyberattacks and IT outages with weak AI tie-in."
+    },
+    {
+      "title": "PB Fintech Cofounder Alok Bansal To Step Down From Executive Role",
+      "reason": "not AI: Insurtech executive departure."
+    },
+    {
+      "title": "GTA 6 cheat codes: How to unlock all 61 codes, get free cash, spawn vehicles and more",
+      "reason": "not AI: Video game cheat codes guide, completely off-topic."
+    },
+    {
+      "title": "Surge in software patches likely behind recent tech outages; bank regulators on alert",
+      "reason": "score 4: General software patch outages, tangential and minor AI connection."
+    },
+    {
+      "title": "GTA 6 pre-orders hit 17 million, generate $1.65 billion ahead of launch; what does the $100 Ultimate Edition offer?",
+      "reason": "not AI: Video game pre-order sales numbers."
+    },
+    {
+      "title": "Google developing Android Fast Switch to rival Apple's iPhone Handoff? Share one phone number across two devices",
+      "reason": "not AI: Android mobile feature rumor."
+    },
+    {
+      "title": "Surge in software patches likely behind recent tech outages, experts say",
+      "reason": "score 4: DNI testimony on tech outages, minor AI relevance."
+    },
+    {
+      "title": "Anthropic prices its IPO at $83 per share, valuing the AI giant at $1.5 trillion",
+      "reason": "duplicate of 0b980939d985"
+    },
+    {
+      "title": "10 polite ways to set boundaries with family and colleagues",
+      "reason": "not AI: Lifestyle and boundary-setting advice listicle."
+    },
+    {
+      "title": "Debate brews over Sarvam hosting Chinese AI models; Grand Theft Auto VI is finally here",
+      "reason": "duplicate of d930ebd0b69d"
+    },
+    {
+      "title": "Inside MS Dhoni’s startup playbook: 13 companies backed by Captain Cool",
+      "reason": "not AI: General startup portfolio overview of a sports celebrity, lacks specific AI news."
+    },
+    {
+      "title": "Quick service restaurant chain Boba Bhai raises $18M in Series B round",
+      "reason": "not AI: Series B funding for a bubble tea QSR chain."
+    },
+    {
+      "title": "datasette-arrows 0.1a0",
+      "reason": "not AI: Datasette plugin release for data exploration, not AI news."
+    },
+    {
+      "title": "Ethan Mollick: At its current shipping trend, halving the time between each model release, Google exhausts all the element names on November 24, with a…",
+      "reason": "score 3: Satirical/humorous commentary by Ethan Mollick on Google's rapid model naming and release cadence."
+    },
+    {
+      "title": "OpenGNS: An Open Dataset of the Gradient Noise Scale across Vision, Language, and Diffusion Models",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "Arizona says it is investigating OpenAI, other firms over possible rogue agents",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "25c96fa5a216",
+      "headline": "Anthropic prices IPO at $83 per share, valuing company at $1.5 trillion",
+      "category": "industry",
+      "summary": "Anthropic priced its initial public offering at $83 per share, raising $81 billion in proceeds and reaching a $1.5 trillion valuation on a fully diluted basis. The offering surpassed SpaceX's previous record to become the largest IPO in history by proceeds raised.",
+      "url": "https://anthropic.com/news/anthropic-prices-initial-public-offering",
+      "sources": 5,
+      "quotes": 1
+    },
+    {
+      "id": "dd0ead71d47c",
+      "headline": "Google releases Gemini 4 Neon model for complex workflows",
+      "category": "models",
+      "summary": "Google DeepMind released Gemini 4 Neon, a midtier model designed for software engineering, science, and knowledge work. Independent evaluations rank the model third overall on the Artificial Analysis Intelligence Index with a score of 61.",
+      "url": "https://techmeme.com/261118/p58",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "a7274720f199",
+      "headline": "Alibaba used regional companies to access Nvidia chips and aid military-linked lab",
+      "category": "policy",
+      "summary": "Alibaba used its AI computing technology to aid a lab linked to China's military by accessing Nvidia chips via regional companies like Megaspeed. Indonesian police raided Megaspeed's local unit in early 2026 at the request of U.S. authorities over suspicions of helping Chinese entities obtain restricted hardware.",
+      "url": "https://techmeme.com/261118/p57",
+      "sources": 5,
+      "quotes": 0
+    },
+    {
+      "id": "a1f50bca3921",
+      "headline": "Microsoft's Agent Framework PyPI package compromised with credential stealer",
+      "category": "safety",
+      "summary": "Hackers compromised Microsoft's official Agent Framework Python package on PyPI on November 17, 2026, publishing two malicious versions designed to steal cloud credentials and sensitive developer information. The affected package averages roughly 190,000 to 200,000 monthly downloads.",
+      "url": "https://techmeme.com/261118/p56",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "0bd7a28301d2",
+      "headline": "Coalition challenges Anthropic's safety branding ahead of IPO",
+      "category": "safety",
+      "summary": "Ahead of Anthropic's initial public offering, a coalition of scientists, legal scholars, and tech leaders signed the MisAnthropic Statement challenging the company's safety branding. Prominent signatories include Steven Pinker, Oliver Hart, and Judea Pearl.",
+      "url": "https://businesswire.com/news/home/20261118974464/en/Anthropic-is-Not-a-Safe-AI-Company---Broad-Coalition-of-Scientists-Legal-Scholars-and-Tech-Leaders-Challenge-Anthropics-Safety-Branding-Ahead-of-IPO",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "2a1f0dfea65b",
+      "headline": "Elon Musk criticizes Nvidia board for ousting Jensen Huang",
+      "category": "voices",
+      "summary": "Elon Musk and other tech leaders discussed Nvidia's decision to remove former CEO Jensen Huang at the New York Times DealBook Summit. Musk compared the ousting to removing Michael Jordan from a winning team, while Nvidia's board confirmed it has no plans to reinstate Huang.",
+      "url": "https://economictimes.indiatimes.com/tech/technology/no-one-can-replace-jensen-elon-musk-says-nvidia-decision-to-sack-jensen-huang-was-not-smart/articleshow/135975859.cms",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "9fa731b0ef6c",
+      "headline": "OpenAI measures coding agents in research acceleration and recursive self-improvement",
+      "category": "research",
+      "summary": "OpenAI measured how coding agents accelerate AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+      "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "c7d3ecb00643",
+      "headline": "OpenAI models applied to Jalapeño silicon and RISC-V core design",
+      "category": "research",
+      "summary": "OpenAI models optimized circuits used in Jalapeño silicon and improved RISC-V core designs, demonstrating progress in AI-assisted chip design with GPT-6 Astra.",
+      "url": "https://openai.com/index/advancing-chip-design-with-our-models",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "b7a81c659ac0",
+      "headline": "Study examines prompt injection protection in image-rendered documents",
+      "category": "research",
+      "summary": "Researchers evaluated how multimodal language models handle indirect prompt injection when documents are rendered as page images instead of plain text. They found that rendering reduces attack execution across models, but certain models still execute image-borne replacement at rates up to 77.96%.",
+      "url": "https://arxiv.org/abs/2611.24231",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "not India desk: ''No one can replace Jensen': Elon Musk says Nvidia'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "dropped unverifiable benchmark: Qwen3-VL-8B Qwen3-VL-8B image-borne replacement execution 77.96%",
+    "3 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 83.5,
+    "audit": 6.6,
+    "plan": 27.4,
+    "judge": 19.7,
+    "verify and write": 173.4,
+    "videos": 6.0,
+    "tagging": 3.4,
+    "explainers": 1.4,
+    "trackers": 7.1,
+    "claims": 2.2,
+    "model tracker": 0.0,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "briefing": 5.7,
+    "self-review": 1.7,
+    "photos": 1.4,
+    "stock photos": 1.0,
+    "daily email": 0.0,
+    "alerts": 7.2
+  },
+  "fetched": 2999,
+  "fresh": 122,
+  "audit": "coverage 86% of 7 significant stories; 1 missed, 0 added to this run",
+  "plan": {
+    "focus": "Covering Anthropic's landmark IPO pricing alongside new model rollouts and enterprise agent security challenges.",
+    "priorities": [
+      "Anthropic prices initial public offering (Anthropic prices its IPO at $83 per share, valuing the company at $1.5 trillion—a milestone for the AI industry.)",
+      "Artificial Analysis: Gemini 4 Neon trails only Claude Fable 5.2 and GP (Artificial Analysis benchmarks place Gemini 4 Neon among top-tier models for intelligence and coding at lower costs.)",
+      "How Alibaba uses regional companies like Megaspeed to access Nvidia ch (New revelations on how Alibaba bypasses chip curbs via offshore data centers to access Nvidia hardware.)",
+      "Hackers compromised Microsoft's Agent Framework Python package on PyPI (Compromised Microsoft Agent Framework PyPI package highlights growing supply-chain risks for AI agent tools.)",
+      "Anthropic prices its IPO at $83 per share, valuing the AI giant at $1. (ET Tech coverage detailing Anthropic's $1.5 trillion valuation and IPO pricing.)"
+    ],
+    "thin_areas": [
+      "india",
+      "safety"
+    ],
+    "searches": [
+      "Anthropic IPO valuation pricing: 6 new",
+      "Gemini 4 Neon benchmarks Artificial Analysis: 6 new"
+    ],
+    "dig_deeper": [
+      "Anthropic prices initial public offering",
+      "Artificial Analysis: Gemini 4 Neon trails only Claude Fable 5.2 and GP"
+    ]
+  },
+  "judged": 80,
+  "kept": 13,
+  "research": {
+    "investigated": 5,
+    "confirmed": 5,
+    "tool_calls": 11
+  },
+  "research_log": [
+    "Anthropic prices initial public offering: confirmed (searched “Anthropic initial public offering IPO priced”; read techcrunch.com)",
+    "Artificial Analysis: Gemini 4 Neon trails only Claude Fable 5.2 and GP: confirmed (searched “Gemini 4 Neon Artificial Analysis”; searched “Artificial Analysis Gemini 4 Neon Intelligence Index Claude Fable 5.2”)",
+    "How Alibaba uses regional companies like Megaspeed to access Nvidia ch: confirmed (searched “Alibaba Megaspeed Nvidia chips New York Times”; read nytimes.com; read indiatimes.com)",
+    "Hackers compromised Microsoft's Agent Framework Python package on PyPI: confirmed (searched “Microsoft Agent Framework Python package PyPI BleepingComputer Bill Toulas”; read bleepingcomputer.com)",
+    "\"Anthropic Is Not a Safe AI Company\" – Coalition Challenges Anthropic : confirmed (searched “Anthropic Is Not a Safe AI Company Coalition”; read yahoo.com)"
+  ],
+  "threads": [
+    "Anthropic IPO valuation and Nscale chip funding: Anthropic prices IPO at $83 per share, valuing company at $1",
+    "Google Gemini 4 model rollouts: Google releases Gemini 4 Neon model for complex workflows",
+    "US chip curbs and SE Asia data centers: Alibaba used regional companies to access Nvidia chips and a",
+    "Nvidia leadership and Jensen Huang departure: Elon Musk criticizes Nvidia board for ousting Jensen Huang",
+    "OpenAI study on AI research acceleration: OpenAI measures coding agents in research acceleration and r"
+  ],
+  "videos": {
+    "OpenAI": "ok (12 in feed, 1 new)",
+    "Anthropic": "ok (12 in feed, 0 new)",
+    "Google DeepMind": "ok (14 in feed, 3 new)",
+    "Google for Developers": "ok (10 in feed, 4 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
+    "Microsoft Research": "ok (12 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 1 new)",
+    "Hugging Face": "ok (12 in feed, 3 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 1 new)",
+    "AI Explained": "ok (15 in feed, 0 new)",
+    "Lex Fridman": "ok (14 in feed, 2 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 1 new)",
+    "No Priors": "ok (2 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 2 new)",
+    "Training Data (Sequoia)": "ok (5 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 1 new)",
+    "Hard Fork": "ok (6 in feed, 5 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (4 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "18 kept from 23 new",
+  "tagged": 10,
+  "explainers": "1 added to earlier stories",
+  "trackers": "filed 9 stories; updated us-china, frontier-race, agent-safety, ai-infrastructure",
+  "claims": "203 tracked, 197 open, 0 updated this run",
+  "model_tracker": "82 models, 10 changes today",
+  "briefing": "5 themes from 20 stories",
+  "india_briefing": "3 themes from 6 stories",
+  "self_review": "19 lines written to data/self_review.md",
+  "photos": "7 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "23 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":73}",
+  "ai_requests_run": 50,
+  "ai_tokens_run": 158381,
+  "ai_requests_today": 50,
+  "provider_log": []
+}
