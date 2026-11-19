@@ -1,0 +1,325 @@
+{
+  "started_at": "2026-11-19T16:18:10+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1413)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (913)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "mistral-news": "ok (2)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (9)",
+    "gdelt": "ok (0) via Bing News (GDELT unavailable)",
+    "hn": "ok (16)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (0) via Bing News (GDELT unavailable)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (27)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Deutsche Telekom invests €100 million in French AI start-up Mistral",
+      "reason": "score 7: Duplicate of the Deutsche Telekom investment story already covered; same event."
+    },
+    {
+      "title": "Black high school students sue after AI mistakes Doritos bag for gun",
+      "reason": "score 5: Lawsuit over a misclassification by an AI model is a localized legal case without broader industry or policy impact."
+    },
+    {
+      "title": "DeepMind Employees Are Unionising",
+      "reason": "score 5: Unionisation effort at DeepMind is a labor story; while adjacent to AI, it lacks direct AI‑technical significance for our core audience."
+    },
+    {
+      "title": "Someone reported java4shell bug in September 2026",
+      "reason": "not AI: Bug report unrelated to AI; no AI relevance."
+    },
+    {
+      "title": "Nintendo takes Picofly firmware down from GitHub [video]",
+      "reason": "not AI: Firmware takedown video unrelated to AI; no AI relevance."
+    },
+    {
+      "title": "Superhuman pushes its Go assistant everywhere",
+      "reason": "score 4: Incremental product feature — Superhuman pushing its Go assistant into Docs and Mail. Minor update, not genuinely newsworthy for our readers."
+    },
+    {
+      "title": "ChatGPT can transcribe as you speak now with Live Dictation",
+      "reason": "score 5: Live Dictation is an incremental product feature rollout rather than a frontier model or major infrastructure move; it is core AI but not significant enough for our audience."
+    },
+    {
+      "title": "With the biggest IPO of all time, Anthropic’s ‘good guy’ reputation is on the line",
+      "reason": "duplicate of 25c96fa5a216"
+    },
+    {
+      "title": "Cyient Semiconductors Secures $10 Mn Investment From GlobalFoundries",
+      "reason": "score 5: Cyient Semiconductors receives $10 M from GlobalFoundries; while semiconductor‑related, the story lacks a strong AI focus."
+    },
+    {
+      "title": "Wadhwani AI Joins LinkedIn to Train 2,000 Northeast SMEs in AI",
+      "reason": "score 5: Training programme for 2,000 SMEs is useful but an incremental education effort, not a frontier‑scale development."
+    },
+    {
+      "title": "Paytm Lines Up ₹200 Cr Investment in Singapore’s Funding Societies",
+      "reason": "not AI: Fintech investment with no AI angle."
+    },
+    {
+      "title": "Can ShareChat’s Microdrama-Fuelled Revival Keep Going?",
+      "reason": "not AI: Article about ShareChat revival, no AI focus."
+    },
+    {
+      "title": "Razorpay To File UDRHP By Next Week, Eyes IPO By February 2027: Report",
+      "reason": "not AI: Razorpay IPO filing report, no AI component."
+    },
+    {
+      "title": "Adhiraj Chauhan wins ‘Young AI Entrepreneur’ at the ET AI Awards 2026 for breakthroughs spanning mental healthcare to marine robotics",
+      "reason": "score 4: Award for a young entrepreneur is a profile piece with limited broader impact; falls into a low‑significance voice story."
+    },
+    {
+      "title": "Public Markets Are Frequently Wrong. The SaaSpocalypse Shows Us Why",
+      "reason": "score 4: Guest essay on the SaaSpocalypse and public markets; AI is a secondary theme. Routine commentary, not news."
+    },
+    {
+      "title": "Amazon warns NYC customers that they could be charged up to $5 more per order if the City Council passes a bill requiring it to directly hire delivery workers (Lisa Fickenscher/New York Post)",
+      "reason": "not AI: Amazon NYC delivery-worker billing story; no AI angle."
+    },
+    {
+      "title": "Binance says it obtained a $6.5B freezing order from an Abu Dhabi court, targeting unidentified perpetrators of the October 29 attack on the exchange (Teresa Xie/Bloomberg)",
+      "reason": "not AI: Binance crypto freezing order; no AI angle."
+    },
+    {
+      "title": "Seattle-based StepSecurity, which offers a software supply chain security platform, raised a $20M Series A led by Elephant, bringing its total funding to $23M (Chris Metinko/Axios)",
+      "reason": "not AI: Small $20M Series A for a software supply-chain security startup; not AI-specific and below threshold."
+    },
+    {
+      "title": "Leaked docs: right-wing X aggregator Visegrad24 used anti-migrant, pro-Israel content to become one of Elon Musk's top X news sources and raise tech funding (James Jackson/Wired)",
+      "reason": "not AI: Leaked docs on a right-wing X aggregator; no AI angle, off-topic."
+    },
+    {
+      "title": "A UK tribunal rules against the UK Home Office, saying it must acknowledge issuing a secret \"technical capability notice\" to Apple to bypass its encryption (Tim Bradshaw/Financial Times)",
+      "reason": "not AI: UK tribunal ruling on a secret Apple encryption notice; privacy/encryption, not AI."
+    },
+    {
+      "title": "Anthropic IPO: The stock is just hours away from its highly anticipated trading debut — live updates",
+      "reason": "score 9: Duplicate coverage of Anthropic IPO; already reported in existing story 824e87dcfa8e."
+    },
+    {
+      "title": "Google picks Bezos' Blue Origin to launch AI computing satellites in 2029",
+      "reason": "score 7: Duplicate coverage of Google-Blue Origin AI satellite launch; already reported in existing story cc36c5ea21ab."
+    },
+    {
+      "title": "Google chooses Blue Origin rocket to launch AI satellites in 2029 — Channel NewsAsia",
+      "reason": "score 8: Duplicate of already published story about Google partnering with Blue Origin for AI satellite launch (ID cc36c5ea21ab)."
+    },
+    {
+      "title": "Sources: Anthropic's IPO left 50%+ of bidding institutional investors with zero shares; allocations heavily favored US investors, shutting out foreign orders (Bloomberg)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Google partners with Jeff Bezos' Blue Origin to launch TPU-powered AI server satellites aboard the New Glenn rocket in Q1 2029, as part of Project Suncatcher (Emma Roth/The Verge)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Anthropic IPO Rekindles Debate Over India’s AI Ambitions",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "The European Commission confirms a cyberattack that disrupted systems for 10+ days; CERT-EU says international hackers used AI penetration testing tool ARTEX (Gerardo Fortuna/Politico)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Deutsche Telekom’s tech fund invests $110 million in Mistral AI",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Infosys Expands AI Footprint in Japan With Telecom JV",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "AI shouldnt deny credit to small borrowers, fin inclusion should be central to tech: Setty",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "824e87dcfa8e",
+      "headline": "Anthropic’s $81.3 billion IPO tests AI’s circular financing model",
+      "category": "industry",
+      "summary": "Anthropic priced its shares at $83, raising $81.3 billion in the largest U.S. IPO to date and valuing the company at about $1.5 trillion. Supplier‑investors such as Amazon and Google hold stakes worth over $150 billion, highlighting the circular financing where the same firms fund and buy AI services.",
+      "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test",
+      "sources": 7,
+      "quotes": 1
+    },
+    {
+      "id": "3d4a65fc0db1",
+      "headline": "Sarvam AI’s Token Factory hosts mostly Chinese models on Indian GPUs, sparking sovereign AI debate",
+      "category": "industry",
+      "summary": "Sarvam AI launched its Token Factory inference platform on November 16, offering eight open-weight models via an OpenAI‑compatible API on GPU clusters in India, six of which are from Chinese firms. The company received a ₹98.68 crore government GPU subsidy for building indigenous models.",
+      "url": "https://medianama.com/2026/11/223-sarvam-token-factory-india-sovereign-ai",
+      "sources": 2,
+      "quotes": 1
+    },
+    {
+      "id": "2773c380ad92",
+      "headline": "Disseqt AI raises $8 million to expand enterprise AI governance platform",
+      "category": "industry",
+      "summary": "Disseqt AI, an Irish‑headquartered startup that provides testing and compliance tools for AI agents, secured $8 million in a funding round led by Gresham House Ventures. The capital will be used to grow its global enterprise customer base, open operations in London, and increase hiring in India.",
+      "url": "https://inc42.com/buzz/ai-startup-disseqt-ai-raises-8-mn-to-scale-international-operations",
+      "sources": 2,
+      "quotes": 1
+    }
+  ],
+  "notes": [
+    "ignored made-up duplicate id 153ab24f457a for 'Deutsche Telekom invests €100 million in French AI'",
+    "ignored made-up duplicate id 824e87dcfa8e for 'Anthropic IPO: The stock is just hours away from i'",
+    "ignored made-up duplicate id cc36c5ea21ab for 'Google picks Bezos' Blue Origin to launch AI compu'",
+    "ignored made-up duplicate id cc36c5ea21ab for 'Google chooses Blue Origin rocket to launch AI sat'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "dropped non-quote (Rohit Mathur): tools that sit apart from the model providers they rely on…",
+    "dropped unverifiable benchmark: global sports league fan‑engagement agent safe-response rate 80% → 99%",
+    "10 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 101.5,
+    "audit": -0.0,
+    "plan": 43.2,
+    "judge": 202.0,
+    "verify and write": 422.7,
+    "videos": 149.9,
+    "tagging": 1.3,
+    "explainers": -0.0,
+    "trackers": 39.5,
+    "claims": 50.4,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 20.5,
+    "self-review": 0.0,
+    "photos": 1.0,
+    "stock photos": -0.0,
+    "daily email": -0.0,
+    "alerts": 4.7
+  },
+  "fetched": 2993,
+  "fresh": 34,
+  "plan": {
+    "focus": "Chasing the fallout from the historic Anthropic IPO while tracking new infrastructure, security, and AI deployments worldwide.",
+    "priorities": [
+      "Sources: Anthropic's IPO left 50%+ of bidding institutional investors  (Detailed institutional allocation data on the massive Anthropic IPO.)",
+      "Google partners with Jeff Bezos' Blue Origin to launch TPU-powered AI  (Google and Blue Origin partnering for TPU-powered AI server satellites (Project Suncatcher).)",
+      "ChatGPT can transcribe as you speak now with Live Dictation (OpenAI launches live dictation transcription in ChatGPT, expanding voice use cases.)",
+      "Anthropic IPO Rekindles Debate Over India’s AI Ambitions (Anthropic IPO fallout and its direct impact on India's sovereign AI ambitions.)",
+      "The European Commission confirms a cyberattack that disrupted systems  (European Commission confirms a cyberattack involving AI penetration testing tool ARTEX.)"
+    ],
+    "thin_areas": [
+      "models"
+    ],
+    "searches": [
+      "Anthropic IPO valuation stock performance: 6 new",
+      "Google Project Suncatcher Blue Origin: 6 new"
+    ],
+    "dig_deeper": [
+      "Sources: Anthropic's IPO left 50%+ of bidding institutional investors ",
+      "Google partners with Jeff Bezos' Blue Origin to launch TPU-powered AI "
+    ]
+  },
+  "judged": 45,
+  "kept": 14,
+  "research": {
+    "investigated": 5,
+    "confirmed": 0,
+    "tool_calls": 20
+  },
+  "research_log": [
+    "Sources: Anthropic's IPO left 50%+ of bidding institutional investors : unconfirmed (searched “Anthropic IPO allocation foreign investors zero shares Bloomberg”; read bloomberg.com; read techcrunch.com; searched “\"Anthropic\" \"allocation\" \"foreign\" investors”)",
+    "Google partners with Jeff Bezos' Blue Origin to launch TPU-powered AI : unconfirmed (searched “Google Blue Origin Project Suncatcher TPU satellites New Glenn”; read msn.com; read theverge.com; read spacenews.com)",
+    "Anthropic IPO Rekindles Debate Over India’s AI Ambitions: unconfirmed (searched “Anthropic IPO India AI ambitions debate”; read analyticsindiamag.com; searched “India AI ambitions debate Anthropic IPO”; searched “Anthropic IPO debate India AI ambitions business leaders”)",
+    "The European Commission confirms a cyberattack that disrupted systems : unconfirmed (searched “European Commission cyberattack 10 days ARTEX AI penetration testing tool CERT-EU”; read therecord.media; read msn.com; read infosecurity-magazine.com)",
+    "Deutsche Telekom’s tech fund invests $110 million in Mistral AI: unconfirmed (searched “Deutsche Telekom tech fund invests $110 million Mistral AI”; read msn.com; searched “Mistral AI Deutsche Telekom fund investment 110 million”; read marketscreener.com)"
+  ],
+  "threads": [
+    "Anthropic IPO tests circular financing boom: Anthropic’s $81.3 billion IPO tests AI’s circular financing ",
+    "Sarvam token factory fuels sovereign AI debate: Sarvam AI’s Token Factory hosts mostly Chinese models on Ind"
+  ],
+  "videos": {
+    "OpenAI": "ok (12 in feed, 0 new)",
+    "Anthropic": "ok (12 in feed, 1 new)",
+    "Google DeepMind": "ok (14 in feed, 1 new)",
+    "Google for Developers": "ok (10 in feed, 2 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
+    "Microsoft Research": "ok (11 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 2 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 2 new)",
+    "AI Explained": "ok (15 in feed, 1 new)",
+    "Lex Fridman": "ok (14 in feed, 1 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (3 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 2 new)",
+    "Training Data (Sequoia)": "ok (5 in feed, 0 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (6 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (4 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "12 kept from 13 new",
+  "tagged": 3,
+  "trackers": "filed 3 stories; updated india-ai, ai-money",
+  "claims": "210 tracked, 204 open, 0 updated this run",
+  "model_tracker": "82 models, 27 changes today",
+  "briefing": "4 themes from 20 stories",
+  "india_briefing": "3 themes from 3 stories",
+  "photos": "3 saved, 0 unavailable",
+  "alerts": "38 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":27}",
+  "ai_requests_run": 42,
+  "ai_tokens_run": 120663,
+  "ai_requests_today": 291,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model",
+    "gemini: 503 after retry; moving to next provider for this run",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: model unavailable (400); trying next model",
+    "groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing",
+    "groq/qwen/qwen3.8-27b: HTTP 400: {\"error\":{\"message\":\"Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"",
+    "groq/openai/gpt-oss-20b: model unavailable (400); trying next model",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model"
+  ]
+}
