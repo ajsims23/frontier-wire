@@ -107,7 +107,7 @@ function build() {
     const href = (s) => (s.kind === "frontier" ? `${root}story/${encodeURIComponent(s.id)}/` : (/^https:\/\//.test(s.url || "") ? s.url : "#"));
     const cite = (n) => { const s = byN.get(+n); return s ? `<a class="fwc-cite" href="${esc(href(s))}" ${s.kind === "frontier" ? "" : 'target="_blank" rel="noopener"'} title="${esc(s.headline)}">${n}</a>` : ""; };
     const shown = srcs.filter((s) => s.cited);
-    const rest = srcs.filter((s) => !s.cited && s.kind === "frontier").slice(0, 3);
+    const rest = [];   // only what the answer actually cites
     const list = [...shown, ...rest];
     return `<div class="fwc-a">${md(a.answer || "We couldn't write an answer this time.", cite)}
       ${list.length ? `<button type="button" class="fwc-srctoggle" aria-expanded="${i === state.turns.length - 1}">${shown.length} source${shown.length === 1 ? "" : "s"}${rest.length ? ` · ${rest.length} related` : ""}</button>
