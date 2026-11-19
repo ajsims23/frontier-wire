@@ -1,0 +1,51 @@
+# Read-only health check of the API worker and the email pipeline. Run it from the Actions tab.
+# Prints counts only (no email addresses: these logs are public).
+name: Worker status
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install -g wrangler@4 >/dev/null 2>&1
+      - name: Database
+        working-directory: worker
+        run: |
+          id=$(wrangler d1 list --json | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const db=JSON.parse(s).find(d=>d.name==="frontier-wire");process.stdout.write(db?db.uuid:"")})')
+          sed -i "s/REPLACED_IN_CI/$id/" wrangler.toml
+          q() { echo "-- $1"; wrangler d1 execute frontier-wire --remote --json --command "$2" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{for(const r of JSON.parse(s)) for(const row of r.results) console.log(JSON.stringify(row))})'; }
+          q "subscribers" "SELECT frequency, confirmed, COUNT(*) n FROM subscribers GROUP BY frequency, confirmed"
+          q "queued events per subscriber (daily digest backlog)" "SELECT substr(sub_id,1,6) sub, COUNT(*) n, MIN(created) oldest, MAX(created) newest FROM queue GROUP BY sub_id"
+          q "emails counted per day (cap 280)" "SELECT day, kind, who, n FROM usage WHERE kind = 'email' ORDER BY day DESC LIMIT 8"
+          q "meta" "SELECT k, substr(v,1,40) v FROM meta"
+      - name: Brevo
+        run: |
+          [ -n "$BREVO_API_KEY" ] || { echo "no BREVO_API_KEY secret"; exit 0; }
+          curl -s https://api.brevo.com/v3/account -H "api-key: $BREVO_API_KEY" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const a=JSON.parse(s);console.log("plan:",JSON.stringify(a.plan||a), "relay:", JSON.stringify((a.relay||{}).enabled))})'
+          for d in 1 2 3 4 5; do
+            day=$(date -u -d "-$d day" +%F)
+            curl -s "https://api.brevo.com/v3/smtp/statistics/aggregatedReport?startDate=$day&endDate=$day" -H "api-key: $BREVO_API_KEY" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const a=JSON.parse(s);console.log(process.argv[1], JSON.stringify({requests:a.requests,delivered:a.delivered,hardBounces:a.hardBounces,softBounces:a.softBounces,blocked:a.blocked,invalid:a.invalid,error:a.message}))})' "$day"
+          done
+      - name: Worker runs (Cloudflare analytics)
+        run: |
+          since=$(date -u -d '-4 day' +%FT%TZ); now=$(date -u +%FT%TZ)
+          body=$(node -e 'console.log(JSON.stringify({query:`query($a:String!,$s:Time!,$e:Time!){viewer{accounts(filter:{accountTag:$a}){workersInvocationsAdaptive(limit:500,filter:{scriptName:"frontier-wire-api",datetime_geq:$s,datetime_leq:$e}){sum{requests errors}dimensions{status datetimeHour}}}}}`,variables:{a:process.env.CLOUDFLARE_ACCOUNT_ID,s:process.argv[1],e:process.argv[2]}}))' "$since" "$now")
+          curl -s https://api.cloudflare.com/client/v4/graphql -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -H "Content-Type: application/json" -d "$body" | node -e '
+            let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const j=JSON.parse(s);if(j.errors&&j.errors.length){console.log("analytics:",JSON.stringify(j.errors).slice(0,300));return}
+            const rows=j.data.viewer.accounts[0].workersInvocationsAdaptive;
+            const bad=rows.filter(r=>r.dimensions.status!=="success").sort((a,b)=>a.dimensions.datetimeHour<b.dimensions.datetimeHour?-1:1);
+            console.log("non-success invocations by hour:");for(const r of bad)console.log(" ",r.dimensions.datetimeHour,r.dimensions.status,r.sum.requests);
+            const at3=rows.filter(r=>/T03:00/.test(r.dimensions.datetimeHour));console.log("03:00 UTC hours (digest):");for(const r of at3)console.log(" ",r.dimensions.datetimeHour,r.dimensions.status,r.sum.requests,"errors",r.sum.errors)})'
