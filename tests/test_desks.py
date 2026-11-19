@@ -338,3 +338,34 @@ def test_x_coverage_bing_fallback_per_person(tmp_path):
     room.fetcher.pages["https://www.bing.com/news/search"] = lambda u: rss if "Sam+Altman" in u else "<rss><channel></channel></rss>"
     out, status = top_voices.from_x_coverage(room, room.cfg.extra["top_voices"]["people"])
     assert status.endswith("bing)") and [p["person"] for p in out] == ["Sam Altman"] and out[0]["kind"] == "reported"
+
+
+BING_RSS = """<?xml version="1.0"?><rss version="2.0"><channel><title>Bing</title>
+<item><title>Mistral AI launches a new open model</title><pubDate>Wed, 21 Oct 2026 08:00:00 GMT</pubDate>
+<link>http://www.bing.com/news/apiclick.aspx?ref=FexRss&amp;url=https%3a%2f%2fnews.example.com%2fmistral&amp;c=1</link></item>
+<item><title>Strong wind expected in Provence</title><pubDate>Wed, 21 Oct 2026 07:00:00 GMT</pubDate>
+<link>http://www.bing.com/news/apiclick.aspx?ref=FexRss&amp;url=https%3a%2f%2fnews.example.com%2fweather&amp;c=1</link></item>
+<item><title>Mistral AI funding, from last month</title><pubDate>Fri, 18 Sep 2026 08:00:00 GMT</pubDate>
+<link>http://www.bing.com/news/apiclick.aspx?ref=FexRss&amp;url=https%3a%2f%2fnews.example.com%2fold&amp;c=1</link></item>
+</channel></rss>"""
+
+
+def test_gdelt_source_falls_back_to_bing_when_gdelt_is_down():
+    from agent.sources import gather
+
+    def gdelt_down(url):
+        raise ConnectionError("The handshake operation timed out")
+    f = Fetcher({"https://api.gdeltproject.org": gdelt_down, "https://www.bing.com/news/search": BING_RSS})
+    items, status = gather([{"id": "gdelt", "name": "GDELT", "kind": "gdelt", "role": "news"}], f, now=NOW, lookback_hours=24,
+                           gdelt=Gdelt(f, sleep=lambda s: None), gdelt_settings={"query": "x", "fallback_query": "AI"}, lab_domains={})
+    assert status["gdelt"].startswith("ok") and "via Bing News" in status["gdelt"]
+    assert [i.url for i in items] == ["https://news.example.com/mistral"]   # AI headlines only, inside the window
+
+
+def test_search_source_tracks_a_lab_in_the_news():
+    from agent.sources import gather
+    f = Fetcher({"https://www.bing.com/news/search": BING_RSS})
+    items, status = gather([{"id": "mistral-news", "name": "Mistral AI in the news", "kind": "search", "query": '"Mistral AI"',
+                             "role": "news", "lab": "Mistral AI"}], f, now=NOW, lookback_hours=24,
+                           gdelt=Gdelt(f, sleep=lambda s: None), gdelt_settings={"query": "x"}, lab_domains={})
+    assert status["mistral-news"] == "ok (1)" and items[0].lab == "Mistral AI" and items[0].url == "https://news.example.com/mistral"

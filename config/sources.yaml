@@ -9,6 +9,7 @@
 #   hf_models  – new models published by labs on Hugging Face (feeds the lab tracker)
 #   hf_papers  – Hugging Face daily trending papers
 #   bluesky    – public posts from people's Bluesky accounts
+#   search     – a Bing News search on one subject (`query`), e.g. a lab's press coverage
 #
 # role:
 #   lab    – a lab's own channel (primary source for its own releases)
@@ -54,6 +55,8 @@ sources:
     link_pattern: "^https://mistral\\.ai/news/[a-z0-9-]+/?$"
     role: lab
     lab: Mistral AI
+  # Mistral posts rarely; this catches its press coverage between announcements
+  - {id: mistral-news, name: Mistral AI in the news, kind: search, query: '"Mistral AI"', role: news, lab: Mistral AI}
 
   # New model uploads by lab (org on Hugging Face → lab name)
   - id: hf-models
@@ -105,6 +108,7 @@ sources:
     role: news
     desk: india
     query: '("artificial intelligence" OR "AI startup" OR IndiaAI OR "generative AI" OR "large language model") sourcecountry:india sourcelang:english'
+    fallback_query: 'India "artificial intelligence" OR "AI startup" OR IndiaAI'   # Bing News, when GDELT is unavailable
 
   # ---- AI business --------------------------------------------------------
   - {id: crunchbase-news, name: Crunchbase News, kind: rss, url: "https://news.crunchbase.com/feed/", role: news}

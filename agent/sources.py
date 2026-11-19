@@ -142,7 +142,9 @@ def parse_page(raw: str, src: dict[str, Any], fetcher: Fetcher, max_links: int =
 
 # ------------------------------------------------------------------ GDELT
 class Gdelt:
-    """GDELT DOC 2.0 article search. Free, no key; asks for at most one request every 5 seconds."""
+    """GDELT DOC 2.0 article search. Free, no key; asks for at most one request every 5 seconds. GitHub's shared
+    runners get rate-limited and its servers sometimes stall, so requests are spaced 10 s apart and retried with a
+    longer back-off on a 429 or a timeout."""
 
     BASE = "https://api.gdeltproject.org/api/v2/doc/doc"
 
@@ -158,7 +160,7 @@ class Gdelt:
                f"&maxrecords={max_records}&timespan={timespan}&sort=datedesc")
         raw = None
         for attempt in range(3):
-            wait = 6.0 - (self.clock() - self._last)
+            wait = 10.0 - (self.clock() - self._last)
             if wait > 0:
                 self.sleep(wait)
             self._last = self.clock()
@@ -166,11 +168,12 @@ class Gdelt:
                 raw = self.fetcher.get(url)
                 break
             except Exception as exc:  # noqa: BLE001
-                if "429" not in str(exc) or attempt == 2:
-                    if "429" in str(exc):
+                busy = "429" in str(exc) or "Timeout" in type(exc).__name__ or "timed out" in str(exc)
+                if not busy or attempt == 2:
+                    if busy:
                         self.disabled = True
                     raise
-                self.sleep(8 * (attempt + 1))  # shared servers get rate-limited; back off and retry
+                self.sleep(15 * (attempt + 1))  # shared servers get rate-limited or stall; back off and retry
         try:
             data = json.loads(raw)
         except json.JSONDecodeError as exc:
@@ -232,9 +235,19 @@ def is_ai_headline(title: str) -> bool:
     return bool(AI_UPPER.search(title) or AI_WORDS.search(title))
 
 
-def from_gdelt(src: dict[str, Any], gdelt: Gdelt, settings: dict[str, Any], lookback_hours: int) -> list[Item]:
+def from_gdelt(src: dict[str, Any], gdelt: Gdelt, settings: dict[str, Any], lookback_hours: int,
+               fetcher: Fetcher | None = None, now: datetime | None = None) -> list[Item]:
+    """GDELT's search; if GDELT is rate-limited or down, the same kind of search on Bing News (cut to the window)."""
     span = f"{max(1, min(lookback_hours, 72))}h"
-    rows = gdelt.search(src.get("query") or settings["query"], timespan=span, max_records=settings.get("max_records", 50))
+    try:
+        rows = gdelt.search(src.get("query") or settings["query"], timespan=span, max_records=settings.get("max_records", 50))
+    except Exception:
+        if fetcher is None or not (src.get("fallback_query") or settings.get("fallback_query")):
+            raise
+        cutoff = ((now or datetime.now(timezone.utc)) - timedelta(hours=lookback_hours)).isoformat()
+        rows = [r for r in bing_news(fetcher, src.get("fallback_query") or settings["fallback_query"], 40)
+                if r.get("published") and r["published"] >= cutoff]
+        src["_via"] = "bing"
     # GDELT matches article text, so plenty of off-topic pieces slip in; keep headlines that are about AI.
     return [Item(url=r["url"], title=r["title"], source_id=src["id"], source_name=r["domain"] or "GDELT",
                  role=src["role"], published=r["published"]) for r in rows if is_ai_headline(r["title"])]
@@ -337,7 +350,15 @@ def gather(sources: list[dict[str, Any]], fetcher: Fetcher, *, now: datetime, lo
             elif kind == "page":
                 got = parse_page(fetcher.get(src["url"]), src, fetcher)
             elif kind == "gdelt":
-                got = from_gdelt(src, gdelt, gdelt_settings, lookback_hours)
+                got = from_gdelt(src, gdelt, gdelt_settings, lookback_hours, fetcher, now)
+                if src.pop("_via", ""):
+                    note = " via Bing News (GDELT unavailable)"
+            elif kind == "search":  # a news search on one subject (e.g. a lab's press coverage), Bing News, no key
+                cutoff = (now - timedelta(hours=lookback_hours)).isoformat()
+                got = [Item(url=r["url"], title=r["title"], source_id=src["id"], source_name=r["domain"] or src["name"],
+                            role=src["role"], published=r["published"], lab=src.get("lab"))
+                       for r in bing_news(fetcher, src["query"], src.get("max_records", 20))
+                       if r.get("published") and r["published"] >= cutoff and is_ai_headline(r["title"])]
             elif kind == "hn":
                 got = from_hn(src, fetcher, now, lookback_hours)
             elif kind == "hf_models":
