@@ -1,7 +1,11 @@
 """Daily recap: picking, credits and the script checks (no rendering)."""
 from datetime import datetime, timedelta, timezone
 
+import shutil
+
 import pytest
+
+NEEDS_FFMPEG = pytest.mark.skipif(not (shutil.which("ffmpeg") and shutil.which("ffprobe")), reason="needs ffmpeg")
 
 from agent import recap
 
@@ -302,6 +306,7 @@ def _tone_take(lengths, gap=1.2, rate=24000):
     return bytes(pcm), rate
 
 
+@NEEDS_FFMPEG
 def test_gemini_one_take_is_cut_into_scenes(tmp_path):
     import base64
     script = _programme()
@@ -335,6 +340,7 @@ def test_gemini_one_take_is_cut_into_scenes(tmp_path):
     assert recap.voice_provider(out) == "gemini"
 
 
+@NEEDS_FFMPEG
 def test_gemini_falls_back_to_the_next_model_and_cleans_up(tmp_path):
     class R:
         status_code = 429
@@ -415,6 +421,7 @@ def _speech(tmp_path, sentences, gap=0.7, rate=16000):
     return f
 
 
+@NEEDS_FFMPEG
 def test_word_times_follow_the_sentences_in_the_read(tmp_path):
     from agent import motion
     sents = ["Nvidia is walking away from China.", "It has stopped selling its H200 chips there after new export rules.",
