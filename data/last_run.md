@@ -1,79 +1,109 @@
-## Frontier Wire newsroom run — 2026-11-19T10:21:53+00:00
+## Frontier Wire newsroom run — 2026-11-19T13:34:16+00:00
 
-Fetched 3021 items · fresh 17 · judged 27 · kept 4 · **written 1**
-AI: 29 requests, 75,052 tokens this run · 204 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking policy crackdowns on AI chips and labor‑shortage automation while filling our thin policy and safety desks.
-  Priorities: Deutsche Telekom’s tech fund invests $110 million in Mistral AI (Major European investment in Mistral AI, ties to model competition and our Mistral storyline.); Association for Advancing Automation: North American companies ordered (Shows rapid rise in industrial robots, key for readers on automation and labor shortages.); Instagram launches copyright detection tool for AI deepfakes and stole (Instagram's AI deepfake detection tool raises policy and safety questions.); College students are increasingly pushing back against campus AI manda (Student pushback on campus AI mandates highlights emerging education policy tensions.); Alphabet Chief Investment Officer Ruth Porat says the company and its  (Alphabet exec warns of job investment needs amid data‑center backlash, relevant to policy and business.)
-  Thin areas: policy, safety
-  Searches: Jensen Huang successor: 4 new; US school districts AI tools: 6 new; US state AI regulation proposals: 1 new
-  Dig deeper: Instagram launches copyright detection tool for AI deepfakes and stole; Association for Advancing Automation: North American companies ordered
-Research agent: investigated 4 stories with 15 tool calls, confirmed 1
-Daily briefing: 4 themes from 20 stories
-Videos: 13 kept from 14 new · OpenAI ok (12 in feed, 0 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (10 in feed, 2 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (2 in feed, 0 new), Latent Space ok (15 in feed, 2 new), Training Data (Sequoia) ok (5 in feed, 0 new), a16z ok (15 in feed, 1 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (6 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (3 in feed, 0 new)
-Photos: 1 saved, 0 unavailable
-Alerts: 26 events sent: {"subscribers":6,"sent":0,"queued":11}
+Fetched 2992 items · fresh 44 · judged 53 · kept 18 · **written 4**
+AI: 44 requests, 138,169 tokens this run · 248 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Chasing the fallout from Anthropic's looming IPO and capital constraints while tracking the expansion of AI infrastructure and safety frameworks.
+  Priorities: Analysis: Anthropic needs ~$602B in annual revenue to hit a 20% return (Financial analysis reveals the massive revenue gap Anthropic must bridge to match Big Tech ROIC.); Dustin Moskovitz, one of Anthropic's earliest investors, says he "inve (Dustin Moskovitz's public warning on Anthropic's speed highlights internal investor friction between safety and the IPO race.); IEA expects global data center investment to hit $4T by 2030; fewer th (IEA data center investment projections underscore the staggering power and capital demands of scaling AI infrastructure.); Anthropic is set to become the US stock market's largest public benefi (Details on Anthropic's structure as the US stock market's largest public benefit corporation.); Canva adds a toggle to let free and paid users disable generative AI f (Canva's new generative AI toggle shows growing user pushback and platforms offering opt-outs.)
+  Thin areas: india, models
+  Searches: Anthropic IPO valuation revenue targets: 6 new; IEA data center power demand AI: 2 new; Dustin Moskovitz Anthropic safety race: 1 new
+  Dig deeper: Analysis: Anthropic needs ~$602B in annual revenue to hit a 20% return; Dustin Moskovitz, one of Anthropic's earliest investors, says he "inve
+Research agent: investigated 5 stories with 17 tool calls, confirmed 2
+Daily briefing: 3 themes from 20 stories
+Threads updated: Anthropic safety concerns spark investor comment: Early Anthropic investor Dustin Moskovitz says labs should s
+Videos: 14 kept from 15 new · OpenAI ok (12 in feed, 1 new), Anthropic ok (12 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (10 in feed, 2 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 2 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 1 new), Latent Space ok (15 in feed, 2 new), Training Data (Sequoia) ok (5 in feed, 0 new), a16z ok (15 in feed, 1 new), Big Technology Podcast ok (13 in feed, 1 new), Hard Fork ok (6 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (3 in feed, 0 new)
+Photos: 3 saved, 1 unavailable
+Alerts: 36 events sent: {"subscribers":6,"sent":0,"queued":36}
 Claims: 209 tracked, 203 open, 0 updated this run
-Trackers: filed 1 stories; updated copyright
-Model tracker: 82 models, 18 changes today
-Tagged 1 stories by sector, region and deal
-Time: gather 116s, plan 217s, judge 82s, verify and write 240s, videos 97s, trackers 8s, claims 23s, briefing 3s, alerts 2s
+Trackers: filed 4 stories; updated india-ai, agent-safety, ai-infrastructure
+Model tracker: 82 models, 24 changes today
+Tagged 4 stories by sector, region and deal
+India briefing: 4 themes from 9 stories
+Time: gather 103s, plan 11s, judge 96s, verify and write 299s, videos 169s, tagging 3s, trackers 72s, claims 4s, briefing 50s, stock photos 16s, alerts 4s
 
 ### New stories
-- **safety** — [Instagram adds copyright detection tool for AI‑generated video copies](https://medianama.com/2026/11/223-instagram-copyright-tool-deepfakes-stolen-content)  
-  Meta announced that Instagram’s new Content Protection feature will scan Instagram and Facebook for visual matches and for videos that reuse a creator’s spoken words even when AI changes the visuals. The tool will be tested with a small group of creators in the coming weeks.  
-  _5 source(s), 2 verified quote(s)_
+- **industry** — [IEA projects global data center investment to reach $4T by 2030](https://techmeme.com/261119/p24)  
+  The International Energy Agency reported that global data center investments are expected to reach $4 trillion by 2030. The report also noted that fewer than 100 major AI projects would require a combined 50 gigawatts of power.  
+  _3 source(s), 0 verified quote(s)_
+- **voices** — [Early Anthropic investor Dustin Moskovitz says labs should slow down](https://techmeme.com/261119/p23)  
+  Anthropic's early investor Dustin Moskovitz stated that he invested to promote safety rather than racing and that frontier AI labs should slow down. His stake from a 2021 investment is expected to be worth billions as Anthropic completes its public debut.  
+  _3 source(s), 0 verified quote(s)_
+- **industry** — [Canva adds toggle to disable generative AI features for all users](https://techmeme.com/261119/p26)  
+  Canva introduced a setting that lets free and paid users turn off most of its generative AI tools, including Magic Expand and AI image generation, while keeping non‑generative tools like background remover on.  
+  _2 source(s), 0 verified quote(s)_
+- **industry** — [Karnataka hosts 1,088 GCCs and 111,000 AI/ML professionals, new report finds](https://analyticsindiamag.com/ai-news/karnataka-hosts-nearly-half-of-indias-ai-centres-of-excellence-zinnov-kdem-report-says)  
+  A Zinnov-KDEM report released at the Bengaluru Tech Summit 2026 found Karnataka hosts 1,088 global capability centres (51% of India's total) and 111,000 AI/ML professionals, with over 120 dedicated AI/ML Centres of Excellence.  
+  _2 source(s), 1 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Zurich Insurance to Expand Hyderabad GCC With 1,000 Employees By 2028 — score 5: Zurich Insurance’s plan to add 1,000 AI‑related roles in Hyderabad is a sizable hiring effort but not a breakthrough in AI infrastructure or financing.
-- Can Simulated Users Replace Weeks of Testing Products? Vectorial AI Thinks So — score 5: Vectorial AI’s simulated‑user platform is an incremental startup product launch; interesting but not a frontier advancement.
-- Nitin Gadkari Urges States To Adopt Aggregator Guidelines Amid Bike Taxi Crackdowns — not AI: Transport policy on bike-taxi aggregators; no AI angle, off-topic for an AI audience.
-- August AI Raises $12 Mn To Expand AI Healthcare Assistant In The US — score 4: A $12M seed/early round for a US-focused AI healthcare assistant is a small funding event, not significant for our readers.
-- Yatra falters under ‘MICE’ strain, swings to loss in Q2 — not AI: Yatra’s financial results are unrelated to AI; the story has no AI angle.
-- Asus ExpertBook P5 review: Can this lightweight laptop handle the demands of modern professionals? — score 2: Product review of an Asus laptop; AI‑powered features are a minor selling point, not newsworthy for Frontier Wire.
-- Cyient Semiconductors secures $10 million investment from GlobalFoundries — score 4: A $10M investment in an Indian semiconductor firm is a small, general chip story with no stated AI angle; below the bar.
-- Lenovo posts 48% revenue jump on AI-related sales, beating estimates — score 5: Lenovo's earnings beat driven partly by AI-related sales is a general earnings story with a secondary AI angle; not a standalone AI news item.
-- Six Indian startups selected for Hub71's Immersion Programme in Abu Dhabi — score 4: Six Indian startups selected for a Hub71 immersion programme; AI is one of several tracks and there is no specific AI development worth a story.
-- AI can write code, but knowing what to build still matters — score 3: Routine conference commentary on domain expertise vs AI coding; not substantive news.
-- A profile of Netflix's new Chief Content Officer Peter Rice, a former Fox and Disney executive, as sources say he may focus on revamping its film strategy (Alex Weprin/The Hollywood Reporter) — not AI: Profile of Netflix’s new CCO is unrelated to AI; it has no AI relevance and is a routine executive move.
-- College students are increasingly pushing back against campus AI mandates, demanding opt-outs from AI-required assignments and an end to enterprise licenses (Dana Goldstein/New York Times) — score 5: Student opposition to campus AI mandates is an emerging education‑policy story but does not rise to a frontier‑AI news level; it is an adjacent policy issue with limited impact on model development or infrastructure.
-- Association for Advancing Automation: North American companies ordered ~11K robots in Q3 2026, up 25% YoY, as they seek to ease labor shortages in manufacturing (Christian Davies/Financial Times) — score 5: The report on a 25 % YoY rise in robot orders shows a healthy automation market, but the story is largely a macro‑industrial trend with only a peripheral AI angle, so it falls below the news threshold.
-- Alphabet Chief Investment Officer Ruth Porat says the company and its peers need to invest in jobs in places where data centers are being built amid backlash (Elena Eisenstadt/Bloomberg) — score 5: Ruth Porat’s comment about job investment around data‑center build‑outs is a corporate‑policy remark rather than a concrete development; it is adjacent to AI infrastructure but not a significant news event.
-- Nvidia chair says the board will not rehire Huang as CEO — not AI: Nvidia board’s decision not to rehire Jensen Huang is corporate governance news without an AI angle; it does not meet the frontier‑AI significance bar.
-- Nvidia forecasts Q4 revenue above Wall Street estimates — not AI: Nvidia’s Q4 revenue forecast is a standard earnings update; while Nvidia is a key AI chip player, the story is pure finance with no new AI development, so it scores low.
-- Top US school districts seek Google Search alternatives as tech giant forces AI into classrooms — score 5: Report on US school districts looking for Google Search alternatives touches on AI in education, but it is a policy‑level reaction rather than a breakthrough or major funding event.
-- U.S. school districts weigh breaking up with Google search over AI — score 5: Similar to the previous item – districts weighing a break‑up with Google over AI integration; interesting but not a high‑impact AI news item.
-- Google faces a reckoning after pushing its AI tools into classrooms — score 5: Similar coverage of Google’s classroom AI push; duplicate of the previous item, offering no additional news value.
-- Boulder Valley schools trying to stay in reasonable middle on AI — score 3: Local Boulder Valley school district’s moderate AI stance – low‑impact, purely regional education story.
-- AISD Writes AI Policy Into the Books — score 4: AISD adopts an AI policy; routine district‑level move without broader industry or regulatory significance.
-- Deutsche Telekom’s tech fund invests $110 million in Mistral AI — could not verify yet; will retry next run
-- Newsom says AI regulation should be 'table stakes' for any serious 2028 candidate — could not verify yet; will retry next run
-- GitHub Now Lets Indian Enterprises Store Code Locally Ahead of DPDP Deadline — could not verify yet after a second try; dropped
+- AI will not make you rich (2025) — not AI: Opinion/commentary piece from 2025, lacks hard news value.
+- I let Apple’s always-listening AI summarize my life for two weeks — score 5: Product review/personal essay format rather than substantive product launch or industry news.
+- Canva adds an AI ‘off’ button — score 5: Duplicate coverage of Canva adding a generative AI disable toggle.
+- Google's New Gemini 4 Neon Outperforms Claude Opus 5.5 on Several Benchmarks — duplicate of b898a1b2127c
+- America is Flooding AI With Billions. Indian Startups are Fighting for Survival — score 4: Broad commentary piece on venture capital trends without a specific news event or announcement.
+- NEPRA Raises ₹110 Cr To Expand Plastic Recycling Capacity — not AI: Waste management startup funding round; no AI angle.
+- Refunds to app wallets without consent may be a dark pattern, consumer commission says in JioMart case — not AI: Consumer commission ruling on e-commerce dark patterns in JioMart, no AI relevance.
+- Report: NPCI, UPI apps approach Google to curb cybercrime, sideloading APKs flagged as major issue — not AI: General mobile security and app sideloading policy discussion without an AI focus.
+- Intuit deepens its investment in India with the opening of its new Bengaluru campus — score 4: Corporate real estate and engineering expansion by Intuit in Bengaluru, with only a passing mention of AI capabilities.
+- How Dhruv Sayani built Ccigmaa Lifestyles into a five-brand personal care business — not AI: Profile of a personal care business; no AI angle.
+- Gen Z’s guide to self-improvement: Build habits that pay off — not AI: General self-improvement guide for Gen Z with no AI content.
+- 7 Micro-habits under 5 minutes that can change your year — not AI: General lifestyle and micro-habits advice with no AI relevance.
+- 'Where are the jobs?' Modi tells industry to respond to tax relief with hiring, salary hikes — not AI: Prime Minister Modi's comments on job creation and tax relief; no AI angle.
+- EPFO approves systematic withdrawal plan for retiring members — not AI: EPFO retirement savings policy update; no AI angle.
+- When agents go out of bounds: How Lasso is helping enterprises secure the AI agents they build and use — score 5: Profile of an early-stage security startup (Lasso) working on enterprise AI agents; too minor for global coverage.
+- Startup news and updates: daily roundup (November 19, 2026) — not AI: Daily startup roundup mentioning anthropic IPO in passing without new original reporting.
+- InPrime Finserv raises Rs 101 Cr in Series B round led by FMO — score 4: Series B funding for an NBFC to expand lending; AI mention is secondary and general.
+- The Blue Economy: The World’s Quietest Economic Engine And Its Smartest Cities — score 4: Blue economy and maritime automation with minor AI mention, not core AI news.
+- What’s Next For Recruiting, Job Hunting And HR? More AI, Of Course — score 4: HR and payroll tech funding with general AI incorporation, too broad.
+- Twitch says GTA VI was its "largest game launch ever" with 3.3M concurrent livestream viewers; GTA VI is set to hit $3B+ in revenue in its first few months (Cecilia D'Anastasio/Bloomberg) — not AI: Gaming news about GTA VI launch viewership and revenue.
+- Temu owner PDD reports Q3 revenue flat YoY at ~$16.2B, below ~$17.3B est., and net profit up 0.7% to ~$4.43B, above ~$3.7B est., as Temu's user base shrinks (Tracy Qu/Wall Street Journal) — not AI: Temu owner PDD Q3 earnings report.
+- GTA VI's 5,000-strong team eschewed AI and procedural generation in favor of handcrafted "fidelity", with 30,000 unique NPCs and an in-game video game system (Joseph Bernstein/New York Times) — score 3: GTA VI specifically eschewed AI and procedural generation, making it non-AI gaming news.
+- Germany and Austria submit a proposal urging the EU to require TikTok to find a local owner for its European operations to combat TikTok's ties to Beijing (Bloomberg) — not AI: European proposal regarding TikTok ownership.
+- Google is mandating Android app support for foldables starting in April 2027, saying developers must meet Tier 3 standards by filling display areas and more (Jay Peters/The Verge) — not AI: Google Android app foldable support mandate.
+- Anthropic raises $81.3 billion in record IPO, securing $1.5 trillion valuation ahead of Nasdaq debut — duplicate of 25c96fa5a216
+- Anthropic IPO: The bullish and bearish case investors cannot ignore — score 4: Duplicate/rehash of Anthropic IPO bull and bear case coverage.
+- Anthropic IPO: Claude Maker Prepares for Biggest IPO in History at $1.5 Trillion Valuation — duplicate of 25c96fa5a216
+- Anthropic Hits US$1.5tn Valuation in Record-Breaking IPO — duplicate of 25c96fa5a216
+- Anthropic prices at $83 per share, setting the company up for an IPO above $1 trillion — duplicate of 25c96fa5a216
+- Report: Anthropic prices blockbuster IPO above target — duplicate of 25c96fa5a216
+- Exclusive: AI data centers face years waiting for grid power. Bloom says they don’t have to wait — score 4: Benzinga syndication snippet about Bloom Energy addressing grid wait times for AI data centers; lacks sufficient depth or unique new details compared to existing data center power coverage.
+- Analysis: Anthropic needs ~$602B in annual revenue to hit a 20% return on invested capital comparable to its Big Tech peers; Apple has $478B in annual revenue (Financial Times) — could not verify yet; will retry next run
+- A look at Jeff Bezos' AI startup Prometheus, which raised $18B and employs ~250 people; sources say it is building an end-to-end agentic AI engineering system (Rebecca Heilweil/Fast Company) — could not verify yet; will retry next run
+- Anthropic is set to become the US stock market's largest public benefit corporation by far; the mandate is overseen by a five-member "long-term benefit trust" (Cory Weinberg/New York Times) — could not verify yet; will retry next run
+- Snap launches Easy Lens CLI on Mac, Windows, and Linux, letting developers build AR Lenses using external AI coding tools like Claude Code (Aisha Malik/TechCrunch) — could not verify yet; will retry next run
+- Wadhwani AI Joins LinkedIn to Train 2,000 Northeast SMEs in AI — could not verify yet; will retry next run
+- Digital India BHASHINI Division, NIELIT sign MoU to advance multilingual AI and technology education — could not verify yet; will retry next run
 
 </details>
 
 <details><summary>Research agent's work</summary>
 
-- Deutsche Telekom’s tech fund invests $110 million in Mistral AI: unconfirmed (searched “Deutsche Telekom tech fund invests $110 million Mistral AI”; searched “Deutsche Telekom tech fund invests 110 million Mistral AI”; read marketscreener.com; read marketscreener.com)
-- Instagram launches copyright detection tool for AI deepfakes and stole: confirmed (searched “Instagram copyright detection tool AI deepfakes”; searched “Meta launches copyright detection tool Instagram creators track matches stolen content”; read yahoo.com)
-- Newsom says AI regulation should be 'table stakes' for any serious 202: unconfirmed (searched “Newsom AI regulation table stakes 2028 candidate”; searched “"table stakes" AI regulation 2028 candidate Newsom”; searched “Gavin Newsom AI regulation 2028 candidate”; read msn.com)
-- GitHub Now Lets Indian Enterprises Store Code Locally Ahead of DPDP De: unconfirmed (searched “GitHub Indian enterprises store code locally DPDP deadline”; read inc42.com; searched “GitHub local code storage India DPDP rules”; searched “GitHub DPDP India code repository local storage”)
+- IEA expects global data center investment to hit $4T by 2030; fewer th: confirmed (searched “IEA data center investment $4T 2030 50GW Will Mathis Bloomberg”; searched “IEA data center investment 4T 2030 50GW Will Mathis”; searched “IEA data center investment 4 trillion 2030 Bloomberg”)
+- Dustin Moskovitz, one of Anthropic's earliest investors, says he "inve: confirmed (searched “Dustin Moskovitz Anthropic invested in Anthropic to promote safety not racing”; searched “Dustin Moskovitz Anthropic safety not racing New York Times”; read cryptobriefing.com)
+- Analysis: Anthropic needs ~$602B in annual revenue to hit a 20% return: unconfirmed (searched “Anthropic $602B annual revenue Financial Times”; searched “Anthropic needs 602B in annual revenue Financial Times”; searched “Anthropic Financial Times revenue Apple 602B”)
+- A look at Jeff Bezos' AI startup Prometheus, which raised $18B and emp: unconfirmed (searched “Jeff Bezos AI startup Prometheus Fast Company Rebecca Heilweil”; read fastcompany.com; read msn.com; read yahoo.com)
+- Anthropic is set to become the US stock market's largest public benefi: unconfirmed (searched “Anthropic public benefit corporation long-term benefit trust”; read nytimes.com; read cnbc.com; read irishtimes.com)
 
 </details>
 
 ### Notes
-- 2 kept item(s) carried over to the next run
+- ignored made-up duplicate id 4f4f5641c981 for 'Canva adds an AI ‘off’ button'
+- ignored made-up duplicate id 3277b2e57f3a for 'Anthropic IPO: The bullish and bearish case invest'
+- dropped non-quote (Dustin Moskovitz): invested in Anthropic to promote safety, not racing…
+- dropped non-quote (Dustin Moskovitz): should slow down…
+- GDELT unavailable: GDELT paused for this run after repeated rate-limiting
+- 14 kept item(s) carried over to the next run
 - gemini/gemini-flash-lite-latest: 503 (server busy); trying next model
-- gemini: unreachable (ReadTimeout); skipping provider
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- gemini/gemini-flash-latest: 503 (server busy); trying next model
+- gemini: 503 after retry; moving to next provider for this run
 - groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
 - groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
 - groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
 - groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-120b: model unavailable (400); trying next model
+- groq/openai/gpt-oss-120b: answer cut off; retrying with more room
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
 - groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing
 - groq/qwen/qwen3.8-27b: HTTP 400: {"error":{"message":"Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.","type":"invalid_request_error","
 - groq/openai/gpt-oss-20b: model unavailable (400); trying next model
 - nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room
-- groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
