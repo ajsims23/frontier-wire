@@ -1161,13 +1161,18 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "AI agent security incidents continue to escalate, most recently marked by the supply chain compromise of Microsoft's official Agent Framework PyPI package with a credential-stealing payload and ongoing disclosures around autonomous patch-to-exploit frameworks. Frontier labs are increasingly embedding independent evaluators (such as Apollo, METR, Transluce, and Goodfire) with deep internal access, even as companies face regulatory scrutiny, lawsuits like California's against OpenAI, and simulated military testing vulnerabilities. Meanwhile, enterprises and developers are adopting new governance platforms, sandbox controls, and frameworks like Agent Trust Infrastructure to secure multi-agent d",
-    "changed": "New incidents include the compromise of Microsoft's official Agent Framework PyPI package with a credential stealer, alongside studies on image-rendered document prompt injections, while labs expand independent evaluator access and face legal and simulated military targeting challenges.",
+    "status": "AI agent security incidents are escalating, with new incidents such as Microsoft's compromised Agent Framework package and Arizona's criminal investigation. Companies are also launching safety pilots, governance tools, and updating vulnerability disclosure windows. Meanwhile, Amazon plans a large-scale product graph for AI agents.",
+    "changed": "Arizona opened a criminal investigation into OpenAI and other AI firms over rogue AI agents.",
     "timeline": [
       {
         "story_id": "a1f50bca3921",
         "date": "2026-11-19",
         "text": "Microsoft's Agent Framework PyPI package compromised with credential-stealing payload."
+      },
+      {
+        "story_id": "48e619c8f030",
+        "date": "2026-11-19",
+        "text": "Arizona opens criminal investigation into OpenAI and other AI firms over rogue agents."
       },
       {
         "story_id": "1c0a3eaad1e2",
@@ -1358,24 +1363,24 @@
         "story_id": "477d20e59c64",
         "date": "2026-11-09",
         "text": "Tencent's chief AI scientist warned that AI models will soon master biology and present safety risks."
-      },
-      {
-        "story_id": "dfb270522ea5",
-        "date": "2026-11-09",
-        "text": "Cognition CISO Alex Stamos discussed how AI is upending cybersecurity on The Verge's Decoder podcast."
       }
     ],
     "title": "AI agents and safety incidents",
     "next": [
       {
-        "text": "Anthropic's new vulnerability disclosure window and dashboard publication policies take effect",
-        "when": "January 1, 2027",
+        "text": "Amazon World Product Graph implementation or rollout",
+        "when": "Oct 1, 2027",
+        "story_id": "3681b329f0a9"
+      },
+      {
+        "text": "Anthropic vulnerability disclosure window change",
+        "when": "Jan 1, 2027",
         "story_id": "648e7457655f"
       },
       {
-        "text": "Amazon's World Product Graph project implementation or rollout",
-        "when": "October 1, 2027",
-        "story_id": "3681b329f0a9"
+        "text": "Arizona criminal investigation ongoing",
+        "when": "",
+        "story_id": "48e619c8f030"
       }
     ],
     "story_ids": [
@@ -1466,10 +1471,11 @@
       "1c0a3eaad1e2",
       "06d9e6c4596e",
       "b7a81c659ac0",
+      "48e619c8f030",
       "a1f50bca3921"
     ],
-    "updated_at": "2026-11-19T04:00:01+00:00",
-    "tried_at": "2026-11-19T04:00:01+00:00"
+    "updated_at": "2026-11-19T04:14:38+00:00",
+    "tried_at": "2026-11-19T04:14:38+00:00"
   },
   "ai-money": {
     "status": "Anthropic is set to begin trading on Nasdaq Thursday, targeting a $1.4 trillion valuation, while Nvidia’s private startup stakes have swelled to $65.5 billion as its interim CEO promises tighter dealmaking. Venture funding remains strong with dozens of multi‑hundred‑million rounds across data, robotics and enterprise AI, even as Tencent’s profit slipped under heavy AI‑related capex. The sector shows both continued capital inflows and early signs of financial pressure.",
@@ -1947,8 +1953,8 @@
     "tried_at": "2026-11-18T09:34:50+00:00"
   },
   "ai-infrastructure": {
-    "status": "Nvidia reported Q3 revenue of $115.8B and forecast $130B for Q4 under interim CEO Colette Kress, amid disclosures about its Singapore unit revenues and export control investigations. Meanwhile, major tech companies and startups continue to scale infrastructure investments—such as Tencent's 5x surge in AI capex and OpenAI's use in chip design—while facing local power and community constraints.",
-    "changed": "OpenAI models were successfully applied to optimize Jalapeño silicon and RISC-V core designs.",
+    "status": "Nvidia reported Q3 revenue of $115.8B (up 103% YoY) and guided Q4 to $130B under interim CEO Colette Kress, while announcing Rubin HPC GPUs, a DGX Spark desktop kit, and multiyear manufacturing expansions with TSMC, Foxconn and Amkor through 2029. AI infrastructure spending is straining both balance sheets and local politics: Tencent's capex jumped 5x to ~$12B, Amazon's Ohio data centers face voter bans, and a Harvard study found 403 U.S. hyperscale data centers drew ~82 TWh mostly from fossil fuels. New power and compute moves include Google's $500M+ geothermal deal with Quaise, Cerebras's disaggregated inference, and a ten-nation declaration to secure AI supply chains.",
+    "changed": "New stories add Nvidia's multiyear manufacturing expansion through 2029, Cerebras's production disaggregated inference system, Tencent's 5x capex surge to ~$12B, and the Microsoft-Intel Azure infrastructure partnership.",
     "timeline": [
       {
         "story_id": "1d563f2e1832",
@@ -1979,6 +1985,11 @@
         "story_id": "c7d3ecb00643",
         "date": "2026-11-18",
         "text": "OpenAI models optimized Jalapeño silicon and improved RISC-V core designs using GPT-6 Astra."
+      },
+      {
+        "story_id": "3c17f9a2318e",
+        "date": "2026-11-18",
+        "text": "Cerebras launches production disaggregated inference combining AMD GPUs and wafer-scale engines"
       },
       {
         "story_id": "0ed1df8ad9da",
@@ -2144,24 +2155,24 @@
         "story_id": "e6cb939ef31f",
         "date": "2026-11-13",
         "text": "Samsung entered talks to acquire data center cooling firm Modine."
-      },
-      {
-        "story_id": "4907eb362d1d",
-        "date": "2026-11-13",
-        "text": "ReNew pledged ₹80,000 crore for green data center and clean energy manufacturing in Andhra Pradesh."
       }
     ],
     "title": "The AI infrastructure build-out",
     "next": [
       {
-        "text": "Rollout of Azure M-series v4 virtual machines with CXL memory and Intel Flat Memory Mode",
-        "when": "",
-        "story_id": "43ef4d889aa2"
+        "text": "SPIL and Nvidia expanded advanced packaging operations in Taiwan come online",
+        "when": "mid-2029",
+        "story_id": "1d563f2e1832"
       },
       {
-        "text": "Deployment of Intel QuickAssist Technology enabled virtual machines for faster SQL backups",
+        "text": "Kinsus production under new agreement begins",
+        "when": "second half of 2027",
+        "story_id": "1d563f2e1832"
+      },
+      {
+        "text": "Rollout of disaggregated inference for infrastructure partners' datacenters",
         "when": "",
-        "story_id": "43ef4d889aa2"
+        "story_id": "3c17f9a2318e"
       }
     ],
     "story_ids": [
@@ -2314,13 +2325,14 @@
       "536093b04b83",
       "c515216ed921",
       "c7d3ecb00643",
+      "3c17f9a2318e",
       "1d563f2e1832",
       "ef05e9909b39",
       "9247c7737332",
       "1c3eaf246b72",
       "43ef4d889aa2"
     ],
-    "updated_at": "2026-11-19T04:00:01+00:00",
-    "tried_at": "2026-11-19T04:00:01+00:00"
+    "updated_at": "2026-11-19T04:14:38+00:00",
+    "tried_at": "2026-11-19T04:14:38+00:00"
   }
 }
