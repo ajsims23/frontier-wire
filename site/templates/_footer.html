@@ -45,3 +45,5 @@
     <span>Summaries are written by AI from the linked sources. Stock photos are credited on each story.</span>
   </div>
 </footer>
+{% if chat_api %}<div id="fw-chat" data-api="{{ chat_api }}" data-root="{{ root }}"></div>
+<script type="module" src="{{ root }}chat.js"></script>{% endif %}

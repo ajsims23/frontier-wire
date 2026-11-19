@@ -131,7 +131,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     env = Environment(loader=FileSystemLoader(ROOT / "site" / "templates"), autoescape=select_autoescape(["html"]))
     env.tests["match_video"] = lambda v: bool(re.fullmatch(r"[A-Za-z0-9_-]{11}", str(v or "")))
     theme_boot = (ROOT / "site" / "theme-boot.js").read_text()
-    common = {"year": now.year, "theme_boot": theme_boot, "analytics": analytics_tag(site["goatcounter"]),
+    common = {"year": now.year, "theme_boot": theme_boot, "analytics": analytics_tag(site["goatcounter"]), "chat_api": site.get("api_url", ""),
               "newsletter": site["newsletter"] if re.fullmatch(r"[A-Za-z0-9_-]{2,60}", site["newsletter"] or "") else ""}
 
     # ---------------------------------------------------------------- story pages
