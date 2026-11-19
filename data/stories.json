@@ -1,6 +1,79 @@
 [
   {
     "explainer": {
+      "what_it_means": "Google has introduced a Tool Retrieval preview feature in the Gemini Interactions API. Instead of sending every tool's full definition with every prompt, developers can let the model load tool details only when they are needed for a specific task. This approach reduces input token counts and latency for agents that use large libraries of tools.",
+      "terms": [
+        {
+          "term": "API",
+          "meaning": "Software code that allows different applications to communicate with each other."
+        },
+        {
+          "term": "Tokens",
+          "meaning": "Pieces of text processed by language models, which affect cost and memory limits."
+        },
+        {
+          "term": "Parameter schema",
+          "meaning": "The structural definition of what data a tool requires to function."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers can use the new Tool Retrieval feature in the Gemini Interactions API by adding a tool_search tool and setting defer_loading to true to manage large tool libraries.",
+      "business": "Businesses building complex AI agents can reduce input token costs and latency when using models with large collections of software tools.",
+      "investors": "Google is expanding developer capabilities for Gemini models to handle complex agent tasks more efficiently."
+    },
+    "id": "b00f82b6db94",
+    "headline": "Google introduces Tool Retrieval in the Gemini API",
+    "summary": "Google released a Tool Retrieval feature in preview for the Gemini Interactions API to help agents manage large tool libraries. The feature loads tool parameter schemas on demand to reduce input token counts and latency.",
+    "why_it_matters": "Tool Retrieval helps developers scale AI agents that rely on large libraries of software tools without inflating input token costs.",
+    "category": "models",
+    "lab": "Google",
+    "model_name": "Gemini 3.6 and later models",
+    "model_type": "Language",
+    "tags": [
+      "Gemini API",
+      "Tool Retrieval",
+      "Google",
+      "Interactions API"
+    ],
+    "quotes": [],
+    "score": 7,
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval",
+    "source_id": "google-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Tool_retrieval_hero.width-1300.png",
+    "sources": [
+      {
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval",
+        "publisher": "Google AI blog",
+        "title": "Introducing Tool Retrieval in the Gemini API"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-19T18:00:00+00:00",
+    "created_at": "2026-11-19T18:38:43+00:00",
+    "breaking": true,
+    "thread": "t-9e3e3ddacb24",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 1,
+      "investors": 1
+    },
+    "cover": "Gemini API",
+    "trackers": [],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Disseqt offers a separate layer that lets companies test AI agents for safety, bias and data‑leak risks before they go live, and enforce policy guardrails while the agents run. It also records audit trails independent of the underlying AI models.",
       "terms": [
         {

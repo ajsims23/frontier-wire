@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T17:39:32+00:00",
+  "updated_at": "2026-11-19T18:38:43+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "The International Energy Agency projects that global data center investments will reach $4 trillion by 2030 as AI demand surges. At the same time, power grids, equipment supply chains, and public acceptance are constraining infrastructure growth more than computing capacity itself.",
@@ -97,6 +97,79 @@
     }
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Google has introduced a Tool Retrieval preview feature in the Gemini Interactions API. Instead of sending every tool's full definition with every prompt, developers can let the model load tool details only when they are needed for a specific task. This approach reduces input token counts and latency for agents that use large libraries of tools.",
+        "terms": [
+          {
+            "term": "API",
+            "meaning": "Software code that allows different applications to communicate with each other."
+          },
+          {
+            "term": "Tokens",
+            "meaning": "Pieces of text processed by language models, which affect cost and memory limits."
+          },
+          {
+            "term": "Parameter schema",
+            "meaning": "The structural definition of what data a tool requires to function."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers can use the new Tool Retrieval feature in the Gemini Interactions API by adding a tool_search tool and setting defer_loading to true to manage large tool libraries.",
+        "business": "Businesses building complex AI agents can reduce input token costs and latency when using models with large collections of software tools.",
+        "investors": "Google is expanding developer capabilities for Gemini models to handle complex agent tasks more efficiently."
+      },
+      "id": "b00f82b6db94",
+      "headline": "Google introduces Tool Retrieval in the Gemini API",
+      "summary": "Google released a Tool Retrieval feature in preview for the Gemini Interactions API to help agents manage large tool libraries. The feature loads tool parameter schemas on demand to reduce input token counts and latency.",
+      "why_it_matters": "Tool Retrieval helps developers scale AI agents that rely on large libraries of software tools without inflating input token costs.",
+      "category": "models",
+      "lab": "Google",
+      "model_name": "Gemini 3.6 and later models",
+      "model_type": "Language",
+      "tags": [
+        "Gemini API",
+        "Tool Retrieval",
+        "Google",
+        "Interactions API"
+      ],
+      "quotes": [],
+      "score": 7,
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval",
+      "source_id": "google-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Tool_retrieval_hero.width-1300.png",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval",
+          "publisher": "Google AI blog",
+          "title": "Introducing Tool Retrieval in the Gemini API"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-19T18:00:00+00:00",
+      "created_at": "2026-11-19T18:38:43+00:00",
+      "breaking": true,
+      "thread": "t-9e3e3ddacb24",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 1,
+        "investors": 1
+      },
+      "cover": "Gemini API",
+      "trackers": [],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "Disseqt offers a separate layer that lets companies test AI agents for safety, bias and data‑leak risks before they go live, and enforce policy guardrails while the agents run. It also records audit trails independent of the underlying AI models.",
@@ -5596,77 +5669,6 @@
         "ai-infrastructure"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Researchers found that vision-language models can give harmful help just by describing what is happening in an image, even when nobody asks for anything harmful. They built a test set and an attack method that raised the success rate of getting harmful answers to 71.2% on average across eight models. Existing text and image filters did little to stop this.",
-        "terms": [
-          {
-            "term": "Vision-language model (VLM)",
-            "meaning": "A model that takes both an image and text as input and answers questions about the image."
-          },
-          {
-            "term": "Attack success rate (ASR)",
-            "meaning": "The share of attack attempts that successfully get the model to give harmful help."
-          },
-          {
-            "term": "Scene state",
-            "meaning": "The stage of a harmful event shown in an image, from early (Initial) through middle (Medium) to final (Ultimate)."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "VLM developers should test scene-state inputs, since text-side filters and visual moderation offer limited protection against this attack.",
-        "business": "Organisations deploying vision-language models face a new safety risk where models give harmful help just from interpreting images."
-      },
-      "id": "d3943358cd80",
-      "headline": "Researchers find vision-language models give harmful help from scene images",
-      "summary": "Researchers led by Tongxi Wu identified a \"scene-state safety vulnerability\" in which vision-language models provide harmful assistance by interpreting visual events, even without an explicit harmful request. Their attack method S3TA achieved a model-average attack success rate of 71.2% across eight VLMs, exceeding the strongest baseline by 6.1 percentage points.",
-      "why_it_matters": "It shows a new way to bypass VLM safety filters that relies on the model's own scene reasoning rather than on the user's text, so defenders must protect the assistance models infer from images, not just screen input content.",
-      "category": "research",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "vision-language models",
-        "safety",
-        "jailbreak",
-        "multimodal",
-        "evaluation"
-      ],
-      "quotes": [],
-      "score": 7,
-      "url": "https://arxiv.org/abs/2611.23206",
-      "source_id": "arxiv",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://arxiv.org/html/2611.23206v1/figures/text_example.png",
-      "sources": [
-        {
-          "url": "https://arxiv.org/abs/2611.23206",
-          "publisher": "arXiv (cs.AI, cs.CL, cs.LG)",
-          "title": "Reading Scene States: Uncovering Safety Failures in Vision-Language Models"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-11-17T18:48:02+00:00",
-      "created_at": "2026-11-18T07:34:50+00:00",
-      "figure_checked": true,
-      "image_kind": "figure",
-      "sectors": [
-        "cybersecurity"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {},
-      "cover": "71.2%",
-      "trackers": [
-        "agent-safety"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -6122,6 +6124,83 @@
   },
   "threads": [
     {
+      "id": "t-9e3e3ddacb24",
+      "title": "Google Gemini 4 model rollouts",
+      "updated_at": "2026-11-19T18:00:00+00:00",
+      "stories": [
+        {
+          "id": "b00f82b6db94",
+          "headline": "Google introduces Tool Retrieval in the Gemini API",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval",
+          "published_at": "2026-11-19T18:00:00+00:00",
+          "category": "models"
+        },
+        {
+          "id": "dd0ead71d47c",
+          "headline": "Google releases Gemini 4 Neon model for complex workflows",
+          "url": "https://techmeme.com/261118/p58",
+          "published_at": "2026-11-19T03:35:01+00:00",
+          "category": "models"
+        },
+        {
+          "id": "b898a1b2127c",
+          "headline": "Google launches Gemini 4 Neon model for complex workflows",
+          "url": "https://deepmind.google/blog/introducing-gemini-4-neon",
+          "published_at": "2026-11-18T21:35:43+00:00",
+          "category": "models"
+        },
+        {
+          "id": "a64bf86d357e",
+          "headline": "Google rolls out Gemini Tasks assistant for free in six markets",
+          "url": "https://inc42.com/buzz/google-begins-rolling-out-personal-ai-assistant-tasks-in-india",
+          "published_at": "2026-11-17T23:31:37+00:00",
+          "category": "models"
+        },
+        {
+          "id": "0508a8475458",
+          "headline": "Google DeepMind launches Gemini 4 Hydrogen, a fast low‑cost model for coding",
+          "url": "https://techmeme.com/261112/p60",
+          "published_at": "2026-11-12T22:15:00+00:00",
+          "category": "models"
+        },
+        {
+          "id": "a8d5fa7d24b3",
+          "headline": "Google launches Gemini 4 Hydrogen, a fast model for everyday coding and search",
+          "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
+          "published_at": "2026-11-12T18:00:50+00:00",
+          "category": "models"
+        },
+        {
+          "id": "cce714811b51",
+          "headline": "Google launches Gemini Decisions API for fast multimodal yes/no and choice scoring",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api",
+          "published_at": "2026-11-11T18:00:00+00:00",
+          "category": "models"
+        },
+        {
+          "id": "a468d4c7b355",
+          "headline": "Ethan Mollick tests Fable 5.2 and Gemini Carbon on the Fermi Paradox",
+          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzyzlpr6lk2r",
+          "published_at": "2026-11-11T03:35:36.254000+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "28b27e2d175e",
+          "headline": "Google rolls out Gemini 4 Carbon to the public with agent swarm feature",
+          "url": "https://theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout",
+          "published_at": "2026-11-10T16:00:00+00:00",
+          "category": "models"
+        },
+        {
+          "id": "41e0dc889e76",
+          "headline": "Google announces Gemini 4 Carbon, a more capable frontier AI model not yet released",
+          "url": "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use",
+          "published_at": "2026-10-28T18:47:27+00:00",
+          "category": "models"
+        }
+      ]
+    },
+    {
       "id": "t-a50b07bc6191",
       "title": "Anthropic IPO tests circular financing boom",
       "updated_at": "2026-11-19T14:54:39+00:00",
@@ -6463,555 +6542,16 @@
           "category": "safety"
         }
       ]
-    },
-    {
-      "id": "t-1b80f30c0254",
-      "title": "Nvidia leadership and Jensen Huang departure",
-      "updated_at": "2026-11-19T05:55:31+00:00",
-      "stories": [
-        {
-          "id": "fbe096045978",
-          "headline": "China's military seeks Nvidia chips for AI weapons, report says",
-          "url": "https://techmeme.com/261119/p2",
-          "published_at": "2026-11-19T05:55:31+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "a7274720f199",
-          "headline": "Alibaba used regional companies to access Nvidia chips and aid military-linked lab",
-          "url": "https://techmeme.com/261118/p57",
-          "published_at": "2026-11-19T03:15:02+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "2a1f0dfea65b",
-          "headline": "Elon Musk criticizes Nvidia board for ousting Jensen Huang",
-          "url": "https://economictimes.indiatimes.com/tech/technology/no-one-can-replace-jensen-elon-musk-says-nvidia-decision-to-sack-jensen-huang-was-not-smart/articleshow/135975859.cms",
-          "published_at": "2026-11-19T02:50:09+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "bc1083d540d9",
-          "headline": "Nvidia's startup stakes reach $65.5B as interim CEO signals caution",
-          "url": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt",
-          "published_at": "2026-11-18T01:44:21+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "46eddffe315d",
-          "headline": "Nvidia ends H200 chip sales in China under acting CEO Colette Kress",
-          "url": "https://techmeme.com/261117/p63",
-          "published_at": "2026-11-18T00:00:14+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "536093b04b83",
-          "headline": "Nvidia stopped reporting Singapore unit revenue in 2025 as it hit $104B",
-          "url": "https://techmeme.com/261117/p41",
-          "published_at": "2026-11-17T17:30:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "0fc7d9162585",
-          "headline": "Nvidia sales team introduced Alibaba to Alice Huang in 2022",
-          "url": "https://theinformation.com/articles/nvidia-introduced-alibaba-alice-huang-workaround-u-s-export-controls",
-          "published_at": "2026-11-17T16:00:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "5f83aea8a158",
-          "headline": "Nvidia CEO Jensen Huang to testify before US House committees on Dec 1",
-          "url": "https://economictimes.indiatimes.com/tech/technology/jensen-huang-to-appear-before-us-house-committees-on-december-1/articleshow/135932177.cms",
-          "published_at": "2026-11-17T15:54:22+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "63e247d2b73a",
-          "headline": "Chinese records show Kang Wei built state-backed data center network",
-          "url": "https://techmeme.com/261117/p12",
-          "published_at": "2026-11-17T11:00:41+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "11e63e8d9cdb",
-          "headline": "Nvidia board creates National Security and Export Control Oversight Committee",
-          "url": "https://techmeme.com/261117/p8",
-          "published_at": "2026-11-17T10:13:45+00:00",
-          "category": "safety"
-        },
-        {
-          "id": "a923fd9b70a1",
-          "headline": "US tightens AI chip export rules, targeting Southeast Asia data centres",
-          "url": "https://economictimes.indiatimes.com/tech/technology/us-ai-chip-curbs-threaten-southeast-asia-data-centre-boom-shares-slump/articleshow/135916332.cms",
-          "published_at": "2026-11-17T07:56:03+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "5745401fd09d",
-          "headline": "US Commerce Dept and DOJ investigated Megaspeed over chip exports in 2024",
-          "url": "https://techmeme.com/261117/p2",
-          "published_at": "2026-11-17T05:55:00+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "668b96b1a125",
-          "headline": "Trump says former Nvidia CEO Jensen Huang's affair posed no security risk",
-          "url": "https://techcrunch.com/2026/11/16/trump-says-ex-nvidia-ceo-jensen-huangs-affair-with-an-alleged-chinese-spy-did-not-threaten-national-security",
-          "published_at": "2026-11-16T19:12:02+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "c24f64cfec57",
-          "headline": "Nvidia’s board is reportedly ‘not considering’ hiring Jensen Huang back",
-          "url": "https://theverge.com/tech/1034501/nvidia-board-jensen-huang-not-bringing-back",
-          "published_at": "2026-11-16T18:43:35+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "ca1899ca1680",
-          "headline": "Jensen Huang allies form \"war room\" to lobby for his return as Nvidia CEO",
-          "url": "https://arstechnica.com/ai/2026/11/jensen-huang-allies-build-a-war-room-to-get-him-back-at-nvidia",
-          "published_at": "2026-11-16T14:06:16+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "2c910f3a42c8",
-          "headline": "Indonesian police raided Nvidia partner Megaspeed local unit in early 2026",
-          "url": "https://economictimes.indiatimes.com/tech/technology/indonesian-police-raided-nvidia-partner-megaspeeds-local-unit-in-early-2026-on-us-request-report/articleshow/135877651.cms",
-          "published_at": "2026-11-16T07:56:26+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "4b57fcd6de68",
-          "headline": "Nvidia interim CEO Colette Kress expected to rein in deals",
-          "url": "https://techmeme.com/261115/p24",
-          "published_at": "2026-11-16T03:30:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "2cb612de9116",
-          "headline": "Nvidia considers leadership options after Jensen Huang's departure",
-          "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry",
-          "published_at": "2026-11-15T21:56:35+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "30eb34a90a59",
-          "headline": "Megaspeed says Alice Huang left in 2025 amid US probe into Nvidia chip sales",
-          "url": "https://techmeme.com/261115/p15",
-          "published_at": "2026-11-15T20:02:17+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "369f1ffcda11",
-          "headline": "Jensen Huang discusses Nvidia CEO comeback as allies lobby for return",
-          "url": "https://techmeme.com/261115/p14",
-          "published_at": "2026-11-15T19:20:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "024802442c5a",
-          "headline": "Congress moves to tighten export rules on AI chips after Nvidia spy scandal",
-          "url": "https://theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
-          "published_at": "2026-11-15T19:15:43+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "bc6fcac7439b",
-          "headline": "Nvidia sought Taipei's help after employee's chip smuggling case",
-          "url": "https://techmeme.com/261115/p13",
-          "published_at": "2026-11-15T19:10:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "9bf9c1834c1b",
-          "headline": "Howard Lutnick joins Trump on Air Force One to China amid Nvidia chip curbs dispute",
-          "url": "https://techmeme.com/261115/p11",
-          "published_at": "2026-11-15T17:15:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "4d0aab350c5f",
-          "headline": "Scott Bessent urges Nvidia leadership shakeup and answers on China chip sales",
-          "url": "https://techmeme.com/261115/p8",
-          "published_at": "2026-11-15T15:50:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "49d98b129891",
-          "headline": "Nvidia CEO Jensen Huang resigns following investigation into personal relationships",
-          "url": "https://techmeme.com/261115/p6",
-          "published_at": "2026-11-15T07:01:35+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "3e9aed84c994",
-          "headline": "Nvidia chips accessed by Chinese companies in SE Asia data centers",
-          "url": "https://techmeme.com/261115/p1",
-          "published_at": "2026-11-15T05:55:03+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "9d72f3c35aab",
-          "headline": "Democrats launch inquiry into Nvidia chip sales and Trump administration policies",
-          "url": "https://techmeme.com/261114/p23",
-          "published_at": "2026-11-15T04:15:42+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "fa0ba71cc1a1",
-          "headline": "Nvidia investors urge board to keep Jensen Huang return option open",
-          "url": "https://techmeme.com/261114/p18",
-          "published_at": "2026-11-14T19:55:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "eaeae4ef3f97",
-          "headline": "Nvidia open-source strategy questioned following Jensen Huang's resignation",
-          "url": "https://techmeme.com/261114/p15",
-          "published_at": "2026-11-14T18:05:02+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "01ec9257e016",
-          "headline": "Nvidia CEO Jensen Huang resigns as Colette Kress takes over as interim chief",
-          "url": "https://inc42.com/features/jensen-huangs-exit-how-deep-does-nvidias-ai-ecosystem-run-in-india",
-          "published_at": "2026-11-14T14:57:02+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "c46863c30810",
-          "headline": "Nvidia CEO Jensen Huang resigns amid scandals, ending an era for Big Tech",
-          "url": "https://theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
-          "published_at": "2026-11-14T12:00:00+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "1b43d5e72ff4",
-          "headline": "Nvidia faces leadership transition and market shifts after Jensen Huang's exit",
-          "url": "https://analyticsindiamag.com/global-tech/jensen-huangs-exit-just-gave-amd-and-google-their-biggest-ai-opening",
-          "published_at": "2026-11-14T11:01:30+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "6c8aa70af5f8",
-          "headline": "Jensen Huang struggled to access Beijing chip policymakers",
-          "url": "https://techmeme.com/261114/p7",
-          "published_at": "2026-11-14T07:30:08+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "792490ccf5f8",
-          "headline": "Nvidia scandal looms over US-China AI safety talks",
-          "url": "https://economictimes.indiatimes.com/tech/technology/nvidia-scandal-looms-over-us-china-ai-talks/articleshow/135821307.cms",
-          "published_at": "2026-11-14T03:14:18+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "a3f6c83f5ebf",
-          "headline": "Trump not expected to raise Jensen Huang allegations in meeting with Xi",
-          "url": "https://techmeme.com/261113/p40",
-          "published_at": "2026-11-14T03:10:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "eb62d1b6c624",
-          "headline": "Nvidia approaches Arm CEO Haas as employees seek Huang's return",
-          "url": "https://economictimes.indiatimes.com/tech/technology/nvidia-approaches-arm-holdings-ceo-haas-to-take-over-jensen-huangs-job-elon-musk-backs-huangs-reinstatement/articleshow/135821129.cms",
-          "published_at": "2026-11-14T03:04:32+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "cd2fdb36b7bd",
-          "headline": "Jensen Huang misled Nvidia leaders about relationship with Alice Huang",
-          "url": "https://techmeme.com/261113/p36",
-          "published_at": "2026-11-14T01:00:12+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "8cc1cc35134e",
-          "headline": "Congressional Democrats launch inquiry into Nvidia China chip sales and Trump deal",
-          "url": "https://techmeme.com/261113/p29",
-          "published_at": "2026-11-13T21:01:40+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "c2a6bd7529de",
-          "headline": "Nvidia board says it is selecting a search firm for the CEO role",
-          "url": "https://techmeme.com/261113/p27",
-          "published_at": "2026-11-13T20:35:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "3fc687f52312",
-          "headline": "Start-up investors and founders worry about losing ally in Jensen Huang",
-          "url": "https://techmeme.com/261113/p24",
-          "published_at": "2026-11-13T19:10:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "25902582c426",
-          "headline": "Nvidia reaffirms GPU supply plans to South Korea after Huang exit",
-          "url": "https://koreatimes.co.kr/business/20261113/nvidia-reaffirms-planned-gpu-supply-to-s-korea-despite-huangs-exit-minister",
-          "published_at": "2026-11-13T18:00:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "ebab4bb216e9",
-          "headline": "Wall Street fears Jensen Huang's ouster will slow Nvidia's AI dealmaking",
-          "url": "https://techmeme.com/261113/p20",
-          "published_at": "2026-11-13T17:30:02+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "e1478bd447ba",
-          "headline": "Scott Bessent says Treasury and other departments pushed to blacklist Megaspeed",
-          "url": "https://techmeme.com/261113/p13",
-          "published_at": "2026-11-13T14:50:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "72e1fb99c741",
-          "headline": "Nvidia CEO Jensen Huang resigns following revelations about personal relationships",
-          "url": "https://techmeme.com/261113/p10",
-          "published_at": "2026-11-13T13:10:02+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "31e6773ef72a",
-          "headline": "Report details past clash between Jensen Huang and interim CEO Colette Kress",
-          "url": "https://techmeme.com/261113/p9",
-          "published_at": "2026-11-13T12:50:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "1bd2fae01273",
-          "headline": "Arm shares fall 6.5% as Nvidia board considers CEO Rene Haas",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/arm-shares-slide-nvidia-succession-173756134.html",
-          "published_at": "2026-11-13T09:38:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "da1211fa00c6",
-          "headline": "US officials disagree on whether Alice Huang spied for China",
-          "url": "https://techmeme.com/261112/p72",
-          "published_at": "2026-11-13T03:40:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "bb7ee3742638",
-          "headline": "Senate Banking Chair Tim Scott asks Jensen Huang and Howard Lutnick to testify",
-          "url": "https://techmeme.com/261112/p70",
-          "published_at": "2026-11-13T03:01:46+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "cd89cca4588e",
-          "headline": "Trump defends Nvidia CEO Jensen Huang amid intelligence and chip sale probe",
-          "url": "https://techmeme.com/261112/p67",
-          "published_at": "2026-11-13T01:35:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "63b9278e53bf",
-          "headline": "President Trump urges Nvidia CEO Jensen Huang to keep fighting for his job",
-          "url": "https://techmeme.com/261112/p66",
-          "published_at": "2026-11-13T00:35:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "4e2810e47ea3",
-          "headline": "Democrats launch Nvidia investigation into China chip sales and Trump deal",
-          "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump",
-          "published_at": "2026-11-12T22:42:51+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "ae9ad26a9543",
-          "headline": "Forensic analysis finds six Chinese AI models show NVIDIA Blackwell GPU fingerprints",
-          "url": "https://techmeme.com/261112/p62",
-          "published_at": "2026-11-12T22:30:04+00:00",
-          "category": "research"
-        },
-        {
-          "id": "6e7f4ca7daf1",
-          "headline": "Nvidia privately confirmed it could track chips to fight smuggling",
-          "url": "https://technologyreview.com/2026/11/12/1148483/nvidia-chip-tracking",
-          "published_at": "2026-11-12T20:16:24+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "0a3a3741b20c",
-          "headline": "Nvidia CEO Jensen Huang resigns after reports of extramarital affairs; CFO Colette Kress named interim CEO",
-          "url": "https://theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling",
-          "published_at": "2026-11-12T17:44:33+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "bd7310f2d9f0",
-          "headline": "US DOJ opens antitrust and related probes involving Nvidia",
-          "url": "https://techmeme.com/261112/p42",
-          "published_at": "2026-11-12T16:40:46+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "ea64cad924f9",
-          "headline": "Ex-Nvidia CEO Jensen Huang agrees to testify before Congress by Thanksgiving",
-          "url": "https://techmeme.com/261112/p41",
-          "published_at": "2026-11-12T16:35:00+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "ee129214e4fa",
-          "headline": "Nvidia board and interim CEO address staff after CEO resignation",
-          "url": "https://theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang",
-          "published_at": "2026-11-12T15:48:12+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "79cf7beb5372",
-          "headline": "Firms linked to Alice Huang invest $14 million in DeepSeek and promise Nvidia Blackwell chips",
-          "url": "https://techmeme.com/261112/p37",
-          "published_at": "2026-11-12T15:35:02+00:00",
-          "category": "safety"
-        },
-        {
-          "id": "a769a94b7f5c",
-          "headline": "Nvidia CEO Jensen Huang resigns; CFO Colette Kress named interim CEO",
-          "url": "https://techmeme.com/261112/p26",
-          "published_at": "2026-11-12T13:53:14+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "cfa3026dfba3",
-          "headline": "Nvidia employees stunned as board weighs Jensen Huang’s future after affair disclosures",
-          "url": "https://techmeme.com/261112/p20",
-          "published_at": "2026-11-12T12:00:50+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "8cc3e4a94ce5",
-          "headline": "Nvidia board weighs successors for Jensen Huang amid ouster reports",
-          "url": "https://techmeme.com/261112/p14",
-          "published_at": "2026-11-12T11:00:31+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "213d79a3c5c9",
-          "headline": "Congress prepares subpoena for Nvidia CEO Jensen Huang over spy affair",
-          "url": "https://techmeme.com/261112/p3",
-          "published_at": "2026-11-12T05:45:05+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "24a2cff26351",
-          "headline": "Nvidia stopped reporting Singapore revenue after July 2025 blocklist",
-          "url": "https://techmeme.com/261112/p2",
-          "published_at": "2026-11-12T05:35:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "7d9fafd0f2c2",
-          "headline": "Nvidia board weighs CEO Jensen Huang's future amid spy claims and affair disclosures",
-          "url": "https://techmeme.com/261111/p54",
-          "published_at": "2026-11-12T04:00:57+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "b49868ed46c8",
-          "headline": "Commerce Department finalizes rule to block remote AI chip access for China",
-          "url": "https://techmeme.com/261111/p53",
-          "published_at": "2026-11-12T03:25:00+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "72ade767b5d7",
-          "headline": "House Republicans push for Nvidia's Jensen Huang to testify over spy allegations",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/house-republicans-push-for-nvidias-jensen-huang-to-testify-float-subpoena-over-spy-allegations/articleshow/135753113.cms",
-          "published_at": "2026-11-12T02:55:35+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "6e669aaa015b",
-          "headline": "Senators ask Trump administration to preserve Nvidia-China records",
-          "url": "https://techmeme.com/261111/p51",
-          "published_at": "2026-11-12T02:35:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "3707d8597189",
-          "headline": "Megaspeed founder Alice Huang returns to Beijing",
-          "url": "https://techmeme.com/261111/p50",
-          "published_at": "2026-11-12T01:45:02+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "efdd0bfa6110",
-          "headline": "Nvidia board prepares to oust CEO Jensen Huang amid scandal",
-          "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline",
-          "published_at": "2026-11-11T23:50:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "b91248042740",
-          "headline": "Nvidia stock drops as board reportedly prepares to oust CEO Jensen Huang",
-          "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang",
-          "published_at": "2026-11-11T23:28:45+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "d4f68e24f561",
-          "headline": "Nvidia spy scandal exposes Singapore chip networks evading US export controls",
-          "url": "https://techmeme.com/261111/p7",
-          "published_at": "2026-11-11T07:10:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "26a96166f51f",
-          "headline": "Jensen Huang affair raises chances of US chip export limits in NDAA",
-          "url": "https://techmeme.com/261111/p1",
-          "published_at": "2026-11-11T05:05:26+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "818c761e8b84",
-          "headline": "Nvidia intervention leads to Commerce chip smuggling probe being moved to DOJ",
-          "url": "https://techmeme.com/261109/p32",
-          "published_at": "2026-11-09T16:20:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "b10abbc74a23",
-          "headline": "Nvidia board investigates CEO Jensen Huang over affair with alleged Chinese spy",
-          "url": "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50",
-          "published_at": "2026-11-09T05:26:29+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "4756aa2fa657",
-          "headline": "Nvidia board launches probe into CEO Jensen Huang over alleged spy plot",
-          "url": "https://techmeme.com/261108/p13",
-          "published_at": "2026-11-08T20:25:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "2c93e9013ac1",
-          "headline": "Megaspeed exec recruited to spy on Nvidia CEO, US memo claims",
-          "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo",
-          "published_at": "2026-11-07T21:17:08+00:00",
-          "category": "industry"
-        }
-      ]
     }
   ],
   "labs": [
     {
       "lab": "Google",
-      "model": "Gemini 4 Neon",
+      "model": "Gemini 3.6 and later models",
       "type": "Language",
-      "date": "2026-11-19T03:35:01+00:00",
-      "story_id": "dd0ead71d47c",
-      "url": "https://techmeme.com/261118/p58"
+      "date": "2026-11-19T18:00:00+00:00",
+      "story_id": "b00f82b6db94",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval"
     },
     {
       "lab": "Google DeepMind",
@@ -7245,8 +6785,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 538,
-    "model_releases_this_month": 63,
+    "stories_this_month": 539,
+    "model_releases_this_month": 64,
     "labs_tracked": 30
   }
 }
