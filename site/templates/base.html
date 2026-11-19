@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}">
+{% if noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
 <link rel="canonical" href="{{ canonical }}">
 <meta property="og:site_name" content="Frontier Wire">
 <meta property="og:type" content="{{ og_type|default('website') }}">

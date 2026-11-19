@@ -1,0 +1,18 @@
+name: Feedback system check
+# Manual: checks the live suggestions API and the admin dashboard's data (counts only; nothing is posted or changed).
+on: workflow_dispatch
+permissions: { contents: read }
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check
+        env: { KEY: "${{ secrets.ALERTS_DISPATCH_SECRET }}" }
+        run: |
+          API=$(cat config/api_url.txt)
+          echo "== public board"; curl -sS -m 30 "$API/api/feedback/list" | jq '{ideas: (.items|length), counts}'
+          echo "== similar ideas"; curl -sS -m 30 "$API/api/feedback/similar?q=dark%20mode%20newsletter" | jq '.items|length'
+          echo "== admin (no key) should be 401"; curl -sS -o /dev/null -w '%{http_code}\n' -m 30 "$API/api/admin/overview"
+          echo "== admin overview"; curl -sS -m 30 -H "Authorization: Bearer $KEY" "$API/api/admin/overview" | jq '{stats, reports: (.reports|length), picks: (.picks|length), recent_log: [.log[:8][] | "\(.at) \(.level) \(.kind): \(.msg)"]}'

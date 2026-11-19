@@ -35,6 +35,7 @@
     </nav>
     <nav class="foot-col" aria-label="About">
       <h2>About</h2>
+      <a href="{{ root }}suggestions/">Suggest an idea</a>
       <a href="{{ root }}audit/">How we're doing</a>
       <a href="{{ root }}data/site.json">Open data</a>
       <a href="{{ root }}data/feed.xml">RSS feed</a>
@@ -46,4 +47,6 @@
   </div>
 </footer>
 {% if chat_api %}<div id="fw-chat" data-api="{{ chat_api }}" data-root="{{ root }}"></div>
-<script type="module" src="{{ root }}chat.js"></script>{% endif %}
+<script type="module" src="{{ root }}chat.js"></script>
+<div id="fw-feedback" data-api="{{ chat_api }}" data-root="{{ root }}"></div>
+<script type="module" src="{{ root }}feedback.js"></script>{% endif %}

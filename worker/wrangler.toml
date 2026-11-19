@@ -17,4 +17,7 @@ database_name = "frontier-wire"
 database_id = "REPLACED_IN_CI"
 
 [triggers]
-crons = ["20 3 * * *", "*/10 * * * *"]   # daily digests at 08:50 IST; finish sending an approved recap
+crons = ["20 3 * * *", "35 3 * * *", "*/10 * * * *"]   # digests 08:50 IST; weekly feedback analysis 09:05 IST; finish sending an approved recap
+
+[observability]
+enabled = true   # Workers Logs (free): the worker's log lines, searchable in the Cloudflare dashboard

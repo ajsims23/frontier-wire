@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="shell lab-page desk-page ad-page">
+  <header class="lab-head">
+    <h1>Feedback dashboard</h1>
+    <p class="desk-intro">Everything readers have suggested, this week's AI recommendations for your approval, and how ideas are moving.</p>
+  </header>
+  <div data-admin data-api="{{ api }}" data-root="{{ root }}"><noscript>The dashboard needs JavaScript.</noscript></div>
+</section>
+<script type="module" src="{{ root }}admin.js"></script>
+{% endblock %}

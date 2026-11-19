@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="shell lab-page desk-page fb-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>Suggestions</span></nav>
+  <header class="lab-head fb-head">
+    <div>
+      <h1>Help shape Frontier Wire</h1>
+      <p class="desk-intro">Suggest features, coverage and fixes, vote for the ideas you want most, and follow them from idea to launch.
+        Every week we review all feedback, and the team picks what to build next.</p>
+    </div>
+    <div class="fb-stats" data-board-stats aria-live="polite"></div>
+  </header>
+  <div data-board data-api="{{ api }}" data-root="{{ root }}">
+    {% if not api %}<p class="muted">The suggestions board is offline right now. Please try again later.</p>{% endif %}
+  </div>
+</section>
+{% endblock %}

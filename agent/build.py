@@ -394,6 +394,14 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
                     "k": " ".join([tracker_titles.get(t, "") for t in s.get("trackers") or []] + [SECTORS.get(x, "") for x in s.get("sectors") or []])}
                    for s in newest_first]
     (out / "data" / "search.json").write_text(json.dumps(search_docs, ensure_ascii=False))
+    page("suggestions", "suggestions.html", title="Suggestions: help shape Frontier Wire | Frontier Wire",
+         description="Suggest features and coverage for Frontier Wire, vote for the ideas you want, and follow them from idea to launch.",
+         canonical=f"{base}suggestions/", og_image=f"{base}og/home.png", api=site.get("api_url", ""))
+    # the team's feedback dashboard: not linked, not indexed, not in the sitemap (sign-in by emailed link)
+    (out / "admin").mkdir(parents=True, exist_ok=True)
+    (out / "admin" / "index.html").write_text(env.get_template("admin.html").render(
+        **common, root="../", title="Feedback dashboard | Frontier Wire", description="Frontier Wire team dashboard.",
+        canonical=f"{base}admin/", og_image=f"{base}og/home.png", api=site.get("api_url", ""), noindex=True))
     page("ask", "ask.html", title="Ask the Wire: AI news answers with sources | Frontier Wire",
          description="Ask anything about recent AI news and get an answer from our fact-checked archive, with every claim linked.",
          canonical=f"{base}ask/", og_image=f"{base}og/home.png", api=site.get("api_url", ""), count=len(stories),

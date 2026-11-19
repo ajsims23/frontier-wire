@@ -9,12 +9,14 @@
 //   GET|POST /api/recap/approve?d=&s=  the editor's signed link: confirm, then send the recap to its subscribers
 //   POST /api/recap/image  (bearer secret) {prompt} -> an AI illustration (Workers AI, FLUX schnell) as base64 JPEG
 //   POST /api/recap/voice  (bearer secret) {text, speaker?} -> narration (Workers AI, Deepgram Aura-2; MeloTTS fallback) as base64 MP3
-//   cron                   08:50 IST daily digests; every 10 minutes, continues sending an approved recap
+//   /api/feedback/*, /api/admin/*  community feedback, the suggestions board and the admin dashboard (see feedback.js)
+//   cron                   08:50 IST daily digests; 09:05 IST the weekly feedback analysis; every 10 minutes, continues sending an approved recap
 //
 // Secrets: CEREBRAS_API_KEY (and optional GROQ_API_KEY, GEMINI_API_KEY, NVIDIA_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY), BREVO_API_KEY, DISPATCH_SECRET. Binding: AI (Workers AI).
 // Vars: SITE_URL, SENDER_EMAIL, SENDER_NAME. Binding: DB (D1).
 import { buildIndex, rank } from "../../site/search.js";
 import { digestSubject, recapSubject, renderEmail, renderRecap } from "./email.js";
+import { handleFeedback, logEvent, weeklyIfDue } from "./feedback.js";
 
 const ASK_PER_IP_PER_DAY = 25;
 const ASK_PER_DAY = 600;
@@ -22,6 +24,7 @@ const EMAILS_PER_DAY = 280; // Brevo's free plan allows 300 a day
 const FOLLOW_KEY = /^(lab:[^<>"]{1,60}|tracker:[a-z0-9-]{1,40}|sector:[a-z_]{1,30}|topic:[a-z]{1,20}|region:india|deals|models|recap)$/;
 const RECAP_BATCH = 40;   // emails per run, inside the free plan's 50 outgoing requests per invocation
 const DIGEST_CRON = "20 3 * * *";
+const WEEKLY_CRON = "35 3 * * *";   // 09:05 IST: the weekly feedback analysis (runs on Mondays; on later days only if Monday's failed)
 const IMAGES_PER_DAY = 40;   // recap illustrations; about 60 Workers AI neurons each, far inside the free 10,000 a day
 // Every illustration prompt ends with this, so images stay within the recap's rules whatever the prompt says.
 export const IMAGE_STYLE = "Editorial illustration for a technology news video, cinematic lighting, deep teal and navy palette with one accent colour, clean composition, high detail. No text, no letters, no numbers, no logos, no brand marks, no recognisable people, no faces.";
@@ -64,7 +67,7 @@ function corsFor(req, env) {
   const origin = req.headers.get("origin") || "";
   const allowed = new URL(env.SITE_URL).origin;
   return origin === allowed ? { "access-control-allow-origin": origin, "access-control-allow-methods": "POST, GET, OPTIONS",
-    "access-control-allow-headers": "content-type", vary: "origin" } : {};
+    "access-control-allow-headers": "content-type, authorization", vary: "origin" } : {};
 }
 
 async function bump(env, kind, who, limit) {
@@ -660,6 +663,9 @@ function page(env, title, text) {
   { headers: { "content-type": "text/html; charset=utf-8" } });
 }
 
+// what the feedback module borrows from this file
+const helpers = () => ({ json, bump, sha, sendEmail, llm, shell, esc });
+
 export default {
   async fetch(req, env) {
     const url = new URL(req.url);
@@ -750,9 +756,11 @@ export default {
         const audio = await audioBase64(out);
         return audio ? json({ audio, model: "melotts" }) : json({ error: "no audio returned" }, 502);
       }
+      if (url.pathname.startsWith("/api/feedback/") || url.pathname.startsWith("/api/admin/")) return await handleFeedback(req, env, url, cors, helpers());
       if (url.pathname === "/api/health") return json({ ok: true }, 200, cors);
       return json({ error: "not found" }, 404, cors);
     } catch (e) {
+      await logEvent(env, "error", "request", `${req.method} ${url.pathname}: ${e && e.message}`);
       return json({ error: "Something went wrong. Try again in a minute." }, 500, cors);
     }
   },
@@ -762,6 +770,10 @@ export default {
       env.API_URL = row ? row.v : "";
     }
     if (event.cron === DIGEST_CRON) { ctx.waitUntil(digests(env)); return; }
+    if (event.cron === WEEKLY_CRON) {
+      if (new Date().getUTCDay() !== 0) ctx.waitUntil(weeklyIfDue(env, helpers()));   // Monday's run; Tuesday onward only retries a failed one
+      return;
+    }
     // every 10 minutes: finish sending an approved recap (only within two days of its date)
     const row = await env.DB.prepare("SELECT v FROM meta WHERE k = 'recap_approved'").first();
     if (row && Date.now() - Date.parse(row.v) < 2 * 86400000) ctx.waitUntil(sendRecap(env, row.v));

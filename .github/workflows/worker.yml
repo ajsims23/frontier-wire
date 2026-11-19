@@ -29,7 +29,7 @@ jobs:
         with:
           node-version: 22
       - name: Tests
-        run: node --test worker/test/search.test.mjs worker/test/worker.test.mjs worker/test/email.test.mjs
+        run: node --test worker/test/search.test.mjs worker/test/worker.test.mjs worker/test/email.test.mjs worker/test/feedback.test.mjs
       - name: Check setup
         id: setup
         run: |
@@ -84,8 +84,9 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           DISPATCH_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
+          ADMIN_EMAIL: ${{ secrets.RECAP_REVIEWER_EMAIL || vars.RECAP_REVIEWER_EMAIL }}   # who can sign in to the feedback dashboard
         run: |
-          for name in CEREBRAS_API_KEY GROQ_API_KEY GEMINI_API_KEY NVIDIA_API_KEY MISTRAL_API_KEY OPENROUTER_API_KEY BREVO_API_KEY DISPATCH_SECRET; do
+          for name in CEREBRAS_API_KEY GROQ_API_KEY GEMINI_API_KEY NVIDIA_API_KEY MISTRAL_API_KEY OPENROUTER_API_KEY BREVO_API_KEY DISPATCH_SECRET ADMIN_EMAIL; do
             val="${!name}"
             if [ -n "$val" ]; then printf '%s' "$val" | wrangler secret put "$name" >/dev/null && echo "set $name"; fi
           done
