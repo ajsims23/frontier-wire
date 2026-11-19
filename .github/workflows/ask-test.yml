@@ -1,0 +1,24 @@
+name: Ask the Wire check
+# Manual: asks the live analyst a question (then a follow-up) and prints the answer, sources and engine.
+on:
+  workflow_dispatch:
+    inputs:
+      q: { description: "Question", default: "What did Anthropic announce this week?" }
+      followup: { description: "Follow-up question", default: "How does that compare with OpenAI?" }
+permissions: { contents: read }
+jobs:
+  ask:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ask
+        env: { Q: "${{ inputs.q }}", F: "${{ inputs.followup }}" }
+        run: |
+          API=$(cat config/api_url.txt)
+          show() { jq -r '"ENGINE: \(.engine)\n\n\(.answer)\n\nFOLLOW-UPS: \(.followups|join(" | "))\n\nSOURCES:", (.sources[] | "  [\(.n)] \(if .cited then "cited" else "     " end) \(.kind) \(.date // "") \(.publisher // "") \(.headline)"), (.diag // empty)'; }
+          jq -n --arg q "$Q" '{q:$q, mode:"chat"}' | curl -sS -m 90 -X POST "$API/api/ask" -H 'content-type: application/json' --data @- > a1.json
+          show < a1.json
+          echo; echo "================ follow-up"; echo
+          jq -n --arg q "$F" --arg q0 "$Q" --slurpfile a a1.json '{q:$q, mode:"chat", history:[{role:"user",content:$q0},{role:"assistant",content:$a[0].answer}]}' \
+            | curl -sS -m 90 -X POST "$API/api/ask" -H 'content-type: application/json' --data @- | show
