@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-20T13:29:38+00:00",
+  "started_at": "2026-11-20T20:47:58+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -8,325 +8,51 @@
     "cerebras"
   ],
   "sources": {
-    "openai": "ok (1418)",
+    "openai": "ok (1421)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
-    "huggingface": "ok (913)",
+    "huggingface": "ok (915)",
     "nvidia": "ok (18)",
     "anthropic": "ok (6)",
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)",
-    "mistral-news": "ok (4)",
-    "hf-models": "ok (57)",
-    "arxiv": "ok (40)",
-    "hf-papers": "ok (13)",
-    "gdelt": "ok (0) via Bing News (GDELT unavailable)",
-    "hn": "ok (16)",
-    "techcrunch-ai": "ok (20)",
-    "verge-ai": "ok (10)",
-    "mit-tr-ai": "ok (10)",
-    "ars-ai": "ok (20)",
-    "aim": "ok (50)",
-    "inc42": "ok (24)",
-    "medianama": "ok (10)",
-    "mint-tech": "ok (35)",
-    "et-tech": "ok (50)",
-    "yourstory": "ok (20)",
-    "gdelt-india": "ok (0) via Bing News (GDELT unavailable)",
-    "crunchbase-news": "ok (10)",
-    "import-ai": "ok (10)",
-    "simon-willison": "ok (30)",
-    "sam-altman": "ok (30)",
-    "bluesky": "ok (26)",
-    "auto-techmeme.com": "ok (15)"
+    "mistral": "ok (6)"
   },
-  "dropped": [
-    {
-      "title": "Anthropic announces closing of initial public offering, including full exercise of underwriters’ option to purchase additional shares, and closing of concurrent private placement",
-      "reason": "duplicate of 3ed82417f95b"
-    },
-    {
-      "title": "Deutsche Telekom invests $109 million in Mistral AI as first step in larger partnership",
-      "reason": "duplicate of 459fb45d2a37"
-    },
-    {
-      "title": "Signal is blocking Gemini and Siri AI from reading your screen",
-      "reason": "duplicate of 2536f904ad2b"
-    },
-    {
-      "title": "Logic Pursuits Certified as Best Firm for Data Engineers",
-      "reason": "not AI: Company certification for data engineers is routine corporate PR rather than substantive AI news."
-    },
-    {
-      "title": "Why Banks Are Betting on AI Orchestration Over Autonomy",
-      "reason": "score 4: General commentary on AI orchestration vs autonomy in banking, lacking specific news."
-    },
-    {
-      "title": "Supreme Court Upholds Karnataka HC Order Allowing Bike Taxis",
-      "reason": "not AI: Supreme Court order on bike taxis is general transportation and regulatory news with no AI angle."
-    },
-    {
-      "title": "Fireside Ventures’ Changing Guard: Exits, Power Struggle And The Succession Question",
-      "reason": "not AI: Venture capital firm leadership changes and internal power struggles are general business news without an AI focus."
-    },
-    {
-      "title": "How Barosi Is Building A ₹1,000 Cr ARR Ghee Empire In 10-Minute Economy",
-      "reason": "not AI: Quick commerce and FMCG business with no AI angle."
-    },
-    {
-      "title": "UPI PIN doesn’t prove a customer authorised a transaction: Telangana consumer commission",
-      "reason": "not AI: Consumer commission ruling on UPI transactions with no AI relevance."
-    },
-    {
-      "title": "Xiaomi 18 Pro could move into India’s ultra-premium smartphone segment: Expected price, features",
-      "reason": "not AI: Smartphone launch pricing details with no substantive AI focus."
-    },
-    {
-      "title": "5 Books from Bill Gates' latest reading list before 2026 end",
-      "reason": "not AI: Bill Gates' book reading list is general reading recommendations rather than AI commentary."
-    },
-    {
-      "title": "7 Bryan Johnson longevity habits anyone can afford",
-      "reason": "not AI: General health and longevity lifestyle tips."
-    },
-    {
-      "title": "Supreme Court rejects Karnataka's plea, paving way for bike taxis to return",
-      "reason": "not AI: Supreme Court ruling on bike taxis is general legal and transport news."
-    },
-    {
-      "title": "India ties for APAC’s highest phishing rate as employee awareness gaps emerge: Kaspersky",
-      "reason": "not AI: Kaspersky survey on phishing rates and cybersecurity resilience lacks any specific AI focus."
-    },
-    {
-      "title": "PIDG invests $11.7M in dry waste recycling company NEPRA",
-      "reason": "not AI: Investment in a waste management and recycling company lacks any AI relevance."
-    },
-    {
-      "title": "5 Interesting Startup Deals You May Have Missed: Reflecting Sunlight From Space, Better Breathing And Smarter Garbage Trucks",
-      "reason": "not AI: General startup roundup covering space tech and garbage hauling with no significant AI story."
-    },
-    {
-      "title": "Uber quietly launched Uber Kids as a pilot in three US cities for kids as young as 10, building on its teen ride-hailing service for those aged 13 to 17 (Kirsten Korosec/TechCrunch)",
-      "reason": "not AI: General ride-hailing pilot news with no AI relevance."
-    },
-    {
-      "title": "How Jensen Huang used humiliation in his management style for decades; Huang's behavior once led to a settlement with an exec who said he \"terrorized\" staff (New York Times)",
-      "reason": "not AI: Article about Nvidia CEO's management style; no AI product or policy content, only personal behavior. Not core AI news."
-    },
-    {
-      "title": "Sources: China says it will not approve requests from Chinese companies registered overseas after 2023 to list outside mainland China, impacting tech startups (Reuters)",
-      "reason": "not AI: Regulatory news about Chinese companies listing abroad; unrelated to AI specifics, only tangential impact on tech startups."
-    },
-    {
-      "title": "Signal says it will restrict screenshots by default to stop AI agents from reading private chats on phones but warns its new protections are \"incomplete\" (Katie Paul/Reuters)",
-      "reason": "duplicate of 2536f904ad2b"
-    },
-    {
-      "title": "Filing: SK Hynix will become Kioxia's largest shareholder with a ~14.1% stake after it converts Kioxia bonds into shares, expanding its clout in the NAND sector (Yoolim Lee/Bloomberg)",
-      "reason": "score 5: SK Hynix becoming largest shareholder of Kioxia is a memory‑sector finance move; AI relevance is only adjacent (memory for AI compute). Not significant enough for coverage."
-    },
-    {
-      "title": "Here's What $1,000 Invested at Anthropic's IPO Price Is Worth Now",
-      "reason": "not AI: Financial analysis of Anthropic IPO returns for investors; no new AI development or policy, purely market commentary."
-    },
-    {
-      "title": "After a mega opening day, Anthropic's stock is back to earth with a bump, dropping 6%",
-      "reason": "not AI: Stock‑price movement after Anthropic IPO; lacks substantive AI content beyond the IPO itself which is already covered."
-    },
-    {
-      "title": "Anthropic IPO live: Anthropic stock begins trading in record $81B raise with $1.5T valuation",
-      "reason": "duplicate of 4aacf31011a3"
-    },
-    {
-      "title": "Anthropic IPO highlights: Claude maker hits $1.8 trillion valuation, Amazon and Google hold 28% stake",
-      "reason": "duplicate of 4aacf31011a3"
-    },
-    {
-      "title": "Anthropic set to start trading after completing largest-ever IPO",
-      "reason": "duplicate of 4aacf31011a3"
-    },
-    {
-      "title": "Anthropic Prices $81.3 Billion IPO at $83 a Share, Topping SpaceX",
-      "reason": "duplicate of 4aacf31011a3"
-    },
-    {
-      "title": "AMD and Intel, move over: AI designed an all-new CPU — and claims it is 4.6x more efficient",
-      "reason": "score 7: Duplicate coverage of the AI‑designed Frostbite CPU architecture; original story already published."
-    },
-    {
-      "title": "What The Telecom Bust Taught Me About AI’s Debt Boom",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Goa Wants to Train 50,000 Graduates in AI Skills",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Forget Organic Growth, AI is Forcing Mid-Cap Indian IT to Reinvent M&A Playbook",
-      "reason": "could not verify yet; will retry next run"
-    }
-  ],
+  "dropped": [],
   "written": [
     {
-      "id": "000028228240",
-      "headline": "Architect Labs unveils AI-designed Frostbite CPU architecture",
-      "category": "research",
-      "summary": "US AI startup Architect Labs introduced Frostbite, a general-purpose CPU architecture designed and verified by AI. The company claims the design delivers 4.59 times the performance per watt and 8.77 times the performance per area compared to a conventional CPU core across 25 workloads in pre-silicon simulations.",
-      "url": "https://architectlabs.com/blog/frostbite",
-      "sources": 2,
+      "id": "3ea993db7e3c",
+      "headline": "OpenAI details methods to combat adversarial distillation and protect reasoning",
+      "category": "safety",
+      "summary": "OpenAI published details on how it detects and disrupts adversarial distillation, a process where bad actors use frontier model outputs without authorization to train models without safeguards. The company reported that updated defenses in GPT-6.2 Astra lowered the average attack success rate for recovering protected reasoning from 54.0% to 0.2%.",
+      "url": "https://openai.com/index/combatting-adversarial-distillation",
+      "sources": 1,
       "quotes": 0
-    },
-    {
-      "id": "6cf7e64e1861",
-      "headline": "Pragmatik Labs reaches $5 billion valuation in new funding round",
-      "category": "industry",
-      "summary": "Shanghai-based Pragmatik Labs raised tens of millions of dollars in funding. The startup was founded by former Alibaba Group Holding Ltd. AI chief Junyang Lin and reached a $5 billion valuation, up from $2 billion in August.",
-      "url": "https://techmeme.com/261120/p10",
-      "sources": 2,
-      "quotes": 0
-    },
-    {
-      "id": "9eaf7b604514",
-      "headline": "Mistral opens Singapore headquarters and targets 200 Asia-Pacific staff by 2027",
-      "category": "industry",
-      "summary": "French artificial intelligence company Mistral opened its Asia-Pacific headquarters in Singapore on November 20, 2026, aiming to double its regional headcount to 200 people by 2027. The office will focus on public sector agencies, high-tech manufacturing, and robotics.",
-      "url": "https://cryptobriefing.com/mistral-asia-pacific-headquarters-singapore",
-      "sources": 4,
-      "quotes": 2
-    },
-    {
-      "id": "2ffe30d0b83e",
-      "headline": "OpenAI reportedly developing first smartphone with Foxconn subsidiary assembly",
-      "category": "models",
-      "summary": "OpenAI is reportedly developing its first smartphone, with Foxconn subsidiary FIH Mobile securing assembly orders for a potential launch in late 2027 or 2028. Neither OpenAI nor Foxconn has officially confirmed the project.",
-      "url": "https://livemint.com/technology/gadgets/openai-smartphone-in-the-works-foxconn-subsidiary-secures-assembly-orders-launch-tipped-for-202728-11795169231874.html",
-      "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "a752a447406b",
-      "headline": "SatSure raises ₹60 Cr from Antariksh VC fund in Series B round",
-      "category": "industry",
-      "summary": "Earth-intelligence startup SatSure has raised ₹60 Cr from the state-backed Antariksh Venture Capital Fund in the first tranche of its ₹200 Cr Series B round at an ₹870 Cr valuation. The capital will advance optical payloads built by its subsidiary KaleidEO, scale its geospatial AI model Dhaarini, and expand international operations.",
-      "url": "https://inc42.com/buzz/centres-antariksh-vc-fund-leads-satsures-%e2%82%b9200-cr-series-b-round",
-      "sources": 2,
-      "quotes": 1
     }
   ],
-  "notes": [
-    "ignored made-up duplicate id 000028228240 for 'AMD and Intel, move over: AI designed an all-new C'",
-    "dropped unverifiable benchmark: Frostbite performance per unit of area compared to a conventional CPU core across 25 workloads 8.77x",
-    "dropped non-quote (Arup Kumar): indigenous orbital infrastructure with downstream decision i…",
-    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "3 kept item(s) carried over to the next run"
-  ],
-  "mode": "full",
+  "notes": [],
+  "mode": "breaking",
   "timings": {
-    "gather": 106.1,
-    "audit": -0.0,
-    "plan": 17.7,
-    "judge": 136.4,
-    "verify and write": 164.0,
-    "videos": 10.7,
-    "tagging": 8.4,
-    "explainers": 0.0,
-    "trackers": 22.7,
-    "claims": 5.8,
-    "model tracker": 0.2,
-    "weekly": -0.0,
-    "builders": -0.0,
-    "top voices": -0.0,
-    "briefing": 10.2,
-    "self-review": 0.0,
-    "photos": 1.2,
-    "stock photos": 15.8,
-    "daily email": -0.0,
-    "alerts": 5.9
+    "gather": 9.4,
+    "judge": 1.3,
+    "verify and write": 2.9,
+    "tagging": 0.9,
+    "trackers": 1.9,
+    "photos": 0.2,
+    "stock photos": -0.0,
+    "alerts": 2.3
   },
-  "fetched": 3003,
-  "fresh": 30,
-  "plan": {
-    "focus": "Chasing the fallout from the Anthropic IPO and new AI agent screenshot protections while tracking hardware and regional shifts.",
-    "priorities": [
-      "Anthropic announces closing of initial public offering, including full (Official closing of Anthropic's record IPO and private placement closes out the week's biggest market test.)",
-      "Signal says it will restrict screenshots by default to stop AI agents  (Signal's move to block AI agents from reading chats via default screenshot restrictions marks a key privacy frontline.)",
-      "Frostbite: A new CPU architecture discovered, designed and verified by (Frostbite CPU architecture represents a major milestone: designed, discovered, and verified entirely by AI.)",
-      "Deutsche Telekom invests $109 million in Mistral AI as first step in l (Deutsche Telekom's $109M investment in Mistral AI highlights telecom capital moving directly into European foundation models.)",
-      "Sources: Shanghai-based Pragmatik Labs, founded by ex-Qwen AI head Jun (Pragmatik Labs hitting a $5B valuation underscores rapid capital concentration in Chinese AI labs.)"
-    ],
-    "thin_areas": [
-      "india",
-      "models"
-    ],
-    "searches": [
-      "Anthropic IPO aftermarket closing share price: 6 new",
-      "Frostbite CPU architecture AI designed: 1 new"
-    ],
-    "dig_deeper": [
-      "Anthropic announces closing of initial public offering, including full",
-      "Signal says it will restrict screenshots by default to stop AI agents "
-    ]
-  },
-  "judged": 37,
-  "kept": 8,
-  "research": {
-    "investigated": 5,
-    "confirmed": 4,
-    "tool_calls": 14
-  },
-  "research_log": [
-    "Frostbite: A new CPU architecture discovered, designed and verified by: confirmed (searched “Frostbite CPU architecture AI architectlabs”; searched “Frostbite CPU architecture AI”; read notebookcheck.net)",
-    "Sources: Shanghai-based Pragmatik Labs, founded by ex-Qwen AI head Jun: confirmed (searched “Pragmatik Labs Junyang Lin Bloomberg valuation”; read bloomberg.com; searched “Pragmatik Labs Junyang Lin $5 billion Bloomberg”)",
-    "Mistral opens Asia-Pacific headquarters in Singapore, plans to double : confirmed (searched “Mistral Asia Pacific headquarters Singapore 2027 headcount”; read yahoo.com)",
-    "What The Telecom Bust Taught Me About AI’s Debt Boom: unconfirmed (searched “David Spreng Runway Growth Capital telecom AI debt boom”; searched “\"What The Telecom Bust Taught Me About AI’s Debt Boom\"”; searched “David Spreng telecom bust AI debt boom”)",
-    "OpenAI smartphone in the works? Foxconn subsidiary secures assembly or: confirmed (searched “OpenAI smartphone Foxconn FIH Mobile MediaTek”; read androidauthority.com; read gsmarena.com)"
-  ],
-  "threads": [
-    "Mistral AI international expansion and investment push: Mistral opens Singapore headquarters and targets 200 Asia-Pa"
-  ],
-  "videos": {
-    "OpenAI": "ok (14 in feed, 0 new)",
-    "Anthropic": "ok (13 in feed, 0 new)",
-    "Google DeepMind": "ok (14 in feed, 1 new)",
-    "Google for Developers": "ok (10 in feed, 2 new)",
-    "AI at Meta": "ok (11 in feed, 0 new)",
-    "Microsoft Research": "ok (11 in feed, 0 new)",
-    "NVIDIA": "ok (9 in feed, 0 new)",
-    "Hugging Face": "ok (12 in feed, 2 new)",
-    "Mistral AI": "ok (0 in feed, 0 new)",
-    "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 2 new)",
-    "AI Explained": "ok (15 in feed, 1 new)",
-    "Lex Fridman": "ok (14 in feed, 1 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
-    "No Priors": "ok (3 in feed, 0 new)",
-    "Latent Space": "ok (15 in feed, 4 new)",
-    "Training Data (Sequoia)": "ok (5 in feed, 1 new)",
-    "a16z": "ok (15 in feed, 1 new)",
-    "Big Technology Podcast": "ok (13 in feed, 0 new)",
-    "Hard Fork": "ok (6 in feed, 0 new)",
-    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (4 in feed, 0 new)",
-    "20VC": "ok (4 in feed, 1 new)"
-  },
-  "videos_kept": "15 kept from 16 new",
-  "tagged": 5,
-  "trackers": "filed 5 stories; updated us-china, india-ai, ai-infrastructure, ai-money",
-  "claims": "216 tracked, 210 open, 0 updated this run",
-  "model_tracker": "82 models, 30 changes today",
-  "briefing": "3 themes from 20 stories",
-  "india_briefing": "3 themes from 4 stories",
-  "photos": "4 saved, 0 unavailable",
-  "stock photos": "1 added",
-  "alerts": "42 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":45}",
-  "ai_requests_run": 40,
-  "ai_tokens_run": 101221,
-  "ai_requests_today": 222,
-  "provider_log": [
-    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
-    "gemini: network error ReadTimeout, retrying",
-    "gemini/gemini-flash-latest: 503 (server busy); trying next model"
-  ]
+  "fetched": 2508,
+  "fresh": 1,
+  "judged": 1,
+  "kept": 1,
+  "tagged": 1,
+  "trackers": "filed 1 stories; updated frontier-race",
+  "photos": "1 saved, 0 unavailable",
+  "alerts": "38 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":8}",
+  "ai_requests_run": 6,
+  "ai_tokens_run": 13549,
+  "ai_requests_today": 228,
+  "provider_log": []
 }

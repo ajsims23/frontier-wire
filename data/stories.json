@@ -348,6 +348,86 @@
   },
   {
     "explainer": {
+      "what_it_means": "OpenAI reports that bad actors can use frontier model outputs without authorization to train other models and strip away safety protections. To stop this, the company has updated defenses for its models, specifically targeting the internal reasoning steps models generate before giving an answer.",
+      "terms": [
+        {
+          "term": "Distillation",
+          "meaning": "A machine-learning technique in which one model learns from data, answers, or reasoning produced by another model."
+        },
+        {
+          "term": "Protected reasoning",
+          "meaning": "The intermediate steps a model generates internally while working toward an answer, also known as chain-of-thought."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "GPT-6 Astra",
+        "benchmark": "internal adaptive evaluation using strong automated red-team",
+        "score": "54.0%"
+      },
+      {
+        "model": "GPT-6.2 Astra",
+        "benchmark": "internal adaptive evaluation using strong automated red-team",
+        "score": "0.2%"
+      }
+    ],
+    "audiences": {
+      "builders": "GPT-6.2 Astra and GPT-6.2 Sol now include strengthened defenses against protected reasoning extraction, reducing attack success rates to 0.2%.",
+      "business": "Adversarial distillation allows bad actors to reproduce frontier model capabilities without safeguards, creating risks in dual-use domains like cybersecurity and biology.",
+      "investors": "OpenAI is applying updated safeguards aligning with biology and cybersecurity to protect model capabilities and reasoning traces."
+    },
+    "id": "3ea993db7e3c",
+    "headline": "OpenAI details methods to combat adversarial distillation and protect reasoning",
+    "summary": "OpenAI published details on how it detects and disrupts adversarial distillation, a process where bad actors use frontier model outputs without authorization to train models without safeguards. The company reported that updated defenses in GPT-6.2 Astra lowered the average attack success rate for recovering protected reasoning from 54.0% to 0.2%.",
+    "why_it_matters": "Preventing adversarial distillation helps stop bad actors from reproducing advanced model capabilities, such as in cybersecurity and biology, without appropriate safety protections.",
+    "category": "safety",
+    "lab": "OpenAI",
+    "model_name": "GPT-6.2 Astra",
+    "model_type": "Language",
+    "tags": [
+      "safety",
+      "distillation",
+      "gpt-6.2",
+      "security"
+    ],
+    "quotes": [],
+    "score": 7,
+    "url": "https://openai.com/index/combatting-adversarial-distillation",
+    "source_id": "openai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://images.ctfassets.net/kftzwdyauwt9/5SUtPGdssrttC7LfP1yoJ1/b6b000846ab3576c1735c29534ab20b0/combatting-adversarial-distillation-social.png?w=1600&h=900&fit=fill",
+    "sources": [
+      {
+        "url": "https://openai.com/index/combatting-adversarial-distillation",
+        "publisher": "OpenAI",
+        "title": "Combatting adversarial distillation"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-20T10:00:00+00:00",
+    "created_at": "2026-11-20T20:47:58+00:00",
+    "breaking": true,
+    "sectors": [],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "GPT-6.2 Astra",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "An analysis of 10 million job advertisements in China from 2021 to 2025 compared roles based on their exposure to artificial intelligence. The study found that positions more exposed to AI experienced a double-digit drop in listings compared to less-exposed roles.",
       "terms": [],
       "watch_next": []
