@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-20T01:26:17+00:00",
+  "started_at": "2026-11-20T04:10:39+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -18,12 +18,12 @@
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
     "mistral": "ok (6)",
-    "mistral-news": "ok (2)",
+    "mistral-news": "ok (4)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (10)",
-    "gdelt": "ok (27)",
-    "hn": "ok (22)",
+    "hf-papers": "ok (9)",
+    "gdelt": "ok (0) via Bing News (GDELT unavailable)",
+    "hn": "ok (20)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -44,306 +44,453 @@
   },
   "dropped": [
     {
-      "title": "Deploying Daybreak Red",
-      "reason": "score 4: Reference architecture and product update posts on Daybreak Red are routine developer documentation/marketing."
+      "title": "Mistral AI opens regional HQ in Singapore, seeks to fill 200 roles in APAC",
+      "reason": "score 7: Duplicate of Mistral opening APAC headquarters in Singapore (8b3589e67194)."
     },
     {
-      "title": "See PR scans in action",
-      "reason": "score 3: Walkthrough video of PR scans is routine product marketing."
+      "title": "When Do Rankings Beat Signs? Gradient Direction Recovery under Even Nuisance",
+      "reason": "not AI: Too theoretical and mathematical, lacking a clear AI application or angle for our readers."
     },
     {
-      "title": "Explore the Codex Security Plugin",
-      "reason": "score 3: Demo video of the Codex Security Plugin is routine product marketing."
+      "title": "Reference-Free Humanoid Skateboarding via Termination-Shaped Reinforcement Learning",
+      "reason": "score 5: Robotics locomotion paper on skateboarding; interesting physically but adjacent rather than core AI."
     },
     {
-      "title": "Get started with Daybreak Blue",
-      "reason": "score 3: Onboarding walkthrough for Daybreak Blue is routine product documentation."
+      "title": "Fixing the Twin, Not the Detector: Sim-to-Real Roadside LiDAR Detection from Digital-Twin Data",
+      "reason": "score 4: Sim-to-real roadside LiDAR detection paper; too niche for core readers."
     },
     {
-      "title": "Former NVIDIA CEO Jensen Huang May Be Preparing to Take on the Company He Built",
-      "reason": "score 3: Vague speculative headline about former NVIDIA CEO Jensen Huang without substantive reporting."
+      "title": "SEOYUN: Refusal-Inducing Exam Documents for AI-Glasses Pipelines",
+      "reason": "score 5: Interesting research introducing refusal-inducing exam documents for AI-glasses pipelines, but falls short of a major breakthrough."
     },
     {
-      "title": "Anthropic Just Went Public at $1 . 5 Trillion . VOO Wont Own a Share Until Late 2027 at the Earliest",
-      "reason": "score 4: Rehash of the Anthropic IPO valuation and index inclusion timeline."
+      "title": "The Delayed Societal Cost of Unfairness",
+      "reason": "score 4: Fair machine learning paper studying delayed societal costs, standard academic fare without immediate frontier lab relevance."
     },
     {
-      "title": "Boom or Bubble ? Understanding AI and the U . S . Economy | Council on Foreign Relations",
-      "reason": "score 4: Broad discussion paper from CFR on AI economics, but lacks specific breaking news or builder insights."
+      "title": "Serialization Tax in Shared-Latent Exchangeable Decisions",
+      "reason": "score 3: Routine academic paper on item probabilities and latent states, not a landmark result."
     },
     {
-      "title": "AI helps uncover critical flaw in widely used internet software amid cyber arms race",
-      "reason": "score 4: Vague news report about AI finding internet software flaws without sufficient technical detail for our audience."
+      "title": "ForeSeek: Foresight-Driven Reasoning for Long-Form Video Understanding",
+      "reason": "score 4: Incremental paper on long-form video understanding via MLLM agents."
     },
     {
-      "title": "Magazine : Real - world , effective uses of AI",
-      "reason": "not AI: Vague magazine piece on real-world AI uses without substantive news or analysis."
+      "title": "FrontierReplay: Split-Free Exact Prefix Caching for Hybrid Language Models",
+      "reason": "score 4: Academic paper on prefix caching for hybrid language models."
     },
     {
-      "title": "Making Cents : What does an AI company entering public trading mean for the market ?",
-      "reason": "score 4: General market explainer on AI companies going public, offering little new news."
+      "title": "Does the Workspace Do the Work? A Causal Protocol for Verifying Global-Workspace Computation in a Language Model",
+      "reason": "score 4: Academic paper investigating Global Workspace Theory in language models."
     },
     {
-      "title": "Wall Street AI jitters return as stocks tumble , S & P500 logs longest losing streak in 2 . 5 years",
-      "reason": "score 4: General stock market report discussing Wall Street jitters and S&P 500 losing streak."
+      "title": "When Agents Play Differently: Localizing Human--Agent Behavioral Divergence with Conditional Distributional Testing",
+      "reason": "score 3: Academic paper on evaluating human-agent behavioral divergence."
     },
     {
-      "title": "Nvidia financial forecast excludes China Hopper revenue after government policy change",
-      "reason": "score 5: Nvidia financial forecast excluding China Hopper revenue following policy changes, covered in depth elsewhere."
+      "title": "Evaluating safeguarding in multi-turn conversations with AI assistants",
+      "reason": "score 4: Academic paper evaluating safeguarding in multi-turn conversations."
     },
     {
-      "title": "Atiku demands independent audit of INEC AI system",
-      "reason": "not AI: Not about AI; concerns political demands regarding an election system in Nigeria."
+      "title": "System-One RSI: Building Muscle Memory for Interactive Agents through Guided Practice",
+      "reason": "score 4: Academic paper on system-one recursive self-improvement for interactive agents."
     },
     {
-      "title": "Anthropic pulled off the biggest IPO ever . What that means , by the numbers",
-      "reason": "score 3: Rehash of Anthropic's IPO numbers, covered extensively by already published stories."
+      "title": "Xing-Audio-NVVASR: Scaling and Refining Supervision for Joint Recognition of Speech and Non-Verbal Vocalizations",
+      "reason": "score 3: Incremental speech recognition paper."
     },
     {
-      "title": "Can AI Fix Clinical Trial Access in Oncology ? Arturo Loaiza - Bonilla , MD , Built the Answer With the Data to Back It",
-      "reason": "score 4: General profile on oncology clinical trials with a minor AI mention; not core AI news."
+      "title": "Reinforcing Few-Step Diffusion Models via Shadow Posterior Matching",
+      "reason": "score 3: Academic paper on few-step diffusion models."
     },
     {
-      "title": "Tech outages are piling up , and AI is raising the stakes . Could this be the new normal ? - WSVN 7News | Miami News , Weather , Sports",
-      "reason": "score 3: General commentary on tech outages and AI risks without specific concrete news."
+      "title": "From AI Surrogate to Engineering Tool: Toward Production Use of Fiber-Orientation Prediction in Crash CAE",
+      "reason": "score 3: Niche engineering simulation paper, lower priority for general AI research news."
     },
     {
-      "title": "Chrome AI features wasting much bandwidth",
-      "reason": "score 3: Minor browser bandwidth complaint about Chrome AI features, low significance."
+      "title": "Policy Improvement-Guided Replay for Continual Reinforcement Learning",
+      "reason": "score 3: Standard academic RL paper without immediate frontier breakthrough significance."
     },
     {
-      "title": "AI isn't replacing your job. It's turning it into low-paid gig work",
-      "reason": "score 5: Opinion/commentary piece on AI labor impacts; interesting opinion but lacks breaking news value."
+      "title": "Seeing Beyond the Obvious: Complementary Semantic Guidance for Salient Single-Positive Multi-Label Learning",
+      "reason": "score 2: Incremental computer vision classification paper."
     },
     {
-      "title": "Show HN: Foolscap – a writing app that reads your book and never writes for you",
-      "reason": "score 2: Show HN writing app that explicitly does not write for you; minor developer launch."
+      "title": "Safe Subgame Resolving in Multiplayer Games",
+      "reason": "score 3: Specialized game theory and poker solving research paper."
     },
     {
-      "title": "The AI Superintelligence Debate Has Serious Flaws",
-      "reason": "score 4: Opinion piece discussing flaws in the AI superintelligence debate; commentary rather than news."
+      "title": "Multi-View Transformer with Geometry-Guided Multi-Modal ControlNet for 3D Virtual Try-On",
+      "reason": "score 3: Niche 3D Gaussian Splatting virtual try-on paper."
     },
     {
-      "title": "Apple may be developing its own AI agent that runs your Mac",
-      "reason": "score 4: Duplicate of Apple's hiring engineers for its own AI agent."
+      "title": "Energy estimates of open-weight large language models across stated food weights: a dose-response evaluation",
+      "reason": "score 2: Odd evaluation paper on open-weight LLMs estimating food energy; low significance."
     },
     {
-      "title": "Infosys Expands AI Footprint in Japan With Telecom JV",
-      "reason": "score 4: Infosys telecom joint venture in Japan touches on digital twins but lacks significant standalone AI news value."
+      "title": "Power Setpoint Tracking for Large-Scale EV Charging: Transformer-Constrained Charging Policy Learning with Self-Tuning Constraint Prices",
+      "reason": "score 3: Applied energy grid and EV charging optimization paper."
     },
     {
-      "title": "PostgreSQL 19 Released",
-      "reason": "score 3: PostgreSQL release note, AI is mentioned as a factor in the delay but database software is not core AI news."
+      "title": "Web search in Latin America: language models use less local and diverse news than search engines",
+      "reason": "score 4: Incremental empirical paper on web search bias in Latin America; not a landmark research breakthrough."
     },
     {
-      "title": "Ethan Mollick: Playing GTA & not following the Anthropic IPO? Following the IPO & not playing GTA? Why not both? I had Fable make a playable thing where…",
-      "reason": "score 4: Lighthearted social post about the Anthropic IPO and a custom Fable game, not substantive commentary."
+      "title": "GaussTrans: A Gaussian Interface Framework for Multi-Layer Refractive Transport",
+      "reason": "not AI: Computer graphics and optics paper; no AI or machine learning relevance."
     },
     {
-      "title": "Sources: National Cyber Director Sean Cairncross is leaving now to let the White House get a successor confirmed before Democrats take the Senate in January (Axios)",
-      "reason": "not AI: General political and cyber leadership departure without a direct AI focus."
+      "title": "Gradient Boosting with Kolmogorov-Arnold Units for Interpretable Regression beyond Pairwise Interactions",
+      "reason": "score 3: Niche tabular regression paper combining gradient boosting and Kolmogorov-Arnold networks; incremental research."
     },
     {
-      "title": "Intuit agrees to sell marketing subsidiary Mailchimp to Bending Spoons for $3.68B in cash and stock; Intuit paid $12B to buy Mailchimp in 2021 (Jordan Novet/CNBC)",
-      "reason": "not AI: M&A deal regarding Mailchimp; Intuit selling marketing software is not core AI news."
+      "title": "DTS: Delta-Based Tile Scoring for Efficient Long-Context Sparse Attention",
+      "reason": "score 4: Incremental paper on sparse attention optimization for long-context LLMs."
     },
     {
-      "title": "At a Senate hearing, Trump's CISA director nominee Michael LoSapio dodged questions about the agency's priorities, denied January 6 was an attack, and more (Eric Geller/Cybersecurity Dive)",
-      "reason": "not AI: General CISA nomination and political hearing coverage."
+      "title": "Hellinger Decision Trees for Density Ratio Estimation: Finite-Sample Guarantees",
+      "reason": "score 3: Statistical learning theory paper on density ratio estimation; standard academic contribution."
     },
     {
-      "title": "Sources: Alphabet plans to raise at least CA$5B in a five-part Canadian bond sale, after raising CA$8.5B in its debut Canadian offering in May (Bloomberg)",
-      "reason": "score 5: Alphabet bond sale in Canada; general corporate financing without a direct tie to AI infrastructure buildout."
+      "title": "Fast-JEPA: Advancing the Success-Latency Frontier for Latent World Models",
+      "reason": "score 5: Interesting latent world model planning framework (Fast-JEPA), but an incremental arXiv preprint rather than a major milestone."
     },
     {
-      "title": "Anthropic IPO details: Price, valuation, stock ticker, more",
-      "reason": "duplicate of 25c96fa5a216"
+      "title": "ROAM-GRPO: Enforcing Reasoning Diversity in GRPO via Routed Off-mode Approach Mining",
+      "reason": "score 4: Paper addressing reasoning diversity collapse in GRPO; useful niche reinforcement learning contribution but not top-tier breakthrough."
     },
     {
-      "title": "Anthropic Got Rich With Record-Breaking IPO: As It Happened",
-      "reason": "duplicate of 25c96fa5a216"
+      "title": "A Lightweight Hybrid Approach for Milling Force Reconstruction from Internal Machine Signals",
+      "reason": "score 3: Applied machine learning in manufacturing (milling force monitoring); outside core frontier AI scope."
     },
     {
-      "title": "Anthropic debut tests Wall Street faith in AI boom",
-      "reason": "already covered (story 824e87dcfa8e)"
+      "title": "LIFT: Latent Flow Matching for Probabilistic Cell Fate Dynamics with Single Cell Snapshots",
+      "reason": "score 3: Specialised bioinformatics paper using flow matching for single-cell data; narrow application."
+    },
+    {
+      "title": "Many Solutions, One Answer: Search Order Shapes the Default Solutions of Language Models",
+      "reason": "score 4: Interesting cognitive/behavioral analysis of language model solution concentration on constraint puzzles, but standard academic paper."
+    },
+    {
+      "title": "The Linguistic Structure of Dependency-Conditioned Embeddings",
+      "reason": "score 3: Incremental linguistics paper on dependency-conditioned embeddings; low significance for frontier wire readers."
+    },
+    {
+      "title": "Validation-driven Deployment of LLM Inference Platforms for Agentic Workloads",
+      "reason": "score 4: ArXiv preprint on validation-driven deployment of LLM inference for agentic workloads; too niche and academic."
+    },
+    {
+      "title": "From Cases to Criteria: Reusing Evaluation Knowledge for Task-Specific Rubric Generation",
+      "reason": "score 4: ArXiv paper on rubric generation for LLM evaluation; incremental research."
+    },
+    {
+      "title": "Verifiable Logic in Medical LLMs: A Critical Review of Agentic Clinical Reasoning Optimization and Neuro-Symbolic Grounding",
+      "reason": "score 4: Critical review of verifiable logic in medical LLMs; academic preprint."
+    },
+    {
+      "title": "Gemini 4 Neon is the new #1 on the Models Engineering Index",
+      "reason": "score 4: Blog post re-stating Gemini 4 Neon model achievements; model already covered extensively in other stories."
+    },
+    {
+      "title": "India’s Anthropic Question, ShareChat’s Turnaround & More",
+      "reason": "score 4: Weekly newsletter roundup rehash of India's AI ambitions following the Anthropic IPO, not a standalone news report."
+    },
+    {
+      "title": "SpaceX's new plan to eliminate mobile dead zones: How Starlink's rooftop cell towers will work",
+      "reason": "not AI: General telecom and satellite news without any AI angle"
+    },
+    {
+      "title": "White House taps Kirsten Davies as cyber chief after outages rattle Americans",
+      "reason": "not AI: White House cybersecurity appointment with no direct AI angle"
+    },
+    {
+      "title": "Samsung Electronics names new heads of memory chip, mobile businesses",
+      "reason": "not AI: Routine executive shuffle in Samsung memory and mobile divisions without AI focus"
+    },
+    {
+      "title": "Anthropic's $1.5 trillion debut rewrites venture capital's playbook",
+      "reason": "duplicate of 4aacf31011a3"
+    },
+    {
+      "title": "California attorney general subpoenas Nvidia over chips, former CEO's affair",
+      "reason": "score 8: Duplicate of California AG subpoena to Nvidia over China chip exports"
+    },
+    {
+      "title": "Explained: Could Huang, Nvidia and company's board be held liable over affair scandal?",
+      "reason": "score 3: Speculative legal commentary on Nvidia and Jensen Huang's affair scandal without new factual disclosures."
+    },
+    {
+      "title": "‘My dream is to make WeWork India the default choice for workspaces’",
+      "reason": "score 3: General interview with WeWork India CEO touching only briefly on workspace AI trends."
+    },
+    {
+      "title": "Meet the 8 women powering India’s deeptech future; Anthropic raises a record $81.3B in IPO",
+      "reason": "score 3: Women's Entrepreneurship Day roundup featuring deeptech founders alongside a brief mention of the Anthropic IPO."
+    },
+    {
+      "title": "Source: National Cyber Director Sean Cairncross was \"fired\" from his role; the president \"fully supported\" the firing days after a wave of tech-related outages (Courtney Rozen/Reuters)",
+      "reason": "not AI: General cybersecurity leadership change without an AI angle."
     },
     {
       "title": "Source: Iconiq invested more than $6B in Anthropic; its estimated 1.8% stake was worth ~$31.8B at Thursday's close, a 430%+ return on investment (Richard Nieva/Forbes)",
+      "reason": "duplicate of 4aacf31011a3"
+    },
+    {
+      "title": "Source: Meta plans to charge $300 for its forthcoming Muse Charm device and include a free 5G data plan from Verizon for up to 12 months (Jyoti Mann/The Information)",
+      "reason": "score 5: Pricing and bundling details for Meta's upcoming hardware device, marginal AI relevance compared to core lab news."
+    },
+    {
+      "title": "DeepMind Institute Maps Four Routes From AGI to Superintelligence",
+      "reason": "score 8: Duplicate of existing story about DeepMind AGI to ASI research paper"
+    },
+    {
+      "title": "Law at the Speed of AI: Critical Legal Infrastructure for the Machine Age: Autonomy Under Law Architecture (AULA)",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "Anthropic's Australian data centre overwhelmingly opposed by residents",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "Alibaba defrauded shareholders by concealing ties to suspected spy in Nvidia scandal, lawsuit says",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "TSMC tightens China AI chip curbs as new US rules close manufacturing loophole, sources say",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "The Depth of a Prediction: Where Language Models Resolve a Word Predicts Human Reading Time",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "When Sounds Turn Heads: Recovering Event Timing That Audio LLMs Fail to Say",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "Meta to price Muse Charm gadget at $300: The Information",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "Meta says 'reevaluating' 2030 net zero target amid AI buildout",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Elon Musk's SpaceXSI denies liability in UK lawmaker's lawsuit over Grok images",
       "reason": "could not verify yet; will retry next run"
     },
     {
       "title": "Karnataka Sees ₹1,050 Cr Deeptech Investment From 24 VCs",
-      "reason": "could not verify yet; will retry next run"
-    },
-    {
-      "title": "Digital India BHASHINI Division, NIELIT sign MoU to advance multilingual AI and technology education",
       "reason": "could not verify yet after a second try; dropped"
     }
   ],
   "written": [
     {
-      "id": "4aacf31011a3",
-      "headline": "Anthropic raises $81.3B in record-breaking IPO as founders cash out $2B",
-      "category": "industry",
-      "summary": "Anthropic became a public company on Thursday, raising $81.3 billion in an initial public offering that included $1.95 billion for its seven founders. The stock closed at $97.17 per share, giving the company a valuation of roughly $1.7 trillion.",
-      "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo",
-      "sources": 7,
+      "id": "72c866ace5bf",
+      "headline": "California AG subpoenas Nvidia over former CEO Jensen Huang's affair",
+      "category": "policy",
+      "summary": "California Attorney General Rob Bonta issued an investigative subpoena to Nvidia on Thursday to investigate whether former CEO Jensen Huang's actions resulted in China obtaining advanced chips or confidential information. The probe also examines whether the company misled investors and the public regarding the risks.",
+      "url": "https://techmeme.com/261119/p60",
+      "sources": 4,
       "quotes": 2
     },
     {
-      "id": "be373132dcb8",
-      "headline": "Anthropic's Claude model solves two open problems in black hole physics",
-      "category": "research",
-      "summary": "Anthropic's Claude Fable 5.2 solved two open problems in black hole physics, including a calculation left unresolved for over 20 years. The model showed that black hole formation in very small universes happens through a sudden first-order phase transition.",
-      "url": "https://anthropic.com/research/claude-black-hole-physics",
+      "id": "609b4d81eb2e",
+      "headline": "US Commerce Dept approved sales of over 879K AI chips to Chinese companies",
+      "category": "industry",
+      "summary": "The US Commerce Department approved sales of more than 879,000 AI chips to Chinese companies as of May 2026, according to disclosures released by House Foreign Affairs Committee Chair Brian Mast. The approvals included entities on the Department of Defense's Chinese military-linked list.",
+      "url": "https://techmeme.com/261119/p59",
       "sources": 3,
       "quotes": 0
     },
     {
-      "id": "b24c1081da70",
-      "headline": "Apple is hiring engineers to build its own AI agent",
-      "category": "models",
-      "summary": "Apple is developing an autonomous AI agent designed to browse the web, work across apps, write code, and call services, according to a job listing. The project would put Apple in competition with similar AI assistants from Meta, OpenAI, Anthropic, and Google.",
-      "url": "https://theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+      "id": "c12364fa44cd",
+      "headline": "Study examines EU AI Act references on Hugging Face repository cards and discussions",
+      "category": "policy",
+      "summary": "Researchers conducted an empirical study of explicit references to the European Union's AI Act on Hugging Face using over five million records. They found that explicit references remain rare across all repository types.",
+      "url": "https://arxiv.org/abs/2611.26050",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "d7b2210ab3d2",
+      "headline": "Google DeepMind institute outlines four pathways from AGI to ASI",
+      "category": "research",
+      "summary": "Google DeepMind researchers published an essay outlining four pathways for AI development to move from human-level AGI to artificial general superintelligence (ASI). The essay notes that global effective compute has grown at least tenfold per year.",
+      "url": "https://techmeme.com/261119/p57",
       "sources": 2,
       "quotes": 0
     },
     {
-      "id": "d69a5a1cc95f",
-      "headline": "Nvidia in talks to acquire diffusion LLM startup Inception for $500M+",
+      "id": "3803d289c6f7",
+      "headline": "Bipartisan House lawmakers form AI Safety and Innovation Caucus",
+      "category": "policy",
+      "summary": "A bipartisan group of over two dozen House lawmakers formed the AI Safety and Innovation Caucus to balance mitigating AI risks with maintaining U.S. leadership in AI. The 26-member caucus includes seven Republicans and is co-chaired by Representatives George Whitesides, Nathaniel Moran, and Don Beyer.",
+      "url": "https://techmeme.com/261119/p48",
+      "sources": 4,
+      "quotes": 1
+    },
+    {
+      "id": "459fb45d2a37",
+      "headline": "Deutsche Telekom invests €100 million in French AI start-up Mistral",
       "category": "industry",
-      "summary": "Nvidia is in advanced talks to acquire diffusion LLM developer Inception for over $500 million plus earnouts. The discussions began prior to Jensen Huang's resignation.",
-      "url": "https://techmeme.com/261119/p54",
-      "sources": 3,
-      "quotes": 0
+      "summary": "Deutsche Telekom's T.Capital Tech Fund invested €100 million in French artificial intelligence company Mistral. The investment marks a first step toward a strategic partnership to support companies and the public sector in Germany.",
+      "url": "https://finance.yahoo.com/technology/ai/articles/deutsche-telekom-invests-100-million-141833941.html",
+      "sources": 2,
+      "quotes": 1
     },
     {
-      "id": "84a41c24a3f1",
-      "headline": "Google adds computer use to Gemini for macOS",
-      "category": "models",
-      "summary": "Google added a computer use feature to the Gemini desktop app on macOS, enabling the AI to complete tasks across apps, files, and the web in the background. The feature is available in English to U.S. AI Plus, Pro, and Ultra subscribers.",
-      "url": "https://techmeme.com/261119/p47",
-      "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "e63fea43dcbf",
-      "headline": "Students sue school and police after chip bag triggers AI gun alert",
-      "category": "safety",
-      "summary": "Four high school students sued Baltimore County Public Schools, the police department, and Omnilert after an AI gun-detection system mistook a bag of chips for a firearm in October 2025. Despite school officials canceling the alert within two minutes, armed police were dispatched, resulting in the students being handcuffed and searched on campus.",
-      "url": "https://arstechnica.com/tech-policy/2026/11/traumatized-teens-sue-school-cops-after-doritos-bag-triggers-ai-gun-alert",
-      "sources": 3,
+      "id": "b1bf002e5462",
+      "headline": "AI agents redesign engineering parts with CAD parameters and simulations",
+      "category": "research",
+      "summary": "Researchers showed that GPT-6 Astra can redesign engineering parts with more than a thousand CAD parameters and nonlinear simulations. Using a budget of 15 simulations, the AI lowered the strain in a magnesium stent's bends by 32%.",
+      "url": "https://arxiv.org/abs/2611.26003",
+      "sources": 1,
       "quotes": 0
     }
   ],
   "notes": [
-    "ignored made-up duplicate id b24c1081da70 for 'Apple may be developing its own AI agent that runs'",
+    "not India desk: 'Meta says 'reevaluating' 2030 net zero target amid'",
+    "not India desk: 'Elon Musk's SpaceXSI denies liability in UK lawmak'",
+    "not India desk: 'Alibaba defrauded shareholders by concealing ties '",
+    "ignored made-up duplicate id 72c866ace5bf for 'California attorney general subpoenas Nvidia over '",
+    "not India desk: 'Meta to price Muse Charm gadget at $300: The Infor'",
+    "not India desk: 'TSMC tightens China AI chip curbs as new US rules '",
+    "ignored made-up duplicate id d7b2210ab3d2 for 'DeepMind Institute Maps Four Routes From AGI to Su'",
+    "dropped non-quote (Gregory Meeks): the agency seemed to approve licenses for advanced chips to …",
     "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "14 kept item(s) carried over to the next run"
+    "4 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 122.3,
-    "audit": 5.9,
-    "plan": 5.1,
-    "judge": 27.9,
-    "verify and write": 112.4,
-    "videos": 5.0,
-    "tagging": 5.7,
-    "explainers": 0.0,
-    "trackers": 61.6,
-    "claims": 2.4,
+    "gather": 103.6,
+    "audit": -0.0,
+    "plan": 6.4,
+    "judge": 31.8,
+    "verify and write": 105.5,
+    "videos": 113.4,
+    "tagging": 2.6,
+    "explainers": 1.5,
+    "trackers": 6.5,
+    "claims": 2.7,
     "model tracker": 0.1,
     "weekly": -0.0,
-    "builders": -0.0,
-    "top voices": -0.0,
-    "briefing": 2.1,
-    "self-review": 2.8,
-    "photos": 0.8,
-    "stock photos": -0.0,
-    "daily email": -0.0,
-    "alerts": 10.8
+    "builders": 15.7,
+    "top voices": 12.1,
+    "briefing": 2.4,
+    "self-review": -0.0,
+    "photos": 0.6,
+    "stock photos": 4.0,
+    "daily email": 0.0,
+    "alerts": 6.8
   },
-  "fetched": 3031,
-  "fresh": 67,
-  "audit": "coverage 100% of 3 significant stories; 0 missed, 0 added to this run",
+  "fetched": 3003,
+  "fresh": 70,
   "plan": {
-    "focus": "Tracking the aftermath of Anthropic's historic IPO and Jensen Huang's Nvidia developments alongside big AI agent pushes.",
+    "focus": "Chasing the fallout from Anthropic's record IPO and Nvidia regulatory probes while covering policy and research.",
     "priorities": [
-      "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO (Details founders cashing out nearly $2B in Anthropic's record-breaking IPO.)",
-      "Sources: Nvidia is in advanced talks to acquire diffusion LLM develope (Nvidia in advanced talks to acquire Inception for $500M+ amid leadership shifts.)",
-      "Google adds computer use to Gemini for macOS, letting it work across a (Google expands computer use to Gemini for macOS, advancing autonomous browser agents.)",
-      "Apple is hiring engineers to build its own AI agent (Apple hiring engineers to build its own system-level AI agent.)",
-      "A bipartisan group of 24+ House lawmakers forms the AI Safety and Inno (New bipartisan House AI Safety and Innovation Caucus forms in Washington.)"
+      "California's AG subpoenas Nvidia to investigate whether Jensen Huang's (California AG subpoenas Nvidia over China chip exports and executive conduct.)",
+      "Google DeepMind researchers argue AI development is on pace to move be (Google DeepMind researchers argue AI is moving beyond AGI to ASI.)",
+      "Docs: as of May 2026, the US Commerce Dept. approved sales of 879K+ AI (US Commerce Dept approved significant AI chip sales to Chinese entities.)",
+      "A bipartisan group of 24+ House lawmakers forms the AI Safety and Inno (New bipartisan House AI Safety and Innovation Caucus formed.)",
+      "Studying AI Act Mentions: A first look at the impact of the European U (First look at EU AI Act mentions and impact on Hugging Face.)"
     ],
     "thin_areas": [
       "policy"
     ],
     "searches": [
-      "Anthropic IPO valuation founders cash out: 6 new",
-      "Jensen Huang Nvidia acquisition Inception: 0 new"
+      "Anthropic IPO valuation investors Iconiq Lightspeed: 6 new",
+      "DeepMind AGI to ASI research paper: 1 new"
     ],
     "dig_deeper": [
-      "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
-      "Sources: Nvidia is in advanced talks to acquire diffusion LLM develope"
+      "California's AG subpoenas Nvidia to investigate whether Jensen Huang's",
+      "Google DeepMind researchers argue AI development is on pace to move be"
     ]
   },
-  "judged": 69,
-  "kept": 21,
+  "judged": 77,
+  "kept": 19,
   "research": {
     "investigated": 5,
-    "confirmed": 5,
+    "confirmed": 4,
     "tool_calls": 13
   },
   "research_log": [
-    "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO: confirmed (searched “Anthropic IPO founders cash out $2B $83 share”; searched “Anthropic 7 founders cashed out 2b ipo”; read msn.com)",
-    "Claude solves two open problems in the physics of black holes: confirmed (searched “Claude solves two open problems in the physics of black holes”; read cryptobriefing.com)",
-    "Sources: Nvidia is in advanced talks to acquire diffusion LLM develope: confirmed (searched “Nvidia Inception acquisition $500M Information”; searched “Nvidia acquire Inception diffusion LLM”; searched “Nvidia Inception acquisition The Information”)",
-    "Google adds computer use to Gemini for macOS, letting it work across a: confirmed (searched “Google Gemini computer use macOS TechCrunch Sarah Perez”; read techcrunch.com; read theverge.com)",
-    "Traumatized teens sue school, cops after Doritos bag triggers AI gun a: confirmed (searched “Traumatized teens sue school cops Doritos bag AI gun alert”; read lawyerscommittee.org)"
+    "California's AG subpoenas Nvidia to investigate whether Jensen Huang's: confirmed (searched “California AG subpoena Nvidia Jensen Huang China investors”; read nbclosangeles.com)",
+    "Docs: as of May 2026, the US Commerce Dept. approved sales of 879K+ AI: confirmed (searched “US Commerce Dept approved sales of AI chips Chinese companies military linked list CNBC”; read theverge.com)",
+    "Studying AI Act Mentions: A first look at the impact of the European U: unconfirmed (searched “AI Act impact on Hugging Face arXiv 2026”; searched “\"Studying AI Act Mentions\" Hugging Face”; searched “\"AI Act\" \"Hugging Face\" arxiv”)",
+    "Google DeepMind researchers argue AI development is on pace to move be: confirmed (searched “Google DeepMind Tim Genewein ASI AGI human level”; searched “Tim Genewein DeepMind Institute AGI ASI”; read unite.ai)",
+    "A bipartisan group of 24+ House lawmakers forms the AI Safety and Inno: confirmed (searched “AI Safety and Innovation Caucus House lawmakers Owen Dahlkamp Politico”; searched “AI Safety and Innovation Caucus House Whitesides Moran Beyer”; read therecord.media)"
   ],
   "threads": [
-    "Anthropic IPO tests circular financing boom: Anthropic raises $81.3B in record-breaking IPO as founders c",
-    "Nvidia leadership and Jensen Huang departure: Nvidia in talks to acquire diffusion LLM startup Inception f",
-    "Google Gemini 4 model rollouts: Google adds computer use to Gemini for macOS",
-    "School districts weigh alternatives to Google Chromebook sea: Students sue school and police after chip bag triggers AI gu"
+    "Nvidia leadership and Jensen Huang departure: California AG subpoenas Nvidia over former CEO Jensen Huang'",
+    "Lutnick Nvidia ties under scrutiny: US Commerce Dept approved sales of over 879K AI chips to Chi"
   ],
   "videos": {
     "OpenAI": "ok (12 in feed, 0 new)",
-    "Anthropic": "ok (13 in feed, 1 new)",
-    "Google DeepMind": "ok (14 in feed, 2 new)",
+    "Anthropic": "ok (13 in feed, 0 new)",
+    "Google DeepMind": "ok (14 in feed, 1 new)",
     "Google for Developers": "ok (10 in feed, 2 new)",
-    "AI at Meta": "ok (11 in feed, 1 new)",
+    "AI at Meta": "ok (11 in feed, 0 new)",
     "Microsoft Research": "ok (11 in feed, 0 new)",
-    "NVIDIA": "ok (9 in feed, 1 new)",
-    "Hugging Face": "ok (12 in feed, 3 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 4 new)",
     "Mistral AI": "ok (0 in feed, 0 new)",
     "xAI": "ok (1 in feed, 0 new)",
     "Two Minute Papers": "ok (15 in feed, 2 new)",
-    "AI Explained": "ok (15 in feed, 2 new)",
+    "AI Explained": "ok (15 in feed, 1 new)",
     "Lex Fridman": "ok (14 in feed, 1 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 1 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
     "No Priors": "ok (3 in feed, 0 new)",
     "Latent Space": "ok (15 in feed, 3 new)",
-    "Training Data (Sequoia)": "ok (5 in feed, 0 new)",
+    "Training Data (Sequoia)": "ok (5 in feed, 1 new)",
     "a16z": "ok (15 in feed, 1 new)",
-    "Big Technology Podcast": "ok (13 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
     "Hard Fork": "ok (6 in feed, 0 new)",
     "The Cognitive Revolution": "ok (9 in feed, 0 new)",
     "Lenny's Podcast": "ok (4 in feed, 0 new)",
     "20VC": "ok (3 in feed, 0 new)"
   },
-  "videos_kept": "20 kept from 21 new",
-  "tagged": 6,
-  "trackers": "filed 3 stories; updated frontier-race, ai-money",
+  "videos_kept": "15 kept from 16 new",
+  "tagged": 7,
+  "explainers": "1 added to earlier stories",
+  "trackers": "filed 7 stories; updated us-china, frontier-race, ai-regulation, agent-safety",
   "claims": "210 tracked, 204 open, 0 updated this run",
-  "model_tracker": "82 models, 9 changes today",
-  "briefing": "4 themes from 20 stories",
-  "self_review": "17 lines written to data/self_review.md",
-  "photos": "6 saved, 0 unavailable",
-  "alerts": "17 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":45}",
-  "ai_requests_run": 42,
-  "ai_tokens_run": 129285,
-  "ai_requests_today": 43,
-  "provider_log": []
+  "model_tracker": "82 models, 18 changes today",
+  "builders_sources": {
+    "show-hn": "ok (9)",
+    "github-new": "ok (45)",
+    "hf-spaces": "ok (24)",
+    "product-hunt": "ok (14)",
+    "r-localllama": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day'\nFor more i",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
+  },
+  "builders": "picked 5 from 60 candidates; 4 with pictures, 0 with videos",
+  "top_voices_sources": {
+    "tv-mollick": "ok (0)",
+    "tv-lambert": "ok (1)",
+    "tv-swyx": "ok (8)",
+    "tv-dwarkesh": "ok (2)",
+    "tv-raschka": "ok (1)",
+    "tv-karpathy": "ok (0)",
+    "tv-evans": "ok (0)",
+    "x-coverage": "ok (2 of 6 articles, bing)",
+    "hn": "ok (1)"
+  },
+  "top_voices": "3 debates from 50 posts by 7 people (2 removed by checks); 2 portraits, 3 pictures",
+  "briefing": "5 themes from 20 stories",
+  "photos": "4 saved, 1 unavailable",
+  "stock photos": "2 added",
+  "alerts": "30 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":57}",
+  "ai_requests_run": 50,
+  "ai_tokens_run": 167918,
+  "ai_requests_today": 93,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model",
+    "groq/openai/gpt-oss-120b: model unavailable (400); trying next model",
+    "groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing",
+    "groq/qwen/qwen3.8-27b: HTTP 400: {\"error\":{\"message\":\"Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"",
+    "groq/openai/gpt-oss-20b: model unavailable (400); trying next model",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room"
+  ]
 }
