@@ -222,8 +222,8 @@
       "lab": "DeepSeek",
       "released": "2026-10-17",
       "context": 1048576,
-      "price_in": 0.15,
-      "price_out": 0.6,
+      "price_in": 0.036,
+      "price_out": 0.5,
       "inputs": [
         "text",
         "image"
@@ -402,8 +402,8 @@
       "lab": "DeepSeek",
       "released": "2026-09-10",
       "context": 1048576,
-      "price_in": 0.0507,
-      "price_out": 0.2028,
+      "price_in": 0.3,
+      "price_out": 1.2,
       "inputs": [
         "text",
         "image"
@@ -510,8 +510,8 @@
       "lab": "DeepSeek",
       "released": "2026-08-12",
       "context": 1048576,
-      "price_in": 0.18,
-      "price_out": 7.8,
+      "price_in": 0.27,
+      "price_out": 11.5,
       "inputs": [
         "text"
       ]
@@ -548,7 +548,7 @@
       "lab": "DeepSeek",
       "released": "2026-07-31",
       "context": 1048576,
-      "price_in": 0.062,
+      "price_in": 0.1,
       "price_out": 0.3,
       "inputs": [
         "text"
@@ -614,8 +614,8 @@
       "lab": "Moonshot AI",
       "released": "2026-06-12",
       "context": 262144,
-      "price_in": 0.65,
-      "price_out": 3.5,
+      "price_in": 0.6,
+      "price_out": 3.0,
       "inputs": [
         "text",
         "image"
@@ -644,20 +644,6 @@
       "price_out": 2.2,
       "inputs": [
         "text"
-      ]
-    },
-    {
-      "id": "x-ai/grok-build-0.1",
-      "name": "Grok Build 0.1",
-      "lab": "xAI",
-      "released": "2026-05-20",
-      "context": 256000,
-      "price_in": 1.0,
-      "price_out": 2.0,
-      "inputs": [
-        "text",
-        "image",
-        "file"
       ]
     },
     {
@@ -716,6 +702,20 @@
     {
       "id": "x-ai/grok-4.20-multi-agent",
       "name": "Grok 4.20 Multi-Agent",
+      "lab": "xAI",
+      "released": "2026-03-31",
+      "context": 2000000,
+      "price_in": 1.25,
+      "price_out": 2.5,
+      "inputs": [
+        "text",
+        "image",
+        "file"
+      ]
+    },
+    {
+      "id": "x-ai/grok-4.20",
+      "name": "Grok 4.20",
       "lab": "xAI",
       "released": "2026-03-31",
       "context": 2000000,
@@ -1095,69 +1095,6 @@
   ],
   "changes": [
     {
-      "date": "2026-11-16",
-      "model": "DeepSeek V4.1 Flash 1017",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4.1 Flash 1017 output price cut: $0.6 → $0.5 per 1M tokens"
-    },
-    {
-      "date": "2026-11-16",
-      "model": "GLM 5.3 Prime",
-      "lab": "Zhipu AI",
-      "kind": "price_cut",
-      "text": "GLM 5.3 Prime input price cut: $2.8 → $1.68 per 1M tokens"
-    },
-    {
-      "date": "2026-11-16",
-      "model": "GLM 5.3 Prime",
-      "lab": "Zhipu AI",
-      "kind": "price_cut",
-      "text": "GLM 5.3 Prime output price cut: $8.8 → $5.28 per 1M tokens"
-    },
-    {
-      "date": "2026-11-17",
-      "model": "Nemotron 3.5 Lightning",
-      "lab": "NVIDIA",
-      "kind": "context",
-      "text": "Nemotron 3.5 Lightning context window: 262,144 → 1,048,576 tokens"
-    },
-    {
-      "date": "2026-11-17",
-      "model": "Nemotron 3 Ultra",
-      "lab": "NVIDIA",
-      "kind": "price_cut",
-      "text": "Nemotron 3 Ultra input price cut: $0.6 → $0.5 per 1M tokens"
-    },
-    {
-      "date": "2026-11-17",
-      "model": "Nemotron 3 Ultra",
-      "lab": "NVIDIA",
-      "kind": "price_cut",
-      "text": "Nemotron 3 Ultra output price cut: $2.4 → $2.2 per 1M tokens"
-    },
-    {
-      "date": "2026-11-17",
-      "model": "DeepSeek V4.1 Flash",
-      "lab": "DeepSeek",
-      "kind": "price_cut",
-      "text": "DeepSeek V4.1 Flash input price cut: $0.14 → $0.051 per 1M tokens"
-    },
-    {
-      "date": "2026-11-17",
-      "model": "DeepSeek V4.1 Flash",
-      "lab": "DeepSeek",
-      "kind": "price_rise",
-      "text": "DeepSeek V4.1 Flash output price raised: $0.42 → $0.567 per 1M tokens"
-    },
-    {
-      "date": "2026-11-17",
-      "model": "GLM 5.3 Flash",
-      "lab": "Zhipu AI",
-      "kind": "price_rise",
-      "text": "GLM 5.3 Flash input price raised: $0.0399 → $0.15 per 1M tokens"
-    },
-    {
       "date": "2026-11-17",
       "model": "GLM 5.3 Flash",
       "lab": "Zhipu AI",
@@ -1513,7 +1450,70 @@
       "lab": "DeepSeek",
       "kind": "price_rise",
       "text": "DeepSeek V4 Pro 0813 output price raised: $6.5 → $7.8 per 1M tokens"
+    },
+    {
+      "date": "2026-11-20",
+      "model": "DeepSeek V4.1 Flash 1017",
+      "lab": "DeepSeek",
+      "kind": "price_cut",
+      "text": "DeepSeek V4.1 Flash 1017 input price cut: $0.15 → $0.036 per 1M tokens"
+    },
+    {
+      "date": "2026-11-20",
+      "model": "DeepSeek V4.1 Flash 1017",
+      "lab": "DeepSeek",
+      "kind": "price_cut",
+      "text": "DeepSeek V4.1 Flash 1017 output price cut: $0.6 → $0.5 per 1M tokens"
+    },
+    {
+      "date": "2026-11-20",
+      "model": "DeepSeek V4.1 Flash",
+      "lab": "DeepSeek",
+      "kind": "price_rise",
+      "text": "DeepSeek V4.1 Flash input price raised: $0.0507 → $0.3 per 1M tokens"
+    },
+    {
+      "date": "2026-11-20",
+      "model": "DeepSeek V4.1 Flash",
+      "lab": "DeepSeek",
+      "kind": "price_rise",
+      "text": "DeepSeek V4.1 Flash output price raised: $0.2028 → $1.2 per 1M tokens"
+    },
+    {
+      "date": "2026-11-20",
+      "model": "DeepSeek V4 Pro 0813",
+      "lab": "DeepSeek",
+      "kind": "price_rise",
+      "text": "DeepSeek V4 Pro 0813 input price raised: $0.18 → $0.27 per 1M tokens"
+    },
+    {
+      "date": "2026-11-20",
+      "model": "DeepSeek V4 Pro 0813",
+      "lab": "DeepSeek",
+      "kind": "price_rise",
+      "text": "DeepSeek V4 Pro 0813 output price raised: $7.8 → $11.5 per 1M tokens"
+    },
+    {
+      "date": "2026-11-20",
+      "model": "DeepSeek V4 Flash 0731",
+      "lab": "DeepSeek",
+      "kind": "price_rise",
+      "text": "DeepSeek V4 Flash 0731 input price raised: $0.062 → $0.1 per 1M tokens"
+    },
+    {
+      "date": "2026-11-20",
+      "model": "Kimi K2.7 Code",
+      "lab": "Moonshot AI",
+      "kind": "price_cut",
+      "text": "Kimi K2.7 Code input price cut: $0.65 → $0.6 per 1M tokens"
+    },
+    {
+      "date": "2026-11-20",
+      "model": "Kimi K2.7 Code",
+      "lab": "Moonshot AI",
+      "kind": "price_cut",
+      "text": "Kimi K2.7 Code output price cut: $3.5 → $3 per 1M tokens"
     }
   ],
-  "updated_at": "2026-11-19T22:04:23+00:00"
+  "updated_at": "2026-11-20T01:26:17+00:00"
 }
