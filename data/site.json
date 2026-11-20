@@ -1,98 +1,67 @@
 {
-  "updated_at": "2026-11-20T10:21:44+00:00",
+  "updated_at": "2026-11-20T13:29:38+00:00",
   "lead": {
     "explainer": {
-      "what_it_means": "Anthropic has completed its stock market debut, raising tens of billions of dollars while its founders and employees acquired substantial personal wealth. Major technology companies like Nvidia, Google, and Amazon hold significant equity stakes, while the lab faces massive future spending requirements for compute infrastructure.",
+      "what_it_means": "Architect Labs used AI systems to design a general-purpose CPU called Frostbite from scratch, including its instruction set, microarchitecture, and layout. Unlike conventional processors that rely on complex cache hierarchies and shared memory, Frostbite uses a grid of small computing tiles based on interaction nets, where computation happens locally without a centralized scheduler.",
       "terms": [
         {
-          "term": "IPO",
-          "meaning": "An initial public offering, the process of offering shares of a private corporation to the public in a new stock issuance."
+          "term": "Interaction nets",
+          "meaning": "A mathematical graph model where computation proceeds by rewriting connected nodes locally."
         },
         {
-          "term": "Prospectus (S-1)",
-          "meaning": "An official document filed with the SEC containing detailed financial and business information about a company going public."
+          "term": "RTL",
+          "meaning": "Register-transfer level, a design abstraction used in creating digital circuits like microprocessors."
         },
         {
-          "term": "Non-voting Class N stock",
-          "meaning": "Capital stock that does not carry the right to vote in corporate elections."
+          "term": "GDS",
+          "meaning": "Graphic Data System, the final layout file format used to manufacture integrated circuits."
         }
       ],
       "watch_next": []
     },
-    "audiences": {
-      "builders": "Employees can sell up to 10% of their shares now, but retention of key technical talent remains a core risk for the company.",
-      "business": "Anthropic raised $81.3 billion in its record-breaking IPO, reaching a valuation of roughly $1.7 trillion by the close of trading on Thursday.",
-      "investors": "Google and Amazon combined own 28% of Anthropic, while the company faces infrastructure commitments of $70.7 billion in the next 12 months."
-    },
-    "id": "4aacf31011a3",
-    "headline": "Anthropic raises $81.3B in record-breaking IPO as founders cash out $2B",
-    "summary": "Anthropic became a public company on Thursday, raising $81.3 billion in an initial public offering that included $1.95 billion for its seven founders. The stock closed at $97.17 per share, giving the company a valuation of roughly $1.7 trillion.",
-    "why_it_matters": "The offering marks one of the largest public debuts in history, significantly expanding the capital and corporate backing available to a major AI lab while creating thousands of millionaire employees.",
-    "category": "industry",
-    "lab": "Anthropic",
-    "model_name": "",
-    "model_type": "",
-    "tags": [
-      "Anthropic",
-      "IPO",
-      "Funding",
-      "Business"
-    ],
-    "quotes": [
+    "benchmarks": [
       {
-        "text": "One of the downsides of going public is it typically does result in an increase in employee turnover",
-        "speaker": "Jay Ritter",
-        "speaker_role": "University of Florida finance professor and expert on IPOs",
-        "source_url": "https://nypost.com/2026/11/19/business/anthropic-ipo-sparks-worries-that-newly-minted-millionaires-could-exit-analysts"
-      },
-      {
-        "text": "It wouldn’t be surprising to see some employees take the allotted 10% off the table and turn some of their hard work into cash",
-        "speaker": "Daniel Newman",
-        "speaker_role": "CEO of Futurum Group",
-        "source_url": "https://nypost.com/2026/11/19/business/anthropic-ipo-sparks-worries-that-newly-minted-millionaires-could-exit-analysts"
+        "model": "Frostbite",
+        "benchmark": "performance per watt compared to a modern, silicon-proven su",
+        "score": "4.59x"
       }
     ],
+    "audiences": {
+      "builders": "Architect Labs introduced Frostbite, a CPU using interaction nets with a Vine language, Ivy intermediate representation, and an AI-driven toolchain covering RTL and verification.",
+      "business": "US AI startup Architect Labs claims its AI-designed Frostbite CPU achieves 4.59x performance per watt and 8.77x performance per area compared to a conventional CPU core in pre-silicon simulations.",
+      "investors": "US startup Architect Labs has developed an AI-designed general-purpose CPU architecture called Frostbite, though results are currently based on pre-silicon simulations rather than physical silicon."
+    },
+    "id": "000028228240",
+    "headline": "Architect Labs unveils AI-designed Frostbite CPU architecture",
+    "summary": "US AI startup Architect Labs introduced Frostbite, a general-purpose CPU architecture designed and verified by AI. The company claims the design delivers 4.59 times the performance per watt and 8.77 times the performance per area compared to a conventional CPU core across 25 workloads in pre-silicon simulations.",
+    "why_it_matters": "This release represents an attempt to use autonomous AI systems for co-designing software and hardware across the stack, potentially bypassing decades of human-made CPU design stagnation.",
+    "category": "research",
+    "lab": "Architect Labs",
+    "model_name": "Frostbite",
+    "model_type": "Other",
+    "tags": [
+      "CPU",
+      "hardware discovery",
+      "interaction nets",
+      "AI-designed silicon"
+    ],
+    "quotes": [],
     "score": 10,
-    "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo",
-    "source_id": "techcrunch-ai",
+    "url": "https://architectlabs.com/blog/frostbite",
+    "source_id": "hn",
     "desk": "",
     "ai_relevance": "core",
-    "image": "https://techcrunch.com/wp-content/uploads/2026/11/antrhopic-openingday-getty.jpg?resize=1200,801",
+    "image": "https://main--gleeful-begonia-6bb5f3.netlify.app/_next/static/media/frostbite-cover.3n9ytugnquhlr.jpg",
     "sources": [
       {
-        "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo",
-        "publisher": "TechCrunch AI",
-        "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO"
+        "url": "https://architectlabs.com/blog/frostbite",
+        "publisher": "architectlabs.com",
+        "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI"
       },
       {
-        "url": "https://inc.com/moses-jeanfrancois/anthropic-ipo-create-thousands-millionaires-cant-cash-out-yet/91438035",
-        "publisher": "Inc.com",
-        "title": "Anthropic’s IPO Could Create Thousands of Millionaires. But Most Can’t Cash Out Yet"
-      },
-      {
-        "url": "https://inc.com/chris-morris/the-biggest-loser-in-anthropics-ipo-missed-out-on-50-billion/91439779",
-        "publisher": "Inc.com",
-        "title": "The Biggest Loser in Anthropic’s IPO Missed Out on $50 Billion"
-      },
-      {
-        "url": "https://nypost.com/2026/11/19/business/anthropic-ipo-sparks-worries-that-newly-minted-millionaires-could-exit-analysts",
-        "publisher": "New York Post",
-        "title": "Anthropic IPO bonanza sparks worries that newly minted millionaires could leave the company: analysts"
-      },
-      {
-        "url": "https://msn.com/en-us/news/other/almost-all-of-anthropic-s-employees-are-now-millionaires/ar-AA2hO9m1",
-        "publisher": "CNN on MSN",
-        "title": "Almost all of Anthropic’s employees are now millionaires"
-      },
-      {
-        "url": "https://apnews.com/article/anthropic-ai-stock-market-e303343c7f1a1b6a1361e08c1f8eeded",
-        "publisher": "Associated Press News",
-        "title": "What to know about Anthropic’s massive IPO as it breaks records on Wall Street"
-      },
-      {
-        "url": "https://forbes.com/sites/sandycarter/2026/11/18/the-anthropic-record-breaking-ipo-explained-in-7-key-facts",
-        "publisher": "Forbes",
-        "title": "The Anthropic Record-Breaking IPO Explained In 7 Key Facts"
+        "url": "https://notebookcheck.net/AMD-and-Intel-move-over-AI-designed-an-all-new-CPU-and-claims-it-is-4-6x-more-efficient.1455225.0.html",
+        "publisher": "Notebookcheck",
+        "title": "AMD and Intel, move over: AI designed an all-new CPU — and claims it is 4.6x more efficient"
       }
     ],
     "research": {
@@ -100,32 +69,374 @@
       "read": 1,
       "decision": "confirmed"
     },
-    "published_at": "2026-11-20T00:43:50+00:00",
-    "created_at": "2026-11-20T01:26:17+00:00",
-    "thread": "t-a50b07bc6191",
-    "sectors": [],
-    "regions": [
-      "us",
-      "global"
+    "published_at": "2026-11-20T10:01:41+00:00",
+    "created_at": "2026-11-20T13:29:38+00:00",
+    "sectors": [
+      "manufacturing"
     ],
-    "deal": {
-      "type": "ipo",
-      "company": "Anthropic",
-      "amount": "$81.3B",
-      "usd": 81300000000.0
-    },
+    "regions": [
+      "us"
+    ],
+    "deal": null,
     "relevance": {
-      "builders": 1,
-      "business": 3,
-      "investors": 3
+      "builders": 3,
+      "business": 2,
+      "investors": 2
     },
-    "cover": "$81.3B",
+    "cover": "Frostbite",
     "trackers": [
-      "ai-money"
+      "ai-infrastructure"
     ],
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "OpenAI is reportedly developing its first smartphone, with assembly orders secured by Foxconn subsidiary FIH Mobile and a potential launch window of late 2027 or 2028. Reports indicate that additional electronics manufacturers may supply components for the device, and MediaTek could supply a custom processor. Neither OpenAI nor Foxconn has officially confirmed the project.",
+        "terms": [
+          {
+            "term": "Processor",
+            "meaning": "A semiconductor component that executes instructions and calculations in a device."
+          },
+          {
+            "term": "NPU",
+            "meaning": "A specialised semiconductor designed to accelerate machine learning workloads."
+          }
+        ],
+        "watch_next": [
+          "A smartphone launch by OpenAI in late 2027 or 2028."
+        ]
+      },
+      "audiences": {
+        "builders": "Developers and engineers can monitor hardware-specific APIs and development toolkits that may emerge from OpenAI's custom mobile device ecosystem.",
+        "business": "Strategy teams across consumer electronics face potential new competition as OpenAI moves into handset manufacturing with established suppliers like Foxconn.",
+        "investors": "Capital is tracking supply chain partnerships and manufacturing commitments as OpenAI develops proprietary mobile hardware."
+      },
+      "id": "2ffe30d0b83e",
+      "headline": "OpenAI reportedly developing first smartphone with Foxconn subsidiary assembly",
+      "summary": "OpenAI is reportedly developing its first smartphone, with Foxconn subsidiary FIH Mobile securing assembly orders for a potential launch in late 2027 or 2028. Neither OpenAI nor Foxconn has officially confirmed the project.",
+      "why_it_matters": "This reported hardware project marks a potential expansion by OpenAI beyond software into consumer devices, putting it in possible competition with major handset manufacturers.",
+      "category": "models",
+      "lab": "OpenAI",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "OpenAI",
+        "Foxconn",
+        "FIH Mobile",
+        "Smartphone",
+        "MediaTek"
+      ],
+      "quotes": [],
+      "score": 7,
+      "url": "https://livemint.com/technology/gadgets/openai-smartphone-in-the-works-foxconn-subsidiary-secures-assembly-orders-launch-tipped-for-202728-11795169231874.html",
+      "source_id": "mint-tech",
+      "desk": "india",
+      "ai_relevance": "core",
+      "image": "https://www.livemint.com/lm-img/img/2026/11/20/600x338/foxconn_1795175683707_11E6_1795175697613_N53m_e3a8b981-0972-469e-bcc0-489f8e8dbafb_9AhK.jpg",
+      "sources": [
+        {
+          "url": "https://livemint.com/technology/gadgets/openai-smartphone-in-the-works-foxconn-subsidiary-secures-assembly-orders-launch-tipped-for-202728-11795169231874.html",
+          "publisher": "Mint Technology",
+          "title": "OpenAI smartphone in the works? Foxconn subsidiary secures assembly orders; launch tipped for 2027-28"
+        },
+        {
+          "url": "https://gsmarena.com/openais_first_smartphone_is_rumored_to_be_made_by_a_wellknown_iphone_assembler-news-75555.php",
+          "publisher": "GSMArena",
+          "title": "OpenAI's first smartphone is rumored to be made by a well-known iPhone assembler"
+        },
+        {
+          "url": "https://androidauthority.com/openai-phone-foxconn-assembly-3737193",
+          "publisher": "Android Authority",
+          "title": "OpenAI's first smartphone could launch in 2027 with help from iPhone manufacturer"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-20T12:54:27+00:00",
+      "created_at": "2026-11-20T13:29:38+00:00",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 3,
+        "investors": 3
+      },
+      "cover": "late 2027",
+      "trackers": [],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Pragmatik Labs, a Shanghai-based startup founded by former Alibaba Group Holding Ltd. AI chief Junyang Lin, raised tens of millions of dollars. Its valuation reached $5 billion, an increase from its $2 billion valuation in August.",
+        "terms": [],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Pragmatik Labs was founded by former Qwen AI head Junyang Lin.",
+        "business": "Pragmatik Labs raised tens of millions of dollars at a $5 billion valuation, up from $2 billion in August.",
+        "investors": "Shanghai-based Pragmatik Labs reached a $5 billion valuation after raising tens of millions of dollars."
+      },
+      "id": "6cf7e64e1861",
+      "headline": "Pragmatik Labs reaches $5 billion valuation in new funding round",
+      "summary": "Shanghai-based Pragmatik Labs raised tens of millions of dollars in funding. The startup was founded by former Alibaba Group Holding Ltd. AI chief Junyang Lin and reached a $5 billion valuation, up from $2 billion in August.",
+      "why_it_matters": "The funding round highlights significant capital movement in the AI startup sector, specifically regarding companies founded by former major tech executives.",
+      "category": "industry",
+      "lab": "Pragmatik Labs",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "Pragmatik Labs",
+        "Junyang Lin",
+        "Alibaba",
+        "funding",
+        "valuation"
+      ],
+      "quotes": [],
+      "score": 9,
+      "url": "https://techmeme.com/261120/p10",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://techmeme.com/261120/p10",
+          "publisher": "techmeme.com",
+          "title": "Sources: Shanghai-based Pragmatik Labs, founded by ex-Qwen AI head Junyang Lin, raised tens of millions of dollars at a $5B valuation, up from $2B in August (Bloomberg)"
+        },
+        {
+          "url": "https://bloomberg.com/news/articles/2026-11-20/ex-alibaba-star-s-ai-startup-doubles-valuation-to-5-billion",
+          "publisher": "Bloomberg",
+          "title": "Ex-Alibaba Star’s AI Startup Doubles Valuation to $5 Billion"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 0,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-20T11:10:01+00:00",
+      "created_at": "2026-11-20T13:29:38+00:00",
+      "sectors": [],
+      "regions": [
+        "china"
+      ],
+      "deal": {
+        "type": "funding",
+        "company": "Pragmatik Labs",
+        "amount": "tens of millions of dollars",
+        "usd": null
+      },
+      "relevance": {
+        "builders": 0,
+        "business": 2,
+        "investors": 3
+      },
+      "cover": "$5 billion",
+      "trackers": [
+        "ai-money",
+        "us-china"
+      ],
+      "stock_tried": "2026-11-20T13:29:38+00:00",
+      "photo_local": true,
+      "image_kind": "stock",
+      "photo_credit": {
+        "key": "wc:52148387",
+        "by": "Johnscotaus",
+        "license": "CC BY-SA 4.0",
+        "page": "https://commons.wikimedia.org/wiki/File:AGM_Annual_General_Meeting_of_a_typical_small_(141_member)_volunteer_organisation.jpg",
+        "via": "Wikimedia Commons"
+      }
+    },
+    {
+      "explainer": {
+        "what_it_means": "SatSure is an Earth-intelligence company that uses satellite data and AI to provide analytics for sectors like banking, insurance, and agriculture. It has raised ₹60 crore in the first tranche of its ₹200 crore Series B funding round from the state-backed Antariksh Venture Capital Fund at a valuation of ₹870 crore. The funds will be used to advance optical payloads, scale its geospatial AI model Dhaarini, and expand operations.",
+        "terms": [
+          {
+            "term": "Geospatial foundation model",
+            "meaning": "Artificial intelligence models trained on geographic and satellite imagery to interpret spatial data."
+          },
+          {
+            "term": "Optical payload",
+            "meaning": "Instruments on a spacecraft used to capture optical images."
+          }
+        ],
+        "watch_next": [
+          "SatSure's Series B round is scheduled to close on a rolling basis through December 2026.",
+          "Subsidiary KaleidEO has an optical payload flight planned for 2027."
+        ]
+      },
+      "audiences": {
+        "builders": "SatSure provides geospatial AI models like Dhaarini and APIs for enterprise data analytics used by banks and insurers.",
+        "business": "SatSure raised ₹60 Cr in the first tranche of its ₹200 Cr Series B round, led by the state-backed Antariksh Venture Capital Fund, valuing the company at ₹870 Cr.",
+        "investors": "The Antariksh Venture Capital Fund, anchored by IN-SPACe and managed by SIDBI Venture Capital, made its first investment in India's downstream data and AI layer of the spacetech economy."
+      },
+      "id": "a752a447406b",
+      "headline": "SatSure raises ₹60 Cr from Antariksh VC fund in Series B round",
+      "summary": "Earth-intelligence startup SatSure has raised ₹60 Cr from the state-backed Antariksh Venture Capital Fund in the first tranche of its ₹200 Cr Series B round at an ₹870 Cr valuation. The capital will advance optical payloads built by its subsidiary KaleidEO, scale its geospatial AI model Dhaarini, and expand international operations.",
+      "why_it_matters": "This investment marks the Antariksh Venture Capital Fund's first entry into the downstream data and AI layer of India's commercial space economy.",
+      "category": "industry",
+      "lab": "SatSure",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "SatSure",
+        "Antariksh Venture Capital Fund",
+        "Spacetech",
+        "Geospatial AI",
+        "India"
+      ],
+      "quotes": [
+        {
+          "text": "The strategic value of the space economy lies not only in reaching orbit, but in what we can understand from it",
+          "speaker": "Prateep Basu",
+          "speaker_role": "Chief Executive and Co-founder",
+          "source_url": "https://yourstory.com/2026/11/spacetech-firm-satsure-raises-rs-60-cr-from-antariksh-fund"
+        }
+      ],
+      "score": 6,
+      "url": "https://inc42.com/buzz/centres-antariksh-vc-fund-leads-satsures-%e2%82%b9200-cr-series-b-round",
+      "source_id": "inc42",
+      "desk": "india",
+      "ai_relevance": "core",
+      "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/11/satsure_soc.jpg",
+      "sources": [
+        {
+          "url": "https://inc42.com/buzz/centres-antariksh-vc-fund-leads-satsures-%e2%82%b9200-cr-series-b-round",
+          "publisher": "Inc42",
+          "title": "Centre’s Antariksh VC Fund Leads SatSure’s ₹200 Cr Series B Round"
+        },
+        {
+          "url": "https://yourstory.com/2026/11/spacetech-firm-satsure-raises-rs-60-cr-from-antariksh-fund",
+          "publisher": "YourStory",
+          "title": "Spacetech firm SatSure raises Rs 60 Cr from Antariksh fund"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-20T10:31:57+00:00",
+      "created_at": "2026-11-20T13:29:38+00:00",
+      "sectors": [
+        "science"
+      ],
+      "regions": [
+        "india"
+      ],
+      "deal": {
+        "type": "funding",
+        "company": "SatSure",
+        "amount": "₹60 Cr",
+        "usd": null
+      },
+      "relevance": {
+        "builders": 2,
+        "business": 2,
+        "investors": 3
+      },
+      "cover": "₹60 Cr",
+      "trackers": [
+        "india-ai",
+        "ai-money"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Architect Labs used AI systems to design a general-purpose CPU called Frostbite from scratch, including its instruction set, microarchitecture, and layout. Unlike conventional processors that rely on complex cache hierarchies and shared memory, Frostbite uses a grid of small computing tiles based on interaction nets, where computation happens locally without a centralized scheduler.",
+        "terms": [
+          {
+            "term": "Interaction nets",
+            "meaning": "A mathematical graph model where computation proceeds by rewriting connected nodes locally."
+          },
+          {
+            "term": "RTL",
+            "meaning": "Register-transfer level, a design abstraction used in creating digital circuits like microprocessors."
+          },
+          {
+            "term": "GDS",
+            "meaning": "Graphic Data System, the final layout file format used to manufacture integrated circuits."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "Frostbite",
+          "benchmark": "performance per watt compared to a modern, silicon-proven su",
+          "score": "4.59x"
+        }
+      ],
+      "audiences": {
+        "builders": "Architect Labs introduced Frostbite, a CPU using interaction nets with a Vine language, Ivy intermediate representation, and an AI-driven toolchain covering RTL and verification.",
+        "business": "US AI startup Architect Labs claims its AI-designed Frostbite CPU achieves 4.59x performance per watt and 8.77x performance per area compared to a conventional CPU core in pre-silicon simulations.",
+        "investors": "US startup Architect Labs has developed an AI-designed general-purpose CPU architecture called Frostbite, though results are currently based on pre-silicon simulations rather than physical silicon."
+      },
+      "id": "000028228240",
+      "headline": "Architect Labs unveils AI-designed Frostbite CPU architecture",
+      "summary": "US AI startup Architect Labs introduced Frostbite, a general-purpose CPU architecture designed and verified by AI. The company claims the design delivers 4.59 times the performance per watt and 8.77 times the performance per area compared to a conventional CPU core across 25 workloads in pre-silicon simulations.",
+      "why_it_matters": "This release represents an attempt to use autonomous AI systems for co-designing software and hardware across the stack, potentially bypassing decades of human-made CPU design stagnation.",
+      "category": "research",
+      "lab": "Architect Labs",
+      "model_name": "Frostbite",
+      "model_type": "Other",
+      "tags": [
+        "CPU",
+        "hardware discovery",
+        "interaction nets",
+        "AI-designed silicon"
+      ],
+      "quotes": [],
+      "score": 10,
+      "url": "https://architectlabs.com/blog/frostbite",
+      "source_id": "hn",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://main--gleeful-begonia-6bb5f3.netlify.app/_next/static/media/frostbite-cover.3n9ytugnquhlr.jpg",
+      "sources": [
+        {
+          "url": "https://architectlabs.com/blog/frostbite",
+          "publisher": "architectlabs.com",
+          "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI"
+        },
+        {
+          "url": "https://notebookcheck.net/AMD-and-Intel-move-over-AI-designed-an-all-new-CPU-and-claims-it-is-4-6x-more-efficient.1455225.0.html",
+          "publisher": "Notebookcheck",
+          "title": "AMD and Intel, move over: AI designed an all-new CPU — and claims it is 4.6x more efficient"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-20T10:01:41+00:00",
+      "created_at": "2026-11-20T13:29:38+00:00",
+      "sectors": [
+        "manufacturing"
+      ],
+      "regions": [
+        "us"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "Frostbite",
+      "trackers": [
+        "ai-infrastructure"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "An analysis of 10 million job advertisements in China from 2021 to 2025 compared roles based on their exposure to artificial intelligence. The study found that positions more exposed to AI experienced a double-digit drop in listings compared to less-exposed roles.",
@@ -1275,6 +1586,109 @@
         "page": "https://commons.wikimedia.org/wiki/File:Luke_Williams_(NYU)_-_8703783241.jpg",
         "via": "Wikimedia Commons"
       }
+    },
+    {
+      "explainer": {
+        "what_it_means": "Mistral has opened an Asia-Pacific headquarters in Singapore to expand its research and engineering operations in the region. The office will function as an extension of the company's Science Hub, focusing on public services, high-tech manufacturing, and robotics.",
+        "terms": [
+          {
+            "term": "open-weight models",
+            "meaning": "AI models where the underlying code and weights are publicly released, allowing users to download and run them on their own hardware."
+          },
+          {
+            "term": "sovereign AI",
+            "meaning": "AI systems and infrastructure that allow governments and organizations to retain control over their own data, technology, and operations."
+          },
+          {
+            "term": "forward-deployed engineering",
+            "meaning": "Engineers who work directly with customers to help deploy, configure, and integrate AI technology into production workflows."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Mistral is hiring forward-deployed engineers and scientists in Singapore, focusing on open-weight models, physical AI, and robotics (such as Robostral Navigate).",
+        "business": "Mistral is targeting public sector agencies, high-tech manufacturing, and robotics in the Asia-Pacific region with its sovereign AI pitch, competing against widely used Chinese open-weight models.",
+        "investors": "French AI company Mistral has opened an Asia-Pacific headquarters in Singapore at Asia Square Tower 1, with plans to grow its regional staff from roughly 100 to 200 people by 2027."
+      },
+      "id": "9eaf7b604514",
+      "headline": "Mistral opens Singapore headquarters and targets 200 Asia-Pacific staff by 2027",
+      "summary": "French artificial intelligence company Mistral opened its Asia-Pacific headquarters in Singapore on November 20, 2026, aiming to double its regional headcount to 200 people by 2027. The office will focus on public sector agencies, high-tech manufacturing, and robotics.",
+      "why_it_matters": "The expansion establishes a European AI provider with a physical research and engineering presence in Southeast Asia, where Chinese open-weight models are already widely used.",
+      "category": "industry",
+      "lab": "Mistral AI",
+      "model_name": "Robostral Navigate",
+      "model_type": "Language",
+      "tags": [
+        "Mistral",
+        "Singapore",
+        "Asia-Pacific",
+        "Sovereign AI",
+        "Open-weight models"
+      ],
+      "quotes": [
+        {
+          "text": "Our ambition is to establish Singapore as a strategic location for empowering governments and enterprises across Asia Pacific to retain ownership of their infrastructure and intelligence",
+          "speaker": "Arthur Mensch",
+          "speaker_role": "Co-founder and Chief Executive",
+          "source_url": "https://thenextweb.com/news/mistral-opens-asia-pacific-headquarters-in-singapore-to-build-sovereign-ai"
+        },
+        {
+          "text": "There's the intelligence. There's the technology underneath to deploy it and the technology above to turn it into workflows and applications. And finally, the third component is forward-deployed engineering",
+          "speaker": "Marjorie Janiewicz",
+          "speaker_role": "Chief Revenue Officer",
+          "source_url": "https://finance.yahoo.com/technology/ai/articles/french-ai-company-mistral-picks-095118269.html"
+        }
+      ],
+      "score": 7,
+      "url": "https://cryptobriefing.com/mistral-asia-pacific-headquarters-singapore",
+      "source_id": "mistral-news",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://static.cryptobriefing.com/wp-content/uploads/2026/11/20051420/library-mistral-opens-asia-pacific-headquarters-in-singapore-pla-800x450.jpg",
+      "sources": [
+        {
+          "url": "https://cryptobriefing.com/mistral-asia-pacific-headquarters-singapore",
+          "publisher": "Crypto Briefing",
+          "title": "Mistral opens Asia-Pacific headquarters in Singapore, plans to double regional headcount by 2027"
+        },
+        {
+          "url": "https://finance.yahoo.com/technology/ai/articles/french-ai-company-mistral-picks-095118269.html",
+          "publisher": "Yahoo Finance",
+          "title": "French AI company Mistral picks Singapore for its Asia-Pacific headquarters, bringing Europe’s ‘sovereign AI’ pitch to China’s backyard"
+        },
+        {
+          "url": "https://thenextweb.com/news/mistral-opens-asia-pacific-headquarters-in-singapore-to-build-sovereign-ai",
+          "publisher": "The Next Web",
+          "title": "Mistral opens Asia Pacific headquarters in Singapore to build sovereign AI"
+        },
+        {
+          "url": "https://msn.com/en-sg/money/general/mistral-ai-opens-regional-hq-in-singapore-seeks-to-fill-200-roles-in-apac/ar-AA2hPb36",
+          "publisher": "The Business Times on MSN",
+          "title": "Mistral AI opens regional HQ in Singapore, seeks to fill 200 roles in APAC"
+        }
+      ],
+      "research": {
+        "steps": 2,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-20T02:14:00+00:00",
+      "created_at": "2026-11-20T13:29:38+00:00",
+      "thread": "t-a83814a46377",
+      "sectors": [],
+      "regions": [
+        "asia_pacific"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 1,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "200 Asia-Pacific",
+      "trackers": [],
+      "photo_local": true
     },
     {
       "explainer": {
@@ -3305,7 +3719,8 @@
       "trackers": [
         "ai-money"
       ],
-      "photo_local": true
+      "photo_local": true,
+      "thread": "t-a83814a46377"
     },
     {
       "explainer": {
@@ -5107,473 +5522,6 @@
       ],
       "photo_local": true,
       "thread": "t-eb191c8e2116"
-    },
-    {
-      "explainer": {
-        "what_it_means": "Azure will run servers that use Intel’s EMIB advanced packaging and new Xeon “Diamond Rapids” CPUs with CXL memory, giving AI workloads more compute power and faster data movement. The first virtual machines with Intel QuickAssist will back up SQL databases up to 2.5 times faster. Confidential VMs will encrypt memory and CPU state when moving between hosts, improving data security.",
-        "terms": [
-          {
-            "term": "EMIB",
-            "meaning": "Embedded Multi-die Interconnect Bridge, a packaging technology that links multiple chips in a single package for higher performance."
-          },
-          {
-            "term": "Compute Express Link (CXL)",
-            "meaning": "A high‑speed interface that lets CPUs share memory more efficiently with other components."
-          },
-          {
-            "term": "Intel QuickAssist Technology (QAT)",
-            "meaning": "Hardware acceleration for data‑processing tasks such as encryption and compression, used here to speed up SQL backups."
-          }
-        ],
-        "watch_next": [
-          "Rollout of Azure M-series v4 virtual machines with CXL memory and Intel Flat Memory Mode",
-          "Deployment of Intel QuickAssist Technology enabled virtual machines for faster SQL backups"
-        ]
-      },
-      "benchmarks": [
-        {
-          "model": "Intel QuickAssist enabled virtual machines",
-          "benchmark": "SQL backup speed on Azure",
-          "score": "up to 2.5x faster"
-        }
-      ],
-      "audiences": {
-        "builders": "Developers can use Azure VMs with higher compute and memory efficiency, reducing latency for AI model training and inference.",
-        "business": "Enterprises gain faster database backups and stronger data protection, improving operational efficiency and security.",
-        "investors": "The deeper Microsoft‑Intel tie‑up signals continued demand for AI‑focused cloud infrastructure, potentially boosting revenue for both companies."
-      },
-      "id": "43ef4d889aa2",
-      "headline": "Microsoft and Intel expand partnership to boost Azure AI infrastructure",
-      "summary": "Microsoft and Intel announced an expanded collaboration to enhance Azure infrastructure for cloud and AI workloads. The deal adds Intel Foundry’s EMIB packaging, next‑gen Xeon “Diamond Rapids” CPUs and CXL memory, promising up to 2.3× performance gains in M‑series v4 VMs and 2.5× faster SQL backups.",
-      "why_it_matters": "The partnership delivers faster, more efficient compute and memory for AI models running in Azure, lowering latency and cost for developers.",
-      "category": "industry",
-      "lab": "Microsoft",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "Our customers need infrastructure built around the workloads that matter to them.",
-          "speaker": "Saurabh Dighe",
-          "speaker_role": "CVP, Azure System & Architecture, Microsoft",
-          "source_url": "https://news.microsoft.com/source/2026/11/18/microsoft-and-intel-deepen-collaboration-to-deliver-differentiated-azure-infrastructure"
-        },
-        {
-          "text": "Microsoft and Intel share a clear view of where AI infrastructure is headed–increasingly complex systems designed through the co-optimization of silicon, packaging, compute memory and software.",
-          "speaker": "Naga Chandrasekaran",
-          "speaker_role": "EVP, Chief Technology and Operations Officer and General Manager of Intel Foundry",
-          "source_url": "https://news.microsoft.com/source/2026/11/18/microsoft-and-intel-deepen-collaboration-to-deliver-differentiated-azure-infrastructure"
-        }
-      ],
-      "score": 6,
-      "url": "https://news.microsoft.com/source/2026/11/18/microsoft-and-intel-deepen-collaboration-to-deliver-differentiated-azure-infrastructure",
-      "source_id": "microsoft-ai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": null,
-      "sources": [
-        {
-          "url": "https://news.microsoft.com/source/2026/11/18/microsoft-and-intel-deepen-collaboration-to-deliver-differentiated-azure-infrastructure",
-          "publisher": "Microsoft Source",
-          "title": "Microsoft and Intel deepen collaboration to deliver differentiated Azure infrastructure"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-11-18T16:06:59+00:00",
-      "created_at": "2026-11-18T16:16:49+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": {
-        "type": "partnership",
-        "company": "Microsoft",
-        "amount": "",
-        "usd": null
-      },
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "2.3× performance",
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "stock_tried": "2026-11-18T16:16:49+00:00",
-      "photo_local": true,
-      "image_kind": "stock",
-      "photo_credit": {
-        "key": "ov:71799923-fe1a-4115-b7a8-ae2fae2f91ba",
-        "by": "Steve Jurvetson",
-        "license": "CC BY 2.0",
-        "page": "https://commons.wikimedia.org/w/index.php?curid=156548047",
-        "via": "Wikimedia"
-      }
-    },
-    {
-      "audiences": {
-        "builders": "The probe targets export-control enforcement on Nvidia's advanced AI chips, a policy area that shapes which chips and tools are available to developers.",
-        "business": "Cantor Fitzgerald faces congressional scrutiny over its Nvidia holdings, and the investigation adds to pressure on Nvidia amid its chip-diversion scandal.",
-        "investors": "Cantor Fitzgerald's Nvidia stake, reportedly around $1.2 billion at Lutnick's confirmation, fell nearly 50% between September 2025 and March 2026, and the probe adds regulatory risk to Nvidia."
-      },
-      "id": "133a9b1c10bd",
-      "headline": "House Democrats open probe into Lutnick's ties to Nvidia",
-      "summary": "House Judiciary and Foreign Affairs Committee Democrats are investigating whether Commerce Secretary Howard Lutnick's decisions on AI chip export controls were influenced by his sons' firm Cantor Fitzgerald, which held an Nvidia stake reportedly valued around $1.2 billion. The probe follows Nvidia co-founder Jensen Huang's ouster over his relationship with a suspected Chinese spy.",
-      "why_it_matters": "The investigation signals that AI chip export policy and the officials who shape it are now subject to congressional oversight, with potential consequences for how Nvidia's chips reach foreign markets.",
-      "category": "policy",
-      "lab": "NVIDIA",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "congress",
-        "export controls",
-        "nvidia",
-        "commerce department",
-        "investigation"
-      ],
-      "quotes": [
-        {
-          "text": "We seek to understand whether any actions or decisions by Secretary Lutnick concerning export controls, enforcement measures, or national security policies may have been improperly influenced by Cantor Fitzgerald's holdings or business interests.",
-          "speaker": "House Democrats",
-          "speaker_role": "Reps. Jamie Raskin, Gregory Meeks, and Sydney Kamlager-Dove",
-          "source_url": "https://cnbc.com/2026/11/18/nvidia-lutnick-china-ai-megaspeed-cantor-fitzgerald.html"
-        }
-      ],
-      "score": 8,
-      "url": "https://techmeme.com/261118/p25",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://image.cnbcfm.com/api/v1/image/108550371-1794947199426-108550371-1794507832499-108550371-1794507713087-gettyimages-2300685528-AFP_D3WN2XZ.jpeg?v=1794959597&w=1920&h=1080",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261118/p25",
-          "publisher": "techmeme.com",
-          "title": "US House Democrats launch an investigation into Commerce Secretary Howard Lutnick and his family's ties to Nvidia, laying the groundwork for oversight in 2027 (Chris Marquette/Politico)"
-        },
-        {
-          "url": "https://politico.com/news/2026/11/18/democrats-congress-lutnick-nvidia-01171921",
-          "publisher": "Politico",
-          "title": "Democrats on House Judiciary and Foreign Affairs probing Lutnick family’s role in Nvidia scandal"
-        },
-        {
-          "url": "https://msn.com/en-us/money/general/democrats-probe-whether-howard-lutnick-helped-cantor-avoid-nvidia-scandal/ar-AA2hGZa6",
-          "publisher": "Reuters on MSN",
-          "title": "Democrats probe whether Howard Lutnick helped Cantor avoid Nvidia scandal"
-        },
-        {
-          "url": "https://cnbc.com/2026/11/18/nvidia-lutnick-china-ai-megaspeed-cantor-fitzgerald.html",
-          "publisher": "CNBC",
-          "title": "Cantor Fitzgerald's Nvidia business interests targeted in Democrats' Lutnick probe"
-        },
-        {
-          "url": "https://ms.now/news/house-democrats-probe-lutnick-family-ties-nvidia",
-          "publisher": "ms",
-          "title": "House Democrats want to probe Lutnick’s family ties to Nvidia"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-18T14:55:01+00:00",
-      "created_at": "2026-11-18T16:16:49+00:00",
-      "thread": "t-f02621b12802",
-      "sectors": [
-        "government"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 2,
-        "investors": 3
-      },
-      "cover": "$1.2 billion",
-      "explainer": null,
-      "trackers": [
-        "us-china",
-        "ai-regulation"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "NVIDIA RTX Spark compact desktops from ASUS, Dell, and MSI are now available for purchase, providing a dedicated Windows PC for local AI agents, image and video generation, and model fine-tuning. These systems feature a 20-core NVIDIA Grace CPU, a Blackwell RTX GPU with 6,144 CUDA cores, and up to 128GB of unified memory, delivering up to 1 petaflop of AI performance. Running models locally helps keep processed code and files on the PC while avoiding per-token cloud API charges.",
-        "terms": [
-          {
-            "term": "compact desktop",
-            "meaning": "A compact computer system designed for a desktop workspace."
-          },
-          {
-            "term": "unified memory",
-            "meaning": "Memory that is shared and accessible by both the CPU and GPU."
-          },
-          {
-            "term": "AI agent",
-            "meaning": "An artificial intelligence program that can execute tasks autonomously or semi-autonomously."
-          }
-        ],
-        "watch_next": [
-          "Mini PCs from Acer, GIGABYTE and HP are coming soon.",
-          "The Microsoft Surface RTX Spark Dev Box is coming soon."
-        ]
-      },
-      "audiences": {
-        "builders": "Developers can run local AI workflows using native CUDA support and Linux development tools through Windows Subsystem for Linux, fine-tune models with Unsloth, and set up agents with Hermes Agent or NVIDIA NemoClaw blueprints on dedicated R",
-        "business": "Businesses can deploy dedicated compact desktops from ASUS, Dell, and MSI to run personal AI agents 24/7, keeping locally processed code and files on the PC and avoiding per-token cloud API charges.",
-        "investors": "NVIDIA expanded its hardware ecosystem with RTX Spark compact desktops from ASUS, Dell, and MSI, offering up to 128GB of unified memory and 1 petaflop of AI performance."
-      },
-      "id": "1c3eaf246b72",
-      "headline": "Nvidia RTX Spark compact desktops released by Asus, Dell, and MSI",
-      "summary": "New NVIDIA RTX Spark compact desktops from ASUS, Dell, and MSI are available today, offering up to 128GB of unified memory and up to 1 petaflop of AI performance for local AI agents and creative tools. Mini PCs from Acer, GIGABYTE, and HP are coming soon alongside the Microsoft Surface RTX Spark Dev Box.",
-      "why_it_matters": "The release provides developers, creators, and enthusiasts with dedicated local hardware for running large language models and always-on AI agents without relying on cloud APIs.",
-      "category": "models",
-      "lab": "NVIDIA",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "NVIDIA",
-        "RTX Spark",
-        "hardware",
-        "AI desktops",
-        "ASUS"
-      ],
-      "quotes": [],
-      "score": 6,
-      "url": "https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now",
-      "source_id": "nvidia",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://blogs.nvidia.com/wp-content/uploads/2026/11/nv-blog-1280x680-2-1.jpg",
-      "sources": [
-        {
-          "url": "https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now",
-          "publisher": "NVIDIA blog",
-          "title": "NVIDIA RTX Spark Compact Desktops Out Now"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-11-18T14:00:31+00:00",
-      "created_at": "2026-11-18T14:55:26+00:00",
-      "breaking": true,
-      "sectors": [],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 0
-      },
-      "cover": "128GB",
-      "trackers": [
-        "ai-infrastructure"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Humyn Labs records people performing everyday tasks with a two‑camera rig and tags the footage so AI models can learn how humans move and interact with objects. This data helps robotics companies train systems that understand real‑world actions, improving robot performance in homes and workplaces.",
-        "terms": [
-          {
-            "term": "first‑person footage",
-            "meaning": "Video captured from the viewpoint of a person, showing their hands and surroundings as they perform tasks."
-          },
-          {
-            "term": "venture debt",
-            "meaning": "A loan provided to a startup, often alongside equity financing, that must be repaid with interest."
-          },
-          {
-            "term": "robot training data",
-            "meaning": "Annotated recordings of human activity used to teach AI models how to recognize and replicate physical actions."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers can use Humyn Labs’ annotated video datasets to train more capable robot perception and manipulation models.",
-        "business": "Robotics firms gain a ready source of high‑quality, diverse data, reducing the time and cost of building functional robots for consumer markets.",
-        "investors": "The $47 million Series A shows strong investor confidence in data‑centric infrastructure for the growing robotics AI market."
-      },
-      "id": "9247c7737332",
-      "headline": "Humyn Labs raises $47 million to supply robot training data to U.S. AI developers",
-      "summary": "Bengaluru-based Humyn Labs secured $26 million in equity led by Accel and $21 million in venture debt to provide first‑person video data for training robotics AI, reporting $10 million revenue in six months.",
-      "why_it_matters": "Access to large, diverse real‑world data is essential for building robots that can operate safely and effectively in everyday environments.",
-      "category": "industry",
-      "lab": "Humyn Labs",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [
-        {
-          "text": "Scale, diversity, and quality are important aspects, and they need to work in tandem.",
-          "speaker": "Manish Agarwal",
-          "speaker_role": "",
-          "source_url": "https://techcrunch.com/2026/11/18/accel-backs-indias-humyn-labs-to-supply-training-data-needed-by-u-s-robotics-ai-developers"
-        }
-      ],
-      "score": 8,
-      "url": "https://techmeme.com/261118/p17",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/11/humyn-labs-co-founders_164602.jpg?resize=1200,800",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261118/p17",
-          "publisher": "techmeme.com",
-          "title": "Bengaluru-based Humyn Labs, which creates robot training data using first-person footage from cameras, raised $26M in equity led by Accel and $21M in debt (Jagmeet Singh/TechCrunch)"
-        },
-        {
-          "url": "https://techcrunch.com/2026/11/18/accel-backs-indias-humyn-labs-to-supply-training-data-needed-by-u-s-robotics-ai-developers",
-          "publisher": "TechCrunch AI",
-          "title": "India’s Humyn Labs raises $47M to feed U.S. robotics companies the data they need"
-        },
-        {
-          "url": "https://msn.com/en-us/news/other/india-s-humyn-labs-raises-47m-to-feed-us-robotics-companies-the-data-they-need/ar-AA2hHq2R",
-          "publisher": "TechCrunch on MSN",
-          "title": "India’s Humyn Labs raises $47M to feed U.S. robotics companies the data they need"
-        },
-        {
-          "url": "https://business-standard.com/companies/news/ai-startup-humyn-labs-raises-47-million-in-series-a-funding-round-126111800765_1.html",
-          "publisher": "Business Standard",
-          "title": "AI startup Humyn Labs raises $47 million in Series A funding round"
-        },
-        {
-          "url": "https://moneycontrol.com/news/business/funding/humyn-labs-raises-47-million-led-by-accel-to-scale-physical-ai-research-and-real-world-deployment-14083680.html",
-          "publisher": "Moneycontrol",
-          "title": "Humyn Labs raises $47 million led by Accel to scale physical AI research and real-world deployment"
-        },
-        {
-          "url": "https://livemint.com/ai/artificial-intelligence/humyn-labs-raises-47-million-physical-ai-data-platform-11794980153757.html",
-          "publisher": "Mint",
-          "title": "Physical AI startup Humyn Labs raises $47 million in Series A funding to expand global operations"
-        },
-        {
-          "url": "https://siliconangle.com/2026/11/18/humyn-labs-raises-47m-to-bridge-the-gap-between-ai-training-and-real-world-robotics",
-          "publisher": "SiliconANGLE",
-          "title": "Humyn Labs raises $47M to bridge the gap between AI training and real-world robotics"
-        },
-        {
-          "url": "https://unite.ai/humyn-labs-secures-47m-series-a-for-real-world-robotics-data",
-          "publisher": "Unite.AI",
-          "title": "Humyn Labs Secures $47M Series A for Real-World Robotics Data"
-        }
-      ],
-      "research": {
-        "steps": 2,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-18T12:15:02+00:00",
-      "created_at": "2026-11-18T13:30:16+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "india",
-        "us"
-      ],
-      "deal": {
-        "type": "funding",
-        "company": "Humyn Labs",
-        "amount": "$47 million",
-        "usd": 47000000.0
-      },
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "$47 million",
-      "trackers": [
-        "ai-money",
-        "ai-infrastructure"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Multimodal language models often read external documents to answer questions, which can expose them to hidden commands planted inside the content. When these documents are turned into images before being read by the AI, some attacks fail because the visual encoding spreads the command and its target across the page. However, rendering only provides conditional protection, and certain models still execute harmful instructions or can be manipulated when attackers optimize their methods.",
-        "terms": [
-          {
-            "term": "Prompt injection",
-            "meaning": "A type of attack where hidden commands are planted in untrusted content to hijack the response of a language model."
-          },
-          {
-            "term": "Multimodal language models",
-            "meaning": "AI systems that can process multiple types of information, such as text and images."
-          },
-          {
-            "term": "Image-rendered documents",
-            "meaning": "The process of converting document pages into images before feeding them to a model."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers can see that rendering documents as images reduces prompt injection execution for every tested model, though security depends on target type, rendering settings, wording, and repetition.",
-        "business": "Business leaders evaluating multimodal language models must account for conditional security, as image-rendered documents still leave models vulnerable to attacks like replacement and formatting manipulation.",
-        "investors": "Investors can note that multimodal language models face security risks from indirect prompt injection via image-rendered documents, and protection varies significantly by model architecture and attack budget."
-      },
-      "id": "b7a81c659ac0",
-      "headline": "Study examines prompt injection protection in image-rendered documents",
-      "summary": "Researchers evaluated how multimodal language models handle indirect prompt injection when documents are rendered as page images instead of plain text. They found that rendering reduces attack execution across models, but certain models still execute image-borne replacement at rates up to 77.96%.",
-      "why_it_matters": "It shows that converting text documents to images offers only conditional protection against prompt injection, highlighting the need for evaluations that report security by model, operation, and attack budget.",
-      "category": "research",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "prompt injection",
-        "multimodal language models",
-        "document security",
-        "image rendering"
-      ],
-      "quotes": [],
-      "score": 7,
-      "url": "https://arxiv.org/abs/2611.24231",
-      "source_id": "arxiv",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://arxiv.org/html/2611.24231v1/draw/fig1.png",
-      "sources": [
-        {
-          "url": "https://arxiv.org/abs/2611.24231",
-          "publisher": "arXiv (cs.AI, cs.CL, cs.LG)",
-          "title": "What Survives the Shift from Text to Pixels? Conditional Protection against Prompt Injection in Image-Rendered Documents"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-11-18T11:08:07+00:00",
-      "created_at": "2026-11-19T04:00:01+00:00",
-      "figure_checked": true,
-      "image_kind": "figure",
-      "sectors": [
-        "cybersecurity"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 0
-      },
-      "cover": "77.96%",
-      "trackers": [
-        "agent-safety"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -5717,14 +5665,6 @@
   ],
   "podcasts": [
     {
-      "id": "_wLzJINt9iQ",
-      "title": "Superintelligence Needs the Physical World with CEO and Co-Founder of Arda Bob McGrew",
-      "channel": "No Priors",
-      "published": "2026-11-19T12:00:19+00:00",
-      "blurb": "No Priors hosts Bob McGrew, former OpenAI Chief Research Officer, to discuss why superintelligence requires physical-world changes and why hard takeoff is unlikely.",
-      "guest": "Bob McGrew, former OpenAI Chief Research Officer"
-    },
-    {
       "id": "6BxzNgQGj6E",
       "title": "America’s AI Lead Over China Is 12 Hours Not 12 Months – Paul Christiano",
       "channel": "Dwarkesh Patel",
@@ -5763,15 +5703,23 @@
       "published": "2026-11-19T20:01:37+00:00",
       "blurb": "Cristina Cordova discusses Linear's GTM strategy and how agents are driving over half of created issues.",
       "guest": "Cristina Cordova, Linear COO"
+    },
+    {
+      "id": "J5EA7QeBm8k",
+      "title": "Why Sam Altman and Greg Brockman Say Humans Must Stay in Control of AI",
+      "channel": "Hard Fork",
+      "published": "2026-11-18T18:05:56+00:00",
+      "blurb": "Sam Altman and Greg Brockman discuss keeping humans in control of AI.",
+      "guest": "Sam Altman and Greg Brockman, OpenAI leadership"
     }
   ],
   "briefing": {
-    "written_at": "2026-11-20T10:21:44+00:00",
-    "one_line": "Anthropic went public in a record $81.3B IPO, while global data center investments are projected to reach $4 trillion by 2030.",
+    "written_at": "2026-11-20T13:29:38+00:00",
+    "one_line": "Anthropic completed a record-breaking IPO valued around $1.5 to $1.7 trillion while wider AI stock sell-offs and trade regulations unfolded.",
     "themes": [
       {
-        "title": "Anthropic completes record $81.3B IPO",
-        "text": "Anthropic completed a record-breaking $81.3 billion initial public offering, valuing the company at roughly $1.7 trillion while its founders cashed out $2 billion. Following the debut, Asian tech stocks plunged as the listing failed to halt a wider AI stock sell-off, and early investor Dustin Moskovitz reiterated calls for frontier labs to slow down.",
+        "title": "Anthropic raises $81.3B in historic IPO",
+        "text": "Anthropic went public with a record-shattering IPO raising $81.3 billion and valuing the company at over $1.5 trillion, though shares dipped in after-hours trading amid a broader AI stock sell-off and scrutiny of circular financing models.",
         "stories": [
           {
             "id": "4aacf31011a3",
@@ -5779,36 +5727,25 @@
             "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo"
           },
           {
-            "id": "76ddd5e08e0d",
-            "headline": "Early Anthropic investor Dustin Moskovitz says labs should slow down",
-            "url": "https://techmeme.com/261119/p23"
-          },
-          {
             "id": "8099b1cf49a8",
             "headline": "Asian tech stocks plunge as Anthropic IPO fails to stem AI sell-off",
             "url": "https://techmeme.com/261120/p1"
-          }
-        ]
-      },
-      {
-        "title": "Data center investments and space AI",
-        "text": "The International Energy Agency projected global data center investments to reach $4 trillion by 2030, noting that fewer than 100 major AI projects would require 50 gigawatts of power. Meanwhile, Google selected Blue Origin to launch its Project Suncatcher AI computing satellites in 2029.",
-        "stories": [
-          {
-            "id": "439fd057c0b0",
-            "headline": "IEA projects global data center investment to reach $4T by 2030",
-            "url": "https://techmeme.com/261119/p24"
           },
           {
-            "id": "1ab0efa6e74c",
-            "headline": "Google selects Blue Origin to launch Project Suncatcher AI satellites in 2029",
-            "url": "https://economictimes.indiatimes.com/tech/startups/google-picks-bezos-blue-origin-to-launch-ai-computing-satellites-in-2029/articleshow/136012234.cms"
+            "id": "78098ada5602",
+            "headline": "Anthropic shares slide 5% in after-hours trading following record IPO",
+            "url": "https://techmeme.com/261119/p61"
+          },
+          {
+            "id": "824e87dcfa8e",
+            "headline": "Anthropic’s $81.3 billion IPO tests AI’s circular financing model",
+            "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test"
           }
         ]
       },
       {
-        "title": "US chip approvals and export regulations",
-        "text": "The US Commerce Department approved sales of over 879,000 AI chips to Chinese companies, and the California AG subpoenaed Nvidia to investigate former CEO Jensen Huang's actions regarding China chip access. Additionally, Nscale may need a US license for ByteDance's GPU access under new export rules, and the Trump administration is considering requiring US firms to disclose Chinese AI use.",
+        "title": "U.S. approves chip exports and weighs AI rules",
+        "text": "The U.S. Commerce Department approved sales of over 879,000 AI chips to Chinese companies, while California's Attorney General subpoenaed Nvidia regarding former CEO Jensen Huang and chip access, and the Trump administration weighed new disclosure rules for Chinese AI models.",
         "stories": [
           {
             "id": "609b4d81eb2e",
@@ -5833,8 +5770,8 @@
         ]
       },
       {
-        "title": "Scientific models and AGI pathways",
-        "text": "Anthropic's Claude solved two open problems in black hole physics, including a calculation unresolved for over 20 years. Separately, research highlighted science agents conducting collaborative research and publishing papers, while Google DeepMind researchers outlined four pathways from AGI to ASI.",
+        "title": "AI models advance in physics and research",
+        "text": "Anthropic's Claude solved two long-standing problems in black hole physics, researchers highlighted 35 human labs deploying collaborative science agents that published 936 papers, and Google DeepMind outlined four pathways from AGI to ASI.",
         "stories": [
           {
             "id": "be373132dcb8",
@@ -5857,15 +5794,15 @@
     "from_stories": 20
   },
   "plan": {
-    "focus": "Tracking the aftermath of Anthropic's massive IPO and Nvidia's leadership crisis across global markets.",
-    "updated_at": "2026-11-20T10:21:44+00:00",
+    "focus": "Chasing the fallout from the Anthropic IPO and new AI agent screenshot protections while tracking hardware and regional shifts.",
+    "updated_at": "2026-11-20T13:29:38+00:00",
     "thin_areas": [
       "AI in India",
-      "deals and business"
+      "model releases"
     ],
     "searches": [
-      "Anthropic IPO retail selling fallout",
-      "Nvidia Jensen Huang petition return"
+      "Anthropic IPO aftermarket closing share price",
+      "Frostbite CPU architecture AI designed"
     ]
   },
   "builders": {
@@ -6346,6 +6283,14 @@
   ],
   "labs": [
     {
+      "lab": "OpenAI",
+      "model": "OpenAI reportedly developing first smartphone with Foxconn subsidiary assembly",
+      "type": "Other",
+      "date": "2026-11-20T12:54:27+00:00",
+      "story_id": "2ffe30d0b83e",
+      "url": "https://livemint.com/technology/gadgets/openai-smartphone-in-the-works-foxconn-subsidiary-secures-assembly-orders-launch-tipped-for-202728-11795169231874.html"
+    },
+    {
       "lab": "Apple",
       "model": "Apple is hiring engineers to build its own AI agent",
       "type": "Other",
@@ -6376,14 +6321,6 @@
       "date": "2026-11-18T14:00:31+00:00",
       "story_id": "1c3eaf246b72",
       "url": "https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now"
-    },
-    {
-      "lab": "OpenAI",
-      "model": "OpenAI details Codex sandbox security and execution controls",
-      "type": "Other",
-      "date": "2026-11-18T08:00:00+00:00",
-      "story_id": "53f2a14376dd",
-      "url": "https://openai.com/index/inside-the-codex-sandbox"
     },
     {
       "lab": "Cerebras",
@@ -6585,8 +6522,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 566,
-    "model_releases_this_month": 66,
+    "stories_this_month": 571,
+    "model_releases_this_month": 67,
     "labs_tracked": 30
   }
 }

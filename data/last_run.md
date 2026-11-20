@@ -1,111 +1,94 @@
-## Frontier Wire newsroom run — 2026-11-20T10:21:44+00:00
+## Frontier Wire newsroom run — 2026-11-20T13:29:38+00:00
 
-Fetched 3038 items · fresh 50 · judged 54 · kept 7 · **written 6**
-AI: 42 requests, 116,172 tokens this run · 182 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking the aftermath of Anthropic's massive IPO and Nvidia's leadership crisis across global markets.
-  Priorities: Anthropic makes a $1 . 8 trillion debut : What investors should watch  (Breaks down the $1.8T Anthropic debut and what investors need to watch next.); Bring Jensen back : Uber co founder says hell show up to Nvidia HQ as  (Captures the ongoing turbulence around Nvidia and executive leadership fallout.); Anthropic founder combined wealth jumps to $166 bn after record IPO (Details the massive wealth surge for founders following the record IPO.); TSMC invests USD 500 million in Anthropic , acquires 0 . 03 % stake at (Highlights strategic TSMC investment in Anthropic at IPO.); Trump administration weighs forcing US firms to disclose Chinese AI us (Signals potential new Trump administration rules on Chinese AI use by US firms.)
-  Thin areas: india, business
-  Searches: Anthropic IPO retail selling fallout: 6 new; Nvidia Jensen Huang petition return: 4 new
-  Dig deeper: Bring Jensen back : Uber co founder says hell show up to Nvidia HQ as ; Anthropic founder combined wealth jumps to $166 bn after record IPO
-Research agent: investigated 5 stories with 13 tool calls, confirmed 5
-Daily briefing: 4 themes from 20 stories
-Threads updated: Anthropic safety concerns spark investor comment: Anthropic debuts on Nasdaq at $1.5 trillion valuation after ; Nvidia leadership and Jensen Huang departure: Travis Kalanick backs Jensen Huang's return to Nvidia
-Videos: 15 kept from 15 new · OpenAI ok (14 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (10 in feed, 2 new), AI at Meta ok (11 in feed, 0 new), Microsoft Research ok (11 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 2 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 4 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 1 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (6 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (3 in feed, 0 new)
-Photos: 5 saved, 0 unavailable
-Alerts: 38 events sent: {"subscribers":6,"sent":0,"queued":45}
-Claims: 215 tracked, 209 open, 1 updated this run
-Trackers: filed 5 stories; updated us-china, frontier-race, agent-safety, ai-infrastructure
-Model tracker: 82 models, 26 changes today
-Explainers: 1 added to earlier stories
-Tagged 6 stories by sector, region and deal
-Time: gather 134s, plan 2s, judge 14s, verify and write 69s, videos 7s, tagging 32s, explainers 1s, trackers 37s, claims 7s, briefing 7s, photos 1s, stock photos 16s, alerts 12s
+Fetched 3003 items · fresh 30 · judged 37 · kept 8 · **written 5**
+AI: 40 requests, 101,221 tokens this run · 222 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Chasing the fallout from the Anthropic IPO and new AI agent screenshot protections while tracking hardware and regional shifts.
+  Priorities: Anthropic announces closing of initial public offering, including full (Official closing of Anthropic's record IPO and private placement closes out the week's biggest market test.); Signal says it will restrict screenshots by default to stop AI agents  (Signal's move to block AI agents from reading chats via default screenshot restrictions marks a key privacy frontline.); Frostbite: A new CPU architecture discovered, designed and verified by (Frostbite CPU architecture represents a major milestone: designed, discovered, and verified entirely by AI.); Deutsche Telekom invests $109 million in Mistral AI as first step in l (Deutsche Telekom's $109M investment in Mistral AI highlights telecom capital moving directly into European foundation models.); Sources: Shanghai-based Pragmatik Labs, founded by ex-Qwen AI head Jun (Pragmatik Labs hitting a $5B valuation underscores rapid capital concentration in Chinese AI labs.)
+  Thin areas: india, models
+  Searches: Anthropic IPO aftermarket closing share price: 6 new; Frostbite CPU architecture AI designed: 1 new
+  Dig deeper: Anthropic announces closing of initial public offering, including full; Signal says it will restrict screenshots by default to stop AI agents 
+Research agent: investigated 5 stories with 14 tool calls, confirmed 4
+Daily briefing: 3 themes from 20 stories
+Threads updated: Mistral AI international expansion and investment push: Mistral opens Singapore headquarters and targets 200 Asia-Pa
+Videos: 15 kept from 16 new · OpenAI ok (14 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (10 in feed, 2 new), AI at Meta ok (11 in feed, 0 new), Microsoft Research ok (11 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 2 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 4 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 1 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (6 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (4 in feed, 1 new)
+Photos: 4 saved, 0 unavailable
+Alerts: 42 events sent: {"subscribers":6,"sent":0,"queued":45}
+Claims: 216 tracked, 210 open, 0 updated this run
+Trackers: filed 5 stories; updated us-china, india-ai, ai-infrastructure, ai-money
+Model tracker: 82 models, 30 changes today
+Tagged 5 stories by sector, region and deal
+India briefing: 3 themes from 4 stories
+Time: gather 106s, plan 18s, judge 136s, verify and write 164s, videos 11s, tagging 8s, trackers 23s, claims 6s, briefing 10s, photos 1s, stock photos 16s, alerts 6s
 
 ### New stories
-- **policy** — [Trump administration weighs forcing US firms to disclose Chinese AI use](https://asiaone.com:443/world/trump-administration-weighs-forcing-us-firms-disclose-chinese-ai-use)  
-  The Trump administration is considering requiring US companies to publicly disclose their use of Chinese AI models on their websites. The plan, discussed by the Treasury Department and the White House, aims to discourage reliance on Chinese AI without imposing outright restrictions.  
-  _3 source(s), 0 verified quote(s)_
-- **industry** — [Google selects Blue Origin to launch Project Suncatcher AI satellites in 2029](https://economictimes.indiatimes.com/tech/startups/google-picks-bezos-blue-origin-to-launch-ai-computing-satellites-in-2029/articleshow/136012234.cms)  
-  Google selected Blue Origin's New Glenn rocket to launch satellites for Project Suncatcher, an experiment testing AI computing in space. The mission is targeted for the first quarter of 2029.  
-  _4 source(s), 0 verified quote(s)_
-- **voices** — [Anthropic debuts on Nasdaq at $1.5 trillion valuation after $81.34 billion IPO](https://milwaukeesun.com/news/279444284/dario-amodei-says-anthropic-will-not-bend-to-business-political-pressure-on-ai-safety)  
-  Anthropic went public on Nasdaq after raising USD 81.34 billion in an initial public offering that valued the company at approximately USD 1.5 trillion. CEO Dario Amodei stated that the company will prioritize safety and human control over business or political pressures.  
+- **research** — [Architect Labs unveils AI-designed Frostbite CPU architecture](https://architectlabs.com/blog/frostbite)  
+  US AI startup Architect Labs introduced Frostbite, a general-purpose CPU architecture designed and verified by AI. The company claims the design delivers 4.59 times the performance per watt and 8.77 times the performance per area compared to a conventional CPU core across 25 workloads in pre-silicon simulations.  
+  _2 source(s), 0 verified quote(s)_
+- **industry** — [Pragmatik Labs reaches $5 billion valuation in new funding round](https://techmeme.com/261120/p10)  
+  Shanghai-based Pragmatik Labs raised tens of millions of dollars in funding. The startup was founded by former Alibaba Group Holding Ltd. AI chief Junyang Lin and reached a $5 billion valuation, up from $2 billion in August.  
+  _2 source(s), 0 verified quote(s)_
+- **industry** — [Mistral opens Singapore headquarters and targets 200 Asia-Pacific staff by 2027](https://cryptobriefing.com/mistral-asia-pacific-headquarters-singapore)  
+  French artificial intelligence company Mistral opened its Asia-Pacific headquarters in Singapore on November 20, 2026, aiming to double its regional headcount to 200 people by 2027. The office will focus on public sector agencies, high-tech manufacturing, and robotics.  
   _4 source(s), 2 verified quote(s)_
-- **safety** — [Signal restricts screenshots to block AI agents from reading messages](https://livemint.com/technology/signal-restricts-screenshots-to-block-ai-agents-from-reading-messages-11795165297929.html)  
-  Encrypted messaging service Signal introduced default restrictions on screenshots to prevent device-level AI agents from reading private chats. The company warned that operating system integrations by tech giants pose an existential threat to its privacy guarantee.  
+- **models** — [OpenAI reportedly developing first smartphone with Foxconn subsidiary assembly](https://livemint.com/technology/gadgets/openai-smartphone-in-the-works-foxconn-subsidiary-secures-assembly-orders-launch-tipped-for-202728-11795169231874.html)  
+  OpenAI is reportedly developing its first smartphone, with Foxconn subsidiary FIH Mobile securing assembly orders for a potential launch in late 2027 or 2028. Neither OpenAI nor Foxconn has officially confirmed the project.  
   _3 source(s), 0 verified quote(s)_
-- **research** — [Analysis of 10M job ads in China shows double-digit decline for AI-exposed roles](https://techmeme.com/261120/p7)  
-  An analysis of 10 million job advertisements in China between 2021 and 2025 revealed a double-digit decline in listings for roles with high AI exposure compared to less-exposed positions. The study highlights a growing impact of artificial intelligence on hiring trends in the region.  
-  _2 source(s), 0 verified quote(s)_
-- **voices** — [Travis Kalanick backs Jensen Huang's return to Nvidia](https://businessinsider.com/travis-kalanick-jensen-huang-nvidia-hq-employee-walkout-2026-11)  
-  Uber co-founder Travis Kalanick stated he would support the return of former Nvidia CEO Jensen Huang. Kalanick remarked he would bring a wafer-encrusted megaphone to Nvidia's headquarters to back Huang's reinstatement.  
-  _2 source(s), 0 verified quote(s)_
+- **industry** — [SatSure raises ₹60 Cr from Antariksh VC fund in Series B round](https://inc42.com/buzz/centres-antariksh-vc-fund-leads-satsures-%e2%82%b9200-cr-series-b-round)  
+  Earth-intelligence startup SatSure has raised ₹60 Cr from the state-backed Antariksh Venture Capital Fund in the first tranche of its ₹200 Cr Series B round at an ₹870 Cr valuation. The capital will advance optical payloads built by its subsidiary KaleidEO, scale its geospatial AI model Dhaarini, and expand international operations.  
+  _2 source(s), 1 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Asian shares head for worst week since 2020 as AI rout deepens — duplicate of 8099b1cf49a8
-- Apple developing computer - controlling AI agent for Mac , targets late - 2027 debut — duplicate of b24c1081da70
-- Trump praises meeting between Chinese and Russian presidents and discusses AI rules with China — not AI: General geopolitical news with only passing mention of rules.
-- Pentagon standoff , copyright lawsuit to AI safety concerns : 5 controversies that have put Anthropic under scrutiny — score 3: Review of Anthropic controversies and scrutiny is a rehash of ongoing IPO and safety debates.
-- Australia AI boom puts workforce skills under pressure , new research finds | Empower Stories | Build Authority — score 3: General workforce skills report regarding AI adoption, lacks specific technical or market news.
-- Bring Jensen back : Uber co founder says hell show up to Nvidia HQ as 200 , 000 sign petition for Huang return — duplicate of 2a1f0dfea65b
-- Anthropic IPO caps an explosive growth period for the AI startup — duplicate of 4aacf31011a3
-- Anthropic tops SpaceX with biggest IPO on record — duplicate of 4aacf31011a3
-- Cap Raise Crucible : Broker bonanza , gold and AI glory — score 2: General market roundup touching on multiple asset classes
-- Anthropic raises record $81 billion in stock market debut as shares close 17 percent higher — duplicate of 4aacf31011a3
-- A Different Retail From The One That Showed Up For SpaceX : Anthropic Sets A Day - One Retail Trading Record ... And Nearly Half Of It Was Selling — score 3: Duplicate zerohedge article on Anthropic IPO retail trading
-- Nifty , Sensex open lower as sell - off in AI weighs on sentiment , Gold down to lowest level of 2026 — score 3: General stock market index movements influenced by broader sentiment
-- Months before , Anthropic record IPO , Palantir Alex Karp blamed AI labs of drug addicting everyone by ... — score 5: Commentary on AI labs from Palantir's Alex Karp
-- USTED VC cautions students against over - reliance on AI — score 2: Student advisory general warning about over-reliance on AI
-- The End Of Man : The Real Danger Isnt Artificial Intelligence — not AI: General philosophical opinion piece, not specific AI news
-- Anthropic IPO caps an explosive growth period for the AI startup , filled with contradictions — duplicate of 4aacf31011a3
-- Anthropic makes a $1 . 8 trillion debut : What investors should watch next — duplicate of 4aacf31011a3
-- CGI and Learning Links Foundation launch Centre of Excellence for AI & Innovation at MEI Polytechnic College — score 3: Routine academic/institutional tech center launch partnership; too minor for global frontier wire readers.
-- Fintech firms rethink cybersecurity as AI advances — score 4: Generic fintech cybersecurity overview with only a loose mention of AI advances.
-- TSMC invests USD 500 million in Anthropic , acquires 0 . 03 % stake at IPO price — duplicate of 4aacf31011a3
-- SoftBank Leads Asian Technology Sell - off as Anthropic Debut Fuels AI Investment Concerns — duplicate of 8099b1cf49a8
-- Rogue AI agents may have infiltrated US banks — score 4: Speculative report on rogue AI agents in US banks without confirmed details or primary source.
-- Google Cloud expands Partner Marketing Studio with seven Gemini - powered AI agents — score 5: Google Cloud adding Gemini-powered agents to Partner Marketing Studio is an incremental marketing feature.
-- Anthropic Record - Breaking IPO Values AI Developer at $1 . 8 Trillion in Landmark Nasdaq Debut – Sri Lanka Guardian — duplicate of 4aacf31011a3
-- Anthropic founder combined wealth jumps to $166 bn after record IPO — duplicate of 4aacf31011a3
-- Why Your Own AI Agents Can Act Like Attackers — score 5: Security analysis of AI agent failure modes and unexpected attack-like behavior; useful developer insights but somewhat general.
-- Asian stocks head for worst week since 2020 as AI rally loses steam — duplicate of 8099b1cf49a8
-- NVIDIA's Crisis Has Only Just Begun, and There's No Jensen Charm to Save It — score 5: Commentary on Nvidia leadership changes and market headwinds, largely derivative of already published stories on Jensen Huang.
-- Soket AI Secures $4 Mn as it Rolls Out EKA-1 Model — duplicate of 3bb219d57336
-- Amazon Prime India Head Abhinav Agarwal Quits After 16 Years At Company — not AI: General executive departure in e-commerce, no AI relevance.
-- Meta’s Muse AI agent accesses private messages, raises data leak concerns — duplicate of 0cefd4c68688
-- Humyn Labs raises $47 mn to collect training data for physical AI — duplicate of 9247c7737332
-- IRDAI chairman flags consumer data grab before insurance price quotes, AI-related risks — score 5: Regulatory comments on insurance AI underwriting and data practices; routine compliance commentary.
-- Indian businesses expect technology investments to drive demand, 93% use AI in trade: HSBC — score 4: HSBC survey finding on tech and AI adoption by Indian businesses; general survey data rather than specific news.
-- Startup news and updates: Daily roundup (November 20, 2026) — not AI: Daily startup roundup containing mixed general news; no single substantive AI development.
-- YourStory launches voice AI hackathon with Rs 8 lakh prize pool in collaboration with Google Cloud India — score 4: Routine hackathon announcement by an Indian media outlet, low significance for global or regional AI strategy.
-- GTA 6 is rated 17+: What Indian parents should know before letting their children play — not AI: Gaming age-rating article; no AI relevance.
-- Urban Company raises Rs 2,500 Cr through QIP — not AI: QIP funding for Urban Company housekeeping services; not primarily an AI story.
-- Eazeebox co-founder Srinivas Shanbhogue passes away — not AI: Obituary notice; not AI news.
-- Retail traders pile into Anthropic IPO, but net buying trails SpaceX — score 4: Retail trading participation in the Anthropic IPO is derivative market commentary.
-- After Anthropic’s ‘bittersweet’ IPO, here’s what lies ahead — score 4: Retrospective commentary on the Anthropic IPO without new primary news.
-- CRWV, IREN, NBIS stocks extend Neocloud selloff as Anthropic IPO rally fades - Michael Burry takes a victory lap — score 5: Market commentary on neocloud selloffs and Michael Burry reactions following the Anthropic IPO.
-- Anthropic IPO: Investors who flip the stock may face brokerage penalty — score 4: Brokerage policy details on flipping IPO shares are peripheral financial mechanics.
-- Anthropic's Blockbuster IPO Dominated Headlines This Week – AI Anxiety Eased, While Investors And Employees Reaped A Windfall — score 3: Weekly roundup rehash of the Anthropic IPO and market impact.
-- Anthropic's $81 Billion IPO Could Make Early Investors Billions. Retail Buyers Face A Different Bet. — score 4: Opinion piece on retail versus early investor returns from the Anthropic IPO.
-- Nvidia May Replace Jensen Huang With a Former Executive Who Spent 7 Years at the Company — score 5: Speculation regarding Nvidia's leadership succession and potential executive replacement.
-- BrightAI, which uses AI to help industrial companies detect malfunctioning equipment, raised $97M led by Smith Point, bringing its total funding to $184M (Maria Deutscher/SiliconANGLE) — could not verify yet after a second try; dropped
+- Anthropic announces closing of initial public offering, including full exercise of underwriters’ option to purchase additional shares, and closing of concurrent private placement — duplicate of 3ed82417f95b
+- Deutsche Telekom invests $109 million in Mistral AI as first step in larger partnership — duplicate of 459fb45d2a37
+- Signal is blocking Gemini and Siri AI from reading your screen — duplicate of 2536f904ad2b
+- Logic Pursuits Certified as Best Firm for Data Engineers — not AI: Company certification for data engineers is routine corporate PR rather than substantive AI news.
+- Why Banks Are Betting on AI Orchestration Over Autonomy — score 4: General commentary on AI orchestration vs autonomy in banking, lacking specific news.
+- Supreme Court Upholds Karnataka HC Order Allowing Bike Taxis — not AI: Supreme Court order on bike taxis is general transportation and regulatory news with no AI angle.
+- Fireside Ventures’ Changing Guard: Exits, Power Struggle And The Succession Question — not AI: Venture capital firm leadership changes and internal power struggles are general business news without an AI focus.
+- How Barosi Is Building A ₹1,000 Cr ARR Ghee Empire In 10-Minute Economy — not AI: Quick commerce and FMCG business with no AI angle.
+- UPI PIN doesn’t prove a customer authorised a transaction: Telangana consumer commission — not AI: Consumer commission ruling on UPI transactions with no AI relevance.
+- Xiaomi 18 Pro could move into India’s ultra-premium smartphone segment: Expected price, features — not AI: Smartphone launch pricing details with no substantive AI focus.
+- 5 Books from Bill Gates' latest reading list before 2026 end — not AI: Bill Gates' book reading list is general reading recommendations rather than AI commentary.
+- 7 Bryan Johnson longevity habits anyone can afford — not AI: General health and longevity lifestyle tips.
+- Supreme Court rejects Karnataka's plea, paving way for bike taxis to return — not AI: Supreme Court ruling on bike taxis is general legal and transport news.
+- India ties for APAC’s highest phishing rate as employee awareness gaps emerge: Kaspersky — not AI: Kaspersky survey on phishing rates and cybersecurity resilience lacks any specific AI focus.
+- PIDG invests $11.7M in dry waste recycling company NEPRA — not AI: Investment in a waste management and recycling company lacks any AI relevance.
+- 5 Interesting Startup Deals You May Have Missed: Reflecting Sunlight From Space, Better Breathing And Smarter Garbage Trucks — not AI: General startup roundup covering space tech and garbage hauling with no significant AI story.
+- Uber quietly launched Uber Kids as a pilot in three US cities for kids as young as 10, building on its teen ride-hailing service for those aged 13 to 17 (Kirsten Korosec/TechCrunch) — not AI: General ride-hailing pilot news with no AI relevance.
+- How Jensen Huang used humiliation in his management style for decades; Huang's behavior once led to a settlement with an exec who said he "terrorized" staff (New York Times) — not AI: Article about Nvidia CEO's management style; no AI product or policy content, only personal behavior. Not core AI news.
+- Sources: China says it will not approve requests from Chinese companies registered overseas after 2023 to list outside mainland China, impacting tech startups (Reuters) — not AI: Regulatory news about Chinese companies listing abroad; unrelated to AI specifics, only tangential impact on tech startups.
+- Signal says it will restrict screenshots by default to stop AI agents from reading private chats on phones but warns its new protections are "incomplete" (Katie Paul/Reuters) — duplicate of 2536f904ad2b
+- Filing: SK Hynix will become Kioxia's largest shareholder with a ~14.1% stake after it converts Kioxia bonds into shares, expanding its clout in the NAND sector (Yoolim Lee/Bloomberg) — score 5: SK Hynix becoming largest shareholder of Kioxia is a memory‑sector finance move; AI relevance is only adjacent (memory for AI compute). Not significant enough for coverage.
+- Here's What $1,000 Invested at Anthropic's IPO Price Is Worth Now — not AI: Financial analysis of Anthropic IPO returns for investors; no new AI development or policy, purely market commentary.
+- After a mega opening day, Anthropic's stock is back to earth with a bump, dropping 6% — not AI: Stock‑price movement after Anthropic IPO; lacks substantive AI content beyond the IPO itself which is already covered.
+- Anthropic IPO live: Anthropic stock begins trading in record $81B raise with $1.5T valuation — duplicate of 4aacf31011a3
+- Anthropic IPO highlights: Claude maker hits $1.8 trillion valuation, Amazon and Google hold 28% stake — duplicate of 4aacf31011a3
+- Anthropic set to start trading after completing largest-ever IPO — duplicate of 4aacf31011a3
+- Anthropic Prices $81.3 Billion IPO at $83 a Share, Topping SpaceX — duplicate of 4aacf31011a3
+- AMD and Intel, move over: AI designed an all-new CPU — and claims it is 4.6x more efficient — score 7: Duplicate coverage of the AI‑designed Frostbite CPU architecture; original story already published.
+- What The Telecom Bust Taught Me About AI’s Debt Boom — could not verify yet; will retry next run
+- Goa Wants to Train 50,000 Graduates in AI Skills — could not verify yet; will retry next run
+- Forget Organic Growth, AI is Forcing Mid-Cap Indian IT to Reinvent M&A Playbook — could not verify yet; will retry next run
 
 </details>
 
 <details><summary>Research agent's work</summary>
 
-- Trump administration weighs forcing US firms to disclose Chinese AI us: confirmed (searched “Trump administration weighs forcing US firms to disclose Chinese AI use”; read reuters.com; read ibtimes.sg)
-- Google picks Bezos' Blue Origin to launch AI computing satellites in 2: confirmed (searched “Google Blue Origin AI computing satellites 2029”; read theverge.com)
-- Dario Amodei says Anthropic will not bend to business , political pres: confirmed (searched “Dario Amodei Anthropic business political pressure AI safety”; read indiatimes.com)
-- Signal restricts screenshots to block AI agents from reading messages: confirmed (searched “Signal restricts screenshots to block AI agents from reading messages”; read reuters.com; read digitaltrends.com)
-- An analysis of 10M job ads in China between 2021 and 2025 finds a doub: confirmed (searched “Bloomberg China job ads AI 2021 2025 decline”; read bloomberg.com; searched “AI Threatens to Make China Jobs Slump Much Worse Bloomberg”)
+- Frostbite: A new CPU architecture discovered, designed and verified by: confirmed (searched “Frostbite CPU architecture AI architectlabs”; searched “Frostbite CPU architecture AI”; read notebookcheck.net)
+- Sources: Shanghai-based Pragmatik Labs, founded by ex-Qwen AI head Jun: confirmed (searched “Pragmatik Labs Junyang Lin Bloomberg valuation”; read bloomberg.com; searched “Pragmatik Labs Junyang Lin $5 billion Bloomberg”)
+- Mistral opens Asia-Pacific headquarters in Singapore, plans to double : confirmed (searched “Mistral Asia Pacific headquarters Singapore 2027 headcount”; read yahoo.com)
+- What The Telecom Bust Taught Me About AI’s Debt Boom: unconfirmed (searched “David Spreng Runway Growth Capital telecom AI debt boom”; searched “"What The Telecom Bust Taught Me About AI’s Debt Boom"”; searched “David Spreng telecom bust AI debt boom”)
+- OpenAI smartphone in the works? Foxconn subsidiary secures assembly or: confirmed (searched “OpenAI smartphone Foxconn FIH Mobile MediaTek”; read androidauthority.com; read gsmarena.com)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id ed330fb99436 for 'A Different Retail From The One That Showed Up For'
-- not India desk: 'Signal restricts screenshots to block AI agents fr'
-- not India desk: 'Google picks Bezos' Blue Origin to launch AI compu'
-- dropped non-quote (Chinese Embassy in Washington): only stifle global AI advances and serve no one's interests.…
-- dropped non-quote (Signal): Right now, these agentic AI integrations are changing this e…
+- ignored made-up duplicate id 000028228240 for 'AMD and Intel, move over: AI designed an all-new C'
+- dropped unverifiable benchmark: Frostbite performance per unit of area compared to a conventional CPU core across 25 workloads 8.77x
+- dropped non-quote (Arup Kumar): indigenous orbital infrastructure with downstream decision i…
 - GDELT unavailable: GDELT paused for this run after repeated rate-limiting
+- 3 kept item(s) carried over to the next run
+- gemini/gemini-flash-lite-latest: 503 (server busy); trying next model
+- gemini: network error ReadTimeout, retrying
+- gemini/gemini-flash-latest: 503 (server busy); trying next model
