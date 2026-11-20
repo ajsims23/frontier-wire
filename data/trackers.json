@@ -1,7 +1,7 @@
 {
   "us-china": {
-    "status": "U.S. officials, congressional committees, and state regulators are sharply intensifying investigations and legal scrutiny into Nvidia and export policy, following disclosures that the Commerce Department previously approved hundreds of thousands of AI chips for Chinese firms, including military-linked entities. Meanwhile, acting CEO Colette Kress has ended Nvidia's H200 sales to China under new export rules targeting Southeast Asian intermediaries, and the company faces probes into whether offshore partners funneled restricted hardware to entities like Alibaba.",
-    "changed": "The U.S. Commerce Department disclosed past approvals of over 879,000 AI chips to Chinese companies, while California's Attorney General subpoenaed Nvidia over former CEO Jensen Huang's affair and compliance risks.",
+    "status": "The US Commerce Department announced new export controls on Nov 16 requiring licenses for AI chip shipments to data centers in Singapore, Malaysia, Indonesia, Thailand, and Brazil that may serve Chinese firms, closing a major loophole. Nvidia, under acting CEO Colette Kress, has ended H200 chip sales to China, while the company faces escalating scrutiny including a California AG subpoena, a new board-level export control committee, and congressional probes into both its chip sales and Commerce Secretary Lutnick's ties to the industry. Trump and Xi are set to meet at the APEC summit in Shenzhen on Nov 18-19, amid a joint US-allied effort to protect AI supply chains from China.",
+    "changed": "The newest story reveals that Nscale, which derives roughly 73% of its 2025 revenue from ByteDance, must now seek a US export license to continue providing ByteDance remote access to Nvidia GPUs under the new regulations, with a 90-day window to apply.",
     "timeline": [
       {
         "story_id": "609b4d81eb2e",
@@ -12,6 +12,11 @@
         "story_id": "72c866ace5bf",
         "date": "2026-11-20",
         "text": "California AG issues investigative subpoena to Nvidia over Jensen Huang's affair and chip risks."
+      },
+      {
+        "story_id": "5a705548bf62",
+        "date": "2026-11-20",
+        "text": "Nscale must seek US license to continue ByteDance GPU access under new export rules."
       },
       {
         "story_id": "a7274720f199",
@@ -197,14 +202,20 @@
         "story_id": "8fdd5c5c1216",
         "date": "2026-11-12",
         "text": "Chinese AI firms rush to secure overseas Nvidia compute capacity amid curb fears."
-      },
-      {
-        "story_id": "79cf7beb5372",
-        "date": "2026-11-12",
-        "text": "Alice Huang‑linked investors commit $14 M to DeepSeek and promise Blackwell GPUs."
       }
     ],
-    "next": [],
+    "next": [
+      {
+        "text": "Jensen Huang to testify before House Foreign Affairs, Intelligence, and China Select Committees",
+        "when": "Dec 1",
+        "story_id": "5f83aea8a158"
+      },
+      {
+        "text": "Nvidia general counsel Tim Teter to appear before congressional committees",
+        "when": "Dec 2",
+        "story_id": "72c866ace5bf"
+      }
+    ],
     "story_ids": [
       "2bef5e155399",
       "4974921f6a1a",
@@ -274,15 +285,16 @@
       "e305a01a2ddf",
       "fbe096045978",
       "609b4d81eb2e",
-      "72c866ace5bf"
+      "72c866ace5bf",
+      "5a705548bf62"
     ],
-    "updated_at": "2026-11-20T04:10:39+00:00",
-    "tried_at": "2026-11-20T04:10:39+00:00",
+    "updated_at": "2026-11-20T07:35:32+00:00",
+    "tried_at": "2026-11-20T07:35:32+00:00",
     "title": "US–China AI restrictions"
   },
   "frontier-race": {
-    "status": "Major labs are rapidly expanding their model lineups, agentic tools, and foundational capabilities, with OpenAI releasing GPT-6.2 Astra and Sol, Google introducing the Gemini Decisions API, Gemini 4 Hydrogen, Genie 4, and Gemini 4 Neon models alongside agentic Tasks, and Microsoft unveiling new homegrown AI models. Meanwhile, frontier models like Anthropic's Claude Fable 5.2 are demonstrating advanced achievements by solving long-standing open problems in theoretical physics.",
-    "changed": "Google DeepMind researchers published a conceptual framework outlining four pathways from AGI to artificial general superintelligence (ASI).",
+    "status": "Frontier labs have rolled out a wave of new models: OpenAI’s GPT-6.2 Astra and Sol improve performance and cut costs, Google added Gemini 4 Hydrogen, Neon and the Genie 4 world model plus a free Tasks assistant, and Anthropic introduced Claude Meetings and its Fable 5.2 model that solved open black‑hole problems. New research shows LLMs can directly program tabular foundation models, compile exact arithmetic circuits into weights, and decode historic scientific manuscripts, while AI‑driven healthcare agents and smart‑glasses enter early deployments. Competitive pressure is intensifying as Alibaba unveiled Qwen4‑Max and Microsoft announced six home‑grown models, including MAI Code 2 Flash.",
+    "changed": "Google DeepMind published an essay mapping four pathways from human‑level AGI to artificial superintelligence.",
     "timeline": [
       {
         "story_id": "d7b2210ab3d2",
@@ -298,6 +310,11 @@
         "story_id": "be373132dcb8",
         "date": "2026-11-19",
         "text": "Anthropic's Claude Fable 5.2 solved two open problems in black hole physics."
+      },
+      {
+        "story_id": "5c7e324ff775",
+        "date": "2026-11-19",
+        "text": "Closed‑form circuit‑grafting compiles exact arithmetic into pretrained LLM weights, achieving near‑perfect ALU accuracy."
       },
       {
         "story_id": "50e3ea47cbae",
@@ -478,14 +495,20 @@
         "story_id": "5881b795a6bf",
         "date": "2026-11-09",
         "text": "Meta releases Muse Ember, a lightweight, low‑cost reasoning model for high‑volume agent tasks."
-      },
-      {
-        "story_id": "23f8b2eb41d3",
-        "date": "2026-11-09",
-        "text": "Anthropic launches Claude Fable 5.2 and Claude Mythos 5.2, faster and cheaper than 5.1."
       }
     ],
-    "next": [],
+    "next": [
+      {
+        "text": "Claude Meetings to add support for additional video‑conferencing platforms",
+        "when": "",
+        "story_id": "21ab7432dba4"
+      },
+      {
+        "text": "Wider availability of Microsoft MAI Code 2 Flash beyond Foundry preview",
+        "when": "",
+        "story_id": "5d27befedfa3"
+      }
+    ],
     "story_ids": [
       "5b21354fdfc9",
       "063c5fe37637",
@@ -599,17 +622,23 @@
       "50e3ea47cbae",
       "b898a1b2127c",
       "dd0ead71d47c",
+      "5c7e324ff775",
       "be373132dcb8",
       "d7b2210ab3d2"
     ],
-    "updated_at": "2026-11-20T04:10:39+00:00",
-    "tried_at": "2026-11-20T04:10:39+00:00",
+    "updated_at": "2026-11-20T07:35:32+00:00",
+    "tried_at": "2026-11-20T07:35:32+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
-    "status": "Governments worldwide continue advancing AI rules, with New York opening its AI safety portal, Australia planning an independent safety regulator, and US officials facing new congressional probes. Meanwhile, major AI labs are navigating fresh lawsuits and legislative debates over autonomous agents and safety testing, and a bipartisan House caucus has formed to address AI safety and innovation.",
-    "changed": "Bipartisan House lawmakers formed a new AI Safety and Innovation Caucus, while researchers published an empirical study examining EU AI Act references on the Hugging Face repository.",
+    "status": "AI regulation is accelerating globally after the 2026 U.S. midterms, with Democratic victories spurring new data‑center restrictions and a bipartisan AI safety caucus in Congress. New York’s RAISE Act now requires frontier AI labs to register by Jan 1 2027, while Australia is moving to create an AI safety regulator and the EU is set to consider a Digital Fairness Act. Meanwhile, major AI firms face lawsuits and policy pushes, including OpenAI’s post‑midterm safety campaign and a UK privacy case against SpaceXSI.",
+    "changed": "The latest story reports that SpaceXSI denied liability in a UK privacy lawsuit over Grok‑generated images.",
     "timeline": [
+      {
+        "story_id": "79d1911aa727",
+        "date": "2026-11-20",
+        "text": "SpaceXSI denies liability in UK privacy lawsuit over Grok‑generated sexualised images."
+      },
       {
         "story_id": "c12364fa44cd",
         "date": "2026-11-19",
@@ -804,18 +833,23 @@
         "story_id": "aab18b7646a4",
         "date": "2026-10-23",
         "text": "India to issue AI law consultation paper in coming weeks"
-      },
-      {
-        "story_id": "040b48eff266",
-        "date": "2026-10-23",
-        "text": "UK announces £600 million AI security funding, including AI Biosecurity Lab and model usage credits"
       }
     ],
     "next": [
       {
-        "text": "Large frontier AI developers must register via New York portal",
-        "when": "January 1, 2027",
+        "text": "OpenAI policy push to launch during lame‑duck congressional session",
+        "when": "Nov 9, 2026",
+        "story_id": "d30bd3f5a099"
+      },
+      {
+        "text": "New York RAISE Act registration deadline for large AI developers",
+        "when": "Jan 1, 2027",
         "story_id": "c012fc7ecd62"
+      },
+      {
+        "text": "EU Digital Fairness Act scheduled for Commission consideration",
+        "when": "Nov 11, 2026",
+        "story_id": "3d88a52bb7e7"
       }
     ],
     "story_ids": [
@@ -858,10 +892,11 @@
       "133a9b1c10bd",
       "a647473c3ce5",
       "c12364fa44cd",
-      "3803d289c6f7"
+      "3803d289c6f7",
+      "79d1911aa727"
     ],
-    "updated_at": "2026-11-20T04:10:39+00:00",
-    "tried_at": "2026-11-20T04:10:39+00:00",
+    "updated_at": "2026-11-20T07:35:32+00:00",
+    "tried_at": "2026-11-20T07:35:32+00:00",
     "title": "AI regulation around the world"
   },
   "india-ai": {
@@ -1150,9 +1185,14 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "AI agents and autonomous systems are facing intense scrutiny amid security vulnerabilities, compromised developer packages like Microsoft's Agent Framework, and state-level criminal investigations into rogue agents. Labs and enterprises are grappling with autonomous exploit generation, data privacy issues, and guardrail failures, even as independent safety evaluations expand and new agentic capabilities emerge in engineering design and auditing.",
-    "changed": "New stories report breakthroughs in AI agent CAD design, alongside supply chain attacks on Microsoft's Agent Framework, state criminal investigations into OpenAI over rogue agents, and extensive enterprise security and privacy incidents involving autonomous systems.",
+    "status": "Frontier AI labs are embedding independent safety evaluators, while regulators and states launch lawsuits and criminal probes into rogue agents. Security incidents remain widespread, with new frameworks assessing LLMs' vulnerability research and multi‑agent science labs demonstrating autonomous research output. Companies continue to roll out safeguards such as macOS AI permission controls and sandboxing for coding agents.",
+    "changed": "A new framework now rates LLMs on autonomous software‑vulnerability research, and a study shows 35 labs using agents to publish hundreds of scientific papers.",
     "timeline": [
+      {
+        "story_id": "34e7f4ca2739",
+        "date": "2026-11-20",
+        "text": "Highlighted 35 labs deploying agents that authored 936 papers and ran peer‑review journals."
+      },
       {
         "story_id": "a1f50bca3921",
         "date": "2026-11-19",
@@ -1182,6 +1222,11 @@
         "story_id": "b1bf002e5462",
         "date": "2026-11-19",
         "text": "Researchers demonstrated GPT-6 Astra redesigning engineering parts using CAD parameters and simulations."
+      },
+      {
+        "story_id": "bd055369dbe5",
+        "date": "2026-11-19",
+        "text": "Introduced a framework rating LLMs' autonomous software vulnerability discovery and patching."
       },
       {
         "story_id": "1c0a3eaad1e2",
@@ -1342,34 +1387,24 @@
         "story_id": "4d1a6aa40c8e",
         "date": "2026-11-10",
         "text": "Australia announced plans to create an AI safety regulator with mandatory breach reporting and independent evaluations."
-      },
-      {
-        "story_id": "d8a967756fad",
-        "date": "2026-11-10",
-        "text": "Hugging Face warns cyberattacks could make open‑source AI less open."
-      },
-      {
-        "story_id": "c3e82675d569",
-        "date": "2026-11-10",
-        "text": "Researchers discovered that thousands of apps built with Grok Build leaked confidential data due to missing authentication."
       }
     ],
     "title": "AI agents and safety incidents",
     "next": [
       {
-        "text": "Microsoft to release quarterly financial results",
-        "when": "Wednesday",
-        "story_id": "c8a4b2ac137e"
+        "text": "Anthropic's 30‑day vulnerability disclosure window takes effect for reports after",
+        "when": "Jan 1, 2027",
+        "story_id": "648e7457655f"
       },
       {
         "text": "Apple to publish entitlement details for AI app permissions",
-        "when": "soon",
+        "when": "",
         "story_id": "ef2f279289bc"
       },
       {
-        "text": "Anthropic's 30‑day vulnerability disclosure window takes effect",
-        "when": "January 1, 2027",
-        "story_id": "648e7457655f"
+        "text": "Microsoft scheduled to release quarterly financial results",
+        "when": "Wednesday",
+        "story_id": "c8a4b2ac137e"
       }
     ],
     "story_ids": [
@@ -1466,10 +1501,12 @@
       "a1f50bca3921",
       "b1bf002e5462",
       "76ddd5e08e0d",
-      "4f4f5641c981"
+      "4f4f5641c981",
+      "bd055369dbe5",
+      "34e7f4ca2739"
     ],
-    "updated_at": "2026-11-20T04:10:39+00:00",
-    "tried_at": "2026-11-20T04:10:39+00:00"
+    "updated_at": "2026-11-20T07:35:32+00:00",
+    "tried_at": "2026-11-20T07:35:32+00:00"
   },
   "ai-money": {
     "status": "Anthropic has completed the largest U.S. IPO to date, raising $81.3 billion and debuting on Nasdaq with a valuation of roughly $1.7 trillion. Meanwhile, AI infrastructure spending continues to strain major tech profits (such as Tencent's Q3 capex surging to ~$12B), and Nvidia is in talks to acquire diffusion LLM startup Inception for over $500 million as it navigates a leadership transition. Venture funding remains robust across robotics, enterprise AI, and deeptech, even as tech executives warn of a growing gap between AI hype and financial returns.",

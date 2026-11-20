@@ -1,0 +1,499 @@
+{
+  "started_at": "2026-11-20T07:35:32+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1418)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (913)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "mistral-news": "ok (3)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (9)",
+    "gdelt": "ok (0) via Bing News (GDELT unavailable)",
+    "hn": "ok (20)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (0) via Bing News (GDELT unavailable)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (26)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
+      "reason": "score 4: Incremental research paper on diffusion transformers."
+    },
+    {
+      "title": "PlayCraft: Designing Engaging Games from Agent Play Experience",
+      "reason": "score 4: Incremental gaming research paper using vision agents."
+    },
+    {
+      "title": "TideCache: Efficient Hybrid LLM Serving with Transparent Cache Management and Layer-Wise Streaming",
+      "reason": "score 4: Incremental LLM serving cache optimization paper."
+    },
+    {
+      "title": "One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning",
+      "reason": "score 4: Incremental latent action learning research paper."
+    },
+    {
+      "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+      "reason": "score 4: Incremental robotics benchmark evaluation paper."
+    },
+    {
+      "title": "Bio-PM-Guided Synthetic IMU Generation",
+      "reason": "score 3: Incremental wearable sensor data generation paper."
+    },
+    {
+      "title": "Depth Pro 2: Sharp and Temporally Consistent Metric Monocular Depth",
+      "reason": "score 4: Incremental computer vision research paper on metric monocular depth estimation."
+    },
+    {
+      "title": "Active Feature Acquisition by Distilling an Oracle Teacher",
+      "reason": "score 3: Routine active learning and feature acquisition research paper."
+    },
+    {
+      "title": "PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation",
+      "reason": "score 4: Robotics and VLA model research paper on loco-manipulation."
+    },
+    {
+      "title": "Realized versus Population Reliability: Anytime-Valid Self-Consistency Certification under Correlated Reasoning",
+      "reason": "score 3: Theoretical statistics and self-consistency paper for language models."
+    },
+    {
+      "title": "Probing the \"Conscious\" Mind: Selective Access and Global Workspace in Vision-Language Models",
+      "reason": "score 4: Interpretability research probing global workspace theory in vision-language models."
+    },
+    {
+      "title": "Verify the Verifier: Specification-Grounded LLM Cross-Checking for Bugs That Escape UVM Scoreboards",
+      "reason": "score 3: Specialized verification paper for LLM cross-checking in hardware verification."
+    },
+    {
+      "title": "ProtoDiffusion: Token-per-Layer Generative Modeling of Multi-Layer Images",
+      "reason": "score 3: Diffusion model research for multi-layer graphic design image generation."
+    },
+    {
+      "title": "Represented but misread: Post-training changes how language models read out what they represent",
+      "reason": "score 5: Interpretability research paper examining how post-training affects internal model representations."
+    },
+    {
+      "title": "Text-Aware, Vision-Blind: How Multimodal Image Editing Systems Handle Unsafe Inputs",
+      "reason": "score 5: Safety analysis paper examining multimodal image editing systems and unsafe inputs."
+    },
+    {
+      "title": "GEOHunter: Mapping a Generative Engine Optimization Network in the Wild",
+      "reason": "score 4: Incremental paper on generative engine optimization; not a major breakthrough."
+    },
+    {
+      "title": "Multi-institutional grading of Barrett's esophagus dysplasia without stain normalization using a pathology foundation model and multiple instance learning",
+      "reason": "score 4: Domain-specific medical imaging paper; too niche for general AI news."
+    },
+    {
+      "title": "MM-SystemOneBias: Evaluating Bias in Multimodal Jev-Style System One Decision Models",
+      "reason": "score 4: Niche academic paper on multimodal decision model bias."
+    },
+    {
+      "title": "Replication of Agentic Security Events: Audit and Investigation (ROGUE-AI)",
+      "reason": "score 5: Academic study auditing agentic security events; interesting topic but standard arXiv paper."
+    },
+    {
+      "title": "The Geometry of Lies: Knowledge and Persona Directions for Detecting Deception in Large Language Models",
+      "reason": "score 4: Academic paper on lie detection and persona directions in LLMs."
+    },
+    {
+      "title": "AURA: AUdio-dRiven streaming Avatar",
+      "reason": "score 4: Streaming avatar paper; incremental research."
+    },
+    {
+      "title": "LLM GerryMandering: Separating Interactions from Additive Effects in LLM Audits",
+      "reason": "score 4: Academic paper on intersectional bias auditing in LLMs."
+    },
+    {
+      "title": "Cost-Aware Agentic Feature Optimization System for Fleet-Scale Ranking Models",
+      "reason": "score 4: Academic paper on fleet-scale ranking feature optimization; too narrow."
+    },
+    {
+      "title": "Backtracking Agent Applications Security Incidents",
+      "reason": "score 4: Paper on backtracking security incidents in agent applications; similar to existing safety papers."
+    },
+    {
+      "title": "Deterministic Temporal Embedding for Calcium Imaging Trace Extraction",
+      "reason": "score 3: Specialized neuroscience/calcium imaging paper."
+    },
+    {
+      "title": "The Window Lever: Longer Observation Windows Outweigh the Observed Effects of Data, Capacity, and Architecture in Customer Behavior Forecasting",
+      "reason": "score 4: Incremental applied machine learning paper on customer behavior forecasting."
+    },
+    {
+      "title": "Simple Private Noisy SGD is Minimax-Optimal under Population Strong Convexity",
+      "reason": "score 4: Theoretical machine learning paper on differentially private SGD."
+    },
+    {
+      "title": "Hybrid Retrieval for Government Scheme Search in English and Marathi",
+      "reason": "score 4: Incremental bilingual NLP retrieval paper for Maharashtra government schemes."
+    },
+    {
+      "title": "AutoMaster: Autonomous Post-Training by Making the Same Model a Better Teacher",
+      "reason": "score 4: Post-training fine-tuning research paper, incremental contribution."
+    },
+    {
+      "title": "GLiDE: A Fast, Calibrated Decision Model Distilled from Reasoning Teachers",
+      "reason": "score 4: Distillation research paper for decision models, does not rise to a major milestone."
+    },
+    {
+      "title": "Grid Cells as Spectral Successor Features: A Reusable Basis for Continual Reinforcement Learning",
+      "reason": "score 4: Reinforcement learning successor features research paper, standard academic contribution."
+    },
+    {
+      "title": "Multimodal Error Detection in Chest X-ray Reports: A Large Language Model Reading Image Evidence",
+      "reason": "score 4: Specialized medical imaging error detection paper, routine academic literature."
+    },
+    {
+      "title": "FLUID: Flexible, Evidence-Grounded Situated Task Guidance",
+      "reason": "score 4: Task guidance benchmark paper, standard academic publication."
+    },
+    {
+      "title": "Anticipating Future Build Results with BuildPredictor",
+      "reason": "score 3: CI build prediction paper, routine software engineering AI research."
+    },
+    {
+      "title": "A new algorithmic approach for finding flat minima: critically damped Polyak stepsizes",
+      "reason": "score 4: Optimization algorithm research paper on gradient descent stepsizes."
+    },
+    {
+      "title": "Monte Carlo Pass Search for Setpieces",
+      "reason": "score 3: Application of machine learning to soccer set pieces is domain-specific and of low significance to frontier AI readers."
+    },
+    {
+      "title": "Neural Conditional Gaussian Model: Efficient Data Assimilation with Sequential Uncertainty Quantification for Nonlinear Dynamics",
+      "reason": "score 3: Mathematical/numerical method for dynamical systems with minor AI tie-in, not frontier AI research."
+    },
+    {
+      "title": "Bayesian optimization on amortized search space",
+      "reason": "score 3: Bayesian optimization paper on mechanistic simulators; too niche for our audience."
+    },
+    {
+      "title": "Should governments slow frontier AI? Jacob Coxon and Robin Hanson debate [video]",
+      "reason": "score 5: General discussion video debating government slowdown of frontier AI; routine commentary without breaking news."
+    },
+    {
+      "title": "Pete warden on local AI, open models, voice interfaces, the future of hardware",
+      "reason": "score 5: Pete Warden interview on local AI and hardware; general commentary without specific news hooks."
+    },
+    {
+      "title": "Launch HN: Onlook (YC W25) – An open-source developer tool for designers",
+      "reason": "not AI: Developer tool launch for designers; not primarily an AI story."
+    },
+    {
+      "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+      "reason": "not AI: OpenSSL buffer overflow vulnerability; general systems security, not AI-specific."
+    },
+    {
+      "title": "Zerodha Migrates Kite's User Preference Storage From SSDB to Open-Source SQLite-Based System",
+      "reason": "not AI: Database migration story for an Indian stock-broking platform, not an AI development."
+    },
+    {
+      "title": "Samsung Electronics Shakes Up Chips Leadership Amid Soaring Memory Demand",
+      "reason": "score 4: General Samsung memory leadership shuffle with a passing mention of AI demand, similar to 96dc8a080110."
+    },
+    {
+      "title": "TSMC Looks at Client Balance Sheets Before Allocating Chips: Report",
+      "reason": "not AI: General semiconductor foundry credit policy news with no specific AI focus."
+    },
+    {
+      "title": "Skyroot Partners With HEX20, Exolaunch, OhmSpace For Second Vikram-1 Flight",
+      "reason": "not AI: Aerospace and space launch partnership with no AI relevance."
+    },
+    {
+      "title": "US Agreed to Sell 879,000 NVIDIA and AMD Chips to China",
+      "reason": "duplicate of 609b4d81eb2e"
+    },
+    {
+      "title": "Flipkart’s BBD Timing Weighs On Walmart International’s Q3 Growth",
+      "reason": "not AI: E-commerce sales timing and retail revenue reporting, not AI news."
+    },
+    {
+      "title": "Urban Company Raises ₹2,500 Cr Via QIP, Draws Bids Worth Over ₹15,000 Cr",
+      "reason": "not AI: Home services marketplace financing round, not AI-related."
+    },
+    {
+      "title": "Delhi HC issues notice on LiveLaw’s challenge to automated content blocking under IT Rules",
+      "reason": "score 4: Legal challenge to automated content moderation under IT Rules; tangential AI angle."
+    },
+    {
+      "title": "Israel to roll out dedicated launchpad to help startups enter India, shares fast-track deep-tech funding playbook",
+      "reason": "score 4: Launchpad for Israeli deep-tech startups entering India; general deep-tech rather than specific AI coverage."
+    },
+    {
+      "title": "Israel Innovation Authority Chairman calls for strategic mega-projects in AI, semiconductors and quantum for tech sovereignty",
+      "reason": "score 4: High-level bilateral R&D cooperation commentary without a specific AI product, funding round, or concrete development."
+    },
+    {
+      "title": "Indonesia asks Google to clarify removal of 19,000 YouTube channels, ministry says",
+      "reason": "not AI: General YouTube moderation and influence operations report, not an AI story."
+    },
+    {
+      "title": "Taiwan tells Meta thousands of China-linked accounts seek to influence elections",
+      "reason": "not AI: Taiwan social media influence operations report, lacking an AI focus."
+    },
+    {
+      "title": "Anthropic's IPO caps explosive growth period for AI startup, filled with contradictions",
+      "reason": "score 3: Rehash of Anthropic's history and IPO context."
+    },
+    {
+      "title": "Spacetech startup SatSure raises $7 million from sovereign space fund",
+      "reason": "not AI: Spacetech funding round for satellite earth observation startup, lacking an explicit AI focus."
+    },
+    {
+      "title": "Meet the innovators exhibiting at Bengaluru Tech Summit 2026",
+      "reason": "not AI: Photo essay on general tech summit exhibitors, not specific AI news."
+    },
+    {
+      "title": "Vembu flags possible US immigration reversal, says it could revive housing demand",
+      "reason": "not AI: Commentary on US immigration and housing market, not AI."
+    },
+    {
+      "title": "Amazon Prime India head Abhinav Agarwal steps down after 16 years",
+      "reason": "not AI: Executive departure at Amazon Prime India, routine tech industry news."
+    },
+    {
+      "title": "Karnataka aims to raise its share in aerospace, defence sector to 75%: Minister",
+      "reason": "not AI: Aerospace and defence infrastructure policy in Karnataka."
+    },
+    {
+      "title": "Google is rolling out a collapsible sidebar on its desktop Search homepage, letting users easily find and resume recent AI searches (Barry Schwartz/Search Engine Roundtable)",
+      "reason": "score 5: Minor UI update for Google Search history sidebar for recent AI searches; incremental product feature."
+    },
+    {
+      "title": "Meta says 'reevaluating' 2030 net zero target amid AI buildout",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "Sources: Singapore-based DayOne pauses its US IPO plans to raise up to $5B as soon as Q4 amid market volatility and valuation concerns around AI infrastructure (Bloomberg)",
+      "reason": "variety: already 2 stories from bloomberg this run"
+    },
+    {
+      "title": "Google picks Bezos' Blue Origin to launch AI computing satellites in 2029",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "BrightAI, which uses AI to help industrial companies detect malfunctioning equipment, raised $97M led by Smith Point, bringing its total funding to $184M (Maria Deutscher/SiliconANGLE)",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "34e7f4ca2739",
+      "headline": "Ethan Mollick highlights research on 35 human labs deploying science agents",
+      "category": "voices",
+      "summary": "Ethan Mollick highlighted research where 35 human labs deployed agents that collaborated to conduct science, publishing 936 papers. The agents also publicly retracted mistakes, published null results more than humans, and founded a peer review journal.",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2pqcy4cbs2g",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "5a705548bf62",
+      "headline": "Nscale may need US license for ByteDance GPU access under new rules",
+      "category": "policy",
+      "summary": "Nscale must seek a US license to continue providing ByteDance remote access to Nvidia GPUs under new export regulations. ByteDance accounted for approximately 73% of Nscale's 2025 revenue.",
+      "url": "https://techmeme.com/261120/p3",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "8099b1cf49a8",
+      "headline": "Asian tech stocks plunge as Anthropic IPO fails to stem AI sell-off",
+      "category": "industry",
+      "summary": "Asian technology stocks dropped following Anthropic's $81.3 billion initial public offering as the record listing failed to halt a wider artificial intelligence stock sell-off. SoftBank shares fell 14.67%, while Japanese stocks lost over JPY 53 trillion.",
+      "url": "https://techmeme.com/261120/p1",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "79d1911aa727",
+      "headline": "SpaceXSI denies liability in UK lawmaker's lawsuit over Grok images",
+      "category": "safety",
+      "summary": "Elon Musk's SpaceXSI filed a defense against a lawsuit brought by British lawmaker Jess Asato over sexualised AI images generated by Grok. The company argued that obviously fictitious, AI-generated content cannot breach privacy rights.",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/elon-musks-spacexsi-denies-liability-in-uk-lawmakers-lawsuit-over-grok-images/articleshow/136012108.cms",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "78098ada5602",
+      "headline": "Anthropic shares slide 5% in after-hours trading following record IPO",
+      "category": "industry",
+      "summary": "Anthropic shares fell more than 5% in after-hours trading, slipping below its IPO level following a record $107.3 billion initial public offering. The decline occurred amid a broad market selloff driven by investor doubts regarding artificial intelligence profitability and high spending.",
+      "url": "https://techmeme.com/261119/p61",
+      "sources": 4,
+      "quotes": 1
+    },
+    {
+      "id": "5c7e324ff775",
+      "headline": "Compiling exact circuits into pretrained language model weights",
+      "category": "research",
+      "summary": "Tanmay Sah introduced closed-form, zero-gradient circuit-grafting primitives that compile deterministic computation directly into pretrained language model weights. On 6-digit arithmetic, Alibaba Qwen 3.5 4B and IBM Granite 4.2 3B reached 100.00% and 99.17% ALU-prefix accuracy.",
+      "url": "https://arxiv.org/abs/2611.26450",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "bd055369dbe5",
+      "headline": "New framework assesses LLM capability in software vulnerability research",
+      "category": "research",
+      "summary": "Researchers introduced a framework to rate LLM capabilities in software vulnerability research on an autonomy scale modeled after driving automation levels. They found that AI agents discovered, validated, and patched real-world software vulnerabilities without human intervention before 2026.",
+      "url": "https://arxiv.org/abs/2611.26601",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "e486efe85b2a",
+      "headline": "ChatPRD ends free trials after facing widespread token fraud abuse",
+      "category": "voices",
+      "summary": "ChatPRD founder Claire Vo reports that groups are abusing free trials to steal and resell AI tokens or run commercial enterprises. The widespread fraud has forced ChatPRD to wind down its free trials entirely.",
+      "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad",
+      "sources": 1,
+      "quotes": 1
+    }
+  ],
+  "notes": [
+    "ignored made-up duplicate id 96dc8a080110 for 'Samsung Electronics Shakes Up Chips Leadership Ami'",
+    "not India desk: 'Google picks Bezos' Blue Origin to launch AI compu'",
+    "not India desk: 'Meta says 'reevaluating' 2030 net zero target amid'",
+    "not India desk: 'Elon Musk's SpaceXSI denies liability in UK lawmak'",
+    "dropped non-quote (Mohamed A. El-Erian): remember this isn't just about the promise of AI, but about …",
+    "dropped unverifiable quote (Matt Maley): The Anthropic IPO has been a major success, However, the IPO…",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "2 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 100.7,
+    "audit": 0.0,
+    "plan": 1.9,
+    "judge": 18.9,
+    "verify and write": 122.4,
+    "videos": 5.9,
+    "tagging": 206.3,
+    "explainers": 0.0,
+    "trackers": 103.9,
+    "claims": 32.8,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "top voices": -0.0,
+    "briefing": 40.5,
+    "self-review": -0.0,
+    "photos": 1.2,
+    "stock photos": 41.9,
+    "daily email": -0.0,
+    "alerts": 12.6
+  },
+  "fetched": 3002,
+  "fresh": 74,
+  "plan": {
+    "focus": "Chasing the fallout from Anthropic's record IPO and Asian tech stock sell-off while filling a thin policy desk.",
+    "priorities": [
+      "Asian tech stocks plunge as Anthropic's record IPO fails to stem an AI (Asian tech stocks plunging after Anthropic's IPO is a major market reaction for investors and builders.)",
+      "Anthropic fell ~5% in after-hours trading on its debut day, following  (Anthropic falling in after-hours trading highlights valuation limits on the AI financing boom.)",
+      "US Agreed to Sell 879,000 NVIDIA and AMD Chips to China (US agreement to sell 879k chips to China directly feeds into ongoing trade policy and supply chain threads.)",
+      "Sources: Nscale must seek a US license to provide ByteDance remote acc (Nscale and ByteDance licensing rules intersect AI export controls and infrastructure financing.)",
+      "Ethan Mollick: Early fascinating work on how an AI science community w (Ethan Mollick's note on autonomous multi-agent science labs is crucial signal for research and agent architectures.)"
+    ],
+    "thin_areas": [
+      "policy"
+    ],
+    "searches": [],
+    "dig_deeper": [
+      "Asian tech stocks plunge as Anthropic's record IPO fails to stem an AI",
+      "Anthropic fell ~5% in after-hours trading on its debut day, following "
+    ]
+  },
+  "judged": 74,
+  "kept": 12,
+  "research": {
+    "investigated": 5,
+    "confirmed": 4,
+    "tool_calls": 14
+  },
+  "research_log": [
+    "Ethan Mollick: Early fascinating work on how an AI science community w: unconfirmed (searched “AI science community 35 human labs agents 936 papers”; searched “\"AI science community\" agents 35 human labs”; searched “\"published 936 papers\" AI agents science”)",
+    "Sources: Nscale must seek a US license to provide ByteDance remote acc: confirmed (searched “Nscale ByteDance US license Nvidia GPUs Bloomberg”; searched “Nscale ByteDance US license Nvidia GPUs”; read cryptobriefing.com)",
+    "Asian tech stocks plunge as Anthropic's record IPO fails to stem an AI: confirmed (searched “Anthropic record IPO Asian tech stocks plunge SoftBank TSMC Samsung SK Hynix”; searched “\"Asian tech stocks plunge as Anthropic's record IPO fails to stem an AI sell-off\"”; searched “\"Asian Equities Fall as Anthropic’s IPO Fails to Staunch AI Stock Selloff\"”)",
+    "Elon Musk's SpaceXSI denies liability in UK lawmaker's lawsuit over Gr: confirmed (searched “SpaceXSI denies liability UK lawmaker lawsuit Grok images Jess Asato”; read indiatimes.com)",
+    "Anthropic fell ~5% in after-hours trading on its debut day, following : confirmed (searched “Anthropic IPO 107.3B Bloomberg after hours”; searched “Anthropic fell 5% after hours debut day Bloomberg IPO”; read business-standard.com)"
+  ],
+  "threads": [
+    "Ethan Mollick research and lab simulations: Ethan Mollick highlights research on 35 human labs deploying",
+    "US lawmakers seek Microsoft briefing on ByteDance AI deal: Nscale may need US license for ByteDance GPU access under ne",
+    "Anthropic IPO tests circular financing model: Asian tech stocks plunge as Anthropic IPO fails to stem AI s",
+    "Wyoming woman joins federal lawsuit against xAI over Grok de: SpaceXSI denies liability in UK lawmaker's lawsuit over Grok",
+    "Anthropic IPO tests circular financing boom: Anthropic shares slide 5% in after-hours trading following r"
+  ],
+  "videos": {
+    "OpenAI": "ok (14 in feed, 5 new)",
+    "Anthropic": "ok (13 in feed, 0 new)",
+    "Google DeepMind": "ok (14 in feed, 1 new)",
+    "Google for Developers": "ok (10 in feed, 2 new)",
+    "AI at Meta": "ok (11 in feed, 0 new)",
+    "Microsoft Research": "ok (11 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 2 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 2 new)",
+    "AI Explained": "ok (15 in feed, 1 new)",
+    "Lex Fridman": "ok (14 in feed, 1 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (3 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 4 new)",
+    "Training Data (Sequoia)": "ok (5 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 1 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (6 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (4 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "15 kept from 20 new",
+  "tagged": 8,
+  "trackers": "filed 7 stories; updated us-china, frontier-race, ai-regulation, agent-safety",
+  "claims": "211 tracked, 205 open, 1 updated this run",
+  "model_tracker": "82 models, 24 changes today",
+  "briefing": "4 themes from 20 stories",
+  "india_briefing": "3 themes from 3 stories",
+  "photos": "4 saved, 0 unavailable",
+  "stock photos": "4 added",
+  "alerts": "37 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":56}",
+  "ai_requests_run": 47,
+  "ai_tokens_run": 153753,
+  "ai_requests_today": 140,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model",
+    "gemini: network error ReadTimeout, retrying",
+    "gemini: unreachable (ReadTimeout); skipping provider",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model"
+  ]
+}
