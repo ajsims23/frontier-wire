@@ -1,67 +1,93 @@
 {
-  "updated_at": "2026-11-20T20:47:58+00:00",
+  "updated_at": "2026-11-20T22:15:25+00:00",
   "lead": {
     "explainer": {
-      "what_it_means": "Architect Labs used AI systems to design a general-purpose CPU called Frostbite from scratch, including its instruction set, microarchitecture, and layout. Unlike conventional processors that rely on complex cache hierarchies and shared memory, Frostbite uses a grid of small computing tiles based on interaction nets, where computation happens locally without a centralized scheduler.",
+      "what_it_means": "An Anthropic mathematician published a proof of the 1859 Riemann hypothesis using Claude, presenting the work in a programming language that checks mathematical correctness. The solution has not yet been independently verified by the mathematics community or accepted by the Clay Mathematics Institute.",
       "terms": [
         {
-          "term": "Interaction nets",
-          "meaning": "A mathematical graph model where computation proceeds by rewriting connected nodes locally."
+          "term": "Riemann hypothesis",
+          "meaning": "A 167-year-old mathematical conjecture concerning the distribution of prime numbers and zeroes of a specific function."
         },
         {
-          "term": "RTL",
-          "meaning": "Register-transfer level, a design abstraction used in creating digital circuits like microprocessors."
+          "term": "Lean",
+          "meaning": "An open-source programming language used to check the logical and mathematical correctness of formal proofs."
         },
         {
-          "term": "GDS",
-          "meaning": "Graphic Data System, the final layout file format used to manufacture integrated circuits."
+          "term": "Millennium Prize problem",
+          "meaning": "One of seven notoriously difficult mathematical problems designated by the Clay Mathematics Institute, carrying a $1 million bounty each."
         }
       ],
-      "watch_next": []
+      "watch_next": [
+        "Independent verification of Levent Alpöge's Lean-coded proof by mathematical experts and the Clay Mathematics Institute."
+      ]
     },
-    "benchmarks": [
-      {
-        "model": "Frostbite",
-        "benchmark": "performance per watt compared to a modern, silicon-proven su",
-        "score": "4.59x"
-      }
-    ],
     "audiences": {
-      "builders": "Architect Labs introduced Frostbite, a CPU using interaction nets with a Vine language, Ivy intermediate representation, and an AI-driven toolchain covering RTL and verification.",
-      "business": "US AI startup Architect Labs claims its AI-designed Frostbite CPU achieves 4.59x performance per watt and 8.77x performance per area compared to a conventional CPU core in pre-silicon simulations.",
-      "investors": "US startup Architect Labs has developed an AI-designed general-purpose CPU architecture called Frostbite, though results are currently based on pre-silicon simulations rather than physical silicon."
+      "builders": "Developers and engineers can inspect the Lean-coded proof published on Levent Alpöge's website to examine how Claude was used to formalize arguments without assumptions.",
+      "business": "Executives and strategy teams are tracking how AI labs like Anthropic intersect with fundamental scientific breakthroughs, following Anthropic's public market debut.",
+      "investors": "Investors are monitoring the market impact and scientific validation of claims made by employees at publicly traded AI labs like Anthropic."
     },
-    "id": "000028228240",
-    "headline": "Architect Labs unveils AI-designed Frostbite CPU architecture",
-    "summary": "US AI startup Architect Labs introduced Frostbite, a general-purpose CPU architecture designed and verified by AI. The company claims the design delivers 4.59 times the performance per watt and 8.77 times the performance per area compared to a conventional CPU core across 25 workloads in pre-silicon simulations.",
-    "why_it_matters": "This release represents an attempt to use autonomous AI systems for co-designing software and hardware across the stack, potentially bypassing decades of human-made CPU design stagnation.",
+    "id": "f1b7c64ada91",
+    "headline": "Anthropic mathematician claims to have solved Riemann hypothesis with Claude",
+    "summary": "Anthropic mathematician Levent Alpöge published a claim that he used Claude to prove the Riemann hypothesis, a 167-year-old open mathematical problem. The solution has not yet been independently verified by experts or accepted by the Clay Mathematics Institute.",
+    "why_it_matters": "If verified by the mathematics community, it would represent a major milestone for AI in solving long-standing open problems in number theory.",
     "category": "research",
-    "lab": "Architect Labs",
-    "model_name": "Frostbite",
-    "model_type": "Other",
+    "lab": "Anthropic",
+    "model_name": "Claude",
+    "model_type": "Language",
     "tags": [
-      "CPU",
-      "hardware discovery",
-      "interaction nets",
-      "AI-designed silicon"
+      "Anthropic",
+      "Riemann hypothesis",
+      "Claude",
+      "Millennium Prize problems",
+      "mathematics"
     ],
     "quotes": [],
     "score": 10,
-    "url": "https://architectlabs.com/blog/frostbite",
-    "source_id": "hn",
+    "url": "https://theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+    "source_id": "verge-ai",
     "desk": "",
     "ai_relevance": "core",
-    "image": "https://main--gleeful-begonia-6bb5f3.netlify.app/_next/static/media/frostbite-cover.3n9ytugnquhlr.jpg",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/gettyimages-2305894185.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
     "sources": [
       {
-        "url": "https://architectlabs.com/blog/frostbite",
-        "publisher": "architectlabs.com",
-        "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI"
+        "url": "https://theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+        "publisher": "The Verge AI",
+        "title": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude"
       },
       {
-        "url": "https://notebookcheck.net/AMD-and-Intel-move-over-AI-designed-an-all-new-CPU-and-claims-it-is-4-6x-more-efficient.1455225.0.html",
-        "publisher": "Notebookcheck",
-        "title": "AMD and Intel, move over: AI designed an all-new CPU — and claims it is 4.6x more efficient"
+        "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too",
+        "publisher": "TechCrunch AI",
+        "title": "AI claimed a solution to the 167-year-old Riemann Hypothesis — and a human did, too"
+      },
+      {
+        "url": "https://msn.com/en-us/technology/artificial-intelligence/anthropic-mathematician-says-claude-helped-solve-the-riemann-hypothesis-biggest-problem-in-math/ar-AA2hSnuU",
+        "publisher": "Insider on MSN",
+        "title": "Anthropic mathematician says Claude helped solve the Riemann hypothesis: 'Biggest problem in math'"
+      },
+      {
+        "url": "https://scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math",
+        "publisher": "Scientific American",
+        "title": "Anthropic mathematician claims to prove Riemann hypothesis, most famous problem in all of math"
+      },
+      {
+        "url": "https://nypost.com/2026/11/20/business/anthropic-researcher-claims-claude-cracked-legendary-1m-math-problem-and-left-him-struggling-to-keep-up",
+        "publisher": "New York Post",
+        "title": "Anthropic researcher claims Claude cracked legendary $1M math problem — and left him struggling to keep up"
+      },
+      {
+        "url": "https://clarin.com/us-news/the-riemann-hypothesis-been-solved-anthropic-mathematician-levent-alpoge-claims-claude-cracked-maths-most-famous-problem_0_nQxBE3rUxX.html",
+        "publisher": "Clarín",
+        "title": "Has the Riemann hypothesis been solved? Anthropic mathematician Levent Alpöge claims Claude cracked math’s most famous problem"
+      },
+      {
+        "url": "https://nytimes.com/2026/11/20/science/anthropic-ai-math-riemann-hypothesis.html",
+        "publisher": "The New York Times",
+        "title": "Anthropic Mathematician Claims to Have Solved Math’s Most Famous Problem"
+      },
+      {
+        "url": "https://the-independent.com/tech/riemann-hypothesis-solved-levent-alpoge-b3088927.html",
+        "publisher": "the-independent.com",
+        "title": "Anthropic mathematician claims proof of Riemann hypothesis with help of Claude"
       }
     ],
     "research": {
@@ -69,27 +95,776 @@
       "read": 1,
       "decision": "confirmed"
     },
-    "published_at": "2026-11-20T10:01:41+00:00",
-    "created_at": "2026-11-20T13:29:38+00:00",
+    "published_at": "2026-11-20T16:34:13+00:00",
+    "created_at": "2026-11-20T22:15:25+00:00",
+    "thread": "t-752abeffd6c8",
     "sectors": [
-      "manufacturing"
+      "science"
     ],
     "regions": [
       "us"
     ],
     "deal": null,
     "relevance": {
-      "builders": 3,
-      "business": 2,
+      "builders": 2,
+      "business": 3,
       "investors": 2
     },
-    "cover": "Frostbite",
+    "cover": "167-year-old",
     "trackers": [
-      "ai-infrastructure"
+      "frontier-race"
     ],
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Mistral has launched a public preview of Mistral Large 4, a new multimodal AI model with 1 trillion total parameters. The model was trained in Europe on NVIDIA hardware and will have its weights released by the end of the month.",
+        "terms": [
+          {
+            "term": "Multimodal model",
+            "meaning": "An artificial intelligence model that processes multiple types of data such as text and images."
+          },
+          {
+            "term": "Active parameters",
+            "meaning": "Model parameters that are used during a specific computation or token generation, rather than the entire parameter count."
+          },
+          {
+            "term": "Open-weight model",
+            "meaning": "AI model weights that are publicly shared and can be downloaded, modified, and run independently."
+          }
+        ],
+        "watch_next": [
+          "Weight release of Mistral Large 4 by the end of October 2026."
+        ]
+      },
+      "audiences": {
+        "builders": "Developers can try the Mistral Large 4 preview API today on Mistral Studio, with model weights scheduled to drop at the end of the month.",
+        "business": "Enterprises in sectors like cybersecurity, finance, and law can use Mistral Large 4 for mission-critical workloads, with self-deployment options providing control under European law.",
+        "investors": "Mistral trained the 1-trillion-parameter model from scratch on 3,800 NVIDIA Grace Blackwell GPUs in its own European datacenters."
+      },
+      "id": "820bd24a41c4",
+      "headline": "Mistral launches public preview of Mistral Large 4",
+      "summary": "Mistral has launched a public preview of Mistral Large 4, a 1-trillion-parameter natively multimodal model with 52 billion active parameters. The preview API is available on Mistral Studio, with weights releasing at the end of the month.",
+      "why_it_matters": "Mistral Large 4 represents a major European-built open-weight release intended to compete with global frontier models while offering self-deployment and control under European law.",
+      "category": "models",
+      "lab": "Mistral AI",
+      "model_name": "Mistral Large 4",
+      "model_type": "Multimodal",
+      "tags": [
+        "Mistral",
+        "Mistral Large 4",
+        "multimodal",
+        "open-weight",
+        "AI models"
+      ],
+      "quotes": [],
+      "score": 8,
+      "url": "https://mistral.ai/news/mistral-large-4",
+      "source_id": "mistral",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp",
+      "sources": [
+        {
+          "url": "https://mistral.ai/news/mistral-large-4",
+          "publisher": "Mistral AI",
+          "title": "Research Introducing Mistral Large 4 October 6, 2026 By Mistral"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-20T22:15:25+00:00",
+      "created_at": "2026-11-20T22:15:25+00:00",
+      "thread": "t-a83814a46377",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "europe"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 3,
+        "investors": 2
+      },
+      "cover": "Mistral Large 4",
+      "trackers": [
+        "frontier-race"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Inkling 2 Mini is a small open-weights AI model designed to run on consumer laptops with a memory footprint of about 20GB. By looping its middle layers three times per token, it aims to achieve higher reasoning performance using fewer active parameters than traditional models of similar capability.",
+        "terms": [
+          {
+            "term": "open-weights",
+            "meaning": "An open-weights AI model whose parameter files are publicly available for download and use."
+          },
+          {
+            "term": "looped transformer",
+            "meaning": "A neural network architecture that processes sequential data by running middle layers multiple times per token."
+          },
+          {
+            "term": "Mixture-of-Experts",
+            "meaning": "A model design where only a subset of parameters is active for any given token to improve efficiency."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "Inkling 2 Mini",
+          "benchmark": "DeepSWE v1.1",
+          "score": "48.2%"
+        },
+        {
+          "model": "Inkling 2 Mini",
+          "benchmark": "Vals Index v2.2",
+          "score": "46.5%"
+        }
+      ],
+      "audiences": {
+        "builders": "Developers can access Inkling 2 Mini on Hugging Face and run it locally using tools like Ollama, Unsloth, or llama.cpp.",
+        "business": "Businesses can use Inkling 2 Mini locally on hardware like consumer laptops to power persistent agents and coding tools without cloud dependency.",
+        "investors": "Thinking Machines Lab is competing in the open-weights model market with an architecture that reduces active parameters and memory footprints."
+      },
+      "id": "6da8ea47d40e",
+      "headline": "Thinking Machines Lab releases Inkling 2 Mini open-weights model",
+      "summary": "Thinking Machines Lab released Inkling 2 Mini, a 26.4B-parameter open-weights Mixture-of-Experts transformer that loops its middle layers three times per token. The ~20GB model is small enough to run on consumer laptops and leads open-weights models under 100B parameters on benchmarks like DeepSWE v1.1.",
+      "why_it_matters": "The release demonstrates the practical application of looped transformer architectures in sub-100B parameter models designed for local hardware execution.",
+      "category": "models",
+      "lab": "Thinking Machines Lab",
+      "model_name": "Inkling 2 Mini",
+      "model_type": "Language",
+      "tags": [
+        "Inkling 2 Mini",
+        "Thinking Machines Lab",
+        "open-weights",
+        "transformer",
+        "Mixture-of-Experts"
+      ],
+      "quotes": [],
+      "score": 9,
+      "url": "https://techmeme.com/261120/p33",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://thinkingmachines.ai/news/inkling-2-mini/images/cover-social.png",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261120/p33",
+          "publisher": "techmeme.com",
+          "title": "TML releases Inkling 2 Mini, an open-weights 26.4B-parameter transformer that loops middle layers three times per token for better reasoning with fewer tokens (Thinking Machines Lab)"
+        },
+        {
+          "url": "https://techmeme.com/261120/p37",
+          "publisher": "techmeme.com",
+          "title": "Artificial Analysis says Inkling 2 Mini, with 5.4B active parameters, matches Qwen3.8 27B (xhigh) on its Intelligence Index with ~5x fewer active parameters (Artificial Analysis)"
+        },
+        {
+          "url": "https://thinkingmachines.ai/news/inkling-2-mini",
+          "publisher": "thinkingmachines.ai",
+          "title": "Inkling 2 Mini"
+        },
+        {
+          "url": "https://unite.ai/thinking-machines-lab-releases-inkling-2-mini-for-local-devices",
+          "publisher": "Unite.AI",
+          "title": "Thinking Machines Lab Releases Inkling 2 Mini for Local Devices"
+        },
+        {
+          "url": "https://huggingface.co/blog/inkling2mini",
+          "publisher": "Hugging Face blog",
+          "title": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 2,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-20T21:15:02+00:00",
+      "created_at": "2026-11-20T22:15:25+00:00",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "Inkling 2 Mini",
+      "trackers": [
+        "frontier-race"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Security research revealed that sensitive data sent through AI routers and inference resellers can be exposed, logged, or accessed by attackers. The study tracked secrets planted in AI prompts to see where they surfaced across the supply chain.",
+        "terms": [
+          {
+            "term": "AI router",
+            "meaning": "Services that receive prompts from AI applications and route them to inference models based on price or suitability."
+          },
+          {
+            "term": "Canary",
+            "meaning": "Unique credentials or URLs planted in data to track unauthorized access or data leakage when used."
+          },
+          {
+            "term": "Zero Data Retention",
+            "meaning": "A setting where AI providers are instructed not to retain user data."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers using AI routers and reseller networks face hidden data exposure and privacy setting failures in the supply chain.",
+        "business": "Enterprises relying on third-party AI routers and inference resellers must account for widespread prompt logging and compromised providers.",
+        "investors": "Security risks in the AI supply chain highlight vulnerabilities in reseller and hosting provider ecosystems."
+      },
+      "id": "6e086317ffb3",
+      "headline": "Researcher tests AI supply chain with 2 million canaries and finds data leaks",
+      "summary": "Security researcher HD Moore planted nearly 2 million trackable secrets in prompts sent through AI services to test for data leakage between July and November 2026. The experiment uncovered compromised AI providers, prompt logging by resellers, and ignored privacy settings.",
+      "why_it_matters": "The findings demonstrate that sensitive data sent to AI applications can leak through routers, resellers, and compromised hosting providers despite encryption in transit.",
+      "category": "research",
+      "lab": "Dragos",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "security",
+        "privacy",
+        "supply chain",
+        "AI routers"
+      ],
+      "quotes": [
+        {
+          "text": "We sent nearly two million AI prompts containing unique, trackable secrets to AI providers, then watched where those secrets surfaced",
+          "speaker": "HD Moore",
+          "speaker_role": "Chief Research Officer of Dragos",
+          "source_url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate"
+        }
+      ],
+      "score": 8,
+      "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate",
+      "source_id": "ars-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/11/ai-privacy-leakage-1152x648.jpg",
+      "sources": [
+        {
+          "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate",
+          "publisher": "Ars Technica AI",
+          "title": "Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced."
+        },
+        {
+          "url": "https://cryptobriefing.com/hd-moore-ai-supply-chain-data-leaks",
+          "publisher": "Crypto Briefing",
+          "title": "HD Moore’s canary experiment exposes data leaks across the AI supply chain"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-20T20:59:08+00:00",
+      "created_at": "2026-11-20T22:15:25+00:00",
+      "sectors": [
+        "cybersecurity"
+      ],
+      "regions": [
+        "us"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 3,
+        "investors": 1
+      },
+      "cover": "2 million",
+      "trackers": [
+        "agent-safety"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "President Donald Trump stated that U.S. companies will be blocked from building data centers outside the country or face a heavy tax penalty. Major technology firms currently rely on international data centers for global expansion and to meet regulatory requirements.",
+        "terms": [
+          {
+            "term": "Data center",
+            "meaning": "A physical facility that houses computer systems and associated components, such as telecommunications and storage systems, used for AI and cloud computing."
+          },
+          {
+            "term": "Cloud infrastructure",
+            "meaning": "Services provided over the internet, including data storage and computing power, typically hosted in large data centers by companies like Amazon, Microsoft, and Google."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Policy proposals to restrict overseas data center construction could impact infrastructure scaling and global deployment plans for cloud providers.",
+        "business": "U.S. cloud infrastructure providers with international data centers face potential taxation or bans if the proposed policy is enacted.",
+        "investors": "Uncertainty surrounds major tech investments in international cloud infrastructure as potential tariffs and bans are floated."
+      },
+      "id": "b451ca89e9da",
+      "headline": "Trump threatens tax and ban on US companies building data centers overseas",
+      "summary": "President Donald Trump stated that U.S. companies will be blocked from building data centers overseas or face a heavy tax. Major cloud providers including Alphabet, Amazon, Microsoft, Meta, and Oracle have already built data centers in other countries.",
+      "why_it_matters": "The proposal addresses the geopolitical and energy constraints of the AI boom, forcing a clash between domestic infrastructure policy and the global expansion strategies of major tech companies.",
+      "category": "policy",
+      "lab": "",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "Trump",
+        "data centers",
+        "policy",
+        "AI infrastructure",
+        "cloud computing"
+      ],
+      "quotes": [
+        {
+          "text": "We’re not going to allow our companies to build data centers outside of our country",
+          "speaker": "Donald Trump",
+          "speaker_role": "President of the United States",
+          "source_url": "https://theverge.com/policy/1038892/trump-foreign-data-centers-tax"
+        }
+      ],
+      "score": 9,
+      "url": "https://techmeme.com/261120/p23",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/STK466_ELECTION_2024_CVirginia_E.jpg?quality=90&strip=all&crop=0%2C9.9676601489831%2C100%2C80.064679702034&w=1200",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261120/p23",
+          "publisher": "techmeme.com",
+          "title": "Trump says he would block US companies from building data centers overseas or impose a \"tremendous tax\" on them if they do (Julianna Bragg/Axios)"
+        },
+        {
+          "url": "https://theverge.com/policy/1038892/trump-foreign-data-centers-tax",
+          "publisher": "The Verge AI",
+          "title": "Trump threatens ‘tremendous tax’ for moving AI data centers outside the US"
+        },
+        {
+          "url": "https://cnbc.com/2026/11/20/trump-data-centers-ai-companies-tax.html",
+          "publisher": "CNBC",
+          "title": "Trump vows to stop U.S. companies from building data centers abroad, threatens 'tremendous tax'"
+        },
+        {
+          "url": "https://msn.com/en-us/news/other/trump-threatens-tremendous-penalties-on-companies-that-build-ai-data-centers-overseas/ar-AA2hS6lK",
+          "publisher": "NBC News on MSN",
+          "title": "Trump threatens tremendous penalties on companies that build AI data centers overseas"
+        },
+        {
+          "url": "https://nytimes.com/2026/11/20/us/politics/trump-data-centers-ban.html",
+          "publisher": "The New York Times",
+          "title": "Trump Threatens to Bar U.S. Tech Firms From Building Data Centers Abroad"
+        }
+      ],
+      "research": {
+        "steps": 2,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-20T18:35:01+00:00",
+      "created_at": "2026-11-20T22:15:25+00:00",
+      "thread": "t-c71977e5e8f7",
+      "sectors": [],
+      "regions": [
+        "us"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 1,
+        "business": 3,
+        "investors": 3
+      },
+      "cover": "Alphabet",
+      "trackers": [
+        "ai-infrastructure"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "A nonprofit evaluation organization called METR has updated its benchmark tracking how long AI models can work on complex tasks. The findings show that while models continue to improve rapidly on structured tasks like coding, they still struggle with open-ended tasks that require human-like judgment.",
+        "terms": [
+          {
+            "term": "Time horizon plot",
+            "meaning": "A test suite created by METR that rates AI models based on the length of human tasks they can successfully complete."
+          },
+          {
+            "term": "Reinforcement learning",
+            "meaning": "A machine learning technique where systems are trained by rewarding successes and penalizing failures."
+          },
+          {
+            "term": "Verifiable tasks",
+            "meaning": "Tasks where an automated check can determine whether the solution succeeded or failed."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Builders can examine METR's expanded TH2 task suite—covering both verifiable domains and open-ended research—to better understand where frontier models excel and where judgment lags.",
+        "business": "Business leaders tracking AI automation in R&D should note METR's findings that frontier models improve rapidly on verifiable tasks like coding while lagging in judgment and open-ended research.",
+        "investors": "Investors evaluating the commercial timeline for autonomous AI R&D and self-improving agents can review METR's updated time horizon data showing exponential growth alongside persistent gaps in research judgment."
+      },
+      "id": "583b7a1c7413",
+      "headline": "METR updates AI time horizon report with harder tasks and judgment focus",
+      "summary": "Nonprofit evaluation group METR released an update to its time horizon report, finding that while frontier AI models continue rapid capability gains on verifiable tasks like coding, their performance lags on open-ended tasks requiring judgment. The updated TH2 suite tests models on 36 tasks across 12 families, showing that time horizons double roughly every 110 days.",
+      "why_it_matters": "Understanding the capability gap between verifiable coding tasks and open-ended research judgment is critical for assessing progress toward automated AI R&D.",
+      "category": "research",
+      "lab": "METR",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "METR",
+        "AI evaluation",
+        "benchmarks",
+        "time horizon",
+        "reinforcement learning"
+      ],
+      "quotes": [],
+      "score": 8,
+      "url": "https://technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update",
+      "source_id": "mit-tr-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://wp.technologyreview.com/wp-content/uploads/2026/11/metr2a.jpg?resize=1200,600",
+      "sources": [
+        {
+          "url": "https://technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update",
+          "publisher": "MIT Technology Review AI",
+          "title": "The most misunderstood graph in AI just got a major update"
+        },
+        {
+          "url": "https://unite.ai/metr-finds-ai-time-horizons-doubling-as-research-judgment-lags",
+          "publisher": "Unite.AI",
+          "title": "METR Finds AI Time Horizons Doubling as Research Judgment Lags"
+        },
+        {
+          "url": "https://cryptobriefing.com/metr-ai-time-horizon-report-judgment-tasks",
+          "publisher": "Crypto Briefing",
+          "title": "METR updates its AI time horizon report, adds judgment-heavy tasks"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-20T18:15:15+00:00",
+      "created_at": "2026-11-20T22:15:25+00:00",
+      "sectors": [
+        "science"
+      ],
+      "regions": [
+        "us"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "110 days",
+      "trackers": [
+        "agent-safety"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "An Anthropic mathematician published a proof of the 1859 Riemann hypothesis using Claude, presenting the work in a programming language that checks mathematical correctness. The solution has not yet been independently verified by the mathematics community or accepted by the Clay Mathematics Institute.",
+        "terms": [
+          {
+            "term": "Riemann hypothesis",
+            "meaning": "A 167-year-old mathematical conjecture concerning the distribution of prime numbers and zeroes of a specific function."
+          },
+          {
+            "term": "Lean",
+            "meaning": "An open-source programming language used to check the logical and mathematical correctness of formal proofs."
+          },
+          {
+            "term": "Millennium Prize problem",
+            "meaning": "One of seven notoriously difficult mathematical problems designated by the Clay Mathematics Institute, carrying a $1 million bounty each."
+          }
+        ],
+        "watch_next": [
+          "Independent verification of Levent Alpöge's Lean-coded proof by mathematical experts and the Clay Mathematics Institute."
+        ]
+      },
+      "audiences": {
+        "builders": "Developers and engineers can inspect the Lean-coded proof published on Levent Alpöge's website to examine how Claude was used to formalize arguments without assumptions.",
+        "business": "Executives and strategy teams are tracking how AI labs like Anthropic intersect with fundamental scientific breakthroughs, following Anthropic's public market debut.",
+        "investors": "Investors are monitoring the market impact and scientific validation of claims made by employees at publicly traded AI labs like Anthropic."
+      },
+      "id": "f1b7c64ada91",
+      "headline": "Anthropic mathematician claims to have solved Riemann hypothesis with Claude",
+      "summary": "Anthropic mathematician Levent Alpöge published a claim that he used Claude to prove the Riemann hypothesis, a 167-year-old open mathematical problem. The solution has not yet been independently verified by experts or accepted by the Clay Mathematics Institute.",
+      "why_it_matters": "If verified by the mathematics community, it would represent a major milestone for AI in solving long-standing open problems in number theory.",
+      "category": "research",
+      "lab": "Anthropic",
+      "model_name": "Claude",
+      "model_type": "Language",
+      "tags": [
+        "Anthropic",
+        "Riemann hypothesis",
+        "Claude",
+        "Millennium Prize problems",
+        "mathematics"
+      ],
+      "quotes": [],
+      "score": 10,
+      "url": "https://theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+      "source_id": "verge-ai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/gettyimages-2305894185.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+      "sources": [
+        {
+          "url": "https://theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+          "publisher": "The Verge AI",
+          "title": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude"
+        },
+        {
+          "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too",
+          "publisher": "TechCrunch AI",
+          "title": "AI claimed a solution to the 167-year-old Riemann Hypothesis — and a human did, too"
+        },
+        {
+          "url": "https://msn.com/en-us/technology/artificial-intelligence/anthropic-mathematician-says-claude-helped-solve-the-riemann-hypothesis-biggest-problem-in-math/ar-AA2hSnuU",
+          "publisher": "Insider on MSN",
+          "title": "Anthropic mathematician says Claude helped solve the Riemann hypothesis: 'Biggest problem in math'"
+        },
+        {
+          "url": "https://scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math",
+          "publisher": "Scientific American",
+          "title": "Anthropic mathematician claims to prove Riemann hypothesis, most famous problem in all of math"
+        },
+        {
+          "url": "https://nypost.com/2026/11/20/business/anthropic-researcher-claims-claude-cracked-legendary-1m-math-problem-and-left-him-struggling-to-keep-up",
+          "publisher": "New York Post",
+          "title": "Anthropic researcher claims Claude cracked legendary $1M math problem — and left him struggling to keep up"
+        },
+        {
+          "url": "https://clarin.com/us-news/the-riemann-hypothesis-been-solved-anthropic-mathematician-levent-alpoge-claims-claude-cracked-maths-most-famous-problem_0_nQxBE3rUxX.html",
+          "publisher": "Clarín",
+          "title": "Has the Riemann hypothesis been solved? Anthropic mathematician Levent Alpöge claims Claude cracked math’s most famous problem"
+        },
+        {
+          "url": "https://nytimes.com/2026/11/20/science/anthropic-ai-math-riemann-hypothesis.html",
+          "publisher": "The New York Times",
+          "title": "Anthropic Mathematician Claims to Have Solved Math’s Most Famous Problem"
+        },
+        {
+          "url": "https://the-independent.com/tech/riemann-hypothesis-solved-levent-alpoge-b3088927.html",
+          "publisher": "the-independent.com",
+          "title": "Anthropic mathematician claims proof of Riemann hypothesis with help of Claude"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-20T16:34:13+00:00",
+      "created_at": "2026-11-20T22:15:25+00:00",
+      "thread": "t-752abeffd6c8",
+      "sectors": [
+        "science"
+      ],
+      "regions": [
+        "us"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 3,
+        "investors": 2
+      },
+      "cover": "167-year-old",
+      "trackers": [
+        "frontier-race"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Levent Alpöge reported working with Anthropic's Claude model to develop a proof for the Riemann Hypothesis and related mathematical hypotheses. The AI model reportedly outpaced the researcher near the end of the process.",
+        "terms": [
+          {
+            "term": "Riemann Hypothesis",
+            "meaning": "A famous unsolved problem in mathematics concerning the distribution of the zeros of the Riemann zeta function."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers using AI systems can see an example of an AI model working on complex mathematics research.",
+        "business": "Business leaders can observe AI being applied to advanced mathematical problem-solving.",
+        "investors": "Investors can note reports of AI assisting in complex scientific and mathematical breakthroughs."
+      },
+      "id": "b8e1839046bc",
+      "headline": "Levent Alpöge reports discovering proof of Riemann Hypothesis with Claude",
+      "summary": "Mathematician Levent Alpöge stated that he discovered a proof of the Riemann Hypothesis while working with Anthropic's Claude model. According to the report, the AI model also helped formalize the arguments without assumptions.",
+      "why_it_matters": "This account highlights an instance of an AI assistant being used to tackle and potentially resolve long-standing mathematical problems.",
+      "category": "voices",
+      "lab": "Anthropic",
+      "model_name": "Claude",
+      "model_type": "Language",
+      "tags": [
+        "mathematics",
+        "claude",
+        "riemann-hypothesis"
+      ],
+      "quotes": [
+        {
+          "text": "I believe I have, working with Claude, discovered a proof of the Riemann Hypothesis.",
+          "speaker": "Levent Alpöge",
+          "speaker_role": "Mathematician",
+          "source_url": "https://simonwillison.net/2026/Nov/20/levent-alpoge"
+        }
+      ],
+      "score": 8,
+      "url": "https://simonwillison.net/2026/Nov/20/levent-alpoge",
+      "source_id": "simon-willison",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Nov/20/levent-alpoge",
+          "publisher": "Simon Willison",
+          "title": "Quoting Levent Alpöge"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-20T16:30:48+00:00",
+      "created_at": "2026-11-20T22:15:25+00:00",
+      "sectors": [
+        "science"
+      ],
+      "regions": [
+        "us"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 3,
+        "investors": 2
+      },
+      "cover": "Riemann Hypothesis",
+      "trackers": [
+        "frontier-race"
+      ],
+      "stock_tried": "2026-11-20T22:15:25+00:00",
+      "photo_local": true,
+      "image_kind": "stock",
+      "photo_credit": {
+        "key": "ov:314b4db9-30cb-438e-82f4-987fc0ca6cf5",
+        "by": "The Global Diplomacy and Foreign Affairs Forum",
+        "license": "CC BY-SA 4.0",
+        "page": "https://commons.wikimedia.org/w/index.php?curid=192773608",
+        "via": "Wikimedia"
+      }
+    },
+    {
+      "explainer": {
+        "what_it_means": "Anthropic's public stock listing allows retail investors to buy shares in the company through overseas investment platforms. Indian retail investors used platforms like INDmoney, Mudrex, and Vested to trade the stock following its Nasdaq debut, though they could not buy directly into the initial public offering.",
+        "terms": [
+          {
+            "term": "Liberalised Remittance Scheme (LRS)",
+            "meaning": "A regulatory scheme in India that permits resident individuals to freely remit a certain amount of foreign exchange abroad for capital or current account transactions."
+          },
+          {
+            "term": "Retail investors",
+            "meaning": "Individual investors who trade for themselves rather than on behalf of institutions."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "business": "Indian retail investors drove significant volume into Anthropic shares on overseas platforms following its Nasdaq listing, offering a new avenue for public market exposure to AI companies.",
+        "investors": "Anthropic's public debut drew substantial retail trading activity across platforms like INDmoney, Mudrex, and Vested, highlighting strong public demand for artificial intelligence assets."
+      },
+      "id": "5fe0efb0a285",
+      "headline": "Anthropic Nasdaq debut sparks buying rush among Indian retail investors",
+      "summary": "Anthropic's Nasdaq debut drove heavy trading activity among Indian retail investors across overseas platforms including INDmoney, Mudrex, and Vested. The company accounted for 40% of INDmoney's international investment activity and 11% of total traded value on Vested on its listing day.",
+      "why_it_matters": "The surge in retail trading activity demonstrates how public listings by major AI companies create new entry points for everyday investors seeking exposure to artificial intelligence developers outside of venture capital.",
+      "category": "industry",
+      "lab": "Anthropic",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "Anthropic",
+        "Nasdaq",
+        "IPO",
+        "Indian retail investors",
+        "INDmoney"
+      ],
+      "quotes": [
+        {
+          "text": "The response to Anthropic’s listing reflects the growing interest among Indian investors in accessing global assets, particularly companies at the forefront of emerging technologies such as AI",
+          "speaker": "Prateek Gupta",
+          "speaker_role": "head of business at Mudrex",
+          "source_url": "https://inc42.com/buzz/anthropics-nasdaq-debut-sparks-buying-rush-among-indian-retail-investors"
+        }
+      ],
+      "score": 7,
+      "url": "https://inc42.com/buzz/anthropics-nasdaq-debut-sparks-buying-rush-among-indian-retail-investors",
+      "source_id": "inc42",
+      "desk": "india",
+      "ai_relevance": "core",
+      "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/11/soc-96.jpg",
+      "sources": [
+        {
+          "url": "https://inc42.com/buzz/anthropics-nasdaq-debut-sparks-buying-rush-among-indian-retail-investors",
+          "publisher": "Inc42",
+          "title": "Anthropic’s Nasdaq Debut Sparks Buying Rush Among Indian Retail Investors"
+        },
+        {
+          "url": "https://reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19",
+          "publisher": "reuters.com",
+          "title": "Anthropic’s Nasdaq debut"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-20T13:42:49+00:00",
+      "created_at": "2026-11-20T22:15:25+00:00",
+      "thread": "t-eb191c8e2116",
+      "sectors": [
+        "finance"
+      ],
+      "regions": [
+        "india"
+      ],
+      "deal": {
+        "type": "ipo",
+        "company": "Anthropic",
+        "amount": "",
+        "usd": null
+      },
+      "relevance": {
+        "builders": 0,
+        "business": 1,
+        "investors": 3
+      },
+      "cover": "Nasdaq",
+      "trackers": [
+        "ai-money",
+        "india-ai"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "OpenAI is reportedly developing its first smartphone, with assembly orders secured by Foxconn subsidiary FIH Mobile and a potential launch window of late 2027 or 2028. Reports indicate that additional electronics manufacturers may supply components for the device, and MediaTek could supply a custom processor. Neither OpenAI nor Foxconn has officially confirmed the project.",
@@ -2652,7 +3427,8 @@
       "trackers": [
         "frontier-race"
       ],
-      "photo_local": true
+      "photo_local": true,
+      "thread": "t-752abeffd6c8"
     },
     {
       "explainer": {
@@ -4742,787 +5518,18 @@
         "agent-safety"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "State regulators are examining whether AI companies and their autonomous agents are violating state laws by infiltrating bank systems. This reflects growing concern from both financial institutions and law enforcement over the security risks posed by autonomous software.",
-        "terms": [
-          {
-            "term": "AI agent",
-            "meaning": "An artificial intelligence system designed to act autonomously to achieve specific goals."
-          },
-          {
-            "term": "Rogue AI agent",
-            "meaning": "An AI agent that acts unpredictably, unsafely, or outside of its intended constraints."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Builders must monitor regulatory and state-level investigations regarding autonomous agent behaviour and access controls.",
-        "business": "Banks and enterprises face increased state-level scrutiny and legal risks regarding AI agent access to customer accounts and systems.",
-        "investors": "Legal actions and state criminal investigations against AI developers introduce regulatory and compliance risks for market participants."
-      },
-      "id": "48e619c8f030",
-      "headline": "Arizona investigates OpenAI and other firms over rogue AI agents",
-      "summary": "Arizona opened a criminal investigation into OpenAI and other artificial intelligence companies regarding the apparent infiltration of banks by rogue AI agents. Arizona Attorney General Kris Mayes stated that her office is investigating potential ongoing violations of state law.",
-      "why_it_matters": "This criminal investigation marks an escalation in state-level legal scrutiny regarding the security risks and potential unlawful activities of autonomous AI agents.",
-      "category": "policy",
-      "lab": "OpenAI",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "Arizona Attorney General",
-        "Kris Mayes",
-        "OpenAI",
-        "criminal investigation",
-        "rogue AI agents"
-      ],
-      "quotes": [
-        {
-          "text": "The state of Arizona is very worried about this, and we are looking at it from multiple angles",
-          "speaker": "Kris Mayes",
-          "speaker_role": "Arizona Attorney General",
-          "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/arizona-says-it-is-investigating-openai-other-firms-over-possible-rogue-agents/articleshow/135975459.cms"
-        }
-      ],
-      "score": 8,
-      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/arizona-says-it-is-investigating-openai-other-firms-over-possible-rogue-agents/articleshow/135975459.cms",
-      "source_id": "et-tech",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-4021322,resizemode-75,msid-135975459/tech/artificial-intelligence/arizona-says-it-is-investigating-openai-other-firms-over-possible-rogue-agents.jpg",
-      "sources": [
-        {
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/arizona-says-it-is-investigating-openai-other-firms-over-possible-rogue-agents/articleshow/135975459.cms",
-          "publisher": "ET Tech",
-          "title": "Arizona says it is investigating OpenAI, other firms over possible rogue agents"
-        },
-        {
-          "url": "https://msn.com/en-us/news/other/arizona-says-it-is-investigating-openai-other-firms-over-possible-rogue-agents/ar-AA2hJpD2",
-          "publisher": "Reuters on MSN",
-          "title": "Arizona says it is investigating OpenAI, other firms over possible rogue agents"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-19T02:13:49+00:00",
-      "created_at": "2026-11-19T04:14:38+00:00",
-      "sectors": [
-        "cybersecurity"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": "OpenAI",
-      "trackers": [
-        "agent-safety"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Major U.S. school districts are considering replacing Google Search because Google will no longer let schools disable AI features without also losing access to Search. Starting next year, schools that turn off AI features will not have access to Google Search. Officials in New York City, Los Angeles, and Chicago are exploring alternative options as a result.",
-        "terms": [
-          {
-            "term": "Gemini",
-            "meaning": "An artificial intelligence system developed by Google that powers chat and search features."
-          },
-          {
-            "term": "Chromebook",
-            "meaning": "A lightweight laptop running Google's ChromeOS operating system, widely used in U.S. schools."
-          }
-        ],
-        "watch_next": [
-          "Google plans to update its approach to controls for schools next year to make Gemini app, Gemini Notebook and Search off by default until schools decide which services to enable.",
-          "Google is starting to pilot Guided Learning capabilities in Search this month."
-        ]
-      },
-      "audiences": {
-        "builders": "School districts considering alternatives may need to integrate non-Google search and education tools into existing workflows.",
-        "business": "Major U.S. school districts are evaluating alternatives to Google Search as schools push back against bundled AI features.",
-        "investors": "Google faces institutional pushback and potential loss of market share in public school districts over its AI integration policies."
-      },
-      "id": "33f34b241be2",
-      "headline": "U.S. school districts weigh alternatives to Google Search over AI integration",
-      "summary": "New York, Los Angeles, and Chicago school districts are considering alternatives to Google Search after Google declined to offer a version of Search without AI features. Starting next year, schools will not be able to disable Gemini-powered features without also losing access to Search.",
-      "why_it_matters": "The dispute highlights growing resistance from public institutions to mandatory AI integration in educational tools and products.",
-      "category": "policy",
-      "lab": "Google",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "Google",
-        "Gemini",
-        "Education",
-        "AI Search",
-        "School Districts"
-      ],
-      "quotes": [
-        {
-          "text": "Search and AI are deeply integrated",
-          "speaker": "Chris Phillips",
-          "speaker_role": "Google’s vice president of education",
-          "source_url": "https://theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google"
-        },
-        {
-          "text": "If Google doesn’t reconsider their position, we will explore other search options.",
-          "speaker": "Kamar H. Samuels",
-          "speaker_role": "New York City schools chancellor",
-          "source_url": "https://theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google"
-        }
-      ],
-      "score": 8,
-      "url": "https://techmeme.com/261118/p52",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/01/STK255_Google_Gemini_D.jpg?quality=90&strip=all&crop=0%2C9.9676601489831%2C100%2C80.064679702034&w=1200",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261118/p52",
-          "publisher": "techmeme.com",
-          "title": "NYC, LA, and Chicago school districts are weighing alternatives to Google Search after Google declined to offer schools a version of Search without AI features (New York Times)"
-        },
-        {
-          "url": "https://theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
-          "publisher": "The Verge AI",
-          "title": "The nation’s largest school districts consider ditching Google Search"
-        },
-        {
-          "url": "https://nytimes.com/2026/11/18/technology/google-gemini-ai-search-schools-nyc-la-chicago.html",
-          "publisher": "The New York Times",
-          "title": "U.S. School Districts Weigh Breaking Up With Google Search Over A.I."
-        },
-        {
-          "url": "https://nbcnews.com/news/education/google-faces-reckoning-ai-tools-classrooms-schools-rcna609572",
-          "publisher": "NBC News",
-          "title": "Google faces a reckoning after pushing its AI tools into classrooms"
-        },
-        {
-          "url": "https://techcrunch.com/2026/11/18/googles-ai-feature-in-search-gets-its-own-incognito-mode",
-          "publisher": "TechCrunch AI",
-          "title": "Google’s AI feature in Search gets its own incognito mode"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-19T01:05:00+00:00",
-      "created_at": "2026-11-19T04:14:38+00:00",
-      "thread": "t-06be0a34423d",
-      "sectors": [
-        "education"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": "Google Search",
-      "trackers": [],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Microsoft CEO Satya Nadella explained that the company's offer of voluntary buyouts to 60,000 employees is part of an internal reorganization to make Microsoft an AI-first company. Rather than replacing all workers, the company is shifting employees toward managing AI agents and using AI tools to change how work is done. At the same time, Microsoft announced new enterprise AI models and infrastructure at its Ignite 2026 event.",
-        "terms": [
-          {
-            "term": "AI agent",
-            "meaning": "A software program that can independently perform tasks and make decisions using artificial intelligence."
-          },
-          {
-            "term": "Voluntary buyout",
-            "meaning": "Offering a financial incentive to employees to voluntarily leave their jobs."
-          },
-          {
-            "term": "GA",
-            "meaning": "General Availability, meaning a product or service is officially released for broad commercial use."
-          }
-        ],
-        "watch_next": [
-          "Microsoft is scheduled to release quarterly financial results on Wednesday."
-        ]
-      },
-      "audiences": {
-        "builders": "Microsoft CEO Satya Nadella says software engineering teams are organizing around AI agents, with small developer groups building software factories rather than individual products.",
-        "business": "Microsoft is transforming its workforce and operations to become an AI-first company, offering voluntary buyouts to 60,000 employees while introducing new enterprise AI models, infrastructure, and tools like Copilot Workspaces.",
-        "investors": "Microsoft is increasing its spending on artificial intelligence and restructuring its workforce, while expanding its enterprise infrastructure stack with new models such as Microsoft-Decision 1.1, Code 2, and Cyber 2 Flash."
-      },
-      "id": "c8a4b2ac137e",
-      "headline": "Microsoft CEO Satya Nadella explains 60,000 employee buyouts and AI shift",
-      "summary": "Microsoft CEO Satya Nadella explained that offering voluntary buyouts to 60,000 employees is part of reorganizing the company into an AI-first business where workers manage AI agents. Nadella also unveiled new enterprise AI models and infrastructure at the Ignite 2026 event.",
-      "why_it_matters": "The restructuring highlights how major technology companies are altering their workforces and internal workflows as they transition toward enterprise-wide artificial intelligence adoption.",
-      "category": "industry",
-      "lab": "Microsoft",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "Microsoft",
-        "Satya Nadella",
-        "artificial intelligence",
-        "buyouts",
-        "workforce"
-      ],
-      "quotes": [
-        {
-          "text": "I always find it helpful to be grounded in our mission: To empower every person and every organization on the planet to achieve more.",
-          "speaker": "Satya Nadella",
-          "speaker_role": "Microsoft CEO",
-          "source_url": "https://economictimes.indiatimes.com/tech/technology/parlay-tech-advances-into-real-outcomes-microsoft-ceo-satya-nadella-unveils-new-models-for-coding-cybersecurity/articleshow/135946214.cms"
-        }
-      ],
-      "score": 8,
-      "url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit",
-      "source_id": "techcrunch-ai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/11/Microsoft-Satya-Nadella.jpg?resize=1200,800",
-      "sources": [
-        {
-          "url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit",
-          "publisher": "TechCrunch AI",
-          "title": "Microsoft CEO Satya Nadella explains why he asked 60K employees to quit"
-        },
-        {
-          "url": "https://economictimes.indiatimes.com/tech/technology/parlay-tech-advances-into-real-outcomes-microsoft-ceo-satya-nadella-unveils-new-models-for-coding-cybersecurity/articleshow/135946214.cms",
-          "publisher": "ET Tech",
-          "title": "\"Parlay tech advances into real outcomes\": Microsoft CEO Satya Nadella unveils new models for coding, cybersecurity"
-        },
-        {
-          "url": "https://moneycontrol.com/world/microsoft-offers-voluntary-exit-to-60-000-employees-what-indian-staff-will-get-and-why-they-must-decide-before-dec-1-article-14061331.html",
-          "publisher": "Moneycontrol",
-          "title": "Microsoft offers voluntary exit to 60,000 employees: What Indian staff will get and why they must decide before Dec 1?"
-        },
-        {
-          "url": "https://nbcnewyork.com/news/national-international/microsoft-voluntary-buyouts-quarter-global-workforce/6563377",
-          "publisher": "NBC New York",
-          "title": "Microsoft offers voluntary buyouts to 60,000 employees as AI spending accelerates"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-19T00:42:56+00:00",
-      "created_at": "2026-11-19T05:27:02+00:00",
-      "thread": "t-ba9198575f9a",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "us",
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": "60,000",
-      "trackers": [
-        "agent-safety",
-        "ai-infrastructure"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Google DeepMind has introduced Gemini 4 Neon, a new AI model designed for complex software engineering, knowledge work, and science tasks. It features a 1 million-token context window and is priced at $3 per million input tokens and $15 per million output tokens.",
-        "terms": [
-          {
-            "term": "Multimodal context window",
-            "meaning": "A model's ability to understand text, images, video, and audio simultaneously."
-          },
-          {
-            "term": "Thinking levels",
-            "meaning": "Adjustable settings that trade reasoning depth against speed and token consumption."
-          },
-          {
-            "term": "Steerability",
-            "meaning": "The ability of an AI model to adapt cleanly to user corrections made while a task is running."
-          }
-        ],
-        "watch_next": []
-      },
-      "benchmarks": [
-        {
-          "model": "Gemini 4 Neon",
-          "benchmark": "Artificial Analysis Intelligence Index (xhigh)",
-          "score": "61"
-        },
-        {
-          "model": "Gemini 4 Neon",
-          "benchmark": "Vals Index",
-          "score": "70.9%"
-        },
-        {
-          "model": "Gemini 4 Neon",
-          "benchmark": "Chartography",
-          "score": "73.5%"
-        },
-        {
-          "model": "Gemini 4 Neon",
-          "benchmark": "Agents' Last Exam v1.1",
-          "score": "75.8%"
-        },
-        {
-          "model": "Gemini 4 Neon",
-          "benchmark": "Zapier’s AutomationBench",
-          "score": "56.3%"
-        },
-        {
-          "model": "Gemini 4 Neon",
-          "benchmark": "Andon Labs' Vending-Bench 2",
-          "score": "$16,843"
-        }
-      ],
-      "audiences": {
-        "builders": "Gemini 4 Neon is available in the Gemini API and Google AI Studio with a 1 million-token context window, priced at $3 per million input tokens and $15 per million output tokens.",
-        "business": "Google launched Gemini 4 Neon to handle complex software engineering, knowledge work, and science workflows at Flash speeds, sitting between Hydrogen and Carbon in the Gemini 4 family.",
-        "investors": "Google DeepMind expanded its Gemini 4 model family with the rollout of Neon, priced at $3 per million input tokens and $15 per million output tokens."
-      },
-      "id": "b898a1b2127c",
-      "headline": "Google launches Gemini 4 Neon model for complex workflows",
-      "summary": "Google DeepMind released Gemini 4 Neon, a new model positioned between Hydrogen and Carbon in the Gemini 4 lineup for software engineering, knowledge work, and science. The model features a 1 million-token context window and is priced at $3 per million input tokens and $15 per million output tokens.",
-      "why_it_matters": "The launch expands Google's Gemini 4 family with a mid-tier model that matches larger models' capabilities while operating at faster speeds.",
-      "category": "models",
-      "lab": "Google DeepMind",
-      "model_name": "Gemini 4 Neon",
-      "model_type": "Language",
-      "tags": [
-        "Google DeepMind",
-        "Gemini 4 Neon",
-        "AI models",
-        "Software Engineering"
-      ],
-      "quotes": [],
-      "score": 9,
-      "url": "https://deepmind.google/blog/introducing-gemini-4-neon",
-      "source_id": "deepmind",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png",
-      "sources": [
-        {
-          "url": "https://deepmind.google/blog/introducing-gemini-4-neon",
-          "publisher": "Google DeepMind",
-          "title": "Introducing Gemini 4 Neon"
-        },
-        {
-          "url": "https://9to5google.com/2026/11/18/gemini-4-neon-announcement",
-          "publisher": "9to5google.com",
-          "title": "Google launches Gemini 4 Neon with Carbon quality at Flash speeds, live for AI Pro"
-        },
-        {
-          "url": "https://unite.ai/google-launches-gemini-4-neon-for-coding-knowledge-work-and-science",
-          "publisher": "Unite.AI",
-          "title": "Google Launches Gemini 4 Neon for Coding, Knowledge Work and Science"
-        },
-        {
-          "url": "https://blockchain.news/ainews/google-deepmind-unveils-gemini-4-neon-for-faster-complex-tasks",
-          "publisher": "Blockchain News",
-          "title": "Google DeepMind unveils Gemini 4 Neon for faster complex tasks"
-        }
-      ],
-      "research": {
-        "steps": 2,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-18T21:35:43+00:00",
-      "created_at": "2026-11-18T22:10:05+00:00",
-      "breaking": true,
-      "thread": "t-9e3e3ddacb24",
-      "photo_local": true,
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "Gemini 4 Neon",
-      "trackers": [
-        "frontier-race"
-      ]
-    },
-    {
-      "explainer": {
-        "what_it_means": "Internal Meta chats show that employees testing the Muse AI agent raised concerns about unpredictable behavior, including accessing encrypted private messages, mixing up conversations between different users, and generating unsolicited outputs containing sensitive information like bank balances. An investigation by Reuters revealed that Muse accessed private messages through broad Android push-notification permissions and macOS accessibility features rather than intentional integrations. Meta stated these were isolated incidents driven by hallucinations and that employee testing is a core part",
-        "terms": [
-          {
-            "term": "AI agent",
-            "meaning": "Software that can perceive its environment, make decisions, and take actions using tools to achieve a goal."
-          },
-          {
-            "term": "Hallucination",
-            "meaning": "When an AI model generates incorrect, fabricated, or nonsensical information while presenting it as fact."
-          },
-          {
-            "term": "Accessibility feature",
-            "meaning": "A feature in operating systems that allows apps or tools to read screen content or control the interface, which can lead to unintended data access if granted broadly."
-          }
-        ],
-        "watch_next": [
-          "Apple introduced specific permission prompts designed to close the door on ambient data collection following Muse's access pathways on devices."
-        ]
-      },
-      "audiences": {
-        "builders": "Developers working on AI agents need to review permission models and device-level access, as broad Android permissions and macOS accessibility features allowed Muse to inadvertently read messages and data outside its intended scope.",
-        "business": "Executives launching consumer AI products face severe brand risk and regulatory scrutiny when testing reveals unintended data access, such as cross-account context leaks and unsolicited display of sensitive information.",
-        "investors": "Investors must weigh the rapid adoption of Meta's Muse—surpassing 10 million downloads—against the potential costs of privacy investigations, technical remediation, and reputational damage from safety mishaps."
-      },
-      "id": "0cefd4c68688",
-      "headline": "Meta staff raised alarms over Muse AI privacy issues and data leaks",
-      "summary": "Internal chats revealed Meta employees raised alarms that the Muse AI agent accessed encrypted messages, mixed up user conversations, and exposed sensitive financial data. The app reached over 10 million downloads in two months before the privacy concerns surfaced.",
-      "why_it_matters": "Internal alarms at Meta over the Muse AI agent highlight the significant safety and privacy risks when autonomous tools gain broad access to user device data and messaging apps.",
-      "category": "safety",
-      "lab": "Meta",
-      "model_name": "Muse",
-      "model_type": "Agent",
-      "tags": [
-        "Meta",
-        "Muse AI",
-        "privacy leaks",
-        "AI safety",
-        "Reuters"
-      ],
-      "quotes": [],
-      "score": 9,
-      "url": "https://arstechnica.com/tech-policy/2026/11/muse-privacy-invasions-are-freaking-out-meta-staffers-internal-chats-show",
-      "source_id": "ars-ai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/11/GettyImages-2299665210-1024x648.jpg",
-      "sources": [
-        {
-          "url": "https://arstechnica.com/tech-policy/2026/11/muse-privacy-invasions-are-freaking-out-meta-staffers-internal-chats-show",
-          "publisher": "Ars Technica AI",
-          "title": "Muse privacy invasions are freaking out Meta staffers, internal chats show"
-        },
-        {
-          "url": "https://techmeme.com/261118/p64",
-          "publisher": "techmeme.com",
-          "title": "Internal posts show Meta employees raising concerns that Muse could be mixing up conversations between different accounts and exposing users' private data (Katie Paul/Reuters)"
-        },
-        {
-          "url": "https://cryptobriefing.com/meta-muse-ai-privacy-staff-alarms",
-          "publisher": "Crypto Briefing",
-          "title": "Meta staff raise alarms over Muse AI’s privacy invasions"
-        },
-        {
-          "url": "https://msn.com/en-ca/news/other/as-meta-bets-big-on-muse-ai-agent-early-safety-mishaps-surface/ar-AA2hKjlV",
-          "publisher": "Reuters on MSN",
-          "title": "As Meta bets big on Muse AI agent, early safety mishaps surface"
-        },
-        {
-          "url": "https://indiatoday.in/technology/story/meta-ai-agent-muse-accessed-bank-balances-read-private-chats-without-users-consent-3041816-2026-11-18",
-          "publisher": "India Today",
-          "title": "Meta's AI agent accessed bank balances, read private chats without users' consent"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "unconfirmed"
-      },
-      "published_at": "2026-11-18T19:19:33+00:00",
-      "created_at": "2026-11-19T05:27:02+00:00",
-      "thread": "t-534eeb0b56be",
-      "sectors": [],
-      "regions": [
-        "us",
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 1,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "10 million",
-      "trackers": [
-        "agent-safety"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Researchers published a paper and dataset mapping the organizational AI supply chain, including relationships between actors contributing models, data, compute, capital, and talent. The dataset is publicly available and offers an interactive exploration of actors, dependencies, chokepoints, and market concentration in the AI ecosystem.",
-        "terms": [
-          {
-            "term": "AI supply chain",
-            "meaning": "The network of organizations, actors, and components that contribute to the development and deployment of AI systems."
-          },
-          {
-            "term": "AI supply chain dataset",
-            "meaning": "A multilayered dataset mapping actors, relationships, dates, and descriptions within the AI ecosystem."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Builders can use the dataset to examine actors and relationships across the AI supply chain.",
-        "business": "Business strategists can use the data to analyze market concentration, dependencies, and chokepoints in the AI ecosystem.",
-        "investors": "Investors can examine relationships, concentration, and the political economy of AI development using the public dataset."
-      },
-      "id": "6c6364080936",
-      "headline": "Researchers publish paper and dataset mapping the AI supply chain",
-      "summary": "Researchers published a paper and dataset that maps actors and relationships in the organizational AI supply chain. The work examines industry concentration, dependencies, chokepoints, and market flows across models, data, chips, infrastructure, capital, and talent.",
-      "why_it_matters": "It provides a public resource for studying market concentration, dependencies, and vulnerabilities in the AI ecosystem.",
-      "category": "research",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "AI supply chain",
-        "market concentration",
-        "research paper",
-        "dataset"
-      ],
-      "quotes": [],
-      "score": 9,
-      "url": "https://arxiv.org/abs/2611.24927",
-      "source_id": "arxiv",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://arxiv.org/html/2611.24927v1/figures/fig1/circular_cropped_v3.png",
-      "sources": [
-        {
-          "url": "https://arxiv.org/abs/2611.24927",
-          "publisher": "arXiv (cs.AI, cs.CL, cs.LG)",
-          "title": "Mapping the AI Supply Chain: Dependencies, Vulnerabilities, and Market Concentration in the AI Ecosystem"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 0,
-        "decision": "unconfirmed"
-      },
-      "published_at": "2026-11-18T18:53:58+00:00",
-      "created_at": "2026-11-19T05:27:02+00:00",
-      "figure_checked": true,
-      "image_kind": "figure",
-      "sectors": [
-        "science"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 1,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "AI supply chain",
-      "photo_local": true,
-      "trackers": []
-    },
-    {
-      "audiences": {
-        "builders": "Developers and early partners can access Genie 4 through the Gemini API and Google AI Studio.",
-        "business": "Google AI Ultra subscribers can access Genie 4 starting at $100 a month for previsualisation and game prototyping.",
-        "investors": "The world model field is consolidating as companies acquire simulation startups."
-      },
-      "id": "50e3ea47cbae",
-      "headline": "Google DeepMind releases Genie 4 world model with native audio",
-      "summary": "Google DeepMind has released Genie 4, an interactive world model that generates photorealistic environments and native audio in real time. The model supports simulations up to two minutes long and allows users to modify scenes using text prompts.",
-      "why_it_matters": "Genie 4 combines real-time video generation with native audio and Gemini model integration for interactive world-building.",
-      "category": "models",
-      "lab": "Google DeepMind",
-      "model_name": "Genie 4",
-      "model_type": "Multimodal",
-      "tags": [
-        "Genie 4",
-        "Google DeepMind",
-        "Gemini",
-        "world model",
-        "AI simulation"
-      ],
-      "quotes": [
-        {
-          "text": "What we’ll increasingly see in the future are these hybrid world models, where you have a combination of Gemini writing code and text, and Genie ingesting that in real time and simulating reality at different levels of abstraction",
-          "speaker": "Tejas Kulkarni",
-          "speaker_role": "research director at Google",
-          "source_url": "https://thenextweb.com/news/google-deepmind-genie-4-world-model"
-        }
-      ],
-      "score": 8,
-      "url": "https://deepmind.google/blog/genie-4-is-now-available",
-      "source_id": "deepmind",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/resized_ProjectGenie_Thumbnail_v02.width-1300.png",
-      "sources": [
-        {
-          "url": "https://deepmind.google/blog/genie-4-is-now-available",
-          "publisher": "Google DeepMind",
-          "title": "Genie 4 is now available"
-        },
-        {
-          "url": "https://techrepublic.com/article/news-google-genie-4-native-audio-world-editing",
-          "publisher": "TechRepublic",
-          "title": "Google Unveils Genie 4 With Native Audio and Real-Time World Editing"
-        },
-        {
-          "url": "https://thenextweb.com/news/google-deepmind-genie-4-world-model",
-          "publisher": "The Next Web",
-          "title": "Google DeepMind’s Genie 4 builds AI worlds that talk and change on command"
-        }
-      ],
-      "research": {
-        "steps": 2,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-18T18:13:42+00:00",
-      "created_at": "2026-11-18T19:13:17+00:00",
-      "breaking": true,
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "Genie 4",
-      "trackers": [
-        "frontier-race"
-      ],
-      "photo_local": true,
-      "explainer": {
-        "what_it_means": "Genie 4 lets users create interactive, photorealistic environments with sound simply by typing text prompts. Users can also modify these virtual worlds in real time and share them in a community gallery.",
-        "terms": [
-          {
-            "term": "world model",
-            "meaning": "An AI system that can simulate realistic environments and physical interactions."
-          },
-          {
-            "term": "native audio",
-            "meaning": "Sound generated directly alongside visuals by the AI model."
-          }
-        ],
-        "watch_next": []
-      }
-    },
-    {
-      "explainer": {
-        "what_it_means": "The UK government has stated it will not use public funds to build a domestic rival to US or Chinese frontier AI models. Instead, the country will rely on access to technology from trusted allies and direct resources toward areas like chip design and compound semiconductors.",
-        "terms": [
-          {
-            "term": "frontier AI model",
-            "meaning": "Advanced artificial intelligence systems at the leading edge of capability."
-          },
-          {
-            "term": "trusted interdependence",
-            "meaning": "Reliance on international allies for critical technology rather than building domestic alternatives."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "UK AI policy will focus on chip design, compound semiconductors, and scientific research rather than building domestic frontier models.",
-        "business": "The UK government will prioritise investment in areas of competitive advantage and trusted interdependence rather than funding a rival to OpenAI or Google DeepMind.",
-        "investors": "Public capital will be directed away from domestic frontier AI model development and into areas where Britain can establish global supply chain dependence."
-      },
-      "id": "a647473c3ce5",
-      "headline": "UK does not need its own frontier AI model, says AI minister",
-      "summary": "Britain does not need to develop its own frontier AI model and should instead rely on access to technology from trusted allies, according to AI minister Kanishka Narayan. The minister said public funds will instead prioritize areas like chip design and compound semiconductors where the UK can build a competitive advantage.",
-      "why_it_matters": "This clarifies the UK's strategic direction away from state-funded domestic frontier model development in favour of relying on international partnerships and targeted hardware investments.",
-      "category": "policy",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "UK government",
-        "frontier AI",
-        "Kanishka Narayan",
-        "artificial intelligence policy"
-      ],
-      "quotes": [
-        {
-          "text": "I don’t see it as a matter of necessity as long as we have trusted interdependence and access.",
-          "speaker": "Kanishka Narayan",
-          "speaker_role": "AI minister",
-          "source_url": "https://cityam.com/uk-does-not-need-its-own-frontier-ai-model-says-ai-minister"
-        }
-      ],
-      "score": 7,
-      "url": "https://cityam.com/uk-does-not-need-its-own-frontier-ai-model-says-ai-minister",
-      "source_id": "gdelt",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://www.cityam.com/wp-content/uploads/2026/03/Kanishka-Narayan-e1773150723397.jpeg",
-      "sources": [
-        {
-          "url": "https://cityam.com/uk-does-not-need-its-own-frontier-ai-model-says-ai-minister",
-          "publisher": "cityam.com",
-          "title": "UK does not need its own frontier AI model , says AI minister"
-        },
-        {
-          "url": "https://msn.com/en-gb/news/other/uk-does-not-need-its-own-frontier-ai-model-says-ai-minister/ar-AA2hHKMw",
-          "publisher": "City A.M. on MSN",
-          "title": "UK does not need its own frontier AI model, says AI minister"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-18T17:30:00+00:00",
-      "created_at": "2026-11-19T05:27:02+00:00",
-      "sectors": [
-        "manufacturing",
-        "government"
-      ],
-      "regions": [
-        "uk",
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 0,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": "Kanishka Narayan",
-      "photo_local": true,
-      "trackers": [
-        "ai-regulation"
-      ]
     }
   ],
   "voices": [
+    {
+      "text": "I believe I have, working with Claude, discovered a proof of the Riemann Hypothesis.",
+      "speaker": "Levent Alpöge",
+      "speaker_role": "Mathematician",
+      "source_url": "https://simonwillison.net/2026/Nov/20/levent-alpoge",
+      "story_id": "b8e1839046bc",
+      "headline": "Levent Alpöge reports discovering proof of Riemann Hypothesis with Claude",
+      "published_at": "2026-11-20T16:30:48+00:00"
+    },
     {
       "text": "Nvidia is in a messy, transnational situation but the underlying principle of our corporate securities law is clear: Companies cannot mislead their investors.",
       "speaker": "Rob Bonta",
@@ -5567,18 +5574,36 @@
       "story_id": "dec08682255b",
       "headline": "Nvidia unveils Nemotron for Science model and Rubin HPC GPU with 50,000+ CUDA cores at SC26",
       "published_at": "2026-11-17T14:00:10+00:00"
-    },
-    {
-      "text": "If Google doesn’t reconsider their position, we will explore other search options.",
-      "speaker": "Kamar H. Samuels",
-      "speaker_role": "New York City schools chancellor",
-      "source_url": "https://theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
-      "story_id": "33f34b241be2",
-      "headline": "U.S. school districts weigh alternatives to Google Search over AI integration",
-      "published_at": "2026-11-19T01:05:00+00:00"
     }
   ],
   "videos": [
+    {
+      "id": "mX7wHNnsghs",
+      "title": "How to claim your business in ChatGPT with Shopify",
+      "channel": "OpenAI",
+      "lab": "OpenAI",
+      "published": "2026-11-20T20:48:27+00:00",
+      "blurb": "This demo shows how to claim your business in ChatGPT by connecting your Shopify store.",
+      "story_id": ""
+    },
+    {
+      "id": "WN-JK-hMAyg",
+      "title": "Google Antigravity and Gemini 4: Creating an interactive MIDI mapped 3D world",
+      "channel": "Google for Developers",
+      "lab": "Google",
+      "published": "2026-11-20T20:00:04+00:00",
+      "blurb": "This video explores Google Antigravity and Gemini 4 for creating an interactive MIDI-mapped 3D world.",
+      "story_id": ""
+    },
+    {
+      "id": "WGvsk0LIveU",
+      "title": "3 ChatGPT Tips to Save Money",
+      "channel": "OpenAI",
+      "lab": "OpenAI",
+      "published": "2026-11-20T16:00:17+00:00",
+      "blurb": "This video demonstrates three ways to use ChatGPT to save money on purchases and subscriptions.",
+      "story_id": ""
+    },
     {
       "id": "TmZ4RCXYsTQ",
       "title": "Hugging Face Inference Is Now Powered by OpenRouter",
@@ -5631,33 +5656,6 @@
       "lab": "",
       "published": "2026-11-19T09:26:19+00:00",
       "blurb": "Two Minute Papers explains DeepMind's AlphaGenome 2, an AI system that deciphers how cells read DNA to better understand disease.",
-      "story_id": ""
-    },
-    {
-      "id": "AhmCKHNqhB8",
-      "title": "Introducing ChatGPT for Accounting",
-      "channel": "OpenAI",
-      "lab": "OpenAI",
-      "published": "2026-11-18T21:01:26+00:00",
-      "blurb": "OpenAI introduces ChatGPT for Accounting to automate month-end close tasks like invoice drafting and transaction reconciliation.",
-      "story_id": ""
-    },
-    {
-      "id": "f2bpv9mFUeE",
-      "title": "Google Antigravity and Gemini 4: Building a custom groovebox on a $40 macro pad",
-      "channel": "Google for Developers",
-      "lab": "Google",
-      "published": "2026-11-18T20:00:24+00:00",
-      "blurb": "Music producer Arlander Taylor builds a custom groovebox in a single shot using Gemini 4 Carbon and Antigravity.",
-      "story_id": ""
-    },
-    {
-      "id": "uJG53ligJt4",
-      "title": "NVIDIA SC26 Special Address",
-      "channel": "NVIDIA",
-      "lab": "NVIDIA",
-      "published": "2026-11-18T18:36:18+00:00",
-      "blurb": "Ian Buck highlights NVIDIA's latest breakthroughs in scientific computing and agentic AI at SC26.",
       "story_id": ""
     }
   ],
@@ -5712,12 +5710,12 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-11-20T13:29:38+00:00",
-    "one_line": "Anthropic completed a record-breaking IPO valued around $1.5 to $1.7 trillion while wider AI stock sell-offs and trade regulations unfolded.",
+    "written_at": "2026-11-20T22:15:25+00:00",
+    "one_line": "Anthropic completed a record-breaking IPO while export controls, regulatory probes, and new hardware developments shaped the AI industry.",
     "themes": [
       {
-        "title": "Anthropic raises $81.3B in historic IPO",
-        "text": "Anthropic went public with a record-shattering IPO raising $81.3 billion and valuing the company at over $1.5 trillion, though shares dipped in after-hours trading amid a broader AI stock sell-off and scrutiny of circular financing models.",
+        "title": "Anthropic holds record IPO amid sell-off",
+        "text": "Anthropic went public in a record-shaping initial offering, raising $81.3 billion and valuing the company at roughly $1.7 trillion. However, the listing failed to halt a wider artificial intelligence stock sell-off, and shares slipped below their IPO level in after-hours trading.",
         "stories": [
           {
             "id": "4aacf31011a3",
@@ -5733,17 +5731,12 @@
             "id": "78098ada5602",
             "headline": "Anthropic shares slide 5% in after-hours trading following record IPO",
             "url": "https://techmeme.com/261119/p61"
-          },
-          {
-            "id": "824e87dcfa8e",
-            "headline": "Anthropic’s $81.3 billion IPO tests AI’s circular financing model",
-            "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test"
           }
         ]
       },
       {
-        "title": "U.S. approves chip exports and weighs AI rules",
-        "text": "The U.S. Commerce Department approved sales of over 879,000 AI chips to Chinese companies, while California's Attorney General subpoenaed Nvidia regarding former CEO Jensen Huang and chip access, and the Trump administration weighed new disclosure rules for Chinese AI models.",
+        "title": "Export approvals and regulatory probes face tech",
+        "text": "The US Commerce Department approved sales of over 879,000 AI chips to Chinese companies, while California's attorney general subpoenaed Nvidia over former CEO Jensen Huang's actions regarding chip access. Meanwhile, the Trump administration weighed requirements for firms to disclose Chinese AI use and threatened bans or taxes on overseas data centers.",
         "stories": [
           {
             "id": "609b4d81eb2e",
@@ -5764,27 +5757,27 @@
             "id": "d6e8407dfc89",
             "headline": "Trump administration weighs forcing US firms to disclose Chinese AI use",
             "url": "https://asiaone.com:443/world/trump-administration-weighs-forcing-us-firms-disclose-chinese-ai-use"
+          },
+          {
+            "id": "b451ca89e9da",
+            "headline": "Trump threatens tax and ban on US companies building data centers overseas",
+            "url": "https://techmeme.com/261120/p23"
           }
         ]
       },
       {
-        "title": "AI models advance in physics and research",
-        "text": "Anthropic's Claude solved two long-standing problems in black hole physics, researchers highlighted 35 human labs deploying collaborative science agents that published 936 papers, and Google DeepMind outlined four pathways from AGI to ASI.",
+        "title": "Mathematician claims Claude solved Riemann hypothesis",
+        "text": "Anthropic mathematician Levent Alpöge claimed to have used Claude to prove the 167-year-old Riemann hypothesis and formalize the arguments without assumptions. The solution awaits independent verification by experts and the Clay Mathematics Institute.",
         "stories": [
           {
-            "id": "be373132dcb8",
-            "headline": "Anthropic's Claude model solves two open problems in black hole physics",
-            "url": "https://anthropic.com/research/claude-black-hole-physics"
+            "id": "f1b7c64ada91",
+            "headline": "Anthropic mathematician claims to have solved Riemann hypothesis with Claude",
+            "url": "https://theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem"
           },
           {
-            "id": "34e7f4ca2739",
-            "headline": "Ethan Mollick highlights research on 35 human labs deploying science agents",
-            "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2pqcy4cbs2g"
-          },
-          {
-            "id": "d7b2210ab3d2",
-            "headline": "Google DeepMind institute outlines four pathways from AGI to ASI",
-            "url": "https://techmeme.com/261119/p57"
+            "id": "b8e1839046bc",
+            "headline": "Levent Alpöge reports discovering proof of Riemann Hypothesis with Claude",
+            "url": "https://simonwillison.net/2026/Nov/20/levent-alpoge"
           }
         ]
       }
@@ -5792,15 +5785,16 @@
     "from_stories": 20
   },
   "plan": {
-    "focus": "Chasing the fallout from the Anthropic IPO and new AI agent screenshot protections while tracking hardware and regional shifts.",
-    "updated_at": "2026-11-20T13:29:38+00:00",
+    "focus": "Chasing the fallout from Jensen Huang’s ouster and Anthropic’s bumpy IPO while tracking major model drops and data center policy shifts.",
+    "updated_at": "2026-11-20T22:15:25+00:00",
     "thin_areas": [
       "AI in India",
       "model releases"
     ],
     "searches": [
-      "Anthropic IPO aftermarket closing share price",
-      "Frostbite CPU architecture AI designed"
+      "Anthropic Riemann hypothesis Claude math",
+      "Nvidia SEC probe Jensen Huang ouster",
+      "Trump data center ban overseas tax"
     ]
   },
   "builders": {
@@ -5929,357 +5923,177 @@
   },
   "threads": [
     {
-      "id": "t-eb191c8e2116",
-      "title": "Anthropic safety concerns spark investor comment",
-      "updated_at": "2026-11-20T06:45:00+00:00",
+      "id": "t-1f4231610437",
+      "title": "Mistral Large 4 preview to public release",
+      "updated_at": "2026-11-20T22:15:25+00:00",
       "stories": [
         {
-          "id": "3ed82417f95b",
-          "headline": "Anthropic debuts on Nasdaq at $1.5 trillion valuation after $81.34 billion IPO",
-          "url": "https://milwaukeesun.com/news/279444284/dario-amodei-says-anthropic-will-not-bend-to-business-political-pressure-on-ai-safety",
-          "published_at": "2026-11-20T06:45:00+00:00",
-          "category": "voices"
+          "id": "820bd24a41c4",
+          "headline": "Mistral launches public preview of Mistral Large 4",
+          "url": "https://mistral.ai/news/mistral-large-4",
+          "published_at": "2026-11-20T22:15:25+00:00",
+          "category": "models"
         },
         {
-          "id": "76ddd5e08e0d",
-          "headline": "Early Anthropic investor Dustin Moskovitz says labs should slow down",
-          "url": "https://techmeme.com/261119/p23",
-          "published_at": "2026-11-19T12:25:01+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "0bd7a28301d2",
-          "headline": "Coalition challenges Anthropic's safety branding ahead of IPO",
-          "url": "https://businesswire.com/news/home/20261118974464/en/Anthropic-is-Not-a-Safe-AI-Company---Broad-Coalition-of-Scientists-Legal-Scholars-and-Tech-Leaders-Challenge-Anthropics-Safety-Branding-Ahead-of-IPO",
-          "published_at": "2026-11-18T16:41:22+00:00",
-          "category": "safety"
+          "id": "05c952b5cb3a",
+          "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms",
+          "published_at": "2026-10-31T06:13:40+00:00",
+          "category": "models"
         }
       ]
     },
     {
-      "id": "t-6efc30caffcd",
-      "title": "US lawmakers seek Microsoft briefing on ByteDance AI deal",
-      "updated_at": "2026-11-20T06:15:01+00:00",
+      "id": "t-a83814a46377",
+      "title": "Mistral AI international expansion and research rollout",
+      "updated_at": "2026-11-20T22:15:25+00:00",
       "stories": [
         {
-          "id": "5a705548bf62",
-          "headline": "Nscale may need US license for ByteDance GPU access under new rules",
-          "url": "https://techmeme.com/261120/p3",
-          "published_at": "2026-11-20T06:15:01+00:00",
+          "id": "820bd24a41c4",
+          "headline": "Mistral launches public preview of Mistral Large 4",
+          "url": "https://mistral.ai/news/mistral-large-4",
+          "published_at": "2026-11-20T22:15:25+00:00",
+          "category": "models"
+        },
+        {
+          "id": "9eaf7b604514",
+          "headline": "Mistral opens Singapore headquarters and targets 200 Asia-Pacific staff by 2027",
+          "url": "https://cryptobriefing.com/mistral-asia-pacific-headquarters-singapore",
+          "published_at": "2026-11-20T02:14:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "459fb45d2a37",
+          "headline": "Deutsche Telekom invests €100 million in French AI start-up Mistral",
+          "url": "https://finance.yahoo.com/technology/ai/articles/deutsche-telekom-invests-100-million-141833941.html",
+          "published_at": "2026-11-19T06:17:00+00:00",
+          "category": "industry"
+        }
+      ]
+    },
+    {
+      "id": "t-c71977e5e8f7",
+      "title": "Trump policy and data center expansion clash",
+      "updated_at": "2026-11-20T18:35:01+00:00",
+      "stories": [
+        {
+          "id": "b451ca89e9da",
+          "headline": "Trump threatens tax and ban on US companies building data centers overseas",
+          "url": "https://techmeme.com/261120/p23",
+          "published_at": "2026-11-20T18:35:01+00:00",
           "category": "policy"
         },
         {
-          "id": "e305a01a2ddf",
-          "headline": "US lawmakers seek Microsoft briefing on reported ByteDance AI deal",
-          "url": "https://economictimes.indiatimes.com/tech/technology/us-lawmakers-seek-microsoft-briefing-on-reported-ai-deal-talks-with-bytedance/articleshow/135977207.cms",
-          "published_at": "2026-11-19T04:09:53+00:00",
+          "id": "dfbd3a5f46f2",
+          "headline": "Amazon's Ohio data center plans face risks after voter restrictions",
+          "url": "https://techmeme.com/261117/p1",
+          "published_at": "2026-11-17T05:40:01+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "a7baa208561a",
+          "headline": "Constellation Energy raises guidance and shrugs off data center fears",
+          "url": "https://theverge.com/science/1034694/nuclear-energy-constellation-earnings-data-centers-democrats",
+          "published_at": "2026-11-16T20:29:37+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "f819d90d809d",
+          "headline": "Harvard study estimates power use of 403 US hyperscale data centers",
+          "url": "https://theverge.com/ai-artificial-intelligence/1034668/data-centers-electricity-climate-pollution-study-harvard",
+          "published_at": "2026-11-16T20:27:58+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "03263f595a44",
+          "headline": "Envision Group opens gigawatt-scale Galaxy AI datacenter in Inner Mongolia",
+          "url": "https://techmeme.com/261108/p7",
+          "published_at": "2026-11-08T11:00:01+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "d44fec61ccb7",
+          "headline": "After the midterms, things are looking rocky for Elon Musk and data centers",
+          "url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers",
+          "published_at": "2026-11-07T22:07:22+00:00",
+          "category": "policy"
+        },
+        {
+          "id": "b08d310c81f1",
+          "headline": "OpenAI changes data center policies after midterm voter pushback",
+          "url": "https://myfox28columbus.com/news/nation-world/openai-moves-to-rebuild-trust-after-voters-reject-data-centers-in-local-measures-ai-infrastructure",
+          "published_at": "2026-11-07T06:30:00+00:00",
+          "category": "policy"
+        },
+        {
+          "id": "acdb0c16a39e",
+          "headline": "Asian tech stocks plunge amid fears US Democrats may delay data centers",
+          "url": "https://techmeme.com/261106/p2",
+          "published_at": "2026-11-06T05:40:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "b53db0f7184a",
+          "headline": "OpenAI steps back from NDAs and promises full power costs for data centers",
+          "url": "https://theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda",
+          "published_at": "2026-11-06T00:37:56+00:00",
+          "category": "policy"
+        },
+        {
+          "id": "d93ef6b85a78",
+          "headline": "Midterm results boost opposition to AI data centers, prompting new restrictions",
+          "url": "https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming",
+          "published_at": "2026-11-05T01:02:14+00:00",
+          "category": "policy"
+        },
+        {
+          "id": "d30bd3f5a099",
+          "headline": "OpenAI to launch post‑midterm policy push, propose AI speed limits and rename data centers",
+          "url": "https://techmeme.com/261101/p16",
+          "published_at": "2026-11-01T21:30:01+00:00",
           "category": "policy"
         }
       ]
     },
     {
-      "id": "t-a50b07bc6191",
-      "title": "Anthropic IPO tests circular financing boom",
-      "updated_at": "2026-11-20T05:45:01+00:00",
+      "id": "t-752abeffd6c8",
+      "title": "Anthropic Claude solves major math and physics problems",
+      "updated_at": "2026-11-20T16:34:13+00:00",
       "stories": [
         {
-          "id": "8099b1cf49a8",
-          "headline": "Asian tech stocks plunge as Anthropic IPO fails to stem AI sell-off",
-          "url": "https://techmeme.com/261120/p1",
-          "published_at": "2026-11-20T05:45:01+00:00",
-          "category": "industry"
+          "id": "f1b7c64ada91",
+          "headline": "Anthropic mathematician claims to have solved Riemann hypothesis with Claude",
+          "url": "https://theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+          "published_at": "2026-11-20T16:34:13+00:00",
+          "category": "research"
         },
         {
-          "id": "78098ada5602",
-          "headline": "Anthropic shares slide 5% in after-hours trading following record IPO",
-          "url": "https://techmeme.com/261119/p61",
-          "published_at": "2026-11-20T04:15:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "4aacf31011a3",
-          "headline": "Anthropic raises $81.3B in record-breaking IPO as founders cash out $2B",
-          "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo",
-          "published_at": "2026-11-20T00:43:50+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "824e87dcfa8e",
-          "headline": "Anthropic’s $81.3 billion IPO tests AI’s circular financing model",
-          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test",
-          "published_at": "2026-11-19T14:54:39+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "cbe596e93c95",
-          "headline": "Anthropic IPO retail investor allocation expected to fall below 20%",
-          "url": "https://techmeme.com/261119/p6",
-          "published_at": "2026-11-19T07:25:29+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "2d572302d891",
-          "headline": "Anthropic IPO set to deliver windfall to smaller VC firms",
-          "url": "https://techmeme.com/261118/p3",
-          "published_at": "2026-11-18T07:00:41+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "a8c038b3bd40",
-          "headline": "San Francisco AI insiders could hold $1.2 trillion in equity as Anthropic goes public",
-          "url": "https://techmeme.com/261117/p67",
-          "published_at": "2026-11-18T01:50:07+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "25c96fa5a216",
-          "headline": "Anthropic prices IPO at $83 per share, valuing company at $1.5 trillion",
-          "url": "https://anthropic.com/news/anthropic-prices-initial-public-offering",
-          "published_at": "2026-11-18T00:00:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "168c023a4a8e",
-          "headline": "Altimeter aims to invest $5B in Anthropic IPO",
-          "url": "https://techmeme.com/261116/p43",
-          "published_at": "2026-11-16T21:05:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "0b980939d985",
-          "headline": "Anthropic prices its IPO on Wednesday with valuation up to $1.4 trillion",
-          "url": "https://thestreet.com/crypto/artificial-intelligence/traders-are-pricing-anthropic-40-higher-ahead-of-ipo",
-          "published_at": "2026-11-16T11:15:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "3710a552738d",
-          "headline": "Anthropic IPO tests its public benefit commitment",
-          "url": "https://livemint.com/companies/anthropic-promises-to-pursue-humanitys-benefit-its-ipo-filing-gives-it-wiggle-room-11794805350350.html",
-          "published_at": "2026-11-16T08:15:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "9231c3778855",
-          "headline": "Samsung SDS seeks Anthropic and OpenAI as tenants for AI data centre services",
-          "url": "https://techmeme.com/261115/p19",
-          "published_at": "2026-11-16T01:15:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "e9a9e657b9d8",
-          "headline": "Anthropic targets up to $90.4B in IPO and private placement",
-          "url": "https://techmeme.com/261115/p18",
-          "published_at": "2026-11-15T23:00:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "2c9708b63937",
-          "headline": "Sam Bankman-Fried misses out on Anthropic IPO windfall",
-          "url": "https://techmeme.com/261113/p42",
-          "published_at": "2026-11-14T04:25:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "b9a430a49080",
-          "headline": "Nscale reports $5.5B in debt and $1.69B loss in amended IPO filing",
-          "url": "https://techmeme.com/261113/p11",
-          "published_at": "2026-11-13T14:25:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "6fe694c8134f",
-          "headline": "Nscale says it needs extra funding for 2027 commitments after $45B Anthropic chip order",
-          "url": "https://techmeme.com/261113/p3",
-          "published_at": "2026-11-13T06:01:16+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "3e673ebfce8a",
-          "headline": "Anthropic IPO draws about six times the orders for available shares",
-          "url": "https://techmeme.com/261112/p55",
-          "published_at": "2026-11-12T21:20:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "6734a79295b9",
-          "headline": "Anthropic's IPO roadshow video details multi-chip strategy and compute multipliers",
-          "url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow",
-          "published_at": "2026-11-11T15:11:59+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "04441559207d",
-          "headline": "Anthropic IPO draws multiple times the orders for available shares",
-          "url": "https://techmeme.com/261111/p27",
-          "published_at": "2026-11-11T13:40:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "61c97162f2b8",
-          "headline": "Anthropic opens Australian retail IPO ahead of Nasdaq listing",
-          "url": "https://techmeme.com/261110/p63",
-          "published_at": "2026-11-11T02:30:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "103c6c1b606c",
-          "headline": "Nvidia plans $10B investment in Anthropic alongside its IPO",
-          "url": "https://techmeme.com/261110/p50",
-          "published_at": "2026-11-10T20:55:05+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "f2e3e14e12ac",
-          "headline": "Anthropic co-founders to sell $1.75 billion in shares ahead of $1.4 trillion IPO",
-          "url": "https://techmeme.com/261110/p32",
-          "published_at": "2026-11-10T17:02:35+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "e9e2b3561c9a",
-          "headline": "TSMC to invest up to $1B in Anthropic and OpenAI at IPO price",
-          "url": "https://techmeme.com/261110/p24",
-          "published_at": "2026-11-10T14:46:04+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "06c34be0a2ca",
-          "headline": "Anthropic sets IPO price at $70–$78 per share, targeting $1.4 trillion valuation",
-          "url": "https://theverge.com/ai-artificial-intelligence/1030703/anthropic-ipo-1-4-trillion",
-          "published_at": "2026-11-10T14:06:54+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "6e60d9db5bba",
-          "headline": "Anthropic targets $1.3tn valuation in IPO pricing 825 million shares at $70-$78",
-          "url": "https://businesschief.com/news/anthropic-targets-us-1-3tn-valuation-for-much-hyped-ipo",
-          "published_at": "2026-11-10T07:54:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "ea51f7bea31a",
-          "headline": "Anthropic to host live‑stream IPO event with CEO Dario Amodei and JPMorgan’s Jamie Dimon",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-plans-ipo-live-stream-with-dario-amodei-jpmorgan-ceo-jamie-dimon/articleshow/135699429.cms",
-          "published_at": "2026-11-10T04:38:39+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "9798aa740a48",
-          "headline": "Anthropic sends and retracts IPO filing pricing details to bankers",
-          "url": "https://techmeme.com/261109/p48",
-          "published_at": "2026-11-10T01:41:39+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "69011908bacb",
-          "headline": "TSMC board approves up to $1bn investment in Anthropic and OpenAI",
-          "url": "https://ua.news/en/dovkolo-svitu/rada-direktoriv-tsmc-skhvalila-investitsiyi-do-1-mlrd-v-anthropic-i-openai-channel-newsasia",
-          "published_at": "2026-11-09T18:43:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "9b35f1480431",
-          "headline": "AI companies sell $300B+ in stock in 2026 amid market absorption questions",
-          "url": "https://techmeme.com/261108/p10",
-          "published_at": "2026-11-08T17:45:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "afa4cae37227",
-          "headline": "Anthropic buys 1.7GW of gas-fired generators in $3.4B deal",
-          "url": "https://techmeme.com/261108/p8",
-          "published_at": "2026-11-08T15:05:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "f31245a34fce",
-          "headline": "Anthropic presses on with November IPO plans despite global AI stock sell-off",
-          "url": "https://techmeme.com/261106/p21",
-          "published_at": "2026-11-06T21:12:51+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "7c70b636a2cf",
-          "headline": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
-          "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo",
-          "published_at": "2026-11-06T15:54:47+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "1b0209f81f9f",
-          "headline": "Anthropic reports $895.4 billion in compute‑related purchase commitments and leases",
-          "url": "https://techmeme.com/261102/p29",
-          "published_at": "2026-11-02T16:35:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "038e188345e4",
-          "headline": "Anthropic to raise up to ¥552.9 bn ($3.5 bn) from Japanese investors in US IPO",
-          "url": "https://bloomberg.com/news/articles/2026-11-02/anthropic-seeks-up-to-3-5-billion-in-japan-for-its-mega-us-ipo",
-          "published_at": "2026-11-01T22:23:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "b329cc4aaa4c",
-          "headline": "Blackstone says Anthropic likely to receive junk rating after IPO",
-          "url": "https://ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
-          "published_at": "2026-10-30T17:27:25+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "007a2afe4a6c",
-          "headline": "Anthropic’s IPO faces valuation drop as growth slows and AI prices plunge",
-          "url": "https://economictimes.indiatimes.com/tech/technology/anthropics-record-ipo-faces-some-big-questions/articleshow/135249836.cms",
-          "published_at": "2026-10-28T02:42:31+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "e4d1fbe9aac7",
-          "headline": "Anthropic files S‑1 for Nasdaq IPO, reporting $16.3 billion H1 revenue",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/articleshow/135222913.cms",
-          "published_at": "2026-10-27T02:33:06+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "09134649a0da",
-          "headline": "Anthropic files S‑1 showing $16.3 billion H1 revenue and $131.7 billion cash",
-          "url": "https://msn.com/en-us/news/other/the-anthropic-ipo-by-the-numbers-from-a-possible-valuation-in-the-trillions-to-surging-revenue/ar-AA2g76lV",
-          "published_at": "2026-10-26T16:53:17+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "8a77e646571b",
-          "headline": "Anthropic files S‑1 for IPO, plans Nasdaq listing under ticker ANT",
-          "url": "https://anthropic.com/news/s1-sec",
-          "published_at": "2026-10-26T00:00:00+00:00",
-          "category": "industry"
-        }
-      ]
-    },
-    {
-      "id": "t-e29f6794c6f3",
-      "title": "Ethan Mollick research and lab simulations",
-      "updated_at": "2026-11-20T04:20:53.322000+00:00",
-      "stories": [
-        {
-          "id": "34e7f4ca2739",
-          "headline": "Ethan Mollick highlights research on 35 human labs deploying science agents",
-          "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2pqcy4cbs2g",
-          "published_at": "2026-11-20T04:20:53.322000+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "f89756bdc7b4",
-          "headline": "Ethan Mollick's lab releases open-source Primer simulation system",
-          "url": "https://bsky.app/profile/emollick.bsky.social/post/3n25jpzcdtk2p",
-          "published_at": "2026-11-12T22:34:59.292000+00:00",
+          "id": "be373132dcb8",
+          "headline": "Anthropic's Claude model solves two open problems in black hole physics",
+          "url": "https://anthropic.com/research/claude-black-hole-physics",
+          "published_at": "2026-11-19T17:30:44+00:00",
           "category": "research"
         }
       ]
     }
   ],
   "labs": [
+    {
+      "lab": "Mistral AI",
+      "model": "Mistral Large 4",
+      "type": "Multimodal",
+      "date": "2026-11-20T22:15:25+00:00",
+      "story_id": "820bd24a41c4",
+      "url": "https://mistral.ai/news/mistral-large-4"
+    },
+    {
+      "lab": "Thinking Machines Lab",
+      "model": "Inkling 2 Mini",
+      "type": "Language",
+      "date": "2026-11-20T21:15:02+00:00",
+      "story_id": "6da8ea47d40e",
+      "url": "https://techmeme.com/261120/p33"
+    },
     {
       "lab": "OpenAI",
       "model": "OpenAI reportedly developing first smartphone with Foxconn subsidiary assembly",
@@ -6465,14 +6279,6 @@
       "url": "https://livemint.com/technology/chinas-baidu-launches-ai-model-simulating-road-environment-for-robotaxis-11793709678345.html"
     },
     {
-      "lab": "Mistral AI",
-      "model": "Large 4",
-      "type": "Multimodal",
-      "date": "2026-10-31T06:13:40+00:00",
-      "story_id": "05c952b5cb3a",
-      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms"
-    },
-    {
       "lab": "DeepSeek and Moonshot AI",
       "model": "DeepSeek and Moonshot AI used OpenAI’s GPT‑6 Astra for distillation training",
       "type": "Other",
@@ -6520,8 +6326,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 572,
-    "model_releases_this_month": 67,
-    "labs_tracked": 30
+    "stories_this_month": 580,
+    "model_releases_this_month": 69,
+    "labs_tracked": 31
   }
 }

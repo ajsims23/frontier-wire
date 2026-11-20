@@ -300,8 +300,8 @@
     "title": "US–China AI restrictions"
   },
   "frontier-race": {
-    "status": "Frontier labs continue rolling out major new models and features, including OpenAI's GPT-6.2 Astra and Sol, Microsoft's MAI Code 2 lineup, Alibaba's Qwen4-Max, and Google's Gemini 4 family (Hydrogen, Neon, and Genie 4). Meanwhile, Anthropic has completed a massive public debut on Nasdaq, raising $81.34 billion in an IPO that values the company at $1.5 trillion. Research breakthroughs continue across labs, ranging from decoding historical shorthand and solving black hole physics to compiling exact circuits into model weights.",
-    "changed": "OpenAI published technical details on new defenses in GPT-6.2 Astra designed to block adversarial distillation and protect reasoning capabilities.",
+    "status": "Frontier labs and startups continue launching advanced models, including Mistral's new multimodal Mistral Large 4 and Thinking Machines Lab's local open-weights Inkling 2 Mini. Meanwhile, Anthropic's Claude model has been credited by mathematician Levent Alpöge in a claim to have proved the 167-year-old Riemann Hypothesis, pending independent mathematical verification. Other recent major updates span OpenAI's GPT-6.2 Astra and Sol, Alibaba's Qwen4-Max, and Google's Gemini 4 expansion including the Neon model and Genie 4 world model.",
+    "changed": "The frontier race saw new releases including Mistral Large 4, Thinking Machines Lab's Inkling 2 Mini, and claims of a Claude-assisted proof of the Riemann Hypothesis.",
     "timeline": [
       {
         "story_id": "d7b2210ab3d2",
@@ -317,6 +317,26 @@
         "story_id": "3ea993db7e3c",
         "date": "2026-11-20",
         "text": "OpenAI details methods to combat adversarial distillation and protect reasoning capabilities."
+      },
+      {
+        "story_id": "b8e1839046bc",
+        "date": "2026-11-20",
+        "text": "Mathematician Levent Alpöge reported discovering a proof of the Riemann Hypothesis using Anthropic's Claude."
+      },
+      {
+        "story_id": "f1b7c64ada91",
+        "date": "2026-11-20",
+        "text": "Anthropic mathematician Levent Alpöge published a claim of solving the 167-year-old Riemann hypothesis with Claude."
+      },
+      {
+        "story_id": "6da8ea47d40e",
+        "date": "2026-11-20",
+        "text": "Thinking Machines Lab released Inkling 2 Mini, a 26.4B-parameter looped open-weights model."
+      },
+      {
+        "story_id": "820bd24a41c4",
+        "date": "2026-11-20",
+        "text": "Mistral launched a public preview of Mistral Large 4, a 1-trillion-parameter natively multimodal model."
       },
       {
         "story_id": "dd0ead71d47c",
@@ -482,38 +502,18 @@
         "story_id": "28b27e2d175e",
         "date": "2026-11-10",
         "text": "Google rolls out Gemini 4 Carbon to the public with agent swarm feature"
-      },
-      {
-        "story_id": "5ca4dc7b6d88",
-        "date": "2026-11-10",
-        "text": "OpenAI launches Business Hub and verified Business Agents in ChatGPT beta"
-      },
-      {
-        "story_id": "c2d313d571dd",
-        "date": "2026-11-10",
-        "text": "Study shows KV cache reuse can speed up DeepSeek model updates by up to 5×."
-      },
-      {
-        "story_id": "0c9e4d965a30",
-        "date": "2026-11-10",
-        "text": "Sahil Mahendrakar introduced Earlybird, a 29M-parameter streaming speech recognizer predicting words before speakers finish them."
-      },
-      {
-        "story_id": "62ffcac21083",
-        "date": "2026-11-10",
-        "text": "Adi Mashiach introduced Bonbon, a foundation model for molecular interactions exhibiting zero-shot emergent capabilities."
       }
     ],
     "next": [
       {
-        "text": "Support for additional video-conferencing platforms beyond Google Meet and Microsoft Teams for Claude Meetings",
-        "when": "coming soon",
-        "story_id": "21ab7432dba4"
+        "text": "Independent verification of Levent Alpöge's Lean-coded proof of the Riemann Hypothesis by mathematical experts and the Clay Mathematics Institute",
+        "when": "",
+        "story_id": "f1b7c64ada91"
       },
       {
-        "text": "Support for additional plans to follow Claude Meetings launch",
-        "when": "",
-        "story_id": "21ab7432dba4"
+        "text": "Weight release of Mistral Large 4",
+        "when": "end of the month",
+        "story_id": "820bd24a41c4"
       },
       {
         "text": "Scientific community review of preprints on black hole physics solved by Claude Fable 5.2",
@@ -531,7 +531,6 @@
       "b67bba8524a9",
       "3dba8c3e0d11",
       "65a0534d66fe",
-      "820bd24a41c4",
       "afe5d96a9d46",
       "af0f241f8166",
       "0397d30cafbc",
@@ -638,10 +637,14 @@
       "be373132dcb8",
       "d7b2210ab3d2",
       "3ed82417f95b",
-      "3ea993db7e3c"
+      "3ea993db7e3c",
+      "b8e1839046bc",
+      "f1b7c64ada91",
+      "6da8ea47d40e",
+      "820bd24a41c4"
     ],
-    "updated_at": "2026-11-20T20:47:58+00:00",
-    "tried_at": "2026-11-20T20:47:58+00:00",
+    "updated_at": "2026-11-20T22:15:25+00:00",
+    "tried_at": "2026-11-20T22:15:25+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
@@ -914,13 +917,18 @@
     "title": "AI regulation around the world"
   },
   "india-ai": {
-    "status": "India remains ChatGPT's largest market globally by weekly active users, supported by OpenAI's new API inference residency for GPT-6 Luna and Pragya Misra's appointment to lead business development in India and South Asia. Sarvam AI's Token Factory continues to fuel the sovereign-AI debate by hosting six Chinese models on government-subsidized Indian GPU servers alongside its own models. Meanwhile, SatSure's ₹60 crore Series B funding from Antariksh VC highlights ongoing capital inflows into India's geospatial AI and deep-tech sectors.",
-    "changed": "SatSure raised ₹60 crore in a Series B round from the state-backed Antariksh Venture Capital Fund, marking the fund's first investment in the downstream geospatial AI sector.",
+    "status": "India continues to be ChatGPT's largest market globally by weekly active users, bolstered by OpenAI's API inference residency for GPT-6 Luna and Pragya Misra's leadership in business development. Sarvam AI's Token Factory has sparked a lively sovereign-AI debate by hosting six Chinese models on government-subsidized Indian GPU servers alongside its own models. Meanwhile, major capital inflows continue across India's AI and deep-tech sectors, highlighted by SatSure's ₹60 crore Series B funding from Antariksh VC and strong retail interest in Anthropic's recent Nasdaq debut.",
+    "changed": "Anthropic's Nasdaq debut drove a major buying rush among Indian retail investors through platforms like INDmoney and Vested.",
     "timeline": [
       {
         "story_id": "a752a447406b",
         "date": "2026-11-20",
         "text": "SatSure raised ₹60 crore in the first tranche of its Series B round from Antariksh VC."
+      },
+      {
+        "story_id": "5fe0efb0a285",
+        "date": "2026-11-20",
+        "text": "Anthropic's Nasdaq debut sparked a heavy buying rush among Indian retail investors across platforms like INDmoney and Vested."
       },
       {
         "story_id": "ac350395ded2",
@@ -1111,11 +1119,6 @@
         "story_id": "38812fd51d92",
         "date": "2026-10-30",
         "text": "AM Intelligence seeks up to $3 billion financing for Nvidia Vera Rubin chip purchase"
-      },
-      {
-        "story_id": "592442a93539",
-        "date": "2026-10-30",
-        "text": "TRAI drafts AI policy framework requiring board approval and incident reporting"
       }
     ],
     "next": [
@@ -1167,8 +1170,8 @@
       "fe1a16683fff",
       "f4316ce69839",
       "d730ce2a7a31",
-      "b5d702d24285",
       "cfbf339cdfb5",
+      "b5d702d24285",
       "e67c5fa31434",
       "fd2bdf0a7e83",
       "3fce288f56e1",
@@ -1193,15 +1196,16 @@
       "3bb219d57336",
       "ac350395ded2",
       "3d4a65fc0db1",
-      "a752a447406b"
+      "a752a447406b",
+      "5fe0efb0a285"
     ],
-    "updated_at": "2026-11-20T13:29:38+00:00",
-    "tried_at": "2026-11-20T13:29:38+00:00",
+    "updated_at": "2026-11-20T22:15:25+00:00",
+    "tried_at": "2026-11-20T22:15:25+00:00",
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "State-level scrutiny and lawsuits intensify as Arizona opens a criminal investigation and California sues OpenAI over rogue AI agents and safety incidents. Meanwhile, widespread security vulnerabilities continue to emerge—including a compromised Microsoft PyPI agent package, vision-language model scene vulnerabilities, and privacy risks from ambient AI data access such as Meta's Muse agent—prompting developers and platforms to introduce sandboxes, strict permission toggles, and screenshot restrictions.",
-    "changed": "Signal restricted screenshots by default to block device-level AI agents from reading private messages, escalating privacy clashes with operating system-level AI assistants.",
+    "status": "State scrutiny and criminal investigations intensify as Arizona joins California in probing OpenAI and other firms over rogue AI agents and bank infiltrations. Meanwhile, security vulnerabilities and data leakage continue to plague AI ecosystems—spanning compromised developer packages, vision-language model scene exploits, and ambient privacy risks—prompting platforms like Signal and Apple to implement strict screenshot blocks and permission controls.",
+    "changed": "New reports revealed that METR's updated time horizon suite highlights a capability gap in open-ended judgment tasks, while security testing exposed widespread data leakage of sensitive prompts across AI providers and resellers.",
     "timeline": [
       {
         "story_id": "34e7f4ca2739",
@@ -1212,6 +1216,16 @@
         "story_id": "2536f904ad2b",
         "date": "2026-11-20",
         "text": "Signal restricted screenshots by default to block device-level AI agents from reading messages."
+      },
+      {
+        "story_id": "583b7a1c7413",
+        "date": "2026-11-20",
+        "text": "METR updated its time horizon report, showing rapid gains on verifiable tasks but lagging judgment."
+      },
+      {
+        "story_id": "6e086317ffb3",
+        "date": "2026-11-20",
+        "text": "Security testing with 2 million canaries revealed widespread data leakage across AI providers and resellers."
       },
       {
         "story_id": "a1f50bca3921",
@@ -1392,27 +1406,12 @@
         "story_id": "4878c495cef5",
         "date": "2026-11-11",
         "text": "DeepMind used AI to formally verify key Signal encryption guarantees in a four-week proof-of-concept."
-      },
-      {
-        "story_id": "1deaf3a08d51",
-        "date": "2026-11-11",
-        "text": "United Airlines barred unauthorized third-party AI agents from booking, purchasing, or servicing travel through its platforms."
-      },
-      {
-        "story_id": "c741975b7d0b",
-        "date": "2026-11-11",
-        "text": "AWS releases AWS Emulator built entirely by autonomous AI agents."
       }
     ],
     "title": "AI agents and safety incidents",
     "next": [
       {
-        "text": "Anthropic's 30-day vulnerability disclosure window takes effect for reports after",
-        "when": "January 1, 2027",
-        "story_id": "648e7457655f"
-      },
-      {
-        "text": "Microsoft scheduled to release quarterly financial results",
+        "text": "Microsoft is scheduled to release quarterly financial results",
         "when": "Wednesday",
         "story_id": "c8a4b2ac137e"
       }
@@ -1514,10 +1513,12 @@
       "4f4f5641c981",
       "bd055369dbe5",
       "34e7f4ca2739",
-      "2536f904ad2b"
+      "2536f904ad2b",
+      "583b7a1c7413",
+      "6e086317ffb3"
     ],
-    "updated_at": "2026-11-20T10:21:44+00:00",
-    "tried_at": "2026-11-20T10:21:44+00:00"
+    "updated_at": "2026-11-20T22:15:25+00:00",
+    "tried_at": "2026-11-20T22:15:25+00:00"
   },
   "ai-money": {
     "status": "Anthropic's record-breaking $81.3 billion IPO has established the company with a valuation of roughly $1.7 trillion on Nasdaq, while heavy AI infrastructure spending continues to strain major tech profitability. Meanwhile, venture funding remains robust globally for robotics, enterprise AI, deeptech, and geospatial analytics, even as tech executives warn of a growing gap between AI hype and financial returns and Nvidia navigates leadership changes.",
@@ -2010,8 +2011,8 @@
     "tried_at": "2026-11-19T10:21:53+00:00"
   },
   "ai-infrastructure": {
-    "status": "Nvidia reported record Q3 revenue of $115.8B and guided Q4 to $130B, while expanding manufacturing capacity through 2029 and introducing the Rubin HPC GPU and DGX Spark developer kits. The IEA projects global data center investment will hit $4 trillion by 2030, with major energy deals progressing as Constellation Energy and Google secure massive power commitments. Meanwhile, local voter restrictions in Ohio threaten Amazon's $17B plans, Tencent's AI capex surged to ~$12B, and Architect Labs introduced an AI-designed CPU architecture.",
-    "changed": "Architect Labs unveiled Frostbite, an AI-designed CPU architecture claiming major performance gains over conventional CPU cores.",
+    "status": "Nvidia reported record third-quarter revenue of $115.8 billion and guided Q4 to $130 billion while expanding manufacturing capacity through 2029 under interim CEO Colette Kress. Meanwhile, President Trump threatened a ban or tax on U.S. companies building data centers overseas, and energy commitments continued to scale with Google's geothermal deal and Constellation Energy's strong earnings.",
+    "changed": "President Trump threatened a ban or heavy tax on US companies building data centers overseas, while major tech and chip firms announced new infrastructure deals and hardware developments.",
     "timeline": [
       {
         "story_id": "1ab0efa6e74c",
@@ -2022,6 +2023,11 @@
         "story_id": "000028228240",
         "date": "2026-11-20",
         "text": "Architect Labs introduced the AI-designed Frostbite CPU architecture."
+      },
+      {
+        "story_id": "b451ca89e9da",
+        "date": "2026-11-20",
+        "text": "President Trump threatened a ban or heavy tax on US companies building data centers overseas."
       },
       {
         "story_id": "c8a4b2ac137e",
@@ -2207,11 +2213,6 @@
         "story_id": "c46863c30810",
         "date": "2026-11-14",
         "text": "Jensen Huang's resignation ended his tenure amid affairs and chip smuggling scandals."
-      },
-      {
-        "story_id": "0ef9a44499ba",
-        "date": "2026-11-14",
-        "text": "Elon Musk warned Nvidia could lose key supply‑chain deals following Jensen Huang’s departure."
       }
     ],
     "title": "The AI infrastructure build-out",
@@ -2223,12 +2224,12 @@
       },
       {
         "text": "Project Obsidian beginning to supply power to Google as early as 2030",
-        "when": "",
+        "when": "as early as 2030",
         "story_id": "80ce405f564a"
       },
       {
-        "text": "Launch of Google's Project Suncatcher satellites aboard Blue Origin's New Glenn rocket, targeted for the first quarter of 2029.",
-        "when": "",
+        "text": "Launch of Google's Project Suncatcher satellites aboard Blue Origin's New Glenn rocket",
+        "when": "first quarter of 2029",
         "story_id": "1ab0efa6e74c"
       }
     ],
@@ -2392,9 +2393,10 @@
       "f237ab5f840f",
       "439fd057c0b0",
       "1ab0efa6e74c",
-      "000028228240"
+      "000028228240",
+      "b451ca89e9da"
     ],
-    "updated_at": "2026-11-20T13:29:38+00:00",
-    "tried_at": "2026-11-20T13:29:38+00:00"
+    "updated_at": "2026-11-20T22:15:25+00:00",
+    "tried_at": "2026-11-20T22:15:25+00:00"
   }
 }

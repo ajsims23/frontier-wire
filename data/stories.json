@@ -1,6 +1,754 @@
 [
   {
     "explainer": {
+      "what_it_means": "Mistral has launched a public preview of Mistral Large 4, a new multimodal AI model with 1 trillion total parameters. The model was trained in Europe on NVIDIA hardware and will have its weights released by the end of the month.",
+      "terms": [
+        {
+          "term": "Multimodal model",
+          "meaning": "An artificial intelligence model that processes multiple types of data such as text and images."
+        },
+        {
+          "term": "Active parameters",
+          "meaning": "Model parameters that are used during a specific computation or token generation, rather than the entire parameter count."
+        },
+        {
+          "term": "Open-weight model",
+          "meaning": "AI model weights that are publicly shared and can be downloaded, modified, and run independently."
+        }
+      ],
+      "watch_next": [
+        "Weight release of Mistral Large 4 by the end of October 2026."
+      ]
+    },
+    "audiences": {
+      "builders": "Developers can try the Mistral Large 4 preview API today on Mistral Studio, with model weights scheduled to drop at the end of the month.",
+      "business": "Enterprises in sectors like cybersecurity, finance, and law can use Mistral Large 4 for mission-critical workloads, with self-deployment options providing control under European law.",
+      "investors": "Mistral trained the 1-trillion-parameter model from scratch on 3,800 NVIDIA Grace Blackwell GPUs in its own European datacenters."
+    },
+    "id": "820bd24a41c4",
+    "headline": "Mistral launches public preview of Mistral Large 4",
+    "summary": "Mistral has launched a public preview of Mistral Large 4, a 1-trillion-parameter natively multimodal model with 52 billion active parameters. The preview API is available on Mistral Studio, with weights releasing at the end of the month.",
+    "why_it_matters": "Mistral Large 4 represents a major European-built open-weight release intended to compete with global frontier models while offering self-deployment and control under European law.",
+    "category": "models",
+    "lab": "Mistral AI",
+    "model_name": "Mistral Large 4",
+    "model_type": "Multimodal",
+    "tags": [
+      "Mistral",
+      "Mistral Large 4",
+      "multimodal",
+      "open-weight",
+      "AI models"
+    ],
+    "quotes": [],
+    "score": 8,
+    "url": "https://mistral.ai/news/mistral-large-4",
+    "source_id": "mistral",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp",
+    "sources": [
+      {
+        "url": "https://mistral.ai/news/mistral-large-4",
+        "publisher": "Mistral AI",
+        "title": "Research Introducing Mistral Large 4 October 6, 2026 By Mistral"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-20T22:15:25+00:00",
+    "created_at": "2026-11-20T22:15:25+00:00",
+    "thread": "t-a83814a46377",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "europe"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 3,
+      "investors": 2
+    },
+    "cover": "Mistral Large 4",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Inkling 2 Mini is a small open-weights AI model designed to run on consumer laptops with a memory footprint of about 20GB. By looping its middle layers three times per token, it aims to achieve higher reasoning performance using fewer active parameters than traditional models of similar capability.",
+      "terms": [
+        {
+          "term": "open-weights",
+          "meaning": "An open-weights AI model whose parameter files are publicly available for download and use."
+        },
+        {
+          "term": "looped transformer",
+          "meaning": "A neural network architecture that processes sequential data by running middle layers multiple times per token."
+        },
+        {
+          "term": "Mixture-of-Experts",
+          "meaning": "A model design where only a subset of parameters is active for any given token to improve efficiency."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "Inkling 2 Mini",
+        "benchmark": "DeepSWE v1.1",
+        "score": "48.2%"
+      },
+      {
+        "model": "Inkling 2 Mini",
+        "benchmark": "Vals Index v2.2",
+        "score": "46.5%"
+      }
+    ],
+    "audiences": {
+      "builders": "Developers can access Inkling 2 Mini on Hugging Face and run it locally using tools like Ollama, Unsloth, or llama.cpp.",
+      "business": "Businesses can use Inkling 2 Mini locally on hardware like consumer laptops to power persistent agents and coding tools without cloud dependency.",
+      "investors": "Thinking Machines Lab is competing in the open-weights model market with an architecture that reduces active parameters and memory footprints."
+    },
+    "id": "6da8ea47d40e",
+    "headline": "Thinking Machines Lab releases Inkling 2 Mini open-weights model",
+    "summary": "Thinking Machines Lab released Inkling 2 Mini, a 26.4B-parameter open-weights Mixture-of-Experts transformer that loops its middle layers three times per token. The ~20GB model is small enough to run on consumer laptops and leads open-weights models under 100B parameters on benchmarks like DeepSWE v1.1.",
+    "why_it_matters": "The release demonstrates the practical application of looped transformer architectures in sub-100B parameter models designed for local hardware execution.",
+    "category": "models",
+    "lab": "Thinking Machines Lab",
+    "model_name": "Inkling 2 Mini",
+    "model_type": "Language",
+    "tags": [
+      "Inkling 2 Mini",
+      "Thinking Machines Lab",
+      "open-weights",
+      "transformer",
+      "Mixture-of-Experts"
+    ],
+    "quotes": [],
+    "score": 9,
+    "url": "https://techmeme.com/261120/p33",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://thinkingmachines.ai/news/inkling-2-mini/images/cover-social.png",
+    "sources": [
+      {
+        "url": "https://techmeme.com/261120/p33",
+        "publisher": "techmeme.com",
+        "title": "TML releases Inkling 2 Mini, an open-weights 26.4B-parameter transformer that loops middle layers three times per token for better reasoning with fewer tokens (Thinking Machines Lab)"
+      },
+      {
+        "url": "https://techmeme.com/261120/p37",
+        "publisher": "techmeme.com",
+        "title": "Artificial Analysis says Inkling 2 Mini, with 5.4B active parameters, matches Qwen3.8 27B (xhigh) on its Intelligence Index with ~5x fewer active parameters (Artificial Analysis)"
+      },
+      {
+        "url": "https://thinkingmachines.ai/news/inkling-2-mini",
+        "publisher": "thinkingmachines.ai",
+        "title": "Inkling 2 Mini"
+      },
+      {
+        "url": "https://unite.ai/thinking-machines-lab-releases-inkling-2-mini-for-local-devices",
+        "publisher": "Unite.AI",
+        "title": "Thinking Machines Lab Releases Inkling 2 Mini for Local Devices"
+      },
+      {
+        "url": "https://huggingface.co/blog/inkling2mini",
+        "publisher": "Hugging Face blog",
+        "title": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 2,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-20T21:15:02+00:00",
+    "created_at": "2026-11-20T22:15:25+00:00",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 1
+    },
+    "cover": "Inkling 2 Mini",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Security research revealed that sensitive data sent through AI routers and inference resellers can be exposed, logged, or accessed by attackers. The study tracked secrets planted in AI prompts to see where they surfaced across the supply chain.",
+      "terms": [
+        {
+          "term": "AI router",
+          "meaning": "Services that receive prompts from AI applications and route them to inference models based on price or suitability."
+        },
+        {
+          "term": "Canary",
+          "meaning": "Unique credentials or URLs planted in data to track unauthorized access or data leakage when used."
+        },
+        {
+          "term": "Zero Data Retention",
+          "meaning": "A setting where AI providers are instructed not to retain user data."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers using AI routers and reseller networks face hidden data exposure and privacy setting failures in the supply chain.",
+      "business": "Enterprises relying on third-party AI routers and inference resellers must account for widespread prompt logging and compromised providers.",
+      "investors": "Security risks in the AI supply chain highlight vulnerabilities in reseller and hosting provider ecosystems."
+    },
+    "id": "6e086317ffb3",
+    "headline": "Researcher tests AI supply chain with 2 million canaries and finds data leaks",
+    "summary": "Security researcher HD Moore planted nearly 2 million trackable secrets in prompts sent through AI services to test for data leakage between July and November 2026. The experiment uncovered compromised AI providers, prompt logging by resellers, and ignored privacy settings.",
+    "why_it_matters": "The findings demonstrate that sensitive data sent to AI applications can leak through routers, resellers, and compromised hosting providers despite encryption in transit.",
+    "category": "research",
+    "lab": "Dragos",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "security",
+      "privacy",
+      "supply chain",
+      "AI routers"
+    ],
+    "quotes": [
+      {
+        "text": "We sent nearly two million AI prompts containing unique, trackable secrets to AI providers, then watched where those secrets surfaced",
+        "speaker": "HD Moore",
+        "speaker_role": "Chief Research Officer of Dragos",
+        "source_url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate"
+      }
+    ],
+    "score": 8,
+    "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate",
+    "source_id": "ars-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/11/ai-privacy-leakage-1152x648.jpg",
+    "sources": [
+      {
+        "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate",
+        "publisher": "Ars Technica AI",
+        "title": "Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced."
+      },
+      {
+        "url": "https://cryptobriefing.com/hd-moore-ai-supply-chain-data-leaks",
+        "publisher": "Crypto Briefing",
+        "title": "HD Moore’s canary experiment exposes data leaks across the AI supply chain"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-20T20:59:08+00:00",
+    "created_at": "2026-11-20T22:15:25+00:00",
+    "sectors": [
+      "cybersecurity"
+    ],
+    "regions": [
+      "us"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 2,
+      "business": 3,
+      "investors": 1
+    },
+    "cover": "2 million",
+    "trackers": [
+      "agent-safety"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "President Donald Trump stated that U.S. companies will be blocked from building data centers outside the country or face a heavy tax penalty. Major technology firms currently rely on international data centers for global expansion and to meet regulatory requirements.",
+      "terms": [
+        {
+          "term": "Data center",
+          "meaning": "A physical facility that houses computer systems and associated components, such as telecommunications and storage systems, used for AI and cloud computing."
+        },
+        {
+          "term": "Cloud infrastructure",
+          "meaning": "Services provided over the internet, including data storage and computing power, typically hosted in large data centers by companies like Amazon, Microsoft, and Google."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Policy proposals to restrict overseas data center construction could impact infrastructure scaling and global deployment plans for cloud providers.",
+      "business": "U.S. cloud infrastructure providers with international data centers face potential taxation or bans if the proposed policy is enacted.",
+      "investors": "Uncertainty surrounds major tech investments in international cloud infrastructure as potential tariffs and bans are floated."
+    },
+    "id": "b451ca89e9da",
+    "headline": "Trump threatens tax and ban on US companies building data centers overseas",
+    "summary": "President Donald Trump stated that U.S. companies will be blocked from building data centers overseas or face a heavy tax. Major cloud providers including Alphabet, Amazon, Microsoft, Meta, and Oracle have already built data centers in other countries.",
+    "why_it_matters": "The proposal addresses the geopolitical and energy constraints of the AI boom, forcing a clash between domestic infrastructure policy and the global expansion strategies of major tech companies.",
+    "category": "policy",
+    "lab": "",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "Trump",
+      "data centers",
+      "policy",
+      "AI infrastructure",
+      "cloud computing"
+    ],
+    "quotes": [
+      {
+        "text": "We’re not going to allow our companies to build data centers outside of our country",
+        "speaker": "Donald Trump",
+        "speaker_role": "President of the United States",
+        "source_url": "https://theverge.com/policy/1038892/trump-foreign-data-centers-tax"
+      }
+    ],
+    "score": 9,
+    "url": "https://techmeme.com/261120/p23",
+    "source_id": "auto-techmeme.com",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/STK466_ELECTION_2024_CVirginia_E.jpg?quality=90&strip=all&crop=0%2C9.9676601489831%2C100%2C80.064679702034&w=1200",
+    "sources": [
+      {
+        "url": "https://techmeme.com/261120/p23",
+        "publisher": "techmeme.com",
+        "title": "Trump says he would block US companies from building data centers overseas or impose a \"tremendous tax\" on them if they do (Julianna Bragg/Axios)"
+      },
+      {
+        "url": "https://theverge.com/policy/1038892/trump-foreign-data-centers-tax",
+        "publisher": "The Verge AI",
+        "title": "Trump threatens ‘tremendous tax’ for moving AI data centers outside the US"
+      },
+      {
+        "url": "https://cnbc.com/2026/11/20/trump-data-centers-ai-companies-tax.html",
+        "publisher": "CNBC",
+        "title": "Trump vows to stop U.S. companies from building data centers abroad, threatens 'tremendous tax'"
+      },
+      {
+        "url": "https://msn.com/en-us/news/other/trump-threatens-tremendous-penalties-on-companies-that-build-ai-data-centers-overseas/ar-AA2hS6lK",
+        "publisher": "NBC News on MSN",
+        "title": "Trump threatens tremendous penalties on companies that build AI data centers overseas"
+      },
+      {
+        "url": "https://nytimes.com/2026/11/20/us/politics/trump-data-centers-ban.html",
+        "publisher": "The New York Times",
+        "title": "Trump Threatens to Bar U.S. Tech Firms From Building Data Centers Abroad"
+      }
+    ],
+    "research": {
+      "steps": 2,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-20T18:35:01+00:00",
+    "created_at": "2026-11-20T22:15:25+00:00",
+    "thread": "t-c71977e5e8f7",
+    "sectors": [],
+    "regions": [
+      "us"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 1,
+      "business": 3,
+      "investors": 3
+    },
+    "cover": "Alphabet",
+    "trackers": [
+      "ai-infrastructure"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "A nonprofit evaluation organization called METR has updated its benchmark tracking how long AI models can work on complex tasks. The findings show that while models continue to improve rapidly on structured tasks like coding, they still struggle with open-ended tasks that require human-like judgment.",
+      "terms": [
+        {
+          "term": "Time horizon plot",
+          "meaning": "A test suite created by METR that rates AI models based on the length of human tasks they can successfully complete."
+        },
+        {
+          "term": "Reinforcement learning",
+          "meaning": "A machine learning technique where systems are trained by rewarding successes and penalizing failures."
+        },
+        {
+          "term": "Verifiable tasks",
+          "meaning": "Tasks where an automated check can determine whether the solution succeeded or failed."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Builders can examine METR's expanded TH2 task suite—covering both verifiable domains and open-ended research—to better understand where frontier models excel and where judgment lags.",
+      "business": "Business leaders tracking AI automation in R&D should note METR's findings that frontier models improve rapidly on verifiable tasks like coding while lagging in judgment and open-ended research.",
+      "investors": "Investors evaluating the commercial timeline for autonomous AI R&D and self-improving agents can review METR's updated time horizon data showing exponential growth alongside persistent gaps in research judgment."
+    },
+    "id": "583b7a1c7413",
+    "headline": "METR updates AI time horizon report with harder tasks and judgment focus",
+    "summary": "Nonprofit evaluation group METR released an update to its time horizon report, finding that while frontier AI models continue rapid capability gains on verifiable tasks like coding, their performance lags on open-ended tasks requiring judgment. The updated TH2 suite tests models on 36 tasks across 12 families, showing that time horizons double roughly every 110 days.",
+    "why_it_matters": "Understanding the capability gap between verifiable coding tasks and open-ended research judgment is critical for assessing progress toward automated AI R&D.",
+    "category": "research",
+    "lab": "METR",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "METR",
+      "AI evaluation",
+      "benchmarks",
+      "time horizon",
+      "reinforcement learning"
+    ],
+    "quotes": [],
+    "score": 8,
+    "url": "https://technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update",
+    "source_id": "mit-tr-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://wp.technologyreview.com/wp-content/uploads/2026/11/metr2a.jpg?resize=1200,600",
+    "sources": [
+      {
+        "url": "https://technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update",
+        "publisher": "MIT Technology Review AI",
+        "title": "The most misunderstood graph in AI just got a major update"
+      },
+      {
+        "url": "https://unite.ai/metr-finds-ai-time-horizons-doubling-as-research-judgment-lags",
+        "publisher": "Unite.AI",
+        "title": "METR Finds AI Time Horizons Doubling as Research Judgment Lags"
+      },
+      {
+        "url": "https://cryptobriefing.com/metr-ai-time-horizon-report-judgment-tasks",
+        "publisher": "Crypto Briefing",
+        "title": "METR updates its AI time horizon report, adds judgment-heavy tasks"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-20T18:15:15+00:00",
+    "created_at": "2026-11-20T22:15:25+00:00",
+    "sectors": [
+      "science"
+    ],
+    "regions": [
+      "us"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "110 days",
+    "trackers": [
+      "agent-safety"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "An Anthropic mathematician published a proof of the 1859 Riemann hypothesis using Claude, presenting the work in a programming language that checks mathematical correctness. The solution has not yet been independently verified by the mathematics community or accepted by the Clay Mathematics Institute.",
+      "terms": [
+        {
+          "term": "Riemann hypothesis",
+          "meaning": "A 167-year-old mathematical conjecture concerning the distribution of prime numbers and zeroes of a specific function."
+        },
+        {
+          "term": "Lean",
+          "meaning": "An open-source programming language used to check the logical and mathematical correctness of formal proofs."
+        },
+        {
+          "term": "Millennium Prize problem",
+          "meaning": "One of seven notoriously difficult mathematical problems designated by the Clay Mathematics Institute, carrying a $1 million bounty each."
+        }
+      ],
+      "watch_next": [
+        "Independent verification of Levent Alpöge's Lean-coded proof by mathematical experts and the Clay Mathematics Institute."
+      ]
+    },
+    "audiences": {
+      "builders": "Developers and engineers can inspect the Lean-coded proof published on Levent Alpöge's website to examine how Claude was used to formalize arguments without assumptions.",
+      "business": "Executives and strategy teams are tracking how AI labs like Anthropic intersect with fundamental scientific breakthroughs, following Anthropic's public market debut.",
+      "investors": "Investors are monitoring the market impact and scientific validation of claims made by employees at publicly traded AI labs like Anthropic."
+    },
+    "id": "f1b7c64ada91",
+    "headline": "Anthropic mathematician claims to have solved Riemann hypothesis with Claude",
+    "summary": "Anthropic mathematician Levent Alpöge published a claim that he used Claude to prove the Riemann hypothesis, a 167-year-old open mathematical problem. The solution has not yet been independently verified by experts or accepted by the Clay Mathematics Institute.",
+    "why_it_matters": "If verified by the mathematics community, it would represent a major milestone for AI in solving long-standing open problems in number theory.",
+    "category": "research",
+    "lab": "Anthropic",
+    "model_name": "Claude",
+    "model_type": "Language",
+    "tags": [
+      "Anthropic",
+      "Riemann hypothesis",
+      "Claude",
+      "Millennium Prize problems",
+      "mathematics"
+    ],
+    "quotes": [],
+    "score": 10,
+    "url": "https://theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+    "source_id": "verge-ai",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/gettyimages-2305894185.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+    "sources": [
+      {
+        "url": "https://theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+        "publisher": "The Verge AI",
+        "title": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude"
+      },
+      {
+        "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too",
+        "publisher": "TechCrunch AI",
+        "title": "AI claimed a solution to the 167-year-old Riemann Hypothesis — and a human did, too"
+      },
+      {
+        "url": "https://msn.com/en-us/technology/artificial-intelligence/anthropic-mathematician-says-claude-helped-solve-the-riemann-hypothesis-biggest-problem-in-math/ar-AA2hSnuU",
+        "publisher": "Insider on MSN",
+        "title": "Anthropic mathematician says Claude helped solve the Riemann hypothesis: 'Biggest problem in math'"
+      },
+      {
+        "url": "https://scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math",
+        "publisher": "Scientific American",
+        "title": "Anthropic mathematician claims to prove Riemann hypothesis, most famous problem in all of math"
+      },
+      {
+        "url": "https://nypost.com/2026/11/20/business/anthropic-researcher-claims-claude-cracked-legendary-1m-math-problem-and-left-him-struggling-to-keep-up",
+        "publisher": "New York Post",
+        "title": "Anthropic researcher claims Claude cracked legendary $1M math problem — and left him struggling to keep up"
+      },
+      {
+        "url": "https://clarin.com/us-news/the-riemann-hypothesis-been-solved-anthropic-mathematician-levent-alpoge-claims-claude-cracked-maths-most-famous-problem_0_nQxBE3rUxX.html",
+        "publisher": "Clarín",
+        "title": "Has the Riemann hypothesis been solved? Anthropic mathematician Levent Alpöge claims Claude cracked math’s most famous problem"
+      },
+      {
+        "url": "https://nytimes.com/2026/11/20/science/anthropic-ai-math-riemann-hypothesis.html",
+        "publisher": "The New York Times",
+        "title": "Anthropic Mathematician Claims to Have Solved Math’s Most Famous Problem"
+      },
+      {
+        "url": "https://the-independent.com/tech/riemann-hypothesis-solved-levent-alpoge-b3088927.html",
+        "publisher": "the-independent.com",
+        "title": "Anthropic mathematician claims proof of Riemann hypothesis with help of Claude"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-20T16:34:13+00:00",
+    "created_at": "2026-11-20T22:15:25+00:00",
+    "thread": "t-752abeffd6c8",
+    "sectors": [
+      "science"
+    ],
+    "regions": [
+      "us"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 2,
+      "business": 3,
+      "investors": 2
+    },
+    "cover": "167-year-old",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
+      "what_it_means": "Levent Alpöge reported working with Anthropic's Claude model to develop a proof for the Riemann Hypothesis and related mathematical hypotheses. The AI model reportedly outpaced the researcher near the end of the process.",
+      "terms": [
+        {
+          "term": "Riemann Hypothesis",
+          "meaning": "A famous unsolved problem in mathematics concerning the distribution of the zeros of the Riemann zeta function."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers using AI systems can see an example of an AI model working on complex mathematics research.",
+      "business": "Business leaders can observe AI being applied to advanced mathematical problem-solving.",
+      "investors": "Investors can note reports of AI assisting in complex scientific and mathematical breakthroughs."
+    },
+    "id": "b8e1839046bc",
+    "headline": "Levent Alpöge reports discovering proof of Riemann Hypothesis with Claude",
+    "summary": "Mathematician Levent Alpöge stated that he discovered a proof of the Riemann Hypothesis while working with Anthropic's Claude model. According to the report, the AI model also helped formalize the arguments without assumptions.",
+    "why_it_matters": "This account highlights an instance of an AI assistant being used to tackle and potentially resolve long-standing mathematical problems.",
+    "category": "voices",
+    "lab": "Anthropic",
+    "model_name": "Claude",
+    "model_type": "Language",
+    "tags": [
+      "mathematics",
+      "claude",
+      "riemann-hypothesis"
+    ],
+    "quotes": [
+      {
+        "text": "I believe I have, working with Claude, discovered a proof of the Riemann Hypothesis.",
+        "speaker": "Levent Alpöge",
+        "speaker_role": "Mathematician",
+        "source_url": "https://simonwillison.net/2026/Nov/20/levent-alpoge"
+      }
+    ],
+    "score": 8,
+    "url": "https://simonwillison.net/2026/Nov/20/levent-alpoge",
+    "source_id": "simon-willison",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": null,
+    "sources": [
+      {
+        "url": "https://simonwillison.net/2026/Nov/20/levent-alpoge",
+        "publisher": "Simon Willison",
+        "title": "Quoting Levent Alpöge"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-20T16:30:48+00:00",
+    "created_at": "2026-11-20T22:15:25+00:00",
+    "sectors": [
+      "science"
+    ],
+    "regions": [
+      "us"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 2,
+      "business": 3,
+      "investors": 2
+    },
+    "cover": "Riemann Hypothesis",
+    "trackers": [
+      "frontier-race"
+    ],
+    "stock_tried": "2026-11-20T22:15:25+00:00",
+    "photo_local": true,
+    "image_kind": "stock",
+    "photo_credit": {
+      "key": "ov:314b4db9-30cb-438e-82f4-987fc0ca6cf5",
+      "by": "The Global Diplomacy and Foreign Affairs Forum",
+      "license": "CC BY-SA 4.0",
+      "page": "https://commons.wikimedia.org/w/index.php?curid=192773608",
+      "via": "Wikimedia"
+    }
+  },
+  {
+    "explainer": {
+      "what_it_means": "Anthropic's public stock listing allows retail investors to buy shares in the company through overseas investment platforms. Indian retail investors used platforms like INDmoney, Mudrex, and Vested to trade the stock following its Nasdaq debut, though they could not buy directly into the initial public offering.",
+      "terms": [
+        {
+          "term": "Liberalised Remittance Scheme (LRS)",
+          "meaning": "A regulatory scheme in India that permits resident individuals to freely remit a certain amount of foreign exchange abroad for capital or current account transactions."
+        },
+        {
+          "term": "Retail investors",
+          "meaning": "Individual investors who trade for themselves rather than on behalf of institutions."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "business": "Indian retail investors drove significant volume into Anthropic shares on overseas platforms following its Nasdaq listing, offering a new avenue for public market exposure to AI companies.",
+      "investors": "Anthropic's public debut drew substantial retail trading activity across platforms like INDmoney, Mudrex, and Vested, highlighting strong public demand for artificial intelligence assets."
+    },
+    "id": "5fe0efb0a285",
+    "headline": "Anthropic Nasdaq debut sparks buying rush among Indian retail investors",
+    "summary": "Anthropic's Nasdaq debut drove heavy trading activity among Indian retail investors across overseas platforms including INDmoney, Mudrex, and Vested. The company accounted for 40% of INDmoney's international investment activity and 11% of total traded value on Vested on its listing day.",
+    "why_it_matters": "The surge in retail trading activity demonstrates how public listings by major AI companies create new entry points for everyday investors seeking exposure to artificial intelligence developers outside of venture capital.",
+    "category": "industry",
+    "lab": "Anthropic",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "Anthropic",
+      "Nasdaq",
+      "IPO",
+      "Indian retail investors",
+      "INDmoney"
+    ],
+    "quotes": [
+      {
+        "text": "The response to Anthropic’s listing reflects the growing interest among Indian investors in accessing global assets, particularly companies at the forefront of emerging technologies such as AI",
+        "speaker": "Prateek Gupta",
+        "speaker_role": "head of business at Mudrex",
+        "source_url": "https://inc42.com/buzz/anthropics-nasdaq-debut-sparks-buying-rush-among-indian-retail-investors"
+      }
+    ],
+    "score": 7,
+    "url": "https://inc42.com/buzz/anthropics-nasdaq-debut-sparks-buying-rush-among-indian-retail-investors",
+    "source_id": "inc42",
+    "desk": "india",
+    "ai_relevance": "core",
+    "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/11/soc-96.jpg",
+    "sources": [
+      {
+        "url": "https://inc42.com/buzz/anthropics-nasdaq-debut-sparks-buying-rush-among-indian-retail-investors",
+        "publisher": "Inc42",
+        "title": "Anthropic’s Nasdaq Debut Sparks Buying Rush Among Indian Retail Investors"
+      },
+      {
+        "url": "https://reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19",
+        "publisher": "reuters.com",
+        "title": "Anthropic’s Nasdaq debut"
+      }
+    ],
+    "research": null,
+    "published_at": "2026-11-20T13:42:49+00:00",
+    "created_at": "2026-11-20T22:15:25+00:00",
+    "thread": "t-eb191c8e2116",
+    "sectors": [
+      "finance"
+    ],
+    "regions": [
+      "india"
+    ],
+    "deal": {
+      "type": "ipo",
+      "company": "Anthropic",
+      "amount": "",
+      "usd": null
+    },
+    "relevance": {
+      "builders": 0,
+      "business": 1,
+      "investors": 3
+    },
+    "cover": "Nasdaq",
+    "trackers": [
+      "ai-money",
+      "india-ai"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "OpenAI is reportedly developing its first smartphone, with assembly orders secured by Foxconn subsidiary FIH Mobile and a potential launch window of late 2027 or 2028. Reports indicate that additional electronics manufacturers may supply components for the device, and MediaTek could supply a custom processor. Neither OpenAI nor Foxconn has officially confirmed the project.",
       "terms": [
         {
@@ -2561,7 +3309,8 @@
     "trackers": [
       "frontier-race"
     ],
-    "photo_local": true
+    "photo_local": true,
+    "thread": "t-752abeffd6c8"
   },
   {
     "explainer": {
@@ -70064,83 +70813,6 @@
       "business": 0,
       "investors": 0
     }
-  },
-  {
-    "id": "820bd24a41c4",
-    "headline": "Mistral AI opens preview of Mistral Large 4, a 1‑trillion‑parameter multimodal model",
-    "summary": "Mistral AI released a public preview of Mistral Large 4, a 1‑trillion‑parameter multimodal model with 52 billion active parameters. The company plans to release the model weights by the end of October and is testing it with cybersecurity partners and state authorities.",
-    "why_it_matters": "The model offers state‑of‑the‑art performance in critical enterprise domains while remaining open‑weight, giving users control over deployment and policy.",
-    "category": "models",
-    "lab": "Mistral AI",
-    "model_name": "Mistral Large 4",
-    "model_type": "Multimodal",
-    "tags": [
-      "open-weight",
-      "multimodal",
-      "enterprise"
-    ],
-    "quotes": [],
-    "score": 7,
-    "url": "https://mistral.ai/news/mistral-large-4",
-    "sources": [
-      {
-        "url": "https://mistral.ai/news/mistral-large-4",
-        "publisher": "Mistral AI",
-        "title": "Research Introducing Mistral Large 4 October 6, 2026 By Mistral"
-      }
-    ],
-    "published_at": "2026-10-21T17:16:05+00:00",
-    "created_at": "2026-10-21T17:16:05+00:00",
-    "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp",
-    "sectors": [
-      "software"
-    ],
-    "regions": [
-      "global"
-    ],
-    "deal": null,
-    "cover": "1‑trillion",
-    "explainer": {
-      "what_it_means": "Mistral Large 4 is a massive AI model that can process both text and images, built with a trillion total parameters but only 52 billion that are active at any time. The company is letting developers test it now through an API, and will release the full model weights by the end of October so anyone can run the model themselves.",
-      "terms": [
-        {
-          "term": "parameter",
-          "meaning": "A numeric value the model learns; more parameters generally mean a larger, more capable AI."
-        },
-        {
-          "term": "multimodal",
-          "meaning": "The ability to understand and generate multiple types of data, such as text and images together."
-        },
-        {
-          "term": "open weights",
-          "meaning": "The model’s trained parameters are made publicly available, allowing anyone to download and run the model on their own hardware."
-        }
-      ],
-      "watch_next": [
-        "The model weights are scheduled to be released by the end of October 2026.",
-        "The model will be made available across multiple regions worldwide, including a European deployment operated end‑to‑end under European law."
-      ]
-    },
-    "trackers": [
-      "frontier-race"
-    ],
-    "audiences": {
-      "builders": "Mistral AI previews Large 4, a 1‑trillion‑parameter multimodal model, with weights due soon.",
-      "business": "Enterprises can test state‑of‑the‑art AI for critical domains while retaining open‑weight control.",
-      "investors": "Open‑weight large models may attract investors seeking flexible AI infrastructure."
-    },
-    "photo_local": true,
-    "relevance": {
-      "builders": 3,
-      "business": 2,
-      "investors": 2
-    },
-    "video": {
-      "id": "FczbSauVvjw",
-      "title": "Science Behind the Open Cyber Frontier with Mistral Large 4",
-      "channel": "Hugging Face"
-    },
-    "thread": "t-1f4231610437"
   },
   {
     "id": "afe5d96a9d46",
