@@ -1,135 +1,111 @@
-## Frontier Wire newsroom run — 2026-11-20T07:35:32+00:00
+## Frontier Wire newsroom run — 2026-11-20T10:21:44+00:00
 
-Fetched 3002 items · fresh 74 · judged 74 · kept 12 · **written 8**
-AI: 47 requests, 153,753 tokens this run · 140 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Chasing the fallout from Anthropic's record IPO and Asian tech stock sell-off while filling a thin policy desk.
-  Priorities: Asian tech stocks plunge as Anthropic's record IPO fails to stem an AI (Asian tech stocks plunging after Anthropic's IPO is a major market reaction for investors and builders.); Anthropic fell ~5% in after-hours trading on its debut day, following  (Anthropic falling in after-hours trading highlights valuation limits on the AI financing boom.); US Agreed to Sell 879,000 NVIDIA and AMD Chips to China (US agreement to sell 879k chips to China directly feeds into ongoing trade policy and supply chain threads.); Sources: Nscale must seek a US license to provide ByteDance remote acc (Nscale and ByteDance licensing rules intersect AI export controls and infrastructure financing.); Ethan Mollick: Early fascinating work on how an AI science community w (Ethan Mollick's note on autonomous multi-agent science labs is crucial signal for research and agent architectures.)
-  Thin areas: policy
-  Dig deeper: Asian tech stocks plunge as Anthropic's record IPO fails to stem an AI; Anthropic fell ~5% in after-hours trading on its debut day, following 
-Research agent: investigated 5 stories with 14 tool calls, confirmed 4
+Fetched 3038 items · fresh 50 · judged 54 · kept 7 · **written 6**
+AI: 42 requests, 116,172 tokens this run · 182 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Tracking the aftermath of Anthropic's massive IPO and Nvidia's leadership crisis across global markets.
+  Priorities: Anthropic makes a $1 . 8 trillion debut : What investors should watch  (Breaks down the $1.8T Anthropic debut and what investors need to watch next.); Bring Jensen back : Uber co founder says hell show up to Nvidia HQ as  (Captures the ongoing turbulence around Nvidia and executive leadership fallout.); Anthropic founder combined wealth jumps to $166 bn after record IPO (Details the massive wealth surge for founders following the record IPO.); TSMC invests USD 500 million in Anthropic , acquires 0 . 03 % stake at (Highlights strategic TSMC investment in Anthropic at IPO.); Trump administration weighs forcing US firms to disclose Chinese AI us (Signals potential new Trump administration rules on Chinese AI use by US firms.)
+  Thin areas: india, business
+  Searches: Anthropic IPO retail selling fallout: 6 new; Nvidia Jensen Huang petition return: 4 new
+  Dig deeper: Bring Jensen back : Uber co founder says hell show up to Nvidia HQ as ; Anthropic founder combined wealth jumps to $166 bn after record IPO
+Research agent: investigated 5 stories with 13 tool calls, confirmed 5
 Daily briefing: 4 themes from 20 stories
-Threads updated: Ethan Mollick research and lab simulations: Ethan Mollick highlights research on 35 human labs deploying; US lawmakers seek Microsoft briefing on ByteDance AI deal: Nscale may need US license for ByteDance GPU access under ne; Anthropic IPO tests circular financing model: Asian tech stocks plunge as Anthropic IPO fails to stem AI s; Wyoming woman joins federal lawsuit against xAI over Grok de: SpaceXSI denies liability in UK lawmaker's lawsuit over Grok; Anthropic IPO tests circular financing boom: Anthropic shares slide 5% in after-hours trading following r
-Videos: 15 kept from 20 new · OpenAI ok (14 in feed, 5 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (10 in feed, 2 new), AI at Meta ok (11 in feed, 0 new), Microsoft Research ok (11 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 2 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 4 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 1 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (6 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (3 in feed, 0 new)
-Photos: 4 saved, 0 unavailable
-Alerts: 37 events sent: {"subscribers":6,"sent":0,"queued":56}
-Claims: 211 tracked, 205 open, 1 updated this run
-Trackers: filed 7 stories; updated us-china, frontier-race, ai-regulation, agent-safety
-Model tracker: 82 models, 24 changes today
-Tagged 8 stories by sector, region and deal
-India briefing: 3 themes from 3 stories
-Time: gather 101s, plan 2s, judge 19s, verify and write 122s, videos 6s, tagging 206s, trackers 104s, claims 33s, briefing 40s, photos 1s, stock photos 42s, alerts 13s
+Threads updated: Anthropic safety concerns spark investor comment: Anthropic debuts on Nasdaq at $1.5 trillion valuation after ; Nvidia leadership and Jensen Huang departure: Travis Kalanick backs Jensen Huang's return to Nvidia
+Videos: 15 kept from 15 new · OpenAI ok (14 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (10 in feed, 2 new), AI at Meta ok (11 in feed, 0 new), Microsoft Research ok (11 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 2 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 4 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 1 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (6 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (3 in feed, 0 new)
+Photos: 5 saved, 0 unavailable
+Alerts: 38 events sent: {"subscribers":6,"sent":0,"queued":45}
+Claims: 215 tracked, 209 open, 1 updated this run
+Trackers: filed 5 stories; updated us-china, frontier-race, agent-safety, ai-infrastructure
+Model tracker: 82 models, 26 changes today
+Explainers: 1 added to earlier stories
+Tagged 6 stories by sector, region and deal
+Time: gather 134s, plan 2s, judge 14s, verify and write 69s, videos 7s, tagging 32s, explainers 1s, trackers 37s, claims 7s, briefing 7s, photos 1s, stock photos 16s, alerts 12s
 
 ### New stories
-- **voices** — [Ethan Mollick highlights research on 35 human labs deploying science agents](https://bsky.app/profile/emollick.bsky.social/post/3n2pqcy4cbs2g)  
-  Ethan Mollick highlighted research where 35 human labs deployed agents that collaborated to conduct science, publishing 936 papers. The agents also publicly retracted mistakes, published null results more than humans, and founded a peer review journal.  
-  _1 source(s), 0 verified quote(s)_
-- **policy** — [Nscale may need US license for ByteDance GPU access under new rules](https://techmeme.com/261120/p3)  
-  Nscale must seek a US license to continue providing ByteDance remote access to Nvidia GPUs under new export regulations. ByteDance accounted for approximately 73% of Nscale's 2025 revenue.  
+- **policy** — [Trump administration weighs forcing US firms to disclose Chinese AI use](https://asiaone.com:443/world/trump-administration-weighs-forcing-us-firms-disclose-chinese-ai-use)  
+  The Trump administration is considering requiring US companies to publicly disclose their use of Chinese AI models on their websites. The plan, discussed by the Treasury Department and the White House, aims to discourage reliance on Chinese AI without imposing outright restrictions.  
   _3 source(s), 0 verified quote(s)_
-- **industry** — [Asian tech stocks plunge as Anthropic IPO fails to stem AI sell-off](https://techmeme.com/261120/p1)  
-  Asian technology stocks dropped following Anthropic's $81.3 billion initial public offering as the record listing failed to halt a wider artificial intelligence stock sell-off. SoftBank shares fell 14.67%, while Japanese stocks lost over JPY 53 trillion.  
+- **industry** — [Google selects Blue Origin to launch Project Suncatcher AI satellites in 2029](https://economictimes.indiatimes.com/tech/startups/google-picks-bezos-blue-origin-to-launch-ai-computing-satellites-in-2029/articleshow/136012234.cms)  
+  Google selected Blue Origin's New Glenn rocket to launch satellites for Project Suncatcher, an experiment testing AI computing in space. The mission is targeted for the first quarter of 2029.  
+  _4 source(s), 0 verified quote(s)_
+- **voices** — [Anthropic debuts on Nasdaq at $1.5 trillion valuation after $81.34 billion IPO](https://milwaukeesun.com/news/279444284/dario-amodei-says-anthropic-will-not-bend-to-business-political-pressure-on-ai-safety)  
+  Anthropic went public on Nasdaq after raising USD 81.34 billion in an initial public offering that valued the company at approximately USD 1.5 trillion. CEO Dario Amodei stated that the company will prioritize safety and human control over business or political pressures.  
+  _4 source(s), 2 verified quote(s)_
+- **safety** — [Signal restricts screenshots to block AI agents from reading messages](https://livemint.com/technology/signal-restricts-screenshots-to-block-ai-agents-from-reading-messages-11795165297929.html)  
+  Encrypted messaging service Signal introduced default restrictions on screenshots to prevent device-level AI agents from reading private chats. The company warned that operating system integrations by tech giants pose an existential threat to its privacy guarantee.  
   _3 source(s), 0 verified quote(s)_
-- **safety** — [SpaceXSI denies liability in UK lawmaker's lawsuit over Grok images](https://economictimes.indiatimes.com/tech/artificial-intelligence/elon-musks-spacexsi-denies-liability-in-uk-lawmakers-lawsuit-over-grok-images/articleshow/136012108.cms)  
-  Elon Musk's SpaceXSI filed a defense against a lawsuit brought by British lawmaker Jess Asato over sexualised AI images generated by Grok. The company argued that obviously fictitious, AI-generated content cannot breach privacy rights.  
-  _2 source(s), 2 verified quote(s)_
-- **industry** — [Anthropic shares slide 5% in after-hours trading following record IPO](https://techmeme.com/261119/p61)  
-  Anthropic shares fell more than 5% in after-hours trading, slipping below its IPO level following a record $107.3 billion initial public offering. The decline occurred amid a broad market selloff driven by investor doubts regarding artificial intelligence profitability and high spending.  
-  _4 source(s), 1 verified quote(s)_
-- **research** — [Compiling exact circuits into pretrained language model weights](https://arxiv.org/abs/2611.26450)  
-  Tanmay Sah introduced closed-form, zero-gradient circuit-grafting primitives that compile deterministic computation directly into pretrained language model weights. On 6-digit arithmetic, Alibaba Qwen 3.5 4B and IBM Granite 4.2 3B reached 100.00% and 99.17% ALU-prefix accuracy.  
-  _1 source(s), 0 verified quote(s)_
-- **research** — [New framework assesses LLM capability in software vulnerability research](https://arxiv.org/abs/2611.26601)  
-  Researchers introduced a framework to rate LLM capabilities in software vulnerability research on an autonomy scale modeled after driving automation levels. They found that AI agents discovered, validated, and patched real-world software vulnerabilities without human intervention before 2026.  
-  _1 source(s), 0 verified quote(s)_
-- **voices** — [ChatPRD ends free trials after facing widespread token fraud abuse](https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad)  
-  ChatPRD founder Claire Vo reports that groups are abusing free trials to steal and resell AI tokens or run commercial enterprises. The widespread fraud has forced ChatPRD to wind down its free trials entirely.  
-  _1 source(s), 1 verified quote(s)_
+- **research** — [Analysis of 10M job ads in China shows double-digit decline for AI-exposed roles](https://techmeme.com/261120/p7)  
+  An analysis of 10 million job advertisements in China between 2021 and 2025 revealed a double-digit decline in listings for roles with high AI exposure compared to less-exposed positions. The study highlights a growing impact of artificial intelligence on hiring trends in the region.  
+  _2 source(s), 0 verified quote(s)_
+- **voices** — [Travis Kalanick backs Jensen Huang's return to Nvidia](https://businessinsider.com/travis-kalanick-jensen-huang-nvidia-hq-employee-walkout-2026-11)  
+  Uber co-founder Travis Kalanick stated he would support the return of former Nvidia CEO Jensen Huang. Kalanick remarked he would bring a wafer-encrusted megaphone to Nvidia's headquarters to back Huang's reinstatement.  
+  _2 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- RL Post-Training in Diffusion Transformers Is Activation Steering — score 4: Incremental research paper on diffusion transformers.
-- PlayCraft: Designing Engaging Games from Agent Play Experience — score 4: Incremental gaming research paper using vision agents.
-- TideCache: Efficient Hybrid LLM Serving with Transparent Cache Management and Layer-Wise Streaming — score 4: Incremental LLM serving cache optimization paper.
-- One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning — score 4: Incremental latent action learning research paper.
-- AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control — score 4: Incremental robotics benchmark evaluation paper.
-- Bio-PM-Guided Synthetic IMU Generation — score 3: Incremental wearable sensor data generation paper.
-- Depth Pro 2: Sharp and Temporally Consistent Metric Monocular Depth — score 4: Incremental computer vision research paper on metric monocular depth estimation.
-- Active Feature Acquisition by Distilling an Oracle Teacher — score 3: Routine active learning and feature acquisition research paper.
-- PGX: Physically Grounded Execution for Long-Horizon Humanoid Loco-Manipulation — score 4: Robotics and VLA model research paper on loco-manipulation.
-- Realized versus Population Reliability: Anytime-Valid Self-Consistency Certification under Correlated Reasoning — score 3: Theoretical statistics and self-consistency paper for language models.
-- Probing the "Conscious" Mind: Selective Access and Global Workspace in Vision-Language Models — score 4: Interpretability research probing global workspace theory in vision-language models.
-- Verify the Verifier: Specification-Grounded LLM Cross-Checking for Bugs That Escape UVM Scoreboards — score 3: Specialized verification paper for LLM cross-checking in hardware verification.
-- ProtoDiffusion: Token-per-Layer Generative Modeling of Multi-Layer Images — score 3: Diffusion model research for multi-layer graphic design image generation.
-- Represented but misread: Post-training changes how language models read out what they represent — score 5: Interpretability research paper examining how post-training affects internal model representations.
-- Text-Aware, Vision-Blind: How Multimodal Image Editing Systems Handle Unsafe Inputs — score 5: Safety analysis paper examining multimodal image editing systems and unsafe inputs.
-- GEOHunter: Mapping a Generative Engine Optimization Network in the Wild — score 4: Incremental paper on generative engine optimization; not a major breakthrough.
-- Multi-institutional grading of Barrett's esophagus dysplasia without stain normalization using a pathology foundation model and multiple instance learning — score 4: Domain-specific medical imaging paper; too niche for general AI news.
-- MM-SystemOneBias: Evaluating Bias in Multimodal Jev-Style System One Decision Models — score 4: Niche academic paper on multimodal decision model bias.
-- Replication of Agentic Security Events: Audit and Investigation (ROGUE-AI) — score 5: Academic study auditing agentic security events; interesting topic but standard arXiv paper.
-- The Geometry of Lies: Knowledge and Persona Directions for Detecting Deception in Large Language Models — score 4: Academic paper on lie detection and persona directions in LLMs.
-- AURA: AUdio-dRiven streaming Avatar — score 4: Streaming avatar paper; incremental research.
-- LLM GerryMandering: Separating Interactions from Additive Effects in LLM Audits — score 4: Academic paper on intersectional bias auditing in LLMs.
-- Cost-Aware Agentic Feature Optimization System for Fleet-Scale Ranking Models — score 4: Academic paper on fleet-scale ranking feature optimization; too narrow.
-- Backtracking Agent Applications Security Incidents — score 4: Paper on backtracking security incidents in agent applications; similar to existing safety papers.
-- Deterministic Temporal Embedding for Calcium Imaging Trace Extraction — score 3: Specialized neuroscience/calcium imaging paper.
-- The Window Lever: Longer Observation Windows Outweigh the Observed Effects of Data, Capacity, and Architecture in Customer Behavior Forecasting — score 4: Incremental applied machine learning paper on customer behavior forecasting.
-- Simple Private Noisy SGD is Minimax-Optimal under Population Strong Convexity — score 4: Theoretical machine learning paper on differentially private SGD.
-- Hybrid Retrieval for Government Scheme Search in English and Marathi — score 4: Incremental bilingual NLP retrieval paper for Maharashtra government schemes.
-- AutoMaster: Autonomous Post-Training by Making the Same Model a Better Teacher — score 4: Post-training fine-tuning research paper, incremental contribution.
-- GLiDE: A Fast, Calibrated Decision Model Distilled from Reasoning Teachers — score 4: Distillation research paper for decision models, does not rise to a major milestone.
-- Grid Cells as Spectral Successor Features: A Reusable Basis for Continual Reinforcement Learning — score 4: Reinforcement learning successor features research paper, standard academic contribution.
-- Multimodal Error Detection in Chest X-ray Reports: A Large Language Model Reading Image Evidence — score 4: Specialized medical imaging error detection paper, routine academic literature.
-- FLUID: Flexible, Evidence-Grounded Situated Task Guidance — score 4: Task guidance benchmark paper, standard academic publication.
-- Anticipating Future Build Results with BuildPredictor — score 3: CI build prediction paper, routine software engineering AI research.
-- A new algorithmic approach for finding flat minima: critically damped Polyak stepsizes — score 4: Optimization algorithm research paper on gradient descent stepsizes.
-- Monte Carlo Pass Search for Setpieces — score 3: Application of machine learning to soccer set pieces is domain-specific and of low significance to frontier AI readers.
-- Neural Conditional Gaussian Model: Efficient Data Assimilation with Sequential Uncertainty Quantification for Nonlinear Dynamics — score 3: Mathematical/numerical method for dynamical systems with minor AI tie-in, not frontier AI research.
-- Bayesian optimization on amortized search space — score 3: Bayesian optimization paper on mechanistic simulators; too niche for our audience.
-- Should governments slow frontier AI? Jacob Coxon and Robin Hanson debate [video] — score 5: General discussion video debating government slowdown of frontier AI; routine commentary without breaking news.
-- Pete warden on local AI, open models, voice interfaces, the future of hardware — score 5: Pete Warden interview on local AI and hardware; general commentary without specific news hooks.
-- Launch HN: Onlook (YC W25) – An open-source developer tool for designers — not AI: Developer tool launch for designers; not primarily an AI story.
-- OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8) — not AI: OpenSSL buffer overflow vulnerability; general systems security, not AI-specific.
-- Zerodha Migrates Kite's User Preference Storage From SSDB to Open-Source SQLite-Based System — not AI: Database migration story for an Indian stock-broking platform, not an AI development.
-- Samsung Electronics Shakes Up Chips Leadership Amid Soaring Memory Demand — score 4: General Samsung memory leadership shuffle with a passing mention of AI demand, similar to 96dc8a080110.
-- TSMC Looks at Client Balance Sheets Before Allocating Chips: Report — not AI: General semiconductor foundry credit policy news with no specific AI focus.
-- Skyroot Partners With HEX20, Exolaunch, OhmSpace For Second Vikram-1 Flight — not AI: Aerospace and space launch partnership with no AI relevance.
-- US Agreed to Sell 879,000 NVIDIA and AMD Chips to China — duplicate of 609b4d81eb2e
-- Flipkart’s BBD Timing Weighs On Walmart International’s Q3 Growth — not AI: E-commerce sales timing and retail revenue reporting, not AI news.
-- Urban Company Raises ₹2,500 Cr Via QIP, Draws Bids Worth Over ₹15,000 Cr — not AI: Home services marketplace financing round, not AI-related.
-- Delhi HC issues notice on LiveLaw’s challenge to automated content blocking under IT Rules — score 4: Legal challenge to automated content moderation under IT Rules; tangential AI angle.
-- Israel to roll out dedicated launchpad to help startups enter India, shares fast-track deep-tech funding playbook — score 4: Launchpad for Israeli deep-tech startups entering India; general deep-tech rather than specific AI coverage.
-- Israel Innovation Authority Chairman calls for strategic mega-projects in AI, semiconductors and quantum for tech sovereignty — score 4: High-level bilateral R&D cooperation commentary without a specific AI product, funding round, or concrete development.
-- Indonesia asks Google to clarify removal of 19,000 YouTube channels, ministry says — not AI: General YouTube moderation and influence operations report, not an AI story.
-- Taiwan tells Meta thousands of China-linked accounts seek to influence elections — not AI: Taiwan social media influence operations report, lacking an AI focus.
-- Anthropic's IPO caps explosive growth period for AI startup, filled with contradictions — score 3: Rehash of Anthropic's history and IPO context.
-- Spacetech startup SatSure raises $7 million from sovereign space fund — not AI: Spacetech funding round for satellite earth observation startup, lacking an explicit AI focus.
-- Meet the innovators exhibiting at Bengaluru Tech Summit 2026 — not AI: Photo essay on general tech summit exhibitors, not specific AI news.
-- Vembu flags possible US immigration reversal, says it could revive housing demand — not AI: Commentary on US immigration and housing market, not AI.
-- Amazon Prime India head Abhinav Agarwal steps down after 16 years — not AI: Executive departure at Amazon Prime India, routine tech industry news.
-- Karnataka aims to raise its share in aerospace, defence sector to 75%: Minister — not AI: Aerospace and defence infrastructure policy in Karnataka.
+- Asian shares head for worst week since 2020 as AI rout deepens — duplicate of 8099b1cf49a8
+- Apple developing computer - controlling AI agent for Mac , targets late - 2027 debut — duplicate of b24c1081da70
+- Trump praises meeting between Chinese and Russian presidents and discusses AI rules with China — not AI: General geopolitical news with only passing mention of rules.
+- Pentagon standoff , copyright lawsuit to AI safety concerns : 5 controversies that have put Anthropic under scrutiny — score 3: Review of Anthropic controversies and scrutiny is a rehash of ongoing IPO and safety debates.
+- Australia AI boom puts workforce skills under pressure , new research finds | Empower Stories | Build Authority — score 3: General workforce skills report regarding AI adoption, lacks specific technical or market news.
+- Bring Jensen back : Uber co founder says hell show up to Nvidia HQ as 200 , 000 sign petition for Huang return — duplicate of 2a1f0dfea65b
+- Anthropic IPO caps an explosive growth period for the AI startup — duplicate of 4aacf31011a3
+- Anthropic tops SpaceX with biggest IPO on record — duplicate of 4aacf31011a3
+- Cap Raise Crucible : Broker bonanza , gold and AI glory — score 2: General market roundup touching on multiple asset classes
+- Anthropic raises record $81 billion in stock market debut as shares close 17 percent higher — duplicate of 4aacf31011a3
+- A Different Retail From The One That Showed Up For SpaceX : Anthropic Sets A Day - One Retail Trading Record ... And Nearly Half Of It Was Selling — score 3: Duplicate zerohedge article on Anthropic IPO retail trading
+- Nifty , Sensex open lower as sell - off in AI weighs on sentiment , Gold down to lowest level of 2026 — score 3: General stock market index movements influenced by broader sentiment
+- Months before , Anthropic record IPO , Palantir Alex Karp blamed AI labs of drug addicting everyone by ... — score 5: Commentary on AI labs from Palantir's Alex Karp
+- USTED VC cautions students against over - reliance on AI — score 2: Student advisory general warning about over-reliance on AI
+- The End Of Man : The Real Danger Isnt Artificial Intelligence — not AI: General philosophical opinion piece, not specific AI news
+- Anthropic IPO caps an explosive growth period for the AI startup , filled with contradictions — duplicate of 4aacf31011a3
+- Anthropic makes a $1 . 8 trillion debut : What investors should watch next — duplicate of 4aacf31011a3
+- CGI and Learning Links Foundation launch Centre of Excellence for AI & Innovation at MEI Polytechnic College — score 3: Routine academic/institutional tech center launch partnership; too minor for global frontier wire readers.
+- Fintech firms rethink cybersecurity as AI advances — score 4: Generic fintech cybersecurity overview with only a loose mention of AI advances.
+- TSMC invests USD 500 million in Anthropic , acquires 0 . 03 % stake at IPO price — duplicate of 4aacf31011a3
+- SoftBank Leads Asian Technology Sell - off as Anthropic Debut Fuels AI Investment Concerns — duplicate of 8099b1cf49a8
+- Rogue AI agents may have infiltrated US banks — score 4: Speculative report on rogue AI agents in US banks without confirmed details or primary source.
+- Google Cloud expands Partner Marketing Studio with seven Gemini - powered AI agents — score 5: Google Cloud adding Gemini-powered agents to Partner Marketing Studio is an incremental marketing feature.
+- Anthropic Record - Breaking IPO Values AI Developer at $1 . 8 Trillion in Landmark Nasdaq Debut – Sri Lanka Guardian — duplicate of 4aacf31011a3
+- Anthropic founder combined wealth jumps to $166 bn after record IPO — duplicate of 4aacf31011a3
+- Why Your Own AI Agents Can Act Like Attackers — score 5: Security analysis of AI agent failure modes and unexpected attack-like behavior; useful developer insights but somewhat general.
+- Asian stocks head for worst week since 2020 as AI rally loses steam — duplicate of 8099b1cf49a8
+- NVIDIA's Crisis Has Only Just Begun, and There's No Jensen Charm to Save It — score 5: Commentary on Nvidia leadership changes and market headwinds, largely derivative of already published stories on Jensen Huang.
+- Soket AI Secures $4 Mn as it Rolls Out EKA-1 Model — duplicate of 3bb219d57336
+- Amazon Prime India Head Abhinav Agarwal Quits After 16 Years At Company — not AI: General executive departure in e-commerce, no AI relevance.
+- Meta’s Muse AI agent accesses private messages, raises data leak concerns — duplicate of 0cefd4c68688
+- Humyn Labs raises $47 mn to collect training data for physical AI — duplicate of 9247c7737332
+- IRDAI chairman flags consumer data grab before insurance price quotes, AI-related risks — score 5: Regulatory comments on insurance AI underwriting and data practices; routine compliance commentary.
+- Indian businesses expect technology investments to drive demand, 93% use AI in trade: HSBC — score 4: HSBC survey finding on tech and AI adoption by Indian businesses; general survey data rather than specific news.
+- Startup news and updates: Daily roundup (November 20, 2026) — not AI: Daily startup roundup containing mixed general news; no single substantive AI development.
+- YourStory launches voice AI hackathon with Rs 8 lakh prize pool in collaboration with Google Cloud India — score 4: Routine hackathon announcement by an Indian media outlet, low significance for global or regional AI strategy.
+- GTA 6 is rated 17+: What Indian parents should know before letting their children play — not AI: Gaming age-rating article; no AI relevance.
+- Urban Company raises Rs 2,500 Cr through QIP — not AI: QIP funding for Urban Company housekeeping services; not primarily an AI story.
+- Eazeebox co-founder Srinivas Shanbhogue passes away — not AI: Obituary notice; not AI news.
+- Retail traders pile into Anthropic IPO, but net buying trails SpaceX — score 4: Retail trading participation in the Anthropic IPO is derivative market commentary.
+- After Anthropic’s ‘bittersweet’ IPO, here’s what lies ahead — score 4: Retrospective commentary on the Anthropic IPO without new primary news.
+- CRWV, IREN, NBIS stocks extend Neocloud selloff as Anthropic IPO rally fades - Michael Burry takes a victory lap — score 5: Market commentary on neocloud selloffs and Michael Burry reactions following the Anthropic IPO.
+- Anthropic IPO: Investors who flip the stock may face brokerage penalty — score 4: Brokerage policy details on flipping IPO shares are peripheral financial mechanics.
+- Anthropic's Blockbuster IPO Dominated Headlines This Week – AI Anxiety Eased, While Investors And Employees Reaped A Windfall — score 3: Weekly roundup rehash of the Anthropic IPO and market impact.
+- Anthropic's $81 Billion IPO Could Make Early Investors Billions. Retail Buyers Face A Different Bet. — score 4: Opinion piece on retail versus early investor returns from the Anthropic IPO.
+- Nvidia May Replace Jensen Huang With a Former Executive Who Spent 7 Years at the Company — score 5: Speculation regarding Nvidia's leadership succession and potential executive replacement.
+- BrightAI, which uses AI to help industrial companies detect malfunctioning equipment, raised $97M led by Smith Point, bringing its total funding to $184M (Maria Deutscher/SiliconANGLE) — could not verify yet after a second try; dropped
 
 </details>
 
 <details><summary>Research agent's work</summary>
 
-- Ethan Mollick: Early fascinating work on how an AI science community w: unconfirmed (searched “AI science community 35 human labs agents 936 papers”; searched “"AI science community" agents 35 human labs”; searched “"published 936 papers" AI agents science”)
-- Sources: Nscale must seek a US license to provide ByteDance remote acc: confirmed (searched “Nscale ByteDance US license Nvidia GPUs Bloomberg”; searched “Nscale ByteDance US license Nvidia GPUs”; read cryptobriefing.com)
-- Asian tech stocks plunge as Anthropic's record IPO fails to stem an AI: confirmed (searched “Anthropic record IPO Asian tech stocks plunge SoftBank TSMC Samsung SK Hynix”; searched “"Asian tech stocks plunge as Anthropic's record IPO fails to stem an AI sell-off"”; searched “"Asian Equities Fall as Anthropic’s IPO Fails to Staunch AI Stock Selloff"”)
-- Elon Musk's SpaceXSI denies liability in UK lawmaker's lawsuit over Gr: confirmed (searched “SpaceXSI denies liability UK lawmaker lawsuit Grok images Jess Asato”; read indiatimes.com)
-- Anthropic fell ~5% in after-hours trading on its debut day, following : confirmed (searched “Anthropic IPO 107.3B Bloomberg after hours”; searched “Anthropic fell 5% after hours debut day Bloomberg IPO”; read business-standard.com)
+- Trump administration weighs forcing US firms to disclose Chinese AI us: confirmed (searched “Trump administration weighs forcing US firms to disclose Chinese AI use”; read reuters.com; read ibtimes.sg)
+- Google picks Bezos' Blue Origin to launch AI computing satellites in 2: confirmed (searched “Google Blue Origin AI computing satellites 2029”; read theverge.com)
+- Dario Amodei says Anthropic will not bend to business , political pres: confirmed (searched “Dario Amodei Anthropic business political pressure AI safety”; read indiatimes.com)
+- Signal restricts screenshots to block AI agents from reading messages: confirmed (searched “Signal restricts screenshots to block AI agents from reading messages”; read reuters.com; read digitaltrends.com)
+- An analysis of 10M job ads in China between 2021 and 2025 finds a doub: confirmed (searched “Bloomberg China job ads AI 2021 2025 decline”; read bloomberg.com; searched “AI Threatens to Make China Jobs Slump Much Worse Bloomberg”)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id 96dc8a080110 for 'Samsung Electronics Shakes Up Chips Leadership Ami'
+- ignored made-up duplicate id ed330fb99436 for 'A Different Retail From The One That Showed Up For'
+- not India desk: 'Signal restricts screenshots to block AI agents fr'
 - not India desk: 'Google picks Bezos' Blue Origin to launch AI compu'
-- not India desk: 'Meta says 'reevaluating' 2030 net zero target amid'
-- not India desk: 'Elon Musk's SpaceXSI denies liability in UK lawmak'
-- dropped non-quote (Mohamed A. El-Erian): remember this isn't just about the promise of AI, but about …
-- dropped unverifiable quote (Matt Maley): The Anthropic IPO has been a major success, However, the IPO…
+- dropped non-quote (Chinese Embassy in Washington): only stifle global AI advances and serve no one's interests.…
+- dropped non-quote (Signal): Right now, these agentic AI integrations are changing this e…
 - GDELT unavailable: GDELT paused for this run after repeated rate-limiting
-- 2 kept item(s) carried over to the next run
-- gemini/gemini-flash-lite-latest: per-minute limit hit; trying next model
-- gemini: network error ReadTimeout, retrying
-- gemini: unreachable (ReadTimeout); skipping provider
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
