@@ -415,17 +415,25 @@ def draft_pocs(llm: LLM, stories: list[dict], state: LensState, profile: dict, n
         return 0
     by_id = {s["id"]: s for s in stories}
     cards = state.poc["cards"]
-    todo = [e for e in state.radar["entries"].values() if (e["ring"] == "trial" or e.get("proposed") == "adopt")
+    def testable(e: dict) -> bool:  # an Assess item earns an evaluation card once the analyst has a concrete test for it
+        return any(state.impact.get(i, {}).get("test") for i in e.get("evidence", []))
+    todo = [e for e in state.radar["entries"].values() if e.get("quadrant") != "policy"
+            and (e["ring"] == "trial" or e.get("proposed") == "adopt" or (e["ring"] == "assess" and testable(e)))
             and poc_id(e["key"]) not in cards and any(i in by_id for i in e.get("evidence", []))]
-    todo.sort(key=lambda e: (len(e.get("evidence", [])), e.get("updated", "")), reverse=True)  # best-evidenced first
+    # pilots (Trial) before evaluations (Assess); then the best-evidenced
+    todo.sort(key=lambda e: (e["ring"] == "trial" or e.get("proposed") == "adopt", len(e.get("evidence", [])), e.get("updated", "")), reverse=True)
     caps = {c["id"]: c for c in profile["capabilities"]}
     roles = ", ".join(r["id"] for r in profile["roles"])
     made = 0
     for e in todo[: int(profile.get("limits", {}).get("poc_cards_per_day", 2))]:
         ev = [i for i in e["evidence"] if i in by_id][:4]
         cap = caps.get(e.get("capability"), profile["capabilities"][0])
+        kind = "pilot" if e["ring"] == "trial" or e.get("proposed") == "adopt" else "evaluation"
         prompt = (f'Radar item: {e["name"]} (ring: {e["ring"]}{", proposed for adopt" if e.get("proposed") else ""})\n'
-                  f'Radar rationale: {e.get("rationale", "")}\nDPA capability: {cap["name"]}: {cap["about"]}\n\nEvidence:\n'
+                  + ("Card type: evaluation. The item is on Assess, so propose a two-week EVALUATION on synthetic or public "
+                     "documents that decides whether it earns a real pilot, not a pilot itself. Title it \"Evaluate ...\".\n"
+                     if kind == "evaluation" else "Card type: pilot.\n")
+                  + f'Radar rationale: {e.get("rationale", "")}\nDPA capability: {cap["name"]}: {cap["about"]}\n\nEvidence:\n'
                   + "\n".join(f'<story id="{i}">{by_id[i]["headline"]}. {by_id[i]["summary"]} DPA note: '
                               f'{state.impact.get(i, {}).get("so_what", "")} Test idea: {state.impact.get(i, {}).get("test", "")}</story>'
                               for i in ev))
@@ -435,14 +443,15 @@ def draft_pocs(llm: LLM, stories: list[dict], state: LensState, profile: dict, n
         if not plan or not a.get("proposal"):
             continue
         cid = poc_id(e["key"])
-        cards[cid] = {"id": cid, "radar_key": e["key"], "item": e["name"], "capability": cap["id"],
+        cards[cid] = {"id": cid, "kind": kind, "radar_key": e["key"], "item": e["name"], "capability": cap["id"],
                       "title": _clip(a.get("title"), 90), "problem": _clip(a.get("problem"), 260),
                       "proposal": _clip(a.get("proposal"), 320), "plan": plan, "metric": _clip(a.get("metric"), 200),
                       "data_safety": _clip(a.get("data_safety"), 240), "effort": a.get("effort") if a.get("effort") in ("S", "M", "L") else "M",
                       "owner": a.get("owner") if a.get("owner") in {r["id"] for r in profile["roles"]} else "champions",
                       "evidence": ev, "drafted": today, "model": llm.last_model}
         made += 1
-    state.poc["last"] = today
+    if made:
+        state.poc["last"] = today  # at most one batch of cards a day; a day with no candidates tries again next run
     report["poc"] = f"{made} card(s) drafted; {len(cards)} in the queue"
     return made
 

@@ -56,7 +56,8 @@ class FakeLLM:
                     "proposal": "Run DocParse 2 beside the current step.", "plan": ["Pick 20 public reports", "Run both", "Compare"],
                     "metric": "Field accuracy and minutes per document.", "data_safety": "Public documents only.", "effort": "S", "owner": "extraction"}
         if schema_name == "submit_check":
-            return {"claims": [{"claim": "DocParse 2 is open source", "verdict": "supported", "evidence": "DocParse 2 is open source"},
+            return {"claims": [{"claim": "DocParse 2 is open source", "type": "fact", "verdict": "supported", "evidence": "DocParse 2 is open source"},
+                               {"claim": "This shows open tools are winning", "type": "analysis", "verdict": "unsupported"},
                                {"claim": "It reads scanned PDFs", "verdict": "partly", "evidence": "made up words", "note": "only some scans"}]}
         raise AssertionError(schema_name)
 
@@ -94,10 +95,10 @@ def test_lens_run_end_to_end(tmp_path):
     assert e["ring"] == "trial" and e["proposed"] == "adopt" and e["evidence"] == ["s1"]
     assert st.brief["calls"][0]["story_ids"] == ["s1"]
     card = st.poc["cards"][dpa.poc_id("docparse-2")]
-    assert card["owner"] == "extraction" and len(card["plan"]) == 3
+    assert card["owner"] == "extraction" and len(card["plan"]) == 3 and card["kind"] == "pilot"
     # the audit keeps only evidence that is really in the source
     a = next(iter(st.factcheck["audits"].values()))
-    assert a["verdict"] == "minor" and a["claims"][0]["evidence"] and not a["claims"][1]["evidence"]
+    assert a["verdict"] == "minor" and a["claims"][0]["evidence"] and not a["claims"][1]["evidence"] and len(a["claims"]) == 2
     assert "factcheck" in report and not [n for n in report["notes"] if "failed" in n]
     # a second run the same day doesn't repeat the daily steps
     llm2 = FakeLLM()

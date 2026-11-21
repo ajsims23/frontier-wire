@@ -5,8 +5,8 @@
   <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><a href="{{ root }}dpa/">For {{ org.name }}</a><span aria-hidden="true">/</span><span>Pilot proposals</span></nav>
   <header class="lab-head">
     <span class="dl-kicker">For {{ org.name }}'s AI Champion Initiative</span>
-    <h1>Pilot proposals</h1>
-    <p class="desk-intro">When something reaches Trial on the <a href="{{ root }}radar/">AI Radar</a>, the agent drafts a one-page pilot: the {{ org.name }} workflow it could help, a two-week plan that starts with public or synthetic documents, how success is measured and how client data stays safe. <b>Nothing is tried until a person approves it.</b></p>
+    <h1>Pilot and evaluation proposals</h1>
+    <p class="desk-intro">When something reaches Trial on the <a href="{{ root }}radar/">AI Radar</a>, the agent drafts a one-page pilot; for Assess items with a concrete test, a two-week evaluation that decides whether they earn a pilot. Each card covers the {{ org.name }} workflow it could help, a two-week plan that starts with public or synthetic documents, how success is measured and how client data stays safe. <b>Nothing is tried until a person approves it.</b></p>
     <dl class="lab-stats">
       <div><dt>Awaiting review</dt><dd>{{ counts.awaiting }}</dd></div>
       <div><dt>Approved</dt><dd>{{ counts.approved }}</dd></div>
@@ -18,7 +18,7 @@
   <div class="dl-poc-grid">
     {% for c in cards %}
     <article class="dl-poc" id="{{ c.id }}">
-      <div class="dl-poc-top"><span class="dl-st st-{{ c.status }}">{{ {"awaiting": "Awaiting review", "approved": "Approved", "rejected": "Rejected"}[c.status] }}</span><span class="muted">{{ c.id }} · drafted {{ short(c.drafted) }}</span></div>
+      <div class="dl-poc-top"><span><span class="pill">{{ "Evaluation" if c.kind == "evaluation" else "Pilot" }}</span> <span class="dl-st st-{{ c.status }}">{{ {"awaiting": "Awaiting review", "approved": "Approved", "rejected": "Rejected"}[c.status] }}</span></span><span class="muted">{{ c.id }} · drafted {{ short(c.drafted) }}</span></div>
       <h2>{{ c.title }}</h2>
       <p class="dl-poc-meta"><span class="pill">{{ c.cap_name }}</span><span class="pill">Effort {{ c.effort }}</span><span class="pill">Owner: {{ c.owner_name }}</span><a class="pill" href="{{ root }}radar/#r-{{ c.radar_key }}">On the radar: {{ c.item }}</a></p>
       <dl class="dl-poc-body">
