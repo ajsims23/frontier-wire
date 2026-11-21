@@ -1,23 +1,5 @@
 {
   "posts": {
-    "fde4e161df12": {
-      "id": "fde4e161df12",
-      "url": "https://simonwillison.net/2026/Nov/13/datasette-cluster-map",
-      "person": "Simon Willison",
-      "text": "datasette-cluster-map 0.19. Release: datasette-cluster-map 0.19 One of the oldest Datasette plugins, and still one of my favorites. It now works with Datasette 1.0a42, and depends on the new datasette-leaflet to ensure OpenStreetMap tiles are requested with a referrer header. Here's a map of power plants owned by California's PG&E , also demonstrating Datasette's recently redesigned facets : Tags: datasette , geospatial , openstreetmap",
-      "published": "2026-11-13T23:02:45+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
-    "673d8bd62405": {
-      "id": "673d8bd62405",
-      "url": "https://simonwillison.net/2026/Nov/13/datasette-leaflet",
-      "person": "Simon Willison",
-      "text": "datasette-leaflet 0.3. Release: datasette-leaflet 0.3 OpenStreetMap have a very reasonable policy that hits to their hosted tile server should send a referrer header . Datasette table pages used the Referrer-Policy: no-referrer HTTP header, causing plugins that loaded tiles from OpenStreetMap to violate that policy. datasette-leaflet is the plugin that loads a bundled Leaflet so other Datasette plugins can depend on it. It now sets the referrer policy on the tile requests themselves to strict-origin-when-cross-origin , passing the host but not the full path to the page. Tags: leaflet , datasette , openstreetmap",
-      "published": "2026-11-13T22:30:54+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
     "4d80d3475473": {
       "id": "4d80d3475473",
       "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2c67rtdjs22",
@@ -526,6 +508,42 @@
       "text": "Riemann Hypothesis may have been solved with the help of Claude. “what I saw during the course of progress so amazed me that I believe it is one dawn across science of something far greater.” alpo.ge/remark.pdf",
       "published": "2026-11-20T15:30:42.096Z",
       "via": "Bluesky",
+      "kind": "post"
+    },
+    "fac06b384050": {
+      "id": "fac06b384050",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2seaj2c4c2m",
+      "person": "Ethan Mollick",
+      "text": "It is amazing that human language turned out to be so unreasonably effective at modeling the universe that training a system to predict what comes next in a sentence would get us this far.",
+      "published": "2026-11-21T05:22:44.733Z",
+      "via": "Bluesky",
+      "kind": "post"
+    },
+    "2b32d4b379bc": {
+      "id": "2b32d4b379bc",
+      "url": "https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently",
+      "person": "swyx",
+      "text": "[AINews] Riemann Hypothesis proved...twice independently. Within a few hours of each other ( timeline ), two mathematicians claimed independent proofs of the Riemann Hypothesis, the most famous open problem in mathematics ( Scientific American ). Levent Alpöge of Anthropic first made his Claude-driven proof in a note released with Lean code (1.3GB worth, ~250,000 page equivalent) rather than a full paper. Elliot Glazer confirms that the formalized statement is GRH and puts the chance of a Lean bug well under 1%. So if it finishes compiling with no extra axioms, it is probably correct, and no human will ever have read all of it… …prompting Alessandro Masullo to release his 940 page, 100%…",
+      "published": "2026-11-21T05:02:13+00:00",
+      "via": "Latent Space",
+      "kind": "post"
+    },
+    "c989db0d32fd": {
+      "id": "c989db0d32fd",
+      "url": "https://latent.space/p/formal-verification",
+      "person": "swyx",
+      "text": "The War Against Slop and an Emerging Weapon to Fight it: Formal Verification. The word of the year in the AI industry over 2026 has been “slop” — meaning low-quality output from a large language model. And with so much code being AI-generated now, avoiding slop has become a daily concern for software engineers. So how to do that? One way is to use formal verification systems , which use mathematical proofs and logic to verify the correctness of software or hardware. With AI’s growing prowess at solving math problems , there’s now a number of AI companies offering formal verification systems. They include Harmonic , Theorem , Axiom Math , and a new entrant called &Truth (pronounced ‘and…",
+      "published": "2026-11-20T21:18:41+00:00",
+      "via": "Latent Space",
+      "kind": "post"
+    },
+    "1177dfbd92c1": {
+      "id": "1177dfbd92c1",
+      "url": "https://latent.space/p/ainews-anthropic-successfully-completes-largest-ipo-in-history-valued-at-1-5t",
+      "person": "swyx",
+      "text": "[AINews] Anthropic successfully completes largest IPO in history, valued at $1.5T. As we previewed on our Know Before You IPO pod , Anthropic set its IPO price at $83 and today $ANT closed at $97.17, up 17% from the offering price ( drifting -5% to $92.60 after the close) . The $81.3B offering overtook SpaceX's June IPO as the largest in history. Dario and Daniela ( Dario’s remarks , Founders’ letter ) used the occasion to say Anthropic would pace training and deployment based on whether it could keep its systems safe and under human control. Their Class F shares carry 50.1% of voting power on most shareholder matters. Expect the lockup expiries to weigh on the stock price as about a…",
+      "published": "2026-11-20T07:12:24+00:00",
+      "via": "Latent Space",
       "kind": "post"
     }
   },

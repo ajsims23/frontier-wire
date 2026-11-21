@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-21T02:03:34+00:00",
+  "started_at": "2026-11-21T07:16:01+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -17,55 +17,439 @@
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
-    "mistral": "ok (6)"
+    "mistral": "ok (6)",
+    "mistral-news": "ok (2)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (15)",
+    "gdelt": "ok (26)",
+    "hn": "ok (12)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (0) via Bing News (GDELT unavailable)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (26)",
+    "auto-techmeme.com": "ok (15)"
   },
-  "dropped": [],
+  "dropped": [
+    {
+      "title": "Ai2 publishes LitAgent-Joint-SFT-9B-lg7eae-2n on Hugging Face",
+      "reason": "score 4: Routine Hugging Face model upload from Ai2, does not meet the threshold for significant frontier model releases."
+    },
+    {
+      "title": "Artists eye class action over AI copyright theft",
+      "reason": "score 4: Vague report on artists considering class action over AI copyright, lacking substantive new details."
+    },
+    {
+      "title": "Anthropic slides 9 . 1 % to shrink IPO gain as AI trade unravels",
+      "reason": "duplicate of 78098ada5602"
+    },
+    {
+      "title": "Anthropic CEO vacations at Italian resort after public listing",
+      "reason": "not AI: Gossip/lifestyle piece about Anthropic CEO vacationing, not AI news."
+    },
+    {
+      "title": "A new imperial age : Yuval Harari warns Philippines of foreign AI dependence",
+      "reason": "score 4: Yuval Harari warning about foreign AI dependence is general commentary rather than a concrete AI development."
+    },
+    {
+      "title": "AI to lead investment strategy in 2027 ; Energy and borrowing costs shape macro outlook : Barclays",
+      "reason": "score 4: Broader macroeconomic report by Barclays mentioning AI investment strategy in passing."
+    },
+    {
+      "title": "Anthropic worker claims to have solved a Holy Grail of math problems with the help of AI",
+      "reason": "duplicate of f1b7c64ada91"
+    },
+    {
+      "title": "Anthropic researcher claims to solve Riemann maths problem with Claude",
+      "reason": "duplicate of f1b7c64ada91"
+    },
+    {
+      "title": "Frontier breached , Anthropic mathematician claims solution of Riemann hypothesis with help from Claude AI",
+      "reason": "duplicate of f1b7c64ada91"
+    },
+    {
+      "title": "Trump seeks to penalize US companies that build AI data centers abroad , even as they face backlash",
+      "reason": "duplicate of b451ca89e9da"
+    },
+    {
+      "title": "Trump threatens to penalize U . S . tech companies over AI data centers – NBC Los Angeles",
+      "reason": "duplicate of b451ca89e9da"
+    },
+    {
+      "title": "Anthropic record IPO puts pensions and 401 ( k ) plans closer to AI boom - and - bust risk",
+      "reason": "duplicate of 824e87dcfa8e"
+    },
+    {
+      "title": "AI sell - off batters Wall Street ; S & P 500 enters correction , Nasdaq turns negative for year",
+      "reason": "duplicate of 8099b1cf49a8"
+    },
+    {
+      "title": "Machine Gods : Anthropic early days",
+      "reason": "score 3: Podcast episode or routine feature on Anthropic's early days, non-news rehash"
+    },
+    {
+      "title": "Tech stocks end the week on a down note , despite Anthropic mega - IPO",
+      "reason": "duplicate of 8099b1cf49a8"
+    },
+    {
+      "title": "Trump : AI Data Centers Must Be Built In U . S .",
+      "reason": "duplicate of b451ca89e9da"
+    },
+    {
+      "title": "Trump : AI Data Centers Must Be Built In U . S . | Twin Cities News Talk",
+      "reason": "duplicate of b451ca89e9da"
+    },
+    {
+      "title": "Race to Prove Riemann Hypothesis Just Became a Human - Versus - AI Showdown",
+      "reason": "duplicate of f1b7c64ada91"
+    },
+    {
+      "title": "Prediction : Nvidia Stock Will Do This in the 6 Months After a New CEO Takes Over , According to History",
+      "reason": "not AI: Stock price prediction and analyst commentary, off-topic."
+    },
+    {
+      "title": "Restricting AI agents in mobile operating systems platforms from capturing data",
+      "reason": "duplicate of 2536f904ad2b"
+    },
+    {
+      "title": "India Minicorn Tracker: Mapping The Next Wave Of High-Growth Startups",
+      "reason": "not AI: General startup tracker, not AI-specific."
+    },
+    {
+      "title": "From Dreamteam To Boba Bhai — Indian Startups Raised Over $291 Mn This Week",
+      "reason": "not AI: General weekly Indian startup funding roundup, no specific AI focus."
+    },
+    {
+      "title": "EV Startup River Mobility’s FY26 Revenue Jumps 4.2X To ₹432 Cr",
+      "reason": "not AI: EV startup financial results, no AI relevance."
+    },
+    {
+      "title": "System Upgrades At Banks Resulting In Withdrawal Delays: CoinDCX",
+      "reason": "not AI: Crypto exchange withdrawal delays due to bank system upgrades are routine fintech news, not AI."
+    },
+    {
+      "title": "MediaNama This Week: Top 10 Stories (14 November – 20 November 2026)",
+      "reason": "score 3: Weekly roundup of general tech and media news in India."
+    },
+    {
+      "title": "South Koreas Lee says speed is vital in AI race on data centre visit",
+      "reason": "score 4: South Korean official's routine remarks on AI speed and data centers, wire report rehash."
+    },
+    {
+      "title": "Final decision on bike taxis after discussion with Advocate General: Karnataka transport minister Byrathi Suresh",
+      "reason": "not AI: Transport policy news regarding bike taxis, no AI angle."
+    },
+    {
+      "title": "Databricks in early talks to raise funds at $225 billion valuation: WSJ",
+      "reason": "score 3: Duplicate of 0bbb6615887d (Databricks early talks to raise funds at $225B valuation)."
+    },
+    {
+      "title": "Oracle says OpenAI infrastructure deal is fully funded after final capital raise",
+      "reason": "score 3: Duplicate of 0980e466e3e8 (Oracle says OpenAI infrastructure contract is fully funded)."
+    },
+    {
+      "title": "YouTube nears $3 billion settlement with US school districts over addiction claims: Bloomberg News",
+      "reason": "not AI: YouTube school district settlement, no AI angle."
+    },
+    {
+      "title": "CrowdStrike in talks to acquire Zscaler",
+      "reason": "not AI: CrowdStrike talks to acquire Zscaler is a traditional cybersecurity M&A story without a stated AI angle."
+    },
+    {
+      "title": "'Grand Theft Auto VI' sets record with $3.79 billion in first-day retail sales, Rockstar Games reports",
+      "reason": "not AI: GTA VI sales record is general gaming news with no AI relevance."
+    },
+    {
+      "title": "UPI was never free. But is its new merchant fee fair?",
+      "reason": "not AI: UPI merchant fee analysis is fintech/payments news, not AI."
+    },
+    {
+      "title": "What parents should know about GTA 6; Bike taxis could return to Karnataka",
+      "reason": "not AI: General lifestyle and transport news (GTA 6 parental advice and Karnataka bike taxis), not AI."
+    },
+    {
+      "title": "Ethan Mollick: It is amazing that human language turned out to be so unreasonably effective at modeling the universe that training a system to predict…",
+      "reason": "score 3: Routine social media commentary on language models, too general."
+    },
+    {
+      "title": "Microsoft plans to retire its To Do app on June 30, 2027, offering migration to Planner for work and school accounts, but no replacement for personal accounts (Todd Bishop/GeekWire)",
+      "reason": "not AI: Microsoft retiring To Do app, no core AI relevance."
+    },
+    {
+      "title": "Sources: the FBI is investigating an apparent breach of its NCIC database, which is used by law enforcement to share info on warrants and background checks (Evan Perez/CNN)",
+      "reason": "not AI: FBI database breach is general cybercrime and law enforcement news with no AI angle."
+    },
+    {
+      "title": "Sources: Wonder is exploring a sale of Grubhub, which it bought in 2024 for $650M; bankers have been in contact with Walmart, Target, Kroger and other retailers (Wall Street Journal)",
+      "reason": "not AI: Wonder exploring a sale of Grubhub is food delivery and retail business news with no AI relevance."
+    },
+    {
+      "title": "Sources: hackers breached the US Department of Agriculture's system that facilitates payments to farmers this week (Julia Ainsley/NBC News)",
+      "reason": "not AI: USDA system breach is a general cybersecurity incident without an AI angle."
+    },
+    {
+      "title": "Anthropic mathematician claims Claude proved Riemann Hypothesis",
+      "reason": "duplicate of f1b7c64ada91"
+    },
+    {
+      "title": "Anthropic mathematician claims AI-assisted proof of the Riemann hypothesis",
+      "reason": "duplicate of f1b7c64ada91"
+    },
+    {
+      "title": "Anthropic mathematician claims to solve 167-year-old Riemann hypothesis with Claude: What is the $1 million maths puzzle",
+      "reason": "duplicate of f1b7c64ada91"
+    },
+    {
+      "title": "Riemann hypothesis proof claimed by Anthropic mathematician using Claude",
+      "reason": "duplicate of f1b7c64ada91"
+    },
+    {
+      "title": "Anthropic researcher says he and Claude proved the Riemann hypothesis, first posed in 1859",
+      "reason": "duplicate of f1b7c64ada91"
+    },
+    {
+      "title": "Claude helps Anthropic mathematician solve a 'sacred object in mathematics' — the 167-year-old Riemann hypothesis may havebeen solved in breakthrough that could win $1 ...",
+      "reason": "duplicate of f1b7c64ada91"
+    },
+    {
+      "title": "After Its Worst Week in 18 Years, Nvidia Now Faces an SEC Investigation. What It Means for Investors",
+      "reason": "score 4: Motley Fool stock-price commentary and investor guide, lower quality than the main news reporting on the SEC probe."
+    },
+    {
+      "title": "Nvidia Stock Plunge Wipes Out Nearly $500 Billion in One Day as SEC Reportedly Probes Its Accounting",
+      "reason": "score 5: Stock commentary and market roundup on Nvidia SEC probe."
+    },
+    {
+      "title": "Report Reveals Nvidia Accounting Is Focus of SEC Probe, Sends Stock Price Tumbling Further",
+      "reason": "score 5: Duplicate of a250c4f5700f covering the Nvidia SEC probe."
+    },
+    {
+      "title": "Nvidia plunges 14% amid SEC probe; mounting US scrutiny could cast long shadow over chip giant: analysts",
+      "reason": "score 5: Duplicate of a250c4f5700f covering the Nvidia SEC probe."
+    },
+    {
+      "title": "Trump threatens tax on US companies building AI data centers overseas",
+      "reason": "duplicate of b451ca89e9da"
+    },
+    {
+      "title": "Trump threatens 'tremendous tax' on US tech firms building AI data centers overseas",
+      "reason": "duplicate of b451ca89e9da"
+    },
+    {
+      "title": "Industry insiders say new US export rules affect a broader range of chips, including SoCs used in consumer electronics, extending beyond advanced AI chips (Cheng Ting-Fang/Nikkei Asia)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Nasdaq 100 fell 5.6% on Friday, taking its loss for the week to 10.4%, its worst run in more than six years, amid fears of a slowdown in the AI investment boom (George Steer/Financial Times)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Sources: Databricks is in early talks to raise several billion dollars at a ~$225B valuation, after closing a $5B round at a $190B valuation in August (Wall Street Journal)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Cursor tells lawmakers it is considering phasing out Chinese open-weight AI models due to \"geopolitical risk\"; Cursor's Composer 2 was built on Kimi K2.5 (Kai Nicol-Schwarz/CNBC)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Fintechs Bear The Brunt As Yes Bank Upgrades AI Safeguards",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
   "written": [
     {
-      "id": "afe5d96a9d46",
-      "headline": "Mistral releases Voxtral 3 speech models and voice agent SDK",
-      "category": "models",
-      "summary": "Mistral AI released Voxtral 3, a family of speech-to-text and text-to-speech models alongside a voice agent SDK built on LiveKit. The system combines transcription, reasoning, and speech output into a streaming pipeline with sub-one-second turn latency priced at $0.04 per minute.",
-      "url": "https://mistral.ai/news/voxtral-3",
+      "id": "51ea2ca54315",
+      "headline": "Researchers publish AI-aided Navier-Stokes blowup proof",
+      "category": "research",
+      "summary": "NYU professor Tristan Buckmaster and Anthropic employee Levent Alpöge published an AI-aided proof of Navier-Stokes blowup. The researchers stated that their work closes a loophole present in OpenAI's September solution.",
+      "url": "https://techmeme.com/261121/p4",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "26630a49cf7f",
+      "headline": "SoftBank explored a $1 trillion buyout of SK Hynix",
+      "category": "industry",
+      "summary": "SoftBank CEO Masayoshi Son explored financing for a potential $1 trillion buyout of memory chip giant SK Hynix. SoftBank stated that the deal is no longer under active consideration.",
+      "url": "https://techmeme.com/261120/p45",
+      "sources": 5,
+      "quotes": 0
+    },
+    {
+      "id": "c98d3ebce669",
+      "headline": "Cognition AI in funding talks at a $75 billion valuation",
+      "category": "industry",
+      "summary": "Cognition AI Inc. is in funding talks to raise $2 billion or more at a $75 billion valuation. The startup has raised over $3 billion in 2026 so far, including $2 billion at a $48 billion valuation in September.",
+      "url": "https://techmeme.com/261120/p36",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "0980e466e3e8",
+      "headline": "Oracle says OpenAI infrastructure contract is fully funded",
+      "category": "industry",
+      "summary": "Oracle announced that its infrastructure contract with OpenAI is fully funded following a final capital raise earlier this month. The company stated it is the first hyperscaler fully funded for this investment cycle.",
+      "url": "https://techmeme.com/261120/p43",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "a250c4f5700f",
+      "headline": "Nvidia faces U.S. SEC accounting investigation, sources say",
+      "category": "industry",
+      "summary": "The U.S. Securities and Exchange Commission is investigating Nvidia's accounting practices, according to two people briefed on the matter. The probe adds to regulatory and legal challenges for the chipmaker, whose shares dropped about 13% on Friday.",
+      "url": "https://nytimes.com/2026/11/20/business/nvidia-sec-accounting.html",
       "sources": 3,
       "quotes": 0
     }
   ],
-  "notes": [],
-  "mode": "breaking",
+  "notes": [
+    "ignored made-up duplicate id 0bbb6615887d for 'Databricks in early talks to raise funds at $225 b'",
+    "ignored made-up duplicate id 0980e466e3e8 for 'Oracle says OpenAI infrastructure deal is fully fu'",
+    "not India desk: 'Sources: Masayoshi Son recently explored a possibl'",
+    "not India desk: 'Nvidia Said to Face S.E.C. Probe Into Its Accounti'",
+    "ignored made-up duplicate id a250c4f5700f for 'Report Reveals Nvidia Accounting Is Focus of SEC P'",
+    "ignored made-up duplicate id a250c4f5700f for 'Nvidia plunges 14% amid SEC probe; mounting US scr'",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "10 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
   "timings": {
-    "gather": 8.7,
-    "judge": 0.8,
-    "verify and write": 101.7,
-    "tagging": 0.9,
-    "trackers": 7.7,
-    "photos": 0.3,
-    "stock photos": -0.0,
-    "alerts": 0.8
+    "gather": 192.2,
+    "audit": 2.2,
+    "plan": 2.4,
+    "judge": 17.2,
+    "verify and write": 107.0,
+    "videos": 17.0,
+    "tagging": 2.3,
+    "explainers": -0.0,
+    "trackers": 3.9,
+    "claims": 2.4,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 12.2,
+    "top voices": 11.4,
+    "briefing": 1.5,
+    "self-review": 1.7,
+    "photos": 1.4,
+    "stock photos": 0.0,
+    "daily email": 0.0,
+    "alerts": 6.3
   },
-  "fetched": 2508,
-  "fresh": 1,
-  "judged": 1,
-  "kept": 1,
+  "fetched": 3030,
+  "fresh": 65,
+  "audit": "coverage 100% of 2 significant stories; 0 missed, 0 added to this run",
+  "plan": {
+    "focus": "Chasing the fallout from the Anthropic IPO correction and export rules while tracking AI math breakthroughs.",
+    "priorities": [
+      "Anthropic researcher claims to solve Riemann maths problem with Claude (Major scientific milestone: Anthropic researcher claims Riemann hypothesis proof with Claude.)",
+      "Nvidia's accounting is a focus of US SEC investigation, sources say (Regulatory scrutiny intensifies as US SEC investigates Nvidia's accounting.)",
+      "Anthropic slides 9 . 1 % to shrink IPO gain as AI trade unravels (Market correction hits Anthropic as IPO gains shrink amidst broader AI sell-off.)",
+      "Cursor tells lawmakers it is considering phasing out Chinese open-weig (Geopolitical risk forces Cursor to consider dropping Chinese open-weight models.)",
+      "Industry insiders say new US export rules affect a broader range of ch (New US export controls expand to cover broader consumer electronics chips and SoCs.)"
+    ],
+    "thin_areas": [
+      "policy",
+      "research"
+    ],
+    "searches": [
+      "Anthropic Riemann hypothesis Claude proof math: 6 new",
+      "Nvidia SEC accounting investigation chips: 6 new",
+      "Trump data center overseas tax ban: 2 new"
+    ],
+    "dig_deeper": [
+      "Anthropic researcher claims to solve Riemann maths problem with Claude",
+      "Nvidia's accounting is a focus of US SEC investigation, sources say"
+    ]
+  },
+  "judged": 68,
+  "kept": 15,
   "research": {
-    "investigated": 1,
-    "confirmed": 1,
-    "tool_calls": 3
+    "investigated": 5,
+    "confirmed": 4,
+    "tool_calls": 13
   },
   "research_log": [
-    "Research Voxtral 3 Build agents that can listen, reason, speak, and ac: confirmed (searched “Mistral Voxtral 3”; read marktechpost.com; read techtimes.com)"
+    "NYU's Tristan Buckmaster and Anthropic's Levent Alpöge publish an AI-a: confirmed (searched “Tristan Buckmaster Levent Alpoge Navier Stokes blowup Scientific American”; read scientificamerican.com)",
+    "Sources: Masayoshi Son recently explored a possible $1T buyout of SK H: confirmed (searched “SoftBank Masayoshi Son SK Hynix trillion dollar buyout”; read businesstimes.com.sg)",
+    "Sources: Cognition is considering raising $2B or more at a $75B valuat: confirmed (searched “Cognition AI funding 75 billion Rebecca Torrence Bloomberg”; read bloomberg.com; read bloomberg.com)",
+    "Industry insiders say new US export rules affect a broader range of ch: unconfirmed (searched “US export rules broader range of chips consumer electronics SoCs Cheng Ting Fang Nikkei Asia”; searched “US export rules consumer electronics SoCs Nikkei Asia”; searched “US export controls consumer electronics SoCs Cheng Ting-Fang”)",
+    "Oracle says it has secured funding for its infrastructure contract wit: confirmed (searched “Oracle secured funding infrastructure contract OpenAI”; read yahoo.com; read indiatimes.com)"
   ],
   "threads": [
-    "Mistral AI international expansion and research rollout: Mistral releases Voxtral 3 speech models and voice agent SDK"
+    "Nvidia leadership and Jensen Huang departure: Nvidia faces U.S. SEC accounting investigation, sources say"
   ],
-  "tagged": 1,
-  "trackers": "filed 1 stories; updated frontier-race",
-  "photos": "1 saved, 0 unavailable",
-  "alerts": "2 events sent: {\"subscribers\":6,\"sent\":0,\"queued\":8}",
-  "ai_requests_run": 10,
-  "ai_tokens_run": 21528,
-  "ai_requests_today": 10,
+  "videos": {
+    "OpenAI": "ok (13 in feed, 0 new)",
+    "Anthropic": "ok (13 in feed, 0 new)",
+    "Google DeepMind": "ok (14 in feed, 1 new)",
+    "Google for Developers": "ok (10 in feed, 1 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
+    "Microsoft Research": "ok (11 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 2 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 2 new)",
+    "AI Explained": "ok (15 in feed, 1 new)",
+    "Lex Fridman": "ok (14 in feed, 1 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (3 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 5 new)",
+    "Training Data (Sequoia)": "ok (5 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (6 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (4 in feed, 0 new)",
+    "20VC": "ok (3 in feed, 0 new)"
+  },
+  "videos_kept": "14 kept from 14 new",
+  "tagged": 5,
+  "trackers": "filed 3 stories; updated ai-infrastructure, ai-money",
+  "claims": "221 tracked, 215 open, 0 updated this run",
+  "model_tracker": "82 models, 5 changes today",
+  "builders_sources": {
+    "show-hn": "ok (6)",
+    "github-new": "ok (47)",
+    "hf-spaces": "ok (24)",
+    "product-hunt": "ok (12)",
+    "r-localllama": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day'\nFor more i",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
+  },
+  "builders": "picked 5 from 60 candidates; 4 with pictures, 0 with videos",
+  "top_voices_sources": {
+    "tv-mollick": "ok (0)",
+    "tv-lambert": "ok (1)",
+    "tv-swyx": "ok (8)",
+    "tv-dwarkesh": "ok (1)",
+    "tv-raschka": "ok (1)",
+    "tv-karpathy": "ok (0)",
+    "tv-evans": "ok (0)",
+    "x-coverage": "ok (2 of 4 articles, bing)",
+    "hn": "ok (0)"
+  },
+  "top_voices": "skipped: only 1 debates passed the checks",
+  "briefing": "3 themes from 20 stories",
+  "self_review": "17 lines written to data/self_review.md",
+  "photos": "5 saved, 0 unavailable",
+  "alerts": "13 events sent: {\"subscribers\":5,\"sent\":0,\"queued\":28}",
+  "ai_requests_run": 45,
+  "ai_tokens_run": 135919,
+  "ai_requests_today": 55,
   "provider_log": [
-    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model"
+    "gemini/gemini-flash-lite-latest: answer cut off; retrying with more room"
   ]
 }
