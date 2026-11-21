@@ -247,20 +247,41 @@ def _radar_schema(cap_ids: list[str]) -> dict:
         "required": ["name", "keep", "ring", "quadrant", "capability", "rationale"]}}}, "required": ["subjects"]}
 
 
+def _merge_pairs(entries: dict[str, dict]) -> None:
+    """Fold an entry named "X and Y" into an existing entry "X" (same release, named twice)."""
+    for key in list(entries):
+        e = entries[key]
+        first = norm_key(re.split(r"\s+(?:and|&)\s+|,\s*", e["name"])[0])
+        if first != key and first in entries:
+            target = entries[first]
+            target["evidence"] = list(dict.fromkeys(target.get("evidence", []) + e.get("evidence", [])))[:8]
+            target.setdefault("aliases", [])
+            target["aliases"] = list(dict.fromkeys(target["aliases"] + [key] + e.get("aliases", [])))
+            del entries[key]
+
+
 def update_radar(llm: LLM, stories: list[dict], state: LensState, profile: dict, review: dict, now: datetime,
                  report: dict) -> int:
     by_id = {s["id"]: s for s in stories}
     entries: dict[str, dict] = state.radar["entries"]
     considered = set(state.radar.get("considered") or [])
+    _merge_pairs(entries)
     alias = {k: k for k in entries}
     for k, e in entries.items():
         for a in e.get("aliases", []):
             alias[a] = k
+
+    def resolve(name: str) -> str:
+        key = norm_key(name)
+        if key in alias:
+            return alias[key]
+        first = norm_key(re.split(r"\s+(?:and|&)\s+|,\s*", name)[0])  # "GPT-6.2 Astra and Sol" belongs with "GPT-6.2 Astra"
+        return alias.get(first, key)
     groups: dict[str, dict] = {}
     for sid, imp in state.impact.items():
         if sid in considered or sid not in by_id or not imp.get("item") or imp.get("relevance", 0) < 2:
             continue
-        key = alias.get(norm_key(imp["item"]), norm_key(imp["item"]))
+        key = resolve(imp["item"])
         g = groups.setdefault(key, {"key": key, "name": entries.get(key, {}).get("name") or imp["item"], "ids": [], "rel": 0})
         g["ids"].append(sid)
         g["rel"] = max(g["rel"], imp["relevance"])
