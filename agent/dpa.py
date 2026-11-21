@@ -413,9 +413,11 @@ One card per radar item. A person reviews every card before anything is tried. B
 - problem: max 35 words: the DPA pain this could relieve, described generally (no client names, no made-up numbers).
 - proposal: max 45 words: what to try and how it fits the current workflow.
 - plan: 3 or 4 steps for a two-week pilot, each max 20 words, starting with public or synthetic documents.
-- metric: max 25 words: how the pilot is judged (e.g. field accuracy vs the current step, minutes saved per document).
-- data_safety: max 30 words: how client data stays safe (public or synthetic data first; no client data on free tiers;
-  check the licence and data terms).
+- metric: max 25 words: how this particular pilot is judged, measured on the workflow it targets (for an extraction
+  tool that could be field accuracy against a hand-checked key; for a coding tool, time to finish set tasks). Write a
+  metric that fits this item; don't reuse these examples.
+- data_safety: max 30 words, specific to this item: what data it may see (public or synthetic first, never client data
+  on free tiers), and which licence, hosting or data-retention terms to check before any wider use.
 - effort: S (a few days), M (one to two weeks) or L (more).
 - owner: the role id best placed to run it, from: {roles}
 Facts about the item come only from the evidence; never invent features, prices or results.
