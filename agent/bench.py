@@ -187,11 +187,13 @@ def run(cfg: Config, now: datetime, env: dict[str, str], llm_for: Any = None, sl
                 sleep(6.5 if p["name"] == "gemini" else 2.5)  # stay inside per-minute free limits
             rec["latency"].append(round(time.monotonic() - t0, 2))
             s, fields = score_task(t, answer)
-            rec["tasks"][t["id"]] = {"score": round(s, 3), "fields": fields}
+            rec["tasks"][t["id"]] = {"score": round(s, 3), "fields": fields, "answer": json.dumps(answer, ensure_ascii=False)[:900]}
         rec["tokens"] = limits.run_tokens - tokens0
         done = [t for t in spec["tasks"] if t["id"] in rec["tasks"]]
-        if not done or len(done) < len(spec["tasks"]) or (rec.get("stopped") == "model unavailable on the free tier" and rec["errors"] == len(done)):
-            rec["available"] = False  # only complete runs are ranked, so every score covers the same tasks
+        if rec["errors"] and not rec.get("stopped"):
+            rec["stopped"] = f"free-tier errors on {rec['errors']} task(s)"
+        if not done or len(done) < len(spec["tasks"]) or rec["errors"]:
+            rec["available"] = False  # only complete, error-free runs are ranked: an outage is not a wrong answer
         else:
             rec["available"] = True
             rec["score"] = round(100 * sum(rec["tasks"][t["id"]]["score"] for t in spec["tasks"] if t["id"] in rec["tasks"]) / len(spec["tasks"]), 1)

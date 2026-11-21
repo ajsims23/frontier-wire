@@ -1,5 +1,5 @@
 {
- "version": "2026-11-22",
+ "version": "2026-11-22b",
  "about": "Synthetic documents written for this bench, modelled on the formats DPA teams handle. Every company, fund and person in them is fictional. No client data, ever.",
  "types": {
   "extraction": "Extraction",
@@ -957,6 +957,236 @@
       "D5": "quarterly_report",
       "D6": "distribution_notice",
       "D7": "other"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ocr-balance-sheet",
+   "type": "extraction",
+   "capability": "doc_extraction",
+   "title": "OCR-damaged balance sheet, columns in reverse order",
+   "why": "Real scans come back with OCR errors (O for 0, l for 1) and columns in an unexpected order. Read through both.",
+   "instruction": "This balance sheet was OCR'd from a scan, so some digits are letters (O for 0, l or 1 confused). Give the figures for 31 Dec 2026 (USD millions, plain numbers). equity_change = total equity at 31 Dec 2026 minus at 31 Dec 2025. balanced_2026 = whether total assets equal total liabilities plus total equity at 31 Dec 2026.",
+   "document": "CONSOLIDATED BALANCE SHEET (USD millions)          Note     31 Dec 2025     31 Dec 2026\nCash and equiva1ents                                 4          312.4           4O8.1\nReceivab1es                                          5          905.0           988.6\nInvestments at fair va1ue                            6        2,410.7         2,655.6\nTota1 assets                                                  3,628.1         4,O52.3\nBorrowings                                           7        1,150.0         1,275.0\nOther 1iabilities                                               411.6           447.9\nTota1 liabi1ities                                             1,561.6         1,722.9\nTotal equity                                                  2,066.5         2,329.4",
+   "schema": {
+    "type": "object",
+    "properties": {
+     "cash_2026": {
+      "type": "number"
+     },
+     "total_assets_2026": {
+      "type": "number"
+     },
+     "total_liabilities_2026": {
+      "type": "number"
+     },
+     "equity_change": {
+      "type": "number"
+     },
+     "balanced_2026": {
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "cash_2026",
+     "total_assets_2026",
+     "total_liabilities_2026",
+     "equity_change",
+     "balanced_2026"
+    ]
+   },
+   "fields": [
+    {
+     "key": "cash_2026",
+     "kind": "number",
+     "expect": 408.1
+    },
+    {
+     "key": "total_assets_2026",
+     "kind": "number",
+     "expect": 4052.3
+    },
+    {
+     "key": "total_liabilities_2026",
+     "kind": "number",
+     "expect": 1722.9
+    },
+    {
+     "key": "equity_change",
+     "kind": "number",
+     "expect": 262.9
+    },
+    {
+     "key": "balanced_2026",
+     "kind": "bool",
+     "expect": true
+    }
+   ]
+  },
+  {
+   "id": "distribution-waterfall",
+   "type": "research",
+   "capability": "reporting",
+   "title": "Distribution waterfall: pref, catch-up and carry",
+   "why": "The calculation behind every PE distribution notice: return of capital, preferred return, GP catch-up, then the split.",
+   "instruction": "Run this European (whole-fund) distribution waterfall and give the amounts in USD millions. preferred_return = the LPs' total preferred return. gp_catch_up = the GP's catch-up amount. lp_total and gp_total = what each receives in total. gp_share_of_profit_pct = the GP's total as a percentage of total profit (distributions minus contributed capital).",
+   "document": "WATERFALL TERMS (Limited Partnership Agreement, Section 8.1)\n1. Return of capital: 100% to the LPs until they have received their contributed capital.\n2. Preferred return: 100% to the LPs until they have received 8% per year, simple (not compounded), on contributed\n   capital, for the holding period.\n3. GP catch-up: 100% to the GP until the GP has received 20% of all distributions made under steps 2 and 3.\n4. Thereafter: 80% to the LPs and 20% to the GP.\n\nFUND FACTS\nContributed capital: USD 120.0 million, all contributed at the start of the holding period.\nHolding period: 4 years.\nTotal distributions available at exit: USD 180.0 million.",
+   "schema": {
+    "type": "object",
+    "properties": {
+     "preferred_return": {
+      "type": "number"
+     },
+     "gp_catch_up": {
+      "type": "number"
+     },
+     "lp_total": {
+      "type": "number"
+     },
+     "gp_total": {
+      "type": "number"
+     },
+     "gp_share_of_profit_pct": {
+      "type": "number"
+     }
+    },
+    "required": [
+     "preferred_return",
+     "gp_catch_up",
+     "lp_total",
+     "gp_total",
+     "gp_share_of_profit_pct"
+    ]
+   },
+   "fields": [
+    {
+     "key": "preferred_return",
+     "kind": "number",
+     "expect": 38.4
+    },
+    {
+     "key": "gp_catch_up",
+     "kind": "number",
+     "expect": 9.6
+    },
+    {
+     "key": "lp_total",
+     "kind": "number",
+     "expect": 168.0
+    },
+    {
+     "key": "gp_total",
+     "kind": "number",
+     "expect": 12.0
+    },
+    {
+     "key": "gp_share_of_profit_pct",
+     "kind": "number",
+     "expect": 20.0
+    }
+   ]
+  },
+  {
+   "id": "subtle-checklist",
+   "type": "quality",
+   "capability": "data_qa",
+   "title": "Quarterly report: the subtle errors reviewers miss",
+   "why": "Errors that pass a quick read: allocations that sum to 99%, a stale table date, a fund name that drifts.",
+   "instruction": "Check the report excerpt against each item K1 to K8 and answer pass or fail.",
+   "document": "CHECKLIST\nK1. The portfolio allocation percentages add up to 100%.\nK2. Every date in the report refers to the reporting quarter end (30 September 2026).\nK3. The quarter-on-quarter change in distributions is calculated correctly (to one decimal).\nK4. The fund name is written identically everywhere.\nK5. Includes the disclaimer \"Past performance is not indicative of future results.\"\nK6. Every percentage has exactly one decimal place.\nK7. Every multiple is shown with two decimals and an \"x\".\nK8. Every currency amount is labelled USD.\n\nREPORT EXCERPT\nALDER CREEK REAL ESTATE FUND II - QUARTERLY REPORT\nQuarter ended 30 September 2026\nPortfolio allocation (by value): Logistics 41.5% | Residential 27.0% | Office 18.5% | Retail 12.0%\nPerformance: net IRR since inception 11.4%; TVPI 1.32x; DPI 0.41x.\nQ3 distributions: USD 6.2m (Q2: USD 4.9m), up 26.5% quarter on quarter.\nOccupancy (as at 30 June 2026): Logistics 97.1% | Residential 94.3% | Office 81.0% | Retail 88.6%\nAlder Creek Real Estate Fund 2 continues to prioritise logistics assets near major ports.\nPast performance is not indicative of future results.",
+   "schema": {
+    "type": "object",
+    "properties": {
+     "results": {
+      "type": "object",
+      "properties": {
+       "K1": {
+        "type": "string",
+        "enum": [
+         "pass",
+         "fail"
+        ]
+       },
+       "K2": {
+        "type": "string",
+        "enum": [
+         "pass",
+         "fail"
+        ]
+       },
+       "K3": {
+        "type": "string",
+        "enum": [
+         "pass",
+         "fail"
+        ]
+       },
+       "K4": {
+        "type": "string",
+        "enum": [
+         "pass",
+         "fail"
+        ]
+       },
+       "K5": {
+        "type": "string",
+        "enum": [
+         "pass",
+         "fail"
+        ]
+       },
+       "K6": {
+        "type": "string",
+        "enum": [
+         "pass",
+         "fail"
+        ]
+       },
+       "K7": {
+        "type": "string",
+        "enum": [
+         "pass",
+         "fail"
+        ]
+       },
+       "K8": {
+        "type": "string",
+        "enum": [
+         "pass",
+         "fail"
+        ]
+       }
+      },
+      "required": [
+       "K1",
+       "K2",
+       "K3",
+       "K4",
+       "K5",
+       "K6",
+       "K7",
+       "K8"
+      ]
+     }
+    },
+    "required": [
+     "results"
+    ]
+   },
+   "fields": [
+    {
+     "key": "results",
+     "kind": "map",
+     "expect": {
+      "K1": "fail",
+      "K2": "fail",
+      "K3": "pass",
+      "K4": "fail",
+      "K5": "pass",
+      "K6": "pass",
+      "K7": "pass",
+      "K8": "pass"
      }
     }
    ]

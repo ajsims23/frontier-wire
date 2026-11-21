@@ -27,7 +27,7 @@
           <td class="num">{% if r.delta is none %}<span class="muted">new</span>{% elif r.delta > 0 %}<span class="up">+{{ r.delta }}</span>{% elif r.delta < 0 %}<span class="down">{{ r.delta }}</span>{% else %}<span class="muted">same</span>{% endif %}</td></tr>
       {% endfor %}</tbody>
     </table></div>
-    {% if b.unavailable %}<p class="muted bn-note">Not available on the free tier this run: {% for u in b.unavailable %}{{ u.model }} ({{ u.provider }}){% if not loop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
+    {% if b.unavailable %}<p class="muted bn-note">Not ranked this run (the free tier was busy or out of quota, so the run was incomplete): {% for u in b.unavailable %}{{ u.model }} ({{ u.provider }}){% if not loop.last %}, {% endif %}{% endfor %}. Only complete, error-free runs are ranked.</p>{% endif %}
 
     <h3 class="bn-h3">Task by task</h3>
     <div class="table-box"><table class="deals bn-heat">
