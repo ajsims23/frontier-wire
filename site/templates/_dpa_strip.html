@@ -24,7 +24,7 @@
       <a class="dl-tile" href="dpa/"><span class="n">{{ stats.assessed30 }}</span><span class="l">stories assessed for DPA in 30 days</span></a>
       <a class="dl-tile" href="dpa/#act"><span class="n">{{ stats.act30 }}</span><span class="l">worth trying or evaluating</span></a>
       <a class="dl-tile" href="radar/"><span class="n">{{ stats.radar }}</span><span class="l">items on the DPA AI Radar</span></a>
-      {% if fc.rate is not none %}<a class="dl-tile" href="system/#accuracy"><span class="n">{{ fc.rate|round|int }}%</span><span class="l">of claims supported in our accuracy audit</span></a>
+      {% if fc.rate is not none %}<a class="dl-tile" href="system/#accuracy"><span class="n">{{ fc.rate|round|int }}%</span><span class="l">of {{ fc.claims }} claims supported in our accuracy audit</span></a>
       {% else %}<a class="dl-tile" href="system/"><span class="n">{{ st.official_pct + 0 }}%</span><span class="l">of stories from an official source</span></a>{% endif %}
       {% if bench.rows %}<a class="dl-tile" href="bench/"><span class="n">{{ bench.rows[0].score|round|int }}</span><span class="l">best free-model score on DPA tasks ({{ bench.rows[0].name }})</span></a>{% endif %}
       <a class="btn dl-go" href="dpa/">Open the DPA lens</a>

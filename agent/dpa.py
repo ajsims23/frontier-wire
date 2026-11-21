@@ -357,10 +357,11 @@ BRIEF_SYSTEM = """You write the DPA brief for {org}
 From this week's AI developments (with the analyst's DPA notes), pick the three calls DPA should make this week:
 what to try, what to evaluate, what to be careful about. For each call:
 - title: max 8 words, plain.
-- text: max 45 words: what to do and why, for DPA's work. Facts only from the stories; the advice is your judgement.
+- text: max 40 words: what to do and why, for DPA's work. Plain and specific; no filler like "leveraging" or "ensuring robust". Facts only from the stories; the advice is your judgement.
 - move: trial, assess, watch or caution.
 - story_ids: the ids of the stories it rests on (1 to 3).
-Also write headline: one sentence (max 22 words) that sums up what this week means for DPA.
+Also write headline: what this week means for DPA, as a plain newspaper-style headline of at most 14 words
+(e.g. "Two free extraction models worth a test, and a supply-chain scare to act on"). Don't start with "DPA must".
 {untrusted}"""
 
 BRIEF_SCHEMA = {"type": "object", "properties": {"headline": {"type": "string"}, "calls": {"type": "array", "items": {
