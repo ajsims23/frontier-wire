@@ -1,0 +1,1741 @@
+{
+ "runs": [
+  {
+   "date": "2026-11-21",
+   "at": "2026-11-21T22:18:58+00:00",
+   "tasks_version": "2026-11-22",
+   "tasks": 12,
+   "models": [
+    {
+     "provider": "nvidia",
+     "model": "nvidia/nemotron-3-ultra-550b-a55b",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_commitments_musd",
+         "score": 1.0
+        },
+        {
+         "key": "called_musd",
+         "score": 1.0
+        },
+        {
+         "key": "distributions_musd",
+         "score": 1.0
+        },
+        {
+         "key": "nav_musd",
+         "score": 1.0
+        },
+        {
+         "key": "net_irr_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tvpi",
+         "score": 1.0
+        },
+        {
+         "key": "nav_change_qoq_musd",
+         "score": 1.0
+        }
+       ]
+      },
+      "income-statement": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "revenue_2025",
+         "score": 1.0
+        },
+        {
+         "key": "operating_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "net_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "gross_margin_2025_pct",
+         "score": 1.0
+        },
+        {
+         "key": "eps_diluted_2024",
+         "score": 1.0
+        }
+       ]
+      },
+      "capital-call": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "fund_name",
+         "score": 1.0
+        },
+        {
+         "key": "notice_number",
+         "score": 1.0
+        },
+        {
+         "key": "call_amount_usd",
+         "score": 1.0
+        },
+        {
+         "key": "management_fees_usd",
+         "score": 1.0
+        },
+        {
+         "key": "due_date",
+         "score": 1.0
+        },
+        {
+         "key": "cumulative_called_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "rent-roll": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "occupancy_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tenant_count",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant_rent_share_pct",
+         "score": 1.0
+        },
+        {
+         "key": "earliest_expiry",
+         "score": 1.0
+        }
+       ]
+      },
+      "holdings-total": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_matches",
+         "score": 1.0
+        },
+        {
+         "key": "computed_total",
+         "score": 1.0
+        },
+        {
+         "key": "difference",
+         "score": 1.0
+        }
+       ]
+      },
+      "narrative-vs-table": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "inconsistent",
+         "score": 1.0
+        }
+       ]
+      },
+      "clean-distribution": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "components_sum_usd",
+         "score": 1.0
+        },
+        {
+         "key": "net_check_ok",
+         "score": 1.0
+        },
+        {
+         "key": "errors",
+         "score": 1.0
+        }
+       ]
+      },
+      "report-checklist": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "results",
+         "score": 1.0
+        }
+       ]
+      },
+      "trade-file-rules": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "rules",
+         "score": 1.0
+        }
+       ]
+      },
+      "ownership-chain": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "direct_owners",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_owner",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_pct",
+         "score": 1.0
+        },
+        {
+         "key": "kestrel_indirect_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "credit-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "net_debt",
+         "score": 1.0
+        },
+        {
+         "key": "net_leverage",
+         "score": 1.0
+        },
+        {
+         "key": "interest_coverage",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_margin_pct",
+         "score": 1.0
+        },
+        {
+         "key": "leverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "coverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_cushion_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "document-routing": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "labels",
+         "score": 1.0
+        }
+       ]
+      }
+     },
+     "errors": 0,
+     "tokens": 17632,
+     "available": true,
+     "score": 100.0,
+     "by_type": {
+      "extraction": 100.0,
+      "quality": 100.0,
+      "research": 100.0,
+      "routing": 100.0
+     },
+     "median_latency_s": 10.45
+    },
+    {
+     "provider": "nvidia",
+     "model": "mistralai/mistral-large-4-1t-a52b",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_commitments_musd",
+         "score": 1.0
+        },
+        {
+         "key": "called_musd",
+         "score": 1.0
+        },
+        {
+         "key": "distributions_musd",
+         "score": 1.0
+        },
+        {
+         "key": "nav_musd",
+         "score": 1.0
+        },
+        {
+         "key": "net_irr_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tvpi",
+         "score": 1.0
+        },
+        {
+         "key": "nav_change_qoq_musd",
+         "score": 1.0
+        }
+       ]
+      },
+      "income-statement": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "revenue_2025",
+         "score": 1.0
+        },
+        {
+         "key": "operating_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "net_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "gross_margin_2025_pct",
+         "score": 1.0
+        },
+        {
+         "key": "eps_diluted_2024",
+         "score": 1.0
+        }
+       ]
+      },
+      "capital-call": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "fund_name",
+         "score": 1.0
+        },
+        {
+         "key": "notice_number",
+         "score": 1.0
+        },
+        {
+         "key": "call_amount_usd",
+         "score": 1.0
+        },
+        {
+         "key": "management_fees_usd",
+         "score": 1.0
+        },
+        {
+         "key": "due_date",
+         "score": 1.0
+        },
+        {
+         "key": "cumulative_called_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "rent-roll": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "occupancy_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tenant_count",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant_rent_share_pct",
+         "score": 1.0
+        },
+        {
+         "key": "earliest_expiry",
+         "score": 1.0
+        }
+       ]
+      },
+      "holdings-total": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_matches",
+         "score": 1.0
+        },
+        {
+         "key": "computed_total",
+         "score": 1.0
+        },
+        {
+         "key": "difference",
+         "score": 1.0
+        }
+       ]
+      },
+      "narrative-vs-table": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "inconsistent",
+         "score": 1.0
+        }
+       ]
+      },
+      "clean-distribution": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "components_sum_usd",
+         "score": 1.0
+        },
+        {
+         "key": "net_check_ok",
+         "score": 1.0
+        },
+        {
+         "key": "errors",
+         "score": 1.0
+        }
+       ]
+      },
+      "report-checklist": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "results",
+         "score": 1.0
+        }
+       ]
+      },
+      "trade-file-rules": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "rules",
+         "score": 1.0
+        }
+       ]
+      },
+      "ownership-chain": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "direct_owners",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_owner",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_pct",
+         "score": 1.0
+        },
+        {
+         "key": "kestrel_indirect_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "credit-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "net_debt",
+         "score": 1.0
+        },
+        {
+         "key": "net_leverage",
+         "score": 1.0
+        },
+        {
+         "key": "interest_coverage",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_margin_pct",
+         "score": 1.0
+        },
+        {
+         "key": "leverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "coverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_cushion_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "document-routing": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "labels",
+         "score": 1.0
+        }
+       ]
+      }
+     },
+     "errors": 0,
+     "tokens": 10118,
+     "available": true,
+     "score": 100.0,
+     "by_type": {
+      "extraction": 100.0,
+      "quality": 100.0,
+      "research": 100.0,
+      "routing": 100.0
+     },
+     "median_latency_s": 16.09
+    },
+    {
+     "provider": "groq",
+     "model": "openai/gpt-oss-120b",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_commitments_musd",
+         "score": 1.0
+        },
+        {
+         "key": "called_musd",
+         "score": 1.0
+        },
+        {
+         "key": "distributions_musd",
+         "score": 1.0
+        },
+        {
+         "key": "nav_musd",
+         "score": 1.0
+        },
+        {
+         "key": "net_irr_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tvpi",
+         "score": 1.0
+        },
+        {
+         "key": "nav_change_qoq_musd",
+         "score": 1.0
+        }
+       ]
+      },
+      "income-statement": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "revenue_2025",
+         "score": 1.0
+        },
+        {
+         "key": "operating_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "net_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "gross_margin_2025_pct",
+         "score": 1.0
+        },
+        {
+         "key": "eps_diluted_2024",
+         "score": 1.0
+        }
+       ]
+      },
+      "capital-call": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "fund_name",
+         "score": 1.0
+        },
+        {
+         "key": "notice_number",
+         "score": 1.0
+        },
+        {
+         "key": "call_amount_usd",
+         "score": 1.0
+        },
+        {
+         "key": "management_fees_usd",
+         "score": 1.0
+        },
+        {
+         "key": "due_date",
+         "score": 1.0
+        },
+        {
+         "key": "cumulative_called_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "rent-roll": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "occupancy_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tenant_count",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant_rent_share_pct",
+         "score": 1.0
+        },
+        {
+         "key": "earliest_expiry",
+         "score": 1.0
+        }
+       ]
+      },
+      "holdings-total": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_matches",
+         "score": 1.0
+        },
+        {
+         "key": "computed_total",
+         "score": 1.0
+        },
+        {
+         "key": "difference",
+         "score": 1.0
+        }
+       ]
+      },
+      "narrative-vs-table": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "inconsistent",
+         "score": 1.0
+        }
+       ]
+      },
+      "clean-distribution": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "components_sum_usd",
+         "score": 1.0
+        },
+        {
+         "key": "net_check_ok",
+         "score": 1.0
+        },
+        {
+         "key": "errors",
+         "score": 1.0
+        }
+       ]
+      },
+      "report-checklist": {
+       "score": 0.833,
+       "fields": [
+        {
+         "key": "results",
+         "score": 0.833
+        }
+       ]
+      },
+      "trade-file-rules": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "rules",
+         "score": 1.0
+        }
+       ]
+      },
+      "ownership-chain": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "direct_owners",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_owner",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_pct",
+         "score": 1.0
+        },
+        {
+         "key": "kestrel_indirect_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "credit-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "net_debt",
+         "score": 1.0
+        },
+        {
+         "key": "net_leverage",
+         "score": 1.0
+        },
+        {
+         "key": "interest_coverage",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_margin_pct",
+         "score": 1.0
+        },
+        {
+         "key": "leverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "coverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_cushion_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "document-routing": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "labels",
+         "score": 1.0
+        }
+       ]
+      }
+     },
+     "errors": 0,
+     "tokens": 10687,
+     "available": true,
+     "score": 98.6,
+     "by_type": {
+      "extraction": 100.0,
+      "quality": 96.7,
+      "research": 100.0,
+      "routing": 100.0
+     },
+     "median_latency_s": 3.83
+    },
+    {
+     "provider": "groq",
+     "model": "openai/gpt-oss-20b",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_commitments_musd",
+         "score": 1.0
+        },
+        {
+         "key": "called_musd",
+         "score": 1.0
+        },
+        {
+         "key": "distributions_musd",
+         "score": 1.0
+        },
+        {
+         "key": "nav_musd",
+         "score": 1.0
+        },
+        {
+         "key": "net_irr_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tvpi",
+         "score": 1.0
+        },
+        {
+         "key": "nav_change_qoq_musd",
+         "score": 1.0
+        }
+       ]
+      },
+      "income-statement": {
+       "score": 0.8,
+       "fields": [
+        {
+         "key": "revenue_2025",
+         "score": 1.0
+        },
+        {
+         "key": "operating_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "net_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "gross_margin_2025_pct",
+         "score": 0.0
+        },
+        {
+         "key": "eps_diluted_2024",
+         "score": 1.0
+        }
+       ]
+      },
+      "capital-call": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "fund_name",
+         "score": 1.0
+        },
+        {
+         "key": "notice_number",
+         "score": 1.0
+        },
+        {
+         "key": "call_amount_usd",
+         "score": 1.0
+        },
+        {
+         "key": "management_fees_usd",
+         "score": 1.0
+        },
+        {
+         "key": "due_date",
+         "score": 1.0
+        },
+        {
+         "key": "cumulative_called_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "rent-roll": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "occupancy_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tenant_count",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant_rent_share_pct",
+         "score": 1.0
+        },
+        {
+         "key": "earliest_expiry",
+         "score": 1.0
+        }
+       ]
+      },
+      "holdings-total": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_matches",
+         "score": 1.0
+        },
+        {
+         "key": "computed_total",
+         "score": 1.0
+        },
+        {
+         "key": "difference",
+         "score": 1.0
+        }
+       ]
+      },
+      "narrative-vs-table": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "inconsistent",
+         "score": 1.0
+        }
+       ]
+      },
+      "clean-distribution": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "components_sum_usd",
+         "score": 1.0
+        },
+        {
+         "key": "net_check_ok",
+         "score": 1.0
+        },
+        {
+         "key": "errors",
+         "score": 1.0
+        }
+       ]
+      },
+      "report-checklist": {
+       "score": 0.833,
+       "fields": [
+        {
+         "key": "results",
+         "score": 0.833
+        }
+       ]
+      },
+      "trade-file-rules": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "rules",
+         "score": 1.0
+        }
+       ]
+      },
+      "ownership-chain": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "direct_owners",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_owner",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_pct",
+         "score": 1.0
+        },
+        {
+         "key": "kestrel_indirect_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "credit-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "net_debt",
+         "score": 1.0
+        },
+        {
+         "key": "net_leverage",
+         "score": 1.0
+        },
+        {
+         "key": "interest_coverage",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_margin_pct",
+         "score": 1.0
+        },
+        {
+         "key": "leverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "coverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_cushion_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "document-routing": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "labels",
+         "score": 1.0
+        }
+       ]
+      }
+     },
+     "errors": 0,
+     "tokens": 11078,
+     "available": true,
+     "score": 96.9,
+     "by_type": {
+      "extraction": 95.0,
+      "quality": 96.7,
+      "research": 100.0,
+      "routing": 100.0
+     },
+     "median_latency_s": 3.15
+    },
+    {
+     "provider": "gemini",
+     "model": "gemini-flash-lite-latest",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_commitments_musd",
+         "score": 1.0
+        },
+        {
+         "key": "called_musd",
+         "score": 1.0
+        },
+        {
+         "key": "distributions_musd",
+         "score": 1.0
+        },
+        {
+         "key": "nav_musd",
+         "score": 1.0
+        },
+        {
+         "key": "net_irr_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tvpi",
+         "score": 1.0
+        },
+        {
+         "key": "nav_change_qoq_musd",
+         "score": 1.0
+        }
+       ]
+      },
+      "income-statement": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "revenue_2025",
+         "score": 1.0
+        },
+        {
+         "key": "operating_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "net_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "gross_margin_2025_pct",
+         "score": 1.0
+        },
+        {
+         "key": "eps_diluted_2024",
+         "score": 1.0
+        }
+       ]
+      },
+      "capital-call": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "fund_name",
+         "score": 1.0
+        },
+        {
+         "key": "notice_number",
+         "score": 1.0
+        },
+        {
+         "key": "call_amount_usd",
+         "score": 1.0
+        },
+        {
+         "key": "management_fees_usd",
+         "score": 1.0
+        },
+        {
+         "key": "due_date",
+         "score": 1.0
+        },
+        {
+         "key": "cumulative_called_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "rent-roll": {
+       "score": 0.8,
+       "fields": [
+        {
+         "key": "occupancy_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tenant_count",
+         "score": 0.0
+        },
+        {
+         "key": "largest_tenant",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant_rent_share_pct",
+         "score": 1.0
+        },
+        {
+         "key": "earliest_expiry",
+         "score": 1.0
+        }
+       ]
+      },
+      "holdings-total": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_matches",
+         "score": 1.0
+        },
+        {
+         "key": "computed_total",
+         "score": 1.0
+        },
+        {
+         "key": "difference",
+         "score": 1.0
+        }
+       ]
+      },
+      "narrative-vs-table": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "inconsistent",
+         "score": 1.0
+        }
+       ]
+      },
+      "clean-distribution": {
+       "score": 0.667,
+       "fields": [
+        {
+         "key": "components_sum_usd",
+         "score": 1.0
+        },
+        {
+         "key": "net_check_ok",
+         "score": 1.0
+        },
+        {
+         "key": "errors",
+         "score": 0.0
+        }
+       ]
+      },
+      "report-checklist": {
+       "score": 0.833,
+       "fields": [
+        {
+         "key": "results",
+         "score": 0.833
+        }
+       ]
+      },
+      "trade-file-rules": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "rules",
+         "score": 1.0
+        }
+       ]
+      },
+      "ownership-chain": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "direct_owners",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_owner",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_pct",
+         "score": 1.0
+        },
+        {
+         "key": "kestrel_indirect_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "credit-metrics": {
+       "score": 0.857,
+       "fields": [
+        {
+         "key": "net_debt",
+         "score": 1.0
+        },
+        {
+         "key": "net_leverage",
+         "score": 1.0
+        },
+        {
+         "key": "interest_coverage",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_margin_pct",
+         "score": 1.0
+        },
+        {
+         "key": "leverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "coverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_cushion_pct",
+         "score": 0.0
+        }
+       ]
+      },
+      "document-routing": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "labels",
+         "score": 1.0
+        }
+       ]
+      }
+     },
+     "errors": 0,
+     "tokens": 7184,
+     "available": true,
+     "score": 93.0,
+     "by_type": {
+      "extraction": 95.0,
+      "quality": 90.0,
+      "research": 92.8,
+      "routing": 100.0
+     },
+     "median_latency_s": 7.32
+    },
+    {
+     "provider": "groq",
+     "model": "qwen/qwen3.8-27b",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_commitments_musd",
+         "score": 1.0
+        },
+        {
+         "key": "called_musd",
+         "score": 1.0
+        },
+        {
+         "key": "distributions_musd",
+         "score": 1.0
+        },
+        {
+         "key": "nav_musd",
+         "score": 1.0
+        },
+        {
+         "key": "net_irr_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tvpi",
+         "score": 1.0
+        },
+        {
+         "key": "nav_change_qoq_musd",
+         "score": 1.0
+        }
+       ]
+      },
+      "income-statement": {
+       "score": 0.4,
+       "fields": [
+        {
+         "key": "revenue_2025",
+         "score": 1.0
+        },
+        {
+         "key": "operating_income_2024",
+         "score": 0.0
+        },
+        {
+         "key": "net_income_2024",
+         "score": 0.0
+        },
+        {
+         "key": "gross_margin_2025_pct",
+         "score": 1.0
+        },
+        {
+         "key": "eps_diluted_2024",
+         "score": 0.0
+        }
+       ]
+      },
+      "capital-call": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "fund_name",
+         "score": 1.0
+        },
+        {
+         "key": "notice_number",
+         "score": 1.0
+        },
+        {
+         "key": "call_amount_usd",
+         "score": 1.0
+        },
+        {
+         "key": "management_fees_usd",
+         "score": 1.0
+        },
+        {
+         "key": "due_date",
+         "score": 1.0
+        },
+        {
+         "key": "cumulative_called_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "rent-roll": {
+       "score": 0.6,
+       "fields": [
+        {
+         "key": "occupancy_pct",
+         "score": 0.0
+        },
+        {
+         "key": "tenant_count",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant_rent_share_pct",
+         "score": 0.0
+        },
+        {
+         "key": "earliest_expiry",
+         "score": 1.0
+        }
+       ]
+      },
+      "holdings-total": {
+       "score": 0.667,
+       "fields": [
+        {
+         "key": "total_matches",
+         "score": 0.0
+        },
+        {
+         "key": "computed_total",
+         "score": 1.0
+        },
+        {
+         "key": "difference",
+         "score": 1.0
+        }
+       ]
+      },
+      "narrative-vs-table": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "inconsistent",
+         "score": 1.0
+        }
+       ]
+      },
+      "clean-distribution": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "components_sum_usd",
+         "score": 1.0
+        },
+        {
+         "key": "net_check_ok",
+         "score": 1.0
+        },
+        {
+         "key": "errors",
+         "score": 1.0
+        }
+       ]
+      },
+      "report-checklist": {
+       "score": 0.833,
+       "fields": [
+        {
+         "key": "results",
+         "score": 0.833
+        }
+       ]
+      },
+      "trade-file-rules": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "rules",
+         "score": 1.0
+        }
+       ]
+      },
+      "ownership-chain": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "direct_owners",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_owner",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_pct",
+         "score": 1.0
+        },
+        {
+         "key": "kestrel_indirect_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "credit-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "net_debt",
+         "score": 1.0
+        },
+        {
+         "key": "net_leverage",
+         "score": 1.0
+        },
+        {
+         "key": "interest_coverage",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_margin_pct",
+         "score": 1.0
+        },
+        {
+         "key": "leverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "coverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_cushion_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "document-routing": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "labels",
+         "score": 1.0
+        }
+       ]
+      }
+     },
+     "errors": 0,
+     "tokens": 9847,
+     "available": true,
+     "score": 87.5,
+     "by_type": {
+      "extraction": 75.0,
+      "quality": 90.0,
+      "research": 100.0,
+      "routing": 100.0
+     },
+     "median_latency_s": 2.9
+    },
+    {
+     "provider": "gemini",
+     "model": "gemini-flash-latest",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_commitments_musd",
+         "score": 1.0
+        },
+        {
+         "key": "called_musd",
+         "score": 1.0
+        },
+        {
+         "key": "distributions_musd",
+         "score": 1.0
+        },
+        {
+         "key": "nav_musd",
+         "score": 1.0
+        },
+        {
+         "key": "net_irr_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tvpi",
+         "score": 1.0
+        },
+        {
+         "key": "nav_change_qoq_musd",
+         "score": 1.0
+        }
+       ]
+      },
+      "income-statement": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "revenue_2025",
+         "score": 1.0
+        },
+        {
+         "key": "operating_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "net_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "gross_margin_2025_pct",
+         "score": 1.0
+        },
+        {
+         "key": "eps_diluted_2024",
+         "score": 1.0
+        }
+       ]
+      },
+      "capital-call": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "fund_name",
+         "score": 1.0
+        },
+        {
+         "key": "notice_number",
+         "score": 1.0
+        },
+        {
+         "key": "call_amount_usd",
+         "score": 1.0
+        },
+        {
+         "key": "management_fees_usd",
+         "score": 1.0
+        },
+        {
+         "key": "due_date",
+         "score": 1.0
+        },
+        {
+         "key": "cumulative_called_pct",
+         "score": 1.0
+        }
+       ]
+      },
+      "rent-roll": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "occupancy_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tenant_count",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant_rent_share_pct",
+         "score": 1.0
+        },
+        {
+         "key": "earliest_expiry",
+         "score": 1.0
+        }
+       ]
+      },
+      "holdings-total": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_matches",
+         "score": 1.0
+        },
+        {
+         "key": "computed_total",
+         "score": 1.0
+        },
+        {
+         "key": "difference",
+         "score": 1.0
+        }
+       ]
+      },
+      "narrative-vs-table": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "inconsistent",
+         "score": 1.0
+        }
+       ]
+      },
+      "clean-distribution": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "components_sum_usd",
+         "score": 1.0
+        },
+        {
+         "key": "net_check_ok",
+         "score": 1.0
+        },
+        {
+         "key": "errors",
+         "score": 1.0
+        }
+       ]
+      },
+      "report-checklist": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "results",
+         "score": 1.0
+        }
+       ]
+      },
+      "trade-file-rules": {
+       "score": 0.0,
+       "error": "rver busy); trying next model | gemini/gemini-flash-latest: 503 (server busy); trying next model | gemini: 429 after retry; moving to next provider for this run"
+      },
+      "ownership-chain": {
+       "score": 0.0,
+       "error": "rver busy); trying next model | gemini/gemini-flash-latest: 503 (server busy); trying next model | gemini: 429 after retry; moving to next provider for this run"
+      },
+      "credit-metrics": {
+       "score": 0.0,
+       "error": "rver busy); trying next model | gemini/gemini-flash-latest: 503 (server busy); trying next model | gemini: 429 after retry; moving to next provider for this run"
+      },
+      "document-routing": {
+       "score": 0.0,
+       "error": "rver busy); trying next model | gemini/gemini-flash-latest: 503 (server busy); trying next model | gemini: 429 after retry; moving to next provider for this run"
+      }
+     },
+     "errors": 4,
+     "tokens": 9380,
+     "available": true,
+     "score": 66.7,
+     "by_type": {
+      "extraction": 100.0,
+      "quality": 80.0,
+      "research": 0.0,
+      "routing": 0.0
+     },
+     "median_latency_s": 44.29
+    },
+    {
+     "provider": "cerebras",
+     "model": "gpt-oss-120b",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 0.0,
+       "error": "every configured provider failed: cerebras: payment required (402) \u2014 free quota used up or billing needed; skipping provider"
+      }
+     },
+     "errors": 1,
+     "stopped": "model unavailable on the free tier",
+     "tokens": 0,
+     "available": false
+    }
+   ]
+  }
+ ]
+}
