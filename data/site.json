@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20T22:15:25+00:00",
+  "updated_at": "2026-11-21T02:03:34+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "An Anthropic mathematician published a proof of the 1859 Riemann hypothesis using Claude, presenting the work in a programming language that checks mathematical correctness. The solution has not yet been independently verified by the mathematics community or accepted by the Clay Mathematics Institute.",
@@ -117,6 +117,119 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Mistral has released a family of speech models and an agent software kit that handle speech transcription, reasoning, and voice generation together. Instead of combining separate tools from different providers, developers can run complete phone or web voice conversations through a single setup. The service is available via Mistral's hosted cloud or for installation on a company's own servers.",
+        "terms": [
+          {
+            "term": "speaker diarization",
+            "meaning": "The process of identifying and attributing different parts of an audio recording to specific speakers."
+          },
+          {
+            "term": "context biasing",
+            "meaning": "Providing custom terms or vocabulary to an audio model to improve how accurately it recognizes specific words."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "Voxtral Small Transcribe 3",
+          "benchmark": "AA-WER (Artificial Analysis)",
+          "score": "2.1%"
+        },
+        {
+          "model": "Voxtral Small Transcribe 3",
+          "benchmark": "FLEURS (auto-detect)",
+          "score": "4.0%"
+        },
+        {
+          "model": "Voxtral Small Transcribe 3",
+          "benchmark": "FLEURS (language specified)",
+          "score": "4.1%"
+        },
+        {
+          "model": "Voxtral Small Transcribe 3",
+          "benchmark": "cpWER",
+          "score": "18.4%"
+        },
+        {
+          "model": "Voxtral Mini Transcribe Realtime 3",
+          "benchmark": "FLEURS 35 (realtime at 240 ms)",
+          "score": "7.4%"
+        }
+      ],
+      "audiences": {
+        "builders": "Developers can build voice agents using a LiveKit-based SDK running over WebRTC or SIP with sub-second turn latency, priced at $0.04 per minute for the full pipeline.",
+        "business": "Mistral offers sovereign EU-hosted API endpoints and self-deployment options for enterprises building contact centers and virtual assistants under EU data regulations.",
+        "investors": "Mistral is undercutting OpenAI's Realtime API on pricing while expanding into real-time speech and telephony infrastructure."
+      },
+      "id": "afe5d96a9d46",
+      "headline": "Mistral releases Voxtral 3 speech models and voice agent SDK",
+      "summary": "Mistral AI released Voxtral 3, a family of speech-to-text and text-to-speech models alongside a voice agent SDK built on LiveKit. The system combines transcription, reasoning, and speech output into a streaming pipeline with sub-one-second turn latency priced at $0.04 per minute.",
+      "why_it_matters": "Voxtral 3 integrates the full voice agent stack into a single pipeline, offering European-hosted and self-deployed alternatives to providers like OpenAI and ElevenLabs.",
+      "category": "models",
+      "lab": "Mistral AI",
+      "model_name": "Voxtral 3",
+      "model_type": "Voice",
+      "tags": [
+        "Mistral AI",
+        "Voxtral 3",
+        "voice AI",
+        "speech-to-text",
+        "text-to-speech"
+      ],
+      "quotes": [],
+      "score": 8,
+      "url": "https://mistral.ai/news/voxtral-3",
+      "source_id": "mistral",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://mistral.ai/cms-media/api/media/file/hero-blog-voxtral.png",
+      "sources": [
+        {
+          "url": "https://mistral.ai/news/voxtral-3",
+          "publisher": "Mistral AI",
+          "title": "Research Voxtral 3 Build agents that can listen, reason, speak, and act, with Voxtral 3. October 20, 2026 By Mistral"
+        },
+        {
+          "url": "https://marktechpost.com/2026/10/20/mistral-voxtral-3-speech-models-voice-agent-sdk",
+          "publisher": "MarkTechPost",
+          "title": "Mistral AI Releases Voxtral 3: Speech-to-Text, TTS and a Voice Agent SDK"
+        },
+        {
+          "url": "https://techtimes.com/articles/329296/20261021/mistral-voxtral-3-cuts-full-voice-agent-pipeline-one-sdk-004-min-beats-whisper.htm",
+          "publisher": "techtimes",
+          "title": "Mistral Voxtral 3 Cuts Full Voice Agent Pipeline to One SDK at $0.04/min, Beats Whisper"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-21T02:03:34+00:00",
+      "created_at": "2026-11-21T02:03:34+00:00",
+      "breaking": true,
+      "thread": "t-a83814a46377",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "europe"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "Voxtral 3",
+      "trackers": [
+        "frontier-race"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "Mistral has launched a public preview of Mistral Large 4, a new multimodal AI model with 1 trillion total parameters. The model was trained in Europe on NVIDIA hardware and will have its weights released by the end of the month.",
@@ -5424,100 +5537,6 @@
       "cover": "Jensen Huang",
       "trackers": [],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Attackers uploaded two malicious versions of Microsoft's Agent Framework Python package to PyPI, which automatically executed a credential stealer upon Python startup while allowing legitimate application features to function normally. The malware targeted cloud credentials, environment secrets, and configuration files for services like Azure, AWS, and GitHub, sending the harvested data to an external endpoint. PyPI quarantined both malicious versions after they were active for less than an hour.",
-        "terms": [
-          {
-            "term": "PyPI",
-            "meaning": "A software repository for Python packages where developers publish and download open-source code libraries."
-          },
-          {
-            "term": "Supply chain attack",
-            "meaning": "A software development practice where bad actors inject malicious code into open-source libraries to infect downstream users."
-          },
-          {
-            "term": "Webhook",
-            "meaning": "A unique URL used to test and capture web requests or data payloads sent by applications or malware."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers using Microsoft's Agent Framework should check environments and CI/CD pipelines for compromised versions 1.26.1 and 1.26.2, rotate exposed credentials, and replace affected installations with clean version 1.26.0.",
-        "business": "Organizations utilizing the Agent Framework should investigate developer workstations, automated build systems, and cloud resources for potential credential exposure following the supply chain attack.",
-        "investors": "The security incident highlights ongoing software supply chain risks for popular open-source AI tooling packages, though financial impacts were not disclosed."
-      },
-      "id": "a1f50bca3921",
-      "headline": "Microsoft's Agent Framework PyPI package compromised with credential stealer",
-      "summary": "Hackers compromised Microsoft's official Agent Framework Python package on PyPI on November 17, 2026, publishing two malicious versions designed to steal cloud credentials and sensitive developer information. The affected package averages roughly 190,000 to 200,000 monthly downloads.",
-      "why_it_matters": "The incident exposes vulnerabilities in widely used open-source AI developer toolkits, potentially compromising cloud credentials and CI/CD pipelines across numerous developer environments.",
-      "category": "safety",
-      "lab": "Microsoft",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "microsoft",
-        "pypi",
-        "security",
-        "supply-chain-attack",
-        "agent-framework"
-      ],
-      "quotes": [],
-      "score": 9,
-      "url": "https://techmeme.com/261118/p56",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://www.bleepstatic.com/content/hl-images/2025/03/12/Microsoft-headpic.jpg",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261118/p56",
-          "publisher": "techmeme.com",
-          "title": "Hackers compromised Microsoft's Agent Framework Python package on PyPI, publishing two versions designed to steal cloud credentials and other information (Bill Toulas/BleepingComputer)"
-        },
-        {
-          "url": "https://bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials",
-          "publisher": "Bleeping Computer",
-          "title": "Microsoft’s Agent Framework PyPI package compromised to steal credentials"
-        },
-        {
-          "url": "https://securityweek.com/microsoft-agent-framework-releases-poisoned-with-credential-stealer",
-          "publisher": "SecurityWeek",
-          "title": "Microsoft Agent Framework Releases Poisoned With Credential Stealer"
-        },
-        {
-          "url": "https://infoworld.com/article/4250167/attackers-hijack-microsofts-agent-framework-package-to-steal-azure-and-ci-credentials-2.html",
-          "publisher": "InfoWorld",
-          "title": "Attackers hijack Microsoft’s agent-framework package to steal Azure and CI credentials"
-        }
-      ],
-      "research": {
-        "steps": 2,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-19T02:50:01+00:00",
-      "created_at": "2026-11-19T04:00:01+00:00",
-      "sectors": [
-        "software",
-        "cybersecurity"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 0
-      },
-      "cover": "Agent Framework",
-      "trackers": [
-        "agent-safety"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -5661,14 +5680,6 @@
   ],
   "podcasts": [
     {
-      "id": "6BxzNgQGj6E",
-      "title": "America’s AI Lead Over China Is 12 Hours Not 12 Months – Paul Christiano",
-      "channel": "Dwarkesh Patel",
-      "published": "2026-11-18T16:30:02+00:00",
-      "blurb": "Paul Christiano discusses AI timelines and the lead between America and China.",
-      "guest": "Paul Christiano, AI Researcher"
-    },
-    {
       "id": "WY0cdD4gNoQ",
       "title": "Meta’s Muse: How we launched the most successful consumer product this year | Mona Sarantakos",
       "channel": "Lenny's Podcast",
@@ -5707,6 +5718,14 @@
       "published": "2026-11-18T18:05:56+00:00",
       "blurb": "Sam Altman and Greg Brockman discuss keeping humans in control of AI.",
       "guest": "Sam Altman and Greg Brockman, OpenAI leadership"
+    },
+    {
+      "id": "tvl8E0BIrfA",
+      "title": "The AI That Escaped Its Sandbox to Cheat on a Test – Paul Christiano",
+      "channel": "Dwarkesh Patel",
+      "published": "2026-11-19T18:00:00+00:00",
+      "blurb": "Paul Christiano discusses AI safety and agent behavior in this podcast episode.",
+      "guest": "Paul Christiano"
     }
   ],
   "briefing": {
@@ -5923,31 +5942,17 @@
   },
   "threads": [
     {
-      "id": "t-1f4231610437",
-      "title": "Mistral Large 4 preview to public release",
-      "updated_at": "2026-11-20T22:15:25+00:00",
-      "stories": [
-        {
-          "id": "820bd24a41c4",
-          "headline": "Mistral launches public preview of Mistral Large 4",
-          "url": "https://mistral.ai/news/mistral-large-4",
-          "published_at": "2026-11-20T22:15:25+00:00",
-          "category": "models"
-        },
-        {
-          "id": "05c952b5cb3a",
-          "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms",
-          "published_at": "2026-10-31T06:13:40+00:00",
-          "category": "models"
-        }
-      ]
-    },
-    {
       "id": "t-a83814a46377",
       "title": "Mistral AI international expansion and research rollout",
-      "updated_at": "2026-11-20T22:15:25+00:00",
+      "updated_at": "2026-11-21T02:03:34+00:00",
       "stories": [
+        {
+          "id": "afe5d96a9d46",
+          "headline": "Mistral releases Voxtral 3 speech models and voice agent SDK",
+          "url": "https://mistral.ai/news/voxtral-3",
+          "published_at": "2026-11-21T02:03:34+00:00",
+          "category": "models"
+        },
         {
           "id": "820bd24a41c4",
           "headline": "Mistral launches public preview of Mistral Large 4",
@@ -5968,6 +5973,27 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/deutsche-telekom-invests-100-million-141833941.html",
           "published_at": "2026-11-19T06:17:00+00:00",
           "category": "industry"
+        }
+      ]
+    },
+    {
+      "id": "t-1f4231610437",
+      "title": "Mistral Large 4 preview to public release",
+      "updated_at": "2026-11-20T22:15:25+00:00",
+      "stories": [
+        {
+          "id": "820bd24a41c4",
+          "headline": "Mistral launches public preview of Mistral Large 4",
+          "url": "https://mistral.ai/news/mistral-large-4",
+          "published_at": "2026-11-20T22:15:25+00:00",
+          "category": "models"
+        },
+        {
+          "id": "05c952b5cb3a",
+          "headline": "Mistral AI releases Large 4, a 1‑trillion‑parameter model for cybersecurity",
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/mistral-ai-publicly-releases-large-4-targets-cybersecurity-users/articleshow/135390933.cms",
+          "published_at": "2026-10-31T06:13:40+00:00",
+          "category": "models"
         }
       ]
     },
@@ -6080,11 +6106,11 @@
   "labs": [
     {
       "lab": "Mistral AI",
-      "model": "Mistral Large 4",
-      "type": "Multimodal",
-      "date": "2026-11-20T22:15:25+00:00",
-      "story_id": "820bd24a41c4",
-      "url": "https://mistral.ai/news/mistral-large-4"
+      "model": "Voxtral 3",
+      "type": "Voice",
+      "date": "2026-11-21T02:03:34+00:00",
+      "story_id": "afe5d96a9d46",
+      "url": "https://mistral.ai/news/voxtral-3"
     },
     {
       "lab": "Thinking Machines Lab",
@@ -6326,8 +6352,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 580,
-    "model_releases_this_month": 69,
+    "stories_this_month": 581,
+    "model_releases_this_month": 70,
     "labs_tracked": 31
   }
 }

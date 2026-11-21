@@ -1,6 +1,119 @@
 [
   {
     "explainer": {
+      "what_it_means": "Mistral has released a family of speech models and an agent software kit that handle speech transcription, reasoning, and voice generation together. Instead of combining separate tools from different providers, developers can run complete phone or web voice conversations through a single setup. The service is available via Mistral's hosted cloud or for installation on a company's own servers.",
+      "terms": [
+        {
+          "term": "speaker diarization",
+          "meaning": "The process of identifying and attributing different parts of an audio recording to specific speakers."
+        },
+        {
+          "term": "context biasing",
+          "meaning": "Providing custom terms or vocabulary to an audio model to improve how accurately it recognizes specific words."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "Voxtral Small Transcribe 3",
+        "benchmark": "AA-WER (Artificial Analysis)",
+        "score": "2.1%"
+      },
+      {
+        "model": "Voxtral Small Transcribe 3",
+        "benchmark": "FLEURS (auto-detect)",
+        "score": "4.0%"
+      },
+      {
+        "model": "Voxtral Small Transcribe 3",
+        "benchmark": "FLEURS (language specified)",
+        "score": "4.1%"
+      },
+      {
+        "model": "Voxtral Small Transcribe 3",
+        "benchmark": "cpWER",
+        "score": "18.4%"
+      },
+      {
+        "model": "Voxtral Mini Transcribe Realtime 3",
+        "benchmark": "FLEURS 35 (realtime at 240 ms)",
+        "score": "7.4%"
+      }
+    ],
+    "audiences": {
+      "builders": "Developers can build voice agents using a LiveKit-based SDK running over WebRTC or SIP with sub-second turn latency, priced at $0.04 per minute for the full pipeline.",
+      "business": "Mistral offers sovereign EU-hosted API endpoints and self-deployment options for enterprises building contact centers and virtual assistants under EU data regulations.",
+      "investors": "Mistral is undercutting OpenAI's Realtime API on pricing while expanding into real-time speech and telephony infrastructure."
+    },
+    "id": "afe5d96a9d46",
+    "headline": "Mistral releases Voxtral 3 speech models and voice agent SDK",
+    "summary": "Mistral AI released Voxtral 3, a family of speech-to-text and text-to-speech models alongside a voice agent SDK built on LiveKit. The system combines transcription, reasoning, and speech output into a streaming pipeline with sub-one-second turn latency priced at $0.04 per minute.",
+    "why_it_matters": "Voxtral 3 integrates the full voice agent stack into a single pipeline, offering European-hosted and self-deployed alternatives to providers like OpenAI and ElevenLabs.",
+    "category": "models",
+    "lab": "Mistral AI",
+    "model_name": "Voxtral 3",
+    "model_type": "Voice",
+    "tags": [
+      "Mistral AI",
+      "Voxtral 3",
+      "voice AI",
+      "speech-to-text",
+      "text-to-speech"
+    ],
+    "quotes": [],
+    "score": 8,
+    "url": "https://mistral.ai/news/voxtral-3",
+    "source_id": "mistral",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://mistral.ai/cms-media/api/media/file/hero-blog-voxtral.png",
+    "sources": [
+      {
+        "url": "https://mistral.ai/news/voxtral-3",
+        "publisher": "Mistral AI",
+        "title": "Research Voxtral 3 Build agents that can listen, reason, speak, and act, with Voxtral 3. October 20, 2026 By Mistral"
+      },
+      {
+        "url": "https://marktechpost.com/2026/10/20/mistral-voxtral-3-speech-models-voice-agent-sdk",
+        "publisher": "MarkTechPost",
+        "title": "Mistral AI Releases Voxtral 3: Speech-to-Text, TTS and a Voice Agent SDK"
+      },
+      {
+        "url": "https://techtimes.com/articles/329296/20261021/mistral-voxtral-3-cuts-full-voice-agent-pipeline-one-sdk-004-min-beats-whisper.htm",
+        "publisher": "techtimes",
+        "title": "Mistral Voxtral 3 Cuts Full Voice Agent Pipeline to One SDK at $0.04/min, Beats Whisper"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-21T02:03:34+00:00",
+    "created_at": "2026-11-21T02:03:34+00:00",
+    "breaking": true,
+    "thread": "t-a83814a46377",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "europe"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 2
+    },
+    "cover": "Voxtral 3",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Mistral has launched a public preview of Mistral Large 4, a new multimodal AI model with 1 trillion total parameters. The model was trained in Europe on NVIDIA hardware and will have its weights released by the end of the month.",
       "terms": [
         {
@@ -70812,71 +70925,6 @@
       "builders": 2,
       "business": 0,
       "investors": 0
-    }
-  },
-  {
-    "id": "afe5d96a9d46",
-    "headline": "Mistral AI releases Voxtral 3 voice agent SDK with multilingual speech models",
-    "summary": "Mistral AI announced the Voxtral 3 family of speech-to-text and text-to-speech models along with a voice agent SDK for real‑time, multi‑step conversations in over 50 languages. The models and SDK are available through Mistral’s EU‑hosted API or for self‑deployment, offering data sovereignty and low‑latency interactions for contact‑center agents and virtual assistants.",
-    "why_it_matters": "It provides developers with tools to build voice agents that can listen, reason, speak and act across many languages, lowering the barrier to deploying sophisticated conversational AI.",
-    "category": "models",
-    "lab": "Mistral AI",
-    "model_name": "Voxtral 3",
-    "model_type": "Voice",
-    "tags": [],
-    "quotes": [],
-    "score": 7,
-    "url": "https://mistral.ai/news/voxtral-3",
-    "sources": [
-      {
-        "url": "https://mistral.ai/news/voxtral-3",
-        "publisher": "Mistral AI",
-        "title": "Research Voxtral 3 Build agents that can listen, reason, speak, and act, with Voxtral 3. October 20, 2026 By Mistral"
-      }
-    ],
-    "published_at": "2026-10-21T17:16:05+00:00",
-    "created_at": "2026-10-21T17:16:05+00:00",
-    "image": "https://mistral.ai/cms-media/api/media/file/hero-blog-voxtral.png",
-    "sectors": [
-      "software",
-      "telecom"
-    ],
-    "regions": [
-      "europe"
-    ],
-    "deal": null,
-    "cover": "Voxtral 3",
-    "explainer": {
-      "what_it_means": "Mistral's new Voxtral 3 lets companies add voice assistants that can understand and speak in more than 50 languages, handling multi‑step tasks instantly. The models can be accessed via Mistral’s EU‑hosted API or installed on a company’s own servers, so the audio data stays under the organization’s control.",
-      "terms": [
-        {
-          "term": "speech-to-text",
-          "meaning": "Turns spoken words into written text."
-        },
-        {
-          "term": "text-to-speech",
-          "meaning": "Converts written text into spoken audio."
-        },
-        {
-          "term": "voice agent SDK",
-          "meaning": "A set of tools developers use to build voice‑based applications that can listen, think, and speak."
-        }
-      ],
-      "watch_next": []
-    },
-    "trackers": [
-      "frontier-race"
-    ],
-    "audiences": {
-      "builders": "Mistral releases Voxtral 3 SDK with multilingual speech models for real‑time voice agents.",
-      "business": "Contact‑center operators can deploy low‑latency, data‑sovereign voice AI across 50+ languages.",
-      "investors": "Expands Mistral’s product portfolio, potentially boosting market share in voice AI."
-    },
-    "photo_local": true,
-    "relevance": {
-      "builders": 3,
-      "business": 2,
-      "investors": 2
     }
   },
   {
