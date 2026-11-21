@@ -8,7 +8,7 @@ export function tokens(text) {
 }
 
 function docText(d) {
-  return `${d.h} ${d.h} ${d.l || ""} ${d.s || ""} ${d.w || ""} ${(d.t || []).join(" ")} ${d.a || ""} ${d.k || ""}`;
+  return `${d.h} ${d.h} ${d.l || ""} ${d.s || ""} ${d.w || ""} ${(d.t || []).join(" ")} ${d.a || ""} ${d.k || ""} ${d.x || ""}`;
 }
 
 export function buildIndex(docs) {

@@ -115,6 +115,13 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     tracker_defs = load_trackers()
     tracker_titles = {t["id"]: t["title"] for t in tracker_defs}
     by_id = {s["id"]: s for s in stories}
+    # reworded repeats of a story: their pages point to the original, and they stay out of every listing
+    from .text import duplicate_ids
+    from . import dpa as dpa_mod
+    dups = {d: o for d, o in duplicate_ids(stories).items() if o in by_id}
+    lens = dpa_mod.site_view([s for s in stories if s["id"] not in dups], data, now)
+    radar_of = {sid: e for e in lens["radar"] for sid in e.get("evidence", [])}
+    audits = lens["factcheck"].get("audits") or {}
 
     if out.exists():
         shutil.rmtree(out)
@@ -137,6 +144,14 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     # ---------------------------------------------------------------- story pages
     urls = [base]
     for s in stories:
+        if s["id"] in dups:
+            target = f"{base}story/{dups[s['id']]}/"
+            page_dir = out / "story" / s["id"]
+            page_dir.mkdir(parents=True, exist_ok=True)
+            (page_dir / "index.html").write_text(
+                f'<!doctype html><meta charset="utf-8"><title>Frontier Wire</title><link rel="canonical" href="{target}">'
+                f'<meta http-equiv="refresh" content="0; url=../{dups[s["id"]]}/"><a href="../{dups[s["id"]]}/">This story has moved.</a>')
+            continue
         og_png = out / "og" / f"{s['id']}.png"
         story_card(s, og_png)
         tid = s.get("thread")
@@ -165,6 +180,10 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
             cover_json=json.dumps({k: s.get(k) for k in ("id", "headline", "category", "lab", "model_name", "cover")}, ensure_ascii=False), jsonld=jsonld, cat_name=TAG.get(s["category"], s["category"]),
             topic=TOPIC_OF.get(s["category"], "all"), lab_slug=slug(s.get("lab", "")), published_human=human_date(s["published_at"]),
             image_credit=credit, thread=thread,
+            lens_box=({**lens["impact"][s["id"]], "cap_names": [lens["caps"][c]["short"] for c in lens["impact"][s["id"]].get("capabilities", []) if c in lens["caps"]]}
+                      if s["id"] in lens["impact"] else None),
+            lens_radar=radar_of.get(s["id"]), audit=audits.get(s["id"]) if (audits.get(s["id"]) or {}).get("claims") else None,
+            correction=lens["review"]["corrections"].get(s["id"], ""),
             tracker_links=[{"id": t, "title": tracker_titles[t]} for t in (s.get("trackers") or []) if t in tracker_titles],
             related=[{**r, "when": short_date(r["published_at"]), "cat_name": TAG.get(r["category"], ""),
                       "cover_json": json.dumps({k: r.get(k) for k in ("id", "headline", "category", "lab", "model_name", "cover")}, ensure_ascii=False)}
@@ -174,6 +193,8 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
         page.parent.mkdir(parents=True, exist_ok=True)
         page.write_text(html)
         urls.append(canonical)
+
+    stories = [s for s in stories if s["id"] not in dups]
 
     # ---------------------------------------------------------------- lab pages
     labs = sorted(set(cfg.tracked_labs) | {s["lab"] for s in stories if s.get("lab")})
@@ -391,7 +412,9 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     # Ask the Wire: search index of every story, and the Ask page
     search_docs = [{"id": s["id"], "h": s["headline"], "s": s["summary"], "w": s.get("why_it_matters", ""), "d": s["published_at"][:10],
                     "l": s.get("lab", ""), "t": s.get("tags") or [], "a": " ".join((s.get("audiences") or {}).values()),
-                    "k": " ".join([tracker_titles.get(t, "") for t in s.get("trackers") or []] + [SECTORS.get(x, "") for x in s.get("sectors") or []])}
+                    "k": " ".join([tracker_titles.get(t, "") for t in s.get("trackers") or []] + [SECTORS.get(x, "") for x in s.get("sectors") or []]),
+                    **({"x": lens["impact"][s["id"]]["so_what"], "m": lens["impact"][s["id"]]["move"]}
+                       if lens["impact"].get(s["id"], {}).get("so_what") else {})}
                    for s in newest_first]
     (out / "data" / "search.json").write_text(json.dumps(search_docs, ensure_ascii=False))
     page("suggestions", "suggestions.html", title="Suggestions: help shape Frontier Wire | Frontier Wire",
@@ -407,6 +430,10 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
          canonical=f"{base}ask/", og_image=f"{base}og/home.png", api=site.get("api_url", ""), count=len(stories),
          examples=["What happened with DeepSeek this month?", "Where does AI regulation stand?", "Which labs launched new models this week?",
                    "What's happening with AI in India?", "Which AI companies raised money recently?"])
+
+    # The intelligence pages: For DPA, AI Radar, pilot proposals, task bench, System, agent API
+    from .build_intel import build_intel
+    dpa_strip = build_intel(out, env, common, base, cfg, stories, by_id, lens, page, site, now)
 
     # Daily self-check ("How we're doing")
     hist = audit_state.get("history", [])
@@ -511,6 +538,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
                                {k: v["video"] for k, v in by_id.items() if isinstance(v.get("video"), dict)})
     index = (out / "index.html").read_text()
     index = index.replace("<!--RECAP-->", recap_strip)
+    index = index.replace("<!--DPA-->", dpa_strip)
     index = index.replace("<!--META-->", meta)
     index = index.replace("<!--NEWSLETTER-->", env.get_template("_newsletter.html").render(**common))
     index = index.replace("<!--HEADER-->", env.get_template("_header.html").render(**common, root=""))

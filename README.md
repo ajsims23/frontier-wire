@@ -84,6 +84,23 @@ motion-graphics video: `python -m agent recap draft | render | upload` (see `age
 - The deploy workflow copies the last 3 days' videos (and 30 days' posters and GIFs) into the site at `/videos/YYYY-MM-DD/`.
 - `/videos/` is the archive; older videos download from Releases. `/videos/feed.xml` has one item per day for the subscriber email.
 
+## The intelligence layer: Frontier Wire for DPA
+The newsroom reports what happened in AI. The intelligence layer decides what it means for DPA and what to do about it.
+Everything below runs on the same free AI tiers, with its own request caps, and **proposes only**: people decide.
+
+| Page | What it is | Made by |
+|---|---|---|
+| `/dpa/` | The DPA lens: this week's three calls, what to act on (with a first test), briefings by role | `agent/dpa.py` (workflow **DPA lens**, every 3 hours) |
+| `/radar/` | The DPA AI Radar: Adopt / Trial / Assess / Hold, evidence and a log of every move. Only a person can approve Adopt | `agent/dpa.py` |
+| `/poc/` | One-page pilot proposals for Trial items, for an AI Champion to approve or reject | `agent/dpa.py` |
+| `/bench/` | DPA Task Bench: every free model tested weekly on 12 synthetic DPA-style document tasks, scored against known answers | `agent/bench.py` (workflow **DPA task bench**) |
+| `/system/` | How the agent works, from its own run logs: pipeline, drop reasons, guardrails, verification, the daily accuracy audit and corrections log | `agent/system.py`, `agent/factcheck.py` |
+| `/api/` | MCP server (`<API address>/mcp`) and JSON API (`api/v1/*.json`) so any AI agent can use Frontier Wire | `worker/src/mcp.js`, `agent/build_intel.py` |
+
+- **What the agent knows about DPA:** `config/dpa.yaml` (public service lines, capabilities and roles only; never client names or data).
+- **Human decisions:** `config/dpa_review.yaml`: approve Adopt on the radar, override a ring, approve or reject a pilot, resolve a fact-check flag.
+- **Duplicates:** reworded repeats of a story already published are dropped before publishing (and old ones redirect to the original).
+
 ## Free-tier safety
 - Caps of 40 AI requests per run, 300 per day and 700k tokens per day keep you well inside free limits (`config/settings.yaml` → `limits`).
 - Provider fallback: Cerebras → Groq → OpenRouter → Gemini. Rate-limited or retired models are skipped automatically.

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block main %}
+<section class="shell lab-page desk-page dl-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><a href="{{ root }}dpa/">For {{ org.name }}</a><span aria-hidden="true">/</span><span>AI Radar</span></nav>
+  <header class="lab-head">
+    <span class="dl-kicker">Kept by the intelligence agent{% if updated %} · updated {{ updated }}{% endif %}</span>
+    <h1>The {{ org.name }} AI Radar</h1>
+    <p class="desk-intro">AI models, tools, techniques and rules, placed for {{ org.name }}'s own work. The agent places each one from the evidence in our stories and logs a reason for every move. <b>Only a person can move something into Adopt</b>; the agent can only propose it.</p>
+    <dl class="lab-stats">
+      {% for r in rings %}<div><dt>{{ r.name }}</dt><dd>{{ r.rows|length }}</dd></div>{% endfor %}
+      <div><dt>Moves logged</dt><dd>{{ moves|length }}</dd></div>
+    </dl>
+  </header>
+
+  {% if svg %}
+  <div class="dl-radar-wrap">
+    {{ m.radar_pic(svg, root) }}
+    <div class="dl-legend">
+      <h2>Quadrants</h2>
+      <ul>{% for q in quads %}<li><span class="dot" style="background: {{ q.color }}"></span><span class="strong">{{ q.name }}</span><span class="muted">{{ q.n }}</span></li>{% endfor %}</ul>
+      <h2>Rings</h2>
+      <dl>{% for r in lens.rings %}<div><dt>{{ m.ring(r.id) }}</dt><dd>{{ r.about }}</dd></div>{% endfor %}</dl>
+      <p class="muted">A dashed outline marks an item the agent has proposed for Adopt, waiting for a person.</p>
+    </div>
+  </div>
+  {% else %}
+  <p class="empty">The radar fills in as the agent assesses new stories (every three hours).</p>
+  {% endif %}
+
+  {% for r in rings %}{% if r.rows %}
+  <section class="block" aria-labelledby="ring-{{ r.id }}">
+    <div class="block-head"><h2 id="ring-{{ r.id }}">{{ m.ring(r.id) }} {{ r.rows|length }} item{{ '' if r.rows|length == 1 else 's' }}</h2><p>{{ r.about }}</p></div>
+    <ol class="dl-entries">
+      {% for e in r.rows %}
+      <li class="dl-entry" id="r-{{ e.key }}">
+        <div class="dl-entry-top"><span class="dl-n" style="background: {{ {'models': 'var(--models)', 'tools': 'var(--research)', 'techniques': 'var(--industry)', 'policy': 'var(--policy)'}[e.quadrant] }}">{{ e.n }}</span>
+          <h3>{{ e.name }}</h3>
+          {% if e.proposed %}<span class="dl-st st-awaiting">Proposed for Adopt · awaiting a person</span>{% endif %}
+          {% if e.human %}<span class="dl-st st-approved">Set by a person</span>{% endif %}
+          {% if e.stale %}<span class="pill">No new evidence in 45 days</span>{% endif %}
+        </div>
+        <p class="dl-entry-meta"><span class="pill">{{ e.cap_name }}</span><span class="muted">{{ {'models': 'Model', 'tools': 'Tool or platform', 'techniques': 'Technique', 'policy': 'Risk or policy'}[e.quadrant] }} · on the radar since {{ short(e.first_seen) }}{% if e.moved %} · last moved {{ short(e.moved) }}{% endif %}</span></p>
+        <p class="dl-why">{{ e.rationale }}</p>
+        <div class="dl-ev"><span class="muted">Evidence</span>{% for x in e.evidence_rows %}<a href="{{ root }}story/{{ x.id }}/">{{ x.headline|truncate(70, True, '…') }}</a>{% endfor %}</div>
+        {% if e.history|length > 1 %}<details class="dl-hist"><summary>History ({{ e.history|length }} entries)</summary><ul>{% for h in e.history|reverse %}<li><span class="when">{{ short(h.date) }}</span>{% if h.from %}{{ h.from|capitalize }} → {% endif %}{{ h.to|capitalize }}. {{ h.why }}</li>{% endfor %}</ul></details>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}{% endfor %}
+
+  <section class="block" aria-labelledby="mv-h">
+    <div class="block-head"><h2 id="mv-h">Every move, logged</h2><p>New entries and ring changes, newest first, with the agent's reason.</p></div>
+    {% if moves %}<ul class="next-list">{% for x in moves %}<li><span class="when">{{ x.when }}</span><a class="strong" href="#r-{{ x.key }}">{{ x.name }}</a><span>{% if x.from %}{{ m.ring(x.from) }} → {% else %}New on {% endif %}{{ m.ring(x.to) }}</span><span class="muted">{{ x.why }}</span></li>{% endfor %}</ul>
+    {% else %}<p class="empty">No moves yet.</p>{% endif %}
+  </section>
+
+  <section class="block" aria-labelledby="hw-h">
+    <div class="block-head"><h2 id="hw-h">How the radar is kept</h2></div>
+    <ol class="dl-steps">
+      <li>Every story is assessed for {{ org.name }}. When it is about a specific model, tool, technique or rule that matters to our work (relevance 2 or 3), that item becomes a radar candidate. Names must appear in the story itself.</li>
+      <li>Every three hours the agent reviews candidates with new evidence: new items get a ring; existing items move only when the new evidence clearly justifies it, and the reason is logged.</li>
+      <li>Adopt is reserved for people. When the agent thinks something is ready, it stays on Trial marked "proposed for Adopt" until a person approves it. People can also override any ring.</li>
+      <li>Trial items get a <a href="{{ root }}poc/">pilot proposal</a>; models are tested on the <a href="{{ root }}bench/">task bench</a>. The radar is also available to other AI agents through our <a href="{{ root }}api/">MCP server and JSON API</a>.</li>
+    </ol>
+  </section>
+</section>
+{% endblock %}

@@ -2,14 +2,14 @@
   <div class="shell u-row">
     <span class="u-date" id="u-date"></span>
     <span class="u-status"><span class="pulse" aria-hidden="true"></span><span id="updated">AI news, every story checked against its sources</span></span>
-    <span class="u-links">{% if newsletter %}<a href="#nl-h">Newsletter</a>{% endif %}<a href="{{ root }}weekly/">Weekly deep dive</a><a href="{{ root }}suggestions/">Suggest an idea</a><a href="{{ root }}data/feed.xml">RSS</a></span>
+    <span class="u-links"><a href="{{ root }}system/">How the agent works</a><a href="{{ root }}api/">Connect your AI</a>{% if newsletter %}<a href="#nl-h">Newsletter</a>{% endif %}<a href="{{ root }}weekly/">Weekly deep dive</a><a href="{{ root }}suggestions/">Suggest an idea</a><a href="{{ root }}data/feed.xml">RSS</a></span>
   </div>
 </div>
 <header class="top">
   <div class="shell top-row">
     <a class="mark" href="{{ root }}" aria-label="Frontier Wire home">
       <svg aria-hidden="true" width="28" height="28" viewBox="0 0 26 26"><rect x="2" y="10" width="3.4" height="13" rx="1.7" fill="var(--models)"/><rect x="8.2" y="3" width="3.4" height="20" rx="1.7" fill="var(--research)"/><rect x="14.4" y="13" width="3.4" height="10" rx="1.7" fill="var(--policy)"/><rect x="20.6" y="7" width="3.4" height="16" rx="1.7" fill="var(--industry)"/></svg>
-      <span class="mark-text"><span class="mark-name">Frontier Wire</span><span class="mark-tag">The AI newsroom</span></span>
+      <span class="mark-text"><span class="mark-name">Frontier Wire</span><span class="mark-tag">The AI intelligence agent</span></span>
     </a>
     <form class="search" role="search" action="{{ root }}" method="get">
       <label class="sr" for="q">Search stories</label>
@@ -29,6 +29,8 @@
   <nav class="secnav" aria-label="Sections">
     <div class="shell secnav-row">
       <a href="{{ root }}" data-nav="home">Top stories</a>
+      <a class="nav-dpa" href="{{ root }}dpa/">For DPA</a>
+      <a href="{{ root }}radar/">AI Radar</a>
       <a href="{{ root }}#stories" data-topic="all">Latest</a>
       <a href="{{ root }}?topic=models#stories" data-topic="models">Models</a>
       <a href="{{ root }}?topic=research#stories" data-topic="research">Research</a>

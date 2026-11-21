@@ -116,7 +116,8 @@ Rules:
   ("revolutionary", "game-changing").
 - headline: plain and specific, max 90 characters, sentence case.
 - summary: at most two sentences: what happened, who, key number or detail.
-- why_it_matters: one sentence on the significance for people following AI.
+- why_it_matters: one sentence on the significance for people following AI. It must add something the summary
+  doesn't say (the consequence, the comparison, who is affected); never restate the summary.
 - quotes: up to two, each at most 40 words, only if a named person's words appear in a source.
   Pick the most telling sentence rather than a whole paragraph. Copy the words EXACTLY as
   they appear in that source, character for character, and give that source's URL. For a person's

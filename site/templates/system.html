@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block main %}
+<section class="shell lab-page desk-page dl-page sys-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>How the agent works</span></nav>
+  <header class="lab-head">
+    <span class="dl-kicker"><span class="pulse" aria-hidden="true"></span>Live, from the agent's own run logs · last {{ st.days }} days</span>
+    <h1>How the agent works</h1>
+    <p class="desk-intro">Frontier Wire is not a feed. It is a set of AI agents that read, judge, verify, write, check and correct, every three hours, on free infrastructure, with people deciding anything that changes the system. Every number on this page is computed from the agent's own logs.</p>
+    <dl class="lab-stats">
+      <div><dt>Agent runs</dt><dd>{{ st.runs }} <span class="muted">({{ st.breaking_runs }} breaking-news checks)</span></dd></div>
+      <div><dt>Items read</dt><dd>{{ "{:,}".format(st.scanned) }}</dd></div>
+      <div><dt>Stories published</dt><dd>{{ st.written }}</dd></div>
+      <div><dt>Median time, source to story</dt><dd>{% if st.latency_h is not none %}{{ st.latency_h }} h{% else %}—{% endif %}</dd></div>
+      <div><dt>Audited accuracy</dt><dd><a href="#accuracy">{% if fc.rate is not none %}{{ fc.rate }}%{% else %}Starting{% endif %}</a></dd></div>
+      <div><dt>AI cost</dt><dd>₹0 <span class="muted">free tiers only</span></dd></div>
+    </dl>
+  </header>
+
+  <section class="block" aria-labelledby="pipe-h">
+    <div class="block-head"><h2 id="pipe-h">The pipeline, this week</h2><p>From everything the agent read to what it published. Most of its work is saying no.</p></div>
+    <ol class="sys-flow">
+      <li><span class="n">{{ st.sources }}<small>+{{ st.auto_sources }}</small></span><span class="l">Sources watched</span><span class="d">Lab blogs, papers, Hugging Face, news search, Hacker News, Bluesky. Outlets it missed stories from are added automatically.</span></li>
+      <li><span class="n">{{ "{:,}".format(st.fresh) }}</span><span class="l">New items</span><span class="d">Seen for the first time, inside the 36-hour window.</span></li>
+      <li><span class="n">{{ "{:,}".format(st.judged) }}</span><span class="l">Judged by the editor</span><span class="d">Scored 1–10 for significance, checked for duplicates and AI relevance. An editor-in-chief agent sets each run's priorities ({{ st.plans }} plans, {{ st.searches }} extra searches).</span></li>
+      <li><span class="n">{{ st.kept }}</span><span class="l">Passed the bar</span><span class="d">Score 5 or more, genuinely news, core AI.</span></li>
+      <li><span class="n">{{ st.written }}</span><span class="l">Verified and written</span><span class="d">An official source or two independent outlets. A research agent investigated {{ st.research.investigated }} stories with {{ st.research.tool_calls }} tool calls.</span></li>
+      <li><span class="n">{{ lens.stats.assessed30 }}</span><span class="l">Assessed for DPA</span><span class="d">30 days: what each means for DPA, and what to do. <a href="{{ root }}dpa/">The DPA lens</a></span></li>
+    </ol>
+  </section>
+
+  <div class="desk-charts">
+    {{ m.hbars(drop_bars, "Why items were dropped", "{:,}".format(st.dropped) ~ " items, last " ~ st.days ~ " days") }}
+    <figure class="news-chart">
+      <figcaption><span class="nc-title">Guardrails that fired</span><span class="muted">Last {{ st.days }} days</span></figcaption>
+      <ul class="sys-guards">
+        <li><span class="n">{{ st.quotes_removed }}</span><span>quotes removed because they weren't the speaker's exact words in the source</span></li>
+        <li><span class="n">{{ st.benchmarks_removed }}</span><span>benchmark figures removed because the source didn't state them</span></li>
+        <li><span class="n">{{ st.made_up_ids }}</span><span>made-up story ids from the editor model caught and ignored</span></li>
+        <li><span class="n">{{ st.fallbacks }}</span><span>times the agent routed around a busy or rate-limited model</span></li>
+      </ul>
+    </figure>
+  </div>
+
+  <section class="block" aria-labelledby="ver-h">
+    <div class="block-head"><h2 id="ver-h">How a story gets verified</h2><p>{{ st.stories }} stories published in the last {{ st.days }} days.</p></div>
+    <dl class="lab-stats">
+      <div><dt>From an official source</dt><dd>{{ st.official_pct }}%</dd></div>
+      <div><dt>Two or more independent outlets</dt><dd>{{ st.two_pct }}%</dd></div>
+      <div><dt>Confirmed by the research agent</dt><dd>{{ st.researched }}</dd></div>
+      <div><dt>Published within 6 hours of the source</dt><dd>{% if st.fast_pct is not none %}{{ st.fast_pct }}%{% else %}—{% endif %}</dd></div>
+      <div><dt>Daily coverage check (7 days)</dt><dd><a href="{{ root }}audit/">{% if st.coverage7 is not none %}{{ st.coverage7 }}%{% else %}—{% endif %}</a></dd></div>
+    </dl>
+  </section>
+
+  <section class="block" id="accuracy" aria-labelledby="acc-h">
+    <div class="block-head"><h2 id="acc-h">Accuracy audit</h2><p>Every day a second AI model, from a different provider than the writer where possible, re-reads the sources of a sample of published stories (half the biggest, half at random) and checks every factual claim.</p></div>
+    {% if fc.claims %}
+    <dl class="lab-stats">
+      <div><dt>Claims supported (partly right counts half)</dt><dd>{{ fc.rate }}%</dd></div>
+      <div><dt>Fully supported</dt><dd>{{ fc.strict }}%</dd></div>
+      <div><dt>Claims checked</dt><dd>{{ fc.claims }} <span class="muted">in {{ fc.stories }} stories since {{ short(fc.since) }}</span></dd></div>
+      <div><dt>Stories with no issue</dt><dd>{{ fc.accurate_stories }} of {{ fc.stories }}</dd></div>
+      <div><dt>Flagged for correction</dt><dd>{{ fc.flagged_stories }}</dd></div>
+    </dl>
+    <h3 class="bn-h3">Corrections log</h3>
+    {% if fc.log %}
+    <div class="table-box"><table class="deals">
+      <thead><tr><th scope="col">Checked</th><th scope="col">Story</th><th scope="col">Claim</th><th scope="col">Finding</th><th scope="col">Status</th></tr></thead>
+      <tbody>{% for x in fc.log %}<tr><td class="nowrap">{{ short(x.date) }}</td><td>{% if x.live %}<a href="{{ root }}story/{{ x.story_id }}/">{{ x.headline|truncate(60, True, '…') }}</a>{% else %}{{ x.headline|truncate(60, True, '…') }}{% endif %}</td>
+        <td>{{ x.claim }}</td><td><span class="fc fc-{{ x.verdict }}">{{ {"partly": "Partly right", "unsupported": "Not in the sources", "contradicted": "Contradicted"}[x.verdict] }}</span> {{ x.note }}</td>
+        <td>{% if x.resolution %}<span class="dl-st st-approved">Resolved</span> {{ x.resolution }}{% else %}<span class="dl-st st-awaiting">Flagged for the editor</span>{% endif %}</td></tr>{% endfor %}</tbody>
+    </table></div>
+    {% else %}<p class="empty">Nothing flagged so far.</p>{% endif %}
+    {% else %}
+    <p class="empty">The first audit runs within a day. Its results, including anything it gets wrong, appear here.</p>
+    {% endif %}
+  </section>
+
+  <section class="block" aria-labelledby="free-h">
+    <div class="block-head"><h2 id="free-h">Running on free tiers</h2><p>AI requests per day, against the agent's own cap of {{ st.cap }}. Providers this week: {{ st.providers|join(", ") }}. Median run: {{ st.run_minutes }} minutes.</p></div>
+    <figure class="sys-usage" aria-label="AI requests per day">
+      {% for u in st.usage %}<div class="col" title="{{ u.day }}: {{ u.total }} requests ({{ u.newsroom }} newsroom, {{ u.dpa }} DPA lens, {{ u.bench }} bench)">
+        <span class="bar"><span class="seg nr" style="height: {{ (100 * u.newsroom / usage_max)|round(1) }}%"></span><span class="seg dp" style="height: {{ (100 * u.dpa / usage_max)|round(1) }}%"></span><span class="seg bn" style="height: {{ (100 * u.bench / usage_max)|round(1) }}%"></span></span>
+        <span class="d">{{ short(u.day) }}</span></div>{% endfor %}
+      <span class="cap" style="bottom: calc({{ (100 * st.cap / usage_max)|round(1) }}% * .86 + 26px)">cap {{ st.cap }}</span>
+    </figure>
+    <p class="muted sys-key"><span class="k nr"></span>Newsroom <span class="k dp"></span>DPA lens <span class="k bn"></span>Task bench. When a provider is busy or out of quota, the agent moves to the next one; when a model is retired, it finds the provider's current models.</p>
+  </section>
+
+  <section class="block" aria-labelledby="arch-h">
+    <div class="block-head"><h2 id="arch-h">The agents</h2><p>Each is a step with its own job, tools and checks.</p></div>
+    <ol class="sys-agents">
+      <li><b>Gatherer</b><span>Reads {{ st.sources }} sources every 3 hours, and the labs' own channels every 15 minutes for breaking news.</span></li>
+      <li><b>Editor-in-chief</b><span>Plans each run: the most important threads, under-covered areas, and its own extra searches.</span></li>
+      <li><b>Editor</b><span>Scores every item, merges coverage of the same event, drops non-AI news and duplicates.</span></li>
+      <li><b>Research agent</b><span>Uses tools (news search, reading pages) to confirm stories that lack an official source.</span></li>
+      <li><b>Writer and checker</b><span>Writes from the sources only. Quotes must match word for word; benchmark figures must appear in the source.</span></li>
+      <li><b>Self-check</b><span>Daily: what did the wider press cover that we missed? Writes up misses, adds outlets, adds lessons to the editor's instructions.</span></li>
+      <li><b>DPA lens</b><span>Assesses every story for DPA, keeps the AI Radar, writes the weekly calls and drafts pilot proposals.</span></li>
+      <li><b>Fact-checker</b><span>A second model audits a daily sample of stories claim by claim.</span></li>
+      <li><b>Task bench</b><span>Tests every free model on DPA-style document tasks, weekly.</span></li>
+      <li><b>Analyst and MCP server</b><span>Answers questions from the archive with citations, and serves the archive, radar and bench to other AI agents. <a href="{{ root }}api/">Connect yours</a></span></li>
+    </ol>
+  </section>
+
+  <section class="block" aria-labelledby="hum-h">
+    <div class="block-head"><h2 id="hum-h">What a person decides</h2><p>The agent proposes. These need a person.</p></div>
+    <div class="desk-charts even">
+      <ul class="dl-steps">
+        <li>Any change to the agent itself: sources, thresholds, prompts. The agent files a daily self-review with suggestions; nothing changes until a person approves it.</li>
+        <li>Moving anything into Adopt on the AI Radar, or overriding a ring.</li>
+        <li>Approving or rejecting a pilot proposal.</li>
+        <li>Resolving anything the accuracy audit flags.</li>
+        <li>Sending the daily video recap to subscribers.</li>
+      </ul>
+      {% if st.suggestions %}
+      <figure class="news-chart">
+        <figcaption><span class="nc-title">The agent's latest self-review</span><span class="muted">{{ short(st.review_date) if st.review_date else "" }} · awaiting a person</span></figcaption>
+        <ul class="sys-review">{% for s in st.suggestions %}<li><span class="pill">{{ s.kind }}</span> {{ s.text }}</li>{% endfor %}</ul>
+      </figure>
+      {% endif %}
+    </div>
+  </section>
+</section>
+{% endblock %}

@@ -143,3 +143,50 @@ def paper_figure(fetcher, paper_id: str) -> str | None:
         if url.startswith("https://arxiv.org/"):
             return url
     return None
+
+
+_DUP_STOP = set("""this that with from into over after their they have will been were what when which while about also
+than more just only says said report reports reported according announced announces launch launches new""".split())
+
+
+def content_tokens(text: str) -> set[str]:
+    """Distinctive words of a story (names, numbers, nouns), for near-duplicate checks."""
+    words = re.findall(r"[a-z0-9][a-z0-9.\-]*[a-z0-9]|[a-z0-9]", (text or "").lower().replace("‑", "-"))
+    return {w for w in words if len(w) > 3 and w not in _DUP_STOP}
+
+
+def near_duplicate(a: dict, b: dict) -> bool:
+    """True when two stories report the same news (identical or reworded headlines, same facts)."""
+    ha, hb = a.get("headline", ""), b.get("headline", "")
+    sim = similar(ha, hb)
+    if sim >= 0.8:
+        return True
+    ta = content_tokens(f"{ha} {a.get('summary', '')}")
+    tb = content_tokens(f"{hb} {b.get('summary', '')}")
+    if not ta or not tb:
+        return False
+    jac = len(ta & tb) / len(ta | tb)
+    return jac >= 0.6 or (jac >= 0.48 and sim >= 0.55)
+
+
+def duplicate_ids(stories: list[dict], hours: int = 72) -> dict[str, str]:
+    """{duplicate story id: id of the story it repeats}. Within each pair published close together, the earlier
+    (or, at the same time, higher-scored) story is the original; the other is the repeat."""
+    from datetime import datetime, timedelta
+
+    def when(s: dict) -> datetime:
+        return datetime.fromisoformat(s["published_at"].replace("Z", "+00:00"))
+
+    ordered = sorted(stories, key=lambda s: (s["published_at"], -int(s.get("score") or 0)))
+    out: dict[str, str] = {}
+    span = timedelta(hours=hours)
+    for i, s in enumerate(ordered):
+        if s["id"] in out:
+            continue
+        t = when(s)
+        for o in ordered[i + 1:]:
+            if when(o) - t > span:
+                break
+            if o["id"] not in out and near_duplicate(s, o):
+                out[o["id"]] = s["id"]
+    return out

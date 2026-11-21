@@ -6,6 +6,8 @@
   python -m agent check-models  send one tiny request to each configured provider/model
   python -m agent preview-desks plan a run and write the Builders and Top Voices desks now (set DATA_DIR to a copy of
                                 data/ to try changes without touching the live site)
+  python -m agent dpa           the DPA lens: assess stories for DPA, update the AI Radar, brief, POC cards, fact-check audit
+  python -m agent bench         the DPA Task Bench: test every configured free model on DPA-style document tasks
   python -m agent recap draft   pick today's top five and write data/recaps/<date>.json for the editor to fill
   python -m agent recap render --out DIR   check the filled script and render the recap bulletin recap.mp4, poster.jpg, teaser.gif
   python -m agent recap footage|voice --out DIR   (workflow) stock clips from Pexels / AI narration via the worker
@@ -39,6 +41,8 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("sources")
     sub.add_parser("check-models")
     sub.add_parser("preview-desks")
+    sub.add_parser("dpa")
+    sub.add_parser("bench")
     rc = sub.add_parser("recap")
     rc.add_argument("action", choices=["draft", "render", "check", "upload", "stamp", "images", "footage", "voice", "voice-gemini", "voice-backup", "frames", "shortlist", "shortlist-request", "shortlist-get", "pick"])
     rc.add_argument("--story", type=int, default=0, help="pick: the story number")
@@ -61,6 +65,9 @@ def main(argv: list[str] | None = None) -> int:
             print(f"{sid:16} {st}")
         print(f"\n{len(items)} items total")
         return 0
+
+    if args.cmd in ("dpa", "bench"):
+        return _lens(args.cmd, cfg, fetcher, now)
 
     limits = Limits(cfg.limits, cfg.data_dir / "usage.json")
 
@@ -133,6 +140,33 @@ def main(argv: list[str] | None = None) -> int:
         with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
             fh.write(f"stories_written={len(report['written'])}\n")
             fh.write(f"self_review={'1' if report.get('self_review') else '0'}\n")
+    return 0
+
+
+def _lens(cmd: str, cfg, fetcher, now) -> int:
+    """The DPA lens and the task bench: their own request caps and files, so they never eat the newsroom's budget."""
+    import json
+    env = dict(os.environ)
+    if not any(env.get(p["key_env"]) for p in cfg.providers):
+        print("No AI provider key is set.", file=sys.stderr)
+        return 2
+    if cmd == "dpa":
+        from . import dpa
+        report = dpa.run(cfg, fetcher, now, env=env)
+        lines = ["## DPA lens run", "", "```json", json.dumps({k: v for k, v in report.items() if k != "provider_log"}, indent=1), "```"]
+    else:
+        from . import bench
+        rec = bench.run(cfg, now, env)
+        lines = ["## DPA Task Bench", "", "| Model | Provider | Score | Extraction | Quality | Research | Routing |", "|---|---|---|---|---|---|---|"]
+        for m in rec["models"]:
+            t = m.get("by_type") or {}
+            lines.append(f"| {m['model']} | {m['provider']} | {m.get('score', 'n/a')} | {t.get('extraction', '')} | {t.get('quality', '')} | "
+                         f"{t.get('research', '')} | {t.get('routing', '')} |" if m.get("available") else f"| {m['model']} | {m['provider']} | unavailable | | | | |")
+    md = "\n".join(lines) + "\n"
+    print(md)
+    if os.environ.get("GITHUB_STEP_SUMMARY"):
+        with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as fh:
+            fh.write(md)
     return 0
 
 

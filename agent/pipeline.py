@@ -13,7 +13,7 @@ from . import alerts, audit, builders, chief, claims, top_voices, editorial, pho
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather, is_adjacent, slate_key
 from .store import Store
-from .text import arxiv_id, canonical_url, domain, extract_image, extract_text, paper_figure, quote_in_text, similar, stable_id
+from .text import arxiv_id, canonical_url, domain, duplicate_ids, extract_image, extract_text, near_duplicate, paper_figure, quote_in_text, similar, stable_id
 
 ROLE_RANK = {"lab": 0, "paper": 1, "voice": 2, "news": 3}
 STOP = set("""a an and are as at be by for from has have how in into is it its new of on or our that the their
@@ -514,7 +514,8 @@ class Newsroom:
 
     def build_site(self) -> dict[str, Any]:
         cutoff = self.now - timedelta(days=self.cfg.run["front_page_days"])
-        live = sorted((s for s in self.store.stories if datetime.fromisoformat(s["published_at"]) >= cutoff),
+        dups = duplicate_ids(self.store.stories)  # reworded repeats of a story already on the page stay off it
+        live = sorted((s for s in self.store.stories if datetime.fromisoformat(s["published_at"]) >= cutoff and s["id"] not in dups),
                       key=lambda s: s["published_at"], reverse=True)
         window = [s for s in live if datetime.fromisoformat(s["published_at"]) >= self.now - timedelta(hours=36)]
         pool = window or live[:20]
@@ -661,6 +662,13 @@ class Newsroom:
                 break
             except Exception as e:  # noqa: BLE001
                 self.report["dropped"].append({"title": members[0].title, "reason": f"error: {type(e).__name__}: {e}"})
+                continue
+            # last check before publishing: the same news, reworded, already on the site (e.g. two outlets' takes)
+            recent_cut = (self.now - timedelta(hours=72)).isoformat()
+            twin = next((o for o in self.store.stories if o["published_at"] >= recent_cut and o["id"] != story["id"]
+                         and near_duplicate(o, story)), None)
+            if twin:
+                self.report["dropped"].append({"title": members[0].title, "reason": f"duplicate of {twin['id']} (same news, reworded)"})
                 continue
             if not story.get("image"):
                 self.add_paper_figure(story)

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block main %}
+<section class="shell lab-page desk-page dl-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><a href="{{ root }}dpa/">For {{ org.name }}</a><span aria-hidden="true">/</span><span>Pilot proposals</span></nav>
+  <header class="lab-head">
+    <span class="dl-kicker">For {{ org.name }}'s AI Champion Initiative</span>
+    <h1>Pilot proposals</h1>
+    <p class="desk-intro">When something reaches Trial on the <a href="{{ root }}radar/">AI Radar</a>, the agent drafts a one-page pilot: the {{ org.name }} workflow it could help, a two-week plan that starts with public or synthetic documents, how success is measured and how client data stays safe. <b>Nothing is tried until a person approves it.</b></p>
+    <dl class="lab-stats">
+      <div><dt>Awaiting review</dt><dd>{{ counts.awaiting }}</dd></div>
+      <div><dt>Approved</dt><dd>{{ counts.approved }}</dd></div>
+      <div><dt>Rejected</dt><dd>{{ counts.rejected }}</dd></div>
+    </dl>
+  </header>
+
+  {% if cards %}
+  <div class="dl-poc-grid">
+    {% for c in cards %}
+    <article class="dl-poc" id="{{ c.id }}">
+      <div class="dl-poc-top"><span class="dl-st st-{{ c.status }}">{{ {"awaiting": "Awaiting review", "approved": "Approved", "rejected": "Rejected"}[c.status] }}</span><span class="muted">{{ c.id }} · drafted {{ short(c.drafted) }}</span></div>
+      <h2>{{ c.title }}</h2>
+      <p class="dl-poc-meta"><span class="pill">{{ c.cap_name }}</span><span class="pill">Effort {{ c.effort }}</span><span class="pill">Owner: {{ c.owner_name }}</span><a class="pill" href="{{ root }}radar/#r-{{ c.radar_key }}">On the radar: {{ c.item }}</a></p>
+      <dl class="dl-poc-body">
+        <div><dt>The problem</dt><dd>{{ c.problem }}</dd></div>
+        <div><dt>The proposal</dt><dd>{{ c.proposal }}</dd></div>
+        <div><dt>Two-week plan</dt><dd><ol>{% for p in c.plan %}<li>{{ p }}</li>{% endfor %}</ol></dd></div>
+        <div><dt>How we judge it</dt><dd>{{ c.metric }}</dd></div>
+        <div><dt>Client data</dt><dd>{{ c.data_safety }}</dd></div>
+      </dl>
+      <div class="dl-ev"><span class="muted">Evidence</span>{% for x in c.evidence_rows %}<a href="{{ root }}story/{{ x.id }}/">{{ x.headline|truncate(70, True, '…') }}</a>{% endfor %}</div>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty">No proposals yet. The agent drafts up to two a day, for the strongest Trial items on the radar.</p>
+  {% endif %}
+
+  <section class="block" aria-labelledby="dec-h">
+    <div class="block-head"><h2 id="dec-h">Who decides</h2></div>
+    <p class="desk-intro">An AI Champion reads each card and approves or rejects it. Decisions are recorded in the repository (<code>config/dpa_review.yaml</code>), so every approval has a name, a date and a history. The agent never runs a pilot or touches client data.</p>
+  </section>
+</section>
+{% endblock %}

@@ -9,6 +9,7 @@
       <time datetime="{{ s.published_at }}">{{ published_human }}</time>.
       {% if s.lab %}<button class="follow-mini" type="button" data-follow="lab:{{ s.lab }}" data-label="{{ s.lab }}" data-cta="Follow {{ s.lab }}" hidden>Follow {{ s.lab }}</button>{% endif %}
       Checked against {{ s.sources|length }} source{{ '' if s.sources|length == 1 else 's' }}{% if s.research and s.research.decision == 'confirmed' %} by our research agent{% endif %}.
+      {% if audit and audit.claims %}<a class="fc-badge fc-{{ audit.verdict }}" href="#fc-h">{% if audit.verdict == "accurate" %}Fact-checked: all {{ audit.claims|length }} claims supported{% elif audit.verdict == "minor" %}Fact-checked: {{ audit.claims|selectattr("verdict", "equalto", "supported")|list|length }} of {{ audit.claims|length }} claims fully supported{% else %}Fact-check flagged an issue{% endif %}</a>{% endif %}
     </p>
   </header>
 
@@ -29,6 +30,20 @@
     {% endif %}
     <p class="lede">{{ s.summary }}</p>
     {% if s.why_it_matters %}<p class="why"><strong>Why it matters.</strong> {{ s.why_it_matters }}</p>{% endif %}
+
+    {% if lens_box and lens_box.relevance and lens_box.so_what %}
+    <section class="dl-box" aria-labelledby="dl-h">
+      <div class="dl-box-top"><h2 id="dl-h"><span class="dl-kicker">For DPA</span>What this means for our work</h2>
+        {% if lens_box.move and lens_box.move != "none" %}<span class="mv mv-{{ lens_box.move }}">{{ {"trial": "Try it", "assess": "Evaluate", "watch": "Watch", "caution": "Caution"}[lens_box.move] }}</span>{% endif %}</div>
+      <p>{{ lens_box.so_what }}</p>
+      {% if lens_box.test %}<p class="dl-test"><b>First test:</b> {{ lens_box.test }}</p>{% endif %}
+      <p class="dl-box-meta">{% for c in lens_box.cap_names %}<span class="pill">{{ c }}</span>{% endfor %}
+        <span class="muted">Relevance {{ lens_box.relevance }}/3{% if lens_box.confidence %}, {{ lens_box.confidence }} confidence{% endif %}.</span>
+        {% if lens_radar %}<a class="pill" href="{{ root }}radar/#r-{{ lens_radar.key }}">On the AI Radar: {{ lens_radar.name }}, {{ lens_radar.ring }}</a>{% endif %}
+        <a class="see-all" href="{{ root }}dpa/">The DPA lens</a></p>
+      <p class="ex-note">The agent's assessment for DPA, from the facts in this story. It proposes; people decide.</p>
+    </section>
+    {% endif %}
 
     {% if tracker_links %}
     <p class="part-of">Part of {% for t in tracker_links %}<a href="{{ root }}tracker/{{ t.id }}/">{{ t.title }}</a>{% if not loop.last %} and {% endif %}{% endfor %}. See where things stand.</p>
@@ -78,6 +93,15 @@
       <figcaption><strong>{{ q.speaker }}</strong>{% if q.speaker_role %}, {{ q.speaker_role }}{% endif %}. <a href="{{ q.source_url }}" rel="noopener" data-goatcounter-click="out-quote">Source</a></figcaption>
     </figure>
     {% endfor %}
+
+    {% if audit and audit.claims %}
+    <section class="fc-box" aria-labelledby="fc-h">
+      <h2 id="fc-h">Fact-check</h2>
+      <p class="muted">On {{ audit.date }} a second AI model re-read the sources and checked each claim in this story. <a href="{{ root }}system/#accuracy">How the audit works</a></p>
+      <ul>{% for c in audit.claims %}<li><span class="fc fc-{{ c.verdict }}">{{ {"supported": "Supported", "partly": "Partly", "unsupported": "Not in sources", "contradicted": "Contradicted"}[c.verdict] }}</span> {{ c.claim }}{% if c.note %} <span class="muted">({{ c.note }})</span>{% endif %}</li>{% endfor %}</ul>
+      {% if correction %}<p class="dl-test"><b>Editor's note:</b> {{ correction }}</p>{% endif %}
+    </section>
+    {% endif %}
 
     <section class="sources-list" aria-labelledby="src-h">
       <h2 id="src-h">Sources</h2>

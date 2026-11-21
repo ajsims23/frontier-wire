@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="shell lab-page desk-page dl-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><a href="{{ root }}dpa/">For {{ org.name }}</a><span aria-hidden="true">/</span><span>Task bench</span></nav>
+  <header class="lab-head">
+    <span class="dl-kicker">We benchmark so you don't have to{% if b.latest %} · last run {{ short(b.latest.date) }}{% endif %}</span>
+    <h1>{{ org.name }} Task Bench</h1>
+    <p class="desk-intro">Public leaderboards measure general ability. This bench measures our kind of work: pulling figures out of fund reports and financial statements, reconciling totals, checking a deliverable against a checklist, ownership and credit arithmetic, and routing investor documents. Every free model our agent can reach runs the same {{ b.spec.tasks|length }} tasks each week, and answers are <b>scored automatically against known answers</b>. No AI grades another AI.</p>
+    <dl class="lab-stats">
+      <div><dt>Models tested</dt><dd>{{ b.rows|length if b.rows else "First run under way" }}</dd></div>
+      <div><dt>Tasks</dt><dd>{{ b.spec.tasks|length }}</dd></div>
+      <div><dt>Best score</dt><dd>{% if b.rows %}{{ b.rows[0].score }} <span class="muted">{{ b.rows[0].name }}</span>{% else %}—{% endif %}</dd></div>
+      <div><dt>Client data used</dt><dd>None, ever</dd></div>
+    </dl>
+  </header>
+
+  <section class="block" aria-labelledby="lb-h">
+    <div class="block-head"><h2 id="lb-h">Leaderboard</h2><p>Scores out of 100. Each task is worth the same; partial credit for partly right answers.</p></div>
+    {% if b.rows %}
+    <div class="table-box"><table class="deals bn-table">
+      <thead><tr><th scope="col">#</th><th scope="col">Model</th><th scope="col">Overall</th>{% for k, v in b.spec.types.items() %}<th scope="col">{{ v }}</th>{% endfor %}<th scope="col">Median time</th><th scope="col">Since last run</th></tr></thead>
+      <tbody>{% for r in b.rows %}
+        <tr><td>{{ loop.index }}</td><td><span class="strong">{{ r.name }}</span><br><span class="muted">{{ r.provider_name }} · <code>{{ r.model }}</code></span></td>
+          <td class="num"><span class="bn-score" style="--p: {{ r.score }}%">{{ r.score }}</span></td>
+          {% for k in b.spec.types %}<td class="num">{{ r.by_type[k] if r.by_type[k] is not none else "—" }}</td>{% endfor %}
+          <td class="num nowrap">{{ r.median_latency_s }} s</td>
+          <td class="num">{% if r.delta is none %}<span class="muted">new</span>{% elif r.delta > 0 %}<span class="up">+{{ r.delta }}</span>{% elif r.delta < 0 %}<span class="down">{{ r.delta }}</span>{% else %}<span class="muted">same</span>{% endif %}</td></tr>
+      {% endfor %}</tbody>
+    </table></div>
+    {% if b.unavailable %}<p class="muted bn-note">Not available on the free tier this run: {% for u in b.unavailable %}{{ u.model }} ({{ u.provider }}){% if not loop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
+
+    <h3 class="bn-h3">Task by task</h3>
+    <div class="table-box"><table class="deals bn-heat">
+      <thead><tr><th scope="col">Model</th>{% for t in b.spec.tasks %}<th scope="col" title="{{ t.title }}">{{ loop.index }}</th>{% endfor %}</tr></thead>
+      <tbody>{% for r in b.rows %}<tr><td class="strong nowrap">{{ r.name }}</td>{% for c in r.cells %}<td class="bn-cell" style="--s: {{ ((c.score or 0) * 100)|round|int }}%" title="{{ b.spec.tasks[loop.index0].title }}: {{ ((c.score or 0) * 100)|round|int }}">{{ ((c.score or 0) * 100)|round|int }}</td>{% endfor %}</tr>{% endfor %}</tbody>
+    </table></div>
+    {% else %}
+    <p class="empty">The first bench run is under way. Results appear here when it finishes.</p>
+    {% endif %}
+  </section>
+
+  <section class="block" aria-labelledby="tk-h">
+    <div class="block-head"><h2 id="tk-h">The tasks</h2><p>{{ b.spec.about }}</p></div>
+    <ol class="bn-tasks">
+      {% for t in b.spec.tasks %}<li><span class="pill">{{ b.spec.types[t.type] }}</span><span class="strong">{{ loop.index }}. {{ t.title }}</span><span class="muted">{{ t.why }}</span></li>{% endfor %}
+    </ol>
+  </section>
+
+  <section class="block" aria-labelledby="ex-h2">
+    <div class="block-head"><h2 id="ex-h2">An example: {{ example.title }}</h2><p>What every model is given, and the answer it is scored against.</p></div>
+    <div class="bn-example">
+      <div><h3>Instruction</h3><p>{{ example.instruction }}</p><h3>Document</h3><pre>{{ example.document }}</pre></div>
+      <div><h3>Known answer</h3><table class="bench-t"><tbody>{% for f in example.fields %}<tr><td><code>{{ f.key }}</code></td><td class="num">{{ f.expect }}</td></tr>{% endfor %}</tbody></table>
+        <p class="muted">Numbers must match within half a percent; text and dates must match exactly; lists are scored by overlap (F1).</p></div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="mt-h">
+    <div class="block-head"><h2 id="mt-h">Method and limits</h2></div>
+    <ul class="dl-steps">
+      <li>Every model gets the same instruction and document, and must answer in a fixed JSON format (structured output is part of the test: a model that can't return clean fields can't run in a pipeline).</li>
+      <li>The documents are synthetic, written for this bench in the formats {{ org.name }} teams handle. Every fund, company and person in them is fictional, so no client data ever reaches a free-tier model.</li>
+      <li>Only free models are tested, because that is what this agent runs on. Paid frontier models are tracked on the <a href="{{ root }}models/">model tracker</a> from public benchmarks.</li>
+      <li>The bench runs weekly and whenever the tasks change. A rate-limited request is retried once after a pause, so a busy free tier isn't counted against a model.</li>
+      <li>Twelve tasks are a signal, not a verdict: use the results to choose what to pilot, then test on your own (approved) documents.</li>
+    </ul>
+  </section>
+</section>
+{% endblock %}

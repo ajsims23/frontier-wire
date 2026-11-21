@@ -1,0 +1,115 @@
+# The DPA lens: what the intelligence agent knows about the firm it works for.
+# The agent reads this to decide what each AI development means for DPA, which DPA capability it touches,
+# and what to try. Public service lines only: never put client names, client data or anything confidential here
+# (prompts go to free-tier AI providers that may use them to improve their products).
+
+org:
+  name: DPA
+  long_name: DPA (data and process automation)
+  about: >-
+    A data and process automation firm based in Nashik, India. Teams build data pipelines and automation for
+    financial-services clients (asset managers, alternatives, private equity and real-estate investors): extracting
+    data from documents, quality-checking deliverables, producing investor and financial reports, and research.
+    An internal AI Champion Initiative drives AI adoption and turns promising AI tools into internal pilots.
+
+# What DPA does. Each AI development is mapped to the capability it changes.
+capabilities:
+  - id: doc_extraction
+    name: Document and PDF extraction
+    short: Extraction
+    about: Pulling tables, figures and fields out of PDFs, scans and filings (fund reports, financial statements, notices).
+  - id: data_qa
+    name: Data quality and checks
+    short: Quality checks
+    about: Validating data and deliverables against checklists, reconciling numbers, catching errors before clients do.
+  - id: reporting
+    name: Investor and financial reporting
+    short: Reporting
+    about: Quarterly investor reports, fund factsheets, financial decks and dashboards built from client data.
+  - id: research
+    name: Research and analysis
+    short: Research
+    about: Credit research, company and ownership research, market and sector analysis for clients.
+  - id: data_pipelines
+    name: Data engineering and pipelines
+    short: Pipelines
+    about: Ingesting, normalising and storing alternatives and financial data; data strategy and architecture.
+  - id: agents
+    name: Agentic process automation
+    short: Agents
+    about: Multi-step AI agents that run workflows end to end with tools, checks and human approval.
+  - id: productivity
+    name: Team productivity and AI skills
+    short: Productivity
+    about: Coding assistants, copilots and AI skills that make DPA's own people faster; AI Champion adoption.
+  - id: governance
+    name: AI risk, security and client data
+    short: Risk
+    about: Client-data protection, model risk, security of AI tools, regulation that affects how DPA can use AI.
+
+# Who reads the DPA briefings. Each role sees the developments for its capabilities.
+roles:
+  - id: leadership
+    name: Leadership
+    about: What changes DPA's offer, pricing, competition or risk.
+    capabilities: [agents, governance, reporting, research, productivity]
+  - id: delivery
+    name: Delivery team leads
+    about: What could change how client engagements are run and staffed.
+    capabilities: [agents, doc_extraction, data_qa, reporting]
+  - id: extraction
+    name: Data and extraction analysts
+    about: Better ways to get clean data out of documents.
+    capabilities: [doc_extraction, data_pipelines]
+  - id: quality
+    name: Quality and review
+    about: Catching errors faster and more reliably.
+    capabilities: [data_qa, governance]
+  - id: analysts
+    name: Research analysts
+    about: Faster, better-sourced research and analysis.
+    capabilities: [research, reporting]
+  - id: engineers
+    name: Developers and automation engineers
+    about: Models, APIs, agent frameworks and tools to build with.
+    capabilities: [agents, data_pipelines, productivity, doc_extraction]
+  - id: champions
+    name: AI Champions
+    about: What to pilot next and how to spread it across teams.
+    capabilities: [productivity, agents, governance]
+
+# The DPA AI Radar's rings (adapted from technology-radar practice).
+rings:
+  - id: adopt
+    name: Adopt
+    about: Proven for DPA's work. Use it where it fits. Only a person can move something into Adopt.
+  - id: trial
+    name: Trial
+    about: Worth a time-boxed pilot on a real DPA workflow now.
+  - id: assess
+    name: Assess
+    about: Worth understanding and testing on DPA-style tasks before any pilot.
+  - id: hold
+    name: Hold
+    about: Don't start new work with it yet (risk, immaturity, licence, cost or a better option exists).
+
+quadrants:
+  - id: models
+    name: Models
+  - id: tools
+    name: Tools and platforms
+  - id: techniques
+    name: Techniques
+  - id: policy
+    name: Risk and policy
+
+limits:
+  assess_batch: 12          # stories per assessment request
+  assess_batches_per_run: 6 # backfill speed: up to 72 stories per run
+  assess_days: 21           # how far back the lens reaches
+  radar_subjects_per_run: 14
+  poc_cards_per_day: 2
+  factcheck_per_day: 6
+  max_requests_per_run: 40
+  max_requests_per_day: 160
+  max_tokens_per_day: 500000

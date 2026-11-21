@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block main %}
+<section class="shell lab-page desk-page dl-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>For {{ org.name }}</span></nav>
+  <header class="lab-head">
+    <span class="dl-kicker">Frontier Wire for {{ org.name }} · the intelligence agent</span>
+    <h1>What {{ org.name }} should do about AI this week</h1>
+    <p class="desk-intro">The newsroom reports what happened in AI. This lens decides what it means for {{ org.name }}: which of our capabilities each development touches, whether to try it, evaluate it or be careful, and the first test to run. It keeps the {{ org.name }} AI Radar, drafts pilot proposals for AI Champions and tests free models on {{ org.name }}-style document work. <b>The agent proposes; people decide.</b></p>
+    <dl class="lab-stats">
+      <div><dt>Stories assessed for {{ org.name }} (30 days)</dt><dd>{{ lens.stats.assessed30 }}</dd></div>
+      <div><dt>Relevant to our work</dt><dd>{{ lens.stats.relevant30 }}</dd></div>
+      <div><dt>Worth trying or evaluating</dt><dd><a href="#act">{{ lens.stats.act30 }}</a></dd></div>
+      <div><dt>On the AI Radar</dt><dd><a href="{{ root }}radar/">{{ lens.stats.radar }}</a></dd></div>
+      <div><dt>Pilot proposals awaiting review</dt><dd><a href="{{ root }}poc/">{{ lens.stats.awaiting }}</a></dd></div>
+      <div><dt>Accuracy audit</dt><dd><a href="{{ root }}system/#accuracy">{% if fc.rate is not none %}{{ fc.rate }}%{% else %}Starting{% endif %}</a></dd></div>
+    </dl>
+    <nav class="dl-jump" aria-label="In the DPA lens">
+      <a class="chip" href="#calls">This week's calls</a><a class="chip" href="#act">Act on this</a><a class="chip" href="#roles">By role</a>
+      <a class="chip" href="{{ root }}radar/">AI Radar</a><a class="chip" href="{{ root }}poc/">Pilot proposals</a><a class="chip" href="{{ root }}bench/">Task bench</a>
+      <a class="chip" href="{{ root }}system/">How it works</a><a class="chip" href="{{ root }}api/">Use it from your AI</a>
+    </nav>
+  </header>
+
+  <section class="block" id="calls" aria-labelledby="calls-h">
+    <div class="block-head"><h2 id="calls-h">This week's calls</h2><p>{% if lens.brief %}Written by the agent on {{ short(lens.brief.written_at) }} from {{ lens.brief.from_stories }} relevant stories.{% else %}The agent writes these once a day.{% endif %}</p></div>
+    {% if lens.brief %}
+    <div class="dl-brief">
+      <p class="dl-brief-line">{{ lens.brief.headline }}</p>
+      <ol class="dl-calls big">
+        {% for c in lens.brief.calls %}
+        <li class="dl-call">
+          <div class="dl-call-top">{{ m.mv(c.move) }}<span class="muted">Call {{ loop.index }}</span></div>
+          <h3>{{ c.title }}</h3><p>{{ c.text }}</p>
+          <div class="refs">{% for s in c.stories %}<a href="{{ root }}story/{{ s.id }}/" title="{{ s.headline }}">{{ s.headline|truncate(56, True, '…') }}</a>{% endfor %}</div>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+    {% else %}<p class="empty">The first calls appear after the agent's next run.</p>{% endif %}
+  </section>
+
+  <section class="block" id="act" aria-labelledby="act-h">
+    <div class="block-head"><h2 id="act-h">Act on this</h2><p>This week's developments that matter most to {{ org.name }}, with the agent's call and the first test it would run.</p></div>
+    {% if lens.recent %}<ol class="dl-list">{% for r in lens.recent %}{{ m.act_row(r, root, short) }}{% endfor %}</ol>
+    {% else %}<p class="empty">Nothing this week has cleared the bar yet.</p>{% endif %}
+  </section>
+
+  <section class="block" id="roles" aria-labelledby="roles-h">
+    <div class="block-head"><h2 id="roles-h">By role</h2><p>The same developments, sorted for the people who would act on them.</p></div>
+    <div class="dl-roles">
+      {% for r in lens.roles %}
+      <details class="dl-role"{% if loop.first %} open{% endif %}>
+        <summary><span class="strong">{{ r.name }}</span><span class="muted">{{ r.about }}</span><span class="dl-count">{{ r.picks|length }}</span></summary>
+        {% if r.picks %}<ul>{% for x in r.picks %}<li>{{ m.mv(x.move) }} <a href="{{ root }}story/{{ x.id }}/">{{ x.headline }}</a>{% if x.so_what %}<p>{{ x.so_what }}</p>{% endif %}</li>{% endfor %}</ul>
+        {% else %}<p class="empty">A quiet fortnight for this role.</p>{% endif %}
+      </details>
+      {% endfor %}
+    </div>
+  </section>
+
+  <div class="desk-charts">
+    {{ m.hbars(heat, "Where AI is moving for " ~ org.name, "Relevant developments per capability, 30 days") }}
+    <figure class="news-chart dl-radar-mini">
+      <figcaption><span class="nc-title">The {{ org.name }} AI Radar</span><a class="see-all" href="{{ root }}radar/">Open the radar</a></figcaption>
+      {% if radar %}{{ m.radar_pic(radar, root, link=True) }}{% else %}<p class="empty">The radar fills in as the agent finds tools and models worth placing.</p>{% endif %}
+    </figure>
+  </div>
+
+  <section class="block" aria-labelledby="bn-h">
+    <div class="block-head"><h2 id="bn-h">Which free model does our kind of work best?</h2><p>The agent tests every free model it can reach on {{ org.name }}-style document tasks, scored automatically.</p><a class="see-all" href="{{ root }}bench/">Full results</a></div>
+    {% if bench.rows %}
+    <div class="table-box"><table class="deals dl-bench-mini">
+      <thead><tr><th scope="col">#</th><th scope="col">Model</th><th scope="col">Overall</th>{% for k, v in bench.spec.types.items() %}<th scope="col">{{ v }}</th>{% endfor %}</tr></thead>
+      <tbody>{% for r in bench.rows[:5] %}<tr><td>{{ loop.index }}</td><td class="strong">{{ r.name }} <span class="muted">{{ r.provider_name }}</span></td><td class="num strong">{{ r.score }}</td>{% for k in bench.spec.types %}<td class="num">{{ r.by_type[k] }}</td>{% endfor %}</tr>{% endfor %}</tbody>
+    </table></div>
+    {% else %}<p class="empty">The first bench run is under way: {{ bench.spec.tasks|length }} tasks across extraction, quality checks, research and routing.</p>{% endif %}
+  </section>
+
+  <section class="block" aria-labelledby="poc-h">
+    <div class="block-head"><h2 id="poc-h">Pilot proposals</h2><p>Drafted by the agent for Trial items on the radar. An AI Champion approves or rejects each one.</p><a class="see-all" href="{{ root }}poc/">All proposals</a></div>
+    {% if cards %}<div class="dl-pocs">{% for c in cards %}
+      <a class="dl-poc-mini" href="{{ root }}poc/#{{ c.id }}"><span class="dl-st st-{{ c.status }}">{{ {"awaiting": "Awaiting review", "approved": "Approved", "rejected": "Rejected"}[c.status] }}</span>
+        <h3>{{ c.title }}</h3><p>{{ c.proposal }}</p><span class="muted">{{ c.cap_name }} · effort {{ c.effort }} · owner: {{ c.owner_name }}</span></a>
+    {% endfor %}</div>
+    {% else %}<p class="empty">Proposals appear when an item reaches Trial on the radar.</p>{% endif %}
+  </section>
+
+  <section class="block" aria-labelledby="how-h">
+    <div class="block-head"><h2 id="how-h">How the lens works</h2><p>What the agent knows about {{ org.name }}, and where people stay in charge.</p></div>
+    <div class="dl-how">
+      <ol class="dl-steps">
+        <li><b>Reads every story with {{ org.name }}'s profile.</b> A public description of what {{ org.name }} does: {{ lens.profile.capabilities|length }} capabilities, {{ lens.profile.roles|length }} roles. Never client names or client data.</li>
+        <li><b>Makes a call on each one.</b> How much it matters (0 to 3), which capability it touches, a plain "so what", a move (try it, evaluate, watch, caution) and the first test to run. Products it names must appear in the story itself.</li>
+        <li><b>Keeps the radar.</b> Tools, models, techniques and rules worth placing go on Adopt, Trial, Assess or Hold, with the evidence and a logged reason for every move. Only a person can put something on Adopt.</li>
+        <li><b>Turns Trial items into pilot proposals</b> with a two-week plan, a success metric and data-safety rules, for an AI Champion to approve or reject.</li>
+        <li><b>Tests the models itself.</b> The task bench runs every free model the agent can reach on synthetic {{ org.name }}-style documents and scores them against known answers.</li>
+        <li><b>Checks its own facts.</b> A second model audits a sample of stories against their sources every day, and the results are published.</li>
+      </ol>
+      <div class="dl-caps">
+        <h3>{{ org.name }}'s capabilities, as the agent sees them</h3>
+        <ul>{% for c in lens.profile.capabilities %}<li><span class="strong">{{ c.name }}</span><span class="muted">{{ c.about }}</span></li>{% endfor %}</ul>
+      </div>
+    </div>
+  </section>
+</section>
+{% endblock %}

@@ -52,3 +52,35 @@
 </div>
 {% endif %}
 {%- endmacro %}
+
+{% macro mv(move, label="") -%}
+{% if move and move != "none" %}<span class="mv mv-{{ move }}">{{ label or {"trial": "Try it", "assess": "Evaluate", "watch": "Watch", "caution": "Caution"}[move] }}</span>{% endif %}
+{%- endmacro %}
+
+{% macro ring(r) -%}
+<span class="rg rg-{{ r }}">{{ r|capitalize }}</span>
+{%- endmacro %}
+
+{% macro act_row(r, root, short) -%}
+<li class="dl-row">
+  <div class="dl-row-top">{{ mv(r.move) }}{% for c in r.cap_names %}<span class="pill">{{ c }}</span>{% endfor %}<span class="muted">{{ short(r.published_at) }}{% if r.lab %}, {{ r.lab }}{% endif %}</span></div>
+  <a class="dl-row-h" href="{{ root }}story/{{ r.id }}/">{{ r.headline }}</a>
+  {% if r.so_what %}<p class="dl-sowhat"><b>For DPA:</b> {{ r.so_what }}</p>{% endif %}
+  {% if r.test %}<p class="dl-test"><b>First test:</b> {{ r.test }}</p>{% endif %}
+</li>
+{%- endmacro %}
+
+{% macro radar_pic(svg, root, link=False) -%}
+<svg class="dl-radar" viewBox="0 0 {{ svg.size }} {{ svg.size }}" role="img" aria-label="The DPA AI Radar: {{ svg.blips|length }} items in four rings">
+  {% for r in svg.rings|reverse %}<circle cx="{{ svg.c }}" cy="{{ svg.c }}" r="{{ r.r }}" class="dl-ring-c dl-ring-{{ loop.revindex }}"/>{% endfor %}
+  <line x1="{{ svg.c - svg.R }}" y1="{{ svg.c }}" x2="{{ svg.c + svg.R }}" y2="{{ svg.c }}" class="dl-axis"/>
+  <line x1="{{ svg.c }}" y1="{{ svg.c - svg.R }}" x2="{{ svg.c }}" y2="{{ svg.c + svg.R }}" class="dl-axis"/>
+  {% for r in svg.rings %}<text x="{{ svg.c + 6 }}" y="{{ r.ly }}" class="dl-ring-l">{{ r.label }}</text>{% endfor %}
+  {% for b in svg.blips %}
+  {% if link %}<a href="{{ root }}radar/#r-{{ b.key }}">{% else %}<a href="#r-{{ b.key }}">{% endif %}
+    <g class="dl-blip{% if b.proposed %} prop{% endif %}"><title>{{ b.n }}. {{ b.name }} ({{ b.ring }}{% if b.proposed %}, proposed for adopt{% endif %})</title>
+    <circle cx="{{ b.x }}" cy="{{ b.y }}" r="{{ 12 if svg.size > 500 else 10 }}" style="fill: {{ b.color }}"/>
+    <text x="{{ b.x }}" y="{{ b.y + 4 }}" text-anchor="middle">{{ b.n }}</text></g></a>
+  {% endfor %}
+</svg>
+{%- endmacro %}

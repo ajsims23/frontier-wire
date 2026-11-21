@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="shell lab-page desk-page dl-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ root }}">Frontier Wire</a><span aria-hidden="true">/</span><span>Use it from your AI</span></nav>
+  <header class="lab-head">
+    <span class="dl-kicker">MCP server · open JSON API</span>
+    <h1>Use Frontier Wire from your own AI</h1>
+    <p class="desk-intro">You shouldn't have to visit a website to know what changed in AI. Connect Claude, ChatGPT, Gemini or your own agent to Frontier Wire and ask it directly: it gets our fact-checked stories, the {{ org.name }} lens, the AI Radar, the task bench and our accuracy numbers, with links to every source.</p>
+  </header>
+
+  <section class="block" aria-labelledby="mcp-h">
+    <div class="block-head"><h2 id="mcp-h">MCP server</h2><p>Model Context Protocol, over streamable HTTP. No sign-up, read-only.</p></div>
+    {% if mcp_url %}
+    <div class="api-url"><code id="mcp-url">{{ mcp_url }}</code><button class="chip" type="button" data-copy="{{ mcp_url }}">Copy</button></div>
+    {% endif %}
+    <div class="api-grid">
+      <div><h3>Claude</h3><p>Add a custom connector in Claude's connector settings and paste the address above. No sign-in needed.</p></div>
+      <div><h3>ChatGPT</h3><p>Turn on developer mode in ChatGPT's connector settings, then add an MCP connector with the address above.</p></div>
+      <div><h3>Claude Code, Gemini CLI, other clients</h3><pre>{"mcpServers": {"frontier-wire": {"type": "http", "url": "{{ mcp_url or 'https://<api>/mcp' }}"}}}</pre></div>
+    </div>
+    <h3 class="bn-h3">Tools</h3>
+    <ul class="bn-tasks api-tools">
+      <li><code>search_news</code><span class="muted">Search the fact-checked archive. Each result links to its story page (with sources) and carries the {{ org.name }} lens.</span></li>
+      <li><code>what_changed</code><span class="muted">Everything since a date: new stories, radar moves, the latest calls for {{ org.name }}.</span></li>
+      <li><code>dpa_brief</code><span class="muted">This week's calls and the developments to act on, optionally for one role or capability.</span></li>
+      <li><code>get_radar</code><span class="muted">The AI Radar, filtered by ring, quadrant or capability, with evidence.</span></li>
+      <li><code>best_model_for</code><span class="muted">Task bench results: which free model does extraction, quality checks, research or routing best.</span></li>
+      <li><code>ask_wire</code><span class="muted">A cited answer to a question, written from the archive.</span></li>
+      <li><code>system_status</code><span class="muted">The pipeline's numbers and the accuracy audit, so your agent knows how far to trust it.</span></li>
+    </ul>
+    <p class="muted">Try asking your assistant: "Using Frontier Wire, which free model is best for table extraction right now, and how sure are you?" or "What should our extraction team test this week?"</p>
+  </section>
+
+  <section class="block" aria-labelledby="json-h">
+    <div class="block-head"><h2 id="json-h">JSON API</h2><p>Static files, rebuilt with the site. Free to use; please link back.</p></div>
+    <div class="table-box"><table class="deals">
+      <thead><tr><th scope="col">Endpoint</th><th scope="col">What's in it</th></tr></thead>
+      <tbody>
+        <tr><td><a href="{{ root }}api/v1/index.json"><code>api/v1/index.json</code></a></td><td>The list of endpoints.</td></tr>
+        <tr><td><a href="{{ root }}api/v1/stories.json"><code>api/v1/stories.json</code></a></td><td>The latest 200 stories with sources, the {{ org.name }} assessment and fact-check verdicts.</td></tr>
+        <tr><td><a href="{{ root }}api/v1/dpa.json"><code>api/v1/dpa.json</code></a></td><td>This week's calls, what to act on, role briefings, capabilities.</td></tr>
+        <tr><td><a href="{{ root }}api/v1/radar.json"><code>api/v1/radar.json</code></a></td><td>The AI Radar with rings, evidence and the history of every move.</td></tr>
+        <tr><td><a href="{{ root }}api/v1/poc.json"><code>api/v1/poc.json</code></a></td><td>Pilot proposals and their review status.</td></tr>
+        <tr><td><a href="{{ root }}api/v1/bench.json"><code>api/v1/bench.json</code></a></td><td>The latest task bench run, task by task.</td></tr>
+        <tr><td><a href="{{ root }}api/v1/system.json"><code>api/v1/system.json</code></a></td><td>Pipeline numbers, drop reasons, verification, accuracy and the corrections log.</td></tr>
+        <tr><td><a href="{{ root }}data/feed.xml"><code>data/feed.xml</code></a></td><td>RSS of the latest stories.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+</section>
+<script>document.querySelectorAll("[data-copy]").forEach(function(b){b.addEventListener("click",function(){try{navigator.clipboard.writeText(b.dataset.copy);b.textContent="Copied";}catch(e){}});});</script>
+{% endblock %}

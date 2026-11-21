@@ -139,6 +139,7 @@ class LLM:
         self._too_large = False
         self._server_errors: dict[str, int] = {}
         self.log: list[str] = []
+        self.last_model = ""
 
     @property
     def configured(self) -> list[str]:
@@ -323,6 +324,7 @@ class LLM:
                         outcome = "retry"
                     break
                 if outcome == "ok":
+                    self.last_model = f"{p['name']}/{model}"  # which model wrote the answer (shown on the site)
                     return result
                 if outcome == "dead":
                     break

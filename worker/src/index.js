@@ -9,6 +9,7 @@
 //   GET|POST /api/recap/approve?d=&s=  the editor's signed link: confirm, then send the recap to its subscribers
 //   POST /api/recap/image  (bearer secret) {prompt} -> an AI illustration (Workers AI, FLUX schnell) as base64 JPEG
 //   POST /api/recap/voice  (bearer secret) {text, speaker?} -> narration (Workers AI, Deepgram Aura-2; MeloTTS fallback) as base64 MP3
+//   POST /mcp              the MCP server (streamable HTTP): verified news, the DPA lens, AI Radar, task bench (see mcp.js)
 //   /api/feedback/*, /api/admin/*  community feedback, the suggestions board and the admin dashboard (see feedback.js)
 //   cron                   08:50 IST daily digests; 09:05 IST the weekly feedback analysis; every 10 minutes, continues sending an approved recap
 //
@@ -17,6 +18,7 @@
 import { buildIndex, rank } from "../../site/search.js";
 import { digestSubject, recapSubject, renderEmail, renderRecap } from "./email.js";
 import { handleFeedback, logEvent, weeklyIfDue } from "./feedback.js";
+import { handleMcp } from "./mcp.js";
 
 const ASK_PER_IP_PER_DAY = 25;
 const ASK_PER_DAY = 600;
@@ -673,6 +675,12 @@ export default {
     if (!env.API_URL) {  // remember our own address for links in emails sent later by the daily cron
       env.API_URL = url.origin;
       if (!originSaved) { originSaved = true; await env.DB.prepare("INSERT OR REPLACE INTO meta (k, v) VALUES ('api_url', ?1)").bind(url.origin).run(); }
+    }
+    if (url.pathname === "/mcp") {  // open to any MCP client (read-only); has its own CORS headers
+      try { return await handleMcp(req, env, { getIndex, rank, answer, bump, sha }); } catch (e) {
+        await logEvent(env, "error", "mcp", e && e.message);
+        return json({ jsonrpc: "2.0", id: null, error: { code: -32603, message: "Internal error" } }, 500, { "access-control-allow-origin": "*" });
+      }
     }
     if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
     try {

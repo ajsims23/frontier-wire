@@ -5,7 +5,7 @@
         <svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26"><rect x="2" y="10" width="3.4" height="13" rx="1.7" fill="var(--models)"/><rect x="8.2" y="3" width="3.4" height="20" rx="1.7" fill="var(--research)"/><rect x="14.4" y="13" width="3.4" height="10" rx="1.7" fill="var(--policy)"/><rect x="20.6" y="7" width="3.4" height="16" rx="1.7" fill="var(--industry)"/></svg>
         <span class="mark-name">Frontier Wire</span>
       </a>
-      <p>An AI newsroom agent reads lab announcements, papers, news outlets and posts from leading people every three hours. A story is published only with an official source or two independent outlets, and quotes appear only when they match the source word for word.</p>
+      <p>An AI intelligence agent reads lab announcements, papers, news outlets and posts from leading people every three hours. A story is published only with an official source or two independent outlets, quotes appear only when they match the source word for word, and a second model audits a sample every day. Its DPA lens turns the news into calls: what to try, evaluate or watch.</p>
       <a class="btn btn-ghost" href="{{ root }}data/feed.xml">Follow with RSS</a>
     </div>
     <nav class="foot-col" aria-label="News">
@@ -33,10 +33,20 @@
       <a href="{{ root }}ask/">Ask the Wire</a>
       <a href="{{ root }}following/">For you</a>
     </nav>
+    <nav class="foot-col" aria-label="For DPA">
+      <h2>For DPA</h2>
+      <a href="{{ root }}dpa/">The DPA lens</a>
+      <a href="{{ root }}radar/">AI Radar</a>
+      <a href="{{ root }}poc/">Pilot proposals</a>
+      <a href="{{ root }}bench/">Task bench</a>
+      <a href="{{ root }}api/">MCP server and API</a>
+    </nav>
     <nav class="foot-col" aria-label="About">
       <h2>About</h2>
       <a href="{{ root }}suggestions/">Suggest an idea</a>
-      <a href="{{ root }}audit/">How we're doing</a>
+      <a href="{{ root }}system/">How the agent works</a>
+      <a href="{{ root }}system/#accuracy">Accuracy and corrections</a>
+      <a href="{{ root }}audit/">Daily coverage check</a>
       <a href="{{ root }}data/site.json">Open data</a>
       <a href="{{ root }}data/feed.xml">RSS feed</a>
     </nav>
