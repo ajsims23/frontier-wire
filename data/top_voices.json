@@ -1,29 +1,11 @@
 {
   "posts": {
-    "4d80d3475473": {
-      "id": "4d80d3475473",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2c67rtdjs22",
-      "person": "Ethan Mollick",
-      "text": "The end result of the reconstruction is very impressive, however. It made a version of the lost class, called the “hardest in the humanities,\" that is remarkably accessible and based on scattered textual evidence from Auden's writing & surviving notes. auden-english-135.netlify.app#/tempest/son...",
-      "published": "2026-11-14T18:52:22.123Z",
-      "via": "Bluesky",
-      "kind": "post"
-    },
     "f9a3c449e598": {
       "id": "f9a3c449e598",
       "url": "https://simonwillison.net/2026/Nov/14/datasette-llm",
       "person": "Simon Willison",
       "text": "datasette-llm 0.1a11. Release: datasette-llm 0.1a11 datasette-llm is the intermediate plugin for Datasette that supports configuring LLMs for use with other Datasette plugins. This release adds support for OpenAI-compatible endpoints, so you can configure Datasette to use an LLM hosted anywhere that talks the OpenAI pseudo-standard web protocol. This means that if you're running local models with LM Studio or Ollama or llama.cpp (which just hit v1.0.0 ) you can run Datasette via uvx like this: wget https://datasette.io/content.db uvx --with datasette-agent datasette \\ --root --secret 1 \\ -s plugins.datasette-llm.de",
       "published": "2026-11-14T23:59:28+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
-    "5acb9d3d7e18": {
-      "id": "5acb9d3d7e18",
-      "url": "https://simonwillison.net/2026/Nov/14/datasette-vega",
-      "person": "Simon Willison",
-      "text": "datasette-vega 0.7. Release: datasette-vega 0.7 A new release of Datasette's longest untouched plugin, for rendering charts (using Vega-Lite ) against data in a table or custom query. The last release was in July 2018! I finally bumped it for compatibility with the latest Datasette alphas, plus some cosmetic tweaks to make it work better with Datasette Lite . (Datasette Lite just gained the ability to run JavaScript plugins like this! I'll write more about that soon.) Since it works with Datasette Lite, the live demo in the README now links to this demo on Datasette Lite . Tags: datasette , visualisation , datase",
-      "published": "2026-11-14T17:09:09+00:00",
       "via": "Simon Willison",
       "kind": "post"
     },
@@ -525,6 +507,24 @@
       "person": "Ethan Mollick",
       "text": "We really are in a (temporary?) place where a combination of expertise and being able to work with AI allows people to do incredible things. It is no coincidence that people proving Millennium Problems have all been great mathematicians, the models can't (yet) do it all on their own.",
       "published": "2026-11-21T16:23:06.373Z",
+      "via": "Bluesky",
+      "kind": "post"
+    },
+    "480c7f59bbc9": {
+      "id": "480c7f59bbc9",
+      "url": "https://simonwillison.net/2026/Nov/20/llm-gemini",
+      "person": "Simon Willison",
+      "text": "llm-gemini 0.38.1. Release: llm-gemini 0.38.1 Gemini 4 Carbon only supports low , medium and high reasoning levels - but Gemini 4 Hydrogen and Gemini 4 Neon both have an extra xhigh level. I missed that when I added those models to the llm-gemini plugin, which is now fixed in this dot release. The xhigh setting for Hydrogen makes a significant difference. I updated my Gemini 4 comparison grid - note how Hydrogen at high used 5,311 output tokens and cost 3.99 cents, but the same model at xhigh used 31,477 output tokens, cost 23.61 cents, and produced a pelican that's competitive with Gemini 4 Neon: Tags: gemini ,",
+      "published": "2026-11-20T03:01:57+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "ae8cfecfa51e": {
+      "id": "ae8cfecfa51e",
+      "url": "https://bsky.app/profile/simonwillison.net/post/3n2tsb6pguk27",
+      "person": "Simon Willison",
+      "text": "Gemini 4 tip: the difference between Gemini 4 Hydrogen on \"high\" thinking effort and that same model on \"xhigh\" is VERY significant Here's the high v.s. the xhigh pelican - high cost 3.99 cents and used 5,311 output tokens, xhigh cost 23.61 cents and used 31,477 output tokens",
+      "published": "2026-11-21T19:06:19.565Z",
       "via": "Bluesky",
       "kind": "post"
     }
