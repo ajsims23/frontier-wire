@@ -824,13 +824,14 @@
     }
    ],
    "evidence": [
+    "d8887a09bc5e",
     "a1e895b935bb"
    ],
    "ring": "assess",
    "proposed": "",
    "quadrant": "models",
-   "capability": "doc_extraction",
-   "rationale": "Demonstrated capability in decoding historical text and shorthand. May be assessed for extracting unstructured data from degraded historical document archives.",
+   "capability": "research",
+   "rationale": "Could assist with historical document transcription and agent memory architectures; remains a key model under evaluation for complex research tasks.",
    "updated": "2026-11-21",
    "model": "gemini/gemini-flash-lite-latest"
   },
@@ -902,6 +903,238 @@
    "rationale": "Allows AI agents to query enterprise tables as a unified graph without data duplication. May be assessed for streamlining agentic financial data pipelines.",
    "updated": "2026-11-21",
    "model": "gemini/gemini-flash-lite-latest"
+  },
+  "claude-code": {
+   "key": "claude-code",
+   "name": "Claude Code",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Could boost engineering output, but requires strict access tiering and careful management of local credential files to prevent secret leakage into version control. Sits in assess."
+    }
+   ],
+   "evidence": [
+    "68ff5ed661ee",
+    "5186d80b7eef"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "productivity",
+   "rationale": "Could boost engineering output, but requires strict access tiering and careful management of local credential files to prevent secret leakage into version control. Sits in assess.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "cert-in-ai-security-auditing-guidelines": {
+   "key": "cert-in-ai-security-auditing-guidelines",
+   "name": "CERT-In AI Security Auditing Guidelines",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "hold",
+     "why": "Restricts multi-step agents in India; DPA must ensure compliance with tool-use checks and emergency-stop mandates for autonomous systems. Sits in hold as a policy constraint."
+    }
+   ],
+   "evidence": [
+    "b5d702d24285"
+   ],
+   "ring": "hold",
+   "proposed": "",
+   "quadrant": "policy",
+   "capability": "governance",
+   "rationale": "Restricts multi-step agents in India; DPA must ensure compliance with tool-use checks and emergency-stop mandates for autonomous systems. Sits in hold as a policy constraint.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "glm": {
+   "key": "glm",
+   "name": "GLM",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "trial",
+     "why": "Could significantly lower internal coding and inference costs via self-hosting on local GPUs. Worth a time-boxed trial for development teams."
+    }
+   ],
+   "evidence": [
+    "2d3b8471f026"
+   ],
+   "ring": "trial",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "productivity",
+   "rationale": "Could significantly lower internal coding and inference costs via self-hosting on local GPUs. Worth a time-boxed trial for development teams.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "flashprove": {
+   "key": "flashprove",
+   "name": "FlashProve",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "May provide cryptographic proof of model inference for financial reporting pipelines, but requires evaluation of latency overhead on verification workflows."
+    }
+   ],
+   "evidence": [
+    "c7ca507a9ed8",
+    "88d7432c1d48"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "techniques",
+   "capability": "reporting",
+   "rationale": "May provide cryptographic proof of model inference for financial reporting pipelines, but requires evaluation of latency overhead on verification workflows.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "claude-data": {
+   "key": "claude-data",
+   "name": "Claude Data",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Could streamline financial dataset processing and spreadsheet analysis for DPA analysts; worth evaluating in beta."
+    }
+   ],
+   "evidence": [
+    "7737e173e31a"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "reporting",
+   "rationale": "Could streamline financial dataset processing and spreadsheet analysis for DPA analysts; worth evaluating in beta.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "activesecharness": {
+   "key": "activesecharness",
+   "name": "ActiveSecHarness",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Could inform how DPA secures autonomous coding agents and internal harnesses using capability-token isolation. Sits in assess."
+    }
+   ],
+   "evidence": [
+    "b61856a48aba"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "techniques",
+   "capability": "agents",
+   "rationale": "Could inform how DPA secures autonomous coding agents and internal harnesses using capability-token isolation. Sits in assess.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "fireworks": {
+   "key": "fireworks",
+   "name": "Fireworks",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "hold",
+     "why": "Security breach involving data and model weight exposure highlights supply-chain risks, reinforcing DPA's caution with third-party AI cloud infrastructure vendors. Sits in hold."
+    }
+   ],
+   "evidence": [
+    "7c216e897ed3"
+   ],
+   "ring": "hold",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "governance",
+   "rationale": "Security breach involving data and model weight exposure highlights supply-chain risks, reinforcing DPA's caution with third-party AI cloud infrastructure vendors. Sits in hold.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "harness": {
+   "key": "harness",
+   "name": "Harness",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Open-source agent app with massive scale; worth assessing for workflow patterns in financial process automation."
+    }
+   ],
+   "evidence": [
+    "76dbab81d73b"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "agents",
+   "rationale": "Open-source agent app with massive scale; worth assessing for workflow patterns in financial process automation.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "arete-27b": {
+   "key": "arete-27b",
+   "name": "Arete-27B",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Demonstrates domain-specific fine-tuning of open-weight models; could be evaluated by DPA's AI Champion Initiative for specialized research tasks."
+    }
+   ],
+   "evidence": [
+    "a03a5c718a32"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "research",
+   "rationale": "Demonstrates domain-specific fine-tuning of open-weight models; could be evaluated by DPA's AI Champion Initiative for specialized research tasks.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "artex": {
+   "key": "artex",
+   "name": "ARTEX",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "hold",
+     "why": "Leaked open-source offensive AI tool highlights security risks and prompts caution regarding internal testing endpoints. Sits in hold."
+    }
+   ],
+   "evidence": [
+    "a8fc84dcded8"
+   ],
+   "ring": "hold",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "governance",
+   "rationale": "Leaked open-source offensive AI tool highlights security risks and prompts caution regarding internal testing endpoints. Sits in hold.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
   }
  },
  "considered": [
@@ -916,12 +1149,14 @@
   "28b27e2d175e",
   "2adb42fb6372",
   "2b4eaac89da1",
+  "2d3b8471f026",
   "2db41133973d",
   "3decd8b5d056",
   "3f1ac81e6e95",
   "459fb45d2a37",
   "48f1f10785df",
   "4deebe750552",
+  "5186d80b7eef",
   "518c47915c16",
   "53f2a14376dd",
   "549a77347d5e",
@@ -931,31 +1166,45 @@
   "5d27befedfa3",
   "60f45a639eb2",
   "6373036a727f",
+  "646e58946cb7",
+  "68ff5ed661ee",
   "6da8ea47d40e",
+  "76dbab81d73b",
+  "7737e173e31a",
   "77d255b4e9ac",
   "7a3f1296623a",
+  "7c216e897ed3",
+  "7f37f170fafc",
   "820bd24a41c4",
   "84a41c24a3f1",
   "853b24ff0d6e",
+  "88d7432c1d48",
   "9045dcda80bd",
   "9108ffa54a00",
   "94ff1d7f5e18",
+  "a03a5c718a32",
   "a1e895b935bb",
   "a1f50bca3921",
   "a8d5fa7d24b3",
   "a8d86fb81b42",
+  "a8fc84dcded8",
   "afe5d96a9d46",
   "b00f82b6db94",
   "b0ded74e06b0",
+  "b5d702d24285",
+  "b61856a48aba",
   "b621aa11e7e8",
   "b898a1b2127c",
   "c3e82675d569",
   "c60558e98558",
   "c741975b7d0b",
+  "c7ca507a9ed8",
   "cce714811b51",
+  "d8887a09bc5e",
   "e1842b672534",
   "ef2f279289bc",
+  "f0be036ed676",
   "fa0e89bac09a"
  ],
- "updated_at": "2026-11-21T22:31:39+00:00"
+ "updated_at": "2026-11-21T22:47:03+00:00"
 }
