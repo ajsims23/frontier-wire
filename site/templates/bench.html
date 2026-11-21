@@ -20,7 +20,7 @@
     <div class="table-box"><table class="deals bn-table">
       <thead><tr><th scope="col">#</th><th scope="col">Model</th><th scope="col">Overall</th>{% for k, v in b.spec.types.items() %}<th scope="col">{{ v }}</th>{% endfor %}<th scope="col">Median time</th><th scope="col">Since last run</th></tr></thead>
       <tbody>{% for r in b.rows %}
-        <tr><td>{{ loop.index }}</td><td><span class="strong">{{ r.name }}</span><br><span class="muted">{{ r.provider_name }} · <code>{{ r.model }}</code></span></td>
+        <tr><td>{{ loop.index }}</td><td><span class="strong">{{ r.name }}</span><br><span class="muted">{{ r.provider_name }} · <code>{{ r.model }}</code>{% if r.stale %} · result from {{ short(r.as_of) }}{% endif %}</span></td>
           <td class="num"><span class="bn-score" style="--p: {{ r.score }}%">{{ r.score }}</span></td>
           {% for k in b.spec.types %}<td class="num">{{ r.by_type[k] if r.by_type[k] is not none else "—" }}</td>{% endfor %}
           <td class="num nowrap">{{ r.median_latency_s }} s</td>

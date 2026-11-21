@@ -142,18 +142,26 @@ def contenders(cfg: Config, env: dict[str, str]) -> list[tuple[dict, str]]:
 
 
 def run(cfg: Config, now: datetime, env: dict[str, str], llm_for: Any = None, sleep: Any = time.sleep,
-        tasks_path: Path | None = None) -> dict[str, Any]:
+        tasks_path: Path | None = None, budget_s: float = 34 * 60, model_budget_s: float = 7 * 60) -> dict[str, Any]:
     spec = load_tasks(tasks_path)
     out_dir = cfg.data_dir / "bench"
     limits = Limits({"max_requests_per_run": 260, "max_requests_per_day": 400, "max_tokens_per_day": 900000},
                     out_dir / "usage.json", today=now.date().isoformat())
     llm_for = llm_for or (lambda p, m: LLM([dict(p, models=[m])], limits, env=env))
     models = []
+    started = time.monotonic()
     for p, m in contenders(cfg, env):
+        if time.monotonic() - started > budget_s:  # stay inside the workflow's time limit; the rest run next week
+            models.append({"provider": p["name"], "model": m, "tasks": {}, "errors": 0, "available": False, "stopped": "time budget"})
+            continue
+        model_started = time.monotonic()
         llm = llm_for(p, m)
         rec: dict[str, Any] = {"provider": p["name"], "model": m, "tasks": {}, "errors": 0, "latency": []}
         tokens0 = limits.run_tokens
         for t in spec["tasks"]:
+            if time.monotonic() - model_started > model_budget_s:
+                rec["stopped"] = "too slow on the free tier this run"
+                break
             prompt = f"{t['instruction']}\n\n<document>\n{t['document']}\n</document>"
             t0 = time.monotonic()
             try:
@@ -182,8 +190,8 @@ def run(cfg: Config, now: datetime, env: dict[str, str], llm_for: Any = None, sl
             rec["tasks"][t["id"]] = {"score": round(s, 3), "fields": fields}
         rec["tokens"] = limits.run_tokens - tokens0
         done = [t for t in spec["tasks"] if t["id"] in rec["tasks"]]
-        if not done or rec.get("stopped") == "model unavailable on the free tier" and rec["errors"] == len(done):
-            rec["available"] = False
+        if not done or len(done) < len(spec["tasks"]) or (rec.get("stopped") == "model unavailable on the free tier" and rec["errors"] == len(done)):
+            rec["available"] = False  # only complete runs are ranked, so every score covers the same tasks
         else:
             rec["available"] = True
             rec["score"] = round(100 * sum(rec["tasks"][t["id"]]["score"] for t in spec["tasks"] if t["id"] in rec["tasks"]) / len(spec["tasks"]), 1)
@@ -221,15 +229,25 @@ def site_view(data_dir: Path) -> dict[str, Any] | None:
     latest = runs[-1] if runs else None
     rows = []
     if latest:
-        prev = {(m["provider"], m["model"]): m.get("score") for m in (runs[-2]["models"] if len(runs) > 1 else [])}
-        for m in latest["models"]:
-            if not m.get("available"):
+        # each model's newest complete result (a busy free tier this week shouldn't wipe last week's score)
+        best: dict[tuple, tuple[dict, str]] = {}
+        older: dict[tuple, float] = {}
+        for r in runs:
+            if r.get("tasks_version") != spec["version"]:
                 continue
-            last = prev.get((m["provider"], m["model"]))
-            rows.append({**m, "name": MODEL_NAMES.get(m["model"], m["model"].split("/")[-1]),
+            for m in r["models"]:
+                if m.get("available"):
+                    k = (m["provider"], m["model"])
+                    if k in best:
+                        older[k] = best[k][0]["score"]
+                    best[k] = (m, r["date"])
+        for (prov, model), (m, date) in sorted(best.items(), key=lambda kv: -kv[1][0]["score"]):
+            last = older.get((prov, model))
+            rows.append({**m, "as_of": date, "stale": date != latest["date"], "name": MODEL_NAMES.get(m["model"], m["model"].split("/")[-1]),
                          "provider_name": PROVIDER_NAMES.get(m["provider"], m["provider"]),
                          "delta": None if last is None else round(m["score"] - last, 1),
                          "cells": [{"id": t["id"], "score": m["tasks"].get(t["id"], {}).get("score")} for t in spec["tasks"]]})
     return {"spec": spec, "latest": latest, "rows": rows, "runs": len(runs),
-            "unavailable": [m for m in (latest or {}).get("models", []) if not m.get("available")],
+            "unavailable": [m for m in (latest or {}).get("models", []) if not m.get("available")
+                            and not any(r["provider"] == m["provider"] and r["model"] == m["model"] for r in rows)],
             "history": [{"date": r["date"], "best": max([m.get("score") or 0 for m in r["models"]] or [0])} for r in runs]}
