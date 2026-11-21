@@ -593,15 +593,19 @@
     }
    ],
    "evidence": [
+    "2b4eaac89da1",
     "2848e728094b"
    ],
    "ring": "assess",
    "proposed": "",
-   "quadrant": "techniques",
-   "capability": "research",
-   "rationale": "GPT-6 Astra's ability to program tabular foundation models via weight and cache editing offers a potential technique for configuring tabular models.",
+   "quadrant": "models",
+   "capability": "agents",
+   "rationale": "OpenAI models offering advanced reasoning capabilities. May be assessed on complex multi-step financial data extraction and reporting tasks. Same as GPT-6 Astra.",
    "updated": "2026-11-21",
-   "model": "gemini/gemini-flash-lite-latest"
+   "model": "gemini/gemini-flash-lite-latest",
+   "aliases": [
+    "gpt-5-6-and-astra"
+   ]
   },
   "databento": {
    "key": "databento",
@@ -636,16 +640,266 @@
      "from": "",
      "to": "assess",
      "why": "Demonstrates deep multi-step text search capabilities relevant to DPA's automated research and document extraction workflows."
+    },
+    {
+     "date": "2026-11-21",
+     "from": "assess",
+     "to": "trial",
+     "why": "Anthropic's Fable 5.2 offers strong agent orchestration, a 1M-token context window, and lower pricing. It could improve speed and cost efficiency in document extraction and financial reporting. Same as Claude Fable 5.2."
+    },
+    {
+     "date": "2026-11-21",
+     "from": "trial",
+     "to": "assess",
+     "why": "Fable 5.2 tops the Remote Labor Index for professional freelance tasks. May be assessed for complex alternative-investment research and data extraction. Same as Claude Fable 5.2."
     }
    ],
    "evidence": [
+    "b621aa11e7e8",
+    "94ff1d7f5e18",
+    "255b56db4a4a",
+    "23f8b2eb41d3",
     "fa0e89bac09a"
    ],
    "ring": "assess",
    "proposed": "",
    "quadrant": "models",
    "capability": "research",
-   "rationale": "Demonstrates deep multi-step text search capabilities relevant to DPA's automated research and document extraction workflows.",
+   "rationale": "Fable 5.2 tops the Remote Labor Index for professional freelance tasks. May be assessed for complex alternative-investment research and data extraction. Same as Claude Fable 5.2.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest",
+   "moved": "2026-11-21",
+   "aliases": [
+    "fable-5-2"
+   ]
+  },
+  "gemini-decisions-api": {
+   "key": "gemini-decisions-api",
+   "name": "Gemini Decisions API",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "trial",
+     "why": "Provides extremely fast, low-cost bounded-choice probability scoring and multi-modal QA. Could be trialed for high-volume document checks and compliance checklists on fund filings."
+    }
+   ],
+   "evidence": [
+    "cce714811b51"
+   ],
+   "ring": "trial",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "data_qa",
+   "rationale": "Provides extremely fast, low-cost bounded-choice probability scoring and multi-modal QA. Could be trialed for high-volume document checks and compliance checklists on fund filings.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "grok-build": {
+   "key": "grok-build",
+   "name": "Grok Build",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "hold",
+     "why": "Coding agents that auto-deploy apps without default authentication pose severe data leakage risks. DPA must hold and enforce strict security reviews on any internal apps built with such tools."
+    }
+   ],
+   "evidence": [
+    "c3e82675d569"
+   ],
+   "ring": "hold",
+   "proposed": "",
+   "quadrant": "policy",
+   "capability": "governance",
+   "rationale": "Coding agents that auto-deploy apps without default authentication pose severe data leakage risks. DPA must hold and enforce strict security reviews on any internal apps built with such tools.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "gemini-4-carbon": {
+   "key": "gemini-4-carbon",
+   "name": "Gemini 4 Carbon",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Google's Gemini 4 Carbon introduces agent swarm features for coordinated multi-step execution. May be assessed for complex financial reporting and research workflows against current tools."
+    }
+   ],
+   "evidence": [
+    "28b27e2d175e"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "agents",
+   "rationale": "Google's Gemini 4 Carbon introduces agent swarm features for coordinated multi-step execution. May be assessed for complex financial reporting and research workflows against current tools.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "muse-ember": {
+   "key": "muse-ember",
+   "name": "Muse Ember",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Meta's lightweight reasoning model offers very low token pricing. May be assessed for repetitive agent execution tasks and high-volume document parsing in DPA pipelines."
+    }
+   ],
+   "evidence": [
+    "5881b795a6bf"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "doc_extraction",
+   "rationale": "Meta's lightweight reasoning model offers very low token pricing. May be assessed for repetitive agent execution tasks and high-volume document parsing in DPA pipelines.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "dpdp-act-consent-manager-portal": {
+   "key": "dpdp-act-consent-manager-portal",
+   "name": "DPDP Act consent manager portal",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "hold",
+     "why": "MeitY's consent manager registration framework under the DPDP Act governs personal data handling. DPA must hold/observe strict compliance when managing client data."
+    }
+   ],
+   "evidence": [
+    "9045dcda80bd"
+   ],
+   "ring": "hold",
+   "proposed": "",
+   "quadrant": "policy",
+   "capability": "governance",
+   "rationale": "MeitY's consent manager registration framework under the DPDP Act governs personal data handling. DPA must hold/observe strict compliance when managing client data.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "claude-meetings": {
+   "key": "claude-meetings",
+   "name": "Claude Meetings",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "trial",
+     "why": "Anthropic's beta tool joins video calls to take notes and draft follow-ups. Could be trialed for internal scoping calls and research summaries."
+    }
+   ],
+   "evidence": [
+    "21ab7432dba4"
+   ],
+   "ring": "trial",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "productivity",
+   "rationale": "Anthropic's beta tool joins video calls to take notes and draft follow-ups. Could be trialed for internal scoping calls and research summaries.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "claude": {
+   "key": "claude",
+   "name": "Claude",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Demonstrated capability in decoding historical text and shorthand. May be assessed for extracting unstructured data from degraded historical document archives."
+    }
+   ],
+   "evidence": [
+    "a1e895b935bb"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "doc_extraction",
+   "rationale": "Demonstrated capability in decoding historical text and shorthand. May be assessed for extracting unstructured data from degraded historical document archives.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "daybreak-defense-factory": {
+   "key": "daybreak-defense-factory",
+   "name": "Daybreak Defense Factory",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "OpenAI's Daybreak platform tools automate finding and fixing code vulnerabilities. May be assessed to secure custom AI applications and internal data pipelines."
+    }
+   ],
+   "evidence": [
+    "3f1ac81e6e95"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "governance",
+   "rationale": "OpenAI's Daybreak platform tools automate finding and fixing code vulnerabilities. May be assessed to secure custom AI applications and internal data pipelines.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "aws-emulator": {
+   "key": "aws-emulator",
+   "name": "AWS Emulator",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Simulates AWS services locally using AI generation. May be assessed for creating local testing mocks and simplifying cloud data pipeline development."
+    }
+   ],
+   "evidence": [
+    "c741975b7d0b"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "data_pipelines",
+   "rationale": "Simulates AWS services locally using AI generation. May be assessed for creating local testing mocks and simplifying cloud data pipeline development.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "puppygraph": {
+   "key": "puppygraph",
+   "name": "PuppyGraph",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Allows AI agents to query enterprise tables as a unified graph without data duplication. May be assessed for streamlining agentic financial data pipelines."
+    }
+   ],
+   "evidence": [
+    "5c695888c432"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "data_pipelines",
+   "rationale": "Allows AI agents to query enterprise tables as a unified graph without data duplication. May be assessed for streamlining agentic financial data pipelines.",
    "updated": "2026-11-21",
    "model": "gemini/gemini-flash-lite-latest"
   }
@@ -654,11 +908,17 @@
   "0508a8475458",
   "0cefd4c68688",
   "1d0b49e9508f",
+  "21ab7432dba4",
+  "23f8b2eb41d3",
+  "255b56db4a4a",
   "25f8ab73ccc5",
   "2848e728094b",
+  "28b27e2d175e",
   "2adb42fb6372",
+  "2b4eaac89da1",
   "2db41133973d",
   "3decd8b5d056",
+  "3f1ac81e6e95",
   "459fb45d2a37",
   "48f1f10785df",
   "4deebe750552",
@@ -666,26 +926,36 @@
   "53f2a14376dd",
   "549a77347d5e",
   "583b7a1c7413",
+  "5881b795a6bf",
+  "5c695888c432",
   "5d27befedfa3",
   "60f45a639eb2",
   "6373036a727f",
   "6da8ea47d40e",
+  "77d255b4e9ac",
   "7a3f1296623a",
   "820bd24a41c4",
   "84a41c24a3f1",
   "853b24ff0d6e",
+  "9045dcda80bd",
   "9108ffa54a00",
+  "94ff1d7f5e18",
+  "a1e895b935bb",
   "a1f50bca3921",
   "a8d5fa7d24b3",
   "a8d86fb81b42",
   "afe5d96a9d46",
   "b00f82b6db94",
   "b0ded74e06b0",
+  "b621aa11e7e8",
   "b898a1b2127c",
+  "c3e82675d569",
   "c60558e98558",
+  "c741975b7d0b",
+  "cce714811b51",
   "e1842b672534",
   "ef2f279289bc",
   "fa0e89bac09a"
  ],
- "updated_at": "2026-11-21T22:27:02+00:00"
+ "updated_at": "2026-11-21T22:31:39+00:00"
 }
