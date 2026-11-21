@@ -151,7 +151,8 @@
     }
    ],
    "evidence": [
-    "25f8ab73ccc5"
+    "25f8ab73ccc5",
+    "549a77347d5e"
    ],
    "ring": "assess",
    "proposed": "",
@@ -159,7 +160,10 @@
    "capability": "doc_extraction",
    "rationale": "DPA could evaluate GPT-6.2 Astra for complex fund document extraction, financial reporting, and research tasks given benchmark gains and lower pricing.",
    "updated": "2026-11-21",
-   "model": "gemini/gemini-flash-lite-latest"
+   "model": "gemini/gemini-flash-lite-latest",
+   "aliases": [
+    "gpt-6-2-astra-and-sol"
+   ]
   },
   "mai-code-2": {
    "key": "mai-code-2",
@@ -181,29 +185,6 @@
    "quadrant": "models",
    "capability": "productivity",
    "rationale": "DPA could test MAI Code 2 and Flash on GitHub Copilot to improve developer velocity for data pipeline engineering.",
-   "updated": "2026-11-21",
-   "model": "gemini/gemini-flash-lite-latest"
-  },
-  "gpt-6-2-astra-and-sol": {
-   "key": "gpt-6-2-astra-and-sol",
-   "name": "GPT-6.2 Astra and Sol",
-   "first_seen": "2026-11-21",
-   "history": [
-    {
-     "date": "2026-11-21",
-     "from": "",
-     "to": "assess",
-     "why": "DPA should evaluate GPT-6.2 Astra and Sol for cost-efficiency across document extraction, coding assistants, and financial research APIs."
-    }
-   ],
-   "evidence": [
-    "549a77347d5e"
-   ],
-   "ring": "assess",
-   "proposed": "",
-   "quadrant": "models",
-   "capability": "doc_extraction",
-   "rationale": "DPA should evaluate GPT-6.2 Astra and Sol for cost-efficiency across document extraction, coding assistants, and financial research APIs.",
    "updated": "2026-11-21",
    "model": "gemini/gemini-flash-lite-latest"
   },
@@ -367,29 +348,344 @@
    "rationale": "DPA could monitor Copilotforce integrations for connecting financial services CRM data into automated client reporting workflows.",
    "updated": "2026-11-21",
    "model": "gemini/gemini-flash-lite-latest"
+  },
+  "gemini-4-hydrogen": {
+   "key": "gemini-4-hydrogen",
+   "name": "Gemini 4 Hydrogen",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Gemini 4 Hydrogen could reduce token costs and speed up DPA's internal coding assistants and multi-step agentic workflows with its low pricing and fast execution."
+    }
+   ],
+   "evidence": [
+    "0508a8475458",
+    "a8d5fa7d24b3"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "productivity",
+   "rationale": "Gemini 4 Hydrogen could reduce token costs and speed up DPA's internal coding assistants and multi-step agentic workflows with its low pricing and fast execution.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "sebi-ai-usage-guidelines": {
+   "key": "sebi-ai-usage-guidelines",
+   "name": "SEBI AI usage guidelines",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "SEBI's AI guidelines require DPA to maintain strict human-in-the-loop oversight and clear accountability for financial reporting and analysis tools."
+    }
+   ],
+   "evidence": [
+    "6373036a727f"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "policy",
+   "capability": "governance",
+   "rationale": "SEBI's AI guidelines require DPA to maintain strict human-in-the-loop oversight and clear accountability for financial reporting and analysis tools.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "whitematter": {
+   "key": "whitematter",
+   "name": "WhiteMatter",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "WhiteMatter's guardian agents could be assessed for securing DPA's multi-step agentic workflows and controlling confidential file access."
+    }
+   ],
+   "evidence": [
+    "7a3f1296623a"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "governance",
+   "rationale": "WhiteMatter's guardian agents could be assessed for securing DPA's multi-step agentic workflows and controlling confidential file access.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "gpt-6-luna-api-inference-residency": {
+   "key": "gpt-6-luna-api-inference-residency",
+   "name": "GPT-6 Luna API inference residency",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "India-hosted inference residency for GPT-6 Luna helps DPA meet data-localisation requirements for financial-services clients."
+    }
+   ],
+   "evidence": [
+    "e1842b672534"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "governance",
+   "rationale": "India-hosted inference residency for GPT-6 Luna helps DPA meet data-localisation requirements for financial-services clients.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "cohere": {
+   "key": "cohere",
+   "name": "Cohere",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Cohere's sovereign AI partnership with HCLTech could offer compliant deployment patterns for financial-services clients requiring strict data residency."
+    }
+   ],
+   "evidence": [
+    "3decd8b5d056"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "data_pipelines",
+   "rationale": "Cohere's sovereign AI partnership with HCLTech could offer compliant deployment patterns for financial-services clients requiring strict data residency.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "token-factory": {
+   "key": "token-factory",
+   "name": "Token Factory",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Sarvam's domestic inference API could provide a local, usage-priced option for running global open-weight models in India for data pipelines."
+    }
+   ],
+   "evidence": [
+    "518c47915c16"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "data_pipelines",
+   "rationale": "Sarvam's domestic inference API could provide a local, usage-priced option for running global open-weight models in India for data pipelines.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "certisum": {
+   "key": "certisum",
+   "name": "CertiSum",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "CertiSum could help DPA reproduce and audit low-precision model training consistently across heterogeneous GPU setups if fine-tuning is scaled."
+    }
+   ],
+   "evidence": [
+    "4deebe750552"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "techniques",
+   "capability": "data_pipelines",
+   "rationale": "CertiSum could help DPA reproduce and audit low-precision model training consistently across heterogeneous GPU setups if fine-tuning is scaled.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "computer-use-agents": {
+   "key": "computer-use-agents",
+   "name": "computer-use agents",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "OpenAI's computer-use agents could eventually assist in navigating client software interfaces for data pipelines and document extraction tasks."
+    }
+   ],
+   "evidence": [
+    "b0ded74e06b0"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "agents",
+   "rationale": "OpenAI's computer-use agents could eventually assist in navigating client software interfaces for data pipelines and document extraction tasks.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "qwen4-max": {
+   "key": "qwen4-max",
+   "name": "Qwen4-Max",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Qwen4-Max's large context window and token efficiency could improve how DPA processes long financial filings and dense research documents."
+    }
+   ],
+   "evidence": [
+    "48f1f10785df"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "doc_extraction",
+   "rationale": "Qwen4-Max's large context window and token efficiency could improve how DPA processes long financial filings and dense research documents.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "openrouter": {
+   "key": "openrouter",
+   "name": "OpenRouter",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "The Hugging Face and OpenRouter partnership offers DPA an alternative multi-provider routing setup for accessing open-weight models in internal pipelines."
+    }
+   ],
+   "evidence": [
+    "853b24ff0d6e"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "data_pipelines",
+   "rationale": "The Hugging Face and OpenRouter partnership offers DPA an alternative multi-provider routing setup for accessing open-weight models in internal pipelines.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "gpt-6-astra": {
+   "key": "gpt-6-astra",
+   "name": "GPT-6 Astra",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "GPT-6 Astra's ability to program tabular foundation models via weight and cache editing offers a potential technique for configuring tabular models."
+    }
+   ],
+   "evidence": [
+    "2848e728094b"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "techniques",
+   "capability": "research",
+   "rationale": "GPT-6 Astra's ability to program tabular foundation models via weight and cache editing offers a potential technique for configuring tabular models.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "databento": {
+   "key": "databento",
+   "name": "Databento",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Databento could offer alternative programmatic market data feeds for DPA's financial research and asset-management pipelines."
+    }
+   ],
+   "evidence": [
+    "2db41133973d"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "research",
+   "rationale": "Databento could offer alternative programmatic market data feeds for DPA's financial research and asset-management pipelines.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "claude-fable-5-2": {
+   "key": "claude-fable-5-2",
+   "name": "Claude Fable 5.2",
+   "first_seen": "2026-11-21",
+   "history": [
+    {
+     "date": "2026-11-21",
+     "from": "",
+     "to": "assess",
+     "why": "Demonstrates deep multi-step text search capabilities relevant to DPA's automated research and document extraction workflows."
+    }
+   ],
+   "evidence": [
+    "fa0e89bac09a"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "research",
+   "rationale": "Demonstrates deep multi-step text search capabilities relevant to DPA's automated research and document extraction workflows.",
+   "updated": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
   }
  },
  "considered": [
+  "0508a8475458",
   "0cefd4c68688",
   "1d0b49e9508f",
   "25f8ab73ccc5",
+  "2848e728094b",
   "2adb42fb6372",
+  "2db41133973d",
+  "3decd8b5d056",
   "459fb45d2a37",
+  "48f1f10785df",
+  "4deebe750552",
+  "518c47915c16",
   "53f2a14376dd",
   "549a77347d5e",
   "583b7a1c7413",
   "5d27befedfa3",
   "60f45a639eb2",
+  "6373036a727f",
   "6da8ea47d40e",
+  "7a3f1296623a",
   "820bd24a41c4",
   "84a41c24a3f1",
+  "853b24ff0d6e",
+  "9108ffa54a00",
   "a1f50bca3921",
+  "a8d5fa7d24b3",
   "a8d86fb81b42",
   "afe5d96a9d46",
   "b00f82b6db94",
+  "b0ded74e06b0",
   "b898a1b2127c",
   "c60558e98558",
-  "ef2f279289bc"
+  "e1842b672534",
+  "ef2f279289bc",
+  "fa0e89bac09a"
  ],
- "updated_at": "2026-11-21T22:24:03+00:00"
+ "updated_at": "2026-11-21T22:27:02+00:00"
 }

@@ -1,3 +1,53 @@
 {
- "cards": {}
+ "cards": {
+  "poc-0e1b17": {
+   "id": "poc-0e1b17",
+   "kind": "pilot",
+   "radar_key": "tool-retrieval",
+   "item": "Tool Retrieval",
+   "capability": "agents",
+   "title": "Pilot Tool Retrieval for scaling agentic data pipelines",
+   "problem": "Managing large tool libraries in multi-step AI agents inflates input token counts and latency, limiting DPA's ability to scale agentic data pipelines cost-effectively.",
+   "proposal": "Integrate Tool Retrieval into an existing Gemini-based agent workflow with 50+ tools to load parameter schemas on demand, reducing token counts and latency without inflating costs.",
+   "plan": [
+    "Build test harness using public or synthetic documents with 50+ tools.",
+    "Integrate Tool Retrieval into the Gemini-based agent workflow.",
+    "Measure token costs and latency compared to static loading."
+   ],
+   "metric": "Compare input token counts and latency against static loading in an agent workflow with 50+ tools.",
+   "data_safety": "Public or synthetic data first; no client data on free tiers; check the licence and data terms.",
+   "effort": "M",
+   "owner": "engineers",
+   "evidence": [
+    "b00f82b6db94"
+   ],
+   "drafted": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "poc-7e2c3b": {
+   "id": "poc-7e2c3b",
+   "kind": "pilot",
+   "radar_key": "mai-code-2",
+   "item": "MAI Code 2",
+   "capability": "productivity",
+   "title": "Pilot MAI Code 2 for data pipeline engineering velocity",
+   "problem": "DPA needs to improve developer velocity for data pipeline engineering tasks without compromising code quality.",
+   "proposal": "Test MAI Code 2 and Flash on GitHub Copilot to evaluate performance and speed for internal pipeline engineering workflows.",
+   "plan": [
+    "Set up trial on GitHub Copilot with public repositories.",
+    "Test MAI Code 2 on pipeline coding tasks.",
+    "Compare developer velocity against baseline methods."
+   ],
+   "metric": "Field accuracy vs the current step, minutes saved per document.",
+   "data_safety": "Public or synthetic data first; no client data on free tiers; check the licence and data terms.",
+   "effort": "M",
+   "owner": "engineers",
+   "evidence": [
+    "5d27befedfa3"
+   ],
+   "drafted": "2026-11-21",
+   "model": "gemini/gemini-flash-lite-latest"
+  }
+ },
+ "last": "2026-11-21"
 }
