@@ -1,85 +1,68 @@
-## Frontier Wire newsroom run — 2026-11-22T17:11:54+00:00
+## Frontier Wire newsroom run — 2026-11-22T23:38:28+00:00
 
-Fetched 3031 items · fresh 34 · judged 42 · kept 5 · **written 3**
-AI: 35 requests, 98,557 tokens this run · 82 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Chasing the fallout from the massive Nvidia chip smuggling ring and Nvidia's executive turmoil while tracking AI infrastructure spending.
-  Priorities: Chinese national Li Ming charged in fraud case in Singapore linked to  (Major development in the ongoing smuggling thread connecting Li Ming, Singapore, and diverted Nvidia chips.); Nvidia Faces US Accounting Probe amid Deepening Turmoil (Nvidia facing US accounting probe adds a fresh regulatory layer to supply chain turmoil.); AI investment to rise to USD 1 . 4 trillion in 2027 , but returns rema (UBS forecast on $1.4T AI investment by 2027 provides critical market context for investors and builders.); 87% of the Anthropic power will come from gas and 11% from coal in 202 (Striking data on Anthropic's future power sources (gas and coal) linking AI scaling directly to energy infrastructure.); Experts say AI has made planning cyberattacks on industrial equipment  (Important cybersecurity angle on AI accelerating industrial equipment cyberattacks.)
-  Thin areas: safety, india
-  Searches: Li Ming Nvidia chip smuggling Singapore: 6 new; Nvidia US accounting probe SEC: 3 new; UBS AI investment 1.4 trillion returns: 4 new
-  Dig deeper: Chinese national Li Ming charged in fraud case in Singapore linked to ; Nvidia Faces US Accounting Probe amid Deepening Turmoil
-Research agent: investigated 4 stories with 11 tool calls, confirmed 2
-Daily briefing: 3 themes from 9 stories
-Threads updated: Nvidia chips smuggled to China via Southeast Asia: Chinese national Li Ming charged in fraud case linked to Meg
-Videos: 17 kept from 18 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (10 in feed, 1 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (11 in feed, 0 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 1 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 5 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (7 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (5 in feed, 1 new), 20VC ok (5 in feed, 1 new)
-Top Voices: 2 debates from 50 posts by 6 people; 4 portraits, 3 pictures
-Photos: 2 saved, 0 unavailable
-Alerts: 11 events sent: {"subscribers":5,"sent":0,"queued":23}
-Claims: 226 tracked, 220 open, 0 updated this run
-Trackers: filed 4 stories; updated us-china, india-ai, ai-infrastructure, ai-money
+Fetched 3014 items · fresh 19 · judged 30 · kept 9 · **written 5**
+AI: 40 requests, 92,004 tokens this run · 122 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Tracking OpenAI's proposals on perplexity metrics for scaling limits alongside ongoing fallout around Nvidia and Anthropic.
+  Priorities: OpenAI shares its models' perplexity, or how well they predict data, a (OpenAI sharing models' perplexity and proposing pacing limits based on metrics ahead of a potential 2027 avalanche.); A week after urging an Nvidia shake-up, Scott Bessent says Jensen Huan (Scott Bessent pressing Nvidia and Jensen Huang over China chip sales probes.); How Dario Amodei built Anthropic's tightly knit culture with essays, S (Details on Dario Amodei's leadership culture at Anthropic amid its IPO timeline.); Experts say AI has made planning cyberattacks on industrial equipment  (Industrial cybersecurity risks as AI accelerates manual analysis for attacks.); Why data centers are at the center of the Big Tech backlash (Big Tech backlash centered around power-hungry data center expansion.)
+  Thin areas: safety, business
+  Searches: Scott Bessent Nvidia China chip probes: 6 new; OpenAI perplexity model scaling limits 2027: 6 new
+  Dig deeper: OpenAI shares its models' perplexity, or how well they predict data, a; A week after urging an Nvidia shake-up, Scott Bessent says Jensen Huan
+Research agent: investigated 5 stories with 14 tool calls, confirmed 3
+Daily briefing: 4 themes from 11 stories
+Threads updated: Nvidia leadership and Jensen Huang departure: Scott Bessent says Jensen Huang's Nvidia return should await
+Videos: 17 kept from 18 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (10 in feed, 1 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 1 new), NVIDIA ok (9 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 6 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 1 new), Hard Fork ok (5 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (5 in feed, 0 new)
+Photos: 3 saved, 0 unavailable
+Alerts: 15 events sent: {"subscribers":5,"sent":0,"queued":30}
+Claims: 228 tracked, 222 open, 0 updated this run
+Trackers: filed 6 stories; updated us-china, frontier-race, agent-safety, ai-infrastructure
 Model tracker: 82 models, 4 changes today
-Tagged 3 stories by sector, region and deal
-Time: gather 139s, plan 2s, judge 18s, verify and write 107s, videos 7s, tagging 1s, trackers 16s, claims 2s, top voices 22s, briefing 1s, stock photos 1s, alerts 5s
+Tagged 5 stories by sector, region and deal
+India briefing: 3 themes from 3 stories
+Time: gather 93s, plan 3s, judge 7s, verify and write 104s, videos 6s, tagging 2s, trackers 19s, claims 2s, briefing 13s, alerts 3s
 
 ### New stories
-- **industry** — [Chinese national Li Ming charged in fraud case linked to Megaspeed](https://economictimes.indiatimes.com/tech/technology/chinese-national-li-ming-charged-in-fraud-case-in-singapore-linked-to-megaspeed-and-alice-huang-report/articleshow/136073178.cms)  
-  Chinese national Li Ming was charged with fraud by Singapore prosecutors in February 2025 for allegedly misleading an American supplier regarding the destination of Nvidia-equipped servers. The case involves a network of companies providing advanced computing capacity to Chinese customers through Singapore-based Megaspeed.  
-  _4 source(s), 0 verified quote(s)_
-- **industry** — [UBS projects global AI investment to reach USD 1.4 trillion in 2027](https://news.webindia123.com/news/Articles/Business/20261122/4522916.html)  
-  Global artificial intelligence investment is projected to rise to USD 1.4 trillion in 2027, up from USD 1 trillion in 2026, according to a report by UBS. Around 80 percent of this spending is expected to come from Alphabet, Amazon, Meta, Microsoft, and SpaceX.  
-  _9 source(s), 0 verified quote(s)_
-- **voices** — [Melanie Mitchell highlights framework for AI in unverifiable domains](https://bsky.app/profile/melaniemitchell.bsky.social/post/3n2vyricbms2n)  
-  Melanie Mitchell shared an article by @binarybits.bsky.social that provides a framework for evaluating AI in fields beyond math and coding. The piece examines how artificial intelligence is applied in domains that lack easily verifiable answers.  
-  _1 source(s), 0 verified quote(s)_
+- **voices** — [Anthropic valued at over $1 trillion as CEO Dario Amodei shares philosophy](https://techmeme.com/261122/p12)  
+  Anthropic is worth more than $1 trillion as CEO Dario Amodei promotes his philosophy of the future. The company seeds these ideas with opinion-makers through essays, Slack memos, and talks.  
+  _3 source(s), 0 verified quote(s)_
+- **policy** — [Scott Bessent says Jensen Huang's Nvidia return should await China probes](https://techmeme.com/261122/p10)  
+  U.S. Treasury Secretary Scott Bessent stated that Jensen Huang's potential return as Nvidia's chief executive should depend on investigations into the company's China chip sales. Bessent also noted that Nvidia has yet to answer questions regarding the U.S. probe into alleged restricted AI chip sales to China.  
+  _8 source(s), 0 verified quote(s)_
+- **research** — [OpenAI shares internal perplexity data and proposes shared AI safety limits](https://openai.com/index/perplexity-and-intelligence)  
+  OpenAI Chief Scientist Jakub Pachocki published internal perplexity measurements for models starting with GPT-3.5 and proposed establishing perplexity as a common metric for industry safety standards. Perplexity measures how well a model predicts the next token on average, with lower scores indicating better predictions.  
+  _10 source(s), 0 verified quote(s)_
+- **policy** — [Data centers emerge as a political flashpoint amid growing tech backlash](https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash)  
+  Journalist Paris Marx examines the environmental and social impacts of the rapid generative AI data center buildout in his new book, Hyperscale. The expansion of these facilities has driven local community opposition and emerged as a political factor in recent midterm elections.  
+  _4 source(s), 2 verified quote(s)_
+- **policy** — [Officials warn of more tech outages during AI infrastructure upgrades](https://techmeme.com/261122/p11)  
+  Director of National Intelligence Jay Clayton and Microsoft President Brad Smith warned that further major tech outages are expected as global information infrastructure is upgraded for the AI age. Recent disruptions included a nationwide FAA ground stop, a multi-day Microsoft Outlook outage, and banking issues at JPMorgan Chase.  
+  _2 source(s), 2 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Anthropic record IPO raises hopes for a charitable windfall that has nonprofits preparing to scale — score 4: Nonprofit financial windfall speculation stemming from Anthropic's IPO is secondary and low-signal.
-- South Korea Education Minister quits after AI cheating scandal rocks Suneung exam — score 4: Exam cheating scandal involving AI is more of a general education administration incident.
-- Alice Huang husband , asscoiate Li Ming , accused of running network to divert Nvidia AI Chips To China : Report — duplicate of 877f48487e8a
-- Like SpaceX , Anthropic ran an unusual IPO process , chafing some bankers — score 5: Commentary on Anthropic's unusual IPO process and banker reactions; minor color compared to the actual market debut.
-- Carl Benedikt Frey : Dont expect AI to work miracles — score 4: Routine skeptical commentary on AI productivity expectations.
-- China spy agency used intelligence network to secure advanced AI chips , bypass US curbs : Report — score 5: Reports on Chinese intelligence networks securing restricted AI chips; overlaps with prior chip-smuggling coverage (877f48487e8a).
-- Nvidia Faces US Accounting Probe amid Deepening Turmoil — duplicate of a250c4f5700f
-- Editorial : Should Nvidia bring back Jensen Huang ? — score 3: Speculative or opinion editorial on Nvidia leadership; not hard news.
-- Nvidia supply - chain expansion boosts confidence among Taiwan firms : Analyst — score 4: General analyst commentary on Taiwan supply chain confidence regarding Nvidia; lacks specific new data.
-- Taiwan banks deploy AI to prevent cyberattacks — score 4: Routine adoption of AI by regional banks for cybersecurity; lacks broad frontier relevance.
-- Hacks , AI and conspiracy theories : why are we having so many outages ? — score 3: General feature on tech outages touching loosely on AI; not a primary AI news story.
-- Nvidia says no to Jensen Huang return and continues with the search for a new CEO — score 2: Satirical or fabricated news piece about Nvidia leadership changes.
-- AI Revolution in Aviation : Smarter Aircraft , Airports and Air Traffic Control — score 3: Generic promotional overview of AI in aviation; no concrete new developments or releases.
-- In China tech mecca , Trump and Xi touted AI cooperation . Now comes the harsh reality . | Business — score 5: Broad analysis of US-China tech policy and AI restrictions; lacks specific new policy announcements or agreements.
-- Data Processing Incidents on Inference Providers — score 6: Technical incident report regarding data processing issues on inference providers via OpenRouter.
-- The Mythology of Conscious AI — score 4: Philosophical essay on the mythology of conscious AI; lacks concrete news value for builders or investors.
-- Pandex – Official European Law for AI Agents, over MCP — score 4: Hacker News point count post about EU law for AI agents over MCP without substantive details or primary official release.
-- Show HN: I built a game where you are an LLM's subagent — score 3: Show HN hobby game project where player is an LLM's subagent, not significant frontier model or product news.
-- Fast-Anything: Don't rewrite it in Rust. Rewrite the 5% that's slow — not AI: General software engineering and performance optimization post, no AI relevance.
-- The vibe-coding revolution is coming to all the gadgets — score 4: Weekly newsletter column discussing vibe-coding and consumer gadgets generally, routine commentary.
-- VinFast To Build Dedicated E-Scooter Assembly Line At TN Plant — not AI: Electric vehicle manufacturing plant expansion, no AI relevance.
-- Samsung Galaxy S27 leak: 5 new features leaked so far, from an iPhone-like Now Bar to AI video creation — score 4: Routine smartphone rumor leak mentioning minor AI camera features, low significance.
-- CII proposes 15 financial sector reforms to boost long-term growth ambitions — not AI: General financial sector reforms proposal by CII with no AI relevance.
-- Jony Ive, ex-OpenAI product designer Joey Flynn, and others on Silicon Valley's obsession with "taste" as a moat against AI slop and whether AI can learn it (Jonah Weiner/New York Times) — score 6: Thoughtful commentary and interviews on Silicon Valley's obsession with taste as a moat against AI slop, suitable for industry readership.
-- Current and former officials from the US and other countries describe the Chinese spy agency MSS' campaign to help Chinese companies acquire advanced AI chips (New York Times) — score 7: Reporting on Chinese state security campaigns to help firms acquire advanced AI chips.
-- Li Ming, alleged key figure in Nvidia chip smuggling network, is out on bail — duplicate of 877f48487e8a
-- Megaspeed affair's hidden hand – Nvidia chip smuggling web still running — duplicate of 877f48487e8a
-- Nvidia AI Chip Smuggling Allegations: Key Figure Li Ming Out on $1M Bail — duplicate of 877f48487e8a
-- Alice Huang and her husband’s close associate Li Ming routed Nvidia chips to China: report — duplicate of 877f48487e8a
-- The associate of Alice Huang who funneled Nvidia chips to China - WSJ — duplicate of 877f48487e8a
-- Nvidia chip smuggling row: Who is Li Ming, the Chinese national linked to Alice Huang and Kang Wei? — duplicate of 877f48487e8a
-- US SEC's Nvidia probe focuses on potential accounting irregularities — duplicate of a250c4f5700f
-- Nvidia faces US accounting probe as Jensen Huang exit, China spy saga deepen turmoil: Report — duplicate of a250c4f5700f
-- 87% of the Anthropic power will come from gas and 11% from coal in 2028 — could not verify yet; will retry next run
-- Experts say AI has made planning cyberattacks on industrial equipment faster by helping attackers read manuals and research past accidents more quickly (Tom Wilson/Financial Times) — could not verify yet; will retry next run
+- A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth — score 3: Beginner's guide to running local AI models; lacks frontier news value.
+- Europe weakens chemical rules as science links them to 'lifestyle diseases' — not AI: Off-topic article about European chemical rules and lifestyle diseases.
+- Canada recommits to federal funding for news — not AI: General news about Canadian federal funding for journalism, lacking an AI angle.
+- The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife — not AI: Video game wildlife field guide with no AI relevance.
+- How to use auto drive in GTA 6? What does it do? Does it work with boats in the video game? All questions answered — not AI: General gaming news about GTA 6 features, not AI.
+- Experts say AI has made planning cyberattacks on industrial equipment faster by helping attackers read manuals and research past accidents more quickly (Tom Wilson/Financial Times) — could not verify yet after a second try; dropped
+- 87% of the Anthropic power will come from gas and 11% from coal in 2028 — could not verify yet after a second try; dropped
+- Sources: amid leak fears, Anthropic limited some IPO banks to four-person teams, used a view-logging file platform, and sought six-month bans on advising rivals (Reuters) — could not verify yet; will retry next run
+- Binding of Isaac developer removes AI music from Repentance Plus — could not verify yet; will retry next run
 
 </details>
 
 <details><summary>Research agent's work</summary>
 
-- 87% of the Anthropic power will come from gas and 11% from coal in 202: unconfirmed (searched “Anthropic power gas coal 2028 better datacenter project”; searched “87% Anthropic gas coal 2028 betterdatacenterproject”; searched “betterdatacenterproject Anthropic gas coal”)
-- Chinese national Li Ming charged in fraud case in Singapore linked to : confirmed (searched “Li Ming fraud Singapore Megaspeed Alice Huang Nvidia”; read outlookindia.com; read moneycontrol.com)
-- AI investment to rise to USD 1 . 4 trillion in 2027 , but returns rema: confirmed (searched “AI investment 1.4 trillion 2027 UBS report”; read livemint.com)
-- Experts say AI has made planning cyberattacks on industrial equipment : unconfirmed (searched “Tom Wilson Financial Times AI cyberattacks industrial equipment manuals past accidents”; searched “AI has made planning cyberattacks on industrial equipment faster Tom Wilson Financial Times”; searched “"Tom Wilson" "industrial equipment" cyberattacks Financial Times”)
+- How Dario Amodei built Anthropic's tightly knit culture with essays, S: confirmed (searched “Dario Amodei Washington Post culture Vision Quest”; searched “Nitasha Tiku Washington Post Dario Amodei Anthropic culture Vision Quest”; searched “"Inside an AI prophet's secretive visions" Washington Post”)
+- A week after urging an Nvidia shake-up, Scott Bessent says Jensen Huan: confirmed (searched “Scott Bessent Nvidia Jensen Huang China chip sales CBS”; read nytimes.com; read msn.com)
+- Perplexity and Intelligence: unconfirmed (searched “OpenAI perplexity and intelligence Jakub Pachocki”; read openai.com)
+- Why data centers are at the center of the Big Tech backlash: confirmed (searched “Paris Marx Hyperscale book data centers TechCrunch”; searched “Paris Marx Hyperscale book TechCrunch”; read msn.com)
+- Experts say AI has made planning cyberattacks on industrial equipment : unconfirmed (searched “Tom Wilson Financial Times AI cyberattacks industrial equipment manuals”; searched “Financial Times AI cyberattacks industrial equipment manuals”; searched “Tom Wilson industrial equipment manuals cyberattacks”)
 
 </details>
 
 ### Notes
-- not India desk: 'Chinese national Li Ming charged in fraud case in '
+- not India desk: 'OpenAI shares its models' perplexity, or how well '
+- dropped unverifiable quote (Jakub Pachocki): Publishing our internal perplexity measurements took some co…
+- GDELT unavailable: GDELT paused for this run after repeated rate-limiting
 - 2 kept item(s) carried over to the next run

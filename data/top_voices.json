@@ -1,38 +1,11 @@
 {
   "posts": {
-    "19e044bba936": {
-      "id": "19e044bba936",
-      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2eo3wirl22g",
-      "person": "Ethan Mollick",
-      "text": "Another one of those things that would have been impossible a few months ago: \"Fable & Opus, find video of the Starship catch. Render the last 40 seconds or so in 3D in 3js with extreme detail. Let me switch views . No need to include the crowd.\" You can control it here: ship-42-catch.netlify.app",
-      "published": "2026-11-15T18:41:52.148Z",
-      "via": "Bluesky",
-      "kind": "post"
-    },
     "4b4d48f19f03": {
       "id": "4b4d48f19f03",
       "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre",
       "person": "Simon Willison",
       "text": "datasette-maplibre 0.1a0. Release: datasette-maplibre 0.1a0 The first new Datasette geospatial plugin in quite a while! This one combines the excellent MapLibre GL library with OpenFreeMap , the free vector map server operated by Zsolt Ero (you should sponsor Zsolt on GitHub .) I built most of this with a single prompt to Claude Fable 5.2: Look at datasette-cluster-map and datasette-leaflet-geojson plugins, then look at ~/dev/tools/openfreemap-demo.html - then build a brand new Datasette plugin that uses maplibreGL and openfreemap and combines the features of those other two plugins - but be creative and think outside",
       "published": "2026-11-15T23:58:36+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
-    "3bc6cdb34c17": {
-      "id": "3bc6cdb34c17",
-      "url": "https://simonwillison.net/2026/Nov/15/datasette",
-      "person": "Simon Willison",
-      "text": "datasette 1.0a43. Release: datasette 1.0a43 I've been leaning hard into Claude Fable 5.2 to help knock things off the 1.0 milestone , which is now 53% complete. The biggest 1.0 item in this release is streaming support for output renderers - the built-in TSV and CSV export mechanisms now use this as well, and plugins can register themselves as capable of streaming every row in a table in one go via the new Response.stream() method. There are a couple of security fixes, one of which I deemed deserving of a GitHub advisory : private stored queries could be exposed, granting access to the title and SQL of the quer",
-      "published": "2026-11-15T23:20:27+00:00",
-      "via": "Simon Willison",
-      "kind": "post"
-    },
-    "7c04761a4076": {
-      "id": "7c04761a4076",
-      "url": "https://simonwillison.net/2026/Nov/15/datasette-2",
-      "person": "Simon Willison",
-      "text": "datasette 0.65.6. Release: datasette 0.65.6 I backported a minor security fix from 1.0a43: Fixed a security issue where a database registered using add_database(db, name=..., route=...) with a route that differs from its name could be downloaded from /<route>.db by actors who were denied access to it. [...] Tags: security , datasette",
-      "published": "2026-11-15T23:18:17+00:00",
       "via": "Simon Willison",
       "kind": "post"
     },
