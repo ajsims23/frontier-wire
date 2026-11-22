@@ -1591,15 +1591,7 @@ body { font-family: var(--sans); }
 .fc-supported, .fc-accurate { background: color-mix(in srgb, var(--research) 18%, transparent); color: var(--research); }
 .fc-partly, .fc-minor { background: color-mix(in srgb, var(--policy) 18%, transparent); color: var(--policy); }
 .fc-unsupported, .fc-contradicted, .fc-flagged { background: color-mix(in srgb, var(--safety) 18%, transparent); color: var(--safety); }
-.secnav a.nav-dpa { color: var(--brand); }
-.secnav a.nav-dpa::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--brand); margin-right: 7px; vertical-align: 2px; }
 
-/* home page strip */
-.dl-strip { padding-top: clamp(36px, 5vw, 56px); }
-.dl-strip-in { border: 1px solid var(--line); border-top: 3px solid var(--brand); border-radius: var(--r-lg); background: linear-gradient(180deg, color-mix(in srgb, var(--brand) 7%, var(--panel)), var(--panel) 60%); padding: clamp(22px, 3.4vw, 38px); display: flex; flex-direction: column; gap: 24px; }
-.dl-strip-head { display: flex; flex-direction: column; gap: 10px; max-width: 900px; }
-.dl-strip-head h2 { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.12; font-weight: 700; letter-spacing: -.02em; text-wrap: balance; }
-.dl-strip-sub { color: var(--soft); max-width: 72ch; }
 .dl-calls { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; }
 .dl-call { display: flex; flex-direction: column; gap: 10px; padding: 18px 18px 16px; border-radius: var(--r-md); background: var(--ground); border: 1px solid var(--line-soft); }
 .dl-call-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
@@ -1609,13 +1601,6 @@ body { font-family: var(--sans); }
 .dl-call .refs a, .dl-ev a { font-size: 12.5px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--soft); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .dl-call .refs a:hover, .dl-ev a:hover { color: var(--text); border-color: var(--soft); }
 .dl-ev .muted { font-size: 12.5px; padding: 3px 4px 3px 0; }
-.dl-strip-foot { display: flex; flex-wrap: wrap; gap: 12px; align-items: stretch; }
-.dl-tile { flex: 1 1 150px; display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: var(--r-md); border: 1px solid var(--line-soft); background: var(--ground); }
-.dl-tile:hover { border-color: var(--brand); }
-.dl-tile .n { font-size: 26px; font-weight: 800; font-stretch: 112.5%; line-height: 1.1; color: var(--strong); font-variant-numeric: tabular-nums; }
-.dl-tile .l { font-size: 12.5px; color: var(--muted); line-height: 1.35; }
-.dl-go { align-self: center; flex: 0 0 auto; }
-
 /* hub */
 .dl-jump { display: flex; flex-wrap: wrap; gap: 8px; }
 .dl-jump .chip { text-decoration: none; }
@@ -1782,6 +1767,18 @@ table.bn-heat { min-width: 640px; }
 .lab-stats dd .muted { font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0; }
 .dl-page .hbars .hb-row, .dl-page .hbars a { grid-template-columns: minmax(120px, 230px) minmax(0, 1fr) 40px; }
 .dl-page .hbars .nc-lab { white-space: normal; line-height: 1.25; }
-.dl-strip { padding-top: 22px; }
 .dl-box { max-width: 64ch; }
 .api-grid pre { white-space: pre-wrap; word-break: break-all; }
+
+/* home page: the AI Radar block */
+.rd-home { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: clamp(20px, 4vw, 48px); align-items: center; }
+.rd-pic { display: block; }
+.rd-side { display: flex; flex-direction: column; gap: 18px; }
+.rd-counts { margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.rd-counts div { border: 1px solid var(--line-soft); border-radius: var(--r-md); padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.rd-counts dd { margin: 0; font-size: 26px; font-weight: 800; color: var(--strong); font-variant-numeric: tabular-nums; }
+.rd-side h3 { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.rd-moves { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.rd-moves li { padding: 10px 0; border-top: 1px solid var(--line-soft); }
+.rd-moves p { color: var(--soft); font-size: 14px; margin-top: 4px; }
+@media (max-width: 800px) { .rd-home { grid-template-columns: minmax(0, 1fr); } .rd-pic { max-width: 360px; } .rd-counts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

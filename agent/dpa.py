@@ -234,7 +234,7 @@ the analyst's DPA notes. For each subject return:
 - quadrant: models, tools, techniques or policy.
 - capability: the one capability id it matters to most.
 - rationale: max 35 words: why it sits on this ring for DPA, grounded in the evidence. If the ring changed, say what
-  changed. No hype; use "could" and "may" for DPA outcomes.
+  changed. No hype; use "could" and "may" for DPA outcomes. Don't mention same_as or other entries here.
 Existing radar entries (for same_as): {existing}
 {untrusted}"""
 
@@ -245,6 +245,21 @@ def _radar_schema(cap_ids: list[str]) -> dict:
         "ring": {"type": "string", "enum": RINGS}, "quadrant": {"type": "string", "enum": QUADRANTS},
         "capability": {"type": "string", "enum": cap_ids}, "rationale": {"type": "string"}},
         "required": ["name", "keep", "ring", "quadrant", "capability", "rationale"]}}}, "required": ["subjects"]}
+
+
+def collapse_history(history: list[dict]) -> list[dict]:
+    """One entry per day: the day's net move (a same-day there-and-back is no move at all)."""
+    out: list[dict] = []
+    for h in history:
+        if out and out[-1]["date"] == h["date"]:
+            prev = out.pop()
+            net = {**h, "from": prev["from"]}
+            if net["from"] and net["from"] == net["to"]:
+                continue
+            out.append(net)
+        else:
+            out.append(dict(h))
+    return out
 
 
 def _merge_pairs(entries: dict[str, dict]) -> None:
@@ -309,6 +324,7 @@ def update_radar(llm: LLM, stories: list[dict], state: LensState, profile: dict,
     by_name = {g["name"].lower(): g for g in subjects}
     names = {e["name"].lower(): k for k, e in entries.items()}
     changed, today = 0, now.date().isoformat()
+    decided: set[str] = set()  # one ring decision per entry per run, even when two subjects turn out to be the same item
     for r in answer.get("subjects") or []:
         if not isinstance(r, dict):
             continue
@@ -325,12 +341,17 @@ def update_radar(llm: LLM, stories: list[dict], state: LensState, profile: dict,
             if key not in entries[target]["aliases"]:
                 entries[target]["aliases"].append(key)
             key = target
+        if key in decided:  # already placed this run: just add the evidence
+            e = entries[key]
+            e["evidence"] = list(dict.fromkeys(e["evidence"] + [i for i in g["ids"] if i in by_id]))[:8]
+            continue
+        decided.add(key)
         ring = r.get("ring") if r.get("ring") in RINGS else "assess"
         proposed = ""
         if ring == "adopt" and entries.get(key, {}).get("name", g["name"]) not in review["radar_adopt"]:
             ring, proposed = "trial", "adopt"  # only a person moves something into Adopt
         e = entries.get(key)
-        why = _clip(r.get("rationale"), 260)
+        why = _clip(re.sub(r"\s*\(?\bSame as\b.*$", "", str(r.get("rationale") or "")), 260)
         if not e:
             e = entries[key] = {"key": key, "name": g["name"], "first_seen": today, "history": [], "evidence": []}
             e["history"].append({"date": today, "from": "", "to": ring, "why": why})
@@ -345,6 +366,8 @@ def update_radar(llm: LLM, stories: list[dict], state: LensState, profile: dict,
                   "rationale": why or e.get("rationale", ""), "updated": today, "model": llm.last_model})
         ids = list(dict.fromkeys(sorted(g["ids"], key=lambda i: by_id[i]["published_at"], reverse=True) + e["evidence"]))
         e["evidence"] = [i for i in ids if i in by_id][:8]
+    for e in entries.values():
+        e["history"] = collapse_history(e.get("history", []))
     state.radar["entries"] = entries
     state.radar["considered"] = sorted(considered)[-3000:]
     state.radar["updated_at"] = now.isoformat()
@@ -549,6 +572,8 @@ def site_view(stories: list[dict], data_dir: Path, now: datetime, config_dir: Pa
         if not ev:
             continue
         human = e["name"] in review["radar_override"] or e["name"] in review["radar_adopt"]
+        e = {**e, "history": collapse_history(e.get("history", [])),
+             "rationale": re.sub(r"\s*\(?\bSame as\b.*$", "", e.get("rationale", ""))}
         entries.append({**e, "ring": ring, "human": human, "proposed": "" if ring == "adopt" else e.get("proposed", ""),
                         "ring_name": rings[ring]["name"], "cap_name": caps.get(e.get("capability"), {}).get("name", ""),
                         "evidence_rows": [story_row(i) for i in ev[:5]],

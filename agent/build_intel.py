@@ -60,7 +60,7 @@ def radar_svg(entries: list[dict], size: int = 640) -> dict[str, Any]:
 
 def build_intel(out: Path, env: Any, common: dict, base: str, cfg: Any, stories: list[dict], by_id: dict[str, dict],
                 lens: dict[str, Any], page: Callable[..., None], site: dict, now: datetime) -> str:
-    """Renders the pages and the API files; returns the home page's For DPA strip."""
+    """Renders the pages and the API files; returns the home page's AI Radar block."""
     data = cfg.data_dir
     org = lens["profile"]["org"]
     caps = lens["caps"]
@@ -122,12 +122,11 @@ def build_intel(out: Path, env: Any, common: dict, base: str, cfg: Any, stories:
          canonical=f"{base}api/", og_image=og, mcp_url=mcp_url, base=base, org=org)
     write_api(out, base, stories, lens, fc, st, bv, now)
 
-    # ------------------------------------------------------------------ the home page strip
-    calls = (lens["brief"] or {}).get("calls") or [
-        {"title": r["headline"], "text": r["so_what"], "move": r["move"], "move_name": r["move_name"], "stories": [r]}
-        for r in lens["recent"][:3] if r.get("so_what")]
-    return env.get_template("_dpa_strip.html").render(**common, root="", org=org, brief=lens["brief"], calls=calls[:3],
-                                                       stats=lens["stats"], fc=fc, bench=bv, st=st)
+    # ------------------------------------------------------------------ the home page's AI Radar block
+    moves = [mv for mv in lens["moves"] if mv.get("from")][:3] or lens["moves"][:3]
+    return env.get_template("_radar_home.html").render(
+        **common, root="", svg=radar_svg(lens["radar"], 420) if lens["radar"] else None, moves=moves,
+        rings=[{"id": r["id"], "n": sum(1 for e in lens["radar"] if e["ring"] == r["id"])} for r in lens["rings"]])
 
 
 def _story_api(s: dict, base: str, lens: dict, audits: dict) -> dict:

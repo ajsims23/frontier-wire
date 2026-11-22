@@ -433,7 +433,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
 
     # The intelligence pages: For DPA, AI Radar, pilot proposals, task bench, System, agent API
     from .build_intel import build_intel
-    dpa_strip = build_intel(out, env, common, base, cfg, stories, by_id, lens, page, site, now)
+    radar_home = build_intel(out, env, common, base, cfg, stories, by_id, lens, page, site, now)
 
     # Daily self-check ("How we're doing")
     hist = audit_state.get("history", [])
@@ -538,7 +538,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
                                {k: v["video"] for k, v in by_id.items() if isinstance(v.get("video"), dict)})
     index = (out / "index.html").read_text()
     index = index.replace("<!--RECAP-->", recap_strip)
-    index = index.replace("<!--DPA-->", dpa_strip)
+    index = index.replace("<!--RADAR-->", radar_home)
     index = index.replace("<!--META-->", meta)
     index = index.replace("<!--NEWSLETTER-->", env.get_template("_newsletter.html").render(**common))
     index = index.replace("<!--HEADER-->", env.get_template("_header.html").render(**common, root=""))
