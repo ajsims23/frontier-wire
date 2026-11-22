@@ -1,0 +1,334 @@
+{
+  "started_at": "2026-11-22T17:11:54+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1421)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (915)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "mistral-news": "ok (0)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (20)",
+    "gdelt": "ok (21)",
+    "hn": "ok (15)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (0) via Bing News (GDELT unavailable)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (26)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Anthropic record IPO raises hopes for a charitable windfall that has nonprofits preparing to scale",
+      "reason": "score 4: Nonprofit financial windfall speculation stemming from Anthropic's IPO is secondary and low-signal."
+    },
+    {
+      "title": "South Korea Education Minister quits after AI cheating scandal rocks Suneung exam",
+      "reason": "score 4: Exam cheating scandal involving AI is more of a general education administration incident."
+    },
+    {
+      "title": "Alice Huang husband , asscoiate Li Ming , accused of running network to divert Nvidia AI Chips To China : Report",
+      "reason": "duplicate of 877f48487e8a"
+    },
+    {
+      "title": "Like SpaceX , Anthropic ran an unusual IPO process , chafing some bankers",
+      "reason": "score 5: Commentary on Anthropic's unusual IPO process and banker reactions; minor color compared to the actual market debut."
+    },
+    {
+      "title": "Carl Benedikt Frey : Dont expect AI to work miracles",
+      "reason": "score 4: Routine skeptical commentary on AI productivity expectations."
+    },
+    {
+      "title": "China spy agency used intelligence network to secure advanced AI chips , bypass US curbs : Report",
+      "reason": "score 5: Reports on Chinese intelligence networks securing restricted AI chips; overlaps with prior chip-smuggling coverage (877f48487e8a)."
+    },
+    {
+      "title": "Nvidia Faces US Accounting Probe amid Deepening Turmoil",
+      "reason": "duplicate of a250c4f5700f"
+    },
+    {
+      "title": "Editorial : Should Nvidia bring back Jensen Huang ?",
+      "reason": "score 3: Speculative or opinion editorial on Nvidia leadership; not hard news."
+    },
+    {
+      "title": "Nvidia supply - chain expansion boosts confidence among Taiwan firms : Analyst",
+      "reason": "score 4: General analyst commentary on Taiwan supply chain confidence regarding Nvidia; lacks specific new data."
+    },
+    {
+      "title": "Taiwan banks deploy AI to prevent cyberattacks",
+      "reason": "score 4: Routine adoption of AI by regional banks for cybersecurity; lacks broad frontier relevance."
+    },
+    {
+      "title": "Hacks , AI and conspiracy theories : why are we having so many outages ?",
+      "reason": "score 3: General feature on tech outages touching loosely on AI; not a primary AI news story."
+    },
+    {
+      "title": "Nvidia says no to Jensen Huang return and continues with the search for a new CEO",
+      "reason": "score 2: Satirical or fabricated news piece about Nvidia leadership changes."
+    },
+    {
+      "title": "AI Revolution in Aviation : Smarter Aircraft , Airports and Air Traffic Control",
+      "reason": "score 3: Generic promotional overview of AI in aviation; no concrete new developments or releases."
+    },
+    {
+      "title": "In China tech mecca , Trump and Xi touted AI cooperation . Now comes the harsh reality . | Business",
+      "reason": "score 5: Broad analysis of US-China tech policy and AI restrictions; lacks specific new policy announcements or agreements."
+    },
+    {
+      "title": "Data Processing Incidents on Inference Providers",
+      "reason": "score 6: Technical incident report regarding data processing issues on inference providers via OpenRouter."
+    },
+    {
+      "title": "The Mythology of Conscious AI",
+      "reason": "score 4: Philosophical essay on the mythology of conscious AI; lacks concrete news value for builders or investors."
+    },
+    {
+      "title": "Pandex – Official European Law for AI Agents, over MCP",
+      "reason": "score 4: Hacker News point count post about EU law for AI agents over MCP without substantive details or primary official release."
+    },
+    {
+      "title": "Show HN: I built a game where you are an LLM's subagent",
+      "reason": "score 3: Show HN hobby game project where player is an LLM's subagent, not significant frontier model or product news."
+    },
+    {
+      "title": "Fast-Anything: Don't rewrite it in Rust. Rewrite the 5% that's slow",
+      "reason": "not AI: General software engineering and performance optimization post, no AI relevance."
+    },
+    {
+      "title": "The vibe-coding revolution is coming to all the gadgets",
+      "reason": "score 4: Weekly newsletter column discussing vibe-coding and consumer gadgets generally, routine commentary."
+    },
+    {
+      "title": "VinFast To Build Dedicated E-Scooter Assembly Line At TN Plant",
+      "reason": "not AI: Electric vehicle manufacturing plant expansion, no AI relevance."
+    },
+    {
+      "title": "Samsung Galaxy S27 leak: 5 new features leaked so far, from an iPhone-like Now Bar to AI video creation",
+      "reason": "score 4: Routine smartphone rumor leak mentioning minor AI camera features, low significance."
+    },
+    {
+      "title": "CII proposes 15 financial sector reforms to boost long-term growth ambitions",
+      "reason": "not AI: General financial sector reforms proposal by CII with no AI relevance."
+    },
+    {
+      "title": "Jony Ive, ex-OpenAI product designer Joey Flynn, and others on Silicon Valley's obsession with \"taste\" as a moat against AI slop and whether AI can learn it (Jonah Weiner/New York Times)",
+      "reason": "score 6: Thoughtful commentary and interviews on Silicon Valley's obsession with taste as a moat against AI slop, suitable for industry readership."
+    },
+    {
+      "title": "Current and former officials from the US and other countries describe the Chinese spy agency MSS' campaign to help Chinese companies acquire advanced AI chips (New York Times)",
+      "reason": "score 7: Reporting on Chinese state security campaigns to help firms acquire advanced AI chips."
+    },
+    {
+      "title": "Li Ming, alleged key figure in Nvidia chip smuggling network, is out on bail",
+      "reason": "duplicate of 877f48487e8a"
+    },
+    {
+      "title": "Megaspeed affair's hidden hand – Nvidia chip smuggling web still running",
+      "reason": "duplicate of 877f48487e8a"
+    },
+    {
+      "title": "Nvidia AI Chip Smuggling Allegations: Key Figure Li Ming Out on $1M Bail",
+      "reason": "duplicate of 877f48487e8a"
+    },
+    {
+      "title": "Alice Huang and her husband’s close associate Li Ming routed Nvidia chips to China: report",
+      "reason": "duplicate of 877f48487e8a"
+    },
+    {
+      "title": "The associate of Alice Huang who funneled Nvidia chips to China - WSJ",
+      "reason": "duplicate of 877f48487e8a"
+    },
+    {
+      "title": "Nvidia chip smuggling row: Who is Li Ming, the Chinese national linked to Alice Huang and Kang Wei?",
+      "reason": "duplicate of 877f48487e8a"
+    },
+    {
+      "title": "US SEC's Nvidia probe focuses on potential accounting irregularities",
+      "reason": "duplicate of a250c4f5700f"
+    },
+    {
+      "title": "Nvidia faces US accounting probe as Jensen Huang exit, China spy saga deepen turmoil: Report",
+      "reason": "duplicate of a250c4f5700f"
+    },
+    {
+      "title": "87% of the Anthropic power will come from gas and 11% from coal in 2028",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Experts say AI has made planning cyberattacks on industrial equipment faster by helping attackers read manuals and research past accidents more quickly (Tom Wilson/Financial Times)",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "e209846e7d75",
+      "headline": "Chinese national Li Ming charged in fraud case linked to Megaspeed",
+      "category": "industry",
+      "summary": "Chinese national Li Ming was charged with fraud by Singapore prosecutors in February 2025 for allegedly misleading an American supplier regarding the destination of Nvidia-equipped servers. The case involves a network of companies providing advanced computing capacity to Chinese customers through Singapore-based Megaspeed.",
+      "url": "https://economictimes.indiatimes.com/tech/technology/chinese-national-li-ming-charged-in-fraud-case-in-singapore-linked-to-megaspeed-and-alice-huang-report/articleshow/136073178.cms",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "1e34f656ac2a",
+      "headline": "UBS projects global AI investment to reach USD 1.4 trillion in 2027",
+      "category": "industry",
+      "summary": "Global artificial intelligence investment is projected to rise to USD 1.4 trillion in 2027, up from USD 1 trillion in 2026, according to a report by UBS. Around 80 percent of this spending is expected to come from Alphabet, Amazon, Meta, Microsoft, and SpaceX.",
+      "url": "https://news.webindia123.com/news/Articles/Business/20261122/4522916.html",
+      "sources": 9,
+      "quotes": 0
+    },
+    {
+      "id": "ad5aaf5afbb3",
+      "headline": "Melanie Mitchell highlights framework for AI in unverifiable domains",
+      "category": "voices",
+      "summary": "Melanie Mitchell shared an article by @binarybits.bsky.social that provides a framework for evaluating AI in fields beyond math and coding. The piece examines how artificial intelligence is applied in domains that lack easily verifiable answers.",
+      "url": "https://bsky.app/profile/melaniemitchell.bsky.social/post/3n2vyricbms2n",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "not India desk: 'Chinese national Li Ming charged in fraud case in '",
+    "2 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 138.6,
+    "audit": 0.0,
+    "plan": 2.5,
+    "judge": 17.6,
+    "verify and write": 107.1,
+    "videos": 6.9,
+    "tagging": 1.4,
+    "explainers": 0.0,
+    "trackers": 15.7,
+    "claims": 2.3,
+    "model tracker": 0.1,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 22.2,
+    "briefing": 1.2,
+    "self-review": 0.0,
+    "photos": 0.7,
+    "stock photos": 1.1,
+    "daily email": 0.0,
+    "alerts": 5.3
+  },
+  "fetched": 3031,
+  "fresh": 34,
+  "plan": {
+    "focus": "Chasing the fallout from the massive Nvidia chip smuggling ring and Nvidia's executive turmoil while tracking AI infrastructure spending.",
+    "priorities": [
+      "Chinese national Li Ming charged in fraud case in Singapore linked to  (Major development in the ongoing smuggling thread connecting Li Ming, Singapore, and diverted Nvidia chips.)",
+      "Nvidia Faces US Accounting Probe amid Deepening Turmoil (Nvidia facing US accounting probe adds a fresh regulatory layer to supply chain turmoil.)",
+      "AI investment to rise to USD 1 . 4 trillion in 2027 , but returns rema (UBS forecast on $1.4T AI investment by 2027 provides critical market context for investors and builders.)",
+      "87% of the Anthropic power will come from gas and 11% from coal in 202 (Striking data on Anthropic's future power sources (gas and coal) linking AI scaling directly to energy infrastructure.)",
+      "Experts say AI has made planning cyberattacks on industrial equipment  (Important cybersecurity angle on AI accelerating industrial equipment cyberattacks.)"
+    ],
+    "thin_areas": [
+      "safety",
+      "india"
+    ],
+    "searches": [
+      "Li Ming Nvidia chip smuggling Singapore: 6 new",
+      "Nvidia US accounting probe SEC: 3 new",
+      "UBS AI investment 1.4 trillion returns: 4 new"
+    ],
+    "dig_deeper": [
+      "Chinese national Li Ming charged in fraud case in Singapore linked to ",
+      "Nvidia Faces US Accounting Probe amid Deepening Turmoil"
+    ]
+  },
+  "judged": 42,
+  "kept": 5,
+  "research": {
+    "investigated": 4,
+    "confirmed": 2,
+    "tool_calls": 11
+  },
+  "research_log": [
+    "87% of the Anthropic power will come from gas and 11% from coal in 202: unconfirmed (searched “Anthropic power gas coal 2028 better datacenter project”; searched “87% Anthropic gas coal 2028 betterdatacenterproject”; searched “betterdatacenterproject Anthropic gas coal”)",
+    "Chinese national Li Ming charged in fraud case in Singapore linked to : confirmed (searched “Li Ming fraud Singapore Megaspeed Alice Huang Nvidia”; read outlookindia.com; read moneycontrol.com)",
+    "AI investment to rise to USD 1 . 4 trillion in 2027 , but returns rema: confirmed (searched “AI investment 1.4 trillion 2027 UBS report”; read livemint.com)",
+    "Experts say AI has made planning cyberattacks on industrial equipment : unconfirmed (searched “Tom Wilson Financial Times AI cyberattacks industrial equipment manuals past accidents”; searched “AI has made planning cyberattacks on industrial equipment faster Tom Wilson Financial Times”; searched “\"Tom Wilson\" \"industrial equipment\" cyberattacks Financial Times”)"
+  ],
+  "threads": [
+    "Nvidia chips smuggled to China via Southeast Asia: Chinese national Li Ming charged in fraud case linked to Meg"
+  ],
+  "videos": {
+    "OpenAI": "ok (13 in feed, 0 new)",
+    "Anthropic": "ok (13 in feed, 0 new)",
+    "Google DeepMind": "ok (14 in feed, 1 new)",
+    "Google for Developers": "ok (10 in feed, 1 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
+    "Microsoft Research": "ok (11 in feed, 0 new)",
+    "NVIDIA": "ok (9 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 2 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 3 new)",
+    "AI Explained": "ok (15 in feed, 1 new)",
+    "Lex Fridman": "ok (14 in feed, 1 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 1 new)",
+    "No Priors": "ok (3 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 5 new)",
+    "Training Data (Sequoia)": "ok (5 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (7 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (5 in feed, 1 new)",
+    "20VC": "ok (5 in feed, 1 new)"
+  },
+  "videos_kept": "17 kept from 18 new",
+  "tagged": 3,
+  "trackers": "filed 4 stories; updated us-china, india-ai, ai-infrastructure, ai-money",
+  "claims": "226 tracked, 220 open, 0 updated this run",
+  "model_tracker": "82 models, 4 changes today",
+  "top_voices_sources": {
+    "tv-mollick": "ok (0)",
+    "tv-lambert": "ok (0)",
+    "tv-swyx": "ok (8)",
+    "tv-dwarkesh": "ok (1)",
+    "tv-raschka": "ok (0)",
+    "tv-karpathy": "ok (0)",
+    "tv-evans": "ok (0)",
+    "x-coverage": "ok (1 of 4 articles, bing)",
+    "hn": "ok (0)"
+  },
+  "top_voices": "2 debates from 50 posts by 6 people; 4 portraits, 3 pictures",
+  "briefing": "3 themes from 9 stories",
+  "photos": "2 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "11 events sent: {\"subscribers\":5,\"sent\":0,\"queued\":23}",
+  "ai_requests_run": 35,
+  "ai_tokens_run": 98557,
+  "ai_requests_today": 82,
+  "provider_log": []
+}

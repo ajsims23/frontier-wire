@@ -9,15 +9,6 @@
       "via": "Bluesky",
       "kind": "post"
     },
-    "950ac38f23f2": {
-      "id": "950ac38f23f2",
-      "url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
-      "person": "Sebastian Raschka",
-      "text": "Understanding Positional Embeddings in Modern LLMs. This article explains how LLMs encode and process token position information by covering classic and contemporary methods like RoPE. It’s essentially a comprehensive journey where we will work through the mechanisms with visual examples, a little math, and a small PyTorch implementation. And, of course, we will then also look at how modern architectures adapt or omit explicit positional encodings. Below, you can find a preview of which positional embedding choices are used in 2026 open-weight models. We will discuss these choices later after covering the underlying mechanisms. Figure 1: A preview of the gallery’s 2026 architectures,…",
-      "published": "2026-11-15T12:10:37+00:00",
-      "via": "Ahead of AI",
-      "kind": "post"
-    },
     "4b4d48f19f03": {
       "id": "4b4d48f19f03",
       "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre",
@@ -136,16 +127,6 @@
       "via": "Crypto Briefing",
       "kind": "reported",
       "headline": "Jensen Huang share transfers to heirs draw scrutiny amid reported Nvidia exit"
-    },
-    "7911d75d7eeb": {
-      "id": "7911d75d7eeb",
-      "url": "https://247wallst.com/cards/nvda-xpost-01m7g2gke7amb18986rhx2p94d",
-      "person": "Elon Musk",
-      "text": "Musk went public on X instead of engaging the board privately, signaling he wants this resolved visibly and putting Nvidia's board in the uncomfortable position of responding to a customer as much as to a shareholder or outside voice.",
-      "published": "2026-11-15T08:36:00+00:00",
-      "via": "24/7 Wall St.",
-      "kind": "reported",
-      "headline": "Musk Calls for Jensen Huang's Reinstatement as Nvidia CEO"
     },
     "fdfdaf9d59fd": {
       "id": "fdfdaf9d59fd",
@@ -509,20 +490,29 @@
       "published": "2026-11-22T03:45:47.475Z",
       "via": "Bluesky",
       "kind": "post"
+    },
+    "ad5aaf5afbb3": {
+      "id": "ad5aaf5afbb3",
+      "url": "https://bsky.app/profile/melaniemitchell.bsky.social/post/3n2vyricbms2n",
+      "person": "Melanie Mitchell",
+      "text": "I found this piece, by @binarybits.bsky.social, to be a useful framework for thinking about where we are with respect to AI in fields beyond math, coding, and other \"verifiable\" domains. www.understandingai.org/p/this-robot...",
+      "published": "2026-11-22T16:08:08.422Z",
+      "via": "Bluesky",
+      "kind": "post"
     }
   },
   "digest": {
-    "written_at": "2026-11-21T16:49:40+00:00",
-    "range": "14 Nov – 21 Nov 2026",
-    "headline": "AI leaders debate the safety of rapid capability scaling alongside breakthroughs in automated mathematical proofs and infrastructure security.",
+    "written_at": "2026-11-22T17:11:54+00:00",
+    "range": "15 Nov – 22 Nov 2026",
+    "headline": "AI leaders are debating the boundaries of automated math, the impact of new frontier releases, and security challenges.",
     "debates": [
       {
-        "title": "Can AI and formal verification solve the Riemann Hypothesis?",
-        "summary": "Independent mathematicians have announced proofs related to the famous Riemann Hypothesis using AI assistance, raising questions about whether formal verification can handle complex mathematics that humans cannot fully read. This milestone highlights the growing intersection of automated reasoning, AI collaboration, and centuries-old mathematical problems.",
+        "title": "Is AI ready to solve major mathematical problems?",
+        "summary": "Recent claims of proofs for the Riemann Hypothesis using AI tools have sparked discussions about how much mathematics is currently driven by machines versus human experts. This matters as society evaluates the reliability and authorship of automated mathematical breakthroughs.",
         "positions": [
           {
             "person": "Ethan Mollick",
-            "stance": "Notes that models cannot yet solve Millennium Problems entirely on their own, requiring human mathematical expertise alongside AI help.",
+            "stance": "Notes that models cannot yet solve hard math problems entirely on their own, requiring domain experts to partner with AI to achieve breakthroughs.",
             "posts": [
               {
                 "id": "9d2786e70294",
@@ -530,59 +520,108 @@
                 "via": "Bluesky",
                 "kind": "post",
                 "date": "2026-11-21"
-              },
+              }
+            ]
+          },
+          {
+            "person": "swyx",
+            "stance": "Highlights that independent proofs of the Riemann Hypothesis were recently claimed using AI assistance, with one formalized in Lean so thoroughly that no human will ever read all of it.",
+            "posts": [
               {
-                "id": "297bc06ad6bc",
-                "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2qvqp4fts2e",
-                "via": "Bluesky",
+                "id": "2b32d4b379bc",
+                "url": "https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently",
+                "via": "Latent Space",
+                "kind": "post",
+                "date": "2026-11-21"
+              }
+            ]
+          },
+          {
+            "person": "Simon Willison",
+            "stance": "Points out that a prominent proposed proof of the Generalized Riemann Hypothesis was developed entirely by a human without any AI involvement.",
+            "posts": [
+              {
+                "id": "81ce5b24dd89",
+                "url": "https://simonwillison.net/2026/Nov/20/ravi-vakil",
+                "via": "Simon Willison",
                 "kind": "post",
                 "date": "2026-11-20"
               }
             ]
           }
-        ]
+        ],
+        "image": "img/voices/2b32d4b379bc.jpg",
+        "image_credit": "Latent Space",
+        "video": "35ZWesLrv5A"
       },
       {
-        "title": "How to handle token fraud and software vulnerabilities?",
-        "summary": "Developers and organizations are grappling with the operational fallout of infrastructure vulnerabilities and widespread token fraud as bad actors exploit AI platforms. These security challenges force a difficult balance between maintaining reliable day-to-day operations and deploying urgent patches against emerging digital threats.",
+        "title": "Navigating the shifting maze of frontier models",
+        "summary": "Rapid releases of new frontier models and shifting capabilities have made tracking model tiers, pricing, and distillation increasingly complex. This matters as developers and infrastructure providers try to balance performance, cost, and efficiency across rapidly changing ecosystems.",
         "positions": [
           {
             "person": "Ethan Mollick",
-            "stance": "Points out that software infrastructure is inherently fragile and prone to cascading failures, creating heavy burdens for CIOs trying to balance operations with security patching.",
+            "stance": "Flags that the effective end of easy distillation from leading labs may be causing a relative slowdown in open weights model progress.",
             "posts": [
               {
-                "id": "19d9786d6737",
-                "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2kh6qjgrs2z",
+                "id": "1eccff0bef7d",
+                "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2req7quy225",
                 "via": "Bluesky",
+                "kind": "post",
+                "date": "2026-11-20"
+              }
+            ]
+          },
+          {
+            "person": "swyx",
+            "stance": "Notes the arrival of new competitive frontier models and infrastructure providers rebranding as neolabs to build their own systems.",
+            "posts": [
+              {
+                "id": "7c37480e5f49",
+                "url": "https://latent.space/p/ainews-gpt-6-2-astra-the-2-frontier-model-is-better-and-20-600-cheaper-but-has-mixed-reviews-6-2-sol",
+                "via": "Latent Space",
                 "kind": "post",
                 "date": "2026-11-18"
               },
               {
-                "id": "1e6985a78fe0",
-                "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2htyp4bhc2t",
-                "via": "Bluesky",
+                "id": "af19957a97c2",
+                "url": "https://latent.space/p/cloudflare",
+                "via": "Latent Space",
                 "kind": "post",
                 "date": "2026-11-17"
               }
             ]
+          },
+          {
+            "person": "Simon Willison",
+            "stance": "Observes that newer model tiers and reasoning effort settings introduce significant cost and token usage differences that complicate navigation for developers.",
+            "posts": [
+              {
+                "id": "ae8cfecfa51e",
+                "url": "https://bsky.app/profile/simonwillison.net/post/3n2tsb6pguk27",
+                "via": "Bluesky",
+                "kind": "post",
+                "date": "2026-11-21"
+              },
+              {
+                "id": "480c7f59bbc9",
+                "url": "https://simonwillison.net/2026/Nov/20/llm-gemini",
+                "via": "Simon Willison",
+                "kind": "post",
+                "date": "2026-11-20"
+              }
+            ]
           }
-        ]
+        ],
+        "video": "T-R3u8RdkbA",
+        "image": "img/voices/480c7f59bbc9.jpg",
+        "image_credit": "Simon Willison"
       }
     ],
     "standouts": [
       {
-        "id": "b8e1839046bc",
-        "person": "Simon Willison",
-        "why": "Provides a firsthand account of discovering and formalizing a historic mathematical proof with Claude.",
-        "url": "https://simonwillison.net/2026/Nov/20/levent-alpoge",
-        "via": "Simon Willison",
-        "kind": "post",
-        "title": "Quoting Levent Alpöge. I believe I have, working with Claude, discovered a proof of the Riemann Hypothesis. In fact,…"
-      },
-      {
         "id": "2905913a6c82",
         "person": "Dwarkesh Patel",
-        "why": "Delivers a stark warning from the Alignment Research Center head regarding near-term superintelligence risks.",
+        "why": "Paul Christiano warns that superintelligence capable of overthrowing the government could be just 12 months away on the current trajectory.",
         "url": "https://dwarkesh.com/p/paul-christiano-2",
         "via": "Dwarkesh Podcast",
         "kind": "post",
@@ -591,26 +630,36 @@
         "video": "SyHM5hNPAEo"
       },
       {
-        "id": "e486efe85b2a",
+        "id": "34e7f4ca2739",
+        "person": "Ethan Mollick",
+        "why": "Ethan Mollick highlights early work where human labs deployed AI agents that successfully collaborated to conduct science and publish papers.",
+        "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2pqcy4cbs2g",
+        "via": "Bluesky",
+        "kind": "post",
+        "title": "Early fascinating work on how an AI science community would work. 35 human labs deployed agents that worked with each…"
+      },
+      {
+        "id": "569017a70fd8",
         "person": "Simon Willison",
-        "why": "Sheds light on the very real economic and operational burden of large-scale token fraud on AI platforms.",
-        "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad",
+        "why": "Daniel Stenberg shares a grounded look at maintaining a massive C codebase alongside automated Rust rewrites.",
+        "url": "https://simonwillison.net/2026/Nov/18/daniel-stenberg",
         "via": "Simon Willison",
         "kind": "post",
-        "title": "Token fraud is here and it’s BAD (YouTube). Token fraud is here and it’s BAD (YouTube) Claire Vo runs ChatPRD , an AI…",
-        "image": "img/voices/e486efe85b2a.jpg",
-        "video": "ZDpP7JXPlhc"
+        "title": "Quoting Daniel Stenberg. During the time these agents converted 185,000 lines of C code into 340,000 lines of Rust…"
       }
     ],
     "people": [
-      "Ethan Mollick"
+      "Ethan Mollick",
+      "Simon Willison",
+      "swyx"
     ],
     "from_posts": 50,
     "reported": 0,
     "portraits": {
-      "Simon Willison": "img/people/simon-willison.jpg",
       "Ethan Mollick": "img/people/ethan-mollick.jpg",
-      "Dwarkesh Patel": "img/people/dwarkesh-patel.jpg"
+      "swyx": "img/people/swyx.jpg",
+      "Dwarkesh Patel": "img/people/dwarkesh-patel.jpg",
+      "Simon Willison": "img/people/simon-willison.jpg"
     },
     "portrait_credits": [
       "Bluesky",
@@ -621,17 +670,17 @@
     "Ethan Mollick": {
       "file": "img/people/ethan-mollick.jpg",
       "credit": "Bluesky",
-      "checked": "2026-11-08T09:59:04+00:00"
+      "checked": "2026-11-22T17:11:54+00:00"
     },
     "Simon Willison": {
       "file": "img/people/simon-willison.jpg",
       "credit": "Bluesky",
-      "checked": "2026-11-08T09:59:04+00:00"
+      "checked": "2026-11-22T17:11:54+00:00"
     },
     "swyx": {
       "file": "img/people/swyx.jpg",
       "credit": "Bluesky",
-      "checked": "2026-11-08T09:59:04+00:00"
+      "checked": "2026-11-22T17:11:54+00:00"
     },
     "Elon Musk": {
       "file": "img/people/elon-musk.jpg",
