@@ -363,15 +363,16 @@
     }
    ],
    "evidence": [
+    "ae8cfecfa51e",
     "0508a8475458",
     "a8d5fa7d24b3"
    ],
    "ring": "assess",
    "proposed": "",
    "quadrant": "models",
-   "capability": "productivity",
-   "rationale": "Gemini 4 Hydrogen could reduce token costs and speed up DPA's internal coding assistants and multi-step agentic workflows with its low pricing and fast execution.",
-   "updated": "2026-11-21",
+   "capability": "research",
+   "rationale": "Gemini 4 Hydrogen provides low-cost, fast inference suitable for coding and agents, but cost spikes significantly in xhigh thinking mode. DPA should assess accuracy versus cost gains before wider adoption.",
+   "updated": "2026-11-22",
    "model": "gemini/gemini-flash-lite-latest"
   },
   "sebi-ai-usage-guidelines": {
@@ -1423,6 +1424,52 @@
    "rationale": "Continuous fine-tuning platforms could help DPA adapt open-source models for specialized document extraction and financial research tasks using internal feedback.",
    "updated": "2026-11-22",
    "model": "gemini/gemini-flash-lite-latest"
+  },
+  "hex-4-0": {
+   "key": "hex-4-0",
+   "name": "Hex 4.0",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "assess",
+     "why": "Hex 4.0 introduces an agent-first rewrite for analytics and data workflows. DPA could assess its capabilities for building interactive data pipelines and automated reporting for alternatives and private equity clients."
+    }
+   ],
+   "evidence": [
+    "d5d97060cb47"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "data_pipelines",
+   "rationale": "Hex 4.0 introduces an agent-first rewrite for analytics and data workflows. DPA could assess its capabilities for building interactive data pipelines and automated reporting for alternatives and private equity clients.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "qodo": {
+   "key": "qodo",
+   "name": "Qodo",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "assess",
+     "why": "Qodo integrates internal coding standards into code reviews to catch critical bugs early. DPA could assess its effectiveness in improving internal development workflows and data pipeline repository quality."
+    }
+   ],
+   "evidence": [
+    "598c6194c0d3"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "productivity",
+   "rationale": "Qodo integrates internal coding standards into code reviews to catch critical bugs early. DPA could assess its effectiveness in improving internal development workflows and data pipeline repository quality.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
   }
  },
  "considered": [
@@ -1455,6 +1502,7 @@
   "549a77347d5e",
   "583b7a1c7413",
   "5881b795a6bf",
+  "598c6194c0d3",
   "5bf107852b8f",
   "5c695888c432",
   "5d27befedfa3",
@@ -1486,6 +1534,7 @@
   "a8d5fa7d24b3",
   "a8d86fb81b42",
   "a8fc84dcded8",
+  "ae8cfecfa51e",
   "afe5d96a9d46",
   "b00f82b6db94",
   "b0ded74e06b0",
@@ -1501,6 +1550,7 @@
   "c7ca507a9ed8",
   "cc0bbf95c7e7",
   "cce714811b51",
+  "d5d97060cb47",
   "d8887a09bc5e",
   "e1842b672534",
   "ef2f279289bc",
@@ -1508,5 +1558,5 @@
   "f19cee3d1350",
   "fa0e89bac09a"
  ],
- "updated_at": "2026-11-22T00:29:10+00:00"
+ "updated_at": "2026-11-22T02:41:23+00:00"
 }
