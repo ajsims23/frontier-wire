@@ -201,14 +201,15 @@
     }
    ],
    "evidence": [
+    "5bf107852b8f",
     "84a41c24a3f1"
    ],
    "ring": "assess",
    "proposed": "",
-   "quadrant": "tools",
+   "quadrant": "models",
    "capability": "agents",
-   "rationale": "Gemini's new macOS computer use feature could be assessed by DPA's AI Champion Initiative for automating desktop workflows.",
-   "updated": "2026-11-21",
+   "rationale": "Google's computer use feature could help automate desktop workflows, though EU copyright risks require monitoring for research tasks.",
+   "updated": "2026-11-22",
    "model": "gemini/gemini-flash-lite-latest"
   },
   "gemini-4-neon": {
@@ -638,18 +639,6 @@
     {
      "date": "2026-11-21",
      "from": "",
-     "to": "assess",
-     "why": "Demonstrates deep multi-step text search capabilities relevant to DPA's automated research and document extraction workflows."
-    },
-    {
-     "date": "2026-11-21",
-     "from": "assess",
-     "to": "trial",
-     "why": "Anthropic's Fable 5.2 offers strong agent orchestration, a 1M-token context window, and lower pricing. It could improve speed and cost efficiency in document extraction and financial reporting. Same as Claude Fable 5.2."
-    },
-    {
-     "date": "2026-11-21",
-     "from": "trial",
      "to": "assess",
      "why": "Fable 5.2 tops the Remote Labor Index for professional freelance tasks. May be assessed for complex alternative-investment research and data extraction. Same as Claude Fable 5.2."
     }
@@ -1135,11 +1124,311 @@
    "rationale": "Leaked open-source offensive AI tool highlights security risks and prompts caution regarding internal testing endpoints. Sits in hold.",
    "updated": "2026-11-21",
    "model": "gemini/gemini-flash-lite-latest"
+  },
+  "delaware-ai-corporate-proposal": {
+   "key": "delaware-ai-corporate-proposal",
+   "name": "DELAWARE AI CORPORATE PROPOSAL",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "assess",
+     "why": "State-level regulatory debates on autonomous agents managing entities highlight emerging legal frameworks that may eventually impact how DPA structures automated client workflows."
+    }
+   ],
+   "evidence": [
+    "4e58f6108a21"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "policy",
+   "capability": "agents",
+   "rationale": "State-level regulatory debates on autonomous agents managing entities highlight emerging legal frameworks that may eventually impact how DPA structures automated client workflows.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "chatgpt": {
+   "key": "chatgpt",
+   "name": "ChatGPT",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "hold",
+     "why": "High-profile litigation over chatbot safety guardrails underscores legal risks, reinforcing DPA's need for strict guardrails on client-facing outputs."
+    }
+   ],
+   "evidence": [
+    "f19cee3d1350"
+   ],
+   "ring": "hold",
+   "proposed": "",
+   "quadrant": "policy",
+   "capability": "governance",
+   "rationale": "High-profile litigation over chatbot safety guardrails underscores legal risks, reinforcing DPA's need for strict guardrails on client-facing outputs.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "muse-wonder": {
+   "key": "muse-wonder",
+   "name": "Muse Wonder",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "assess",
+     "why": "Meta's Active Memory and Active Focus updates could enhance long-document extraction and agentic multi-step tasks by reducing errors from unexpected obstacles."
+    }
+   ],
+   "evidence": [
+    "77bf41c17995"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "doc_extraction",
+   "rationale": "Meta's Active Memory and Active Focus updates could enhance long-document extraction and agentic multi-step tasks by reducing errors from unexpected obstacles.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "grok": {
+   "key": "grok",
+   "name": "Grok",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "assess",
+     "why": "Evaluating Grok through enterprise partners may offer an alternative LLM option for DPA's agent workflows and internal productivity tools."
+    }
+   ],
+   "evidence": [
+    "31089e719fc9"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "agents",
+   "rationale": "Evaluating Grok through enterprise partners may offer an alternative LLM option for DPA's agent workflows and internal productivity tools.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "studio-le-chonk": {
+   "key": "studio-le-chonk",
+   "name": "Studio Le Chonk",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "assess",
+     "why": "Mistral's platform deployment options could offer DPA alternative paths for running client document workflows on-premises or in VPCs with data sovereignty."
+    }
+   ],
+   "evidence": [
+    "1184d3a025fd"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "agents",
+   "rationale": "Mistral's platform deployment options could offer DPA alternative paths for running client document workflows on-premises or in VPCs with data sovereignty.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "nvidia-nemotron": {
+   "key": "nvidia-nemotron",
+   "name": "Nvidia Nemotron",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "assess",
+     "why": "Nvidia Nemotron embeddings inside Box could inform how DPA indexes unstructured fund documents for enterprise AI agent queries."
+    }
+   ],
+   "evidence": [
+    "5ea6f104b1e8"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "doc_extraction",
+   "rationale": "Nvidia Nemotron embeddings inside Box could inform how DPA indexes unstructured fund documents for enterprise AI agent queries.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "prism": {
+   "key": "prism",
+   "name": "Prism",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "assess",
+     "why": "Sarvam's India-developed decision model could be tested for fast classification and routing in DPA's financial data reconciliation workflows."
+    }
+   ],
+   "evidence": [
+    "3e50b2261d70"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "data_qa",
+   "rationale": "Sarvam's India-developed decision model could be tested for fast classification and routing in DPA's financial data reconciliation workflows.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "indian-cyber-crime-coordination-centre-advisory": {
+   "key": "indian-cyber-crime-coordination-centre-advisory",
+   "name": "Indian Cyber Crime Coordination Centre advisory",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "hold",
+     "why": "DPA must ensure strict security and API governance when deploying autonomous AI agents for financial clients in India."
+    }
+   ],
+   "evidence": [
+    "b607b0928983"
+   ],
+   "ring": "hold",
+   "proposed": "",
+   "quadrant": "policy",
+   "capability": "governance",
+   "rationale": "DPA must ensure strict security and API governance when deploying autonomous AI agents for financial clients in India.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "d3d": {
+   "key": "d3d",
+   "name": "D3D",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "assess",
+     "why": "D3D could speed up internal LLM inference and reduce compute costs for DPA's data pipeline tasks."
+    }
+   ],
+   "evidence": [
+    "434be2e7a9b5"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "techniques",
+   "capability": "data_pipelines",
+   "rationale": "D3D could speed up internal LLM inference and reduce compute costs for DPA's data pipeline tasks.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "pearl": {
+   "key": "pearl",
+   "name": "PEARL",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "assess",
+     "why": "PEARL could help DPA suppress misaligned behaviors in fine-tuned open-weight models used for financial extraction."
+    }
+   ],
+   "evidence": [
+    "cc0bbf95c7e7"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "techniques",
+   "capability": "doc_extraction",
+   "rationale": "PEARL could help DPA suppress misaligned behaviors in fine-tuned open-weight models used for financial extraction.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "statebench": {
+   "key": "statebench",
+   "name": "StateBench",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "assess",
+     "why": "StateBench could help DPA benchmark how well our extraction models track entity states across lengthy fund reports."
+    }
+   ],
+   "evidence": [
+    "a55665cf4895"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "techniques",
+   "capability": "doc_extraction",
+   "rationale": "StateBench could help DPA benchmark how well our extraction models track entity states across lengthy fund reports.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "fiddler-ai": {
+   "key": "fiddler-ai",
+   "name": "Fiddler AI",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "assess",
+     "why": "Fiddler AI observability tools could help DPA monitor and secure multi-step agentic workflows for private equity clients."
+    }
+   ],
+   "evidence": [
+    "6a9cc38190a7"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "agents",
+   "rationale": "Fiddler AI observability tools could help DPA monitor and secure multi-step agentic workflows for private equity clients.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "trajectory": {
+   "key": "trajectory",
+   "name": "Trajectory",
+   "first_seen": "2026-11-22",
+   "history": [
+    {
+     "date": "2026-11-22",
+     "from": "",
+     "to": "assess",
+     "why": "Continuous fine-tuning platforms could help DPA adapt open-source models for specialized document extraction and financial research tasks using internal feedback."
+    }
+   ],
+   "evidence": [
+    "b2485c91dd17"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "doc_extraction",
+   "rationale": "Continuous fine-tuning platforms could help DPA adapt open-source models for specialized document extraction and financial research tasks using internal feedback.",
+   "updated": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
   }
  },
  "considered": [
   "0508a8475458",
   "0cefd4c68688",
+  "1184d3a025fd",
   "1d0b49e9508f",
   "21ab7432dba4",
   "23f8b2eb41d3",
@@ -1151,26 +1440,34 @@
   "2b4eaac89da1",
   "2d3b8471f026",
   "2db41133973d",
+  "31089e719fc9",
   "3decd8b5d056",
+  "3e50b2261d70",
   "3f1ac81e6e95",
+  "434be2e7a9b5",
   "459fb45d2a37",
   "48f1f10785df",
   "4deebe750552",
+  "4e58f6108a21",
   "5186d80b7eef",
   "518c47915c16",
   "53f2a14376dd",
   "549a77347d5e",
   "583b7a1c7413",
   "5881b795a6bf",
+  "5bf107852b8f",
   "5c695888c432",
   "5d27befedfa3",
+  "5ea6f104b1e8",
   "60f45a639eb2",
   "6373036a727f",
   "646e58946cb7",
   "68ff5ed661ee",
+  "6a9cc38190a7",
   "6da8ea47d40e",
   "76dbab81d73b",
   "7737e173e31a",
+  "77bf41c17995",
   "77d255b4e9ac",
   "7a3f1296623a",
   "7c216e897ed3",
@@ -1185,13 +1482,16 @@
   "a03a5c718a32",
   "a1e895b935bb",
   "a1f50bca3921",
+  "a55665cf4895",
   "a8d5fa7d24b3",
   "a8d86fb81b42",
   "a8fc84dcded8",
   "afe5d96a9d46",
   "b00f82b6db94",
   "b0ded74e06b0",
+  "b2485c91dd17",
   "b5d702d24285",
+  "b607b0928983",
   "b61856a48aba",
   "b621aa11e7e8",
   "b898a1b2127c",
@@ -1199,12 +1499,14 @@
   "c60558e98558",
   "c741975b7d0b",
   "c7ca507a9ed8",
+  "cc0bbf95c7e7",
   "cce714811b51",
   "d8887a09bc5e",
   "e1842b672534",
   "ef2f279289bc",
   "f0be036ed676",
+  "f19cee3d1350",
   "fa0e89bac09a"
  ],
- "updated_at": "2026-11-21T22:47:03+00:00"
+ "updated_at": "2026-11-22T00:29:10+00:00"
 }

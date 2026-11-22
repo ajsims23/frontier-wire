@@ -47,7 +47,57 @@
    ],
    "drafted": "2026-11-21",
    "model": "gemini/gemini-flash-lite-latest"
+  },
+  "poc-8e37a6": {
+   "id": "poc-8e37a6",
+   "kind": "pilot",
+   "radar_key": "gemini-decisions-api",
+   "item": "Gemini Decisions API",
+   "capability": "data_qa",
+   "title": "Pilot Gemini Decisions API for fund-filing compliance checks",
+   "problem": "Manual compliance checks on high-volume fund filings are time-consuming and prone to bottlenecks during peak reporting cycles, delaying error-catching before client deliverables are finalized.",
+   "proposal": "Pilot the Gemini Decisions API using public and synthetic PDF fund notices to automate high-volume binary decisions, compliance checklist validations, and multi-modal QA tasks, integrating probability scoring into our review workflow.",
+   "plan": [
+    "Prepare 50 public or synthetic PDF fund notices with known compliance checklist items.",
+    "Integrate Gemini Decisions API to run bounded-choice scoring on the test set.",
+    "Measure response latency, per-request token costs, and scoring accuracy against ground truth.",
+    "Evaluate results and document recommendations for high-volume compliance checks."
+   ],
+   "metric": "Measure API latency (target under 250ms), cost per document, and match accuracy against hand-checked compliance checklists for 50 test fund notices.",
+   "data_safety": "Test initially with public or synthetic PDFs only; never send client data on external API tiers. Verify Google's data retention, privacy terms, and zero-retention options before wider production use.",
+   "effort": "M",
+   "owner": "quality",
+   "evidence": [
+    "cce714811b51"
+   ],
+   "drafted": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "poc-cda2c8": {
+   "id": "poc-cda2c8",
+   "kind": "pilot",
+   "radar_key": "claude-meetings",
+   "item": "Claude Meetings",
+   "capability": "productivity",
+   "title": "Pilot Claude Meetings for internal scoping call notes",
+   "problem": "DPA teams spend valuable time manually taking notes and drafting follow-up documents after internal scoping and research calls, slowing down project kickoff.",
+   "proposal": "Pilot Anthropic's Claude Meetings beta feature to join internal video calls, automatically take notes, answer questions, and draft follow-up documents to streamline post-call workflows.",
+   "plan": [
+    "Set up Claude Meetings on a Team or Enterprise plan for Google Meet.",
+    "Run and record three internal scoping calls using the tool.",
+    "Compare generated notes and follow-up drafts against manual summaries.",
+    "Document time saved and note accuracy for the team."
+   ],
+   "metric": "Evaluated by comparing Claude's meeting notes and follow-up drafts against manual summaries from three internal scoping calls for completeness and editing time.",
+   "data_safety": "Use only for internal scoping or synthetic meeting recordings; verify Anthropic's enterprise data retention terms and ensure zero training on enterprise inputs before any client use.",
+   "effort": "S",
+   "owner": "champions",
+   "evidence": [
+    "21ab7432dba4"
+   ],
+   "drafted": "2026-11-22",
+   "model": "gemini/gemini-flash-lite-latest"
   }
  },
- "last": "2026-11-21"
+ "last": "2026-11-22"
 }
