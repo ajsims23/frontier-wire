@@ -3552,6 +3552,1891 @@
      "available": false
     }
    ]
+  },
+  {
+   "date": "2026-11-22",
+   "at": "2026-11-22T14:53:53+00:00",
+   "tasks_version": "2026-11-22b",
+   "tasks": 15,
+   "models": [
+    {
+     "provider": "nvidia",
+     "model": "nvidia/nemotron-3-ultra-550b-a55b",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_commitments_musd",
+         "score": 1.0
+        },
+        {
+         "key": "called_musd",
+         "score": 1.0
+        },
+        {
+         "key": "distributions_musd",
+         "score": 1.0
+        },
+        {
+         "key": "nav_musd",
+         "score": 1.0
+        },
+        {
+         "key": "net_irr_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tvpi",
+         "score": 1.0
+        },
+        {
+         "key": "nav_change_qoq_musd",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"total_commitments_musd\": 1250.0, \"called_musd\": 812.5, \"distributions_musd\": 305.2, \"nav_musd\": 934.7, \"net_irr_pct\": 14.2, \"tvpi\": 1.53, \"nav_change_qoq_musd\": 33.4}"
+      },
+      "income-statement": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "revenue_2025",
+         "score": 1.0
+        },
+        {
+         "key": "operating_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "net_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "gross_margin_2025_pct",
+         "score": 1.0
+        },
+        {
+         "key": "eps_diluted_2024",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"revenue_2025\": 482310, \"operating_income_2024\": -12565, \"net_income_2024\": -17220, \"gross_margin_2025_pct\": 58.2, \"eps_diluted_2024\": -0.34}"
+      },
+      "capital-call": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "fund_name",
+         "score": 1.0
+        },
+        {
+         "key": "notice_number",
+         "score": 1.0
+        },
+        {
+         "key": "call_amount_usd",
+         "score": 1.0
+        },
+        {
+         "key": "management_fees_usd",
+         "score": 1.0
+        },
+        {
+         "key": "due_date",
+         "score": 1.0
+        },
+        {
+         "key": "cumulative_called_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"fund_name\": \"Northfield Credit Opportunities Fund II, L.P.\", \"notice_number\": 14, \"call_amount_usd\": 600000, \"management_fees_usd\": 48500, \"due_date\": \"2026-11-17\", \"cumulative_called_pct\": 71.6}"
+      },
+      "rent-roll": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "occupancy_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tenant_count",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant_rent_share_pct",
+         "score": 1.0
+        },
+        {
+         "key": "earliest_expiry",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"occupancy_pct\": 81.9, \"tenant_count\": 3, \"largest_tenant\": \"Coastline Freight LLC\", \"largest_tenant_rent_share_pct\": 51.0, \"earliest_expiry\": \"2027-09-30\"}"
+      },
+      "holdings-total": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_matches",
+         "score": 1.0
+        },
+        {
+         "key": "computed_total",
+         "score": 1.0
+        },
+        {
+         "key": "difference",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"total_matches\": false, \"computed_total\": 87565, \"difference\": 900}"
+      },
+      "narrative-vs-table": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "inconsistent",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"inconsistent\": [\"S2\", \"S4\"]}"
+      },
+      "clean-distribution": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "components_sum_usd",
+         "score": 1.0
+        },
+        {
+         "key": "net_check_ok",
+         "score": 1.0
+        },
+        {
+         "key": "errors",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"components_sum_usd\": 1500000, \"net_check_ok\": true, \"errors\": []}"
+      },
+      "report-checklist": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "results",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"results\": {\"C1\": \"pass\", \"C2\": \"pass\", \"C3\": \"fail\", \"C4\": \"fail\", \"C5\": \"fail\", \"C6\": \"pass\"}}"
+      },
+      "trade-file-rules": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "rules",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"rules\": {\"R1\": {\"status\": \"pass\", \"ids\": []}, \"R2\": {\"status\": \"fail\", \"ids\": [\"T-1003\"]}, \"R3\": {\"status\": \"fail\", \"ids\": [\"T-1005\"]}, \"R4\": {\"status\": \"fail\", \"ids\": [\"T-1006\"]}, \"R5\": {\"status\": \"fail\", \"ids\": [\"T-1004\"]}}}"
+      },
+      "ownership-chain": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "direct_owners",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_owner",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_pct",
+         "score": 1.0
+        },
+        {
+         "key": "kestrel_indirect_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"direct_owners\": [{\"name\": \"Pinecrest Holdings Ltd\", \"pct\": 62}, {\"name\": \"Arun Mehta\", \"pct\": 23}, {\"name\": \"Orchid Ventures Fund I\", \"pct\": 15}], \"largest_indirect_owner\": \"Marlow Family Trust\", \"largest_indirect_pct\": 49.6, \"kestrel_indirect_pct\": 12.4}"
+      },
+      "credit-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "net_debt",
+         "score": 1.0
+        },
+        {
+         "key": "net_leverage",
+         "score": 1.0
+        },
+        {
+         "key": "interest_coverage",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_margin_pct",
+         "score": 1.0
+        },
+        {
+         "key": "leverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "coverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_cushion_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"net_debt\": 264.0, \"net_leverage\": 2.75, \"interest_coverage\": 5.19, \"ebitda_margin_pct\": 15.0, \"leverage_covenant_ok\": true, \"coverage_covenant_ok\": true, \"ebitda_cushion_pct\": 15.4}"
+      },
+      "document-routing": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "labels",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"labels\": {\"D1\": \"capital_call\", \"D2\": \"k1_tax_form\", \"D3\": \"subscription_agreement\", \"D4\": \"side_letter\", \"D5\": \"quarterly_report\", \"D6\": \"distribution_notice\", \"D7\": \"other\"}}"
+      },
+      "ocr-balance-sheet": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "cash_2026",
+         "score": 1.0
+        },
+        {
+         "key": "total_assets_2026",
+         "score": 1.0
+        },
+        {
+         "key": "total_liabilities_2026",
+         "score": 1.0
+        },
+        {
+         "key": "equity_change",
+         "score": 1.0
+        },
+        {
+         "key": "balanced_2026",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"cash_2026\": 408.1, \"total_assets_2026\": 4052.3, \"total_liabilities_2026\": 1722.9, \"equity_change\": 262.9, \"balanced_2026\": true}"
+      },
+      "distribution-waterfall": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "preferred_return",
+         "score": 1.0
+        },
+        {
+         "key": "gp_catch_up",
+         "score": 1.0
+        },
+        {
+         "key": "lp_total",
+         "score": 1.0
+        },
+        {
+         "key": "gp_total",
+         "score": 1.0
+        },
+        {
+         "key": "gp_share_of_profit_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"preferred_return\": 38.4, \"gp_catch_up\": 9.6, \"lp_total\": 168.0, \"gp_total\": 12.0, \"gp_share_of_profit_pct\": 20.0}"
+      },
+      "subtle-checklist": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "results",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"results\": {\"K1\": \"fail\", \"K2\": \"fail\", \"K3\": \"pass\", \"K4\": \"fail\", \"K5\": \"pass\", \"K6\": \"pass\", \"K7\": \"pass\", \"K8\": \"pass\"}}"
+      }
+     },
+     "errors": 0,
+     "tokens": 23366,
+     "available": true,
+     "score": 100.0,
+     "by_type": {
+      "extraction": 100.0,
+      "quality": 100.0,
+      "research": 100.0,
+      "routing": 100.0
+     },
+     "median_latency_s": 19.67
+    },
+    {
+     "provider": "groq",
+     "model": "openai/gpt-oss-120b",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_commitments_musd",
+         "score": 1.0
+        },
+        {
+         "key": "called_musd",
+         "score": 1.0
+        },
+        {
+         "key": "distributions_musd",
+         "score": 1.0
+        },
+        {
+         "key": "nav_musd",
+         "score": 1.0
+        },
+        {
+         "key": "net_irr_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tvpi",
+         "score": 1.0
+        },
+        {
+         "key": "nav_change_qoq_musd",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"called_musd\": 812.5, \"distributions_musd\": 305.2, \"nav_change_qoq_musd\": 33.4, \"nav_musd\": 934.7, \"net_irr_pct\": 14.2, \"total_commitments_musd\": 1250, \"tvpi\": 1.53}"
+      },
+      "income-statement": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "revenue_2025",
+         "score": 1.0
+        },
+        {
+         "key": "operating_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "net_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "gross_margin_2025_pct",
+         "score": 1.0
+        },
+        {
+         "key": "eps_diluted_2024",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"eps_diluted_2024\": -0.34, \"gross_margin_2025_pct\": 58.2, \"net_income_2024\": -17220, \"operating_income_2024\": -12565, \"revenue_2025\": 482310}"
+      },
+      "capital-call": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "fund_name",
+         "score": 1.0
+        },
+        {
+         "key": "notice_number",
+         "score": 1.0
+        },
+        {
+         "key": "call_amount_usd",
+         "score": 1.0
+        },
+        {
+         "key": "management_fees_usd",
+         "score": 1.0
+        },
+        {
+         "key": "due_date",
+         "score": 1.0
+        },
+        {
+         "key": "cumulative_called_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"call_amount_usd\": 600000, \"cumulative_called_pct\": 71.6, \"due_date\": \"2026-11-17\", \"fund_name\": \"Northfield Credit Opportunities Fund II, L.P.\", \"management_fees_usd\": 48500, \"notice_number\": 14}"
+      },
+      "rent-roll": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "occupancy_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tenant_count",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant_rent_share_pct",
+         "score": 1.0
+        },
+        {
+         "key": "earliest_expiry",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"earliest_expiry\": \"2027-09-30\", \"largest_tenant\": \"Coastline Freight LLC\", \"largest_tenant_rent_share_pct\": 51, \"occupancy_pct\": 81.9, \"tenant_count\": 3}"
+      },
+      "holdings-total": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_matches",
+         "score": 1.0
+        },
+        {
+         "key": "computed_total",
+         "score": 1.0
+        },
+        {
+         "key": "difference",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"computed_total\": 87565, \"difference\": 900, \"total_matches\": false}"
+      },
+      "narrative-vs-table": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "inconsistent",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"inconsistent\": [\"S2\", \"S4\"]}"
+      },
+      "clean-distribution": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "components_sum_usd",
+         "score": 1.0
+        },
+        {
+         "key": "net_check_ok",
+         "score": 1.0
+        },
+        {
+         "key": "errors",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"components_sum_usd\": 1500000, \"errors\": [], \"net_check_ok\": true}"
+      },
+      "report-checklist": {
+       "score": 0.833,
+       "fields": [
+        {
+         "key": "results",
+         "score": 0.833
+        }
+       ],
+       "answer": "{\"results\": {\"C1\": \"pass\", \"C2\": \"pass\", \"C3\": \"fail\", \"C4\": \"pass\", \"C5\": \"fail\", \"C6\": \"pass\"}}"
+      },
+      "trade-file-rules": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "rules",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"rules\": {\"R1\": {\"ids\": [], \"status\": \"pass\"}, \"R2\": {\"ids\": [\"T-1003\"], \"status\": \"fail\"}, \"R3\": {\"ids\": [\"T-1005\"], \"status\": \"fail\"}, \"R4\": {\"ids\": [\"T-1006\"], \"status\": \"fail\"}, \"R5\": {\"ids\": [\"T-1004\"], \"status\": \"fail\"}}}"
+      },
+      "ownership-chain": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "direct_owners",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_owner",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_pct",
+         "score": 1.0
+        },
+        {
+         "key": "kestrel_indirect_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"direct_owners\": [{\"name\": \"Pinecrest Holdings Ltd\", \"pct\": 62}, {\"name\": \"Arun Mehta\", \"pct\": 23}, {\"name\": \"Orchid Ventures Fund I\", \"pct\": 15}], \"kestrel_indirect_pct\": 12.4, \"largest_indirect_owner\": \"Marlow Family Trust\", \"largest_indirect_pct\": 49.6}"
+      },
+      "credit-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "net_debt",
+         "score": 1.0
+        },
+        {
+         "key": "net_leverage",
+         "score": 1.0
+        },
+        {
+         "key": "interest_coverage",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_margin_pct",
+         "score": 1.0
+        },
+        {
+         "key": "leverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "coverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_cushion_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"coverage_covenant_ok\": true, \"ebitda_cushion_pct\": 15.4, \"ebitda_margin_pct\": 15, \"interest_coverage\": 5.19, \"leverage_covenant_ok\": true, \"net_debt\": 264, \"net_leverage\": 2.75}"
+      },
+      "document-routing": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "labels",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"labels\": {\"D1\": \"capital_call\", \"D2\": \"k1_tax_form\", \"D3\": \"subscription_agreement\", \"D4\": \"side_letter\", \"D5\": \"quarterly_report\", \"D6\": \"distribution_notice\", \"D7\": \"other\"}}"
+      },
+      "ocr-balance-sheet": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "cash_2026",
+         "score": 1.0
+        },
+        {
+         "key": "total_assets_2026",
+         "score": 1.0
+        },
+        {
+         "key": "total_liabilities_2026",
+         "score": 1.0
+        },
+        {
+         "key": "equity_change",
+         "score": 1.0
+        },
+        {
+         "key": "balanced_2026",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"balanced_2026\": true, \"cash_2026\": 408.1, \"equity_change\": 262.9, \"total_assets_2026\": 4052.3, \"total_liabilities_2026\": 1722.9}"
+      },
+      "distribution-waterfall": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "preferred_return",
+         "score": 1.0
+        },
+        {
+         "key": "gp_catch_up",
+         "score": 1.0
+        },
+        {
+         "key": "lp_total",
+         "score": 1.0
+        },
+        {
+         "key": "gp_total",
+         "score": 1.0
+        },
+        {
+         "key": "gp_share_of_profit_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"gp_catch_up\": 9.6, \"gp_share_of_profit_pct\": 20, \"gp_total\": 12, \"lp_total\": 168, \"preferred_return\": 38.4}"
+      },
+      "subtle-checklist": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "results",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"results\": {\"K1\": \"fail\", \"K2\": \"fail\", \"K3\": \"pass\", \"K4\": \"fail\", \"K5\": \"pass\", \"K6\": \"pass\", \"K7\": \"pass\", \"K8\": \"pass\"}}"
+      }
+     },
+     "errors": 0,
+     "tokens": 14119,
+     "available": true,
+     "score": 98.9,
+     "by_type": {
+      "extraction": 100.0,
+      "quality": 97.2,
+      "research": 100.0,
+      "routing": 100.0
+     },
+     "median_latency_s": 3.57
+    },
+    {
+     "provider": "groq",
+     "model": "openai/gpt-oss-20b",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_commitments_musd",
+         "score": 1.0
+        },
+        {
+         "key": "called_musd",
+         "score": 1.0
+        },
+        {
+         "key": "distributions_musd",
+         "score": 1.0
+        },
+        {
+         "key": "nav_musd",
+         "score": 1.0
+        },
+        {
+         "key": "net_irr_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tvpi",
+         "score": 1.0
+        },
+        {
+         "key": "nav_change_qoq_musd",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"called_musd\": 812.5, \"distributions_musd\": 305.2, \"nav_change_qoq_musd\": 33.4, \"nav_musd\": 934.7, \"net_irr_pct\": 14.2, \"total_commitments_musd\": 1250, \"tvpi\": 1.53}"
+      },
+      "income-statement": {
+       "score": 0.8,
+       "fields": [
+        {
+         "key": "revenue_2025",
+         "score": 1.0
+        },
+        {
+         "key": "operating_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "net_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "gross_margin_2025_pct",
+         "score": 0.0
+        },
+        {
+         "key": "eps_diluted_2024",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"eps_diluted_2024\": -0.34, \"gross_margin_2025_pct\": 58.3, \"net_income_2024\": -17220, \"operating_income_2024\": -12565, \"revenue_2025\": 482310}"
+      },
+      "capital-call": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "fund_name",
+         "score": 1.0
+        },
+        {
+         "key": "notice_number",
+         "score": 1.0
+        },
+        {
+         "key": "call_amount_usd",
+         "score": 1.0
+        },
+        {
+         "key": "management_fees_usd",
+         "score": 1.0
+        },
+        {
+         "key": "due_date",
+         "score": 1.0
+        },
+        {
+         "key": "cumulative_called_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"call_amount_usd\": 600000, \"cumulative_called_pct\": 71.6, \"due_date\": \"2026-11-17\", \"fund_name\": \"Northfield Credit Opportunities Fund II, L.P.\", \"management_fees_usd\": 48500, \"notice_number\": 14}"
+      },
+      "rent-roll": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "occupancy_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tenant_count",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant_rent_share_pct",
+         "score": 1.0
+        },
+        {
+         "key": "earliest_expiry",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"earliest_expiry\": \"2027-09-30\", \"largest_tenant\": \"Coastline Freight LLC\", \"largest_tenant_rent_share_pct\": 51, \"occupancy_pct\": 81.9, \"tenant_count\": 3}"
+      },
+      "holdings-total": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_matches",
+         "score": 1.0
+        },
+        {
+         "key": "computed_total",
+         "score": 1.0
+        },
+        {
+         "key": "difference",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"computed_total\": 87565, \"difference\": 900, \"total_matches\": false}"
+      },
+      "narrative-vs-table": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "inconsistent",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"inconsistent\": [\"S2\", \"S4\"]}"
+      },
+      "clean-distribution": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "components_sum_usd",
+         "score": 1.0
+        },
+        {
+         "key": "net_check_ok",
+         "score": 1.0
+        },
+        {
+         "key": "errors",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"components_sum_usd\": 1500000, \"errors\": [], \"net_check_ok\": true}"
+      },
+      "report-checklist": {
+       "score": 0.833,
+       "fields": [
+        {
+         "key": "results",
+         "score": 0.833
+        }
+       ],
+       "answer": "{\"results\": {\"C1\": \"pass\", \"C2\": \"pass\", \"C3\": \"fail\", \"C4\": \"pass\", \"C5\": \"fail\", \"C6\": \"pass\"}}"
+      },
+      "trade-file-rules": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "rules",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"rules\": {\"R1\": {\"ids\": [], \"status\": \"pass\"}, \"R2\": {\"ids\": [\"T-1003\"], \"status\": \"fail\"}, \"R3\": {\"ids\": [\"T-1005\"], \"status\": \"fail\"}, \"R4\": {\"ids\": [\"T-1006\"], \"status\": \"fail\"}, \"R5\": {\"ids\": [\"T-1004\"], \"status\": \"fail\"}}}"
+      },
+      "ownership-chain": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "direct_owners",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_owner",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_pct",
+         "score": 1.0
+        },
+        {
+         "key": "kestrel_indirect_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"direct_owners\": [{\"name\": \"Pinecrest Holdings Ltd\", \"pct\": 62}, {\"name\": \"Arun Mehta\", \"pct\": 23}, {\"name\": \"Orchid Ventures Fund I\", \"pct\": 15}], \"kestrel_indirect_pct\": 12.4, \"largest_indirect_owner\": \"Marlow Family Trust\", \"largest_indirect_pct\": 49.6}"
+      },
+      "credit-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "net_debt",
+         "score": 1.0
+        },
+        {
+         "key": "net_leverage",
+         "score": 1.0
+        },
+        {
+         "key": "interest_coverage",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_margin_pct",
+         "score": 1.0
+        },
+        {
+         "key": "leverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "coverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_cushion_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"coverage_covenant_ok\": true, \"ebitda_cushion_pct\": 15.4, \"ebitda_margin_pct\": 15, \"interest_coverage\": 5.19, \"leverage_covenant_ok\": true, \"net_debt\": 264, \"net_leverage\": 2.75}"
+      },
+      "document-routing": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "labels",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"labels\": {\"D1\": \"capital_call\", \"D2\": \"k1_tax_form\", \"D3\": \"subscription_agreement\", \"D4\": \"side_letter\", \"D5\": \"quarterly_report\", \"D6\": \"distribution_notice\", \"D7\": \"other\"}}"
+      },
+      "ocr-balance-sheet": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "cash_2026",
+         "score": 1.0
+        },
+        {
+         "key": "total_assets_2026",
+         "score": 1.0
+        },
+        {
+         "key": "total_liabilities_2026",
+         "score": 1.0
+        },
+        {
+         "key": "equity_change",
+         "score": 1.0
+        },
+        {
+         "key": "balanced_2026",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"balanced_2026\": true, \"cash_2026\": 408.1, \"equity_change\": 262.9, \"total_assets_2026\": 4052.3, \"total_liabilities_2026\": 1722.9}"
+      },
+      "distribution-waterfall": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "preferred_return",
+         "score": 1.0
+        },
+        {
+         "key": "gp_catch_up",
+         "score": 1.0
+        },
+        {
+         "key": "lp_total",
+         "score": 1.0
+        },
+        {
+         "key": "gp_total",
+         "score": 1.0
+        },
+        {
+         "key": "gp_share_of_profit_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"gp_catch_up\": 9.6, \"gp_share_of_profit_pct\": 20, \"gp_total\": 12, \"lp_total\": 168, \"preferred_return\": 38.4}"
+      },
+      "subtle-checklist": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "results",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"results\": {\"K1\": \"fail\", \"K2\": \"fail\", \"K3\": \"pass\", \"K4\": \"fail\", \"K5\": \"pass\", \"K6\": \"pass\", \"K7\": \"pass\", \"K8\": \"pass\"}}"
+      }
+     },
+     "errors": 0,
+     "tokens": 14638,
+     "available": true,
+     "score": 97.6,
+     "by_type": {
+      "extraction": 96.0,
+      "quality": 97.2,
+      "research": 100.0,
+      "routing": 100.0
+     },
+     "median_latency_s": 3.24
+    },
+    {
+     "provider": "gemini",
+     "model": "gemini-flash-lite-latest",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_commitments_musd",
+         "score": 1.0
+        },
+        {
+         "key": "called_musd",
+         "score": 1.0
+        },
+        {
+         "key": "distributions_musd",
+         "score": 1.0
+        },
+        {
+         "key": "nav_musd",
+         "score": 1.0
+        },
+        {
+         "key": "net_irr_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tvpi",
+         "score": 1.0
+        },
+        {
+         "key": "nav_change_qoq_musd",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"distributions_musd\": 305.2, \"total_commitments_musd\": 1250, \"net_irr_pct\": 14.2, \"tvpi\": 1.53, \"nav_change_qoq_musd\": 33.4, \"called_musd\": 812.5, \"nav_musd\": 934.7}"
+      },
+      "income-statement": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "revenue_2025",
+         "score": 1.0
+        },
+        {
+         "key": "operating_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "net_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "gross_margin_2025_pct",
+         "score": 1.0
+        },
+        {
+         "key": "eps_diluted_2024",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"gross_margin_2025_pct\": 58.2, \"eps_diluted_2024\": -0.34, \"net_income_2024\": -17220, \"revenue_2025\": 482310, \"operating_income_2024\": -12565}"
+      },
+      "capital-call": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "fund_name",
+         "score": 1.0
+        },
+        {
+         "key": "notice_number",
+         "score": 1.0
+        },
+        {
+         "key": "call_amount_usd",
+         "score": 1.0
+        },
+        {
+         "key": "management_fees_usd",
+         "score": 1.0
+        },
+        {
+         "key": "due_date",
+         "score": 1.0
+        },
+        {
+         "key": "cumulative_called_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"cumulative_called_pct\": 71.6, \"notice_number\": 14, \"call_amount_usd\": 600000, \"fund_name\": \"Northfield Credit Opportunities Fund II, L.P.\", \"management_fees_usd\": 48500, \"due_date\": \"2026-11-17\"}"
+      },
+      "rent-roll": {
+       "score": 0.8,
+       "fields": [
+        {
+         "key": "occupancy_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tenant_count",
+         "score": 0.0
+        },
+        {
+         "key": "largest_tenant",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant_rent_share_pct",
+         "score": 1.0
+        },
+        {
+         "key": "earliest_expiry",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"largest_tenant_rent_share_pct\": 51, \"earliest_expiry\": \"2027-09-30\", \"largest_tenant\": \"Coastline Freight LLC\", \"tenant_count\": 4, \"occupancy_pct\": 81.9}"
+      },
+      "holdings-total": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_matches",
+         "score": 1.0
+        },
+        {
+         "key": "computed_total",
+         "score": 1.0
+        },
+        {
+         "key": "difference",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"total_matches\": false, \"computed_total\": 87565, \"difference\": 900}"
+      },
+      "narrative-vs-table": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "inconsistent",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"inconsistent\": [\"S2\", \"S4\"]}"
+      },
+      "clean-distribution": {
+       "score": 0.667,
+       "fields": [
+        {
+         "key": "components_sum_usd",
+         "score": 1.0
+        },
+        {
+         "key": "net_check_ok",
+         "score": 1.0
+        },
+        {
+         "key": "errors",
+         "score": 0.0
+        }
+       ],
+       "answer": "{\"net_check_ok\": true, \"errors\": [\"Gross distribution (1,500,000) does not equal the sum of the three components (900,000 + 520,000 + 80,000 = 1,500,000 is correct for sum, but wait: 900,000 + 520,000 + 80,000 = 1,500,000). Let's re-verify: 900k + 520k = 1,420k + 80k = 1,500k. The components sum is 1,500,000. Wait, where is the error? Gross distribution is 1,500,000, withholding is 12,000. 1,500,000 - 12,000 = 1,488,000. Net distribution paid is 1,488,000. So net_check_ok is true and components_sum_usd is 1,500,000, with no errors.\"], \"components_sum_usd\": 1500000}"
+      },
+      "report-checklist": {
+       "score": 0.833,
+       "fields": [
+        {
+         "key": "results",
+         "score": 0.833
+        }
+       ],
+       "answer": "{\"results\": {\"C4\": \"pass\", \"C6\": \"pass\", \"C1\": \"pass\", \"C5\": \"fail\", \"C2\": \"pass\", \"C3\": \"fail\"}}"
+      },
+      "trade-file-rules": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "rules",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"rules\": {\"R1\": {\"ids\": [], \"status\": \"pass\"}, \"R2\": {\"ids\": [\"T-1003\"], \"status\": \"fail\"}, \"R5\": {\"status\": \"fail\", \"ids\": [\"T-1004\"]}, \"R3\": {\"ids\": [\"T-1005\"], \"status\": \"fail\"}, \"R4\": {\"ids\": [\"T-1006\"], \"status\": \"fail\"}}}"
+      },
+      "ownership-chain": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "direct_owners",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_owner",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_pct",
+         "score": 1.0
+        },
+        {
+         "key": "kestrel_indirect_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"largest_indirect_owner\": \"Marlow Family Trust\", \"largest_indirect_pct\": 49.6, \"kestrel_indirect_pct\": 12.4, \"direct_owners\": [{\"pct\": 62, \"name\": \"Pinecrest Holdings Ltd\"}, {\"pct\": 23, \"name\": \"Arun Mehta\"}, {\"name\": \"Orchid Ventures Fund I\", \"pct\": 15}]}"
+      },
+      "credit-metrics": {
+       "score": 0.714,
+       "fields": [
+        {
+         "key": "net_debt",
+         "score": 1.0
+        },
+        {
+         "key": "net_leverage",
+         "score": 1.0
+        },
+        {
+         "key": "interest_coverage",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_margin_pct",
+         "score": 1.0
+        },
+        {
+         "key": "leverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "coverage_covenant_ok",
+         "score": 0.0
+        },
+        {
+         "key": "ebitda_cushion_pct",
+         "score": 0.0
+        }
+       ],
+       "answer": "{\"interest_coverage\": 5.19, \"coverage_covenant_ok\": false, \"ebitda_cushion_pct\": 12.7, \"leverage_covenant_ok\": true, \"net_debt\": 264, \"ebitda_margin_pct\": 15, \"net_leverage\": 2.75}"
+      },
+      "document-routing": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "labels",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"labels\": {\"D4\": \"side_letter\", \"D7\": \"other\", \"D3\": \"subscription_agreement\", \"D6\": \"distribution_notice\", \"D5\": \"quarterly_report\", \"D1\": \"capital_call\", \"D2\": \"k1_tax_form\"}}"
+      },
+      "ocr-balance-sheet": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "cash_2026",
+         "score": 1.0
+        },
+        {
+         "key": "total_assets_2026",
+         "score": 1.0
+        },
+        {
+         "key": "total_liabilities_2026",
+         "score": 1.0
+        },
+        {
+         "key": "equity_change",
+         "score": 1.0
+        },
+        {
+         "key": "balanced_2026",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"cash_2026\": 408.1, \"total_assets_2026\": 4052.3, \"equity_change\": 262.89999999999964, \"total_liabilities_2026\": 1722.9, \"balanced_2026\": true}"
+      },
+      "distribution-waterfall": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "preferred_return",
+         "score": 1.0
+        },
+        {
+         "key": "gp_catch_up",
+         "score": 1.0
+        },
+        {
+         "key": "lp_total",
+         "score": 1.0
+        },
+        {
+         "key": "gp_total",
+         "score": 1.0
+        },
+        {
+         "key": "gp_share_of_profit_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"gp_total\": 12, \"lp_total\": 168, \"preferred_return\": 38.4, \"gp_catch_up\": 9.6, \"gp_share_of_profit_pct\": 20}"
+      },
+      "subtle-checklist": {
+       "score": 0.875,
+       "fields": [
+        {
+         "key": "results",
+         "score": 0.875
+        }
+       ],
+       "answer": "{\"results\": {\"K3\": \"pass\", \"K4\": \"fail\", \"K6\": \"pass\", \"K1\": \"pass\", \"K8\": \"pass\", \"K7\": \"pass\", \"K2\": \"fail\", \"K5\": \"pass\"}}"
+      }
+     },
+     "errors": 0,
+     "tokens": 9130,
+     "available": true,
+     "score": 92.6,
+     "by_type": {
+      "extraction": 96.0,
+      "quality": 89.6,
+      "research": 90.5,
+      "routing": 100.0
+     },
+     "median_latency_s": 8.25
+    },
+    {
+     "provider": "groq",
+     "model": "qwen/qwen3.8-27b",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_commitments_musd",
+         "score": 1.0
+        },
+        {
+         "key": "called_musd",
+         "score": 1.0
+        },
+        {
+         "key": "distributions_musd",
+         "score": 1.0
+        },
+        {
+         "key": "nav_musd",
+         "score": 1.0
+        },
+        {
+         "key": "net_irr_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tvpi",
+         "score": 1.0
+        },
+        {
+         "key": "nav_change_qoq_musd",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"called_musd\": 812.5, \"distributions_musd\": 305.2, \"nav_change_qoq_musd\": 33.4, \"nav_musd\": 934.7, \"net_irr_pct\": 14.2, \"total_commitments_musd\": 1250, \"tvpi\": 1.53}"
+      },
+      "income-statement": {
+       "score": 0.4,
+       "fields": [
+        {
+         "key": "revenue_2025",
+         "score": 1.0
+        },
+        {
+         "key": "operating_income_2024",
+         "score": 0.0
+        },
+        {
+         "key": "net_income_2024",
+         "score": 0.0
+        },
+        {
+         "key": "gross_margin_2025_pct",
+         "score": 1.0
+        },
+        {
+         "key": "eps_diluted_2024",
+         "score": 0.0
+        }
+       ],
+       "answer": "{\"eps_diluted_2024\": 0.34, \"gross_margin_2025_pct\": 58.2, \"net_income_2024\": 17220, \"operating_income_2024\": 12565, \"revenue_2025\": 482310}"
+      },
+      "capital-call": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "fund_name",
+         "score": 1.0
+        },
+        {
+         "key": "notice_number",
+         "score": 1.0
+        },
+        {
+         "key": "call_amount_usd",
+         "score": 1.0
+        },
+        {
+         "key": "management_fees_usd",
+         "score": 1.0
+        },
+        {
+         "key": "due_date",
+         "score": 1.0
+        },
+        {
+         "key": "cumulative_called_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"call_amount_usd\": 600000, \"cumulative_called_pct\": 71.6, \"due_date\": \"2026-11-17\", \"fund_name\": \"Northfield Credit Opportunities Fund II, L.P.\", \"management_fees_usd\": 48500, \"notice_number\": 14}"
+      },
+      "rent-roll": {
+       "score": 0.6,
+       "fields": [
+        {
+         "key": "occupancy_pct",
+         "score": 0.0
+        },
+        {
+         "key": "tenant_count",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant_rent_share_pct",
+         "score": 0.0
+        },
+        {
+         "key": "earliest_expiry",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"earliest_expiry\": \"2027-09-30\", \"largest_tenant\": \"Coastline Freight LLC\", \"largest_tenant_rent_share_pct\": 47.8, \"occupancy_pct\": 84.7, \"tenant_count\": 3}"
+      },
+      "holdings-total": {
+       "score": 0.667,
+       "fields": [
+        {
+         "key": "total_matches",
+         "score": 0.0
+        },
+        {
+         "key": "computed_total",
+         "score": 1.0
+        },
+        {
+         "key": "difference",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"computed_total\": 87565, \"difference\": 900, \"total_matches\": true}"
+      },
+      "narrative-vs-table": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "inconsistent",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"inconsistent\": [\"S2\", \"S4\"]}"
+      },
+      "clean-distribution": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "components_sum_usd",
+         "score": 1.0
+        },
+        {
+         "key": "net_check_ok",
+         "score": 1.0
+        },
+        {
+         "key": "errors",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"components_sum_usd\": 1500000, \"errors\": [], \"net_check_ok\": true}"
+      },
+      "report-checklist": {
+       "score": 0.833,
+       "fields": [
+        {
+         "key": "results",
+         "score": 0.833
+        }
+       ],
+       "answer": "{\"results\": {\"C1\": \"pass\", \"C2\": \"pass\", \"C3\": \"fail\", \"C4\": \"pass\", \"C5\": \"fail\", \"C6\": \"pass\"}}"
+      },
+      "trade-file-rules": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "rules",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"rules\": {\"R1\": {\"ids\": [], \"status\": \"pass\"}, \"R2\": {\"ids\": [\"T-1003\"], \"status\": \"fail\"}, \"R3\": {\"ids\": [\"T-1005\"], \"status\": \"fail\"}, \"R4\": {\"ids\": [\"T-1006\"], \"status\": \"fail\"}, \"R5\": {\"ids\": [\"T-1004\"], \"status\": \"fail\"}}}"
+      },
+      "ownership-chain": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "direct_owners",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_owner",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_pct",
+         "score": 1.0
+        },
+        {
+         "key": "kestrel_indirect_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"direct_owners\": [{\"name\": \"Pinecrest Holdings Ltd\", \"pct\": 62}, {\"name\": \"Arun Mehta\", \"pct\": 23}, {\"name\": \"Orchid Ventures Fund I\", \"pct\": 15}], \"kestrel_indirect_pct\": 12.4, \"largest_indirect_owner\": \"Marlow Family Trust\", \"largest_indirect_pct\": 49.6}"
+      },
+      "credit-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "net_debt",
+         "score": 1.0
+        },
+        {
+         "key": "net_leverage",
+         "score": 1.0
+        },
+        {
+         "key": "interest_coverage",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_margin_pct",
+         "score": 1.0
+        },
+        {
+         "key": "leverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "coverage_covenant_ok",
+         "score": 1.0
+        },
+        {
+         "key": "ebitda_cushion_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"coverage_covenant_ok\": true, \"ebitda_cushion_pct\": 15.4, \"ebitda_margin_pct\": 15, \"interest_coverage\": 5.19, \"leverage_covenant_ok\": true, \"net_debt\": 264, \"net_leverage\": 2.75}"
+      },
+      "document-routing": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "labels",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"labels\": {\"D1\": \"capital_call\", \"D2\": \"k1_tax_form\", \"D3\": \"subscription_agreement\", \"D4\": \"side_letter\", \"D5\": \"quarterly_report\", \"D6\": \"distribution_notice\", \"D7\": \"other\"}}"
+      },
+      "ocr-balance-sheet": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "cash_2026",
+         "score": 1.0
+        },
+        {
+         "key": "total_assets_2026",
+         "score": 1.0
+        },
+        {
+         "key": "total_liabilities_2026",
+         "score": 1.0
+        },
+        {
+         "key": "equity_change",
+         "score": 1.0
+        },
+        {
+         "key": "balanced_2026",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"balanced_2026\": true, \"cash_2026\": 408.1, \"equity_change\": 262.9, \"total_assets_2026\": 4052.3, \"total_liabilities_2026\": 1722.9}"
+      },
+      "distribution-waterfall": {
+       "score": 0.4,
+       "fields": [
+        {
+         "key": "preferred_return",
+         "score": 1.0
+        },
+        {
+         "key": "gp_catch_up",
+         "score": 1.0
+        },
+        {
+         "key": "lp_total",
+         "score": 0.0
+        },
+        {
+         "key": "gp_total",
+         "score": 0.0
+        },
+        {
+         "key": "gp_share_of_profit_pct",
+         "score": 0.0
+        }
+       ],
+       "answer": "{\"gp_catch_up\": 9.6, \"gp_share_of_profit_pct\": 44, \"gp_total\": 26.4, \"lp_total\": 153.6, \"preferred_return\": 38.4}"
+      },
+      "subtle-checklist": {
+       "score": 0.875,
+       "fields": [
+        {
+         "key": "results",
+         "score": 0.875
+        }
+       ],
+       "answer": "{\"results\": {\"K1\": \"pass\", \"K2\": \"fail\", \"K3\": \"pass\", \"K4\": \"fail\", \"K5\": \"pass\", \"K6\": \"pass\", \"K7\": \"pass\", \"K8\": \"pass\"}}"
+      }
+     },
+     "errors": 0,
+     "tokens": 12447,
+     "available": true,
+     "score": 85.2,
+     "by_type": {
+      "extraction": 80.0,
+      "quality": 89.6,
+      "research": 80.0,
+      "routing": 100.0
+     },
+     "median_latency_s": 3.16
+    },
+    {
+     "provider": "gemini",
+     "model": "gemini-flash-latest",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 0.0,
+       "error": "every configured provider failed: gemini: unreachable (ReadTimeout); skipping provider"
+      }
+     },
+     "errors": 1,
+     "stopped": "model unavailable on the free tier",
+     "tokens": 0,
+     "available": false
+    },
+    {
+     "provider": "nvidia",
+     "model": "mistralai/mistral-large-4-1t-a52b",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_commitments_musd",
+         "score": 1.0
+        },
+        {
+         "key": "called_musd",
+         "score": 1.0
+        },
+        {
+         "key": "distributions_musd",
+         "score": 1.0
+        },
+        {
+         "key": "nav_musd",
+         "score": 1.0
+        },
+        {
+         "key": "net_irr_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tvpi",
+         "score": 1.0
+        },
+        {
+         "key": "nav_change_qoq_musd",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"total_commitments_musd\": 1250.0, \"called_musd\": 812.5, \"distributions_musd\": 305.2, \"nav_musd\": 934.7, \"net_irr_pct\": 14.2, \"tvpi\": 1.53, \"nav_change_qoq_musd\": 33.4}"
+      },
+      "income-statement": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "revenue_2025",
+         "score": 1.0
+        },
+        {
+         "key": "operating_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "net_income_2024",
+         "score": 1.0
+        },
+        {
+         "key": "gross_margin_2025_pct",
+         "score": 1.0
+        },
+        {
+         "key": "eps_diluted_2024",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"revenue_2025\": 482310, \"operating_income_2024\": -12565, \"net_income_2024\": -17220, \"gross_margin_2025_pct\": 58.2, \"eps_diluted_2024\": -0.34}"
+      },
+      "capital-call": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "fund_name",
+         "score": 1.0
+        },
+        {
+         "key": "notice_number",
+         "score": 1.0
+        },
+        {
+         "key": "call_amount_usd",
+         "score": 1.0
+        },
+        {
+         "key": "management_fees_usd",
+         "score": 1.0
+        },
+        {
+         "key": "due_date",
+         "score": 1.0
+        },
+        {
+         "key": "cumulative_called_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"fund_name\": \"Northfield Credit Opportunities Fund II, L.P.\", \"notice_number\": 14, \"call_amount_usd\": 600000, \"management_fees_usd\": 48500, \"due_date\": \"2026-11-17\", \"cumulative_called_pct\": 71.6}"
+      },
+      "rent-roll": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "occupancy_pct",
+         "score": 1.0
+        },
+        {
+         "key": "tenant_count",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant",
+         "score": 1.0
+        },
+        {
+         "key": "largest_tenant_rent_share_pct",
+         "score": 1.0
+        },
+        {
+         "key": "earliest_expiry",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"occupancy_pct\": 81.9, \"tenant_count\": 3, \"largest_tenant\": \"Coastline Freight LLC\", \"largest_tenant_rent_share_pct\": 51.0, \"earliest_expiry\": \"2027-09-30\"}"
+      },
+      "holdings-total": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "total_matches",
+         "score": 1.0
+        },
+        {
+         "key": "computed_total",
+         "score": 1.0
+        },
+        {
+         "key": "difference",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"total_matches\": false, \"computed_total\": 87565, \"difference\": 900}"
+      },
+      "narrative-vs-table": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "inconsistent",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"inconsistent\": [\"S2\", \"S4\"]}"
+      },
+      "clean-distribution": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "components_sum_usd",
+         "score": 1.0
+        },
+        {
+         "key": "net_check_ok",
+         "score": 1.0
+        },
+        {
+         "key": "errors",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"components_sum_usd\": 1500000, \"net_check_ok\": true, \"errors\": []}"
+      },
+      "report-checklist": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "results",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"results\": {\"C1\": \"pass\", \"C2\": \"pass\", \"C3\": \"fail\", \"C4\": \"fail\", \"C5\": \"fail\", \"C6\": \"pass\"}}"
+      },
+      "trade-file-rules": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "rules",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"rules\": {\"R1\": {\"status\": \"pass\", \"ids\": []}, \"R2\": {\"status\": \"fail\", \"ids\": [\"T-1003\"]}, \"R3\": {\"status\": \"fail\", \"ids\": [\"T-1005\"]}, \"R4\": {\"status\": \"fail\", \"ids\": [\"T-1006\"]}, \"R5\": {\"status\": \"fail\", \"ids\": [\"T-1004\"]}}}"
+      },
+      "ownership-chain": {
+       "score": 1.0,
+       "fields": [
+        {
+         "key": "direct_owners",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_owner",
+         "score": 1.0
+        },
+        {
+         "key": "largest_indirect_pct",
+         "score": 1.0
+        },
+        {
+         "key": "kestrel_indirect_pct",
+         "score": 1.0
+        }
+       ],
+       "answer": "{\"direct_owners\": [{\"name\": \"Pinecrest Holdings Ltd\", \"pct\": 62}, {\"name\": \"Arun Mehta\", \"pct\": 23}, {\"name\": \"Orchid Ventures Fund I\", \"pct\": 15}], \"largest_indirect_owner\": \"Marlow Family Trust\", \"largest_indirect_pct\": 49.6, \"kestrel_indirect_pct\": 12.4}"
+      }
+     },
+     "errors": 0,
+     "stopped": "too slow on the free tier this run",
+     "tokens": 8032,
+     "available": false
+    },
+    {
+     "provider": "cerebras",
+     "model": "gpt-oss-120b",
+     "tasks": {
+      "fund-report-metrics": {
+       "score": 0.0,
+       "error": "every configured provider failed: cerebras: payment required (402) \u2014 free quota used up or billing needed; skipping provider"
+      }
+     },
+     "errors": 1,
+     "stopped": "model unavailable on the free tier",
+     "tokens": 0,
+     "available": false
+    }
+   ]
   }
  ]
 }
