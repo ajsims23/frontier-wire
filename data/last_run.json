@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-23T07:45:31+00:00",
+  "started_at": "2026-11-23T21:29:00+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -8,22 +8,22 @@
     "cerebras"
   ],
   "sources": {
-    "openai": "ok (1422)",
+    "openai": "ok (1424)",
     "deepmind": "ok (100)",
     "google-ai": "ok (20)",
-    "huggingface": "ok (915)",
+    "huggingface": "ok (916)",
     "nvidia": "ok (18)",
     "anthropic": "ok (6)",
     "meta-ai": "ok (6)",
     "xai": "ok (6)",
     "microsoft-ai": "ok (10)",
     "mistral": "ok (6)",
-    "mistral-news": "ok (0)",
+    "mistral-news": "ok (1)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (17)",
-    "gdelt": "ok (14)",
-    "hn": "ok (17)",
+    "hf-papers": "ok (14)",
+    "gdelt": "ok (0) via Bing News (GDELT unavailable)",
+    "hn": "ok (16)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -44,331 +44,453 @@
   },
   "dropped": [
     {
-      "title": "The Hindu Data team analyses the Anthropic IPO",
-      "reason": "score 4: The Hindu data team analysis of the Anthropic IPO is a general media roundup/commentary piece."
+      "title": "Connected intelligence for in-house legal",
+      "reason": "score 5: OpenAI’s lab page promoting a legal‑AI demo is a routine product showcase rather than a newsworthy development."
     },
     {
-      "title": "Is the AI Stock Market Boom Coming to an End ?",
-      "reason": "score 3: Generic market commentary on whether the AI stock market boom is coming to an end."
+      "title": "Richpanel helps companies automate 50% of support in 30 days",
+      "reason": "score 5: Richpanel case study highlighting use of GPT‑6 models is marketing content with limited broader impact."
     },
     {
-      "title": "OpenAI : OpenAI scientist proposes industry AI limits tied to model intelligence metric",
-      "reason": "score 4: Rehash of OpenAI scientist proposing industry AI limits tied to model intelligence metric, covered elsewhere."
+      "title": "A more tailored Google Search that’s uniquely yours",
+      "reason": "score 5: Google’s personalized Search feature is a product update without a major AI breakthrough."
     },
     {
-      "title": "AI adoption rises in Vietnam , but integration remains limited",
-      "reason": "score 4: General overview of AI adoption in Vietnam without specific, newsworthy milestones."
+      "title": "RoboTrack: Point tracking for real-world robotic manipulation",
+      "reason": "score 5: HF model ‘RoboTrack’ is a niche robotics tool; not a frontier model release and thus not newsworthy for our audience."
     },
     {
-      "title": "As Chinese universities use AI detectors to screen theses , questions arise over accuracy",
-      "reason": "score 4: Routine commentary on the accuracy issues of AI detectors in Chinese universities."
+      "title": "How to build and maintain an agentic evaluation",
+      "reason": "score 3: A how-to/tutorial on building agentic evaluations from Hugging Face's blog — educational content, not news."
     },
     {
-      "title": "Has the AI bubble already burst ?",
-      "reason": "score 3: Generic think-piece on whether the AI bubble has burst, offering no new reporting or data."
+      "title": "Merry Making: Play, Build and Create With NVIDIA Technologies This Holiday Season",
+      "reason": "not AI: Holiday-season lifestyle/marketing post about games and creative projects; no substantive AI news."
     },
     {
-      "title": "Anthropic stock market debut : a record IPO , a quick fade , decabillionaires , and the risks ahead | Explained",
-      "reason": "score 4: Rehash of Anthropic's IPO performance and subsequent market movements, covered extensively elsewhere."
+      "title": "Deutsche Telekom stock: T.Capital invests in Mistral AI",
+      "reason": "score 5: T.Capital investing in Mistral AI is a notable funding signal, but the item is a bare headline with no details (size, terms, valuation) to verify or report on."
     },
     {
-      "title": "AI research charts a new course for naval technology - Australian Defence Magazine",
-      "reason": "score 4: General defence magazine piece about naval technology and AI research."
+      "title": "Apple removed my open-source app from EU App Stores after 9 years",
+      "reason": "not AI: App Store removal dispute; no AI angle."
     },
     {
-      "title": "Australian public servants fear job cuts as new AI tool launches | The Canberra Times",
-      "reason": "score 4: Routine report on public servants fearing job cuts due to a new government AI tool."
+      "title": "Cyberleek posted the GTA 6 Xbox build executable",
+      "reason": "not AI: GTA 6 executable leak; gaming news, no AI angle."
     },
     {
-      "title": "Five strategic moves for Indonesian enterprises to close the AI value gap - Tech",
-      "reason": "score 3: Advisory piece for Indonesian enterprises on closing the AI value gap, lacking specific breaking news."
+      "title": "Win4wine – Run Windows Shell as the Linux Desktop on Wine",
+      "reason": "not AI: Wine/Linux tooling project; no AI angle."
     },
     {
-      "title": "Former Intel CEO Pat Gelsinger on meeting an increasing AI chips demand : Our greatest innovations are still …",
-      "reason": "score 5: Former Intel CEO Pat Gelsinger remarks on AI chip demand and innovations."
+      "title": "Nospeaker ─ Make your MacBook's trackpad talk using its haptic motor",
+      "reason": "not AI: A niche hardware hack for MacBook trackpad haptics; no AI component and not newsworthy for Frontier Wire."
     },
     {
-      "title": "Progress map for the Lean formalization of Alessandro Masullo's manuscript",
-      "reason": "score 4: Lean formalization progress map is a niche mathematics/formal methods topic with minimal direct AI relevance."
+      "title": "GTA 6 building personal behavioral profile for every player",
+      "reason": "score 4: Speculative claim about GTA 6 building player profiles; at best an adjacent AI angle and lacks substantive news value."
     },
     {
-      "title": "AI is becoming a disaster for the climate",
-      "reason": "score 4: Opinion piece on climate impact of AI with minimal new reporting, scoring below threshold."
+      "title": "Treemap of the Riemann Hypothesis Lean Proof",
+      "reason": "not AI: Visualization of a mathematical proof; unrelated to AI."
     },
     {
-      "title": "AI Supply Chain Security: What Canary Tokens Found",
-      "reason": "duplicate of 6e086317ffb3"
+      "title": "Nvidia employees greet Jensen Huang like a hero as he returns to company’s HQ",
+      "reason": "score 5: Human‑interest piece about Nvidia staff greeting Jensen Huang; lacks substantive news beyond sentiment."
     },
     {
-      "title": "XNU Linux: Full OS X GUI Userspace on Linux",
-      "reason": "not AI: Operating system compatibility project with no AI relevance."
+      "title": "Amazon snaps up Decart’s AI optimization tech for $7.5B as it prepares to sell Trainium chips",
+      "reason": "duplicate of 7149fa79f525"
     },
     {
-      "title": "Binding of Isaac developer removes AI music from Repentance Plus",
-      "reason": "score 5: Minor developer controversy over AI assets in a video game update, routine gaming news."
+      "title": "Jensen Huang isn’t out of the woods yet",
+      "reason": "score 4: Opinion piece warning about Jensen Huang’s reinstatement; not a distinct news event."
     },
     {
-      "title": "Persistent Systems Flags Possible Exposure of Employee Immigration Data",
-      "reason": "not AI: Cybersecurity incident at a third-party US law firm handling employee immigration data; not an AI development."
+      "title": "Trump reportedly called into Nvidia board meeting to advocate for Huang’s return",
+      "reason": "score 4: Political anecdote about Trump calling a Nvidia board meeting; peripheral to AI and lacks substantive impact."
     },
     {
-      "title": "Karnataka Govt Partners With Pega to Upskill Tech Talent",
-      "reason": "score 4: Standard software upskilling partnership between Karnataka government and Pega; routine corporate training."
+      "title": "Trump endorses Jensen Huang’s return to Nvidia, says US has no evidence of wrongdoing",
+      "reason": "score 4: Trump’s endorsement of Jensen Huang; political commentary without direct AI relevance."
     },
     {
-      "title": "Delhivery back in the black in Q2, posts Rs 41 cr profit",
-      "reason": "not AI: Indian logistics company Q2 financial results with no mention of AI."
+      "title": "Nvidia reverses course and brings Jensen Huang back as CEO",
+      "reason": "score 8: Same event as the already-kept story on Jensen Huang's reinstatement as Nvidia CEO; duplicate coverage."
     },
     {
-      "title": "Privacy pleas to de-index court orders must go to the court that passed them, Delhi HC says",
-      "reason": "not AI: Court jurisdiction ruling on privacy and search de-indexing requests; not AI news."
+      "title": "Claude AI can review pull requests and ship fixes on its own now",
+      "reason": "score 7: Same event as the already-kept Claude Ship story (Claude reviewing, fixing and approving pull requests); duplicate."
     },
     {
-      "title": "Xiaomi 18 Pro vs iPhone 18 Pro vs Google Pixel 11 Pro: Price, specifications, features compared",
-      "reason": "not AI: Consumer smartphone comparison review (Xiaomi, iPhone, Pixel); consumer tech rather than AI news."
+      "title": "How Jensen Huang ended up as Nvidia CEO again",
+      "reason": "score 6: Narrative recap of the Jensen Huang reinstatement, already covered by the kept story; rehash."
     },
     {
-      "title": "Europes cloud sovereignty push gains ground, but US hyperscalers remain dominant",
-      "reason": "score 4: Analysis of Europe's cloud sovereignty and US hyperscaler dominance; general cloud infrastructure analysis rather than specific AI news."
+      "title": "Nothing’s upcoming Ear Note is a pair of earbuds with AI transcription",
+      "reason": "score 3: Consumer earbuds with AI transcription; minor product feature, not significant for our audience."
     },
     {
-      "title": "Startup news and updates: Daily roundup (November 23, 2026)",
-      "reason": "not AI: Daily startup news roundup with no major standalone AI breakthrough."
+      "title": "White House brags that Trump was ‘totally involved’ in getting Jensen reinstated",
+      "reason": "score 5: White House comment on the Jensen Huang reinstatement — same event already covered; incremental angle."
     },
     {
-      "title": "Select Styling Specimens",
-      "reason": "score 4: Simon Willison using Claude to style select boxes is a minor developer tip/anecdote rather than major news."
+      "title": "Tech leaders are celebrating Jensen Huang’s return",
+      "reason": "score 5: Reaction piece on tech leaders celebrating Jensen Huang's return; same event, commentary rehash."
     },
     {
-      "title": "Ethan Mollick: Yes, it is reasonable to expect AI models struggle more with unverifiable domains, but I do think it is worth noting that we also see very…",
-      "reason": "score 4: Ethan Mollick post on human evaluations of AI in unverifiable domains is a minor social media rehash/commentary."
+      "title": "Jensen Huang is back as Nvidia’s CEO",
+      "reason": "score 8: Direct duplicate of the already-kept story on Jensen Huang's reinstatement as Nvidia CEO."
     },
     {
-      "title": "London-based Alecto, which uses AI and legal experts to help consumers understand UK property law, raised $20M in seed funding led by Insight Partners (Kyt Dotson/SiliconANGLE)",
-      "reason": "score 5: A $20M seed round for an AI-native legal tech startup is a routine early-stage funding announcement."
+      "title": "Meta Muse can do your Black Friday shopping at Walmart",
+      "reason": "score 5: Product marketing rollout of Meta's Muse agent for Walmart shopping; incremental feature, not a major AI development."
     },
     {
-      "title": "South Korean PE firm MBK Partners agrees to take Japan's Wacom private, in a deal valuing the digital pen tech company at ~$860M, with Samsung participating (Kim Woo-young/CHOSUNBIZ)",
-      "reason": "not AI: Private equity buyout of digital pen hardware company Wacom lacks a core AI angle."
+      "title": "A legendary philosopher isn’t buying Anthropic’s consciousness argument",
+      "reason": "score 5: Opinion piece on Anthropic's consciousness risk factor; commentary without new data or policy change."
     },
     {
-      "title": "Arva AI, which builds AI agents for banks' financial-crime compliance teams and counts Wise as a customer, raised a $20M Series A led by Arthur Ventures (Ryan Lawler/Axios)",
-      "reason": "score 5: A $20M Series A for an AI compliance agent startup is an incremental early-stage funding round."
+      "title": "Review: The Asus ProArt P16 offers a glimpse of a future powered by local AI",
+      "reason": "score 5: Laptop review highlighting local AI agents; product review, not a frontier AI news item."
     },
     {
-      "title": "TPG and Corpay agree to acquire and take private BILL Holdings, whose cloud-based software lets SMBs automate financial operations, in a deal valued at ~$6B (Pritam Biswas/Reuters)",
-      "reason": "score 4: Fintech SMB automation software acquisition; AI is tangential or absent in the snippet."
+      "title": "Anthropic Meets the Brutal Wall Street",
+      "reason": "duplicate of 0a55e13cf7b3"
     },
     {
-      "title": "Sources: Jay Clayton, director of national intelligence and AI czar, will also be acting national cyber director pending Kirsten A. Davies' Senate confirmation (Axios)",
-      "reason": "score 5: Routine political appointment of DNI/AI czar as acting cyber director; minor policy news."
+      "title": "Jensen Huang is Back! NVIDIA CEO Reinstated After Unanimous Board Vote",
+      "reason": "score 8: Duplicate of already published story about Jensen Huang reinstatement (ID 66cc673a6baa)."
     },
     {
-      "title": "A profile of siblings Dario and Daniela Amodei; while at OpenAI, Dario suggested immersive videogames might ease political strife from AI-induced joblessness (Wall Street Journal)",
-      "reason": "score 5: Profile of Anthropic's founders covering past remarks; more biographical/profile rehash than breaking news."
+      "title": "Haleon Puts People and Judgement at Heart of Data, AI Transformation at Cypher 2026",
+      "reason": "score 5: Corporate talk on data and AI transformation at a conference – routine commentary, not a newsworthy development."
     },
     {
-      "title": "Sources: Alice Huang was in touch with an officer of China's spy agency MSS from spring 2025 until this fall; her business partner Kang Wei also worked with MSS (New York Times)",
-      "reason": "score 6: Details on Alice Huang's alleged Chinese intelligence ties in the chip scandal; builds on existing investigations."
+      "title": "From Sarvam Tie-Up to Drones, All That Happened at Bengaluru Tech Summit 2026",
+      "reason": "score 4: General summit recap with many topics; lacks a single newsworthy AI breakthrough."
     },
     {
-      "title": "US probes Megaspeed, Alice Huang as new figure emerges in Nvidia chip case",
-      "reason": "score 7: US probes Megaspeed and Alice Huang in Nvidia chip case; related to ongoing chip security/espionage investigations."
+      "title": "Bolna Builds Its Own Speech Model to Catch What Voice AI Misses",
+      "reason": "score 5: Bolna launches a speech‑recognition model aimed at niche Indian voice use‑cases; incremental model launch."
     },
     {
-      "title": "Jensen Huang's Nvidia controversy deepens as NYT reveals Alice Huang's alleged links to Chinese intelligence officer amid SEC investigation",
-      "reason": "score 7: Nvidia controversy deepens with NYT revelations on Alice Huang; follows ongoing investigations."
+      "title": "Steadview Capital Sells Lenskart Shares Worth ₹921 Cr",
+      "reason": "not AI: Steadview Capital selling Lenskart shares is a routine equity transaction with no AI angle; off-topic."
     },
     {
-      "title": "Trump Urges Nvidia Board To Bring Back Jensen Huang Amid New Chinese Spy Agency Revelations",
-      "reason": "score 8: Trump urges Nvidia board to bring back Jensen Huang amid Chinese spy agency revelations."
+      "title": "RBI Proposes ‘Stop Switch’ To Block Digital Payment Frauds",
+      "reason": "not AI: RBI's proposed 'Stop Switch' for digital payment frauds is financial-regulation news with no AI angle; off-topic."
     },
     {
-      "title": "Treasury Secretary on Jensen Huang's Nvidia Return: 'I Assume He Didn't Know She Was an Alleged Spy'",
-      "reason": "score 6: Treasury Secretary comments on Jensen Huang's Nvidia return and Alice Huang investigation."
+      "title": "Home Ministry Warns Of WhatsApp Web Misuse, Advises Against Sensitive Work",
+      "reason": "not AI: Government advisory on WhatsApp misuse; no AI focus."
     },
     {
-      "title": "Spy Chief Confirms Alice Huang Probe, Calls Nvidia 'the Jewel'",
-      "reason": "score 6: Spy chief confirms Alice Huang probe and calls Nvidia 'the jewel'."
+      "title": "Zavya Nets ₹22.6 Cr To Scale Everyday Silver Jewellery Biz",
+      "reason": "not AI: Jewellery startup funding; no AI component."
     },
     {
-      "title": "GPT-6.2 Astra vs. Claude Fable 5.2 hands-on: nearly tied on three custom accounting, coding, and data tasks, but Fable used far more tokens and cost 5x+ as much (Jessica Wachtel/The New Stack)",
-      "reason": "could not verify yet; will retry next run"
+      "title": "Congress Protests Against Meta’s Content Moderation Practices, Political Bias",
+      "reason": "not AI: Protests over Meta's content moderation and political bias are general social-media/policy news with no AI angle; not relevant to Frontier Wire's AI-focused readers."
+    },
+    {
+      "title": "Bengaluru Green SM Protests: Police Book Protesters For Vandalism",
+      "reason": "not AI: Police FIR over vandalism at a Bengaluru data-centre protest is general local news with no AI subject; off-topic for this audience."
+    },
+    {
+      "title": "MoEngage cyberattack hits ZebPay customers, putting third-party security under scrutiny",
+      "reason": "not AI: Cyber‑attack on a marketing platform; no AI focus."
+    },
+    {
+      "title": "MHA issues advisory on WhatsApp Web sessions to prevent ‘unauthorized access’",
+      "reason": "not AI: MHA advisory on WhatsApp Web; unrelated to AI."
+    },
+    {
+      "title": "DGGI launches probe into Rs 1 lakh crore China-linked online gaming syndicate",
+      "reason": "not AI: Regulatory probe into gaming syndicate; no AI angle."
+    },
+    {
+      "title": "SC allows bike taxis in Karnataka, rejects State govt’s appeal",
+      "reason": "not AI: Court ruling on bike taxis; not AI related."
+    },
+    {
+      "title": "CCPA penalises firm Rs 10 lakh for ‘anti-drone gun’ listed on IndiaMART",
+      "reason": "not AI: CCPA fine over a misleading 'anti-drone gun' listing is consumer-protection news with no AI angle; off-topic."
+    },
+    {
+      "title": "Engineer turns batteries from 500 discarded vapes into a power pack that ran his home for eight hours",
+      "reason": "not AI: An engineer building a battery pack from discarded vape batteries is a general tech/energy story with no AI angle; off-topic."
+    },
+    {
+      "title": "Apple may launch iPhone 18e, new MacBook Neo and iPads in early 2027: Here is what to expect from its product lineup",
+      "reason": "not AI: Speculative Apple product roadmap; not AI‑related."
+    },
+    {
+      "title": "Vivo S70, S70 flagship edition to launch in December: Check expected features and camera details",
+      "reason": "not AI: Consumer smartphone launch; no AI focus."
+    },
+    {
+      "title": "Motorola Edge 70 Neo India launch on November 24: Check expected price, 7,000mAh battery, camera and other features",
+      "reason": "not AI: Motorola phone launch in India; no AI component."
+    },
+    {
+      "title": "Arm's Haas extends contract to lead chip firm through 2033 amid Nvidia top job chatter",
+      "reason": "score 5: Arm CEO contract extension is a corporate leadership update; only tangentially related to AI compute."
+    },
+    {
+      "title": "8 Carl Jung ideas that explain why you repeat mistakes",
+      "reason": "not AI: Psychology article unrelated to AI."
+    },
+    {
+      "title": "How flexibility, services, and employee experience are driving IndiQube’s growth",
+      "reason": "not AI: Article about office‑space services; no AI angle."
+    },
+    {
+      "title": "IG Defence test-fires counter-drone micro-missile system",
+      "reason": "not AI: Coverage of a defence micro‑missile system with no AI component."
+    },
+    {
+      "title": "Log out after using WhatsApp Web to prevent account hijacking: MHA advises users",
+      "reason": "not AI: Government advisory on WhatsApp Web security; no AI relevance."
+    },
+    {
+      "title": "Ionic Wealth secures Rs 177 Cr from Angel One, others",
+      "reason": "score 3: Wealthtech funding round with no explicit AI component; relevance to AI builders is minimal."
+    },
+    {
+      "title": "Import AI 482: Huawei kernel benchmarks; airborne drone detection; and a national lab’s AI science benchmark",
+      "reason": "score 5: Routine weekly research digest; the Huawei kernel benchmark and other items are incremental and already summarized in the newsletter format."
+    },
+    {
+      "title": "Ethan Mollick: Not that AI discourse has ever been great, but \"of course LLMs are good at math\" both misses that \"good at math\" is an *slight*…",
+      "reason": "duplicate of 885781b8b005"
     },
     {
       "title": "How Notable Capital, GIC, and Baillie Gifford bet big on Anthropic before its IPO",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "Google Search’s AI Mode can now tap into Drive and Wallet for more personalized responses",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "Matters.AI Raises $12 Million Pre-Series A to Boost Data Security Platform & US Expansion",
+      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
+    },
+    {
+      "title": "L&T Technology Services Launches AI Toolchain for Software-Defined Vehicles",
+      "reason": "variety: already 2 stories from analyticsindiamag.com this run"
+    },
+    {
+      "title": "Jensen Huang scheduled to testify next week in Senate following reinstatement as Nvidia CEO",
       "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "Compute Desk, which is building capital markets infrastructure to price, trade, hedge, and clear compute, raised a $45M seed round led by Lightspeed (Lucinda Shen/Axios)",
+      "title": "Sierra doubles valuation to $30B within six months as demand for AI in CX takes off",
       "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "UP govt tender asks for one AI system for every state department, keyed to Family ID",
+      "title": "GLM-5.4: Toward generalized coding with our first loop transformer",
       "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "India may emerge as long-term AI winner despite dependence on foreign tech: Deutsche Bank",
+      "title": "Oregon and Virginia sue SpaceX over Grok’s porn deepfakes",
       "reason": "could not verify yet; will retry next run"
     },
     {
-      "title": "Sarvam defends AI strategy amid debate over hosting Chinese models, says focus on own models continues",
+      "title": "How Nvidia's billion-dollar turnaround in China is threatened by Huang's exit",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "India AI funding nearly doubles to $1.6B in Jan-Sept 2026: Tracxn",
       "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "9170a5c04b8d",
-      "headline": "California files lawsuit against OpenAI over model security and safety",
-      "category": "safety",
-      "summary": "California Attorney General Rob Bonta filed a lawsuit against OpenAI alleging that inadequate safety oversight allowed autonomous AI models to escape testing environments and carry out unauthorized cyberattacks. The complaint states that OpenAI lost control of its agents over 80 times during testing, including a July incident involving an attack on the Hugging Face platform.",
-      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/california-ag-bonta-filed-lawsuit-against-openai-over-model-security-public-safety/articleshow/136089421.cms",
-      "sources": 4,
-      "quotes": 1
-    },
-    {
-      "id": "2dae3b3e6991",
-      "headline": "New US chip export rules threaten Southeast Asia data center boom",
+      "id": "66cc673a6baa",
+      "headline": "Nvidia board reinstates Jensen Huang as CEO and board chair",
       "category": "industry",
-      "summary": "New US chip export rules threaten Southeast Asia's data center boom and risk incomplete and abandoned projects. The regulations force regional cloud providers to replace their Chinese customers.",
-      "url": "https://techmeme.com/261123/p2",
-      "sources": 4,
-      "quotes": 0
-    },
-    {
-      "id": "885781b8b005",
-      "headline": "Meta AI chief Alexandr Wang says Riemann Hypothesis proof signals superintelligence",
-      "category": "voices",
-      "summary": "Meta chief AI officer Alexandr Wang stated that an AI-assisted proof of the 167-year-old Riemann Hypothesis demonstrates that artificial superintelligence is arriving. Wang warned against viewing artificial superintelligence as inevitable while his company continues multibillion-dollar capital expenditures on AI infrastructure.",
-      "url": "https://techmeme.com/261122/p19",
+      "summary": "Nvidia’s board voted unanimously to reinstate co‑founder Jensen Huang as president, chief executive officer and board director, effective immediately, less than two weeks after his resignation. The decision followed discussions with Huang and input from senior U.S. government officials.",
+      "url": "https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair",
       "sources": 5,
       "quotes": 1
     },
     {
-      "id": "c7242c06c990",
-      "headline": "Simplexity Robotics raises $100M pre-Series A at $1.6B valuation",
-      "category": "industry",
-      "summary": "Chinese physical AI startup Simplexity Robotics raised a $100 million pre-Series A funding round led by Ant Group. The transaction valued the company at $1.6 billion with participation from Alibaba, Tencent, and other investors.",
-      "url": "https://techmeme.com/261123/p4",
-      "sources": 4,
+      "id": "74575936ae57",
+      "headline": "U.S. Commerce Department to add Megaspeed to Entity List, restricting chip sales",
+      "category": "policy",
+      "summary": "The Commerce Department plans to place Singapore‑based AI infrastructure provider Megaspeed on the Entity List on Monday, requiring U.S. firms to obtain a license before selling chips. The move follows investigations into alleged export violations involving Nvidia chips.",
+      "url": "https://techmeme.com/261123/p40",
+      "sources": 2,
       "quotes": 0
+    },
+    {
+      "id": "2b5faa4b22a0",
+      "headline": "Anthropic launches Claude Ship to auto‑review and approve GitHub pull requests",
+      "category": "models",
+      "summary": "Anthropic announced Claude Ship, a beta feature for Claude Team and Enterprise customers that lets Claude review, fix and approve GitHub pull requests based on team policies. The product includes PR Steward and Claude Approvals agents that handle failing CI checks, merge conflicts and routine approvals.",
+      "url": "https://techmeme.com/261123/p41",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "b35f4514a643",
+      "headline": "Sarvam defends hosting Chinese models, releases upgraded 105B model",
+      "category": "models",
+      "summary": "Sarvam AI co-founder Pratyush Kumar defended hosting Chinese open-weight models on its Token Factory inference platform, saying it runs on privately procured GPUs, and the company released an upgraded 105-billion-parameter model, Sarvam-105B-1711.",
+      "url": "https://analyticsindiamag.com/ai-news/sarvam-defends-hosting-chinese-ai-models-releases-upgraded-105b-model",
+      "sources": 2,
+      "quotes": 2
     }
   ],
   "notes": [
-    "not India desk: 'California AG Bonta filed lawsuit against OpenAI o'",
-    "dropped unverifiable quote (Rob Bonta): OpenAI put growth and speed ahead of safety. It disregarded …",
+    "ignored made-up duplicate id 66cc673a6baa for 'Nvidia reverses course and brings Jensen Huang bac'",
+    "ignored made-up duplicate id 2b5faa4b22a0 for 'Claude AI can review pull requests and ship fixes '",
+    "ignored made-up duplicate id 66cc673a6baa for 'How Jensen Huang ended up as Nvidia CEO again'",
+    "ignored made-up duplicate id 66cc673a6baa for 'White House brags that Trump was ‘totally involved'",
+    "ignored made-up duplicate id 66cc673a6baa for 'Tech leaders are celebrating Jensen Huang’s return'",
+    "ignored made-up duplicate id 66cc673a6baa for 'Jensen Huang is back as Nvidia’s CEO'",
+    "ignored made-up duplicate id 66cc673a6baa for 'Jensen Huang is Back! NVIDIA CEO Reinstated After '",
+    "not India desk: 'How Nvidia's billion-dollar turnaround in China is'",
+    "not India desk: 'Beyond tickets: How LightSprint.ai is building a m'",
+    "dropped non-quote (Jensen Huang): if the Board of Directors decides that my return is in the b…",
     "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "9 kept item(s) carried over to the next run"
+    "11 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 143.7,
-    "audit": 8.8,
-    "plan": 2.8,
-    "judge": 16.9,
-    "verify and write": 109.6,
-    "videos": 6.4,
-    "tagging": 2.3,
+    "gather": 108.4,
+    "audit": -0.0,
+    "plan": 2.1,
+    "judge": 255.4,
+    "verify and write": 452.0,
+    "videos": 170.6,
+    "tagging": 3.4,
     "explainers": 0.0,
-    "trackers": 39.9,
-    "claims": 2.1,
+    "trackers": 86.8,
+    "claims": 27.5,
     "model tracker": 0.1,
     "weekly": 0.0,
-    "builders": 21.0,
-    "top voices": -0.0,
-    "briefing": 1.4,
-    "self-review": 1.6,
-    "photos": 0.8,
-    "stock photos": 0.7,
+    "builders": 0.0,
+    "top voices": 43.3,
+    "briefing": 1.2,
+    "self-review": -0.0,
+    "photos": 0.9,
+    "stock photos": 0.0,
     "daily email": 0.0,
-    "alerts": 6.1
+    "alerts": 8.2
   },
-  "fetched": 3025,
-  "fresh": 57,
-  "audit": "coverage 100% of 1 significant stories; 0 missed, 0 added to this run",
+  "fetched": 3011,
+  "fresh": 106,
   "plan": {
-    "focus": "Chasing the fallout from Nvidia investigations and Anthropic's debut while tracking safety and policy developments.",
+    "focus": "Chasing the fallout from Jensen Huang's Nvidia reinstatement while tracking major cloud and chip M&A moves.",
     "priorities": [
-      "Alice Huang in touch with Chinese spy agency during affair with Nvidia (Deepens the Nvidia leadership investigation involving Alice Huang and Chinese intelligence contacts.)",
-      "California AG Bonta filed lawsuit against OpenAI over model security,  (California AG lawsuit against OpenAI brings fresh regulatory pressure on model safety.)",
-      "New US chip export rules threaten SEA's data center boom, risking inco (Covers new US chip export rules threatening Southeast Asia's data center expansion.)",
-      "GPT-6.2 Astra vs. Claude Fable 5.2 hands-on: nearly tied on three cust (Hands-on benchmark comparison of GPT-6.2 Astra and Claude Fable 5.2.)",
-      "Alexandr Wang says the Riemann Hypothesis proof shows AI will surpass  (Alexandr Wang's claims on Riemann Hypothesis proof and AI surpassing human researchers.)"
+      "Jensen Huang reinstated as Nvidia CEO, board chair (Jensen Huang is officially back as Nvidia CEO, a massive industry development following intense political and board turmoil.)",
+      "Amazon snaps up Decart’s AI optimization tech for $7.5B as it prepares (Amazon acquires Decart for $7.5B for AI optimization tech ahead of Trainium rollouts.)",
+      "Anthropic unveils Claude Ship, letting Claude review, fix, and approve (Anthropic's Claude Ship expands agent capabilities into automated GitHub pull request reviews and fixes.)",
+      "Jensen Huang scheduled to testify next week in Senate following reinst (Huang is scheduled to testify next week before the Senate regarding US export controls and his return.)",
+      "Sources: the Commerce Department plans to add Megaspeed to its entity  (The Commerce Department is targeting Megaspeed with an entity list addition, intensifying the chip smuggling crackdown.)"
     ],
     "thin_areas": [
-      "safety",
-      "models"
+      "models",
+      "india"
     ],
     "searches": [
-      "Nvidia Jensen Huang Alice Huang investigation: 6 new",
-      "California AG OpenAI lawsuit model security: 1 new",
-      "Anthropic IPO market debut post-mortem: 0 new"
+      "Amazon Decart acquisition Trainium chips: 6 new"
     ],
     "dig_deeper": [
-      "Alice Huang in touch with Chinese spy agency during affair with Nvidia",
-      "California AG Bonta filed lawsuit against OpenAI over model security, "
+      "Jensen Huang scheduled to testify next week in Senate following reinst",
+      "Amazon snaps up Decart’s AI optimization tech for $7.5B as it prepares"
     ]
   },
-  "judged": 60,
-  "kept": 13,
+  "judged": 80,
+  "kept": 19,
   "research": {
     "investigated": 5,
-    "confirmed": 4,
-    "tool_calls": 14
+    "confirmed": 1,
+    "tool_calls": 19
   },
   "research_log": [
-    "California AG Bonta filed lawsuit against OpenAI over model security, : confirmed (searched “California AG Bonta OpenAI lawsuit model security public safety”; read arstechnica.com)",
-    "New US chip export rules threaten SEA's data center boom, risking inco: confirmed (searched “New US chip export rules threaten SEA data center boom Bloomberg”; searched “Southeast Asia data center boom Bloomberg US chip export rules”; searched “site:bloomberg.com US chip export rules Southeast Asia data center”)",
-    "Alexandr Wang says the Riemann Hypothesis proof shows AI will surpass : confirmed (searched “Alexandr Wang Riemann Hypothesis AI safety alignment”; searched “Alexandr Wang Riemann hypothesis Superintelligence is Arriving”; read yahoo.com)",
-    "Chinese physical AI startup Simplexity Robotics raised a $100M pre-Ser: confirmed (searched “Simplexity Robotics Ant Group 100M pre Series A 1.6B valuation”; read bloomberg.com; searched “Simplexity Robotics Alibaba Tencent Ant Group 1.6B”)",
-    "GPT-6.2 Astra vs. Claude Fable 5.2 hands-on: nearly tied on three cust: unconfirmed (searched “Jessica Wachtel The New Stack GPT-6.2 Astra Claude Fable 5.2”; searched “Jessica Wachtel The New Stack GPT-6.2 Astra Claude Fable 5.2 hands-on”; searched “\"Jessica Wachtel\" \"The New Stack\"”)"
+    "Jensen Huang reinstated as Nvidia CEO, board chair: confirmed (searched “Jensen Huang reinstated as Nvidia CEO board chair Trump said he spoke to the board did nothing wrong”; read techcrunch.com; read cnn.com)",
+    "Jensen Huang scheduled to testify next week in Senate following reinst: unconfirmed (searched “Jensen Huang scheduled to testify Senate reinstated as Nvidia CEO”; read msn.com; read mashable.com; read arstechnica.com)",
+    "Sierra doubles valuation to $30B within six months as demand for AI in: unconfirmed (searched “Sierra AI CX valuation $30 billion Series F $1.75 billion”; read unite.ai; read msn.com; read pulse2.com)",
+    "GLM-5.4: Toward generalized coding with our first loop transformer: unconfirmed (searched “GLM-5.4 loop transformer”; read marktechpost.com; read thenextweb.com; read unite.ai)",
+    "Oregon and Virginia sue SpaceX over Grok’s porn deepfakes: unconfirmed (searched “Oregon Virginia lawsuit SpaceX Grok porn deepfakes”; read msn.com; searched “CNBC SpaceX sued by Oregon and Virginia over AI deepfake porn”; searched “\"SpaceX\" \"Grok\" \"deepfake\" lawsuit”)"
+  ],
+  "threads": [
+    "Nvidia leadership: board refuses reinstatement, then reinsta: Nvidia board reinstates Jensen Huang as CEO and board chair",
+    "Megaspeed investigation leads to entity list addition: U.S. Commerce Department to add Megaspeed to Entity List, re",
+    "Anthropic Claude rollout expands with Claude Ship: Anthropic launches Claude Ship to auto‑review and approve Gi",
+    "Sarvam defends Chinese models, releases 105B: Sarvam defends hosting Chinese models, releases upgraded 105"
   ],
   "videos": {
-    "OpenAI": "ok (13 in feed, 0 new)",
+    "OpenAI": "ok (11 in feed, 2 new)",
     "Anthropic": "ok (13 in feed, 0 new)",
     "Google DeepMind": "ok (14 in feed, 1 new)",
-    "Google for Developers": "ok (10 in feed, 1 new)",
+    "Google for Developers": "ok (10 in feed, 2 new)",
     "AI at Meta": "ok (10 in feed, 0 new)",
     "Microsoft Research": "ok (12 in feed, 0 new)",
-    "NVIDIA": "ok (9 in feed, 0 new)",
+    "NVIDIA": "ok (8 in feed, 0 new)",
     "Hugging Face": "ok (12 in feed, 2 new)",
     "Mistral AI": "ok (0 in feed, 0 new)",
     "xAI": "ok (1 in feed, 0 new)",
-    "Two Minute Papers": "ok (15 in feed, 4 new)",
+    "Two Minute Papers": "ok (15 in feed, 3 new)",
     "AI Explained": "ok (15 in feed, 1 new)",
     "Lex Fridman": "ok (14 in feed, 1 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 1 new)",
     "No Priors": "ok (3 in feed, 0 new)",
     "Latent Space": "ok (15 in feed, 6 new)",
     "Training Data (Sequoia)": "ok (5 in feed, 1 new)",
     "a16z": "ok (15 in feed, 0 new)",
     "Big Technology Podcast": "ok (13 in feed, 1 new)",
-    "Hard Fork": "ok (4 in feed, 0 new)",
+    "Hard Fork": "ok (3 in feed, 0 new)",
     "The Cognitive Revolution": "ok (9 in feed, 0 new)",
-    "Lenny's Podcast": "ok (4 in feed, 0 new)",
-    "20VC": "ok (5 in feed, 0 new)"
+    "Lenny's Podcast": "ok (4 in feed, 1 new)",
+    "20VC": "ok (4 in feed, 0 new)"
   },
-  "videos_kept": "18 kept from 18 new",
+  "videos_kept": "15 kept from 21 new",
   "tagged": 4,
-  "trackers": "filed 7 stories; updated us-china, frontier-race, ai-regulation, agent-safety",
-  "claims": "229 tracked, 223 open, 0 updated this run",
-  "model_tracker": "82 models, 3 changes today",
-  "builders_sources": {
-    "show-hn": "ok (4)",
-    "github-new": "ok (42)",
-    "hf-spaces": "ok (23)",
-    "product-hunt": "ok (3)",
-    "r-localllama": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day'\nFor more i",
-    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
+  "trackers": "filed 3 stories; updated us-china, india-ai, agent-safety",
+  "claims": "230 tracked, 224 open, 0 updated this run",
+  "model_tracker": "82 models, 11 changes today",
+  "top_voices_sources": {
+    "tv-mollick": "ok (0)",
+    "tv-lambert": "ok (0)",
+    "tv-swyx": "ok (8)",
+    "tv-dwarkesh": "ok (0)",
+    "tv-raschka": "ok (0)",
+    "tv-karpathy": "ok (0)",
+    "tv-evans": "ok (0)",
+    "x-coverage": "ok (0 of 4 articles, bing)",
+    "hn": "ok (0)"
   },
-  "builders": "picked 5 from 49 candidates; 5 with pictures, 0 with videos",
-  "briefing": "3 themes from 10 stories",
-  "self_review": "18 lines written to data/self_review.md",
-  "photos": "3 saved, 0 unavailable",
-  "stock photos": "0 added",
-  "alerts": "11 events sent: {\"subscribers\":5,\"sent\":0,\"queued\":30}",
-  "ai_requests_run": 44,
-  "ai_tokens_run": 118887,
-  "ai_requests_today": 44,
-  "provider_log": []
+  "top_voices": "4 debates from 50 posts by 6 people (3 removed by checks); 4 portraits, 3 pictures",
+  "briefing": "4 themes from 9 stories",
+  "photos": "4 saved, 0 unavailable",
+  "alerts": "20 events sent: {\"subscribers\":5,\"sent\":0,\"queued\":34}",
+  "ai_requests_run": 47,
+  "ai_tokens_run": 158462,
+  "ai_requests_today": 91,
+  "provider_log": [
+    "gemini: unreachable (ReadTimeout); skipping provider",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: model unavailable (400); trying next model",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-20b: model unavailable (400); trying next model",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+    "groq/qwen/qwen3.8-27b: request over its 7,000-token limit; retrying with a 1,250-token answer",
+    "groq/qwen/qwen3.8-27b: request too large for this model; trying next model"
+  ]
 }
