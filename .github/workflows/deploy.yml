@@ -3,7 +3,7 @@ name: Deploy website
 on:
   push:
     branches: [main]
-    paths: ["site/**", "data/**", "agent/**", "config/**"]
+    paths: ["site/**", "data/**", "agent/**", "config/**", ".github/workflows/deploy.yml"]
   workflow_run:                 # after each newsroom run (auto mode publishes straight to main)
     workflows: ["Newsroom agent", "Recap release", "DPA lens", "DPA task bench"]
     types: [completed]
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -60,7 +60,16 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+      # GitHub sometimes can't find the artifact uploaded seconds earlier ("No artifacts named github-pages"):
+      # wait and try once more rather than losing the deploy.
       - id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      - name: Wait before retrying the deploy
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 45
+      - id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
 
       # Today's recap: once the site serves it, email the editor a preview with an "Approve and send" button.
@@ -71,7 +80,7 @@ jobs:
         env:
           SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
           TO: ${{ secrets.RECAP_REVIEWER_EMAIL || vars.RECAP_REVIEWER_EMAIL }}
-          PAGE: ${{ steps.deployment.outputs.page_url }}
+          PAGE: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
         run: |
           date=$(jq -r .date _site/videos/latest.json)
           [ "$date" = "$(TZ=Asia/Kolkata date +%F)" ] || { echo "Latest recap is $date, not today; nothing to preview."; exit 0; }
