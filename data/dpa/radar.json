@@ -1558,5 +1558,43 @@
   "f19cee3d1350",
   "fa0e89bac09a"
  ],
- "updated_at": "2026-11-22T02:41:23+00:00"
+ "updated_at": "2026-11-22T02:41:23+00:00",
+ "takeaways": {
+  "written_at": "2026-11-23T15:46:56+00:00",
+  "sig": "cert-in-ai-security-auditing-guidelines:hold|claude-code:assess|claude-fable-5-2:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|grok-build:hold|mai-code-2:trial|microsoft-agent-framework:hold|tool-retrieval:trial",
+  "headline": "DPA eyes new AI models while tightening security on agents",
+  "items": [
+   {
+    "title": "Assess next-gen models for research and extraction",
+    "meaning": "Evaluating Claude Fable 5.2, Gemini 4 Hydrogen, and GPT-6.2 Astra could improve accuracy and cost of alternative-investment research and complex PDF data pulls.",
+    "use": "Run each model on a set of synthetic fund PDFs and research briefs this week, compare extraction accuracy, speed and token cost against the current baseline.",
+    "items": [
+     "claude-fable-5-2",
+     "gemini-4-hydrogen",
+     "gpt-6-2-astra"
+    ]
+   },
+   {
+    "title": "Trial AI coding assistants and tool retrieval",
+    "meaning": "Testing MAI Code 2, Gemini Decisions API, and Tool Retrieval can boost developer speed and lower token use in pipeline and agent workflows.",
+    "use": "Set up a sandbox with public synthetic data, enable MAI Code 2 in Copilot, integrate Tool Retrieval into a Gemini-based agent, and run the Decisions API on sample checklists.",
+    "items": [
+     "mai-code-2",
+     "tool-retrieval",
+     "gemini-decisions-api"
+    ]
+   },
+   {
+    "title": "Hold insecure agent frameworks and enforce policy",
+    "meaning": "Microsoft Agent Framework, Grok Build, and CERT-In guidelines must be paused, audited and locked down to prevent credential leaks and meet Indian regulations.",
+    "use": "Freeze any deployment using these packages, conduct a security audit of existing agents, and update CI pipelines with strict dependency checks before any future use.",
+    "items": [
+     "microsoft-agent-framework",
+     "grok-build",
+     "cert-in-ai-security-auditing-guidelines"
+    ]
+   }
+  ],
+  "model": "groq/openai/gpt-oss-120b"
+ }
 }
