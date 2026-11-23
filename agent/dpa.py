@@ -518,6 +518,7 @@ Write:
     the step is what to pause, check or tighten; for a rule, guideline or regulation, it is what DPA must do to
     comply (rules are complied with, never "paused").
   - items: the names of the 1 to 4 items it rests on, copied exactly as given.
+Write the headline and titles in sentence case (capitalise only the first word and names), like a newspaper.
 Facts about the items come only from what you are given; the DPA angle is your judgement, so use "could" and "may"
 for outcomes. Plain words: no "leverage", "robust", "seamless", "unlock" or "game-changer". Never name or guess DPA's
 clients. {untrusted}"""
