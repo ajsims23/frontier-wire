@@ -6,7 +6,7 @@
   python -m agent check-models  send one tiny request to each configured provider/model
   python -m agent preview-desks plan a run and write the Builders and Top Voices desks now (set DATA_DIR to a copy of
                                 data/ to try changes without touching the live site)
-  python -m agent dpa           the DPA lens: assess stories for DPA, update the AI Radar, brief, POC cards, fact-check audit
+  python -m agent dpa           the DPA lens: assess stories for DPA, update the AI Radar and its takeaways, brief, fact-check audit
   python -m agent bench         the DPA Task Bench: test every configured free model on DPA-style document tasks
   python -m agent recap draft   pick today's top five and write data/recaps/<date>.json for the editor to fill
   python -m agent recap render --out DIR   check the filled script and render the recap bulletin recap.mp4, poster.jpg, teaser.gif

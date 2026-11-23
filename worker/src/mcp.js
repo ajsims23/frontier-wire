@@ -28,7 +28,7 @@ export const TOOLS = [
       capability: str("Optional capability id", { enum: ["doc_extraction", "data_qa", "reporting", "research", "data_pipelines", "agents", "productivity", "governance"] }) } },
     annotations: ro },
   { name: "get_radar", title: "The DPA AI Radar",
-    description: "AI models, tools, techniques and rules placed for DPA's work on Adopt / Trial / Assess / Hold, with the agent's rationale and evidence. Only a person can move something into Adopt.",
+    description: "The radar's top 10: the AI models, tools, techniques and rules that matter most for DPA's work right now, placed on Adopt / Trial / Assess / Hold, most important first, with the agent's rationale, evidence and what they mean for DPA. Only a person can move something into Adopt.",
     inputSchema: { type: "object", properties: { ring: str("Optional ring", { enum: ["adopt", "trial", "assess", "hold"] }),
       quadrant: str("Optional quadrant", { enum: ["models", "tools", "techniques", "policy"] }),
       query: str("Optional name to look for, e.g. 'Gemini'") } }, annotations: ro },
@@ -86,7 +86,7 @@ export async function callTool(name, args, env, deps, ip = "unknown") {
       if (args.capability) act = act.filter((x) => (x.capabilities || []).includes(args.capability));
       const role = args.role ? (dpa.roles || []).find((r) => r.id === args.role) : null;
       return { org: dpa.org, calls: dpa.brief || null, act_on: act.slice(0, 10), ...(role ? { for_role: role } : {}),
-        note: "These are the agent's recommendations; a person approves any pilot or adoption." };
+        note: "These are the agent's recommendations; a person approves anything DPA tries or adopts." };
     }
     case "get_radar": {
       const radar = await siteJson(env, "api/v1/radar.json");
@@ -94,8 +94,10 @@ export async function callTool(name, args, env, deps, ip = "unknown") {
       const entries = radar.entries.filter((e) => (!args.ring || e.ring === args.ring) && (!args.quadrant || e.quadrant === args.quadrant)
         && (!q || e.name.toLowerCase().includes(q)));
       return { updated_at: radar.updated_at, rings: radar.rings, count: entries.length,
-        entries: entries.map((e) => ({ name: e.name, ring: e.ring, proposed_for_adopt: e.proposed === "adopt", set_by_person: !!e.human, quadrant: e.quadrant,
-          capability: e.cap_name, rationale: e.rationale, updated: e.updated, evidence: (e.evidence || []).slice(0, 3) })),
+        entries: entries.map((e) => ({ rank: e.rank, name: e.name, ring: e.ring, proposed_for_adopt: e.proposed === "adopt", set_by_person: !!e.human, quadrant: e.quadrant,
+          capability: e.cap_name, rationale: e.rationale, dpa_note: e.dpa_note || "", first_step: e.first_step || "", updated: e.updated,
+          evidence: (e.evidence || []).slice(0, 3) })),
+        ...(radar.what_it_means_for_dpa ? { what_it_means_for_dpa: radar.what_it_means_for_dpa } : {}),
         page: new URL("radar/", env.SITE_URL).href };
     }
     case "best_model_for": {

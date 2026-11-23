@@ -6,18 +6,17 @@
   <header class="lab-head">
     <span class="dl-kicker">Frontier Wire for {{ org.name }} · the intelligence agent</span>
     <h1>What {{ org.name }} should do about AI this week</h1>
-    <p class="desk-intro">The newsroom reports what happened in AI. This lens decides what it means for {{ org.name }}: which of our capabilities each development touches, whether to try it, evaluate it or be careful, and the first test to run. It keeps the {{ org.name }} AI Radar, drafts pilot proposals for AI Champions and tests free models on {{ org.name }}-style document work. <b>The agent proposes; people decide.</b></p>
+    <p class="desk-intro">The newsroom reports what happened in AI. This lens decides what it means for {{ org.name }}: which of our capabilities each development touches, whether to try it, evaluate it or be careful, and the first test to run. It keeps the {{ org.name }} AI Radar of the 10 developments that matter most to us and tests free models on {{ org.name }}-style document work. <b>The agent proposes; people decide.</b></p>
     <dl class="lab-stats">
       <div><dt>Stories assessed for {{ org.name }} (30 days)</dt><dd>{{ lens.stats.assessed30 }}</dd></div>
       <div><dt>Relevant to our work</dt><dd>{{ lens.stats.relevant30 }}</dd></div>
       <div><dt>Worth trying or evaluating</dt><dd><a href="#act">{{ lens.stats.act30 }}</a></dd></div>
-      <div><dt>On the AI Radar</dt><dd><a href="{{ root }}radar/">{{ lens.stats.radar }}</a></dd></div>
-      <div><dt>Pilot proposals awaiting review</dt><dd><a href="{{ root }}poc/">{{ lens.stats.awaiting }}</a></dd></div>
+      <div><dt>On the AI Radar (top 10)</dt><dd><a href="{{ root }}radar/">{{ lens.stats.radar }}</a></dd></div>
       <div><dt>Accuracy audit</dt><dd><a href="{{ root }}system/#accuracy">{% if fc.rate is not none %}{{ fc.rate }}%{% else %}Starting{% endif %}</a></dd></div>
     </dl>
     <nav class="dl-jump" aria-label="In the DPA lens">
       <a class="chip" href="#calls">This week's calls</a><a class="chip" href="#act">Act on this</a><a class="chip" href="#roles">By role</a>
-      <a class="chip" href="{{ root }}radar/">AI Radar</a><a class="chip" href="{{ root }}poc/">Pilot proposals</a><a class="chip" href="{{ root }}bench/">Task bench</a>
+      <a class="chip" href="{{ root }}radar/">AI Radar</a><a class="chip" href="{{ root }}bench/">Task bench</a>
       <a class="chip" href="{{ root }}system/">How it works</a><a class="chip" href="{{ root }}api/">Use it from your AI</a>
     </nav>
   </header>
@@ -77,23 +76,13 @@
     {% else %}<p class="empty">The first bench run is under way: {{ bench.spec.tasks|length }} tasks across extraction, quality checks, research and routing.</p>{% endif %}
   </section>
 
-  <section class="block" aria-labelledby="poc-h">
-    <div class="block-head"><h2 id="poc-h">Pilot proposals</h2><p>Drafted by the agent for Trial items on the radar. An AI Champion approves or rejects each one.</p><a class="see-all" href="{{ root }}poc/">All proposals</a></div>
-    {% if cards %}<div class="dl-pocs">{% for c in cards %}
-      <a class="dl-poc-mini" href="{{ root }}poc/#{{ c.id }}"><span class="dl-st st-{{ c.status }}">{{ {"awaiting": "Awaiting review", "approved": "Approved", "rejected": "Rejected"}[c.status] }}</span>
-        <h3>{{ c.title }}</h3><p>{{ c.proposal }}</p><span class="muted">{{ c.cap_name }} · effort {{ c.effort }} · owner: {{ c.owner_name }}</span></a>
-    {% endfor %}</div>
-    {% else %}<p class="empty">Proposals appear when an item reaches Trial on the radar.</p>{% endif %}
-  </section>
-
   <section class="block" aria-labelledby="how-h">
     <div class="block-head"><h2 id="how-h">How the lens works</h2><p>What the agent knows about {{ org.name }}, and where people stay in charge.</p></div>
     <div class="dl-how">
       <ol class="dl-steps">
         <li><b>Reads every story with {{ org.name }}'s profile.</b> A public description of what {{ org.name }} does: {{ lens.profile.capabilities|length }} capabilities, {{ lens.profile.roles|length }} roles. Never client names or client data.</li>
         <li><b>Makes a call on each one.</b> How much it matters (0 to 3), which capability it touches, a plain "so what", a move (try it, evaluate, watch, caution) and the first test to run. Products it names must appear in the story itself.</li>
-        <li><b>Keeps the radar.</b> Tools, models, techniques and rules worth placing go on Adopt, Trial, Assess or Hold, with the evidence and a logged reason for every move. Only a person can put something on Adopt.</li>
-        <li><b>Turns Trial items into pilot proposals</b> with a two-week plan, a success metric and data-safety rules, for an AI Champion to approve or reject.</li>
+        <li><b>Keeps the radar.</b> Tools, models, techniques and rules worth placing go on Adopt, Trial, Assess or Hold, with the evidence and a logged reason for every move. The radar shows the 10 that matter most right now, with what they mean for {{ org.name }} and how to use them. Only a person can put something on Adopt.</li>
         <li><b>Tests the models itself.</b> The task bench runs every free model the agent can reach on synthetic {{ org.name }}-style documents and scores them against known answers.</li>
         <li><b>Checks its own facts.</b> A second model audits a sample of stories against their sources every day, and the results are published.</li>
       </ol>

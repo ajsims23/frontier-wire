@@ -71,16 +71,36 @@
 {%- endmacro %}
 
 {% macro radar_pic(svg, root, link=False) -%}
-<svg class="dl-radar" viewBox="0 0 {{ svg.size }} {{ svg.size }}" role="img" aria-label="The DPA AI Radar: {{ svg.blips|length }} items in four rings">
+<svg class="dl-radar" viewBox="0 0 {{ svg.size }} {{ svg.size }}" role="img" aria-label="The DPA AI Radar: its top {{ svg.blips|length }} items in four rings. The closer to the centre, the readier for DPA's work.">
   {% for r in svg.rings|reverse %}<circle cx="{{ svg.c }}" cy="{{ svg.c }}" r="{{ r.r }}" class="dl-ring-c dl-ring-{{ loop.revindex }}"/>{% endfor %}
   <line x1="{{ svg.c - svg.R }}" y1="{{ svg.c }}" x2="{{ svg.c + svg.R }}" y2="{{ svg.c }}" class="dl-axis"/>
   <line x1="{{ svg.c }}" y1="{{ svg.c - svg.R }}" x2="{{ svg.c }}" y2="{{ svg.c + svg.R }}" class="dl-axis"/>
-  {% for r in svg.rings %}<text x="{{ svg.c + 6 }}" y="{{ r.ly }}" class="dl-ring-l">{{ r.label }}</text>{% endfor %}
+  {% for q in svg.quads %}<text x="{{ q.x }}" y="{{ q.y }}" text-anchor="{{ q.anchor }}" class="dl-quad-l" style="fill: {{ q.color }}">{{ q.label }}</text>{% endfor %}
+  {% for r in svg.rings %}<text x="{{ svg.c }}" y="{{ r.ly + 4 }}" text-anchor="middle" class="dl-ring-l">{{ r.label }}</text>{% endfor %}
   {% for b in svg.blips %}
-  {% if link %}<a href="{{ root }}radar/#r-{{ b.key }}">{% else %}<a href="#r-{{ b.key }}">{% endif %}
-    <g class="dl-blip{% if b.proposed %} prop{% endif %}"><title>{{ b.n }}. {{ b.name }} ({{ b.ring }}{% if b.proposed %}, proposed for adopt{% endif %})</title>
-    <circle cx="{{ b.x }}" cy="{{ b.y }}" r="{{ 12 if svg.size > 500 else 10 }}" style="fill: {{ b.color }}"/>
-    <text x="{{ b.x }}" y="{{ b.y + 4 }}" text-anchor="middle">{{ b.n }}</text></g></a>
+  <a href="{% if link %}{{ root }}radar/{% endif %}#r-{{ b.key }}" data-rk="{{ b.key }}">
+    <g class="dl-blip{% if b.proposed %} prop{% endif %}"><title>{{ b.n }}. {{ b.name }} ({{ b.ring|capitalize }}{% if b.proposed %}, proposed for Adopt{% endif %})</title>
+    <circle cx="{{ b.x }}" cy="{{ b.y }}" r="{{ svg.br }}" style="fill: {{ b.color }}"/>
+    <text x="{{ b.x }}" y="{{ b.y + 4.5 }}" text-anchor="middle">{{ b.n }}</text></g></a>
   {% endfor %}
 </svg>
+{%- endmacro %}
+
+{% macro radar_key(items, root, link=False) -%}
+<ol class="rd-key">
+  {% for e in items %}
+  <li><a href="{% if link %}{{ root }}radar/{% endif %}#r-{{ e.key }}" data-rk="{{ e.key }}"><span class="dl-n" style="background: {{ {'models': 'var(--models)', 'tools': 'var(--research)', 'techniques': 'var(--industry)', 'policy': 'var(--policy)'}[e.quadrant] }}">{{ e.n }}</span><span class="rd-key-name">{{ e.name }}</span>{{ ring(e.ring) }}</a></li>
+  {% endfor %}
+</ol>
+{%- endmacro %}
+
+{% macro radar_hover() -%}
+<script>(function () { /* highlight an item on the chart and in the list together */
+  var w = document.currentScript.parentNode;
+  function set(k) { w.querySelectorAll(".hi").forEach(function (x) { x.classList.remove("hi"); });
+    if (k) w.querySelectorAll('[data-rk="' + k + '"]').forEach(function (x) { x.classList.add("hi"); }); }
+  function on(e) { var t = e.target.closest && e.target.closest("[data-rk]"); set(t ? t.getAttribute("data-rk") : ""); }
+  w.addEventListener("pointerover", on); w.addEventListener("focusin", on);
+  w.addEventListener("pointerleave", function () { set(""); }); w.addEventListener("focusout", function () { set(""); });
+})();</script>
 {%- endmacro %}

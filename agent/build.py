@@ -431,7 +431,7 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
          examples=["What happened with DeepSeek this month?", "Where does AI regulation stand?", "Which labs launched new models this week?",
                    "What's happening with AI in India?", "Which AI companies raised money recently?"])
 
-    # The intelligence pages: For DPA, AI Radar, pilot proposals, task bench, System, agent API
+    # The intelligence pages: For DPA, AI Radar, task bench, System, agent API
     from .build_intel import build_intel
     radar_home = build_intel(out, env, common, base, cfg, stories, by_id, lens, page, site, now)
 

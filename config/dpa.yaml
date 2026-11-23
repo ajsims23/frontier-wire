@@ -75,40 +75,50 @@ roles:
     capabilities: [agents, data_pipelines, productivity, doc_extraction]
   - id: champions
     name: AI Champions
-    about: What to pilot next and how to spread it across teams.
+    about: What to try next and how to spread it across teams.
     capabilities: [productivity, agents, governance]
 
 # The DPA AI Radar's rings (adapted from technology-radar practice).
+# `plain` is the everyday wording shown beside each ring on the site.
 rings:
   - id: adopt
     name: Adopt
+    plain: Use it
     about: Proven for DPA's work. Use it where it fits. Only a person can move something into Adopt.
   - id: trial
     name: Trial
-    about: Worth a time-boxed pilot on a real DPA workflow now.
+    plain: Try it now
+    about: Worth a short hands-on trial on a real DPA workflow now.
   - id: assess
     name: Assess
-    about: Worth understanding and testing on DPA-style tasks before any pilot.
+    plain: Test it first
+    about: Worth understanding and testing on DPA-style tasks before relying on it.
   - id: hold
     name: Hold
+    plain: Pause new use
     about: Don't start new work with it yet (risk, immaturity, licence, cost or a better option exists).
 
 quadrants:
   - id: models
     name: Models
+    short: Models
   - id: tools
     name: Tools and platforms
+    short: Tools
   - id: techniques
     name: Techniques
+    short: Techniques
   - id: policy
     name: Risk and policy
+    short: Risk and policy
 
 limits:
   assess_batch: 12          # stories per assessment request
   assess_batches_per_run: 10 # backfill speed: up to 120 stories per run
   assess_days: 21           # how far back the lens reaches
   radar_subjects_per_run: 14
-  poc_cards_per_day: 2
+  radar_top: 10             # the radar shows only its 10 most important items (the rest stay tracked)
+  radar_top_per_quadrant: 4 # at most 4 of them from one quadrant (models, tools, techniques, risk and policy)
   factcheck_per_day: 6
   max_requests_per_run: 40
   max_requests_per_day: 160

@@ -23,7 +23,7 @@
       <li><code>search_news</code><span class="muted">Search the fact-checked archive. Each result links to its story page (with sources) and carries the {{ org.name }} lens.</span></li>
       <li><code>what_changed</code><span class="muted">Everything since a date: new stories, radar moves, the latest calls for {{ org.name }}.</span></li>
       <li><code>dpa_brief</code><span class="muted">This week's calls and the developments to act on, optionally for one role or capability.</span></li>
-      <li><code>get_radar</code><span class="muted">The AI Radar, filtered by ring, quadrant or capability, with evidence.</span></li>
+      <li><code>get_radar</code><span class="muted">The AI Radar's top 10, filtered by ring, quadrant or name, with evidence.</span></li>
       <li><code>best_model_for</code><span class="muted">Task bench results: which free model does extraction, quality checks, research or routing best.</span></li>
       <li><code>ask_wire</code><span class="muted">A cited answer to a question, written from the archive.</span></li>
       <li><code>system_status</code><span class="muted">The pipeline's numbers and the accuracy audit, so your agent knows how far to trust it.</span></li>
@@ -39,8 +39,7 @@
         <tr><td><a href="{{ root }}api/v1/index.json"><code>api/v1/index.json</code></a></td><td>The list of endpoints.</td></tr>
         <tr><td><a href="{{ root }}api/v1/stories.json"><code>api/v1/stories.json</code></a></td><td>The latest 200 stories with sources, the {{ org.name }} assessment and fact-check verdicts.</td></tr>
         <tr><td><a href="{{ root }}api/v1/dpa.json"><code>api/v1/dpa.json</code></a></td><td>This week's calls, what to act on, role briefings, capabilities.</td></tr>
-        <tr><td><a href="{{ root }}api/v1/radar.json"><code>api/v1/radar.json</code></a></td><td>The AI Radar with rings, evidence and the history of every move.</td></tr>
-        <tr><td><a href="{{ root }}api/v1/poc.json"><code>api/v1/poc.json</code></a></td><td>Pilot proposals and their review status.</td></tr>
+        <tr><td><a href="{{ root }}api/v1/radar.json"><code>api/v1/radar.json</code></a></td><td>The AI Radar's top 10 with rings, evidence, what they mean for {{ org.name }} and the history of every move, plus the wider watchlist.</td></tr>
         <tr><td><a href="{{ root }}api/v1/bench.json"><code>api/v1/bench.json</code></a></td><td>The latest task bench run, task by task.</td></tr>
         <tr><td><a href="{{ root }}api/v1/system.json"><code>api/v1/system.json</code></a></td><td>Pipeline numbers, drop reasons, verification, accuracy and the corrections log.</td></tr>
         <tr><td><a href="{{ root }}data/feed.xml"><code>data/feed.xml</code></a></td><td>RSS of the latest stories.</td></tr>

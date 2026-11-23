@@ -91,14 +91,14 @@ Everything below runs on the same free AI tiers, with its own request caps, and 
 | Page | What it is | Made by |
 |---|---|---|
 | `/dpa/` | The DPA lens: this week's three calls, what to act on (with a first test), briefings by role | `agent/dpa.py` (workflow **DPA lens**, every 3 hours) |
-| `/radar/` | The DPA AI Radar: Adopt / Trial / Assess / Hold, evidence and a log of every move. Only a person can approve Adopt | `agent/dpa.py` |
-| `/poc/` | One-page pilot proposals for Trial items, for an AI Champion to approve or reject | `agent/dpa.py` |
+| `/radar/` | The DPA AI Radar: the 10 developments that matter most right now (ranked by importance), on Adopt / Trial / Assess / Hold, with what they mean for DPA, how to use them and a log of every move. Only a person can approve Adopt | `agent/dpa.py` |
 | `/bench/` | DPA Task Bench: every free model tested weekly on 12 synthetic DPA-style document tasks, scored against known answers | `agent/bench.py` (workflow **DPA task bench**) |
 | `/system/` | How the agent works, from its own run logs: pipeline, drop reasons, guardrails, verification, the daily accuracy audit and corrections log | `agent/system.py`, `agent/factcheck.py` |
 | `/api/` | MCP server (`<API address>/mcp`) and JSON API (`api/v1/*.json`) so any AI agent can use Frontier Wire | `worker/src/mcp.js`, `agent/build_intel.py` |
 
 - **What the agent knows about DPA:** `config/dpa.yaml` (public service lines, capabilities and roles only; never client names or data).
-- **Human decisions:** `config/dpa_review.yaml`: approve Adopt on the radar, override a ring, approve or reject a pilot, resolve a fact-check flag.
+- **Human decisions:** `config/dpa_review.yaml`: approve Adopt on the radar, override a ring, resolve a fact-check flag.
+- **The radar's top 10:** the agent tracks every candidate in `data/dpa/radar.json`; the site shows the 10 most important (DPA relevance, how big the development is, coverage, whether it calls for action, recency; at most 4 per quadrant). Change the numbers in `config/dpa.yaml` → `limits`.
 - **Duplicates:** reworded repeats of a story already published are dropped before publishing (and old ones redirect to the original).
 
 ## Free-tier safety

@@ -1,16 +1,24 @@
 {% import "_macros.html" as m %}
 {% if svg %}
 <section class="shell block" id="radar-home" aria-labelledby="rh-h">
-  <div class="block-head"><h2 id="rh-h">AI Radar</h2><p>Models, tools and rules our agent rates for practical use: try, evaluate or hold, with the evidence. Every move is logged.</p><a class="see-all" href="radar/">Open the radar</a></div>
+  <div class="block-head"><h2 id="rh-h">AI Radar</h2><p>The {{ rv.top|length }} AI developments that matter most for practical use right now, and what they mean for {{ lens.profile.org.name }}.</p><a class="see-all" href="radar/">Open the radar</a></div>
   <div class="rd-home">
-    <a class="rd-pic" href="radar/" aria-label="Open the AI Radar">{{ m.radar_pic(svg, "", link=False) }}</a>
+    <figure class="rd-pic">
+      {{ m.radar_pic(svg, "", link=True) }}
+      <figcaption class="rd-rings small">{% for r in rv.rings %}<span>{{ m.ring(r.id) }}{{ r.plain }}</span>{% endfor %}</figcaption>
+    </figure>
     <div class="rd-side">
-      <dl class="rd-counts">{% for r in rings %}<div><dt>{{ m.ring(r.id) }}</dt><dd>{{ r.n }}</dd></div>{% endfor %}</dl>
-      {% if moves %}
-      <h3>Latest moves</h3>
-      <ul class="rd-moves">{% for x in moves %}<li><a class="strong" href="radar/#r-{{ x.key }}">{{ x.name }}</a> <span>{% if x.from %}{{ m.ring(x.from) }} → {% endif %}{{ m.ring(x.to) }}</span><p>{{ x.why }}</p></li>{% endfor %}</ul>
+      {{ m.radar_key(rv.top, "", link=True) }}
+      {% set tk = rv.takeaways %}
+      {% if tk['items'] %}
+      <div class="rd-mini">
+        <h3>What it means for {{ lens.profile.org.name }}</h3>
+        {% if tk.headline %}<p class="rd-mini-head">{{ tk.headline }}</p>{% endif %}
+        <ul>{% for t in tk['items'] %}<li><a href="radar/#for-dpa"><b>{{ t.title }}.</b> {{ t.use|truncate(150, True, '…') }}</a></li>{% endfor %}</ul>
+      </div>
       {% endif %}
     </div>
+    {{ m.radar_hover() }}
   </div>
 </section>
 {% endif %}

@@ -1,5 +1,5 @@
-"""The intelligence pages: For DPA, the AI Radar, pilot proposals, the task bench, the System page and the
-agent API (static JSON + the MCP server's documentation). Called from build.py."""
+"""The intelligence pages: For DPA, the AI Radar, the task bench, the System page and the agent API (static JSON +
+the MCP server's documentation). Called from build.py."""
 from __future__ import annotations
 
 import hashlib
@@ -28,8 +28,9 @@ def short(iso: str) -> str:
     return _dt(iso if "T" in iso else iso + "T00:00:00+00:00").strftime("%-d %b")
 
 
-def radar_svg(entries: list[dict], size: int = 640) -> dict[str, Any]:
-    """Blip positions for the radar picture: each item sits in its quadrant and ring, spread out so none overlap."""
+def radar_svg(entries: list[dict], size: int = 640, quadrants: list[dict] | None = None) -> dict[str, Any]:
+    """Blip positions for the radar picture: each item sits in its quadrant and ring, spread out so none overlap, and
+    kept clear of the axes (where the ring names sit). Quadrant names go in the corners, outside the circle."""
     c, R = size / 2, size / 2 - 18
     placed: list[tuple[float, float]] = []
     blips = []
@@ -38,16 +39,18 @@ def radar_svg(entries: list[dict], size: int = 640) -> dict[str, Any]:
         r0, r1 = RING_BANDS[e["ring"]]
         h = int(hashlib.sha1(e["key"].encode()).hexdigest(), 16)
         best = None
-        for attempt in range(40):
+        for attempt in range(60):
             u = ((h >> (attempt * 3)) % 1000) / 1000
             v = ((h >> (attempt * 5 + 7)) % 1000) / 1000
-            ang = math.radians(a0 + 9 + u * (a1 - a0 - 18))
-            rad = R * (r0 + v * (r1 - r0))
+            lo = a0 + (22 if a0 == 90 else 9)  # the ring names sit on the upper vertical axis: keep dots clear of it
+            hi = a1 - (22 if a1 == 90 else 9)
+            ang = math.radians(lo + u * (hi - lo))
+            rad = R * (r0 + 0.12 * (r1 - r0) + v * 0.76 * (r1 - r0))
             x, y = c + rad * math.cos(ang), c - rad * math.sin(ang)
             gap = min((math.hypot(x - px, y - py) for px, py in placed), default=99)
             if best is None or gap > best[0]:
                 best = (gap, x, y)
-            if gap >= 25:
+            if gap >= 40:
                 break
         _, x, y = best
         placed.append((x, y))
@@ -55,7 +58,13 @@ def radar_svg(entries: list[dict], size: int = 640) -> dict[str, Any]:
                       "name": e["name"], "ring": e["ring"], "key": e["key"], "proposed": bool(e.get("proposed")), "human": e.get("human")})
     rings = [{"r": round(R * RING_BANDS[r][1] + (R * 0.02 if r != "hold" else R * 0.03), 1), "label": r.capitalize(),
               "ly": round(c - R * (RING_BANDS[r][0] + RING_BANDS[r][1]) / 2, 1)} for r in ("adopt", "trial", "assess", "hold")]
-    return {"size": size, "c": c, "R": R, "blips": blips, "rings": rings}
+    short = {q["id"]: q.get("short") or q["name"] for q in quadrants or []}
+    pad = 6
+    corners = {"models": (size - pad, 16, "end"), "tools": (pad, 16, "start"), "techniques": (pad, size - 8, "start"),
+               "policy": (size - pad, size - 8, "end")}
+    quads = [{"x": x, "y": y, "anchor": anchor, "label": short.get(q, q.capitalize()), "color": QUAD_COLOR[q]}
+             for q, (x, y, anchor) in corners.items()] if quadrants else []
+    return {"size": size, "c": c, "R": R, "blips": blips, "rings": rings, "quads": quads, "br": 15 if size > 500 else 14}
 
 
 def build_intel(out: Path, env: Any, common: dict, base: str, cfg: Any, stories: list[dict], by_id: dict[str, dict],
@@ -70,35 +79,30 @@ def build_intel(out: Path, env: Any, common: dict, base: str, cfg: Any, stories:
     st = sys_mod.stats(cfg, stories, now, days=7)
     st30 = sys_mod.stats(cfg, stories, now, days=30)
     bv = bench_mod.site_view(data)
-    top_cards = [c for c in lens["cards"] if c["status"] != "rejected"][:3]
     mcp_url = (site.get("api_url") or "").rstrip("/") + "/mcp" if site.get("api_url") else ""
 
     # ------------------------------------------------------------------ For DPA (the hub)
     page("dpa", "dpa.html", title=f"For {org['name']}: what to do about AI this week | Frontier Wire",
          description=f"Frontier Wire's intelligence agent reads every AI story with {org['name']}'s work in mind: what it means, "
-                     "whether to try it, the AI Radar, pilot proposals and a benchmark of free models on DPA-style tasks.",
-         canonical=f"{base}dpa/", og_image=og, org=org, lens=lens, fc=fc, bench=bv, cards=top_cards, mcp_url=mcp_url,
-         radar=radar_svg(lens["radar"], 420) if lens["radar"] else None, short=short,
+                     "whether to try it, the AI Radar's top 10 and a benchmark of free models on DPA-style tasks.",
+         canonical=f"{base}dpa/", og_image=og, org=org, lens=lens, fc=fc, bench=bv, mcp_url=mcp_url,
+         radar=radar_svg(lens["radar"], 420, lens["quadrants"]) if lens["radar"] else None, short=short,
          heat=[{"label": h["short"], "n": h["n"], "href": "", "pct": max(3, round(100 * h["n"] / max([x["n"] for x in lens["heat"]] + [1])))}
                for h in sorted(lens["heat"], key=lambda h: -h["n"])])
 
-    # ------------------------------------------------------------------ the radar
-    rings = []
-    for r in lens["rings"]:
-        rows = [e for e in lens["radar"] if e["ring"] == r["id"]]
-        rings.append({**r, "rows": rows})
-    page("radar", "radar.html", title=f"The {org['name']} AI Radar: adopt, trial, assess, hold | Frontier Wire",
-         description=f"AI models, tools, techniques and rules placed for {org['name']}'s work, with the evidence and every move logged.",
-         canonical=f"{base}radar/", og_image=og, org=org, lens=lens, rings=rings, svg=radar_svg(lens["radar"]) if lens["radar"] else None,
-         quads=[{**q, "color": QUAD_COLOR[q["id"]], "n": sum(1 for e in lens["radar"] if e.get("quadrant") == q["id"])} for q in lens["quadrants"]],
-         moves=[{**mv, "when": short(mv["date"])} for mv in lens["moves"]], short=short,
-         updated=short(lens["radar_updated"]) if lens["radar_updated"] else "")
-
-    # ------------------------------------------------------------------ pilot proposals
-    page("poc", "poc.html", title=f"Pilot proposals for {org['name']}'s AI Champions | Frontier Wire",
-         description="One-page pilot proposals drafted by the agent from the AI Radar's Trial items. A person approves or rejects each one.",
-         canonical=f"{base}poc/", og_image=og, org=org, cards=lens["cards"], short=short,
-         counts={k: sum(1 for c in lens["cards"] if c["status"] == k) for k in ("awaiting", "approved", "rejected")})
+    # ------------------------------------------------------------------ the radar (its top 10)
+    rv = radar_view(lens)
+    page("radar", "radar.html", title=f"The {org['name']} AI Radar: the 10 AI developments that matter most | Frontier Wire",
+         description=f"The 10 AI models, tools and rules that matter most for {org['name']}'s work right now, placed on Adopt, Trial, "
+                     "Assess or Hold, with what they mean for us and the first step to take.",
+         canonical=f"{base}radar/", og_image=og, org=org, lens=lens, rv=rv, svg=radar_svg(lens["radar"], 640, lens["quadrants"]) if lens["radar"] else None,
+         short=short, updated=short(lens["radar_updated"]) if lens["radar_updated"] else "")
+    # the pilot proposals page was retired: anyone with an old link lands on the radar
+    (out / "poc").mkdir(parents=True, exist_ok=True)
+    (out / "poc" / "index.html").write_text(
+        f'<!doctype html><meta charset="utf-8"><title>Frontier Wire</title><meta name="robots" content="noindex">'
+        f'<link rel="canonical" href="{base}radar/"><meta http-equiv="refresh" content="0; url=../radar/">'
+        f'<a href="../radar/">This page has moved to the AI Radar.</a>')
 
     # ------------------------------------------------------------------ the task bench
     page("bench", "bench.html", title="DPA Task Bench: free AI models tested on financial-document work | Frontier Wire",
@@ -123,10 +127,17 @@ def build_intel(out: Path, env: Any, common: dict, base: str, cfg: Any, stories:
     write_api(out, base, stories, lens, fc, st, bv, now)
 
     # ------------------------------------------------------------------ the home page's AI Radar block
-    moves = [mv for mv in lens["moves"] if mv.get("from")][:3] or lens["moves"][:3]
     return env.get_template("_radar_home.html").render(
-        **common, root="", svg=radar_svg(lens["radar"], 420) if lens["radar"] else None, moves=moves,
-        rings=[{"id": r["id"], "n": sum(1 for e in lens["radar"] if e["ring"] == r["id"])} for r in lens["rings"]])
+        **common, root="", rv=rv, lens=lens, svg=radar_svg(lens["radar"], 420, lens["quadrants"]) if lens["radar"] else None)
+
+
+def radar_view(lens: dict) -> dict[str, Any]:
+    """What the radar page and the home block show: ring counts with plain meanings, the quadrants, the takeaways."""
+    top = lens["radar"]
+    return {"top": top, "takeaways": lens["takeaways"], "tracked": lens["stats"].get("tracked", len(top)),
+            "rings": [{**r, "n": sum(1 for e in top if e["ring"] == r["id"])} for r in lens["rings"]],
+            "quads": [{**q, "color": QUAD_COLOR[q["id"]], "n": sum(1 for e in top if e.get("quadrant") == q["id"])} for q in lens["quadrants"]],
+            "moves": [{**mv, "when": short(mv["date"])} for mv in lens["moves"]]}
 
 
 def _story_api(s: dict, base: str, lens: dict, audits: dict) -> dict:
@@ -144,15 +155,25 @@ def write_api(out: Path, base: str, stories: list[dict], lens: dict, fc: dict, s
     api.mkdir(parents=True, exist_ok=True)
     newest = sorted(stories, key=lambda s: s["published_at"], reverse=True)
     audits = lens["factcheck"].get("audits") or {}
-    radar = [{k: e.get(k) for k in ("n", "name", "key", "ring", "proposed", "human", "quadrant", "capability", "cap_name", "rationale",
-                                    "first_seen", "updated", "moved", "history")} | {"evidence": [{"id": i, "page": f"{base}story/{i}/",
-                                    "headline": next((s["headline"] for s in stories if s["id"] == i), "")} for i in e.get("evidence", [])]}
+    headlines = {s["id"]: s["headline"] for s in stories}
+    radar = [{k: e.get(k) for k in ("rank", "name", "key", "ring", "proposed", "human", "quadrant", "capability", "cap_name", "rationale",
+                                    "first_seen", "updated", "moved", "history")}
+             | {"dpa_note": (e.get("note") or {}).get("so_what", ""), "first_step": (e.get("note") or {}).get("test", ""),
+                "evidence": [{"id": i, "page": f"{base}story/{i}/", "headline": headlines.get(i, "")} for i in e.get("evidence", [])]}
              for e in lens["radar"]]
+    tk = lens["takeaways"]
     files = {
         "stories.json": {"generated_at": now.isoformat(), "count": min(200, len(newest)),
                          "stories": [_story_api(s, base, lens, audits) for s in newest[:200]]},
         "radar.json": {"generated_at": now.isoformat(), "updated_at": lens["radar_updated"],
-                       "rings": lens["rings"], "quadrants": lens["quadrants"], "entries": radar},
+                       "about": "The radar's top 10: the AI developments that matter most for DPA right now, most important first. "
+                                "watchlist lists the other items the agent tracks; any of them can rise into the top 10 as evidence grows.",
+                       "rings": lens["rings"], "quadrants": lens["quadrants"], "entries": radar,
+                       "what_it_means_for_dpa": {"headline": tk.get("headline", ""), "written_by_agent": bool(tk.get("by_agent")),
+                                                 "takeaways": [{"title": t["title"], "meaning": t["meaning"], "how_to_use_it": t["use"],
+                                                                "items": [r["name"] for r in t["rows"]]} for t in tk.get("items", [])]},
+                       "watchlist": [{k: e.get(k) for k in ("name", "key", "ring", "quadrant", "capability", "rationale", "updated")}
+                                     for e in lens["watchlist"]]},
         "dpa.json": {"generated_at": now.isoformat(), "org": lens["profile"]["org"]["name"],
                      "capabilities": [{k: c[k] for k in ("id", "name", "about")} for c in lens["profile"]["capabilities"]],
                      "brief": {k: v for k, v in (lens["brief"] or {}).items() if k != "calls"} | {"calls": [
@@ -162,9 +183,6 @@ def write_api(out: Path, base: str, stories: list[dict], lens: dict, fc: dict, s
                      "roles": [{"id": r["id"], "name": r["name"], "items": [{"id": x["id"], "headline": x["headline"], "so_what": x.get("so_what"),
                                                                               "move": x.get("move")} for x in r["picks"]]} for r in lens["roles"]],
                      "stats": lens["stats"]},
-        "poc.json": {"generated_at": now.isoformat(), "cards": [{k: c[k] for k in ("id", "item", "title", "status", "capability", "problem", "proposal",
-                                                                                  "plan", "metric", "data_safety", "effort", "owner", "drafted", "evidence")}
-                                                               for c in lens["cards"]]},
         "bench.json": {"generated_at": now.isoformat(), "tasks": [{k: t[k] for k in ("id", "type", "title", "capability")} for t in bv["spec"]["tasks"]],
                        "latest": bv["latest"]},
         "system.json": {"generated_at": now.isoformat(), "window_days": st["days"],
@@ -179,6 +197,6 @@ def write_api(out: Path, base: str, stories: list[dict], lens: dict, fc: dict, s
         (api / name).write_text(json.dumps(body, ensure_ascii=False, indent=1))
     (api / "index.json").write_text(json.dumps({
         "name": "Frontier Wire API", "version": 1, "generated_at": now.isoformat(),
-        "about": "Verified AI news with a DPA lens: every story checked against its sources, assessed for DPA, plus the DPA AI Radar, "
-                 "pilot proposals, a benchmark of free models on DPA-style tasks and the agent's own accuracy audit.",
+        "about": "Verified AI news with a DPA lens: every story checked against its sources, assessed for DPA, plus the DPA AI Radar "
+                 "(its top 10), a benchmark of free models on DPA-style tasks and the agent's own accuracy audit.",
         "endpoints": {n.removesuffix(".json"): f"{base}api/v1/{n}" for n in files}, "docs": f"{base}api/"}, indent=1))
