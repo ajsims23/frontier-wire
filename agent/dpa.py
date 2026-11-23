@@ -514,8 +514,9 @@ Write:
   - title: max 8 words, plain.
   - meaning: max 35 words: what this means for DPA's work, naming the capability or workflow it changes.
   - use: max 35 words: how DPA can put it to work: one concrete step a team could start this week, on public or
-    synthetic documents first (never client data on free tools). For hold items, the step is what to pause, check
-    or tighten.
+    synthetic documents first (never client data on free tools). For a hold item that is a tool, model or package,
+    the step is what to pause, check or tighten; for a rule, guideline or regulation, it is what DPA must do to
+    comply (rules are complied with, never "paused").
   - items: the names of the 1 to 4 items it rests on, copied exactly as given.
 Facts about the items come only from what you are given; the DPA angle is your judgement, so use "could" and "may"
 for outcomes. Plain words: no "leverage", "robust", "seamless", "unlock" or "game-changer". Never name or guess DPA's
