@@ -97,7 +97,59 @@
    ],
    "drafted": "2026-11-22",
    "model": "gemini/gemini-flash-lite-latest"
+  },
+  "poc-0ea5bf": {
+   "id": "poc-0ea5bf",
+   "kind": "pilot",
+   "radar_key": "glm",
+   "item": "GLM",
+   "capability": "productivity",
+   "title": "Pilot self-hosted GLM to reduce internal coding inference costs",
+   "problem": "DPA development teams face high inference and licensing costs for commercial coding assistants, impacting internal engineering budgets and reducing scalability for custom automation tools.",
+   "proposal": "Deploy open-weight GLM models on internal DPA NVIDIA GPUs to test self-hosted coding assistance. Benchmark response latency, token costs, and code quality against our current commercial APIs for internal development workflows.",
+   "plan": [
+    "Deploy open-weight GLM on internal NVIDIA GPUs using public code snippets.",
+    "Benchmark response latency and token costs against current commercial APIs.",
+    "Evaluate output quality across routine internal development tasks."
+   ],
+   "metric": "Compare coding assistant latency and token cost per task against current commercial APIs using standardized internal benchmark prompts.",
+   "data_safety": "Run initial tests exclusively on public or synthetic code snippets; do not send proprietary source code or client data. Verify open-weight model licence terms and local hosting data-retention policies.",
+   "effort": "M",
+   "owner": "engineers",
+   "evidence": [
+    "2d3b8471f026"
+   ],
+   "drafted": "2026-11-23",
+   "model": "gemini/gemini-flash-lite-latest"
+  },
+  "poc-e4ebb3": {
+   "id": "poc-e4ebb3",
+   "kind": "evaluation",
+   "radar_key": "claude-fable-5-2",
+   "item": "Claude Fable 5.2",
+   "capability": "research",
+   "title": "Evaluate Claude Fable 5.2 for alternative-investment research and extraction",
+   "problem": "Alternative-investment research and complex data extraction require handling massive multi-page documents and nuanced financial terms, where manual research creates high workloads and traditional models struggle with multi-step reasoning.",
+   "proposal": "Evaluate Claude Fable 5.2 on public and synthetic alternative-investment research tasks, testing its 1-million-token context window and professional-tier freelance capabilities to determine readiness for an internal pilot.",
+   "plan": [
+    "Assemble 10 public alternative-investment research documents and synthetic complex financial reporting files.",
+    "Configure API access under enterprise zero-data-retention terms and run evaluation scripts.",
+    "Compare extraction accuracy, context handling, and token costs against human baselines and current models.",
+    "Document evaluation findings in a final report to decide on a production pilot."
+   ],
+   "metric": "Measure output field accuracy, token costs, and processing speed against human-verified baselines across 10 complex alternative-investment research and extraction tasks.",
+   "data_safety": "Exclusively test using public alternative-investment filings and synthetic documents on paid enterprise API tiers. Verify Anthropic zero-retention policies and ensure no confidential client financials enter external training sets.",
+   "effort": "M",
+   "owner": "champions",
+   "evidence": [
+    "b621aa11e7e8",
+    "94ff1d7f5e18",
+    "255b56db4a4a",
+    "23f8b2eb41d3"
+   ],
+   "drafted": "2026-11-23",
+   "model": "gemini/gemini-flash-lite-latest"
   }
  },
- "last": "2026-11-22"
+ "last": "2026-11-23"
 }
