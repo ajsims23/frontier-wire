@@ -32,3 +32,8 @@ CREATE TABLE IF NOT EXISTS picks (
   status TEXT NOT NULL DEFAULT 'pending', decided TEXT, PRIMARY KEY (week, sid)
 );
 CREATE TABLE IF NOT EXISTS log (id INTEGER PRIMARY KEY AUTOINCREMENT, at TEXT NOT NULL, level TEXT NOT NULL, kind TEXT NOT NULL, msg TEXT NOT NULL);
+-- API usage and limits (admin dashboard "Usage & limits"; see src/apiusage.js)
+CREATE TABLE IF NOT EXISTS api_usage (day TEXT NOT NULL, service TEXT NOT NULL, model TEXT NOT NULL, source TEXT NOT NULL,
+  requests INTEGER NOT NULL DEFAULT 0, ok INTEGER NOT NULL DEFAULT 0, limited INTEGER NOT NULL DEFAULT 0, busy INTEGER NOT NULL DEFAULT 0,
+  failed INTEGER NOT NULL DEFAULT 0, tokens INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (day, service, model, source));
+CREATE TABLE IF NOT EXISTS api_state (service TEXT NOT NULL, k TEXT NOT NULL, v TEXT NOT NULL, at TEXT NOT NULL, PRIMARY KEY (service, k));

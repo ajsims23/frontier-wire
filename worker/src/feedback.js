@@ -21,6 +21,7 @@
 //   POST /api/feedback/watch        {id, email}                      "email me when this moves"
 //   POST /api/admin/login           {email}  emails the admin a sign-in link (valid 30 days)
 //   GET  /api/admin/overview        (admin) everything for the dashboard
+//   GET  /api/admin/usage           (admin) API usage and limits (see apiusage.js)
 //   GET  /api/admin/item?id=        (admin) one suggestion with all comments, including held ones
 //   POST /api/admin/update          (admin) {id, status?, public?, held?, note?, category?, title?, notify?}
 //   POST /api/admin/delete          (admin) {id}
@@ -29,6 +30,7 @@
 //   POST /api/admin/analyze         (admin) runs this week's analysis now
 //   POST /api/admin/decide          (admin) {week, sid, decision: "approve" | "reject"}
 import { tokens } from "../../site/search.js";
+import { usageOverview } from "./apiusage.js";
 
 export const STATUSES = ["open", "under_consideration", "planned", "in_progress", "implemented", "declined"];
 export const STATUS_LABEL = { open: "Open", under_consideration: "Under consideration", planned: "Planned", in_progress: "In progress",
@@ -268,6 +270,7 @@ export async function handleFeedback(req, env, url, cors, h) {
   if (!(await isAdmin(req, env))) return ok({ error: "Please sign in again." }, 401);
 
   if (p === "/api/admin/overview" && req.method === "GET") return ok(await overview(env));
+  if (p === "/api/admin/usage" && req.method === "GET") return ok(await usageOverview(env));
 
   if (p === "/api/admin/item" && req.method === "GET") {
     const s = await env.DB.prepare("SELECT * FROM suggestions WHERE id = ?1").bind(+url.searchParams.get("id") || 0).first();

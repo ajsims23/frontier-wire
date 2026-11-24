@@ -17,6 +17,8 @@ from typing import Any, Callable
 
 import httpx
 
+from agent.usage import METER, outcome_for
+
 
 class LimitReached(RuntimeError):
     pass
@@ -38,6 +40,21 @@ _RETIRED = re.compile(r"decommission|model_not_found|does not exist|no longer (a
                       r"not found|model.{0,40}(is not available|unavailable)", re.I)
 _TOOL_FAILED = re.compile(r"tool_use_failed|failed_generation|failed to call a function|tool.?call|tool_choice|"
                           r"parse tool", re.I)
+
+
+def _meter(service: str, model: str, resp: httpx.Response) -> None:
+    """Count one answer for the usage tracker (tokens, limit hits and the provider's rate-limit headers)."""
+    try:
+        code, tokens, note = resp.status_code, 0, ""
+        if code == 200:
+            tokens = int(((resp.json() or {}).get("usage") or {}).get("total_tokens") or 0)
+        elif code in (402, 429):
+            text = resp.text
+            q = re.search(r'"quotaId"\s*:\s*"([^"]+)"[^}]*?"quotaValue"\s*:\s*"(\d+)"', text)
+            note = f"{q.group(1)} = {q.group(2)}" if q else _error_text(resp)[:160]
+        METER.add(service, model, outcome_for(code), tokens, resp.headers, note)
+    except Exception:  # noqa: BLE001
+        pass
 
 
 def _error_text(resp: httpx.Response) -> str:
@@ -183,11 +200,13 @@ class LLM:
             try:
                 resp = self.http.post(url, headers=headers, json=body)
             except httpx.HTTPError as exc:
+                METER.add(p["name"], body.get("model", ""), "busy")
                 if attempt == 1 or isinstance(exc, httpx.ReadTimeout):
                     raise
                 self.log.append(f"{p['name']}: network error {type(exc).__name__}, retrying")
                 self.sleep(3)
                 continue
+            _meter(p["name"], body.get("model", ""), resp)
             if resp.status_code in (429, 500, 502, 503, 504) and attempt == 0:
                 try:
                     wait = float(resp.headers.get("retry-after", "5") or 5)

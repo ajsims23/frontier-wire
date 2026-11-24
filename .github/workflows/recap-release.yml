@@ -65,6 +65,7 @@ jobs:
         if: env.PREBUILT != '1'
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          ALERTS_DISPATCH_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}   # reports API usage to the admin dashboard
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: python -m agent recap footage --date "$DATE" --out "_recap/$DATE"
 
@@ -72,6 +73,7 @@ jobs:
         if: env.PREBUILT != '1'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ALERTS_DISPATCH_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}   # reports API usage to the admin dashboard
         run: python -m agent recap voice-gemini --date "$DATE" --out "_recap/$DATE"
 
       - name: Fallback narration (Workers AI via our API worker) if the Gemini voice failed

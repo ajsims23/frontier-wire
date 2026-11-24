@@ -45,6 +45,7 @@ jobs:
       - name: Search and draw the sheets
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          ALERTS_DISPATCH_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}   # reports API usage to the admin dashboard
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: python -m agent recap shortlist --date "$DATE" --out "_short/$DATE"
       - name: Attach to the footage-shortlist pre-release

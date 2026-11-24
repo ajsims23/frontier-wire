@@ -9,6 +9,8 @@
 // Needs the worker secret SCHEDULER_TOKEN: a fine-grained GitHub token for this repository only, with
 // "Actions: read and write". Without it this does nothing and GitHub's cron is the only clock.
 
+import { record } from "./apiusage.js";
+
 const MIN = 60 * 1000;
 
 // every / offset / grace in minutes (UTC). offset = where the slot starts within each period.
@@ -56,6 +58,16 @@ function gh(env, path, init = {}) {
   });
 }
 
+// when the token expires and how much of this hour's API allowance is left, for the Usage & limits tab
+async function noteToken(env, r) {
+  try {
+    const exp = r.headers.get("github-authentication-token-expiration");
+    const state = [["expires", exp], ["x-ratelimit-limit", r.headers.get("x-ratelimit-limit")], ["x-ratelimit-remaining", r.headers.get("x-ratelimit-remaining")]]
+      .filter(([, v]) => v).map(([k, v]) => ({ service: "github", k: `scheduler token|${k}`, v }));
+    await record(env, "worker", [{ service: "github", model: "scheduler token", requests: 1, ok: 1 }], state);
+  } catch (e) { /* never block the scheduler */ }
+}
+
 export async function tick(env, nowMs = Date.now(), log = async () => {}) {
   if (!env.SCHEDULER_TOKEN || !env.GITHUB_REPO) return [];
   const runs = {};
@@ -65,6 +77,7 @@ export async function tick(env, nowMs = Date.now(), log = async () => {}) {
       await log("error", "scheduler", `couldn't read ${job.workflow} runs: HTTP ${r.status}${r.status === 401 ? " (SCHEDULER_TOKEN expired or revoked)" : ""}`);
       return [];
     }
+    if (job === JOBS[0]) await noteToken(env, r);
     runs[job.workflow] = ((await r.json()).workflow_runs || []).map((x) => ({ status: x.status, conclusion: x.conclusion, created_at: x.created_at }));
   }
   const busy = new Set(JOBS.filter((j) => runs[j.workflow].some((r) => ALIVE.has(r.status))).map((j) => j.workflow));

@@ -228,3 +228,33 @@ test("helpers", () => {
   assert.equal(parseJson("no json"), null);
   assert.equal(similar([], "x").length, 0);
 });
+
+// ------------------------------------------------------------------ API usage & limits
+test("GitHub runs report API usage; the admin tab adds it up with the worker's own calls", async () => {
+  const rows = [{ service: "groq", model: "openai/gpt-oss-120b", requests: 10, ok: 8, limited: 2, tokens: 50000 },
+    { service: "gemini", model: "gemini-3.5-flash-lite", requests: 5, busy: 5 }];
+  const state = [{ service: "groq", k: "openai/gpt-oss-120b|x-ratelimit-remaining-requests", v: "990" }];
+  assert.equal((await call("/api/usage/report", { source: "Newsroom agent", rows, state })).status, 403);   // needs the secret
+  assert.equal((await call("/api/usage/report", { source: "Newsroom agent", rows, state }, { auth: admin() })).status, 200);
+  await call("/api/usage/report", { source: "Newsroom agent", rows: [rows[0]] }, { auth: admin() });      // a second run adds up
+  await suggest("Email me weekly");   // nothing to do with usage; just exercises the db
+  const u = await call("/api/admin/usage", null, { auth: admin() });
+  assert.equal(u.status, 200);
+  const groq = u.body.rows.find((r) => r.service === "groq");
+  assert.deepEqual([groq.requests, groq.ok, groq.limited, groq.tokens, groq.source], [20, 16, 4, 100000, "Newsroom agent"]);
+  assert.equal(u.body.rows.find((r) => r.service === "gemini").busy, 5);
+  assert.equal(u.body.state.find((s) => s.service === "groq").v, "990");
+  assert.equal(u.body.days.length, 7);
+  assert.equal(u.body.configured.brevo, true);
+  assert.equal(u.body.configured.pexels, null);   // a GitHub-only key: the worker can't tell
+  assert.ok(u.body.services.gemini.limit);
+  assert.equal((await call("/api/admin/usage")).status, 401);
+});
+
+test("the worker meters its own emails", async () => {
+  await call("/api/admin/login", { email: "editor@example.com" });   // emails a sign-in link
+  assert.equal(mail.length, 1);
+  const u = await call("/api/admin/usage", null, { auth: admin() });
+  const brevo = u.body.rows.find((r) => r.service === "brevo");
+  assert.ok(brevo && brevo.ok >= 1 && brevo.source === "worker");
+});

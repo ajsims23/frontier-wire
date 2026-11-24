@@ -38,6 +38,7 @@ from urllib.parse import urlparse
 from PIL import Image, ImageDraw, ImageFilter
 
 from . import newsgfx
+from .usage import METER, outcome_for
 from .cards import GROUND, LABEL, MUTED, TEXT, TOPIC, _font, _wrap
 
 IST = timezone(timedelta(hours=5, minutes=30))
@@ -566,6 +567,7 @@ def _pexels(http: Any, q: str, key: str) -> list[dict[str, Any]]:
     r = http.get("https://api.pexels.com/v1/videos/search", params=params, headers={"Authorization": key})
     if r.status_code == 404:
         r = http.get("https://api.pexels.com/videos/search", params=params, headers={"Authorization": key})
+    METER.add("pexels", "video search", outcome_for(r.status_code), headers=getattr(r, "headers", None))
     r.raise_for_status()
     out = []
     for v in r.json().get("videos") or []:
@@ -584,6 +586,7 @@ def _pixabay(http: Any, q: str, key: str) -> list[dict[str, Any]]:
     """Candidate clips from Pixabay (free key, Pixabay Content License, no attribution required; we credit anyway)."""
     r = http.get("https://pixabay.com/api/videos/", params={"key": key, "q": q[:100], "video_type": "film",
                                                             "safesearch": "true", "per_page": 15})
+    METER.add("pixabay", "video search", outcome_for(r.status_code), headers=getattr(r, "headers", None))
     r.raise_for_status()
     out = []
     for v in r.json().get("hits") or []:
@@ -999,6 +1002,8 @@ def _gemini_say(http: Any, model: str, key: str, voice: str, style: str, text: s
     if r.status_code == 400 and model.startswith("gemini-3.8"):  # the newer voice field, if the classic one is refused
         body["generationConfig"]["speechConfig"] = {"voiceConfig": {"voice": voice}}
         r = http.post(GEMINI_URL.format(model=model), json=body, headers={"x-goog-api-key": key}, timeout=300)
+    METER.add("gemini-tts", model, outcome_for(r.status_code), headers=getattr(r, "headers", None),
+              note=str(getattr(r, "text", ""))[:200] if r.status_code in (402, 429) else "")
     if r.status_code != 200:
         raise RuntimeError(f"{model} HTTP {r.status_code}: {r.text[:200]}")
     inline = r.json()["candidates"][0]["content"]["parts"][0]["inlineData"]

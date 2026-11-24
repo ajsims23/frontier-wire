@@ -24,7 +24,7 @@ keyFromLink();
 try { key = key || localStorage.getItem(KEY) || ""; } catch (e) { /* private mode */ }
 addEventListener("hashchange", () => { if (el && keyFromLink()) load(); });
 
-let data = null, tab = "overview", filter = { status: "", source: "", vis: "", q: "" };
+let data = null, usage = null, tab = "overview", filter = { status: "", source: "", vis: "", q: "" };
 const openRows = new Set();
 
 async function call(path, body) {
@@ -59,7 +59,10 @@ function signIn() {
 
 async function load(keepTab) {
   if (!keepTab) el.innerHTML = `<p class="fb-loading">Loading the dashboard…</p>`;
-  try { data = await call("/api/admin/overview"); render(); if (tab === "all") openRows.forEach(loadComments); }
+  try {
+    [data, usage] = await Promise.all([call("/api/admin/overview"), call("/api/admin/usage").catch((e) => ({ error: e.message }))]);
+    render(); if (tab === "all") openRows.forEach(loadComments);
+  }
   catch (e) { if (key) el.innerHTML = `<p class="fb-err">${esc(e.message)} <button class="fb-link" type="button" onclick="location.reload()">Retry</button></p>`; }
 }
 
@@ -68,12 +71,12 @@ function render() {
   const report = data.reports[0];
   const pending = data.picks.filter((p) => p.status === "pending").length;
   const tabs = [["overview", "Overview"], ["picks", `Weekly picks${pending ? ` <b>${pending}</b>` : ""}`], ["all", `All feedback <span>${s.total}</span>`],
-    ["moderation", `Review queue${s.held ? ` <b>${s.held}</b>` : ""}`], ["history", "History"], ["system", "System"]];
+    ["moderation", `Review queue${s.held ? ` <b>${s.held}</b>` : ""}`], ["history", "History"], ["usage", `Usage &amp; limits${usageAlerts() ? ` <b>${usageAlerts()}</b>` : ""}`], ["system", "System"]];
   el.innerHTML = `
     <div class="ad-top"><p>Signed in. ${report ? `Latest analysis: week of ${day(report.week)}.` : "No weekly analysis yet."}</p>
       <div><button type="button" class="btn btn-ghost" data-act="refresh">Refresh</button> <button type="button" class="btn btn-ghost" data-act="signout">Sign out</button></div></div>
     <nav class="ad-tabs" role="tablist">${tabs.map(([k, l]) => `<button type="button" role="tab" aria-selected="${k === tab}" data-tab="${k}">${l}</button>`).join("")}</nav>
-    <div class="ad-panel">${({ overview, picks: picksTab, all: allTab, moderation, history: historyTab, system })[tab]()}</div>`;
+    <div class="ad-panel">${({ overview, picks: picksTab, all: allTab, moderation, history: historyTab, usage: usageTab, system })[tab]()}</div>`;
 }
 
 // ------------------------------------------------------------------ overview
@@ -221,6 +224,118 @@ function system() {
     groups them with AI (free providers, with a rule-based fallback), scores each open idea (popularity 30%, frequency 15%, feasibility 20%, impact 20%, fit 15%) and emails you the top two.
     Spam protection: hidden honeypot field, a minimum typing time, per-address daily limits, a cap on votes from one network, and a review queue for links or rude words.</p>
     <h3>Recent activity and errors</h3><div class="ad-scroll"><table class="ad-log"><tbody>${data.log.map((l) => `<tr class="${l.level}"><td>${when(l.at)}</td><td>${esc(l.level)}</td><td>${esc(l.kind)}</td><td>${esc(l.msg)}</td></tr>`).join("") || `<tr><td>No activity yet.</td></tr>`}</tbody></table></div>`;
+}
+
+// ------------------------------------------------------------------ usage & limits
+// Today's API calls per service against its limits. Counts come from every GitHub run and from the worker itself;
+// "left" figures are the providers' own rate-limit headers from their latest answer (with how old that answer is).
+const fmt = (n) => (n >= 1e6 ? `${(n / 1e6).toFixed(1)}M` : n >= 1e5 ? `${Math.round(n / 1e3)}k` : Number(n || 0).toLocaleString());
+const ago = (iso) => { const m = Math.round((Date.now() - new Date(iso)) / 60000); return m < 60 ? `${Math.max(1, m)} min ago` : m < 2880 ? `${Math.round(m / 60)}h ago` : `${Math.round(m / 1440)} days ago`; };
+const sum = (rows, k) => rows.reduce((a, r) => a + (+r[k] || 0), 0);
+
+// what each provider's rate-limit headers mean (they don't all use the same names or windows)
+function headerLabel(service, h) {
+  const suffix = h.replace(/^x-ratelimit-(limit|remaining|reset)-?/, "");
+  const win = { groq: { requests: "requests today", tokens: "tokens this minute" }, cerebras: { "requests-day": "requests today", "tokens-minute": "tokens this minute", "requests-minute": "requests this minute" },
+    pexels: { "": "requests this month" }, pixabay: { "": "requests this minute" }, github: { "": "API calls this hour" }, openrouter: { "": "requests (current window)" } };
+  return (win[service] || {})[suffix] || suffix.replace(/-/g, " ") || "requests";
+}
+
+function liveFigures(service, state) {
+  const mine = state.filter((x) => x.service === service);
+  const byModel = {};
+  for (const x of mine) { const [model, k] = x.k.split("|"); (byModel[model] ||= {})[k] = x; }
+  const out = [];
+  for (const [model, h] of Object.entries(byModel)) {
+    for (const [k, x] of Object.entries(h)) {
+      if (!k.startsWith("x-ratelimit-remaining")) continue;
+      const lim = h[k.replace("remaining", "limit")];
+      const left = +x.v, of = lim ? +lim.v : null;
+      out.push({ model, label: headerLabel(service, k), left, of, at: x.at, low: of ? left / of < 0.15 : false });
+    }
+    if (h.expires) {
+      const days = Math.floor((new Date(h.expires.v.replace(" UTC", "Z").replace(" ", "T")) - Date.now()) / 86400000);
+      out.push({ model, expires: h.expires.v, days, at: h.expires.at, low: days < 14 });
+    }
+    if (h["last limit"]) out.push({ model, limitNote: h["last limit"].v, at: h["last limit"].at });
+  }
+  return out;
+}
+
+function serviceStatus(key, today, live, u) {
+  const svc = u.services[key];
+  if (u.configured[key] === false && !today.requests) return ["off", "○", "No key set"];
+  if (live.some((f) => f.days != null && f.days < 0)) return ["bad", "✕", "Expired"];
+  if (key === "cerebras" && today.limited) return ["off", "○", "Paid only"];
+  // a per-minute limit is routine throttling (the next model or minute answers); a daily quota or no answers at all is not
+  const daily = live.some((f) => f.limitNote && /per.?day|daily|quota exceeded|exceeded your current quota/i.test(f.limitNote) && Date.now() - new Date(f.at) < 864e5);
+  if (today.limited && daily) return ["bad", "!", "Daily limit hit"];
+  if (today.limited && !today.ok) return ["bad", "!", "Blocked by limits"];
+  if (today.limited) return ["warn", "!", `Throttled ${today.limited}×`];
+  if (live.some((f) => f.low)) return ["warn", "!", "Running low"];
+  if (today.requests && today.busy / today.requests > 0.3) return ["warn", "!", "Often busy"];
+  if (svc.daily && today.requests / svc.daily > 0.8) return ["warn", "!", "Near daily limit"];
+  if (!today.requests) return ["idle", "–", "No calls today"];
+  return ["ok", "✓", "OK"];
+}
+
+function usageAlerts() {
+  if (!usage || usage.error) return 0;
+  return Object.keys(usage.services).filter((k) => {
+    const rows = usage.rows.filter((r) => r.service === k && r.day === usage.today);
+    const t = { requests: sum(rows, "requests"), limited: sum(rows, "limited"), busy: sum(rows, "busy") };
+    return ["bad", "warn"].includes(serviceStatus(k, t, liveFigures(k, usage.state), usage)[0]) && k !== "cerebras";
+  }).length;
+}
+
+function spark(values, limited, days) {   // one series: requests per day, brand colour, hover for the exact numbers
+  const W = 140, H = 34, n = values.length, max = Math.max(1, ...values), bw = W / n, inner = Math.max(3, bw - 3);
+  return `<svg class="us-spark" viewBox="0 0 ${W} ${H + 2}" role="img" aria-label="Requests per day, last 7 days">
+    <line x1="0" x2="${W}" y1="${H}" y2="${H}" class="ad-axis"/>
+    ${values.map((v, i) => { const h = v ? Math.max(3, (v / max) * (H - 4)) : 0, x = i * bw + (bw - inner) / 2;
+      return `<g class="ad-bar${limited[i] ? " us-hit" : ""}"><rect x="${i * bw}" y="0" width="${bw}" height="${H}" fill="transparent"/>${h ? `<path d="M${x},${H} v${-(h - 3)} q0,-3 3,-3 h${inner - 6} q3,0 3,3 v${h - 3} z"/>` : ""}
+        <title>${day(days[i])}: ${fmt(v)} requests${limited[i] ? `, ${limited[i]} hit a limit` : ""}</title></g>`; }).join("")}</svg>`;
+}
+
+function usageTab() {
+  const u = usage;
+  if (!u) return `<p class="fb-loading">Loading usage…</p>`;
+  if (u.error) return `<p class="fb-err">Couldn't load usage: ${esc(u.error)}</p>`;
+  const todayRows = u.rows.filter((r) => r.day === u.today);
+  const cards = Object.entries(u.services).map(([k, svc]) => {
+    const rows = todayRows.filter((r) => r.service === k);
+    const t = { requests: sum(rows, "requests"), ok: sum(rows, "ok"), limited: sum(rows, "limited"), busy: sum(rows, "busy"), failed: sum(rows, "failed"), tokens: sum(rows, "tokens") };
+    const live = liveFigures(k, u.state);
+    const [cls, icon, label] = serviceStatus(k, t, live, u);
+    const perDay = u.days.map((d) => sum(u.rows.filter((r) => r.service === k && r.day === d), "requests"));
+    const hitDay = u.days.map((d) => sum(u.rows.filter((r) => r.service === k && r.day === d), "limited"));
+    let daily = svc.daily ? { used: t.requests, of: svc.daily } : null;
+    if (k === "brevo" && u.brevo && u.brevo.credits != null && u.brevo.creditsType === "sendLimit") daily = { used: Math.max(0, svc.daily - u.brevo.credits), of: svc.daily, live: true };
+    const meter = daily ? `<div class="us-meter" role="meter" aria-valuemin="0" aria-valuemax="${daily.of}" aria-valuenow="${daily.used}" aria-label="${esc(svc.label)} used today">
+        <span style="width:${Math.min(100, (daily.used / daily.of) * 100).toFixed(1)}%"></span></div>
+        <p class="us-small">${fmt(daily.used)} of ${fmt(daily.of)} today${daily.live ? " (Brevo's own count)" : ""}</p>` : "";
+    const liveLines = live.map((f) => f.expires ? `<li class="${f.low ? "us-low" : ""}">Token expires ${new Date(f.expires.replace(" UTC", "Z").replace(" ", "T")).toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" })} (${f.days < 0 ? "expired" : pl(f.days, "day") + " left"})</li>`
+      : f.limitNote ? `<li class="us-note">Last limit hit${f.model !== "-" ? ` on ${esc(f.model)}` : ""}, ${ago(f.at)}: <span>${esc(f.limitNote)}</span></li>`
+      : `<li class="${f.low ? "us-low" : ""}">${f.model !== "-" ? `<b>${esc(f.model)}</b>: ` : ""}${fmt(f.left)}${f.of ? ` of ${fmt(f.of)}` : ""} ${esc(f.label)} left <span>· ${ago(f.at)}</span></li>`).join("");
+    const counts = t.requests ? `<p class="us-counts"><strong>${fmt(t.requests)}</strong> calls today${t.tokens ? ` · ${fmt(t.tokens)} tokens` : ""}</p>
+        <p class="us-small">${[["ok", t.ok], ["hit a limit", t.limited], ["busy or timed out", t.busy], ["other errors", t.failed]].filter(([, n]) => n).map(([l, n]) => `${fmt(n)} ${l}`).join(" · ")}</p>`
+      : `<p class="us-counts us-small">No calls today${u.configured[k] === null ? " (key is in GitHub secrets)" : ""}</p>`;
+    return `<article class="us-card us-${cls}"><header><div><h4>${esc(svc.label)}</h4><p class="us-small">${esc(svc.what)}</p></div>
+        <span class="us-pill us-${cls}"><i aria-hidden="true">${icon}</i>${esc(label)}</span></header>
+      ${counts}${meter}${liveLines ? `<ul class="us-live">${liveLines}</ul>` : ""}
+      <div class="us-foot">${spark(perDay, hitDay, u.days)}<span class="us-small">7 days: ${fmt(perDay.reduce((a, b) => a + b, 0))} calls${hitDay.some(Boolean) ? ` · limits hit on ${pl(hitDay.filter(Boolean).length, "day")}` : ""}</span></div>
+      <p class="us-limit">${esc(svc.limit)}</p></article>`;
+  }).join("");
+  const detail = [...todayRows].sort((a, b) => a.service.localeCompare(b.service) || b.requests - a.requests);
+  return `<p class="muted">Today in IST, from every GitHub run (newsroom, breaking-news checks, DPA lens, recap) and the worker (Ask the Wire, emails, voice and images).
+      "Left" figures are each provider's own count from its latest answer. Published free-tier limits change without notice, so treat them as a guide.</p>
+    ${u.errors.length ? `<div class="us-errors"><h3>Recent problems</h3><ul>${u.errors.map((e) => `<li>${when(e.at)} · ${esc(e.msg)}</li>`).join("")}</ul></div>` : ""}
+    <div class="us-grid">${cards}</div>
+    <details class="ad-table" open><summary>Today by model and run</summary><div class="ad-scroll"><table><thead><tr><th>Service</th><th>Model / use</th><th>From</th><th>Calls</th><th>OK</th><th>Limit hits</th><th>Busy</th><th>Errors</th><th>Tokens</th></tr></thead>
+      <tbody>${detail.map((r) => `<tr><td>${esc(u.services[r.service]?.label || r.service)}</td><td>${esc(r.model)}</td><td>${esc(r.source)}</td><td>${fmt(r.requests)}</td><td>${fmt(r.ok)}</td><td>${fmt(r.limited)}</td><td>${fmt(r.busy)}</td><td>${fmt(r.failed)}</td><td>${r.tokens ? fmt(r.tokens) : ""}</td></tr>`).join("") || `<tr><td colspan="9">No calls recorded yet today.</td></tr>`}</tbody></table></div></details>
+    <details class="ad-table"><summary>Last 7 days by service</summary><div class="ad-scroll"><table><thead><tr><th>Service</th>${u.days.map((d) => `<th>${day(d)}</th>`).join("")}</tr></thead>
+      <tbody>${Object.entries(u.services).map(([k, svc]) => `<tr><td>${esc(svc.label)}</td>${u.days.map((d) => { const rs = u.rows.filter((r) => r.service === k && r.day === d); const n = sum(rs, "requests"), l = sum(rs, "limited");
+        return `<td>${n ? fmt(n) : ""}${l ? ` <span class="us-hitn">(${l} limit)</span>` : ""}</td>`; }).join("")}</tr>`).join("")}</tbody></table></div></details>`;
 }
 
 // ------------------------------------------------------------------ actions
