@@ -980,6 +980,53 @@
    "sources_read": 2,
    "model": "groq/openai/gpt-oss-120b",
    "attempts": 1
+  },
+  "4aacf31011a3": {
+   "date": "2026-11-24",
+   "outcome": "confirmed",
+   "note": "All flagged claims confirmed; stock price and valuation from NY Post; employee wealth from NY Post.",
+   "edits": {},
+   "rulings": [
+    {
+     "claim": "The stock closed at $97.17 per share",
+     "ruling": "confirmed",
+     "evidence": "The stock closed at $97.17 per share, good for a valuation of roughly $1.7 trillion."
+    },
+    {
+     "claim": "The closing price gave the company a valuation of roughly $1.7 trillion",
+     "ruling": "confirmed",
+     "evidence": "The stock closed at $97.17 per share, good for a valuation of roughly $1.7 trillion."
+    },
+    {
+     "claim": "The offering creates thousands of millionaire employees",
+     "ruling": "confirmed",
+     "evidence": "Thousands of Anthropic employees got rich in its record-setting IPO on Thursday – raising worries that a chunk of the AI giant’s newly wealthy workforce could soon head for the exits."
+    }
+   ],
+   "sources_read": 2,
+   "model": "groq/openai/gpt-oss-120b",
+   "attempts": 1
+  },
+  "459fb45d2a37": {
+   "date": "2026-11-24",
+   "outcome": "corrected",
+   "note": "Reworded why it matters to reflect source: the deal connects a major telecom provider with a leading AI start-up to support companies and the public sector in Germany with tailored AI.",
+   "edits": {
+    "why_it_matters": {
+     "from": "The deal connects a major European telecommunications provider with one of Europe's leading artificial intelligence start-ups to expand regional enterprise AI adoption.",
+     "to": "The deal connects a major European telecommunications provider with one of Europe's leading artificial intelligence start-ups to support companies and the public sector in Germany with tailored AI."
+    }
+   },
+   "rulings": [
+    {
+     "claim": "The deal connects a major European telecommunications provider with one of Europe's leading artificial intelligence start-ups to expand regional enterprise AI adoption.",
+     "ruling": "reword",
+     "evidence": "Deutsche Telekom is investing in Mistral AI, Europe's largest artificial intelligence company, plan to support companies and the public sector in Germany introducing tailored AI."
+    }
+   ],
+   "sources_read": 1,
+   "model": "groq/openai/gpt-oss-120b",
+   "attempts": 1
   }
  }
 }
