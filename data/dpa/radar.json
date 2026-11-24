@@ -151,6 +151,7 @@
     }
    ],
    "evidence": [
+    "366ea4cc69c5",
     "25f8ab73ccc5",
     "549a77347d5e"
    ],
@@ -158,9 +159,9 @@
    "proposed": "",
    "quadrant": "models",
    "capability": "doc_extraction",
-   "rationale": "DPA could evaluate GPT-6.2 Astra for complex fund document extraction, financial reporting, and research tasks given benchmark gains and lower pricing.",
-   "updated": "2026-11-21",
-   "model": "gemini/gemini-flash-lite-latest",
+   "rationale": "New model shows benchmark gains and 20% lower pricing; DPA should test on complex fund reports for extraction accuracy and latency versus production models before adoption.",
+   "updated": "2026-11-24",
+   "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
    "aliases": [
     "gpt-6-2-astra-and-sol"
    ]
@@ -814,16 +815,20 @@
     }
    ],
    "evidence": [
+    "f991ba256218",
     "d8887a09bc5e",
     "a1e895b935bb"
    ],
    "ring": "assess",
    "proposed": "",
    "quadrant": "models",
-   "capability": "research",
-   "rationale": "Could assist with historical document transcription and agent memory architectures; remains a key model under evaluation for complex research tasks.",
-   "updated": "2026-11-21",
-   "model": "gemini/gemini-flash-lite-latest"
+   "capability": "productivity",
+   "rationale": "Anthropic share price drop below IPO may affect model pricing or stability; DPA should compare Claude cost/performance against alternatives on coding-assistant tasks.",
+   "updated": "2026-11-24",
+   "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
+   "aliases": [
+    "anthropic-claude"
+   ]
   },
   "daybreak-defense-factory": {
    "key": "daybreak-defense-factory",
@@ -1723,6 +1728,29 @@
    "rationale": "Lawsuits over illicit image generation expose legal risk; DPA must restrict use, placing it on hold.",
    "updated": "2026-11-24",
    "model": "groq/openai/gpt-oss-120b"
+  },
+  "shellbench-benchmark": {
+   "key": "shellbench-benchmark",
+   "name": "ShellBench benchmark",
+   "first_seen": "2026-11-24",
+   "history": [
+    {
+     "date": "2026-11-24",
+     "from": "",
+     "to": "assess",
+     "why": "Benchmark reveals current AI agents complete only ~60% of realistic tasks; DPA should evaluate its internal agent framework against ShellBench to measure reliability before client deployment."
+    }
+   ],
+   "evidence": [
+    "f8978e4ce75f"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "agents",
+   "rationale": "Benchmark reveals current AI agents complete only ~60% of realistic tasks; DPA should evaluate its internal agent framework against ShellBench to measure reliability before client deployment.",
+   "updated": "2026-11-24",
+   "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b"
   }
  },
  "considered": [
@@ -1744,6 +1772,7 @@
   "2d3b8471f026",
   "2db41133973d",
   "31089e719fc9",
+  "366ea4cc69c5",
   "3decd8b5d056",
   "3e50b2261d70",
   "3f1ac81e6e95",
@@ -1820,9 +1849,11 @@
   "ef3910f6a7af",
   "f0be036ed676",
   "f19cee3d1350",
+  "f8978e4ce75f",
+  "f991ba256218",
   "fa0e89bac09a"
  ],
- "updated_at": "2026-11-24T14:15:24+00:00",
+ "updated_at": "2026-11-24T17:20:58+00:00",
  "takeaways": {
   "written_at": "2026-11-24T14:15:24+00:00",
   "sig": "claude-code:assess|claude-fable-5-2:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|grok-build:hold|mai-code-2:trial|microsoft-agent-framework:hold|tool-retrieval:trial|unreleased-models:hold",
