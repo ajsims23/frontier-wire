@@ -1,128 +1,162 @@
 # Frontier Wire
 
-A live AI news website, run by an AI newsroom agent. Every 3 hours it reads lab announcements,
-papers, news and posts from leading people, then picks what matters, checks it and writes it up.
-The site updates itself. **Everything runs on free services.**
+**A live AI news site run by an AI newsroom agent.** It reads around 30 sources every few hours. It then decides
+what matters, checks it against its sources, writes it up and publishes it. It also explains what each development
+means for DPA's work. People make the final calls. **Everything runs on free services (AI cost: ₹0).**
+
+- Site: https://ajsims23.github.io/frontier-wire/
+- How it works, from its own logs (pipeline, accuracy audit, corrections): `/system/`
+- For other AI agents: MCP server at `<API address>/mcp` and JSON API at `/api/v1/*.json` (see `/api/`)
+
+Created by Ajay Manuel.
 
 ---
 
-## Launch it (about 20 minutes, one time)
+## What runs, and when
 
-### 1. Get a free AI key (2 min)
-- Go to **https://cloud.cerebras.ai**, sign up, open **API Keys** and create a key. Copy it.
-- Recommended: also get a free backup key from **https://console.groq.com/keys**.
-  If one provider is busy, the agent automatically uses the other.
+| Job | When | What it does | Code |
+|---|---|---|---|
+| **Newsroom agent** | Every 3 hours (:17) | Editor-in-chief plans the run, then gather → judge → verify → research → write → publish (below) | `agent/pipeline.py`, `agent/chief.py` |
+| **Breaking news watch** | Every 15 minutes | Checks the labs' own channels; if something is new, runs a quick breaking edition. Most checks use no AI | `.github/workflows/watch.yml` |
+| **DPA lens** | Every 3 hours, 90 min after the newsroom | What each story means for DPA, the AI Radar, weekly calls, and a daily fact-check audit of published stories | `agent/dpa.py`, `agent/factcheck.py` |
+| **DPA task bench** | Sundays | Tests every reachable free model on synthetic DPA-style document tasks, scored against known answers | `agent/bench.py` |
+| **Daily recap** | Evenings | A scheduled Claude session writes a one-minute news bulletin of the top 5 stories; **Recap release** renders and publishes it | `agent/recap.py` |
+| **API worker** | Always on (Cloudflare) | Ask the Wire, subscriptions and emails, feedback board, MCP server; daily digests at 08:50 IST; re-starts any run GitHub's cron misses | `worker/src/` |
+| **Deploy website** | After every change | Builds the static site to GitHub Pages | `agent/build.py` |
 
-### 2. Put the project on GitHub (5 min, no command line)
-1. Install **GitHub Desktop** (https://desktop.github.com) and sign in with your GitHub account.
-2. Unzip `frontier-wire.zip` somewhere easy, such as Documents.
-3. In GitHub Desktop, choose **File → Add local repository**, pick the `frontier-wire` folder, and
-   click **Add repository**. If it asks to "create a repository", say yes.
-4. Click **Publish repository**. **Untick "Keep this code private"** (free website hosting needs a
-   public repository), then click **Publish**.
+A "scheduler" in the worker starts the newsroom, breaking-news and DPA jobs if GitHub's own cron skips them.
 
-### 3. Add your key to the repository (2 min)
-On github.com, open your repository and go to **Settings → Secrets and variables → Actions → New repository secret**:
-- Name `CEREBRAS_API_KEY`, value: your Cerebras key.
-- Also, if you have it: `GROQ_API_KEY`.
-
-Keys stored here are encrypted. They're never visible in the code or on the site.
-
-### 4. Switch on the website and the robot (2 min)
-In the repository's **Settings**:
-- **Pages** → *Build and deployment* → Source: **GitHub Actions**.
-- **Actions → General** → *Workflow permissions*: choose **Read and write permissions** and tick
-  **Allow GitHub Actions to create and approve pull requests**. Click **Save**.
-- **General** → tick **Automatically delete head branches**.
-
-### 5. First run (5 min)
-1. Open the **Actions** tab. If asked, click **"I understand my workflows, go ahead and enable them"**.
-2. Click **Newsroom agent → Run workflow → Run workflow**. Wait 3–5 minutes.
-3. Review mode is on, so a **pull request** appears under **Pull requests**. Open it to read the
-   stories, then click **Merge pull request** to publish them.
-4. **Deploy website** runs automatically. Your site is live at
-   **`https://<your-username>.github.io/frontier-wire/`**. The exact link is shown under Settings → Pages.
-
-From then on it runs every 3 hours. New stories collect in the same pull request, so you can merge
-once or twice a day.
-
-**To publish automatically, without reviewing:** go to Settings → Secrets and variables → Actions →
-**Variables** tab and add `REVIEW_MODE` = `false`.
-
-### Optional: your own domain
-Buy a domain (about ₹800–1,500 a year from Namecheap, GoDaddy, Hostinger and similar), then follow
-Settings → Pages → *Custom domain*. GitHub provides HTTPS for free.
-
----
-
-## What one run does
+### What one newsroom run does
 
 | Step | What happens |
 |---|---|
-| **Gather** | Lab blogs and RSS feeds, new Hugging Face models from 12 labs, arXiv and Hugging Face trending papers, GDELT global news search, Hacker News top AI stories, and Bluesky posts from leading people. All free, no keys. |
-| **Judge** | The AI scores each item 1–10, drops noise (minor fine-tunes, listicles, marketing) and merges coverage of the same event. |
-| **Verify** | A story needs an official source (the lab's post, the paper, or the person's own post) or 2 independent outlets. Missing outlets are searched for on GDELT. |
-| **Write** | Headline, two-line summary, "why it matters", lab and model. |
-| **Check** | Quotes must appear word for word in the source, or they're removed. |
-| **Publish** | Front page, frontier lab tracker, RSS feed (`data/feed.xml`) and a run report. |
+| **Plan** | The editor-in-chief agent looks at the last two days of coverage, open storylines and what came in. It sets priorities, flags thin areas and runs up to three extra news searches. |
+| **Gather** | Lab blogs and feeds, Hugging Face, arXiv, GDELT, Hacker News, Bluesky posts from leading people, and news searches. All are free with no keys. |
+| **Judge** | Scores each item 1–10, drops noise and non-AI news, and merges coverage of the same event. A variety cap stops one source from flooding the page. |
+| **Verify** | A story needs an official source (the lab's post, the paper, the person's own post) or two independent outlets. A research agent searches and reads further when it is unsure. |
+| **Write** | Headline, summary, "why it matters", an explainer, notes by audience, tags, trackers and storylines. |
+| **Check** | Quotes must appear word for word in the source, or they're removed. Unsupported benchmark numbers are removed. Made-up ids from the model are ignored. |
+| **Publish** | Home page, story pages, desks, RSS, email alerts and a run report (`data/last_run.md`). |
 
-## Daily one-minute recap
-Every evening a scheduled Claude session picks the day's top five stories (the home page's top-stories rule over
-the last 24 hours, at most two per category), writes paraphrased on-screen lines and renders an original
-motion-graphics video: `python -m agent recap draft | render | upload` (see `agent/recap.py`).
-- Each story plays over a free **Pexels** stock clip (search query from the script's `footage` field, else the story's beat),
-  falling back to an AI illustration, then a drawn one. Needs the repo secret `PEXELS_API_KEY` (free key from
-  pexels.com/api, no card); without it the recap uses illustrations. Clips are credited on screen and on the recap page.
-- The script has an anchor bulletin (`open`, a 20-25 word `anchor` per story with context and why it matters, `close`), capped at about a minute; the voice reads that, not the on-screen text.
-- An **AI voice** (Deepgram Aura-2 on Workers AI, via `/api/recap/voice` on the worker; if Workers AI fails, the open-source Kokoro voice runs on the Actions runner as the backup) reads the hook and
-  each story's line (or its optional `say` field). Scenes stretch to fit the voice and stay within 55-70 seconds (the details are dropped from the voice if they would run longer); if the
-  narration can't fit or the worker is unreachable, the video publishes silent.
-- Under each story on a recap page, the lab's own YouTube video for that story (from the Watch desk) plays in the pop-up player.
-- Videos, posters and teaser GIFs are stored as GitHub **Releases** (`recap-YYYY-MM-DD`), not in git, so the repo stays light.
-  The session pushes them on a short-lived `recap-upload/<date>` branch; the **Recap release** workflow checks them,
-  creates the Release, marks the recap published on main and deletes the branch.
-- The deploy workflow copies the last 3 days' videos (and 30 days' posters and GIFs) into the site at `/videos/YYYY-MM-DD/`.
-- `/videos/` is the archive; older videos download from Releases. `/videos/feed.xml` has one item per day for the subscriber email.
+Every dropped item is logged with a reason, and the `/system/` page shows the counts.
+
+## Where people stay in control
+
+The agent proposes and people decide. There are three places where people decide:
+
+1. **`config/dpa_review.yaml`**: approve **Adopt** on the AI Radar, override a radar ring, and **resolve fact-check flags**.
+   A resolution shows as an "Editor's note" on the story and as resolved on `/system/`. To resolve a flag, edit
+   this file on github.com (pencil icon). The site redeploys in a few minutes.
+2. **The daily recap email**: the editor gets a preview with an "Approve and send" link first. Nothing goes to
+   subscribers until it's approved (a signed link handled by the worker).
+3. **Reader suggestions**: the weekly analysis ranks ideas from the public board. The admin dashboard (`/admin/`,
+   sign-in by emailed link) has Approve and Reject buttons. Approving only records the decision; it changes nothing on
+   the site by itself.
+
+`config/dpa.yaml` holds what the agent knows about DPA: public service lines, capabilities and roles. It holds
+**no client names or client data**. Nothing confidential is sent to any AI provider.
+
+## Running it day to day
+
+**Daily check (2 minutes):**
+1. Open `/system/` and check that stories are being published and how many accuracy flags are open.
+2. Open the **Actions** tab and look for any red ✗ runs.
+3. Resolve fact-check flags in `config/dpa_review.yaml`.
+
+**If something breaks:**
+
+| Symptom | What to do |
+|---|---|
+| Few or no new stories | Run **Check AI keys** (Actions tab). It tests each provider and each model for tool calls. Remove dead models from `providers` in `config/settings.yaml`. |
+| A provider's free quota runs out | No action needed. The agent falls back down the provider list automatically and logs it as "fallbacks handled" on `/system/`. |
+| Ask the Wire or emails not working | Run **Worker status** (read-only; prints counts, never addresses). Redeploy with **Deploy API**. |
+| Recap missing | Check the **Recap release** run for that day. The voice falls back from Gemini TTS to Workers AI to Kokoro; with no voice at all, the video publishes silent. |
+| Site not updating | Re-run **Deploy website**. It retries once if GitHub can't find the Pages artifact. |
+
+**Free-tier safety:** caps of 70 AI requests per run, 450 per day and 900k tokens per day (`config/settings.yaml` →
+`limits`). A run that hits a cap stops calling AI, and unjudged items carry over to the next run.
+
+**AI providers, in order** (`config/settings.yaml` → `providers`): **Gemini** (main) → **Groq** → **NVIDIA NIM** →
+Mistral and OpenRouter (only if keys exist) → Cerebras (its free tier has ended; kept as a last resort).
+Busy or retired models are skipped automatically. Only free tiers that need no credit card are used.
 
 ## The intelligence layer: Frontier Wire for DPA
-The newsroom reports what happened in AI. The intelligence layer decides what it means for DPA and what to do about it.
-Everything below runs on the same free AI tiers, with its own request caps, and **proposes only**: people decide.
 
-| Page | What it is | Made by |
-|---|---|---|
-| `/dpa/` | The DPA lens: this week's three calls, what to act on (with a first test), briefings by role | `agent/dpa.py` (workflow **DPA lens**, every 3 hours) |
-| `/radar/` | The DPA AI Radar: the 10 developments that matter most right now (ranked by importance), on Adopt / Trial / Assess / Hold, with what they mean for DPA, how to use them and a log of every move. Only a person can approve Adopt | `agent/dpa.py` |
-| `/bench/` | DPA Task Bench: every free model tested weekly on 12 synthetic DPA-style document tasks, scored against known answers | `agent/bench.py` (workflow **DPA task bench**) |
-| `/system/` | How the agent works, from its own run logs: pipeline, drop reasons, guardrails, verification, the daily accuracy audit and corrections log | `agent/system.py`, `agent/factcheck.py` |
-| `/api/` | MCP server (`<API address>/mcp`) and JSON API (`api/v1/*.json`) so any AI agent can use Frontier Wire | `worker/src/mcp.js`, `agent/build_intel.py` |
+| Page | What it is |
+|---|---|
+| `/dpa/` | The DPA lens: this week's calls, what to act on (each with a move — trial / assess / watch / caution — and a first test), and briefings by role |
+| `/radar/` | The AI Radar: the 10 developments that matter most right now, on Adopt / Trial / Assess / Hold, with what they mean for DPA. Only a person can approve Adopt |
+| `/bench/` | DPA Task Bench: which free model does DPA-style work best, re-tested weekly |
+| `/system/` | Pipeline numbers, drop reasons, verification, the daily accuracy audit and the corrections log |
+| `/api/` | The MCP server and JSON API, so any AI agent (Claude, ChatGPT and others) can use Frontier Wire |
 
-- **What the agent knows about DPA:** `config/dpa.yaml` (public service lines, capabilities and roles only; never client names or data).
-- **Human decisions:** `config/dpa_review.yaml`: approve Adopt on the radar, override a ring, resolve a fact-check flag.
-- **The radar's top 10:** the agent tracks every candidate in `data/dpa/radar.json`; the site shows the 10 most important (DPA relevance, how big the development is, coverage, whether it calls for action, recency; at most 4 per quadrant). Change the numbers in `config/dpa.yaml` → `limits`.
-- **Duplicates:** reworded repeats of a story already published are dropped before publishing (and old ones redirect to the original).
+## The daily recap
 
-## Free-tier safety
-- Caps of 40 AI requests per run, 300 per day and 700k tokens per day keep you well inside free limits (`config/settings.yaml` → `limits`).
-- Provider fallback: Cerebras → Groq → OpenRouter → Gemini. Rate-limited or retired models are skipped automatically.
-- Stories the agent keeps but can't write this run carry over to the next run.
+Every evening, a scheduled Claude session picks the day's top five stories and writes a one-minute anchor
+bulletin (open, a line per story with context and why it matters, warm close). It pushes the script to
+`recap-upload/<date>`. **Recap release** then does the rest:
+- adds stock footage (Pixabay or Pexels with keys, otherwise free-licence Wikimedia Commons) and AI illustrations
+- records the narration (Gemini TTS; fallbacks Workers AI, then open-source Kokoro)
+- renders the video in headless Chrome and checks it
+- stores it as the GitHub Release `recap-<date>` and puts it on the site
+
+The site keeps the last 3 days' videos; older ones download from Releases. A vertical 9:16 cut is made for Shorts and Reels.
 
 ## Changing things
-- **Sources** (feeds, labs, Bluesky accounts): `config/sources.yaml`
-- **Thresholds, caps, providers**: `config/settings.yaml`
-- **Website look**: `site/` (plain HTML, CSS and JavaScript)
 
-You can edit these files on github.com with the pencil icon. Each change redeploys automatically.
+| To change | Edit |
+|---|---|
+| Sources (feeds, labs, people) | `config/sources.yaml` |
+| Thresholds, caps, AI providers and models | `config/settings.yaml` |
+| What the agent knows about DPA; radar limits | `config/dpa.yaml` |
+| Human decisions (radar, fact-check flags) | `config/dpa_review.yaml` |
+| Prompts | `agent/prompts.py` (newsroom), `agent/chief.py`, `agent/dpa.py`, `agent/factcheck.py` |
+| Website look | `site/` (plain HTML, CSS, JavaScript; Jinja templates in `site/templates/`) |
+| API, emails, MCP | `worker/src/` (Cloudflare Worker; `worker/schema.sql` for its D1 database) |
 
-## If something isn't working
-- **Each run's report:** Actions → Newsroom agent → the latest run → *Summary*. It lists failed sources, dropped stories and provider issues.
-- **"No AI provider key is set"**: step 3 wasn't done, or the secret name is misspelt.
-- **A model was retired**: the agent tries the next model in the list. Update `providers` in `settings.yaml` when convenient.
+You can edit any of these on github.com, and each change redeploys automatically. Run the tests before changing code.
 
-## Running locally (optional)
+## Accounts and secrets (handover)
+
+Everything lives in this repository plus these free accounts: **GitHub** (code, Actions, Pages, Releases),
+**Cloudflare** (API worker, D1 database, Workers AI), **Brevo** (email), **Google AI Studio** (Gemini key),
+**Groq**, **NVIDIA Developer Program** and **GoatCounter** (privacy-friendly page counts).
+
+Repository secrets (Settings → Secrets and variables → Actions). Keys are never in the code or on the site.
+
+| Secret | For |
+|---|---|
+| `GEMINI_API_KEY`, `GROQ_API_KEY`, `NVIDIA_API_KEY` | The AI providers (optional extras: `MISTRAL_API_KEY`, `OPENROUTER_API_KEY`, `CEREBRAS_API_KEY`) |
+| `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` | Deploying the API worker |
+| `BREVO_API_KEY` | Sending email |
+| `ALERTS_DISPATCH_SECRET` | Lets the newsroom and recap jobs talk to the worker |
+| `RECAP_REVIEWER_EMAIL` | Where the recap preview goes for approval |
+| `SCHEDULER_TOKEN` | Optional: lets the worker start missed runs |
+| `PEXELS_API_KEY`, `PIXABAY_API_KEY` | Optional: stock video for the recap |
+
+Repository variables: `SITE_URL`, `API_URL`, `SENDER_EMAIL`, `GOATCOUNTER_CODE`; `REVIEW_MODE=true` makes the
+newsroom open a pull request for review instead of publishing directly.
+
+## Running locally
+
 ```bash
 pip install -r requirements.txt
-python -m pytest -q             # offline tests
-python -m agent sources         # which sources respond (no AI calls)
-CEREBRAS_API_KEY=... python -m agent check-models   # which free models work with your key
-CEREBRAS_API_KEY=... python -m agent run
+python -m pytest -q                      # Python tests (offline, no keys needed)
+node --test worker/test/*.test.mjs       # worker tests
+python -m agent sources                  # which sources respond (no AI calls)
+GEMINI_API_KEY=... python -m agent check-models   # which free models work with your key
+GEMINI_API_KEY=... python -m agent run            # one newsroom run
+```
+
+## Repository map
+
+```
+agent/     the newsroom, DPA lens, fact-checker, bench, recap and site builder (Python)
+config/    sources, settings, DPA profile and human decisions (YAML)
+data/      everything the agent produces: stories, audits, radar, runs, recaps (written by the bot)
+site/      the website's templates, CSS and JavaScript
+worker/    the API on Cloudflare Workers: Ask the Wire, email, feedback, MCP
+video/     the recap's broadcast renderer
+tests/     Python tests (worker tests are in worker/test/)
+.github/   the scheduled workflows listed above
 ```
