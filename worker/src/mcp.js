@@ -115,7 +115,11 @@ export async function callTool(name, args, env, deps, ip = "unknown") {
       if (q.length < 3) throw new ToolError("question is required");
       if (deps.bump && (!(await deps.bump(env, "ask", ip, 25)) || !(await deps.bump(env, "ask", "all", 600)))) throw new ToolError("Daily question limit reached. Try search_news instead.");
       const r = await deps.answer(env, q, await deps.getIndex(env));
-      return { answer: r.answer, sources: (r.sources || []).map((s) => ({ n: s.n, headline: s.headline, date: s.date, page: s.id ? page(env, s.id) : s.url })), general: !!r.general };
+      // only the sources the answer actually cites, as on the site's chat (a live search returns ~20 results, most unused)
+      const cited = new Set([...String(r.answer || "").matchAll(/\[(\d+(?:\s*,\s*\d+)*)\]/g)].flatMap((m) => m[1].split(",").map((n) => +n.trim())));
+      const basis = r.web ? "live news search (not yet in Frontier Wire's fact-checked archive)" : r.general ? "general knowledge (no sources found)" : "Frontier Wire's fact-checked archive";
+      return { answer: r.answer, basis, sources: (r.sources || []).filter((s) => cited.has(s.n))
+        .map((s) => ({ n: s.n, headline: s.headline, date: s.date, ...(s.publisher ? { publisher: s.publisher } : {}), page: s.id ? page(env, s.id) : s.url })), general: !!r.general };
     }
     case "system_status": {
       const s = await siteJson(env, "api/v1/system.json");

@@ -22,7 +22,7 @@ globalThis.fetch = async (url) => {
   const path = String(url).replace(env.SITE_URL, "");
   return files[path] ? new Response(JSON.stringify(files[path])) : new Response("no", { status: 404 });
 };
-const deps = { getIndex: async () => index, rank, answer: async (e, q) => ({ answer: "DocParse 2 [1].", sources: [{ n: 1, id: "a", headline: "x", date: "d" }] }) };
+const deps = { getIndex: async () => index, rank, answer: async (e, q) => ({ answer: "DocParse 2 [1].", sources: [{ n: 1, id: "a", headline: "x", date: "d" }, { n: 2, id: "b", headline: "y", date: "d" }] }) };
 const rpc = async (body) => {
   const r = await handleMcp(new Request("https://api/mcp", { method: "POST", body: JSON.stringify(body) }), env, deps);
   return { status: r.status, body: r.status === 202 ? null : await r.json() };
@@ -61,6 +61,8 @@ test("tools answer from the site's data", async () => {
   assert.deepEqual(d.structuredContent.act_on.map((x) => x.id), ["b"]);
   const a = await call("ask_wire", { question: "what is docparse" });
   assert.equal(a.structuredContent.sources[0].page, "https://example.github.io/frontier-wire/story/a/");
+  assert.equal(a.structuredContent.sources.length, 1);   // the uncited archive story is left out
+  assert.match(a.structuredContent.basis, /fact-checked archive/);
   const bad = await call("search_news", {});
   assert.equal(bad.isError, true);
   const unknown = await rpc({ jsonrpc: "2.0", id: 10, method: "tools/call", params: { name: "rm", arguments: {} } });
