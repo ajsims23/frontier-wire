@@ -1,70 +1,91 @@
 {
-  "written_at": "2026-11-24T09:54:41+00:00",
-  "one_line": "AI agents expand into shopping, code review and Linux security as U.S. export controls and state lawsuits tighten.",
+  "written_at": "2026-11-24T10:03:20+00:00",
+  "one_line": "Nvidia reinstates Huang, U.S. targets Megaspeed, and AI agents expand into coding, security, and chip attacks.",
   "themes": [
     {
-      "title": "Agents take on everyday and dev tasks",
-      "text": "Meta rolled out its Muse personal agent to UK adults for shopping and travel, Anthropic launched Claude Ship to review and approve GitHub pull requests, and OpenAI and Cisco released Shirudo, an open-source runtime that blocked a Java4Shell exploit in a controlled test without a restart.",
+      "title": "U.S. chip policy and Nvidia leadership",
+      "text": "Nvidia's board unanimously reinstated Jensen Huang as CEO and board chair less than two weeks after his resignation, following discussions with senior U.S. government officials. Separately, the Commerce Department plans to add Singapore-based Megaspeed to the Entity List, requiring licenses for chip sales after investigations into alleged Nvidia export violations.",
       "stories": [
         {
-          "id": "9dd0aa4b535f",
-          "headline": "Meta launches Muse AI agent in the UK for everyday tasks",
-          "url": "https://techmeme.com/261124/p4"
+          "id": "66cc673a6baa",
+          "headline": "Nvidia board reinstates Jensen Huang as CEO and board chair",
+          "url": "https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair"
         },
+        {
+          "id": "74575936ae57",
+          "headline": "U.S. Commerce Department to add Megaspeed to Entity List, restricting chip sales",
+          "url": "https://techmeme.com/261123/p40"
+        }
+      ]
+    },
+    {
+      "title": "AI agents expand into coding and security",
+      "text": "Anthropic launched Claude Ship to auto-review and approve GitHub pull requests, Google DeepMind detailed its AlphaEvolve coding agent, and OpenAI and Cisco released Shirudo, a runtime that blocked a Java4Shell exploit without a restart. Researchers also introduced ToolSmith, which auto-generates tool modules for multimodal search agents.",
+      "stories": [
         {
           "id": "2b5faa4b22a0",
           "headline": "Anthropic launches Claude Ship to auto‑review and approve GitHub pull requests",
           "url": "https://techmeme.com/261123/p41"
         },
         {
+          "id": "61dcf1169479",
+          "headline": "Google DeepMind details AlphaEvolve coding agent",
+          "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification"
+        },
+        {
           "id": "1d0c151fefed",
           "headline": "OpenAI and Cisco introduce Shirudo for Linux security",
           "url": "https://openai.com/index/introducing-shirudo"
+        },
+        {
+          "id": "10e9675f3c04",
+          "headline": "ToolSmith auto-generates tools for multimodal search agents",
+          "url": "https://arxiv.org/abs/2611.31198"
         }
       ]
     },
     {
-      "title": "U.S. regulators and courts press AI firms",
-      "text": "Virginia and Oregon sued Musk companies over Grok's alleged lack of safety safeguards, the Commerce Department plans to add Megaspeed to the Entity List over alleged Nvidia chip export violations, and Nvidia's board reinstated Jensen Huang as CEO and board chair after discussions with senior U.S. government officials.",
+      "title": "Safety gaps draw attacks and lawsuits",
+      "text": "Radboud University demonstrated FATCAT, an electromagnetic fault-injection attack that disables safety refusals in Llama 3.2 and Gemma 3 models and causes hazardous robot movements. Meanwhile, Virginia and Oregon sued Musk companies alleging they stripped safeguards from Grok, enabling creation of child sexual abuse material and nonconsensual intimate imagery.",
       "stories": [
+        {
+          "id": "ba049826a989",
+          "headline": "Researchers show physical chip attack can disable AI safety refusals",
+          "url": "https://arxiv.org/abs/2611.31129"
+        },
         {
           "id": "98fe46c7c873",
           "headline": "Virginia and Oregon sue Musk companies over Grok sexualized images",
           "url": "https://thedailytimes.com/news/states-sue-musk-companies-over-flood-of-sexualized-images-made-with-ai-chatbot-grok/article_81a3a832-7064-558b-b8cc-1fa1a66b930f.html"
-        },
-        {
-          "id": "74575936ae57",
-          "headline": "U.S. Commerce Department to add Megaspeed to Entity List, restricting chip sales",
-          "url": "https://techmeme.com/261123/p40"
-        },
-        {
-          "id": "66cc673a6baa",
-          "headline": "Nvidia board reinstates Jensen Huang as CEO and board chair",
-          "url": "https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair"
         }
       ]
     },
     {
-      "title": "Research on self-modifying and attackable agents",
-      "text": "Researchers introduced a 27B embodied agent that rewrites its own weights between tasks without training or gradients, presented FATCAT, a physical electromagnetic fault-injection attack that removes refusal in LLMs and vision-language models, and Google DeepMind detailed AlphaEvolve, a Gemini-powered coding agent for designing advanced algorithms.",
+      "title": "India's AI industry moves",
+      "text": "Sarvam AI released an upgraded 105B model and a speech-to-text API supporting 22 Indian languages, while defending its hosting of Chinese open-weight models. Nasscom proposed a three-year AI scheme for Indian IT firms in Budget 2027-28, and a Systematix report said AI adoption will sustain demand for Indian IT services even as it pressures labor-based delivery models.",
       "stories": [
         {
-          "id": "7347ab830f15",
-          "headline": "Self-upgrading embodied agent rewrites its own weights from experience",
-          "url": "https://arxiv.org/abs/2611.31117"
+          "id": "b35f4514a643",
+          "headline": "Sarvam defends hosting Chinese models, releases upgraded 105B model",
+          "url": "https://analyticsindiamag.com/ai-news/sarvam-defends-hosting-chinese-ai-models-releases-upgraded-105b-model"
         },
         {
-          "id": "ba049826a989",
-          "headline": "FATCAT physical fault injection attacks eliminate LLM and vision-language model refusal",
-          "url": "https://arxiv.org/abs/2611.31129"
+          "id": "5862fe6cf17f",
+          "headline": "Sarvam AI launches Dictate API for English and 22 Indian languages",
+          "url": "https://inc42.com/buzz/sarvam-ai-launches-dictation-api-for-english-22-indian-languages"
         },
         {
-          "id": "61dcf1169479",
-          "headline": "Google DeepMind details AlphaEvolve coding agent",
-          "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification"
+          "id": "285373b393ac",
+          "headline": "Nasscom proposes three-year AI scheme for Indian IT firms in Budget 2027-28",
+          "url": "https://analyticsindiamag.com/ai-news/nasscom-seeks-three-year-ai-scheme-for-indian-it-firms-in-budget-2027-28"
+        },
+        {
+          "id": "0942c58b1e3f",
+          "headline": "Systematix report: AI adoption to sustain Indian IT services demand, labor models pressured",
+          "url": "https://news.webindia123.com/news/Articles/Business/20261124/4523804.html"
         }
       ]
     }
   ],
-  "from_stories": 12
+  "from_stories": 14
 }

@@ -1,40 +1,40 @@
 ## Newsroom self-review, 2026-11-24
 
-Looked at 9 runs over the last 3 days (39 stories written).
+Looked at 9 runs over the last 3 days (41 stories written).
 Tick the suggestions you want applied; nothing changes until a person approves it.
 
-- [ ] **fix source** · `gdelt, gdelt-india`: Investigate the GDELT and GDELT-India fetchers (endpoint, query, or rate limit) and repair them; if GDELT is unreliable, consider replacing gdelt-india with a working India news RSS feed.  
-  _Why:_ gdelt-india returned nothing in 7/9 runs and gdelt in 4/9 runs. These are the only India/global news sources besides the Indian tech sites, so the pipeline is effectively blind to non-AI-lab news most of the time.
-- [ ] **fix source** · `mistral-news`: Check the mistral-news source (URL, parsing, or rate limit) and fix it; if it cannot be made reliable, remove it to avoid wasted fetches.  
-  _Why:_ mistral-news returned nothing in 6/9 runs, so Mistral news coverage is nearly absent.
-- [ ] **coverage gap** · `xAI, DeepSeek`: Add dedicated xAI and DeepSeek sources (official blogs/announcements) and verify their items are not being dropped by the 'not AI' filter or low scores.  
-  _Why:_ xAI and DeepSeek are tracked labs but produced no stories this week, while other labs are well covered. Given the high drop counts, their items are likely being filtered out.
-- [ ] **tune** · `min_score_to_publish_1_to_10`: Confirm whether score-5 items should publish; if yes, find why 36 are dropped (likely 'could not verify yet' or max_stories_per_run=10 cap) and adjust the cap or verification step rather than the score threshold.  
-  _Why:_ 36 stories were dropped at score 5, which equals the current min_score_to_publish (5). If the intent is to publish score-5 items, these are being dropped by a different rule (e.g., verification or per-run cap), so the threshold itself may be fine but the interaction is unclear.
-- [ ] **tune** · `ai_providers_configured`: Reorder ai_providers_configured to put the most reliable free provider first (e.g., gemini or cerebras) and add small backoff between calls to groq to reduce per-minute limit hits.  
-  _Why:_ Multiple provider notes show per-minute limits hit and models returning 400/unavailable, causing fallback churn and retries.
+- [ ] **fix source** · `mistral-news`: Investigate and fix the mistral-news source (check its endpoint/auth/parse logic); if it can't be repaired, remove it from the sources list.  
+  _Why:_ mistral-news returned nothing in 7 of 9 runs, the worst of any source. It's effectively dead weight and likely failing silently.
+- [ ] **fix source** · `gdelt, gdelt-india`: Fix the GDELT sources (verify the GDELT DOC API query/params and rate limits); if they keep failing, drop them rather than leaving them returning nothing.  
+  _Why:_ gdelt (4/9) and gdelt-india (6/9) return nothing more than half the time, so India coverage is unreliable.
+- [ ] **tune** · `ai_providers_configured (groq models)`: Remove or deprioritize the failing Groq models (gpt-oss-120b, gpt-oss-20b, qwen3.8-27b) from the rotation, or add a short backoff between requests to stay under the per-minute limit; keep the working free providers (gemini, cerebras, nvidia).  
+  _Why:_ Provider notes show repeated per-minute limit hits and 'model unavailable (400)' on groq/openai/gpt-oss-120b and gpt-oss-20b, plus qwen3.8-27b hitting its 7,000-token request limit. These models are failing often enough to waste runs.
+- [ ] **coverage gap** · `tracked labs: xAI, DeepSeek`: Add dedicated sources for xAI and DeepSeek (e.g., their official blogs/announcements and X/Bluesky accounts) so they aren't missed when news is sparse.  
+  _Why:_ xAI and DeepSeek are tracked but produced no stories this week, even though they are active AI labs.
+- [ ] **tune** · `min_score_to_publish_1_to_10`: Consider lowering min_score_to_publish to 4 to capture more stories, or verify the scoring prompt isn't being overly strict; review a sample of the dropped score-4 items first.  
+  _Why:_ min_score_to_publish is 5, so 64 stories scored 4 and 23 scored 3 were dropped. Combined with 87 'not AI' drops, the pipeline is discarding a lot of potentially useful material.
 
 <details><summary>Statistics the agent reviewed</summary>
 
 ```json
 {
  "runs": 9,
- "stories_written": 39,
+ "stories_written": 41,
  "source_failures": {},
  "sources_returning_nothing": {
-  "mistral-news": "6/9 runs",
+  "mistral-news": "7/9 runs",
   "gdelt": "4/9 runs",
-  "gdelt-india": "7/9 runs"
+  "gdelt-india": "6/9 runs"
  },
  "drop_reasons": {
-  "not AI": 90,
-  "score 4": 68,
-  "score 5": 36,
-  "score 3": 33,
-  "could not verify yet": 24,
-  "score 6": 11,
+  "not AI": 87,
+  "score 4": 64,
+  "score 5": 51,
+  "score 3": 23,
+  "could not verify yet": 23,
   "duplicate of f1b7c64ada91": 7,
-  "duplicate of 877f48487e8a": 7
+  "variety": 7,
+  "score 6": 7
  },
  "tracked_labs_without_stories_this_week": [
   "xAI",
