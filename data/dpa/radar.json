@@ -1631,6 +1631,98 @@
    "rationale": "Demonstrates hardware‑level risk to model safety; DPA should audit hardware and simulate attacks before on‑prem deployment.",
    "updated": "2026-11-24",
    "model": "groq/openai/gpt-oss-120b"
+  },
+  "unreleased-models": {
+   "key": "unreleased-models",
+   "name": "unreleased models",
+   "first_seen": "2026-11-24",
+   "history": [
+    {
+     "date": "2026-11-24",
+     "from": "",
+     "to": "hold",
+     "why": "Safety warnings advise DPA to audit and prohibit use of unreleased models; risk to client data warrants hold."
+    }
+   ],
+   "evidence": [
+    "42a733130eca"
+   ],
+   "ring": "hold",
+   "proposed": "",
+   "quadrant": "policy",
+   "capability": "governance",
+   "rationale": "Safety warnings advise DPA to audit and prohibit use of unreleased models; risk to client data warrants hold.",
+   "updated": "2026-11-24",
+   "model": "groq/openai/gpt-oss-120b"
+  },
+  "muse-personal-ai-agent": {
+   "key": "muse-personal-ai-agent",
+   "name": "Muse personal AI agent",
+   "first_seen": "2026-11-24",
+   "history": [
+    {
+     "date": "2026-11-24",
+     "from": "",
+     "to": "assess",
+     "why": "First UK‑available personal AI agent; could automate internal workflows, so assess for agents capability."
+    }
+   ],
+   "evidence": [
+    "9dd0aa4b535f"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "agents",
+   "rationale": "First UK‑available personal AI agent; could automate internal workflows, so assess for agents capability.",
+   "updated": "2026-11-24",
+   "model": "groq/openai/gpt-oss-120b"
+  },
+  "glm-5-4": {
+   "key": "glm-5-4",
+   "name": "GLM-5.4",
+   "first_seen": "2026-11-24",
+   "history": [
+    {
+     "date": "2026-11-24",
+     "from": "",
+     "to": "assess",
+     "why": "Loop‑transformer coding model may improve script generation cost‑effectively; assess for productivity/coding assistance."
+    }
+   ],
+   "evidence": [
+    "ef3910f6a7af"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "productivity",
+   "rationale": "Loop‑transformer coding model may improve script generation cost‑effectively; assess for productivity/coding assistance.",
+   "updated": "2026-11-24",
+   "model": "groq/openai/gpt-oss-120b"
+  },
+  "grok-ai-image-tool": {
+   "key": "grok-ai-image-tool",
+   "name": "Grok AI image tool",
+   "first_seen": "2026-11-24",
+   "history": [
+    {
+     "date": "2026-11-24",
+     "from": "",
+     "to": "hold",
+     "why": "Lawsuits over illicit image generation expose legal risk; DPA must restrict use, placing it on hold."
+    }
+   ],
+   "evidence": [
+    "972640f78a70"
+   ],
+   "ring": "hold",
+   "proposed": "",
+   "quadrant": "policy",
+   "capability": "governance",
+   "rationale": "Lawsuits over illicit image generation expose legal risk; DPA must restrict use, placing it on hold.",
+   "updated": "2026-11-24",
+   "model": "groq/openai/gpt-oss-120b"
   }
  },
  "considered": [
@@ -1655,6 +1747,7 @@
   "3decd8b5d056",
   "3e50b2261d70",
   "3f1ac81e6e95",
+  "42a733130eca",
   "434be2e7a9b5",
   "459fb45d2a37",
   "48f1f10785df",
@@ -1693,7 +1786,9 @@
   "9045dcda80bd",
   "9108ffa54a00",
   "94ff1d7f5e18",
+  "972640f78a70",
   "98fe46c7c873",
+  "9dd0aa4b535f",
   "a03a5c718a32",
   "a1e895b935bb",
   "a1f50bca3921",
@@ -1722,45 +1817,46 @@
   "d8887a09bc5e",
   "e1842b672534",
   "ef2f279289bc",
+  "ef3910f6a7af",
   "f0be036ed676",
   "f19cee3d1350",
   "fa0e89bac09a"
  ],
- "updated_at": "2026-11-24T12:00:53+00:00",
+ "updated_at": "2026-11-24T14:15:24+00:00",
  "takeaways": {
-  "written_at": "2026-11-23T16:05:03+00:00",
-  "sig": "cert-in-ai-security-auditing-guidelines:hold|claude-code:assess|claude-fable-5-2:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|grok-build:hold|mai-code-2:trial|microsoft-agent-framework:hold|tool-retrieval:trial",
-  "headline": "New AI models and tools spark trials while security policies force holds",
+  "written_at": "2026-11-24T14:15:24+00:00",
+  "sig": "claude-code:assess|claude-fable-5-2:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|grok-build:hold|mai-code-2:trial|microsoft-agent-framework:hold|tool-retrieval:trial|unreleased-models:hold",
+  "headline": "DPA eyes new AI models while tightening security on risky tools",
   "items": [
    {
-    "title": "Assess high‑impact AI models",
-    "meaning": "DPA could evaluate Claude Fable 5.2, Gemini 4 Hydrogen, GPT‑6.2 Astra and Claude Code for document extraction, research and developer assistance.",
-    "use": "Run synthetic PDF extraction, research prompts and code‑completion tests this week, comparing accuracy, speed and token cost against current baselines.",
+    "title": "Assess next‑gen models for research and extraction",
+    "meaning": "Research and doc_extraction teams could test Claude Fable 5.2, Gemini 4 Hydrogen and GPT‑6.2 Astra to see if they improve accuracy or cost for complex fund documents and analysis.",
+    "use": "Run each model on a synthetic set of 30 fund PDFs and research briefs, compare extraction accuracy, speed and token cost, then document findings for a pilot decision.",
     "items": [
      "claude-fable-5-2",
      "gemini-4-hydrogen",
-     "gpt-6-2-astra",
+     "gpt-6-2-astra"
+    ]
+   },
+   {
+    "title": "Trial AI tools for coding, agents and checks",
+    "meaning": "Productivity, agentic and data_qa groups could experiment with MAI Code 2, Tool Retrieval, Gemini Decisions API and Claude Code to speed pipeline coding, tool management and compliance scoring.",
+    "use": "Set up a sandbox using public synthetic documents, integrate each tool into a small end‑to‑end pipeline, measure latency and cost, and share results with the AI Champion team.",
+    "items": [
+     "mai-code-2",
+     "tool-retrieval",
+     "gemini-decisions-api",
      "claude-code"
     ]
    },
    {
-    "title": "Trial tools for agentic pipelines",
-    "meaning": "DPA could pilot MAI Code 2, Tool Retrieval and Gemini Decisions API to speed coding, manage large tool libraries and run fast bounded‑choice QA on synthetic filings.",
-    "use": "Create a sandbox with dummy data pipelines, enable MAI Code 2 in Copilot, integrate Tool Retrieval into a Gemini agent and test the Decisions API on mock compliance checks.",
-    "items": [
-     "mai-code-2",
-     "tool-retrieval",
-     "gemini-decisions-api"
-    ]
-   },
-   {
-    "title": "Hold insecure packages and enforce compliance",
-    "meaning": "DPA must pause Microsoft Agent Framework, Grok Build and the CERT‑In AI Security Auditing Guidelines, audit dependencies and lock down any agentic workflow until security reviews are complete.",
-    "use": "Immediately freeze all builds that import the Microsoft Agent Framework, run a full dependency audit, and update internal policies to meet CERT‑In requirements before any future agent deployment.",
+    "title": "Hold insecure frameworks and unreleased models",
+    "meaning": "Governance must block the compromised Microsoft Agent Framework, Grok Build and any unreleased model use until security reviews certify they are safe for client data.",
+    "use": "Freeze deployment of these packages, audit existing code for their presence, and enforce a policy requiring security sign‑off before any future inclusion.",
     "items": [
      "microsoft-agent-framework",
      "grok-build",
-     "cert-in-ai-security-auditing-guidelines"
+     "unreleased-models"
     ]
    }
   ],
