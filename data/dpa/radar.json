@@ -1855,42 +1855,41 @@
  ],
  "updated_at": "2026-11-24T17:20:58+00:00",
  "takeaways": {
-  "written_at": "2026-11-24T14:15:24+00:00",
-  "sig": "claude-code:assess|claude-fable-5-2:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|grok-build:hold|mai-code-2:trial|microsoft-agent-framework:hold|tool-retrieval:trial|unreleased-models:hold",
-  "headline": "DPA eyes new AI models while tightening security on risky tools",
+  "written_at": "2026-11-24T20:20:50+00:00",
+  "sig": "claude-code:assess|claude-fable-5-2:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|grok-build:hold|mai-code-2:trial|microsoft-agent-framework:hold|shellbench-benchmark:assess|tool-retrieval:trial",
+  "headline": "New models and agent tools arrive for testing while security holds tighten",
   "items": [
    {
-    "title": "Assess next‑gen models for research and extraction",
-    "meaning": "Research and doc_extraction teams could test Claude Fable 5.2, Gemini 4 Hydrogen and GPT‑6.2 Astra to see if they improve accuracy or cost for complex fund documents and analysis.",
-    "use": "Run each model on a synthetic set of 30 fund PDFs and research briefs, compare extraction accuracy, speed and token cost, then document findings for a pilot decision.",
+    "title": "Assessing new models for extraction and productivity",
+    "meaning": "New language models offer lower pricing, faster speed, and benchmark gains. DPA can assess and trial these models to improve extraction accuracy, research depth, financial reporting pipelines, and developer velocity.",
+    "use": "Run GPT-6.2 Astra and Claude Fable 5.2 on 30 complex private equity fund reports to compare extraction accuracy, latency, and token cost against current production models on public or synthetic files first.",
     "items": [
+     "gpt-6-2-astra",
      "claude-fable-5-2",
      "gemini-4-hydrogen",
-     "gpt-6-2-astra"
-    ]
-   },
-   {
-    "title": "Trial AI tools for coding, agents and checks",
-    "meaning": "Productivity, agentic and data_qa groups could experiment with MAI Code 2, Tool Retrieval, Gemini Decisions API and Claude Code to speed pipeline coding, tool management and compliance scoring.",
-    "use": "Set up a sandbox using public synthetic documents, integrate each tool into a small end‑to‑end pipeline, measure latency and cost, and share results with the AI Champion team.",
-    "items": [
-     "mai-code-2",
-     "tool-retrieval",
-     "gemini-decisions-api",
      "claude-code"
     ]
    },
    {
-    "title": "Hold insecure frameworks and unreleased models",
-    "meaning": "Governance must block the compromised Microsoft Agent Framework, Grok Build and any unreleased model use until security reviews certify they are safe for client data.",
-    "use": "Freeze deployment of these packages, audit existing code for their presence, and enforce a policy requiring security sign‑off before any future inclusion.",
+    "title": "Trialing tool retrieval and decision APIs for agents",
+    "meaning": "New API features and benchmarks help manage large tool libraries, speed up bounded-choice document checks, and measure reliability in multi-step agentic workflows and automated data pipelines.",
+    "use": "Integrate Tool Retrieval into an existing Gemini-based agent workflow with 50 plus tools and compare input token costs and latency against static loading using public test data.",
+    "items": [
+     "tool-retrieval",
+     "gemini-decisions-api",
+     "shellbench-benchmark"
+    ]
+   },
+   {
+    "title": "Locking down dependencies and reviewing coding agent security",
+    "meaning": "Compromised packages and auto-deploy coding agents pose credential theft and data leakage risks, requiring strict security reviews and dependency lockdowns in agentic workflow development.",
+    "use": "Immediately audit and lock down all dependencies used in agentic workflow development, and enforce strict security reviews on any internal apps built with coding agents.",
     "items": [
      "microsoft-agent-framework",
-     "grok-build",
-     "unreleased-models"
+     "grok-build"
     ]
    }
   ],
-  "model": "groq/openai/gpt-oss-120b"
+  "model": "gemini/gemini-3.5-flash-lite"
  }
 }
