@@ -234,3 +234,98 @@ def test_brief_503_does_not_bench_the_provider_for_the_whole_run(tmp_path):
     seen.clear()
     assert ask(llm) == {"ok": True}
     assert seen == ["lite"]  # and Gemini is still first next call
+
+
+GROQ_TOOL_FAIL = {"error": {"message": "Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.",
+                            "type": "invalid_request_error", "code": "tool_use_failed",
+                            "failed_generation": "The model is not sure; this model does not exist in my notes"}}
+
+
+def test_garbled_groq_tool_call_is_not_read_as_a_retired_model(tmp_path):
+    seen, fail = [], {"n": 3}
+
+    def handler(req):
+        body = json.loads(req.content)
+        seen.append((body["model"], body.get("tool_choice")))
+        if body["model"] == "big" and fail["n"] > 0:
+            fail["n"] -= 1
+            return httpx.Response(400, json=GROQ_TOOL_FAIL)
+        return httpx.Response(200, json=completion("submit", {"ok": True}))
+
+    llm = make([TWO[1]], handler, tmp_path)
+    assert ask(llm) == {"ok": True}
+    assert not any("model unavailable" in line for line in llm.log)
+    assert ("groq", "big") not in llm._dead_models
+    seen.clear()
+    assert ask(llm) == {"ok": True}
+    assert seen[0][0] == "big"  # Groq's best model is still first in line
+
+
+def test_real_retirement_still_detected(tmp_path):
+    def handler(req):
+        if json.loads(req.content)["model"] == "big":
+            return httpx.Response(400, json={"error": {"message": "The model `big` has been decommissioned", "code": "model_decommissioned"}})
+        return httpx.Response(200, json=completion("submit", {"ok": True}))
+
+    llm = make([TWO[1]], handler, tmp_path)
+    assert ask(llm) == {"ok": True}
+    assert ("groq", "big") in llm._dead_models
+
+
+GEM = [{"name": "gemini", "base_url": "https://gemini.example/v1", "key_env": "GM", "models": ["lite", "flash"]},
+       {"name": "groq", "base_url": "https://groq.example/v1", "key_env": "G", "models": ["big"]}]
+
+
+def test_busy_gemini_rests_two_minutes_then_comes_back(tmp_path):
+    now, seen, busy = [0.0], [], {"on": True}
+
+    def handler(req):
+        model = json.loads(req.content)["model"]
+        seen.append(model)
+        if model in ("lite", "flash") and busy["on"]:
+            return httpx.Response(503, json={"error": {"message": "The model is overloaded"}})
+        return httpx.Response(200, json=completion("submit", {"ok": True}))
+
+    llm = make(GEM, handler, tmp_path)
+    llm.clock = lambda: now[0]
+    assert ask(llm) == {"ok": True} and seen[-1] == "big"   # both Gemini models busy: Groq answers
+    assert ask(llm) == {"ok": True} and seen[-1] == "big"   # a third busy answer: Gemini rests
+    assert "gemini" not in llm._dead_providers and any("resting it for 2 minutes" in line for line in llm.log)
+    seen.clear(); now[0] = 60
+    assert ask(llm) == {"ok": True} and seen == ["big"]  # still resting
+    seen.clear(); now[0] = 130; busy["on"] = False
+    assert ask(llm) == {"ok": True} and seen == ["lite"]  # back as the main provider
+
+
+def test_slow_gemini_rests_instead_of_being_dropped_for_the_run(tmp_path):
+    now, calls = [0.0], {"n": 0}
+
+    def handler(req):
+        if json.loads(req.content)["model"] == "lite":
+            calls["n"] += 1
+            raise httpx.ReadTimeout("slow", request=req)
+        return httpx.Response(200, json=completion("submit", {"ok": True}))
+
+    llm = make(GEM, handler, tmp_path)
+    llm.clock = lambda: now[0]
+    assert ask(llm) == {"ok": True}
+    assert calls["n"] == 1  # a timeout isn't retried straight away
+    assert "gemini" not in llm._dead_providers and "gemini" in llm._resting
+
+
+def test_when_everyone_is_resting_wait_once_but_never_past_the_run_cap(tmp_path):
+    now, slept = [0.0], []
+
+    def handler(req):
+        return httpx.Response(503, json={"error": {"message": "overloaded"}})
+
+    llm = make(GEM, handler, tmp_path)
+    llm.clock = lambda: now[0]
+
+    def sleep(s):
+        slept.append(s); now[0] += s
+    llm.sleep = sleep
+    for _ in range(6):
+        with pytest.raises(Exception):
+            ask(llm)
+    assert sum(s for s in slept if s >= 60) <= LLM.MAX_WAIT_PER_RUN

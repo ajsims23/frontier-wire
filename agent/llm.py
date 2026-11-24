@@ -32,6 +32,27 @@ class RequestTooLarge(AllProvidersFailed):
 
 # Groq-style size/limit messages: "... on tokens per minute (TPM): Limit 8000, Requested 15712 ..."
 _LIMIT_RE = re.compile(r"Limit\s+(\d+),\s*Requested\s+(\d+)", re.I)
+_NO_ANSWER = object()
+# the error's own message and code, not the model output some providers quote back in it
+_RETIRED = re.compile(r"decommission|model_not_found|does not exist|no longer (available|supported)|deprecat|end of life|"
+                      r"not found|model.{0,40}(is not available|unavailable)", re.I)
+_TOOL_FAILED = re.compile(r"tool_use_failed|failed_generation|failed to call a function|tool.?call|tool_choice|"
+                          r"parse tool", re.I)
+
+
+def _error_text(resp: httpx.Response) -> str:
+    try:
+        data = resp.json()
+    except Exception:  # noqa: BLE001
+        return resp.text[:500]
+    if isinstance(data, list) and data:
+        data = data[0]
+    err = data.get("error") if isinstance(data, dict) else None
+    if isinstance(err, dict):
+        return f"{err.get('code') or ''} {err.get('type') or ''} {err.get('message') or ''}".strip()
+    return resp.text[:500]
+
+
 _PER_MINUTE = re.compile(r"per.?minute|\b[RT]PM\b|requests rate limit exceeded", re.I)  # Groq: "tokens per minute"; Gemini: "...PerMinute..."
 
 
@@ -128,13 +149,20 @@ def _for_provider(name: str, messages: list[dict[str, Any]]) -> list[dict[str, A
 class LLM:
     def __init__(self, providers: list[dict[str, Any]], limits: Limits, *,
                  http: httpx.Client | None = None, env: dict[str, str] | None = None,
-                 sleep: Callable[[float], None] = time.sleep, timeout: float = 90.0):
+                 sleep: Callable[[float], None] = time.sleep, timeout: float = 120.0,
+                 clock: Callable[[], float] = time.monotonic):
         env = env if env is not None else dict(os.environ)
         self.providers = [dict(p, key=env[p["key_env"]]) for p in providers if env.get(p["key_env"])]
         self.limits = limits
-        self.http = http or httpx.Client(timeout=timeout)
+        # Gemini's free tier can take well over a minute when busy; 120s lets a slow answer finish
+        self.http = http or httpx.Client(timeout=httpx.Timeout(timeout, connect=15.0))
         self.sleep = sleep
+        self.clock = clock
         self._dead_providers: set[str] = set()
+        # A busy or slow provider rests for a couple of minutes, then gets another go (it used to be dropped for
+        # the whole run, which on 24 Nov 2026 left Gemini unused for hours and 19 stories waiting for the next run)
+        self._resting: dict[str, float] = {}
+        self._waited = 0.0  # seconds spent waiting for a resting provider this run (capped, so the run can't time out)
         self._dead_models: set[tuple[str, str]] = set()
         self._too_large = False
         self._server_errors: dict[str, int] = {}
@@ -155,7 +183,7 @@ class LLM:
             try:
                 resp = self.http.post(url, headers=headers, json=body)
             except httpx.HTTPError as exc:
-                if attempt == 1:
+                if attempt == 1 or isinstance(exc, httpx.ReadTimeout):
                     raise
                 self.log.append(f"{p['name']}: network error {type(exc).__name__}, retrying")
                 self.sleep(3)
@@ -197,6 +225,15 @@ class LLM:
             self.log.append(f"{p['name']}: listed models retired; trying {', '.join(picks)} (update settings.yaml when convenient)")
         return picks
 
+    REST_SECONDS = 120.0
+    MAX_WAIT_PER_RUN = 360.0
+
+    def _rest(self, p: dict[str, Any], why: str) -> tuple[str, None]:
+        self.log.append(f"{p['name']}: {why}; resting it for {self.REST_SECONDS / 60:.0f} minutes")
+        self._resting[p["name"]] = self.clock() + self.REST_SECONDS
+        self._server_errors[p["name"]] = 0
+        return "dead", None
+
     def _attempt(self, p: dict[str, Any], model: str, messages: list[dict[str, Any]], tools: list[dict[str, Any]],
                  tool_choice: Any, max_tokens: int, parse: Callable[[dict[str, Any]], Any]) -> tuple[str, Any]:
         """One request. Returns ("ok", result) | ("retry", None) | ("next", None) | ("dead", None)."""
@@ -209,10 +246,12 @@ class LLM:
         try:
             resp = self._post(p, body)
         except httpx.HTTPError as exc:
-            self.log.append(f"{p['name']}: unreachable ({type(exc).__name__}); skipping provider")
-            self._dead_providers.add(p["name"])
-            return "dead", None
+            return self._rest(p, f"unreachable or too slow ({type(exc).__name__})")
         code = resp.status_code
+        err = _error_text(resp) if code >= 400 else ""
+        # Groq reports a garbled tool call as a 400 that quotes the model's own output ("failed_generation"),
+        # which used to read as "model retired" and drop Groq's best model for the run
+        tool_failed = code == 400 and bool(tools) and bool(_TOOL_FAILED.search(err))
         if code in (401, 403):
             self.log.append(f"{p['name']}: key rejected ({code}); skipping provider")
             self._dead_providers.add(p["name"])
@@ -238,8 +277,8 @@ class LLM:
             self.log.append(f"{p['name']}/{model}: needs terms accepted in the provider console; skipping model")
             self._dead_models.add((p["name"], model))
             return "next", None
-        if code == 410 or (code in (400, 404) and re.search(r"model.{0,40}(not|unavailable|deprecat)|decommission|not found|does not exist|end of life", resp.text, re.I)):
-            self.log.append(f"{p['name']}/{model}: model unavailable ({code}); trying next model")
+        if code == 410 or (code in (400, 404) and not tool_failed and _RETIRED.search(err)):
+            self.log.append(f"{p['name']}/{model}: model unavailable ({code}: {err[:80]}); trying next model")
             self._dead_models.add((p["name"], model))
             return "next", None
         if code == 429 and _PER_MINUTE.search(resp.text):
@@ -250,16 +289,22 @@ class LLM:
             # a busy/overloaded server is usually brief: try the provider's next model, and only give up on
             # the provider for this run after a few of these
             self._server_errors[p["name"]] = self._server_errors.get(p["name"], 0) + 1
-            if self._server_errors[p["name"]] < 3:
+            if self._server_errors[p["name"]] < max(3, len(p["models"])):  # give every listed model a go first
                 self.log.append(f"{p['name']}/{model}: {code} (server busy); trying next model")
                 return "next", None
-        if code == 429 or code >= 500:
-            self.log.append(f"{p['name']}: {code} after retry; moving to next provider for this run")
+        if code >= 500:
+            return self._rest(p, f"{code} (server busy) on several tries")
+        if code == 429:
+            # not a per-minute limit: a daily quota, which won't come back this run
+            self.log.append(f"{p['name']}: {code} after retry ({err[:80]}); moving to next provider for this run")
             self._dead_providers.add(p["name"])
             return "dead", None
-        if code == 400 and tools and re.search(r"tool.?call|tool_choice", resp.text, re.I) and tool_choice != "auto":
+        if tool_failed and tool_choice != "auto":
             self.log.append(f"{p['name']}/{model}: couldn't force a tool call; retrying without forcing")
             return "unforced", None
+        if tool_failed:
+            self.log.append(f"{p['name']}/{model}: garbled tool call")
+            return "retry", None
         if code != 200:
             self.log.append(f"{p['name']}/{model}: HTTP {code}: {resp.text[:150]}")
             return "next", None
@@ -283,8 +328,26 @@ class LLM:
         if not self.providers:
             raise AllProvidersFailed("no AI provider key is set (e.g. CEREBRAS_API_KEY or GROQ_API_KEY)")
         self._too_large = False
+        for round_ in range(2):
+            result = self._round(messages, tools, tool_choice, max_tokens, parse)
+            if result is not _NO_ANSWER:
+                return result
+            waits = [t - self.clock() for n, t in self._resting.items() if n not in self._dead_providers]
+            if round_ or not waits or self._too_large or self._waited >= self.MAX_WAIT_PER_RUN:
+                break
+            wait = max(0.0, min(min(waits), self.REST_SECONDS, self.MAX_WAIT_PER_RUN - self._waited))
+            self._waited += wait
+            self.log.append(f"every provider is resting; waiting {wait:.0f}s for the first to come back")
+            self.sleep(wait)
+        if self._too_large:
+            raise RequestTooLarge("request too large for every available model: " + " | ".join(self.log[-4:]))
+        raise AllProvidersFailed("every configured provider failed: " + " | ".join(self.log[-4:]))
+
+    def _round(self, messages: list[dict[str, Any]], tools: list[dict[str, Any]], tool_choice: Any,
+               max_tokens: int, parse: Callable[[dict[str, Any]], Any]) -> Any:
+        """One pass over the providers in order; _NO_ANSWER if none answered."""
         for p in self.providers:
-            if p["name"] in self._dead_providers:
+            if p["name"] in self._dead_providers or self._resting.get(p["name"], 0) > self.clock():
                 continue
             queue = list(p["models"])
             tried: set[str] = set()
@@ -328,9 +391,7 @@ class LLM:
                     return result
                 if outcome == "dead":
                     break
-        if self._too_large:
-            raise RequestTooLarge("request too large for every available model: " + " | ".join(self.log[-4:]))
-        raise AllProvidersFailed("every configured provider failed: " + " | ".join(self.log[-4:]))
+        return _NO_ANSWER
 
     def ask(self, *, system: str, prompt: str, schema_name: str, schema: dict[str, Any],
             max_tokens: int = 3000) -> dict[str, Any]:

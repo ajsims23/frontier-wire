@@ -217,6 +217,7 @@ def run(cfg: Config, now: datetime, env: dict[str, str], llm_for: Any = None, sl
 
 # ---------------------------------------------------------------------------------------------- for the website
 MODEL_NAMES = {"gemini-flash-lite-latest": "Gemini Flash-Lite", "gemini-flash-latest": "Gemini Flash",
+               "gemini-3.5-flash-lite": "Gemini 3.5 Flash-Lite", "gemini-3.5-flash": "Gemini 3.5 Flash", "gemini-3.6-flash": "Gemini 3.6 Flash",
                "openai/gpt-oss-120b": "gpt-oss-120b", "openai/gpt-oss-20b": "gpt-oss-20b", "qwen/qwen3.8-27b": "Qwen3.8 27B",
                "nvidia/nemotron-3-ultra-550b-a55b": "Nemotron 3 Ultra", "mistralai/mistral-large-4-1t-a52b": "Mistral Large 4",
                "gpt-oss-120b": "gpt-oss-120b"}
