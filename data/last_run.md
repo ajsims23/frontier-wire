@@ -1,157 +1,123 @@
-## Frontier Wire newsroom run — 2026-11-24T10:03:20+00:00
+## Frontier Wire newsroom run — 2026-11-24T12:51:00+00:00
 
-Fetched 3066 items · fresh 189 · judged 80 · kept 12 · **written 8**
-AI: 51 requests, 161,553 tokens this run · 59 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking Megaspeed chip restrictions and Nvidia's leadership shift while bolstering research and safety coverage.
-  Priorities: Agentic AI for Intent Management and Control in Autonomous Communicati (Agentic AI for intent management, directly relevant to builders of autonomous systems and strategy planners.); FATCAT: Fault Injection Attacks Targeting Chip-level Alignment (Fault injection attacks paper highlights emerging hardware safety threats, key for policy and risk readers.); Preflight: Agentic Last-Mile Verification for AI Software Supply Chain (Preflight framework addresses AI software supply‑chain verification, a hot safety concern for investors.); ToolSmith: An Automatic Tool-Generation Framework for Multimodal Searc (ToolSmith automates tool generation for multimodal agents, useful for developers and product teams.); Habitats: A Framework for Open-Ended Evolution of Agent Objectives (Habitats proposes open‑ended evolution of agent objectives, advancing frontier research readers care about.)
-  Thin areas: research, safety
-  Searches: Megaspeed entity list appeal: 6 new; Claude Ship usage statistics: 4 new; AI safety verification tools market: 2 new
-  Dig deeper: FATCAT: Fault Injection Attacks Targeting Chip-level Alignment; Preflight: Agentic Last-Mile Verification for AI Software Supply Chain
-Research agent: investigated 5 stories with 16 tool calls, confirmed 2
+Fetched 3011 items · fresh 83 · judged 80 · kept 23 · **written 1**
+AI: 39 requests, 113,219 tokens this run · 98 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Chasing the fallout from Jensen Huang's Nvidia return, Grok lawsuits, and frontier AI reasoning safety concerns.
+  Priorities: Sources: Anthropic and OpenAI employees warn that internal, unreleased (Internal lab warnings about unreleased reasoning models hitting safety walls are crucial for builders and investors.); President Trump dismissed US intelligence findings to reinstate Jensen (Political intervention in Nvidia's governance sets a massive precedent for tech-state relations.); Amazon says hackers' AI agents found and exploited 0-day with little h (First-hand documentation of autonomous AI agents exploiting 0-days with minimal human input.); Study: most AI deployments derive value by expanding and accelerating  (Anthropic study on enterprise AI deployment value challenges cost-cutting assumptions.); Filing: the US Commerce Department adds Alibaba's Singaporean subsidia (Broadening US export restrictions on Alibaba's Singapore unit and Megaspeed reshapes chip supply chains.)
+  Thin areas: policy, research
+  Dig deeper: Sources: Anthropic and OpenAI employees warn that internal, unreleased; President Trump dismissed US intelligence findings to reinstate Jensen
+Research agent: investigated 5 stories with 20 tool calls, confirmed 0
 Daily briefing: 4 themes from 14 stories
-Threads updated: Legal action against Grok sexualized images: Virginia and Oregon sue Musk companies over Grok sexualized ; Microsoft in-house AI model development: Microsoft builds in-house Rocket system to train AI models a
-Videos: 14 kept from 19 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (10 in feed, 1 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (7 in feed, 0 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 8 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 1 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 1 new), 20VC ok (4 in feed, 0 new)
-Builders desk: picked 8 from 60 candidates; 5 with pictures, 0 with videos
-Daily self-check: coverage 43% of 7 significant stories; 4 missed, 0 added to this run
-Photos: 6 saved, 1 unavailable
-Alerts: 21 events sent: {"subscribers":5,"sent":0,"queued":29}
+Videos: 16 kept from 20 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (10 in feed, 1 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (8 in feed, 1 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 7 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 1 new), 20VC ok (4 in feed, 0 new)
+Photos: 1 saved, 0 unavailable
+Alerts: 18 events sent: {"subscribers":5,"sent":0,"queued":11}
 Claims: 231 tracked, 225 open, 0 updated this run
-Trackers: filed 6 stories; updated frontier-race, india-ai, agent-safety
-Model tracker: 81 models, 10 changes today
-Explainers: 1 added to earlier stories
-Tagged 8 stories by sector, region and deal
-India briefing: 3 themes from 4 stories
-Self-review written (see the newsroom issue)
-Time: gather 68s, audit 108s, plan 84s, judge 164s, verify and write 395s, videos 47s, tagging 4s, explainers 21s, trackers 88s, claims 24s, builders 244s, briefing 5s, self-review 3s, photos 1s, stock photos 2s, alerts 3s
+Trackers: filed 1 stories; updated frontier-race
+Model tracker: 81 models, 14 changes today
+Tagged 1 stories by sector, region and deal
+Time: gather 107s, plan 94s, judge 230s, verify and write 289s, videos 307s, tagging 1s, trackers 5s, claims 11s, briefing 16s, alerts 3s
 
 ### New stories
-- **research** — [ToolSmith auto-generates tools for multimodal search agents](https://arxiv.org/abs/2611.31198)  
-  Researchers Rui Sun and colleagues introduced ToolSmith, a framework that automatically generates and reuses tool modules for multimodal search agents instead of relying on a hand-crafted library. They report it improves over the base library across three in-domain and ten out-of-domain benchmarks, with larger backbones gaining more.  
-  _1 source(s), 0 verified quote(s)_
-- **safety** — [Researchers show physical chip attack can disable AI safety refusals](https://arxiv.org/abs/2611.31129)  
-  Researchers at Radboud University demonstrated FATCAT, a non-invasive electromagnetic fault-injection attack that forces Llama 3.2 1B and Gemma 3 1B models to comply with restricted requests by corrupting chip-level memory, and showed it can cause a robot arm to make hazardous movements.  
-  _1 source(s), 0 verified quote(s)_
-- **policy** — [Virginia and Oregon sue Musk companies over Grok sexualized images](https://thedailytimes.com/news/states-sue-musk-companies-over-flood-of-sexualized-images-made-with-ai-chatbot-grok/article_81a3a832-7064-558b-b8cc-1fa1a66b930f.html)  
-  Virginia Attorney General Jay Jones and Oregon's attorney general filed separate lawsuits Monday alleging that Musk companies including SpaceX, X, and SpaceXSI stripped industry-standard safeguards from the Grok chatbot to boost users, enabling creation of child sexual abuse material and nonconsensual intimate imagery.  
-  _3 source(s), 2 verified quote(s)_
-- **models** — [Sarvam AI launches Dictate API for English and 22 Indian languages](https://inc42.com/buzz/sarvam-ai-launches-dictation-api-for-english-22-indian-languages)  
-  Sarvam AI has released Sarvam Dictate, a speech‑to‑text API that supports English and 22 Indian languages, priced at ₹0.50 per minute. In tests, it required 40% fewer character edits than Gemini 3.5 Transcribe for English and 47% fewer for Indian languages.  
-  _4 source(s), 0 verified quote(s)_
-- **policy** — [Nasscom proposes three-year AI scheme for Indian IT firms in Budget 2027-28](https://analyticsindiamag.com/ai-news/nasscom-seeks-three-year-ai-scheme-for-indian-it-firms-in-budget-2027-28)  
-  Nasscom has proposed a three-year AI Services Transformation and Innovation Scheme in its pre-Budget recommendations for 2027-28, to be designed jointly by the Ministry of Electronics and Information Technology and the Finance Ministry. The scheme would support Indian IT firms in developing and commercialising AI products and services, including through licensing, subscriptions, usage-based payments and outcome-linked arrangements.  
-  _6 source(s), 0 verified quote(s)_
-- **voices** — [Mollick: Anthropic paper finds AI value comes from changing org roles](https://bsky.app/profile/emollick.bsky.social/post/3n2zw35rhxs2g)  
-  Ethan Mollick highlights two findings from a new Anthropic paper: the most AI value comes from changing the organization and roles, and there is wide worker resistance to AI adoption. He suggests changes that expand what workers do and share AI gains with them could help.  
-  _1 source(s), 1 verified quote(s)_
-- **industry** — [Systematix report: AI adoption to sustain Indian IT services demand, labor models pressured](https://news.webindia123.com/news/Articles/Business/20261124/4523804.html)  
-  A Systematix report says growing AI adoption will sustain demand for Indian IT services firms as enterprises need help integrating and deploying AI at scale, even as automation pressures traditional labor-based delivery models.  
+- **models** — [Z.ai releases GLM-5.4, a loop transformer model for coding](https://simonwillison.net/2026/Nov/23/glm-54)  
+  Chinese AI lab Z.ai made its GLM-5.4 model available via a Coding Plan subscription. The model uses a looped transformer architecture that runs weight-shared layers multiple times to deepen the network without adding parameters.  
   _2 source(s), 0 verified quote(s)_
-- **industry** — [Microsoft builds in-house Rocket system to train AI models at scale](https://sierraleonetimes.com/news/279451476/microsoft-steps-up-efforts-to-build-advanced-ai-models-with-its-in-house-rocket-system)  
-  Microsoft has developed an in-house reinforcement learning framework called Rocket to train its three-trillion-parameter MAI Base 2 model over weeks or months across thousands of GPUs, reducing dependence on third-party models. The company says its model recently surpassed Claude Opus 4.8 on an aggregate reasoning benchmark and is on track to overtake GPT-5.6 Sol in the coming weeks.  
-  _3 source(s), 1 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Pruning Autonomous Driving VLAs: What to Preserve for Reasoning and Action — score 5: Study of structured pruning for autonomous‑driving vision‑language‑action models is an engineering optimisation; useful but incremental and not a headline‑worthy advance.
-- Let Vision-Language Models Generate Images through Their Representations — score 5: Explores using vision‑language models to generate images via internal representations. Interesting but an incremental step rather than a major breakthrough.
-- TowerBridge: Bridging the Dual-Encoder Modality Gap via Weight-Space Programming — score 5: Addresses the modality gap in dual‑encoder models with weight‑space programming; a technical refinement that does not rise to news level for the audience.
-- Language Models Steer on Injected Uncertainty Tokens, but Fail to Self-Monitor In Situ — score 5: Analyzes uncertainty‑token steering and self‑monitoring failures; valuable for safety research but remains a narrow experimental study, not a headline result.
-- How Far Can Linear Go? BiPert, a Unified Framework for Single-Cell Perturbation Modelling — score 4: Applies AI modelling to single‑cell perturbation biology, an adjacent domain with limited relevance to Frontier Wire’s core AI audience.
-- Self-Supervised Dataset Distillation via Mutual Information Maximization — score 4: Incremental research on self‑supervised dataset distillation; no major breakthrough or frontier impact for builders/investors.
-- CTLink: A Text-Prompted Segmentation Model for Linking Radiology Report Findings to 3D Chest CT Scans — score 4: Medical imaging application of a text‑prompted segmentation model; interesting but not a frontier AI development.
-- LeJEPA Features Are Not Isotropic, and Should Not Be — score 3: Technical analysis of a regularizer with modest performance gain; too narrow for our audience.
-- Seeking in Space: Benchmarking Purposeful Active Exploration of Vision-Language Models for Spatial Reasoning — score 5: Benchmark for purposeful active exploration of VLMs; useful but not a landmark result.
-- Flood forecasting using a physics-guided conditional denoising diffusion probabilistic model — score 4: Application of diffusion models to flood forecasting; niche domain without broader AI impact.
-- Verifying the Outputs of PDE Solvers: From Finite Elements to Neural Surrogates — score 4: Verification of PDE solver outputs using neural surrogates; interesting safety angle but limited scope.
-- Matching Under Metric Privacy — score 3: Theoretical work on metric privacy for matching; not a frontier AI development.
-- Learning Neurovascular Codes for EEG-to-fMRI Synthesis — score 3: Neurovascular code learning for EEG‑to‑fMRI synthesis; neuroscience focus, not core AI news.
-- Know When to Abstain: Conformal Confidence Estimation for Text-to-SQL — score 5: Conformal confidence estimation for Text‑to‑SQL improves reliability but is an incremental technique.
-- CO-GRAFT: Attributing Reinforcement Learning Gains in Search Agents via Role-Level Policy Grafting — score 5: Analysis of RL gains in search agents; useful insight but not a breakthrough worthy of a story.
-- Needwise: Generation-Free Conversational Recommendation from Need-Level Typed Decisions — score 5: Incremental improvement to conversational recommendation; interesting but not a breakthrough or major model release.
-- Reducing Order Sensitivity in Decision Models — score 5: Addresses order‑sensitivity in decision models; useful technical tweak but not a frontier breakthrough.
-- EEG Decoding in Context: A Framework for Tuning-Free EEG Foundation Models — score 5: Introduces a framework for EEG foundation models; niche application and incremental relative to existing work.
-- Precision-Aware Learning Rate Transfer Across Block Count in LLM Post-Training — score 5: Technical method for learning‑rate transfer in LLM post‑training; useful but not a major advance.
-- When Does Overriding the Majority Vote Help? — score 5: Study of when majority‑vote overrides help; interesting analysis but not a headline‑worthy result.
-- SPROUT: Predicting Objective-Grounded Prompt Utility for Efficient Text-to-Image Preference Tuning — score 5: Improves efficiency of text‑to‑image preference tuning; incremental optimization rather than a breakthrough.
-- Analyzing and Improving FlowMap Distillation of Autoregressive Video Models — score 5: Enhancements to FlowMap distillation for video models; incremental progress in a specialized area.
-- Habitats: A Framework for Open-Ended Evolution of Agent Objectives — score 5: Habitats presents a theoretical framework for open‑ended evolution of agent objectives. The idea is interesting but remains speculative and does not constitute a concrete advance that the Frontier Wire audience would treat as news.
-- Attention Latent Feedback — score 5: New attention mechanism (ALF); interesting but not a major shift in model capabilities.
-- Optimal Regret Lower Bounds in Matrix Games — score 4: Theoretical regret bounds for matrix games; relevant to theory community but not core AI news for builders/investors.
-- Deneb-Vritra: Descriptions, Edges and Names Examined by Blocking Via Restoring Token Representations and Attention — score 5: Specific encoder for multiple‑choice tasks; incremental model variant without broader impact.
-- SRCWDNet: Semantic-Relational Cross-Window Dual-Graph Network for Multi-Label Remote Sensing Scene Classification — score 2: Incremental remote-sensing scene classification method; niche applied task, not a frontier advance for our readers.
-- Serialization and the Character-System: Measuring Narrative Concentration in French Fiction (1800--1940) — not AI: Digital-humanities study of narrative structure in French fiction; no meaningful AI angle.
-- Genome-to-Image Translation: Reconstructing Escherichia coli Morphology from Genomic Sequences — score 3: Genomics-to-morphology ML for E. coli; interesting but a domain-specific application, not a frontier AI advance.
-- Data-Driven Identification of Uncertainty Sets with Conformance Guarantees — score 2: Control-theory / formal-verification methods paper; peripheral to frontier AI coverage.
-- Site-Conditioned Boundary Closure for Subsurface Seepage Forecasting and Relief Placement — score 2: Subsurface seepage forecasting model; niche applied ML, not relevant to our audience.
-- Self-Upgrading Embodied Agents — score 5: Interesting idea on weight-space self-modification of embodied agents, but a single arXiv paper without a lab or product behind it; not a landmark result.
-- RUIBench: What Makes a Good Robot-Use Interface? — score 4: Robot-use interface benchmark; incremental robotics/embodied-AI contribution, not a breakthrough.
-- Attention Temperature Confounds Zero-Shot Context Extension — score 4: Technical note on attention temperature and context-extension evaluation; incremental, not a headline advance.
-- Look Back, Draft Ahead: Corrective Prefix Attention for Parallel Speculative Decoding — score 4: Speculative-decoding improvement; incremental systems optimization, not a major result.
-- LiveLoRA: Exact KV Cache Migration Across LoRA Updates for LLM Agents — score 4: KV-cache migration across LoRA updates; useful but incremental systems work, not a frontier advance.
-- Nvidia comeback bet : Why Jensen Huang return calmed markets , for now — score 5: Opinion piece on Jensen Huang’s return; market‑reaction focus without new AI‑specific development.
-- Uday Kotak on Jensen Huang Return as Nvidia CEO and the $1 Trillion Market Rebound — score 5: Commentary linking Nvidia leadership to a $1 trillion market rebound; lacks direct AI breakthrough or financing detail.
-- Thailand Next Economic Frontier : How Can the AI Boom Drive Lasting Prosperity ? – Thailand Business News — score 4: Opinion piece on Thailand’s economy and AI; lacks a concrete news hook for Frontier Wire’s audience.
-- Beyond Imagination , Into Visualisation : Ultimate Smile AI Is Making Your Future Smile Visible in Just 10 Seconds — score 3: Marketing‑style announcement of a niche visual‑AI product; not a frontier‑level development.
-- Trump Saw Nvidia Huang As Protector of Open - Weight AI Models , Report — not AI: Political commentary linking Trump and Nvidia; no substantive AI development reported.
-- Anthropic Introduces Claude Ship to Bring AI Agents Into Code Approval — duplicate of 2b5faa4b22a0
-- GalaxEye Awards Bellatrix Deal to Power Its Next 30 Satellites — not AI: A space-tech satellite order with no AI angle; off-topic for Frontier Wire.
-- Antariksh Venture Capital Fund Invests ₹60 Cr in Bengaluru's SatSure — score 4: A ₹60 Cr (~$7M) satellite investment where AI models are only one stated use; a small, non-frontier round that does not clear the bar.
-- How Will AI Change Jobs in India? The Roles at Risk & Those on the Rise — score 3: A generic listicle on AI's impact on Indian jobs; not genuine news and not a substantive take from a named voice.
-- Google Cloud Confirms Around 30 Job Cuts In India, Rejects Wider Layoff Rumours — score 4: Google Cloud confirming ~30 role cuts in India is a small, routine workforce item with only a tangential AI angle; not significant enough.
-- Explained: RBI’s draft rules for ‘trusted’ third-party approvals to prevent high-volume online fraud — not AI: RBI draft rules on payment approvals; AI is not a central element of the story.
-- Lenskart pilots AI eye-test ‘Drysh’ in select locations; its smart glasses hit 500 stores — score 4: Lenskart piloting an AI eye-test and expanding smart glasses is a consumer product rollout, not a frontier AI development; minor for our readers.
-- Motorola Edge 70 Neo gets ₹6,000 launch offers in India: Check price, specifications and sale date — not AI: Smartphone launch coverage; no AI relevance.
-- Meta pauses Class C share issuance amid shareholder lawsuit — not AI: Meta pausing a Class C share issuance over a shareholder lawsuit is corporate governance/finance with no AI angle.
-- Anthropic launches Claude Ship to help developers ship code faster — duplicate of 2b5faa4b22a0
-- Amazon to buy Decart's AI chip optimisation tech in latest AI talent grab — duplicate of 7149fa79f525
-- Jensen Huang's Nvidia return sparks relief for battered AI trade, but questions remain — score 5: Stock-market reaction to Huang's reinstatement; the event is already published and this is market commentary, which stays at 5 or lower.
-- 7 Habits that make you a better listener and build trust — not AI: General personal‑development article; no AI content.
-- Startup news and updates: Daily roundup (November 24, 2026) — not AI: A generic daily startup roundup listicle with no substantive single AI story.
-- CortexSpark Ventures launches Rs 1,000 Cr deeptech fund — not AI: A general deeptech fund launch with no AI-specific angle in the source; off-topic for an AI-focused desk.
-- Jensen Huang is back as Nvidia CEO . What does it mean for India AI growth story ? — score 4: An opinion piece on what Jensen Huang's return means for India's AI growth; the underlying event is already covered and this is commentary, not new news.
-- Nvidia board made a U - turn on Jensen Huang : What changed in just 11 days ? — duplicate of 66cc673a6baa
-- Most consequential development : Uday Kotak on Huang return as Nvidia CEO — duplicate of 66cc673a6baa
-- After 11 days as interim CEO , what lies ahead for Nvidia Colette Kress ? — duplicate of 66cc673a6baa
+- NariQ: BF16-level Qwen3.8-27B in a 10 GB file — score 3: Quantised or community model variant upload, not a major frontier release.
+- VP ≠ VNP over Every Field — not AI: Theoretical mathematics paper on complexity theory without an AI focus.
+- India's opposition storms Meta's offices to get its Instagram accounts back — not AI: Political protest and social media account access dispute, not an AI news story.
+- Drone Maps of Salvage Yards — not AI: Drone mapping of salvage yards, routine hardware/imagery topic with no core AI focus.
+- GPUI is getting its own repository — score 4: Bare GitHub repo announcement with no indication of a frontier model or major capability; too minor for our audience.
+- Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes — duplicate of 2b5faa4b22a0
+- Elon Musk and others rejoice as Jensen Huang is reinstated at Nvidia amid scandal — score 5: Reaction piece to Nvidia leadership change; essentially commentary and already covered by the board reinstatement story.
+- Trump engineered a risky comeback for Jensen Huang — not AI: Opinion piece about political maneuvering; lacks substantive AI news content.
+- Welcome to elite impunity, Jensen Huang — not AI: Editorial commentary on Nvidia leadership; not a distinct news event.
+- Oregon and Virginia sue SpaceX over Grok’s porn deepfakes — duplicate of 98fe46c7c873
+- OpenAI, Cisco Launch Open-Source Security Tool in Wake of Outages — duplicate of 1d0c151fefed
+- Pixxel Confirms Building Satellite Manufacturing Facility in Bengaluru — not AI: Pixxel building a satellite manufacturing facility in Bengaluru is a space-tech story with no AI angle; not relevant to our AI readers.
+- GalaxEye Awards Bellatrix Propulsion Contract For 30 Satellites — not AI: Space‑tech propulsion contract; no AI relevance.
+- JioStar To Cut 150 Jobs To Control Costs — not AI: JioStar cutting 150 jobs is a routine corporate cost-cutting story with no AI angle.
+- Cosine Robots Bags ₹22.4 Cr To Scale Robotics Hardware Production — score 3: A small (~$2.4M) robotics hardware raise; minor funding and only a loose AI angle, below the bar for coverage.
+- Ex-Sequoia Investor Sudhanshu Mishra Launches Agentic AI Startup Demi AI — score 4: A startup launch by a former Sequoia India investor, but a US-based agentic AI startup with no funding or product milestone yet; thin news value.
+- Ex-Infosys Executives’ CortexSpark Ventures Launches ₹1,000 Cr Deeptech Fund — not AI: A deeptech fund launch by ex-Infosys executives; general venture/tech news with no stated AI focus.
+- D2C Brands Build A Multiverse — not AI: Marketing‑focused piece about D2C brands entering a multiverse; lacks substantive AI content.
+- Manufacturing Startups To Watch: 5 Startups That Caught Our Eye In November — not AI: Overview of manufacturing startups with no clear AI angle.
+- Sarvam Vs Critics, Jensen Huang Returns & More — duplicate of b35f4514a643
+- FY26 Financial Tracker: Tracking The Financial Performance Of Indian Startups — score 4: General financial tracker of Indian startups; not focused on AI developments.
+- SEBI warns investors of impersonation fraud on WhatsApp and other closed user groups on SM platforms — not AI: SEBI warning about impersonation fraud on WhatsApp/Telegram is financial-regulation news with no AI angle; off-topic for an AI audience.
+- Akhilesh Yadav’s Facebook page is back but Meta still owes users answers — not AI: A political figure's Facebook page restoration is general social-media news with no AI angle.
+- Prime Minister asks for “data and analytics system” for children over 3: The risks of the APAAR ID — not AI: A data-analytics/surveillance proposal for children and privacy concerns; no AI angle in the source. Off-topic for an AI-focused outlet.
+- FASTag transactions rise to Rs 7,785.98 crore in October 2026, volume reaches 365.09M — not AI: FASTag transaction statistics; general payments/tech news with no AI angle.
+- Why CrowdStrike is spending $44 billion to acquire cloud security platform Zscaler — score 4: Duplicate of the already-published CrowdStrike–Zscaler $44B acquisition story; AI is only a secondary angle in this explainer.
+- Maharashtra FDA warns influencers of Rs 10 lakh fines for misleading health supplement claims — not AI: FDA warning about health‑supplement influencers; no AI relevance.
+- GTA 6 Easter egg takes players back to original Vice City with PS2 graphics: How to unlock it — not AI: GTA 6 Easter egg gaming content; no AI relevance and off-topic.
+- India tops APAC in AI use at work, 96 pc of employees use it regularly: BCG — score 4: BCG survey finding that India tops APAC in workplace AI use is a routine adoption stat, not a substantive development for our readers.
+- AI agents emerge as new consumer gatekeepers, businesses urged to optimise for Bot-driven purchases: Report — score 5: An a16z report on AI agents as consumer gatekeepers is useful but general industry commentary, not a discrete news event; incremental for our readers.
+- Secret recording, AI errors and privacy risks: Why Dutch watchdog is against camera glasses — score 5: Dutch watchdog warning on AI‑powered camera glasses; limited broader AI impact.
+- Nvidia and board still face legal risks after Jensen Huang's return — duplicate of 66cc673a6baa
+- Questions linger after Jensen Huang's return to Nvidia — duplicate of 66cc673a6baa
+- Nvidia’s board was no match for Trump or Jensen Huang’s backers — score 5: Same event as the kept Trump-intervention story (3dc41b87462e); the Trump-dialed-into-board detail is already covered there.
+- US blacklists Megaspeed chip firm linked to Nvidia scandal — duplicate of 74575936ae57
+- Jensen Huang's comeback to Nvidia underscores his outsized grip on AI — duplicate of 66cc673a6baa
+- How Nvidia's billion-dollar turnaround in China is threatened by Huang's exit — score 5: Analytical piece on Nvidia's China exposure; overlaps the published Huang-reinstatement and China-probe stories without a distinct new fact.
+- Taking a personal loan with variable income? Here's how to plan your EMI smartly — not AI: Personal-loan/EMI personal-finance advice; no AI angle, off-topic.
+- 6 Must-read Indian historical fiction books to explore — not AI: A listicle of historical fiction books; off-topic and no AI relevance.
+- What it takes for Indian startups to win when building is no longer the hard part — score 4: Conference panel commentary on startup strategy with AI as a backdrop; routine commentary, not news.
+- Beyond tickets: How LightSprint.ai is building a multiplayer software factory where PMs and designers ship with engineers — score 3: Startup feature on a small AI dev tool; marketing-adjacent, not significant news.
+- Sarvam's new AI model promises better performance at lower cost — duplicate of b35f4514a643
+- 94% of India's most-used online platforms still use dark patterns: LocalCircles — not AI: Study on dark patterns across Indian platforms is consumer-protection/UX news with no AI angle.
+- Google Cloud confirms 30 role cuts in India, rejects claims of wider layoffs — not AI: Layoffs at Google Cloud India are not AI-focused; AI relevance is none, score below threshold.
+- Fintech startup Vegapay to raise Rs 38.4 Cr in Series A funding round led by Prosus — not AI: Fintech funding round with no AI component.
+- NVIDIA reinstates Jensen Huang as CEO; Sarvam unveils upgraded model amid Token Factory row — duplicate of 66cc673a6baa
+- Enterprise data security startup Matters.AI raises Rs 115 Cr in pre-Series A round — score 5: Funding round for security startup Matters.AI is modest and only adjacent to AI; score below keep threshold.
+- AI Bias In HR: Why Polished Work Gets Overrated And What to Do About It — score 5: Opinion piece on AI bias in HR; core AI topic but only commentary, not breaking news.
+- Startups Are Picking Names That Can Work Even If The Original Business Model Doesn’t — not AI: General startup naming trends; no AI angle.
+- Most Unicorns Are Worth More Than Their Last Funding-Round Valuations, Crunchbase Estimates — not AI: Analysis of unicorn valuations; not AI-specific.
+- Arianespace's Ariane 6 rocket launches 36 Amazon Leo satellites from ESA's spaceport in French Guiana, its fourth Amazon mission and the rocket's 10th flight (Summer Maxwell/Bloomberg) — not AI: Rocket launch of Amazon satellites; no AI component.
+- Researchers find two separate, unsecured databases exposing 3.5B+ combined records, login credentials, and personal documents; 1.64B relate to Chinese citizens (Wired) — not AI: Report on unsecured databases; unrelated to AI.
+- Sources: SpaceX and Tesla are negotiating an all-stock, $3.5T merger led by two special committees of five "disinterested" directors, all with ties to Elon Musk (Financial Times) — score 5: A $3.5 trillion merger between SpaceX and Tesla is massive corporate news but AI is only a secondary angle; not core AI coverage for Frontier Wire.
+- Xiaomi reports Q3 revenue down 5.2% YoY to ~$16.1B, its third straight quarter of decline, and net income down 68% to ~$585M, as memory shortages weigh on sales (Bloomberg) — not AI: Xiaomi revenue decline is a general business story with no AI component.
+- Sources: a Silicon Valley war room, including Travis Kalanick, Gavin Baker, Brad Gerstner, and Marc Andreessen, lobbied Trump and JD Vance to reinstate Huang (Financial Times) — duplicate of 66cc673a6baa
+- Sony says GTA VI is the biggest launch in PlayStation history across five generations, with 39M+ unique PS5 players logging 683M hours from November 19 to 22 (Tim Turi/PlayStation.Blog) — not AI: Gaming launch announcement; no AI relevance.
+- Jensen Huang scheduled to testify next week in Senate following reinstatement as Nvidia CEO — variety: already 2 stories from techcrunch.com this run
+- CrowdStrike to Buy Zscaler for $44 Bn as AI Raises Stakes for Cyber Defence — variety: already 2 stories from analyticsindiamag.com this run
+- Amazon says hackers' AI agents found and exploited 0-day with little human input — could not verify yet; will retry next run
+- President Trump dismissed US intelligence findings to reinstate Jensen Huang, saying on CNBC he needed to stop market losses; Trump held $12M+ of NVDA in 2025 (Peter Baker/New York Times) — could not verify yet; will retry next run
 
 </details>
 
-### Sources with problems
-- `r-localllama`: failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day'
-For more i
-- `r-sideproject`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'
-F
-
 <details><summary>Research agent's work</summary>
 
-- ToolSmith: An Automatic Tool-Generation Framework for Multimodal Searc: unconfirmed (searched “ToolSmith automatic tool-generation framework multimodal search agents”; searched “"ToolSmith" multimodal search agent tool generation”; searched “ToolSmith arXiv 2611.31198”)
-- FATCAT: Fault Injection Attacks Targeting Chip-level Alignment: unconfirmed (searched “FATCAT fault injection attack GPU LLM refusal electromagnetic”; searched “FATCAT fault injection chip-level alignment LLM”; searched “electromagnetic fault injection attack GPU large language model refusal”)
-- Sarvam AI Launches Dictation API For English, 22 Indian Languages: confirmed (searched “Sarvam AI Sarvam Dictate API launch 22 Indian languages”; searched “"Sarvam Dictate" voice dictation API”; read thehindubusinessline.com; read indiatimes.com)
-- Ahead of Budget, Nasscom Seeks AI Scheme for Indian IT: confirmed (searched “Nasscom AI scheme Budget 2027-28 Indian IT”; read business-standard.com; read indiatimes.com)
-- Ex-Sequoia Investor Sudhanshu Mishra Launches Agentic AI Startup Demi : unconfirmed (searched “Sudhanshu Mishra Demi AI agentic startup launch”; searched “Sudhanshu Mishra Demi.AI”; searched “"Demi AI" startup Sequoia India”)
+- Amazon says hackers' AI agents found and exploited 0-day with little h: unconfirmed (searched “Amazon hackers AI agents 0-day little human input”; read securityweek.com; read bleepingcomputer.com; read venturebeat.com)
+- President Trump dismissed US intelligence findings to reinstate Jensen: unconfirmed (searched “Trump Jensen Huang reinstated Nvidia CNBC market losses intelligence findings”; read techcrunch.com; searched “"Trump" "Jensen Huang" "CNBC"”; searched “Peter Baker New York Times Trump Jensen Huang 2025 NVDA $12 million”)
+- Sources: Anthropic and OpenAI employees warn that internal, unreleased: unconfirmed (searched “Anthropic internal unreleased model reasoning unsafe to release employees warn”; read msn.com; read seekingalpha.com; searched “Axios Anthropic OpenAI internal models unsafe employees”)
+- Filing: the US Commerce Department adds Alibaba's Singaporean subsidia: unconfirmed (searched “US Commerce Department adds Alibaba Singapore subsidiary Apex Enterprise Solutions Entity List”; read msn.com; read bloomberglaw.com; read hindustantimes.com)
+- GLM-5.4: Toward Generalized Coding with Our First Loop Transformer: unconfirmed (searched “GLM-5.4 loop transformer release”; read venturebeat.com; read thenextweb.com; read marktechpost.com)
 
 </details>
 
 ### Notes
-- not India desk: 'AI agents emerge as new consumer gatekeepers, busi'
+- ignored made-up duplicate id 2666fdd28542 for 'Why CrowdStrike is spending $44 billion to acquire'
+- ignored made-up duplicate id 3dc41b87462e for 'Nvidia’s board was no match for Trump or Jensen Hu'
 - GDELT unavailable: GDELT paused for this run after repeated rate-limiting
-- 2 kept item(s) carried over to the next run
+- 19 kept item(s) carried over to the next run
+- gemini: network error ReadTimeout, retrying
 - gemini/gemini-flash-lite-latest: 503 (server busy); trying next model
-- gemini: unreachable (ReadTimeout); skipping provider
+- gemini/gemini-flash-latest: 503 (server busy); trying next model
+- gemini: 503 after retry; moving to next provider for this run
 - groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
 - groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
 - groq/openai/gpt-oss-120b: model unavailable (400); trying next model
-- groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-20b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-20b: HTTP 400: {"error":{"message":"Failed to parse tool call arguments as JSON","type":"invalid_request_error","code":"tool_use_failed","failed_generation":"{\"name
-- groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-20b: couldn't force a tool call; retrying without forcing
-- groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-20b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-20b: HTTP 400: {"error":{"message":"Failed to parse tool call arguments as JSON","type":"invalid_request_error","code":"tool_use_failed","failed_generation":"{\"name
-- groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model
+- groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing
+- groq/qwen/qwen3.8-27b: HTTP 400: {"error":{"message":"Failed to call a function. Please adjust your prompt. See 'failed_generation' for more details.","type":"invalid_request_error","
 - groq/openai/gpt-oss-20b: model unavailable (400); trying next model
-- groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model
-- groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model
-- groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model
 - nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room
 - nvidia: network error ReadTimeout, retrying

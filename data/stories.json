@@ -545,6 +545,83 @@
   },
   {
     "explainer": {
+      "what_it_means": "A loop transformer repeats a set of layers several times for each token, refining its internal representations each pass. Because the layers share weights, the model becomes deeper without increasing the total number of parameters. This can improve reasoning ability for tasks like code generation while keeping the model size and compute cost similar to earlier versions.",
+      "terms": [
+        {
+          "term": "Loop transformer",
+          "meaning": "A transformer where a group of weight‑shared layers is executed multiple iterations per forward pass, refining hidden states each time."
+        },
+        {
+          "term": "Weight‑shared layers",
+          "meaning": "Layers that use the same parameters each time they are run, allowing repeated computation without adding new parameters."
+        },
+        {
+          "term": "Hidden states",
+          "meaning": "The internal vector representations a model maintains and updates as it processes input tokens."
+        }
+      ],
+      "watch_next": []
+    },
+    "audiences": {
+      "builders": "Developers can access GLM‑5.4 through Z.ai’s OpenAI‑compatible API using a Coding Plan subscription, enabling them to test the loop transformer for coding tasks.",
+      "business": "Enterprises evaluating coding assistants can consider GLM‑5.4 for potentially better reasoning without the expense of larger models.",
+      "investors": "The release highlights Z.ai’s progress in novel model architectures, which may influence competitive dynamics in the LLM market."
+    },
+    "id": "ef3910f6a7af",
+    "headline": "Z.ai releases GLM-5.4, a loop transformer model for coding",
+    "summary": "Chinese AI lab Z.ai made its GLM-5.4 model available via a Coding Plan subscription. The model uses a looped transformer architecture that runs weight-shared layers multiple times to deepen the network without adding parameters.",
+    "why_it_matters": "The architecture lets developers get higher reasoning quality for coding tasks without larger model sizes, affecting cost and performance considerations.",
+    "category": "models",
+    "lab": "Z.ai",
+    "model_name": "GLM-5.4",
+    "model_type": "Language",
+    "tags": [],
+    "quotes": [],
+    "score": 8,
+    "url": "https://simonwillison.net/2026/Nov/23/glm-54",
+    "source_id": "simon-willison",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://static.simonwillison.net/static/2026/glm-family-4.webp",
+    "sources": [
+      {
+        "url": "https://simonwillison.net/2026/Nov/23/glm-54",
+        "publisher": "Simon Willison",
+        "title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer"
+      },
+      {
+        "url": "https://z.ai/blog/glm-5.4",
+        "publisher": "z.ai",
+        "title": "GLM-5.4: Toward generalized coding with our first loop transformer"
+      }
+    ],
+    "research": {
+      "steps": 4,
+      "read": 2,
+      "decision": "unconfirmed"
+    },
+    "published_at": "2026-11-23T23:40:49+00:00",
+    "created_at": "2026-11-24T12:51:00+00:00",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "china"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 0,
+      "investors": 0
+    },
+    "cover": "GLM-5.4",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Claude Ship lets an AI agent automatically examine code changes in a pull request, suggest fixes, and merge them when they meet predefined rules. Teams can rely on the PR Steward to resolve CI failures or merge conflicts, while Claude Approvals can auto‑approve routine updates. This reduces the time engineers spend on manual code reviews.",
       "terms": [
         {
