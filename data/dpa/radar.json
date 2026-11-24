@@ -1751,6 +1751,75 @@
    "rationale": "Benchmark reveals current AI agents complete only ~60% of realistic tasks; DPA should evaluate its internal agent framework against ShellBench to measure reliability before client deployment.",
    "updated": "2026-11-24",
    "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b"
+  },
+  "siren": {
+   "key": "siren",
+   "name": "Siren",
+   "first_seen": "2026-11-24",
+   "history": [
+    {
+     "date": "2026-11-24",
+     "from": "",
+     "to": "assess",
+     "why": "Siren could inform how DPA tests boundary controls and safety alignment for multi-step financial agent workflows, needing evaluation on agent security."
+    }
+   ],
+   "evidence": [
+    "22021bc9b3d4"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "techniques",
+   "capability": "agents",
+   "rationale": "Siren could inform how DPA tests boundary controls and safety alignment for multi-step financial agent workflows, needing evaluation on agent security.",
+   "updated": "2026-11-24",
+   "model": "gemini/gemini-3.5-flash-lite"
+  },
+  "shellbench": {
+   "key": "shellbench",
+   "name": "ShellBench",
+   "first_seen": "2026-11-24",
+   "history": [
+    {
+     "date": "2026-11-24",
+     "from": "",
+     "to": "assess",
+     "why": "ShellBench highlights why DPA needs rigorous pre-delivery validation and safety checks before deploying multi-step automation to financial clients."
+    }
+   ],
+   "evidence": [
+    "71615ee1ebfd"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "techniques",
+   "capability": "agents",
+   "rationale": "ShellBench highlights why DPA needs rigorous pre-delivery validation and safety checks before deploying multi-step automation to financial clients.",
+   "updated": "2026-11-24",
+   "model": "gemini/gemini-3.5-flash-lite"
+  },
+  "claude-sheets": {
+   "key": "claude-sheets",
+   "name": "Claude Sheets",
+   "first_seen": "2026-11-24",
+   "history": [
+    {
+     "date": "2026-11-24",
+     "from": "",
+     "to": "trial",
+     "why": "Claude Sheets and Data could offer alternative spreadsheet and dashboard workflows for DPA analysts building financial decks, warranting hands-on evaluation."
+    }
+   ],
+   "evidence": [
+    "ea45337e78bf"
+   ],
+   "ring": "trial",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "reporting",
+   "rationale": "Claude Sheets and Data could offer alternative spreadsheet and dashboard workflows for DPA analysts building financial decks, warranting hands-on evaluation.",
+   "updated": "2026-11-24",
+   "model": "gemini/gemini-3.5-flash-lite"
   }
  },
  "considered": [
@@ -1760,6 +1829,7 @@
   "1184d3a025fd",
   "1d0b49e9508f",
   "21ab7432dba4",
+  "22021bc9b3d4",
   "23f8b2eb41d3",
   "255b56db4a4a",
   "25f8ab73ccc5",
@@ -1800,6 +1870,7 @@
   "68ff5ed661ee",
   "6a9cc38190a7",
   "6da8ea47d40e",
+  "71615ee1ebfd",
   "74e3f2b1316b",
   "76dbab81d73b",
   "7737e173e31a",
@@ -1845,6 +1916,7 @@
   "d5d97060cb47",
   "d8887a09bc5e",
   "e1842b672534",
+  "ea45337e78bf",
   "ef2f279289bc",
   "ef3910f6a7af",
   "f0be036ed676",
@@ -1853,7 +1925,7 @@
   "f991ba256218",
   "fa0e89bac09a"
  ],
- "updated_at": "2026-11-24T17:20:58+00:00",
+ "updated_at": "2026-11-24T23:20:48+00:00",
  "takeaways": {
   "written_at": "2026-11-24T20:20:50+00:00",
   "sig": "claude-code:assess|claude-fable-5-2:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|grok-build:hold|mai-code-2:trial|microsoft-agent-framework:hold|shellbench-benchmark:assess|tool-retrieval:trial",
