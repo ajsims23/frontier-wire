@@ -1,51 +1,54 @@
-## Newsroom self-review, 2026-11-23
+## Newsroom self-review, 2026-11-24
 
-Looked at 12 runs over the last 3 days (53 stories written).
+Looked at 9 runs over the last 3 days (39 stories written).
 Tick the suggestions you want applied; nothing changes until a person approves it.
 
-- [ ] **remove source** · `gdelt-india`: Remove the gdelt-india source as it is unreliable.  
-  _Why:_ gdelt-india has failed to return content in 9 out of 12 runs.
-- [ ] **remove source** · `mistral-news`: Remove the mistral-news source due to high failure rate.  
-  _Why:_ mistral-news has returned nothing in 6 out of 12 runs.
-- [ ] **coverage gap** · `xAI, DeepSeek`: Add dedicated RSS or news feeds for xAI and DeepSeek to improve coverage of these key labs.  
-  _Why:_ Tracked labs xAI and DeepSeek have produced no stories this week, despite xAI being in the sources list.
-- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower the minimum score to publish from 5 to 4 to capture more borderline relevant stories and reduce drop volume.  
-  _Why:_ A large number of candidate stories (68) scored a 4, falling just below the publish threshold of 5 while still generating significant processing overhead.
+- [ ] **fix source** · `gdelt, gdelt-india`: Investigate the GDELT and GDELT-India fetchers (endpoint, query, or rate limit) and repair them; if GDELT is unreliable, consider replacing gdelt-india with a working India news RSS feed.  
+  _Why:_ gdelt-india returned nothing in 7/9 runs and gdelt in 4/9 runs. These are the only India/global news sources besides the Indian tech sites, so the pipeline is effectively blind to non-AI-lab news most of the time.
+- [ ] **fix source** · `mistral-news`: Check the mistral-news source (URL, parsing, or rate limit) and fix it; if it cannot be made reliable, remove it to avoid wasted fetches.  
+  _Why:_ mistral-news returned nothing in 6/9 runs, so Mistral news coverage is nearly absent.
+- [ ] **coverage gap** · `xAI, DeepSeek`: Add dedicated xAI and DeepSeek sources (official blogs/announcements) and verify their items are not being dropped by the 'not AI' filter or low scores.  
+  _Why:_ xAI and DeepSeek are tracked labs but produced no stories this week, while other labs are well covered. Given the high drop counts, their items are likely being filtered out.
+- [ ] **tune** · `min_score_to_publish_1_to_10`: Confirm whether score-5 items should publish; if yes, find why 36 are dropped (likely 'could not verify yet' or max_stories_per_run=10 cap) and adjust the cap or verification step rather than the score threshold.  
+  _Why:_ 36 stories were dropped at score 5, which equals the current min_score_to_publish (5). If the intent is to publish score-5 items, these are being dropped by a different rule (e.g., verification or per-run cap), so the threshold itself may be fine but the interaction is unclear.
+- [ ] **tune** · `ai_providers_configured`: Reorder ai_providers_configured to put the most reliable free provider first (e.g., gemini or cerebras) and add small backoff between calls to groq to reduce per-minute limit hits.  
+  _Why:_ Multiple provider notes show per-minute limits hit and models returning 400/unavailable, causing fallback churn and retries.
 
 <details><summary>Statistics the agent reviewed</summary>
 
 ```json
 {
- "runs": 12,
- "stories_written": 53,
+ "runs": 9,
+ "stories_written": 39,
  "source_failures": {},
  "sources_returning_nothing": {
-  "gdelt-india": "9/12 runs",
-  "mistral-news": "6/12 runs"
+  "mistral-news": "6/9 runs",
+  "gdelt": "4/9 runs",
+  "gdelt-india": "7/9 runs"
  },
  "drop_reasons": {
-  "not AI": 111,
+  "not AI": 90,
   "score 4": 68,
-  "score 3": 29,
-  "score 5": 29,
-  "could not verify yet": 23,
-  "duplicate of f1b7c64ada91": 17,
-  "duplicate of 4aacf31011a3": 12,
-  "duplicate of 8099b1cf49a8": 7
+  "score 5": 36,
+  "score 3": 33,
+  "could not verify yet": 24,
+  "score 6": 11,
+  "duplicate of f1b7c64ada91": 7,
+  "duplicate of 877f48487e8a": 7
  },
  "tracked_labs_without_stories_this_week": [
   "xAI",
   "DeepSeek"
  ],
  "provider_notes": [
-  "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
   "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-  "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
-  "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-  "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
-  "groq/openai/gpt-oss-120b: HTTP 400: {\"error\":{\"message\":\"Failed to parse tool call arguments as JSON\",\"type\":\"invalid_request_error\",\"code\":\"tool_use_failed\",\"failed_generation\":\"{\\\"name",
-  "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
-  "gemini/gemini-flash-latest: 503 (server busy); trying next model"
+  "groq/openai/gpt-oss-120b: model unavailable (400); trying next model",
+  "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+  "groq/openai/gpt-oss-20b: model unavailable (400); trying next model",
+  "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+  "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+  "groq/qwen/qwen3.8-27b: request over its 7,000-token limit; retrying with a 1,250-token answer",
+  "groq/qwen/qwen3.8-27b: request too large for this model; trying next model"
  ],
  "current_settings": {
   "min_score_to_publish_1_to_10": 5,

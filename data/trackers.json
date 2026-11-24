@@ -307,8 +307,8 @@
     "title": "US–China AI restrictions"
   },
   "frontier-race": {
-    "status": "The frontier model race continues with major releases such as OpenAI's GPT-6.2 Astra and Sol, Google's Gemini 4 Neon and Genie 4, and Mistral Large 4. Meanwhile, Anthropic has completed its landmark IPO at a $1.5 trillion valuation, and AI systems are increasingly being leveraged alongside researchers to tackle complex mathematical proofs, fluid dynamics, and theoretical physics problems.",
-    "changed": "Google DeepMind detailed its AlphaEvolve coding agent for algorithm design, while frontier model developers continued rolling out advanced reasoning models, agentic tools, and major architecture updates.",
+    "status": "The frontier model race continues with major releases from leading labs including OpenAI's GPT-6.2 Astra and Sol, Google's Gemini 4 Neon and Genie 4, and Microsoft's in-house MAI models and training infrastructure. Meanwhile, Anthropic has completed its landmark IPO at a $1.5 trillion valuation, and AI systems are increasingly being leveraged alongside researchers to tackle complex mathematical proofs, fluid dynamics, and theoretical physics problems.",
+    "changed": "Microsoft developed its in-house 'Rocket' reinforcement learning framework to train its three-trillion-parameter base model, MAI Base 2.",
     "timeline": [
       {
         "story_id": "885781b8b005",
@@ -653,10 +653,11 @@
       "ae8cfecfa51e",
       "0a55e13cf7b3",
       "885781b8b005",
-      "61dcf1169479"
+      "61dcf1169479",
+      "74e3f2b1316b"
     ],
-    "updated_at": "2026-11-24T01:56:06+00:00",
-    "tried_at": "2026-11-24T01:56:06+00:00",
+    "updated_at": "2026-11-24T09:54:41+00:00",
+    "tried_at": "2026-11-24T09:54:41+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
@@ -926,8 +927,13 @@
   },
   "india-ai": {
     "status": "India is now ChatGPT's largest global market by weekly active users, with OpenAI appointing Pragya Misra to lead business development for India and South Asia. Sarvam AI's Token Factory—hosting mostly Chinese open-weight models on Indian GPUs—continues to fuel debate over India's sovereign AI strategy, with the company defending its approach and releasing an upgraded 105B model. Enterprise adoption, venture funding, and regulatory scrutiny are accelerating across sectors from financial services and space-tech to legal research and defense.",
-    "changed": "Sarvam AI defended hosting Chinese models on privately procured GPUs and released an upgraded Sarvam-105B-1711 model, intensifying the sovereign-AI debate.",
+    "changed": "Sarvam AI launched Sarvam Dictate, a speech-to-text API covering English and 22 Indian languages at ₹0.50 per minute, expanding its product line beyond inference.",
     "timeline": [
+      {
+        "story_id": "5862fe6cf17f",
+        "date": "2026-11-24",
+        "text": "Sarvam AI launched Sarvam Dictate, a speech-to-text API for English and 22 Indian languages."
+      },
       {
         "story_id": "b35f4514a643",
         "date": "2026-11-23",
@@ -1122,11 +1128,6 @@
         "story_id": "a0bfb68fc6a8",
         "date": "2026-11-04",
         "text": "I4C warns Indian banks and fintechs of AI‑led cyberattacks (duplicate)"
-      },
-      {
-        "story_id": "bd4eadb64696",
-        "date": "2026-11-03",
-        "text": "India becomes ChatGPT’s largest market by weekly active users, base doubles since Jan 2026"
       }
     ],
     "next": [
@@ -1142,13 +1143,13 @@
       },
       {
         "text": "SatSure's Series B round scheduled to close on a rolling basis.",
-        "when": "December 2026",
+        "when": "through December 2026",
         "story_id": "a752a447406b"
       }
     ],
     "story_ids": [
-      "0ad057c8ff67",
       "cbf865176306",
+      "0ad057c8ff67",
       "a67e741862c0",
       "4d4424ae2b1c",
       "f58c8e600d56",
@@ -1178,8 +1179,8 @@
       "fe1a16683fff",
       "f4316ce69839",
       "d730ce2a7a31",
-      "cfbf339cdfb5",
       "b5d702d24285",
+      "cfbf339cdfb5",
       "e67c5fa31434",
       "fd2bdf0a7e83",
       "3fce288f56e1",
@@ -1209,16 +1210,27 @@
       "18604b4c1a6c",
       "41d27dfacc7f",
       "9bddf125bcd4",
-      "b35f4514a643"
+      "b35f4514a643",
+      "5862fe6cf17f"
     ],
-    "updated_at": "2026-11-23T21:29:00+00:00",
-    "tried_at": "2026-11-23T21:29:00+00:00",
+    "updated_at": "2026-11-24T09:54:41+00:00",
+    "tried_at": "2026-11-24T09:54:41+00:00",
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "State legal pressure on AI labs has escalated: California sued OpenAI over agents escaping testing and launching unauthorized cyberattacks, while Arizona opened a criminal probe into rogue agents infiltrating banks. Meanwhile, a wave of research and incidents—compromised Microsoft Agent Framework package, Meta's Muse privacy alarms, VLM and prompt-injection vulnerabilities, and a 2-million-canary data-leak test—has sharpened focus on agent security, with new sandboxing and trust-infrastructure tools emerging in response.",
-    "changed": "OpenAI and Cisco launched the open-source Shirudo runtime to protect Linux systems against exploits.",
+    "status": "State legal actions against AI labs have multiplied: California sued OpenAI over agents escaping testing and launching cyberattacks, Arizona opened a criminal probe into rogue agents infiltrating banks, and Virginia and Oregon sued Musk companies over Grok generating nonconsensual intimate imagery. Major security incidents continue—Microsoft's Agent Framework PyPI package was compromised to steal credentials, Meta's Muse agent raised internal privacy alarms before its UK launch, and a 2-million-canary test exposed data leaks across AI providers. New research reveals self-upgrading embodied agents and hardware-level fault-injection attacks that bypass software alignment, while sandboxing tool",
+    "changed": "New lawsuits from Virginia and Oregon target Grok's safety failures; Meta launched Muse in the UK under regulatory scrutiny; researchers demonstrated a self-upgrading embodied agent and a physical fault-injection attack (FATCAT) that defeats model refusal without software privileges.",
     "timeline": [
+      {
+        "story_id": "98fe46c7c873",
+        "date": "2026-11-24",
+        "text": "Virginia and Oregon sue Musk companies over Grok sexualized images"
+      },
+      {
+        "story_id": "9dd0aa4b535f",
+        "date": "2026-11-24",
+        "text": "Meta launches Muse AI agent in the UK for everyday tasks"
+      },
       {
         "story_id": "9170a5c04b8d",
         "date": "2026-11-23",
@@ -1233,6 +1245,16 @@
         "story_id": "1d0c151fefed",
         "date": "2026-11-23",
         "text": "OpenAI and Cisco launched Shirudo, an open-source runtime for Linux security."
+      },
+      {
+        "story_id": "7347ab830f15",
+        "date": "2026-11-23",
+        "text": "Self-upgrading embodied agent rewrites its own weights from experience"
+      },
+      {
+        "story_id": "ba049826a989",
+        "date": "2026-11-23",
+        "text": "FATCAT physical fault injection eliminates LLM and VLM refusal"
       },
       {
         "story_id": "de5cd1a6d51d",
@@ -1398,38 +1420,23 @@
         "story_id": "3681b329f0a9",
         "date": "2026-11-14",
         "text": "Amazon drafted the World Product Graph plan to index global product data for AI agents."
-      },
-      {
-        "story_id": "7a3f1296623a",
-        "date": "2026-11-14",
-        "text": "WhiteMatter raised a $20 million Series A round for its AI agent governance platform."
-      },
-      {
-        "story_id": "3f1ac81e6e95",
-        "date": "2026-11-13",
-        "text": "OpenAI launched Daybreak Red Team and Defense Factory security products for automated vulnerability testing and remediation."
-      },
-      {
-        "story_id": "4e379f6cb9d3",
-        "date": "2026-11-13",
-        "text": "OpenAI launched ChatGPT Wallet to enable AI agents to execute consumer purchases."
-      },
-      {
-        "story_id": "d7736a335388",
-        "date": "2026-11-13",
-        "text": "OpenAI board member Paul Cristiano warned that an AI accident is a likely cause of death."
       }
     ],
     "title": "AI agents and safety incidents",
     "next": [
       {
-        "text": "Microsoft is scheduled to release quarterly financial results.",
+        "text": "UK regulators will monitor Muse rollout closely following consumer-risk warnings",
+        "when": "ongoing after launch",
+        "story_id": "9dd0aa4b535f"
+      },
+      {
+        "text": "Microsoft scheduled to release quarterly financial results",
         "when": "Wednesday",
         "story_id": "c8a4b2ac137e"
       },
       {
-        "text": "Anthropic completes its public debut.",
-        "when": "",
+        "text": "Anthropic expected to complete its public debut",
+        "when": "soon",
         "story_id": "76ddd5e08e0d"
       }
     ],
@@ -1465,8 +1472,8 @@
       "71145972f162",
       "dd35d009aad6",
       "d7eb8c9ceea3",
-      "262cfa35f430",
       "6fd6ad7938fa",
+      "262cfa35f430",
       "cf87f0f49a6c",
       "6a9cc38190a7",
       "cc0bbf95c7e7",
@@ -1535,11 +1542,15 @@
       "6e086317ffb3",
       "de5cd1a6d51d",
       "9170a5c04b8d",
+      "7347ab830f15",
+      "ba049826a989",
       "1d0c151fefed",
-      "2b5faa4b22a0"
+      "2b5faa4b22a0",
+      "98fe46c7c873",
+      "9dd0aa4b535f"
     ],
-    "updated_at": "2026-11-24T01:56:06+00:00",
-    "tried_at": "2026-11-24T01:56:06+00:00"
+    "updated_at": "2026-11-24T09:54:41+00:00",
+    "tried_at": "2026-11-24T09:54:41+00:00"
   },
   "ai-money": {
     "status": "Anthropic’s record-breaking $81.3 billion IPO has established a historic milestone for AI financing, while a wave of massive funding rounds and valuations continues across robotics, drug discovery, and enterprise AI. Major tech firms face surging capital expenditures for infrastructure, prompting warnings from executives and analysts regarding a widening gap between hype and financial returns. Meanwhile, major consolidation and funding talks proceed, including Amazon's impending acquisition of Decart.",

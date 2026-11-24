@@ -1,0 +1,526 @@
+{
+  "started_at": "2026-11-24T09:54:41+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1425)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (916)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "mistral-news": "ok (1)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (11)",
+    "gdelt": "ok (30)",
+    "hn": "ok (13)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (0) via Bing News (GDELT unavailable)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Pruning Autonomous Driving VLAs: What to Preserve for Reasoning and Action",
+      "reason": "score 4: Incremental research paper on structured pruning for autonomous driving vision-language-action models."
+    },
+    {
+      "title": "Let Vision-Language Models Generate Images through Their Representations",
+      "reason": "score 4: Standard research preprint combining visual understanding and generation."
+    },
+    {
+      "title": "TowerBridge: Bridging the Dual-Encoder Modality Gap via Weight-Space Programming",
+      "reason": "score 4: Standard academic preprint on bridging dual-encoder modality gaps."
+    },
+    {
+      "title": "Language Models Steer on Injected Uncertainty Tokens, but Fail to Self-Monitor In Situ",
+      "reason": "score 4: Academic paper studying language model self-monitoring of uncertainty tokens."
+    },
+    {
+      "title": "How Far Can Linear Go? BiPert, a Unified Framework for Single-Cell Perturbation Modelling",
+      "reason": "score 3: Specialised bioinformatics preprint applying linear frameworks to single-cell perturbation."
+    },
+    {
+      "title": "Self-Supervised Dataset Distillation via Mutual Information Maximization",
+      "reason": "score 4: Standard research preprint on dataset distillation for self-supervised learning."
+    },
+    {
+      "title": "Agentic AI for Intent Management and Control in Autonomous Communication Networks",
+      "reason": "score 4: Academic preprint exploring agentic AI for autonomous communication networks."
+    },
+    {
+      "title": "CTLink: A Text-Prompted Segmentation Model for Linking Radiology Report Findings to 3D Chest CT Scans",
+      "reason": "score 4: Incremental medical imaging segmentation paper, below the high bar for daily arXiv picks."
+    },
+    {
+      "title": "LeJEPA Features Are Not Isotropic, and Should Not Be",
+      "reason": "score 4: Theoretical representation learning paper on LeJEPA regularizers, too niche."
+    },
+    {
+      "title": "Seeking in Space: Benchmarking Purposeful Active Exploration of Vision-Language Models for Spatial Reasoning",
+      "reason": "score 4: Benchmarking VLM spatial exploration, interesting but standard arXiv fare."
+    },
+    {
+      "title": "Flood forecasting using a physics-guided conditional denoising diffusion probabilistic model",
+      "reason": "score 4: Physics-guided diffusion model for flood forecasting, niche application."
+    },
+    {
+      "title": "Verifying the Outputs of PDE Solvers: From Finite Elements to Neural Surrogates",
+      "reason": "score 3: Verification of PDE solver outputs, tangential application."
+    },
+    {
+      "title": "Matching Under Metric Privacy",
+      "reason": "score 3: Theoretical paper on metric privacy in bipartite matching, off-core for AI builders."
+    },
+    {
+      "title": "ToolSmith: An Automatic Tool-Generation Framework for Multimodal Search Agents",
+      "reason": "score 6: ToolSmith automatic tool-generation framework for multimodal search agents is a notable contribution to agent architectures."
+    },
+    {
+      "title": "Learning Neurovascular Codes for EEG-to-fMRI Synthesis",
+      "reason": "score 4: Neurovascular codes for EEG-to-fMRI synthesis, niche neuro-AI crossover."
+    },
+    {
+      "title": "Know When to Abstain: Conformal Confidence Estimation for Text-to-SQL",
+      "reason": "score 4: Conformal confidence estimation for Text-to-SQL, incremental reliability paper."
+    },
+    {
+      "title": "CO-GRAFT: Attributing Reinforcement Learning Gains in Search Agents via Role-Level Policy Grafting",
+      "reason": "score 6: CO-GRAFT role-level policy grafting for search agents provides interesting interpretability insights into RL gains."
+    },
+    {
+      "title": "Needwise: Generation-Free Conversational Recommendation from Need-Level Typed Decisions",
+      "reason": "score 3: Routine academic paper on conversational recommendation; not a major frontier breakthrough."
+    },
+    {
+      "title": "Reducing Order Sensitivity in Decision Models",
+      "reason": "score 3: Academic preprint addressing order sensitivity in decision models; incremental research."
+    },
+    {
+      "title": "EEG Decoding in Context: A Framework for Tuning-Free EEG Foundation Models",
+      "reason": "score 3: EEG decoding and BCI foundation model research paper; too niche for top-tier frontier coverage."
+    },
+    {
+      "title": "Precision-Aware Learning Rate Transfer Across Block Count in LLM Post-Training",
+      "reason": "score 3: Technical paper on learning rate transfer across block counts in LLM post-training; standard arXiv drop."
+    },
+    {
+      "title": "When Does Overriding the Majority Vote Help?",
+      "reason": "score 3: Research paper analyzing majority-vote overrides in reasoning models; lacks landmark significance."
+    },
+    {
+      "title": "SPROUT: Predicting Objective-Grounded Prompt Utility for Efficient Text-to-Image Preference Tuning",
+      "reason": "score 3: Incremental preprint on text-to-image preference tuning compute efficiency."
+    },
+    {
+      "title": "Analyzing and Improving FlowMap Distillation of Autoregressive Video Models",
+      "reason": "score 3: Technical paper on FlowMap distillation for autoregressive video models; routine research."
+    },
+    {
+      "title": "Habitats: A Framework for Open-Ended Evolution of Agent Objectives",
+      "reason": "score 3: Preprint on open-ended evolution of agent objectives; standard academic contribution."
+    },
+    {
+      "title": "Attention Latent Feedback",
+      "reason": "score 3: Research paper introducing Attention Latent Feedback for autoregressive decoding; incremental architecture tweak."
+    },
+    {
+      "title": "Optimal Regret Lower Bounds in Matrix Games",
+      "reason": "score 2: Theoretical paper on matrix games and regret bounds; off-center for frontier AI builders."
+    },
+    {
+      "title": "Deneb-Vritra: Descriptions, Edges and Names Examined by Blocking Via Restoring Token Representations and Attention",
+      "reason": "score 4: Incremental NLP/token representation research paper without landmark significance."
+    },
+    {
+      "title": "SRCWDNet: Semantic-Relational Cross-Window Dual-Graph Network for Multi-Label Remote Sensing Scene Classification",
+      "reason": "score 3: Domain-specific remote sensing classification paper."
+    },
+    {
+      "title": "Serialization and the Character-System: Measuring Narrative Concentration in French Fiction (1800--1940)",
+      "reason": "score 2: Digital humanities application paper using quantitative literary analysis."
+    },
+    {
+      "title": "Genome-to-Image Translation: Reconstructing Escherichia coli Morphology from Genomic Sequences",
+      "reason": "score 3: Application of genomics to bacterial morphology prediction, niche biological research."
+    },
+    {
+      "title": "Data-Driven Identification of Uncertainty Sets with Conformance Guarantees",
+      "reason": "score 3: Formal verification and control systems paper, too niche."
+    },
+    {
+      "title": "Site-Conditioned Boundary Closure for Subsurface Seepage Forecasting and Relief Placement",
+      "reason": "score 2: Subsurface seepage forecasting paper, outside core AI scope."
+    },
+    {
+      "title": "RUIBench: What Makes a Good Robot-Use Interface?",
+      "reason": "score 5: Benchmarking robot-use interfaces, interesting but incremental."
+    },
+    {
+      "title": "Attention Temperature Confounds Zero-Shot Context Extension",
+      "reason": "score 4: Analysis of zero-shot context extension and attention temperature, incremental research."
+    },
+    {
+      "title": "Look Back, Draft Ahead: Corrective Prefix Attention for Parallel Speculative Decoding",
+      "reason": "score 5: Incremental paper on speculative decoding prefix attention; not a landmark breakthrough."
+    },
+    {
+      "title": "Preflight: Agentic Last-Mile Verification for AI Software Supply Chains",
+      "reason": "score 5: Paper on agentic last-mile verification for software supply chains; interesting but niche."
+    },
+    {
+      "title": "LiveLoRA: Exact KV Cache Migration Across LoRA Updates for LLM Agents",
+      "reason": "score 5: KV cache migration paper for LoRA updates; incremental systems research."
+    },
+    {
+      "title": "AI adoption to sustain demand for Indian IT services firms ; labour - based models face pressure : Report",
+      "reason": "score 4: General industry report on IT services demand without specific AI product or technical news."
+    },
+    {
+      "title": "Nvidia comeback bet : Why Jensen Huang return calmed markets , for now",
+      "reason": "duplicate of 66cc673a6baa"
+    },
+    {
+      "title": "Uday Kotak on Jensen Huang Return as Nvidia CEO and the $1 Trillion Market Rebound",
+      "reason": "score 4: Commentary by a business leader on market shifts rather than primary technical or business news."
+    },
+    {
+      "title": "Thailand Next Economic Frontier : How Can the AI Boom Drive Lasting Prosperity ? – Thailand Business News",
+      "reason": "score 3: Broad economic overview of Thailand's AI potential without concrete corporate or technical developments."
+    },
+    {
+      "title": "Beyond Imagination , Into Visualisation : Ultimate Smile AI Is Making Your Future Smile Visible in Just 10 Seconds",
+      "reason": "score 3: Niche consumer-facing cosmetic application announcement, not frontier model or platform news."
+    },
+    {
+      "title": "Anthropic Introduces Claude Ship to Bring AI Agents Into Code Approval",
+      "reason": "duplicate of 2b5faa4b22a0"
+    },
+    {
+      "title": "GalaxEye Awards Bellatrix Deal to Power Its Next 30 Satellites",
+      "reason": "score 4: Space tech component deal between GalaxEye and Bellatrix; AI is not the core focus."
+    },
+    {
+      "title": "Antariksh Venture Capital Fund Invests ₹60 Cr in Bengaluru's SatSure",
+      "reason": "score 5: Satellite/Earth-observation startup raise where AI models are one of several stated uses; AI is a secondary angle, so it scores below the keep bar."
+    },
+    {
+      "title": "How Will AI Change Jobs in India? The Roles at Risk & Those on the Rise",
+      "reason": "score 4: General explainer on how AI affects Indian jobs; listicle-style commentary rather than a specific development."
+    },
+    {
+      "title": "Google Cloud Confirms Around 30 Job Cuts In India, Rejects Wider Layoff Rumours",
+      "reason": "not AI: Routine job cuts at Google Cloud India, not specifically an AI story."
+    },
+    {
+      "title": "Ex-Infosys Executives’ CortexSpark Ventures Launches ₹1,000 Cr Deeptech Fund",
+      "reason": "not AI: Deeptech fund launch with no AI-specific focus; duplicate of the same event as 2d3982cdac41."
+    },
+    {
+      "title": "D2C Brands Build A Multiverse",
+      "reason": "not AI: D2C personal-care business story with no AI angle."
+    },
+    {
+      "title": "Manufacturing Startups To Watch: 5 Startups That Caught Our Eye In November",
+      "reason": "not AI: Manufacturing-startups listicle with no AI focus."
+    },
+    {
+      "title": "Explained: RBI’s draft rules for ‘trusted’ third-party approvals to prevent high-volume online fraud",
+      "reason": "not AI: RBI draft rules for digital payments and fraud prevention, no AI angle in the source."
+    },
+    {
+      "title": "FASTag transactions rise to Rs 7,785.98 crore in October 2026, volume reaches 365.09M",
+      "reason": "not AI: FASTag transaction statistics; no AI angle."
+    },
+    {
+      "title": "Why CrowdStrike is spending $44 billion to acquire cloud security platform Zscaler",
+      "reason": "score 5: Large CrowdStrike–Zscaler security M&A where AI security is only one stated ambition; AI is a secondary angle, so it stays below the keep bar."
+    },
+    {
+      "title": "AI agents emerge as new consumer gatekeepers, businesses urged to optimise for Bot-driven purchases: Report",
+      "reason": "score 6: Report on AI agents as consumer gatekeepers based on an Andreessen Horowitz study."
+    },
+    {
+      "title": "Motorola Edge 70 Neo gets ₹6,000 launch offers in India: Check price, specifications and sale date",
+      "reason": "not AI: Standard smartphone launch announcement with typical mobile specs, no AI focus."
+    },
+    {
+      "title": "Meta pauses Class C share issuance amid shareholder lawsuit",
+      "reason": "not AI: Meta share issuance lawsuit is general corporate litigation without an AI relevance."
+    },
+    {
+      "title": "Anthropic launches Claude Ship to help developers ship code faster",
+      "reason": "duplicate of 2b5faa4b22a0"
+    },
+    {
+      "title": "Amazon to buy Decart's AI chip optimisation tech in latest AI talent grab",
+      "reason": "duplicate of 7149fa79f525"
+    },
+    {
+      "title": "Jensen Huang's Nvidia return sparks relief for battered AI trade, but questions remain",
+      "reason": "duplicate of 66cc673a6baa"
+    },
+    {
+      "title": "Nvidia and board still face legal risks after Jensen Huang's return",
+      "reason": "duplicate of 66cc673a6baa"
+    },
+    {
+      "title": "7 Habits that make you a better listener and build trust",
+      "reason": "not AI: General lifestyle and communication habits article, no AI relevance."
+    },
+    {
+      "title": "Startup news and updates: Daily roundup (November 24, 2026)",
+      "reason": "not AI: General startup daily roundup with no specific AI focus."
+    },
+    {
+      "title": "CortexSpark Ventures launches Rs 1,000 Cr deeptech fund",
+      "reason": "not AI: General deeptech fund launch with no AI-specific focus; also a duplicate of the same event covered by cf4d580baf28."
+    },
+    {
+      "title": "datasette-charts 0.2a0",
+      "reason": "score 4: Minor plugin release update (datasette-charts 0.2a0); developer tooling update, too small for frontier wire."
+    },
+    {
+      "title": "datasette-agent 0.7a1",
+      "reason": "score 4: Minor plugin update (datasette-agent 0.7a1); tool release, not significant news."
+    },
+    {
+      "title": "Ladybird's first alpha release",
+      "reason": "not AI: Ladybird browser alpha release is general open-source web tech, not primarily AI."
+    },
+    {
+      "title": "Simon Willison: I've been trying out the first Ladybird browser alpha release - a from-scratch implementation of most of what it means to be a browser…",
+      "reason": "not AI: Social post about the non-AI Ladybird browser alpha release."
+    },
+    {
+      "title": "Ethan Mollick: Two kinds of people: those watching the AI agent swarm trying to crack P=NP and those watching the AI agent swarm trying to (illegally)…",
+      "reason": "score 4: Casual social commentary by Ethan Mollick on AI agent swarms; minor commentary."
+    },
+    {
+      "title": "Ethan Mollick: Two big points from this new Anthropic paper: 1) The most AI value comes from changing the organization & roles 2) There is wide worker…",
+      "reason": "score 6: Ethan Mollick summarizing findings from a new Anthropic organizational research paper."
+    },
+    {
+      "title": "Ex-Sequoia Investor Sudhanshu Mishra Launches Agentic AI Startup Demi AI",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Lenskart pilots AI eye-test ‘Drysh’ in select locations; its smart glasses hit 500 stores",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Ahead of Budget, Nasscom Seeks AI Scheme for Indian IT",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "98fe46c7c873",
+      "headline": "Virginia and Oregon sue Musk companies over Grok sexualized images",
+      "category": "safety",
+      "summary": "The attorneys general of Virginia and Oregon filed separate lawsuits against Elon Musk's companies, alleging that the AI chatbot Grok was launched without adequate safety safeguards, leading to a proliferation of nonconsensual intimate imagery and child sexual abuse material. The legal complaints claim the companies prioritized business models over user safety.",
+      "url": "https://thedailytimes.com/news/states-sue-musk-companies-over-flood-of-sexualized-images-made-with-ai-chatbot-grok/article_81a3a832-7064-558b-b8cc-1fa1a66b930f.html",
+      "sources": 7,
+      "quotes": 2
+    },
+    {
+      "id": "9dd0aa4b535f",
+      "headline": "Meta launches Muse AI agent in the UK for everyday tasks",
+      "category": "models",
+      "summary": "Meta rolled out its personal AI agent Muse to UK adults to assist with everyday tasks like Christmas shopping and booking travel, making it the first Big Tech AI agent launched in the country. UK watchdogs have warned that such products may accelerate and amplify risks to consumers.",
+      "url": "https://techmeme.com/261124/p4",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "ba049826a989",
+      "headline": "FATCAT physical fault injection attacks eliminate LLM and vision-language model refusal",
+      "category": "research",
+      "summary": "Researchers presented FATCAT, a physical electromagnetic fault-injection attack that eliminates safety-critical refusal mechanisms in large language and vision-language models without requiring software privileges. The attack was tested on devices running models like Llama 3.2 1B and Gemma 3 1B, and demonstrated physical-world hazards by corrupting a vision-language-action policy controlling a robotic manipulator.",
+      "url": "https://arxiv.org/abs/2611.31129",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "7347ab830f15",
+      "headline": "Self-upgrading embodied agent rewrites its own weights from experience",
+      "category": "research",
+      "summary": "Researchers introduced a self-upgrading embodied agent that learns from its own experience by modifying its weights between tasks without training, gradients, or a second model. Operating in a household environment, the 27B agent tests its own weight edits against practice tasks and keeps only those that succeed.",
+      "url": "https://arxiv.org/abs/2611.31117",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "74e3f2b1316b",
+      "headline": "Microsoft develops in-house 'Rocket' reinforcement learning framework to train AI models",
+      "category": "models",
+      "summary": "Microsoft has developed an in-house reinforcement learning framework named Rocket to train advanced AI models over longer periods and at a larger scale. The system is currently being used to train the three-trillion-parameter base model MAI Base 2 across thousands of GPUs.",
+      "url": "https://sierraleonetimes.com/news/279451476/microsoft-steps-up-efforts-to-build-advanced-ai-models-with-its-in-house-rocket-system",
+      "sources": 2,
+      "quotes": 1
+    },
+    {
+      "id": "5862fe6cf17f",
+      "headline": "Sarvam AI launches dictation API for English and 22 Indian languages",
+      "category": "models",
+      "summary": "Indian AI unicorn Sarvam AI launched Sarvam Dictate, an API that converts speech into text in English and 22 Indian languages for ₹0.50 per minute of audio. The service pairs its Saaras V4 speech recognition model with a specialized Sarvam 105B large language model to transcribe and edit audio.",
+      "url": "https://inc42.com/buzz/sarvam-ai-launches-dictation-api-for-english-22-indian-languages",
+      "sources": 3,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "ignored made-up duplicate id 2d3982cdac41 for 'Ex-Infosys Executives’ CortexSpark Ventures Launch'",
+    "ignored made-up duplicate id cf4d580baf28 for 'CortexSpark Ventures launches Rs 1,000 Cr deeptech'",
+    "dropped non-quote (Pratyush Kumar): he had been using the product for a month and that it requir…",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "3 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 135.8,
+    "audit": 3.9,
+    "plan": 2.0,
+    "judge": 76.6,
+    "verify and write": 67.6,
+    "videos": 3.8,
+    "tagging": 3.0,
+    "explainers": 0.9,
+    "trackers": 78.3,
+    "claims": 2.6,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": 28.7,
+    "top voices": 0.0,
+    "briefing": 56.5,
+    "self-review": 3.6,
+    "photos": 0.5,
+    "stock photos": 4.8,
+    "daily email": -0.0,
+    "alerts": 4.4
+  },
+  "fetched": 3037,
+  "fresh": 159,
+  "audit": "coverage 0% of 6 significant stories; 6 missed, 1 added to this run; 1 lesson(s) for the editor",
+  "plan": {
+    "focus": "Chasing agent rollouts and regulatory friction from Meta to Nvidia while covering India AI adoption trends.",
+    "priorities": [
+      "Meta rolls out Muse to UK adults to help with everyday tasks, the firs (Meta launches Muse agent in the UK amid watchdog warnings, expanding the consumer agent debate.)",
+      "Nvidia comeback bet : Why Jensen Huang return calmed markets , for now (Market analysis on Jensen Huang's return as Nvidia CEO calming the tech sector.)",
+      "Ex-Sequoia Investor Sudhanshu Mishra Launches Agentic AI Startup Demi  (Ex-Sequoia investor launching Demi AI highlights active agentic startup funding in India.)",
+      "Amazon to buy Decart's AI chip optimisation tech in latest AI talent g (Amazon acquiring Decart's chip optimisation tech represents a notable talent and infrastructure grab.)",
+      "States sue Musk companies over flood of sexualized images made with AI (Multiple states suing Musk companies over Grok's sexualized imagery deepens safety and policy friction.)"
+    ],
+    "thin_areas": [
+      "india",
+      "safety"
+    ],
+    "searches": [
+      "Meta Muse UK AI agent: 6 new",
+      "Jensen Huang Nvidia return markets: 6 new"
+    ],
+    "dig_deeper": [
+      "Nvidia comeback bet : Why Jensen Huang return calmed markets , for now",
+      "Meta rolls out Muse to UK adults to help with everyday tasks, the firs"
+    ]
+  },
+  "judged": 80,
+  "kept": 9,
+  "research": {
+    "investigated": 5,
+    "confirmed": 3,
+    "tool_calls": 13
+  },
+  "research_log": [
+    "States sue Musk companies over flood of sexualized images made with AI: confirmed (searched “States sue Musk companies over flood of sexualized images Grok”; read theverge.com)",
+    "Meta rolls out Muse to UK adults to help with everyday tasks, the firs: confirmed (searched “Meta Muse UK AI agent Politico Mizy Clifton”; read politico.eu; read theguardian.com)",
+    "Ex-Sequoia Investor Sudhanshu Mishra Launches Agentic AI Startup Demi : unconfirmed (searched “Sudhanshu Mishra Demi AI startup”; searched “Sudhanshu Mishra Demi AI”; searched “Demi AI Sudhanshu Mishra”)",
+    "Sarvam AI Launches Dictation API For English, 22 Indian Languages: confirmed (searched “Sarvam AI Sarvam Dictate API English 22 Indian languages”; read thehindubusinessline.com)",
+    "Lenskart pilots AI eye-test ‘Drysh’ in select locations; its smart gla: unconfirmed (searched “Lenskart AI eye test Drysh smart glasses”; searched “Lenskart Drysh AI eye test”; searched “\"Lenskart\" \"Drysh\"”)"
+  ],
+  "threads": [
+    "Wyoming woman joins federal lawsuit against xAI over Grok de: Virginia and Oregon sue Musk companies over Grok sexualized ",
+    "Muse partnership expands after security pause: Meta launches Muse AI agent in the UK for everyday tasks",
+    "Chariot launches multilingual TTS model with support for 11 : Sarvam AI launches dictation API for English and 22 Indian l"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (13 in feed, 0 new)",
+    "Google DeepMind": "ok (14 in feed, 1 new)",
+    "Google for Developers": "ok (10 in feed, 1 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
+    "Microsoft Research": "ok (12 in feed, 0 new)",
+    "NVIDIA": "ok (7 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 3 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 3 new)",
+    "AI Explained": "ok (15 in feed, 1 new)",
+    "Lex Fridman": "ok (14 in feed, 1 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (3 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 8 new)",
+    "Training Data (Sequoia)": "ok (5 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (13 in feed, 1 new)",
+    "Hard Fork": "ok (2 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (4 in feed, 1 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "12 kept from 19 new",
+  "tagged": 6,
+  "explainers": "1 added to earlier stories",
+  "trackers": "filed 6 stories; updated frontier-race, india-ai, agent-safety",
+  "claims": "231 tracked, 225 open, 0 updated this run",
+  "model_tracker": "81 models, 10 changes today",
+  "builders_sources": {
+    "show-hn": "ok (4)",
+    "github-new": "ok (38)",
+    "hf-spaces": "ok (24)",
+    "product-hunt": "ok (17)",
+    "r-localllama": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day'\nFor more i",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
+  },
+  "builders": "picked 8 from 60 candidates; 7 with pictures, 0 with videos",
+  "briefing": "3 themes from 12 stories",
+  "india_briefing": "1 themes from 2 stories",
+  "self_review": "19 lines written to data/self_review.md",
+  "photos": "4 saved, 1 unavailable",
+  "stock photos": "2 added",
+  "alerts": "19 events sent: {\"subscribers\":5,\"sent\":0,\"queued\":51}",
+  "ai_requests_run": 49,
+  "ai_tokens_run": 127859,
+  "ai_requests_today": 57,
+  "provider_log": [
+    "gemini/gemini-flash-lite-latest: 503 (server busy); trying next model",
+    "gemini/gemini-flash-latest: 503 (server busy); trying next model",
+    "groq/openai/gpt-oss-120b: model unavailable (400); trying next model",
+    "gemini: 503 after retry; moving to next provider for this run",
+    "groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-20b: model unavailable (400); trying next model"
+  ]
+}
