@@ -60,9 +60,10 @@ jobs:
           KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           [ -n "$KEY" ] || exit 0
+          set +e   # report every model, even when one errors
           curl -s "https://generativelanguage.googleapis.com/v1beta/models?pageSize=300&key=$KEY" \
             | jq -r '.models[] | select(.supportedGenerationMethods | index("generateContent")) | .name | sub("^models/";"")' \
-            | grep -iE "flash|gemma" | grep -viE "tts|image|audio|live|embed|robotics|computer" | sort | tee models.txt
+            | grep -iE "flash|gemma" | grep -viE "tts|image|audio|live|embed|robotics|computer|omni|preview" | sort | tee models.txt
           tool='{"type":"function","function":{"name":"answer","description":"Give the answer","parameters":{"type":"object","properties":{"word":{"type":"string"}},"required":["word"]}}}'
           while read -r m; do
             for try in 1 2; do
