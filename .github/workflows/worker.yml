@@ -2,6 +2,8 @@
 # Needs these repository secrets: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, BREVO_API_KEY,
 # ALERTS_DISPATCH_SECRET, CEREBRAS_API_KEY (optional GROQ_API_KEY, GEMINI_API_KEY, NVIDIA_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY), and the variable SENDER_EMAIL
 # (an address you verified in Brevo). Skips quietly until the Cloudflare secrets exist.
+# Optional SCHEDULER_TOKEN: a fine-grained GitHub token (this repo only, Actions: read and write) that lets the
+# worker start newsroom / breaking-news / DPA runs when GitHub's own cron misses them.
 name: Deploy API
 
 on:
@@ -29,7 +31,7 @@ jobs:
         with:
           node-version: 22
       - name: Tests
-        run: node --test worker/test/search.test.mjs worker/test/worker.test.mjs worker/test/email.test.mjs worker/test/feedback.test.mjs worker/test/mcp.test.mjs
+        run: node --test worker/test/search.test.mjs worker/test/worker.test.mjs worker/test/email.test.mjs worker/test/feedback.test.mjs worker/test/mcp.test.mjs worker/test/scheduler.test.mjs
       - name: Check setup
         id: setup
         run: |
@@ -85,8 +87,9 @@ jobs:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
           DISPATCH_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
           ADMIN_EMAIL: ${{ secrets.RECAP_REVIEWER_EMAIL || vars.RECAP_REVIEWER_EMAIL }}   # who can sign in to the feedback dashboard
+          SCHEDULER_TOKEN: ${{ secrets.SCHEDULER_TOKEN }}   # starts the runs GitHub's cron misses
         run: |
-          for name in CEREBRAS_API_KEY GROQ_API_KEY GEMINI_API_KEY NVIDIA_API_KEY MISTRAL_API_KEY OPENROUTER_API_KEY BREVO_API_KEY DISPATCH_SECRET ADMIN_EMAIL; do
+          for name in CEREBRAS_API_KEY GROQ_API_KEY GEMINI_API_KEY NVIDIA_API_KEY MISTRAL_API_KEY OPENROUTER_API_KEY BREVO_API_KEY DISPATCH_SECRET ADMIN_EMAIL SCHEDULER_TOKEN; do
             val="${!name}"
             if [ -n "$val" ]; then printf '%s' "$val" | wrangler secret put "$name" >/dev/null && echo "set $name"; fi
           done

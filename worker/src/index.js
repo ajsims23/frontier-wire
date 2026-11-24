@@ -19,6 +19,7 @@ import { buildIndex, rank } from "../../site/search.js";
 import { digestSubject, recapSubject, renderEmail, renderRecap } from "./email.js";
 import { handleFeedback, logEvent, weeklyIfDue } from "./feedback.js";
 import { handleMcp } from "./mcp.js";
+import { tick } from "./scheduler.js";
 
 const ASK_PER_IP_PER_DAY = 25;
 const ASK_PER_DAY = 600;
@@ -782,7 +783,9 @@ export default {
       if (new Date().getUTCDay() !== 0) ctx.waitUntil(weeklyIfDue(env, helpers()));   // Monday's run; Tuesday onward only retries a failed one
       return;
     }
-    // every 10 minutes: finish sending an approved recap (only within two days of its date)
+    // every 10 minutes: start any newsroom / breaking-news / DPA run GitHub's cron missed
+    ctx.waitUntil(tick(env, Date.now(), (level, kind, msg) => logEvent(env, level, kind, msg)).catch((e) => logEvent(env, "error", "scheduler", e && e.message)));
+    // and finish sending an approved recap (only within two days of its date)
     const row = await env.DB.prepare("SELECT v FROM meta WHERE k = 'recap_approved'").first();
     if (row && Date.now() - Date.parse(row.v) < 2 * 86400000) ctx.waitUntil(sendRecap(env, row.v));
   },

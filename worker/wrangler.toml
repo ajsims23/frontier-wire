@@ -7,6 +7,7 @@ workers_dev = true
 [vars]
 SITE_URL = "https://ajsims23.github.io/frontier-wire/"
 SENDER_NAME = "Frontier Wire"
+GITHUB_REPO = "ajsims23/frontier-wire"   # the scheduler starts runs GitHub's cron missed (needs the SCHEDULER_TOKEN secret)
 
 [ai]
 binding = "AI"   # Workers AI: illustrations for the daily recap (free daily allowance)
@@ -17,7 +18,7 @@ database_name = "frontier-wire"
 database_id = "REPLACED_IN_CI"
 
 [triggers]
-crons = ["20 3 * * *", "35 3 * * *", "*/10 * * * *"]   # digests 08:50 IST; weekly feedback analysis 09:05 IST; finish sending an approved recap
+crons = ["20 3 * * *", "35 3 * * *", "*/10 * * * *"]   # digests 08:50 IST; weekly feedback analysis 09:05 IST; scheduler + finish sending an approved recap
 
 [observability]
 enabled = true   # Workers Logs (free): the worker's log lines, searchable in the Cloudflare dashboard
