@@ -1092,3 +1092,16 @@ def test_homepage_quotes_are_real_varied_and_about_ai():
     assert sum(v["story_id"] in ("s2", "s3") for v in picked) == 1      # one quote per story thread
     assert [v["speaker"] for v in picked].count("Ethan Mollick") == 1   # one quote per person
     assert picked[-1]["speaker"] == "Pat Release"                       # press-release filler ranks last
+
+
+def test_topics_the_site_does_not_run():
+    from agent.text import scrub, unsuitable
+    assert unsuitable("States sue over Grok's generation of child sexual abuse and non-consensual images")
+    assert unsuitable({"headline": "Lawsuit over sexualized deepfakes", "summary": "x"})
+    assert not unsuitable({"headline": "OpenAI releases a new reasoning model", "summary": "It scores higher on maths."})
+    data = {"themes": [{"text": "Meta launched Muse. States sued over sexualized images."},
+                       {"text": "Chips got cheaper.", "stories": [{"id": "bad"}, {"id": "ok"}]}],
+            "status": "Nvidia changed course. A lawsuit targets nudify apps. Rules tightened.", "ids": ["bad", "ok"]}
+    out = scrub(data, {"bad"})
+    assert len(out["themes"]) == 1 and out["themes"][0]["stories"] == [{"id": "ok"}]
+    assert out["status"] == "Nvidia changed course. Rules tightened." and out["ids"] == ["ok"]

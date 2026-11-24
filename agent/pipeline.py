@@ -13,7 +13,7 @@ from . import alerts, audit, builders, chief, claims, top_voices, editorial, pho
 from .research import Researcher
 from .sources import Fetcher, Gdelt, Item, gather, is_adjacent, slate_key
 from .store import Store
-from .text import arxiv_id, canonical_url, domain, duplicate_ids, extract_image, extract_text, near_duplicate, paper_figure, quote_in_text, similar, stable_id
+from .text import arxiv_id, canonical_url, domain, duplicate_ids, extract_image, extract_text, near_duplicate, paper_figure, quote_in_text, similar, stable_id, unsuitable
 
 ROLE_RANK = {"lab": 0, "paper": 1, "voice": 2, "news": 3}
 STOP = set("""a an and are as at be by for from has have how in into is it its new of on or our that the their
@@ -228,7 +228,9 @@ class Newsroom:
             if d.get("duplicate_of_story") and d["duplicate_of_story"] not in recent_ids:
                 self.report["notes"].append(f"ignored made-up duplicate id {d['duplicate_of_story']} for '{title[:50]}'")
                 d["duplicate_of_story"] = ""
-            if d.get("duplicate_of_story"):
+            if unsuitable(title):
+                self.report["dropped"].append({"title": title, "reason": "not suitable: sexual abuse or sexual imagery"})
+            elif d.get("duplicate_of_story"):
                 self.report["dropped"].append({"title": title, "reason": f"duplicate of {d['duplicate_of_story']}"})
             elif rel == "none":
                 self.report["dropped"].append({"title": title, "reason": f"not AI: {d.get('reason', '')}"})
@@ -669,6 +671,9 @@ class Newsroom:
                          and near_duplicate(o, story)), None)
             if twin:
                 self.report["dropped"].append({"title": members[0].title, "reason": f"duplicate of {twin['id']} (same news, reworded)"})
+                continue
+            if unsuitable(story):
+                self.report["dropped"].append({"title": members[0].title, "reason": "not suitable: sexual abuse or sexual imagery"})
                 continue
             if not story.get("image"):
                 self.add_paper_figure(story)

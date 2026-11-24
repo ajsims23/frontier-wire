@@ -21,6 +21,7 @@ DROP_GROUPS = [
     ("could not verify", "Couldn't verify"),
     ("variety", "Variety cap (one source flooding)"),
     ("stale", "Too old"),
+    ("not suitable", "Not suitable for the site"),
 ]
 FALLBACK = re.compile(r"trying next model|moving to next provider|skipping provider|retrying without forcing|retrying with a")
 

@@ -99,7 +99,10 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
         p = data / name
         return json.loads(p.read_text()) if p.exists() else default
 
-    stories: list[dict] = read("stories.json", [])
+    from .text import scrub, unsuitable
+    _all = read("stories.json", [])
+    removed = {s["id"] for s in _all if unsuitable(s)}  # topics the site doesn't run (see text.unsuitable)
+    stories: list[dict] = [s for s in _all if s["id"] not in removed]
     for st in stories:
         st["lab"] = cfg.canon_lab(st.get("lab"))
     home: dict = read("site.json", {"stories": [], "labs": [], "stats": {}})
@@ -109,13 +112,17 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     _fc_state, _review = read("dpa/factcheck.json", {}), _load_review()
     fc_apply.apply_decisions(stories, _fc_state, _review)
     fc_apply.apply_decisions(home.get("stories", []) + ([home["lead"]] if home.get("lead") else []), _fc_state, _review)
-    threads: dict = read("threads.json", {})
+    home["stories"] = [h for h in home.get("stories", []) if not unsuitable(h)]
+    if home.get("lead") and unsuitable(home["lead"]):
+        home["lead"] = home["stories"][0] if home["stories"] else None
+    home = scrub(home, removed)
+    threads: dict = {k: v for k, v in scrub(read("threads.json", {}), removed).items() if not unsuitable(v)}
     labs_info: dict = read("labs.json", {})
-    desk_briefs: dict = read("desk_briefings.json", {})
+    desk_briefs: dict = scrub(read("desk_briefings.json", {}), removed)
     models_state: dict = read("models.json", {})
-    weekly_state: dict = read("weekly.json", {})
-    trackers_state: dict = read("trackers.json", {})
-    claims_state: dict = read("claims.json", {})
+    weekly_state: dict = scrub(read("weekly.json", {}), removed)
+    trackers_state: dict = scrub(read("trackers.json", {}), removed)
+    claims_state: dict = scrub(read("claims.json", {}), removed)
     audit_state: dict = read("audit.json", {})
     from .trackers import load_trackers
     tracker_defs = load_trackers()
@@ -136,7 +143,8 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     if (data / "img").exists():  # our own copies of story photos
         shutil.copytree(data / "img", out / "img", dirs_exist_ok=True)
     if (data / "feed.xml").exists():
-        shutil.copy(data / "feed.xml", out / "data" / "feed.xml")
+        from .store import rss
+        (out / "data" / "feed.xml").write_text(rss(sorted(stories, key=lambda x: x["published_at"], reverse=True)[:30], now))
     for st in home.get("stories", []) + ([home["lead"]] if home.get("lead") else []):
         st["lab"] = cfg.canon_lab(st.get("lab"))
     (out / "data" / "site.json").write_text(json.dumps(home, ensure_ascii=False))

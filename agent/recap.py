@@ -2311,7 +2311,8 @@ def build_site(out: Path, env: Any, common: dict[str, Any], base: str, repo: str
                story_ids: set[str], urls: list[str], api_url: str = "", videos: dict[str, dict[str, Any]] | None = None) -> str:
     """Write /videos/, one page per recap and /videos/feed.xml. Returns the home-page strip (empty if no live recap).
     Also writes videos/assets.txt: the Release files the deploy workflow downloads into the site."""
-    rows = site_view(load_published(data_dir), now, base, repo, story_ids, videos)
+    from .text import scrub
+    rows = site_view([scrub(r) for r in load_published(data_dir)], now, base, repo, story_ids, videos)
     vdir = out / "videos"
     vdir.mkdir(parents=True, exist_ok=True)
     (vdir / "feed.xml").write_text(feed(rows, base))

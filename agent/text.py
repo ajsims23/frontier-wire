@@ -4,6 +4,7 @@ from __future__ import annotations
 import hashlib
 import re
 import unicodedata
+from typing import Any
 from difflib import SequenceMatcher
 from urllib.parse import parse_qsl, urlencode, urljoin, urlparse, urlunparse
 
@@ -190,3 +191,37 @@ def duplicate_ids(stories: list[dict], hours: int = 72) -> dict[str, str]:
             if o["id"] not in out and near_duplicate(s, o):
                 out[o["id"]] = s["id"]
     return out
+
+
+# Frontier Wire doesn't run stories whose subject is sexual abuse or sexual imagery (CSAM, non-consensual or explicit
+# deepfakes, "nudify" apps), however newsworthy: the site is read at work and shown on screens in offices.
+_UNSUITABLE = re.compile(
+    r"child (?:sexual|sex) abuse|\bcsam\b|sexual abuse (?:material|imag)|child (?:sexual|sex) (?:images|imagery|content)"
+    r"|non-?consensual|revenge porn|porn|nudif|\bnudes?\b|undress|sexuali[sz]ed|sexually explicit|explicit (?:images|imagery|deepfakes?)"
+    r"|intimate (?:images|imagery)|sextortion", re.I)
+
+
+def unsuitable(item: Any) -> bool:
+    """True for a story (or a title) whose subject is sexual abuse or sexual imagery."""
+    if isinstance(item, dict):
+        item = " ".join(str(item.get(k) or "") for k in ("headline", "summary", "why_it_matters", "title", "text"))
+    return bool(_UNSUITABLE.search(str(item or "")))
+
+
+def scrub(obj: Any, bad_ids: frozenset | set = frozenset()) -> Any:
+    """Take those topics out of anything built from stories (briefings, trackers, threads, recaps): list entries
+    about them or pointing at a removed story go, and sentences about them go from longer text."""
+    if isinstance(obj, dict):
+        return {k: scrub(v, bad_ids) for k, v in obj.items()}
+    if isinstance(obj, list):
+        out = []
+        for v in obj:
+            if isinstance(v, dict) and (unsuitable(v) or v.get("id") in bad_ids or v.get("story_id") in bad_ids):
+                continue
+            if isinstance(v, str) and v in bad_ids:
+                continue
+            out.append(scrub(v, bad_ids))
+        return out
+    if isinstance(obj, str) and " " in obj and unsuitable(obj):
+        return " ".join(p for p in re.split(r"(?<=[.!?])\s+", obj) if not unsuitable(p))
+    return obj

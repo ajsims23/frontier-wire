@@ -26,6 +26,8 @@ class Store:
     def __init__(self, data_dir: Path):
         self.dir = data_dir
         self.stories: list[dict[str, Any]] = _read(data_dir / "stories.json", [])
+        from .text import unsuitable
+        self.stories = [s for s in self.stories if not unsuitable(s)]  # topics the site doesn't run (see text.unsuitable)
         try:  # the fact-check agent's corrections (data/dpa/factcheck.json) go into the stories it corrected
             from .dpa import load_review
             from .factcheck import apply_decisions

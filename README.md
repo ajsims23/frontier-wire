@@ -32,7 +32,7 @@ A "scheduler" in the worker starts the newsroom, breaking-news and DPA jobs if G
 |---|---|
 | **Plan** | The editor-in-chief agent looks at the last two days of coverage, open storylines and what came in. It sets priorities, flags thin areas and runs up to three extra news searches. |
 | **Gather** | Lab blogs and feeds, Hugging Face, arXiv, GDELT, Hacker News, Bluesky posts from leading people, and news searches. All are free with no keys. |
-| **Judge** | Scores each item 1–10, drops noise and non-AI news, and merges coverage of the same event. A variety cap stops one source from flooding the page. |
+| **Judge** | Scores each item 1–10, drops noise and non-AI news, and merges coverage of the same event. A variety cap stops one source from flooding the page. Stories about sexual abuse or sexual imagery are never run (the site is read at work and shown in offices); the same rule (`agent/text.py` → `unsuitable`) keeps them out of every page, feed and recap. |
 | **Verify** | A story needs an official source (the lab's post, the paper, the person's own post) or two independent outlets. A research agent searches and reads further when it is unsure. |
 | **Write** | Headline, summary, "why it matters", an explainer, notes by audience, tags, trackers and storylines. |
 | **Check** | Quotes must appear word for word in the source, or they're removed. Unsupported benchmark numbers are removed. Made-up ids from the model are ignored. |

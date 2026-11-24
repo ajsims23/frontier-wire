@@ -625,7 +625,8 @@ def run(cfg: Config, fetcher: Any, now: datetime, env: dict[str, str] | None = N
     limits = Limits({"max_requests_per_run": lim.get("max_requests_per_run", 40), "max_requests_per_day": lim.get("max_requests_per_day", 160),
                      "max_tokens_per_day": lim.get("max_tokens_per_day", 500000)}, state.dir / "usage.json", today=now.date().isoformat())
     llm = llm or LLM(cfg.providers, limits, env=env)
-    stories: list[dict] = _read(cfg.data_dir / "stories.json", [])
+    from .text import unsuitable
+    stories: list[dict] = [s for s in _read(cfg.data_dir / "stories.json", []) if not unsuitable(s)]
     report: dict[str, Any] = {"started_at": now.isoformat(), "providers": llm.configured, "notes": []}
     steps = (
         ("assess", lambda: assess_stories(llm, stories, state, profile, now, report)),
