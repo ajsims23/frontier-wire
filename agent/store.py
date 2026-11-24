@@ -26,6 +26,12 @@ class Store:
     def __init__(self, data_dir: Path):
         self.dir = data_dir
         self.stories: list[dict[str, Any]] = _read(data_dir / "stories.json", [])
+        try:  # the fact-check agent's corrections (data/dpa/factcheck.json) go into the stories it corrected
+            from .dpa import load_review
+            from .factcheck import apply_decisions
+            apply_decisions(self.stories, _read(data_dir / "dpa" / "factcheck.json", {}), load_review())
+        except Exception:  # noqa: BLE001  never let this stop a newsroom run
+            pass
         self.seen: dict[str, str] = _read(data_dir / "seen.json", {})
         self.labs: dict[str, dict[str, Any]] = _read(data_dir / "labs.json", {})
         self.retries: dict[str, int] = _read(data_dir / "retries.json", {})

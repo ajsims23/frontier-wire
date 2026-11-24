@@ -103,6 +103,12 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
     for st in stories:
         st["lab"] = cfg.canon_lab(st.get("lab"))
     home: dict = read("site.json", {"stories": [], "labs": [], "stats": {}})
+    # the fact-check agent's corrections, everywhere a story appears (stories.json catches up on the next newsroom run)
+    from . import factcheck as fc_apply
+    from .dpa import load_review as _load_review
+    _fc_state, _review = read("dpa/factcheck.json", {}), _load_review()
+    fc_apply.apply_decisions(stories, _fc_state, _review)
+    fc_apply.apply_decisions(home.get("stories", []) + ([home["lead"]] if home.get("lead") else []), _fc_state, _review)
     threads: dict = read("threads.json", {})
     labs_info: dict = read("labs.json", {})
     desk_briefs: dict = read("desk_briefings.json", {})
@@ -183,7 +189,8 @@ def build(out: Path, data_dir: Path | None = None, now: datetime | None = None) 
             lens_box=({**lens["impact"][s["id"]], "cap_names": [lens["caps"][c]["short"] for c in lens["impact"][s["id"]].get("capabilities", []) if c in lens["caps"]]}
                       if s["id"] in lens["impact"] else None),
             lens_radar=radar_of.get(s["id"]), audit=audits.get(s["id"]) if (audits.get(s["id"]) or {}).get("claims") else None,
-            correction=lens["review"]["corrections"].get(s["id"], ""),
+            correction=fc_apply.resolution(s["id"], lens["factcheck"], lens["review"]["corrections"])[0],
+            correction_by=fc_apply.resolution(s["id"], lens["factcheck"], lens["review"]["corrections"])[1],
             tracker_links=[{"id": t, "title": tracker_titles[t]} for t in (s.get("trackers") or []) if t in tracker_titles],
             related=[{**r, "when": short_date(r["published_at"]), "cat_name": TAG.get(r["category"], ""),
                       "cover_json": json.dumps({k: r.get(k) for k in ("id", "headline", "category", "lab", "model_name", "cover")}, ensure_ascii=False)}

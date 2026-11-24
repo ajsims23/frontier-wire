@@ -54,7 +54,7 @@
   </section>
 
   <section class="block" id="accuracy" aria-labelledby="acc-h">
-    <div class="block-head"><h2 id="acc-h">Accuracy audit</h2><p>Every day a second AI model, from a different provider than the writer where possible, re-reads the sources of a sample of published stories (half the biggest, half at random) and checks every factual claim.</p></div>
+    <div class="block-head"><h2 id="acc-h">Accuracy audit</h2><p>Every day a second AI model, from a different provider than the writer where possible, re-reads the sources of a sample of published stories (half the biggest, half at random) and checks every factual claim. The rate below scores the stories as first published. Then the fact-check agent settles each flag on its own: it re-reads all of the story's sources and confirms the claim (quoting the source), rewords it or removes it, and says why.</p></div>
     {% if fc.claims %}
     <dl class="lab-stats">
       <div><dt>Claims supported (partly right counts half)</dt><dd>{{ fc.rate }}%</dd></div>
@@ -62,6 +62,7 @@
       <div><dt>Claims checked</dt><dd>{{ fc.claims }} <span class="muted">in {{ fc.stories }} stories since {{ short(fc.since) }}</span></dd></div>
       <div><dt>Stories with no issue</dt><dd>{{ fc.accurate_stories }} of {{ fc.stories }}</dd></div>
       <div><dt>Flagged for correction</dt><dd>{{ fc.flagged_stories }}</dd></div>
+      <div><dt>Flags settled by the fact-check agent</dt><dd>{{ fc.settled_by_agent }}</dd></div>
     </dl>
     <h3 class="bn-h3">Corrections log</h3>
     {% if fc.log %}
@@ -69,7 +70,7 @@
       <thead><tr><th scope="col">Checked</th><th scope="col">Story</th><th scope="col">Claim</th><th scope="col">Finding</th><th scope="col">Status</th></tr></thead>
       <tbody>{% for x in fc.log %}<tr><td class="nowrap">{{ short(x.date) }}</td><td>{% if x.live %}<a href="{{ root }}story/{{ x.story_id }}/">{{ x.headline|truncate(60, True, '…') }}</a>{% else %}{{ x.headline|truncate(60, True, '…') }}{% endif %}</td>
         <td>{{ x.claim }}</td><td><span class="fc fc-{{ x.verdict }}">{{ {"partly": "Partly right", "unsupported": "Not in the sources", "contradicted": "Contradicted"}[x.verdict] }}</span> {{ x.note }}</td>
-        <td>{% if x.resolution %}<span class="dl-st st-approved">Resolved</span> {{ x.resolution }}{% else %}<span class="dl-st st-awaiting">Flagged for the editor</span>{% endif %}</td></tr>{% endfor %}</tbody>
+        <td>{% if x.resolution %}<span class="dl-st st-approved">{{ "Settled by the fact-check agent" if x.resolved_by == "agent" else "Resolved by the editor" }}</span> {{ x.resolution }}{% elif x.stuck %}<span class="dl-st st-awaiting">Open: the agent couldn't settle it from the sources</span>{% else %}<span class="dl-st st-awaiting">With the fact-check agent</span>{% endif %}</td></tr>{% endfor %}</tbody>
     </table></div>
     {% else %}<p class="empty">Nothing flagged so far.</p>{% endif %}
     {% else %}
@@ -99,6 +100,7 @@
       <li><b>Self-check</b><span>Daily: what did the wider press cover that we missed? Writes up misses, adds outlets, adds lessons to the editor's instructions.</span></li>
       <li><b>DPA lens</b><span>Assesses every story for DPA, keeps the AI Radar and its top 10, writes what they mean for DPA and the weekly calls.</span></li>
       <li><b>Fact-checker</b><span>A second model audits a daily sample of stories claim by claim.</span></li>
+      <li><b>Fact-check agent</b><span>Settles every flag: re-reads all the story's sources, then confirms, rewords or removes the claim. It can narrow a claim but never add one, and logs every ruling below.</span></li>
       <li><b>Task bench</b><span>Tests every free model on DPA-style document tasks, weekly.</span></li>
       <li><b>Analyst and MCP server</b><span>Answers questions from the archive with citations, and serves the archive, radar and bench to other AI agents. <a href="{{ root }}api/">Connect yours</a></span></li>
     </ol>
@@ -110,7 +112,7 @@
       <ul class="dl-steps">
         <li>Any change to the agent itself: sources, thresholds, prompts. The agent files a daily self-review with suggestions; nothing changes until a person approves it.</li>
         <li>Moving anything into Adopt on the AI Radar, or overriding a ring.</li>
-        <li>Resolving anything the accuracy audit flags.</li>
+        <li>Overriding the fact-check agent's ruling on a flagged claim, if a person disagrees with it.</li>
         <li>Sending the daily video recap to subscribers.</li>
       </ul>
       {% if st.suggestions %}

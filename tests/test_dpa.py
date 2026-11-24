@@ -62,6 +62,9 @@ class FakeLLM:
             return {"claims": [{"claim": "DocParse 2 is open source", "type": "fact", "verdict": "supported", "evidence": "DocParse 2 is open source"},
                                {"claim": "This shows open tools are winning", "type": "analysis", "verdict": "unsupported"},
                                {"claim": "It reads scanned PDFs", "verdict": "partly", "evidence": "made up words", "note": "only some scans"}]}
+        if schema_name == "submit_ruling":
+            return {"rulings": [{"claim": "It reads scanned PDFs", "ruling": "confirmed", "evidence": "reads many scanned PDFs"}],
+                    "note": "Confirmed: the source says it reads many scanned PDFs."}
         raise AssertionError(schema_name)
 
 
@@ -103,6 +106,9 @@ def test_lens_run_end_to_end(tmp_path):
     a = next(iter(st.factcheck["audits"].values()))
     assert a["verdict"] == "minor" and a["claims"][0]["evidence"] and not a["claims"][1]["evidence"] and len(a["claims"]) == 2
     assert "factcheck" in report and not [n for n in report["notes"] if "failed" in n]
+    # the fact-check agent then settles the flag on its own, quoting the source
+    d = st.factcheck["decisions"][next(iter(st.factcheck["audits"]))]
+    assert d["outcome"] == "confirmed" and d["rulings"][0]["evidence"] and not d["edits"]
     # a second run the same day doesn't repeat the daily steps
     llm2 = FakeLLM()
     dpa.run(cfg, Fetch(), NOW, llm=llm2)
@@ -235,3 +241,76 @@ def test_takeaways_are_written_for_the_top_10_and_kept_until_it_changes(tmp_path
     view = dpa.site_view(stories, cfg.data_dir, NOW + timedelta(hours=1))
     assert not view["takeaways"]["by_agent"] and {t["title"] for t in view["takeaways"]["items"]} <= {
         "Worth trying now", "Test before relying on them", "Pause and check"}
+
+
+class RulingLLM:
+    """Answers submit_ruling with whatever the test sets."""
+
+    def __init__(self, answer):
+        self.answer, self.last_model, self.calls = answer, "fake/judge", 0
+
+    def ask(self, *, system, prompt, schema_name, schema, max_tokens=3000):
+        assert schema_name == "submit_ruling"
+        self.calls += 1
+        return self.answer
+
+
+def _flagged(tmp_path):
+    cfg = setup(tmp_path)
+    s = dict(STORIES[1], why_it_matters="The round makes it the largest chip startup in Europe and doubles its staff to 400.")
+    state = dpa.LensState(cfg.data_dir)
+    state.factcheck["audits"] = {"s2": {"date": "2026-10-21", "verdict": "flagged", "headline": s["headline"], "claims": [
+        {"claim": "largest chip startup in Europe", "verdict": "unsupported", "note": "not in source"}]}}
+    return cfg, s, state
+
+
+class ChipFetch:
+    def get(self, url):
+        return "<html><body><article><p>" + "The startup raised $40 million for AI chips in a round led by Example Capital. " * 8 + "</p></article></body></html>"
+
+
+def test_fact_check_agent_corrects_and_the_fix_reaches_the_story(tmp_path):
+    cfg, s, state = _flagged(tmp_path)
+    fixed = "The round funds the startup's AI chip work."
+    judge = RulingLLM({"rulings": [{"claim": "largest chip startup in Europe", "ruling": "remove"}], "why_it_matters": fixed,
+                       "note": "Removed the claim that it is Europe's largest chip startup; no source says so."})
+    report = {}
+    assert factcheck.adjudicate(cfg, judge, ChipFetch(), [s], state, {"corrections": {}}, NOW, report) == 1
+    d = state.factcheck["decisions"]["s2"]
+    assert d["outcome"] == "corrected" and d["edits"]["why_it_matters"]["to"] == fixed
+    home = [dict(s)]
+    assert factcheck.apply_decisions(home, state.factcheck) == 1 and home[0]["why_it_matters"] == fixed
+    # a field someone has changed since isn't overwritten; a person's ruling wins over the agent's
+    later = [dict(s, why_it_matters="Rewritten by hand.")]
+    assert factcheck.apply_decisions(later, state.factcheck) == 0
+    assert factcheck.apply_decisions([dict(s)], state.factcheck, {"corrections": {"s2": "checked by hand"}}) == 0
+    assert factcheck.resolution("s2", state.factcheck, {}) == (d["note"], "agent")
+    assert factcheck.resolution("s2", state.factcheck, {"s2": "checked by hand"}) == ("checked by hand", "editor")
+    out = factcheck.summary(state.factcheck, {}, {"s2": s}, NOW)
+    assert out["log"][0]["resolved_by"] == "agent" and out["settled_by_agent"] == 1
+    # settled stories aren't ruled on again
+    assert factcheck.adjudicate(cfg, judge, ChipFetch(), [s], state, {"corrections": {}}, NOW, {}) == 0 and judge.calls == 1
+
+
+def test_fact_check_agent_can_only_narrow_a_claim(tmp_path):
+    cfg, s, state = _flagged(tmp_path)
+    bad = [
+        # adds a number that is in neither the story nor the sources
+        {"rulings": [{"claim": "largest", "ruling": "reword"}], "why_it_matters": "The round makes it one of 3 big chip startups in Europe.", "note": "Reworded."},
+        # "confirms" with words that aren't in any source
+        {"rulings": [{"claim": "largest", "ruling": "confirmed", "evidence": "the largest chip startup in all of Europe"}], "note": "Confirmed."},
+        # says it removed the claim but changed nothing
+        {"rulings": [{"claim": "largest", "ruling": "remove"}], "note": "Removed."},
+    ]
+    for answer in bad:
+        state.factcheck.pop("decisions", None)
+        assert factcheck.adjudicate(cfg, RulingLLM(answer), ChipFetch(), [s], state, {"corrections": {}}, NOW, {}) == 0
+        assert state.factcheck["decisions"]["s2"]["outcome"] == "retry"
+    # a retried story gets one more go, then is left for a person
+    judge = RulingLLM(bad[0])
+    factcheck.adjudicate(cfg, judge, ChipFetch(), [s], state, {"corrections": {}}, NOW, {})
+    factcheck.adjudicate(cfg, judge, ChipFetch(), [s], state, {"corrections": {}}, NOW, {})
+    assert judge.calls == 1 and state.factcheck["decisions"]["s2"]["attempts"] == 2
+    # a flag a person has already resolved is left alone
+    state.factcheck.pop("decisions")
+    assert factcheck.adjudicate(cfg, judge, ChipFetch(), [s], state, {"corrections": {"s2": "fine"}}, NOW, {}) == 0

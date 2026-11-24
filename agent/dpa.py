@@ -633,6 +633,7 @@ def run(cfg: Config, fetcher: Any, now: datetime, env: dict[str, str] | None = N
         ("takeaways", lambda: write_takeaways(llm, stories, state, profile, review, now, report)),
         ("brief", lambda: write_brief(llm, stories, state, profile, now, report)),
         ("factcheck", lambda: factcheck.audit(cfg, llm, fetcher, stories, state, now, report, env=env)),
+        ("corrections", lambda: factcheck.adjudicate(cfg, llm, fetcher, stories, state, review, now, report, env=env)),
     )
     for name, fn in steps:
         try:

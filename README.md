@@ -18,7 +18,7 @@ Created by Ajay Manuel.
 |---|---|---|---|
 | **Newsroom agent** | Every 3 hours (:17) | Editor-in-chief plans the run, then gather → judge → verify → research → write → publish (below) | `agent/pipeline.py`, `agent/chief.py` |
 | **Breaking news watch** | Every 15 minutes | Checks the labs' own channels; if something is new, runs a quick breaking edition. Most checks use no AI | `.github/workflows/watch.yml` |
-| **DPA lens** | Every 3 hours, 90 min after the newsroom | What each story means for DPA, the AI Radar, weekly calls, and a daily fact-check audit of published stories | `agent/dpa.py`, `agent/factcheck.py` |
+| **DPA lens** | Every 3 hours, 90 min after the newsroom | What each story means for DPA, the AI Radar, weekly calls, a daily fact-check audit of published stories, and the fact-check agent that settles its flags | `agent/dpa.py`, `agent/factcheck.py` |
 | **DPA task bench** | Sundays | Tests every reachable free model on synthetic DPA-style document tasks, scored against known answers | `agent/bench.py` |
 | **Daily recap** | Evenings | A scheduled Claude session writes a one-minute news bulletin of the top 5 stories; **Recap release** renders and publishes it | `agent/recap.py` |
 | **API worker** | Always on (Cloudflare) | Ask the Wire, subscriptions and emails, feedback board, MCP server; daily digests at 08:50 IST; re-starts any run GitHub's cron misses | `worker/src/` |
@@ -40,13 +40,26 @@ A "scheduler" in the worker starts the newsroom, breaking-news and DPA jobs if G
 
 Every dropped item is logged with a reason, and the `/system/` page shows the counts.
 
+### How flagged claims get settled
+
+Each day a second model audits a sample of published stories claim by claim. It reads only one or two sources per
+story, so a flag means "check this", not "this is wrong". The **fact-check agent** then settles each flag on its own:
+- It re-reads **all** of the story's sources and rules on every flagged claim: **confirmed**, **reworded** or **removed**.
+- **Confirmed** requires words copied exactly from a source.
+- A correction may only narrow or remove a claim. It cannot add a number that isn't already in the story or the
+  sources, or make the text much longer.
+- Every ruling is published with a note (on the story and in the corrections log on `/system/`). Corrections reach
+  the site at the next build and `data/stories.json` at the next newsroom run.
+- A ruling that fails these checks is retried once. After that the flag stays open for a person.
+- The accuracy rate on `/system/` still scores stories as they were first published.
+
 ## Where people stay in control
 
 The agent proposes and people decide. There are three places where people decide:
 
-1. **`config/dpa_review.yaml`**: approve **Adopt** on the AI Radar, override a radar ring, and **resolve fact-check flags**.
-   A resolution shows as an "Editor's note" on the story and as resolved on `/system/`. To resolve a flag, edit
-   this file on github.com (pencil icon). The site redeploys in a few minutes.
+1. **`config/dpa_review.yaml`**: approve **Adopt** on the AI Radar, override a radar ring, and **overrule the
+   fact-check agent** on a flagged claim. A person's note shows as an "Editor's note" on the story and wins over the
+   agent's ruling. Edit this file on github.com (pencil icon); the site redeploys in a few minutes.
 2. **The daily recap email**: the editor gets a preview with an "Approve and send" link first. Nothing goes to
    subscribers until it's approved (a signed link handled by the worker).
 3. **Reader suggestions**: the weekly analysis ranks ideas from the public board. The admin dashboard (`/admin/`,
@@ -61,7 +74,7 @@ The agent proposes and people decide. There are three places where people decide
 **Daily check (2 minutes):**
 1. Open `/system/` and check that stories are being published and how many accuracy flags are open.
 2. Open the **Actions** tab and look for any red ✗ runs.
-3. Resolve fact-check flags in `config/dpa_review.yaml`.
+3. Skim the fact-check agent's rulings in the corrections log, and overrule any you disagree with in `config/dpa_review.yaml`.
 
 **If something breaks:**
 

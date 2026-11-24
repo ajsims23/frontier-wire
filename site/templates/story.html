@@ -99,7 +99,7 @@
       <h2 id="fc-h">Fact-check</h2>
       <p class="muted">On {{ audit.date }} a second AI model re-read the sources and checked each claim in this story. <a href="{{ root }}system/#accuracy">How the audit works</a></p>
       <ul>{% for c in audit.claims %}<li><span class="fc fc-{{ c.verdict }}">{{ {"supported": "Supported", "partly": "Partly", "unsupported": "Not in sources", "contradicted": "Contradicted"}[c.verdict] }}</span> {{ c.claim }}{% if c.note %} <span class="muted">({{ c.note }})</span>{% endif %}</li>{% endfor %}</ul>
-      {% if correction %}<p class="dl-test"><b>Editor's note:</b> {{ correction }}</p>{% endif %}
+      {% if correction %}<p class="dl-test"><b>{{ "Fact-check agent" if correction_by == "agent" else "Editor's note" }}:</b> {{ correction }}</p>{% endif %}
     </section>
     {% endif %}
 
