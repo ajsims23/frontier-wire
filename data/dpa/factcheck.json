@@ -906,5 +906,80 @@
    "rate": 0.776
   }
  ],
- "last": "2026-11-24"
+ "last": "2026-11-24",
+ "decisions": {
+  "2dae3b3e6991": {
+   "date": "2026-11-24",
+   "outcome": "corrected",
+   "note": "Reworded why_it_matters to match sources; removed unsupported claim about shifting financial risk.",
+   "edits": {
+    "why_it_matters": {
+     "from": "The new restrictions directly target the cross-border demand model that fueled rapid infrastructure expansion across Southeast Asia, shifting financial risk onto regional operators dependent on Chinese clients.",
+     "to": "The new restrictions threaten the demand from Chinese customers that has driven rapid infrastructure expansion across Southeast Asia."
+    }
+   },
+   "rulings": [
+    {
+     "claim": "The new US chip export rules threaten Southeast Asia data center boom.",
+     "ruling": "confirmed",
+     "evidence": "New US chip export rules threaten SEA's data center boom, risking incomplete and abandoned projects and forcing neoclouds to replace their Chinese customers"
+    },
+    {
+     "claim": "The rules risk incomplete and abandoned projects.",
+     "ruling": "confirmed",
+     "evidence": "New US chip export rules threaten SEA's data center boom, risking incomplete and abandoned projects and forcing neoclouds to replace their Chinese customers"
+    },
+    {
+     "claim": "The regulations force regional cloud providers to replace their Chinese customers.",
+     "ruling": "confirmed",
+     "evidence": "New US chip export rules threaten SEA's data center boom, risking incomplete and abandoned projects and forcing neoclouds to replace their Chinese customers"
+    },
+    {
+     "claim": "The new restrictions directly target the cross-border demand model that fueled rapid infrastructure expansion across Southeast Asia.",
+     "ruling": "reword",
+     "evidence": "Southeast Asia’s data center boom leaned on Chinese demand. New U.S. rules put that pipeline at risk"
+    },
+    {
+     "claim": "They shift financial risk onto regional operators dependent on Chinese clients.",
+     "ruling": "remove",
+     "evidence": ""
+    }
+   ],
+   "sources_read": 1,
+   "model": "groq/openai/gpt-oss-120b",
+   "attempts": 1
+  },
+  "e209846e7d75": {
+   "date": "2026-11-24",
+   "outcome": "confirmed",
+   "note": "Claim confirmed; sources describe fraud charges and smuggling of restricted AI chips from SE Asia to China.",
+   "edits": {},
+   "rulings": [
+    {
+     "claim": "The case highlights enforcement actions surrounding the unauthorized diversion of restricted AI hardware from Southeast Asia to China.",
+     "ruling": "confirmed",
+     "evidence": "Sources: Alice Huang associate Li Ming, whom Singapore charged with fraud in 2025, was central to smuggling restricted AI chips from Southeast Asia to China"
+    }
+   ],
+   "sources_read": 1,
+   "model": "groq/openai/gpt-oss-120b",
+   "attempts": 1
+  },
+  "cba56376caa9": {
+   "date": "2026-11-24",
+   "outcome": "confirmed",
+   "note": "Claim confirmed; supported by techmeme headline stating Motherbrain develops smart NPCs with memory and AI game masters.",
+   "edits": {},
+   "rulings": [
+    {
+     "claim": "Motherbrain is dedicated to developing AI-powered “smart” non-player characters with memory and AI game‑master systems.",
+     "ruling": "confirmed",
+     "evidence": "Ubisoft launches Motherbrain, a subsidiary focused on developing \"smart NPCs with memory and AI game masters that manage large-scale systemic worlds\"."
+    }
+   ],
+   "sources_read": 2,
+   "model": "groq/openai/gpt-oss-120b",
+   "attempts": 1
+  }
+ }
 }
