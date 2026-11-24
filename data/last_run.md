@@ -1,20 +1,24 @@
-## Frontier Wire breaking-news check — 2026-11-24T19:40:44+00:00
+## Frontier Wire breaking-news check — 2026-11-24T21:40:43+00:00
 
-Fetched 2516 items · fresh 1 · judged 1 · kept 1 · **written 1**
-AI: 7 requests, 19,297 tokens this run · 203 requests today · providers: gemini, groq, nvidia, cerebras
-Threads updated: OpenAI GPT-6.2 Astra and Sol rollout: Amateur astronomers use Codex and Astra to search public tel
+Fetched 2517 items · fresh 1 · judged 1 · kept 1 · **written 1**
+AI: 10 requests, 19,334 tokens this run · 213 requests today · providers: gemini, groq, nvidia, cerebras
+Research agent: investigated 1 stories with 3 tool calls, confirmed 1
 Photos: 1 saved, 0 unavailable
-Alerts: 26 events sent: {"subscribers":5,"sent":0,"queued":11}
-Trackers: filed 2 stories; updated copyright, ai-money
+Alerts: 26 events sent: {"subscribers":5,"sent":0,"queued":7}
+Trackers: filed 1 stories; updated frontier-race
 Tagged 1 stories by sector, region and deal
-Time: gather 15s, judge 7s, verify and write 24s, tagging 26s, trackers 59s, alerts 4s
+Time: gather 11s, verify and write 96s, trackers 29s, alerts 1s
 
 ### New stories
-- **models** — [Amateur astronomers use Codex and Astra to search public telescope data for exoplanets](https://openai.com/index/searching-for-distant-planets-with-astra)  
-  Two amateur astronomers used OpenAI's Codex and Astra to analyze public telescope data from millions of stars for signs of distant planets. Their findings have been submitted to professional astronomers for further analysis.  
-  _1 source(s), 0 verified quote(s)_
+- **models** — [OpenAI announces GPT-6 protein-design capabilities](https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities)  
+  OpenAI announced that its GPT-6 family of models can design new protein shapes and sequences using reasoning and code, without relying on specialized biology models. Proteins based on GPT-6.2 designs showed evidence of binding across five targets in lab tests with Onava.  
+  _2 source(s), 0 verified quote(s)_
+
+<details><summary>Research agent's work</summary>
+
+- GPT-6 models demonstrate intrinsic protein-design capabilities: confirmed (searched “GPT-6 models demonstrate intrinsic protein-design capabilities”; searched “GPT-6 protein design OpenAI”; read nature.com)
+
+</details>
 
 ### Notes
 - gemini/gemini-3.5-flash-lite: 503 (server busy); trying next model
-- gemini/gemini-3.5-flash-lite: 503 (server busy); trying next model
-- gemini: 429 after retry (429  You exceeded your current quota, please check your plan and billing details); moving to next provider for this run
