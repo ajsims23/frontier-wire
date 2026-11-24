@@ -53,6 +53,28 @@ jobs:
             -d '{"model":"gemini-flash-lite-latest","messages":[{"role":"user","content":"Reply with the word ok."}],"max_tokens":50}' \
             https://generativelanguage.googleapis.com/v1beta/openai/chat/completions)
           echo "Gemini chat HTTP $code"; [ "$code" = "200" ]
+      - name: Gemini — which models work with tool calls (and how busy they are)
+        if: always()
+        timeout-minutes: 10
+        env:
+          KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          [ -n "$KEY" ] || exit 0
+          curl -s "https://generativelanguage.googleapis.com/v1beta/models?pageSize=300&key=$KEY" \
+            | jq -r '.models[] | select(.supportedGenerationMethods | index("generateContent")) | .name | sub("^models/";"")' \
+            | grep -iE "flash|gemma" | grep -viE "tts|image|audio|live|embed|robotics|computer" | sort | tee models.txt
+          tool='{"type":"function","function":{"name":"answer","description":"Give the answer","parameters":{"type":"object","properties":{"word":{"type":"string"}},"required":["word"]}}}'
+          while read -r m; do
+            for try in 1 2; do
+              res=$(curl -s -o out.json -w "%{http_code} %{time_total}" -m 60 -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+                -d "{\"model\":\"$m\",\"messages\":[{\"role\":\"user\",\"content\":\"Call answer with the word ok.\"}],\"tools\":[$tool],\"tool_choice\":{\"type\":\"function\",\"function\":{\"name\":\"answer\"}},\"max_tokens\":300}" \
+                https://generativelanguage.googleapis.com/v1beta/openai/chat/completions)
+              called=$(jq -r '.choices[0].message.tool_calls[0].function.name // "-"' out.json 2>/dev/null)
+              echo "$m try$try: HTTP $res tool=$called $(jq -rc '.error.message // empty' out.json 2>/dev/null | cut -c1-120)"
+              sleep 4
+            done
+          done < models.txt
+
       - name: NVIDIA key (optional) — which models work with tool calls
         if: always()
         timeout-minutes: 12
