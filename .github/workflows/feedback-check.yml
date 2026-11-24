@@ -16,3 +16,5 @@ jobs:
           echo "== similar ideas"; curl -sS -m 30 "$API/api/feedback/similar?q=dark%20mode%20newsletter" | jq '.items|length'
           echo "== admin (no key) should be 401"; curl -sS -o /dev/null -w '%{http_code}\n' -m 30 "$API/api/admin/overview"
           echo "== admin overview"; curl -sS -m 30 -H "Authorization: Bearer $KEY" "$API/api/admin/overview" | jq '{stats, reports: (.reports|length), picks: (.picks|length), recent_log: [.log[:8][] | "\(.at) \(.level) \(.kind): \(.msg)"]}'
+          echo "== API usage today (Usage & limits tab)"; curl -sS -m 30 -H "Authorization: Bearer $KEY" "$API/api/admin/usage" \
+            | jq '{today, rows_today: [.rows[] | select(.day == .day) | "\(.day) \(.service) / \(.model) / \(.source): \(.requests) calls, \(.ok) ok, \(.limited) limited, \(.busy) busy"] | map(select(test("^" + "'"$(TZ=Asia/Kolkata date +%F)"'"))), live: [.state[] | "\(.service) \(.k) = \(.v)"][:25], brevo}'
