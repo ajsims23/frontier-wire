@@ -1470,6 +1470,29 @@
    "rationale": "Qodo integrates internal coding standards into code reviews to catch critical bugs early. DPA could assess its effectiveness in improving internal development workflows and data pipeline repository quality.",
    "updated": "2026-11-22",
    "model": "gemini/gemini-flash-lite-latest"
+  },
+  "claude-ship": {
+   "key": "claude-ship",
+   "name": "Claude Ship",
+   "first_seen": "2026-11-24",
+   "history": [
+    {
+     "date": "2026-11-24",
+     "from": "",
+     "to": "assess",
+     "why": "Could automate routine pull-request reviews and checks for internal data pipelines, but needs evaluation on DPA-style tasks before a hands-on trial."
+    }
+   ],
+   "evidence": [
+    "2b5faa4b22a0"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "data_pipelines",
+   "rationale": "Could automate routine pull-request reviews and checks for internal data pipelines, but needs evaluation on DPA-style tasks before a hands-on trial.",
+   "updated": "2026-11-24",
+   "model": "gemini/gemini-flash-lite-latest"
   }
  },
  "considered": [
@@ -1485,6 +1508,7 @@
   "28b27e2d175e",
   "2adb42fb6372",
   "2b4eaac89da1",
+  "2b5faa4b22a0",
   "2d3b8471f026",
   "2db41133973d",
   "31089e719fc9",
@@ -1558,7 +1582,7 @@
   "f19cee3d1350",
   "fa0e89bac09a"
  ],
- "updated_at": "2026-11-22T02:41:23+00:00",
+ "updated_at": "2026-11-24T03:04:38+00:00",
  "takeaways": {
   "written_at": "2026-11-23T16:05:03+00:00",
   "sig": "cert-in-ai-security-auditing-guidelines:hold|claude-code:assess|claude-fable-5-2:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|grok-build:hold|mai-code-2:trial|microsoft-agent-framework:hold|tool-retrieval:trial",
