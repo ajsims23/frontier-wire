@@ -622,7 +622,8 @@ def run(cfg: Config, fetcher: Any, now: datetime, env: dict[str, str] | None = N
     profile, review = load_profile(config_dir), load_review(config_dir)
     state = LensState(cfg.data_dir)
     lim = profile.get("limits", {})
-    limits = Limits({"max_requests_per_run": lim.get("max_requests_per_run", 40), "max_requests_per_day": lim.get("max_requests_per_day", 160),
+    limits = Limits({"max_ai_minutes_per_run": lim.get("max_ai_minutes_per_run", 16),  # the job times out at 25
+                     "max_requests_per_run": lim.get("max_requests_per_run", 40), "max_requests_per_day": lim.get("max_requests_per_day", 160),
                      "max_tokens_per_day": lim.get("max_tokens_per_day", 500000)}, state.dir / "usage.json", today=now.date().isoformat())
     llm = llm or LLM(cfg.providers, limits, env=env)
     from .text import unsuitable

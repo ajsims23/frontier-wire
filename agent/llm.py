@@ -90,12 +90,18 @@ class Limits:
                 pass
         self.run_requests = 0
         self.run_tokens = 0
+        # a wall-clock budget for AI in one run, so a slow day on the free tiers ends in a saved run (anything
+        # unfinished carries over) instead of the workflow's timeout killing it with nothing saved
+        self.max_minutes = float(cfg.get("max_ai_minutes_per_run") or 0)
+        self._t0 = time.monotonic()
 
     @property
     def day(self) -> dict[str, int]:
         return self._usage.setdefault(self.today, {"requests": 0, "tokens": 0})
 
     def check(self) -> None:
+        if self.max_minutes and time.monotonic() - self._t0 > self.max_minutes * 60:
+            raise LimitReached(f"time budget of {self.max_minutes:g} minutes for AI reached this run")
         if self.run_requests >= self.max_run:
             raise LimitReached(f"per-run cap of {self.max_run} AI requests reached")
         if self.day["requests"] >= self.max_day:

@@ -87,6 +87,7 @@ limits:
   # Keeps the agent well inside free tiers. A run stops calling AI once a cap is hit;
   # anything not yet judged is picked up next run.
   max_requests_per_run: 70
+  max_ai_minutes_per_run: 22   # the newsroom job times out at 35 minutes: stop calling AI in time to save the run
   max_requests_per_day: 450
   max_tokens_per_day: 900000
 

@@ -329,3 +329,20 @@ def test_when_everyone_is_resting_wait_once_but_never_past_the_run_cap(tmp_path)
         with pytest.raises(Exception):
             ask(llm)
     assert sum(s for s in slept if s >= 60) <= LLM.MAX_WAIT_PER_RUN
+
+
+def test_a_run_stops_calling_ai_when_its_time_budget_is_spent(tmp_path, monkeypatch):
+    import pytest
+    from agent import llm as llm_mod
+    clock = [1000.0]
+    monkeypatch.setattr(llm_mod.time, "monotonic", lambda: clock[0])
+    lim = llm_mod.Limits({"max_requests_per_run": 50, "max_requests_per_day": 50, "max_tokens_per_day": 10**6,
+                          "max_ai_minutes_per_run": 22}, tmp_path / "usage.json")
+    lim.check()  # fine at the start
+    clock[0] += 21 * 60
+    lim.check()  # still inside the budget
+    clock[0] += 2 * 60
+    with pytest.raises(llm_mod.LimitReached, match="time budget"):
+        lim.check()
+    # no budget set: no time limit (the bench and older settings)
+    llm_mod.Limits({"max_requests_per_run": 5, "max_requests_per_day": 5, "max_tokens_per_day": 10}, tmp_path / "u2.json").check()

@@ -95,6 +95,7 @@ jobs:
           API_URL: ${{ vars.API_URL }}
           ALERTS_DISPATCH_SECRET: ${{ secrets.ALERTS_DISPATCH_SECRET }}
           GITHUB_TOKEN: ${{ github.token }}   # read-only search for the Builders desk (new AI repos)
+          PYTHONUNBUFFERED: "1"   # progress shows in the log as it happens, not only at the end
         run: python -m agent run
 
       - name: Commit

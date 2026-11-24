@@ -69,7 +69,10 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd in ("dpa", "bench"):
         return _lens(args.cmd, cfg, fetcher, now)
 
-    limits = Limits(cfg.limits, cfg.data_dir / "usage.json")
+    lim = dict(cfg.limits)
+    if args.cmd == "watch":  # the breaking-news job has a 15-minute timeout
+        lim["max_ai_minutes_per_run"] = min(float(lim.get("max_ai_minutes_per_run") or 9), 9)
+    limits = Limits(lim, cfg.data_dir / "usage.json")
 
     if args.cmd == "check-models":
         schema = {"type": "object", "properties": {"ok": {"type": "boolean"}}, "required": ["ok"]}
