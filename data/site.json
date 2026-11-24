@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T18:51:10+00:00",
+  "updated_at": "2026-11-24T19:40:44+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "Indian AI startups are attracting much more capital but it is flowing into fewer, larger deals. Early-stage rounds are much bigger on average, while the number of new companies getting funded has dropped sharply. Mumbai has pulled ahead of Bengaluru as the top city for AI investment.",
@@ -186,7 +186,10 @@
         "investors": 2
       },
       "cover": "43%",
-      "photo_local": true
+      "photo_local": true,
+      "trackers": [
+        "copyright"
+      ]
     },
     {
       "explainer": {
@@ -375,7 +378,10 @@
         "investors": 3
       },
       "cover": "$100 million",
-      "photo_local": true
+      "photo_local": true,
+      "trackers": [
+        "ai-money"
+      ]
     },
     {
       "explainer": {
@@ -927,6 +933,79 @@
       "trackers": [
         "agent-safety"
       ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Amateur astronomers used AI tools like Codex and Astra to search public telescope data for starlight patterns that indicate orbiting planets. Their findings have been passed to professional researchers and the SETI Institute for independent assessment.",
+        "terms": [
+          {
+            "term": "Exoplanet",
+            "meaning": "A planet that orbits a star outside our solar system."
+          },
+          {
+            "term": "Kepler telescope",
+            "meaning": "A space telescope mission that hunted for planets from 2009 to 2018."
+          },
+          {
+            "term": "Astra",
+            "meaning": "An AI tool used by amateur astronomers to analyze telescope data."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Amateur and professional astronomers can use tools like Codex and Astra to design and run searches of public telescope data for exoplanets.",
+        "business": "Start-up founders and engineers, such as Ethan Byrd, are applying AI models like Astra independently to large-scale public datasets like those from Kepler.",
+        "investors": "AI tools developed by companies like OpenAI are being utilized by individuals for scientific research in astronomy."
+      },
+      "id": "f3aa9260f109",
+      "headline": "Amateur astronomers use Codex and Astra to search public telescope data for exoplanets",
+      "summary": "Two amateur astronomers used OpenAI's Codex and Astra to analyze public telescope data from millions of stars for signs of distant planets. Their findings have been submitted to professional astronomers for further analysis.",
+      "why_it_matters": "Demonstrates how individuals outside professional research can leverage AI tools to process massive public space datasets and produce candidates for scientific review.",
+      "category": "models",
+      "lab": "OpenAI",
+      "model_name": "Astra",
+      "model_type": "Language",
+      "tags": [
+        "astronomy",
+        "exoplanets",
+        "Codex",
+        "Astra",
+        "OpenAI"
+      ],
+      "quotes": [],
+      "score": 7,
+      "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+      "source_id": "openai",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://images.ctfassets.net/kftzwdyauwt9/318YLaAKlMKQFzOdMutjeX/8b6e4e516fd1a7894c97318838f43a0f/searching-for-distant-planets-with-astra-social.png?w=1600&h=900&fit=fill",
+      "sources": [
+        {
+          "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+          "publisher": "OpenAI",
+          "title": "Searching for distant planets with Astra"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-24T11:00:00+00:00",
+      "created_at": "2026-11-24T19:40:44+00:00",
+      "breaking": true,
+      "thread": "t-c4b96abe3e96",
+      "sectors": [
+        "science"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 1,
+        "investors": 0
+      },
+      "cover": "Codex",
       "photo_local": true
     },
     {
@@ -5340,116 +5419,6 @@
         "ai-money"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Inkling 2 Mini is a small open-weights AI model designed to run on consumer laptops with a memory footprint of about 20GB. By looping its middle layers three times per token, it aims to achieve higher reasoning performance using fewer active parameters than traditional models of similar capability.",
-        "terms": [
-          {
-            "term": "open-weights",
-            "meaning": "An open-weights AI model whose parameter files are publicly available for download and use."
-          },
-          {
-            "term": "looped transformer",
-            "meaning": "A neural network architecture that processes sequential data by running middle layers multiple times per token."
-          },
-          {
-            "term": "Mixture-of-Experts",
-            "meaning": "A model design where only a subset of parameters is active for any given token to improve efficiency."
-          }
-        ],
-        "watch_next": []
-      },
-      "benchmarks": [
-        {
-          "model": "Inkling 2 Mini",
-          "benchmark": "DeepSWE v1.1",
-          "score": "48.2%"
-        },
-        {
-          "model": "Inkling 2 Mini",
-          "benchmark": "Vals Index v2.2",
-          "score": "46.5%"
-        }
-      ],
-      "audiences": {
-        "builders": "Developers can access Inkling 2 Mini on Hugging Face and run it locally using tools like Ollama, Unsloth, or llama.cpp.",
-        "business": "Businesses can use Inkling 2 Mini locally on hardware like consumer laptops to power persistent agents and coding tools without cloud dependency.",
-        "investors": "Thinking Machines Lab is competing in the open-weights model market with an architecture that reduces active parameters and memory footprints."
-      },
-      "id": "6da8ea47d40e",
-      "headline": "Thinking Machines Lab releases Inkling 2 Mini open-weights model",
-      "summary": "Thinking Machines Lab released Inkling 2 Mini, a 26.4B-parameter open-weights Mixture-of-Experts transformer that loops its middle layers three times per token. The ~20GB model is small enough to run on consumer laptops and leads open-weights models under 100B parameters on benchmarks like DeepSWE v1.1.",
-      "why_it_matters": "The release demonstrates the practical application of looped transformer architectures in sub-100B parameter models designed for local hardware execution.",
-      "category": "models",
-      "lab": "Thinking Machines Lab",
-      "model_name": "Inkling 2 Mini",
-      "model_type": "Language",
-      "tags": [
-        "Inkling 2 Mini",
-        "Thinking Machines Lab",
-        "open-weights",
-        "transformer",
-        "Mixture-of-Experts"
-      ],
-      "quotes": [],
-      "score": 9,
-      "url": "https://techmeme.com/261120/p33",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://thinkingmachines.ai/news/inkling-2-mini/images/cover-social.png",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261120/p33",
-          "publisher": "techmeme.com",
-          "title": "TML releases Inkling 2 Mini, an open-weights 26.4B-parameter transformer that loops middle layers three times per token for better reasoning with fewer tokens (Thinking Machines Lab)"
-        },
-        {
-          "url": "https://techmeme.com/261120/p37",
-          "publisher": "techmeme.com",
-          "title": "Artificial Analysis says Inkling 2 Mini, with 5.4B active parameters, matches Qwen3.8 27B (xhigh) on its Intelligence Index with ~5x fewer active parameters (Artificial Analysis)"
-        },
-        {
-          "url": "https://thinkingmachines.ai/news/inkling-2-mini",
-          "publisher": "thinkingmachines.ai",
-          "title": "Inkling 2 Mini"
-        },
-        {
-          "url": "https://unite.ai/thinking-machines-lab-releases-inkling-2-mini-for-local-devices",
-          "publisher": "Unite.AI",
-          "title": "Thinking Machines Lab Releases Inkling 2 Mini for Local Devices"
-        },
-        {
-          "url": "https://huggingface.co/blog/inkling2mini",
-          "publisher": "Hugging Face blog",
-          "title": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-20T21:15:02+00:00",
-      "created_at": "2026-11-20T22:15:25+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "Inkling 2 Mini",
-      "trackers": [
-        "frontier-race"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -6287,28 +6256,57 @@
       ]
     },
     {
-      "id": "t-2b8b088b82c1",
-      "title": "Microsoft in-house AI model development",
-      "updated_at": "2026-11-24T07:45:00+00:00",
+      "id": "t-c4b96abe3e96",
+      "title": "OpenAI GPT-6.2 Astra and Sol rollout",
+      "updated_at": "2026-11-24T11:00:00+00:00",
       "stories": [
         {
-          "id": "74e3f2b1316b",
-          "headline": "Microsoft builds in-house Rocket system to train AI models at scale",
-          "url": "https://sierraleonetimes.com/news/279451476/microsoft-steps-up-efforts-to-build-advanced-ai-models-with-its-in-house-rocket-system",
-          "published_at": "2026-11-24T07:45:00+00:00",
-          "category": "industry"
+          "id": "f3aa9260f109",
+          "headline": "Amateur astronomers use Codex and Astra to search public telescope data for exoplanets",
+          "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+          "published_at": "2026-11-24T11:00:00+00:00",
+          "category": "models"
         },
         {
-          "id": "5d27befedfa3",
-          "headline": "Microsoft unveils six AI models including MAI Code 2 and Flash",
-          "url": "https://techmeme.com/261117/p45",
-          "published_at": "2026-11-17T18:25:02+00:00",
+          "id": "53f2a14376dd",
+          "headline": "OpenAI details Codex sandbox security and execution controls",
+          "url": "https://openai.com/index/inside-the-codex-sandbox",
+          "published_at": "2026-11-18T08:00:00+00:00",
+          "category": "models"
+        },
+        {
+          "id": "25f8ab73ccc5",
+          "headline": "OpenAI releases GPT-6.2 Astra and Sol models with benchmark gains",
+          "url": "https://techmeme.com/261117/p57",
+          "published_at": "2026-11-17T21:45:02+00:00",
+          "category": "models"
+        },
+        {
+          "id": "5b059524c340",
+          "headline": "Ethan Mollick shares pre-launch experience with GPT-6.2 Astra",
+          "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2joens5t22x",
+          "published_at": "2026-11-17T18:30:03.697000+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "549a77347d5e",
+          "headline": "OpenAI releases GPT-6.2 Astra and Sol for ChatGPT Work and Codex",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+          "published_at": "2026-11-17T17:45:00+00:00",
           "category": "models"
         }
       ]
     }
   ],
   "labs": [
+    {
+      "lab": "OpenAI",
+      "model": "Astra",
+      "type": "Language",
+      "date": "2026-11-24T11:00:00+00:00",
+      "story_id": "f3aa9260f109",
+      "url": "https://openai.com/index/searching-for-distant-planets-with-astra"
+    },
     {
       "lab": "Meta",
       "model": "Muse",
@@ -6356,14 +6354,6 @@
       "date": "2026-11-23T21:25:00+00:00",
       "story_id": "2b5faa4b22a0",
       "url": "https://techmeme.com/261123/p41"
-    },
-    {
-      "lab": "OpenAI",
-      "model": "OpenAI and Cisco introduce Shirudo for Linux security",
-      "type": "Other",
-      "date": "2026-11-23T21:20:00+00:00",
-      "story_id": "1d0c151fefed",
-      "url": "https://openai.com/index/introducing-shirudo"
     },
     {
       "lab": "Google DeepMind",
@@ -6573,8 +6563,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 636,
-    "model_releases_this_month": 78,
+    "stories_this_month": 637,
+    "model_releases_this_month": 79,
     "labs_tracked": 33
   }
 }
