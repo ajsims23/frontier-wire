@@ -1,0 +1,351 @@
+{
+  "started_at": "2026-11-24T18:51:10+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1426)",
+    "deepmind": "ok (100)",
+    "google-ai": "failed: ReadTimeout: The read operation timed out",
+    "huggingface": "ok (916)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "mistral-news": "ok (0)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (13)",
+    "gdelt": "ok (0) via Bing News (GDELT unavailable)",
+    "hn": "ok (17)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (0) via Bing News (GDELT unavailable)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Anthropic Staff Openly Talk About ‘Taking Over the World’, Claims Max Tegmark",
+      "reason": "score 4: Rehash of safety and existential risk claims regarding Anthropic staff statements."
+    },
+    {
+      "title": "UK warns AI-driven cyberattacks are exposing years of weak security",
+      "reason": "score 5: UK cyber warning on AI-driven cyberattacks exploiting weak security is standard security commentary rather than a core AI frontier update."
+    },
+    {
+      "title": "Meta brings its Muse AI assistant directly into Instagram DMs",
+      "reason": "score 5: Integration of the existing Muse AI assistant into Instagram DMs is an incremental product feature rather than a new model or major capability."
+    },
+    {
+      "title": "Tidal to ban and remove millions of AI-generated tracks as AI slop inundates music streaming",
+      "reason": "score 5: Tidal's policy to ban fully AI‑generated tracks is a content‑moderation move; noteworthy for the music industry but not a frontier AI development."
+    },
+    {
+      "title": "Why a Crusoe investor is betting on solar and batteries to power future AI data centers",
+      "reason": "duplicate of 70f3d3a63449"
+    },
+    {
+      "title": "David Fincher is being dragged for suspected use of AI in his latest film",
+      "reason": "score 3: Allegations about AI use in a Hollywood film are a peripheral cultural story with no substantive AI technical or policy impact."
+    },
+    {
+      "title": "FAA opens probe after Amazon delivery drone clips cable, crashes into garage",
+      "reason": "not AI: FAA probe of an Amazon drone crash is unrelated to AI technology and offers no AI‑focused angle."
+    },
+    {
+      "title": "Shadowfax To Acquire WeFast To Expand Into Intra-City Deliveries",
+      "reason": "not AI: Acquisition of a delivery platform has no AI component; irrelevant to Frontier Wire audience."
+    },
+    {
+      "title": "India AI funding nearly doubles to $1.6B in Jan-Sept 2026: Tracxn",
+      "reason": "duplicate of 429920f88e11"
+    },
+    {
+      "title": "GPT 6.2 Astra Solves a Historical Mystery",
+      "reason": "score 5: Simon Willison shares a case study on GPT-6.2 Astra solving an 1808 sketchbook mystery, highly overlapping with existing coverage of AI identifying sketchbooks."
+    },
+    {
+      "title": "A US FTC official says Shein agreed to pay $100M to settle US claims that it misled consumers on shipping times, manipulated product reviews, and more (Jody Godoy/Reuters)",
+      "reason": "not AI: FTC settlement with Shein concerns consumer‑protection, not AI."
+    },
+    {
+      "title": "The OpenClaw Foundation launches ShellBench to test 13 frontier AI models across five harnesses on 100 tasks; top AI models hit only a ~60% completion rate (Nat Rubio-Licht/The Deep View)",
+      "reason": "duplicate of f8978e4ce75f"
+    },
+    {
+      "title": "Anthropic shares drop below $83 IPO price in premarket trading: here's why",
+      "reason": "duplicate of f991ba256218"
+    },
+    {
+      "title": "Anthropic dips below $83 share price after IPO",
+      "reason": "duplicate of f991ba256218"
+    },
+    {
+      "title": "Anthropic’s IPO Arrived Hot. Then the Stock Fell Below Its IPO Price",
+      "reason": "duplicate of f991ba256218"
+    },
+    {
+      "title": "Anthropic Stock Falls Below $83 Per Share IPO Price",
+      "reason": "duplicate of f991ba256218"
+    },
+    {
+      "title": "Anthropic stock sinks below IPO price days after record NASDAQ debut",
+      "reason": "duplicate of f991ba256218"
+    },
+    {
+      "title": "Anthropic breaks below $83 IPO price as debut rally unravels",
+      "reason": "duplicate of f991ba256218"
+    },
+    {
+      "title": "Tidal Becomes First Streaming Service to Ban AI Music From Its Platform",
+      "reason": "score 6: Same event as already-kept candidate b64fb9502408 (Tidal bans fully AI-generated music). Duplicate."
+    },
+    {
+      "title": "Tidal to ban AI-generated songs from platform",
+      "reason": "score 6: Same event as already-kept candidate b64fb9502408 (Tidal bans fully AI-generated music). Duplicate."
+    },
+    {
+      "title": "Tidal to Ban and Remove “Wholly AI-Generated Music”",
+      "reason": "score 6: Same event as already-kept candidate b64fb9502408 (Tidal bans fully AI-generated music). Duplicate."
+    },
+    {
+      "title": "Tidal Music takes a stand against AI music",
+      "reason": "score 5: Tidal's ban on AI‑generated music is a company policy move, not a major AI development; its impact is limited and similar coverage already exists."
+    },
+    {
+      "title": "Nvidia Board Ousted Jensen Huang Over Lies and Abuse, Not the Affair, as Trump Urges Rehire of Ex-CEO Now",
+      "reason": "not AI: Speculative political commentary about Nvidia board; no concrete AI‑related development."
+    },
+    {
+      "title": "From spy allegations to a CEO comeback: A timeline of Jensen Huang's Nvidia scandal",
+      "reason": "not AI: Timeline piece is a repackaging of existing coverage; lacks original news value for Frontier Wire."
+    },
+    {
+      "title": "Nvidia shares soar 30% after board reinstates Jensen Huang under Trump pressure",
+      "reason": "score 5: Stock‑price reaction to Nvidia board decision is finance‑focused and already covered; not a core AI breakthrough."
+    },
+    {
+      "title": "Jensen Huang was reinstated because his failure to build a management structure fit for Nvidia's size, plus Trump's support, left Nvidia with no other options (Robert Armstrong/Financial Times)",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Zipher, which uses AI agents to handle data workload execution and resource allocation, raised $53M across seed and Series A from TLV Partners and others (Duncan Riley/SiliconANGLE)",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Home service provider Pronto to be acquired by physical AI firm Provision Labs",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "da5966afc3d4",
+      "headline": "Ethan Mollick: Small AI Teams at Big Firms Doing Work of Dozens, Sparking Management Conflicts",
+      "category": "voices",
+      "summary": "Wharton professor Ethan Mollick reports that large manufacturers and financial services firms have scattered teams of two to three people using AI to complete the work of dozens in a fraction of the time, triggering internal management disputes over organizational implications.",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n333h3yyoc2g",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "b64fb9502408",
+      "headline": "Tidal bans fully AI-generated music starting December 9 after 43% of uploads flagged as AI",
+      "category": "industry",
+      "summary": "Tidal announced it will remove all fully AI-generated tracks from its platform beginning December 9, deleting more than 29 million songs. The company said 43% of tracks distributed over the past 90 days were fully AI-generated, rising to over 60% on November 6 alone.",
+      "url": "https://techmeme.com/261124/p29",
+      "sources": 3,
+      "quotes": 1
+    },
+    {
+      "id": "51b9331a9f93",
+      "headline": "Nvidia CEO Jensen Huang apologizes for code of conduct violations at first all-hands since return",
+      "category": "industry",
+      "summary": "Nvidia CEO Jensen Huang apologized to employees at his first all-hands meeting since being reinstated, acknowledging he made 'very serious personal mistakes' and violated the company's code of conduct. The board reinstated him 11 days after accepting his resignation over concerns about extramarital affairs.",
+      "url": "https://techmeme.com/261124/p28",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "1ea54e3f91fe",
+      "headline": "Three xAI founders launch Epochal to build AI agents for superhuman prediction",
+      "category": "industry",
+      "summary": "Three founding members of xAI — Guodong Zhang, Zihang Dai, and Manuel Kroiss — launched Epochal, a startup building AI agents that aim to achieve superhuman prediction. Zhang is personally investing $100 million in the company, which debuted its first product, Time Portal, an archived web environment for training agents on historical data.",
+      "url": "https://techmeme.com/261124/p27",
+      "sources": 4,
+      "quotes": 0
+    },
+    {
+      "id": "f991ba256218",
+      "headline": "Anthropic shares fall below $83 IPO price after record debut",
+      "category": "industry",
+      "summary": "Anthropic shares dropped below their $83 IPO price on Tuesday, trading as low as $76, a roughly 12% decline from Monday's close. The stock had debuted at $111.50 last week in the largest AI offering ever.",
+      "url": "https://techmeme.com/261124/p21",
+      "sources": 6,
+      "quotes": 0
+    },
+    {
+      "id": "71996d97862b",
+      "headline": "iFood scales coding agents across 15,000 repositories",
+      "category": "models",
+      "summary": "OpenAI reports that Brazilian food delivery company iFood has scaled coding agents across 15,000 repositories.",
+      "url": "https://openai.com/index/ifood",
+      "sources": 1,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "ignored made-up duplicate id b64fb9502408 for 'Tidal Becomes First Streaming Service to Ban AI Mu'",
+    "ignored made-up duplicate id b64fb9502408 for 'Tidal to ban AI-generated songs from platform'",
+    "ignored made-up duplicate id b64fb9502408 for 'Tidal to Ban and Remove “Wholly AI-Generated Music'",
+    "dropped non-quote (Ethan Mollick): we have scattered teams of 2-3 people using AI that are doin…",
+    "dropped unverifiable quote (Jensen Huang): This is going to be the hardest company meeting I've ever do…",
+    "dropped unverifiable quote (Jensen Huang): I made some very serious personal mistakes. I hurt my family…",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "2 kept item(s) carried over to the next run",
+    "trackers skipped: time budget of 22 minutes for AI reached this run",
+    "claims skipped: time budget of 22 minutes for AI reached this run",
+    "top voices skipped: time budget of 22 minutes for AI reached this run",
+    "briefing skipped: time budget of 22 minutes for AI reached this run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 113.6,
+    "audit": 0.0,
+    "plan": 2.3,
+    "judge": 109.7,
+    "verify and write": 789.2,
+    "videos": 123.4,
+    "tagging": 55.8,
+    "explainers": -0.0,
+    "model tracker": 153.9,
+    "weekly": -0.0,
+    "builders": -0.0,
+    "self-review": 8.5,
+    "photos": 0.3,
+    "stock photos": 2.7,
+    "daily email": 0.0,
+    "alerts": 11.2
+  },
+  "fetched": 2993,
+  "fresh": 24,
+  "plan": {
+    "focus": "Tracking the fallout from Anthropic's post-IPO slide while capturing major AI-generated music bans and agent startups.",
+    "priorities": [
+      "Anthropic falls 12%+ to ~$76, below its $83 IPO price and a sharp fall (Crucial market update on Anthropic shares dropping below IPO price and insider stock sales.)",
+      "Tidal will ban fully AI-generated music starting December 9 and says s (Major industry tipping point as Tidal bans fully AI-generated music after 43% slop influx.)",
+      "Three xAI founding members launch Epochal to build AI agents that achi (xAI co-founders launch Epochal with $100M backing for superhuman prediction agents.)",
+      "Ethan Mollick: Thing I am hearing from a number of big firms, from man (Ethan Mollick highlights enterprise shift toward scattered 2-3 person AI teams.)",
+      "In the first all-hands since his return, Jensen Huang apologized for v (Jensen Huang apologizes for code of conduct violations in first all-hands since return.)"
+    ],
+    "thin_areas": [
+      "research",
+      "india"
+    ],
+    "searches": [
+      "Anthropic IPO share price drop: 6 new",
+      "Tidal ban AI music: 6 new",
+      "Nvidia Jensen Huang apology all hands: 6 new"
+    ],
+    "dig_deeper": [
+      "Anthropic falls 12%+ to ~$76, below its $83 IPO price and a sharp fall",
+      "Tidal will ban fully AI-generated music starting December 9 and says s"
+    ]
+  },
+  "judged": 41,
+  "kept": 9,
+  "research": {
+    "investigated": 5,
+    "confirmed": 3,
+    "tool_calls": 15
+  },
+  "research_log": [
+    "Ethan Mollick: Thing I am hearing from a number of big firms, from man: unconfirmed (searched “Ethan Mollick big firms scattered teams AI doing work of dozens management fights”; searched “\"scattered teams of 2-3 people\" AI \"doing the work of dozens\" Ethan Mollick”; searched “\"management fights\" \"implications and politics\" AI Ethan Mollick”)",
+    "Tidal will ban fully AI-generated music starting December 9 and says s: confirmed (searched “Tidal ban fully AI-generated music December 9 43% tracks distributed”; read techcrunch.com; read arstechnica.com)",
+    "Three xAI founding members launch Epochal to build AI agents that achi: confirmed (searched “Epochal AI xAI founding members Guodong Zhang 100M superhuman prediction”; read bloomberg.com; searched “Epochal AI startup xAI founders Guodong Zhang prediction”)",
+    "Anthropic falls 12%+ to ~$76, below its $83 IPO price and a sharp fall: confirmed (searched “Anthropic IPO $83 shares fall below IPO price Dario Daniela Amodei sold shares”; read msn.com; read msn.com)",
+    "Jensen Huang was reinstated because his failure to build a management : unconfirmed (searched “Robert Armstrong Financial Times Jensen Huang reinstated Nvidia management structure Trump”; searched “\"Robert Armstrong\" \"Financial Times\" Jensen Huang Nvidia”; read ft.com)"
+  ],
+  "threads": [
+    "Nvidia reinstates Huang; reasons and apology: Nvidia CEO Jensen Huang apologizes for code of conduct viola",
+    "Anthropic IPO tests circular financing boom: Anthropic shares fall below $83 IPO price after record debut"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 5 new)",
+    "Anthropic": "ok (13 in feed, 0 new)",
+    "Google DeepMind": "ok (14 in feed, 2 new)",
+    "Google for Developers": "ok (10 in feed, 1 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
+    "Microsoft Research": "ok (12 in feed, 0 new)",
+    "NVIDIA": "ok (7 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 3 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 4 new)",
+    "AI Explained": "ok (15 in feed, 1 new)",
+    "Lex Fridman": "ok (14 in feed, 1 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (3 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 7 new)",
+    "Training Data (Sequoia)": "ok (5 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (4 in feed, 1 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "11 kept from 26 new",
+  "tagged": 6,
+  "model_tracker": "81 models, 19 changes today",
+  "top_voices_sources": {
+    "tv-mollick": "ok (0)",
+    "tv-lambert": "ok (0)",
+    "tv-swyx": "ok (7)",
+    "tv-dwarkesh": "ok (0)",
+    "tv-raschka": "ok (0)",
+    "tv-karpathy": "ok (0)",
+    "tv-evans": "ok (0)",
+    "x-coverage": "ok (0 of 3 articles, bing)",
+    "hn": "ok (0)"
+  },
+  "photos": "4 saved, 0 unavailable",
+  "stock photos": "2 added",
+  "alerts": "30 events sent: {\"subscribers\":5,\"sent\":0,\"queued\":23}",
+  "ai_requests_run": 45,
+  "ai_tokens_run": 185906,
+  "ai_requests_today": 196,
+  "provider_log": [
+    "gemini/gemini-3.5-flash-lite: 503 (server busy); trying next model",
+    "gemini/gemini-3.6-flash: answer cut off; retrying with more room",
+    "gemini: 429 after retry (429  You exceeded your current quota, please check your plan and billing details); moving to next provider for this run",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq: 429 after retry (rate_limit_exceeded tokens Rate limit reached for model `openai/gpt-oss-120b` in); moving to next provider for this run",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room"
+  ]
+}

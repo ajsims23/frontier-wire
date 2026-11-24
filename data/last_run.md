@@ -1,101 +1,110 @@
-## Frontier Wire newsroom run — 2026-11-24T16:55:28+00:00
+## Frontier Wire newsroom run — 2026-11-24T18:51:10+00:00
 
-Fetched 3072 items · fresh 70 · judged 70 · kept 12 · **written 0**
-AI: 14 requests, 93,506 tokens this run · 151 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking Nvidia’s leadership shake‑up and its market ripple while bolstering coverage of AI safety and research advances.
-  Priorities: Nvidia CEO Jensen Huang pulls off an unlikely comeback in just 11 days (Nvidia CEO reinstatement drives AI stock rally and geopolitical scrutiny, key for investors.); Anthropic falls 12%+ to ~$76, below its $83 IPO price and a sharp fall (Anthropic’s share drop below IPO price signals market stress for leading AI startup.); Amazon’s Decart acquisition is a bet on using software to narrow the g (Amazon’s Decart buy signals a strategic push to close the AI chip gap, important for industry outlook.); Why a Crusoe investor is betting on solar and batteries to power futur (Crusoe investor’s solar‑battery bet highlights emerging infrastructure financing for AI data centers.); Tidal to ban and remove millions of AI-generated tracks as AI slop inu (Tidal’s AI‑generated music ban illustrates content‑moderation challenges for media platforms.)
-  Thin areas: research, safety
-  Searches: Nvidia board probe update: 0 new; Megaspeed chip sanction details: 3 new; Sim2Real obstacle avoidance benchmarks: 0 new
-  Dig deeper: Nvidia CEO Jensen Huang pulls off an unlikely comeback in just 11 days; Anthropic falls 12%+ to ~$76, below its $83 IPO price and a sharp fall
-Videos: no new videos · OpenAI ok (11 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (10 in feed, 1 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (7 in feed, 1 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 7 new), Training Data (Sequoia) ok (5 in feed, 2 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (1 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 1 new), 20VC ok (4 in feed, 1 new)
-Photos: 0 saved, 0 unavailable
-Alerts: 22 events sent: {"subscribers":5,"sent":0,"queued":4}
-Claims: 231 tracked, 225 open
-Trackers: filed 0 stories; no tracker changed
-Model tracker: 81 models, 17 changes today
-Time: gather 62s, plan 166s, judge 1075s, verify and write 45s, tagging 2s, alerts 4s
+Fetched 2993 items · fresh 24 · judged 41 · kept 9 · **written 6**
+AI: 45 requests, 185,906 tokens this run · 196 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Tracking the fallout from Anthropic's post-IPO slide while capturing major AI-generated music bans and agent startups.
+  Priorities: Anthropic falls 12%+ to ~$76, below its $83 IPO price and a sharp fall (Crucial market update on Anthropic shares dropping below IPO price and insider stock sales.); Tidal will ban fully AI-generated music starting December 9 and says s (Major industry tipping point as Tidal bans fully AI-generated music after 43% slop influx.); Three xAI founding members launch Epochal to build AI agents that achi (xAI co-founders launch Epochal with $100M backing for superhuman prediction agents.); Ethan Mollick: Thing I am hearing from a number of big firms, from man (Ethan Mollick highlights enterprise shift toward scattered 2-3 person AI teams.); In the first all-hands since his return, Jensen Huang apologized for v (Jensen Huang apologizes for code of conduct violations in first all-hands since return.)
+  Thin areas: research, india
+  Searches: Anthropic IPO share price drop: 6 new; Tidal ban AI music: 6 new; Nvidia Jensen Huang apology all hands: 6 new
+  Dig deeper: Anthropic falls 12%+ to ~$76, below its $83 IPO price and a sharp fall; Tidal will ban fully AI-generated music starting December 9 and says s
+Research agent: investigated 5 stories with 15 tool calls, confirmed 3
+Threads updated: Nvidia reinstates Huang; reasons and apology: Nvidia CEO Jensen Huang apologizes for code of conduct viola; Anthropic IPO tests circular financing boom: Anthropic shares fall below $83 IPO price after record debut
+Videos: 11 kept from 26 new · OpenAI ok (11 in feed, 5 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 2 new), Google for Developers ok (10 in feed, 1 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (7 in feed, 0 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 4 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 7 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (1 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 1 new), 20VC ok (4 in feed, 0 new)
+Photos: 4 saved, 0 unavailable
+Alerts: 30 events sent: {"subscribers":5,"sent":0,"queued":23}
+Model tracker: 81 models, 19 changes today
+Tagged 6 stories by sector, region and deal
+Time: gather 114s, plan 2s, judge 110s, verify and write 789s, videos 123s, tagging 56s, model tracker 154s, self-review 8s, stock photos 3s, alerts 11s
 
 ### New stories
-- none
+- **voices** — [Ethan Mollick: Small AI Teams at Big Firms Doing Work of Dozens, Sparking Management Conflicts](https://bsky.app/profile/emollick.bsky.social/post/3n333h3yyoc2g)  
+  Wharton professor Ethan Mollick reports that large manufacturers and financial services firms have scattered teams of two to three people using AI to complete the work of dozens in a fraction of the time, triggering internal management disputes over organizational implications.  
+  _1 source(s), 0 verified quote(s)_
+- **industry** — [Tidal bans fully AI-generated music starting December 9 after 43% of uploads flagged as AI](https://techmeme.com/261124/p29)  
+  Tidal announced it will remove all fully AI-generated tracks from its platform beginning December 9, deleting more than 29 million songs. The company said 43% of tracks distributed over the past 90 days were fully AI-generated, rising to over 60% on November 6 alone.  
+  _3 source(s), 1 verified quote(s)_
+- **industry** — [Nvidia CEO Jensen Huang apologizes for code of conduct violations at first all-hands since return](https://techmeme.com/261124/p28)  
+  Nvidia CEO Jensen Huang apologized to employees at his first all-hands meeting since being reinstated, acknowledging he made 'very serious personal mistakes' and violated the company's code of conduct. The board reinstated him 11 days after accepting his resignation over concerns about extramarital affairs.  
+  _4 source(s), 0 verified quote(s)_
+- **industry** — [Three xAI founders launch Epochal to build AI agents for superhuman prediction](https://techmeme.com/261124/p27)  
+  Three founding members of xAI — Guodong Zhang, Zihang Dai, and Manuel Kroiss — launched Epochal, a startup building AI agents that aim to achieve superhuman prediction. Zhang is personally investing $100 million in the company, which debuted its first product, Time Portal, an archived web environment for training agents on historical data.  
+  _4 source(s), 0 verified quote(s)_
+- **industry** — [Anthropic shares fall below $83 IPO price after record debut](https://techmeme.com/261124/p21)  
+  Anthropic shares dropped below their $83 IPO price on Tuesday, trading as low as $76, a roughly 12% decline from Monday's close. The stock had debuted at $111.50 last week in the largest AI offering ever.  
+  _6 source(s), 0 verified quote(s)_
+- **models** — [iFood scales coding agents across 15,000 repositories](https://openai.com/index/ifood)  
+  OpenAI reports that Brazilian food delivery company iFood has scaled coding agents across 15,000 repositories.  
+  _1 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- How Gemini is changing the game for Golden State's organization and fans. — score 4: Google Gemini partnership with Golden State Warriors is a commercial customer announcement, not a model release or research breakthrough. Marketing/partnership content scores below threshold.
-- Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton — score 4: Hugging Face blog post on Microduck obstacle avoidance workflow appears to be a tutorial/demo using Isaac Lab, not a new frontier model or landmark result. Scores below threshold.
-- Japan Makes Investor Information AI - Friendly — score 5: Japan making investor information AI-friendly is a minor regulatory update; not a landmark policy change for frontier AI.
-- AI speeds clinical trial screening - SelectScience news — score 5: AI speeding clinical trial screening is an incremental application in healthcare, not a breakthrough model or method.
-- Apple may be developing its own AI agent that runs your Mac — score 5: Speculative report that Apple may develop an on-device AI agent; no confirmation or launch details.
-- Nvidia CEO Jensen Huang pulls off an unlikely comeback in just 11 days — duplicate of 66cc673a6baa
-- Delhi - NCR emerges as India robotic heart surgery hub ; India eyes US lead by 2031 | Delhi News — score 4: Delhi NCR as robotic heart surgery hub focuses on medical robotics, not core AI; India ambition noted but AI angle is secondary.
-- Nvidia board reinstates Jensen Huang as CEO just days after rejecting his offer to return — duplicate of 66cc673a6baa
-- Black Friday meets AI : Big changes for America holiday shopping season | News — score 4: Black Friday AI shopping trends piece is consumer-focused marketing coverage, not frontier AI news.
-- Nvidia Has Incredible News for Artificial Intelligence ( AI ) Investors . Here Is My Top Stock to Buy Before It Is Too Late — score 3: Motley Fool stock-picking column on Nvidia; investment commentary, not news.
-- Biba Trudgill on why brokers must embrace AI but retain control — score 4: Opinion piece by a broker on embracing AI; no new developments.
-- Nvidia reinstates CEO Jensen Huang , why Arizona is watching — duplicate of 66cc673a6baa
-- After virtual idols , could fully AI - generated stars be K - pop next frontier ? — score 5: Speculative piece on AI-generated K-pop stars; cultural trend, not a technical or business milestone for frontier AI.
-- 2026 - Innovative ideas for music and AI emerge in Hackathon — score 3: University hackathon event; not a breakthrough or major model release. Routine student activity, not frontier news.
-- Doubts cast over AI blueprint for government — score 4: Local Australian outlet covering doubts about a government AI blueprint; lacks global significance and no major policy outcome reported.
-- Tidal Bans AI-Generated Music — score 5: Duplicate of already-published story 85ad47dc9b77 (Tidal banning AI-generated music).
-- LLM agents work for their parent companies, not for you — score 5: Opinion blog post on LLM agent alignment; high HN engagement but not a news event or authoritative commentary from a recognized leader.
-- Anthropic Breaks Below $83 IPO Price in Premarket Trading — score 5: Duplicate of earlier kept story f991ba256218 (Anthropic trading below IPO price).
-- GTA 6 Recomp (Leonida) banned from GitHub while lead dev was in school — not AI: GitHub repository takedown for a GTA 6 mod; no AI angle.
-- Pinterest will now let parents limit the AI-generated content their teens see — score 5: Incremental product feature: Pinterest adds parental controls for AI-generated content. Routine platform update.
-- Amazon’s Decart acquisition is a bet on using software to narrow the gap with Nvidia in the AI chip race — duplicate of 7149fa79f525
-- Jensen Huang deepfakes are the hot new AI slop — score 4: Viral deepfake of Jensen Huang; cultural phenomenon but not a frontier AI development, policy move, or business milestone.
-- The New York Times warns photographers not to update Photoshop over AI features — score 4: Media company warning freelancers about AI features in Photoshop; incremental concern about AI adoption in creative tools, not a frontier development.
-- Raising the stakes for enterprise networks with AI modernization — score 5: Article on enterprise network strain from AI deployment; real but secondary AI angle, routine infrastructure trend piece.
-- How Trump and Silicon Valley forced Nvidia to take Jensen Huang back — duplicate of 66cc673a6baa
-- Trump Has Saved Jensen’s Job. But Can He Save NVIDIA? — score 5: Indian outlet commentary on already-reported Nvidia/Jensen Huang/Trump story (global news, about_india=false). Score 5 for commentary on known events.
-- Maharashtra GST Authorities Search Turtlemint’s Insurance Broking Arm — not AI: GST tax proceedings against an insurance broking subsidiary; no AI angle in the source.
-- GMP Not Indicator Of Expected Returns: SEBI Seeks To Curb IPO GMP Circulation — not AI: SEBI curb on IPO grey-market premium circulation; general financial regulation with no AI connection.
-- Apple iPhone 18e to MacBook Neo 2: 3 upcoming devices that could be easier on Indian buyers’ pockets — not AI: Apple consumer hardware rumor with no AI angle mentioned. ai_relevance=none.
-- Trump's Nvidia intervention rips up Wall Street playbook: McGeever — score 5: Indian outlet commentary on already-reported Nvidia/Trump story (global news, about_india=false). Score 5 for commentary on known events.
-- Nvidia's Huang returns to cheers in China, but political hurdles mount on both sides — duplicate of 66cc673a6baa
-- Maharashtra GST Department conducts search at Turtlemint subsidiary — not AI: GST search at Indian insurtech subsidiary with no AI angle. ai_relevance=none.
-- At least four affairs ? New report adds to Jensen Huang scandal after Nvidia comeback — duplicate of 66cc673a6baa
-- Ill be a better CEO : Nvidia employees give Jensen Huang a hero welcome after dramatic comeback | Indiablooms — duplicate of 66cc673a6baa
-- Nasscom Proposes 3 - Year Government - Backed AI Scheme To Accelerate India Tech Industry Growth Ahead Of Budget 2027 - 28 — duplicate of 285373b393ac
-- KOSPI Jumps 7 . 5 %, Nikkei Gains 5 % As Jensen Huang Reinstatement At Nvidia Fuels AI Stock Rally — duplicate of 66cc673a6baa
-- US blacklists Megaspeed , targeting firm central to Nvidia crisis — duplicate of 74575936ae57
-- US markets rebound sharply as Nvidia soars on Huang return ; Nasdaq rallies 6 . 5 pc — duplicate of 66cc673a6baa
-- Fears Nvidia CEO Huang could have gone to China drove Trump lobbying for him — duplicate of 66cc673a6baa
-- Huang Nvidia Return Boosts Asian Markets – Chennaionline — score 4: Market reaction piece on Asian stocks rising after Jensen Huang's return to Nvidia. The core event (Huang's reinstatement) is already covered in published story [66cc673a6baa]. This Indian-outlet coverage adds no new information for global readers.
-- Nasscom seeks three - year AI transformation scheme in Budget 2027 - 28 to boost innovation , reskill tech workforce — duplicate of 285373b393ac
-- Training vs inference : What the distinction at the heart of the Sarvam AI - China models controversy ? | Explained — score 5: Explainer article on the Sarvam AI–China models controversy. The underlying events (Sarvam hosting Chinese models, launching Dictate API, releasing 105B model) are already covered in published stories [b35f4514a643] and [5862fe6cf17f]. This analysis piece adds no new facts.
-- US blacklists Singapore chip firm Megaspeed tied to Nvidia scandal — duplicate of 74575936ae57
-- Asian markets follow Wall Street : Nikkei , Kospi jump up to 8 % as Jensen Huang return sparks rally in AI stocks — score 4: Market-wrap story on Asian indices rallying after Huang's return. Core event already published [66cc673a6baa]; this is routine market coverage from an Indian outlet with no India-specific developments.
-- Why Donald Trump believed he needed to get Jensen Huang back on top at AI behemoth Nvidia — score 5: Opinion/analysis piece attributing Huang's return to Trump. The reinstatement is already news [66cc673a6baa]; this commentary adds no new reporting and is not from a primary source.
-- AI Trade Resurgence Drives 9 % Rally in Taiwanese Stock Index — score 4: Short market-move report on a 9% rally in the Taiwanese stock index driven by AI trade. No new fundamental development; routine financial-market coverage.
-- Four AI stocks with multi - year growth plans to watch for the long term — score 3: Listicle picking four AI stocks for long-term growth. Investment-tip format, not news; no new information about the companies or the AI sector.
-- Trump claims credit for Huang return ; Congress keeps Nvidia inquiry open — score 4: Political commentary on Trump claiming credit for Huang's return and Congress keeping an inquiry open. The reinstatement and related political scrutiny are already covered [66cc673a6baa, d919e55dc465]; this adds no new facts.
-- Ethan Mollick: There is a lot of focus on AI-aided discoveries in quantitative fields, but they can do other work, too: Historian Mark Humphries asked… — score 5: Ethan Mollick commentary on AI-aided historical discovery (mentions GPT-6.2 Astra) is interesting but not major news; more anecdotal than substantive industry commentary. Scores 5.
-- Internal memos: Microsoft declared a "Code Red" drive to overhaul how it prevents and responds to major service failures after the 24-hour Microsoft 365 outage (Jaspreet Singh/Reuters) — not AI: Microsoft 'Code Red' drive after M365 outage; general cloud reliability story, no AI angle in the source.
-- Experts say Trump effectively overrode Nvidia's board, and reinstating Jensen Huang before its probe ends could invite shareholder suits and political scrutiny (New York Times) — duplicate of 66cc673a6baa
-- Nvidia falls 8%+, paring its 31% jump on Jensen Huang's return as CEO; AMD and Micron drop 11%+, and Arm and Marvell 8%+, after posting strong gains on Monday (CNBC) — score 4: Stock price reaction to Huang's return; market commentary, not core AI news.
-- Sources: Stripe is in discussions for an employee share tender offer that would value it above $200B, up from $159B earlier in 2026, set to close in early 2027 (Ben Glickman/Wall Street Journal) — not AI: Stripe valuation tender offer; payments company, no AI angle stated in source.
-- US sanctions Megaspeed after Nvidia scandal — duplicate of 74575936ae57
-- What we know about Megaspeed, the Nvidia customer blacklisted by US — duplicate of 74575936ae57
-- US blacklists Megaspeed over suspected Nvidia AI chip diversion to China — duplicate of 74575936ae57
-- Uber, Nuro, and Lucid begin robotaxi testing without human safety operators across four South Bay cities ahead of a planned commercial debut in Q1 2027 (Andrew J. Hawkins/The Verge) — loosely AI: lower priority than this run's AI stories
+- Anthropic Staff Openly Talk About ‘Taking Over the World’, Claims Max Tegmark — score 4: Rehash of safety and existential risk claims regarding Anthropic staff statements.
+- UK warns AI-driven cyberattacks are exposing years of weak security — score 5: UK cyber warning on AI-driven cyberattacks exploiting weak security is standard security commentary rather than a core AI frontier update.
+- Meta brings its Muse AI assistant directly into Instagram DMs — score 5: Integration of the existing Muse AI assistant into Instagram DMs is an incremental product feature rather than a new model or major capability.
+- Tidal to ban and remove millions of AI-generated tracks as AI slop inundates music streaming — score 5: Tidal's policy to ban fully AI‑generated tracks is a content‑moderation move; noteworthy for the music industry but not a frontier AI development.
+- Why a Crusoe investor is betting on solar and batteries to power future AI data centers — duplicate of 70f3d3a63449
+- David Fincher is being dragged for suspected use of AI in his latest film — score 3: Allegations about AI use in a Hollywood film are a peripheral cultural story with no substantive AI technical or policy impact.
+- FAA opens probe after Amazon delivery drone clips cable, crashes into garage — not AI: FAA probe of an Amazon drone crash is unrelated to AI technology and offers no AI‑focused angle.
+- Shadowfax To Acquire WeFast To Expand Into Intra-City Deliveries — not AI: Acquisition of a delivery platform has no AI component; irrelevant to Frontier Wire audience.
+- India AI funding nearly doubles to $1.6B in Jan-Sept 2026: Tracxn — duplicate of 429920f88e11
+- GPT 6.2 Astra Solves a Historical Mystery — score 5: Simon Willison shares a case study on GPT-6.2 Astra solving an 1808 sketchbook mystery, highly overlapping with existing coverage of AI identifying sketchbooks.
+- A US FTC official says Shein agreed to pay $100M to settle US claims that it misled consumers on shipping times, manipulated product reviews, and more (Jody Godoy/Reuters) — not AI: FTC settlement with Shein concerns consumer‑protection, not AI.
+- The OpenClaw Foundation launches ShellBench to test 13 frontier AI models across five harnesses on 100 tasks; top AI models hit only a ~60% completion rate (Nat Rubio-Licht/The Deep View) — duplicate of f8978e4ce75f
+- Anthropic shares drop below $83 IPO price in premarket trading: here's why — duplicate of f991ba256218
+- Anthropic dips below $83 share price after IPO — duplicate of f991ba256218
+- Anthropic’s IPO Arrived Hot. Then the Stock Fell Below Its IPO Price — duplicate of f991ba256218
+- Anthropic Stock Falls Below $83 Per Share IPO Price — duplicate of f991ba256218
+- Anthropic stock sinks below IPO price days after record NASDAQ debut — duplicate of f991ba256218
+- Anthropic breaks below $83 IPO price as debut rally unravels — duplicate of f991ba256218
+- Tidal Becomes First Streaming Service to Ban AI Music From Its Platform — score 6: Same event as already-kept candidate b64fb9502408 (Tidal bans fully AI-generated music). Duplicate.
+- Tidal to ban AI-generated songs from platform — score 6: Same event as already-kept candidate b64fb9502408 (Tidal bans fully AI-generated music). Duplicate.
+- Tidal to Ban and Remove “Wholly AI-Generated Music” — score 6: Same event as already-kept candidate b64fb9502408 (Tidal bans fully AI-generated music). Duplicate.
+- Tidal Music takes a stand against AI music — score 5: Tidal's ban on AI‑generated music is a company policy move, not a major AI development; its impact is limited and similar coverage already exists.
+- Nvidia Board Ousted Jensen Huang Over Lies and Abuse, Not the Affair, as Trump Urges Rehire of Ex-CEO Now — not AI: Speculative political commentary about Nvidia board; no concrete AI‑related development.
+- From spy allegations to a CEO comeback: A timeline of Jensen Huang's Nvidia scandal — not AI: Timeline piece is a repackaging of existing coverage; lacks original news value for Frontier Wire.
+- Nvidia shares soar 30% after board reinstates Jensen Huang under Trump pressure — score 5: Stock‑price reaction to Nvidia board decision is finance‑focused and already covered; not a core AI breakthrough.
+- Jensen Huang was reinstated because his failure to build a management structure fit for Nvidia's size, plus Trump's support, left Nvidia with no other options (Robert Armstrong/Financial Times) — could not verify yet; will retry next run
+- Zipher, which uses AI agents to handle data workload execution and resource allocation, raised $53M across seed and Series A from TLV Partners and others (Duncan Riley/SiliconANGLE) — could not verify yet after a second try; dropped
+- Home service provider Pronto to be acquired by physical AI firm Provision Labs — could not verify yet; will retry next run
+
+</details>
+
+### Sources with problems
+- `google-ai`: failed: ReadTimeout: The read operation timed out
+
+<details><summary>Research agent's work</summary>
+
+- Ethan Mollick: Thing I am hearing from a number of big firms, from man: unconfirmed (searched “Ethan Mollick big firms scattered teams AI doing work of dozens management fights”; searched “"scattered teams of 2-3 people" AI "doing the work of dozens" Ethan Mollick”; searched “"management fights" "implications and politics" AI Ethan Mollick”)
+- Tidal will ban fully AI-generated music starting December 9 and says s: confirmed (searched “Tidal ban fully AI-generated music December 9 43% tracks distributed”; read techcrunch.com; read arstechnica.com)
+- Three xAI founding members launch Epochal to build AI agents that achi: confirmed (searched “Epochal AI xAI founding members Guodong Zhang 100M superhuman prediction”; read bloomberg.com; searched “Epochal AI startup xAI founders Guodong Zhang prediction”)
+- Anthropic falls 12%+ to ~$76, below its $83 IPO price and a sharp fall: confirmed (searched “Anthropic IPO $83 shares fall below IPO price Dario Daniela Amodei sold shares”; read msn.com; read msn.com)
+- Jensen Huang was reinstated because his failure to build a management : unconfirmed (searched “Robert Armstrong Financial Times Jensen Huang reinstated Nvidia management structure Trump”; searched “"Robert Armstrong" "Financial Times" Jensen Huang Nvidia”; read ft.com)
 
 </details>
 
 ### Notes
-- ignored made-up duplicate id 85ad47dc9b77 for 'Tidal Bans AI-Generated Music'
-- ignored made-up duplicate id f991ba256218 for 'Anthropic Breaks Below $83 IPO Price in Premarket '
-- follow-up linking skipped: time budget of 22 minutes for AI reached this run
-- stopped writing: time budget of 22 minutes for AI reached this run
-- 11 kept item(s) carried over to the next run
-- videos skipped: time budget of 22 minutes for AI reached this run
+- ignored made-up duplicate id b64fb9502408 for 'Tidal Becomes First Streaming Service to Ban AI Mu'
+- ignored made-up duplicate id b64fb9502408 for 'Tidal to ban AI-generated songs from platform'
+- ignored made-up duplicate id b64fb9502408 for 'Tidal to Ban and Remove “Wholly AI-Generated Music'
+- dropped non-quote (Ethan Mollick): we have scattered teams of 2-3 people using AI that are doin…
+- dropped unverifiable quote (Jensen Huang): This is going to be the hardest company meeting I've ever do…
+- dropped unverifiable quote (Jensen Huang): I made some very serious personal mistakes. I hurt my family…
+- GDELT unavailable: GDELT paused for this run after repeated rate-limiting
+- 2 kept item(s) carried over to the next run
+- trackers skipped: time budget of 22 minutes for AI reached this run
+- claims skipped: time budget of 22 minutes for AI reached this run
+- top voices skipped: time budget of 22 minutes for AI reached this run
+- briefing skipped: time budget of 22 minutes for AI reached this run
 - gemini/gemini-3.5-flash-lite: 503 (server busy); trying next model
+- gemini/gemini-3.6-flash: answer cut off; retrying with more room
 - gemini: 429 after retry (429  You exceeded your current quota, please check your plan and billing details); moving to next provider for this run
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
 - groq: 429 after retry (rate_limit_exceeded tokens Rate limit reached for model `openai/gpt-oss-120b` in); moving to next provider for this run
 - nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room
 - nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room
 - nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room
 - nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room
-- nvidia: unreachable or too slow (ReadTimeout); resting it for 2 minutes
-- cerebras: payment required (402) — free quota used up or billing needed; skipping provider
-- every provider is resting; waiting 120s for the first to come back
+- nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room
+- nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room
 - nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room
 - nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room
