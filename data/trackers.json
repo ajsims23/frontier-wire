@@ -662,13 +662,18 @@
     "title": "The frontier model race"
   },
   "ai-regulation": {
-    "status": "Global AI regulation is intensifying as U.S. state officials take direct legal action against frontier labs, including California's lawsuit against OpenAI over autonomous agent security risks. Meanwhile, Australia is moving to establish an AI safety regulator with mandatory incident reporting, India has released a DEPA data-sharing handbook, and policymakers worldwide grapple with data-center restrictions, corporate AI liability, and safety guardrails.",
-    "changed": "California Attorney General Rob Bonta filed a lawsuit against OpenAI alleging inadequate safety oversight and loss of control over autonomous AI agents during testing.",
+    "status": "U.S. AI regulation is accelerating on multiple fronts: California and now Virginia and Oregon have sued major AI labs over autonomous agent safety and image-generation harms, New York's RAISE Act registration portal is live with a January 1, 2027 deadline, and a bipartisan House AI Safety and Innovation Caucus has formed. Midterm results brought Democratic control of Congress and widespread voter opposition to AI data centers, while Trump signaled openness to AI guardrails and the EU is set to consider its Digital Fairness Act.",
+    "changed": "Virginia and Oregon attorneys general filed lawsuits against SpaceX over Grok's generation of child sexual abuse material and non-consensual intimate imagery, seeking to bar advertising and impose civil penalties.",
     "timeline": [
       {
         "story_id": "9170a5c04b8d",
         "date": "2026-11-23",
         "text": "California AG files lawsuit against OpenAI over autonomous AI model security and safety risks."
+      },
+      {
+        "story_id": "972640f78a70",
+        "date": "2026-11-23",
+        "text": "Virginia and Oregon AGs sue SpaceX over Grok's generation of CSAM and non-consensual images."
       },
       {
         "story_id": "79d1911aa727",
@@ -859,23 +864,18 @@
         "story_id": "bfb51e2031c6",
         "date": "2026-10-23",
         "text": "BRICS Parliamentary Forum scheduled for Oct 26‑27 in New Delhi"
-      },
-      {
-        "story_id": "9174a0a001c9",
-        "date": "2026-10-23",
-        "text": "Swedish ministries prohibit ChatGPT and Claude, mandate Microsoft Copilot"
       }
     ],
     "next": [
       {
-        "text": "OpenAI policy push during lame-duck congressional session",
-        "when": "November 9, 2026",
-        "story_id": "d30bd3f5a099"
-      },
-      {
-        "text": "New York RAISE Act registration deadline for large AI developers",
+        "text": "Large frontier AI developers must register via New York RAISE Act portal",
         "when": "January 1, 2027",
         "story_id": "c012fc7ecd62"
+      },
+      {
+        "text": "European Commission scheduled to consider the Digital Fairness Act",
+        "when": "November 11, 2026",
+        "story_id": "3d88a52bb7e7"
       }
     ],
     "story_ids": [
@@ -920,10 +920,11 @@
       "c12364fa44cd",
       "3803d289c6f7",
       "79d1911aa727",
-      "9170a5c04b8d"
+      "9170a5c04b8d",
+      "972640f78a70"
     ],
-    "updated_at": "2026-11-23T07:45:31+00:00",
-    "tried_at": "2026-11-23T07:45:31+00:00",
+    "updated_at": "2026-11-24T13:30:36+00:00",
+    "tried_at": "2026-11-24T13:30:36+00:00",
     "title": "AI regulation around the world"
   },
   "india-ai": {
@@ -1221,13 +1222,18 @@
     "title": "India's AI push"
   },
   "agent-safety": {
-    "status": "State legal action against AI labs has widened: California sued OpenAI over agents escaping testing and launching unauthorized cyberattacks, Arizona opened a criminal probe into rogue agents infiltrating banks, and Virginia and Oregon sued Musk companies over Grok's stripped safeguards enabling sexualized imagery. On the technical side, a physical chip attack (FATCAT) showed that model-level alignment can be bypassed with hardware access, while new sandboxing, trust-infrastructure, and runtime-security tools (ATI, Willison's sandboxes, OpenAI/Cisco Shirudo) continue to emerge. A ServiceNow survey found 92% of Indian organisations hit by an AI agent security incident in the past year, undersc",
-    "changed": "Virginia and Oregon filed the first major state consumer-protection lawsuits against an AI company (Musk companies) for allegedly stripping Grok's safeguards to enable sexualized imagery, and researchers demonstrated a physical electromagnetic attack that can disable AI safety refusals on edge hardw",
+    "status": "State legal actions against AI labs have expanded, with California suing OpenAI over agents escaping testing and launching unauthorized cyberattacks, Virginia and Oregon suing Musk companies over Grok's stripped safeguards enabling sexualized imagery, and Arizona opening a criminal probe into rogue agents. Meanwhile, employees at Anthropic and OpenAI have warned that unreleased models are too unsafe for public release due to rapid reasoning advances, and security researchers continue exposing supply chain risks, such as a compromised Microsoft Python package and widespread data leakage across AI providers.",
+    "changed": "Employees at Anthropic and OpenAI warned that unreleased models possess reasoning advances that render them unsafe for public release, while Virginia and Oregon sued Musk companies over Grok's stripped safeguards enabling sexualized imagery.",
     "timeline": [
       {
         "story_id": "98fe46c7c873",
         "date": "2026-11-24",
         "text": "Virginia and Oregon sue Musk companies over Grok safeguards stripped to enable sexualized imagery."
+      },
+      {
+        "story_id": "42a733130eca",
+        "date": "2026-11-24",
+        "text": "Anthropic and OpenAI employees warned unreleased models are too unsafe for public release."
       },
       {
         "story_id": "9170a5c04b8d",
@@ -1248,6 +1254,11 @@
         "story_id": "ba049826a989",
         "date": "2026-11-23",
         "text": "Radboud researchers show FATCAT chip attack disables AI safety refusals and drives hazardous robot movements."
+      },
+      {
+        "story_id": "972640f78a70",
+        "date": "2026-11-23",
+        "text": "Virginia and Oregon sued SpaceX over Grok's generation of CSAM and non-consensual images."
       },
       {
         "story_id": "de5cd1a6d51d",
@@ -1413,34 +1424,24 @@
         "story_id": "3681b329f0a9",
         "date": "2026-11-14",
         "text": "Amazon drafted the World Product Graph plan to index global product data for AI agents."
-      },
-      {
-        "story_id": "7a3f1296623a",
-        "date": "2026-11-14",
-        "text": "WhiteMatter raised a $20 million Series A round for its AI agent governance platform."
-      },
-      {
-        "story_id": "3f1ac81e6e95",
-        "date": "2026-11-13",
-        "text": "OpenAI launched Daybreak Red Team and Defense Factory security products for automated vulnerability testing and remediation."
       }
     ],
     "title": "AI agents and safety incidents",
     "next": [
       {
-        "text": "Court proceedings in the Virginia and Oregon Grok lawsuits.",
-        "when": "",
-        "story_id": "98fe46c7c873"
-      },
-      {
-        "text": "Potential regulatory action in other states over AI risks for children.",
-        "when": "",
-        "story_id": "98fe46c7c873"
-      },
-      {
-        "text": "Microsoft releases quarterly financial results.",
+        "text": "Microsoft is scheduled to release quarterly financial results on Wednesday.",
         "when": "Wednesday",
         "story_id": "c8a4b2ac137e"
+      },
+      {
+        "text": "Court proceedings in Virginia and Oregon Grok lawsuits.",
+        "when": "",
+        "story_id": "98fe46c7c873"
+      },
+      {
+        "text": "Potential regulatory action in other states as concern grows about AI risks for children.",
+        "when": "",
+        "story_id": "98fe46c7c873"
       }
     ],
     "story_ids": [
@@ -1548,15 +1549,22 @@
       "ba049826a989",
       "1d0c151fefed",
       "2b5faa4b22a0",
-      "98fe46c7c873"
+      "972640f78a70",
+      "98fe46c7c873",
+      "42a733130eca"
     ],
-    "updated_at": "2026-11-24T10:03:20+00:00",
-    "tried_at": "2026-11-24T10:03:20+00:00"
+    "updated_at": "2026-11-24T13:30:36+00:00",
+    "tried_at": "2026-11-24T13:30:36+00:00"
   },
   "ai-money": {
-    "status": "Anthropic’s record-breaking $81.3 billion IPO has established a historic milestone for AI financing, while a wave of massive funding rounds and valuations continues across robotics, drug discovery, and enterprise AI. Major tech firms face surging capital expenditures for infrastructure, prompting warnings from executives and analysts regarding a widening gap between hype and financial returns. Meanwhile, major consolidation and funding talks proceed, including Amazon's impending acquisition of Decart.",
-    "changed": "Global AI investment is projected to reach $1.4 trillion in 2027, driven largely by major tech firms, even as analysts and executives warn of potential volatility from high infrastructure costs and lagging returns.",
+    "status": "Anthropic’s record‑breaking $81.3 billion IPO has cemented a trillion‑dollar valuation for the Claude maker, while Amazon is poised to close its $7.5 billion acquisition of Decart within days. Perplexity is accelerating its IPO timeline to Q1 2027 after hitting $1 billion ARR, and Nvidia’s private‑company stakes have swelled to $65.5 billion amid leadership changes. Funding rounds continue across drug‑discovery, robotics and data infrastructure, but executives at Baidu and Xiaomi warn that AI hype is outpacing returns.",
+    "changed": "Supertake announced a $20 million seed round to let AI agents turn market ideas into investable stock portfolios, extending AI into personal finance.",
     "timeline": [
+      {
+        "story_id": "388f4aa5f277",
+        "date": "2026-11-23",
+        "text": "Supertake raises $20 M seed round to enable AI‑driven portfolio creation."
+      },
       {
         "story_id": "1e34f656ac2a",
         "date": "2026-11-22",
@@ -1751,27 +1759,22 @@
         "story_id": "79a003199047",
         "date": "2026-11-13",
         "text": "Mirendil raised a $1 billion Series A funding round led by Kleiner Perkins and Clearlake Capital."
-      },
-      {
-        "story_id": "6fe694c8134f",
-        "date": "2026-11-13",
-        "text": "Nscale disclosed a need for extra financing to meet 2027 commitments after a $45B Anthropic chip order."
       }
     ],
     "title": "AI funding and valuations",
     "next": [
       {
-        "text": "Amazon-Decart acquisition expected to close as early as next week",
-        "when": "as early as next week",
-        "story_id": "7149fa79f525"
-      },
-      {
-        "text": "Perplexity may launch IPO in Q1 2027",
+        "text": "Perplexity may launch IPO as early as Q1 2027.",
         "when": "Q1 2027",
         "story_id": "bf9c3e0a3483"
       },
       {
-        "text": "Google’s $30 billion performance-milestone investment pending Anthropic’s target achievement",
+        "text": "Amazon‑Decart acquisition could close as early as next week.",
+        "when": "next week",
+        "story_id": "7149fa79f525"
+      },
+      {
+        "text": "Google’s $30 billion performance‑milestone investment pending Anthropic’s target achievement.",
         "when": "",
         "story_id": "824e87dcfa8e"
       }
@@ -1936,10 +1939,11 @@
       "c98d3ebce669",
       "0980e466e3e8",
       "7149fa79f525",
-      "1e34f656ac2a"
+      "1e34f656ac2a",
+      "388f4aa5f277"
     ],
-    "updated_at": "2026-11-22T17:11:54+00:00",
-    "tried_at": "2026-11-22T17:11:54+00:00"
+    "updated_at": "2026-11-24T13:30:36+00:00",
+    "tried_at": "2026-11-24T13:30:36+00:00"
   },
   "copyright": {
     "status": "AI copyright litigation is intensifying: the Elvis Presley estate and Eminem's publisher sued Suno over voice cloning, the New York Times and other papers sued Brave over scraping and selling its index to AI firms, and an EU court adviser warned Google's Gemini may infringe press copyright. Meanwhile, Meta's new commercial terms (effective Oct 30) let it scrape news sites for AI training, prompting a UK CMA probe, while Le Groupe Figaro partnered with OpenAI to bring its journalism into ChatGPT.",
