@@ -1,12 +1,22 @@
 {
   "us-china": {
-    "status": "Nvidia has ended H200 chip sales to China, formed a board export-control committee, and faces a California AG subpoena, congressional probes, and calls from Treasury Secretary Scott Bessent making any potential return for former CEO Jensen Huang contingent on China probe outcomes. The Commerce Department is adding Singapore-based Megaspeed to the Entity List and has tightened rules on Southeast Asian data centers to prevent Chinese firms from bypassing chip curbs. Meanwhile, U.S. lawmakers are scrutinizing American cloud and AI ties to Chinese companies like ByteDance, while Chinese tech firms face a steep financing gap in their AI infrastructure build-out.",
-    "changed": "The U.S. Commerce Department moved to add Megaspeed to the Entity List, while new congressional probes, disclosures of past chip approvals to Chinese firms, and a California AG subpoena intensified pressure on Nvidia and its former leadership.",
+    "status": "The U.S. has tightened export controls on AI chips to Southeast Asian data centers to block Chinese access, prompting Asian operators to seek U.S. clients as B300 rental rates fall. Nvidia has halted H200 sales in China, created a board-level export-control committee, and faces multiple federal and state investigations into whether its chips were smuggled to China via Singapore-based Megaspeed. Congress is probing Commerce Secretary Lutnick’s ties to Nvidia and advancing export-control legislation, while a black market for restricted Nvidia Blackwell servers flourishes in Shenzhen. Chinese tech firms face a widening financing gap for AI infrastructure.",
+    "changed": "New stories reveal Asian data centers pivoting to U.S. clients as B300 prices drop 7%, Nvidia investigations expanding with three congressional export-control bills pending, and Shenzhen black-market prices for Blackwell servers surging 50% in two months.",
     "timeline": [
       {
         "story_id": "8e7a06808520",
         "date": "2026-11-25",
         "text": "Chinese records show firms linked to Alice Huang financed $270M in AI servers."
+      },
+      {
+        "story_id": "58b313ebe927",
+        "date": "2026-11-25",
+        "text": "Asian data centers seek U.S. clients as B300 rental rates fall 7% after tighter remote-access rules."
+      },
+      {
+        "story_id": "9edbb62c9bcf",
+        "date": "2026-11-25",
+        "text": "Nvidia faces multiple investigations over Megaspeed smuggling; Congress weighs three export-control bills in NDAA."
       },
       {
         "story_id": "2dae3b3e6991",
@@ -192,33 +202,13 @@
         "story_id": "a3f6c83f5ebf",
         "date": "2026-11-14",
         "text": "US officials stated Trump is not expected to raise Jensen Huang allegations with Xi."
-      },
-      {
-        "story_id": "792490ccf5f8",
-        "date": "2026-11-14",
-        "text": "Nvidia scandal looms over US-China AI safety talks ahead of APEC meeting."
-      },
-      {
-        "story_id": "cd89cca4588e",
-        "date": "2026-11-13",
-        "text": "President Trump defended Jensen Huang as Nvidia's board launched an independent probe."
       }
     ],
     "next": [
       {
-        "text": "Jensen Huang to appear before congressional committees",
-        "when": "Dec 1",
-        "story_id": "fbe096045978"
-      },
-      {
-        "text": "Nvidia general counsel Tim Teter to appear before congressional committees",
-        "when": "Dec 2",
-        "story_id": "fbe096045978"
-      },
-      {
-        "text": "Formal rulemaking process by the Trump administration if the disclosure plan moves forward",
-        "when": "",
-        "story_id": "d6e8407dfc89"
+        "text": "Data centers in covered countries must obtain U.S. licenses under remote-access rule",
+        "when": "within 90 days",
+        "story_id": "58b313ebe927"
       }
     ],
     "story_ids": [
@@ -301,10 +291,13 @@
       "d919e55dc465",
       "2dae3b3e6991",
       "74575936ae57",
-      "8e7a06808520"
+      "8e7a06808520",
+      "58b313ebe927",
+      "9edbb62c9bcf",
+      "76fe28fdc54d"
     ],
-    "updated_at": "2026-11-25T09:51:05+00:00",
-    "tried_at": "2026-11-25T09:51:05+00:00",
+    "updated_at": "2026-11-25T16:10:56+00:00",
+    "tried_at": "2026-11-25T16:10:56+00:00",
     "title": "US–China AI restrictions"
   },
   "frontier-race": {
@@ -2062,8 +2055,8 @@
     "tried_at": "2026-11-24T19:40:44+00:00"
   },
   "ai-infrastructure": {
-    "status": "The global AI infrastructure build-out continues at a massive scale, propelled by soaring capital expenditures, manufacturing expansions, and surging demand for AI servers and memory chips. However, the rapid pace of expansion faces severe headwinds, including mounting financial pressures, server price hikes, grid constraints, and growing regulatory and political scrutiny over financing models and data center locations.",
-    "changed": "Nvidia's vendor-backed financing arrangements face potential increased U.S. regulatory scrutiny over financial stability and demand visibility concerns.",
+    "status": "The global AI infrastructure build-out continues at massive scale with hyperscalers doubling capex, but financial pressures mount as AI server prices surge up to 45% and Chinese tech firms face a widening revenue gap. US restrictions on remote compute access are redirecting Asian data center capacity toward Western markets, while new financing vehicles like Nexent Capital's $1B fund emerge to address the infrastructure funding gap. Grid constraints, regulatory scrutiny over vendor financing, and community opposition remain critical bottlenecks.",
+    "changed": "New stories reveal Asian data centers are offloading excess B300 compute to US clients as rental rates fall 7% due to US remote access rules, and Nexent Capital launched a $1B fund for quantum-ready AI infrastructure and energy projects.",
     "timeline": [
       {
         "story_id": "aac3bee5a441",
@@ -2079,6 +2072,16 @@
         "story_id": "ef3f65502198",
         "date": "2026-11-25",
         "text": "Nvidia's AI financing commitments face potential tighter U.S. regulatory scrutiny amid stability concerns."
+      },
+      {
+        "story_id": "58b313ebe927",
+        "date": "2026-11-25",
+        "text": "Asian data centers offload excess B300 compute to US clients as rental rates drop 7%"
+      },
+      {
+        "story_id": "85881ba37f62",
+        "date": "2026-11-25",
+        "text": "Nexent Capital launches $1B fund for quantum-ready AI infrastructure and energy projects"
       },
       {
         "story_id": "64c0c3ceaf25",
@@ -2254,34 +2257,24 @@
         "story_id": "165e60eae15a",
         "date": "2026-11-16",
         "text": "Startups unveil plans for floating offshore data centers to bypass land and power constraints."
-      },
-      {
-        "story_id": "6cab091c059a",
-        "date": "2026-11-16",
-        "text": "Nvidia unveils Rubin HPC GPU with >50,000 CUDA cores at SC26."
-      },
-      {
-        "story_id": "034535fb0427",
-        "date": "2026-11-16",
-        "text": "Moody's reports major U.S. life insurers held $85.2B in AI debt as of June 30."
       }
     ],
     "title": "The AI infrastructure build-out",
     "next": [
       {
-        "text": "SPIL and Nvidia's expanded advanced packaging operations in Taiwan under a multiyear agreement expected to come online by mid-2029",
-        "when": "mid-2029",
-        "story_id": "1d563f2e1832"
+        "text": "Data centers in covered countries must obtain US licenses under remote access rule",
+        "when": "90 days",
+        "story_id": "58b313ebe927"
       },
       {
-        "text": "Kinsus production with its new agreement expected to begin",
-        "when": "second half of 2027",
-        "story_id": "1d563f2e1832"
-      },
-      {
-        "text": "Amazon to begin offering Trainium chips to other companies that build data centers next year",
+        "text": "Amazon to begin offering Trainium chips to other data center builders",
         "when": "next year",
         "story_id": "64c0c3ceaf25"
+      },
+      {
+        "text": "Google Project Suncatcher satellite launch aboard Blue Origin New Glenn",
+        "when": "first quarter of 2029",
+        "story_id": "1ab0efa6e74c"
       }
     ],
     "story_ids": [
@@ -2458,9 +2451,11 @@
       "64c0c3ceaf25",
       "aac3bee5a441",
       "ef3f65502198",
-      "dc0f3e545a5f"
+      "dc0f3e545a5f",
+      "58b313ebe927",
+      "85881ba37f62"
     ],
-    "updated_at": "2026-11-25T10:40:43+00:00",
-    "tried_at": "2026-11-25T10:40:43+00:00"
+    "updated_at": "2026-11-25T16:10:56+00:00",
+    "tried_at": "2026-11-25T16:10:56+00:00"
   }
 }

@@ -1,0 +1,459 @@
+{
+  "started_at": "2026-11-25T16:10:56+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1430)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (916)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "mistral-news": "ok (0)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (17)",
+    "gdelt": "ok (26)",
+    "hn": "ok (22)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (0) via Bing News (GDELT unavailable)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "Jensen Huang return to Nvidia reignites Washington fight over China chip access",
+      "reason": "score 5: Covers the same event (Jensen Huang’s return) already reported in story 995fd2b8bd33; adds little new information."
+    },
+    {
+      "title": "What to know before using AI agents for Black Friday shopping",
+      "reason": "score 2: Consumer‑oriented buying guide; low news value for builders, investors, or strategists."
+    },
+    {
+      "title": "How to Detect AI - Generated Resume ? Quick Tips",
+      "reason": "score 1: Tutorial‑style tip list; not a newsworthy development."
+    },
+    {
+      "title": "BTC improves its automated systems , utilizing AI",
+      "reason": "score 2: Crypto‑focused piece with only a peripheral AI mention; not core AI news."
+    },
+    {
+      "title": "Lianlian DigiTech Launches LianLian XCard , Closing the Loop Between AI Task Execution and Agentic Payments",
+      "reason": "score 5: Product launch from a niche fintech firm; modest AI relevance and limited impact on the broader AI ecosystem."
+    },
+    {
+      "title": "AI rout continues as market exuberance fades over Huang Nvidia return",
+      "reason": "duplicate of 858493e1f133"
+    },
+    {
+      "title": "UN Chief Urges Talks On Global AI Safety Framework , Warns Of Historic Shift In Power",
+      "reason": "duplicate of b4e5fb10375c"
+    },
+    {
+      "title": "U . S . stocks explode higher as Nvidia chief returns",
+      "reason": "duplicate of 995fd2b8bd33"
+    },
+    {
+      "title": "GoVeda Launches AI IP Intelligence Agent for Innovators and IP Professionals",
+      "reason": "score 3: Minor product launch (an IP intelligence agent) announced via PR wire; not significant for our audience."
+    },
+    {
+      "title": "Not SpaceX , Not Anthropic : These Are the 2 AI Stocks I Bought During the Sell - Off",
+      "reason": "score 2: Personal stock-picking listicle ('these are the 2 AI stocks I bought'); not news."
+    },
+    {
+      "title": "AI stocks slide as investors weigh rising costs of infrastructure buildout",
+      "reason": "duplicate of 858493e1f133"
+    },
+    {
+      "title": "Stock market news : AI rout continues as market exuberance fades",
+      "reason": "duplicate of 858493e1f133"
+    },
+    {
+      "title": "Neurovia AI to Showcase AI - Powered Visual Data Infrastructure Technologies at GITEX GLOBAL 2026",
+      "reason": "score 2: PR-wire conference showcase announcement; marketing, not news."
+    },
+    {
+      "title": "Serving Qwen via AWS Lambdas for fun and 80x negative profit",
+      "reason": "score 2: Hobbyist engineering blog about serving Qwen on AWS Lambdas; tutorial-style, not news."
+    },
+    {
+      "title": "Google Releases Cogentic Papers on Integer Factorization, Discrete Logs and More",
+      "reason": "score 5: Google releasing papers on integer factorization and discrete logs is a notable research item, but it is not a frontier model release or a clearly landmark result, and the snippet gives no evidence of a breakthrough; borderline, so dropped."
+    },
+    {
+      "title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+      "reason": "not AI: The article is about audio engineering (Windows Loudness Equalization) with no AI component, so relevance is none and it scores low for Frontier Wire audience."
+    },
+    {
+      "title": "Macrohistory in Six Facts",
+      "reason": "not AI: A macro‑history listicle; no AI angle, thus not news for our readers."
+    },
+    {
+      "title": "Getting old Java phones online again",
+      "reason": "not AI: Technical hobbyist piece about reviving old Java phones – no AI relevance."
+    },
+    {
+      "title": "The Shapes of Rivers",
+      "reason": "not AI: Artistic piece about river shapes; no AI content."
+    },
+    {
+      "title": "Nothing offers a full look at its AI earbuds and charging case",
+      "reason": "score 4: Consumer‑grade AI earbuds from Nothing are a minor product announcement; not a frontier model or major AI infrastructure news."
+    },
+    {
+      "title": "Has vibe coding made open source the new normal for synths?",
+      "reason": "score 3: Discusses open‑source synth coding tools; AI angle is peripheral and not a significant development for Frontier Wire."
+    },
+    {
+      "title": "AI is straining America’s open records systems",
+      "reason": "score 5: Explores how AI workloads strain local open‑records systems – an interesting policy impact but not a major breakthrough or large‑scale development, so it falls below the keep threshold."
+    },
+    {
+      "title": "AI Trading in India Promises Smarter Investment Bets—At a Steep New Risk",
+      "reason": "score 4: General explainer on AI trading tools and their risks; no specific new product, funding or policy event."
+    },
+    {
+      "title": "Kalyan Krishnamurthy’s Exit: How Walmart’s Kickback Probe, IPO Delay Shook Up Flipkart",
+      "reason": "not AI: Leadership change at Flipkart unrelated to AI; no AI angle."
+    },
+    {
+      "title": "Navi Crosses 5% UPI Market Share As PhonePe, Google Pay Slip In October",
+      "reason": "not AI: Fintech market‑share update; no AI relevance."
+    },
+    {
+      "title": "Beyond Its Sovereignty Bet, What’s Sarvam Really Mining?",
+      "reason": "score 5: Analytical/feature piece on Sarvam's strategy and the 'sovereignty' controversy; commentary rather than a discrete new development, and Sarvam's recent moves are already covered elsewhere."
+    },
+    {
+      "title": "Bound By Local Laws: Meta Tells Congress Amid Content Moderation Row",
+      "reason": "score 4: Same Meta–Congress content-moderation row as 6f7f934ad0a3; AI is a minor angle and this is a duplicate of that event."
+    },
+    {
+      "title": "What Jensen Huang’s NVIDIA Return Means For India’s AI Players",
+      "reason": "duplicate of 995fd2b8bd33"
+    },
+    {
+      "title": "Jio Platforms Launches JioAstro To Take On Astrotalk In India’s Booming Astrology Market",
+      "reason": "score 4: Launch of an astrology app and service by Jio; any underlying generative AI for astrology is a minor consumer feature."
+    },
+    {
+      "title": "Meta officials met Congress amid its Youth wing’s campaign against online censorship",
+      "reason": "score 4: Content-moderation/free-speech dispute where AI is only a secondary, stated cause of some takedowns; not a core AI development for our readers."
+    },
+    {
+      "title": "Why CERT-In’s AI security auditing guidelines are dead on arrival",
+      "reason": "score 5: Critical commentary on CERT-In's AI security auditing guidelines; substantive but opinion/analysis rather than a discrete new policy event."
+    },
+    {
+      "title": "Apple iOS 27 vs Samsung One UI 9: Which smartphone software offers better performance, AI and multitasking?",
+      "reason": "score 4: Product comparison of smartphone OSes; marketing‑style listicle with only peripheral AI mentions."
+    },
+    {
+      "title": "Priyank Kharge targets Mangaluru with Rs 6,000 Cr regional growth push",
+      "reason": "not AI: General regional IT and business growth push in Karnataka without any specific AI focus."
+    },
+    {
+      "title": "Why you must read Jordan Himelfarb’s New Chess book",
+      "reason": "not AI: Book recommendation about chess; off-topic and no AI angle."
+    },
+    {
+      "title": "India, Australia deepen education ties with focus on skills and edtech",
+      "reason": "score 4: Announcement of education‑policy cooperation; edtech mention is peripheral to AI."
+    },
+    {
+      "title": "Amazon’s cumulative ecommerce exports from India reach $27B",
+      "reason": "not AI: Amazon ecommerce exports milestone; no AI angle in the source."
+    },
+    {
+      "title": "Karnataka names 47 startup winners under ELEVATE 2026",
+      "reason": "score 5: List of startup winners; includes a few AI‑related firms but overall a routine ecosystem roundup."
+    },
+    {
+      "title": "PhonePe resumes IPO process; targets listing in Feb-March at $12-15B valuation",
+      "reason": "not AI: PhonePe IPO/valuation news with no AI angle in the source; general business news."
+    },
+    {
+      "title": "Your AI Startup’s Exit Is Being Shaped By The Deals You Sign Today",
+      "reason": "not AI: General startup-advice commentary on financing terms and exits; no specific AI development, not news."
+    },
+    {
+      "title": "Sources: US officials told Congressional staffers that there is no evidence MSS directed Alice Huang to spy on Jensen Huang and the affair may have been amorous (Wall Street Journal)",
+      "reason": "duplicate of 7a06c7691973"
+    },
+    {
+      "title": "US tech stocks fall, pushing the Nasdaq 100 down 4%+, as the AI trade continues to unwind; Nvidia and Anthropic fall 9%+, Broadcom drops 7%, and Micron 11% (Financial Times)",
+      "reason": "score 4: Pure market sell‑off coverage; stock‑price commentary without new AI‑specific development, fits the low‑impact category."
+    },
+    {
+      "title": "Source: President Trump is scheduled to lead a December 4 groundbreaking ceremony for TSMC's Phoenix plant expansion, deepening his chip sector involvement (Bloomberg)",
+      "reason": "score 5: Trump headlining a TSMC plant groundbreaking is a chip-manufacturing/policy event with only a secondary AI angle; notable but below the keep bar for our AI-focused readers."
+    },
+    {
+      "title": "Tether and Circle freezing $2B+ in crypto after Binance's $6.3B hack shows their centralized control and a shift from Circle's reliance on slow court orders (Bloomberg)",
+      "reason": "not AI: Crypto exchange hack and stablecoin freezing; no AI angle in the source."
+    },
+    {
+      "title": "OpenAI publishes a preprint that claims to prove that the matrix multiplication exponent (ω) is exactly 9/4, addressing a major open problem in mathematics (alphaXiv)",
+      "reason": "duplicate of 35a6794c57dd"
+    },
+    {
+      "title": "US court documents detail a Commerce Department pressure campaign on Intel to acquire a 10% equity stake in 2025, warning rejection would carry \"consequences\" (Noah Shachtman/Wired)",
+      "reason": "score 5: Government pressure on Intel to take a 10% stake is a chip/policy story with only a secondary AI angle; interesting but below the keep bar."
+    },
+    {
+      "title": "Donald Trump can't walk this back: He said 'I made the deal' to bring back Nvidia's CEO and Republicans are now vowing an investigation",
+      "reason": "score 5: Editor-flagged Megaspeed thread, but this is a political-opinion piece on the Trump/Nvidia CEO reinstatement and a promised investigation; the underlying events are already covered by published stories, so it is a rehash."
+    },
+    {
+      "title": "Nvidia faces scrutiny over chip smuggling allegations tied to Megaspeed",
+      "reason": "score 4: Editor-flagged Megaspeed thread, but this is a thin, generic 'faces scrutiny' item with no new facts; the Megaspeed event is already covered by published stories."
+    },
+    {
+      "title": "Singapore investigating Nvidia-linked Megaspeed after US blacklisting",
+      "reason": "score 4: Editor-flagged Megaspeed thread, but a one-line Singapore investigation note with no new substance; the Megaspeed event is already covered by published stories."
+    },
+    {
+      "title": "Jensen Huang's Nvidia return shows the US.-China AI race is about more than chips",
+      "reason": "duplicate of 66cc673a6baa"
+    },
+    {
+      "title": "Jensen Huang’s Nvidia comeback gives China chip restrictions new momentum in Congress",
+      "reason": "duplicate of 66cc673a6baa"
+    },
+    {
+      "title": "Jensen Huang’s Nvidia return adds momentum to chip export controls",
+      "reason": "duplicate of 66cc673a6baa"
+    },
+    {
+      "title": "Jensen Huang’s Return Shows Nvidia Is Too Big to Police",
+      "reason": "duplicate of 66cc673a6baa"
+    },
+    {
+      "title": "Jensen Huang's Nvidia Return and China's Efforts to Recruit US Troops and Steal Secrets",
+      "reason": "duplicate of 66cc673a6baa"
+    },
+    {
+      "title": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
+      "reason": "variety: already 2 stories from techcrunch.com this run"
+    },
+    {
+      "title": "AI data centers are becoming harder to build, and neoclouds are feeling it",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Rodic Consultants proposes Rs 200 Cr fund for AI in infrastructure",
+      "reason": "could not verify yet after a second try; dropped"
+    },
+    {
+      "title": "Global growth to remain robust in 2027 , rising government and AI - related debt issuance pose risks to bond markets : JPMorgan",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "9edbb62c9bcf",
+      "headline": "Nvidia faces ongoing investigations over Megaspeed chip smuggling after CEO’s return",
+      "category": "policy",
+      "summary": "Nvidia is under multiple investigations into allegations that its advanced GPUs were smuggled to China by Singapore‑based customer Megaspeed, and that CEO Jensen Huang’s personal relationship with a Megaspeed executive may have clouded the company’s judgment. The U.S. government added Megaspeed to a trade restriction list and investigators are probing whether Nvidia knew the chips’ final destination, with a reported inventory discrepancy of about 50,000 units.",
+      "url": "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed",
+      "sources": 4,
+      "quotes": 2
+    },
+    {
+      "id": "85881ba37f62",
+      "headline": "Nexent Capital launches $1 billion fund for AI data‑center and energy infrastructure",
+      "category": "industry",
+      "summary": "Nexent Capital IFSC Private Limited announced the Nexent Capital ADGM Fund I, a closed‑end fund targeting $1 billion in commitments, expandable to $1.6 billion, to invest in quantum‑ready AI infrastructure and advanced energy projects in North America and India.",
+      "url": "https://yourstory.com/2026/11/nexent-capital-launches-1-billion-fund-focused-on-ai-data-centres-investments",
+      "sources": 5,
+      "quotes": 2
+    },
+    {
+      "id": "76fe28fdc54d",
+      "headline": "Shenzhen vendors sell restricted Nvidia Blackwell servers for $3M+, up from $2M in two months",
+      "category": "industry",
+      "summary": "Chinese traders in Shenzhen's Huaqiangbei market are openly selling Nvidia Blackwell B300 servers despite U.S. export restrictions, with prices rising from $2 million to over $3 million in two months. The black-market trade persists amid turmoil surrounding Nvidia CEO Jensen Huang.",
+      "url": "https://techmeme.com/261125/p20",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "58b313ebe927",
+      "headline": "Asian data centers seek US clients for excess compute as B300 prices fall",
+      "category": "industry",
+      "summary": "Asian data centers and neoclouds are seeking US clients to offload excess computing capacity previously allocated to Chinese firms following tighter US remote access rules. According to tracking startup Liquid Compute, hourly rental rates for Nvidia B300 chips fell 7% to $7.19 since late October.",
+      "url": "https://techmeme.com/261125/p14",
+      "sources": 3,
+      "quotes": 2
+    },
+    {
+      "id": "7220dba755e5",
+      "headline": "Meta and Amazon in talks to lift Muse AI shopping block",
+      "category": "industry",
+      "summary": "Meta and Amazon are discussing a potential deal that would allow Meta's Muse AI agent to shop on Amazon's marketplace, ending Amazon's current block. Any agreement would require approval from both CEOs, Mark Zuckerberg and Andy Jassy, and hinges on how search results and advertising would be handled.",
+      "url": "https://techmeme.com/261125/p13",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "6b0e667a74b4",
+      "headline": "Anthropic expands Claude Duet AI agent research preview to India",
+      "category": "models",
+      "summary": "Anthropic has expanded the research preview of its Claude Duet AI agent to India, a month after its US launch. The proactive assistant, built on Claude Opus 5.5, is available via waitlist for Pro, Max, and Ultra subscribers, with public beta for Team users and private beta for Enterprise customers.",
+      "url": "https://analyticsindiamag.com/ai-news/anthropic-brings-claude-duet-ai-agent-to-india",
+      "sources": 2,
+      "quotes": 0
+    }
+  ],
+  "notes": [
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "2 kept item(s) carried over to the next run",
+    "claims skipped: time budget of 22 minutes for AI reached this run",
+    "briefing skipped: time budget of 22 minutes for AI reached this run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 115.7,
+    "audit": -0.0,
+    "plan": 8.6,
+    "judge": 158.8,
+    "verify and write": 403.1,
+    "videos": 135.3,
+    "tagging": 112.6,
+    "explainers": 0.0,
+    "trackers": 273.2,
+    "model tracker": 120.2,
+    "weekly": 0.0,
+    "builders": 0.0,
+    "top voices": 0.0,
+    "self-review": 0.0,
+    "photos": 1.4,
+    "stock photos": 0.8,
+    "daily email": 0.0,
+    "alerts": 7.2
+  },
+  "fetched": 3052,
+  "fresh": 57,
+  "plan": {
+    "focus": "Chasing the fallout from Jensen Huang's return to Nvidia, market corrections, and hardware gray markets.",
+    "priorities": [
+      "Chinese vendors in Shenzhen's Huaqiangbei market still sell US-restric (Sheds light on Shenzhen pricing and availability of US-restricted Blackwell hardware.)",
+      "The questions Jensen Huang and Nvidia will still have to answer about  (Frames ongoing governance and transparency questions surrounding Nvidia and Megaspeed.)",
+      "US tech stocks fall, pushing the Nasdaq 100 down 4%+, as the AI trade  (Captures the macro sell-off and investor jitters hitting the AI trade across major players.)",
+      "Sources: Meta and Amazon are discussing a potential deal to connect Mu (Details potential détente between Amazon and Meta over the Muse agent block.)",
+      "[Update] Anthropic Rolls Out Claude Duet In India After US Launch (Highlights Anthropic pushing Claude Duet into the Indian market.)"
+    ],
+    "thin_areas": [
+      "india",
+      "models"
+    ],
+    "searches": [
+      "Nvidia Megaspeed investigation update: 3 new",
+      "Jensen Huang return Nvidia China chips: 6 new"
+    ],
+    "dig_deeper": [
+      "Chinese vendors in Shenzhen's Huaqiangbei market still sell US-restric",
+      "The questions Jensen Huang and Nvidia will still have to answer about "
+    ]
+  },
+  "judged": 65,
+  "kept": 10,
+  "research": {
+    "investigated": 5,
+    "confirmed": 4,
+    "tool_calls": 13
+  },
+  "research_log": [
+    "The questions Jensen Huang and Nvidia will still have to answer about : confirmed (searched “Jensen Huang Megaspeed chip smuggler”; read cryptobriefing.com)",
+    "Nexent Capital launches $1B fund focused on AI & data centres investme: confirmed (searched “Nexent Capital $1 billion fund AI data centres”; read datacenterdynamics.com)",
+    "AI data centers are becoming harder to build, and neoclouds are feelin: unconfirmed (searched “AI data centers harder to build neoclouds construction delays Nvidia backstop”; read msn.com; read businessinsider.com)",
+    "Chinese vendors in Shenzhen's Huaqiangbei market still sell US-restric: confirmed (searched “Huaqiangbei market Nvidia Blackwell B300 servers $3M Shenzhen vendors US restrictions”; read msn.com; searched “\"Top Nvidia chips are still on offer in China\" Washington Post Joshua Yang”)",
+    "Liquid Compute: Asian data centers and neoclouds are seeking US client: confirmed (searched “Liquid Compute Asian data centers neoclouds US clients B300 Newley Purnell Bloomberg”; read bloomberg.com; read thenextweb.com)"
+  ],
+  "threads": [
+    "Megaspeed investigation leads to entity list addition: Nvidia faces ongoing investigations over Megaspeed chip smug",
+    "Megaspeed investigation leads to entity list addition: Shenzhen vendors sell restricted Nvidia Blackwell servers fo",
+    "Megaspeed investigation leads to entity list addition: Asian data centers seek US clients for excess compute as B30",
+    "Muse rollout expands to UK adults: Meta and Amazon in talks to lift Muse AI shopping block",
+    "Anthropic expands Claude product suite: Anthropic expands Claude Duet AI agent research preview to I"
+  ],
+  "videos": {
+    "OpenAI": "ok (12 in feed, 1 new)",
+    "Anthropic": "ok (13 in feed, 0 new)",
+    "Google DeepMind": "ok (14 in feed, 1 new)",
+    "Google for Developers": "ok (10 in feed, 1 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
+    "Microsoft Research": "ok (12 in feed, 0 new)",
+    "NVIDIA": "ok (6 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 2 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 3 new)",
+    "AI Explained": "ok (15 in feed, 1 new)",
+    "Lex Fridman": "ok (14 in feed, 1 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (3 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 6 new)",
+    "Training Data (Sequoia)": "ok (5 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (13 in feed, 0 new)",
+    "Hard Fork": "ok (2 in feed, 1 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (4 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "12 kept from 18 new",
+  "tagged": 6,
+  "trackers": "filed 5 stories; updated us-china, ai-infrastructure",
+  "model_tracker": "81 models, 19 changes today",
+  "photos": "5 saved, 0 unavailable",
+  "stock photos": "1 added",
+  "alerts": "32 events sent: {\"subscribers\":5,\"sent\":0,\"queued\":36}",
+  "ai_requests_run": 42,
+  "ai_tokens_run": 150550,
+  "ai_requests_today": 261,
+  "provider_log": [
+    "gemini/gemini-3.5-flash-lite: 503 (server busy); trying next model",
+    "gemini/gemini-3.6-flash: 503 (server busy); trying next model",
+    "gemini/gemini-3.5-flash: 503 (server busy); trying next model",
+    "gemini: 503 (server busy) on several tries; resting it for 2 minutes",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "gemini/gemini-3.5-flash-lite: 503 (server busy); trying next model",
+    "gemini/gemini-3.6-flash: 503 (server busy); trying next model",
+    "gemini/gemini-3.5-flash: 503 (server busy); trying next model",
+    "gemini: 503 (server busy) on several tries; resting it for 2 minutes",
+    "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
+    "groq: 429 after retry (rate_limit_exceeded tokens Rate limit reached for model `openai/gpt-oss-120b` in); moving to next provider for this run",
+    "gemini/gemini-3.5-flash-lite: 503 (server busy); trying next model",
+    "gemini/gemini-3.6-flash: answer cut off; retrying with more room",
+    "gemini/gemini-3.5-flash-lite: 503 (server busy); trying next model",
+    "gemini: 429 after retry (429  You exceeded your current quota, please check your plan and billing details); moving to next provider for this run",
+    "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+    "nvidia: unreachable or too slow (ReadTimeout); resting it for 2 minutes"
+  ]
+}
