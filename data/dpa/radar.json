@@ -1866,6 +1866,98 @@
    "rationale": "Locally hosted coding agents with Indian data residency could help DPA's developers safely use AI coding tools while complying with data rules. Moves to assess for testing.",
    "updated": "2026-11-25",
    "model": "gemini/gemini-3.5-flash-lite"
+  },
+  "nvidia-blackwell-b300-servers": {
+   "key": "nvidia-blackwell-b300-servers",
+   "name": "Nvidia Blackwell B300 servers",
+   "first_seen": "2026-11-25",
+   "history": [
+    {
+     "date": "2026-11-25",
+     "from": "",
+     "to": "hold",
+     "why": "Hold due to US export restrictions; sourcing these servers risks non‑compliance and client data security."
+    }
+   ],
+   "evidence": [
+    "76fe28fdc54d"
+   ],
+   "ring": "hold",
+   "proposed": "",
+   "quadrant": "policy",
+   "capability": "governance",
+   "rationale": "Hold due to US export restrictions; sourcing these servers risks non‑compliance and client data security.",
+   "updated": "2026-11-25",
+   "model": "groq/openai/gpt-oss-120b"
+  },
+  "megaspeed-trade-restriction-list": {
+   "key": "megaspeed-trade-restriction-list",
+   "name": "Megaspeed trade restriction list",
+   "first_seen": "2026-11-25",
+   "history": [
+    {
+     "date": "2026-11-25",
+     "from": "",
+     "to": "hold",
+     "why": "Hold because added to US trade restriction list, limiting access to high‑end GPUs for DPA workloads."
+    }
+   ],
+   "evidence": [
+    "9edbb62c9bcf"
+   ],
+   "ring": "hold",
+   "proposed": "",
+   "quadrant": "policy",
+   "capability": "governance",
+   "rationale": "Hold because added to US trade restriction list, limiting access to high‑end GPUs for DPA workloads.",
+   "updated": "2026-11-25",
+   "model": "groq/openai/gpt-oss-120b"
+  },
+  "liquid-compute-b300-rental-rates": {
+   "key": "liquid-compute-b300-rental-rates",
+   "name": "Liquid Compute B300 rental rates",
+   "first_seen": "2026-11-25",
+   "history": [
+    {
+     "date": "2026-11-25",
+     "from": "",
+     "to": "assess",
+     "why": "Assess as cheaper offshore B300 rentals may lower pipeline costs; pilot a PDF extraction job to compare performance."
+    }
+   ],
+   "evidence": [
+    "58b313ebe927"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "data_pipelines",
+   "rationale": "Assess as cheaper offshore B300 rentals may lower pipeline costs; pilot a PDF extraction job to compare performance.",
+   "updated": "2026-11-25",
+   "model": "groq/openai/gpt-oss-120b"
+  },
+  "claude-duet-ai-agent": {
+   "key": "claude-duet-ai-agent",
+   "name": "Claude Duet AI agent",
+   "first_seen": "2026-11-25",
+   "history": [
+    {
+     "date": "2026-11-25",
+     "from": "",
+     "to": "trial",
+     "why": "Trial Claude Duet as autonomous agent for multi‑step document extraction; integrate via API and evaluate accuracy and hand‑off time."
+    }
+   ],
+   "evidence": [
+    "6b0e667a74b4"
+   ],
+   "ring": "trial",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "agents",
+   "rationale": "Trial Claude Duet as autonomous agent for multi‑step document extraction; integrate via API and evaluate accuracy and hand‑off time.",
+   "updated": "2026-11-25",
+   "model": "groq/openai/gpt-oss-120b"
   }
  },
  "considered": [
@@ -1905,6 +1997,7 @@
   "583b7a1c7413",
   "5862fe6cf17f",
   "5881b795a6bf",
+  "58b313ebe927",
   "598c6194c0d3",
   "5bf107852b8f",
   "5c695888c432",
@@ -1915,10 +2008,12 @@
   "646e58946cb7",
   "68ff5ed661ee",
   "6a9cc38190a7",
+  "6b0e667a74b4",
   "6da8ea47d40e",
   "71615ee1ebfd",
   "74e3f2b1316b",
   "76dbab81d73b",
+  "76fe28fdc54d",
   "7737e173e31a",
   "77bf41c17995",
   "77d255b4e9ac",
@@ -1935,6 +2030,7 @@
   "972640f78a70",
   "98fe46c7c873",
   "9dd0aa4b535f",
+  "9edbb62c9bcf",
   "a03a5c718a32",
   "a1e895b935bb",
   "a1f50bca3921",
@@ -1973,7 +2069,7 @@
   "fa0e89bac09a",
   "fa5252ed6842"
  ],
- "updated_at": "2026-11-25T11:20:56+00:00",
+ "updated_at": "2026-11-25T17:21:01+00:00",
  "takeaways": {
   "written_at": "2026-11-24T20:20:50+00:00",
   "sig": "claude-code:assess|claude-fable-5-2:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|grok-build:hold|mai-code-2:trial|microsoft-agent-framework:hold|shellbench-benchmark:assess|tool-retrieval:trial",
