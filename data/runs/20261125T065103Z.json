@@ -1,0 +1,483 @@
+{
+  "started_at": "2026-11-25T06:51:03+00:00",
+  "review_mode": false,
+  "providers": [
+    "gemini",
+    "groq",
+    "nvidia",
+    "cerebras"
+  ],
+  "sources": {
+    "openai": "ok (1430)",
+    "deepmind": "ok (100)",
+    "google-ai": "ok (20)",
+    "huggingface": "ok (916)",
+    "nvidia": "ok (18)",
+    "anthropic": "ok (6)",
+    "meta-ai": "ok (6)",
+    "xai": "ok (6)",
+    "microsoft-ai": "ok (10)",
+    "mistral": "ok (6)",
+    "mistral-news": "ok (0)",
+    "hf-models": "ok (57)",
+    "arxiv": "ok (40)",
+    "hf-papers": "ok (9)",
+    "gdelt": "ok (0) via Bing News (GDELT unavailable)",
+    "hn": "ok (18)",
+    "techcrunch-ai": "ok (20)",
+    "verge-ai": "ok (10)",
+    "mit-tr-ai": "ok (10)",
+    "ars-ai": "ok (20)",
+    "aim": "ok (50)",
+    "inc42": "ok (24)",
+    "medianama": "ok (10)",
+    "mint-tech": "ok (35)",
+    "et-tech": "ok (50)",
+    "yourstory": "ok (20)",
+    "gdelt-india": "ok (0) via Bing News (GDELT unavailable)",
+    "crunchbase-news": "ok (10)",
+    "import-ai": "ok (10)",
+    "simon-willison": "ok (30)",
+    "sam-altman": "ok (30)",
+    "bluesky": "ok (28)",
+    "auto-techmeme.com": "ok (15)"
+  },
+  "dropped": [
+    {
+      "title": "OmniAct: One Policy, One Million Embodiments",
+      "reason": "score 3: Routine robotics policy pre-print paper."
+    },
+    {
+      "title": "DiaCap: Jointly Learning Who Speaks When for Audiovisual Dialogue Captioning",
+      "reason": "score 3: Incremental research paper on audiovisual dialogue captioning."
+    },
+    {
+      "title": "BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles",
+      "reason": "score 3: Standard biomedical VLM preprint."
+    },
+    {
+      "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
+      "reason": "score 3: Incremental reasoning model fine-tuning paper."
+    },
+    {
+      "title": "iWAM: Efficient Action Prediction from World Models without Explicit Future Prediction",
+      "reason": "score 3: Standard action prediction preprint."
+    },
+    {
+      "title": "BriConstrain: Geometrically Constrained Decoding for Autoregressive Brick Assembly Generation",
+      "reason": "score 3: Niche constrained decoding preprint."
+    },
+    {
+      "title": "A Bias in Disguise: Tiny Gradient Edits Stop a Small Language Model's Thinking Loops and Complement a Frontier Model's Weight Edit",
+      "reason": "score 4: Incremental research paper on gradient edits and small language model reasoning loops."
+    },
+    {
+      "title": "Exploratory Midtraining for Robot Policies",
+      "reason": "score 4: Standard exploratory robotics midtraining paper."
+    },
+    {
+      "title": "SAG-Mem-1.0 Technical Report",
+      "reason": "score 3: Technical report on conversational memory retrieval."
+    },
+    {
+      "title": "MetaFORGE: A Meta-Learning Framework for Harness Optimization in Automated Code Generation for Parallel Computing",
+      "reason": "score 3: Meta-learning framework paper for parallel computing code generation."
+    },
+    {
+      "title": "Draft Calibration for Speculative Decoding: Accelerating LLM Serving by Matching Draft and Target Distributions",
+      "reason": "score 4: Draft calibration paper for speculative decoding acceleration."
+    },
+    {
+      "title": "Temporal Conditioning for Human Behavioral Cloning in Chess",
+      "reason": "score 3: Niche behavioral cloning paper applied to chess time pressure."
+    },
+    {
+      "title": "Reinforcement Learning Can Be Recovered From Its Own Rollouts",
+      "reason": "score 4: Reinforcement learning post-training research paper."
+    },
+    {
+      "title": "GREMLIN: Generating Random Environments for Meta-Learning with Interacting Networks",
+      "reason": "score 3: Meta-learning reinforcement learning environments paper."
+    },
+    {
+      "title": "Delegent: A Multi-Agent Harness That Reduces Cost without Sacrificing Performance",
+      "reason": "score 5: Multi-agent harness paper exploring cost reduction via delegating tasks to small language models."
+    },
+    {
+      "title": "EventDiffusion: Learning Native Event Stream Distribution from Videos",
+      "reason": "score 3: Event camera video distribution paper."
+    },
+    {
+      "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design",
+      "reason": "score 4: Routine academic paper on hardware design benchmarking for LLM agents; not a major landmark."
+    },
+    {
+      "title": "The Radar-based Activities of Daily Living (R-ADL) Dataset",
+      "reason": "score 3: Radar-based activity dataset for elderly care; minor assistive tech paper."
+    },
+    {
+      "title": "Uncertainty-Aware Candidate Generation for Entity Linking in Cyber Threat Intelligence",
+      "reason": "score 3: Incremental research on entity resolution in cyber threat intelligence."
+    },
+    {
+      "title": "Shifter Quantization: Compact Representations for Native Integer Computation",
+      "reason": "score 5: Shifter Quantization paper proposing compact representations; incremental LLM quantization work."
+    },
+    {
+      "title": "FOL-Proof: Verifying LLM Text-to-Logic Translations via Deterministic Semantics",
+      "reason": "score 4: FOL-Proof paper verifying LLM text-to-logic translations; standard evaluation research."
+    },
+    {
+      "title": "On the Creation of Object-Centric Event Logs from Patient Journeys",
+      "reason": "not AI: Patient journey event logs in healthcare operations; no direct AI angle."
+    },
+    {
+      "title": "The Reliability Function of Error-Correcting Output Codes with Noisy Binary Classifiers",
+      "reason": "score 3: Theoretical paper on error-correcting output codes and noisy binary classifiers; too narrow for Frontier Wire readers."
+    },
+    {
+      "title": "Auditing the Judge: Human-Derived Bias Discovery, Quantification, and Mitigation in LLM Judges",
+      "reason": "score 4: Auditing LLM judges for human-derived biases; incremental evaluation paper."
+    },
+    {
+      "title": "U-Statistics-Powered LLM Reasoning",
+      "reason": "score 4: U-Statistics-Powered LLM Reasoning paper addressing group size hyperparameters in GRPO; niche theoretical optimization."
+    },
+    {
+      "title": "Understanding Clipping In Zeroth-Order Optimization",
+      "reason": "score 3: Zeroth-order optimization paper studying clipping; theoretical fine-tuning research."
+    },
+    {
+      "title": "ClusterVAD: Threshold-Free Unsupervised Voice Activity Detection with Pre-Trained Neural Representations",
+      "reason": "not AI: Routine paper on voice activity detection."
+    },
+    {
+      "title": "Local Indices Are Not Enough: Synchrony and Global Information in Bandit Algorithms",
+      "reason": "not AI: Theoretical paper on bandit algorithms."
+    },
+    {
+      "title": "Worth the Wait? How Response Time and Streaming Shape Judgments of Generative AI Answers and Chatbot Engagement",
+      "reason": "not AI: Academic study on user response times to generative AI answers."
+    },
+    {
+      "title": "Latent Merger: Latent-Space Composition of Hypernetwork-Generated LoRAs",
+      "reason": "not AI: Incremental paper on LoRA composition and hypernetworks."
+    },
+    {
+      "title": "When Is Product Decoding of ECOC MAP-Consistent? Pair Structure and the n-vs-Rest Codes",
+      "reason": "not AI: Theoretical paper on error-correcting output codes."
+    },
+    {
+      "title": "Towards Realistic Evaluation of Uncertainty Quantification for LLM-Based Recommender Systems",
+      "reason": "not AI: Academic paper on uncertainty quantification for LLM recommenders."
+    },
+    {
+      "title": "Hybrid AI for AI-Native RAN Control: A Functional Perspective",
+      "reason": "not AI: Survey paper on RAN control."
+    },
+    {
+      "title": "Can a Frontier LLM Repair a Quantized Network by Tool-Free Weight-Space Programming?",
+      "reason": "not AI: Academic paper experimenting with weight-space manipulation on a tiny CNN."
+    },
+    {
+      "title": "SALSA: Sampling Adversarial Suffixes from Learned Distributions for LLM Safety Assessment",
+      "reason": "not AI: Standard research paper on jailbreak suffixes."
+    },
+    {
+      "title": "Score-Based Diffusion for Hypergraph Signals in the t-Spectral Domain",
+      "reason": "not AI: Theoretical paper on score-based diffusion for hypergraphs."
+    },
+    {
+      "title": "Best Arm Identification with Unknown Post-Action Context Distribution",
+      "reason": "score 3: Incremental academic paper on multi-armed bandits, not a frontier AI breakthrough."
+    },
+    {
+      "title": "PAC-style Bounds on the Conditional Validity of Conformal Predictors",
+      "reason": "score 3: Theoretical statistics paper on conformal prediction, too niche."
+    },
+    {
+      "title": "RecordRoute: Auditing Agent Failures with Localization-Guided Diagnosis",
+      "reason": "score 4: Academic paper on agent debugging diagnostics, incremental research."
+    },
+    {
+      "title": "Can LLM Judges Catch Unsafe Clinical Actions? A Fault-Injection Study",
+      "reason": "score 4: Academic fault-injection paper on LLM clinical judges, interesting but standard research."
+    },
+    {
+      "title": "PartAgent: Agentic 3D Part Segmentation via Expert Integration and Closed-Loop Refinement",
+      "reason": "score 4: Daily paper on 3D part segmentation, incremental computer vision research."
+    },
+    {
+      "title": "Gemini refused to give me the lyrics to Twinkle Twinkle Little Star",
+      "reason": "not AI: Hacker News discussion about a minor Gemini refusal quirk, essentially an anecdote."
+    },
+    {
+      "title": "Treasury CIO is too busy vibecoding instead of doing his job #147",
+      "reason": "not AI: GitHub issue thread meme, not substantive AI news."
+    },
+    {
+      "title": "Fintech Unicorn Oxyzo Posts 19% Rise In H1 FY27 Profit To ₹208 Cr",
+      "reason": "not AI: Fintech lending earnings report with no AI angle."
+    },
+    {
+      "title": "The Growing Toll Of Token Frauds",
+      "reason": "score 4: Opinion or exploratory piece on token fraud without specific breakthrough reporting."
+    },
+    {
+      "title": "YouTube removed 3.44M videos uploaded from India in April-June 2026, 30.8% of global removals",
+      "reason": "score 4: YouTube content moderation statistics report, general platform governance rather than core AI news."
+    },
+    {
+      "title": "Massive data leak exposes 3.5 billion records worldwide, putting usernames, passwords and identities at risk",
+      "reason": "not AI: General data leak report without a primary AI connection."
+    },
+    {
+      "title": "BGMI Air open beta now available: How to download and install 1GB game on Android",
+      "reason": "not AI: Mobile gaming open beta launch, no AI relevance."
+    },
+    {
+      "title": "Beyond UPI: Why many Indians still need help accessing basic banking services",
+      "reason": "not AI: Article about basic banking access and assisted banking in India, no AI angle."
+    },
+    {
+      "title": "Karnataka clears Pixxel’s Rs 350 Cr satellite manufacturing project",
+      "reason": "not AI: Satellite manufacturing project with no AI relevance."
+    },
+    {
+      "title": "Goldman Sachs, Societe Generale buy Rs 920-Cr stake in Lenskart",
+      "reason": "not AI: Retail eyewear stake acquisition, not AI-related."
+    },
+    {
+      "title": "Amazon plans to start selling cars online in the UK in early 2027, expanding beyond the US, where it offers new and used cars from 35 brands in 150+ cities (Jamie Nimmo/Bloomberg)",
+      "reason": "not AI: E-commerce expansion into UK car sales, no AI angle."
+    },
+    {
+      "title": "Six key questions raised by Jensen Huang's return to Nvidia",
+      "reason": "score 4: Rehash of Jensen Huang's return to Nvidia, already covered."
+    },
+    {
+      "title": "Jensen Huang’s Return Sent Nvidia Stock Soaring. A Day Later, the Rally Is Unraveling",
+      "reason": "score 4: Stock market reaction commentary on Nvidia leadership change, low news value."
+    },
+    {
+      "title": "US senators erupt over Jensen Huang’s Nvidia return and confirm he will still testify next week",
+      "reason": "score 5: Congressional reaction to Jensen Huang return, routine political follow-up."
+    },
+    {
+      "title": "Jensen Huang tells Nvidia employees he's in therapy in first all-hands since his comeback",
+      "reason": "score 4: Derivative report on Nvidia all-hands meeting details."
+    },
+    {
+      "title": "Nvidia CEO Jensen Huang apologizes to employees, says he is in therapy: report",
+      "reason": "score 4: Duplicate report on Nvidia all-hands meeting."
+    },
+    {
+      "title": "Jensen Huang admitted to more affairs before Nvidia took him back: report",
+      "reason": "score 2: Tabloid-style report on personal matters regarding Jensen Huang."
+    },
+    {
+      "title": "From Chinese Factory Town to the Nvidia Scandal: The Rise of Alice Huang",
+      "reason": "score 4: Biographical profile of Alice Huang related to the Nvidia scandal."
+    },
+    {
+      "title": "Nvidia's Jensen Huang still has security clearance, sources say",
+      "reason": "score 4: Routine follow-up on security clearances amid Nvidia probe."
+    },
+    {
+      "title": "Trump Says He’s Open To Pardoning Nvidia CEO Jensen Huang—Who Reportedly Still Holds Security Clearance",
+      "reason": "score 4: Rehash of Trump's comments on a potential pardon for Jensen Huang."
+    },
+    {
+      "title": "AI helping cyber attackers find weaknesses faster than companies can fix them, warns Cisco chief",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "Thomas Dohmke’s Entire Partners With Sarvam to Bring AI Coding Agents to India",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Alice Huang-linked firms listed $270 million in AI servers in China, records show",
+      "reason": "could not verify yet; will retry next run"
+    },
+    {
+      "title": "Sources: Muse boosts Meta's ad business by prompting Instagram users to organize saved posts in Muse, reducing shopping friction and increasing advertisers' ROI (Julia Boorstin/CNBC)",
+      "reason": "could not verify yet; will retry next run"
+    }
+  ],
+  "written": [
+    {
+      "id": "995fd2b8bd33",
+      "headline": "Jensen Huang returns as Nvidia CEO after intervention by Trump and tech allies",
+      "category": "policy",
+      "summary": "Nvidia reinstated Jensen Huang as CEO less than two weeks after his resignation, following lobbying by President Donald Trump and Silicon Valley allies. The reversal occurred while Nvidia faces federal investigations and congressional scrutiny over governance and personal connections to a suspected Chinese spy.",
+      "url": "https://techmeme.com/261125/p3",
+      "sources": 5,
+      "quotes": 0
+    },
+    {
+      "id": "76b8e567fcd2",
+      "headline": "EU plans €50B fund for European AI and quantum companies",
+      "category": "policy",
+      "summary": "The European Union plans to mobilize up to €50 billion for a Sovereign Tech Equity Fund. The fund will make long-term, high-risk bets on European artificial intelligence and quantum computing companies to bolster technological independence.",
+      "url": "https://techmeme.com/261125/p1",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "7a06c7691973",
+      "headline": "US intelligence briefed congressional aides on Alice Huang affair",
+      "category": "policy",
+      "summary": "US intelligence officials informed congressional aides that Alice Huang was not directed by China's MSS regarding the Jensen Huang affair, though she may have passed intelligence to the MSS. The briefing followed statements by President Trump that Jensen Huang was not a security threat.",
+      "url": "https://techmeme.com/261124/p52",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "858493e1f133",
+      "headline": "Asian tech stocks tumble following US tech sell-off",
+      "category": "industry",
+      "summary": "Asian technology stocks fell sharply on Wednesday, led by steep losses in Japanese semiconductor stocks and major regional chipmakers following a US tech sell-off. Advantest dropped over 12%, Tokyo Electron fell more than 7%, and Samsung and SK Hynix declined by over 6%.",
+      "url": "https://techmeme.com/261124/p47",
+      "sources": 3,
+      "quotes": 0
+    },
+    {
+      "id": "dc0f3e545a5f",
+      "headline": "Goldman Sachs flags 2028 risks for memory chip companies amid AI spending concerns",
+      "category": "industry",
+      "summary": "Goldman Sachs warned that a potential slowdown in artificial intelligence infrastructure investments could create risks for memory chip companies in 2028. The bank estimates that memory will account for roughly 40 percent of hyperscaler capital expenditure in 2028, down from about 44 percent in 2027.",
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/ai-spending-slowdown-could-hit-memory-companies-as-goldman-sachs-flags-2028-risks/articleshow/136149044.cms",
+      "sources": 2,
+      "quotes": 0
+    },
+    {
+      "id": "39470ed301cf",
+      "headline": "AidenAI raises $32M Series A to expand enterprise AI platform",
+      "category": "industry",
+      "summary": "Enterprise AI startup AidenAI raised a $32 million Series A funding round led by A91 Partners. The company plans to use the funds to expand its AI builder platform and develop industry-specific AI solutions.",
+      "url": "https://techmeme.com/261125/p2",
+      "sources": 2,
+      "quotes": 2
+    }
+  ],
+  "notes": [
+    "not India desk: 'AI spending slowdown could hit memory companies as'",
+    "not India desk: 'AI helping cyber attackers find weaknesses faster '",
+    "dropped non-quote (an ally of Huang): Great men make great mistakes. But nobody has ever been like…",
+    "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
+    "3 kept item(s) carried over to the next run"
+  ],
+  "mode": "full",
+  "timings": {
+    "gather": 98.2,
+    "audit": 0.0,
+    "plan": 2.1,
+    "judge": 23.5,
+    "verify and write": 126.3,
+    "videos": 10.9,
+    "tagging": 2.6,
+    "explainers": 0.0,
+    "trackers": 4.2,
+    "claims": 2.7,
+    "model tracker": 0.1,
+    "weekly": -0.0,
+    "builders": 9.6,
+    "top voices": -0.0,
+    "briefing": 3.0,
+    "self-review": 0.0,
+    "photos": 1.1,
+    "stock photos": 32.0,
+    "daily email": -0.0,
+    "alerts": 7.6
+  },
+  "fetched": 3014,
+  "fresh": 68,
+  "plan": {
+    "focus": "Chasing the fallout from Nvidia leadership politics and tech sell-offs while tracking enterprise AI agent deployment.",
+    "priorities": [
+      "Trump's tech allies reasserted their power in DC by lobbying the presi (Details Trump allies lobbying to pressure Nvidia and reinstate Jensen Huang, a major geopolitical-tech crossover.)",
+      "Sources: US intelligence officials told congressional aides Alice Huan (Provides essential intelligence background on the Alice Huang and Jensen Huang controversy.)",
+      "AI agents set to reshape Indian workplaces as 93% of leaders plan adop (Informs our audience on Indian business adoption of AI agents from the KPMG-CII report.)",
+      "Asian tech stocks tumble, led by Japanese chip stocks, after a US tech (Captures the immediate market contagion across Asian chip stocks following US tech sell-offs.)",
+      "Sources: the EU plans to mobilize up to €50B for its Sovereign Tech Eq (Covers Europe's major €50B sovereign push into AI and quantum computing.)"
+    ],
+    "thin_areas": [
+      "india",
+      "business"
+    ],
+    "searches": [
+      "Jensen Huang Nvidia return details: 6 new",
+      "Alice Huang intelligence report Nvidia: 3 new"
+    ],
+    "dig_deeper": [
+      "Trump's tech allies reasserted their power in DC by lobbying the presi",
+      "Sources: US intelligence officials told congressional aides Alice Huan"
+    ]
+  },
+  "judged": 77,
+  "kept": 10,
+  "research": {
+    "investigated": 5,
+    "confirmed": 5,
+    "tool_calls": 14
+  },
+  "research_log": [
+    "Trump's tech allies reasserted their power in DC by lobbying the presi: confirmed (searched “Trump Nvidia Jensen Huang CEO intelligence agencies Financial Times”; read arstechnica.com)",
+    "Sources: the EU plans to mobilize up to €50B for its Sovereign Tech Eq: confirmed (searched “EU Sovereign Tech Equity Fund AI quantum 50B Barbara Moens Financial Times”; read ft.com; read msn.com)",
+    "Sources: US intelligence officials told congressional aides Alice Huan: confirmed (searched “Alice Huang Jensen Huang US intelligence MSS New York Times”; searched “\"Alice Huang\" congressional aides intelligence New York Times”; read nytimes.com)",
+    "Asian tech stocks tumble, led by Japanese chip stocks, after a US tech: confirmed (searched “Asian tech stocks tumble Advantest Tokyo Electron Samsung SK Hynix CNBC”; searched “Asian tech stocks tumble led by Japanese chip stocks after a US tech sell off Advantest Tokyo Electron”; read msn.com)",
+    "AI spending slowdown could hit memory companies as Goldman Sachs flags: confirmed (searched “Goldman Sachs AI spending slowdown memory companies 2028”; read cryptobriefing.com; read msn.com)"
+  ],
+  "threads": [
+    "Megaspeed investigation leads to entity list addition: US intelligence briefed congressional aides on Alice Huang a",
+    "Anthropic IPO tests circular financing boom: Asian tech stocks tumble following US tech sell-off"
+  ],
+  "videos": {
+    "OpenAI": "ok (11 in feed, 0 new)",
+    "Anthropic": "ok (13 in feed, 0 new)",
+    "Google DeepMind": "ok (14 in feed, 1 new)",
+    "Google for Developers": "ok (10 in feed, 1 new)",
+    "AI at Meta": "ok (10 in feed, 0 new)",
+    "Microsoft Research": "ok (12 in feed, 0 new)",
+    "NVIDIA": "ok (7 in feed, 0 new)",
+    "Hugging Face": "ok (12 in feed, 3 new)",
+    "Mistral AI": "ok (0 in feed, 0 new)",
+    "xAI": "ok (1 in feed, 0 new)",
+    "Two Minute Papers": "ok (15 in feed, 3 new)",
+    "AI Explained": "ok (15 in feed, 1 new)",
+    "Lex Fridman": "ok (14 in feed, 1 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
+    "No Priors": "ok (3 in feed, 0 new)",
+    "Latent Space": "ok (15 in feed, 6 new)",
+    "Training Data (Sequoia)": "ok (5 in feed, 1 new)",
+    "a16z": "ok (15 in feed, 0 new)",
+    "Big Technology Podcast": "ok (13 in feed, 1 new)",
+    "Hard Fork": "ok (1 in feed, 0 new)",
+    "The Cognitive Revolution": "ok (9 in feed, 0 new)",
+    "Lenny's Podcast": "ok (4 in feed, 0 new)",
+    "20VC": "ok (4 in feed, 0 new)"
+  },
+  "videos_kept": "17 kept from 18 new",
+  "tagged": 6,
+  "trackers": "filed 4 stories; updated ai-infrastructure, ai-money",
+  "claims": "240 tracked, 234 open, 0 updated this run",
+  "model_tracker": "81 models, 9 changes today",
+  "builders_sources": {
+    "show-hn": "ok (7)",
+    "github-new": "ok (31)",
+    "hf-spaces": "ok (24)",
+    "product-hunt": "ok (12)",
+    "r-localllama": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day'\nFor more i",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
+  },
+  "builders": "picked 5 from 50 candidates (1 removed by checks); 5 with pictures, 0 with videos",
+  "briefing": "4 themes from 20 stories",
+  "india_briefing": "3 themes from 5 stories",
+  "photos": "3 saved, 0 unavailable",
+  "stock photos": "3 added",
+  "alerts": "21 events sent: {\"subscribers\":5,\"sent\":0,\"queued\":28}",
+  "ai_requests_run": 47,
+  "ai_tokens_run": 126292,
+  "ai_requests_today": 119,
+  "provider_log": []
+}

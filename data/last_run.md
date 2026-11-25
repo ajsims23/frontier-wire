@@ -1,136 +1,130 @@
-## Frontier Wire newsroom run — 2026-11-25T03:51:02+00:00
+## Frontier Wire newsroom run — 2026-11-25T06:51:03+00:00
 
-Fetched 3073 items · fresh 95 · judged 80 · kept 6 · **written 5**
-AI: 47 requests, 152,447 tokens this run · 72 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking the fallout from Nvidia's governance turmoil and US policy signals alongside a flood of new arXiv preprints.
-  Priorities: It always an option but ...: Trump on whether hell pardon Nvidia CEO J (Direct follow-up on Trump's comments regarding a potential pardon for Nvidia CEO Jensen Huang.); US government may acquire stake in Nvidia - Trump (Major market and policy development: Trump mentions the US government potentially acquiring a stake in Nvidia.); India stresses human oversight in AI use during conflicts , flags risk (Important geopolitical stance from India at the UN concerning human oversight in AI military conflicts.); It Very Clear In The Data : Ramp CEO Says AI Jevons Paradox Broke (Ramp CEO insights on the AI Jevons Paradox offer critical business and economic signal.); AI agents set to reshape Indian workplaces as 93 % of leaders plan ado (KPMG-CII report data on AI agent adoption and workplace transformation in India.)
-  Thin areas: india, policy
-  Searches: Jensen Huang Nvidia board pardon Trump: 6 new; Nvidia government stake Trump: 6 new
-  Dig deeper: It always an option but ...: Trump on whether hell pardon Nvidia CEO J; US government may acquire stake in Nvidia - Trump
-Research agent: investigated 5 stories with 16 tool calls, confirmed 4
+Fetched 3014 items · fresh 68 · judged 77 · kept 10 · **written 6**
+AI: 47 requests, 126,292 tokens this run · 119 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Chasing the fallout from Nvidia leadership politics and tech sell-offs while tracking enterprise AI agent deployment.
+  Priorities: Trump's tech allies reasserted their power in DC by lobbying the presi (Details Trump allies lobbying to pressure Nvidia and reinstate Jensen Huang, a major geopolitical-tech crossover.); Sources: US intelligence officials told congressional aides Alice Huan (Provides essential intelligence background on the Alice Huang and Jensen Huang controversy.); AI agents set to reshape Indian workplaces as 93% of leaders plan adop (Informs our audience on Indian business adoption of AI agents from the KPMG-CII report.); Asian tech stocks tumble, led by Japanese chip stocks, after a US tech (Captures the immediate market contagion across Asian chip stocks following US tech sell-offs.); Sources: the EU plans to mobilize up to €50B for its Sovereign Tech Eq (Covers Europe's major €50B sovereign push into AI and quantum computing.)
+  Thin areas: india, business
+  Searches: Jensen Huang Nvidia return details: 6 new; Alice Huang intelligence report Nvidia: 3 new
+  Dig deeper: Trump's tech allies reasserted their power in DC by lobbying the presi; Sources: US intelligence officials told congressional aides Alice Huan
+Research agent: investigated 5 stories with 14 tool calls, confirmed 5
 Daily briefing: 4 themes from 20 stories
-Threads updated: Megaspeed investigation leads to entity list addition: US government may acquire stake in Nvidia, says Trump; KPMG uses AI agents in audit work: 93% of Indian business leaders plan to adopt AI agents, repo
-Videos: 17 kept from 18 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (10 in feed, 1 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (7 in feed, 0 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 4 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 6 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (1 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (4 in feed, 0 new)
-Photos: 5 saved, 0 unavailable
-Alerts: 20 events sent: {"subscribers":5,"sent":0,"queued":36}
-Claims: 239 tracked, 233 open, 0 updated this run
-Trackers: filed 10 stories; updated frontier-race, ai-regulation, india-ai, ai-infrastructure
+Threads updated: Megaspeed investigation leads to entity list addition: US intelligence briefed congressional aides on Alice Huang a; Anthropic IPO tests circular financing boom: Asian tech stocks tumble following US tech sell-off
+Videos: 17 kept from 18 new · OpenAI ok (11 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (10 in feed, 1 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (7 in feed, 0 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 1 new), Lex Fridman ok (14 in feed, 1 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 6 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 1 new), Hard Fork ok (1 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (4 in feed, 0 new)
+Builders desk: picked 5 from 50 candidates (1 removed by checks); 5 with pictures, 0 with videos
+Photos: 3 saved, 0 unavailable
+Alerts: 21 events sent: {"subscribers":5,"sent":0,"queued":28}
+Claims: 240 tracked, 234 open, 0 updated this run
+Trackers: filed 4 stories; updated ai-infrastructure, ai-money
 Model tracker: 81 models, 9 changes today
-Tagged 5 stories by sector, region and deal
+Tagged 6 stories by sector, region and deal
 India briefing: 3 themes from 5 stories
-Time: gather 69s, plan 81s, judge 18s, verify and write 103s, videos 206s, tagging 4s, trackers 96s, claims 3s, briefing 15s, photos 3s, alerts 3s
+Time: gather 98s, plan 2s, judge 24s, verify and write 126s, videos 11s, tagging 3s, trackers 4s, claims 3s, builders 10s, briefing 3s, photos 1s, stock photos 32s, alerts 8s
 
 ### New stories
-- **policy** — [US government may acquire stake in Nvidia, says Trump](https://trend.az/world/us/4250398.html)  
-  US President Donald Trump stated he has not ruled out the American government acquiring a stake in technology giant Nvidia. Trump noted the government previously acquired a 10% stake in Intel in 2025.  
-  _7 source(s), 1 verified quote(s)_
-- **policy** — [India stresses human oversight in AI use during conflicts at UN](https://economictimes.indiatimes.com/news/india/india-stresses-human-oversight-in-ai-use-during-conflicts-flags-risks-of-misuse-at-un/articleshow/136146544.cms)  
-  India called for human oversight in the application of artificial intelligence during conflicts at a UN Security Council debate. Ambassador Harish Parvathaneni outlined key considerations regarding emerging technologies and international security.  
-  _4 source(s), 1 verified quote(s)_
-- **industry** — [Ramp CEO says AI Jevons paradox broke over the last two months](https://zerohedge.com/ai/its-very-clear-data-ramp-ceo-says-ais-jevons-paradox-broke)  
-  Ramp co-CEO Eric Glyman stated that spending data shows the AI Jevons paradox broke over a two-month period. Transaction data indicates that while AI inference per unit of intelligence keeps coming down, usage is no longer spiking up to offset the price drop.  
-  _2 source(s), 1 verified quote(s)_
-- **industry** — [Dell lifts annual forecasts after record quarter on AI server demand](https://economictimes.indiatimes.com/tech/technology/dell-lifts-annual-forecasts-after-record-quarter-on-surging-ai-server-demand/articleshow/136146169.cms)  
-  Dell Technologies raised its annual revenue and profit forecasts after reporting a record third-quarter revenue of $54.94 billion. The company closed the quarter with $132.3 billion in AI server backlog amid rising demand for AI infrastructure.  
-  _4 source(s), 1 verified quote(s)_
-- **industry** — [93% of Indian business leaders plan to adopt AI agents, report says](https://news.webindia123.com/news/Articles/Business/20261125/4524140.html)  
-  A joint KPMG‑CII report finds 93 % of Indian business leaders intend to deploy AI agents to expand workforce capabilities, while 59 % are already using them to automate workstreams. CEOs see AI readiness as a major growth factor, and the report highlights a shift toward upskilling employees to direct and evaluate AI outputs.  
+- **policy** — [Jensen Huang returns as Nvidia CEO after intervention by Trump and tech allies](https://techmeme.com/261125/p3)  
+  Nvidia reinstated Jensen Huang as CEO less than two weeks after his resignation, following lobbying by President Donald Trump and Silicon Valley allies. The reversal occurred while Nvidia faces federal investigations and congressional scrutiny over governance and personal connections to a suspected Chinese spy.  
+  _5 source(s), 0 verified quote(s)_
+- **policy** — [EU plans €50B fund for European AI and quantum companies](https://techmeme.com/261125/p1)  
+  The European Union plans to mobilize up to €50 billion for a Sovereign Tech Equity Fund. The fund will make long-term, high-risk bets on European artificial intelligence and quantum computing companies to bolster technological independence.  
+  _3 source(s), 0 verified quote(s)_
+- **policy** — [US intelligence briefed congressional aides on Alice Huang affair](https://techmeme.com/261124/p52)  
+  US intelligence officials informed congressional aides that Alice Huang was not directed by China's MSS regarding the Jensen Huang affair, though she may have passed intelligence to the MSS. The briefing followed statements by President Trump that Jensen Huang was not a security threat.  
+  _3 source(s), 0 verified quote(s)_
+- **industry** — [Asian tech stocks tumble following US tech sell-off](https://techmeme.com/261124/p47)  
+  Asian technology stocks fell sharply on Wednesday, led by steep losses in Japanese semiconductor stocks and major regional chipmakers following a US tech sell-off. Advantest dropped over 12%, Tokyo Electron fell more than 7%, and Samsung and SK Hynix declined by over 6%.  
+  _3 source(s), 0 verified quote(s)_
+- **industry** — [Goldman Sachs flags 2028 risks for memory chip companies amid AI spending concerns](https://economictimes.indiatimes.com/tech/artificial-intelligence/ai-spending-slowdown-could-hit-memory-companies-as-goldman-sachs-flags-2028-risks/articleshow/136149044.cms)  
+  Goldman Sachs warned that a potential slowdown in artificial intelligence infrastructure investments could create risks for memory chip companies in 2028. The bank estimates that memory will account for roughly 40 percent of hyperscaler capital expenditure in 2028, down from about 44 percent in 2027.  
   _2 source(s), 0 verified quote(s)_
+- **industry** — [AidenAI raises $32M Series A to expand enterprise AI platform](https://techmeme.com/261125/p2)  
+  Enterprise AI startup AidenAI raised a $32 million Series A funding round led by A91 Partners. The company plans to use the funds to expand its AI builder platform and develop industry-specific AI solutions.  
+  _2 source(s), 2 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- EEG-Jev: A Unified Single-Pass Decision Model for EEG — not AI: Specialized EEG analysis model without significant general AI frontier breakthrough.
-- RepoEviAgent: Scalable Synthesis of Evidence-Grounded Repository-Level Question Answering Tasks — not AI: Incremental arXiv paper on repository-level QA tasks for software engineering agents.
-- Subliminal Learning Crosses Modalities — not AI: arXiv paper on subliminal learning across modalities; does not represent a landmark result or frontier lab release.
-- CALVIN-MAX: When Does a Mid-Execution Change Hurt a Robot Policy? — not AI: Robotics policy paper examining mid-execution changes; incremental research.
-- No Fixed Configuration Is Best: Context- and Cost-Aware Tuning of LLM Pipelines, with an Application to Schema Matching and Mapping — not AI: Compound AI system tuning paper on schema matching; standard incremental research.
-- Start Where the Data Are: Statistical Priors for One-Step Generation on Manifolds — score 4: Incremental research paper on statistical priors for one-step generation.
-- Explainable Deep Learning for Malaria Parasite Detection and Species Differentiation in Thick Blood Smear Images: A Pilot Feasibility Study — score 3: Niche medical imaging application paper.
-- Modeling Event-Conditioned Emotional Expression Response with LLM Agents in a Synthetic Social Simulation — score 3: Academic research paper on LLM emotional response simulation.
-- Two-Stage Post-Training for Flow-Based Embodied Foundation Models — score 3: Academic paper on flow-based embodied models.
-- JECT: Addressing the Context Shortcut in Joint-Embedding Predictive Learning for Chest CT — score 3: Domain-specific medical imaging paper.
-- Faithful Persona Steering under Incongruity via Dual-Stream Refinement — score 3: Academic paper on LLM persona steering.
-- Spec-Test Coverage Gap: Detecting Overspecified Tests in SWE-Bench-Style Benchmarks — score 6: Interesting methodology paper examining test overspecification in coding benchmarks like SWE-bench, worth a modest score for rigorous evaluation study.
-- Gaze World Model — score 3: Academic research paper on gaze world models.
-- POISE: Curvature-Aware Critic Regularization for Smooth Actor-Critic Control — score 3: Robotic control and reinforcement learning paper.
-- Not All Interpretation Methods Are Created Equal: Tiered Evaluation of AI Interpretability — score 4: Academic paper evaluating AI interpretability methods.
-- GaokaoMathGen: Chinese Gaokao Mathematics Finale Problem Generation Controlled by Latent Reasoning Structures — score 3: Standard arXiv paper on math problem generation; does not represent a landmark breakthrough.
-- Exploring Multi-Player Social Games as Verifiable Training Grounds for Large Language Models — score 3: Routine arXiv paper on multi-player social games for LLM training.
-- Compressible Representations: Functional Spines in Deep Neural Networks — score 3: Academic paper on neural network representations and functional spines.
-- Agentic Discovery of Soundness Bugs in Safe Rust Bindings — score 3: Routine arXiv paper on finding bugs in Rust bindings using agents.
-- How Far Apart Are Two Proofs? Measuring Proof Dissimilarity in a Proof Kernel and in Lean/Mathlib — score 3: Routine academic paper on proof dissimilarity.
-- TopoCryptoEEG: End-to-End Encrypted Framework for Brainprint Authentication — score 3: Routine academic paper on brainprint authentication and EEG encryption.
-- Learning Compact State Abstractions for LLM Agents — score 3: Routine arXiv paper on state abstractions for LLM agents.
-- A Generative AI Agent to Emulate Interactive Human-driven Vehicles for Automated Driving Testing in Urban Areas — score 3: Routine academic paper on generative AI agents for traffic simulation.
-- Constructive Causal Abstraction and a Case Study in Mechanistic Interpretability — score 3: Routine arXiv paper on mechanistic interpretability and causal abstraction.
-- AGL-SKILL: Coding Harnesses as Agentic Optimizers — score 3: Routine academic paper on coding harnesses as agentic optimizers.
-- SwarmLeak: Does Coordination Improve Privacy Attacks on LLM Agents? — score 4: Routine security paper on LLM agent multi-turn coordination attacks; not a major breakthrough.
-- Byte Patches versus BPE at Matched Data: A Matched-Twin Comparison at 350M Parameters — score 3: Incremental architecture comparison paper on tokenization methods at small scale (350M parameters).
-- Three-Dimensional Wake Reconstruction and Cross-Scale Transfer for Floating Offshore Wind Turbines via Physics-Informed Fourier Neural Operators — not AI: Domain-specific physics simulation paper for wind turbines; no core AI novelty for LLMs/agents.
-- SciFig2Data: A Workflow for Recovering Structured Data from Scientific Figures — score 3: Routine data extraction tool for scientific charts; incremental utility paper.
-- VISOR: A Vision-Language Selector for Multimodal Time-Series Forecasting — score 3: Incremental vision-language time-series forecasting method; not a frontier milestone.
-- SPARQL-Planned Single-Hop Traversal over a Live Knowledge Graph for Multi-Hop Question Answering — score 3: Incremental GraphRAG/retrieval technique for multi-hop QA.
-- DELTA: Diagnosing Exploration Lineages via Twin-path Alignment - What Can Contrasting Design Paths Reveal About Microarchitectural Behavior? — score 2: Microarchitectural analysis tool; adjacent to hardware design but lacks core AI focus.
-- RoMo Hands: A Large Scale Richly Organized Text to Hand Motion Dataset — score 3: Hand motion text-to-movement dataset; useful resource but routine research paper.
-- Verified Proof Refactoring with Codex and Qwen — score 3: Lean 4 proof refactoring using existing models; incremental application paper.
-- TACT-Bench: Testing Adaptive Conversational Threats against Tool-Use Agents — score 4: Safety benchmark for tool-use agents; incremental evaluation paper.
-- RVLM-X: Towards a Universal VLM Harness — score 3: Routine daily arXiv paper on VLM harnesses, lacks landmark significance for readers.
-- FN-Prune: Training-Free Expert Pruning with Finite RMSNorm Perturbations — score 3: Incremental pruning paper, not a major research breakthrough.
-- Where is the Interface for the AI Harness? — score 4: Academic paper on agent interfaces, lacks frontier breakthrough status.
-- GreenDynaMix: Thermal-Aware Dynamic Mixed-Precision MoE LLM Inference Systems — score 3: Routine thermal-aware MoE inference optimization paper.
-- Reproducing History Is Not Enough: Intervention-Level Assurance for LLM-Generated Simulators — score 3: Academic paper on LLM simulation assurance, lacks broader industry impact.
-- It always an option but ...: Trump on whether hell pardon Nvidia CEO Jensen Huang — duplicate of 2a76ff4ba5c6
-- Jensen Huang controversial return to Nvidia poses the question – what the point of a board ? — score 4: Commentary on Nvidia board governance following Jensen Huang's return; rehash of recent executive drama.
-- Giving it away : authors denounce AI copyright cave - in — score 4: General commentary on author copyright concerns regarding AI, lacks specific new policy or event milestone.
-- Anthropic Has Plunged 30 % From Its Peak . Here the Price at Which Id Buy . — score 3: Stock price analysis and commentary ("stock-price commentary, analyst price targets... stay 5 or lower").
-- PrismML Bonsai 2 . 5 brings better coding and tool use to on - device AI — score 5: Minor model update release from PrismML (Bonsai 2.5), incremental feature release.
-- Jensen Huang acknowledged violating Nvidia code of conduct , making terrible mistakes — duplicate of 51b9331a9f93
-- Prediction : A $10 , 000 Investment in Nvidia Stock Will Be Worth This Much by Year - End 2027 — not AI: Stock price prediction listicle.
-- US schools are moving away from AI in Google searches . Should Australia do the same ? — score 3: General commentary on search tools in schools.
-- Using personal AI accounts can leave your farm records vulnerable | The Land — score 3: General advice on farm data security.
-- State lawmakers to host informational briefing about artificial intelligence innovation : Big Island Now — score 3: Local government informational briefing.
-- LinkedIn CEO : Gen Z have an edge in frozen job market as employers see them as AI - savvy — score 4: LinkedIn CEO commentary on hiring and Gen Z.
-- Nvidia Is Down 31 % From Its Peak . History Says This Happens Next — not AI: Stock price commentary and historical analysis.
-- ABB Helps Scale Industrial AI with World First Motor Featuring Built - in Intelligence - Heavy Machinery / Handling Solutions - ABB Robotics / ABB Ltd — score 6: Industrial hardware product launch with built-in AI.
-- Jensen Huang Return to Nvidia Raises Board Oversight Questions — score 5: Routine governance commentary on Nvidia leadership changes already covered.
-- Bull trap ? Nvidia sell - off resumes day after historic rally — not AI: Stock market daily movement report.
-- Asian stocks retreat as AI rebound stumbles — not AI: Stock market daily movement report.
-- AI impact in New York K - 12 schools — not AI: Local K-12 education policy update with no direct frontier AI relevance.
-- A week after debut , Anthropic shares fall below IPO price — duplicate of f991ba256218
-- China Pressure on India & NVIDIA On The Brett Winterble Show — not AI: Talk radio commentary re-hashing general geopolitics and NVIDIA.
-- Global UAV Navigation Systems Market to Reach $63 . 9 Billion by 2035 as AI and Autonomous Technologies Accelerate ... - Aviation / Aerospace / Drone / eVTOL - Frost & Sullivan — score 4: Broad drone market report with minor mention of AI and autonomous tech.
+- OmniAct: One Policy, One Million Embodiments — score 3: Routine robotics policy pre-print paper.
+- DiaCap: Jointly Learning Who Speaks When for Audiovisual Dialogue Captioning — score 3: Incremental research paper on audiovisual dialogue captioning.
+- BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles — score 3: Standard biomedical VLM preprint.
+- CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies — score 3: Incremental reasoning model fine-tuning paper.
+- iWAM: Efficient Action Prediction from World Models without Explicit Future Prediction — score 3: Standard action prediction preprint.
+- BriConstrain: Geometrically Constrained Decoding for Autoregressive Brick Assembly Generation — score 3: Niche constrained decoding preprint.
+- A Bias in Disguise: Tiny Gradient Edits Stop a Small Language Model's Thinking Loops and Complement a Frontier Model's Weight Edit — score 4: Incremental research paper on gradient edits and small language model reasoning loops.
+- Exploratory Midtraining for Robot Policies — score 4: Standard exploratory robotics midtraining paper.
+- SAG-Mem-1.0 Technical Report — score 3: Technical report on conversational memory retrieval.
+- MetaFORGE: A Meta-Learning Framework for Harness Optimization in Automated Code Generation for Parallel Computing — score 3: Meta-learning framework paper for parallel computing code generation.
+- Draft Calibration for Speculative Decoding: Accelerating LLM Serving by Matching Draft and Target Distributions — score 4: Draft calibration paper for speculative decoding acceleration.
+- Temporal Conditioning for Human Behavioral Cloning in Chess — score 3: Niche behavioral cloning paper applied to chess time pressure.
+- Reinforcement Learning Can Be Recovered From Its Own Rollouts — score 4: Reinforcement learning post-training research paper.
+- GREMLIN: Generating Random Environments for Meta-Learning with Interacting Networks — score 3: Meta-learning reinforcement learning environments paper.
+- Delegent: A Multi-Agent Harness That Reduces Cost without Sacrificing Performance — score 5: Multi-agent harness paper exploring cost reduction via delegating tasks to small language models.
+- EventDiffusion: Learning Native Event Stream Distribution from Videos — score 3: Event camera video distribution paper.
+- AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design — score 4: Routine academic paper on hardware design benchmarking for LLM agents; not a major landmark.
+- The Radar-based Activities of Daily Living (R-ADL) Dataset — score 3: Radar-based activity dataset for elderly care; minor assistive tech paper.
+- Uncertainty-Aware Candidate Generation for Entity Linking in Cyber Threat Intelligence — score 3: Incremental research on entity resolution in cyber threat intelligence.
+- Shifter Quantization: Compact Representations for Native Integer Computation — score 5: Shifter Quantization paper proposing compact representations; incremental LLM quantization work.
+- FOL-Proof: Verifying LLM Text-to-Logic Translations via Deterministic Semantics — score 4: FOL-Proof paper verifying LLM text-to-logic translations; standard evaluation research.
+- On the Creation of Object-Centric Event Logs from Patient Journeys — not AI: Patient journey event logs in healthcare operations; no direct AI angle.
+- The Reliability Function of Error-Correcting Output Codes with Noisy Binary Classifiers — score 3: Theoretical paper on error-correcting output codes and noisy binary classifiers; too narrow for Frontier Wire readers.
+- Auditing the Judge: Human-Derived Bias Discovery, Quantification, and Mitigation in LLM Judges — score 4: Auditing LLM judges for human-derived biases; incremental evaluation paper.
+- U-Statistics-Powered LLM Reasoning — score 4: U-Statistics-Powered LLM Reasoning paper addressing group size hyperparameters in GRPO; niche theoretical optimization.
+- Understanding Clipping In Zeroth-Order Optimization — score 3: Zeroth-order optimization paper studying clipping; theoretical fine-tuning research.
+- ClusterVAD: Threshold-Free Unsupervised Voice Activity Detection with Pre-Trained Neural Representations — not AI: Routine paper on voice activity detection.
+- Local Indices Are Not Enough: Synchrony and Global Information in Bandit Algorithms — not AI: Theoretical paper on bandit algorithms.
+- Worth the Wait? How Response Time and Streaming Shape Judgments of Generative AI Answers and Chatbot Engagement — not AI: Academic study on user response times to generative AI answers.
+- Latent Merger: Latent-Space Composition of Hypernetwork-Generated LoRAs — not AI: Incremental paper on LoRA composition and hypernetworks.
+- When Is Product Decoding of ECOC MAP-Consistent? Pair Structure and the n-vs-Rest Codes — not AI: Theoretical paper on error-correcting output codes.
+- Towards Realistic Evaluation of Uncertainty Quantification for LLM-Based Recommender Systems — not AI: Academic paper on uncertainty quantification for LLM recommenders.
+- Hybrid AI for AI-Native RAN Control: A Functional Perspective — not AI: Survey paper on RAN control.
+- Can a Frontier LLM Repair a Quantized Network by Tool-Free Weight-Space Programming? — not AI: Academic paper experimenting with weight-space manipulation on a tiny CNN.
+- SALSA: Sampling Adversarial Suffixes from Learned Distributions for LLM Safety Assessment — not AI: Standard research paper on jailbreak suffixes.
+- Score-Based Diffusion for Hypergraph Signals in the t-Spectral Domain — not AI: Theoretical paper on score-based diffusion for hypergraphs.
+- Best Arm Identification with Unknown Post-Action Context Distribution — score 3: Incremental academic paper on multi-armed bandits, not a frontier AI breakthrough.
+- PAC-style Bounds on the Conditional Validity of Conformal Predictors — score 3: Theoretical statistics paper on conformal prediction, too niche.
+- RecordRoute: Auditing Agent Failures with Localization-Guided Diagnosis — score 4: Academic paper on agent debugging diagnostics, incremental research.
+- Can LLM Judges Catch Unsafe Clinical Actions? A Fault-Injection Study — score 4: Academic fault-injection paper on LLM clinical judges, interesting but standard research.
+- PartAgent: Agentic 3D Part Segmentation via Expert Integration and Closed-Loop Refinement — score 4: Daily paper on 3D part segmentation, incremental computer vision research.
+- Gemini refused to give me the lyrics to Twinkle Twinkle Little Star — not AI: Hacker News discussion about a minor Gemini refusal quirk, essentially an anecdote.
+- Treasury CIO is too busy vibecoding instead of doing his job #147 — not AI: GitHub issue thread meme, not substantive AI news.
+- Fintech Unicorn Oxyzo Posts 19% Rise In H1 FY27 Profit To ₹208 Cr — not AI: Fintech lending earnings report with no AI angle.
+- The Growing Toll Of Token Frauds — score 4: Opinion or exploratory piece on token fraud without specific breakthrough reporting.
+- YouTube removed 3.44M videos uploaded from India in April-June 2026, 30.8% of global removals — score 4: YouTube content moderation statistics report, general platform governance rather than core AI news.
+- Massive data leak exposes 3.5 billion records worldwide, putting usernames, passwords and identities at risk — not AI: General data leak report without a primary AI connection.
+- BGMI Air open beta now available: How to download and install 1GB game on Android — not AI: Mobile gaming open beta launch, no AI relevance.
+- Beyond UPI: Why many Indians still need help accessing basic banking services — not AI: Article about basic banking access and assisted banking in India, no AI angle.
+- Karnataka clears Pixxel’s Rs 350 Cr satellite manufacturing project — not AI: Satellite manufacturing project with no AI relevance.
+- Goldman Sachs, Societe Generale buy Rs 920-Cr stake in Lenskart — not AI: Retail eyewear stake acquisition, not AI-related.
+- Amazon plans to start selling cars online in the UK in early 2027, expanding beyond the US, where it offers new and used cars from 35 brands in 150+ cities (Jamie Nimmo/Bloomberg) — not AI: E-commerce expansion into UK car sales, no AI angle.
+- Six key questions raised by Jensen Huang's return to Nvidia — score 4: Rehash of Jensen Huang's return to Nvidia, already covered.
+- Jensen Huang’s Return Sent Nvidia Stock Soaring. A Day Later, the Rally Is Unraveling — score 4: Stock market reaction commentary on Nvidia leadership change, low news value.
+- US senators erupt over Jensen Huang’s Nvidia return and confirm he will still testify next week — score 5: Congressional reaction to Jensen Huang return, routine political follow-up.
+- Jensen Huang tells Nvidia employees he's in therapy in first all-hands since his comeback — score 4: Derivative report on Nvidia all-hands meeting details.
+- Nvidia CEO Jensen Huang apologizes to employees, says he is in therapy: report — score 4: Duplicate report on Nvidia all-hands meeting.
+- Jensen Huang admitted to more affairs before Nvidia took him back: report — score 2: Tabloid-style report on personal matters regarding Jensen Huang.
+- From Chinese Factory Town to the Nvidia Scandal: The Rise of Alice Huang — score 4: Biographical profile of Alice Huang related to the Nvidia scandal.
+- Nvidia's Jensen Huang still has security clearance, sources say — score 4: Routine follow-up on security clearances amid Nvidia probe.
 
 </details>
 
+### Sources with problems
+- `r-localllama`: failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day'
+For more i
+- `r-sideproject`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'
+F
+
 <details><summary>Research agent's work</summary>
 
-- US government may acquire stake in Nvidia - Trump: confirmed (searched “Trump US government stake in Nvidia”; read businessinsider.com; read livemint.com)
-- India stresses human oversight in AI use during conflicts , flags risk: confirmed (searched “India human oversight AI conflicts UN misuse”; searched “India AI UN human oversight conflicts misuse”; read inkl.com)
-- It Very Clear In The Data : Ramp CEO Says AI Jevons Paradox Broke: confirmed (searched “Ramp CEO AI Jevons Paradox Broke”; searched “Ramp CEO AI Jevons Paradox”; searched “Stop saying Jevons paradox will save the AI boom Newsweek”)
-- Dell lifts annual forecasts after record quarter on surging AI server : confirmed (searched “Dell lifts annual forecasts after record quarter on surging AI server demand”; read msn.com; read yahoo.com)
-- Asian tech stocks tumble, led by Japanese chip stocks, after a US tech: unconfirmed (searched “Asian tech stocks tumble Advantest Tokyo Electron Samsung SK Hynix CNBC”; read yahoo.com; read marketwatch.com; searched “"Advantest" "tumble" Asian tech stocks”)
+- Trump's tech allies reasserted their power in DC by lobbying the presi: confirmed (searched “Trump Nvidia Jensen Huang CEO intelligence agencies Financial Times”; read arstechnica.com)
+- Sources: the EU plans to mobilize up to €50B for its Sovereign Tech Eq: confirmed (searched “EU Sovereign Tech Equity Fund AI quantum 50B Barbara Moens Financial Times”; read ft.com; read msn.com)
+- Sources: US intelligence officials told congressional aides Alice Huan: confirmed (searched “Alice Huang Jensen Huang US intelligence MSS New York Times”; searched “"Alice Huang" congressional aides intelligence New York Times”; read nytimes.com)
+- Asian tech stocks tumble, led by Japanese chip stocks, after a US tech: confirmed (searched “Asian tech stocks tumble Advantest Tokyo Electron Samsung SK Hynix CNBC”; searched “Asian tech stocks tumble led by Japanese chip stocks after a US tech sell off Advantest Tokyo Electron”; read msn.com)
+- AI spending slowdown could hit memory companies as Goldman Sachs flags: confirmed (searched “Goldman Sachs AI spending slowdown memory companies 2028”; read cryptobriefing.com; read msn.com)
 
 </details>
 
 ### Notes
-- not India desk: 'US government may acquire stake in Nvidia - Trump'
-- not India desk: 'Dell lifts annual forecasts after record quarter o'
-- dropped non-quote (Donald Trump): I’ve thought about it. I’ve said that perhaps I should do it…
-- 1 kept item(s) carried over to the next run
-- gemini/gemini-3.5-flash-lite: per-minute limit hit; trying next model
-- gemini/gemini-3.5-flash-lite: per-minute limit hit; trying next model
-- gemini: 429 after retry (429  You exceeded your current quota, please check your plan and billing details); moving to next provider for this run
-- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/qwen/qwen3.8-27b: couldn't force a tool call; retrying without forcing
-- groq/qwen/qwen3.8-27b: garbled tool call
-- groq/qwen/qwen3.8-27b: garbled tool call
-- groq/openai/gpt-oss-20b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-20b: answer cut off; retrying with more room
-- groq/openai/gpt-oss-20b: answer cut off; retrying with more room
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/qwen/qwen3.8-27b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- not India desk: 'AI spending slowdown could hit memory companies as'
+- not India desk: 'AI helping cyber attackers find weaknesses faster '
+- dropped non-quote (an ally of Huang): Great men make great mistakes. But nobody has ever been like…
+- GDELT unavailable: GDELT paused for this run after repeated rate-limiting
+- 3 kept item(s) carried over to the next run
