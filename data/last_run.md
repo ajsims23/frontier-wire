@@ -1,11 +1,11 @@
-## Frontier Wire breaking-news check — 2026-11-25T19:40:54+00:00
+## Frontier Wire breaking-news check — 2026-11-25T19:50:43+00:00
 
 Fetched 2519 items · fresh 1 · judged 0 · kept 0 · **written 0**
 AI: 0 requests, 0 tokens this run · 297 requests today · providers: gemini, groq, nvidia, cerebras
 Photos: 0 saved, 0 unavailable
 Alerts: 28 events sent: {"subscribers":5,"sent":0,"queued":0}
 Trackers: filed 0 stories; no tracker changed
-Time: gather 14s, alerts 4s
+Time: gather 11s, alerts 1s
 
 ### New stories
 - none
