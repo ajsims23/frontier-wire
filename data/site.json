@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T18:50:58+00:00",
+  "updated_at": "2026-11-26T21:51:05+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "If AI researchers have discovered new algorithms that can solve problems underlying modern encryption, the security guarantees of systems like online banking, messaging, and cloud storage could be weakened. Organizations would need to adopt new cryptographic methods that resist those algorithms.",
@@ -984,6 +984,109 @@
       "cover": "",
       "trackers": [
         "frontier-race"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Google now requires AI agents to access Workspace apps like Gmail and Drive through dedicated gateways called Model Context Protocol servers or a command-line tool, rather than standard REST APIs. These servers enforce security checks, require human approval for sensitive tasks like sending emails, and prohibit using Workspace data to train models.",
+        "terms": [
+          {
+            "term": "Model Context Protocol (MCP)",
+            "meaning": "An open standard protocol for connecting AI models to data sources and tools."
+          },
+          {
+            "term": "Prompt injection",
+            "meaning": "The process where an attacker inputs malicious instructions to manipulate an AI system's behavior."
+          },
+          {
+            "term": "Vector embeddings",
+            "meaning": "Mathematical representations of data used by AI models to search and understand content."
+          }
+        ],
+        "watch_next": [
+          "Technical enforcement of the MCP and CLI access rule begins on February 1, 2027.",
+          "Billing for agent usage begins on April 1, 2027."
+        ]
+      },
+      "audiences": {
+        "builders": "Builders must transition AI agents accessing Google Workspace to MCP servers or CLI by February 1, 2027, or face reduced REST API quotas and potential account suspension.",
+        "business": "Enterprise organizations using AI agents must comply with new Google Workspace data retention limits, dedicated agent identities, and policy enforcement controls.",
+        "investors": "Google is establishing tighter control over ecosystem access and laying the groundwork for monetization of agent usage with billing starting in April 2027."
+      },
+      "id": "6f6a6b07f17a",
+      "headline": "Google mandates MCP server access for Workspace AI agents by February 2027",
+      "summary": "Google released Model Context Protocol servers for Workspace and mandated that AI agents use them instead of standard REST APIs starting February 1, 2027. The rules introduce dedicated agent identities, human approval for sensitive actions, and restrictions on training data.",
+      "why_it_matters": "Developers building email assistants or coding agents on Google Workspace face a tight deadline to migrate architectures and handle restricted Gmail capabilities.",
+      "category": "models",
+      "lab": "Google",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "Google Workspace",
+        "AI Agents",
+        "Model Context Protocol",
+        "Security",
+        "APIs"
+      ],
+      "quotes": [
+        {
+          "text": "Policy checks, data boundaries, and human confirmation have to live in the request path",
+          "speaker": "Chandu Thota",
+          "speaker_role": "VP of Engineering at Google Workspace",
+          "source_url": "https://helpnetsecurity.com/2026/11/26/google-ai-agent-security-requirements"
+        }
+      ],
+      "score": 8,
+      "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp",
+      "source_id": "hn",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://techstackups.com/img/articles/google-workspace-agent-api/cover.jpg",
+      "sources": [
+        {
+          "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp",
+          "publisher": "techstackups.com",
+          "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email"
+        },
+        {
+          "url": "https://thenextweb.com/news/google-workspace-ai-agents-mcp-servers-rules",
+          "publisher": "The Next Web",
+          "title": "Google will make AI agents use new gateways to reach Gmail and Drive"
+        },
+        {
+          "url": "https://techrepublic.com/article/news-google-workspace-ai-agent-access",
+          "publisher": "TechRepublic",
+          "title": "Google Expands AI Agent Access to Gmail, Drive, and Docs — but Tightens the Rules"
+        },
+        {
+          "url": "https://helpnetsecurity.com/2026/11/26/google-ai-agent-security-requirements",
+          "publisher": "Help Net Security",
+          "title": "Google mandates MCP or CLI access for Workspace AI agents starting February 2027"
+        }
+      ],
+      "research": {
+        "steps": 2,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-26T09:44:23+00:00",
+      "created_at": "2026-11-26T21:51:05+00:00",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 0
+      },
+      "cover": "February 2027",
+      "trackers": [
+        "agent-safety"
       ],
       "photo_local": true
     },
@@ -5539,110 +5642,6 @@
         "india-ai"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Dell Technologies has increased its yearly financial forecasts after experiencing a sharp rise in sales for its AI servers. Businesses and cloud providers are purchasing these Nvidia-powered systems in large numbers to support complex artificial intelligence tasks.",
-        "terms": [
-          {
-            "term": "AI-optimized server",
-            "meaning": "Hardware optimized specifically to handle artificial intelligence workloads and model training."
-          },
-          {
-            "term": "AI Factory",
-            "meaning": "A bundle of servers, storage, networking, and software used by businesses to build and run AI models."
-          },
-          {
-            "term": "Backlog",
-            "meaning": "The total value of orders placed for a product that have not yet been fulfilled or delivered."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Dell infrastructure hardware and AI server bundles are increasingly deployed by businesses and cloud providers to run AI models.",
-        "business": "Dell raised its annual revenue forecast to $202 billion and its annual AI-optimized server revenue forecast to $78 billion.",
-        "investors": "Dell reported a record third-quarter revenue of $54.94 billion and closed the quarter with $132.3 billion in AI server backlog."
-      },
-      "id": "aac3bee5a441",
-      "headline": "Dell lifts annual forecasts after record quarter on AI server demand",
-      "summary": "Dell Technologies raised its annual revenue and profit forecasts after reporting a record third-quarter revenue of $54.94 billion. The company closed the quarter with $132.3 billion in AI server backlog amid rising demand for AI infrastructure.",
-      "why_it_matters": "The rapid shift toward AI infrastructure is reshaping traditional hardware makers, with Dell's infrastructure division driving the vast majority of its profit and growth while PC unit growth slows.",
-      "category": "industry",
-      "lab": "Dell Technologies",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "Dell",
-        "AI servers",
-        "financial results",
-        "Nvidia",
-        "Infrastructure Solutions Group"
-      ],
-      "quotes": [
-        {
-          "text": "We are now a different company, with Infrastructure Solutions Group (ISG) driving the vast majority of our profit and growth",
-          "speaker": "Jeff Clarke",
-          "speaker_role": "Chief Operating Officer",
-          "source_url": "https://economictimes.indiatimes.com/tech/technology/dell-lifts-annual-forecasts-after-record-quarter-on-surging-ai-server-demand/articleshow/136146169.cms"
-        }
-      ],
-      "score": 7,
-      "url": "https://economictimes.indiatimes.com/tech/technology/dell-lifts-annual-forecasts-after-record-quarter-on-surging-ai-server-demand/articleshow/136146169.cms",
-      "source_id": "et-tech",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-103,resizemode-75,msid-136146169/tech/technology/dell-lifts-annual-forecasts-after-record-quarter-on-surging-ai-server-demand.jpg",
-      "sources": [
-        {
-          "url": "https://economictimes.indiatimes.com/tech/technology/dell-lifts-annual-forecasts-after-record-quarter-on-surging-ai-server-demand/articleshow/136146169.cms",
-          "publisher": "ET Tech",
-          "title": "Dell lifts annual forecasts after record quarter on surging AI server demand"
-        },
-        {
-          "url": "https://msn.com/en-us/money/companies/dell-lifts-annual-forecasts-after-record-quarter-on-surging-ai-server-demand/ar-AA2i9xxZ",
-          "publisher": "Reuters on MSN",
-          "title": "Dell lifts annual forecasts after record quarter on surging AI server demand"
-        },
-        {
-          "url": "https://finance.yahoo.com/technology/ai/articles/dell-raises-annual-revenue-forecast-214621448.html",
-          "publisher": "Yahoo Finance",
-          "title": "Dell raises annual revenue forecast as AI server demand surges, shares rally"
-        },
-        {
-          "url": "https://techmeme.com/261124/p39",
-          "publisher": "techmeme.com",
-          "title": "Dell reports Q3 revenue up 103% YoY to $54.94B, above $49.32B est., and raises its annual revenue and profit forecasts for the third time this year (Reuters)"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-25T02:32:24+00:00",
-      "created_at": "2026-11-25T03:51:02+00:00",
-      "sectors": [],
-      "regions": [
-        "us"
-      ],
-      "deal": {
-        "type": "earnings",
-        "company": "Dell Technologies",
-        "amount": "$54.94 billion",
-        "usd": 54940000000.0
-      },
-      "relevance": {
-        "builders": 1,
-        "business": 3,
-        "investors": 2
-      },
-      "cover": "$54.94 billion",
-      "trackers": [
-        "ai-infrastructure",
-        "ai-money"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -5835,12 +5834,12 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-11-26T18:50:58+00:00",
-    "one_line": "U.S. export rules and hardware shortages impact global AI chip supplies and data center financing, while labs face governance, security, and policy challenges.",
+    "written_at": "2026-11-26T21:51:05+00:00",
+    "one_line": "New US chip restrictions and supply shortages disrupt global AI infrastructure, hardware deliveries, and data center financing.",
     "themes": [
       {
-        "title": "Export controls and hardware supply constraints",
-        "text": "New U.S. export controls and chip shortages have halted server shipments to Southeast Asia, stalled billions in data center loans, and extended wait times for Nvidia's B300 chips. Additionally, S&P is considering a credit downgrade for Nvidia following management changes, while the Netherlands plans to resist U.S. legislation restricting ASML sales in China.",
+        "title": "Export controls and shortages strain hardware",
+        "text": "New U.S. export controls have halted server shipments to Southeast Asia and stalled billions in data center loans tied to Chinese firms. Meanwhile, severe memory shortages have driven up prices tenfold and extended lead times for Nvidia's B300 chips up to 40 weeks, while S&P considers a credit downgrade for Nvidia over governance risks.",
         "stories": [
           {
             "id": "af0f0092a2fb",
@@ -5848,14 +5847,14 @@
             "url": "https://techmeme.com/261125/p39"
           },
           {
-            "id": "fb08c823339f",
-            "headline": "US chip curbs stall billions in data center loans tied to Chinese firms",
-            "url": "https://techmeme.com/261125/p38"
-          },
-          {
             "id": "f27e0de9d097",
             "headline": "S&P considers Nvidia credit downgrade over governance risks",
             "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks"
+          },
+          {
+            "id": "fb08c823339f",
+            "headline": "US chip curbs stall billions in data center loans tied to Chinese firms",
+            "url": "https://techmeme.com/261125/p38"
           },
           {
             "id": "5d94a8a52956",
@@ -5863,20 +5862,51 @@
             "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/nvidia-halts-chip-shipments-to-southeast-asia-ft-reports/articleshow/136180352.cms"
           },
           {
+            "id": "376d7288d762",
+            "headline": "NVIDIA B300 AI chip orders face up to 40‑week wait; RTX 60 GPU may slip past 2027",
+            "url": "https://tweaktown.com/news/114896/nvidia-b300-ai-chip-orders-face-up-to-a-40-week-wait-while-rtx-60-gpu-production-could-slip-past-2027/index.html"
+          },
+          {
+            "id": "24dd7c3314a4",
+            "headline": "Memory chip shortages spark global procurement war rooms and 10x price hikes",
+            "url": "https://techmeme.com/261126/p5"
+          },
+          {
             "id": "56c6dd81b640",
             "headline": "Netherlands seeks to block US MATCH Act restricting ASML China sales",
             "url": "https://techmeme.com/261126/p15"
           },
           {
-            "id": "376d7288d762",
-            "headline": "NVIDIA B300 AI chip orders face up to 40‑week wait; RTX 60 GPU may slip past 2027",
-            "url": "https://tweaktown.com/news/114896/nvidia-b300-ai-chip-orders-face-up-to-a-40-week-wait-while-rtx-60-gpu-production-could-slip-past-2027/index.html"
+            "id": "79d3f76fe85a",
+            "headline": "Z.ai misses GLM-5.5 launch as US rules and distillation curbs hit China AI",
+            "url": "https://techmeme.com/261126/p11"
           }
         ]
       },
       {
-        "title": "AI security and unauthorized data access",
-        "text": "State-backed hackers from China and North Korea have integrated the AI penetration testing tool Artex into their workflows. Meanwhile, confidential data sent to Chinese startup MiniMax was accessed by unidentified parties despite requests that the data not be stored.",
+        "title": "Enterprise platforms update AI agent policies",
+        "text": "SAP is preparing to eliminate at least 10,000 positions to shift its business toward artificial intelligence. Google mandated MCP server access for Workspace AI agents starting February 2027, and OpenAI fixed a launch-day billing error that caused users to hit plan limits faster.",
+        "stories": [
+          {
+            "id": "9794db2730fe",
+            "headline": "SAP prepares plan to eliminate at least 10,000 positions for AI shift",
+            "url": "https://techmeme.com/261126/p22"
+          },
+          {
+            "id": "6f6a6b07f17a",
+            "headline": "Google mandates MCP server access for Workspace AI agents by February 2027",
+            "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp"
+          },
+          {
+            "id": "244a3e8cb4f1",
+            "headline": "OpenAI fixes billing error, usage limits hit 40% faster on Astra, 25% faster on Sol",
+            "url": "https://twitter.com/thsottiaux/status/2125784147889393806"
+          }
+        ]
+      },
+      {
+        "title": "State actors and researchers expose AI risks",
+        "text": "State-backed hacking groups from China and North Korea have integrated the AI-powered penetration testing tool Artex into their workflows. Separately, confidential data sent to Chinese startup MiniMax was accessed by unidentified parties.",
         "stories": [
           {
             "id": "c6b2d3acc57d",
@@ -5891,34 +5921,8 @@
         ]
       },
       {
-        "title": "Industry restructuring and policy updates",
-        "text": "SAP plans to eliminate at least 10,000 positions to shift toward artificial intelligence, and ElevenLabs entered early talks for a 2027 funding round at a $33 billion valuation. New York signed a five-year ban on AI chatbot toys, and OpenAI corrected a launch-day billing error for its new models.",
-        "stories": [
-          {
-            "id": "9794db2730fe",
-            "headline": "SAP prepares plan to eliminate at least 10,000 positions for AI shift",
-            "url": "https://techmeme.com/261126/p22"
-          },
-          {
-            "id": "f0daa9c96fe9",
-            "headline": "ElevenLabs in early talks for 2027 funding round at $33B target valuation",
-            "url": "https://techmeme.com/261125/p30"
-          },
-          {
-            "id": "4001274b597c",
-            "headline": "New York governor signs five-year ban on AI chatbot toys",
-            "url": "https://techmeme.com/261125/p37"
-          },
-          {
-            "id": "244a3e8cb4f1",
-            "headline": "OpenAI fixes billing error, usage limits hit 40% faster on Astra, 25% faster on Sol",
-            "url": "https://twitter.com/thsottiaux/status/2125784147889393806"
-          }
-        ]
-      },
-      {
-        "title": "India advances AI regulations and models",
-        "text": "India's Ministry of Electronics and Information Technology announced that upcoming AI regulation papers are in their final stages. The launch coincided with the release of the Chariot-1 model suite and BharatGen's Patram 1.5 vision-language model.",
+        "title": "India advances domestic models and regulations",
+        "text": "India's Ministry of Electronics and Information Technology announced that upcoming AI regulation papers are in their final stages. The announcement coincided with the launch of the Chariot-1 model suite and BharatGen's Patram 1.5 vision-language model.",
         "stories": [
           {
             "id": "f2f90da31bee",
@@ -5941,14 +5945,15 @@
     "from_stories": 20
   },
   "plan": {
-    "focus": "Covering SAP's massive AI-driven layoffs and Character.AI's data sale battles alongside ongoing chip geopolitics.",
-    "updated_at": "2026-11-26T18:50:58+00:00",
+    "focus": "Tracking regional chip shipment pauses and potential cost discipline shifts across AI labs.",
+    "updated_at": "2026-11-26T21:51:05+00:00",
     "thin_areas": [
-      "AI in India",
-      "deals and business"
+      "safety",
+      "research"
     ],
     "searches": [
-      "SAP layoffs AI transformation Bloomberg"
+      "Nvidia Southeast Asia chip shipments pause",
+      "OpenAI cost control mode financial strategy"
     ]
   },
   "builders": {
@@ -6870,6 +6875,14 @@
       "url": "https://techmeme.com/261126/p11"
     },
     {
+      "lab": "Google",
+      "model": "Google mandates MCP server access for Workspace AI agents by February 2027",
+      "type": "Other",
+      "date": "2026-11-26T09:44:23+00:00",
+      "story_id": "6f6a6b07f17a",
+      "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp"
+    },
+    {
       "lab": "BharatGen",
       "model": "Patram 1.5",
       "type": "Vision-language",
@@ -6964,14 +6977,6 @@
       "date": "2026-11-19T22:31:41+00:00",
       "story_id": "b24c1081da70",
       "url": "https://theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing"
-    },
-    {
-      "lab": "Google",
-      "model": "Gemini",
-      "type": "Language",
-      "date": "2026-11-19T18:50:09+00:00",
-      "story_id": "84a41c24a3f1",
-      "url": "https://techmeme.com/261119/p47"
     },
     {
       "lab": "NVIDIA",
@@ -7141,8 +7146,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 707,
-    "model_releases_this_month": 90,
+    "stories_this_month": 708,
+    "model_releases_this_month": 91,
     "labs_tracked": 36
   }
 }

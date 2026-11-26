@@ -867,6 +867,109 @@
   },
   {
     "explainer": {
+      "what_it_means": "Google now requires AI agents to access Workspace apps like Gmail and Drive through dedicated gateways called Model Context Protocol servers or a command-line tool, rather than standard REST APIs. These servers enforce security checks, require human approval for sensitive tasks like sending emails, and prohibit using Workspace data to train models.",
+      "terms": [
+        {
+          "term": "Model Context Protocol (MCP)",
+          "meaning": "An open standard protocol for connecting AI models to data sources and tools."
+        },
+        {
+          "term": "Prompt injection",
+          "meaning": "The process where an attacker inputs malicious instructions to manipulate an AI system's behavior."
+        },
+        {
+          "term": "Vector embeddings",
+          "meaning": "Mathematical representations of data used by AI models to search and understand content."
+        }
+      ],
+      "watch_next": [
+        "Technical enforcement of the MCP and CLI access rule begins on February 1, 2027.",
+        "Billing for agent usage begins on April 1, 2027."
+      ]
+    },
+    "audiences": {
+      "builders": "Builders must transition AI agents accessing Google Workspace to MCP servers or CLI by February 1, 2027, or face reduced REST API quotas and potential account suspension.",
+      "business": "Enterprise organizations using AI agents must comply with new Google Workspace data retention limits, dedicated agent identities, and policy enforcement controls.",
+      "investors": "Google is establishing tighter control over ecosystem access and laying the groundwork for monetization of agent usage with billing starting in April 2027."
+    },
+    "id": "6f6a6b07f17a",
+    "headline": "Google mandates MCP server access for Workspace AI agents by February 2027",
+    "summary": "Google released Model Context Protocol servers for Workspace and mandated that AI agents use them instead of standard REST APIs starting February 1, 2027. The rules introduce dedicated agent identities, human approval for sensitive actions, and restrictions on training data.",
+    "why_it_matters": "Developers building email assistants or coding agents on Google Workspace face a tight deadline to migrate architectures and handle restricted Gmail capabilities.",
+    "category": "models",
+    "lab": "Google",
+    "model_name": "",
+    "model_type": "",
+    "tags": [
+      "Google Workspace",
+      "AI Agents",
+      "Model Context Protocol",
+      "Security",
+      "APIs"
+    ],
+    "quotes": [
+      {
+        "text": "Policy checks, data boundaries, and human confirmation have to live in the request path",
+        "speaker": "Chandu Thota",
+        "speaker_role": "VP of Engineering at Google Workspace",
+        "source_url": "https://helpnetsecurity.com/2026/11/26/google-ai-agent-security-requirements"
+      }
+    ],
+    "score": 8,
+    "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp",
+    "source_id": "hn",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://techstackups.com/img/articles/google-workspace-agent-api/cover.jpg",
+    "sources": [
+      {
+        "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp",
+        "publisher": "techstackups.com",
+        "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email"
+      },
+      {
+        "url": "https://thenextweb.com/news/google-workspace-ai-agents-mcp-servers-rules",
+        "publisher": "The Next Web",
+        "title": "Google will make AI agents use new gateways to reach Gmail and Drive"
+      },
+      {
+        "url": "https://techrepublic.com/article/news-google-workspace-ai-agent-access",
+        "publisher": "TechRepublic",
+        "title": "Google Expands AI Agent Access to Gmail, Drive, and Docs — but Tightens the Rules"
+      },
+      {
+        "url": "https://helpnetsecurity.com/2026/11/26/google-ai-agent-security-requirements",
+        "publisher": "Help Net Security",
+        "title": "Google mandates MCP or CLI access for Workspace AI agents starting February 2027"
+      }
+    ],
+    "research": {
+      "steps": 2,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-26T09:44:23+00:00",
+    "created_at": "2026-11-26T21:51:05+00:00",
+    "sectors": [
+      "software"
+    ],
+    "regions": [
+      "global"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 2,
+      "investors": 0
+    },
+    "cover": "February 2027",
+    "trackers": [
+      "agent-safety"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Investors use credit default swaps to measure the cost of insuring a company's bonds against default. Rising costs indicate that the market is increasingly concerned about whether a company's financial bets will pay off in time to cover its debts.",
       "terms": [
         {
