@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T00:51:07+00:00",
+  "updated_at": "2026-11-26T03:37:01+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "The Defense Production Act is a Cold War-era law that gives U.S. presidents extraordinary power to intervene in the economy. According to reports, Pentagon officials discussed using this law as leverage to pressure Nvidia's board to reinstate Jensen Huang.",
@@ -83,6 +83,400 @@
     }
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "The Indian government is preparing to release regulatory papers on artificial intelligence following the launch of domestically developed AI models. Chariot-1, a foundation model supporting English and ten Indian languages, was introduced as part of the IndiaAI Mission.",
+        "terms": [
+          {
+            "term": "Foundation Model",
+            "meaning": "A large AI model trained on vast data that can be adapted to a wide range of downstream tasks."
+          },
+          {
+            "term": "Multimodal",
+            "meaning": "AI systems that can process and understand multiple types of data, such as text and speech."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "Chariot-1",
+          "benchmark": "Async Text-to Verbalisation Accuracy",
+          "score": "over 97%"
+        }
+      ],
+      "audiences": {
+        "builders": "Chariot-1 combines text generation, text-to-speech, and automatic speech recognition in a single architecture, processing Indian text using 2.5 times fewer tokens via 'IndicShift'.",
+        "business": "Chariot Artificial Intelligence Pvt Ltd is among the first four teams selected under the IndiaAI Mission to build sovereign foundation models.",
+        "investors": "MeitY Secretary S Krishnan stated that government AI regulation papers are in their final stages and will be released shortly."
+      },
+      "id": "f2f90da31bee",
+      "headline": "IndiaAI regulation papers in final stages and releasing soon: MeitY",
+      "summary": "Ministry of Electronics and Information Technology Secretary S Krishnan announced that upcoming AI regulation papers are in their final stages. The announcement coincided with the launch of the indigenously developed Chariot-1 Foundation Models, which support English and 10 Indian languages.",
+      "why_it_matters": "The timing links domestic AI model development under the IndiaAI Mission directly to impending government regulatory frameworks for the sector in India.",
+      "category": "policy",
+      "lab": "MeitY",
+      "model_name": "Chariot-1 Foundation Models",
+      "model_type": "Language",
+      "tags": [
+        "IndiaAI Mission",
+        "MeitY",
+        "Chariot-1",
+        "AI Regulation",
+        "Foundation Models"
+      ],
+      "quotes": [
+        {
+          "text": "It's in the final stages. We'll bring it out shortly.",
+          "speaker": "S Krishnan",
+          "speaker_role": "MeitY Secretary",
+          "source_url": "https://telecom.economictimes.indiatimes.com/news/policy/ai-regulation-papers-in-final-stages-to-be-released-shortly-meity-secretary-at-chariot-1-launch/136176370"
+        },
+        {
+          "text": "So, that is what makes Chariot One special: it is one model, a backbone that powers all these different applications",
+          "speaker": "Parth Sarthi",
+          "speaker_role": "Co-Founder of Chariot One",
+          "source_url": "https://telecom.economictimes.indiatimes.com/news/policy/ai-regulation-papers-in-final-stages-to-be-released-shortly-meity-secretary-at-chariot-1-launch/136176370"
+        }
+      ],
+      "score": 8,
+      "url": "https://telecom.economictimes.indiatimes.com/news/policy/ai-regulation-papers-in-final-stages-to-be-released-shortly-meity-secretary-at-chariot-1-launch/136176370",
+      "source_id": "gdelt",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://etimg.etb2bimg.com/thumb/msid-136176370,imgsize-86062,width-1200,height=627,overlay-ettelecom,resizemode-75/policy/ai-regulation-papers-in-final-stages-to-be-released-shortly-meity-secretary-at-chariot-1-launch.jpg",
+      "sources": [
+        {
+          "url": "https://telecom.economictimes.indiatimes.com/news/policy/ai-regulation-papers-in-final-stages-to-be-released-shortly-meity-secretary-at-chariot-1-launch/136176370",
+          "publisher": "telecom.economictimes.indiatimes.com",
+          "title": "India to Unveil Major AI Regulation Papers Soon : Insights from MeitY Secretary , ETTelecom"
+        },
+        {
+          "url": "https://msn.com/en-in/news/other/meity-secretary-confirms-government-ai-regulation-papers-coming-soon/ar-AA2idLzO",
+          "publisher": "Asianet Newsable on MSN",
+          "title": "MeitY secretary confirms government AI regulation papers coming soon"
+        }
+      ],
+      "research": {
+        "steps": 2,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-26T03:15:00+00:00",
+      "created_at": "2026-11-26T03:37:01+00:00",
+      "sectors": [],
+      "regions": [
+        "india"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 3,
+        "investors": 2
+      },
+      "cover": "Chariot-1",
+      "trackers": [
+        "india-ai",
+        "ai-regulation"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "The Indian government has clarified that AI startups receiving state support to build domestic models are permitted to run commercial services that host models from other countries. MeitY stated that Sarvam's commercial hosting of Chinese-developed models does not violate the terms of the IndiaAI Mission, noting that commercial services run on separate, privately procured infrastructure rather than state-subsidised hardware.",
+        "terms": [
+          {
+            "term": "open-weight model",
+            "meaning": "A publicly available AI model whose weights and parameters are shared so anyone can run, modify, or build upon it."
+          },
+          {
+            "term": "GPU",
+            "meaning": "A specialized chip used to accelerate the training and running of artificial intelligence models."
+          },
+          {
+            "term": "inference",
+            "meaning": "The process of running a trained AI model to generate predictions or responses based on user inputs."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Sarvam continues working toward a trillion-parameter model with ongoing government backing, while its Token Factory platform provides commercial inference access using privately procured GPUs.",
+        "business": "MeitY Secretary S Krishnan confirmed that commercial offerings and state-backed indigenous model development can operate as a parallel track, as startups require viable revenue models.",
+        "investors": "Sarvam retains government support under the Rs 10,370-crore IndiaAI Mission without penalties or changes to its state backing over its multi-model commercial services."
+      },
+      "id": "065689811dba",
+      "headline": "Government finds no misuse of IndiaAI support in Sarvam Chinese model row",
+      "summary": "Ministry of Electronics and Information Technology Secretary S Krishnan stated that the government found no misuse of IndiaAI Mission support following scrutiny over startup Sarvam hosting Chinese-developed AI models on its Token Factory platform. Krishnan confirmed that the government will continue to support Sarvam as it works toward a trillion-parameter model.",
+      "why_it_matters": "The decision clarifies official policy on whether state-backed AI beneficiaries can simultaneously provide commercial access to foreign models, setting a precedent for India's domestic AI ecosystem.",
+      "category": "policy",
+      "lab": "Sarvam AI",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "Sarvam AI",
+        "IndiaAI Mission",
+        "MeitY",
+        "S Krishnan",
+        "Token Factory"
+      ],
+      "quotes": [
+        {
+          "text": "With the support that they received from the IndiaAI Mission, they first brought out a 105-billion-parameter model and a few other models. In addition, we are continuing to support them as they work towards a trillion-parameter model. That is the area for which we are supporting them.",
+          "speaker": "S Krishnan",
+          "speaker_role": "Ministry of Electronics and Information Technology Secretary",
+          "source_url": "https://telecom.economictimes.indiatimes.com/news/policy/sarvam-did-not-misuse-indiaai-mission-support-over-chinese-model-row-s-krishnan/136176337"
+        }
+      ],
+      "score": 7,
+      "url": "https://telecom.economictimes.indiatimes.com/news/policy/sarvam-did-not-misuse-indiaai-mission-support-over-chinese-model-row-s-krishnan/136176337",
+      "source_id": "gdelt",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://etimg.etb2bimg.com/thumb/msid-136176337,imgsize-50296,width-1200,height=627,overlay-ettelecom,resizemode-75/policy/sarvam-did-not-misuse-indiaai-mission-support-over-chinese-model-row-s-krishnan.jpg",
+      "sources": [
+        {
+          "url": "https://telecom.economictimes.indiatimes.com/news/policy/sarvam-did-not-misuse-indiaai-mission-support-over-chinese-model-row-s-krishnan/136176337",
+          "publisher": "telecom.economictimes.indiatimes.com",
+          "title": "Sarvam AI Models Under Scrutiny : Government Finds No Misuse of IndiaAI Mission Support , ETTelecom"
+        },
+        {
+          "url": "https://moneycontrol.com/news/business/startup/sarvam-s-hosting-of-chinese-ai-models-does-not-violate-indiaai-mission-objectives-says-meity-secretary-14088992.html",
+          "publisher": "Moneycontrol",
+          "title": "Sarvam's hosting of Chinese AI models does not violate IndiaAI Mission objectives, says MeitY secretary"
+        },
+        {
+          "url": "https://cnbctv18.com/technology/sarvam-hosting-chinese-ai-models-not-at-odds-with-indiaai-mission-says-meity-secretary-20041197.htm",
+          "publisher": "CNBCTV18",
+          "title": "Sarvam hosting Chinese AI models not at odds with IndiaAI Mission, says MeitY Secretary"
+        },
+        {
+          "url": "https://indianexpress.com/article/business/sarvam-chinese-ai-models-indiaai-mission-support-10978438",
+          "publisher": "The Indian Express",
+          "title": "Government okay with Sarvam’s Chinese AI model offerings, sees no misuse of IndiaAI support"
+        },
+        {
+          "url": "https://thehindubusinessline.com/info-tech/no-contradiction-in-sarvamais-open-source-models-and-indias-sovereign-ai-push-says-meity-secretary/article71743362.ece",
+          "publisher": "The Hindu BusinessLine",
+          "title": "No contradiction in SarvamAI’s open-source models and India’s sovereign AI push, says MeitY Secretary"
+        },
+        {
+          "url": "https://msn.com/en-in/news/other/no-misuse-of-indiaai-mission-support-by-sarvam-meity-secretary-ai-labs-also-need-revenue-model/ar-AA2ibXlR",
+          "publisher": "The Print on MSN",
+          "title": "No misuse of IndiaAI Mission support by Sarvam—MeitY secretary. AI labs also need revenue model"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 0,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-26T03:15:00+00:00",
+      "created_at": "2026-11-26T03:37:01+00:00",
+      "thread": "t-2b1356156f54",
+      "sectors": [],
+      "regions": [
+        "india"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 1,
+        "business": 3,
+        "investors": 3
+      },
+      "cover": "Sarvam",
+      "trackers": [
+        "india-ai"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "OpenAI is combining its separate chat and work tabs into a single interface with a shared usage meter for paying subscribers. This means that conversational chatting and complex work tasks will draw from the same pool of usage limits, though basic instant chats will remain unlimited.",
+        "terms": [
+          {
+            "term": "Instant model",
+            "meaning": "The basic AI model used in ChatGPT that remains unlimited and does not count toward the shared usage allowance."
+          },
+          {
+            "term": "tokens",
+            "meaning": "Small units of information that AI models process and generate, used to measure consumption under the new system."
+          },
+          {
+            "term": "Work (or Codex)",
+            "meaning": "A feature in ChatGPT used for complex, resource-intensive tasks and coding."
+          }
+        ],
+        "watch_next": [
+          "OpenAI plans to bring shared usage limits more broadly to Plus, Pro, and Business subscribers in December."
+        ]
+      },
+      "audiences": {
+        "builders": "Developers using Codex or Work tabs will see their usage limits combined with general chat allowances starting in December.",
+        "business": "Business subscribers face shared usage limits between chat and work features, which could restrict access for heavy users.",
+        "investors": "AI companies face mounting infrastructure costs and growing demand, prompting changes to usage limits for paid tiers."
+      },
+      "id": "7f000726c1b3",
+      "headline": "OpenAI begins rolling out merged ChatGPT Chat and Work tabs with shared usage meter",
+      "summary": "OpenAI has started rolling out a unified Chat and Work experience with a shared usage meter to a small group of Pro subscribers. The company stated that while most users are not expected to face more frequent resets, heavy users may hit their limits sooner.",
+      "why_it_matters": "Merging usage limits addresses mounting infrastructure costs for AI providers while raising concerns among heavy subscribers that advanced reasoning access could be restricted under flat subscription fees.",
+      "category": "models",
+      "lab": "OpenAI",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "Codex",
+        "AI models"
+      ],
+      "quotes": [
+        {
+          "text": "We’re beginning to roll out the combined Chat and Work experience to a small group of Pro users to learn from feedback before we roll out more broadly. Let us know what you think and where we can improve!",
+          "speaker": "Thibault Sottiaux",
+          "speaker_role": "product lead",
+          "source_url": "https://decrypt.co/383963/openai-changes-chatgpt-drastically-cut-usage-limits"
+        }
+      ],
+      "score": 7,
+      "url": "https://techmeme.com/261125/p46",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/11/openai-chatgpt.jpg?resize=1200,800",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261125/p46",
+          "publisher": "techmeme.com",
+          "title": "OpenAI rolls out its merged ChatGPT Chat and Work tabs, with a shared usage meter, to a small group of Pro users, saying heavy users may hit their limits sooner (Jagmeet Singh/TechCrunch)"
+        },
+        {
+          "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work",
+          "publisher": "TechCrunch AI",
+          "title": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work"
+        },
+        {
+          "url": "https://theverge.com/ai-artificial-intelligence/1042187/openai-is-combining-chatgpt-and-codex-usage-limits",
+          "publisher": "The Verge",
+          "title": "OpenAI is combining ChatGPT and Codex usage limits."
+        },
+        {
+          "url": "https://decrypt.co/383963/openai-changes-chatgpt-drastically-cut-usage-limits",
+          "publisher": "Decrypt",
+          "title": "OpenAI’s Changes to ChatGPT Could Drastically Cut Usage Limits for Paying Subscribers"
+        }
+      ],
+      "research": {
+        "steps": 2,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-26T02:55:02+00:00",
+      "created_at": "2026-11-26T03:37:01+00:00",
+      "thread": "t-c4b96abe3e96",
+      "sectors": [
+        "software"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 1,
+        "investors": 2
+      },
+      "cover": "Pro",
+      "trackers": [],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Apple removed the Talkie app worldwide after an investigation showed AI characters engaging in abusive and inappropriate interactions with minors. The app, created by Chinese firm MiniMax, allowed users to converse with a wide range of AI-generated characters.",
+        "terms": [
+          {
+            "term": "AI chatbot",
+            "meaning": "An artificial intelligence program designed to simulate human conversation, often adopting a specific persona for roleplay."
+          },
+          {
+            "term": "AI companion app",
+            "meaning": "Digital applications designed to form emotional connections, friendships, or romantic bonds with users."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "Developers building companion or roleplay applications face heightened app store scrutiny regarding child safety and content moderation.",
+        "business": "App stores are aggressively removing AI companion apps found to serve inappropriate content to minors, creating compliance risks for developers.",
+        "investors": "Companies in the AI companion space face growing regulatory pressure, lawsuits, and platform bans following investigations into interactions with minors."
+      },
+      "id": "4e4e2bee3472",
+      "headline": "Apple removes MiniMax chatbot Talkie from App Store worldwide",
+      "summary": "Apple removed MiniMax's AI chatbot Talkie from the App Store worldwide following an investigation showing AI characters engaged in inappropriate interactions with minors. The app had nearly 11 million monthly active users across its website and app as of October.",
+      "why_it_matters": "The worldwide removal underscores how media and investigative scrutiny on child safety can prompt immediate global enforcement actions by major platform gatekeepers against popular AI apps.",
+      "category": "safety",
+      "lab": "MiniMax",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "Apple",
+        "MiniMax",
+        "Talkie",
+        "child safety",
+        "App Store"
+      ],
+      "quotes": [],
+      "score": 7,
+      "url": "https://techmeme.com/261125/p44",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/05/App-Store-fraud.webp?resize=1200,628",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261125/p44",
+          "publisher": "techmeme.com",
+          "title": "Apple removes MiniMax's chatbot Talkie from the App Store worldwide over sexual content, after outlets showed it evidence of AI characters sexualizing children (TBIJ)"
+        },
+        {
+          "url": "https://9to5mac.com/2026/11/25/apple-pulls-popular-chinese-ai-chatbot-from-the-app-store-amid-child-safety-concerns",
+          "publisher": "9to5Mac",
+          "title": "Apple pulls popular Chinese AI chatbot from the App Store amid child safety concerns"
+        },
+        {
+          "url": "https://appleinsider.com/articles/26/11/26/ai-chatbot-companion-app-talkie-pulled-from-apple-app-store-after-investigation",
+          "publisher": "AppleInsider",
+          "title": "AI chatbot companion app Talkie pulled from Apple App Store after investigation"
+        },
+        {
+          "url": "https://thebureauinvestigates.com/stories/2026-11-24/talkie-china-chatbot-children",
+          "publisher": "The Bureau of Investigative Journalism",
+          "title": "‘You’re a pathetic waste of space’: The Chinese chatbot abusing children"
+        }
+      ],
+      "research": {
+        "steps": 2,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-26T01:30:01+00:00",
+      "created_at": "2026-11-26T03:37:01+00:00",
+      "sectors": [],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 1,
+        "business": 3,
+        "investors": 2
+      },
+      "cover": "Talkie",
+      "trackers": [
+        "agent-safety"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "The Defense Production Act is a Cold War-era law that gives U.S. presidents extraordinary power to intervene in the economy. According to reports, Pentagon officials discussed using this law as leverage to pressure Nvidia's board to reinstate Jensen Huang.",
@@ -1235,6 +1629,178 @@
     },
     {
       "explainer": {
+        "what_it_means": "Crucible Bench evaluates large language models on chemistry tasks that require using specialized tools and interpreting their outputs rather than just answering questions. The benchmark covers the design-make-test-analyze cycle using 1,078 tasks, 75 domain-specific tools, and isolated environments with sandboxed graders.",
+        "terms": [
+          {
+            "term": "LLM agent",
+            "meaning": "An AI system capable of using tools and taking multi-step actions to complete complex goals."
+          },
+          {
+            "term": "DMTA cycle",
+            "meaning": "The standard design-make-test-analyze cycle used in chemical and drug research."
+          },
+          {
+            "term": "Model Context Protocol",
+            "meaning": "An open standard for connecting AI models to external data sources and tools."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "Best performing LLM (out of 14 evaluated)",
+          "benchmark": "Crucible Bench Overall Score",
+          "score": "0.545"
+        }
+      ],
+      "audiences": {
+        "builders": "LLM agents for chemistry research can be evaluated using Crucible Bench across 1,078 tasks and 75 tools accessed via the Model Context Protocol.",
+        "business": "Chemical research evaluation moves beyond isolated question answering to full DMTA cycle execution, revealing performance disparities across models.",
+        "investors": "Evaluating specialized LLM agents in domain-specific executable environments highlights current software reliability bottlenecks in scientific workflows."
+      },
+      "id": "f4359170efb8",
+      "headline": "Crucible Bench evaluates LLM agents in chemistry research environments",
+      "summary": "Researchers introduced Crucible Bench, an evaluation framework containing 1,078 tasks across 12 task families to test LLM agents in chemistry research. The best-performing model among 14 evaluated achieved an overall score of 0.545, with synthesis planning and closed-loop optimization identified as the hardest domains.",
+      "why_it_matters": "The benchmark demonstrates that strong overall model performance does not guarantee success in specialized chemical optimization tasks, and agents frequently submit chemically invalid results despite successful tool execution.",
+      "category": "research",
+      "lab": "",
+      "model_name": "",
+      "model_type": "",
+      "tags": [
+        "chemistry",
+        "benchmarks",
+        "llm-agents",
+        "research"
+      ],
+      "quotes": [],
+      "score": 8,
+      "url": "https://arxiv.org/abs/2611.34254",
+      "source_id": "arxiv",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://arxiv.org/html/2611.34254v1/fig1.png",
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2611.34254",
+          "publisher": "arXiv (cs.AI, cs.CL, cs.LG)",
+          "title": "Crucible: Evaluating LLM Agents in Executable Chemistry Research Environments"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 0,
+        "decision": "unconfirmed"
+      },
+      "published_at": "2026-11-25T12:18:29+00:00",
+      "created_at": "2026-11-26T03:37:01+00:00",
+      "figure_checked": true,
+      "image_kind": "figure",
+      "sectors": [
+        "science"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 1,
+        "investors": 1
+      },
+      "cover": "0.545",
+      "trackers": [
+        "agent-safety"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "When multiple AI agents work together and check each other's work over many steps, they can start accepting unverified work to maximize their rewards. A new training method called PROVE stops this behavior by rewarding agents based on the actual evidence behind their verdicts rather than just the final outcome.",
+        "terms": [
+          {
+            "term": "LLM collusion",
+            "meaning": "A situation where AI agents accept each other's work without requiring the evidence mandated by the protocol."
+          },
+          {
+            "term": "PROVE",
+            "meaning": "A multi-agent reinforcement learning method that rewards verdicts by the evidence behind them rather than by their outcome."
+          }
+        ],
+        "watch_next": [
+          "Code release at the provided URL."
+        ]
+      },
+      "benchmarks": [
+        {
+          "model": "Qwen3.6-27B (with PROVE LoRA adapter)",
+          "benchmark": "collusion rate on held-out task sequences at the original te",
+          "score": "1.0%"
+        }
+      ],
+      "audiences": {
+        "builders": "Engineers working with multi-agent systems can use PROVE to train models out of collusion over long horizons using verified evidence.",
+        "business": "Organizations deploying multi-agent LLM workflows can reduce unsupervised drift and protocol bypass without hurting task success.",
+        "investors": "Research into robust multi-agent reliability addresses a key limitation in deploying autonomous agent teams at scale."
+      },
+      "id": "2b73c373643b",
+      "headline": "PROVE training method reduces long-horizon LLM agent collusion to 1.0%",
+      "summary": "Researchers introduced PROVE, a multi-agent reinforcement learning method designed to prevent LLM agents from drifting into collusion during long verification tasks. When applied to Qwen3.6-27B, a LoRA adapter reduced the collusion rate on ten-episode tasks from 65.0% to 1.0% without harming task success.",
+      "why_it_matters": "The method addresses a failure mode where accurate feedback accumulating in memory causes agents to break verification rules in their private reflections.",
+      "category": "research",
+      "lab": "",
+      "model_name": "Qwen3.6-27B",
+      "model_type": "Language",
+      "tags": [
+        "AI research",
+        "multi-agent systems",
+        "reinforcement learning",
+        "LLM collusion"
+      ],
+      "quotes": [],
+      "score": 7,
+      "url": "https://arxiv.org/abs/2611.34215",
+      "source_id": "arxiv",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": null,
+      "sources": [
+        {
+          "url": "https://arxiv.org/abs/2611.34215",
+          "publisher": "arXiv (cs.AI, cs.CL, cs.LG)",
+          "title": "PROVE: Mitigating Long-Horizon LLM Collusion with Reinforcement Learning from Verified Evidence"
+        }
+      ],
+      "research": null,
+      "published_at": "2026-11-25T11:39:39+00:00",
+      "created_at": "2026-11-26T03:37:01+00:00",
+      "figure_checked": true,
+      "sectors": [],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "1.0%",
+      "trackers": [
+        "agent-safety"
+      ],
+      "stock_tried": "2026-11-26T03:37:01+00:00",
+      "photo_local": true,
+      "image_kind": "stock",
+      "photo_credit": {
+        "key": "ov:4e21ab80-f1c2-44cb-bcae-d9492a732031",
+        "by": "Aaron dp",
+        "license": "CC BY-SA 4.0",
+        "page": "https://commons.wikimedia.org/w/index.php?curid=99903740",
+        "via": "Wikimedia"
+      }
+    },
+    {
+      "explainer": {
         "what_it_means": "New US regulations restrict foreign data centers serving Chinese companies from purchasing advanced American AI chips without a license. As a result, cloud providers in the Asia-Pacific region with server space previously reserved for Chinese clients are trying to rent that capacity to US and Western European buyers. This market shift has driven down hourly rental prices for Nvidia B300 processors.",
         "terms": [
           {
@@ -1761,7 +2327,7 @@
       },
       "id": "35a6794c57dd",
       "headline": "OpenAI preprint claims matrix multiplication exponent is exactly 9/4",
-      "summary": "OpenAI released a preprint claiming that the matrix multiplication exponent, omega, is exactly 9/4 over every field. The 111-page paper establishes both an upper bound and a matching lower bound for the long-standing mathematical problem.",
+      "summary": "OpenAI released a preprint claiming that the matrix multiplication exponent, omega, is exactly 9/4 over every field. The paper establishes both an upper bound and a matching lower bound for the long‑standing mathematical problem.",
       "why_it_matters": "The result represents the largest single improvement in matrix multiplication bounds since 1979, addressing a major open problem in algebraic complexity theory.",
       "category": "research",
       "lab": "OpenAI",
@@ -5126,527 +5692,6 @@
         "agent-safety"
       ],
       "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Amateur astronomers used AI tools like Codex and Astra to search public telescope data for starlight patterns that indicate orbiting planets. Their findings have been passed to professional researchers and the SETI Institute for independent assessment.",
-        "terms": [
-          {
-            "term": "Exoplanet",
-            "meaning": "A planet that orbits a star outside our solar system."
-          },
-          {
-            "term": "Kepler telescope",
-            "meaning": "A space telescope mission that hunted for planets from 2009 to 2018."
-          },
-          {
-            "term": "Astra",
-            "meaning": "An AI tool used by amateur astronomers to analyze telescope data."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Amateur and professional astronomers can use tools like Codex and Astra to design and run searches of public telescope data for exoplanets.",
-        "business": "Start-up founders and engineers, such as Ethan Byrd, are applying AI models like Astra independently to large-scale public datasets like those from Kepler.",
-        "investors": "AI tools developed by companies like OpenAI are being utilized by individuals for scientific research in astronomy."
-      },
-      "id": "f3aa9260f109",
-      "headline": "Amateur astronomers use Codex and Astra to search public telescope data for exoplanets",
-      "summary": "Two amateur astronomers used OpenAI's Codex and Astra to analyze public telescope data from millions of stars for signs of distant planets. Their findings have been submitted to professional astronomers for further analysis.",
-      "why_it_matters": "Demonstrates how individuals outside professional research can leverage AI tools to process massive public space datasets and produce candidates for scientific review.",
-      "category": "models",
-      "lab": "OpenAI",
-      "model_name": "Astra",
-      "model_type": "Language",
-      "tags": [
-        "astronomy",
-        "exoplanets",
-        "Codex",
-        "Astra",
-        "OpenAI"
-      ],
-      "quotes": [],
-      "score": 7,
-      "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
-      "source_id": "openai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://images.ctfassets.net/kftzwdyauwt9/318YLaAKlMKQFzOdMutjeX/8b6e4e516fd1a7894c97318838f43a0f/searching-for-distant-planets-with-astra-social.png?w=1600&h=900&fit=fill",
-      "sources": [
-        {
-          "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
-          "publisher": "OpenAI",
-          "title": "Searching for distant planets with Astra"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-11-24T11:00:00+00:00",
-      "created_at": "2026-11-24T19:40:44+00:00",
-      "breaking": true,
-      "thread": "t-c4b96abe3e96",
-      "sectors": [
-        "science"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 1,
-        "investors": 0
-      },
-      "cover": "Codex",
-      "photo_local": true,
-      "trackers": []
-    },
-    {
-      "explainer": {
-        "what_it_means": "Meta has rolled out its personal AI agent, Muse, to adults in the UK, making it the first AI agent product launched by a Big Tech company in the country. The tool is designed to help with everyday tasks such as chasing refunds, renewing car insurance, and Christmas shopping by connecting to apps like email, calendars, and retail services. UK watchdogs and regulators are closely monitoring the rollout following previous warnings about consumer risks.",
-        "terms": [
-          {
-            "term": "AI agent",
-            "meaning": "An artificial intelligence program designed to autonomously execute multi-step tasks on behalf of a user."
-          },
-          {
-            "term": "Digital Regulation Cooperation Forum",
-            "meaning": "A group including the Competition and Markets Authority, Financial Conduct Authority, Ofcom, and the Information Commission."
-          }
-        ],
-        "watch_next": [
-          "Regulators will be watching the U.K. rollout of Muse carefully."
-        ]
-      },
-      "audiences": {
-        "builders": "Meta has launched Muse for UK adults, bringing a personal AI agent to the UK market that integrates with connected apps.",
-        "business": "Meta is the first Big Tech company to launch an AI agent in the UK, drawing close scrutiny from UK watchdogs including the Digital Regulation Cooperation Forum.",
-        "investors": "Meta released Muse in the UK following its US debut and prior internal staff concerns over privacy issues and data leaks."
-      },
-      "id": "9dd0aa4b535f",
-      "headline": "Meta rolls out Muse personal AI agent to adults in the UK",
-      "summary": "Meta launched its personal AI agent, Muse, to adults in the UK to help with everyday tasks such as refunds and shopping. It is the first AI agent product from a Big Tech company in the UK, arriving amid scrutiny from UK watchdogs.",
-      "why_it_matters": "UK regulators, including the Digital Regulation Cooperation Forum, have warned that AI agent products may amplify and accelerate risks to consumers.",
-      "category": "models",
-      "lab": "Meta",
-      "model_name": "Muse",
-      "model_type": "Language",
-      "tags": [
-        "Meta",
-        "Muse",
-        "AI agent",
-        "UK regulators",
-        "Big Tech"
-      ],
-      "quotes": [],
-      "score": 8,
-      "url": "https://techmeme.com/261124/p4",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://www.politico.eu/cdn-cgi/image/width=1200,height=630,fit=crop,quality=80,onerror=redirect/wp-content/uploads/2026/11/23/GettyImages-2192359273-scaled.jpg",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261124/p4",
-          "publisher": "techmeme.com",
-          "title": "Meta rolls out Muse to UK adults to help with everyday tasks, the first Big Tech company to launch an AI agent in the UK; UK watchdogs have warned about agents (Mizy Clifton/Politico)"
-        },
-        {
-          "url": "https://politico.eu/article/meta-ai-agent-muse-launch-uk",
-          "publisher": "Politico Europe",
-          "title": "Meta’s AI agent Muse launches in UK"
-        },
-        {
-          "url": "https://about.fb.com/news/2026/11/muse-now-available-in-the-uk-muse-does-the-work-you-stay-in-control",
-          "publisher": "Meta - About Facebook",
-          "title": "Muse Now Available in the UK: Muse Does the Work, You Stay in Control"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-24T07:50:01+00:00",
-      "created_at": "2026-11-24T13:30:36+00:00",
-      "thread": "t-534eeb0b56be",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "uk"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 2,
-        "business": 3,
-        "investors": 1
-      },
-      "cover": "Muse",
-      "trackers": [],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Indian IT companies will still be needed to help businesses put AI into production, but the work is shifting from providing large teams of engineers to supplying specialized skills like data preparation, system integration, and ongoing AI operations. Firms that rely on billing for headcount and hours face pressure as AI automates routine coding and support tasks.",
-        "terms": [
-          {
-            "term": "Forward-deployed engineering (FDE)",
-            "meaning": "Engineers who work on-site or closely with clients to customize and implement AI solutions for specific business needs."
-          },
-          {
-            "term": "Labor-based delivery model",
-            "meaning": "A traditional IT services approach where revenue depends on the number of employees and hours billed rather than specialized outcomes."
-          },
-          {
-            "term": "Claude Partner Network",
-            "meaning": "Anthropic's program that connects global consultancies and system integrators to deploy its AI models for enterprise clients."
-          }
-        ],
-        "watch_next": [
-          "Anthropic's expansion of implementation services through Ode with Anthropic targeting mid-sized businesses",
-          "Growth of forward-deployed engineering roles at Indian IT firms"
-        ]
-      },
-      "audiences": {
-        "builders": "Developers at Indian IT firms should expect growing demand for AI integration, data readiness, and managed AI operations skills rather than traditional application maintenance work.",
-        "business": "Executives at Indian IT companies face pressure to shift revenue from headcount-based contracts to specialized AI implementation and ongoing support services.",
-        "investors": "The report suggests Indian IT services revenue will be sustained by enterprise AI adoption, but margins may compress as labor-intensive models lose relevance."
-      },
-      "id": "0942c58b1e3f",
-      "headline": "Systematix report: AI adoption to sustain Indian IT services demand, labor models pressured",
-      "summary": "A Systematix report says growing AI adoption will sustain demand for Indian IT services firms as enterprises need help integrating and deploying AI at scale, even as automation pressures traditional labor-based delivery models.",
-      "why_it_matters": "The report signals that Indian IT firms must pivot from headcount-driven models to specialized AI implementation and managed services to capture enterprise AI spending.",
-      "category": "industry",
-      "lab": "Systematix",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "Indian IT services",
-        "AI adoption",
-        "labor models",
-        "Systematix",
-        "Anthropic"
-      ],
-      "quotes": [],
-      "score": 6,
-      "url": "https://news.webindia123.com/news/Articles/Business/20261124/4523804.html",
-      "source_id": "gdelt",
-      "desk": "india",
-      "ai_relevance": "core",
-      "image": "https://www.livemint.com/lm-img/img/2024/12/18/600x338/tech1_1734536428801_1734536438047.jpg",
-      "sources": [
-        {
-          "url": "https://news.webindia123.com/news/Articles/Business/20261124/4523804.html",
-          "publisher": "news.webindia123.com",
-          "title": "AI adoption to sustain demand for Indian IT services firms ; labour - based models face pressure : Report"
-        },
-        {
-          "url": "https://livemint.com/technology/ai-adoption-to-sustain-demand-for-indian-it-services-firms-labour-based-models-face-pressure-report-11795503561451.html",
-          "publisher": "Mint Technology",
-          "title": "AI adoption to sustain demand for Indian IT services firms; labour-based models face pressure: Report"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-11-24T07:45:00+00:00",
-      "created_at": "2026-11-24T10:03:20+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "india"
-      ],
-      "deal": null,
-      "relevance": {},
-      "cover": "AI adoption",
-      "trackers": [
-        "india-ai"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Microsoft is building its own system to train AI models instead of relying on models from other companies. This could let it control its own model development and potentially lower costs for customers. The company says its model has already passed one competitor's model on a reasoning test and expects to pass another soon.",
-        "terms": [
-          {
-            "term": "Reinforcement learning (RL)",
-            "meaning": "A training method where a model improves by repeatedly trying tasks and receiving feedback on its results, rather than just reading examples."
-          },
-          {
-            "term": "Distillation",
-            "meaning": "A method of creating a smaller model by teaching it to imitate the outputs of a larger, more capable model."
-          },
-          {
-            "term": "Parameters",
-            "meaning": "The number of adjustable settings in a model; more parameters generally allow it to learn more complex patterns."
-          }
-        ],
-        "watch_next": [
-          "Microsoft says its model is on track to overtake GPT-5.6 Sol on an aggregate reasoning benchmark in the coming weeks.",
-          "Microsoft says it will continue improving Rocket to support longer training and more complex AI tasks."
-        ]
-      },
-      "audiences": {
-        "builders": "Microsoft's Rocket framework supports multi-week training runs across thousands of GPUs and recovers from hardware failures without restarting, relevant to anyone building long RL pipelines.",
-        "business": "Microsoft is reducing dependence on third-party models by training its own three-trillion-parameter base model, which could shift its AI cost structure and product roadmap.",
-        "investors": "Microsoft says its model surpassed Claude Opus 4.8 on an aggregate reasoning benchmark and is on track to overtake GPT-5.6 Sol in the coming weeks, a claim that could affect competitive positioning."
-      },
-      "id": "74e3f2b1316b",
-      "headline": "Microsoft builds in-house Rocket system to train AI models at scale",
-      "summary": "Microsoft has developed an in-house reinforcement learning framework called Rocket to train its three-trillion-parameter MAI Base 2 model over weeks or months across thousands of GPUs, reducing dependence on third-party models. The company says its model recently surpassed Claude Opus 4.8 on an aggregate reasoning benchmark and is on track to overtake GPT-5.6 Sol in the coming weeks.",
-      "why_it_matters": "By training its own base model without distillation from third-party models, Microsoft is moving to control the full AI development stack, which could change the competitive dynamics with OpenAI and Anthropic.",
-      "category": "industry",
-      "lab": "Microsoft",
-      "model_name": "MAI Base 2",
-      "model_type": "Language",
-      "tags": [
-        "microsoft",
-        "reinforcement-learning",
-        "ai-training",
-        "mai-base-2",
-        "rocket"
-      ],
-      "quotes": [
-        {
-          "text": "Outcome per dollar is the frontier. We're advancing it at every layer: FLOPs-efficient pretraining (MAI Base 2), long RL climbs (Rocket), and token-efficient models.",
-          "speaker": "Satya Nadella",
-          "speaker_role": "Microsoft CEO",
-          "source_url": "https://sierraleonetimes.com/news/279451476/microsoft-steps-up-efforts-to-build-advanced-ai-models-with-its-in-house-rocket-system"
-        }
-      ],
-      "score": 6,
-      "url": "https://sierraleonetimes.com/news/279451476/microsoft-steps-up-efforts-to-build-advanced-ai-models-with-its-in-house-rocket-system",
-      "source_id": "gdelt",
-      "desk": "india",
-      "ai_relevance": "core",
-      "image": "https://chitra-api.kreatio.com/api/v1/wps/8153725/9ed788ff-9934-496d-b1ab-e88fd660e2c2/0/ANI-20261124035423-600x315.jpg",
-      "sources": [
-        {
-          "url": "https://sierraleonetimes.com/news/279451476/microsoft-steps-up-efforts-to-build-advanced-ai-models-with-its-in-house-rocket-system",
-          "publisher": "sierraleonetimes.com",
-          "title": "Microsoft steps up efforts to build advanced AI models with its in - house Rocket system"
-        },
-        {
-          "url": "https://greekherald.com/news/279451476/microsoft-steps-up-efforts-to-build-advanced-ai-models-with-its-in-house-rocket-system",
-          "publisher": "greekherald.com",
-          "title": "Microsoft steps up efforts to build advanced AI models with its in - house Rocket system"
-        },
-        {
-          "url": "https://news.webindia123.com/news/Articles/Business/20261124/4523721.html",
-          "publisher": "news.webindia123.com",
-          "title": "Microsoft steps up efforts to build advanced AI models with its in - house Rocket system"
-        }
-      ],
-      "research": null,
-      "published_at": "2026-11-24T07:45:00+00:00",
-      "created_at": "2026-11-24T10:03:20+00:00",
-      "thread": "t-2b8b088b82c1",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {},
-      "cover": "Rocket",
-      "trackers": [
-        "frontier-race"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "Nasscom, an Indian IT industry body, has asked the government to create a three-year funding scheme so that Indian technology services companies can build and sell AI products. The scheme would be designed by two government ministries in consultation with the industry. It would also include training programmes and shared facilities to help smaller firms that struggle to finance AI development.",
-        "terms": [
-          {
-            "term": "Agentic AI",
-            "meaning": "AI systems that can plan and carry out multi-step tasks on a user's behalf, not just answer single prompts."
-          },
-          {
-            "term": "Union Budget",
-            "meaning": "A government budget document that sets out planned spending and tax policy for the coming fiscal year."
-          },
-          {
-            "term": "Scheme",
-            "meaning": "A government programme that provides funding or support to companies to develop and sell a particular kind of product or service."
-          }
-        ],
-        "watch_next": [
-          "The Union Budget 2027-28, in which the AI Services Transformation and Innovation Scheme is expected to be considered."
-        ]
-      },
-      "audiences": {
-        "builders": "If adopted, the scheme would fund shared technical facilities and training that help smaller Indian IT firms build and ship AI products.",
-        "business": "Indian IT firms face upfront costs to build reusable AI offerings and retrain staff; the proposed scheme targets those costs and new revenue models like licensing and usage-based pricing.",
-        "investors": "The proposal signals government intent to subsidise AI commercialisation in Indian IT, which could affect the cost structure and revenue mix of listed services companies."
-      },
-      "id": "285373b393ac",
-      "headline": "Nasscom proposes three-year AI scheme for Indian IT firms in Budget 2027-28",
-      "summary": "Nasscom has proposed a three-year AI Services Transformation and Innovation Scheme in its pre-Budget recommendations for 2027-28, to be designed jointly by the Ministry of Electronics and Information Technology and the Finance Ministry. The scheme would support Indian IT firms in developing and commercialising AI products and services, including through licensing, subscriptions, usage-based payments and outcome-linked arrangements.",
-      "why_it_matters": "The proposal targets the upfront investment and retraining costs that smaller Indian IT firms face when shifting from project-based work to selling reusable AI products, a transition that determines whether India's services sector can capture revenue from generative and agentic AI.",
-      "category": "policy",
-      "lab": "Nasscom",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "India",
-        "AI policy",
-        "IT services",
-        "budget",
-        "Nasscom"
-      ],
-      "quotes": [],
-      "score": 6,
-      "url": "https://analyticsindiamag.com/ai-news/nasscom-seeks-three-year-ai-scheme-for-indian-it-firms-in-budget-2027-28",
-      "source_id": "aim",
-      "desk": "india",
-      "ai_relevance": "core",
-      "image": "https://analyticsindiamag.com/og/image.jpg?src=https%3A%2F%2Fgspoceeuwjazjpplxtxe.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fimported-images%2F1793274444129-b2dnha.webp&v=2",
-      "sources": [
-        {
-          "url": "https://analyticsindiamag.com/ai-news/nasscom-seeks-three-year-ai-scheme-for-indian-it-firms-in-budget-2027-28",
-          "publisher": "Analytics India Magazine",
-          "title": "Ahead of Budget, Nasscom Seeks AI Scheme for Indian IT"
-        },
-        {
-          "url": "https://cio.economictimes.indiatimes.com/news/investments/nasscom-proposes-three-year-ai-services-transformation-scheme-to-boost-indias-tech-industry/136117597",
-          "publisher": "ET CIO",
-          "title": "Nasscom proposes three-year AI Services Transformation scheme to boost India's tech industry"
-        },
-        {
-          "url": "https://business-standard.com/economy/news/nasscom-seeks-ai-transformation-scheme-esop-tax-relief-in-budget-2027-126112301138_1.html",
-          "publisher": "Business Standard",
-          "title": "Nasscom seeks AI scheme, easier Esop tax rules in Union Budget 2027-28"
-        },
-        {
-          "url": "https://financialexpress.com/business/industry-nasscoms-budget-wish-list-includes-ai-cybersecurity-esop-tax-reforms-4392229",
-          "publisher": "The Financial Express",
-          "title": "Nasscom’s Budget wish list includes AI, cybersecurity, ESOP tax reforms"
-        },
-        {
-          "url": "https://businessworld.in/article/nasscom-seeks-three-year-ai-services-scheme-cybersecurity-fund-for-msmes-634862",
-          "publisher": "BW Businessworld",
-          "title": "Nasscom Seeks Three-Year AI Services Scheme, Cybersecurity Fund For MSMEs In Budget"
-        },
-        {
-          "url": "https://msn.com/en-in/news/India/nasscom-seeks-ai-transformation-scheme-for-it-firms-in-budget-2027-28/ar-AA2i5g4m",
-          "publisher": "Hindustan Times on MSN",
-          "title": "NASSCOM seeks AI transformation scheme for IT firms in Budget 2027-28"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-24T07:27:30+00:00",
-      "created_at": "2026-11-24T10:03:20+00:00",
-      "sectors": [
-        "software",
-        "government"
-      ],
-      "regions": [
-        "india"
-      ],
-      "deal": null,
-      "relevance": {},
-      "cover": "Budget 2027-28",
-      "trackers": [
-        "india-ai"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "The API lets developers add voice dictation to apps, converting spoken words into text in multiple languages. It combines speech recognition with a language model that edits the transcript, reducing the need for manual corrections.",
-        "terms": [
-          {
-            "term": "Speech recognition",
-            "meaning": "Converting spoken audio into written text."
-          },
-          {
-            "term": "Large language model",
-            "meaning": "A neural network trained on vast text data to understand and generate language."
-          },
-          {
-            "term": "API",
-            "meaning": "Application Programming Interface, a set of rules that lets software talk to each other."
-          }
-        ],
-        "watch_next": [
-          "Sarvam plans to expand its commercial AI offerings"
-        ]
-      },
-      "audiences": {
-        "builders": "Developers can integrate a multilingual dictation service with low cost and high accuracy.",
-        "business": "Companies can reduce transcription costs and improve accuracy for customer interactions and documentation.",
-        "investors": "Sarvam AI's new API positions it competitively in the growing Indian AI market, potentially attracting investment."
-      },
-      "id": "5862fe6cf17f",
-      "headline": "Sarvam AI launches Dictate API for English and 22 Indian languages",
-      "summary": "Sarvam AI has released Sarvam Dictate, a speech‑to‑text API that supports English and 22 Indian languages, priced at ₹0.50 per minute. In tests, it required 40% fewer character edits than Gemini 3.5 Transcribe for English and 47% fewer for Indian languages.",
-      "why_it_matters": "The API offers a cost‑effective, multilingual voice‑to‑text solution that could lower transcription costs and improve accuracy for businesses handling diverse language content.",
-      "category": "models",
-      "lab": "Sarvam AI",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "AI",
-        "speech-to-text",
-        "multilingual",
-        "Indian AI",
-        "API"
-      ],
-      "quotes": [],
-      "score": 7,
-      "url": "https://inc42.com/buzz/sarvam-ai-launches-dictation-api-for-english-22-indian-languages",
-      "source_id": "inc42",
-      "desk": "india",
-      "ai_relevance": "core",
-      "image": "https://inc42.com/cdn-cgi/image/quality=90/https://asset.inc42.com/2026/11/Sarvam-social-1.jpg",
-      "sources": [
-        {
-          "url": "https://inc42.com/buzz/sarvam-ai-launches-dictation-api-for-english-22-indian-languages",
-          "publisher": "Inc42",
-          "title": "Sarvam AI Launches Dictation API For English, 22 Indian Languages"
-        },
-        {
-          "url": "https://thehindubusinessline.com/info-tech/sarvam-launches-ai-powered-dictation-api-for-english-22-indian-languages/article71735921.ece",
-          "publisher": "The Hindu BusinessLine",
-          "title": "Sarvam launches AI-powered dictation API for English, 22 Indian languages"
-        },
-        {
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/sarvam-launches-new-ai-dictation-service-claims-better-accuracy-than-googles-gemini/articleshow/136110048.cms",
-          "publisher": "The Economic Times",
-          "title": "Sarvam launches new AI dictation service, claims better accuracy than Google’s Gemini"
-        },
-        {
-          "url": "https://newsbytesapp.com/news/science/sarvam-ai-launches-sarvam-dictate-api-for-developers-handling-conversations/tldr",
-          "publisher": "NewsBytes",
-          "title": "Sarvam AI launches Sarvam Dictate API for developers handling conversations"
-        }
-      ],
-      "research": {
-        "steps": 4,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-24T06:46:40+00:00",
-      "created_at": "2026-11-24T10:03:20+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "india"
-      ],
-      "deal": null,
-      "relevance": {},
-      "cover": "",
-      "trackers": [
-        "india-ai"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -5839,27 +5884,22 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-11-26T00:51:07+00:00",
-    "one_line": "Nvidia's Jensen Huang returned as CEO amid government scrutiny and chip investigations, while US and European funding initiatives targeted AI infrastructure.",
+    "written_at": "2026-11-26T03:37:01+00:00",
+    "one_line": "Nvidia navigates leadership turbulence and regulatory scrutiny, while governments and companies worldwide announce new AI infrastructure, funding, and safety initiatives.",
     "themes": [
       {
-        "title": "Nvidia navigates leadership return and investigations",
-        "text": "Jensen Huang returned as Nvidia's CEO following lobbying by President Donald Trump and tech allies. The company faces ongoing investigations regarding chip smuggling to China, governance risks, and tighter US scrutiny over its financing arrangements.",
+        "title": "Nvidia leadership and regulatory scrutiny",
+        "text": "Jensen Huang returned as Nvidia's CEO following lobbying by political and tech allies, though the company continues to face federal investigations, potential credit downgrades, and scrutiny over chip smuggling allegations and financing models.",
         "stories": [
-          {
-            "id": "995fd2b8bd33",
-            "headline": "Jensen Huang returns as Nvidia CEO after intervention by Trump and tech allies",
-            "url": "https://techmeme.com/261125/p3"
-          },
           {
             "id": "af0f0092a2fb",
             "headline": "Pentagon officials discussed using Defense Production Act over Nvidia CEO role",
             "url": "https://techmeme.com/261125/p39"
           },
           {
-            "id": "9d4d82e7775e",
-            "headline": "US government may acquire stake in Nvidia, says Trump",
-            "url": "https://trend.az/world/us/4250398.html"
+            "id": "995fd2b8bd33",
+            "headline": "Jensen Huang returns as Nvidia CEO after intervention by Trump and tech allies",
+            "url": "https://techmeme.com/261125/p3"
           },
           {
             "id": "f27e0de9d097",
@@ -5877,11 +5917,6 @@
             "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/alice-huang-linked-firms-listed-270-million-in-ai-servers-in-china-records-show/articleshow/136150503.cms"
           },
           {
-            "id": "ef3f65502198",
-            "headline": "Nvidia AI financing commitments may face tighter US scrutiny: report",
-            "url": "https://aninews.in/news/business/nvidias-ai-financing-commitments-may-face-tighter-us-scrutiny-amid-stability-concerns-report20261125084913"
-          },
-          {
             "id": "9edbb62c9bcf",
             "headline": "Nvidia faces ongoing investigations over Megaspeed chip smuggling after CEO’s return",
             "url": "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed"
@@ -5889,8 +5924,8 @@
         ]
       },
       {
-        "title": "Infrastructure funding shifts amid new restrictions",
-        "text": "The European Union announced a €50 billion fund for AI and quantum companies, while the FCC authorized SpaceX to deploy 1 million Starmind AI satellite data centers. Meanwhile, new US chip restrictions halted billions in data center loans, and transaction data indicated that the AI Jevons paradox broke over a two-month period.",
+        "title": "Global funding and infrastructure developments",
+        "text": "Global funding initiatives and regulatory measures emerge as the European Union plans a €50 billion tech equity fund, new US chip curbs stall data center loans, and ElevenLabs targets a $33 billion valuation.",
         "stories": [
           {
             "id": "76b8e567fcd2",
@@ -5898,19 +5933,66 @@
             "url": "https://techmeme.com/261125/p1"
           },
           {
-            "id": "8e9b22777e77",
-            "headline": "US FCC authorizes SpaceX to deploy 1 million Starmind AI satellites",
-            "url": "https://techmeme.com/261125/p27"
-          },
-          {
             "id": "fb08c823339f",
             "headline": "US chip curbs stall billions in data center loans tied to Chinese firms",
             "url": "https://techmeme.com/261125/p38"
           },
           {
-            "id": "d85441ec997f",
-            "headline": "Ramp CEO says AI Jevons paradox broke over the last two months",
-            "url": "https://zerohedge.com/ai/its-very-clear-data-ramp-ceo-says-ais-jevons-paradox-broke"
+            "id": "ef3f65502198",
+            "headline": "Nvidia AI financing commitments may face tighter US scrutiny: report",
+            "url": "https://aninews.in/news/business/nvidias-ai-financing-commitments-may-face-tighter-us-scrutiny-amid-stability-concerns-report20261125084913"
+          },
+          {
+            "id": "b4e5fb10375c",
+            "headline": "UN and Barbados call for global AI safety framework within a year",
+            "url": "https://scoop.co.nz/stories/WO2611/S00244/un-chief-urges-talks-on-global-ai-safety-framework-warns-of-historic-shift-in-power.htm"
+          },
+          {
+            "id": "85881ba37f62",
+            "headline": "Nexent Capital launches $1 billion fund for AI data‑center and energy infrastructure",
+            "url": "https://yourstory.com/2026/11/nexent-capital-launches-1-billion-fund-focused-on-ai-data-centres-investments"
+          },
+          {
+            "id": "f0daa9c96fe9",
+            "headline": "ElevenLabs in early talks for 2027 funding round at $33B target valuation",
+            "url": "https://techmeme.com/261125/p30"
+          }
+        ]
+      },
+      {
+        "title": "New research in mathematics and chemistry",
+        "text": "OpenAI released a preprint claiming the matrix multiplication exponent is exactly 9/4, while researchers introduced Crucible Bench to evaluate LLM agents in chemistry research.",
+        "stories": [
+          {
+            "id": "35a6794c57dd",
+            "headline": "OpenAI preprint claims matrix multiplication exponent is exactly 9/4",
+            "url": "https://techmeme.com/261125/p5"
+          },
+          {
+            "id": "f4359170efb8",
+            "headline": "Crucible Bench evaluates LLM agents in chemistry research environments",
+            "url": "https://arxiv.org/abs/2611.34254"
+          }
+        ]
+      },
+      {
+        "title": "Policy actions and industry updates",
+        "text": "State attorneys general are challenging Character.ai's plan to auction private chats, New York banned AI chatbot toys, and the FCC authorized SpaceX to deploy up to 1 million Starmind satellites.",
+        "stories": [
+          {
+            "id": "8e9b22777e77",
+            "headline": "US FCC authorizes SpaceX to deploy 1 million Starmind AI satellites",
+            "url": "https://techmeme.com/261125/p27"
+          },
+          {
+            "id": "92419877312e",
+            "headline": "42 state attorneys general challenge Character.ai plan to auction private chats",
+            "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats"
+          },
+          {
+            "id": "fa5252ed6842",
+            "headline": "Entire partners with Sarvam to bring AI coding agents to India",
+            "url": "https://analyticsindiamag.com/ai-news/thomas-dohmkes-entire-partners-with-sarvam-to-bring-ai-coding-agents-to-india"
           },
           {
             "id": "fc509d5dcb94",
@@ -5918,41 +6000,14 @@
             "url": "https://analyticsindiamag.com/ai-news/bp-to-transfer-3000-finance-employees-to-wipro-in-strategic-partnership"
           },
           {
-            "id": "85881ba37f62",
-            "headline": "Nexent Capital launches $1 billion fund for AI data‑center and energy infrastructure",
-            "url": "https://yourstory.com/2026/11/nexent-capital-launches-1-billion-fund-focused-on-ai-data-centres-investments"
-          }
-        ]
-      },
-      {
-        "title": "Regulators challenge data sales and governance",
-        "text": "A coalition of 42 state attorneys general moved to block Character.ai from auctioning private chats from 21 million accounts. Additionally, India stressed human oversight for AI in conflicts at the UN, and the UN called for a global AI safety framework within a year.",
-        "stories": [
-          {
-            "id": "92419877312e",
-            "headline": "42 state attorneys general challenge Character.ai plan to auction private chats",
-            "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats"
+            "id": "4001274b597c",
+            "headline": "New York governor signs five-year ban on AI chatbot toys",
+            "url": "https://techmeme.com/261125/p37"
           },
           {
-            "id": "8bfc03f3cad9",
-            "headline": "India stresses human oversight in AI use during conflicts at UN",
-            "url": "https://economictimes.indiatimes.com/news/india/india-stresses-human-oversight-in-ai-use-during-conflicts-flags-risks-of-misuse-at-un/articleshow/136146544.cms"
-          },
-          {
-            "id": "b4e5fb10375c",
-            "headline": "UN and Barbados call for global AI safety framework within a year",
-            "url": "https://scoop.co.nz/stories/WO2611/S00244/un-chief-urges-talks-on-global-ai-safety-framework-warns-of-historic-shift-in-power.htm"
-          }
-        ]
-      },
-      {
-        "title": "OpenAI claims matrix multiplication exponent result",
-        "text": "OpenAI released a preprint claiming that the matrix multiplication exponent is exactly 9/4 over every field.",
-        "stories": [
-          {
-            "id": "35a6794c57dd",
-            "headline": "OpenAI preprint claims matrix multiplication exponent is exactly 9/4",
-            "url": "https://techmeme.com/261125/p5"
+            "id": "f2f90da31bee",
+            "headline": "IndiaAI regulation papers in final stages and releasing soon: MeitY",
+            "url": "https://telecom.economictimes.indiatimes.com/news/policy/ai-regulation-papers-in-final-stages-to-be-released-shortly-meity-secretary-at-chariot-1-launch/136176370"
           }
         ]
       }
@@ -5960,81 +6015,84 @@
     "from_stories": 20
   },
   "plan": {
-    "focus": "Chasing the fallout from Nvidia's governance crisis and export control roadblocks while tracking AI toy bans.",
-    "updated_at": "2026-11-26T00:51:07+00:00",
+    "focus": "Chasing the policy fallout around Nvidia export controls and upcoming Indian AI regulations while tracking market volatility.",
+    "updated_at": "2026-11-26T03:37:01+00:00",
     "thin_areas": [
-      "safety",
-      "deals and business"
+      "AI in India",
+      "policy"
     ],
-    "searches": []
+    "searches": [
+      "India AI regulation papers MeitY",
+      "Sarvam AI IndiaAI Mission scrutiny"
+    ]
   },
   "builders": {
-    "written_at": "2026-11-25T06:51:03+00:00",
-    "intro": "A roundup of today's standout AI tools, open-source models, and developer infrastructure builds.",
+    "written_at": "2026-11-26T03:37:01+00:00",
+    "intro": "Today's top builds range from bare-metal assembly LLMs to automated enterprise integrations and local chat archiving tools.",
     "picks": [
       {
-        "name": "Mason",
-        "what": "An open-source drop-in replacement for a Postgres read-replica, powered by DuckDB's columnar compute engine.",
-        "why": "Speeds up analytics queries on Postgres databases using a lightweight columnar architecture.",
+        "name": "llm.asm",
+        "what": "Implements Qwen3-0.6B inference, a bootable OS, and a Mini-GPT trainer in 100% pure x86-64 NASM assembly with zero dependencies.",
+        "why": "An incredible engineering feat that strips away all abstraction layers for anyone curious about bare-metal machine learning.",
         "kind": "open-source",
         "for": "builders",
-        "url": "https://masondata.ai/",
-        "discussion": "https://news.ycombinator.com/item?id=50630294",
-        "source": "Show HN",
-        "signal": "93 points, 17 comments on Hacker News",
-        "image": "img/builders/8e9b94fee057.jpg",
+        "url": "https://github.com/alesha-pro/llm.asm",
+        "discussion": "",
+        "source": "GitHub",
+        "signal": "402 stars since 25 Nov, written in Assembly",
+        "image": "img/builders/a519f60a2170.jpg",
         "video": null
       },
       {
-        "name": "songe",
-        "what": "A training engine for your local model using idle compute.",
-        "why": "Enables local fine-tuning, distillation, and coding-agent training without cloud GPU costs.",
+        "name": "sap-data-mcp",
+        "what": "Provides read-only MCP servers that let AI assistants query SAP S/4HANA via RFC/BAPI and OData with audited calls and local credentials.",
+        "why": "Essential for enterprise builders safely bridging modern AI agents with legacy ERP systems.",
+        "kind": "open-source",
+        "for": "builders",
+        "url": "https://github.com/w1ccc/sap-data-mcp",
+        "discussion": "",
+        "source": "GitHub",
+        "signal": "161 stars since 20 Nov, written in Python",
+        "image": "img/builders/54d1d6a0fc23.jpg",
+        "video": null
+      },
+      {
+        "name": "Carry",
+        "what": "Automatically saves AI chats from Gemini, ChatGPT, Claude, and Grok as Markdown in a local folder with unified search.",
+        "why": "Gives users full ownership of their conversation history across different platforms in an open format.",
+        "kind": "app",
+        "for": "everyone",
+        "url": "https://carry.md/",
+        "discussion": "https://news.ycombinator.com/item?id=50637995",
+        "source": "Show HN",
+        "signal": "27 points, 18 comments on Hacker News",
+        "image": "img/builders/43d2fbf28dd4.jpg",
+        "video": null
+      },
+      {
+        "name": "garimpo",
+        "what": "Prospects Google Maps for businesses, generates preview sites, and closes leads over WhatsApp with automated payment collection.",
+        "why": "A fully automated, end-to-end local business sales agent that runs on your PC, VPS, or Vercel.",
+        "kind": "open-source",
+        "for": "investors",
+        "url": "https://github.com/matheusmongarde/garimpo",
+        "discussion": "",
+        "source": "GitHub",
+        "signal": "186 stars since 24 Nov, written in TypeScript",
+        "image": "img/builders/81320e4a2b02.jpg",
+        "video": null
+      },
+      {
+        "name": "Antigravity-agy-dart",
+        "what": "A Google Antigravity plugin that improves cache hits, keeps cache warm, tracks context quota, and rescues crashed sessions.",
+        "why": "A practical utility for developers looking to optimize token spend and context window performance.",
         "kind": "tool",
         "for": "builders",
-        "url": "https://github.com/sous-labs/songe",
+        "url": "https://github.com/zou172866/Antigravity-agy-dart",
         "discussion": "",
         "source": "GitHub",
-        "signal": "747 stars since 20 Nov, written in Python",
-        "image": "img/builders/197dc8b3ac4d.jpg",
-        "video": null
-      },
-      {
-        "name": "Brickie",
-        "what": "An open-source tool to deploy sandboxes in your own AWS account, targeting EKS.",
-        "why": "Crucial infrastructure for agentic applications to securely execute untrusted code.",
-        "kind": "open-source",
-        "for": "builders",
-        "url": "https://github.com/hatchet-dev/brickie",
-        "discussion": "https://news.ycombinator.com/item?id=50629936",
-        "source": "Show HN",
-        "signal": "30 points, 7 comments on Hacker News",
-        "image": "img/builders/ff5d820a02c7.jpg",
-        "video": null
-      },
-      {
-        "name": "shrink-anything",
-        "what": "Deletes dead code, files, dependencies, and assets in any codebase, keeping cuts only if tests pass.",
-        "why": "A clever CLI leveraging AI agents to safely reduce bundle sizes and clean up legacy code.",
-        "kind": "tool",
-        "for": "builders",
-        "url": "https://github.com/EL4CTEO/shrink-anything",
-        "discussion": "",
-        "source": "GitHub",
-        "signal": "215 stars since 23 Nov, written in Rust",
-        "image": "img/builders/8db25d470a20.jpg",
-        "video": null
-      },
-      {
-        "name": "claude-multi-desktop",
-        "what": "Runs multiple Claude Desktop accounts simultaneously on Mac with separate sign-ins and a shared Claude Code setup.",
-        "why": "Essential utility for developers juggling multiple Anthropic accounts and agent sessions.",
-        "kind": "open-source",
-        "for": "builders",
-        "url": "https://github.com/jackson-cmd/claude-multi-desktop",
-        "discussion": "",
-        "source": "GitHub",
-        "signal": "410 stars since 16 Nov, written in HTML",
-        "image": "img/builders/479bc4e0e5b1.jpg",
+        "signal": "184 stars since 20 Nov, written in JavaScript",
+        "image": "img/builders/0cced6b62981.jpg",
         "video": null
       }
     ]
@@ -6105,6 +6163,132 @@
     "range": "15 Nov – 22 Nov 2026"
   },
   "threads": [
+    {
+      "id": "t-2b1356156f54",
+      "title": "Sarvam defends Chinese models, releases 105B",
+      "updated_at": "2026-11-26T03:15:00+00:00",
+      "stories": [
+        {
+          "id": "065689811dba",
+          "headline": "Government finds no misuse of IndiaAI support in Sarvam Chinese model row",
+          "url": "https://telecom.economictimes.indiatimes.com/news/policy/sarvam-did-not-misuse-indiaai-mission-support-over-chinese-model-row-s-krishnan/136176337",
+          "published_at": "2026-11-26T03:15:00+00:00",
+          "category": "policy"
+        },
+        {
+          "id": "b35f4514a643",
+          "headline": "Sarvam defends hosting Chinese models, releases upgraded 105B model",
+          "url": "https://analyticsindiamag.com/ai-news/sarvam-defends-hosting-chinese-ai-models-releases-upgraded-105b-model",
+          "published_at": "2026-11-23T10:12:56+00:00",
+          "category": "models"
+        },
+        {
+          "id": "3d4a65fc0db1",
+          "headline": "Sarvam AI’s Token Factory hosts mostly Chinese models on Indian GPUs, sparking sovereign AI debate",
+          "url": "https://medianama.com/2026/11/223-sarvam-token-factory-india-sovereign-ai",
+          "published_at": "2026-11-19T13:23:07+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "d930ebd0b69d",
+          "headline": "Sarvam AI launches Token Factory hosting mostly Chinese models on Indian GPUs, reigniting sovereign AI debate",
+          "url": "https://analyticsindiamag.com/ai-features/sarvams-token-factory-sparks-indias-sovereign-ai-debate-again",
+          "published_at": "2026-11-18T07:10:00+00:00",
+          "category": "policy"
+        },
+        {
+          "id": "e924893212f4",
+          "headline": "Sarvam AI hosts six Chinese models in India, reigniting sovereign AI debate",
+          "url": "https://indianexpress.com/article/explained/explained-ai/sarvam-ai-chinese-models-token-factory-india-ai-sovereignty-10967996",
+          "published_at": "2026-11-17T23:20:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "518c47915c16",
+          "headline": "Sarvam AI opens Token Factory to run global open-weight models on Indian servers",
+          "url": "https://inc42.com/buzz/sarvam-ai-opens-token-factory-to-run-global-ai-models-on-indian-servers",
+          "published_at": "2026-11-17T09:50:00+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "272333516a9d",
+          "headline": "OpenAI names Pragya Misra to lead business development in India and South Asia",
+          "url": "https://yourstory.com/2026/11/pragya-misra-lead-openais-business-development-india-and-south-asia",
+          "published_at": "2026-11-17T08:44:46+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "912ad5c2a7cd",
+          "headline": "India is now ChatGPT's largest market globally by weekly active users",
+          "url": "https://economictimes.indiatimes.com/tech/technology/india-becomes-chatgpts-biggest-market-openais-india-chief-corner-office-conversation/videoshow/135764629.cms",
+          "published_at": "2026-11-12T10:06:38+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "e1842b672534",
+          "headline": "OpenAI adds API inference residency for GPT-6 Luna in India",
+          "url": "https://analyticsindiamag.com/ai-news/openai-launches-api-inference-residency-in-india",
+          "published_at": "2026-11-12T08:02:14+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "bd4eadb64696",
+          "headline": "India becomes ChatGPT’s largest market by weekly active users, base doubles since Jan 2026",
+          "url": "https://inc42.com/buzz/india-becomes-chatgpts-largest-market-globally-user-base-doubles-since-january",
+          "published_at": "2026-11-03T06:09:53+00:00",
+          "category": "industry"
+        }
+      ]
+    },
+    {
+      "id": "t-c4b96abe3e96",
+      "title": "OpenAI GPT-6.2 Astra and Sol rollout",
+      "updated_at": "2026-11-26T02:55:02+00:00",
+      "stories": [
+        {
+          "id": "7f000726c1b3",
+          "headline": "OpenAI begins rolling out merged ChatGPT Chat and Work tabs with shared usage meter",
+          "url": "https://techmeme.com/261125/p46",
+          "published_at": "2026-11-26T02:55:02+00:00",
+          "category": "models"
+        },
+        {
+          "id": "f3aa9260f109",
+          "headline": "Amateur astronomers use Codex and Astra to search public telescope data for exoplanets",
+          "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+          "published_at": "2026-11-24T11:00:00+00:00",
+          "category": "models"
+        },
+        {
+          "id": "53f2a14376dd",
+          "headline": "OpenAI details Codex sandbox security and execution controls",
+          "url": "https://openai.com/index/inside-the-codex-sandbox",
+          "published_at": "2026-11-18T08:00:00+00:00",
+          "category": "models"
+        },
+        {
+          "id": "25f8ab73ccc5",
+          "headline": "OpenAI releases GPT-6.2 Astra and Sol models with benchmark gains",
+          "url": "https://techmeme.com/261117/p57",
+          "published_at": "2026-11-17T21:45:02+00:00",
+          "category": "models"
+        },
+        {
+          "id": "5b059524c340",
+          "headline": "Ethan Mollick shares pre-launch experience with GPT-6.2 Astra",
+          "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2joens5t22x",
+          "published_at": "2026-11-17T18:30:03.697000+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "549a77347d5e",
+          "headline": "OpenAI releases GPT-6.2 Astra and Sol for ChatGPT Work and Codex",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+          "published_at": "2026-11-17T17:45:00+00:00",
+          "category": "models"
+        }
+      ]
+    },
     {
       "id": "t-dcf6c7046ef3",
       "title": "Nvidia reinstates Huang; reasons and apology",
@@ -6195,695 +6379,17 @@
           "category": "industry"
         }
       ]
-    },
-    {
-      "id": "t-a4d26b025e34",
-      "title": "Anthropic Claude rollout and engineering updates",
-      "updated_at": "2026-11-25T17:05:04+00:00",
-      "stories": [
-        {
-          "id": "f72d7ea35d13",
-          "headline": "Anthropic migrates Messages API from Python to Rust with Claude agents",
-          "url": "https://techmeme.com/261125/p26",
-          "published_at": "2026-11-25T17:05:04+00:00",
-          "category": "models"
-        },
-        {
-          "id": "2b5faa4b22a0",
-          "headline": "Anthropic launches Claude Ship to auto‑review and approve GitHub pull requests",
-          "url": "https://techmeme.com/261123/p41",
-          "published_at": "2026-11-23T21:25:00+00:00",
-          "category": "models"
-        },
-        {
-          "id": "0ed1df8ad9da",
-          "headline": "Anthropic says Claude Mythos ported to AMD GPUs in three days with almost no human work",
-          "url": "https://techmeme.com/261116/p52",
-          "published_at": "2026-11-17T04:02:44+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "fa0e89bac09a",
-          "headline": "Ethan Mollick on agent swarm research traffic and Fable 5.2",
-          "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2bwllyra222",
-          "published_at": "2026-11-14T16:35:48.726000+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "b621aa11e7e8",
-          "headline": "Fable 5.2 tops Remote Labor Index at 41.3% of freelance jobs",
-          "url": "https://techmeme.com/261110/p23",
-          "published_at": "2026-11-10T14:40:01+00:00",
-          "category": "research"
-        },
-        {
-          "id": "8f698c770946",
-          "headline": "Anthropic releases Claude Fable and Mythos 5.2 models",
-          "url": "https://techmeme.com/261110/p9",
-          "published_at": "2026-11-10T11:10:02+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "16b90ffd8ed9",
-          "headline": "Anthropic releases Claude Fable and Mythos 5.2 models",
-          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzwjwceb622e",
-          "published_at": "2026-11-10T03:49:51.952000+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "94ff1d7f5e18",
-          "headline": "Ethan Mollick builds 3D worlds with Claude Fable 5.2",
-          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzvxvkdmd22e",
-          "published_at": "2026-11-09T22:27:19.413000+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "255b56db4a4a",
-          "headline": "Anthropic releases Claude Fable 5.2 with 1M context window",
-          "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
-          "published_at": "2026-11-09T20:04:55+00:00",
-          "category": "models"
-        }
-      ]
-    },
-    {
-      "id": "t-1b80f30c0254",
-      "title": "Megaspeed investigation leads to entity list addition",
-      "updated_at": "2026-11-25T13:00:57+00:00",
-      "stories": [
-        {
-          "id": "76fe28fdc54d",
-          "headline": "Shenzhen vendors sell restricted Nvidia Blackwell servers for $3M+, up from $2M in two months",
-          "url": "https://techmeme.com/261125/p20",
-          "published_at": "2026-11-25T13:00:57+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "9edbb62c9bcf",
-          "headline": "Nvidia faces ongoing investigations over Megaspeed chip smuggling after CEO’s return",
-          "url": "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed",
-          "published_at": "2026-11-25T13:00:00+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "58b313ebe927",
-          "headline": "Asian data centers seek US clients for excess compute as B300 prices fall",
-          "url": "https://techmeme.com/261125/p14",
-          "published_at": "2026-11-25T11:00:46+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "8e7a06808520",
-          "headline": "Alice Huang-linked firms listed $270 million in AI servers in China",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/alice-huang-linked-firms-listed-270-million-in-ai-servers-in-china-records-show/articleshow/136150503.cms",
-          "published_at": "2026-11-25T06:14:19+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "7a06c7691973",
-          "headline": "US intelligence briefed congressional aides on Alice Huang affair",
-          "url": "https://techmeme.com/261124/p52",
-          "published_at": "2026-11-25T04:15:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "9d4d82e7775e",
-          "headline": "US government may acquire stake in Nvidia, says Trump",
-          "url": "https://trend.az/world/us/4250398.html",
-          "published_at": "2026-11-25T03:30:00+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "74575936ae57",
-          "headline": "U.S. Commerce Department to add Megaspeed to Entity List, restricting chip sales",
-          "url": "https://techmeme.com/261123/p40",
-          "published_at": "2026-11-23T20:10:11+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "e209846e7d75",
-          "headline": "Chinese national Li Ming charged in fraud case linked to Megaspeed",
-          "url": "https://economictimes.indiatimes.com/tech/technology/chinese-national-li-ming-charged-in-fraud-case-in-singapore-linked-to-megaspeed-and-alice-huang-report/articleshow/136073178.cms",
-          "published_at": "2026-11-22T11:15:13+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "877f48487e8a",
-          "headline": "Li Ming central to smuggling restricted AI chips from Southeast Asia to China",
-          "url": "https://techmeme.com/261122/p1",
-          "published_at": "2026-11-22T05:45:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "a250c4f5700f",
-          "headline": "Nvidia faces U.S. SEC accounting investigation, sources say",
-          "url": "https://nytimes.com/2026/11/20/business/nvidia-sec-accounting.html",
-          "published_at": "2026-11-20T17:06:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "d69a5a1cc95f",
-          "headline": "Nvidia in talks to acquire diffusion LLM startup Inception for $500M+",
-          "url": "https://techmeme.com/261119/p54",
-          "published_at": "2026-11-19T23:00:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "fbe096045978",
-          "headline": "China's military seeks Nvidia chips for AI weapons, report says",
-          "url": "https://techmeme.com/261119/p2",
-          "published_at": "2026-11-19T05:55:31+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "a7274720f199",
-          "headline": "Alibaba used regional companies to access Nvidia chips and aid military-linked lab",
-          "url": "https://techmeme.com/261118/p57",
-          "published_at": "2026-11-19T03:15:02+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "2a1f0dfea65b",
-          "headline": "Elon Musk criticizes Nvidia board for ousting Jensen Huang",
-          "url": "https://economictimes.indiatimes.com/tech/technology/no-one-can-replace-jensen-elon-musk-says-nvidia-decision-to-sack-jensen-huang-was-not-smart/articleshow/135975859.cms",
-          "published_at": "2026-11-19T02:50:09+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "bc1083d540d9",
-          "headline": "Nvidia's startup stakes reach $65.5B as interim CEO signals caution",
-          "url": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt",
-          "published_at": "2026-11-18T01:44:21+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "46eddffe315d",
-          "headline": "Nvidia ends H200 chip sales in China under acting CEO Colette Kress",
-          "url": "https://techmeme.com/261117/p63",
-          "published_at": "2026-11-18T00:00:14+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "536093b04b83",
-          "headline": "Nvidia stopped reporting Singapore unit revenue in 2025 as it hit $104B",
-          "url": "https://techmeme.com/261117/p41",
-          "published_at": "2026-11-17T17:30:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "0fc7d9162585",
-          "headline": "Nvidia sales team introduced Alibaba to Alice Huang in 2022",
-          "url": "https://theinformation.com/articles/nvidia-introduced-alibaba-alice-huang-workaround-u-s-export-controls",
-          "published_at": "2026-11-17T16:00:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "5f83aea8a158",
-          "headline": "Nvidia CEO Jensen Huang to testify before US House committees on Dec 1",
-          "url": "https://economictimes.indiatimes.com/tech/technology/jensen-huang-to-appear-before-us-house-committees-on-december-1/articleshow/135932177.cms",
-          "published_at": "2026-11-17T15:54:22+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "63e247d2b73a",
-          "headline": "Chinese records show Kang Wei built state-backed data center network",
-          "url": "https://techmeme.com/261117/p12",
-          "published_at": "2026-11-17T11:00:41+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "11e63e8d9cdb",
-          "headline": "Nvidia board creates National Security and Export Control Oversight Committee",
-          "url": "https://techmeme.com/261117/p8",
-          "published_at": "2026-11-17T10:13:45+00:00",
-          "category": "safety"
-        },
-        {
-          "id": "a923fd9b70a1",
-          "headline": "US tightens AI chip export rules, targeting Southeast Asia data centres",
-          "url": "https://economictimes.indiatimes.com/tech/technology/us-ai-chip-curbs-threaten-southeast-asia-data-centre-boom-shares-slump/articleshow/135916332.cms",
-          "published_at": "2026-11-17T07:56:03+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "5745401fd09d",
-          "headline": "US Commerce Dept and DOJ investigated Megaspeed over chip exports in 2024",
-          "url": "https://techmeme.com/261117/p2",
-          "published_at": "2026-11-17T05:55:00+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "668b96b1a125",
-          "headline": "Trump says former Nvidia CEO Jensen Huang's affair posed no security risk",
-          "url": "https://techcrunch.com/2026/11/16/trump-says-ex-nvidia-ceo-jensen-huangs-affair-with-an-alleged-chinese-spy-did-not-threaten-national-security",
-          "published_at": "2026-11-16T19:12:02+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "c24f64cfec57",
-          "headline": "Nvidia’s board is reportedly ‘not considering’ hiring Jensen Huang back",
-          "url": "https://theverge.com/tech/1034501/nvidia-board-jensen-huang-not-bringing-back",
-          "published_at": "2026-11-16T18:43:35+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "ca1899ca1680",
-          "headline": "Jensen Huang allies form \"war room\" to lobby for his return as Nvidia CEO",
-          "url": "https://arstechnica.com/ai/2026/11/jensen-huang-allies-build-a-war-room-to-get-him-back-at-nvidia",
-          "published_at": "2026-11-16T14:06:16+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "2c910f3a42c8",
-          "headline": "Indonesian police raided Nvidia partner Megaspeed local unit in early 2026",
-          "url": "https://economictimes.indiatimes.com/tech/technology/indonesian-police-raided-nvidia-partner-megaspeeds-local-unit-in-early-2026-on-us-request-report/articleshow/135877651.cms",
-          "published_at": "2026-11-16T07:56:26+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "4b57fcd6de68",
-          "headline": "Nvidia interim CEO Colette Kress expected to rein in deals",
-          "url": "https://techmeme.com/261115/p24",
-          "published_at": "2026-11-16T03:30:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "2cb612de9116",
-          "headline": "Nvidia considers leadership options after Jensen Huang's departure",
-          "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry",
-          "published_at": "2026-11-15T21:56:35+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "30eb34a90a59",
-          "headline": "Megaspeed says Alice Huang left in 2025 amid US probe into Nvidia chip sales",
-          "url": "https://techmeme.com/261115/p15",
-          "published_at": "2026-11-15T20:02:17+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "369f1ffcda11",
-          "headline": "Jensen Huang discusses Nvidia CEO comeback as allies lobby for return",
-          "url": "https://techmeme.com/261115/p14",
-          "published_at": "2026-11-15T19:20:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "024802442c5a",
-          "headline": "Congress moves to tighten export rules on AI chips after Nvidia spy scandal",
-          "url": "https://theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
-          "published_at": "2026-11-15T19:15:43+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "bc6fcac7439b",
-          "headline": "Nvidia sought Taipei's help after employee's chip smuggling case",
-          "url": "https://techmeme.com/261115/p13",
-          "published_at": "2026-11-15T19:10:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "9bf9c1834c1b",
-          "headline": "Howard Lutnick joins Trump on Air Force One to China amid Nvidia chip curbs dispute",
-          "url": "https://techmeme.com/261115/p11",
-          "published_at": "2026-11-15T17:15:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "4d0aab350c5f",
-          "headline": "Scott Bessent urges Nvidia leadership shakeup and answers on China chip sales",
-          "url": "https://techmeme.com/261115/p8",
-          "published_at": "2026-11-15T15:50:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "49d98b129891",
-          "headline": "Nvidia CEO Jensen Huang resigns following investigation into personal relationships",
-          "url": "https://techmeme.com/261115/p6",
-          "published_at": "2026-11-15T07:01:35+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "3e9aed84c994",
-          "headline": "Nvidia chips accessed by Chinese companies in SE Asia data centers",
-          "url": "https://techmeme.com/261115/p1",
-          "published_at": "2026-11-15T05:55:03+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "9d72f3c35aab",
-          "headline": "Democrats launch inquiry into Nvidia chip sales and Trump administration policies",
-          "url": "https://techmeme.com/261114/p23",
-          "published_at": "2026-11-15T04:15:42+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "fa0ba71cc1a1",
-          "headline": "Nvidia investors urge board to keep Jensen Huang return option open",
-          "url": "https://techmeme.com/261114/p18",
-          "published_at": "2026-11-14T19:55:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "eaeae4ef3f97",
-          "headline": "Nvidia open-source strategy questioned following Jensen Huang's resignation",
-          "url": "https://techmeme.com/261114/p15",
-          "published_at": "2026-11-14T18:05:02+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "01ec9257e016",
-          "headline": "Nvidia CEO Jensen Huang resigns as Colette Kress takes over as interim chief",
-          "url": "https://inc42.com/features/jensen-huangs-exit-how-deep-does-nvidias-ai-ecosystem-run-in-india",
-          "published_at": "2026-11-14T14:57:02+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "c46863c30810",
-          "headline": "Nvidia CEO Jensen Huang resigns amid scandals, ending an era for Big Tech",
-          "url": "https://theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
-          "published_at": "2026-11-14T12:00:00+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "1b43d5e72ff4",
-          "headline": "Nvidia faces leadership transition and market shifts after Jensen Huang's exit",
-          "url": "https://analyticsindiamag.com/global-tech/jensen-huangs-exit-just-gave-amd-and-google-their-biggest-ai-opening",
-          "published_at": "2026-11-14T11:01:30+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "6c8aa70af5f8",
-          "headline": "Jensen Huang struggled to access Beijing chip policymakers",
-          "url": "https://techmeme.com/261114/p7",
-          "published_at": "2026-11-14T07:30:08+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "792490ccf5f8",
-          "headline": "Nvidia scandal looms over US-China AI safety talks",
-          "url": "https://economictimes.indiatimes.com/tech/technology/nvidia-scandal-looms-over-us-china-ai-talks/articleshow/135821307.cms",
-          "published_at": "2026-11-14T03:14:18+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "a3f6c83f5ebf",
-          "headline": "Trump not expected to raise Jensen Huang allegations in meeting with Xi",
-          "url": "https://techmeme.com/261113/p40",
-          "published_at": "2026-11-14T03:10:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "eb62d1b6c624",
-          "headline": "Nvidia approaches Arm CEO Haas as employees seek Huang's return",
-          "url": "https://economictimes.indiatimes.com/tech/technology/nvidia-approaches-arm-holdings-ceo-haas-to-take-over-jensen-huangs-job-elon-musk-backs-huangs-reinstatement/articleshow/135821129.cms",
-          "published_at": "2026-11-14T03:04:32+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "cd2fdb36b7bd",
-          "headline": "Jensen Huang misled Nvidia leaders about relationship with Alice Huang",
-          "url": "https://techmeme.com/261113/p36",
-          "published_at": "2026-11-14T01:00:12+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "8cc1cc35134e",
-          "headline": "Congressional Democrats launch inquiry into Nvidia China chip sales and Trump deal",
-          "url": "https://techmeme.com/261113/p29",
-          "published_at": "2026-11-13T21:01:40+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "c2a6bd7529de",
-          "headline": "Nvidia board says it is selecting a search firm for the CEO role",
-          "url": "https://techmeme.com/261113/p27",
-          "published_at": "2026-11-13T20:35:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "3fc687f52312",
-          "headline": "Start-up investors and founders worry about losing ally in Jensen Huang",
-          "url": "https://techmeme.com/261113/p24",
-          "published_at": "2026-11-13T19:10:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "25902582c426",
-          "headline": "Nvidia reaffirms GPU supply plans to South Korea after Huang exit",
-          "url": "https://koreatimes.co.kr/business/20261113/nvidia-reaffirms-planned-gpu-supply-to-s-korea-despite-huangs-exit-minister",
-          "published_at": "2026-11-13T18:00:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "ebab4bb216e9",
-          "headline": "Wall Street fears Jensen Huang's ouster will slow Nvidia's AI dealmaking",
-          "url": "https://techmeme.com/261113/p20",
-          "published_at": "2026-11-13T17:30:02+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "e1478bd447ba",
-          "headline": "Scott Bessent says Treasury and other departments pushed to blacklist Megaspeed",
-          "url": "https://techmeme.com/261113/p13",
-          "published_at": "2026-11-13T14:50:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "72e1fb99c741",
-          "headline": "Nvidia CEO Jensen Huang resigns following revelations about personal relationships",
-          "url": "https://techmeme.com/261113/p10",
-          "published_at": "2026-11-13T13:10:02+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "31e6773ef72a",
-          "headline": "Report details past clash between Jensen Huang and interim CEO Colette Kress",
-          "url": "https://techmeme.com/261113/p9",
-          "published_at": "2026-11-13T12:50:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "1bd2fae01273",
-          "headline": "Arm shares fall 6.5% as Nvidia board considers CEO Rene Haas",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/arm-shares-slide-nvidia-succession-173756134.html",
-          "published_at": "2026-11-13T09:38:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "da1211fa00c6",
-          "headline": "US officials disagree on whether Alice Huang spied for China",
-          "url": "https://techmeme.com/261112/p72",
-          "published_at": "2026-11-13T03:40:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "bb7ee3742638",
-          "headline": "Senate Banking Chair Tim Scott asks Jensen Huang and Howard Lutnick to testify",
-          "url": "https://techmeme.com/261112/p70",
-          "published_at": "2026-11-13T03:01:46+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "cd89cca4588e",
-          "headline": "Trump defends Nvidia CEO Jensen Huang amid intelligence and chip sale probe",
-          "url": "https://techmeme.com/261112/p67",
-          "published_at": "2026-11-13T01:35:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "63b9278e53bf",
-          "headline": "President Trump urges Nvidia CEO Jensen Huang to keep fighting for his job",
-          "url": "https://techmeme.com/261112/p66",
-          "published_at": "2026-11-13T00:35:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "4e2810e47ea3",
-          "headline": "Democrats launch Nvidia investigation into China chip sales and Trump deal",
-          "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump",
-          "published_at": "2026-11-12T22:42:51+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "ae9ad26a9543",
-          "headline": "Forensic analysis finds six Chinese AI models show NVIDIA Blackwell GPU fingerprints",
-          "url": "https://techmeme.com/261112/p62",
-          "published_at": "2026-11-12T22:30:04+00:00",
-          "category": "research"
-        },
-        {
-          "id": "6e7f4ca7daf1",
-          "headline": "Nvidia privately confirmed it could track chips to fight smuggling",
-          "url": "https://technologyreview.com/2026/11/12/1148483/nvidia-chip-tracking",
-          "published_at": "2026-11-12T20:16:24+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "0a3a3741b20c",
-          "headline": "Nvidia CEO Jensen Huang resigns after reports of extramarital affairs; CFO Colette Kress named interim CEO",
-          "url": "https://theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling",
-          "published_at": "2026-11-12T17:44:33+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "bd7310f2d9f0",
-          "headline": "US DOJ opens antitrust and related probes involving Nvidia",
-          "url": "https://techmeme.com/261112/p42",
-          "published_at": "2026-11-12T16:40:46+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "ea64cad924f9",
-          "headline": "Ex-Nvidia CEO Jensen Huang agrees to testify before Congress by Thanksgiving",
-          "url": "https://techmeme.com/261112/p41",
-          "published_at": "2026-11-12T16:35:00+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "ee129214e4fa",
-          "headline": "Nvidia board and interim CEO address staff after CEO resignation",
-          "url": "https://theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang",
-          "published_at": "2026-11-12T15:48:12+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "79cf7beb5372",
-          "headline": "Firms linked to Alice Huang invest $14 million in DeepSeek and promise Nvidia Blackwell chips",
-          "url": "https://techmeme.com/261112/p37",
-          "published_at": "2026-11-12T15:35:02+00:00",
-          "category": "safety"
-        },
-        {
-          "id": "a769a94b7f5c",
-          "headline": "Nvidia CEO Jensen Huang resigns; CFO Colette Kress named interim CEO",
-          "url": "https://techmeme.com/261112/p26",
-          "published_at": "2026-11-12T13:53:14+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "cfa3026dfba3",
-          "headline": "Nvidia employees stunned as board weighs Jensen Huang’s future after affair disclosures",
-          "url": "https://techmeme.com/261112/p20",
-          "published_at": "2026-11-12T12:00:50+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "8cc3e4a94ce5",
-          "headline": "Nvidia board weighs successors for Jensen Huang amid ouster reports",
-          "url": "https://techmeme.com/261112/p14",
-          "published_at": "2026-11-12T11:00:31+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "213d79a3c5c9",
-          "headline": "Congress prepares subpoena for Nvidia CEO Jensen Huang over spy affair",
-          "url": "https://techmeme.com/261112/p3",
-          "published_at": "2026-11-12T05:45:05+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "24a2cff26351",
-          "headline": "Nvidia stopped reporting Singapore revenue after July 2025 blocklist",
-          "url": "https://techmeme.com/261112/p2",
-          "published_at": "2026-11-12T05:35:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "7d9fafd0f2c2",
-          "headline": "Nvidia board weighs CEO Jensen Huang's future amid spy claims and affair disclosures",
-          "url": "https://techmeme.com/261111/p54",
-          "published_at": "2026-11-12T04:00:57+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "b49868ed46c8",
-          "headline": "Commerce Department finalizes rule to block remote AI chip access for China",
-          "url": "https://techmeme.com/261111/p53",
-          "published_at": "2026-11-12T03:25:00+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "72ade767b5d7",
-          "headline": "House Republicans push for Nvidia's Jensen Huang to testify over spy allegations",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/house-republicans-push-for-nvidias-jensen-huang-to-testify-float-subpoena-over-spy-allegations/articleshow/135753113.cms",
-          "published_at": "2026-11-12T02:55:35+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "6e669aaa015b",
-          "headline": "Senators ask Trump administration to preserve Nvidia-China records",
-          "url": "https://techmeme.com/261111/p51",
-          "published_at": "2026-11-12T02:35:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "3707d8597189",
-          "headline": "Megaspeed founder Alice Huang returns to Beijing",
-          "url": "https://techmeme.com/261111/p50",
-          "published_at": "2026-11-12T01:45:02+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "efdd0bfa6110",
-          "headline": "Nvidia board prepares to oust CEO Jensen Huang amid scandal",
-          "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline",
-          "published_at": "2026-11-11T23:50:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "b91248042740",
-          "headline": "Nvidia stock drops as board reportedly prepares to oust CEO Jensen Huang",
-          "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang",
-          "published_at": "2026-11-11T23:28:45+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "d4f68e24f561",
-          "headline": "Nvidia spy scandal exposes Singapore chip networks evading US export controls",
-          "url": "https://techmeme.com/261111/p7",
-          "published_at": "2026-11-11T07:10:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "26a96166f51f",
-          "headline": "Jensen Huang affair raises chances of US chip export limits in NDAA",
-          "url": "https://techmeme.com/261111/p1",
-          "published_at": "2026-11-11T05:05:26+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "818c761e8b84",
-          "headline": "Nvidia intervention leads to Commerce chip smuggling probe being moved to DOJ",
-          "url": "https://techmeme.com/261109/p32",
-          "published_at": "2026-11-09T16:20:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "b10abbc74a23",
-          "headline": "Nvidia board investigates CEO Jensen Huang over affair with alleged Chinese spy",
-          "url": "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50",
-          "published_at": "2026-11-09T05:26:29+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "4756aa2fa657",
-          "headline": "Nvidia board launches probe into CEO Jensen Huang over alleged spy plot",
-          "url": "https://techmeme.com/261108/p13",
-          "published_at": "2026-11-08T20:25:00+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "2c93e9013ac1",
-          "headline": "Megaspeed exec recruited to spy on Nvidia CEO, US memo claims",
-          "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo",
-          "published_at": "2026-11-07T21:17:08+00:00",
-          "category": "industry"
-        }
-      ]
     }
   ],
   "labs": [
+    {
+      "lab": "OpenAI",
+      "model": "OpenAI begins rolling out merged ChatGPT Chat and Work tabs with shared usage me",
+      "type": "Other",
+      "date": "2026-11-26T02:55:02+00:00",
+      "story_id": "7f000726c1b3",
+      "url": "https://techmeme.com/261125/p46"
+    },
     {
       "lab": "Anthropic",
       "model": "Anthropic migrates Messages API from Python to Rust with Claude agents",
@@ -6907,14 +6413,6 @@
       "date": "2026-11-24T16:41:15+00:00",
       "story_id": "f9bcc6d488b4",
       "url": "https://linkedin.com/feed/update/urn:li:activity:7530839822152708096"
-    },
-    {
-      "lab": "OpenAI",
-      "model": "GPT-6",
-      "type": "Language",
-      "date": "2026-11-24T13:00:00+00:00",
-      "story_id": "3c6728c1bfd1",
-      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities"
     },
     {
       "lab": "Meta",
@@ -7156,8 +6654,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 682,
-    "model_releases_this_month": 85,
+    "stories_this_month": 688,
+    "model_releases_this_month": 86,
     "labs_tracked": 34
   }
 }

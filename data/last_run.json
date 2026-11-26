@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-26T00:51:07+00:00",
+  "started_at": "2026-11-26T03:37:01+00:00",
   "review_mode": false,
   "providers": [
     "gemini",
@@ -21,9 +21,9 @@
     "mistral-news": "ok (0)",
     "hf-models": "ok (57)",
     "arxiv": "ok (40)",
-    "hf-papers": "ok (15)",
-    "gdelt": "ok (25)",
-    "hn": "ok (27)",
+    "hf-papers": "ok (9)",
+    "gdelt": "ok (24)",
+    "hn": "ok (22)",
     "techcrunch-ai": "ok (20)",
     "verge-ai": "ok (10)",
     "mit-tr-ai": "ok (10)",
@@ -34,7 +34,7 @@
     "mint-tech": "ok (35)",
     "et-tech": "ok (50)",
     "yourstory": "ok (20)",
-    "gdelt-india": "ok (0) via Bing News (GDELT unavailable)",
+    "gdelt-india": "ok (35)",
     "crunchbase-news": "ok (10)",
     "import-ai": "ok (10)",
     "simon-willison": "ok (30)",
@@ -44,223 +44,433 @@
   },
   "dropped": [
     {
-      "title": "Vance says Jensen Huang wont need a pardon as scrutiny of Nvidia scandal builds in Washington",
-      "reason": "score 4: Rehash of the ongoing Nvidia political scandal without significant new reporting or details."
+      "title": "RAP: Radial-Angular Random Projection for Hyperbolic Representations",
+      "reason": "score 4: Incremental paper on random projection for hyperbolic representations in transformers."
     },
     {
-      "title": "Top open problems in mathematics ranked by LLM-assessed importance",
-      "reason": "score 3: General math ranking using LLMs; low AI-specific substance."
+      "title": "LatENSO v1.0: a learned latent state of the tropical Pacific for seasonal ENSO operators and forecasting",
+      "reason": "score 4: Domain-specific climate forecasting model, too narrow for core frontier AI coverage."
     },
     {
-      "title": "Show HN: Mason – A lightweight Postgres read-replica, built on columnar storage",
-      "reason": "not AI: PostgreSQL read-replica project with no AI relevance."
+      "title": "WebVibe: Multimodal Interactive Website Generation via Reverse Synthesis and Visual Self-Distillation",
+      "reason": "score 4: Incremental paper on multimodal interactive website generation."
     },
     {
-      "title": "In C++, = default and {} are not the same constructor",
-      "reason": "not AI: C++ constructor language mechanics with no AI angle."
+      "title": "StateWeaver: Multi-Agent Coordination of Story-State Transitions for Long-Horizon Video Generation",
+      "reason": "score 4: Incremental paper on multi-agent coordination for long-horizon video generation."
     },
     {
-      "title": "The polynomial Hirsch conjecture is false [pdf]",
-      "reason": "not AI: Pure mathematics paper on the polynomial Hirsch conjecture with no AI angle."
+      "title": "Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems",
+      "reason": "score 5: Interesting security study on cross-model latent communication in multi-agent systems, but an incremental arXiv preprint."
     },
     {
-      "title": "Much shorter version of GRH Lean verification from Anthropic",
-      "reason": "duplicate of 1479a2d5f115"
+      "title": "Beat This! Live - Online Beat and Downbeat Tracking by Predicting the Future",
+      "reason": "score 3: Routine incremental paper on online beat tracking."
     },
     {
-      "title": "Jensen Huang broke Nvidia’s code of conduct, and his employees may not forget it",
-      "reason": "duplicate of 51b9331a9f93"
+      "title": "Scaling Looped MoE Language Models under Matched Budgets: Information Flow and Parameter Allocation",
+      "reason": "score 4: ArXiv paper on looped MoE model parameter allocation; incremental research."
     },
     {
-      "title": "Want to buy your kid an AI toy this Christmas? Not in New York",
-      "reason": "score 3: Duplicate of NY governor signing a ban on AI chatbot toys."
+      "title": "LatentCP-DPO: Conformal Pessimism for DPO with Finite-Sample Guarantees",
+      "reason": "score 4: ArXiv paper on preference optimization (DPO) with conformal pessimism; standard research paper."
     },
     {
-      "title": "Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future",
-      "reason": "score 4: A rejected patent for personalized AI video feeds is speculative product exploration rather than news."
+      "title": "Libtt: A Compiler and Runtime for Tenstorrent Processors",
+      "reason": "score 5: Compiler and runtime for Tenstorrent hardware supporting PyTorch and JAX; interesting for hardware engineers, but a niche compiler paper rather than a major frontier breakthrough."
     },
     {
-      "title": "IT Secy Defends Sarvam’s Token Factory Over Chinese LLM Debate",
-      "reason": "duplicate of b35f4514a643"
+      "title": "LLM-coupled interpretable tool wear monitoring with multi-evidence reasoning in CNC machining",
+      "reason": "score 4: Application paper combining deep learning and LLMs for tool wear monitoring in CNC machining; domain-specific application."
     },
     {
-      "title": "Delhi Police Arrests Four Suspects In Crypto Fraud Case",
-      "reason": "not AI: General crypto fraud arrest with no AI connection."
+      "title": "Train-Only-Constrained LM for Synthetic Clinical Trajectories: Leak-Safe Calibration and Auditable Dynamics",
+      "reason": "score 4: ArXiv paper on synthetic clinical trajectories using constrained language models; specialized domain paper."
     },
     {
-      "title": "FCC says SpaceX can deploy 1 million satellites for data centers in space. Scientists are skeptical",
-      "reason": "duplicate of 8e9b22777e77"
+      "title": "MedSkill-E$^{2}$: Evaluating and Evolving Skills for Medical Agents",
+      "reason": "score 4: ArXiv paper on evaluating and evolving skills for medical agents; incremental agent evaluation research."
     },
     {
-      "title": "Quoting Scott Aaronson",
-      "reason": "score 4: Brief quote snippet without substantive analysis or commentary on an AI development."
+      "title": "Navigent: A Geometry-Grounded Agentic Framework for Vision Language Navigation",
+      "reason": "score 4: ArXiv paper on a geometry-grounded agentic framework for vision-language navigation; routine research."
     },
     {
-      "title": "A US court dismisses Amazon's challenge to a 2025 CPSC order requiring it to recall 400K+ hazardous products sold by third parties via Fulfillment by Amazon (Emma Roth/The Verge)",
-      "reason": "not AI: Amazon product recall case involving third-party fulfillment has no AI angle."
+      "title": "EXPOSURE: Explaining Sources of Uncertainty in Reinforcement Learning",
+      "reason": "score 4: ArXiv paper explaining sources of uncertainty in reinforcement learning; standard academic paper."
     },
     {
-      "title": "A coalition of 42 AGs opposes Character.AI's plan to auction off data from 21M+ US accounts, 2.1M+ registered to minors, saying the sale lacks user protections (Sarah Perez/TechCrunch)",
-      "reason": "duplicate of 92419877312e"
+      "title": "Did the Model Forecast It, or Already Know It? Evaluating Large Language Models for Novel Drug-Target Prioritisation with a Temporal Knowledge-Graph Oracle",
+      "reason": "score 5: ArXiv paper evaluating LLMs for novel drug-target prioritisation using a temporal knowledge-graph oracle; interesting benchmark study, but incremental."
     },
     {
-      "title": "Hands-on with the \"Install as app\" feature for Claude artifacts: they are HTML apps wrapped inside an Electron shim, which is managed via the main Claude app (Federico Viticci/MacStories)",
-      "reason": "duplicate of cf5e5b069b85"
+      "title": "Weakly Conditioned Diffusion Model Augmentation for Prostate Segmentation",
+      "reason": "score 3: Routine narrow medical imaging paper."
     },
     {
-      "title": "Nvidia agrees to pay $290M to settle a 2018 class action lawsuit alleging it misled shareholders about how much crypto mining fueled its GPU sales (Mike Scarcella/Reuters)",
-      "reason": "not AI: Historical 2018 shareholder class action settlement regarding crypto mining is off-topic for AI."
+      "title": "Change Point Detection with Generative Models",
+      "reason": "score 3: Incremental statistical/generative time-series paper."
     },
     {
-      "title": "WhatsApp starts letting users schedule messages from 10 minutes to 14 days in advance, in group and individual chats; messages are sent even if the phone is off (Ivan Mehta/TechCrunch)",
-      "reason": "not AI: Standard consumer messaging app feature update with no AI angle."
+      "title": "The Socratic PAUSE: safeguarding scientific judgement at AI speed",
+      "reason": "score 4: Policy/philosophical commentary paper on scientific judgement, not a landmark breakthrough."
     },
     {
-      "title": "1Password says an attacker used an employee's GitHub account to push malicious code to its backend, taking some users' names and emails; vaults weren't accessed (Zack Whittaker/TechCrunch)",
-      "reason": "not AI: General cybersecurity incident at a password manager; not an AI security story."
+      "title": "GeoCAM: Self-Supervised Sonar-Optical Representation Learning via Geographic Overlap Supervision",
+      "reason": "score 3: Niche underwater multimodal representation learning paper."
     },
     {
-      "title": "Dario Amodei rejects the idea of surrendering free will to AI and accuses rival AI execs of \"vibes-based\" positioning, rebutting a report on AI leaders' views (Madison Mills/Axios)",
-      "reason": "score 5: Duplicate of an already published story covering Dario Amodei's remarks on AI control."
+      "title": "Compute-Aware Submodular Online Learning in Open Multi-Agent Systems",
+      "reason": "score 4: Incremental multi-agent systems and submodular optimization paper."
     },
     {
-      "title": "Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’",
-      "reason": "variety: already 2 stories from techcrunch.com this run"
+      "title": "Text-Conditioned Low-Rank Adaptation of Time-Series Foundation Models for Multimodal Forecasting",
+      "reason": "score 3: Incremental time-series foundation model adapter paper."
+    },
+    {
+      "title": "SOLO: Towards Sample-Faithful and Detectable LLM Watermarking under Repeated Sampling via Content-Anchored Single-Owner Contexts",
+      "reason": "score 4: Narrow paper on LLM watermarking under repeated sampling."
+    },
+    {
+      "title": "MINE: A Training-Free Defense against Indirect Prompt Injection via Mutual Information and Embedding Variance",
+      "reason": "score 4: Incremental RAG defense paper against indirect prompt injection."
+    },
+    {
+      "title": "Hierarchical Semantic Learning for Multimodal Sentiment Analysis with Missing Modalities",
+      "reason": "score 3: Incremental paper on multimodal sentiment analysis with missing modalities."
+    },
+    {
+      "title": "Lightweight Reasoning Transfer via Chain-of-Thought Vector Projection",
+      "reason": "score 3: Routine paper on reasoning transfer via vector projection."
+    },
+    {
+      "title": "Agentic-Level Adversarial Purification: Revisiting Diffusion Purifiers on Native-Resolution Agentic Inputs",
+      "reason": "score 4: Incremental paper on adversarial purification for vision-language agents."
+    },
+    {
+      "title": "Familiar Words, Unfamiliar Minds: Conventionalization without Calibration in the Vocabulary of Mind",
+      "reason": "score 2: Philosophical and linguistic analysis of LLM vocabulary, not a core technical breakthrough."
+    },
+    {
+      "title": "Multi-view fnirs identifies neurophysiological subtypes in post-stroke aphasia",
+      "reason": "not AI: Medical research paper using fNIRS for post-stroke aphasia without a primary AI focus."
+    },
+    {
+      "title": "Cell-Type-Specific Expression Is Hard to Predict from Bulk, but It Is Still Useful",
+      "reason": "score 2: Genomics and bioinformatics paper using single-cell deconvolution."
+    },
+    {
+      "title": "Strategic and Robust Task Allocation for Combat Objectives in Adversarial Multi-Agent Environments",
+      "reason": "score 3: Academic paper on task allocation for multi-agent adversarial environments."
+    },
+    {
+      "title": "When High Capacity Becomes Undeployable: Pore-Filling Constraints for Multi-Objective Optimization of Direct Air Capture Sorbents",
+      "reason": "not AI: Materials science paper on direct air capture sorbents using Bayesian optimization."
+    },
+    {
+      "title": "Lost in the Grid: Where Multimodal LLMs Fail Between Seeing and Planning",
+      "reason": "score 4: Academic evaluation paper exploring MLLM failures in spatial planning and grid games."
+    },
+    {
+      "title": "Reproducer Synthesis for AI-Reported Bugs in the Linux Kernel",
+      "reason": "score 4: Routine paper on reproducer synthesis for Linux kernel bugs, not a landmark research breakthrough."
+    },
+    {
+      "title": "How resampling method can help us: Improving the Delta model",
+      "reason": "score 3: Niche paper improving the Delta authorship attribution method using resampling, minor relevance to our audience."
+    },
+    {
+      "title": "SOC-Net: Second-Order-Cone-Constrained Neural Networks",
+      "reason": "score 4: Incremental paper on second-order-cone-constrained neural networks for physics-informed machine learning."
+    },
+    {
+      "title": "Nvidia , Anthropic and other AI stocks get back to tumbling and drag the US market lower",
+      "reason": "score 4: Stock-market commentary on AI stocks tumbling, routine market coverage."
+    },
+    {
+      "title": "Nvidia AI Chips Reach Chinese - Linked Firms , Raising US Security Concerns",
+      "reason": "score 5: Duplicate of ongoing coverage regarding Nvidia chips and Chinese-linked firms."
+    },
+    {
+      "title": "Alice Huang Firms Raise $270 Million for AI Servers Amid Nvidia Controversy , ETTelecom",
+      "reason": "score 3: Duplicate of already published story 8e7a06808520 regarding Alice Huang-linked firms and AI servers in China."
+    },
+    {
+      "title": "Inflation is still hot , fueled in part by the AI boom",
+      "reason": "score 4: General macroeconomic commentary on inflation being fueled by the AI boom, lacks specific AI industry or technical news."
+    },
+    {
+      "title": "How important are Nvidia and Jensen Huang to the US economy ?",
+      "reason": "score 3: General retrospective commentary on Nvidia and Jensen Huang, rehashes recent news without new developments."
+    },
+    {
+      "title": "The Future of Innovation Is AI - Powered and Human - Led",
+      "reason": "not AI: Generic thought leadership commentary about AI and humans."
+    },
+    {
+      "title": "GSMA Innovation Forum Explores How AI Is Becoming Embedded Across Devices , Robots and Industry",
+      "reason": "score 4: General event recap on AI embedded in devices and robots at GSMA forum, lacks specific new product or research news."
+    },
+    {
+      "title": "Redesigning roles for AI ? Start with strategy , not the org chart",
+      "reason": "duplicate of ceef1cd956e3"
+    },
+    {
+      "title": "China access to Nvidia AI chips - Shafaqna English | International Shia News & Fatwas",
+      "reason": "duplicate of fb08c823339f"
+    },
+    {
+      "title": "Democrats probe Trump ahead of Nvidia CEO testimony before Congress",
+      "reason": "score 4: Political posturing and congressional probes concerning Nvidia leadership and Trump, too speculative for core news."
+    },
+    {
+      "title": "44 Nvidia trades put Trump financial interests under spotlight after CEO return",
+      "reason": "not AI: Focuses on political financial trades rather than AI developments."
+    },
+    {
+      "title": "AFP developing cloud system to secure data , integrate emerging tech like AI",
+      "reason": "score 3: General military cloud system upgrade mentioning emerging tech like AI."
+    },
+    {
+      "title": "CBS News investigation finds US - based firms with Chinese owners buying advanced Nvidia most advanced chips",
+      "reason": "duplicate of 8e7a06808520"
+    },
+    {
+      "title": "Dow Erases 1 , 100 - Point Plunge as AI Selloff Rattles Wall Street",
+      "reason": "duplicate of 858493e1f133"
+    },
+    {
+      "title": "AI is a national security risk that needs government regulation . | New University",
+      "reason": "score 2: Student opinion piece on AI national security risks and regulation."
+    },
+    {
+      "title": "Brands turn to AI micro dramas to engage consumers in China",
+      "reason": "score 3: Marketing trend piece about brands using AI micro dramas in China."
+    },
+    {
+      "title": "Common Sense Media warns parents against AI toys for young kids this holiday season",
+      "reason": "duplicate of 4001274b597c"
     },
     {
       "title": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
-      "reason": "could not verify yet; will retry next run"
+      "reason": "score 5: Duplicate of techmeme item covering OpenAI's merged Chat and Work tabs."
+    },
+    {
+      "title": "Flipkart CEO Ousted, PhonePe Revives IPO & More",
+      "reason": "not AI: Flipkart CEO departure and PhonePe IPO news is general e-commerce and fintech business news with no AI angle."
+    },
+    {
+      "title": "Vegapay Bags $10 Mn To Scale Credit Line On UPI Infrastructure",
+      "reason": "not AI: Fintech Series A funding round for UPI credit lines with no AI focus."
+    },
+    {
+      "title": "ElevenLabs in early talks for funding at $33 billion valuation",
+      "reason": "duplicate of f0daa9c96fe9"
+    },
+    {
+      "title": "Robots roam Singapore's urban AI testing ground",
+      "reason": "score 4: Local smart building and robotics deployment in Singapore is a minor operational update."
+    },
+    {
+      "title": "From selling drones to intelligence: Where will the next wave of value come from?",
+      "reason": "score 3: General retrospective and forward-looking op-ed on drone and software industry trends."
+    },
+    {
+      "title": "Flipkart CEO Kalyan Krishnamurthy to step down; Lakshmi Venu moves court over family dispute",
+      "reason": "not AI: Executive departure news for an e-commerce platform with no AI relevance."
+    },
+    {
+      "title": "US clears SpaceX plan for 1 million AI satellites",
+      "reason": "duplicate of 8e9b22777e77"
+    },
+    {
+      "title": "When AI becomes the consumer , who will brands advertise to ?",
+      "reason": "score 4: Opinion or speculative piece on AI agents as consumers, lacking hard news substance."
+    },
+    {
+      "title": "SpaceX gets FCC approval for 1 million satellites for AI data centres in space",
+      "reason": "score 4: Duplicate of previously published story about FCC authorizing SpaceX Starmind satellites."
+    },
+    {
+      "title": "Investigation: Nvidia sells its most advanced chips to at least two Chinese-owned California companies, which have leased or sold some of them to firms in Asia (Josh Boswell/CBS News)",
+      "reason": "duplicate of 9edbb62c9bcf"
+    },
+    {
+      "title": "Neuralink says it got FDA approval for the LINK Pivotal Study, a US clinical trial to evaluate the safety and effectiveness of its BCI system in ALS patients (Craig Trudell/Bloomberg)",
+      "reason": "score 5: Neuralink BCI clinical trial approval is adjacent to AI but primarily medical/neural tech."
     },
     {
       "title": "Sources: the DOJ didn't formally investigate Jensen Huang before his reinstatement; AG Todd Blanche cleared him based on probes into Super Micro and Megaspeed (Reuters)",
-      "reason": "could not verify yet; will retry next run"
+      "reason": "duplicate of 995fd2b8bd33"
     },
     {
       "title": "Sources: a16z is in talks to raise ~$20B across its next set of funds; its last set, announced in January at $15B+, later grew to $20B+ with three add-ons (Lucinda Shen/Axios)",
+      "reason": "score 6: a16z raising $20B across new funds is a major venture capital development, with significant implications for AI investment."
+    },
+    {
+      "title": "Beyond Logits: Coherent Hallucination Mitigation via Attention Contrastive Decoding",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "Agent-as-a-Verifier: From Scores to Evidence for General Verification",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "Data centre rush drives biggest rise in Australian business investment since mining boom",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "OpenAI taps Cravath litigator for court showdown with Musk over AI dominance",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "Nvidia China link : How US firms with Chinese owners are accessing advanced AI chips",
+      "reason": "variety: already 2 stories from indiatimes.com this run"
+    },
+    {
+      "title": "Letting Models Manage Their Own Context: Where We Stand",
+      "reason": "variety: already 2 stories from arxiv.org this run"
+    },
+    {
+      "title": "Korea to ban ads on food , drugs , cosmetics featuring AI - generated experts",
       "reason": "could not verify yet; will retry next run"
     }
   ],
   "written": [
     {
-      "id": "af0f0092a2fb",
-      "headline": "Pentagon officials discussed using Defense Production Act over Nvidia CEO role",
-      "category": "policy",
-      "summary": "Pete Hegseth and other Pentagon officials discussed using the Cold War-era Defense Production Act as leverage to pressure Nvidia's board. The law gives U.S. presidents extraordinary power to intervene in the economy.",
-      "url": "https://techmeme.com/261125/p39",
-      "sources": 3,
+      "id": "f4359170efb8",
+      "headline": "Crucible Bench evaluates LLM agents in chemistry research environments",
+      "category": "research",
+      "summary": "Researchers introduced Crucible Bench, an evaluation framework containing 1,078 tasks across 12 task families to test LLM agents in chemistry research. The best-performing model among 14 evaluated achieved an overall score of 0.545, with synthesis planning and closed-loop optimization identified as the hardest domains.",
+      "url": "https://arxiv.org/abs/2611.34254",
+      "sources": 1,
       "quotes": 0
     },
     {
-      "id": "f27e0de9d097",
-      "headline": "S&P considers Nvidia credit downgrade over governance risks",
-      "category": "industry",
-      "summary": "S&P Global Ratings is considering a one-notch credit downgrade for Nvidia from AA to AA- following concerns over management practices and heavy reliance on CEO Jensen Huang. The review was triggered by the ouster and subsequent reinstatement of Huang.",
-      "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks",
+      "id": "f2f90da31bee",
+      "headline": "IndiaAI regulation papers in final stages and releasing soon: MeitY",
+      "category": "policy",
+      "summary": "Ministry of Electronics and Information Technology Secretary S Krishnan announced that upcoming AI regulation papers are in their final stages. The announcement coincided with the launch of the indigenously developed Chariot-1 Foundation Models, which support English and 10 Indian languages.",
+      "url": "https://telecom.economictimes.indiatimes.com/news/policy/ai-regulation-papers-in-final-stages-to-be-released-shortly-meity-secretary-at-chariot-1-launch/136176370",
+      "sources": 2,
+      "quotes": 2
+    },
+    {
+      "id": "2b73c373643b",
+      "headline": "PROVE training method reduces long-horizon LLM agent collusion to 1.0%",
+      "category": "research",
+      "summary": "Researchers introduced PROVE, a multi-agent reinforcement learning method designed to prevent LLM agents from drifting into collusion during long verification tasks. When applied to Qwen3.6-27B, a LoRA adapter reduced the collusion rate on ten-episode tasks from 65.0% to 1.0% without harming task success.",
+      "url": "https://arxiv.org/abs/2611.34215",
+      "sources": 1,
+      "quotes": 0
+    },
+    {
+      "id": "065689811dba",
+      "headline": "Government finds no misuse of IndiaAI support in Sarvam Chinese model row",
+      "category": "policy",
+      "summary": "Ministry of Electronics and Information Technology Secretary S Krishnan stated that the government found no misuse of IndiaAI Mission support following scrutiny over startup Sarvam hosting Chinese-developed AI models on its Token Factory platform. Krishnan confirmed that the government will continue to support Sarvam as it works toward a trillion-parameter model.",
+      "url": "https://telecom.economictimes.indiatimes.com/news/policy/sarvam-did-not-misuse-indiaai-mission-support-over-chinese-model-row-s-krishnan/136176337",
+      "sources": 6,
+      "quotes": 1
+    },
+    {
+      "id": "7f000726c1b3",
+      "headline": "OpenAI begins rolling out merged ChatGPT Chat and Work tabs with shared usage meter",
+      "category": "models",
+      "summary": "OpenAI has started rolling out a unified Chat and Work experience with a shared usage meter to a small group of Pro subscribers. The company stated that while most users are not expected to face more frequent resets, heavy users may hit their limits sooner.",
+      "url": "https://techmeme.com/261125/p46",
       "sources": 4,
-      "quotes": 0
+      "quotes": 1
     },
     {
-      "id": "fb08c823339f",
-      "headline": "US chip curbs stall billions in data center loans tied to Chinese firms",
-      "category": "industry",
-      "summary": "New US chip export restrictions have halted billions of dollars in data center loans tied to Chinese firms including ByteDance, Alibaba, and Tencent. Lenders are delaying deals such as Bain Capital's Bridge Data Centres $6.6 billion loan and reassessing financing for projects in Malaysia and Singapore.",
-      "url": "https://techmeme.com/261125/p38",
-      "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "4001274b597c",
-      "headline": "New York governor signs five-year ban on AI chatbot toys",
-      "category": "policy",
-      "summary": "New York Governor Kathy Hochul signed a bill banning the manufacture, exchange, distribution, and sale of AI chatbot toys for five years. The law takes effect in February, making New York the second US state to enact a ban following California.",
-      "url": "https://techmeme.com/261125/p37",
-      "sources": 3,
-      "quotes": 0
-    },
-    {
-      "id": "f0daa9c96fe9",
-      "headline": "ElevenLabs in early talks for 2027 funding round at $33B target valuation",
-      "category": "industry",
-      "summary": "ElevenLabs is in early discussions for a funding round planned for the first quarter of 2027 at a $33 billion target valuation, up from $22 billion in September. The voice AI company's annual recurring revenue has reached $700 million.",
-      "url": "https://techmeme.com/261125/p30",
-      "sources": 3,
+      "id": "4e4e2bee3472",
+      "headline": "Apple removes MiniMax chatbot Talkie from App Store worldwide",
+      "category": "safety",
+      "summary": "Apple removed MiniMax's AI chatbot Talkie from the App Store worldwide following an investigation showing AI characters engaged in inappropriate interactions with minors. The app had nearly 11 million monthly active users across its website and app as of October.",
+      "url": "https://techmeme.com/261125/p44",
+      "sources": 4,
       "quotes": 0
     }
   ],
   "notes": [
-    "ignored made-up duplicate id 4001274b597c for 'Want to buy your kid an AI toy this Christmas? Not'",
-    "ignored made-up duplicate id 372ac8913322 for 'Dario Amodei rejects the idea of surrendering free'",
+    "ignored made-up duplicate id 5b8e2298ba82 for 'Nvidia AI Chips Reach Chinese - Linked Firms , Rai'",
+    "ignored made-up duplicate id 7f000726c1b3 for 'OpenAI says heavy ChatGPT users may hit limits soo'",
+    "not India desk: 'Data centre rush drives biggest rise in Australian'",
+    "not India desk: 'OpenAI taps Cravath litigator for court showdown w'",
+    "dropped non-quote (S Krishnan): Based on what Sarvam has told us, based on the experience th…",
     "GDELT unavailable: GDELT paused for this run after repeated rate-limiting",
-    "3 kept item(s) carried over to the next run"
+    "1 kept item(s) carried over to the next run"
   ],
   "mode": "full",
   "timings": {
-    "gather": 187.3,
-    "audit": 3.3,
-    "plan": 1.7,
-    "judge": 7.5,
-    "verify and write": 109.1,
-    "videos": 6.9,
-    "tagging": 2.2,
-    "explainers": 0.0,
-    "trackers": 6.1,
-    "claims": 2.1,
+    "gather": 146.2,
+    "audit": -0.0,
+    "plan": 83.6,
+    "judge": 18.6,
+    "verify and write": 66.4,
+    "videos": 3.9,
+    "tagging": 3.7,
+    "explainers": -0.0,
+    "trackers": 6.3,
+    "claims": 0.6,
     "model tracker": 0.1,
     "weekly": -0.0,
-    "builders": -0.0,
-    "top voices": 13.8,
-    "briefing": 3.5,
-    "self-review": 1.1,
-    "photos": 0.4,
-    "stock photos": 0.8,
+    "builders": 8.3,
+    "top voices": 0.0,
+    "briefing": 3.2,
+    "self-review": -0.0,
+    "photos": 0.8,
+    "stock photos": 0.9,
     "daily email": 0.0,
-    "alerts": 8.4
+    "alerts": 3.1
   },
-  "fetched": 3054,
-  "fresh": 29,
-  "audit": "coverage 100% of 4 significant stories; 0 missed, 0 added to this run",
+  "fetched": 3077,
+  "fresh": 92,
   "plan": {
-    "focus": "Chasing the fallout from Nvidia's governance crisis and export control roadblocks while tracking AI toy bans.",
+    "focus": "Chasing the policy fallout around Nvidia export controls and upcoming Indian AI regulations while tracking market volatility.",
     "priorities": [
-      "Sources: Pete Hegseth and other Pentagon officials discussed using the (Pentagon and Defense Production Act pressure on Nvidia board reveals high-stakes geopolitical intervention in corporate governance.)",
-      "S&P considers Nvidia credit downgrade over governance and ‘key man’ ri (S&P credit downgrade consideration adds financial weight to Jensen Huang's governance and key-man risks.)",
-      "Sources: US chip curbs stall billions in data center loans tied to Byt (US chip curbs stalling billions in data center loans shows tangible financial pain from export controls.)",
-      "NY Gov. Kathy Hochul signs a bill banning AI chatbot toys for five yea (New York banning AI chatbot toys marks a growing legislative wave protecting minors from unregulated devices.)"
+      "Sarvam AI Models Under Scrutiny : Government Finds No Misuse of IndiaA (Government scrutiny of Sarvam AI and IndiaAI Mission support is crucial for our India desk.)",
+      "India to Unveil Major AI Regulation Papers Soon : Insights from MeitY  (MeitY's upcoming major AI regulation papers signal major policy shifts in India.)",
+      "Nvidia AI Chips Reach Chinese - Linked Firms , Raising US Security Con (Ongoing revelations about Nvidia chips reaching Chinese-linked firms feed directly into our core geopolitical storylines.)",
+      "44 Nvidia trades put Trump financial interests under spotlight after C (Intersections of political trades and tech governance impact regulatory outlooks.)",
+      "Crucible: Evaluating LLM Agents in Executable Chemistry Research Envir (Crucible evaluation framework represents significant progress in rigorous agentic research.)"
     ],
     "thin_areas": [
-      "safety",
-      "business"
+      "india",
+      "policy"
     ],
-    "searches": [],
+    "searches": [
+      "India AI regulation papers MeitY: 2 new",
+      "Sarvam AI IndiaAI Mission scrutiny: 4 new"
+    ],
     "dig_deeper": [
-      "Sources: Pete Hegseth and other Pentagon officials discussed using the",
-      "S&P considers Nvidia credit downgrade over governance and ‘key man’ ri"
+      "Sarvam AI Models Under Scrutiny : Government Finds No Misuse of IndiaA",
+      "India to Unveil Major AI Regulation Papers Soon : Insights from MeitY "
     ]
   },
-  "judged": 29,
-  "kept": 9,
+  "judged": 80,
+  "kept": 13,
   "research": {
     "investigated": 5,
-    "confirmed": 5,
-    "tool_calls": 13
+    "confirmed": 4,
+    "tool_calls": 12
   },
   "research_log": [
-    "Sources: Pete Hegseth and other Pentagon officials discussed using the: confirmed (searched “Pete Hegseth Pentagon Defense Production Act Nvidia Jensen Huang Washington Post”; searched “\"Pete Hegseth\" \"Defense Production Act\" Nvidia Washington Post”; read msn.com)",
-    "S&P considers Nvidia credit downgrade over governance and ‘key man’ ri: confirmed (searched “SP Nvidia credit downgrade governance key man risks”; read businessinsider.com; read theinformation.com)",
-    "Sources: US chip curbs stall billions in data center loans tied to Byt: confirmed (searched “US chip curbs stall billions in data center loans ByteDance Alibaba Tencent Bridge Data Centres”; read yahoo.com)",
-    "NY Gov. Kathy Hochul signs a bill banning AI chatbot toys for five yea: confirmed (searched “Kathy Hochul AI chatbot toys ban bill New York”; read nbcnews.com; read theverge.com)",
-    "Sources: ElevenLabs is in early talks for a 2027 funding round at a $3: confirmed (searched “ElevenLabs 33B valuation 700M ARR Bloomberg”; read thenextweb.com)"
+    "Crucible: Evaluating LLM Agents in Executable Chemistry Research Envir: unconfirmed (searched “Crucible Evaluating LLM Agents in Executable Chemistry Research Environments”; searched “Crucible Bench LLM Agents Executable Chemistry”; searched “Crucible Evaluating LLM Agents in Executable Chemistry”)",
+    "India to Unveil Major AI Regulation Papers Soon : Insights from MeitY : confirmed (searched “India MeitY AI regulation papers S Krishnan Chariot 1”; read indiatimes.com)",
+    "Sarvam AI Models Under Scrutiny : Government Finds No Misuse of IndiaA: confirmed (searched “Sarvam AI IndiaAI Mission S Krishnan Chinese model”; read moneycontrol.com; read indianexpress.com)",
+    "OpenAI rolls out its merged ChatGPT Chat and Work tabs, with a shared : confirmed (searched “OpenAI ChatGPT Chat and Work tabs shared usage meter Pro users Jagmeet Singh TechCrunch”; read techcrunch.com)",
+    "Apple removes MiniMax's chatbot Talkie from the App Store worldwide ov: confirmed (searched “Apple removes MiniMax Talkie App Store sexual content TBIJ”; read 9to5mac.com)"
   ],
   "threads": [
-    "Nvidia reinstates Huang; reasons and apology: Pentagon officials discussed using Defense Production Act ov",
-    "Nvidia reinstates Huang; reasons and apology: S&P considers Nvidia credit downgrade over governance risks",
-    "New US chip export rules threaten Southeast Asia data center: US chip curbs stall billions in data center loans tied to Ch"
+    "Sarvam defends Chinese models, releases 105B: Government finds no misuse of IndiaAI support in Sarvam Chin",
+    "OpenAI GPT-6.2 Astra and Sol rollout: OpenAI begins rolling out merged ChatGPT Chat and Work tabs "
   ],
   "videos": {
-    "OpenAI": "ok (13 in feed, 1 new)",
+    "OpenAI": "ok (13 in feed, 0 new)",
     "Anthropic": "ok (13 in feed, 0 new)",
     "Google DeepMind": "ok (14 in feed, 1 new)",
-    "Google for Developers": "ok (11 in feed, 2 new)",
+    "Google for Developers": "ok (11 in feed, 1 new)",
     "AI at Meta": "ok (10 in feed, 0 new)",
     "Microsoft Research": "ok (12 in feed, 0 new)",
     "NVIDIA": "ok (6 in feed, 0 new)",
@@ -270,9 +480,9 @@
     "Two Minute Papers": "ok (15 in feed, 3 new)",
     "AI Explained": "ok (15 in feed, 2 new)",
     "Lex Fridman": "ok (14 in feed, 0 new)",
-    "Dwarkesh Patel": "ok (15 in feed, 1 new)",
+    "Dwarkesh Patel": "ok (15 in feed, 0 new)",
     "No Priors": "ok (3 in feed, 0 new)",
-    "Latent Space": "ok (15 in feed, 4 new)",
+    "Latent Space": "ok (15 in feed, 3 new)",
     "Training Data (Sequoia)": "ok (5 in feed, 1 new)",
     "a16z": "ok (15 in feed, 0 new)",
     "Big Technology Podcast": "ok (13 in feed, 0 new)",
@@ -281,31 +491,27 @@
     "Lenny's Podcast": "ok (4 in feed, 0 new)",
     "20VC": "ok (4 in feed, 0 new)"
   },
-  "videos_kept": "16 kept from 17 new",
-  "tagged": 5,
-  "trackers": "filed 4 stories; updated us-china, ai-regulation, ai-infrastructure, ai-money",
-  "claims": "249 tracked, 243 open, 0 updated this run",
-  "model_tracker": "81 models, 6 changes today",
-  "top_voices_sources": {
-    "tv-mollick": "ok (0)",
-    "tv-lambert": "ok (0)",
-    "tv-swyx": "ok (8)",
-    "tv-dwarkesh": "ok (1)",
-    "tv-raschka": "ok (0)",
-    "tv-karpathy": "ok (0)",
-    "tv-evans": "ok (0)",
-    "x-coverage": "ok (4 of 11 articles, bing)",
-    "hn": "ok (0)"
+  "videos_kept": "13 kept from 13 new",
+  "tagged": 6,
+  "trackers": "filed 6 stories; updated ai-regulation, india-ai, agent-safety",
+  "claims": "249 tracked, 243 open, 1 updated this run",
+  "model_tracker": "81 models, 8 changes today",
+  "builders_sources": {
+    "show-hn": "ok (9)",
+    "github-new": "ok (28)",
+    "hf-spaces": "ok (24)",
+    "product-hunt": "ok (13)",
+    "r-localllama": "failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day'\nFor more i",
+    "r-sideproject": "failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'\nF"
   },
-  "top_voices": "3 debates from 50 posts by 8 people; 3 portraits, 2 pictures",
+  "builders": "picked 5 from 57 candidates; 5 with pictures, 0 with videos",
   "briefing": "4 themes from 20 stories",
-  "india_briefing": "3 themes from 9 stories",
-  "self_review": "16 lines written to data/self_review.md",
-  "photos": "4 saved, 0 unavailable",
+  "india_briefing": "4 themes from 9 stories",
+  "photos": "5 saved, 0 unavailable",
   "stock photos": "1 added",
-  "alerts": "15 events sent: {\"subscribers\":5,\"sent\":0,\"queued\":35}",
-  "ai_requests_run": 42,
-  "ai_tokens_run": 112888,
-  "ai_requests_today": 43,
+  "alerts": "20 events sent: {\"subscribers\":5,\"sent\":0,\"queued\":36}",
+  "ai_requests_run": 43,
+  "ai_tokens_run": 130630,
+  "ai_requests_today": 86,
   "provider_log": []
 }
