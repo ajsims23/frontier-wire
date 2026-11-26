@@ -1,17 +1,85 @@
-## Frontier Wire breaking-news check — 2026-11-26T00:10:40+00:00
+## Frontier Wire newsroom run — 2026-11-26T00:51:07+00:00
 
-Fetched 2519 items · fresh 1 · judged 1 · kept 0 · **written 0**
-AI: 1 requests, 3,771 tokens this run · 1 requests today · providers: gemini, groq, nvidia, cerebras
-Photos: 0 saved, 0 unavailable
-Alerts: no events
-Trackers: filed 0 stories; no tracker changed
-Time: gather 10s, judge 3s
+Fetched 3054 items · fresh 29 · judged 29 · kept 9 · **written 5**
+AI: 42 requests, 112,888 tokens this run · 43 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Chasing the fallout from Nvidia's governance crisis and export control roadblocks while tracking AI toy bans.
+  Priorities: Sources: Pete Hegseth and other Pentagon officials discussed using the (Pentagon and Defense Production Act pressure on Nvidia board reveals high-stakes geopolitical intervention in corporate governance.); S&P considers Nvidia credit downgrade over governance and ‘key man’ ri (S&P credit downgrade consideration adds financial weight to Jensen Huang's governance and key-man risks.); Sources: US chip curbs stall billions in data center loans tied to Byt (US chip curbs stalling billions in data center loans shows tangible financial pain from export controls.); NY Gov. Kathy Hochul signs a bill banning AI chatbot toys for five yea (New York banning AI chatbot toys marks a growing legislative wave protecting minors from unregulated devices.)
+  Thin areas: safety, business
+  Dig deeper: Sources: Pete Hegseth and other Pentagon officials discussed using the; S&P considers Nvidia credit downgrade over governance and ‘key man’ ri
+Research agent: investigated 5 stories with 13 tool calls, confirmed 5
+Daily briefing: 4 themes from 20 stories
+Threads updated: Nvidia reinstates Huang; reasons and apology: Pentagon officials discussed using Defense Production Act ov; Nvidia reinstates Huang; reasons and apology: S&P considers Nvidia credit downgrade over governance risks; New US chip export rules threaten Southeast Asia data center: US chip curbs stall billions in data center loans tied to Ch
+Videos: 16 kept from 17 new · OpenAI ok (13 in feed, 1 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (11 in feed, 2 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (6 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 2 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 1 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 4 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (4 in feed, 0 new)
+Top Voices: 3 debates from 50 posts by 8 people; 3 portraits, 2 pictures
+Daily self-check: coverage 100% of 4 significant stories; 0 missed, 0 added to this run
+Photos: 4 saved, 0 unavailable
+Alerts: 15 events sent: {"subscribers":5,"sent":0,"queued":35}
+Claims: 249 tracked, 243 open, 0 updated this run
+Trackers: filed 4 stories; updated us-china, ai-regulation, ai-infrastructure, ai-money
+Model tracker: 81 models, 6 changes today
+Tagged 5 stories by sector, region and deal
+India briefing: 3 themes from 9 stories
+Self-review written (see the newsroom issue)
+Time: gather 187s, audit 3s, plan 2s, judge 8s, verify and write 109s, videos 7s, tagging 2s, trackers 6s, claims 2s, top voices 14s, briefing 4s, self-review 1s, alerts 8s
 
 ### New stories
-- none
+- **policy** — [Pentagon officials discussed using Defense Production Act over Nvidia CEO role](https://techmeme.com/261125/p39)  
+  Pete Hegseth and other Pentagon officials discussed using the Cold War-era Defense Production Act as leverage to pressure Nvidia's board. The law gives U.S. presidents extraordinary power to intervene in the economy.  
+  _3 source(s), 0 verified quote(s)_
+- **industry** — [S&P considers Nvidia credit downgrade over governance risks](https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks)  
+  S&P Global Ratings is considering a one-notch credit downgrade for Nvidia from AA to AA- following concerns over management practices and heavy reliance on CEO Jensen Huang. The review was triggered by the ouster and subsequent reinstatement of Huang.  
+  _4 source(s), 0 verified quote(s)_
+- **industry** — [US chip curbs stall billions in data center loans tied to Chinese firms](https://techmeme.com/261125/p38)  
+  New US chip export restrictions have halted billions of dollars in data center loans tied to Chinese firms including ByteDance, Alibaba, and Tencent. Lenders are delaying deals such as Bain Capital's Bridge Data Centres $6.6 billion loan and reassessing financing for projects in Malaysia and Singapore.  
+  _3 source(s), 0 verified quote(s)_
+- **policy** — [New York governor signs five-year ban on AI chatbot toys](https://techmeme.com/261125/p37)  
+  New York Governor Kathy Hochul signed a bill banning the manufacture, exchange, distribution, and sale of AI chatbot toys for five years. The law takes effect in February, making New York the second US state to enact a ban following California.  
+  _3 source(s), 0 verified quote(s)_
+- **industry** — [ElevenLabs in early talks for 2027 funding round at $33B target valuation](https://techmeme.com/261125/p30)  
+  ElevenLabs is in early discussions for a funding round planned for the first quarter of 2027 at a $33 billion target valuation, up from $22 billion in September. The voice AI company's annual recurring revenue has reached $700 million.  
+  _3 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Where scientists draw the line on AI agents — not AI: The Hugging Face blog post title is too vague and lacks substantive AI research or model details for our readers.
+- Vance says Jensen Huang wont need a pardon as scrutiny of Nvidia scandal builds in Washington — score 4: Rehash of the ongoing Nvidia political scandal without significant new reporting or details.
+- Top open problems in mathematics ranked by LLM-assessed importance — score 3: General math ranking using LLMs; low AI-specific substance.
+- Show HN: Mason – A lightweight Postgres read-replica, built on columnar storage — not AI: PostgreSQL read-replica project with no AI relevance.
+- In C++, = default and {} are not the same constructor — not AI: C++ constructor language mechanics with no AI angle.
+- The polynomial Hirsch conjecture is false [pdf] — not AI: Pure mathematics paper on the polynomial Hirsch conjecture with no AI angle.
+- Much shorter version of GRH Lean verification from Anthropic — duplicate of 1479a2d5f115
+- Jensen Huang broke Nvidia’s code of conduct, and his employees may not forget it — duplicate of 51b9331a9f93
+- Want to buy your kid an AI toy this Christmas? Not in New York — score 3: Duplicate of NY governor signing a ban on AI chatbot toys.
+- Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future — score 4: A rejected patent for personalized AI video feeds is speculative product exploration rather than news.
+- IT Secy Defends Sarvam’s Token Factory Over Chinese LLM Debate — duplicate of b35f4514a643
+- Delhi Police Arrests Four Suspects In Crypto Fraud Case — not AI: General crypto fraud arrest with no AI connection.
+- FCC says SpaceX can deploy 1 million satellites for data centers in space. Scientists are skeptical — duplicate of 8e9b22777e77
+- Quoting Scott Aaronson — score 4: Brief quote snippet without substantive analysis or commentary on an AI development.
+- A US court dismisses Amazon's challenge to a 2025 CPSC order requiring it to recall 400K+ hazardous products sold by third parties via Fulfillment by Amazon (Emma Roth/The Verge) — not AI: Amazon product recall case involving third-party fulfillment has no AI angle.
+- A coalition of 42 AGs opposes Character.AI's plan to auction off data from 21M+ US accounts, 2.1M+ registered to minors, saying the sale lacks user protections (Sarah Perez/TechCrunch) — duplicate of 92419877312e
+- Hands-on with the "Install as app" feature for Claude artifacts: they are HTML apps wrapped inside an Electron shim, which is managed via the main Claude app (Federico Viticci/MacStories) — duplicate of cf5e5b069b85
+- Nvidia agrees to pay $290M to settle a 2018 class action lawsuit alleging it misled shareholders about how much crypto mining fueled its GPU sales (Mike Scarcella/Reuters) — not AI: Historical 2018 shareholder class action settlement regarding crypto mining is off-topic for AI.
+- WhatsApp starts letting users schedule messages from 10 minutes to 14 days in advance, in group and individual chats; messages are sent even if the phone is off (Ivan Mehta/TechCrunch) — not AI: Standard consumer messaging app feature update with no AI angle.
+- 1Password says an attacker used an employee's GitHub account to push malicious code to its backend, taking some users' names and emails; vaults weren't accessed (Zack Whittaker/TechCrunch) — not AI: General cybersecurity incident at a password manager; not an AI security story.
+- Dario Amodei rejects the idea of surrendering free will to AI and accuses rival AI execs of "vibes-based" positioning, rebutting a report on AI leaders' views (Madison Mills/Axios) — score 5: Duplicate of an already published story covering Dario Amodei's remarks on AI control.
+- Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’ — variety: already 2 stories from techcrunch.com this run
+- OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work — could not verify yet; will retry next run
+- Sources: the DOJ didn't formally investigate Jensen Huang before his reinstatement; AG Todd Blanche cleared him based on probes into Super Micro and Megaspeed (Reuters) — could not verify yet; will retry next run
+- Sources: a16z is in talks to raise ~$20B across its next set of funds; its last set, announced in January at $15B+, later grew to $20B+ with three add-ons (Lucinda Shen/Axios) — could not verify yet; will retry next run
 
 </details>
+
+<details><summary>Research agent's work</summary>
+
+- Sources: Pete Hegseth and other Pentagon officials discussed using the: confirmed (searched “Pete Hegseth Pentagon Defense Production Act Nvidia Jensen Huang Washington Post”; searched “"Pete Hegseth" "Defense Production Act" Nvidia Washington Post”; read msn.com)
+- S&P considers Nvidia credit downgrade over governance and ‘key man’ ri: confirmed (searched “SP Nvidia credit downgrade governance key man risks”; read businessinsider.com; read theinformation.com)
+- Sources: US chip curbs stall billions in data center loans tied to Byt: confirmed (searched “US chip curbs stall billions in data center loans ByteDance Alibaba Tencent Bridge Data Centres”; read yahoo.com)
+- NY Gov. Kathy Hochul signs a bill banning AI chatbot toys for five yea: confirmed (searched “Kathy Hochul AI chatbot toys ban bill New York”; read nbcnews.com; read theverge.com)
+- Sources: ElevenLabs is in early talks for a 2027 funding round at a $3: confirmed (searched “ElevenLabs 33B valuation 700M ARR Bloomberg”; read thenextweb.com)
+
+</details>
+
+### Notes
+- ignored made-up duplicate id 4001274b597c for 'Want to buy your kid an AI toy this Christmas? Not'
+- ignored made-up duplicate id 372ac8913322 for 'Dario Amodei rejects the idea of surrendering free'
+- GDELT unavailable: GDELT paused for this run after repeated rate-limiting
+- 3 kept item(s) carried over to the next run
