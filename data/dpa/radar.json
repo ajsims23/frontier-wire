@@ -2027,6 +2027,29 @@
    "rationale": "Exposes risks around foreign AI APIs accessing confidential data. Reinforces DPA governance policies restricting unvetted cloud models and protecting client data against unauthorized retention and leakage.",
    "updated": "2026-11-26",
    "model": "gemini/gemini-3.5-flash-lite"
+  },
+  "patram-1-5": {
+   "key": "patram-1-5",
+   "name": "Patram 1.5",
+   "first_seen": "2026-11-26",
+   "history": [
+    {
+     "date": "2026-11-26",
+     "from": "",
+     "to": "assess",
+     "why": "Open-weight vision-language model with abstention capabilities could improve multi-lingual document extraction and PDF parsing workflows for financial-services clients. Needs evaluation on DPA-style tasks."
+    }
+   ],
+   "evidence": [
+    "a9e589eb2ddb"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "doc_extraction",
+   "rationale": "Open-weight vision-language model with abstention capabilities could improve multi-lingual document extraction and PDF parsing workflows for financial-services clients. Needs evaluation on DPA-style tasks.",
+   "updated": "2026-11-26",
+   "model": "gemini/gemini-3.5-flash-lite"
   }
  },
  "considered": [
@@ -2110,6 +2133,7 @@
   "a8d5fa7d24b3",
   "a8d86fb81b42",
   "a8fc84dcded8",
+  "a9e589eb2ddb",
   "ae8cfecfa51e",
   "afe5d96a9d46",
   "b00f82b6db94",
@@ -2142,7 +2166,7 @@
   "fa0e89bac09a",
   "fa5252ed6842"
  ],
- "updated_at": "2026-11-26T08:20:50+00:00",
+ "updated_at": "2026-11-26T11:21:01+00:00",
  "takeaways": {
   "written_at": "2026-11-26T08:20:50+00:00",
   "sig": "claude-fable-5-2:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|grok-build:hold|mai-code-2:trial|microsoft-agent-framework:hold|minimax:hold|shellbench-benchmark:assess|tool-retrieval:trial",
