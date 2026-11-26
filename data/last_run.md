@@ -1,130 +1,105 @@
-## Frontier Wire newsroom run — 2026-11-26T06:51:02+00:00
+## Frontier Wire newsroom run — 2026-11-26T09:50:59+00:00
 
-Fetched 3031 items · fresh 96 · judged 80 · kept 5 · **written 4**
-AI: 41 requests, 127,495 tokens this run · 128 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Chasing semiconductor export controls, security incidents involving Chinese AI models, and market fallout for our builder and investor audience.
-  Priorities: Nvidia halts chip shipments to Southeast Asia: FT report (Nvidia halting chip shipments to Southeast Asia marks a major escalation in US export controls.); Data from Chinese AI firm MiniMax accessed by unidentified parties, re (Security researcher flags unauthorized access to Chinese AI firm MiniMax data, compounding recent app store removals.); Microsoft says state-backed hacking groups in China and North Korea, i (Microsoft reports state-backed hackers in China and North Korea incorporating AI pentesting tools.); Should AI ever rule humans ? Anthropic CEO Dario Amodei calls the idea (Anthropic CEO Dario Amodei publicly critiques handing political power to machines amid policy debates.); Ellerston Capital shorting Nvidia sees Sydney - based fund profit from (Australian fund profits by shorting Nvidia during leadership and market turbulence.)
-  Thin areas: india, safety
-  Searches: MiniMax data breach security researcher: 1 new
-  Dig deeper: Data from Chinese AI firm MiniMax accessed by unidentified parties, re; Nvidia halts chip shipments to Southeast Asia: FT report
-Research agent: investigated 5 stories with 17 tool calls, confirmed 2
+Fetched 3036 items · fresh 34 · judged 40 · kept 14 · **written 5**
+AI: 41 requests, 118,313 tokens this run · 169 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Chasing memory shortages and security fallout while tracking crucial AI shifts across policy and markets.
+  Priorities: Sources: leading AI labs are sitting on major, unreleased algorithmic  (Scott Aaronson report on unreleased algorithmic breakthroughs threatening cryptosystems is a massive security and models story.); Dragos says unidentified parties accessed confidential data submitted  (Continued fallout from MiniMax confidential data access issues following app store bans.); Memory chip shortages prompt companies worldwide to set up procurement (Global memory chip shortages and 10x price hikes threaten hardware and data center expansion.); Sources: Nvidia tells its manufacturing partners to halt AI server shi (Nvidia halting server shipments to SE Asian countries over US export controls expands major semiconductor storyline.); BharatGen Launches Patram 1.5, a 7B Vision-Language Model for Document (BharatGen launches Patram 1.5 7B VLM for document processing, a notable model release in India.)
+  Thin areas: research, india
+  Searches: memory chip shortages AI hardware: 2 new; MiniMax confidential data breach Dragos: 3 new; BharatGen Patram 1.5 VLM India: 2 new
+  Dig deeper: Sources: leading AI labs are sitting on major, unreleased algorithmic ; Dragos says unidentified parties accessed confidential data submitted 
+Research agent: investigated 5 stories with 15 tool calls, confirmed 5
 Daily briefing: 4 themes from 20 stories
-Threads updated: New US chip export rules threaten Southeast Asia data center: Nvidia stops shipping AI servers to four Southeast Asian cou; Microsoft Copilot strategy and platform updates: China and North Korean state-backed hackers add AI tool Arte; Anthropic valued at over $1 trillion: Anthropic CEO Dario Amodei says handing political power to A
-Videos: 13 kept from 13 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (11 in feed, 1 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (6 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 2 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 3 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (4 in feed, 0 new)
+Threads updated: Memory chip shortages and AI spending: Memory chip shortages spark global procurement war rooms and; OpenAI GPT-6.2 Astra and Sol rollout: OpenAI fixes billing error, usage limits hit 40% faster on A
+Videos: 12 kept from 13 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 1 new), Google for Developers ok (11 in feed, 1 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (6 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 2 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 3 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (4 in feed, 0 new)
 Photos: 4 saved, 0 unavailable
-Alerts: 20 events sent: {"subscribers":5,"sent":0,"queued":25}
+Alerts: 26 events sent: {"subscribers":5,"sent":0,"queued":31}
 Claims: 249 tracked, 243 open, 0 updated this run
-Trackers: filed 4 stories; updated us-china, agent-safety, ai-infrastructure
-Model tracker: 81 models, 10 changes today
-Tagged 4 stories by sector, region and deal
-Time: gather 115s, plan 2s, judge 19s, verify and write 266s, videos 32s, tagging 3s, trackers 82s, claims 2s, briefing 9s, photos 2s, alerts 5s
+Trackers: filed 5 stories; updated frontier-race, india-ai, ai-infrastructure
+Model tracker: 81 models, 14 changes today
+Tagged 5 stories by sector, region and deal
+India briefing: 3 themes from 8 stories
+Time: gather 111s, plan 2s, judge 115s, verify and write 357s, videos 292s, tagging 14s, trackers 22s, claims 2s, briefing 3s, photos 1s, alerts 3s
 
 ### New stories
-- **industry** — [Nvidia stops shipping AI servers to four Southeast Asian countries](https://economictimes.indiatimes.com/tech/artificial-intelligence/nvidia-halts-chip-shipments-to-southeast-asia-ft-reports/articleshow/136180352.cms)  
-  Nvidia instructed manufacturing partners Dell and Supermicro to halt shipments of AI servers to Malaysia, Singapore, Thailand and Indonesia after new U.S. export controls requiring licences for advanced chips took effect.  
+- **research** — [AI labs may hold unreleased breakthroughs that could break current cryptosystems](https://techmeme.com/261126/p8)  
+  Computer scientist Scott Aaronson said leading AI labs likely possess major, unreleased algorithmic breakthroughs that could break deployed cryptosystems, though the exact nature of the breakthroughs is unknown.  
+  _8 source(s), 2 verified quote(s)_
+- **industry** — [Memory chip shortages spark global procurement war rooms and 10x price hikes](https://techmeme.com/261126/p5)  
+  Companies worldwide have created procurement war rooms as a global memory chip shortage pushes some chip prices up tenfold in a year, driving higher electronics prices.  
+  _2 source(s), 0 verified quote(s)_
+- **models** — [OpenAI fixes billing error, usage limits hit 40% faster on Astra, 25% faster on Sol](https://twitter.com/thsottiaux/status/2125784147889393806)  
+  OpenAI corrected a launch‑day billing mistake that had under‑discounted GPT‑6.2 Astra and Sol usage, causing users to reach their plan limits 40% faster on Astra and 25% faster on Sol, and added a one‑time banked reset for all plans.  
+  _2 source(s), 1 verified quote(s)_
+- **industry** — [NVIDIA B300 AI chip orders face up to 40‑week wait; RTX 60 GPU may slip past 2027](https://tweaktown.com/news/114896/nvidia-b300-ai-chip-orders-face-up-to-a-40-week-wait-while-rtx-60-gpu-production-could-slip-past-2027/index.html)  
+  New orders for NVIDIA’s B300 AI chips now have lead times of 26 to 40 weeks, while GB300 orders wait 14 to 26 weeks, according to Taiwanese ODMs. Production of the consumer‑focused RTX 60 series, originally slated for late 2027, could be delayed further as memory shortages and a shift toward data‑center chips tighten supply.  
   _4 source(s), 0 verified quote(s)_
-- **safety** — [China and North Korean state-backed hackers add AI tool Artex to their arsenals](https://techmeme.com/261126/p3)  
-  Microsoft reported that Chinese groups Crystal Typhoon and Salt Typhoon, as well as North Korean actors, have integrated the AI‑powered penetration testing platform Artex into their attack workflows.  
+- **models** — [BharatGen launches Patram 1.5, a 7B vision-language model for documents](https://analyticsindiamag.com/ai-news/bharatgen-launches-patram-15-a-7b-vision-language-model-for-document-processing)  
+  BharatGen has launched Patram 1.5, a 7.8-billion-parameter open-weight vision-language model designed to process complex, multilingual, and poor-quality documents as images. The model features prompt-controlled OCR and abstention capabilities, and is available on Hugging Face and the BharatGen Playground.  
   _4 source(s), 0 verified quote(s)_
-- **voices** — [Anthropic CEO Dario Amodei says handing political power to AI is absurd](https://educationtimes.com/learning/should-ai-ever-rule-humans-anthropic-ceo-dario-amodei-calls-the-idea-of-handing-political-power-to-machines-absurd-and-a-terrible-idea/articleshow/136179680.cms)  
-  On Nov. 25, 2026 Dario Amodei posted on X to reject claims that he wants humans to surrender free will to AI, calling the idea absurd. He emphasized that AI should be governed through democratic processes, not given societal control.  
-  _2 source(s), 2 verified quote(s)_
-- **safety** — [Confidential data sent to Chinese AI startup MiniMax accessed by unknown parties](https://livemint.com/technology/data-from-chinese-ai-firm-minimax-accessed-by-unidentified-parties-researcher-says-11795673767961.html)  
-  Confidential data submitted to Chinese AI startup MiniMax was accessed by unidentified parties, even after users asked that the data not be stored. The exposure was discovered by cybersecurity researcher HD Moore of Dragos, who traced private links to devices in Beijing, Shanghai and unusual activity from Russia’s Moscow region.  
-  _3 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Spectrum Adaptation of AI-Native Autoencoder Communications with Transfer Learning — score 3: Incremental arXiv paper on physical-layer communications via autoencoders.
-- Tokenisation is not in APX — score 3: Theoretical complexity paper on tokenisation algorithms.
-- Can image generation help visual reasoning? An empirical study — score 4: Empirical research paper on whether image generation helps visual reasoning in multimodal models.
-- Attack Policy Selection can Mislead Monitor Evaluators — score 5: AI safety research paper examining attack policy selection and monitor evaluator false negatives.
-- A gene informed benchmark for BioScoring of pathology foundation models — score 4: Pathology foundation model benchmark paper introducing BioScore.
-- Diverse Alternative Reasoning Traces for Hard Math Problems — score 4: Math reasoning post-training paper proposing diverse alternative reasoning traces.
-- Mixture-of-Loops Transformer — score 5: Transformer architecture paper introducing the Mixture-of-Loops Transformer.
-- $μ$-Bench: Benchmarking Multi-User Task Completion in Shared Interaction Voice Agents — score 4: Incremental paper on multi-user voice agent benchmarking; does not meet the high threshold for daily arXiv highlights.
-- Enhancing Maritime Domain Awareness using Latent Space Representations — score 3: Specialized Earth Observation embedding application paper; not a major frontier AI advance.
-- What a Drop Reveals: Sim-to-Real Material Estimation for Deformable Objects from Video — score 3: Niche computer vision and physics paper on deformable objects; incremental research.
-- Interpretable and Accurate Hybrid Decision Trees with Selective Case-Based Splits — score 2: Standard machine learning decision tree research paper; not frontier AI news.
-- Stranger Things: When Objects Appear Without Their Typical Neighbors — score 3: Incremental computer vision object recognition paper; low novelty for frontier readers.
-- How Much Do Coding Agents Over-Edit, and Why? An Empirical Study of Unneeded Edits in Repository-Level Agent Patches — score 5: Empirical study on coding agent over-editing; interesting to builders but standard arXiv paper category.
-- Shape-Aware Three-Way Merge for RDF Knowledge Graphs: The schema defines the conflict: an implementation and evaluation — score 2: Niche knowledge graph merging research; not core frontier AI focus.
-- A Survey of Security, Privacy, and Ethics of Large Language Models in Telecom — score 3: Survey paper on LLMs in telecom; standard academic survey lacking landmark breakthrough.
-- RePace: Reasoning about Demonstration Speedup for Faster Vision-Language-Action Policies — score 4: Robotics and VLA policy speedup paper; incremental research.
-- Focus Only on What's Important: Training-Free Focus Maps for Frozen Vision Transformers in Long-Video Object Segmentation — score 3: Video object segmentation optimization paper; incremental computer vision work.
-- BOP-Refer: Benchmark for Monocular 3D and 2D Object Grounding — score 3: Routine academic paper on 3D/2D object grounding benchmark.
-- Model Weights, Airlocks and Sandboxes: A Call for Technical Validation of Re-identification Tests under the EDPB Anonymisation Guidelines — score 3: Niche paper on technical validation of EDPB anonymisation guidelines, not frontier AI news.
-- From Prediction to Decision: Decision-Focused Fine-Tuning of Autoregressive Tabular Transformers for Cost-Sensitive Financial Events — score 3: Academic paper on tabular event streams and financial fraud prediction.
-- DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents — score 4: Standard arXiv paper introducing a benchmark for deep research agents.
-- Put the World Back: Timestamps Matter in Time Series Reasoning — score 3: Academic paper on time series reasoning in LLMs.
-- Probing Visual Idiosyncrasies in Text-to-Image Models — score 3: Academic paper analyzing visual idiosyncrasies in text-to-image models.
-- Knowledge-Base Gradient Descent: Self-Structuring Learning through Question Answering — score 3: Academic paper on self-structuring learning for knowledge bases.
-- Provably Efficient Offline Discounted Reinforcement Learning under Recursive Entropic Risk — score 2: Theoretical reinforcement learning paper.
-- Proverbs As A Window On Collective Prescriptions — score 3: Computational analysis of proverbs using language models, not a core frontier advance.
-- Repairing the Trustworthiness of Distilled Language Models — score 4: Academic paper on repairing trustworthiness regressions in distilled language models.
-- Not all world models can doubt: how training objective and architecture shape epistemic uncertainty in JEPA and RSSM world models — not AI: arXiv paper on world models; not a landmark breakthrough meeting the high bar for daily papers.
-- Gradient TD($λ$) for Non-Linear Function Approximation — not AI: Theoretical reinforcement learning paper; routine academic contribution.
-- Routeability Before Routing: Routeability Audit Protocol (RAP) and RouteabilityBench for Audited LLM Model Selection — not AI: arXiv paper on LLM routing benchmarks; routine research.
-- The Linguistic Knowledge Benchmark: Do Language Models Know the Foundations of Early-Grade Literacy? — not AI: arXiv paper on early-grade literacy linguistics benchmarks; not a core frontier AI advance.
-- LoopTitan: What Does Parameter Revisit Buy a Mixture-of-Experts? — not AI: arXiv paper on looped MoE architectures; incremental research.
-- VulnSafe: Measuring Vulnerability-Aware Relational Safety in Large Language Models — not AI: arXiv paper on vulnerability-aware safety benchmarks; routine research.
-- Deep Reinforcement Learning for Multi-UAV Data Harvesting Under Variable Team Sizes and Agent Loss — not AI: arXiv paper on multi-UAV data harvesting using reinforcement learning; routine robotics/RL application.
-- Transferring Architecture as an Optimization Prior — not AI: arXiv paper on initialization and optimization geometry; routine research.
-- Solve Vision with Code: Coding Agents Are Stronger Visual Reasoners Than Video Models — not AI: arXiv paper exploring coding agents for visual reasoning; interesting but does not clear the high bar for daily papers.
-- HOG-WAM: Improving Visual Robustness through Future Gradient Prediction — not AI: arXiv paper on visual robustness in world-action models; incremental research.
-- Barron Smoothness for Layers in Deep Neural Networks — not AI: Standard theoretical deep learning paper, not a landmark breakthrough.
-- Guidance as Variance Matching — score 4: Theoretical paper on diffusion model guidance mechanics; incremental research.
-- Split-RL: Local Conflict Resolution in Reinforcement Learning — score 3: Reinforcement learning policy paper, standard arXiv submission.
-- AIRIS: Benchmarking Social Embodied Intelligence in Egocentric Streaming Videos — score 4: Academic benchmark paper for social embodied intelligence; routine pre-print.
-- Improving and Expanding Video Editing Capabilities Without Videos — score 4: Video editing research paper, incremental technique.
-- Sage-Med: Scaling Medical Multimodal Intelligence — score 4: Medical multimodal LLM scaling paper; modest upvotes, routine arXiv drop.
-- VibeVideoAgent: Closing the Perceptual Loop for Code-Driven Video Generation — score 4: Code-driven video generation agent paper; incremental research.
-- Asian shares rebound led by AI stocks after Wall Street pares sharp losses – Winnipeg Free Press — duplicate of 858493e1f133
-- US stocks slide again as AI investment worries persist — duplicate of 858493e1f133
-- IITs to add 6 , 000 seats in robotics and space technology from 2027 : New courses , degree programmes and who can apply — not AI: IITs adding seats in robotics and space technology; general education news with no specific AI focus.
-- Asia has less to fear from the AI correction than you might think — duplicate of 858493e1f133
-- Ellerston Capital shorting Nvidia sees Sydney - based fund profit from chipmaker leadership crisis and market rout — score 4: Short-term hedge fund positioning and stock market commentary around Nvidia's leadership drama.
-- Necessities join gifts in Black Friday shopping carts as AI and higher costs steer spending — not AI: Black Friday shopping trends mentioning AI in passing as part of consumer habits.
-- Kenya poised to harness mobile ‑ money data for homegrown AI growth — score 4: Opinion piece on Kenya potentially using mobile money data for AI growth; speculative commentary rather than news.
-- India Wants Its Own Jet Engines, Green Aero is Taking a Shot — score 4: Green Aero raising $14 million for indigenous engines and autonomous aircraft; defense manufacturing and autonomous systems rather than core AI.
-- SpaceX Gets Nod to Deploy 1 Mn AI Data Centre Satellites — duplicate of 8e9b22777e77
-- WhatsApp Rolls Out Message Scheduling Up To 14 Days In Advance — not AI: Standard messaging app feature update (message scheduling) with no AI angle.
-- Green Aero Raises $14 Mn To Build Jet Engines, Combat Drones — score 4: Deeptech startup funding for jet engines and combat drones with only peripheral defense automation relevance.
-- Views: Can selling personal data amount to a breach under India’s data protection law? — not AI: General commentary on India's data protection law without a specific AI angle.
-- Indian authorities sent 9,147 requests to Amazon, excluding AWS, in H1 2026, down 7.1% — not AI: Government data requests to Amazon and Apple with no AI angle.
-- Samsung brings Galaxy Watch 9's health features to Galaxy Watch 8: Check all new One UI 9 additions — not AI: Samsung smartwatch software update; consumer electronics news with no AI relevance.
-- Apple to open seventh India store in Hyderabad on December 10: What customers can expect — not AI: Apple opening a retail store in Hyderabad is standard retail news without a specific AI angle.
-- Nothing Ear (note) design revealed ahead of 8 December launch: AI recording, transcription and TALK buttons confirmed — score 4: Consumer hardware launch with minor AI recording features, too incremental for frontier wire.
+- AI - driven volatility shakes Wall Street , and 401 ( k ) savers may feel the swings — score 3: Stock market volatility commentary for 401(k) savers with vague AI mentions is not core AI news.
+- US clears SpaceX plan for 1 million AI satellites — duplicate of 8e9b22777e77
+- Robots roam Singapore urban AI testing ground — score 4: Robotics testing in Singapore is adjacent but too brief and light on substantive AI details.
+- For China , Jensen Huang Return to Nvidia Is a Mixed Blessing — score 4: General commentary on Jensen Huang's return to Nvidia from a Chinese perspective is a routine rehash.
+- Rapid Nutrition Plc : Rapid Nutrition Launches SystemLS AI App , Adding Premium Subscriptions and Accelerating International Reach — not AI: Nutritional supplement app launch with minor AI branding is not core AI news.
+- AI News – Simmons & Simmons first law firm to meet global AI industry standard — score 3: Law firm internal AI compliance standard is a minor professional services update.
+- Bare Metal Qwen — score 3: Hacker News project link for running Qwen models bare metal; minor technical post.
+- Minipg: PostgreSQL as a Single Executable — not AI: PostgreSQL as a single executable; no AI angle.
+- Anthropic CEO Accuses Rivals Of Using ‘Human Control’ Slogans Without Tackling AI Risks — score 5: Anthropic CEO’s commentary on rivals’ slogans is opinion‑based and does not constitute a major news development.
+- Finnable Nets ₹405 Cr To Scale Digital Lending Business — not AI: Financing round for a digital‑lending startup has no AI component.
+- Exclusive: Electronics Manufacturing Startup Elecbits To Raise Up To $15 Mn From Xponentia Capital — not AI: Electronics manufacturing startup raise unrelated to AI.
+- SC Orders Separate Warning Labels For High Fat, Sugar, And Salt In Packaged Foods — not AI: Supreme Court food‑labeling order is unrelated to AI.
+- ONDC readies model to take on quick commerce firms, but is anybody using ONDC? — not AI: ONDC delivery model story; not AI‑focused.
+- Persistent Systems flags possible employee data breach: What remains unanswered? — not AI: Data‑breach notice from Persistent Systems is not AI‑focused.
+- Vivo X500 series launched in India with 200MP ZEISS camera, 7,800mAh battery: Check price and specifications — not AI: Phone launch story; no AI component.
+- Want to turn Apple's iPhone Duo into a mini laptop? New keyboard case adds trackpad and MagSafe support — not AI: Keyboard case product announcement; no AI relevance.
+- Zoho–LinkedIn report: AI is helping Indian SMBs grow, but skills lag behind — score 5: Report on AI helping Indian SMBs; interesting but not breaking news, modest impact.
+- GIVA raises Rs 90 Cr from alternative credit platform BlackSoil — not AI: Funding round for jewellery retailer GIVA has no AI relevance.
+- Dragos says unidentified parties accessed confidential data submitted to MiniMax, even after users requested that the company not store or retain their data (Reuters) — duplicate of 4dde58438eb2
+- Sources: Nvidia tells its manufacturing partners to halt AI server shipments to Malaysia, Singapore, Thailand, and Indonesia, as the US steps up export controls (Financial Times) — duplicate of 5d94a8a52956
+- Sensor Tower: Shein's app averaged ~6M MAUs in India in October, flat from January and below market leader Myntra's 100M; Reliance runs Shein's India operations (Bloomberg) — not AI: Sensor Tower report on Shein's MAUs in India; general retail and e-commerce news with no AI relevance.
+- TThe AI memory chip shortage is hitting Amazfit wearables — score 4: The ongoing AI memory chip shortage impacts consumer wearable production at Amazfit, but the direct impact is consumer hardware rather than core AI developments.
+- MiniMax data exposure warning: Researcher flags risks to global AI users — duplicate of 4dde58438eb2
+- Chinese AI firm MiniMax faces data security concerns — duplicate of 4dde58438eb2
+- Q&A with Signal's Moxie Marlinspike on AI and cryptography, his privacy-focused AI chat service Confer, surveilling AI models rather than users, and more (Tyler Cowen/Conversations with Tyler) — could not verify yet; will retry next run
+- Analysis: the S&P 500 software and semiconductor subindices are both slightly down YTD, with software outperforming semiconductors as the AI narrative shifts (Emily Herbert/Financial Times) — could not verify yet; will retry next run
+- Letter: Leopold Aschenbrenner told investors Situational Awareness lost 65% after fees in Q3; the fund is up 88.5% after fees for the year through September (Wall Street Journal) — could not verify yet; will retry next run
+- Exclusive-US chip curbs, distillation crackdown threaten Chinese AI model development, sources say — could not verify yet; will retry next run
+- Pine Labs Adds AI Agents To Merchant App For Sales Insights, Ad Campaigns — could not verify yet after a second try; dropped
 
 </details>
 
 <details><summary>Research agent's work</summary>
 
-- Nvidia halts chip shipments to Southeast Asia: FT report: confirmed (searched “Nvidia halts chip shipments to Southeast Asia FT”; read businesstimes.com.sg)
-- Microsoft says state-backed hacking groups in China and North Korea, i: confirmed (searched “Microsoft ARTEX AI penetration testing tool state-backed hacking groups China North Korea”; read therecord.media; searched “Microsoft report ARTEX AI penetration testing tool China North Korea Salt Typhoon”)
-- Should AI ever rule humans ? Anthropic CEO Dario Amodei calls the idea: unconfirmed (searched “Anthropic CEO Dario Amodei AI should not rule humans political power machines absurd”; read techcrunch.com; read msn.com; searched “"Anthropic" "surrender human control" AI absurd Amodei"”)
-- Data from Chinese AI firm MiniMax accessed by unidentified parties, re: unconfirmed (searched “MiniMax data accessed by unidentified parties researcher says”; read msn.com; read msn.com; read msn.com)
-- Pine Labs Adds AI Agents To Merchant App For Sales Insights, Ad Campai: unconfirmed (searched “Pine Labs AI agents merchant app sales insights ad campaigns”; read bestmediainfo.com; read finextra.com; read socialsamosa.com)
+- Sources: leading AI labs are sitting on major, unreleased algorithmic : confirmed (searched “Scott Aaronson unreleased algorithmic breakthroughs could break cryptosystems AI labs”; read cointelegraph.com; read cointelegraph.com)
+- Memory chip shortages prompt companies worldwide to set up procurement: confirmed (searched “memory chip shortages procurement war rooms”; searched “"procurement war rooms" memory chip”; searched “"prices have risen 10x" memory chip”)
+- OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faste: confirmed (searched “OpenAI cuts GPT-6.2 usage Astra hits limits 40% faster Sol 25% faster”; read techcrunch.com; read neowin.net)
+- NVIDIA B300 AI chip orders face up to a 40-week wait, while RTX 60 GPU: confirmed (searched “NVIDIA B300 AI chip orders 40-week wait RTX 60 production 2027”; read reuters.com; searched “"RTX 60" GPU production 2027”)
+- BharatGen Launches Patram 1.5, a 7B Vision-Language Model for Document: confirmed (searched “BharatGen Patram 1.5 vision-language model document processing”; read thehindubusinessline.com; read msn.com)
 
 </details>
 
 ### Notes
-- not India desk: 'Should AI ever rule humans ? Anthropic CEO Dario A'
-- not India desk: 'Data from Chinese AI firm MiniMax accessed by unid'
-- not India desk: 'Nvidia halts chip shipments to Southeast Asia: FT '
-- ignored made-up duplicate id abeb7830ab90 for 'XEBO.ai bags $10.5M funding from Emirates Growth F'
-- dropped non-quote (Microsoft): In the past few weeks, we’ve reported several distinct campa…
-- dropped non-quote (Microsoft): ARTEX does not introduce new attack techniques; it uses comm…
-- 1 kept item(s) carried over to the next run
-- gemini/gemini-3.5-flash-lite: per-minute limit hit; trying next model
-- gemini: 429 after retry (429  You exceeded your current quota, please check your plan and billing details); moving to next provider for this run
-- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- not India desk: 'Investors see rising risk of SoftBank default as p'
+- GDELT unavailable: GDELT paused for this run after repeated rate-limiting
+- 10 kept item(s) carried over to the next run
+- gemini/gemini-3.5-flash-lite: 503 (server busy); trying next model
+- gemini/gemini-3.6-flash: 503 (server busy); trying next model
+- gemini/gemini-3.5-flash: 503 (server busy); trying next model
+- gemini: 503 (server busy) on several tries; resting it for 2 minutes
 - groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
 - groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
 - groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- gemini/gemini-3.5-flash-lite: 503 (server busy); trying next model
+- gemini: unreachable or too slow (ReadTimeout); resting it for 2 minutes
+- groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
+- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
 - groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing
 - groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
 - groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
-- groq/openai/gpt-oss-120b: per-minute limit hit; trying next model
+- gemini/gemini-3.5-flash-lite: 503 (server busy); trying next model
+- gemini: unreachable or too slow (ReadTimeout); resting it for 2 minutes
+- groq: 429 after retry (rate_limit_exceeded tokens Rate limit reached for model `openai/gpt-oss-120b` in); moving to next provider for this run
+- nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room

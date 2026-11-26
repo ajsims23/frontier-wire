@@ -314,9 +314,19 @@
     "title": "US–China AI restrictions"
   },
   "frontier-race": {
-    "status": "Frontier labs are rolling out increasingly capable models: OpenAI's GPT-6 family now designs proteins, Google DeepMind released Gemini 4 Neon mid-tier models and detailed AlphaEvolve coding agent, Mistral previewed its 1-trillion-parameter Large 4 and launched Voxtral 3 voice stack, and Anthropic's Claude claimed breakthroughs in black-hole physics, Navier-Stokes, and a Riemann-hypothesis proof (unverified). Microsoft's in-house Rocket system has pushed its three-trillion-parameter MAI Base 2 past Claude Opus 4.8 on reasoning benchmarks, with CEO Nadella stating MAI models can trail rivals by 3-6 months while using only 5-20% of the compute. Enterprise uptake grows, with iFood deploying codi",
-    "changed": "Microsoft detailed seven new MAI models and its Rocket RL framework; Nadella articulated a cost-first strategy accepting 3-6 month capability lag for 5-20% compute usage; Anthropic launched desktop-app beta and went public at $1.5T; Riemann-hypothesis proof claim formalized in Lean but remains unver",
+    "status": "Frontier labs continue pushing capabilities, with Anthropic completing a massive $81.34 billion IPO at a $1.5 trillion valuation after researchers claimed AI-aided breakthroughs in the Riemann Hypothesis and Navier-Stokes blowup. Meanwhile, Microsoft is scaling its in-house MAI models to compete on cost, and OpenAI addressed a billing error that caused faster exhaustion of reasoning model usage limits.",
+    "changed": "OpenAI corrected a billing error affecting advanced model usage limits, while computer scientist Scott Aaronson warned that frontier labs may hold unreleased algorithmic breakthroughs that could threaten current cryptography.",
     "timeline": [
+      {
+        "story_id": "244a3e8cb4f1",
+        "date": "2026-11-26",
+        "text": "OpenAI fixed a billing error that caused usage limits to hit 40% faster on Astra and 25% faster on Sol."
+      },
+      {
+        "story_id": "6bff7af530a8",
+        "date": "2026-11-26",
+        "text": "Scott Aaronson warned that AI labs may hold unreleased algorithmic breakthroughs that could break cryptosystems."
+      },
       {
         "story_id": "0a3f3c119965",
         "date": "2026-11-25",
@@ -506,32 +516,22 @@
         "story_id": "ce8b7033600c",
         "date": "2026-11-13",
         "text": "SpaceX laid off ~60 Grok Imagine staffers to prioritize AI coding tools."
-      },
-      {
-        "story_id": "f45ec6ed003d",
-        "date": "2026-11-13",
-        "text": "OpenAI disbanded its standalone robotics team, reassigning staff to focus on general models like GPT-6 Astra."
-      },
-      {
-        "story_id": "a1e895b935bb",
-        "date": "2026-11-13",
-        "text": "AI model Claude used to analyze Kurt Gödel's shorthand notebooks, revealing hundreds of proved theorems."
       }
     ],
     "next": [
       {
+        "text": "Independent verification of Levent Alpöge's Lean-coded proof by mathematical experts and the Clay Mathematics Institute",
+        "when": "",
+        "story_id": "f1b7c64ada91"
+      },
+      {
+        "text": "Weight release of Mistral Large 4 by the end of October 2026",
+        "when": "end of October 2026",
+        "story_id": "820bd24a41c4"
+      },
+      {
         "text": "Microsoft's MAI Base 2 to overtake GPT-5.6 Sol on aggregate reasoning benchmark",
         "when": "coming weeks",
-        "story_id": "74e3f2b1316b"
-      },
-      {
-        "text": "Independent verification of Riemann hypothesis proof by mathematical experts and Clay Mathematics Institute",
-        "when": "",
-        "story_id": "1479a2d5f115"
-      },
-      {
-        "text": "Microsoft to continue improving Rocket for longer training and more complex AI tasks",
-        "when": "",
         "story_id": "74e3f2b1316b"
       }
     ],
@@ -596,8 +596,8 @@
       "87bf89c71a3c",
       "7b93706aafff",
       "1184d3a025fd",
-      "5235c4ab8feb",
       "31089e719fc9",
+      "5235c4ab8feb",
       "2d1cb84adcca",
       "77bf41c17995",
       "d8887a09bc5e",
@@ -668,10 +668,12 @@
       "f9bcc6d488b4",
       "1479a2d5f115",
       "cf5e5b069b85",
-      "0a3f3c119965"
+      "0a3f3c119965",
+      "244a3e8cb4f1",
+      "6bff7af530a8"
     ],
-    "updated_at": "2026-11-25T18:50:59+00:00",
-    "tried_at": "2026-11-25T18:50:59+00:00",
+    "updated_at": "2026-11-26T09:50:59+00:00",
+    "tried_at": "2026-11-26T09:50:59+00:00",
     "title": "The frontier model race"
   },
   "ai-regulation": {
@@ -943,8 +945,8 @@
     "title": "AI regulation around the world"
   },
   "india-ai": {
-    "status": "India's AI ecosystem advances rapidly across enterprise adoption, infrastructure build-outs, and emerging regulatory frameworks. MeitY cleared Sarvam AI of any misuse of IndiaAI support after a debate over hosting Chinese models, while announcing that upcoming national AI regulation papers are in their final stages alongside the release of the Chariot-1 Foundation Models. Meanwhile, startups, academic institutions, and defense bodies continue to scale through funding, research, and specialized deployments like the Indian Navy's LLM fine-tuning workshop.",
-    "changed": "MeitY cleared Sarvam AI of any misuse of IndiaAI support regarding its hosting of Chinese models, while announcing that upcoming AI regulation papers are in their final stages alongside the debut of Chariot-1 Foundation Models.",
+    "status": "India's AI ecosystem continues to advance across enterprise adoption, infrastructure build-outs, and emerging regulatory frameworks. MeitY cleared Sarvam AI of any misuse of IndiaAI support after a debate over hosting Chinese models, while announcing that upcoming national AI regulation papers are in their final stages alongside the release of the Chariot-1 Foundation Models. Meanwhile, BharatGen expanded local model offerings with the release of Patram 1.5, and startups, academic institutions, and defense bodies continue to scale through funding, research, and specialized deployments.",
+    "changed": "BharatGen launched Patram 1.5, a 7.8-billion-parameter open-weight vision-language model for multilingual document processing.",
     "timeline": [
       {
         "story_id": "065689811dba",
@@ -955,6 +957,11 @@
         "story_id": "f2f90da31bee",
         "date": "2026-11-26",
         "text": "MeitY announced IndiaAI regulation papers are in their final stages alongside Chariot-1 Foundation Models debut."
+      },
+      {
+        "story_id": "a9e589eb2ddb",
+        "date": "2026-11-26",
+        "text": "BharatGen launched Patram 1.5, a 7.8-billion-parameter open-weight vision-language model for documents."
       },
       {
         "story_id": "c397a7d16b54",
@@ -1140,16 +1147,11 @@
         "story_id": "cfbf339cdfb5",
         "date": "2026-11-08",
         "text": "EY report shows top AI adopters in customer service gain over 50% KPI improvements."
-      },
-      {
-        "story_id": "b5d702d24285",
-        "date": "2026-11-08",
-        "text": "CERT-In issues mandatory security auditing guidelines for autonomous AI systems."
       }
     ],
     "next": [
       {
-        "text": "SatSure's Series B round scheduled to close on a rolling basis",
+        "text": "SatSure's Series B round scheduled to close on a rolling basis through December 2026",
         "when": "December 2026",
         "story_id": "a752a447406b"
       },
@@ -1196,8 +1198,8 @@
       "fe1a16683fff",
       "f4316ce69839",
       "d730ce2a7a31",
-      "b5d702d24285",
       "cfbf339cdfb5",
+      "b5d702d24285",
       "e67c5fa31434",
       "fd2bdf0a7e83",
       "3fce288f56e1",
@@ -1234,11 +1236,12 @@
       "c397a7d16b54",
       "fa5252ed6842",
       "d0a3a7f662b5",
+      "f2f90da31bee",
       "065689811dba",
-      "f2f90da31bee"
+      "a9e589eb2ddb"
     ],
-    "updated_at": "2026-11-26T03:37:01+00:00",
-    "tried_at": "2026-11-26T03:37:01+00:00",
+    "updated_at": "2026-11-26T09:50:59+00:00",
+    "tried_at": "2026-11-26T09:50:59+00:00",
     "title": "India's AI push"
   },
   "agent-safety": {
@@ -2089,13 +2092,18 @@
     "tried_at": "2026-11-24T19:40:44+00:00"
   },
   "ai-infrastructure": {
-    "status": "The AI infrastructure build-out is accelerating on the capital side—Oracle says its OpenAI contract is fully funded, Dell reports a $132.3B AI server backlog, and UBS projects $1.4T in global AI investment for 2027—but financing and supply-chain stress is deepening. New US export controls have halted billions in data-center loans tied to Chinese firms and forced Nvidia to stop AI server shipments to four Southeast Asian countries, while server suppliers demand up to 45% price increases and power, grid, and community opposition remain key bottlenecks.",
-    "changed": "Nvidia has halted AI server shipments to Malaysia, Singapore, Thailand, and Indonesia under new US export controls, with cloud providers given a 90-day deadline to prove their services do not reach restricted entities.",
+    "status": "The AI infrastructure build-out faces severe supply-chain and memory shortages, with procurement war rooms forming globally as memory chip prices spike up to tenfold and NVIDIA stretches B300 delivery wait times to 40 weeks to prioritize data centers. Meanwhile, financial and regulatory pressures continue to mount: US export curbs have halted billions in data center loans tied to Chinese firms and forced halts on AI server shipments to four Southeast Asian countries, even as capital spending forecasts remain massive, with UBS projecting $1.4 trillion in global AI investment for 2027 and the IEA expecting global data center investment to reach $4 trillion by 2030.",
+    "changed": "New supply chain constraints emerged as memory chip shortages sparked global procurement war rooms and up to tenfold price hikes, while NVIDIA prioritized AI data center demand by stretching B300 delivery wait times and potentially delaying its RTX 60 series to 2028.",
     "timeline": [
       {
         "story_id": "5d94a8a52956",
         "date": "2026-11-26",
         "text": "Nvidia halts AI server shipments to four Southeast Asian countries under new US export controls."
+      },
+      {
+        "story_id": "24dd7c3314a4",
+        "date": "2026-11-26",
+        "text": "Memory chip shortages spark global procurement war rooms and tenfold price hikes."
       },
       {
         "story_id": "aac3bee5a441",
@@ -2126,6 +2134,11 @@
         "story_id": "fb08c823339f",
         "date": "2026-11-25",
         "text": "New US chip export restrictions stall billions in data center loans tied to Chinese firms."
+      },
+      {
+        "story_id": "376d7288d762",
+        "date": "2026-11-25",
+        "text": "NVIDIA B300 chip orders face 26-40 week wait times, and RTX 60 production may slip to 2028."
       },
       {
         "story_id": "64c0c3ceaf25",
@@ -2281,34 +2294,19 @@
         "story_id": "c515216ed921",
         "date": "2026-11-17",
         "text": "Nvidia reported Q3 revenue of $115.8B and forecast Q4 revenue of $130B."
-      },
-      {
-        "story_id": "9231c3778855",
-        "date": "2026-11-16",
-        "text": "Samsung SDS entered early talks to sign Anthropic and OpenAI as tenants for its AI data centre services."
-      },
-      {
-        "story_id": "4b57fcd6de68",
-        "date": "2026-11-16",
-        "text": "Interim CEO Colette Kress is expected to rein in Nvidia's aggressive AI dealmaking and startup financing strategies."
       }
     ],
     "title": "The AI infrastructure build-out",
     "next": [
       {
-        "text": "Handover of Nvidia Vera Rubin racks in Oracle data halls",
-        "when": "in the coming weeks",
-        "story_id": "0980e466e3e8"
-      },
-      {
-        "text": "Amazon to begin offering Trainium chips to other companies that build data centers",
-        "when": "next year",
-        "story_id": "64c0c3ceaf25"
-      },
-      {
         "text": "Cloud providers in Asia to prove services do not reach restricted entities",
-        "when": "90-day deadline",
+        "when": "90 days",
         "story_id": "5d94a8a52956"
+      },
+      {
+        "text": "Mass production of the RTX 60 series, originally targeted for late 2027, may be pushed to 2028",
+        "when": "2028",
+        "story_id": "376d7288d762"
       }
     ],
     "story_ids": [
@@ -2488,10 +2486,12 @@
       "dc0f3e545a5f",
       "58b313ebe927",
       "85881ba37f62",
+      "376d7288d762",
       "fb08c823339f",
-      "5d94a8a52956"
+      "5d94a8a52956",
+      "24dd7c3314a4"
     ],
-    "updated_at": "2026-11-26T06:51:02+00:00",
-    "tried_at": "2026-11-26T06:51:02+00:00"
+    "updated_at": "2026-11-26T09:50:59+00:00",
+    "tried_at": "2026-11-26T09:50:59+00:00"
   }
 }
