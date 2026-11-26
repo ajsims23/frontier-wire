@@ -1,14 +1,5 @@
 {
   "posts": {
-    "9f10c66d4fe3": {
-      "id": "9f10c66d4fe3",
-      "url": "https://bsky.app/profile/simonwillison.net/post/3n2nhnbueh22q",
-      "person": "Simon Willison",
-      "text": "The most useful thing about the pelican riding a bicycle test continues to be illustrating the differences between models in the same family running at different effort levels - here's Gemini 4 Carbon, the new Gemini 4 Neon, and Gemini 4 Hydrogen at low, medium, and high",
-      "published": "2026-11-19T06:40:15.930Z",
-      "via": "Bluesky",
-      "kind": "post"
-    },
     "f0a746966ded": {
       "id": "f0a746966ded",
       "url": "https://latent.space/p/ainews-gemini-4-neon-gdm-s-opus-sol-contender",
@@ -471,6 +462,42 @@
       "text": "[AINews] Math Proofs Are Landing Faster Than We Can Read Them. AINews by Latent Space Scott Aaronson was still trying to digest two proofs of VP ≠ VNP at dinner. Before dessert, an OpenAI paper claimed that the square matrix multiplication exponent ω is exactly 9/4 . During dessert, another paper claimed matching upper and lower bounds for the finite Fourier transform . The lower bound is the biggest news. In October, OpenAI found an upper bound for ω down to at most 9/4 . Finding the lower bound = upper bound leaves only one possible value, which is a shocking result for most. We plotted 64 selected AI-assisted research advances so far this year. November accounts for 20, including six…",
       "published": "2026-11-25T22:23:41+00:00",
       "via": "Latent Space",
+      "kind": "post"
+    },
+    "7fcbebbe6634": {
+      "id": "7fcbebbe6634",
+      "url": "https://simonwillison.net/2026/Nov/26/sqlite3-rsync",
+      "person": "Simon Willison",
+      "text": "sqlite3_rsync: Database Remote-Copy Tool For SQLite. sqlite3_rsync: Database Remote-Copy Tool For SQLite This additional SQLite tool has been around for a while now - it was added as \"experimental\" in SQLite 3.47.0 in October 2024 and enhanced in SQLite 3.50.0 in May 2025 . It was only today that I understood one of its most attractive characteristics. Normally, if you want to grab a snapshot copy of a SQLite database, you need to use either the backup API or VACUUM INTO . In both cases you need enough disk space to create a duplicate copy of your database, so if you're on a small instance and you already use more than half of the available disk",
+      "published": "2026-11-26T06:08:25+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "9527dd371e58": {
+      "id": "9527dd371e58",
+      "url": "https://simonwillison.net/2026/Nov/25/datasette-charts",
+      "person": "Simon Willison",
+      "text": "datasette-charts 0.3a0. Release: datasette-charts 0.3a0 I added chart annotations to datasette-charts ! You can now render a chart and then annotate it with lines, shaded areas, labels, or a combination of the three. A chart with annotations looks like this: Here's that same chart in Datasette Lite , where you can tweak the annotations using the chart builder UI: If you also install Datasette Agent the agent can build annotated charts for you. Here's what I got on the agent.datasette.io demo for this prompt: Show a chart comparing Simon's tagged content about LLMs with his tagged content about Datasette, with annotat",
+      "published": "2026-11-25T18:16:50+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "7dbb1baace41": {
+      "id": "7dbb1baace41",
+      "url": "https://simonwillison.net/2026/Nov/24/datasette-charts-2",
+      "person": "Simon Willison",
+      "text": "datasette-charts 0.2a1. Release: datasette-charts 0.2a1 Minor UI improvements: Collapsing the suggested charts section now leaves the chart visible. Following a link to a chart opens it with the suggestions collapsed for that visit. On table pages the panel now sits below the \"4,235 rows where country = CHN\" line. The \"Data\" table under each chart has been replaced by Copy TSV and Copy CSV buttons. Removed the \"Chart this data\" item from the table, view and query action menus. More space between lines in chart tooltips. Tags: datasette , visualization , datasette-charts",
+      "published": "2026-11-24T06:07:19+00:00",
+      "via": "Simon Willison",
+      "kind": "post"
+    },
+    "56dca498ce5d": {
+      "id": "56dca498ce5d",
+      "url": "https://bsky.app/profile/emollick.bsky.social/post/3n36uicn6lc2z",
+      "person": "Ethan Mollick",
+      "text": "Model names and numbers have never been less useful in determining ability levels. In part this is because the names are more confusing (neon or carbon) and partly because the numbering is not indicative of model families or progress anymore (eg the huge gaps from Astra 6 to 6.2, or Opus 5 to 5.5)",
+      "published": "2026-11-26T04:45:23.176Z",
+      "via": "Bluesky",
       "kind": "post"
     }
   },

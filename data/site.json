@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T05:10:41+00:00",
+  "updated_at": "2026-11-26T06:51:02+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "The Defense Production Act is a Cold War-era law that gives U.S. presidents extraordinary power to intervene in the economy. According to reports, Pentagon officials discussed using this law as leverage to pressure Nvidia's board to reinstate Jensen Huang.",
@@ -83,6 +83,356 @@
     }
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "MiniMax’s system automatically opened web links included in user requests to check for threats, and stored those links. Because the links were later accessed by other devices, any confidential information in them could be seen by unauthorized parties. Users cannot rely on a “no‑store” request to keep such data private when using the service.",
+        "terms": [
+          {
+            "term": "Multimodal AI models",
+            "meaning": "AI systems that can process more than one type of data, such as text and images."
+          },
+          {
+            "term": "Private web link",
+            "meaning": "A URL intended to be shared only with a specific recipient and not publicly accessible."
+          },
+          {
+            "term": "Feishu",
+            "meaning": "A workplace messaging platform developed by ByteDance, used in China."
+          }
+        ],
+        "watch_next": [
+          "U.S. government consideration of rules requiring American companies to disclose use of Chinese AI models."
+        ]
+      },
+      "audiences": {
+        "builders": "Developers using MiniMax’s APIs should assume that any embedded links may be logged and potentially exposed.",
+        "business": "Company leaders must weigh the risk of confidential data leakage when adopting Chinese AI services, even if hosted outside China.",
+        "investors": "Investors should monitor how security incidents could affect MiniMax’s market perception and growth prospects."
+      },
+      "id": "4dde58438eb2",
+      "headline": "Confidential data sent to Chinese AI startup MiniMax accessed by unknown parties",
+      "summary": "Confidential data submitted to Chinese AI startup MiniMax was accessed by unidentified parties, even after users asked that the data not be stored. The exposure was discovered by cybersecurity researcher HD Moore of Dragos, who traced private links to devices in Beijing, Shanghai and unusual activity from Russia’s Moscow region.",
+      "why_it_matters": "The incident shows that data sent to foreign AI services can be exposed despite retention safeguards, raising security concerns for global users of Chinese models.",
+      "category": "safety",
+      "lab": "MiniMax",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 8,
+      "url": "https://livemint.com/technology/data-from-chinese-ai-firm-minimax-accessed-by-unidentified-parties-researcher-says-11795673767961.html",
+      "source_id": "mint-tech",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://www.livemint.com/lm-img/img/2024/12/18/600x338/tech4_1734536476058_1734536482186.png",
+      "sources": [
+        {
+          "url": "https://livemint.com/technology/data-from-chinese-ai-firm-minimax-accessed-by-unidentified-parties-researcher-says-11795673767961.html",
+          "publisher": "Mint Technology",
+          "title": "Data from Chinese AI firm MiniMax accessed by unidentified parties, researcher says"
+        },
+        {
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/data-from-chinese-ai-firm-minimax-accessed-by-unidentified-parties-researcher-says/articleshow/136180952.cms",
+          "publisher": "ET Tech",
+          "title": "Data from Chinese AI firm MiniMax accessed by unidentified parties, researcher says"
+        },
+        {
+          "url": "https://msn.com/en-in/news/other/data-from-chinese-ai-firm-minimax-accessed-by-unidentified-parties-researcher-says/ar-AA2ifQsD",
+          "publisher": "The Economic Times on MSN",
+          "title": "Data from Chinese AI firm MiniMax accessed by unidentified parties, researcher says"
+        }
+      ],
+      "research": {
+        "steps": 4,
+        "read": 0,
+        "decision": "unconfirmed"
+      },
+      "published_at": "2026-11-26T06:16:07+00:00",
+      "created_at": "2026-11-26T06:51:02+00:00",
+      "sectors": [
+        "cybersecurity"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "MiniMax",
+      "trackers": [
+        "us-china"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Amodei is saying that while AI can help with specific tasks, it should not be allowed to make the big political or societal choices that affect people's lives. Humans must retain the ultimate authority over such decisions.",
+        "terms": [
+          {
+            "term": "free will",
+            "meaning": "The ability of individuals to make choices without external coercion."
+          },
+          {
+            "term": "democratic processes",
+            "meaning": "Decision‑making methods where power is distributed among the populace or their elected representatives."
+          },
+          {
+            "term": "recursive self‑improvement (RSI)",
+            "meaning": "When an AI system creates newer, more capable versions of itself without human intervention."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "The comment does not change how developers build or use Anthropic’s models, but underscores that the company will keep AI as a tool, not a decision‑maker.",
+        "business": "Executives should note Anthropic’s public stance against AI governance, which may affect regulatory scrutiny and customer trust.",
+        "investors": "Investors see that Anthropic is positioning itself responsibly on AI governance, potentially reducing regulatory risk."
+      },
+      "id": "ec43f3005817",
+      "headline": "Anthropic CEO Dario Amodei says handing political power to AI is absurd",
+      "summary": "On Nov. 25, 2026 Dario Amodei posted on X to reject claims that he wants humans to surrender free will to AI, calling the idea absurd. He emphasized that AI should be governed through democratic processes, not given societal control.",
+      "why_it_matters": "The statement highlights a leading AI firm’s stance against granting AI decision‑making authority, shaping the debate over future AI governance and regulatory approaches.",
+      "category": "voices",
+      "lab": "Anthropic",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [
+        {
+          "text": "No, I do not believe that we should 'surrender human free will' to AI systems, and it's absurd to suggest that I do,",
+          "speaker": "Dario Amodei",
+          "speaker_role": "CEO, Anthropic",
+          "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-chief-dario-amodei-denies-wanting-humans-to-surrender-free-will-to-ai/articleshow/136178073.cms"
+        },
+        {
+          "text": "We should never sacrifice legitimacy or self-determination at the altar of efficiency or security,",
+          "speaker": "Dario Amodei",
+          "speaker_role": "CEO, Anthropic",
+          "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-chief-dario-amodei-denies-wanting-humans-to-surrender-free-will-to-ai/articleshow/136178073.cms"
+        }
+      ],
+      "score": 8,
+      "url": "https://educationtimes.com/learning/should-ai-ever-rule-humans-anthropic-ceo-dario-amodei-calls-the-idea-of-handing-political-power-to-machines-absurd-and-a-terrible-idea/articleshow/136179680.cms",
+      "source_id": "gdelt",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://static.toiimg.com/thumb/msid-136180036,width-1280,height-720,imgsize-204912,resizemode-6,y_pad-600/photo.jpg",
+      "sources": [
+        {
+          "url": "https://educationtimes.com/learning/should-ai-ever-rule-humans-anthropic-ceo-dario-amodei-calls-the-idea-of-handing-political-power-to-machines-absurd-and-a-terrible-idea/articleshow/136179680.cms",
+          "publisher": "educationtimes.com",
+          "title": "Should AI ever rule humans ? Anthropic CEO Dario Amodei calls the idea of handing political power to machines absurd and a terrible idea"
+        },
+        {
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-chief-dario-amodei-denies-wanting-humans-to-surrender-free-will-to-ai/articleshow/136178073.cms",
+          "publisher": "ET Tech",
+          "title": "Anthropic chief Dario Amodei denies wanting humans to 'surrender' free will to AI"
+        }
+      ],
+      "research": {
+        "steps": 4,
+        "read": 2,
+        "decision": "unconfirmed"
+      },
+      "published_at": "2026-11-26T06:15:00+00:00",
+      "created_at": "2026-11-26T06:51:02+00:00",
+      "thread": "t-284d228b61da",
+      "sectors": [
+        "government"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 1,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "Anthropic",
+      "trackers": [],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Artex is an AI framework that lets attackers automate the steps of a penetration test—scanning, credential cracking, and exploiting vulnerabilities—at machine speed. Defenders must look for behavior patterns rather than static signatures because the tool can vary network indicators.",
+        "terms": [
+          {
+            "term": "AI penetration testing tool",
+            "meaning": "Software that uses artificial intelligence to automate the phases of a security test that probes a network for weaknesses."
+          },
+          {
+            "term": "penetration testing",
+            "meaning": "A simulated cyber‑attack performed to discover and exploit security flaws in a system."
+          },
+          {
+            "term": "network reconnaissance",
+            "meaning": "The process of gathering information about a target’s network, such as open ports and services, before attempting an intrusion."
+          }
+        ],
+        "watch_next": []
+      },
+      "audiences": {
+        "builders": "State‑backed groups now have AI‑driven automation for penetration testing, raising the bar for defensive tooling developers.",
+        "business": "Enterprises may face faster, more automated cyber intrusions, prompting review of detection and response capabilities.",
+        "investors": "The report highlights heightened cyber risk for firms in affected sectors, potentially influencing security spending and market valuations."
+      },
+      "id": "c6b2d3acc57d",
+      "headline": "China and North Korean state-backed hackers add AI tool Artex to their arsenals",
+      "summary": "Microsoft reported that Chinese groups Crystal Typhoon and Salt Typhoon, as well as North Korean actors, have integrated the AI‑powered penetration testing platform Artex into their attack workflows.",
+      "why_it_matters": "The automation lets threat actors move from reconnaissance to privileged access in minutes, increasing the speed and scale of cyber intrusions that defenders must detect.",
+      "category": "safety",
+      "lab": "Microsoft",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 9,
+      "url": "https://techmeme.com/261126/p3",
+      "source_id": "auto-techmeme.com",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://cms.therecord.media/uploads/microsoft_sign_pexels_altabena_efbc5ae4db.jpg",
+      "sources": [
+        {
+          "url": "https://techmeme.com/261126/p3",
+          "publisher": "techmeme.com",
+          "title": "Microsoft says state-backed hacking groups in China and North Korea, including Salt Typhoon, have added AI penetration testing tool ARTEX to their arsenals (Jonathan Greig/The Record)"
+        },
+        {
+          "url": "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool",
+          "publisher": "The Record from Recorded Future News",
+          "title": "Microsoft: China’s Salt Typhoon hackers are using Artex"
+        },
+        {
+          "url": "https://microsoft.com/en-us/security/blog/2026/11/25/what-defenders-need-to-know-artex-agentic-ai-framework-threat-actors-abuse",
+          "publisher": "Microsoft",
+          "title": "What defenders need to know about ARTEX, the agentic AI framework threat actors abuse"
+        },
+        {
+          "url": "https://decrypt.co/383997/what-is-artex-ai-hacking-tool-us-spy-agency-breach",
+          "publisher": "Decrypt",
+          "title": "What Is Artex? The AI Hacking Tool Linked to the US Spy Agency Breach"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-26T06:00:48+00:00",
+      "created_at": "2026-11-26T06:51:02+00:00",
+      "thread": "t-ea62e5ceb199",
+      "sectors": [
+        "cybersecurity"
+      ],
+      "regions": [
+        "global"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 2,
+        "investors": 1
+      },
+      "cover": "Artex",
+      "trackers": [
+        "agent-safety"
+      ],
+      "photo_local": true
+    },
+    {
+      "explainer": {
+        "what_it_means": "Regional buyers will not receive new Nvidia AI servers until the companies can meet the new licensing requirements. This may slow the rollout of AI‑driven services and push customers toward other hardware suppliers.",
+        "terms": [
+          {
+            "term": "export controls",
+            "meaning": "Government rules that restrict the sale or shipment of certain technologies to specified countries or entities."
+          },
+          {
+            "term": "AI processors",
+            "meaning": "Specialized chips designed to accelerate artificial‑intelligence workloads, such as Nvidia’s GPUs."
+          },
+          {
+            "term": "server shipments",
+            "meaning": "Delivery of complete computer systems that integrate CPUs, GPUs and other components for data‑center use."
+          }
+        ],
+        "watch_next": [
+          "Cloud providers in Asia have a 90‑day deadline to prove their services do not reach restricted entities."
+        ]
+      },
+      "audiences": {
+        "builders": "Developers in the affected countries must look for alternative AI hardware or wait for licence approvals before building new systems.",
+        "business": "Regional cloud and data‑center operators may face project delays and need to adjust procurement strategies.",
+        "investors": "Nvidia’s revenue from Southeast Asian server sales could be temporarily reduced, highlighting regulatory risk."
+      },
+      "id": "5d94a8a52956",
+      "headline": "Nvidia stops shipping AI servers to four Southeast Asian countries",
+      "summary": "Nvidia instructed manufacturing partners Dell and Supermicro to halt shipments of AI servers to Malaysia, Singapore, Thailand and Indonesia after new U.S. export controls requiring licences for advanced chips took effect.",
+      "why_it_matters": "The pause could delay AI data‑center projects in the region and forces cloud providers to find alternative hardware or obtain export licences.",
+      "category": "industry",
+      "lab": "NVIDIA",
+      "model_name": "",
+      "model_type": "",
+      "tags": [],
+      "quotes": [],
+      "score": 9,
+      "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/nvidia-halts-chip-shipments-to-southeast-asia-ft-reports/articleshow/136180352.cms",
+      "source_id": "et-tech",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-4191846,resizemode-75,msid-136180352/tech/artificial-intelligence/nvidia-halts-chip-shipments-to-southeast-asia-ft-reports.jpg",
+      "sources": [
+        {
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/nvidia-halts-chip-shipments-to-southeast-asia-ft-reports/articleshow/136180352.cms",
+          "publisher": "ET Tech",
+          "title": "Nvidia halts chip shipments to Southeast Asia: FT report"
+        },
+        {
+          "url": "https://businesstimes.com.sg/companies-markets/telcos-media-tech/nvidia-halts-chip-shipments-4-countries-south-east-asia-including-singapore-ft",
+          "publisher": "The Business Times",
+          "title": "Nvidia halts chip shipments to 4 countries in South-east Asia, including Singapore: FT"
+        },
+        {
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-stops-shipping-ai-servers-062916311.html",
+          "publisher": "Yahoo Finance",
+          "title": "Nvidia stops shipping AI servers to 4 Southeast Asian countries- FT"
+        },
+        {
+          "url": "https://usnews.com/news/top-news/articles/2026-11-26/nvidia-halts-server-shipments-to-four-southeast-asian-countries-ft-reports",
+          "publisher": "U.S. News & World Report",
+          "title": "Nvidia Halts Server Shipments to Four Southeast Asian Countries, FT Reports"
+        }
+      ],
+      "research": {
+        "steps": 2,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-26T05:58:19+00:00",
+      "created_at": "2026-11-26T06:51:02+00:00",
+      "thread": "t-834062342ec8",
+      "sectors": [],
+      "regions": [
+        "asia_pacific"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 2,
+        "business": 2,
+        "investors": 2
+      },
+      "cover": "AI servers",
+      "trackers": [
+        "us-china",
+        "ai-infrastructure"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "The Indian government is preparing to release regulatory papers on artificial intelligence following the launch of domestically developed AI models. Chariot-1, a foundation model supporting English and ten Indian languages, was introduced as part of the IndiaAI Mission.",
@@ -5310,388 +5660,6 @@
         "via": "Wikimedia Commons"
       },
       "trackers": []
-    },
-    {
-      "explainer": {
-        "what_it_means": "Anthropic went public last week at $83 per share and immediately surged to $111.50. On Tuesday the stock gave back those gains and fell below the original offer price, meaning early public investors are now underwater. The move also dragged down other AI-related stocks such as Nvidia.",
-        "terms": [
-          {
-            "term": "IPO price",
-            "meaning": "The price at which shares are first sold to the public in an initial public offering."
-          },
-          {
-            "term": "pre-market trading",
-            "meaning": "Trading that occurs before the regular market session opens, often with lower volume and wider price swings."
-          }
-        ],
-        "watch_next": [
-          "Whether Anthropic shares stabilize above or continue below the $83 IPO price in coming weeks",
-          "Impact on IPO plans of other private AI companies"
-        ]
-      },
-      "audiences": {
-        "builders": "No direct impact on APIs or tools; the story is about public-market valuation.",
-        "business": "A sustained drop below IPO price may make it harder for other AI startups to go public or raise funds at high valuations.",
-        "investors": "Early public buyers are sitting on losses; the slide signals caution about the price the market assigns to pure-play AI labs."
-      },
-      "id": "f991ba256218",
-      "headline": "Anthropic shares fall below $83 IPO price after record debut",
-      "summary": "Anthropic shares dropped below their $83 IPO price on Tuesday, trading as low as $76, a roughly 12% decline from Monday's close. The stock had debuted at $111.50 last week in the largest AI offering ever.",
-      "why_it_matters": "The decline tests whether public markets will sustain high valuations for AI labs and could pressure private startup valuations and future AI IPOs.",
-      "category": "industry",
-      "lab": "Anthropic",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "ipo",
-        "stock",
-        "valuation"
-      ],
-      "quotes": [],
-      "score": 9,
-      "url": "https://techmeme.com/261124/p21",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/11/GettyImages-2305298275.jpg?w=594",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261124/p21",
-          "publisher": "techmeme.com",
-          "title": "Anthropic falls 12%+ to ~$76, below its $83 IPO price and a sharp fall from its $111.50 IPO pop; Dario and Daniela Amodei each sold 3.37M+ shares worth $280M+ (Medha Singh/Reuters)"
-        },
-        {
-          "url": "https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups",
-          "publisher": "TechCrunch AI",
-          "title": "Anthropic shares fall below IPO price, a worrying sign for AI startups"
-        },
-        {
-          "url": "https://bloomberg.com/news/articles/2026-11-24/anthropic-breaks-below-83-ipo-price-in-premarket-trading",
-          "publisher": "bloomberg.com",
-          "title": "Anthropic Breaks Below $83 IPO Price in Premarket Trading"
-        },
-        {
-          "url": "https://msn.com/en-us/news/other/anthropic-stock-falls-below-83-per-share-ipo-price/ar-AA2i7Dml",
-          "publisher": "Forbes on MSN",
-          "title": "Anthropic Stock Falls Below $83 Per Share IPO Price"
-        },
-        {
-          "url": "https://thestreet.com/investing/stocks/anthropic-stock-falls-below-ipo-price-ceo-sells-280-million-in-shares",
-          "publisher": "TheStreet",
-          "title": "Anthropic stock falls below IPO price; CEO sells $280 million in shares"
-        },
-        {
-          "url": "https://247wallst.com/investing/2026/11/24/dario-and-daniela-amodei-each-sold-280-million-of-anthropic-stock-in-the-ipo",
-          "publisher": "24/7 Wall St.",
-          "title": "Dario and Daniela Amodei Each Sold $280 Million of Anthropic Stock in the IPO"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 2,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-24T14:45:30+00:00",
-      "created_at": "2026-11-24T18:51:10+00:00",
-      "thread": "t-127ac791fc68",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": {
-        "type": "ipo",
-        "company": "Anthropic",
-        "amount": "$83",
-        "usd": 83.0
-      },
-      "relevance": {
-        "builders": 0,
-        "business": 2,
-        "investors": 3
-      },
-      "cover": "$83",
-      "trackers": [
-        "ai-money"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "ShellBench tests AI agents on messy, realistic work scenarios — like reconciling expenses while spotting suspicious payments or identifying the current version of a document — using emails, spreadsheets, PDFs, and chat records. Models must meet all success criteria to count a task as complete, a stricter standard than typical benchmarks. The results show current agents are inconsistent: succeeding once doesn't mean they'll succeed again on the same type of task.",
-        "terms": [
-          {
-            "term": "agent harness",
-            "meaning": "A framework that lets an AI model interact with tools, files, and environments to complete multi-step tasks."
-          },
-          {
-            "term": "completion rate",
-            "meaning": "The percentage of tasks where the AI agent met every required criterion on the first attempt."
-          },
-          {
-            "term": "anonymized interactions",
-            "meaning": "Real-world usage data stripped of identifying information, used here to design realistic test scenarios."
-          }
-        ],
-        "watch_next": [
-          "OpenClaw Foundation may publish full methodology and per-harness results",
-          "Future ShellBench versions could expand task count or harness coverage"
-        ]
-      },
-      "benchmarks": [
-        {
-          "model": "GPT-6 Astra",
-          "benchmark": "ShellBench",
-          "score": "62.5%"
-        },
-        {
-          "model": "Claude Fable 5.2",
-          "benchmark": "ShellBench",
-          "score": "61.9%"
-        },
-        {
-          "model": "GPT-6.1 Sol",
-          "benchmark": "ShellBench",
-          "score": "61.4%"
-        }
-      ],
-      "audiences": {
-        "builders": "ShellBench provides a new, stricter way to evaluate agent reliability on realistic file-heavy tasks; developers can use it to compare harnesses like Claude Code, Codex, Hermes, OpenClaw, and Pi.",
-        "business": "The ~60% completion rate signals that AI agents are not yet dependable enough for unattended enterprise workflows; companies should plan for human oversight.",
-        "investors": "The narrow gap among top models suggests differentiation is shifting from raw capability to consistency and harness integration, affecting where tooling investment pays off."
-      },
-      "id": "f8978e4ce75f",
-      "headline": "OpenClaw Foundation launches ShellBench benchmark; top AI agents complete only about 60% of real-world tasks",
-      "summary": "The OpenClaw Foundation introduced ShellBench, a new benchmark testing 12 frontier AI models across five agent harnesses on 100 realistic tasks. The best-performing model, GPT-6 Astra, achieved a 62.5% completion rate, while Claude Fable 5.2 scored 61.9% and GPT-6.1 Sol scored 61.4%.",
-      "why_it_matters": "The benchmark reveals that even leading AI agents fail roughly four in ten real-world tasks under demanding criteria, highlighting a reliability gap for enterprise adoption.",
-      "category": "research",
-      "lab": "OpenClaw Foundation",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "benchmark",
-        "AI agents",
-        "reliability"
-      ],
-      "quotes": [],
-      "score": 8,
-      "url": "https://techmeme.com/261124/p18",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://d1s6vdzy36jczj.cloudfront.net/wp-content/uploads/2026/11/24161858/header-dark-v2.png",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261124/p18",
-          "publisher": "techmeme.com",
-          "title": "The OpenClaw Foundation launches ShellBench to test 13 frontier AI models across five harnesses on 100 tasks; top AI models hit only a ~60% completion rate (Nat Rubio-Licht/The Deep View)"
-        },
-        {
-          "url": "https://techbooky.com/shellbench-finds-top-ai-agents-complete-only-six-in-ten-real-world-tasks",
-          "publisher": "TechBooky",
-          "title": "ShellBench Finds Top AI Agents Complete Only Six in Ten Real-World Tasks"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-24T13:25:01+00:00",
-      "created_at": "2026-11-24T16:30:56+00:00",
-      "sectors": [
-        "software"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "ShellBench",
-      "photo_local": true,
-      "trackers": [
-        "agent-safety"
-      ]
-    },
-    {
-      "explainer": {
-        "what_it_means": "OpenAI announced that its GPT-6 models can design new protein shapes and chemical sequences using only reasoning and code, without relying on specialized biology models. In lab tests with Onava, proteins based on designs from GPT-6.2 showed evidence of binding across five targets.",
-        "terms": [
-          {
-            "term": "Amino acids",
-            "meaning": "Chains of chemical building blocks that make up proteins and determine their three-dimensional shape and function."
-          },
-          {
-            "term": "Specialized biology models",
-            "meaning": "Domain-specific systems trained on biological data to generate protein structures and sequences."
-          },
-          {
-            "term": "Wet lab tests",
-            "meaning": "Testing biological hypotheses using real-world physical and chemical experiments rather than computer simulations alone."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers can use a general-purpose model that adapts to new instructions and requirements for protein design without coordinating multiple specialized biology models.",
-        "business": "Organizations working on protein design can deploy general-purpose models that accept new instructions and requirements without software changes.",
-        "investors": "OpenAI is expanding its technology capabilities into protein design, validated by wet lab tests with Onava."
-      },
-      "id": "3c6728c1bfd1",
-      "headline": "OpenAI announces GPT-6 protein-design capabilities",
-      "summary": "OpenAI announced that its GPT-6 family of models can design new protein shapes and sequences using reasoning and code, without relying on specialized biology models. Proteins based on GPT-6.2 designs showed evidence of binding across five targets in lab tests with Onava.",
-      "why_it_matters": "A general-purpose model handling protein design tasks via natural language could reduce the need to coordinate multiple specialized biology models with different software requirements and input constraints.",
-      "category": "models",
-      "lab": "OpenAI",
-      "model_name": "GPT-6",
-      "model_type": "Language",
-      "tags": [
-        "GPT-6",
-        "OpenAI",
-        "protein design",
-        "biology"
-      ],
-      "quotes": [],
-      "score": 9,
-      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
-      "source_id": "openai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://images.ctfassets.net/kftzwdyauwt9/Eg5mCwwaA3KqnznOVCh0n/8e6deaef25fd508d9853ff86a95187c1/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities-social.png?w=1600&h=900&fit=fill",
-      "sources": [
-        {
-          "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
-          "publisher": "OpenAI",
-          "title": "GPT-6 models demonstrate intrinsic protein-design capabilities"
-        },
-        {
-          "url": "https://blockchain.news/ainews/openai-gpt-6-shows-wet-lab-validated-protein-design",
-          "publisher": "Blockchain News",
-          "title": "OpenAI GPT-6 shows wet lab validated protein design"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-24T13:00:00+00:00",
-      "created_at": "2026-11-24T21:40:43+00:00",
-      "breaking": true,
-      "sectors": [
-        "healthcare",
-        "science"
-      ],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 2
-      },
-      "cover": "GPT-6",
-      "trackers": [
-        "frontier-race"
-      ],
-      "photo_local": true
-    },
-    {
-      "explainer": {
-        "what_it_means": "The companies have built AI systems that can reason more like humans, but internal teams believe the safety mechanisms are not sufficient. If released, these models could produce harmful or misleading outputs. Companies may delay or limit releases until safety catches up.",
-        "terms": [
-          {
-            "term": "reasoning",
-            "meaning": "The ability of an AI model to draw logical conclusions or solve problems step by step."
-          },
-          {
-            "term": "unsafe",
-            "meaning": "A model that could cause harm, spread misinformation, or behave unpredictably when used publicly."
-          },
-          {
-            "term": "unreleased model",
-            "meaning": "An AI system that has been developed internally but has not been made available to external users."
-          }
-        ],
-        "watch_next": []
-      },
-      "audiences": {
-        "builders": "Developers should be aware that cutting‑edge reasoning models may lack robust safety checks before they are released.",
-        "business": "Executives need to consider the risk of deploying powerful AI systems that could generate unsafe outcomes.",
-        "investors": "Investors should note heightened safety concerns that could affect product timelines and valuation for AI firms."
-      },
-      "id": "42a733130eca",
-      "headline": "Anthropic and OpenAI staff say unreleased models are too unsafe to release publicly",
-      "summary": "Employees at Anthropic and OpenAI have warned that internal, unreleased AI models have made rapid reasoning advances that make them unsafe for public release, according to reports citing more than two dozen insiders.",
-      "why_it_matters": "The warning highlights a growing gap between model capabilities and safety controls, raising risk for developers and regulators if such powerful systems are deployed.",
-      "category": "safety",
-      "lab": "",
-      "model_name": "",
-      "model_type": "",
-      "tags": [],
-      "quotes": [],
-      "score": 9,
-      "url": "https://techmeme.com/261124/p11",
-      "source_id": "auto-techmeme.com",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2295567080/image_2295567080.jpg?io=getty-c-og",
-      "sources": [
-        {
-          "url": "https://techmeme.com/261124/p11",
-          "publisher": "techmeme.com",
-          "title": "Sources: Anthropic and OpenAI employees warn that internal, unreleased models have achieved rapid advances in reasoning, making them unsafe to release publicly (Madison Mills/Axios)"
-        },
-        {
-          "url": "https://msn.com/en-us/news/other/scoop-anthropic-and-openai-employees-fear-unreleased-ai-models-are-too-unsafe-to-release/ar-AA2i7Gho",
-          "publisher": "Axios on MSN",
-          "title": "Scoop: Anthropic and OpenAI employees fear unreleased AI models are too unsafe to release"
-        },
-        {
-          "url": "https://seekingalpha.com/news/4676049-openai-and-anthropic-employees-say-some-ai-models-are-too-unsafe-to-ever-release-report",
-          "publisher": "Seeking Alpha",
-          "title": "Anthropic, OpenAI have AI models some staff see too unsafe to release: report"
-        },
-        {
-          "url": "https://ndtvprofit.com/technology/will-be-able-to-trick-us-anthropic-openai-staff-sound-alarm-over-unreleased-ai-models-12370626",
-          "publisher": "NDTV Profit",
-          "title": "'Will Be Able To Trick Us': Anthropic, OpenAI Staff Sound Alarm Over Unreleased AI Models"
-        },
-        {
-          "url": "https://unite.ai/anthropic-and-openai-staff-question-releasing-advanced-ai-models",
-          "publisher": "Unite.AI",
-          "title": "Anthropic and OpenAI Staff Question Releasing Advanced AI Models"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-24T11:20:02+00:00",
-      "created_at": "2026-11-24T13:30:36+00:00",
-      "thread": "t-534eeb0b56be",
-      "sectors": [],
-      "regions": [
-        "global"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 3,
-        "business": 2,
-        "investors": 1
-      },
-      "cover": "OpenAI",
-      "trackers": [
-        "agent-safety"
-      ],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -5703,6 +5671,15 @@
       "story_id": "9170a5c04b8d",
       "headline": "California files lawsuit against OpenAI over model security and safety",
       "published_at": "2026-11-23T04:38:00+00:00"
+    },
+    {
+      "text": "No, I do not believe that we should 'surrender human free will' to AI systems, and it's absurd to suggest that I do",
+      "speaker": "Dario Amodei",
+      "speaker_role": "CEO, Anthropic",
+      "source_url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/anthropic-chief-dario-amodei-denies-wanting-humans-to-surrender-free-will-to-ai/articleshow/136178073.cms",
+      "story_id": "ec43f3005817",
+      "headline": "Anthropic CEO Dario Amodei says handing political power to AI is absurd",
+      "published_at": "2026-11-26T06:15:00+00:00"
     },
     {
       "text": "Character.AI promised users they would never sell their personal information.",
@@ -5739,15 +5716,6 @@
       "story_id": "85881ba37f62",
       "headline": "Nexent Capital launches $1 billion fund for AI data‑center and energy infrastructure",
       "published_at": "2026-11-25T12:45:53+00:00"
-    },
-    {
-      "text": "We believe this partnership with Wipro is the best path forward for BP and our people as we build a simpler, stronger, more valuable BP.",
-      "speaker": "Kate Thomson",
-      "speaker_role": "Chief Financial Officer at BP",
-      "source_url": "https://analyticsindiamag.com/ai-news/bp-to-transfer-3000-finance-employees-to-wipro-in-strategic-partnership",
-      "story_id": "fc509d5dcb94",
-      "headline": "BP to transfer 3,000 finance staff to Wipro in AI transformation deal",
-      "published_at": "2026-11-25T12:37:08+00:00"
     }
   ],
   "videos": [
@@ -5884,120 +5852,28 @@
     }
   ],
   "briefing": {
-    "written_at": "2026-11-26T03:37:01+00:00",
-    "one_line": "Nvidia navigates leadership turbulence and regulatory scrutiny, while governments and companies worldwide announce new AI infrastructure, funding, and safety initiatives.",
+    "written_at": "2026-11-26T06:51:02+00:00",
+    "one_line": "AI research, regulation, hardware, and infrastructure see major moves today.",
     "themes": [
       {
-        "title": "Nvidia leadership and regulatory scrutiny",
-        "text": "Jensen Huang returned as Nvidia's CEO following lobbying by political and tech allies, though the company continues to face federal investigations, potential credit downgrades, and scrutiny over chip smuggling allegations and financing models.",
-        "stories": [
-          {
-            "id": "af0f0092a2fb",
-            "headline": "Pentagon officials discussed using Defense Production Act over Nvidia CEO role",
-            "url": "https://techmeme.com/261125/p39"
-          },
-          {
-            "id": "995fd2b8bd33",
-            "headline": "Jensen Huang returns as Nvidia CEO after intervention by Trump and tech allies",
-            "url": "https://techmeme.com/261125/p3"
-          },
-          {
-            "id": "f27e0de9d097",
-            "headline": "S&P considers Nvidia credit downgrade over governance risks",
-            "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks"
-          },
-          {
-            "id": "7a06c7691973",
-            "headline": "US intelligence briefed congressional aides on Alice Huang affair",
-            "url": "https://techmeme.com/261124/p52"
-          },
-          {
-            "id": "8e7a06808520",
-            "headline": "Alice Huang-linked firms listed $270 million in AI servers in China",
-            "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/alice-huang-linked-firms-listed-270-million-in-ai-servers-in-china-records-show/articleshow/136150503.cms"
-          },
-          {
-            "id": "9edbb62c9bcf",
-            "headline": "Nvidia faces ongoing investigations over Megaspeed chip smuggling after CEO’s return",
-            "url": "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed"
-          }
-        ]
-      },
-      {
-        "title": "Global funding and infrastructure developments",
-        "text": "Global funding initiatives and regulatory measures emerge as the European Union plans a €50 billion tech equity fund, new US chip curbs stall data center loans, and ElevenLabs targets a $33 billion valuation.",
-        "stories": [
-          {
-            "id": "76b8e567fcd2",
-            "headline": "EU plans €50B fund for European AI and quantum companies",
-            "url": "https://techmeme.com/261125/p1"
-          },
-          {
-            "id": "fb08c823339f",
-            "headline": "US chip curbs stall billions in data center loans tied to Chinese firms",
-            "url": "https://techmeme.com/261125/p38"
-          },
-          {
-            "id": "ef3f65502198",
-            "headline": "Nvidia AI financing commitments may face tighter US scrutiny: report",
-            "url": "https://aninews.in/news/business/nvidias-ai-financing-commitments-may-face-tighter-us-scrutiny-amid-stability-concerns-report20261125084913"
-          },
-          {
-            "id": "b4e5fb10375c",
-            "headline": "UN and Barbados call for global AI safety framework within a year",
-            "url": "https://scoop.co.nz/stories/WO2611/S00244/un-chief-urges-talks-on-global-ai-safety-framework-warns-of-historic-shift-in-power.htm"
-          },
-          {
-            "id": "85881ba37f62",
-            "headline": "Nexent Capital launches $1 billion fund for AI data‑center and energy infrastructure",
-            "url": "https://yourstory.com/2026/11/nexent-capital-launches-1-billion-fund-focused-on-ai-data-centres-investments"
-          },
-          {
-            "id": "f0daa9c96fe9",
-            "headline": "ElevenLabs in early talks for 2027 funding round at $33B target valuation",
-            "url": "https://techmeme.com/261125/p30"
-          }
-        ]
-      },
-      {
-        "title": "New research in mathematics and chemistry",
-        "text": "OpenAI released a preprint claiming the matrix multiplication exponent is exactly 9/4, while researchers introduced Crucible Bench to evaluate LLM agents in chemistry research.",
+        "title": "OpenAI claims exact matrix exponent",
+        "text": "OpenAI released a preprint asserting that the matrix multiplication exponent ω equals 9/4 over every field, providing matching upper and lower bounds for the long‑standing problem.",
         "stories": [
           {
             "id": "35a6794c57dd",
             "headline": "OpenAI preprint claims matrix multiplication exponent is exactly 9/4",
             "url": "https://techmeme.com/261125/p5"
-          },
-          {
-            "id": "f4359170efb8",
-            "headline": "Crucible Bench evaluates LLM agents in chemistry research environments",
-            "url": "https://arxiv.org/abs/2611.34254"
           }
         ]
       },
       {
-        "title": "Policy actions and industry updates",
-        "text": "State attorneys general are challenging Character.ai's plan to auction private chats, New York banned AI chatbot toys, and the FCC authorized SpaceX to deploy up to 1 million Starmind satellites.",
+        "title": "Governments intensify AI regulation",
+        "text": "U.S. officials discussed invoking the Defense Production Act to pressure Nvidia’s board, New York enacted a five‑year ban on AI chatbot toys, India’s MeitY signaled final AI regulation papers, and 42 state attorneys general seek to block Character.ai’s data auction.",
         "stories": [
           {
-            "id": "8e9b22777e77",
-            "headline": "US FCC authorizes SpaceX to deploy 1 million Starmind AI satellites",
-            "url": "https://techmeme.com/261125/p27"
-          },
-          {
-            "id": "92419877312e",
-            "headline": "42 state attorneys general challenge Character.ai plan to auction private chats",
-            "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats"
-          },
-          {
-            "id": "fa5252ed6842",
-            "headline": "Entire partners with Sarvam to bring AI coding agents to India",
-            "url": "https://analyticsindiamag.com/ai-news/thomas-dohmkes-entire-partners-with-sarvam-to-bring-ai-coding-agents-to-india"
-          },
-          {
-            "id": "fc509d5dcb94",
-            "headline": "BP to transfer 3,000 finance staff to Wipro in AI transformation deal",
-            "url": "https://analyticsindiamag.com/ai-news/bp-to-transfer-3000-finance-employees-to-wipro-in-strategic-partnership"
+            "id": "af0f0092a2fb",
+            "headline": "Pentagon officials discussed using Defense Production Act over Nvidia CEO role",
+            "url": "https://techmeme.com/261125/p39"
           },
           {
             "id": "4001274b597c",
@@ -6008,6 +5884,63 @@
             "id": "f2f90da31bee",
             "headline": "IndiaAI regulation papers in final stages and releasing soon: MeitY",
             "url": "https://telecom.economictimes.indiatimes.com/news/policy/ai-regulation-papers-in-final-stages-to-be-released-shortly-meity-secretary-at-chariot-1-launch/136176370"
+          },
+          {
+            "id": "92419877312e",
+            "headline": "42 state attorneys general challenge Character.ai plan to auction private chats",
+            "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats"
+          }
+        ]
+      },
+      {
+        "title": "Export controls strain AI hardware market",
+        "text": "New U.S. export controls forced Nvidia to halt AI server shipments to four Southeast Asian nations, halted billions in data‑center loans tied to Chinese firms, triggered a potential S&P credit downgrade for Nvidia, and spurred investigations into alleged GPU smuggling via Megaspeed.",
+        "stories": [
+          {
+            "id": "5d94a8a52956",
+            "headline": "Nvidia stops shipping AI servers to four Southeast Asian countries",
+            "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/nvidia-halts-chip-shipments-to-southeast-asia-ft-reports/articleshow/136180352.cms"
+          },
+          {
+            "id": "fb08c823339f",
+            "headline": "US chip curbs stall billions in data center loans tied to Chinese firms",
+            "url": "https://techmeme.com/261125/p38"
+          },
+          {
+            "id": "f27e0de9d097",
+            "headline": "S&P considers Nvidia credit downgrade over governance risks",
+            "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks"
+          },
+          {
+            "id": "9edbb62c9bcf",
+            "headline": "Nvidia faces ongoing investigations over Megaspeed chip smuggling after CEO’s return",
+            "url": "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed"
+          }
+        ]
+      },
+      {
+        "title": "AI infrastructure deals gain momentum",
+        "text": "The FCC authorized SpaceX’s deployment of up to 1 million Starmind AI satellites, Nexent Capital launched a $1 billion fund for AI data‑center and energy projects, BP partnered with Wipro to shift 3,000 finance staff for AI transformation, and Meta and Amazon discussed lifting the block on Muse AI shopping.",
+        "stories": [
+          {
+            "id": "8e9b22777e77",
+            "headline": "US FCC authorizes SpaceX to deploy 1 million Starmind AI satellites",
+            "url": "https://techmeme.com/261125/p27"
+          },
+          {
+            "id": "85881ba37f62",
+            "headline": "Nexent Capital launches $1 billion fund for AI data‑center and energy infrastructure",
+            "url": "https://yourstory.com/2026/11/nexent-capital-launches-1-billion-fund-focused-on-ai-data-centres-investments"
+          },
+          {
+            "id": "fc509d5dcb94",
+            "headline": "BP to transfer 3,000 finance staff to Wipro in AI transformation deal",
+            "url": "https://analyticsindiamag.com/ai-news/bp-to-transfer-3000-finance-employees-to-wipro-in-strategic-partnership"
+          },
+          {
+            "id": "7220dba755e5",
+            "headline": "Meta and Amazon in talks to lift Muse AI shopping block",
+            "url": "https://techmeme.com/261125/p13"
           }
         ]
       }
@@ -6015,15 +5948,14 @@
     "from_stories": 20
   },
   "plan": {
-    "focus": "Chasing the policy fallout around Nvidia export controls and upcoming Indian AI regulations while tracking market volatility.",
-    "updated_at": "2026-11-26T03:37:01+00:00",
+    "focus": "Chasing semiconductor export controls, security incidents involving Chinese AI models, and market fallout for our builder and investor audience.",
+    "updated_at": "2026-11-26T06:51:02+00:00",
     "thin_areas": [
       "AI in India",
-      "policy"
+      "safety"
     ],
     "searches": [
-      "India AI regulation papers MeitY",
-      "Sarvam AI IndiaAI Mission scrutiny"
+      "MiniMax data breach security researcher"
     ]
   },
   "builders": {
@@ -6164,6 +6096,83 @@
   },
   "threads": [
     {
+      "id": "t-284d228b61da",
+      "title": "Anthropic valued at over $1 trillion",
+      "updated_at": "2026-11-26T06:15:00+00:00",
+      "stories": [
+        {
+          "id": "ec43f3005817",
+          "headline": "Anthropic CEO Dario Amodei says handing political power to AI is absurd",
+          "url": "https://educationtimes.com/learning/should-ai-ever-rule-humans-anthropic-ceo-dario-amodei-calls-the-idea-of-handing-political-power-to-machines-absurd-and-a-terrible-idea/articleshow/136179680.cms",
+          "published_at": "2026-11-26T06:15:00+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "0a55e13cf7b3",
+          "headline": "Anthropic valued at over $1 trillion as CEO Dario Amodei shares philosophy",
+          "url": "https://techmeme.com/261122/p12",
+          "published_at": "2026-11-22T23:20:08+00:00",
+          "category": "voices"
+        }
+      ]
+    },
+    {
+      "id": "t-ea62e5ceb199",
+      "title": "Microsoft Copilot strategy and platform updates",
+      "updated_at": "2026-11-26T06:00:48+00:00",
+      "stories": [
+        {
+          "id": "c6b2d3acc57d",
+          "headline": "China and North Korean state-backed hackers add AI tool Artex to their arsenals",
+          "url": "https://techmeme.com/261126/p3",
+          "published_at": "2026-11-26T06:00:48+00:00",
+          "category": "safety"
+        },
+        {
+          "id": "0a3f3c119965",
+          "headline": "Nadella says Microsoft's MAI models can trail OpenAI by six months if they cost far less to run",
+          "url": "https://windowslatest.com/2026/11/25/six-months-behind-is-a-great-place-to-be-satya-nadella-admits-microsoft-doesnt-mind-if-copilot-runs-on-ai-thats-months-behind-as-long-as-its-cheaper-and-most-users-let-it-pick",
+          "published_at": "2026-11-25T07:46:00+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "60f45a639eb2",
+          "headline": "Microsoft introduces new Copilot features and IQ platform at Ignite 2026",
+          "url": "https://news.microsoft.com/source/2026/11/17/microsoft-ignite-2026-empowering-human-ambition-intelligence-and-trust",
+          "published_at": "2026-11-17T18:36:03+00:00",
+          "category": "models"
+        }
+      ]
+    },
+    {
+      "id": "t-834062342ec8",
+      "title": "New US chip export rules threaten Southeast Asia data center",
+      "updated_at": "2026-11-26T05:58:19+00:00",
+      "stories": [
+        {
+          "id": "5d94a8a52956",
+          "headline": "Nvidia stops shipping AI servers to four Southeast Asian countries",
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/nvidia-halts-chip-shipments-to-southeast-asia-ft-reports/articleshow/136180352.cms",
+          "published_at": "2026-11-26T05:58:19+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "fb08c823339f",
+          "headline": "US chip curbs stall billions in data center loans tied to Chinese firms",
+          "url": "https://techmeme.com/261125/p38",
+          "published_at": "2026-11-25T22:05:01+00:00",
+          "category": "industry"
+        },
+        {
+          "id": "2dae3b3e6991",
+          "headline": "New US chip export rules threaten Southeast Asia data center boom",
+          "url": "https://techmeme.com/261123/p2",
+          "published_at": "2026-11-23T06:02:06+00:00",
+          "category": "industry"
+        }
+      ]
+    },
+    {
       "id": "t-2b1356156f54",
       "title": "Sarvam defends Chinese models, releases 105B",
       "updated_at": "2026-11-26T03:15:00+00:00",
@@ -6236,146 +6245,6 @@
           "headline": "India becomes ChatGPT’s largest market by weekly active users, base doubles since Jan 2026",
           "url": "https://inc42.com/buzz/india-becomes-chatgpts-largest-market-globally-user-base-doubles-since-january",
           "published_at": "2026-11-03T06:09:53+00:00",
-          "category": "industry"
-        }
-      ]
-    },
-    {
-      "id": "t-c4b96abe3e96",
-      "title": "OpenAI GPT-6.2 Astra and Sol rollout",
-      "updated_at": "2026-11-26T02:55:02+00:00",
-      "stories": [
-        {
-          "id": "7f000726c1b3",
-          "headline": "OpenAI begins rolling out merged ChatGPT Chat and Work tabs with shared usage meter",
-          "url": "https://techmeme.com/261125/p46",
-          "published_at": "2026-11-26T02:55:02+00:00",
-          "category": "models"
-        },
-        {
-          "id": "f3aa9260f109",
-          "headline": "Amateur astronomers use Codex and Astra to search public telescope data for exoplanets",
-          "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
-          "published_at": "2026-11-24T11:00:00+00:00",
-          "category": "models"
-        },
-        {
-          "id": "53f2a14376dd",
-          "headline": "OpenAI details Codex sandbox security and execution controls",
-          "url": "https://openai.com/index/inside-the-codex-sandbox",
-          "published_at": "2026-11-18T08:00:00+00:00",
-          "category": "models"
-        },
-        {
-          "id": "25f8ab73ccc5",
-          "headline": "OpenAI releases GPT-6.2 Astra and Sol models with benchmark gains",
-          "url": "https://techmeme.com/261117/p57",
-          "published_at": "2026-11-17T21:45:02+00:00",
-          "category": "models"
-        },
-        {
-          "id": "5b059524c340",
-          "headline": "Ethan Mollick shares pre-launch experience with GPT-6.2 Astra",
-          "url": "https://bsky.app/profile/emollick.bsky.social/post/3n2joens5t22x",
-          "published_at": "2026-11-17T18:30:03.697000+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "549a77347d5e",
-          "headline": "OpenAI releases GPT-6.2 Astra and Sol for ChatGPT Work and Codex",
-          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
-          "published_at": "2026-11-17T17:45:00+00:00",
-          "category": "models"
-        }
-      ]
-    },
-    {
-      "id": "t-dcf6c7046ef3",
-      "title": "Nvidia reinstates Huang; reasons and apology",
-      "updated_at": "2026-11-25T22:55:03+00:00",
-      "stories": [
-        {
-          "id": "af0f0092a2fb",
-          "headline": "Pentagon officials discussed using Defense Production Act over Nvidia CEO role",
-          "url": "https://techmeme.com/261125/p39",
-          "published_at": "2026-11-25T22:55:03+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "f27e0de9d097",
-          "headline": "S&P considers Nvidia credit downgrade over governance risks",
-          "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks",
-          "published_at": "2026-11-25T22:44:32+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "2a76ff4ba5c6",
-          "headline": "Trump says pardon for Nvidia CEO Jensen Huang is 'always an option'",
-          "url": "https://techmeme.com/261124/p42",
-          "published_at": "2026-11-24T23:10:00+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "51b9331a9f93",
-          "headline": "Nvidia CEO Jensen Huang apologizes for code of conduct violations at first all-hands since return",
-          "url": "https://techmeme.com/261124/p28",
-          "published_at": "2026-11-24T18:01:27+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "66cc673a6baa",
-          "headline": "Nvidia board reinstates Jensen Huang as CEO",
-          "url": "https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair",
-          "published_at": "2026-11-23T15:46:18+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "d919e55dc465",
-          "headline": "Scott Bessent says Jensen Huang's Nvidia return should await China probes",
-          "url": "https://techmeme.com/261122/p10",
-          "published_at": "2026-11-22T19:50:01+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "72c866ace5bf",
-          "headline": "California AG subpoenas Nvidia over former CEO Jensen Huang's affair",
-          "url": "https://techmeme.com/261119/p60",
-          "published_at": "2026-11-20T03:30:00+00:00",
-          "category": "policy"
-        },
-        {
-          "id": "39c82d843f49",
-          "headline": "Travis Kalanick backs Jensen Huang's return to Nvidia",
-          "url": "https://businessinsider.com/travis-kalanick-jensen-huang-nvidia-hq-employee-walkout-2026-11",
-          "published_at": "2026-11-19T05:40:00+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "01ad01e5cd41",
-          "headline": "Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
-          "url": "https://techcrunch.com/2026/11/17/nvidia-says-it-doesnt-plan-to-reappoint-jensen-huang-as-ceo",
-          "published_at": "2026-11-17T22:42:27+00:00",
-          "category": "industry"
-        }
-      ]
-    },
-    {
-      "id": "t-834062342ec8",
-      "title": "New US chip export rules threaten Southeast Asia data center",
-      "updated_at": "2026-11-25T22:05:01+00:00",
-      "stories": [
-        {
-          "id": "fb08c823339f",
-          "headline": "US chip curbs stall billions in data center loans tied to Chinese firms",
-          "url": "https://techmeme.com/261125/p38",
-          "published_at": "2026-11-25T22:05:01+00:00",
-          "category": "industry"
-        },
-        {
-          "id": "2dae3b3e6991",
-          "headline": "New US chip export rules threaten Southeast Asia data center boom",
-          "url": "https://techmeme.com/261123/p2",
-          "published_at": "2026-11-23T06:02:06+00:00",
           "category": "industry"
         }
       ]
@@ -6654,7 +6523,7 @@
     }
   ],
   "stats": {
-    "stories_this_month": 688,
+    "stories_this_month": 692,
     "model_releases_this_month": 86,
     "labs_tracked": 34
   }
