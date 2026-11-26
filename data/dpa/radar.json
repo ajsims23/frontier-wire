@@ -2004,6 +2004,29 @@
    "rationale": "PROVE training methods could be evaluated to prevent multi-agent drift and ensure reliability in DPA's agentic process automation workflows.",
    "updated": "2026-11-26",
    "model": "gemini/gemini-3.5-flash-lite"
+  },
+  "minimax": {
+   "key": "minimax",
+   "name": "MiniMax",
+   "first_seen": "2026-11-26",
+   "history": [
+    {
+     "date": "2026-11-26",
+     "from": "",
+     "to": "hold",
+     "why": "Exposes risks around foreign AI APIs accessing confidential data. Reinforces DPA governance policies restricting unvetted cloud models and protecting client data against unauthorized retention and leakage."
+    }
+   ],
+   "evidence": [
+    "4dde58438eb2"
+   ],
+   "ring": "hold",
+   "proposed": "",
+   "quadrant": "policy",
+   "capability": "governance",
+   "rationale": "Exposes risks around foreign AI APIs accessing confidential data. Reinforces DPA governance policies restricting unvetted cloud models and protecting client data against unauthorized retention and leakage.",
+   "updated": "2026-11-26",
+   "model": "gemini/gemini-3.5-flash-lite"
   }
  },
  "considered": [
@@ -2035,6 +2058,7 @@
   "434be2e7a9b5",
   "459fb45d2a37",
   "48f1f10785df",
+  "4dde58438eb2",
   "4deebe750552",
   "4e58f6108a21",
   "5186d80b7eef",
@@ -2118,38 +2142,38 @@
   "fa0e89bac09a",
   "fa5252ed6842"
  ],
- "updated_at": "2026-11-26T05:20:51+00:00",
+ "updated_at": "2026-11-26T08:20:50+00:00",
  "takeaways": {
-  "written_at": "2026-11-24T20:20:50+00:00",
-  "sig": "claude-code:assess|claude-fable-5-2:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|grok-build:hold|mai-code-2:trial|microsoft-agent-framework:hold|shellbench-benchmark:assess|tool-retrieval:trial",
-  "headline": "New models and agent tools arrive for testing while security holds tighten",
+  "written_at": "2026-11-26T08:20:50+00:00",
+  "sig": "claude-fable-5-2:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|grok-build:hold|mai-code-2:trial|microsoft-agent-framework:hold|minimax:hold|shellbench-benchmark:assess|tool-retrieval:trial",
+  "headline": "New model capabilities open fresh tests while supply-chain and data risks demand strict controls",
   "items": [
    {
-    "title": "Assessing new models for extraction and productivity",
-    "meaning": "New language models offer lower pricing, faster speed, and benchmark gains. DPA can assess and trial these models to improve extraction accuracy, research depth, financial reporting pipelines, and developer velocity.",
-    "use": "Run GPT-6.2 Astra and Claude Fable 5.2 on 30 complex private equity fund reports to compare extraction accuracy, latency, and token cost against current production models on public or synthetic files first.",
+    "title": "Testing new models for extraction and research",
+    "meaning": "New language and research models could reduce operating costs and improve accuracy for document extraction, financial reporting, and market research tasks. DPA teams can assess their performance on complex alternative-investment workflows.",
+    "use": "Run GPT-6.2 Astra and Claude Fable 5.2 on a test set of 30 public fund reports and financial statements, comparing extraction accuracy and token costs against current production models.",
     "items": [
      "gpt-6-2-astra",
      "claude-fable-5-2",
-     "gemini-4-hydrogen",
-     "claude-code"
+     "gemini-4-hydrogen"
     ]
    },
    {
-    "title": "Trialing tool retrieval and decision APIs for agents",
-    "meaning": "New API features and benchmarks help manage large tool libraries, speed up bounded-choice document checks, and measure reliability in multi-step agentic workflows and automated data pipelines.",
-    "use": "Integrate Tool Retrieval into an existing Gemini-based agent workflow with 50 plus tools and compare input token costs and latency against static loading using public test data.",
+    "title": "Trialling developer tools and decision APIs",
+    "meaning": "Trialing these tools could boost developer velocity for data pipeline engineering, improve agentic workflow scalability with large tool libraries, and speed up compliance checklist checks on public fund filings.",
+    "use": "Integrate Tool Retrieval into an existing Gemini-based agent workflow using public data to measure input token costs and latency against static loading methods.",
     "items": [
+     "mai-code-2",
      "tool-retrieval",
-     "gemini-decisions-api",
-     "shellbench-benchmark"
+     "gemini-decisions-api"
     ]
    },
    {
-    "title": "Locking down dependencies and reviewing coding agent security",
-    "meaning": "Compromised packages and auto-deploy coding agents pose credential theft and data leakage risks, requiring strict security reviews and dependency lockdowns in agentic workflow development.",
-    "use": "Immediately audit and lock down all dependencies used in agentic workflow development, and enforce strict security reviews on any internal apps built with coding agents.",
+    "title": "Locking down security, dependencies, and risk policies",
+    "meaning": "Security incidents involving foreign API data leaks, compromised public repository packages, and unauthenticated auto-deploying coding agents mean DPA must tighten governance, dependencies, and internal app security reviews.",
+    "use": "Immediately audit and freeze all dependencies used in agentic workflow development, and enforce strict security reviews on any internal apps built with auto-deploying coding tools.",
     "items": [
+     "minimax",
      "microsoft-agent-framework",
      "grok-build"
     ]
