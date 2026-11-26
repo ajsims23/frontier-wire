@@ -1958,6 +1958,52 @@
    "rationale": "Trial Claude Duet as autonomous agent for multi‑step document extraction; integrate via API and evaluate accuracy and hand‑off time.",
    "updated": "2026-11-25",
    "model": "groq/openai/gpt-oss-120b"
+  },
+  "indiaai-regulation-papers": {
+   "key": "indiaai-regulation-papers",
+   "name": "IndiaAI regulation papers",
+   "first_seen": "2026-11-26",
+   "history": [
+    {
+     "date": "2026-11-26",
+     "from": "",
+     "to": "assess",
+     "why": "Upcoming IndiaAI regulation papers may introduce compliance requirements for data handling and model usage that DPA must factor into client data workflows in Nashik."
+    }
+   ],
+   "evidence": [
+    "f2f90da31bee"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "policy",
+   "capability": "governance",
+   "rationale": "Upcoming IndiaAI regulation papers may introduce compliance requirements for data handling and model usage that DPA must factor into client data workflows in Nashik.",
+   "updated": "2026-11-26",
+   "model": "gemini/gemini-3.5-flash-lite"
+  },
+  "prove": {
+   "key": "prove",
+   "name": "PROVE",
+   "first_seen": "2026-11-26",
+   "history": [
+    {
+     "date": "2026-11-26",
+     "from": "",
+     "to": "assess",
+     "why": "PROVE training methods could be evaluated to prevent multi-agent drift and ensure reliability in DPA's agentic process automation workflows."
+    }
+   ],
+   "evidence": [
+    "2b73c373643b"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "techniques",
+   "capability": "agents",
+   "rationale": "PROVE training methods could be evaluated to prevent multi-agent drift and ensure reliability in DPA's agentic process automation workflows.",
+   "updated": "2026-11-26",
+   "model": "gemini/gemini-3.5-flash-lite"
   }
  },
  "considered": [
@@ -1977,6 +2023,7 @@
   "2adb42fb6372",
   "2b4eaac89da1",
   "2b5faa4b22a0",
+  "2b73c373643b",
   "2d3b8471f026",
   "2db41133973d",
   "31089e719fc9",
@@ -2065,12 +2112,13 @@
   "ef3910f6a7af",
   "f0be036ed676",
   "f19cee3d1350",
+  "f2f90da31bee",
   "f8978e4ce75f",
   "f991ba256218",
   "fa0e89bac09a",
   "fa5252ed6842"
  ],
- "updated_at": "2026-11-25T20:14:44+00:00",
+ "updated_at": "2026-11-26T05:20:51+00:00",
  "takeaways": {
   "written_at": "2026-11-24T20:20:50+00:00",
   "sig": "claude-code:assess|claude-fable-5-2:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|grok-build:hold|mai-code-2:trial|microsoft-agent-framework:hold|shellbench-benchmark:assess|tool-retrieval:trial",
