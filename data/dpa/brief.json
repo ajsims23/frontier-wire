@@ -1,30 +1,31 @@
 {
- "date": "2026-11-26",
- "written_at": "2026-11-26T02:20:51+00:00",
- "headline": "PyPI agent package compromise forces dependency audits, while new Gemini and local tools offer efficiency gains",
+ "date": "2026-11-27",
+ "written_at": "2026-11-27T02:20:55+00:00",
+ "headline": "Evaluate open-weight extraction, trial local coding agents, and restrict third-party wrappers",
  "calls": [
   {
-   "title": "Audit and lock down all agent framework dependencies",
-   "text": "Hackers compromised the official Microsoft Agent Framework PyPI package with credential stealers. DPA must immediately audit and lock down all dependencies used in agentic workflow development.",
-   "move": "caution",
+   "title": "Evaluate Patram 1.5 for multilingual document extraction",
+   "text": "Test Patram 1.5 on 30 multilingual, low-quality fund reports to compare field extraction accuracy and abstention rates against our current pipeline. The open-weight vision-language model can improve multilingual document extraction and PDF parsing for financial clients.",
+   "move": "assess",
    "story_ids": [
-    "a1f50bca3921"
+    "a9e589eb2ddb"
    ]
   },
   {
-   "title": "Test Gemini Tool Retrieval for agent efficiency",
-   "text": "Google released Tool Retrieval in the Gemini API to load schemas on demand. Integrate Tool Retrieval into an existing Gemini-based agent workflow with 50+ tools and compare input token costs and latency against static loading.",
-   "move": "assess",
-   "story_ids": [
-    "b00f82b6db94"
-   ]
-  },
-  {
-   "title": "Assess Sarvam-backed local coding agents in India",
-   "text": "Entire and Sarvam AI offer locally hosted coding agents with Indian data residency. Test coding agents on a sample internal Python data pipeline script, measuring task completion time and ensuring zero external data leakage.",
-   "move": "assess",
+   "title": "Trial local Sarvam coding agents for data pipelines",
+   "text": "Test Sarvam-backed coding agents on a sample internal Python data pipeline script, measuring task completion time while ensuring zero external data leakage. Locally hosted agents with data residency comply with strict data rules.",
+   "move": "trial",
    "story_ids": [
     "fa5252ed6842"
+   ]
+  },
+  {
+   "title": "Prohibit unverified wrappers and foreign APIs for clients",
+   "text": "Strictly avoid unverified third-party wrappers and foreign APIs when processing confidential financial documents. Data leaks and unauthorized access at AI startups highlight the risk of prompt logging and retained user data.",
+   "move": "caution",
+   "story_ids": [
+    "6e086317ffb3",
+    "4dde58438eb2"
    ]
   }
  ],
