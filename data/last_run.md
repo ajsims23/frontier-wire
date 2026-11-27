@@ -1,55 +1,54 @@
-## Frontier Wire newsroom run — 2026-11-26T21:51:05+00:00
+## Frontier Wire newsroom run — 2026-11-27T00:51:03+00:00
 
-Fetched 3024 items · fresh 13 · judged 16 · kept 2 · **written 1**
-AI: 19 requests, 53,685 tokens this run · 289 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking regional chip shipment pauses and potential cost discipline shifts across AI labs.
-  Priorities: Nvidia hits pause on chip shipments to Southeast Asia (Nvidia pausing shipments to Southeast Asia directly impacts regional data center growth and supply chains.); OpenAI may be in cost control mode (OpenAI entering cost control mode signals a broader industry shift toward efficiency and margin defense.); Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Se (Google's MCP servers rollout for AI agents highlights practical interoperability limits.); WhatsApp To Partner Jio To Launch Int’l Data eSIM Feature In India (WhatsApp and Jio eSIM partnership expands digital infrastructure access in India.); CERT-In Flags High-Severity Vulnerability In e-Governance Platform DIG (Critical e-governance vulnerability flagged by CERT-In points to significant security risks.)
-  Thin areas: safety, research
-  Searches: Nvidia Southeast Asia chip shipments pause: 6 new; OpenAI cost control mode financial strategy: 0 new
-  Dig deeper: Nvidia hits pause on chip shipments to Southeast Asia; OpenAI may be in cost control mode
-Research agent: investigated 2 stories with 5 tool calls, confirmed 1
+Fetched 3027 items · fresh 7 · judged 7 · kept 2 · **written 2**
+AI: 22 requests, 58,360 tokens this run · 22 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Tracking congressional AI regulation efforts and potential cost controls at OpenAI amid broader market shifts.
+  Priorities: Bipartisan efforts in Congress to regulate AI are gaining momentum, bu (Covers bipartisan momentum and legislative hurdles for US AI regulation.); A US judge sentences a Florida man to 47 months in prison for using AI (Notable case of AI voice/video impersonation and financial fraud resulting in federal prison time.); OpenAI may be in cost control mode (Important signal on OpenAI's operational focus and financial strategy.); AI made self-hosting fun again (Interesting builder perspective on self-hosting AI tools.); Apple To Open Seventh India Store In Hyderabad’s Kukatpally (Tracks major tech footprint expansion in India.)
+  Thin areas: safety, policy
+  Searches: US Congress AI regulation 2026: 0 new
+  Dig deeper: A US judge sentences a Florida man to 47 months in prison for using AI; OpenAI may be in cost control mode
+Research agent: investigated 2 stories with 5 tool calls, confirmed 2
 Daily briefing: 4 themes from 20 stories
-Videos: 12 kept from 12 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 0 new), Google for Developers ok (11 in feed, 0 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (6 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 2 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 4 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (4 in feed, 0 new)
-Top Voices: skipped: only 0 debates passed the checks
+Videos: 11 kept from 11 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 0 new), Google for Developers ok (11 in feed, 0 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (6 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 2 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 3 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (4 in feed, 0 new)
+Builders desk: picked 5 from 60 candidates; 4 with pictures, 0 with videos
+Top Voices: 3 debates from 50 posts by 7 people; 4 portraits, 4 pictures
+Daily self-check: coverage 100% of 6 significant stories; 0 missed, 0 added to this run
 Photos: 1 saved, 0 unavailable
-Alerts: 35 events sent: {"subscribers":5,"sent":0,"queued":10}
+Alerts: 14 events sent: {"subscribers":5,"sent":0,"queued":22}
 Claims: 254 tracked, 248 open, 0 updated this run
-Trackers: filed 1 stories; updated agent-safety
-Model tracker: 82 models, 26 changes today
-Tagged 1 stories by sector, region and deal
-Time: gather 99s, plan 2s, judge 4s, verify and write 12s, videos 5s, tagging 1s, trackers 54s, claims 5s, top voices 19s, briefing 6s, photos 1s, alerts 6s
+Trackers: filed 1 stories; updated ai-regulation
+Model tracker: 82 models, 11 changes today
+Tagged 2 stories by sector, region and deal
+Self-review written (see the newsroom issue)
+Time: gather 98s, audit 2s, plan 2s, judge 2s, verify and write 12s, videos 4s, tagging 58s, trackers 2s, claims 2s, builders 18s, top voices 17s, briefing 2s, self-review 2s, photos 1s, stock photos 5s, alerts 5s
 
 ### New stories
-- **models** — [Google mandates MCP server access for Workspace AI agents by February 2027](https://techstackups.com/articles/google-workspace-ai-agents-mcp)  
-  Google released Model Context Protocol servers for Workspace and mandated that AI agents use them instead of standard REST APIs starting February 1, 2027. The rules introduce dedicated agent identities, human approval for sensitive actions, and restrictions on training data.  
+- **policy** — [Bipartisan congressional efforts to regulate AI face legislative obstacles](https://techmeme.com/261126/p26)  
+  Bipartisan efforts in Congress to regulate artificial intelligence are gaining momentum. However, these initiatives face obstacles due to the slow pace of legislative work and turf battles between members of both parties.  
+  _2 source(s), 0 verified quote(s)_
+- **safety** — [Florida man sentenced to 47 months in prison for AI voice crypto scam](https://techmeme.com/261126/p25)  
+  A US judge sentenced David Anthony Sanchez to 47 months in prison for using artificial intelligence to impersonate Kick streamer N3on in a cryptocurrency fraud scheme. The scheme defrauded memecoin organizers of approximately $260,000 through fake accounts and AI-generated voice recordings.  
   _4 source(s), 1 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Microsoft publishes CogACT2-RoboDojo on Hugging Face — score 3: Minor Hugging Face model upload with zero likes and no major accompanying paper or benchmark.
-- AMD-specific fork of llama.cpp — score 4: Incremental utility library for running local models on AMD hardware rather than major AI news.
-- Show HN: Fuck_data_brokers.py — not AI: Privacy script with no direct AI relevance.
-- YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays — not AI: Browser utility for blocking YouTube ads with no AI angle.
-- NP_R ≠ PAR_R — not AI: Cryptographic or complexity theory post with no AI relevance.
-- Nvidia hits pause on chip shipments to Southeast Asia — duplicate of 5d94a8a52956
-- WhatsApp To Partner Jio To Launch Int’l Data eSIM Feature In India — not AI: Telecom and messaging partnership with no AI angle.
-- CERT-In Flags High-Severity Vulnerability In e-Governance Platform DIGIT — not AI: General cybersecurity vulnerability in an e-governance platform with no AI angle.
-- Binance says it has finished its recovery work and fully lifted its withdrawal suspension, after a record $6.3B was stolen in a hack last month (Rajveer Singh Pardesi/Reuters) — not AI: Crypto exchange hack recovery news, off-topic for AI.
-- Nvidia Reportedly Halts AI Server Shipments to 4 Southeast Asian Countries Amid US Export Controls — duplicate of 5d94a8a52956
-- Nvidia tells partners to pause shipments to Southeast Asia — duplicate of 5d94a8a52956
-- Nvidia Reportedly Freezes AI Chip Shipments to Southeast Asian Countries — duplicate of 5d94a8a52956
-- NVIDIA Reportedly Halts AI Chip Shipments To Southeast Asia — duplicate of 5d94a8a52956
-- Nvidia freezes AI server shipments to Southeast Asia amid new US chip crackdown — duplicate of 5d94a8a52956
-- OpenAI may be in cost control mode — could not verify yet; will retry next run
+- AI made self-hosting fun again — score 4: Hacker News discussion link without substantive unique new developments or lab announcements.
+- Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad — not AI: Profile of an architect with no artificial intelligence angle.
+- OpenAI may be in cost control mode — score 4: Speculative blog post discussing OpenAI cost control based on Hacker News points rather than concrete primary reporting or statements.
+- Show HN: Three Linux VMs in a browser tab, each running a different browser — not AI: Technical browser project for Linux VMs with no artificial intelligence angle.
+- Apple To Open Seventh India Store In Hyderabad’s Kukatpally — not AI: Retail store opening by Apple in India with no artificial intelligence angle.
 
 </details>
+
+### Sources with problems
+- `r-localllama`: failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day'
+For more i
+- `r-sideproject`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'
+F
 
 <details><summary>Research agent's work</summary>
 
-- Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Se: confirmed (searched “Google AI Agents MCP Servers Gmail”; read thenextweb.com)
-- OpenAI may be in cost control mode: unconfirmed (searched “OpenAI cost control mode”; searched “OpenAI is in cost control mode micjm”; searched “"OpenAI is in cost control mode"”)
+- Bipartisan efforts in Congress to regulate AI are gaining momentum, bu: confirmed (searched “Congress regulate AI bipartisan turf battles New York Times”; read nytimes.com; searched “Bipartisan Desire to Regulate A.I. Faces Obstacles in Congress New York Times”)
+- A US judge sentences a Florida man to 47 months in prison for using AI: confirmed (searched “Florida man N3on AI impersonation 47 months prison memecoin”; read theverge.com)
 
 </details>
-
-### Notes
-- 1 kept item(s) carried over to the next run
