@@ -2096,6 +2096,29 @@
    "rationale": "Google's upcoming mandate for Workspace agents could influence how DPA builds internal integrations and agentic workflows connected to Google services. We should assess its fit for our workflows.",
    "updated": "2026-11-26",
    "model": "gemini/gemini-3.5-flash-lite"
+  },
+  "dante-security": {
+   "key": "dante-security",
+   "name": "Dante Security",
+   "first_seen": "2026-11-27",
+   "history": [
+    {
+     "date": "2026-11-27",
+     "from": "",
+     "to": "assess",
+     "why": "Could help DPA track autonomous AI agents across client workflows and assign human oversight for risk management; needs evaluation against our multi-step workflow governance requirements."
+    }
+   ],
+   "evidence": [
+    "4987472b3770"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "tools",
+   "capability": "agents",
+   "rationale": "Could help DPA track autonomous AI agents across client workflows and assign human oversight for risk management; needs evaluation against our multi-step workflow governance requirements.",
+   "updated": "2026-11-27",
+   "model": "gemini/gemini-3.5-flash-lite"
   }
  },
  "considered": [
@@ -2127,6 +2150,7 @@
   "434be2e7a9b5",
   "459fb45d2a37",
   "48f1f10785df",
+  "4987472b3770",
   "4dde58438eb2",
   "4deebe750552",
   "4e58f6108a21",
@@ -2214,40 +2238,41 @@
   "fa0e89bac09a",
   "fa5252ed6842"
  ],
- "updated_at": "2026-11-26T23:20:51+00:00",
+ "updated_at": "2026-11-27T05:20:51+00:00",
  "takeaways": {
-  "written_at": "2026-11-26T08:20:50+00:00",
-  "sig": "claude-fable-5-2:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|grok-build:hold|mai-code-2:trial|microsoft-agent-framework:hold|minimax:hold|shellbench-benchmark:assess|tool-retrieval:trial",
-  "headline": "New model capabilities open fresh tests while supply-chain and data risks demand strict controls",
+  "written_at": "2026-11-27T05:20:51+00:00",
+  "sig": "claude-fable-5-2:assess|dante-security:assess|gemini-4-hydrogen:assess|gemini-decisions-api:trial|gpt-6-2-astra:assess|mai-code-2:trial|microsoft-agent-framework:hold|minimax:hold|shellbench-benchmark:assess|tool-retrieval:trial",
+  "headline": "New models, evaluation tools, and security alerts shape DPA pipeline and agent strategies",
   "items": [
    {
-    "title": "Testing new models for extraction and research",
-    "meaning": "New language and research models could reduce operating costs and improve accuracy for document extraction, financial reporting, and market research tasks. DPA teams can assess their performance on complex alternative-investment workflows.",
-    "use": "Run GPT-6.2 Astra and Claude Fable 5.2 on a test set of 30 public fund reports and financial statements, comparing extraction accuracy and token costs against current production models.",
+    "title": "Testing new foundation models for efficiency and extraction",
+    "meaning": "New high-performing models offer lower token pricing and benchmark gains. DPA can assess and test these models to improve cost efficiency and accuracy across document extraction, research, financial reporting, and coding workflows.",
+    "use": "Run GPT-6.2 Astra on 30 complex private equity fund reports to compare extraction accuracy and latency against current production models.",
     "items": [
      "gpt-6-2-astra",
      "claude-fable-5-2",
-     "gemini-4-hydrogen"
+     "gemini-4-hydrogen",
+     "mai-code-2"
     ]
    },
    {
-    "title": "Trialling developer tools and decision APIs",
-    "meaning": "Trialing these tools could boost developer velocity for data pipeline engineering, improve agentic workflow scalability with large tool libraries, and speed up compliance checklist checks on public fund filings.",
-    "use": "Integrate Tool Retrieval into an existing Gemini-based agent workflow using public data to measure input token costs and latency against static loading methods.",
+    "title": "Scaling agents and checks with new tools",
+    "meaning": "New APIs and benchmarks help DPA scale tool libraries, improve bounded-choice document checks, and evaluate agent reliability, while security tools help monitor autonomous workflows across client deliverables.",
+    "use": "Integrate Tool Retrieval into an existing Gemini-based agent workflow with 50+ tools and compare input token costs and latency against static loading.",
     "items": [
-     "mai-code-2",
+     "gemini-decisions-api",
      "tool-retrieval",
-     "gemini-decisions-api"
+     "shellbench-benchmark",
+     "dante-security"
     ]
    },
    {
-    "title": "Locking down security, dependencies, and risk policies",
-    "meaning": "Security incidents involving foreign API data leaks, compromised public repository packages, and unauthenticated auto-deploying coding agents mean DPA must tighten governance, dependencies, and internal app security reviews.",
-    "use": "Immediately audit and freeze all dependencies used in agentic workflow development, and enforce strict security reviews on any internal apps built with auto-deploying coding tools.",
+    "title": "Securing agent workflows and managing data risks",
+    "meaning": "Third-party data leakage risks and compromised public repositories highlight the need to protect confidential information and secure all dependencies used in agentic workflow development.",
+    "use": "Immediately audit and lock down all dependencies used in agentic workflow development to protect against compromised packages.",
     "items": [
      "minimax",
-     "microsoft-agent-framework",
-     "grok-build"
+     "microsoft-agent-framework"
     ]
    }
   ],
