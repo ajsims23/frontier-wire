@@ -1,54 +1,57 @@
-## Frontier Wire newsroom run — 2026-11-27T00:51:03+00:00
+## Frontier Wire newsroom run — 2026-11-27T03:50:58+00:00
 
-Fetched 3027 items · fresh 7 · judged 7 · kept 2 · **written 2**
-AI: 22 requests, 58,360 tokens this run · 22 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking congressional AI regulation efforts and potential cost controls at OpenAI amid broader market shifts.
-  Priorities: Bipartisan efforts in Congress to regulate AI are gaining momentum, bu (Covers bipartisan momentum and legislative hurdles for US AI regulation.); A US judge sentences a Florida man to 47 months in prison for using AI (Notable case of AI voice/video impersonation and financial fraud resulting in federal prison time.); OpenAI may be in cost control mode (Important signal on OpenAI's operational focus and financial strategy.); AI made self-hosting fun again (Interesting builder perspective on self-hosting AI tools.); Apple To Open Seventh India Store In Hyderabad’s Kukatpally (Tracks major tech footprint expansion in India.)
-  Thin areas: safety, policy
-  Searches: US Congress AI regulation 2026: 0 new
-  Dig deeper: A US judge sentences a Florida man to 47 months in prison for using AI; OpenAI may be in cost control mode
-Research agent: investigated 2 stories with 5 tool calls, confirmed 2
+Fetched 3025 items · fresh 15 · judged 14 · kept 3 · **written 3**
+AI: 22 requests, 56,145 tokens this run · 44 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Tracking enterprise workforce shifts and AI agent security as restructuring announcements ripple across global tech companies.
+  Priorities: Dante Security, which has developed a platform for monitoring the acti (Dante Security raising $10M seed for monitoring AI agent activity addresses enterprise security for autonomous agents.); SAP weighs cutting at least 10,000 positions in AI restructuring (SAP's major restructuring plan highlights workforce displacement driven by AI adoption.); Ethan Mollick: We have the ability to cheaply provide the equivalent o (Ethan Mollick's commentary on personalized AI access highlights broad societal implications of cheap intelligence.); AI may put 24 million knowledge-worker jobs at risk globally over five (JP Morgan's new global job risk estimate provides quantitative grounding for enterprise labor displacement discussions.)
+  Thin areas: research
+  Dig deeper: Dante Security, which has developed a platform for monitoring the acti; SAP weighs cutting at least 10,000 positions in AI restructuring
+Research agent: investigated 2 stories with 6 tool calls, confirmed 2
 Daily briefing: 4 themes from 20 stories
-Videos: 11 kept from 11 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 0 new), Google for Developers ok (11 in feed, 0 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (6 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 2 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 3 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (4 in feed, 0 new)
-Builders desk: picked 5 from 60 candidates; 4 with pictures, 0 with videos
-Top Voices: 3 debates from 50 posts by 7 people; 4 portraits, 4 pictures
-Daily self-check: coverage 100% of 6 significant stories; 0 missed, 0 added to this run
-Photos: 1 saved, 0 unavailable
-Alerts: 14 events sent: {"subscribers":5,"sent":0,"queued":22}
-Claims: 254 tracked, 248 open, 0 updated this run
-Trackers: filed 1 stories; updated ai-regulation
-Model tracker: 82 models, 11 changes today
-Tagged 2 stories by sector, region and deal
-Self-review written (see the newsroom issue)
-Time: gather 98s, audit 2s, plan 2s, judge 2s, verify and write 12s, videos 4s, tagging 58s, trackers 2s, claims 2s, builders 18s, top voices 17s, briefing 2s, self-review 2s, photos 1s, stock photos 5s, alerts 5s
+Threads updated: ATI security layer and Dante Security agent monitoring: Dante Security raises $10M seed to monitor enterprise AI age
+Videos: 11 kept from 12 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 0 new), Google for Developers ok (11 in feed, 0 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (6 in feed, 0 new), Hugging Face ok (12 in feed, 2 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 2 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 3 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 1 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (4 in feed, 0 new)
+Photos: 2 saved, 0 unavailable
+Alerts: 23 events sent: {"subscribers":5,"sent":0,"queued":18}
+Claims: 255 tracked, 249 open, 0 updated this run
+Trackers: filed 2 stories; updated agent-safety, ai-money
+Model tracker: 82 models, 17 changes today
+Tagged 3 stories by sector, region and deal
+Time: gather 97s, plan 1s, judge 3s, verify and write 14s, videos 3s, tagging 1s, trackers 62s, claims 2s, briefing 2s, stock photos 11s, alerts 3s
 
 ### New stories
-- **policy** — [Bipartisan congressional efforts to regulate AI face legislative obstacles](https://techmeme.com/261126/p26)  
-  Bipartisan efforts in Congress to regulate artificial intelligence are gaining momentum. However, these initiatives face obstacles due to the slow pace of legislative work and turf battles between members of both parties.  
-  _2 source(s), 0 verified quote(s)_
-- **safety** — [Florida man sentenced to 47 months in prison for AI voice crypto scam](https://techmeme.com/261126/p25)  
-  A US judge sentenced David Anthony Sanchez to 47 months in prison for using artificial intelligence to impersonate Kick streamer N3on in a cryptocurrency fraud scheme. The scheme defrauded memecoin organizers of approximately $260,000 through fake accounts and AI-generated voice recordings.  
-  _4 source(s), 1 verified quote(s)_
+- **industry** — [AI could displace 24 million knowledge-worker jobs in five years: JP Morgan](https://livemint.com/technology/ai-may-put-24-million-knowledge-worker-jobs-at-risk-globally-over-five-years-jp-morgan-11795746566291.html)  
+  A JP Morgan Wealth Management report estimates that AI could displace around 24 million knowledge-worker jobs globally over five years. The report notes that much of the adjustment may happen through leaving roles unfilled rather than through layoffs.  
+  _4 source(s), 0 verified quote(s)_
+- **voices** — [Ethan Mollick on AI's potential to solve wicked problems](https://bsky.app/profile/emollick.bsky.social/post/3n3b62phpek2b)  
+  Ethan Mollick posted on Bluesky that AI can cheaply deliver personalized human-level help in any language to cellphone users. He argued that this makes complex problems in education, healthcare, and development potentially tractable.  
+  _1 source(s), 2 verified quote(s)_
+- **industry** — [Dante Security raises $10M seed to monitor enterprise AI agents](https://techmeme.com/261126/p27)  
+  Dante Security has launched out of stealth with $10M in seed funding led by NFX to provide a platform for monitoring autonomous AI agents within organizations. The platform discovers agents, traces their actions, and assigns a named human owner to each agent.  
+  _2 source(s), 1 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- AI made self-hosting fun again — score 4: Hacker News discussion link without substantive unique new developments or lab announcements.
-- Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad — not AI: Profile of an architect with no artificial intelligence angle.
-- OpenAI may be in cost control mode — score 4: Speculative blog post discussing OpenAI cost control based on Hacker News points rather than concrete primary reporting or statements.
-- Show HN: Three Linux VMs in a browser tab, each running a different browser — not AI: Technical browser project for Linux VMs with no artificial intelligence angle.
-- Apple To Open Seventh India Store In Hyderabad’s Kukatpally — not AI: Retail store opening by Apple in India with no artificial intelligence angle.
+- Hard Drive pricing has gotten bad — not AI: Hard drive pricing discussion with no AI angle.
+- Rvoip: VoIP stack in Rust — not AI: Rust VoIP stack library release, no AI relevance.
+- D2C’s Red Alert, The Hidden Cost Of Compute & More — not AI: General roundup covering food labelling and other non-AI topics.
+- Final Call: India After Net Neutrality Regulations, November 27, #NAMA — not AI: Net neutrality briefing, no AI relevance.
+- It took X 20 years to add parental controls. Can new feature make platform safer for kids? — not AI: General social media parental controls feature release, no AI angle.
+- X introduces parental controls for teen users aged 13 to 17 — not AI: General social media parental controls feature release, no AI angle.
+- US rejects EU plans to tax Big Tech — not AI: US warns against EU digital tax, no AI relevance.
+- SAP weighs cutting at least 10,000 positions in AI restructuring — duplicate of 9794db2730fe
+- 'King is back': Nvidia boss's return sparks fresh AI deepfake deluge — duplicate of 995fd2b8bd33
+- Hala Mobility combines EV rentals, delivery jobs, and financial services for gig workers — not AI: EV rentals and gig worker financial services without an AI angle.
+- When will Agnikul start earning operating revenue?; How neighbourhood medical stores are becoming e-clinics — not AI: Financial results for a space launch vehicle startup and e-clinic trends without an AI angle.
 
 </details>
-
-### Sources with problems
-- `r-localllama`: failed: HTTPStatusError: Client error '404 Not Found' for url 'https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day'
-For more i
-- `r-sideproject`: failed: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://www.reddit.com/r/SideProject/top/.rss?t=day'
-F
 
 <details><summary>Research agent's work</summary>
 
-- Bipartisan efforts in Congress to regulate AI are gaining momentum, bu: confirmed (searched “Congress regulate AI bipartisan turf battles New York Times”; read nytimes.com; searched “Bipartisan Desire to Regulate A.I. Faces Obstacles in Congress New York Times”)
-- A US judge sentences a Florida man to 47 months in prison for using AI: confirmed (searched “Florida man N3on AI impersonation 47 months prison memecoin”; read theverge.com)
+- AI may put 24 million knowledge-worker jobs at risk globally over five: confirmed (searched “JP Morgan AI 24 million knowledge worker jobs at risk”; read deccanchronicle.com; searched “"24 million" "JP Morgan" AI jobs”)
+- Dante Security, which has developed a platform for monitoring the acti: confirmed (searched “Dante Security 10M seed NFX Meir Orbach CTech”; read thenextweb.com; searched “Dante Security NFX 10M seed Meir Orbach CTech”)
 
 </details>
+
+### Notes
+- not India desk: 'AI may put 24 million knowledge-worker jobs at ris'
+- gemini/gemini-3.5-flash-lite: per-minute limit hit; trying next model
