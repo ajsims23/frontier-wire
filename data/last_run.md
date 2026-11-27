@@ -1,77 +1,75 @@
-## Frontier Wire newsroom run — 2026-11-27T12:31:58+00:00
+## Frontier Wire newsroom run — 2026-11-27T15:50:57+00:00
 
-Fetched 3048 items · fresh 23 · judged 32 · kept 5 · **written 4**
-AI: 40 requests, 93,685 tokens this run · 144 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Chasing enterprise AI agent efficiency gains, India restructuring, and data center evolution amid global demand.
-  Priorities: Anthropic Ditches Python for Rust in Messages API, Cuts CPU Usage by 7 (Anthropic moving Messages API from Python to Rust highlights major systems-level optimization for AI infrastructure.); Swiggy's Instamart to lay off 340 employees amid AI-led restructuring (Swiggy's Instamart layoffs show tangible workforce impacts from AI restructuring in India's tech ecosystem.); A look at proposals for vertical data centers, often the only option w (Vertical data center proposals highlight physical infrastructure adaptation for land-constrained AI hubs.); The Government is planning a common AI platform to automate citizen se (Indian government's common AI platform for citizen services marks a major public sector deployment milestone.); Can AI be recognised as an author under Indian copyright law? Delhi HC (Delhi HC examining AI authorship under Indian copyright law directly impacts IP policy and legal precedents.)
-  Thin areas: research, policy
-  Searches: Anthropic Rust Messages API: 3 new; Swiggy Instamart AI layoffs: 6 new; vertical data centers Taiwan Kansas City: 0 new
-  Dig deeper: Anthropic Ditches Python for Rust in Messages API, Cuts CPU Usage by 7; Swiggy's Instamart to lay off 340 employees amid AI-led restructuring
-Research agent: investigated 5 stories with 14 tool calls, confirmed 4
+Fetched 3024 items · fresh 19 · judged 26 · kept 6 · **written 4**
+AI: 40 requests, 93,403 tokens this run · 184 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Chasing the fallout from data center chip flows and regulatory pressure on AI agents while scanning India's tech landscape.
+  Priorities: Serial numbers in Chinese filings reveal that Nvidia's restricted Blac (Reveals restricted Nvidia Blackwell chips installed in Shanghai data centers via Chinese filings.); The CMA says Meta made changes to Muse's ToS in the UK to reflect the  (CMA updates on Meta Muse's UK terms highlight shifting global compliance for AI agents.); The Government is planning a common AI platform to automate citizen se (Indian government planning a common AI platform for automated citizen services.); From Alibaba to BharatGen, 10 Small Language Models That Rivalled LLMs (Deep dive into Small Language Models rivalling LLMs in 2026.); Kimi for Science: More scientific ideas, made possible (Kimi for Science rollout expands AI tooling for research workflows.)
+  Thin areas: india, research
+  Searches: Nvidia Blackwell China data center Shanghai: 6 new; Meta Muse UK consumer law CMA: 1 new; India government AI platform citizen services: 0 new
+  Dig deeper: Serial numbers in Chinese filings reveal that Nvidia's restricted Blac; The CMA says Meta made changes to Muse's ToS in the UK to reflect the 
+Research agent: investigated 5 stories with 15 tool calls, confirmed 3
 Daily briefing: 3 themes from 20 stories
-Videos: 12 kept from 13 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 0 new), Google for Developers ok (11 in feed, 0 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (6 in feed, 0 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 2 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 3 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (5 in feed, 1 new)
+Threads updated: Muse rollout expands to UK adults: Meta changes UK Muse terms of service to reflect consumer la; US tightens AI chip export rules and ASML restrictions: How Huawei became central to China's AI push after U.S. rest
+Videos: 13 kept from 14 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 0 new), Google for Developers ok (11 in feed, 0 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (6 in feed, 0 new), Hugging Face ok (13 in feed, 4 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 2 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 3 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (3 in feed, 1 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (5 in feed, 0 new)
 Photos: 3 saved, 0 unavailable
-Alerts: 29 events sent: {"subscribers":5,"sent":0,"queued":30}
+Alerts: 36 events sent: {"subscribers":5,"sent":0,"queued":30}
 Claims: 257 tracked, 251 open, 0 updated this run
-Trackers: filed 6 stories; updated india-ai, copyright, ai-infrastructure, ai-money
-Model tracker: 82 models, 19 changes today
-Explainers: 1 added to earlier stories
+Trackers: filed 5 stories; updated us-china, frontier-race, ai-regulation, india-ai
+Model tracker: 82 models, 24 changes today
 Tagged 4 stories by sector, region and deal
-India briefing: 4 themes from 6 stories
-Time: gather 147s, plan 2s, judge 8s, verify and write 103s, videos 4s, tagging 2s, explainers 2s, trackers 6s, claims 2s, briefing 3s, photos 3s, stock photos 1s, alerts 8s
+India briefing: 2 themes from 6 stories
+Time: gather 102s, plan 2s, judge 6s, verify and write 91s, videos 5s, tagging 2s, trackers 40s, claims 2s, briefing 2s, alerts 5s
 
 ### New stories
-- **industry** — [Developers propose vertical data centers as Kansas City blocks high-rise plan](https://techmeme.com/261127/p3)  
-  Developers are proposing vertical data centers to address high demand and land limits in places like Taiwan. However, Kansas City recently rejected a 20-story tower proposal.  
-  _2 source(s), 0 verified quote(s)_
-- **policy** — [Delhi High Court to examine if AI can be author under copyright law](https://medianama.com/2026/11/223-ai-author-indian-copyright-law-delhi-hc)  
-  The Delhi High Court issued notice on an appeal by American computer scientist Stephen L Thaler challenging the Copyright Office's refusal to recognise his AI system DABUS as the author of an artwork. The Copyright Office previously ruled that while the artwork met originality requirements, an AI system cannot be an author under Section 2(d)(vi) of the Copyright Act, 1957.  
-  _2 source(s), 2 verified quote(s)_
-- **research** — [Dunzo cofounder Kabeer Biswas' AI startup M raises $9 Mn](https://inc42.com/buzz/kabeer-biswas-m-raises-9-mn-led-by-rtp-global)  
-  Dunzo cofounder Kabeer Biswas' AI startup M has raised $9 million in a funding round led by RTP Global. This brings the startup's total capital raised to about $20 million following a previous $11 million seed round.  
+- **policy** — [Meta changes UK Muse terms of service to reflect consumer law](https://techmeme.com/261127/p8)  
+  Meta updated the terms of service for its Muse personal AI agent in the UK to reflect the country's consumer law following engagement with the Competition and Markets Authority. The UK terms provide users with higher liability standards and more scope to seek redress for mistakes compared to the US.  
   _3 source(s), 0 verified quote(s)_
-- **industry** — [Swiggy Instamart lays off 340 employees amid AI push and inventory shift](https://financialexpress.com/business/industry-swiggys-instamart-lays-off-340-amid-ai-push-shift-to-inventory-model-4395160)  
-  Swiggy's quick-commerce division, Instamart, is laying off 340 employees while restructuring its business amid increased AI adoption and a shift to an inventory model. The cutbacks come as the company faces competition from rivals including Zomato's Blinkit and Zepto.  
-  _8 source(s), 0 verified quote(s)_
+- **industry** — [How Huawei became central to China's AI push after U.S. restrictions](https://techmeme.com/261127/p7)  
+  U.S. restrictions have pushed Huawei toward self-reliance, making the company central to China's AI ambitions as access to Nvidia's advanced chips shrinks. Despite this growing role, a wide technological gap remains between Huawei and its American rival.  
+  _2 source(s), 0 verified quote(s)_
+- **models** — [Small language models rival large models in 2026 with lower compute costs](https://analyticsindiamag.com/ai-features/from-alibaba-to-bharatgen-10-small-language-models-that-rivalled-llms-in-2026)  
+  Small language models emerged as efficient alternatives to large language models in 2026, offering task-specific optimisation and running on local devices. These specialised models require 10 to 100 times less computation while matching or exceeding larger models.  
+  _2 source(s), 0 verified quote(s)_
+- **industry** — [Jio Platforms launches and takes down AI astrology platform JioAstro](https://medianama.com/2026/11/223-jio-takes-down-ai-astrology-platform)  
+  Jio Platforms launched an AI-powered astrology platform called JioAstro on November 26 and took it offline after a few hours, stating the live version was a closed demo survey. The offering used advanced AI trained in Vedic astrology to generate birth charts and personalized insights.  
+  _2 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- Taking Trainium3 to the Track: Generating Videos with LTX-2.5 — score 4: Minor blog post or announcement about video generation on Trainium hardware.
-- AI boosts workers , but firms see no productivity gain — score 3: Vague productivity report without substantial new data or breakthrough.
-- Claude sabotaging SOTA ML research tasks — score 3: Hacker News discussion post on anecdotal model behavior.
-- Anthropic Ditches Python for Rust in Messages API, Cuts CPU Usage by 70% and Memory by Over 80% — duplicate of f72d7ea35d13
-- Thomas Dohmke Wants to Replace Pull Requests With AI Agent Trails — score 5: General commentary by Thomas Dohmke on software development and AI agent workflows.
-- StockGro Signs MoU With Emirates NBD To Tap UAE’s Growing Investor Base — not AI: Fintech MoU partnership without an AI focus.
-- Can Dreamteam Take On CRM Old Guards With Its Platoon Of AI Agents? — score 4: Profile of a B2B sales startup using AI agents, promotional in nature.
-- FirstCry Halves Stake Sale To ₹150 Cr In Swara Baby IPO — not AI: IPO size reduction for baby products company, not AI-related.
-- indē wild Slips Into Red In FY26 Despite 2.4X YoY Surge In Operating Revenue — not AI: Financial earnings for a beauty brand, no AI angle.
-- Meta to sell international travel data eSIMs inside WhatsApp — not AI: WhatsApp eSIM feature is standard telecom/messaging news, not core AI.
-- X adds parental controls for teens — not AI: General social media feature update regarding parental controls, lacks any AI relevance.
-- AI reshaping role mix, not triggering hiring freeze: Experts — score 4: General commentary on AI and hiring trends without specific news.
-- Masters’ Union hit by widespread job cuts, employees say — not AI: Layoffs at Masters' Union business school without an AI angle.
-- Why Everybody Loves a Good Drought is a must-read book — not AI: Book recommendation piece, off-topic for AI.
-- 5 lessons from the book Why We Sleep by Matthew Walker — not AI: Book review on sleep with no AI angle.
-- From Perplexity to Anthropic: Five Indian-origin tech leaders shaping the global AI industry — not AI: Listicle of Indian-origin leaders in AI, no new substantive development.
-- Startup news and updates: daily roundup (November 27, 2026) — not AI: Daily startup roundup with no distinct AI focus.
-- Sources: the US Air Force recently found that hackers breached Cloud One, the cloud computing platform powering its air defense radar and other data feeds (Reuters) — not AI: Military cloud platform breach without an AI angle.
-- Anthropic Says Claude Helped Rebuild Its API in Rust, Cutting CPU Use by 70% — duplicate of f72d7ea35d13
-- Anthropic switches message API from Python to Rust, cuts CPU use 70 percent — duplicate of f72d7ea35d13
-- November 26 AI News Roundup | Recalculated Pricing and an API Rebuild Collide on the Same Day — duplicate of f72d7ea35d13
-- Swiggy's Instamart lays off 340 employees amid wider AI adoption push — score 4: Routine layoff report citing general automation trends.
-- The Government is planning a common AI platform to automate citizen services — could not verify yet; will retry next run
+- US Air Force's cloud computing platform hacked — not AI: General cloud security incident without an AI focus.
+- "What's Claude's Fursona?" and Other Questions — not AI: Humorous discussion, not substantive AI development news.
+- Android’s DIY widgets are a bit of vibe-coding fun — not AI: Lightweight commentary on mobile widgets and consumer software rather than AI news.
+- Rapido’s Ownly To Charge Customers For Deliveries Soon — not AI: General food delivery logistics update, no AI relevance.
+- CERT-In Flags Five Cybersecurity Vulnerabilities In WhatsApp, Warns Of Data Exposure — not AI: Standard WhatsApp vulnerability warning, no AI focus.
+- Delhi HC Denies TikTok Interim Relief In ‘TIKTOK’ Trademark Dispute — not AI: Trademark dispute involving TikTok, no AI angle.
+- Can Black Friday Sales Unlock Fresh Demand For D2C Brands After Diwali? — not AI: E-commerce and D2C sales roundup, not AI news.
+- Samay Raina Becomes First YouTube Creator Globally To Cross 10 Lakh Paid Channel Members — not AI: Not AI news (YouTube memberships milestone for creator Samay Raina).
+- GTA 6 drives nearly 290% surge in franchise’s mobile game downloads, hits 2.3 million in first week — not AI: Gaming industry metrics, no AI angle.
+- [Weekly funding roundup Nov 21-27] VC inflow dips on modest deal activity — not AI: General weekly venture capital funding roundup across sectors.
+- What’s next for Kalyan Krishnamurthy after Flipkart? 5 possible paths — not AI: General business career speculation, not AI news.
+- Serial numbers in Chinese filings reveal that Nvidia's restricted Blackwell chips were installed at a Shanghai data center linked to Alice Huang and Megaspeed (Bloomberg) — duplicate of 8e7a06808520
+- Meituan reports Q3 revenue up 21.6% YoY to ~$17.3B, above est., and an adjusted net profit of ~$285.1M, up from a ~$2.4B adjusted net loss (Ben Jiang/South China Morning Post) — not AI: Quarterly financial results for a food-delivery giant without a primary AI focus.
+- Nvidia Blackwell Tech Used at China Site Tied to Alice Huang — duplicate of 8e7a06808520
+- Jensen Huang Said Nvidia's Blackwell Racks Were Too Big to Smuggle. One Just Turned Up in Shanghai — duplicate of 8e7a06808520
+- Nvidia Blackwell chips found in Shanghai data center tied to Alice Huang — duplicate of 8e7a06808520
+- Nvidia Blackwell chips found at China data center linked to Alice Huang: report — duplicate of 8e7a06808520
+- Nvidia’s Advanced AI Chips Are Being Used at Chinese Data Center Tied to Alice Huang — duplicate of 8e7a06808520
+- Nvidia Blackwell servers found at a data center in Shanghai — duplicate of 8e7a06808520
+- Kimi for Science: More scientific ideas, made possible — could not verify yet; will retry next run
+- The Government is planning a common AI platform to automate citizen services — could not verify yet after a second try; dropped
 
 </details>
 
 <details><summary>Research agent's work</summary>
 
-- A look at proposals for vertical data centers, often the only option w: confirmed (searched “Tiffany Hsu New York Times vertical data centers Kansas City”; read nytimes.com; searched “Developers Wanted to Build a High-Rise Data Center Kansas City New York Times”)
-- The Government is planning a common AI platform to automate citizen se: unconfirmed (searched “Government common AI platform automate citizen services DIC MediaNama”; searched “DIC AI platform automate citizen services government India”; searched “DIC AI platform citizen interactions workflows government”)
-- Can AI be recognised as an author under Indian copyright law? Delhi HC: confirmed (searched “Delhi High Court Stephen Thaler DABUS AI author copyright”; read barandbench.com)
-- Kabeer Biswas’ M Raises $9 Mn Led By RTP Global: confirmed (searched “Kabeer Biswas M raises 9 Mn RTP Global AI startup”; read moneycontrol.com; read msn.com)
-- Swiggy’s Instamart lays off 340 amid AI push, shift to inventory model: confirmed (searched “Swiggy Instamart layoffs 340 AI”; read business-standard.com; read inc42.com)
+- Kimi for Science: More scientific ideas, made possible: unconfirmed (searched “Kimi for Science program Moonshot AI”; searched “"Kimi for Science" Moonshot AI”; searched “"Kimi for Science" program”)
+- The CMA says Meta made changes to Muse's ToS in the UK to reflect the : confirmed (searched “Meta Muse ToS UK CMA Politico Joseph Bambridge”; searched “Politico Meta Muse UK consumer law CMA Bambridge”; searched “"Meta's UK rollout for Muse AI agent exposes it to more liability"”)
+- Interviews with Huawei CEO Ren Zhengfei and others on how Trump's rest: confirmed (searched “Huawei Ren Zhengfei New York Times Trump restrictions AI ambitions”; read nytimes.com; searched “Trump Tried to Cripple Huawei Now It Is Central to Chinas AI Push New York Times”)
+- From Alibaba to BharatGen, 10 Small Language Models That Rivalled LLMs: confirmed (searched “BharatGen Param 2 Gemma 4 E2B small language models 2026”; searched “"Gemma 4 E2B"”; read xda-developers.com)
+- The Government is planning a common AI platform to automate citizen se: unconfirmed (searched “DIC AI platform automate citizen services MediaNama Government”; searched “DIC AI enabled platform manage citizen interactions workflows”; searched “Government common AI platform citizen services India”)
 
 </details>
 
 ### Notes
+- GDELT unavailable: GDELT paused for this run after repeated rate-limiting
 - 1 kept item(s) carried over to the next run
-- gemini/gemini-3.5-flash-lite: per-minute limit hit; trying next model
