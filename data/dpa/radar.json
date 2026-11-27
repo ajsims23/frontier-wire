@@ -1673,6 +1673,7 @@
     }
    ],
    "evidence": [
+    "cf2fed8b96e6",
     "be55de3d45eb",
     "9dd0aa4b535f"
    ],
@@ -1680,7 +1681,7 @@
    "proposed": "",
    "quadrant": "tools",
    "capability": "agents",
-   "rationale": "DPA must ensure client data boundaries and user control mechanisms are built into multi-step agentic workflows to comply with emerging regulatory guidelines on AI autonomy.",
+   "rationale": "Meta's personal AI agent highlights regulatory standards for autonomy and data control. DPA retains this on assess while evaluating agentic workflow tools for internal tasks.",
    "updated": "2026-11-27",
    "model": "gemini/gemini-3.5-flash-lite",
    "aliases": [
@@ -2123,6 +2124,29 @@
    "rationale": "Could help DPA track autonomous AI agents across client workflows and assign human oversight for risk management; needs evaluation against our multi-step workflow governance requirements.",
    "updated": "2026-11-27",
    "model": "gemini/gemini-3.5-flash-lite"
+  },
+  "small-language-models": {
+   "key": "small-language-models",
+   "name": "Small language models",
+   "first_seen": "2026-11-27",
+   "history": [
+    {
+     "date": "2026-11-27",
+     "from": "",
+     "to": "assess",
+     "why": "Small language models could enable secure on-device document extraction and lower compute costs for financial-services pipelines. DPA will assess via a local extraction test on fund reports."
+    }
+   ],
+   "evidence": [
+    "a61fb0d29dd9"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "doc_extraction",
+   "rationale": "Small language models could enable secure on-device document extraction and lower compute costs for financial-services pipelines. DPA will assess via a local extraction test on fund reports.",
+   "updated": "2026-11-27",
+   "model": "gemini/gemini-3.5-flash-lite"
   }
  },
  "considered": [
@@ -2205,6 +2229,7 @@
   "a1e895b935bb",
   "a1f50bca3921",
   "a55665cf4895",
+  "a61fb0d29dd9",
   "a8d5fa7d24b3",
   "a8d86fb81b42",
   "a8fc84dcded8",
@@ -2228,6 +2253,7 @@
   "c7ca507a9ed8",
   "cc0bbf95c7e7",
   "cce714811b51",
+  "cf2fed8b96e6",
   "d20ffddf55f2",
   "d5d97060cb47",
   "d8887a09bc5e",
@@ -2243,7 +2269,7 @@
   "fa0e89bac09a",
   "fa5252ed6842"
  ],
- "updated_at": "2026-11-27T11:20:53+00:00",
+ "updated_at": "2026-11-27T17:20:53+00:00",
  "takeaways": {
   "written_at": "2026-11-27T11:20:53+00:00",
   "sig": "claude-fable-5-2:assess|dante-security:assess|gemini-4-hydrogen:assess|gpt-6-2-astra:assess|mai-code-2:trial|microsoft-agent-framework:hold|minimax:hold|muse-personal-ai-agent:assess|shellbench-benchmark:assess|tool-retrieval:trial",
