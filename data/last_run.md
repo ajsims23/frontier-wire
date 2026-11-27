@@ -1,64 +1,77 @@
-## Frontier Wire newsroom run — 2026-11-27T09:50:57+00:00
+## Frontier Wire newsroom run — 2026-11-27T12:31:58+00:00
 
-Fetched 3022 items · fresh 13 · judged 19 · kept 2 · **written 2**
-AI: 23 requests, 81,384 tokens this run · 104 requests today · providers: gemini, groq, nvidia, cerebras
-Editor-in-chief: Tracking enterprise AI agent governance, global infrastructure shifts, and corporate restructuring amid workforce pressures.
-  Priorities: UK regulator warns AI agents must give users control over data access  (UK regulator warning on AI agent data access and user control is crucial for enterprise builders.); AI Job Cuts Come to SAP, 10,000 Roles to be Restructured: Report (SAP's 10,000-role restructuring highlights concrete enterprise AI job impacts.); Foreign investors sold a record net $33.1B of Taiwanese stocks in Nove (Record foreign sell-off in Taiwanese tech stocks reflects growing investor anxiety over AI valuations.); Chinas humanoid robot investment set to accelerate, selective commerci (Morgan Stanley projections on Chinese humanoid robot commercialization offer key hardware market signals.); Walmart International CEO To Meet Flipkart Staff After Kalyan Krishnam (Flipkart leadership transition follows Kalyan Krishnamurthy's exit, impacting India's tech ecosystem.)
-  Thin areas: research, safety
-  Searches: SAP AI restructuring 10000 roles: 6 new
-  Dig deeper: UK regulator warns AI agents must give users control over data access ; AI Job Cuts Come to SAP, 10,000 Roles to be Restructured: Report
-Research agent: investigated 2 stories with 6 tool calls, confirmed 2
-Daily briefing: 4 themes from 19 stories
-Threads updated: Muse rollout expands to UK adults: UK regulator warns AI agents must provide user control as Me
-Videos: 13 kept from 13 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 0 new), Google for Developers ok (11 in feed, 0 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (6 in feed, 0 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 4 new), AI Explained ok (15 in feed, 2 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 3 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (4 in feed, 0 new)
-Photos: 2 saved, 0 unavailable
-Alerts: 24 events sent: {"subscribers":5,"sent":0,"queued":15}
+Fetched 3048 items · fresh 23 · judged 32 · kept 5 · **written 4**
+AI: 40 requests, 93,685 tokens this run · 144 requests today · providers: gemini, groq, nvidia, cerebras
+Editor-in-chief: Chasing enterprise AI agent efficiency gains, India restructuring, and data center evolution amid global demand.
+  Priorities: Anthropic Ditches Python for Rust in Messages API, Cuts CPU Usage by 7 (Anthropic moving Messages API from Python to Rust highlights major systems-level optimization for AI infrastructure.); Swiggy's Instamart to lay off 340 employees amid AI-led restructuring (Swiggy's Instamart layoffs show tangible workforce impacts from AI restructuring in India's tech ecosystem.); A look at proposals for vertical data centers, often the only option w (Vertical data center proposals highlight physical infrastructure adaptation for land-constrained AI hubs.); The Government is planning a common AI platform to automate citizen se (Indian government's common AI platform for citizen services marks a major public sector deployment milestone.); Can AI be recognised as an author under Indian copyright law? Delhi HC (Delhi HC examining AI authorship under Indian copyright law directly impacts IP policy and legal precedents.)
+  Thin areas: research, policy
+  Searches: Anthropic Rust Messages API: 3 new; Swiggy Instamart AI layoffs: 6 new; vertical data centers Taiwan Kansas City: 0 new
+  Dig deeper: Anthropic Ditches Python for Rust in Messages API, Cuts CPU Usage by 7; Swiggy's Instamart to lay off 340 employees amid AI-led restructuring
+Research agent: investigated 5 stories with 14 tool calls, confirmed 4
+Daily briefing: 3 themes from 20 stories
+Videos: 12 kept from 13 new · OpenAI ok (13 in feed, 0 new), Anthropic ok (13 in feed, 0 new), Google DeepMind ok (14 in feed, 0 new), Google for Developers ok (11 in feed, 0 new), AI at Meta ok (10 in feed, 0 new), Microsoft Research ok (12 in feed, 0 new), NVIDIA ok (6 in feed, 0 new), Hugging Face ok (12 in feed, 3 new), Mistral AI ok (0 in feed, 0 new), xAI ok (1 in feed, 0 new), Two Minute Papers ok (15 in feed, 3 new), AI Explained ok (15 in feed, 2 new), Lex Fridman ok (14 in feed, 0 new), Dwarkesh Patel ok (15 in feed, 0 new), No Priors ok (3 in feed, 0 new), Latent Space ok (15 in feed, 3 new), Training Data (Sequoia) ok (5 in feed, 1 new), a16z ok (15 in feed, 0 new), Big Technology Podcast ok (13 in feed, 0 new), Hard Fork ok (2 in feed, 0 new), The Cognitive Revolution ok (9 in feed, 0 new), Lenny's Podcast ok (4 in feed, 0 new), 20VC ok (5 in feed, 1 new)
+Photos: 3 saved, 0 unavailable
+Alerts: 29 events sent: {"subscribers":5,"sent":0,"queued":30}
 Claims: 257 tracked, 251 open, 0 updated this run
-Trackers: filed 2 stories; updated ai-regulation, agent-safety
-Model tracker: 82 models, 17 changes today
-Tagged 2 stories by sector, region and deal
-Time: gather 98s, plan 2s, judge 5s, verify and write 23s, videos 201s, tagging 1s, trackers 9s, claims 3s, briefing 2s, alerts 2s
+Trackers: filed 6 stories; updated india-ai, copyright, ai-infrastructure, ai-money
+Model tracker: 82 models, 19 changes today
+Explainers: 1 added to earlier stories
+Tagged 4 stories by sector, region and deal
+India briefing: 4 themes from 6 stories
+Time: gather 147s, plan 2s, judge 8s, verify and write 103s, videos 4s, tagging 2s, explainers 2s, trackers 6s, claims 2s, briefing 3s, photos 3s, stock photos 1s, alerts 8s
 
 ### New stories
-- **policy** — [UK regulator warns AI agents must provide user control as Meta Muse launches](https://medianama.com/2026/11/223-uk-cma-ai-agent-user-control-meta-muse-launch)  
-  The UK Competition and Markets Authority warned that businesses offering personal AI agents must give consumers control over data access and agent autonomy. The guidance follows Meta's launch of its personal AI agent, Muse, in the UK.  
-  _5 source(s), 0 verified quote(s)_
-- **research** — [China humanoid robot investment to rise, selective use by 2027](https://livemint.com/technology/chinas-humanoid-robot-investment-set-to-accelerate-selective-commercial-use-expected-in-2027-morgan-stanley-11795765936718.html)  
-  Investment in humanoid robots in China is projected to accelerate, with selective commercial use anticipated in 2027 according to a Morgan Stanley report. The report highlights that spending on data collection, robot training, and early customer deployments is likely to increase.  
+- **industry** — [Developers propose vertical data centers as Kansas City blocks high-rise plan](https://techmeme.com/261127/p3)  
+  Developers are proposing vertical data centers to address high demand and land limits in places like Taiwan. However, Kansas City recently rejected a 20-story tower proposal.  
   _2 source(s), 0 verified quote(s)_
+- **policy** — [Delhi High Court to examine if AI can be author under copyright law](https://medianama.com/2026/11/223-ai-author-indian-copyright-law-delhi-hc)  
+  The Delhi High Court issued notice on an appeal by American computer scientist Stephen L Thaler challenging the Copyright Office's refusal to recognise his AI system DABUS as the author of an artwork. The Copyright Office previously ruled that while the artwork met originality requirements, an AI system cannot be an author under Section 2(d)(vi) of the Copyright Act, 1957.  
+  _2 source(s), 2 verified quote(s)_
+- **research** — [Dunzo cofounder Kabeer Biswas' AI startup M raises $9 Mn](https://inc42.com/buzz/kabeer-biswas-m-raises-9-mn-led-by-rtp-global)  
+  Dunzo cofounder Kabeer Biswas' AI startup M has raised $9 million in a funding round led by RTP Global. This brings the startup's total capital raised to about $20 million following a previous $11 million seed round.  
+  _3 source(s), 0 verified quote(s)_
+- **industry** — [Swiggy Instamart lays off 340 employees amid AI push and inventory shift](https://financialexpress.com/business/industry-swiggys-instamart-lays-off-340-amid-ai-push-shift-to-inventory-model-4395160)  
+  Swiggy's quick-commerce division, Instamart, is laying off 340 employees while restructuring its business amid increased AI adoption and a shift to an inventory model. The cutbacks come as the company faces competition from rivals including Zomato's Blinkit and Zepto.  
+  _8 source(s), 0 verified quote(s)_
 
 <details><summary>Dropped</summary>
 
-- The group chat where your AI talks behind your back — not AI: Social media fluff / humor piece without substantive industry news.
-- AI Job Cuts Come to SAP, 10,000 Roles to be Restructured: Report — duplicate of 9794db2730fe
-- Haleon In Talks To Acquire Controlling Stake In HealthKart At $1.4 Bn Valuation: Report — not AI: Acquisition talk of a consumer healthcare platform with no AI relevance.
-- Beauty & Personal Care Brands Top Influencer Ad Violations In H1 FY27: ASCI — not AI: Not about AI; covers beauty and personal care influencer ad violations.
-- NUUK Expands Its Home Appliances Portfolio To Drive ₹150 Cr Revenue In FY27 — not AI: Not about AI; covers home appliances revenue targets.
-- Walmart International CEO To Meet Flipkart Staff After Kalyan Krishnamurthy’s Exit: Report — not AI: General e-commerce executive transition news without an AI angle.
-- Who gets recognised as a journalist at a protest site? SC to decide — not AI: Not about AI; covers Supreme Court deciding who is recognized as a journalist.
-- CERT-In flags high-severity vulnerabilities in WhatsApp across Android, iOS and desktop — not AI: Not about AI; covers WhatsApp vulnerabilities flagged by CERT-In.
-- Grocery stores account for nearly 26% of UPI merchant transactions in October 2026 — not AI: Not about AI; covers UPI merchant transaction statistics.
-- Paying high roaming charges abroad? WhatsApp's upcoming eSIM feature could offer an alternative — not AI: General telecommunications and messaging app feature update with no AI angle.
-- Foreign investors sold a record net $33.1B of Taiwanese stocks in November, topping October's record outflow amid AI valuation fears and a broader tech sell-off (Eunice Xu/Bloomberg) — duplicate of 858493e1f133
-- SAP layoffs 2026: How many Indians could lose jobs as company plans 10,000 cuts in AI restructuring? Check expected timeline — duplicate of 9794db2730fe
-- SAP layoffs: Company weighs cutting at least 10,000 jobs in AI restructuring — duplicate of 9794db2730fe
-- German software major SAP weighs cutting at least 10,000 jobs in AI push: Bloomberg — duplicate of 9794db2730fe
-- A Company Selling AI Is Reshaping Its Organization with AI: Key Takeaways for Japanese Companies from Reports of SAP Considering Over 10,000 Job Cuts — duplicate of 9794db2730fe
-- SAP eyes 10,000 job cuts as Europe's software giant pivots to AI: Report — duplicate of 9794db2730fe
-- SAP moves to cut at least 10,000 jobs globally in AI-driven restructuring — duplicate of 9794db2730fe
+- Taking Trainium3 to the Track: Generating Videos with LTX-2.5 — score 4: Minor blog post or announcement about video generation on Trainium hardware.
+- AI boosts workers , but firms see no productivity gain — score 3: Vague productivity report without substantial new data or breakthrough.
+- Claude sabotaging SOTA ML research tasks — score 3: Hacker News discussion post on anecdotal model behavior.
+- Anthropic Ditches Python for Rust in Messages API, Cuts CPU Usage by 70% and Memory by Over 80% — duplicate of f72d7ea35d13
+- Thomas Dohmke Wants to Replace Pull Requests With AI Agent Trails — score 5: General commentary by Thomas Dohmke on software development and AI agent workflows.
+- StockGro Signs MoU With Emirates NBD To Tap UAE’s Growing Investor Base — not AI: Fintech MoU partnership without an AI focus.
+- Can Dreamteam Take On CRM Old Guards With Its Platoon Of AI Agents? — score 4: Profile of a B2B sales startup using AI agents, promotional in nature.
+- FirstCry Halves Stake Sale To ₹150 Cr In Swara Baby IPO — not AI: IPO size reduction for baby products company, not AI-related.
+- indē wild Slips Into Red In FY26 Despite 2.4X YoY Surge In Operating Revenue — not AI: Financial earnings for a beauty brand, no AI angle.
+- Meta to sell international travel data eSIMs inside WhatsApp — not AI: WhatsApp eSIM feature is standard telecom/messaging news, not core AI.
+- X adds parental controls for teens — not AI: General social media feature update regarding parental controls, lacks any AI relevance.
+- AI reshaping role mix, not triggering hiring freeze: Experts — score 4: General commentary on AI and hiring trends without specific news.
+- Masters’ Union hit by widespread job cuts, employees say — not AI: Layoffs at Masters' Union business school without an AI angle.
+- Why Everybody Loves a Good Drought is a must-read book — not AI: Book recommendation piece, off-topic for AI.
+- 5 lessons from the book Why We Sleep by Matthew Walker — not AI: Book review on sleep with no AI angle.
+- From Perplexity to Anthropic: Five Indian-origin tech leaders shaping the global AI industry — not AI: Listicle of Indian-origin leaders in AI, no new substantive development.
+- Startup news and updates: daily roundup (November 27, 2026) — not AI: Daily startup roundup with no distinct AI focus.
+- Sources: the US Air Force recently found that hackers breached Cloud One, the cloud computing platform powering its air defense radar and other data feeds (Reuters) — not AI: Military cloud platform breach without an AI angle.
+- Anthropic Says Claude Helped Rebuild Its API in Rust, Cutting CPU Use by 70% — duplicate of f72d7ea35d13
+- Anthropic switches message API from Python to Rust, cuts CPU use 70 percent — duplicate of f72d7ea35d13
+- November 26 AI News Roundup | Recalculated Pricing and an API Rebuild Collide on the Same Day — duplicate of f72d7ea35d13
+- Swiggy's Instamart lays off 340 employees amid wider AI adoption push — score 4: Routine layoff report citing general automation trends.
+- The Government is planning a common AI platform to automate citizen services — could not verify yet; will retry next run
 
 </details>
 
 <details><summary>Research agent's work</summary>
 
-- UK regulator warns AI agents must give users control over data access : confirmed (searched “UK CMA AI agents Meta Muse”; searched “UK CMA AI agents Meta Muse control”; read fb.com)
-- Chinas humanoid robot investment set to accelerate, selective commerci: confirmed (searched “Chinas humanoid robot investment set to accelerate selective commercial use expected in 2027 Morgan Stanley”; searched “China humanoid robot investment accelerate selective commercial use 2027 Morgan Stanley”; read msn.com)
+- A look at proposals for vertical data centers, often the only option w: confirmed (searched “Tiffany Hsu New York Times vertical data centers Kansas City”; read nytimes.com; searched “Developers Wanted to Build a High-Rise Data Center Kansas City New York Times”)
+- The Government is planning a common AI platform to automate citizen se: unconfirmed (searched “Government common AI platform automate citizen services DIC MediaNama”; searched “DIC AI platform automate citizen services government India”; searched “DIC AI platform citizen interactions workflows government”)
+- Can AI be recognised as an author under Indian copyright law? Delhi HC: confirmed (searched “Delhi High Court Stephen Thaler DABUS AI author copyright”; read barandbench.com)
+- Kabeer Biswas’ M Raises $9 Mn Led By RTP Global: confirmed (searched “Kabeer Biswas M raises 9 Mn RTP Global AI startup”; read moneycontrol.com; read msn.com)
+- Swiggy’s Instamart lays off 340 amid AI push, shift to inventory model: confirmed (searched “Swiggy Instamart layoffs 340 AI”; read business-standard.com; read inc42.com)
 
 </details>
 
 ### Notes
-- not India desk: 'UK regulator warns AI agents must give users contr'
-- not India desk: 'Chinas humanoid robot investment set to accelerate'
-- gemini/gemini-3.5-flash-lite: 503 (server busy); trying next model
-- gemini/gemini-3.6-flash: answer cut off; retrying with more room
-- gemini/gemini-3.6-flash: answer cut off; retrying with more room
+- 1 kept item(s) carried over to the next run
+- gemini/gemini-3.5-flash-lite: per-minute limit hit; trying next model
