@@ -1,6 +1,109 @@
 [
   {
     "explainer": {
+      "what_it_means": "Mistral released the weights for its 1-trillion-parameter model, Mistral Large 4 (Le Chonk), allowing developers and organizations to download and run it locally. The model is designed for tasks like automated coding and cybersecurity defense, and it includes three different reasoning modes to balance cost and performance.",
+      "terms": [
+        {
+          "term": "open-weight model",
+          "meaning": "An AI model whose underlying neural network parameters are published publicly so anyone can download, run, and modify it."
+        },
+        {
+          "term": "reinforcement learning",
+          "meaning": "A training method that uses rewards and penalties to refine model behavior based on feedback."
+        },
+        {
+          "term": "agentic coding",
+          "meaning": "AI systems capable of executing multi-step tasks autonomously, such as writing code or managing terminal environments."
+        }
+      ],
+      "watch_next": []
+    },
+    "benchmarks": [
+      {
+        "model": "Mistral Large 4",
+        "benchmark": "Terminal-Bench 4.0",
+        "score": "41%"
+      },
+      {
+        "model": "Mistral Large 4",
+        "benchmark": "CyberGym-E2E",
+        "score": "79%"
+      }
+    ],
+    "audiences": {
+      "builders": "Mistral Large 4 (Le Chonk) is available on Hugging Face as a 1-trillion-parameter open-weight model with three reasoning modes and a quantized version that runs on four Nvidia B200 or B300 GPUs.",
+      "business": "European startup Mistral released its flagship 1-trillion-parameter model, offering enterprises and governments customizable, self-hosted deployment options for sovereign AI and automated coding or cyber defense.",
+      "investors": "Mistral released its flagship 1-trillion-parameter model trained on European infrastructure, positioning itself in the open-weight AI market against competitors including DeepSeek and Z.ai."
+    },
+    "id": "8ccea7e89b70",
+    "headline": "Mistral releases weights for 1-trillion-parameter model Le Chonk",
+    "summary": "Mistral released the open weights of Mistral Large 4 (Le Chonk), a 1-trillion-parameter multimodal model trained on European infrastructure. The model achieves 41% on Terminal-Bench 4.0 and 79% on CyberGym-E2E.",
+    "why_it_matters": "The release provides organizations with a self-hosted alternative to proprietary models from US labs and models from Chinese competitors, fueling debate over the security risks and benefits of open-source AI.",
+    "category": "models",
+    "lab": "Mistral AI",
+    "model_name": "Mistral Large 4 (Le Chonk)",
+    "model_type": "Language",
+    "tags": [
+      "Mistral",
+      "Le Chonk",
+      "open-weight",
+      "coding",
+      "cybersecurity"
+    ],
+    "quotes": [],
+    "score": 9,
+    "url": "https://mistral.ai/news/mistral-large-4-oss",
+    "source_id": "mistral",
+    "desk": "",
+    "ai_relevance": "core",
+    "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp",
+    "sources": [
+      {
+        "url": "https://mistral.ai/news/mistral-large-4-oss",
+        "publisher": "Mistral AI",
+        "title": "Research Le Chonk: Built for Coders, Trusted by Defenders. We release the weights of Le Chonk, advancing the frontier of open models in agentic coding and cybersecurity. October 29, 2026 By Mistral"
+      },
+      {
+        "url": "https://wired.com/story/mistral-says-le-chonk-surpasses-chinese-models-cybersecurity",
+        "publisher": "Wired",
+        "title": "Mistral Says Its AI Model ‘Le Chonk’ Has Leapfrogged China in the Open-Weight Race"
+      },
+      {
+        "url": "https://thenextweb.com/news/mistral-large-4-open-weights-release",
+        "publisher": "The Next Web",
+        "title": "Mistral releases open weights for its 1 trillion-parameter Large 4 model"
+      }
+    ],
+    "research": {
+      "steps": 3,
+      "read": 1,
+      "decision": "confirmed"
+    },
+    "published_at": "2026-11-28T16:10:43+00:00",
+    "created_at": "2026-11-28T16:10:43+00:00",
+    "breaking": true,
+    "thread": "t-0cfba5858476",
+    "sectors": [
+      "software",
+      "cybersecurity"
+    ],
+    "regions": [
+      "europe"
+    ],
+    "deal": null,
+    "relevance": {
+      "builders": 3,
+      "business": 3,
+      "investors": 3
+    },
+    "cover": "1-trillion",
+    "trackers": [
+      "frontier-race"
+    ],
+    "photo_local": true
+  },
+  {
+    "explainer": {
       "what_it_means": "Sakana AI is building a homegrown foundation model named Sawara to support Japan's industrial, manufacturing, and security sectors. The startup aims to reduce reliance on foreign AI technologies that may carry cultural biases or restrict sensitive local applications.",
       "terms": [
         {
@@ -72190,89 +72293,6 @@
       "ai-money"
     ],
     "photo_local": true
-  },
-  {
-    "explainer": {
-      "what_it_means": "Le Chonk is a large AI model that can process text and images (multimodal) and has been tuned to write code and detect security issues. By releasing the model weights, anyone can run the model on their own hardware, avoiding reliance on cloud providers. Its improved efficiency means it can perform the same tasks while using fewer compute resources.",
-      "terms": [
-        {
-          "term": "multimodal",
-          "meaning": "A model that can handle multiple types of input data, such as text and images, within the same system."
-        },
-        {
-          "term": "reinforcement learning",
-          "meaning": "A training method where a model improves its behavior through trial and error guided by reward signals."
-        },
-        {
-          "term": "coding benchmark",
-          "meaning": "A standardized test that measures how well an AI system can write or evaluate code, often using metrics like correctness and token usage."
-        }
-      ],
-      "watch_next": []
-    },
-    "benchmarks": [
-      {
-        "model": "Le Chonk",
-        "benchmark": "FrontierCode 2.0",
-        "score": "19.7%"
-      },
-      {
-        "model": "Le Chonk",
-        "benchmark": "Artificial Analysis Coding Agent Index",
-        "score": "48%"
-      }
-    ],
-    "audiences": {
-      "builders": "Developers can now self‑host a powerful coding assistant that runs more efficiently, lowering inference costs.",
-      "business": "Enterprises gain access to an open‑weight AI for code generation and security analysis, supporting sovereign AI strategies and cost savings.",
-      "investors": "Mistral’s leadership on open‑weight benchmarks highlights its competitive position in the AI model market."
-    },
-    "id": "8ccea7e89b70",
-    "headline": "Mistral releases weights for 1‑trillion‑parameter Le Chonk model",
-    "summary": "Mistral AI has released the weights for its 1‑trillion‑parameter multimodal model, Le Chonk, citing gains in coding and cybersecurity performance. The model leads open‑weight coding benchmarks, scoring 19.7% on FrontierCode 2.0 and 48% on the Artificial Analysis Coding Agent Index while using fewer tokens.",
-    "why_it_matters": "The open release gives developers and organizations a high‑performance, self‑hosted AI for coding and security tasks, advancing sovereign AI capabilities.",
-    "category": "models",
-    "lab": "Mistral AI",
-    "model_name": "Le Chonk",
-    "model_type": "Multimodal",
-    "tags": [],
-    "quotes": [],
-    "score": 7,
-    "url": "https://mistral.ai/news/mistral-large-4-oss",
-    "source_id": "mistral",
-    "desk": "",
-    "ai_relevance": "core",
-    "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp",
-    "sources": [
-      {
-        "url": "https://mistral.ai/news/mistral-large-4-oss",
-        "publisher": "Mistral AI",
-        "title": "Research Le Chonk: Built for Coders, Trusted by Defenders. We release the weights of Le Chonk, advancing the frontier of open models in agentic coding and cybersecurity. October 29, 2026 By Mistral"
-      }
-    ],
-    "research": null,
-    "published_at": "2026-10-29T14:17:41+00:00",
-    "created_at": "2026-10-29T14:17:41+00:00",
-    "breaking": true,
-    "sectors": [
-      "software",
-      "cybersecurity"
-    ],
-    "regions": [
-      "global"
-    ],
-    "deal": null,
-    "relevance": {
-      "builders": 3,
-      "business": 2,
-      "investors": 1
-    },
-    "cover": "1‑trillion",
-    "trackers": [
-      "frontier-race"
-    ],
-    "photo_local": true,
-    "thread": "t-0cfba5858476"
   },
   {
     "explainer": {

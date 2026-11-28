@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-28T15:50:57+00:00",
+  "updated_at": "2026-11-28T16:10:43+00:00",
   "lead": {
     "explainer": {
       "what_it_means": "OpenAI has filed a countersuit against Apple in a California court, accusing Apple of stealing trade secrets and threatening suppliers that work with both companies. This legal escalation follows an earlier lawsuit filed by Apple against OpenAI regarding trade secrets and former employees.",
@@ -99,6 +99,109 @@
     "photo_local": true
   },
   "stories": [
+    {
+      "explainer": {
+        "what_it_means": "Mistral released the weights for its 1-trillion-parameter model, Mistral Large 4 (Le Chonk), allowing developers and organizations to download and run it locally. The model is designed for tasks like automated coding and cybersecurity defense, and it includes three different reasoning modes to balance cost and performance.",
+        "terms": [
+          {
+            "term": "open-weight model",
+            "meaning": "An AI model whose underlying neural network parameters are published publicly so anyone can download, run, and modify it."
+          },
+          {
+            "term": "reinforcement learning",
+            "meaning": "A training method that uses rewards and penalties to refine model behavior based on feedback."
+          },
+          {
+            "term": "agentic coding",
+            "meaning": "AI systems capable of executing multi-step tasks autonomously, such as writing code or managing terminal environments."
+          }
+        ],
+        "watch_next": []
+      },
+      "benchmarks": [
+        {
+          "model": "Mistral Large 4",
+          "benchmark": "Terminal-Bench 4.0",
+          "score": "41%"
+        },
+        {
+          "model": "Mistral Large 4",
+          "benchmark": "CyberGym-E2E",
+          "score": "79%"
+        }
+      ],
+      "audiences": {
+        "builders": "Mistral Large 4 (Le Chonk) is available on Hugging Face as a 1-trillion-parameter open-weight model with three reasoning modes and a quantized version that runs on four Nvidia B200 or B300 GPUs.",
+        "business": "European startup Mistral released its flagship 1-trillion-parameter model, offering enterprises and governments customizable, self-hosted deployment options for sovereign AI and automated coding or cyber defense.",
+        "investors": "Mistral released its flagship 1-trillion-parameter model trained on European infrastructure, positioning itself in the open-weight AI market against competitors including DeepSeek and Z.ai."
+      },
+      "id": "8ccea7e89b70",
+      "headline": "Mistral releases weights for 1-trillion-parameter model Le Chonk",
+      "summary": "Mistral released the open weights of Mistral Large 4 (Le Chonk), a 1-trillion-parameter multimodal model trained on European infrastructure. The model achieves 41% on Terminal-Bench 4.0 and 79% on CyberGym-E2E.",
+      "why_it_matters": "The release provides organizations with a self-hosted alternative to proprietary models from US labs and models from Chinese competitors, fueling debate over the security risks and benefits of open-source AI.",
+      "category": "models",
+      "lab": "Mistral AI",
+      "model_name": "Mistral Large 4 (Le Chonk)",
+      "model_type": "Language",
+      "tags": [
+        "Mistral",
+        "Le Chonk",
+        "open-weight",
+        "coding",
+        "cybersecurity"
+      ],
+      "quotes": [],
+      "score": 9,
+      "url": "https://mistral.ai/news/mistral-large-4-oss",
+      "source_id": "mistral",
+      "desk": "",
+      "ai_relevance": "core",
+      "image": "https://mistral.ai/cms-media/api/media/file/cover-mistral-sovereign%20copie.webp",
+      "sources": [
+        {
+          "url": "https://mistral.ai/news/mistral-large-4-oss",
+          "publisher": "Mistral AI",
+          "title": "Research Le Chonk: Built for Coders, Trusted by Defenders. We release the weights of Le Chonk, advancing the frontier of open models in agentic coding and cybersecurity. October 29, 2026 By Mistral"
+        },
+        {
+          "url": "https://wired.com/story/mistral-says-le-chonk-surpasses-chinese-models-cybersecurity",
+          "publisher": "Wired",
+          "title": "Mistral Says Its AI Model ‘Le Chonk’ Has Leapfrogged China in the Open-Weight Race"
+        },
+        {
+          "url": "https://thenextweb.com/news/mistral-large-4-open-weights-release",
+          "publisher": "The Next Web",
+          "title": "Mistral releases open weights for its 1 trillion-parameter Large 4 model"
+        }
+      ],
+      "research": {
+        "steps": 3,
+        "read": 1,
+        "decision": "confirmed"
+      },
+      "published_at": "2026-11-28T16:10:43+00:00",
+      "created_at": "2026-11-28T16:10:43+00:00",
+      "breaking": true,
+      "thread": "t-0cfba5858476",
+      "sectors": [
+        "software",
+        "cybersecurity"
+      ],
+      "regions": [
+        "europe"
+      ],
+      "deal": null,
+      "relevance": {
+        "builders": 3,
+        "business": 3,
+        "investors": 3
+      },
+      "cover": "1-trillion",
+      "trackers": [
+        "frontier-race"
+      ],
+      "photo_local": true
+    },
     {
       "explainer": {
         "what_it_means": "Sakana AI is building a homegrown foundation model named Sawara to support Japan's industrial, manufacturing, and security sectors. The startup aims to reduce reliance on foreign AI technologies that may carry cultural biases or restrict sensitive local applications.",
@@ -5417,100 +5520,6 @@
         "page": "https://commons.wikimedia.org/w/index.php?curid=202200326",
         "via": "Wikimedia"
       }
-    },
-    {
-      "explainer": {
-        "what_it_means": "Credit rating agencies evaluate how risky it is to lend money to a company. S&P is reviewing Nvidia's rating because of management and governance concerns after CEO Jensen Huang left and was then reinstated. If Nvidia's credit rating is lowered, it could increase borrowing costs for Nvidia and the infrastructure companies it backs.",
-        "terms": [
-          {
-            "term": "Credit rating",
-            "meaning": "A formal evaluation of a company's ability to repay its debts, which affects how much it costs them to borrow money."
-          },
-          {
-            "term": "Key man risk",
-            "meaning": "Dependence on a single individual, such as a CEO, for a company's continued success and stability."
-          },
-          {
-            "term": "Credit default swap",
-            "meaning": "A financial contract that functions like insurance against a company defaulting on its debt."
-          }
-        ],
-        "watch_next": [
-          "S&P Global Ratings expects to finish its review within 90 days."
-        ]
-      },
-      "audiences": {
-        "builders": "A credit rating downgrade could raise borrowing costs for infrastructure companies and neoclouds that rely on Nvidia's backing.",
-        "business": "S&P Global Ratings is reviewing Nvidia for a potential one-notch credit downgrade from AA to AA- due to governance and key-man risks following the ouster and return of CEO Jensen Huang.",
-        "investors": "Nvidia shares ended lower as S&P placed the company on CreditWatch negative and five-year credit default swap spreads rose following the governance review."
-      },
-      "id": "f27e0de9d097",
-      "headline": "S&P considers Nvidia credit downgrade over governance risks",
-      "summary": "S&P Global Ratings is considering a one-notch credit downgrade for Nvidia from AA to AA- following concerns over management practices and heavy reliance on CEO Jensen Huang. The review was triggered by the ouster and subsequent reinstatement of Huang.",
-      "why_it_matters": "A lower credit rating could raise borrowing costs for Nvidia and increase financial pressure on the neoclouds and infrastructure companies that depend on Nvidia's debt guarantees.",
-      "category": "industry",
-      "lab": "NVIDIA",
-      "model_name": "",
-      "model_type": "",
-      "tags": [
-        "Nvidia",
-        "Jensen Huang",
-        "S&P Global Ratings",
-        "Credit Rating",
-        "Governance"
-      ],
-      "quotes": [],
-      "score": 9,
-      "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks",
-      "source_id": "techcrunch-ai",
-      "desk": "",
-      "ai_relevance": "core",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/01/GettyImages-2256813240.jpg?resize=1200,800",
-      "sources": [
-        {
-          "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks",
-          "publisher": "TechCrunch AI",
-          "title": "S&P considers Nvidia credit downgrade over governance and ‘key man’ risks"
-        },
-        {
-          "url": "https://businessinsider.com/nvidia-credit-rating-downgrade-spglobal-jensen-huang-nvda-2026-11",
-          "publisher": "Insider",
-          "title": "S&P Global warns Nvidia’s credit rating could be downgraded over governance risks"
-        },
-        {
-          "url": "https://msn.com/en-us/news/other/s-p-global-places-nvidia-rating-on-creditwatch-negative-on-rising-management-and-governance-risks/ar-AA2iekht",
-          "publisher": "Reuters on MSN",
-          "title": "S&P Global places Nvidia rating on 'CreditWatch Negative' on rising management and governance risks"
-        },
-        {
-          "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-may-credit-rating-cut-222654879.html",
-          "publisher": "Yahoo Finance",
-          "title": "Nvidia May Get A Credit Rating Cut Amid Governance Issues, While US Officials Reportedly Say No Chinese Interference in Huang’s Affair"
-        }
-      ],
-      "research": {
-        "steps": 3,
-        "read": 1,
-        "decision": "confirmed"
-      },
-      "published_at": "2026-11-25T22:44:32+00:00",
-      "created_at": "2026-11-26T00:51:07+00:00",
-      "thread": "t-dcf6c7046ef3",
-      "sectors": [
-        "finance"
-      ],
-      "regions": [
-        "us"
-      ],
-      "deal": null,
-      "relevance": {
-        "builders": 0,
-        "business": 2,
-        "investors": 3
-      },
-      "cover": "AA-",
-      "trackers": [],
-      "photo_local": true
     }
   ],
   "voices": [
@@ -5900,6 +5909,34 @@
   },
   "threads": [
     {
+      "id": "t-0cfba5858476",
+      "title": "Mistral Le Chonk model release and research rollout",
+      "updated_at": "2026-11-28T16:10:43+00:00",
+      "stories": [
+        {
+          "id": "8ccea7e89b70",
+          "headline": "Mistral releases weights for 1-trillion-parameter model Le Chonk",
+          "url": "https://mistral.ai/news/mistral-large-4-oss",
+          "published_at": "2026-11-28T16:10:43+00:00",
+          "category": "models"
+        },
+        {
+          "id": "6f0e99586315",
+          "headline": "Mistral AI not French president's personal project, says CEO",
+          "url": "https://msn.com/en-us/news/other/mistral-ai-not-french-president-s-personal-project-ceo/ar-AA2hHfEe",
+          "published_at": "2026-11-18T03:12:23+00:00",
+          "category": "voices"
+        },
+        {
+          "id": "1184d3a025fd",
+          "headline": "Mistral launches Studio Le Chonk platform for enterprise AI deployment",
+          "url": "https://mistral.ai/news/build-with-studio",
+          "published_at": "2026-11-05T15:56:59+00:00",
+          "category": "industry"
+        }
+      ]
+    },
+    {
       "id": "t-6b101564ddbb",
       "title": "Jensen Huang returns as Nvidia CEO",
       "updated_at": "2026-11-28T07:40:01+00:00",
@@ -5968,107 +6005,17 @@
           "category": "safety"
         }
       ]
-    },
-    {
-      "id": "t-9e3e3ddacb24",
-      "title": "Google Gemini 4 model rollouts and usage tips",
-      "updated_at": "2026-11-28T01:11:54.182000+00:00",
-      "stories": [
-        {
-          "id": "1562c1e929f4",
-          "headline": "Ethan Mollick tests Gemini 4 Neon on RPG rulebook generation",
-          "url": "https://bsky.app/profile/emollick.bsky.social/post/3n3djifx6fk2b",
-          "published_at": "2026-11-28T01:11:54.182000+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "ae8cfecfa51e",
-          "headline": "Gemini 4 Hydrogen cost jumps with xhigh thinking effort mode",
-          "url": "https://bsky.app/profile/simonwillison.net/post/3n2tsb6pguk27",
-          "published_at": "2026-11-21T19:06:19.565000+00:00",
-          "category": "models"
-        },
-        {
-          "id": "84a41c24a3f1",
-          "headline": "Google adds computer use to Gemini for macOS",
-          "url": "https://techmeme.com/261119/p47",
-          "published_at": "2026-11-19T18:50:09+00:00",
-          "category": "models"
-        },
-        {
-          "id": "b00f82b6db94",
-          "headline": "Google introduces Tool Retrieval in the Gemini API",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval",
-          "published_at": "2026-11-19T18:00:00+00:00",
-          "category": "models"
-        },
-        {
-          "id": "dd0ead71d47c",
-          "headline": "Google releases Gemini 4 Neon model for complex workflows",
-          "url": "https://techmeme.com/261118/p58",
-          "published_at": "2026-11-19T03:35:01+00:00",
-          "category": "models"
-        },
-        {
-          "id": "b898a1b2127c",
-          "headline": "Google launches Gemini 4 Neon model for complex workflows",
-          "url": "https://deepmind.google/blog/introducing-gemini-4-neon",
-          "published_at": "2026-11-18T21:35:43+00:00",
-          "category": "models"
-        },
-        {
-          "id": "a64bf86d357e",
-          "headline": "Google rolls out Gemini Tasks assistant for free in six markets",
-          "url": "https://inc42.com/buzz/google-begins-rolling-out-personal-ai-assistant-tasks-in-india",
-          "published_at": "2026-11-17T23:31:37+00:00",
-          "category": "models"
-        },
-        {
-          "id": "0508a8475458",
-          "headline": "Google DeepMind launches Gemini 4 Hydrogen, a fast low‑cost model for coding",
-          "url": "https://techmeme.com/261112/p60",
-          "published_at": "2026-11-12T22:15:00+00:00",
-          "category": "models"
-        },
-        {
-          "id": "a8d5fa7d24b3",
-          "headline": "Google launches Gemini 4 Hydrogen, a fast model for everyday coding and search",
-          "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
-          "published_at": "2026-11-12T18:00:50+00:00",
-          "category": "models"
-        },
-        {
-          "id": "cce714811b51",
-          "headline": "Google launches Gemini Decisions API for fast multimodal yes/no and choice scoring",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api",
-          "published_at": "2026-11-11T18:00:00+00:00",
-          "category": "models"
-        },
-        {
-          "id": "a468d4c7b355",
-          "headline": "Ethan Mollick tests Fable 5.2 and Gemini Carbon on the Fermi Paradox",
-          "url": "https://bsky.app/profile/emollick.bsky.social/post/3mzyzlpr6lk2r",
-          "published_at": "2026-11-11T03:35:36.254000+00:00",
-          "category": "voices"
-        },
-        {
-          "id": "28b27e2d175e",
-          "headline": "Google rolls out Gemini 4 Carbon to the public with agent swarm feature",
-          "url": "https://theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout",
-          "published_at": "2026-11-10T16:00:00+00:00",
-          "category": "models"
-        },
-        {
-          "id": "41e0dc889e76",
-          "headline": "Google announces Gemini 4 Carbon, a more capable frontier AI model not yet released",
-          "url": "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use",
-          "published_at": "2026-10-28T18:47:27+00:00",
-          "category": "models"
-        }
-      ]
     }
   ],
   "labs": [
+    {
+      "lab": "Mistral AI",
+      "model": "Mistral Large 4 (Le Chonk)",
+      "type": "Language",
+      "date": "2026-11-28T16:10:43+00:00",
+      "story_id": "8ccea7e89b70",
+      "url": "https://mistral.ai/news/mistral-large-4-oss"
+    },
     {
       "lab": "Sakana AI",
       "model": "Sawara",
@@ -6188,14 +6135,6 @@
       "date": "2026-11-21T19:06:19.565000+00:00",
       "story_id": "ae8cfecfa51e",
       "url": "https://bsky.app/profile/simonwillison.net/post/3n2tsb6pguk27"
-    },
-    {
-      "lab": "Mistral AI",
-      "model": "Voxtral 3",
-      "type": "Voice",
-      "date": "2026-11-21T02:03:34+00:00",
-      "story_id": "afe5d96a9d46",
-      "url": "https://mistral.ai/news/voxtral-3"
     },
     {
       "lab": "Thinking Machines Lab",
@@ -6381,8 +6320,8 @@
     }
   ],
   "stats": {
-    "stories_this_month": 743,
-    "model_releases_this_month": 96,
+    "stories_this_month": 744,
+    "model_releases_this_month": 97,
     "labs_tracked": 39
   }
 }
