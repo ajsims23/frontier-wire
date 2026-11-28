@@ -1,32 +1,34 @@
-## Newsroom self-review, 2026-11-27
+## Newsroom self-review, 2026-11-28
 
-Looked at 52 runs over the last 3 days (106 stories written).
+Looked at 49 runs over the last 3 days (87 stories written).
 Tick the suggestions you want applied; nothing changes until a person approves it.
 
-- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower min_score_to_publish_1_to_10 from 5 to 4 to increase story output given the high number of near-threshold drops.  
-  _Why:_ A high volume of stories are dropping due to scores between 5 and 7 (score 5 alone has 116 drops, and scores 2-4 account to 351 drops), while only 106 stories were written across 52 runs. Lowering the minimum publishing score threshold slightly will help capture more borderline-quality news.
-- [ ] **coverage gap** · `sources`: Add dedicated RSS feeds or sources for DeepSeek and Alibaba (Qwen) to ensure these tracked labs are adequately covered.  
-  _Why:_ Major AI labs xAI, DeepSeek, and Alibaba (Qwen) had zero stories written about them this week, representing a significant coverage gap.
-- [ ] **tune** · `ai_providers_configured`: Deprioritize or adjust rate-limiting pacing for groq models to reduce 429 rate limit errors.  
-  _Why:_ Groq providers frequently hit per-minute rate limits and 429 errors (as seen in provider notes), causing fallbacks and delays. Adjusting rate-limiting parameters or prioritizing other free providers like cerebras and gemini can improve stability.
+- [ ] **remove source** · `mistral-news`: Remove mistral-news from the sources list as it is consistently failing to return content.  
+  _Why:_ mistral-news has returned nothing in 25 out of 49 runs.
+- [ ] **tune** · `min_score_to_publish_1_to_10`: Lower min_score_to_publish_1_to_10 from 5 to 4.  
+  _Why:_ A high volume of stories (155 stories) are falling just short of publication at score 4, while only 45 stories achieved score 5. Lowering the publication threshold to 4 would help capture more relevant developments without overwhelming the output.
+- [ ] **coverage gap** · `xAI, DeepSeek, Alibaba (Qwen)`: Check if the feeds or search terms covering xAI, DeepSeek, and Alibaba (Qwen) are active and correctly configured to capture their recent releases.  
+  _Why:_ xAI, DeepSeek, and Alibaba (Qwen) have not produced any stories this week despite being major AI labs.
 
 <details><summary>Statistics the agent reviewed</summary>
 
 ```json
 {
- "runs": 52,
- "stories_written": 106,
+ "runs": 49,
+ "stories_written": 87,
  "source_failures": {},
- "sources_returning_nothing": {},
+ "sources_returning_nothing": {
+  "mistral-news": "25/49 runs"
+ },
  "drop_reasons": {
-  "not AI": 260,
-  "score 4": 200,
-  "score 3": 131,
-  "score 5": 116,
-  "could not verify yet": 58,
-  "duplicate of 66cc673a6baa": 53,
-  "score 2": 20,
-  "variety": 16
+  "not AI": 244,
+  "score 4": 155,
+  "score 3": 105,
+  "score 5": 45,
+  "could not verify yet": 39,
+  "score 2": 16,
+  "duplicate of 9794db2730fe": 16,
+  "duplicate of 5d94a8a52956": 15
  },
  "tracked_labs_without_stories_this_week": [
   "xAI",
@@ -34,14 +36,14 @@ Tick the suggestions you want applied; nothing changes until a person approves i
   "Alibaba (Qwen)"
  ],
  "provider_notes": [
-  "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-  "groq/openai/gpt-oss-120b: couldn't force a tool call; retrying without forcing",
-  "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-  "groq/openai/gpt-oss-120b: per-minute limit hit; trying next model",
-  "gemini/gemini-3.5-flash-lite: 503 (server busy); trying next model",
   "gemini: unreachable or too slow (ReadTimeout); resting it for 2 minutes",
   "groq: 429 after retry (rate_limit_exceeded tokens Rate limit reached for model `openai/gpt-oss-120b` in); moving to next provider for this run",
-  "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room"
+  "nvidia/nvidia/nemotron-3-ultra-550b-a55b: answer cut off; retrying with more room",
+  "gemini/gemini-3.5-flash-lite: per-minute limit hit; trying next model",
+  "gemini/gemini-3.5-flash-lite: 503 (server busy); trying next model",
+  "gemini/gemini-3.6-flash: answer cut off; retrying with more room",
+  "gemini/gemini-3.6-flash: answer cut off; retrying with more room",
+  "gemini/gemini-3.5-flash-lite: per-minute limit hit; trying next model"
  ],
  "current_settings": {
   "min_score_to_publish_1_to_10": 5,
