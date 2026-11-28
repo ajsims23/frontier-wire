@@ -2148,6 +2148,29 @@
    "rationale": "Small language models could enable secure on-device document extraction and lower compute costs for financial-services pipelines. DPA will assess via a local extraction test on fund reports.",
    "updated": "2026-11-27",
    "model": "gemini/gemini-3.5-flash-lite"
+  },
+  "le-chonk": {
+   "key": "le-chonk",
+   "name": "Le Chonk",
+   "first_seen": "2026-11-28",
+   "history": [
+    {
+     "date": "2026-11-28",
+     "from": "",
+     "to": "assess",
+     "why": "Could provide a self-hosted LLM option for extracting sensitive financial data on secure local infrastructure without sending documents to US APIs. Needs evaluation on DPA-style tasks before trial."
+    }
+   ],
+   "evidence": [
+    "8ccea7e89b70"
+   ],
+   "ring": "assess",
+   "proposed": "",
+   "quadrant": "models",
+   "capability": "doc_extraction",
+   "rationale": "Could provide a self-hosted LLM option for extracting sensitive financial data on secure local infrastructure without sending documents to US APIs. Needs evaluation on DPA-style tasks before trial.",
+   "updated": "2026-11-28",
+   "model": "gemini/gemini-3.5-flash-lite"
   }
  },
  "considered": [
@@ -2172,6 +2195,7 @@
   "2db41133973d",
   "31089e719fc9",
   "366ea4cc69c5",
+  "3973f080fe72",
   "3decd8b5d056",
   "3e50b2261d70",
   "3f1ac81e6e95",
@@ -2220,6 +2244,7 @@
   "84a41c24a3f1",
   "853b24ff0d6e",
   "88d7432c1d48",
+  "8ccea7e89b70",
   "9045dcda80bd",
   "9108ffa54a00",
   "92419877312e",
@@ -2272,39 +2297,39 @@
   "fa0e89bac09a",
   "fa5252ed6842"
  ],
- "updated_at": "2026-11-28T08:20:46+00:00",
+ "updated_at": "2026-11-28T17:20:48+00:00",
  "takeaways": {
-  "written_at": "2026-11-27T11:20:53+00:00",
-  "sig": "claude-fable-5-2:assess|dante-security:assess|gemini-4-hydrogen:assess|gpt-6-2-astra:assess|mai-code-2:trial|microsoft-agent-framework:hold|minimax:hold|muse-personal-ai-agent:assess|shellbench-benchmark:assess|tool-retrieval:trial",
-  "headline": "Evaluate new models and secure agent workflows against data risks",
+  "written_at": "2026-11-28T17:20:48+00:00",
+  "sig": "claude-fable-5-2:assess|dante-security:assess|gpt-6-2-astra:assess|le-chonk:assess|mai-code-2:trial|microsoft-agent-framework:hold|minimax:hold|muse-personal-ai-agent:assess|shellbench-benchmark:assess|tool-retrieval:trial",
+  "headline": "New models and agent tools arrive as security policies face urgent audits",
   "items": [
    {
-    "title": "Model testing for extraction and research",
-    "meaning": "New frontier models offer lower pricing and speed gains that could improve cost-efficiency across document extraction, research, and coding tasks.",
-    "use": "Test GPT-6.2 Astra on 30 complex private equity fund reports to compare accuracy and latency against production models.",
+    "title": "New models target document extraction and research",
+    "meaning": "New models could improve accuracy, speed, and cost efficiency in document extraction, financial reporting, and alternative-investment research pipelines, while open weights offer a local hosting option for sensitive data.",
+    "use": "Run GPT-6.2 Astra on 30 complex private equity fund reports and compare extraction accuracy and latency against current production models.",
     "items": [
      "gpt-6-2-astra",
      "claude-fable-5-2",
-     "gemini-4-hydrogen"
+     "le-chonk"
     ]
    },
    {
-    "title": "Productivity and agent scaling trials",
-    "meaning": "New code models and tool retrieval features could boost developer productivity and scale agentic data pipelines efficiently.",
-    "use": "Integrate MAI Code 2 on GitHub Copilot and test Tool Retrieval on a Gemini-based agent workflow.",
+    "title": "Tools and models boost engineering productivity",
+    "meaning": "New developer models and API features could improve team productivity in data pipeline engineering and help scale agentic data pipelines by managing large tool libraries efficiently.",
+    "use": "Integrate Tool Retrieval into an existing Gemini-based agent workflow with 50+ tools and compare input token costs and latency against static loading.",
     "items": [
      "mai-code-2",
      "tool-retrieval"
     ]
    },
    {
-    "title": "Security and governance for agents",
-    "meaning": "Data leaks, compromised packages, and autonomy rules require strict security, dependency audits, and human oversight in agent workflows.",
-    "use": "Immediately audit and lock down all dependencies used in agentic workflow development following the compromised PyPI package.",
+    "title": "Security and governance for agentic workflows",
+    "meaning": "Emerging regulations and security incidents highlight the need for strict client-data boundaries, governance policies, and dependency audits across agentic workflow development and autonomous tools.",
+    "use": "Immediately audit and lock down all dependencies used in agentic workflow development following the compromised package incident.",
     "items": [
+     "muse-personal-ai-agent",
      "minimax",
      "microsoft-agent-framework",
-     "muse-personal-ai-agent",
      "dante-security"
     ]
    }
